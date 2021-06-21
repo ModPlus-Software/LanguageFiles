@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="4.24.5.0">
+<ModPlus Name="en-US" Version="4.24.6.0">
   <ModPlusAPI>
     <msg1>Failed to create Word object! Make sure you installed Microsoft Office</msg1>
     <msg2>No numeric values found!</msg2>
@@ -5966,7 +5966,9 @@
     <re3>An error occurred while creating a transverse reinforcement part of type "{0}" in beam id = {1}:</re3>
   </mprBeamsReinforcement>
   <mprElevations LocalName="Spot dimensions"
-                 Description="Quick creation of spot dimensions on section and elevation views">
+                 Description="Quick creation of spot dimensions on section and elevation views"
+                 LocalName1="Spot dimensions by links"
+                 Description1="Quick creation of spot dimensions on section and elevation views by elements from linked files">
     <h1>The current view is not a section or elevation</h1>
     <h2>No elements selected. To continue, you must select elements</h2>
     <h3>Select the end point</h3>
@@ -5975,5 +5977,7 @@
     <h6>Unselect all</h6>
     <h7>Continue</h7>
     <h8>Cancel</h8>
+    <h9>Select elements from the current file</h9>
+    <h10>Select elements from the linked files</h10>
   </mprElevations>
 </ModPlus>
