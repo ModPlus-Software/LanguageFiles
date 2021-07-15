@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="4.26.5.0">
+<ModPlus Name="en-US" Version="5.0.0.0">
+  <Common>
+    <ok>Ok</ok>
+    <accept>Accept</accept>
+    <cancel>Cancel</cancel>
+    <close>Close</close>
+    <saved>Saved</saved>
+    <copy>Copy</copy>
+    <paste>Paste</paste>
+    <insert>Insert</insert>
+    <search>Search</search>
+    <yes>Yes</yes>
+    <no>No</no>
+    <prefix>Prefix</prefix>
+    <suffix>Suffix</suffix>
+    <all>All</all>
+    <continue>Continue</continue>
+    <mm>mm</mm>
+    <cm>cm</cm>
+    <m>m</m>
+  </Common>
   <ModPlusAPI>
     <msg1>Failed to create Word object! Make sure you installed Microsoft Office</msg1>
     <msg2>No numeric values found!</msg2>
@@ -206,6 +226,8 @@
     <bid11>User preset storage file for the "Context filter" plugin (Revit)</bid11>
     <bi12>Copy parameters</bi12>
     <bid12>Custom configuration storage files for the "Copy parameters" Plugin (Revit)</bid12>
+    <bi13>Section annotation</bi13>
+    <bid13>File for storing the user configurations of the "Section annotation" plugin</bid13>
     <s1>Active</s1>
     <s2>Subscription has not started</s2>
     <s3>Subscription expires</s3>
@@ -6030,7 +6052,7 @@
     <h5>Copy</h5>
     <h6>Cancel</h6>
   </mprRebarTools>
-  <mprSectionAnnotation LocalName="Annotating sections"
+  <mprSectionAnnotation LocalName="Section annotation"
                         Description="Creating annotations - dimensions, spot dimensions, tags - on section views">
     <t1>Save the current configuration as a new custom configuration</t1>
     <t2>Delete current custom configuration</t2>
