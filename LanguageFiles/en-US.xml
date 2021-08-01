@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.9.0">
+<ModPlus Name="en-US" Version="5.0.10.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -3471,7 +3471,11 @@
     <p101>Main text</p101>
     <p102>Small text</p102>
     <p103>View type</p103>
+    <!-- todo remove -->
     <d86>View type: Section or View</d86>
+    <d103>View type: Section or View</d103>
+    <p104>Leader</p104>
+    <d104>Leader on/off</d104>
   </mpESKD>
   <whshScheduleLookup LocalName="Schedule lookup"
                       Description="Search for schedules in a project that contain the specified value"
@@ -6139,4 +6143,34 @@
     <left>Left</left>
     <right>Right</right>
   </mprSectionAnnotation>
+  <mprApartmentBuildingLayout LocalName=""
+                              Description="">
+    <tab1>Introduction</tab1>
+    <tab2>Matrix</tab2>
+    <tab3>Initial check</tab3>
+    <tab4>Collecting apartments</tab4>
+    <rt1>Not set</rt1>
+    <rt2>Residential</rt2>
+    <rt3>Non-residential</rt3>
+    <rt4>Unheated</rt4>
+    <rtm1>residential,living,live</rtm1>
+    <rtm2>non-residential,nonresidential,unoccupied</rtm2>
+    <rtm3>unheated,balcony,loggia,terrace</rtm3>
+    <apartment>Apartment</apartment>
+    <fps>Engine room,technical rooms,storage room,commercial,parking,preschool</fps>
+    <p1>RM_FUNCTIONAL PURPOSE</p1>
+    <p5>AP_Apartment ID</p5>
+    <h1>Apartment ID</h1>
+    <h2>Shared parameters</h2>
+    <h3>Color schemes</h3>
+    <h4>FP</h4>
+    <h5>Room Name</h5>
+    <h6>Finishing thickness</h6>
+    <h7>Room type</h7>
+    <h8>Area factor</h8>
+    <h9>Apartment Identifier:</h9>
+    <tt1>The value of the "RM_FUNCTIONAL PURPOSE" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
+    <instruction2>In the room matrix the basic properties for the selection of the rooms to be processed are set, as well as the values for the calculation of the areas. In the "FP" column are specifying the value that will be searched for in the room parameter "RM_FUNCTIONAL PURPOSE"</instruction2>
+    <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "RM_FUNCTION PURPOSE" and "Name". If the value of the "RM_FUNCTIONAL PURPOSE" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
+  </mprApartmentBuildingLayout>
 </ModPlus>
