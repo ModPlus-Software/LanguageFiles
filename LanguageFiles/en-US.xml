@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.11.0">
+<ModPlus Name="en-US" Version="5.0.12.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -335,6 +335,7 @@
     <group11>Families</group11>
     <group12>Manage</group12>
     <group13>Systems</group13>
+    <group14>Architecture</group14>
   </CUI>
   <Configurator LocalName="Configurator">
     <title1>ModPlus configurator</title1>
@@ -6127,6 +6128,8 @@
     <h32>Horizontal displacement:</h32>
     <h33>Vertical displacement:</h33>
     <h34>(cross-sectional)</h34>
+    <h35>Display annotation errors</h35>
+    <h36>All errors when trying to create annotations will be displayed in the result window with the IDs of the unprocessed elements</h36>
     <m1>To start the plugin, go to section view</m1>
     <m2>Select elements</m2>
     <m3>Do you really want to irrevocably delete the "{0}" configuration?</m3>
@@ -6135,11 +6138,6 @@
     <err3>Type not set to the category "{0}" of configuration "{1}"</err3>
     <noInFamily>The plugin is not available in families</noInFamily>
     <full>Available in full version of the plugin</full>
-    <!-- todo remove -->
-    <accept>Accept</accept>
-    <byMainConfig>Set by general settings</byMainConfig>
-    <on>on</on>
-    <!-- todo remove -->
     <mm>mm</mm>
     <o1>Element</o1>
     <o2>All elements</o2>
@@ -6151,12 +6149,13 @@
     <left>Left</left>
     <right>Right</right>
   </mprSectionAnnotation>
-  <mprApartmentBuildingLayout LocalName=""
-                              Description="">
+  <mprApartmentBuildingLayout LocalName="Apartment Layout"
+                              Description="Comprehensive implementation of Apartment Layout">
     <tab1>Introduction</tab1>
-    <tab2>Matrix</tab2>
+    <tab2>Sources</tab2>
     <tab3>Initial check</tab3>
     <tab4>Collecting apartments</tab4>
+    <tab5>Calculate apartments</tab5>
     <rt1>Not set</rt1>
     <rt2>Residential</rt2>
     <rt3>Non-residential</rt3>
@@ -6164,9 +6163,21 @@
     <rtm1>residential,living,live</rtm1>
     <rtm2>non-residential,nonresidential,unoccupied</rtm2>
     <rtm3>unheated,balcony,loggia,terrace</rtm3>
+    <sa1>Rounded area</sa1>
+    <sa2>Rounded area with a coefficient</sa2>
+    <fc1>SP 12.13130</fc1>
+    <fc2>Euroclass</fc2>
     <apartment>Apartment</apartment>
+    <view>in current view</view>
+    <model>in project</model>
+    <flatArea>Apartment area</flatArea>
+    <totalArea>Total area</totalArea>
+    <livingArea>Living area</livingArea>
+    <flatAreaS>S ap.</flatAreaS>
+    <totalAreaS>S total</totalAreaS>
+    <livingAreaS>S liv.</livingAreaS>
     <fps>Engine room,technical rooms,storage room,commercial,parking,preschool</fps>
-    <p1>RM_FUNCTIONAL PURPOSE</p1>
+    <p1>RM_Func. purpose</p1>
     <p5>AP_Apartment ID</p5>
     <h1>Apartment ID</h1>
     <h2>Shared parameters</h2>
@@ -6177,8 +6188,20 @@
     <h7>Room type</h7>
     <h8>Area factor</h8>
     <h9>Apartment Identifier:</h9>
+    <h10>Rounding areas:</h10>
+    <h11>General</h11>
+    <h12>Apartments areas</h12>
+    <h13>Specify which room area - rounded or rounded with a coefficient - to use when calculating the total areas of the apartment. When calculating according to SP 54.13330 "Multifamily Residential Buildings" select "Rounded area with a coefficient"</h13>
+    <h14>Room matrix</h14>
+    <h15>Apartment types</h15>
     <tt1>The value of the "RM_FUNCTIONAL PURPOSE" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
+    <tt3>Number of decimal places</tt3>
+    <instruction>Instruction</instruction>
+    <instruction1></instruction1>
     <instruction2>In the room matrix the basic properties for the selection of the rooms to be processed are set, as well as the values for the calculation of the areas. In the "FP" column are specifying the value that will be searched for in the room parameter "RM_FUNCTIONAL PURPOSE"</instruction2>
+    <instruction2_1></instruction2_1>
     <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "RM_FUNCTION PURPOSE" and "Name". If the value of the "RM_FUNCTIONAL PURPOSE" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
+    <instruction4></instruction4>
+    <instruction5></instruction5>
   </mprApartmentBuildingLayout>
 </ModPlus>
