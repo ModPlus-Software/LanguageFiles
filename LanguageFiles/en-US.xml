@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.18.0">
+<ModPlus Name="en-US" Version="5.0.19.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -1019,42 +1019,41 @@
     <s4>Restore data from a temporary file</s4>
     <s5>Continue open file</s5>
     <s6>Date of last change:</s6>
-    <!-- todo remove -->
     <s7>Save File</s7>
     <s8>Autosave</s8>
-    <!-- todo remove -->
-    <s9>The Autosave service will create an autosave file (with the extension .as$), a temporary file (with the extension .rv$, .rf$, .rt$) and project backups. Files are saved after a specified period of time, and also if you save the project manually</s9>
+    <s9>When opening projects, as well as when they are first saved and saved as, a backup file is created, with the extension os$ (open state). This file will allow you to return to the version of the project at the time it was opened. To do this, change the file extension to the project file extension (.rvt, .rfa or .rte). If no backup storage folder is specified, the file will be created in the same folder as the project file</s9>
     <s10>Autosave interval, min:</s10>
-    <s11>The number of backups to be created:</s11>
+    <s11>Number of backups saved:</s11>
     <s12>Save backups in project folder</s12>
-    <s13>Save backups in folder:</s13>
+    <s13>Backup storage folder:</s13>
     <s14>Specify folder</s14>
     <s15>Open folder in explorer</s15>
     <s16>The specified folder does not exist!</s16>
-    <!-- todo remove -->
-    <s17>Keep autosave files</s17>
+    <s17>Remove folder</s17>
     <s18>If unchecked, the autosave files (with the extension .as$) will be deleted when the project is closed</s18>
     <s19>Notify if file is not saved</s19>
     <s20>Show notification about the need to save if the current project is created and never saved</s20>
     <s21>Open event log</s21>
     <s22>The service is based on the</s22>
-    <s23>plugin by Bim2B (by Dmitry Talalaev)</s23>
+    <s23>plugin by Bim2B</s23>
     <s24>Create backups</s24>
-    <!-- todo remove start -->
-    <sl1>Backup error</sl1>
-    <sl2>Backup created</sl2>
-    <sl3>Temporary file created</sl3>
-    <sl4>Temporary file creation error</sl4>
+    <s25>Move backup files</s25>
+    <s26>If a backup storage folder is specified, backup files (files like project_name.nnnn.rvt) will be moved to the specified folder</s26>
+    <s27>Sets the number of project backups to be moved to the backup storage folder</s27>
+    <sl1>Backup transfer error</sl1>
+    <sl2>Backup moved</sl2>
+    <sl3>Backup file created with the state at the moment of project opening</sl3>
+    <sl4>Backup file error with state at the moment of project opening</sl4>
     <sl5>Autosave file created</sl5>
     <sl6>Error creating autosave file</sl6>
     <sl7>Temporary file recovery error</sl7>
     <sl8>Error deleting a temporary or autosave file</sl8>
-    <!-- todo remove end -->
     <sl9>When calling the "Save as" command, the document was not found in the list of processed</sl9>
     <sl10>The document was not added to the list of documents to be processed when it is opened</sl10>
     <sl11>The document was not added to the list of documents to be processed when it is created</sl11>
     <sl12>The document is saved on a timer</sl12>
     <sl13>Event handler error</sl13>
+    <sl14>While saving project an error "{1}" occurred in event handler {0}. Added 1 minute to retry saving</sl14>
   </RevitDlls>
   <RengaDlls LocalName="Working libraries for Renga">
     <h1>MODPLUS SETTINGS</h1>
@@ -6201,7 +6200,7 @@
   </mprSectionAnnotation>
   <mprApartmentBuildingLayout LocalName="Apartment Layout"
                               Description="Comprehensive implementation of Apartment Layout">
-    <tab1>Introduction</tab1>
+    <tab1>Parameters</tab1>
     <tab2>Sources</tab2>
     <tab3>Initial check</tab3>
     <tab4>Collecting apartments</tab4>
@@ -6229,6 +6228,11 @@
     <fps>Engine room,technical rooms,storage room,commercial,parking,preschool</fps>
     <p1>RM_Func. purpose</p1>
     <p5>AP_Apartment ID</p5>
+    <pt1>Text</pt1>
+    <pt2>Area</pt2>
+    <pt3>Currency</pt3>
+    <pt4>Integer</pt4>
+    <pt5>Yes/No</pt5>
     <h1>Apartment ID</h1>
     <h2>Shared parameters</h2>
     <h3>Color schemes</h3>
@@ -6244,10 +6248,12 @@
     <h13>Specify which room area - rounded or rounded with a coefficient - to use when calculating the total areas of the apartment. When calculating according to SP 54.13330 "Multifamily Residential Buildings" select "Rounded area with a coefficient"</h13>
     <h14>Room matrix</h14>
     <h15>Apartment types</h15>
-    <tt1>The value of the "RM_FUNCTIONAL PURPOSE" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
+    <h16>Create missing parameters</h16>
+    <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
+    <tt2>Hide instruction</tt2>
     <tt3>Number of decimal places</tt3>
     <instruction>Instruction</instruction>
-    <instruction1></instruction1>
+    <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or check the "Create" checkbox and click the "Create missing parameters" button</instruction1>
     <instruction2>In the room matrix the basic properties for the selection of the rooms to be processed are set, as well as the values for the calculation of the areas. In the "FP" column are specifying the value that will be searched for in the room parameter "RM_FUNCTIONAL PURPOSE"</instruction2>
     <instruction2_1></instruction2_1>
     <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "RM_FUNCTION PURPOSE" and "Name". If the value of the "RM_FUNCTIONAL PURPOSE" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
