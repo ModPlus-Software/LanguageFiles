@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.19.0">
+<ModPlus Name="en-US" Version="5.0.20.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -131,14 +131,14 @@
     <u5>Activation key</u5>
     <u6>User data</u6>
     <u7>Blocked!</u7>
-    <u8>Your account is blocked! Contact support for details</u8>
+    <u8>Your account is blocked due to exceeding your seat usage limit! You can log out of all devices</u8>
     <u9>Hello, </u9>
     <u10>Your login:</u10>
     <u11>Your email:</u11>
     <u12>Your account information was used on</u12>
     <u13>computers</u13>
-    <u14>If your account information is used on more than 5 computers, your account will be blocked automatically!</u14>
-    <u15>Log out of account</u15>
+    <u14>If your account information is used on more than 3 computers, your account will be blocked automatically!</u14>
+    <u15>Log out of the account on this device with a decrease in the number of seats in use</u15>
     <u16>Plugin:</u16>
     <u17>Product:</u17>
     <u18>Version:</u18>
@@ -1054,6 +1054,8 @@
     <sl12>The document is saved on a timer</sl12>
     <sl13>Event handler error</sl13>
     <sl14>While saving project an error "{1}" occurred in event handler {0}. Added 1 minute to retry saving</sl14>
+    <sl15>Project restored from the file with the state at the moment of opening</sl15>
+    <sl16>Failed to restore the project from a file with the state at the moment of opening</sl16>
   </RevitDlls>
   <RengaDlls LocalName="Working libraries for Renga">
     <h1>MODPLUS SETTINGS</h1>
@@ -6249,14 +6251,32 @@
     <h14>Room matrix</h14>
     <h15>Apartment types</h15>
     <h16>Create missing parameters</h16>
+    <h17>Allowed identifiers:</h17>
+    <h18>Removing unplaced families</h18>
+    <h19>Excel files|*.xlsx</h19>
+    <h20>Numbering priority</h20>
+    <h21>Collecting apartments</h21>
+    <h22>Fill data by room matrix</h22>
+    <h23>Calculation of areas</h23>
+    <msg1>Parameter "{0}" not found</msg1>
+    <msg2>Parameter "{0}" is not filled</msg2>
+    <msg3>Parameter "{0}" has an invalid value</msg3>
+    <msg4>Parameter "{0}" has an identifier value from the settings, but the value is not in the matrix</msg4>
+    <msg5>Room name is not filled in</msg5>
+    <msg6>Room name not found in the matrix</msg6>
+    <msg7>There are rooms with blank or incorrect parameters in the results of the initial check. Are you sure you want to perform an apartment collection?</msg7>
+    <msg8>There is a door that leads to a space without a room</msg8>
+    <msg9>The room is enclosed by structures with no doors</msg9>
+    <msg10>The room matrix is empty! Nothing to export</msg10>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>Number of decimal places</tt3>
+    <tt4>List of allowed values for the "Functional purpose" parameter. This list is used to exclude from the initial check the rooms whose "Functional purpose" parameter value does not correspond to the apartment identifier and is not contained in the room matrix</tt4>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or check the "Create" checkbox and click the "Create missing parameters" button</instruction1>
-    <instruction2>In the room matrix the basic properties for the selection of the rooms to be processed are set, as well as the values for the calculation of the areas. In the "FP" column are specifying the value that will be searched for in the room parameter "RM_FUNCTIONAL PURPOSE"</instruction2>
-    <instruction2_1></instruction2_1>
-    <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "RM_FUNCTION PURPOSE" and "Name". If the value of the "RM_FUNCTIONAL PURPOSE" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
+    <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name</instruction2>
+    <instruction2_1>This table specifies the data used to define the apartment type. The values "Contains rooms" and " Not contains rooms" are filled in with the names of rooms, separated by semicolons (;)</instruction2_1>
+    <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "Functional purpose" and "Name". If the value of the "Functional purpose" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
     <instruction4></instruction4>
     <instruction5></instruction5>
   </mprApartmentBuildingLayout>
