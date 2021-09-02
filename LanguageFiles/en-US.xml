@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.20.0">
+<ModPlus Name="en-US" Version="5.0.21.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -28,6 +28,9 @@
     <comma>Comma</comma>
     <collapse>Collapse</collapse>
     <warning>Warning</warning>
+    <export>Export</export>
+    <import>Import</import>
+    <type>Type</type>
     <mm>mm</mm>
     <cm>cm</cm>
     <m>m</m>
@@ -4572,6 +4575,9 @@
     <h35>Placed on sheet</h35>
     <h36>Project shared parameter</h36>
     <h37>Removing shared parameters</h37>
+    <h38>Unplaced rooms</h38>
+    <h39>Removing unplaced rooms</h39>
+    <h40>Remove all</h40>
     <!-- todo remove start -->
     <yes>Yes</yes>
     <no>No</no>
@@ -6227,9 +6233,42 @@
     <flatAreaS>S ap.</flatAreaS>
     <totalAreaS>S total</totalAreaS>
     <livingAreaS>S liv.</livingAreaS>
-    <fps>Engine room,technical rooms,storage room,commercial,parking,preschool</fps>
     <p1>RM_Func. purpose</p1>
-    <p5>AP_Apartment ID</p5>
+    <pd1>Entered manually! Participates in all basic algorithms of Apartment Layout</pd1>
+    <p2>RM_Room number</p2>
+    <pd2>Replaces the system parameter "Number"</pd2>
+    <p3>AP_Apartment ID</p3>
+    <pd3>Unique apartment index</pd3>
+    <p4>AP_Apartment Type</p4>
+    <pd4>For example: 1K, 2C, 3K</pd4>
+    <p5>AP_Room Type</p5>
+    <pd5>Room Type. Assigned by room matrix</pd5>
+    <p6>AP_Number of living rooms</p6>
+    <pd6>Number of living rooms in the apartment</pd6>
+    <p7>AP_Rounded area</p7>
+    <pd7>Apartment area rounded to a given sign</pd7>
+    <p8>AP_Area with factor</p8>
+    <pd8>The area of the apartment room rounded to a given sign. With a reduction factor</pd8>
+    <p9>AP_Area Factor</p9>
+    <pd9>Понижающий коэффициент для балкона, лоджии, террасы</pd9>
+    <p10>AP_Finishing thickness</p10>
+    <pd10>The thickness of the rough finish used in calculating the areas, in mm</pd10>
+    <p11>AP_Room index</p11>
+    <pd11>Repeating the name of the room in the apartment (If there are names of the same name)</pd11>
+    <p12>AP_Living area</p12>
+    <pd12>The sum of the living room areas of the apartment</pd12>
+    <p13>AP_Apartment area</p13>
+    <pd13>The sum of the areas of non-living rooms of the apartment. Excluding unheated (Total)</pd13>
+    <p14>AP_Total area</p14>
+    <pd14>The sum of all areas of the apartment. Including unheated with a reduction factor (Reduced)</pd14>
+    <p15>AP_Non-heated rooms area</p15>
+    <pd15>The sum of the areas of unheated rooms of the apartment. Without reduction factors</pd15>
+    <p16>AP_Non-heated rooms area with factor</p16>
+    <pd16>The sum of the areas of unheated rooms of the apartment. With a reduction factor</pd16>
+    <p17>AP_Apartments count</p17>
+    <pd17>Total number of apartments in the project</pd17>
+    <p18>AP_Apartment Number</p18>
+    <pd18>To be completed at the end of the project</pd18>
     <pt1>Text</pt1>
     <pt2>Area</pt2>
     <pt3>Currency</pt3>
@@ -6258,6 +6297,56 @@
     <h21>Collecting apartments</h21>
     <h22>Fill data by room matrix</h22>
     <h23>Calculation of areas</h23>
+    <h24>Functional purpose</h24>
+    <h25>Apartment type</h25>
+    <h26>Number of living rooms</h26>
+    <h27>No. of living rooms</h27>
+    <h28>Minimum total area</h28>
+    <h29>Min total area</h29>
+    <h30>Maximum total area</h30>
+    <h31>Max total area</h31>
+    <h32>Contains rooms</h32>
+    <h33>Contains rooms</h33>
+    <h34>Not contains rooms</h34>
+    <h35>Not contains rooms</h35>
+    <h36>Creating parameters</h36>
+    <h37>Import from Excel</h37>
+    <h38>Specify the starting row from which to start reading the data, as well as the column numbers that contain the values for the specified properties</h38>
+    <h39>Start row:</h39>
+    <h40>Collect</h40>
+    <h41>Column "Room Name":</h41>
+    <h42>Column "Finishing thickness":</h42>
+    <h43>Столбец "Тип помещения":</h43>
+    <h44>Столбец "Коэффициент площади":</h44>
+    <h45>Столбец "Приоритет нумерации":</h45>
+    <h46>Столбец "Тип квартиры":</h46>
+    <h47>Столбец "Количество жилых помещений:"</h47>
+    <h48>Столбец "Минимальная общая площадь":</h48>
+    <h49>Столбец "Максимальная общая площадь":</h49>
+    <h50>Столбец "Содержит помещения":</h50>
+    <h51>Столбец "Не содержит помещения":</h51>
+    <h52>Номер помещения</h52>
+    <h53>Проблемы</h53>
+    <h54>В проекте не найдено неразмещенных помещений</h54>
+    <h55>Невалидные помещения</h55>
+    <h54>Все помещения в проекте валидны</h54>
+    <h55>Все помещения на текущем виде валидны</h55>
+    <h56>Параметр</h56>
+    <h57>Использовать</h57>
+    <h58>Собрать квартиры</h58>
+    <h59>Собрано квартир:</h59>
+    <h60>Уровень</h60>
+    <h61>Кол-во помещ.</h61>
+    <h62>Не собрано ни одной квартиры! Убедитесь, что помещения имею корректно заполненные параметры "Функциональное назначение" и "Имя", соответствующие матрице помещений</h62>
+    <h63>Некорректные помещения:</h63>
+    <h64>При сборе квартир не выявлено некорректных помещений</h64>
+    <h65>Обсчитано квартир:</h65>
+    <h66>Не найдено квартир для расчета! Заполните параметры помещений "Функциональное назначение" и "Имя" в соответствии с матрицей помещений, а затем выполните сборку квартир</h66>
+    <h67>Неразмещенные помещения</h67>
+    <h68>Удалить выбранные</h68>
+    <h69>Удалить все</h69>
+    <h70>Для выбора нескольких позиций в списке используйте клавишу Shift и/или клавишу Ctrl</h70>
+    <h71>Рассчитать</h71>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -6277,7 +6366,7 @@
     <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name</instruction2>
     <instruction2_1>This table specifies the data used to define the apartment type. The values "Contains rooms" and " Not contains rooms" are filled in with the names of rooms, separated by semicolons (;)</instruction2_1>
     <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "Functional purpose" and "Name". If the value of the "Functional purpose" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
-    <instruction4></instruction4>
-    <instruction5></instruction5>
+    <instruction4>The apartments are collected through the geometric characteristics of the rooms, taking into account the connection of the rooms through windows, doors and room separators. All rooms of the same apartment are assigned the same value of the "Apartment ID" parameter. It is recommended to perform an additional visual check by creating a color scheme according to the "Apartment ID" parameter</instruction4>
+    <instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
   </mprApartmentBuildingLayout>
 </ModPlus>
