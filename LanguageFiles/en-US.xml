@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.23.0">
+<ModPlus Name="en-US" Version="5.0.24.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -6217,6 +6217,8 @@
     <tab3>Initial check</tab3>
     <tab4>Collecting apartments</tab4>
     <tab5>Calculate apartments</tab5>
+    <tab6>Numbering</tab6>
+    <tab7>Schedules</tab7>
     <rt1>Not set</rt1>
     <rt2>Residential</rt2>
     <rt3>Non-residential</rt3>
@@ -6254,7 +6256,7 @@
     <p8>AP_Area with factor</p8>
     <pd8>The area of the apartment room rounded to a given sign. With a reduction factor</pd8>
     <p9>AP_Area Factor</p9>
-    <pd9>Понижающий коэффициент для балкона, лоджии, террасы</pd9>
+    <pd9>Reduction factor for balcony, loggia, terrace</pd9>
     <p10>AP_Finishing thickness</p10>
     <pd10>The thickness of the rough finish used in calculating the areas, in mm</pd10>
     <p11>AP_Room index</p11>
@@ -6320,51 +6322,74 @@
     <h40>Collect</h40>
     <h41>Column "Room Name":</h41>
     <h42>Column "Finishing thickness":</h42>
-    <h43>Столбец "Тип помещения":</h43>
-    <h44>Столбец "Коэффициент площади":</h44>
-    <h45>Столбец "Приоритет нумерации":</h45>
-    <h46>Столбец "Тип квартиры":</h46>
-    <h47>Столбец "Количество жилых помещений:"</h47>
-    <h48>Столбец "Минимальная общая площадь":</h48>
-    <h49>Столбец "Максимальная общая площадь":</h49>
-    <h50>Столбец "Содержит помещения":</h50>
-    <h51>Столбец "Не содержит помещения":</h51>
-    <h52>Номер помещения</h52>
-    <h53>Проблемы</h53>
-    <h54>В проекте не найдено неразмещенных помещений</h54>
-    <h55>Невалидные помещения</h55>
-    <h54>Все помещения в проекте валидны</h54>
-    <h55>Все помещения на текущем виде валидны</h55>
-    <h56>Параметр</h56>
-    <h57>Использовать</h57>
-    <h58>Собрать квартиры</h58>
-    <h59>Собрано квартир:</h59>
-    <h60>Уровень</h60>
-    <h61>Кол-во помещ.</h61>
-    <h62>Не собрано ни одной квартиры! Убедитесь, что помещения имею корректно заполненные параметры "Функциональное назначение" и "Имя", соответствующие матрице помещений</h62>
-    <h63>Некорректные помещения:</h63>
-    <h64>При сборе квартир не выявлено некорректных помещений</h64>
-    <h65>Обсчитано квартир:</h65>
-    <h66>Не найдено квартир для расчета! Заполните параметры помещений "Функциональное назначение" и "Имя" в соответствии с матрицей помещений, а затем выполните сборку квартир</h66>
-    <h67>Неразмещенные помещения</h67>
-    <h68>Удалить выбранные</h68>
-    <h69>Удалить все</h69>
-    <h70>Для выбора нескольких позиций в списке используйте клавишу Shift и/или клавишу Ctrl</h70>
-    <h71>Рассчитать</h71>
+    <h43>Column "Room type":</h43>
+    <h44>Column "Area factor":</h44>
+    <h45>Column "Numbering priority":</h45>
+    <h46>Column "Apartment type":</h46>
+    <h47>Column "Number of living rooms:"</h47>
+    <h48>Column "Minimum total area":</h48>
+    <h49>Column "Maximum total area":</h49>
+    <h50>Column "Contains rooms":</h50>
+    <h51>Column "Not contains rooms":</h51>
+    <h52>Room number</h52>
+    <h53>Problems</h53>
+    <h54>No unplaced rooms were found in the project</h54>
+    <h55>Invalid rooms</h55>
+    <h54>All rooms in the project are valid</h54>
+    <h55>All rooms on the current view are valid</h55>
+    <h56>Parameter</h56>
+    <h57>Use</h57>
+    <h58>Collect apartments</h58>
+    <h59>Collected apartments:</h59>
+    <h60>Level</h60>
+    <h61>Number of rooms in apartment</h61>
+    <h62>Not a single apartment has been collected! Make sure that the rooms have the correct "Functional Purpose" and "Name" parameters, corresponding to the room matrix</h62>
+    <h63>Incorrect rooms:</h63>
+    <h64>During the collection of apartments no incorrect rooms were found</h64>
+    <h65>Calculated apartments:</h65>
+    <h66>No apartments were found for calculation! Fill in the room parameters "Functional purpose" and "Name" according to the room matrix, and then do the apartment collection</h66>
+    <h67>Unplaced rooms</h67>
+    <h68>Remove selected ones</h68>
+    <h69>Remove all</h69>
+    <h70>Use the Shift key and/or the Ctrl key to select more than one item in the list.</h70>
+    <h71>Calculate</h71>
+    <h72>or</h72>
+    <h73>Collect by selected rooms</h73>
+    <h74>Calculate by selected rooms</h74>
+    <h75>Minimize window contents</h75>
+    <h76>Expand window contents</h76>
+    <h77>Enable the "Over the windows" option</h77>
+    <h78>Disable the "Over the windows" option</h78>
+    <h79>Select all</h79>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
-    <msg4>Parameter "{0}" has an identifier value from the settings, but the value is not in the matrix</msg4>
+    <msg4></msg4>
     <msg5>Room name is not filled in</msg5>
     <msg6>Room name not found in the matrix</msg6>
     <msg7>There are rooms with blank or incorrect parameters in the results of the initial check. Are you sure you want to perform an apartment collection?</msg7>
     <msg8>There is a door that leads to a space without a room</msg8>
     <msg9>The room is enclosed by structures with no doors</msg9>
     <msg10>The room matrix is empty! Nothing to export</msg10>
+    <msg11>The list of apartment types is empty! Nothing to export</msg11>
+    <msg12>No data to import!</msg12>
+    <msg13>The number of filled rows is less than the specified number of the first row!</msg13>
+    <msg14>Delete the current values from the matrix? Yes - delete, No - append.</msg14>
+    <msg15>Delete the current values from the list of room types? Yes - delete, No - append</msg15>
+    <msg16>Failed to construct an auxiliary solid and failed to obtain an auxiliary boundary</msg16>
+    <msg17>Failed to get room boundaries</msg17>
+    <msg18>The room has the wrong boundaries or no boundaries at all</msg18>
+    <msg19>No entry in the matrix for the room "{0}" was found</msg19>
+    <msg20>The entry in the matrix for the room "{0}" is not valid</msg20>
+    <msg21>Failed to get a functional purpose</msg21>
+    <msg22>Running the plugin in a family document is not allowed!</msg22>
+    <msg23>This instruction will not appear on all subsequent runs of the plugin. Are you sure you want to close it?</msg23>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>Number of decimal places</tt3>
     <tt4>List of allowed values for the "Functional purpose" parameter. This list is used to exclude from the initial check the rooms whose "Functional purpose" parameter value does not correspond to the apartment identifier and is not contained in the room matrix</tt4>
+    <tt5>In order to collect the apartments correctly, it is necessary to select all the rooms that should be included in the apartments</tt5>
+    <tt6>To calculate the apartments, just select at least one room in the apartment. The apartments will be collected according to the value of the "Apartment ID" parameter</tt6>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or check the "Create" checkbox and click the "Create missing parameters" button</instruction1>
     <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name</instruction2>
