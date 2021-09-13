@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.26.0">
+<ModPlus Name="en-US" Version="5.0.27.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -4956,6 +4956,10 @@
     <h29>Decrement</h29>
     <h30>Limit</h30>
     <h31>The upper limit of the number when decreasing. This is the number from which numbering will start, reaching zero</h31>
+    <h32>Length of number</h32>
+    <h33>You can add leading zeros to the sheet number. To do this, set the minimum length of the line representing the sheet number. For example, if the sheet number is 15 and you set the length to 3, the result will be 015. To avoid adding leading zeros, set the length to 1</h33>
+    <h34>You can add leading zeros to the number. To do this, set the minimum length of the line representing the number. For example, if the number is 15 and you set the length to 3, the result will be 015. To avoid adding leading zeros, set the length to 1</h34>
+    <h35>Length of sheet number:</h35>
     <p1>whole sheet number</p1>
     <p2>1 part</p2>
     <p3>number of 1 part</p3>
@@ -6343,8 +6347,6 @@
     <h53>Problems</h53>
     <h54>No unplaced rooms were found in the project</h54>
     <h55>Invalid rooms</h55>
-    <h54>All rooms in the project are valid</h54>
-    <h55>All rooms on the current view are valid</h55>
     <h56>Parameter</h56>
     <h57>Use</h57>
     <h58>Collect apartments</h58>
@@ -6369,6 +6371,11 @@
     <h77>Enable the "Over the windows" option</h77>
     <h78>Disable the "Over the windows" option</h78>
     <h79>Select all</h79>
+    <h80>Restore hiding instructions</h80>
+    <h81>The plugin has a built-in service for automatic recalculation of apartment areas when the size of the rooms changes and a service for complete recalculation (parameterization by matrix, area recalculation and apartment type determination) when the rooms are deleted. The services process only rooms with filled "Apartment ID" parameter</h81>
+    <h82>Search by room name</h82>
+    <h83>All rooms in the project are valid</h83>
+    <h84>All rooms on the current view are valid</h84>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -6394,12 +6401,12 @@
     <msg23>This instruction will not appear on all subsequent runs of the plugin. Are you sure you want to close it?</msg23>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
-    <tt3>Number of decimal places</tt3>
+    <tt3></tt3>
     <tt4>List of allowed values for the "Functional purpose" parameter. This list is used to exclude from the initial check the rooms whose "Functional purpose" parameter value does not correspond to the apartment identifier and is not contained in the room matrix</tt4>
     <tt5>In order to collect the apartments correctly, it is necessary to select all the rooms that should be included in the apartments</tt5>
     <tt6>To calculate the apartments, just select at least one room in the apartment. The apartments will be collected according to the value of the "Apartment ID" parameter</tt6>
     <instruction>Instruction</instruction>
-    <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or check the "Create" checkbox and click the "Create missing parameters" button</instruction1>
+    <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or check the "Create" checkbox and click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
     <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name</instruction2>
     <instruction2_1>This table specifies the data used to define the apartment type. The values "Contains rooms" and " Not contains rooms" are filled in with the names of rooms, separated by semicolons (;)</instruction2_1>
     <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "Functional purpose" and "Name". If the value of the "Functional purpose" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
