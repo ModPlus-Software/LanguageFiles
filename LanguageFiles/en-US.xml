@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.27.0">
+<ModPlus Name="en-US" Version="5.0.29.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -31,6 +31,8 @@
     <export>Export</export>
     <import>Import</import>
     <type>Type</type>
+    <number>Number</number>
+    <layer>Layer</layer>
     <mm>mm</mm>
     <cm>cm</cm>
     <m>m</m>
@@ -1733,12 +1735,14 @@
   <mpStamps LocalName="Title blocks"
             Description="Plugin of inserting title blocks in the drawing (as AutoCAD tables) according to normative documentation, with field support"
             FullDescription="Using the &quot;Field&quot; plugin allows you to add additional values to the document that you can insert into the title block in the form of fields. This allows you to change the values in the title block at once in all the title blocks throughout the document">
+    <!-- todo remove start -->
     <insert>Insert</insert>
     <no>No</no>
     <export>Export</export>
     <import>Import</import>
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
+    <!-- todo remove end -->
     <h1>Title blocks</h1>
     <h2>Name of title block</h2>
     <h3>Normative documents for:</h3>
@@ -1837,6 +1841,8 @@
     <h97>Insert signatures</h97>
     <h98>Launch "Signatures" plugin</h98>
     <h99>The signature is inserted in the lower left corner of the cell to the right of the cell with the surname. The scale of tables (title blocks) is not taken into account!</h99>
+    <h100>Default layer</h100>
+    <h101>Copy layout name into the title block</h101>
     <msg1>The configuration file is corrupt!\nRun the ModPlus Configurator</msg1>
     <msg2>An error has occurred!</msg2>
     <msg3>Value</msg3>
@@ -6271,7 +6277,7 @@
     <p10>AP_Finishing thickness</p10>
     <pd10>The thickness of the rough finish used in calculating the areas, in mm</pd10>
     <p11>AP_Room index</p11>
-    <pd11>Repeating the name of the room in the apartment (If there are names of the same name)</pd11>
+    <pd11>The order number of the same-name rooms in the apartment</pd11>
     <p12>AP_Living area</p12>
     <pd12>The sum of the living room areas of the apartment</pd12>
     <p13>AP_Apartment area</p13>
@@ -6282,8 +6288,8 @@
     <pd15>The sum of the areas of unheated rooms of the apartment. Without reduction factors</pd15>
     <p16>AP_Non-heated rooms area with factor</p16>
     <pd16>The sum of the areas of unheated rooms of the apartment. With a reduction factor</pd16>
-    <p17>AP_Apartments count</p17>
-    <pd17>Total number of apartments in the project</pd17>
+    <p17>AP_Apartment tag</p17>
+    <pd17>Auxiliary parameter that allows you to count the number of apartments in the schedules</pd17>
     <p18>AP_Apartment Number</p18>
     <pd18>To be completed at the end of the project</pd18>
     <pt1>Text</pt1>
@@ -6376,10 +6382,34 @@
     <h82>Search by room name</h82>
     <h83>All rooms in the project are valid</h83>
     <h84>All rooms on the current view are valid</h84>
+    <h85>Save as default</h85>
+    <h86>Saves the current parameter mapping as default values. When you run the plugin in a new document in which no parameter mapping is configured, the saved default values will be substituted (if there are parameters in the document)</h86>
+    <h87>Numbering</h87>
+    <h88>Apartment numbering</h88>
+    <h89>Numbered apartments:</h89>
+    <h90>No apartments were found for numbering</h90>
+    <h91>Grouping parameters</h91>
+    <h92>Numbering settings</h92>
+    <h93>End-to-end numbering</h93>
+    <h94>Numbering direction:</h94>
+    <h95>clockwise</h95>
+    <h96>counterclockwise</h96>
+    <h97>Start of numbering:</h97>
+    <h98>top left corner</h98>
+    <h99>top right corner</h99>
+    <h100>bottom left corner</h100>
+    <h101>bottom right corner</h101>
+    <h102>point</h102>
+    <h103>Initial number:</h103>
+    <h104>Grouping by Corps</h104>
+    <h105>Grouping by Section</h105>
+    <h106>Sorting:</h106>
+    <h107>ascending</h107>
+    <h108>descending</h108>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
-    <msg4></msg4>
+    <msg4>The parameters specified in the list are not available for the rooms of the current project:</msg4>
     <msg5>Room name is not filled in</msg5>
     <msg6>Room name not found in the matrix</msg6>
     <msg7>There are rooms with blank or incorrect parameters in the results of the initial check. Are you sure you want to perform an apartment collection?</msg7>
@@ -6406,11 +6436,12 @@
     <tt5>In order to collect the apartments correctly, it is necessary to select all the rooms that should be included in the apartments</tt5>
     <tt6>To calculate the apartments, just select at least one room in the apartment. The apartments will be collected according to the value of the "Apartment ID" parameter</tt6>
     <instruction>Instruction</instruction>
-    <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or check the "Create" checkbox and click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
-    <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name</instruction2>
+    <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
+    <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name. In the "Room name" column you can specify an asterisk at the end of the name, which will indicate a check for a match at the beginning of the room name (for example, the value "Bedroom*" will match the room names "Bedroom 1", "Bedroom 2", etc.)</instruction2>
     <instruction2_1>This table specifies the data used to define the apartment type. The values "Contains rooms" and " Not contains rooms" are filled in with the names of rooms, separated by semicolons (;)</instruction2_1>
     <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "Functional purpose" and "Name". If the value of the "Functional purpose" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
     <instruction4>The apartments are collected through the geometric characteristics of the rooms, taking into account the connection of the rooms through windows, doors and room separators. All rooms of the same apartment are assigned the same value of the "Apartment ID" parameter. It is recommended to perform an additional visual check by creating a color scheme according to the "Apartment ID" parameter</instruction4>
     <instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
+    <instruction6></instruction6>
   </mprApartmentBuildingLayout>
 </ModPlus>
