@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.29.0">
+<ModPlus Name="en-US" Version="5.0.31.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -174,6 +174,8 @@
     <u43>If you are having trouble with authorization using your browser, you can</u43>
     <u44>authorize</u44>
     <u45>using your account username and password</u45>
+    <u46>Show only for</u46>
+    <u47>Hide expired subscriptions</u47>
     <nnAll>All news</nnAll>
     <nndAll>Show all news</nndAll>
     <nn0>Important news is shown regardless of the settings</nn0>
@@ -6236,6 +6238,7 @@
     <tab5>Calculate apartments</tab5>
     <tab6>Numbering</tab6>
     <tab7>Schedules</tab7>
+    <tab8>Views of apartments</tab8>
     <rt1>Not set</rt1>
     <rt2>Residential</rt2>
     <rt3>Non-residential</rt3>
@@ -6406,6 +6409,9 @@
     <h106>Sorting:</h106>
     <h107>ascending</h107>
     <h108>descending</h108>
+    <h109>Couldn't find the entrance door!</h109>
+    <h110>Housing</h110>
+    <h111>Section</h111>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -6422,7 +6428,7 @@
     <msg14>Delete the current values from the matrix? Yes - delete, No - append.</msg14>
     <msg15>Delete the current values from the list of room types? Yes - delete, No - append</msg15>
     <msg16>Failed to construct an auxiliary solid and failed to obtain an auxiliary boundary</msg16>
-    <msg17>Failed to get room boundaries</msg17>
+    <msg17>Failed to get room boundaries. Check the boundary of the room for small imperfections. Such imperfections are most often caused by inaccurate construction of the boundary elements</msg17>
     <msg18>The room has the wrong boundaries or no boundaries at all</msg18>
     <msg19>No entry in the matrix for the room "{0}" was found</msg19>
     <msg20>The entry in the matrix for the room "{0}" is not valid</msg20>
@@ -6431,7 +6437,7 @@
     <msg23>This instruction will not appear on all subsequent runs of the plugin. Are you sure you want to close it?</msg23>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
-    <tt3></tt3>
+    <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
     <tt4>List of allowed values for the "Functional purpose" parameter. This list is used to exclude from the initial check the rooms whose "Functional purpose" parameter value does not correspond to the apartment identifier and is not contained in the room matrix</tt4>
     <tt5>In order to collect the apartments correctly, it is necessary to select all the rooms that should be included in the apartments</tt5>
     <tt6>To calculate the apartments, just select at least one room in the apartment. The apartments will be collected according to the value of the "Apartment ID" parameter</tt6>
@@ -6442,6 +6448,6 @@
     <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "Functional purpose" and "Name". If the value of the "Functional purpose" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
     <instruction4>The apartments are collected through the geometric characteristics of the rooms, taking into account the connection of the rooms through windows, doors and room separators. All rooms of the same apartment are assigned the same value of the "Apartment ID" parameter. It is recommended to perform an additional visual check by creating a color scheme according to the "Apartment ID" parameter</instruction4>
     <instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
-    <instruction6></instruction6>
+    <instruction6>Numbering can be done by grouping the apartments by Housings and/or Sections by enabling the corresponding options and by specifying the parameter names from which to take the value of the Housing and/or Sections. In this case, it is considered that the sections are subgroups for the housings. The " End-to-end numbering" property means that the numbering in the next group will continue, not start from the value set in the " Initial number" property. If you select the " Point " option in the "Start of numbering" property, you will need to select a room for each group of apartments</instruction6>
   </mprApartmentBuildingLayout>
 </ModPlus>
