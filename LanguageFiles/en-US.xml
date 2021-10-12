@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.31.0">
+<ModPlus Name="en-US" Version="5.0.33.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -36,6 +36,7 @@
     <mm>mm</mm>
     <cm>cm</cm>
     <m>m</m>
+    <room>Room</room>
   </Common>
   <ModPlusAPI>
     <msg1>Failed to create Word object! Make sure you installed Microsoft Office</msg1>
@@ -112,6 +113,8 @@
     <h58>Select Excel file</h58>
     <h59>Excel file|*.xlsx</h59>
     <h60>Choose a sheet:</h60>
+    <h61>Your version of ModPlus is cracked!</h61>
+    <h62>Files modified by third parties were found as part of the ModPlus software! The work of the plugin has been interrupted!</h62>
     <m1>Enter your email address</m1>
     <m2>The email address is used as a unique key to identify your data on the server.\nIt is recommended to use the email address you provided when registering on modplus.org</m2>
     <m3>Attention! The use of social networks for authorization is possible only after linking social network accounts to a personal account on the site! Otherwise, when you try to log in through social networks, a new account will be created on the site, and you will lose your license data!</m3>
@@ -6412,6 +6415,9 @@
     <h109>Couldn't find the entrance door!</h109>
     <h110>Housing</h110>
     <h111>Section</h111>
+    <h112>Housing to number</h112>
+    <h113>Section to number</h113>
+    <h114>Not selected</h114>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -6441,6 +6447,8 @@
     <tt4>List of allowed values for the "Functional purpose" parameter. This list is used to exclude from the initial check the rooms whose "Functional purpose" parameter value does not correspond to the apartment identifier and is not contained in the room matrix</tt4>
     <tt5>In order to collect the apartments correctly, it is necessary to select all the rooms that should be included in the apartments</tt5>
     <tt6>To calculate the apartments, just select at least one room in the apartment. The apartments will be collected according to the value of the "Apartment ID" parameter</tt6>
+    <tt7>The value of the "Housing" parameter will be added to the apartment number as a prefix, separated by a hyphen</tt7>
+    <tt8>The value of the "Section" parameter will be added to the apartment number as a prefix, separated by a hyphen</tt8>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
     <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name. In the "Room name" column you can specify an asterisk at the end of the name, which will indicate a check for a match at the beginning of the room name (for example, the value "Bedroom*" will match the room names "Bedroom 1", "Bedroom 2", etc.)</instruction2>
@@ -6450,4 +6458,11 @@
     <instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
     <instruction6>Numbering can be done by grouping the apartments by Housings and/or Sections by enabling the corresponding options and by specifying the parameter names from which to take the value of the Housing and/or Sections. In this case, it is considered that the sections are subgroups for the housings. The " End-to-end numbering" property means that the numbering in the next group will continue, not start from the value set in the " Initial number" property. If you select the " Point " option in the "Start of numbering" property, you will need to select a room for each group of apartments</instruction6>
   </mprApartmentBuildingLayout>
+  <mprRoomColorVolume LocalName="Show room volume"
+                      Description="Showing the volume of rooms in color using DirectShape"
+                      FullDescription="The Plugin lets you create DirectShape elements based on the volume of rooms in the model and assign different colors to the DirectShape elements you create. In the plugin window, you can group the created DirectShape elements by the value of the associated room parameter, and you can assign a single color to all DirectShape elements in the group">
+    <h1>Changing colors is available in the full version of the plugin</h1>
+    <h2>Set random colors for all room volume views in the group</h2>
+    <h3>For the current view of the room volume there is no room found in the model. Probably the room has been deleted</h3>
+  </mprRoomColorVolume>
 </ModPlus>
