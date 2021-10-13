@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.0.33.0">
+<ModPlus Name="en-US" Version="5.1.0.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -6458,11 +6458,27 @@
     <instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
     <instruction6>Numbering can be done by grouping the apartments by Housings and/or Sections by enabling the corresponding options and by specifying the parameter names from which to take the value of the Housing and/or Sections. In this case, it is considered that the sections are subgroups for the housings. The " End-to-end numbering" property means that the numbering in the next group will continue, not start from the value set in the " Initial number" property. If you select the " Point " option in the "Start of numbering" property, you will need to select a room for each group of apartments</instruction6>
   </mprApartmentBuildingLayout>
-  <mprRoomColorVolume LocalName="Show room volume"
+  <mprRoomColorVolume LocalName="Room volume"
                       Description="Showing the volume of rooms in color using DirectShape"
                       FullDescription="The Plugin lets you create DirectShape elements based on the volume of rooms in the model and assign different colors to the DirectShape elements you create. In the plugin window, you can group the created DirectShape elements by the value of the associated room parameter, and you can assign a single color to all DirectShape elements in the group">
     <h1>Changing colors is available in the full version of the plugin</h1>
     <h2>Set random colors for all room volume views in the group</h2>
     <h3>For the current view of the room volume there is no room found in the model. Probably the room has been deleted</h3>
+    <h4>Group by parameter:</h4>
+    <h5>Plugin work in family document is not available!</h5>
+    <h6>(Re)create for all rooms</h6>
+    <h7>Create missing</h7>
+    <h8>Remove all volume views</h8>
+    <h9>Remove volume views without the source room</h9>
+    <h10>Save grouping parameter</h10>
+    <h11>Parameter is not set or has no value</h11>
+    <h12>Missing</h12>
+    <h13>No room</h13>
+    <h14>(Re)create volume views</h14>
+    <h15>Create missing volume views</h15>
+    <h16>Remove volume views</h16>
+    <h17>Change the color of volume views</h17>
+    <h18>The room geometry does not satisfy the conditions for creating a volume view</h18>
+    <h19>An error occurred while processing the room:</h19>
   </mprRoomColorVolume>
 </ModPlus>
