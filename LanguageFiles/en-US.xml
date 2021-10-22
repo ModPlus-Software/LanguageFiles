@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.1.2.0">
+<ModPlus Name="en-US" Version="5.1.3.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -6422,6 +6422,14 @@
     <h114>Not selected</h114>
     <h115>No apartments found on the current view</h115>
     <h116>Parameter value to number</h116>
+    <h117>View duplication option:</h117>
+    <h118>Duplicate</h118>
+    <h119>Duplicate with detailing</h119>
+    <h120>Apply view template:</h120>
+    <h121>Crop contour offset:</h121>
+    <h122>Apply view scale:</h122>
+    <h123>Try to use the apartment type as a view name</h123>
+    <h124>Create apartment views</h124>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -6445,6 +6453,13 @@
     <msg21>Failed to get a functional purpose</msg21>
     <msg22>Running the plugin in a family document is not allowed!</msg22>
     <msg23>This instruction will not appear on all subsequent runs of the plugin. Are you sure you want to close it?</msg23>
+    <msg24>An error occurred while creating the view</msg24>
+    <msg25>It was not possible to create a contour on the boundary construction, taking into account each construction</msg25>
+    <msg26>The option of creating a contour according to the greatest thickness of the boundary constructions was used</msg26>
+    <msg27>It was not possible to create a contour on the boundary constructions, taking into account the greatest thickness of the boundary constructions</msg27>
+    <msg28>The option of creating the contour of the apartment according to the contours of the rooms was used</msg28>
+    <msg29>Failed to get the contour of the apartment. Error:</msg29>
+    <msg30>The view of the apartment is not created</msg30>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -6462,6 +6477,7 @@
     <instruction4>The apartments are collected through the geometric characteristics of the rooms, taking into account the connection of the rooms through windows, doors and room separators. All rooms of the same apartment are assigned the same value of the "Apartment ID" parameter. It is recommended to perform an additional visual check by creating a color scheme according to the "Apartment ID" parameter</instruction4>
     <instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
     <instruction6>Numbering can be done by grouping the apartments by Housings and/or Sections by enabling the corresponding options and by specifying the parameter names from which to take the value of the Housing and/or Sections. In this case, it is considered that the sections are subgroups for the housings. The " End-to-end numbering" property means that the numbering in the next group will continue, not start from the value set in the " Initial number" property. If you select the " Point " option in the "Start of numbering" property, you will need to select a room for each group of apartments</instruction6>
+    <instruction7>Creating apartment views is done by duplicating the current view, followed by cropping along the contour of the apartment. First of all, an attempt is made to create a crop contour considering the thickness of the enclosing walls (only for Revit 2020 and higher). If unsuccessful, an attempt is made to create a crop contour taking into account the thickest of the enclosing walls. If the crop contour is not created, the apartment contour obtained from the room boundaries will be used. If the option "Try to use apartment type as view name" is enabled, the created views will be given a name of the type "LEVEL_NAME - Apartment APARTMENT_TYPE".</instruction7>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume LocalName="Room volume"
                       Description="Showing the volume of rooms in color using DirectShape"
