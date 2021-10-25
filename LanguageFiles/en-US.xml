@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.1.6.0">
+<ModPlus Name="en-US" Version="5.1.7.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -5595,6 +5595,8 @@
     <h14>Types</h14>
     <h15>Other elements</h15>
     <h16>Suppress warnings</h16>
+    <filters>Filters</filters>
+    <link>Link:</link>
     <co1>Allow duplicates</co1>
     <co2>Refuse duplicates</co2>
     <co3>Ask user</co3>
@@ -5628,7 +5630,7 @@
     <m28>All groups</m28>
     <m29>Views (Templates)</m29>
     <m30>Copying finished</m30>
-    <m31>Elements copied: {0};{1}Errors: {2};{3}View log for details</m31>
+    <m31>Elements copied: {0};{1}Skipped: {2};{3}Errors: {4};{5}View log for details</m31>
     <m32>Cancel</m32>
     <m33>Search</m33>
     <m34>Area plan</m34>
@@ -5662,6 +5664,8 @@
     <m62>there was a critical Revit warning that required confirmation from the user. Disable warning suppression and try copying again</m62>
     <m63>Shared parameters</m63>
     <m64>No category</m64>
+    <m65>{0} - Copying element "{1} (id {2})" of category "{3}" skipped.</m65>
+    <m66>The target document already has the "{0}" family with the type "{1}".{2}Copy?</m66>
   </mprCopyElementsToOpenDocuments>
   <mprMepElementsBender LocalName="MEP clash solver"
                         Description="Solves MEP elements clashes"
