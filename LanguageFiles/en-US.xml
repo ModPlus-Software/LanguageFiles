@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.2.0.0">
+<ModPlus Name="en-US" Version="5.3.0.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -18,6 +18,8 @@
     <settings>Settings</settings>
     <sheet>Sheet</sheet>
     <convert>Convert</convert>
+    <add>Add</add>
+    <auto>Auto</auto>
     <yes>Yes</yes>
     <no>No</no>
     <prefix>Prefix</prefix>
@@ -37,6 +39,9 @@
     <cm>cm</cm>
     <m>m</m>
     <room>Room</room>
+    <number>Number</number>
+    <execute>Execute</execute>
+    <clear>Clear</clear>
   </Common>
   <ModPlusAPI>
     <msg1>Failed to create Word object! Make sure you installed Microsoft Office</msg1>
@@ -4510,12 +4515,14 @@
   <mmOrderMarking LocalName="Numbering"
                   Description="Adding numbering to the specified parameter of elements with the possibility of numbering in the schedules"
                   FullDescription="When working in a non-schedule view, you can specify the direction of numbering based on the arrangement of elements, or add numbering in the order in which elements were created. When working in a schedule, the plugin adds numbering in the order of items in the schedule (taking into account sorting). The schedule property &quot;Itemized every instance&quot; affects the speed of the plugin. It is possible to set the prefix and suffix for the number">
+    <!-- todo remove start -->
     <h1>Prefix</h1>
     <h2>Number</h2>
     <h3>Suffix</h3>
     <h4>Execute</h4>
     <h5>Clear</h5>
     <h6>Settings</h6>
+    <!-- todo remove end -->
     <h7>Initial value:</h7>
     <h8>Numbering direction:</h8>
     <h9>Parameter name:</h9>
@@ -4531,6 +4538,9 @@
     <h19>Categories to filter</h19>
     <h20>Selection variant:</h20>
     <h21>Selected elements count:</h21>
+    <h22>Algorithm for determining positions:</h22>
+    <a1>Through deletion of rows</a1>
+    <a2>Through signal value</a2>
     <sv1>Standard frame selection</sv1>
     <sv2>Ordinal selection</sv2>
     <sv3>Curve intersection</sv3>
@@ -4543,6 +4553,10 @@
     <t5>Curve intersection - Select a curve (model line or detail line). The elements for numbering will be selected by finding the intersection of the curve with the geometry of the elements in the current view, projected onto the plane of the view. With this option, the direction of numbering can be ascending or descending.</t5>
     <t6>For all selection variants elements can filter by category both before and after elements selection.</t6>
     <t7>The list of parameters is filled in after selecting the elements for numbering.</t7>
+    <t8>For schedules that have the "Itemized" checkbox unchecked, there are two algorithms for determining positions:</t8>
+    <t9>Through deletion of rows - fast algorithm. This algorithm does not always work correctly, as there are cases when it is impossible to delete rows, and there are cases when deleting some rows leads to other rows.</t9>
+    <t10>Through signal value - is a slow algorithm. This algorithm requires constant regeneration of the specification, which leads to high time costs. The more elements in the schedule, the more time is required.</t10>
+    <t11>It is recommended to use the fast algorithm first. If the fast algorithm fails, then use the slow algorithm</t11>
     <m1>Select elements for numbered marking</m1>
     <m2>No items on current view schedule</m2>
     <m3>Filter selected elements by the current list of categories?</m3>
@@ -4753,6 +4767,7 @@
     <h96>By parameter:</h96>
     <h97>Параметр</h97>
     <h98>Distance between the centers of the rods</h98>
+    <h99>Distance between the edges of the rods</h99>
     <h104>Overlap length of straight joint, mm:</h104>
     <h105>Calculate anchoring length</h105>
     <h106>Floor anchoring length, mm:</h106>
@@ -6001,7 +6016,12 @@
     <h24>Section</h24>
     <h25>Longitudinal reinforcement</h25>
     <h27>Working reinforcement cover:</h27>
+    <coverTop>Top:</coverTop>
+    <coverBottom>Bottom:</coverBottom>
+    <coverSide>Side:</coverSide>
+    <coverEnd>Ends:</coverEnd>
     <h28>Cover for the working reinforcement shall be not less than 20 mm or not less than the diameter of the reinforcement</h28>
+    <!-- todo remove -->
     <h29>The diameter of the longitudinal working rebars of precast columns it is recommended to appoint not less than 16 mm. For monolithic columns and for structural reinforcement may be applied bar diameter 12 mm</h29>
     <h30>Parameter</h30>
     <h31>The number of rods in width:</h31>
@@ -6011,8 +6031,8 @@
     <h35>Cross-sectional area of ​​reinforcement, sq.mm:</h35>
     <h36>Reinforcement percentage:</h36>
     <h37>The cross-sectional area of ​​longitudinal reinforcement is not recommended to assign more than 5% of the cross-sectional area of ​​the beam</h37>
-    <h38>Spaces between the edges of the rods along the width of the column:</h38>
-    <h39>Spaces between the edges of the rods along the depth of the column:</h39>
+    <h38>Spaces between the edges of the rods along the width of the beam:</h38>
+    <h39>Spaces between the edges of the rods along the height of the beam:</h39>
     <h40>Attention! When changing the diameter, cover or number of rods, the distances between the rods will be reset to equivalent values!</h40>
     <h41>Longitudinal reinforcement joints</h41>
     <h42>Transverse reinforcement (layout)</h42>
@@ -6050,10 +6070,12 @@
     <h90>Thickening at the ends of the beam</h90>
     <h91>Thickening of reinforcement at the ends of the beam in the absence of underlying elements</h91>
     <h92>Attention! The number and position of longitudinal reinforcement bars, as well as the layout of the transverse reinforcement are not saved and not copied!</h92>
-    <h93>Take into account underlying and end columns and walls</h93>
+    <h93>Triangular stirrups:</h93>
+    <h94>Take into account underlying and end columns and walls</h94>
     <h97>Параметр</h97>
     <h96>By parameter:</h96>
     <h98>Distance between the centers of the rods</h98>
+    <h99>Distance between the edges of the rods</h99>
     <h104>Anchoring length of straight joints, mm:</h104>
     <h141>Do not close the window after creating reinforcement</h141>
     <h147>Reset</h147>
@@ -6070,6 +6092,7 @@
     <h187>Reselect beams that were processed in the current view when using the plugin</h187>
     <h205>C-shaped cross holes (stirrups). Revit hooks:</h205>
     <h206>S-shaped cross holes (stirrups). Revit hooks:</h206>
+    <hook>Hook:</hook>
     <jt1>Longitudinal reinforcement joints are not created. The rods are cut off at the side of the beam according to the specified value of the cover layer from the ends of the reinforcement</jt1>
     <jt2>Straight joints of the rebars of the longitudinal reinforcement are created. The anchoring length is set from the edge of the beam. The joints are only created if there is a wall or column at the end of the beam, otherwise the joints will not be created and the longitudinal bars will be cut at the end of the beam, taking into account the specified ends cover</jt2>
     <m1>Pick beams</m1>
@@ -6082,23 +6105,29 @@
     <m23>Reinforcement settings copied</m23>
     <m25>No groups were selected for creating reinforcement!</m25>
     <m27>Attention! No loaded rebar shapes found in the current project! In this case, the rebar shapes created during the operation of the plugin cannot be opened in the Family Editor! It is recommended that before using the plugin, load the rebar shapes into the project!\nPerform reinforcement, despite the missing rebar shapes?</m27>
+    <!-- todo remove -->
     <create>Create</create>
     <rn>Rebar ⌀</rn>
+    <!-- todo remove -->
     <mm>mm</mm>
     <full>Available in full version!</full>
     <full2>Limited version only has one form available</full2>
+    <!-- todo remove start -->
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
     <yes>Yes</yes>
     <no>No</no>
     <saved>Saved</saved>
+    <!-- todo remove end -->
     <parameters>Parameters</parameters>
     <name>Name</name>
+    <!-- todo remove start -->
     <value>Value</value>
     <copy>Copy</copy>
     <paste>Paste</paste>
     <auto>Auto</auto>
     <add>Add</add>
+    <!-- todo remove end -->
     <noInFamily>Plugin operation in families is not available!</noInFamily>
     <p1>Analysis of the beam:</p1>
     <p2>Search for related elements:</p2>
@@ -6139,6 +6168,8 @@
     <re1>An error occurred while creating longitudinal reinforcement for beam id = {0}:</re1>
     <re2>An error occurred while calculating the location points of the transverse reinforcement for beam id = {0}:</re2>
     <re3>An error occurred while creating a transverse reinforcement part of type "{0}" in beam id = {1}:</re3>
+    <re4>Failed to create a straight rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re4>
+    <re5>Failed to create a rebar of shape "{0}" with a given preferred shape of rebar "{1}". Error: {2}\nAn attempt was made to create a rebar with automatic rebar shape selection or creation</re5>
   </mprBeamsReinforcement>
   <mprElevations LocalName="Spot dimensions"
                  Description="Quick creation of spot dimensions on section and elevation views"
