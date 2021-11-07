@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.3.1.0">
+<ModPlus Name="en-US" Version="5.3.2.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -4814,6 +4814,7 @@
     <h205>C-shaped cross holes (stirrups). Revit hooks:</h205>
     <h206>S-shaped cross holes (stirrups). Revit hooks:</h206>
     <h207>Spiral rebars:</h207>
+    <h208>Use column geometry without considering connections</h208>
     <h221>Longitudinally curved rods (bent into a "bottle")</h221>
     <hook>Hook:</hook>
     <err1>No overlying floor found or distance to overlying column is 0</err1>
@@ -4841,23 +4842,29 @@
     <m23>Reinforcement settings copied</m23>
     <m25>No groups were selected for creating reinforcement!</m25>
     <m27>Attention! No loaded rebar shapes found in the current project! In this case, the rebar shapes created during the operation of the plugin cannot be opened in the Family Editor! It is recommended that before using the plugin, load the rebar shapes into the project!\nPerform reinforcement, despite the missing rebar shapes?</m27>
+    <!-- todo remove -->
     <create>Create</create>
     <rn>Rebar ⌀</rn>
+    <!-- todo remove -->
     <mm>mm</mm>
     <full>Available in full version!</full>
     <full2>Limited version only has one form available</full2>
+    <!-- todo remove start -->
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
     <yes>Yes</yes>
     <no>No</no>
     <saved>Saved</saved>
+    <!-- todo remove end -->
     <parameters>Parameters</parameters>
     <name>Name</name>
+    <!-- todo remove start -->
     <value>Value</value>
     <copy>Copy</copy>
     <paste>Paste</paste>
     <auto>Auto</auto>
     <add>Add</add>
+    <!-- todo remove end -->
     <noInFamily>Plugin operation in families is not available!</noInFamily>
     <p1>Analysis of the column:</p1>
     <p2>Search for related elements:</p2>
@@ -4872,6 +4879,7 @@
     <e5>Failed to get the top or bottom face</e5>
     <e6>Failed to determine transverse profile</e6>
     <e7>The name of the shape used to create the spiral reinforcement is not specified. Use the Preferred Rebar Shapes window to specify the shape of the spiral rebar</e7>
+    <!-- todo remove -->
     <e8>The specified spiral reinforcement shape was not found in the current document</e8>
     <e9>The specified parameter that specifies the radius of the spiral reinforcement was not found in the document</e9>
     <t7>The group contains columns whose reinforcement settings have been manually edited and differ from the group reinforcement settings</t7>
@@ -4896,6 +4904,8 @@
     <re1>An error occurred while creating longitudinal reinforcement for column id = {0}:</re1>
     <re2>An error occurred while calculating the location points of the transverse reinforcement for column id = {0}:</re2>
     <re3>An error occurred while creating a transverse reinforcement part of type "{0}" in column id = {1}:</re3>
+    <re4>Failed to create a straight rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re4>
+    <re5>Failed to create a rebar of shape "{0}" with a given preferred shape of rebar "{1}". Error: {2}\nAn attempt was made to create a rebar with automatic rebar shape selection or creation</re5>
     <re17>Error while creating joints from slab id={0} to column id={1}:</re17>
   </mprColumnsReinforcement>
   <mpStripMtext LocalName="Clear formatting"
