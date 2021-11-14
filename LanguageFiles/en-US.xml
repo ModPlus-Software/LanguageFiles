@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.3.3.0">
+<ModPlus Name="en-US" Version="5.3.4.0">
   <Common>
     <ok>Ok</ok>
     <accept>Accept</accept>
@@ -4098,6 +4098,7 @@
     <h1>Settings</h1>
     <h2>PLUGIN WINDOW:</h2>
     <h3>Transparency of the window</h3>
+    <!-- todo remove -->
     <h4>Over the windows</h4>
     <h5>DISPLAY IN THE MODEL:</h5>
     <h6>Scaling factor:</h6>
@@ -4726,6 +4727,7 @@
     <h49>Joints of longitudinal reinforcement of the top columns</h49>
     <h50>Settings</h50>
     <h51>PLUGIN WINDOW:</h51>
+    <!-- todo remove -->
     <h52>Over the windows</h52>
     <h53>DISPLAY IN THE MODEL:</h53>
     <h54>Scaling factor:</h54>
@@ -5425,6 +5427,7 @@
     <h2>Pick slabs</h2>
     <h3>Select all slabs on current view</h3>
     <h4>Select all slabs in document</h4>
+    <!-- todo remove -->
     <h5>Reinforcement is possible only in structural slabs</h5>
     <h6>Select</h6>
     <h7>Analyze</h7>
@@ -5442,6 +5445,7 @@
     <h19>Offset of the outermost rod (along the axis of the rod) from the edge of the slab:</h19>
     <h20>Settings</h20>
     <h21>PLUGIN WINDOW:</h21>
+    <!-- todo remove -->
     <h22>Over the windows</h22>
     <h23>First mesh (top)</h23>
     <h24>Second mesh (bottom)</h24>
@@ -5471,7 +5475,7 @@
     <h48>Copy to all checked holes of the current slab</h48>
     <h49>Copy to all checked holes of all checked slabs</h49>
     <h50>Undefined</h50>
-    <h51>Holes up to 300 mm are not framed</h51>
+    <h51>It is not recommended to perform framing of holes up to 300 mm</h51>
     <h52>The boundaries of the hole are not aligned with the direction of reinforcement. Framing is not possible!</h52>
     <h53>Apply top and bottom cover settings only for background meshes</h53>
     <h54>Create each detail with a separate rebar</h54>
@@ -5480,6 +5484,7 @@
     <h57>Parameters of longitudinal reinforcement</h57>
     <h58>Parameters of transverse reinforcement</h58>
     <h59>Create with a step of background reinforcement</h59>
+    <h60>Filler rod at the edge of the slab with an indentation (in the center) from the outermost rod:</h60>
     <h61>Calculation of anchoring by SP 52-101-2003</h61>
     <h62>Diameter:</h62>
     <h63>Sectional area, mm²:</h63>
@@ -5497,7 +5502,16 @@
     <h77>Rebar bar type:</h77>
     <h78>Diameter, mm:</h78>
     <h79>Step, mm:</h79>
+    <h80>Set the type for the created "Area Reinforcement" instances:</h80>
+    <h81>Each mesh</h81>
+    <h82>Translate "Area Reinforcement" parameter values into rebars</h82>
     <h84>Cover from the rebars ends, mm:</h84>
+    <h85>Reinforcement of ends in longitudinal direction</h85>
+    <h86>Reinforcement of ends in transverse direction</h86>
+    <h87>Repeat the end reinforcement settings in the longitudinal direction</h87>
+    <h88>Bottom mesh orientation:</h88>
+    <h89>It is not possible to use the co-directional orientation of the bottom mesh when using area reinforcement for all background reinforcement. A mirror orientation will be used</h89>
+    <h91>Do not create a detail if the generation results in a detail length of less than, mm:</h91>
     <h92>Detail length, mm:</h92>
     <h93>Calculate the length of the U-shaped rebar</h93>
     <h104>Anchoring length, mm:</h104>
@@ -5514,6 +5528,8 @@
     <h118>Detail step, mm:</h118>
     <h119>Default reinforcement settings for slabs</h119>
     <h120>Default reinforcement settings for holes</h120>
+    <h121>Parameters of top mesh rods</h121>
+    <h122>Parameters of top mesh rods</h122>
     <h141>Do not close the window after creating reinforcement</h141>
     <h147>Reset</h147>
     <h153>Diagonal reinforcement</h153>
@@ -5545,6 +5561,7 @@
     <e3>Failed to get slab thickness from parameter</e3>
     <e4>Could not get solid from slab geometry</e4>
     <e5>Failed to get top and/or bottom face from slab geometry</e5>
+    <!-- todo remove -->
     <e6>The normal of the top or bottom face of the slab should be aligned with the Z axis</e6>
     <e7>Failed to get outer contours from slab geometry</e7>
     <e8>Failed to get contour for area reinforcement</e8>
@@ -5558,20 +5575,27 @@
     <m11>must be:</m11>
     <m12>The value of the property will be changed</m12>
     <m23>Reinforcement settings copied</m23>
+    <!-- todo remove -->
     <create>Create</create>
     <rn>Rebar ⌀</rn>
+    <!-- todo remove -->
     <mm>mm</mm>
     <full>Available in full version!</full>
+    <!-- todo remove start -->
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
     <auto>Auto</auto>
     <saved>Saved</saved>
+    <!-- todo remove end -->
     <parameters>Parameters</parameters>
     <name>Name</name>
+    <!-- todo remove start -->
     <value>Value</value>
     <copy>Copy</copy>
     <paste>Paste</paste>
+    <!-- todo remove end -->
     <noInFamily>Plugin operation in families is not available!</noInFamily>
+    <notSet>Do not set</notSet>
     <br1>Individual rebars</br1>
     <br2>Area reinforcement</br2>
     <as1>to the edge of the slab</as1>
@@ -5601,6 +5625,8 @@
     <t63>You can specify preferred rebar shapes for different types of rebars created by the plugin.</t63>
     <t64>Setting the preferred shapes does not guarantee that the reinforcement will be created using the specified shape of the rebar.</t64>
     <t65>When creating rebars, an attempt will be made to use the specified shape. If creating a rebar with the specified shape is not possible, Revit will automatically search for a suitable shape or create a new shape.</t65>
+    <re4>Failed to create a straight rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re4>
+    <re5>Failed to create a rebar of shape "{0}" with a given preferred shape of rebar "{1}". Error: {2}\nAn attempt was made to create a rebar with automatic rebar shape selection or creation</re5>
   </mprSlabsReinforcement>
   <mprCopyElementsToOpenDocuments LocalName="Copy elements to the documents"
                                   Description="Batch elements copying to the opened documents"
@@ -6056,6 +6082,7 @@
     <h44>Bend upper rods in case of insufficient anchoring distance</h44>
     <h50>Settings</h50>
     <h51>PLUGIN WINDOW:</h51>
+    <!-- todo remove -->
     <h52>Over the windows</h52>
     <h53>DISPLAY IN THE MODEL:</h53>
     <h54>Scaling factor:</h54>
