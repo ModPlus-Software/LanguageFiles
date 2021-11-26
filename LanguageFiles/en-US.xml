@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.4.7.0">
+<ModPlus Name="en-US" Version="5.4.8.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -844,6 +844,9 @@
 		<msg39>Updates downloaded and will be installed after closing the Revit</msg39>
 		<msg40>Updates downloaded and will be installed after closing the Renga</msg40>
 		<err1>Error reading file on server</err1>
+		<err2>Component reading error</err2>
+		<err3>Error requesting data on components</err3>
+		<err4>Error requesting data for plugins</err4>
 		<err8>Not all updates were installed</err8>
 		<err12>Error while updating data in the registry</err12>
 		<err13>Error while unpacking updates</err13>
@@ -1166,7 +1169,7 @@
 		<QuantityType_Length>Length</QuantityType_Length>
 		<QuantityType_Area>Area</QuantityType_Area>
 		<QuantityType_Volume>Volume</QuantityType_Volume>
-		<QuantityType_Mass></QuantityType_Mass>
+		<QuantityType_Mass>Mass</QuantityType_Mass>
 		<Area>Area</Area>
 		<Count>Count</Count>
 		<CrossSectionArea>Cross section area</CrossSectionArea>
@@ -3346,6 +3349,12 @@
 		<h158>Section label</h158>
 		<h159>Creating Designation Section label</h159>
 		<h160>Creating an smart entity based on an anonymous block describing the Section label</h160>
+		<h161>Letter Line</h161>
+		<h162>Basic style for Letter Line</h162>
+		<h163>Drawing a letter line designation</h163>
+		<h164>Creating an smart entity based on an anonymous block describing the Letter Line</h164>
+		<h165>Letter Line from polyline</h165>
+		<h166>Convert the selected polyline to a Letter Line</h166>
 		<so0>Refresh graphics</so0>
 		<sot0>All found smart entities will have graphics regeneration</sot0>
 		<so1>Select</so1>
@@ -3371,6 +3380,8 @@
 		<amt3>From below</amt3>
 		<vlt1>Section</vlt1>
 		<vlt2>View</vlt2>
+		<llt1>Standard</llt1>
+		<llt2>Composite</llt2>
 		<type1>Type 1</type1>
 		<type2>Type 2</type2>
 		<glfst1>Distance between strokes</glfst1>
@@ -3405,12 +3416,6 @@
 		<wjt16>Corner mounting intermittent on the invisible side</wjt16>
 		<dot>Dot</dot>
 		<comma>Comma</comma>
-		<!-- todo remove start -->
-		<close>Close</close>
-		<accept>Accept</accept>
-		<collapse>Collapse</collapse>
-		<next>Continue</next>
-		<!-- todo remove end -->
 		<p1>BreakLine type</p1>
 		<d1>BreakLine type: linear, curved or cylindrical</d1>
 		<p2>Projections per object</p2>
@@ -3471,6 +3476,7 @@
 		<d34>Type of axis orient marker</d34>
 		<p35>Line type</p35>
 		<d35>Line type of main polyline</d35>
+		<d35-1>Тип линии стандартная или составная</d35-1>
 		<p36>First stroke indent</p36>
 		<d36>Indent the first stroke in each segment of the ground line</d36>
 		<d36-1>Indent the first stroke in each segment of the waterproofing line</d36-1>
@@ -3496,7 +3502,6 @@
 		<p51>Designation</p51>
 		<p52>Designation prefix</p52>
 		<p53>Sheet number</p53>
-		<d53>Sheet number</d53>
 		<p54>Sheet number position</p54>
 		<d54>Sheet number position: on both sides, bottom, top</d54>
 		<p55>Object line</p55>
@@ -3564,11 +3569,15 @@
 		<p101>Main text</p101>
 		<p102>Small text</p102>
 		<p103>View type</p103>
-		<!-- todo remove -->
-		<d86>View type: Section or View</d86>
 		<d103>View type: Section or View</d103>
 		<p104>Leader</p104>
 		<d104>Leader on/off</d104>
+		<p105>Line type generation</p105>
+		<d105>Line type generation along the whole polyline</d105>
+		<p106>Distance between text</p106>
+		<p107>Формула для линии</p107>
+		<d107>The line formula is given by integers separated by hyphens. Each odd number (1, 3, 5, ...) specifies the stroke length. Each fair number (2, 4, 6, ...) specifies the length of the space</d107>
+		<p108>First text indent</p108>
 	</mpESKD>
 	<whshScheduleLookup LocalName="Schedule lookup"
                       Description="Search for schedules in a project that contain the specified value"
@@ -6368,6 +6377,7 @@
 		<flatAreaS>S ap.</flatAreaS>
 		<totalAreaS>S total</totalAreaS>
 		<livingAreaS>S liv.</livingAreaS>
+		<number>Number</number>
 		<p1>RM_Func. purpose</p1>
 		<pd1>Entered manually! Participates in all basic algorithms of Apartment Layout</pd1>
 		<p2>RM_Room number</p2>
