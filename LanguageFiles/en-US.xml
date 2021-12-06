@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.4.13.0">
+<ModPlus Name="en-US" Version="5.4.14.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -4127,6 +4127,7 @@
 	<mprWallsReinforcement LocalName="Walls reinforcement"
                          Description="Analysis, grouping and reinforcement according to given conditions of walls and openings"
                          FullDescription="Plugin works only with walls located in one level. Plugin analyzes the walls, allowing you to find three types of intersections (corner, end and cross) and openings. Flexible grouping allows you to specify exactly what type of reinforcement should be made. You can perform reinforcement only for the specified groups - walls, intersections or openings. Plugin can work even on an empty template">
+		<!-- todo remove -->
 		<h1>Settings</h1>
 		<h2>PLUGIN WINDOW:</h2>
 		<h3>Transparency of the window</h3>
@@ -4419,16 +4420,20 @@
 		<rn>Rebar ⌀</rn>
 		<mm>mm</mm>
 		<full>Available in full version!</full>
+		<!-- todo remove start -->
 		<accept>Accept</accept>
 		<cancel>Cancel</cancel>
 		<yes>Yes</yes>
 		<no>No</no>
 		<saved>Saved</saved>
+		<!-- todo remove end -->
 		<parameters>Parameters</parameters>
 		<name>Name</name>
+		<!-- todo remove start -->
 		<value>Value</value>
 		<copy>Copy</copy>
 		<paste>Paste</paste>
+		<!-- todo remove end -->
 		<noInFamily>Plugin operation in families is not available!</noInFamily>
 		<c1>Move to the end of the wall</c1>
 		<c2>Move to the middle of the wall</c2>
@@ -5758,6 +5763,7 @@
 		<m65>{0} - Copying element "{1} (id {2})" of category "{3}" skipped.</m65>
 		<m66>The target document already has the "{0}" family with the type "{1}".{2}Copy?</m66>
 		<m67>Global parameters</m67>
+		<m68>Line Patterns</m68>
 	</mprCopyElementsToOpenDocuments>
 	<mprMepElementsBender LocalName="MEP clash solver"
                         Description="Solves MEP elements clashes"
