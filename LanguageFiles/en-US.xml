@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.4.19.0">
+<ModPlus Name="en-US" Version="5.4.20.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -6379,10 +6379,10 @@
 		<rt1>Not set</rt1>
 		<rt2>Residential</rt2>
 		<rt3>Non-residential</rt3>
-		<rt4>Unheated</rt4>
+		<rt4>Non-heated</rt4>
 		<rtm1>residential,living,live</rtm1>
 		<rtm2>non-residential,nonresidential,unoccupied</rtm2>
-		<rtm3>unheated,balcony,loggia,terrace</rtm3>
+		<rtm3>non-heated,unheated,balcony,loggia,terrace</rtm3>
 		<sa1>Rounded area</sa1>
 		<sa2>Rounded area with a coefficient</sa2>
 		<fc1>SP 12.13130</fc1>
@@ -6450,7 +6450,7 @@
 		<h9>Apartment Identifier:</h9>
 		<h10>Rounding areas:</h10>
 		<h11>General</h11>
-		<h12>Apartments areas</h12>
+		<h12>Apartment areas</h12>
 		<h13>Specify which room area - rounded or rounded with a coefficient - to use when calculating the total areas of the apartment. When calculating according to SP 54.13330 "Multifamily Residential Buildings" select "Rounded area with a coefficient"</h13>
 		<h14>Room matrix</h14>
 		<h15>Apartment types</h15>
@@ -6618,7 +6618,7 @@
 		<instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "Functional purpose" and "Name". If the value of the "Functional purpose" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
 		<instruction4>The apartments are collected through the geometric characteristics of the rooms, taking into account the connection of the rooms through windows, doors and room separators. All rooms of the same apartment are assigned the same value of the "Apartment ID" parameter. It is recommended to perform an additional visual check by creating a color scheme according to the "Apartment ID" parameter</instruction4>
 		<instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
-		<instruction6>Numbering can be done by grouping the apartments by Housings and/or Sections by enabling the corresponding options and by specifying the parameter names from which to take the value of the Housing and/or Sections. In this case, it is considered that the sections are subgroups for the housings. The " End-to-end numbering" property means that the numbering in the next group will continue, not start from the value set in the " Initial number" property. If you select the " Point " option in the "Start of numbering" property, you will need to select a room for each group of apartments</instruction6>
+		<instruction6>Numbering can be done by grouping the apartments by Housings and/or Sections by enabling the corresponding options and by specifying the parameter names from which to take the value of the Housing and/or Sections. In this case, it is considered that the sections are subgroups for the housings. The "End-to-end numbering" property means that the numbering in the next group will continue, not start from the value set in the "Initial number" property. If you select the " Point " option in the "Start of numbering" property, you will need to select a room for each group of apartments</instruction6>
 		<instruction7>Creating apartment views is done by duplicating the current view, followed by cropping along the contour of the apartment. First of all, an attempt is made to create a crop contour considering the thickness of the enclosing walls (only for Revit 2020 and higher). If unsuccessful, an attempt is made to create a crop contour taking into account the thickest of the enclosing walls. If the crop contour is not created, the apartment contour obtained from the room boundaries will be used. If the option "Try to use apartment type as view name" is enabled, the created views will be given a name of the type "LEVEL_NAME - Apartment APARTMENT_TYPE".</instruction7>
 	</mprApartmentBuildingLayout>
 	<mprRoomColorVolume LocalName="Room volume"
