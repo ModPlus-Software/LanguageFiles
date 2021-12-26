@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.4.22.0">
+<ModPlus Name="en-US" Version="5.4.23.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -6426,6 +6426,7 @@
 		<livingArea>Living area</livingArea>
 		<flatAreaS>S ap.</flatAreaS>
 		<totalAreaS>S total</totalAreaS>
+		<totalAreaWithoutFactorS>S total without factor</totalAreaWithoutFactorS>
 		<livingAreaS>S liv.</livingAreaS>
 		<number>Number</number>
 		<p1>RM_Func. purpose</p1>
@@ -6456,6 +6457,8 @@
 		<pd13>The sum of the areas of non-living rooms of the apartment. Excluding unheated (Total)</pd13>
 		<p14>AP_Total area</p14>
 		<pd14>The sum of all areas of the apartment. Including unheated with a reduction factor (Reduced)</pd14>
+		<p14-1>AP_Total area without factor</p14-1>
+		<pd14-1>The sum of all areas of the apartment without taking into account unheated rooms and without taking into account the reduction factor</pd14-1>
 		<p15>AP_Non-heated rooms area</p15>
 		<pd15>The sum of the areas of unheated rooms of the apartment. Without reduction factors</pd15>
 		<p16>AP_Non-heated rooms area with factor</p16>
@@ -6604,6 +6607,7 @@
 		<h132>Apartment living area</h132>
 		<h133>Apartment total area</h133>
 		<h134>The automatic area recalculation service is not loaded! Re-enable the plugin using the ModPlus Configurator</h134>
+		<h135>Add from rooms</h135>
 		<msg1>Parameter "{0}" not found</msg1>
 		<msg2>Parameter "{0}" is not filled</msg2>
 		<msg3>Parameter "{0}" has an invalid value</msg3>
@@ -6643,6 +6647,7 @@
 		<tt7>The value of the "Housing" parameter will be added to the apartment number as a prefix, separated by a hyphen</tt7>
 		<tt8>The value of the "Section" parameter will be added to the apartment number as a prefix, separated by a hyphen</tt8>
 		<tt9>The value of the selected parameter will be added to the apartment number as a prefix, separated by a hyphen, in the case that the parameter has the value and the value is the same for all rooms of the apartment</tt9>
+		<tt10>Adding new positions to the current table, collected from the rooms of the current project. Items are added only with a filled "Room name" value</tt10>
 		<instruction>Instruction</instruction>
 		<instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
 		<instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name. In the "Room name" column you can specify an asterisk at the end of the name, which will indicate a check for a match at the beginning of the room name (for example, the value "Bedroom*" will match the room names "Bedroom 1", "Bedroom 2", etc.)</instruction2>
