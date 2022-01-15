@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.4.25.0">
+<ModPlus Name="en-US" Version="5.4.26.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -4363,6 +4363,7 @@
 		<h226>Removal of previously created reinforcement:</h226>
 		<h227>Vertical reinforcement at intersections</h227>
 		<h228>Use the main vertical reinforcement settings</h228>
+		<srd>Saving data of selected walls</srd>
 		<rr1>Remove reinforcement of the same type that is created</rr1>
 		<rr2>Remove all previously created reinforcement</rr2>
 		<rr3>Do not remove</rr3>
@@ -4876,6 +4877,7 @@
 		<h207>Spiral rebars:</h207>
 		<h208>Use column geometry without considering connections</h208>
 		<h221>Longitudinally curved rods (bent into a "bottle")</h221>
+		<srd>Saving data of selected columns</srd>
 		<hook>Hook:</hook>
 		<err1>No overlying floor found or distance to overlying column is 0</err1>
 		<npa1>do not create joint</npa1>
@@ -5531,6 +5533,7 @@
 		<h43>In the processed slabs (Floor) a rebar cover</h43>
 		<h44>set to zero</h44>
 		<h45>set based on the reinforcement settings</h45>
+		<!-- todo remove -->
 		<h46>Delete reinforcement previously created by the plugin</h46>
 		<h47>Zoom all</h47>
 		<h48>Copy to all checked holes of the current slab</h48>
@@ -5605,6 +5608,13 @@
 		<h188>Only transverse reinforcement</h188>
 		<h203>Select again</h203>
 		<h204>Reselect slabs that were processed in the current view when using the plugin</h204>
+		<h205>HOLES CHECK:</h205>
+		<h206>By default, leave unchecked the holes of a circumscribed rectangle with</h206>
+		<h207>one side</h207>
+		<h208>all sides</h208>
+		<h209>less</h209>
+		<h226>Removal of previously created reinforcement:</h226>
+		<srd>Saving data of selected slabs</srd>
 		<m1>Pick slabs</m1>
 		<m13>Reinforcement cover</m13>
 		<m24>You did not specify what type of reinforcement to create!</m24>
@@ -5626,6 +5636,11 @@
 		<e6>The normal of the top or bottom face of the slab should be aligned with the Z axis</e6>
 		<e7>Failed to get outer contours from slab geometry</e7>
 		<e8>Failed to get contour for area reinforcement</e8>
+		<e9>Failed to create background reinforcement of slab:</e9>
+		<e10>Failed to create reinforcement of slab ends:</e10>
+		<e11>Failed to create additional reinforcement of slab:</e11>
+		<e12>Failed to create the framing of the slab holes:</e12>
+		<e13>Failed to get lines from the created area reinforcement. Further reinforcement of the slab is interrupted. Error:</e13>
 		<m1>Enter a value from</m1>
 		<m2>to</m2>
 		<m6>For rebar</m6>
@@ -5661,9 +5676,13 @@
 		<br2>Area reinforcement</br2>
 		<as1>to the edge of the slab</as1>
 		<as2>to the middle of the slab</as2>
+		<rr1>Remove reinforcement of the same type that is created</rr1>
+		<rr2>Remove all previously created reinforcement</rr2>
+		<rr3>Do not remove</rr3>
 		<t1>According to SP 63.13330.2012, p. 10.3.5 - the minimum distance in the light between the rebars should be at least the largest diameter of the rod, as well as at least 25 mm for the lower reinforcement and 30 mm for the upper reinforcement; p. 10.3.8 - the largest distance between the axes of the rods should not be more than 200 mm with a plate cross-section height h &lt;= 150 mm and no more than 1,5h and 400 mm with a cross-section height h> 150 mm</t1>
 		<t2>Check and offset when hit on the rods of the background reinforcement is made for the first (nearest) rod, which does not guarantee the correct displacement of the second or third rod. The minimum permissible distance between the rods in the light is taken into account - 30 mm</t2>
 		<t3>The reinforcement previously created by the plugin is deleted depending on the newly created reinforcement. For example, if you choose to create only the main (background) reinforcement, then previously created U-shaped rods along the contour of the slab will not be deleted</t3>
+		<!-- todo remove -->
 		<t4>Save current reinforcement settings as default reinforcement settings</t4>
 		<t5>If the option is enabled, then the upper and lower rebar cover will be applied when creating background reinforcement meshes, without taking into account the diameters of other reinforcement. If the option is disabled, the rebar cover will be applied for all types of reinforcement being created, and the position of the background reinforcement meshes relative to the upper and lower faces of the slab will be calculated from the established conditions</t5>
 		<t6>U-shaped rods will be created with the rod step of the upper mesh of the background reinforcement. If the background reinforcement is not created in the plate, the U-shaped rods will be created with the specified step</t6>
@@ -6232,6 +6251,7 @@
 		<h205>C-shaped cross holes (stirrups). Revit hooks:</h205>
 		<h206>S-shaped cross holes (stirrups). Revit hooks:</h206>
 		<h207>Use beam geometry without considering connections</h207>
+		<srd>Saving data of selected beams</srd>
 		<hook>Hook:</hook>
 		<jt1>Longitudinal reinforcement joints are not created. The rods are cut off at the side of the beam according to the specified value of the cover layer from the ends of the reinforcement</jt1>
 		<jt2>Straight joints of the rebars of the longitudinal reinforcement are created. The anchoring length is set from the edge of the beam. The joints are only created if there is a wall or column at the end of the beam, otherwise the joints will not be created and the longitudinal bars will be cut at the end of the beam, taking into account the specified ends cover</jt2>
