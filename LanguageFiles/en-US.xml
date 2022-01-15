@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.4.26.0">
+<ModPlus Name="en-US" Version="5.4.27.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -4839,7 +4839,7 @@
 		<h109>The calculated overlap length is multiplied by 2</h109>
 		<h110>Create Reinforcement</h110>
 		<h119>Default reinforcement settings</h119>
-		<h127>FP joint bars</h127>
+		<h127>Joints from underlying floor</h127>
 		<h135>Joints type:</h135>
 		<h138>Reinforcement cover:</h138>
 		<h141>Do not close the window after creating reinforcement</h141>
@@ -4877,6 +4877,7 @@
 		<h207>Spiral rebars:</h207>
 		<h208>Use column geometry without considering connections</h208>
 		<h221>Longitudinally curved rods (bent into a "bottle")</h221>
+		<h226>Removal of previously created reinforcement:</h226>
 		<srd>Saving data of selected columns</srd>
 		<hook>Hook:</hook>
 		<err1>No overlying floor found or distance to overlying column is 0</err1>
@@ -4884,10 +4885,12 @@
 		<npa2>create straight joints</npa2>
 		<npa3>assume a floor conditionally existing</npa3>
 		<pt1>Circle</pt1>
-		<pt2>Ellipse</pt2>
 		<pt3>Rectangle</pt3>
 		<pt4>Square</pt4>
 		<pt5>Undefined</pt5>
+		<rr1>Remove reinforcement of the same type that is created</rr1>
+		<rr2>Remove all previously created reinforcement</rr2>
+		<rr3>Do not remove</rr3>
 		<jt1>Longitudinal reinforcement joints are not created. The rods are cut off at the top of the column according to the specified value of the cover layer from the ends of the reinforcement</jt1>
 		<jt2>Straight joints of longitudinal reinforcement bars are created. The anchor length is set from the top of the overlying floor or from the top of the column if there is no floor. The position of the rods of the longitudinal reinforcement of the overlying columns is not taken into account</jt2>
 		<jt3>Joints of longitudinal reinforcement bars with a bend in the overlying column are created. The anchor length is set from the top of the overlying floor or from the top of the column if there is no floor.</jt3>
@@ -4968,7 +4971,7 @@
 		<re3>An error occurred while creating a transverse reinforcement part of type "{0}" in column id = {1}:</re3>
 		<re4>Failed to create a straight rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re4>
 		<re5>Failed to create a rebar of shape "{0}" with a given preferred shape of rebar "{1}". Error: {2}\nAn attempt was made to create a rebar with automatic rebar shape selection or creation</re5>
-		<re17>Error while creating joints from slab id={0} to column id={1}:</re17>
+		<re17>Error while creating joints from floor id={0} to column id={1}:</re17>
 	</mprColumnsReinforcement>
 	<mpStripMtext LocalName="Clear formatting"
                 Description="Remove specified formatting from multiline text"
