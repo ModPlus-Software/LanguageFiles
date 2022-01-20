@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.4.27.0">
+<ModPlus Name="en-US" Version="5.5.0.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -6759,4 +6759,42 @@
 		<op8>Not Begin</op8>
 		<n1>Standard</n1>
 	</mprJoin>
+	<mprBreakLayers LocalName="Layer breaking"
+	                Description="Breaking multilayer walls and floors into separate elements">
+		<h1>Walls</h1>
+		<h2>Floors</h2>
+		<h3>Walls of current file:</h3>
+		<h4>Walls of linked files:</h4>
+		<h5>Floors of current file:</h5>
+		<h6>Floors of linked files:</h6>
+		<h7>Changing the settings is available in the full version</h7>
+		<h8>Breaking variant:</h8>
+		<h9>Variant of inserts restore:</h9>
+		<h10>Pin created walls</h10>
+		<h11>Pin created floors</h11>
+		<h12>Break selected walls</h12>
+		<h13>Break selected floors</h13>
+		<h14>Break walls by layers</h14>
+		<h15>Break floors by layers</h15>
+		<bv1>Layered</bv1>
+		<bv2>By core edge</bv2>
+		<ir1>Structural material</ir1>
+		<ir2>Core biggest layer</ir2>
+		<ir3>Last Layer Below Wrap</ir3>
+		<ir4>Last Layer Above Wrap</ir4>
+		<ir5>Not restore</ir5>
+		<t1>If "Last layer above wrap" is selected, but there are no layers above wrap, the top layer of the core will be taken.</t1>
+		<t2>If "Last layer below wrap" is selected, but there are no layers below wrap, the bottom layer of the core will be taken.</t2>
+		<t3>If the option "Structural material" is selected, but there is no layer with this option, the largest layer of the core will be taken.</t3>
+		<t4>If the largest layer of the core is not found, the largest layer of all layers will also be taken.</t4>
+		<t5>With break option "By core edge" the options "Structural material" and "Core biggest layer" take into account the properties of the initial layers of the element.</t5>
+		<e1>Failed to process a wall. Error:</e1>
+		<e2>Failed to process a floor. Error:</e2>
+		<e3>Failed to process elements from the linked file. Error:</e3>
+		<e4>Failed to process wall inserts. Error:</e4>
+		<e5>Failed to process floor inserts. Error:</e5>
+		<e6>An incorrect number of wall faces is obtained</e6>
+		<e7>Part does not contain a solid</e7>
+		<e8>Element does not contain a solid</e8>
+	</mprBreakLayers>
 </ModPlus>
