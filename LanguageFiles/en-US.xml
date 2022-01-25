@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.6.0.0">
+<ModPlus Name="en-US" Version="5.6.1.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -121,6 +121,8 @@
 		<h60>Choose a sheet:</h60>
 		<h61>Your version of ModPlus is cracked!</h61>
 		<h62>Files modified by third parties were found as part of the ModPlus software! The work of the plugin has been interrupted!</h62>
+		<h63>This error indicates that your version of ModPlus has only received partial updates. It is recommended that you update using</h63>
+		<h64>the installer</h64>
 		<m1>Enter your email address</m1>
 		<m2>The email address is used as a unique key to identify your data on the server.\nIt is recommended to use the email address you provided when registering on modplus.org</m2>
 		<m3>Attention! The use of social networks for authorization is possible only after linking social network accounts to a personal account on the site! Otherwise, when you try to log in through social networks, a new account will be created on the site, and you will lose your license data!</m3>
@@ -4138,11 +4140,6 @@
 	<mprWallsReinforcement LocalName="Walls reinforcement"
                          Description="Analysis, grouping and reinforcement according to given conditions of walls and openings"
                          FullDescription="Plugin works only with walls located in one level. Plugin analyzes the walls, allowing you to find three types of intersections (corner, end and cross) and openings. Flexible grouping allows you to specify exactly what type of reinforcement should be made. You can perform reinforcement only for the specified groups - walls, intersections or openings. Plugin can work even on an empty template">
-		<!-- todo remove -->
-		<h1>Settings</h1>
-		<h2>PLUGIN WINDOW:</h2>
-		<h3>Transparency of the window</h3>
-		<!-- todo remove -->
 		<h4>Over the windows</h4>
 		<h5>DISPLAY IN THE MODEL:</h5>
 		<h6>Scaling factor:</h6>
@@ -4266,14 +4263,14 @@
 		<h124>Third size group</h124>
 		<h125>Crossed by a Cut plane</h125>
 		<h126>Belonging to the current level</h126>
-		<h127>FP joint bars</h127>
-		<h128>Select foundation plates</h128>
-		<h129>Foundation plates</h129>
+		<h127>Joints from underlying slabs</h127>
+		<h128>Select underlying slabs</h128>
+		<h129>Underlying slabs</h129>
 		<h130>Thickness</h130>
-		<h131>Groups of walls in contact with the foundation plate:</h131>
-		<h132>Reinforcement settings of plate joints</h132>
+		<h131>Groups of walls in contact with the slab:</h131>
+		<h132>Reinforcement settings of slab joints</h132>
 		<h133>Joints by middle walls</h133>
-		<h134>Default reinforcement settings for FP joints</h134>
+		<h134>Default reinforcement settings for joints from underlying slabs</h134>
 		<h135>Joints type:</h135>
 		<h136>Joints by outer walls</h136>
 		<h137>Use settings for joints by middle walls</h137>
@@ -4283,12 +4280,12 @@
 		<h141>Do not close the window after creating reinforcement</h141>
 		<h142>View intersection</h142>
 		<h143>Deleting auxiliary geometry</h143>
-		<h144>Detail offset from base plate sole:</h144>
+		<h144>Detail offset from bottom of underlying slab:</h144>
 		<h145>First anchorage length, mm:</h145>
 		<h146>Second anchoring length, mm:</h146>
 		<h147>Reset</h147>
-		<h148>Anchorage length in plate, mm:</h148>
-		<h149>Base plate joints</h149>
+		<h148>Anchorage length in slab, mm:</h148>
+		<h149>Underlying slab joints</h149>
 		<h150>Contiguous walls count</h150>
 		<h151>Additional vertical rebars in ends</h151>
 		<h152>Indent from extreme vertical rebars</h152>
@@ -4300,13 +4297,13 @@
 		<h158>Joints of background vertical rebars</h158>
 		<h159>Joints of intersections vertical rebars</h159>
 		<h160>Joints type:</h160>
-		<h161>Nominal floor thickness, mm:</h161>
+		<h161>Nominal slab thickness, mm:</h161>
 		<h162>Create "Breaking in" joints</h162>
 		<h163>If there is an opening in the overlying wall, then</h163>
 		<h164>Also apply to areas of the overlying wall whose height under the opening (or the height of the entire wall) is less than or equal to two wall widths (but not less than 400)</h164>
-		<h165>If the floor above the wall is missing, then</h165>
-		<h166>Binding bends to the top of the floor (by the center of the rebar)</h166>
-		<h167>Binding bends to the bottom of the floor (by the center of the rebar)</h167>
+		<h165>If the slab above the wall is missing, then</h165>
+		<h166>Binding bends to the top of the slab (by the center of the rebar)</h166>
+		<h167>Binding bends to the bottom of the slab (by the center of the rebar)</h167>
 		<h168>Select walls by rectangle</h168>
 		<h169>Pick walls</h169>
 		<h170>Trim joints by solid of wall</h170>
@@ -4377,16 +4374,16 @@
 		<g2>Girth horizontal bars</g2>
 		<auto>Auto</auto>
 		<oa1>do not create joints</oa1>
-		<oa2>bend into floor (if available)</oa2>
-		<npa1>assume a floor conditionally existing</npa1>
+		<oa2>bend into slab (if available)</oa2>
+		<npa1>assume a slab conditionally existing</npa1>
 		<npa2>calculate overlap length from the top of the wall</npa2>
 		<jtd1>Joints of background vertical rebars are not created. Rebars are cut on the top of the wall according to the specified value of cover from the rebars ends</jtd1>
-		<jtd2>Created straight joints of vertical rebars. Overlap length is set from the top of the overlying floor or from the top of the wall. When the width of the overlying wall decreases, the reinforcement is bent (if floor exist)</jtd2>
+		<jtd2>Created straight joints of vertical rebars. Overlap length is set from the top of the overlying slab or from the top of the wall. When the width of the overlying wall decreases, the reinforcement is bent (if slab exist)</jtd2>
 		<jtd3>Vertical bar releases are created by analogy with straight releases, but with different anchorage lengths</jtd3>
-		<jtd4>Joints of vertical rebars with anchoring in the overlying floor are created. The length of the anchorage is counted from the side face of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the floor</jtd4>
-		<jtd5>Created straight joints of vertical rebars. Overlap length is set from the top of the overlying floor or from the top of the wall</jtd5>
-		<jtd6>Straight joints of vertical rebars in the form of a "bottle" are created - the bends are bent to the center of intersection to the diameter of the rebar. The anchoring length is set from the top of the overlying floor or from the top of the wall</jtd6>
-		<jtd7>Joints are created in the overlying floor in the form of separate L-shaped bars. The first anchoring length - the length of the anchoring of the rods into the floor - is counted from the side face of the wall. The second anchoring length - the length of the anchoring of the rods into the wall - is counted from the top edge of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the floor</jtd7>
+		<jtd4>Joints of vertical rebars with anchoring in the overlying slab are created. The length of the anchorage is counted from the side face of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the slab</jtd4>
+		<jtd5>Created straight joints of vertical rebars. Overlap length is set from the top of the overlying slab or from the top of the wall</jtd5>
+		<jtd6>Straight joints of vertical rebars in the form of a "bottle" are created - the bends are bent to the center of intersection to the diameter of the rebar. The anchoring length is set from the top of the overlying slab or from the top of the wall</jtd6>
+		<jtd7>Joints are created in the overlying slab in the form of separate L-shaped bars. The first anchoring length - the length of the anchoring of the rods into the slab - is counted from the side face of the wall. The second anchoring length - the length of the anchoring of the rods into the wall - is counted from the top edge of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the slab</jtd7>
 		<jtd8>Created straight joints of vertical rebars without taking into account the overlying elements</jtd8>
 		<i1>1. Corner</i1>
 		<i2>2. T-shaped</i2>
@@ -4395,7 +4392,7 @@
 		<i5>Various</i5>
 		<m1>Enter a value from</m1>
 		<m2>to</m2>
-		<m3>To run the command, go to the floor plan</m3>
+		<m3>To run the command, go to the slab plan</m3>
 		<m13>Reinforcement cover</m13>
 		<m14>Up to</m14>
 		<m15>From</m15>
@@ -4411,12 +4408,12 @@
 		<m25>No groups were selected for creating reinforcement!</m25>
 		<m26>Select walls</m26>
 		<m27>Attention! No loaded rebar shapes found in the current project! In this case, the rebar shapes created during the operation of the plugin cannot be opened in the Family Editor! It is recommended that before using the plugin, load the rebar shapes into the project!\nPerform reinforcement, despite the missing rebar shapes?</m27>
-		<m28>Select foundation plates</m28>
-		<m29>The selected foundation plate (id: {0}) has no mates with selected walls</m29>
-		<m30>Attention! Reinforcement settings for foundation plate joint bars will be reset! Continue?</m30>
+		<m28>Select underlying slabs</m28>
+		<m29>The selected underlying slab (id: {0}) has no mates with selected walls</m29>
+		<m30>Attention! Reinforcement settings for underlying slab joint bars will be reset! Continue?</m30>
 		<m31>Bend radius of rebar is less than the minimum allowable</m31>
 		<m32>The specified reinforcement settings will make it impossible to model the reinforcement details!</m32>
-		<m33>Attention! Repeated analysis will clear the current list of groups and the list of foundation plates! Repeat analysis?</m33>
+		<m33>Attention! Repeated analysis will clear the current list of groups and the list of underlying slabs! Repeat analysis?</m33>
 		<p1>Search is not processed walls intersecting with the selected walls</p1>
 		<p2>Initializing the geometry of the walls</p2>
 		<p3>Search for intersections of walls</p3>
@@ -4430,8 +4427,8 @@
 		<p11>Calculation and modeling of reinforcement of the opening</p11>
 		<p12>Revit rebars generation</p12>
 		<p13>Combining the horizontal rebars of the reinforcement</p13>
-		<p14>Calculation and modeling of joints from the plate by middle walls</p14>
-		<p15>Calculation and modeling of joints from the plate by outer walls</p15>
+		<p14>Calculation and modeling of joints from the slab by middle walls</p14>
+		<p15>Calculation and modeling of joints from the slab by outer walls</p15>
 		<dd1>V</dd1>
 		<dd2>H</dd2>
 		<dd3>inside</dd3>
@@ -4517,12 +4514,12 @@
 		<t48>The details of the reinforcement of the intersection will be established with the horizontal reinforcement of the walls - by the smallest or the largest step of horizontal reinforcement of the walls participating in the intersection</t48>
 		<t49>The number of rows of vertical reinforcement (in a row is two bars "along" the opening)</t49>
 		<t50>The number of rows of horizontal reinforcement (in a row is two bars "along" the opening)</t50>
-		<t51>Selecting a foundation plate directly below the selected walls. Foundation plate selection available after wall selection, analysis and grouping. You can select one or more plates. In the properties of the base plates should be included properties "Structural"</t51>
+		<t51>Selecting a underlying slab directly below the selected walls. Underlying slab selection available after wall selection, analysis and grouping. You can select one or more slabs. In the properties of the underlying slabs should be included properties "Structural"</t51>
 		<t52>The maximum allowable value of the binding is calculated from the condition of the minimum allowable distance in the light according to section 10.3.5 of SP 63.13330 for the smallest wall width in the group</t52>
 		<t53>Reset all values ​​of the current default reinforcement settings to the default values ​​set in the plugin</t53>
-		<t54>Copy the current plate joints reinforcement settings to all selected plates</t54>
-		<t55>Save the current plate joints reinforcement settings to the xml file</t55>
-		<t56>Load the joints reinforcement settings from the xml file and set for the current plate</t56>
+		<t54>Copy the current slab joints reinforcement settings to all selected plates</t54>
+		<t55>Save the current slab joints reinforcement settings to the xml file</t55>
+		<t56>Load the joints reinforcement settings from the xml file and set for the current slab</t56>
 		<t57>The minimum and maximum values ​​are calculated based on the specified diameters and vertical reinforcement step</t57>
 		<t58>Rebar length consists of two anchoring lengths</t58>
 		<t59>When you turn on the "Breaking in" option, each first pair of joints along the wall will be created with the first anchoring length, every second pair - with the second anchoring length</t59>
