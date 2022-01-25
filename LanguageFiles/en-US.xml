@@ -3931,10 +3931,8 @@
 		<!-- todo remove -->
 		<cancel>Cancel</cancel>
 	</mprExcelImport>
-	<mprInteriorPlanDimensions LocalName="Internal dimensions on plan"
-                             Description="Internal dimensions on the floor plan"
-                             FullDescription="Plug processes only orthogonally positioned elements (arranged vertically or horizontally in a plane) without arc segments in geometry">
-		<h1>Internal dimensions on plan</h1>
+	<mprInteriorPlanDimensions LocalName="Dimensions on plan"
+                             Description="Plugin allows to perform different variants of element dimensioning on the plan">
 		<h2>Grids dimensioning</h2>
 		<h3>Openings dimensioning</h3>
 		<h4>Indentation of the dimension chain:</h4>
@@ -3942,12 +3940,13 @@
 		<h6>Exclude from the work walls in the name of the type which contains:</h6>
 		<h7>Exclude from the work of the wall in the material name of the layer "Structure" which contains:</h7>
 		<h8>Step:</h8>
-		<h9>Dimensioning the walls</h9>
+		<h9>Dimensioning floor plan</h9>
 		<h10>Dimensioning the columns</h10>
 		<h11>Bind to nearest grids</h11>
 		<h12>Dimension line offset from the column</h12>
 		<h13>Position of horizontal dimensions relative to columns</h13>
 		<h14>Position of vertical dimensions relative to columns</h14>
+		<h15>This item is intended for dimensioning chains of walls on the whole floor plan. For correct work it is necessary to select all walls on the plan that form the floor of a building. Only orthogonally placed elements (located vertically or horizontally in the plan) without arc segments in the geometry are processed</h15>
 		<top>Top</top>
 		<bottom>Bottom</bottom>
 		<left>Left</left>
@@ -3958,9 +3957,11 @@
 		<tt4>_Insul,Finishing,Ceramic</tt4>
 		<tt5>Specify, by comma, the values that can be contained in the material name of the "Structure" layer of the wall</tt5>
 		<tt6>concrete,brick</tt6>
+		<!-- todo remove start -->
 		<mm>mm</mm>
 		<accept>Accept</accept>
 		<cancel>Cancel</cancel>
+		<!-- todo remove end -->
 		<msg1>You need to go to the floor plan!</msg1>
 		<msg2>Select elements to process</msg2>
 		<err1>Could not create a working wall list!</err1>
