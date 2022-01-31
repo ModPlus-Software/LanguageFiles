@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.6.1.0">
+<ModPlus Name="en-US" Version="5.6.2.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -3937,18 +3937,25 @@
                              Description="Plugin allows to perform different variants of element dimensioning on the plan">
 		<h2>Grids dimensioning</h2>
 		<h3>Openings dimensioning</h3>
-		<h4>Indentation of the dimension chain:</h4>
+		<h4>Indent of subsequent dimensional chains</h4>
 		<h5>Handle walls with a thickness of</h5>
 		<h6>Exclude from the work walls in the name of the type which contains:</h6>
 		<h7>Exclude from the work of the wall in the material name of the layer "Structure" which contains:</h7>
 		<h8>Step:</h8>
-		<h9>Dimensioning floor plan</h9>
-		<h10>Dimensioning the columns</h10>
+		<h9>Floor plan</h9>
+		<h10>Columns</h10>
 		<h11>Bind to nearest grids</h11>
-		<h12>Dimension line offset from the column</h12>
-		<h13>Position of horizontal dimensions relative to columns</h13>
-		<h14>Position of vertical dimensions relative to columns</h14>
-		<h15>This item is intended for dimensioning chains of walls on the whole floor plan. For correct work it is necessary to select all walls on the plan that form the floor of a building. Only orthogonally placed elements (located vertically or horizontally in the plan) without arc segments in the geometry are processed</h15>
+		<h12>Dimension chain offset</h12>
+		<h13>Position of horizontal dimensions</h13>
+		<h14>Position of vertical dimensions</h14>
+		<h15>Creating dimensional chains along the walls on the whole floor plan. For correct work it is necessary to select all walls on the plan that form the floor of a building. Only orthogonally placed elements (located vertically or horizontally in the plan) without arc segments in the geometry are processed</h15>
+		<h16>Add a pile to the group if the distance from the pile insertion point to the insertion point of</h16>
+		<h17>in the group does not exceed</h17>
+		<h18>Piles</h18>
+		<h19>Creating the overall dimensions of the columns. Only orthogonally placed (vertically or horizontally in plan) rectangular columns are processed. If the “Bind to nearest grids” option is enabled and a grid intersects a column, then two dimensional chains are created</h19>
+		<h20>Creating the positional dimensions of the piles. The dimensions are placed in the middle of the piles with bind to the nearest grids, if the grids have been selected. The piles are processed in groups. Pile groups are piles that are close to each other. Families are processed in the category "Structural columns" and "Structural foundation"</h20>
+		<pgc1>each pile</pgc1>
+		<pgc2>any pile</pgc2>
 		<top>Top</top>
 		<bottom>Bottom</bottom>
 		<left>Left</left>
@@ -3966,13 +3973,15 @@
 		<!-- todo remove end -->
 		<msg1>You need to go to the floor plan!</msg1>
 		<msg2>Select elements to process</msg2>
-		<err1>Could not create a working wall list!</err1>
+		<err1>The selected walls do not satisfy the processing conditions: failed to obtain a solid, failed to obtain faces or they are not located orthogonally</err1>
 		<err2>In this set there are no walls intersected by Primary range Cut plane!</err2>
 		<err3>At runtime, the program went into an endless loop! If you see this message, please contact the developer!</err3>
 		<err4>It is necessary to choose more than one element!</err4>
 		<err5>Among the selected elements there are no walls!</err5>
-		<err6>Could not create a working column list!</err6>
+		<err6>The selected columns do not satisfy the processing conditions: failed to obtain a solid, failed to obtain faces, have no insertion point or are not located orthogonally</err6>
+		<!-- todo remove -->
 		<err7>In this set there are no columns intersected by Primary range Cut plane!</err7>
+		<err8>The selected piles do not satisfy the processing conditions: failed to obtain a solid or do not have an insertion point</err8>
 		<s1>Filtering the initial list of walls</s1>
 		<s2>Search internal and external walls</s2>
 		<s3>Creating analytical dimensions</s3>
