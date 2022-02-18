@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.6.11.0">
+<ModPlus Name="en-US" Version="5.6.12.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -4623,9 +4623,12 @@
 		<h19>Categories to filter</h19>
 		<h20>Selection variant:</h20>
 		<h21>Selected elements count:</h21>
+		<!-- todo remove -->
 		<h22>Algorithm for determining positions:</h22>
-		<h23>If rows are selected before running the plugin, the plugin will number only the selected rows. The numbering of the selected rows does not work with the algorithm "Through deletion of rows"</h23>
+		<h23>If rows are selected before running the plugin, the plugin will number only the selected rows</h23>
+		<!-- todo remove -->
 		<a1>Through deletion of rows</a1>
+		<!-- todo remove -->
 		<a2>Through signal value</a2>
 		<sv1>Standard frame selection</sv1>
 		<sv2>Ordinal selection</sv2>
@@ -4638,10 +4641,12 @@
 		<t5>Curve intersection - Select a curve (model line or detail line). The elements for numbering will be selected by finding the intersection of the curve with the geometry of the elements in the current view, projected onto the plane of the view. With this option, the direction of numbering can be ascending or descending.</t5>
 		<t6>For all selection variants elements can filter by category both before and after elements selection.</t6>
 		<t7>The list of parameters is filled in after selecting the elements for numbering.</t7>
+		<!-- todo remove start -->
 		<t8>For schedules that have the "Itemized" checkbox unchecked, there are two algorithms for determining positions:</t8>
 		<t9>Through deletion of rows - fast algorithm. This algorithm does not always work correctly, as there are cases when it is impossible to delete rows, and there are cases when deleting some rows leads to other rows.</t9>
 		<t10>Through signal value - is a slow algorithm. This algorithm requires constant regeneration of the specification, which leads to high time costs. The more elements in the schedule, the more time is required.</t10>
 		<t11>It is recommended to use the fast algorithm first. If the fast algorithm fails, then use the slow algorithm</t11>
+		<!-- todo remove end -->
 		<m1>Select elements for numbered marking</m1>
 		<m2>No items on current view schedule</m2>
 		<m3>Filter selected elements by the current list of categories?</m3>
