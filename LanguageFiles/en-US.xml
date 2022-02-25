@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.6.15.0">
+<ModPlus Name="en-US" Version="5.6.16.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -5218,12 +5218,14 @@
 	<mprWorksets LocalName="Worksets"
                Description="Manage, create, and apply worksets"
                FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element">
+		<!-- todo remove start -->
 		<yes>Yes</yes>
 		<no>No</no>
 		<accept>Accept</accept>
 		<cancel>Cancel</cancel>
 		<and>AND</and>
 		<or>OR</or>
+		<!-- todo remove end -->
 		<h1>Create worksets</h1>
 		<h2>Create worksets and apply them by filters</h2>
 		<h3>Apply worksets by filters</h3>
@@ -5259,6 +5261,7 @@
 		<h33>Uncheck all</h33>
 		<h34>Inverse</h34>
 		<h35>Available in the full version of the plugin</h35>
+		<!-- todo remove -->
 		<h36>Result</h36>
 		<h37>Import worksets</h37>
 		<h38>Group export</h38>
@@ -5287,6 +5290,7 @@
 		<t13>Uncheck all categories</t13>
 		<t14>Add new item</t14>
 		<t15>Remove selected item</t15>
+		<!-- todo remove -->
 		<t16>Open in notepad</t16>
 		<t17>This workset name is already in use</t17>
 		<t18>Empty workset name is not valid</t18>
@@ -5302,6 +5306,7 @@
 		<msg10>No configuration selected!</msg10>
 		<msg11>Nothing selected!</msg11>
 		<msg12>Creating worksets is only possible in documents configured for collaboration (workshared)</msg12>
+		<!-- todo remove start -->
 		<msg13>A workset with the name "{0}" already exists in the current document</msg13>
 		<msg14>Workset "{0}" created</msg14>
 		<msg15>No workset "{0}" found</msg15>
@@ -5309,6 +5314,7 @@
 		<msg17>Element id={0} did not have a "Workset" parameter</msg17>
 		<msg18>The workset "{0}" is applied to {1} elements: {2}</msg18>
 		<msg19>An error "{0}" occurred while setting the workset to elements: {1}</msg19>
+		<!-- todo remove end -->
 		<msg20>No worksets configuration created</msg20>
 		<msg21>Worksets configuration not selected</msg21>
 		<msg22>No worksets groups created in current configuration</msg22>
@@ -5316,7 +5322,16 @@
 		<msg24>You are trying to import a worksets group storage file</msg24>
 		<msg25>The selected file is not a file for storing data about a group of worksets and cannot be imported!</msg25>
 		<msg26>You are trying to import a configuration storage file</msg26>
+		<!-- todo remove -->
 		<msg27>The workset was not applied for the following elements because the elements are owned by user "{0}": {1}</msg27>
+		<msg28>A workset already exists in the current document</msg28>
+		<msg29>Workset created</msg29>
+		<msg30>Workset not found</msg30>
+		<msg31>No apply conditions are set for the workset</msg31>
+		<msg32>Element did not have a "Workset" parameter</msg32>
+		<msg33>The workset "{0}" is applied to {1} elements</msg33>
+		<msg34>An error "{0}" occurred while setting the workset to elements</msg34>
+		<msg35>The workset was not applied for the following elements because the elements are owned by user "{0}"</msg35>
 		<i1>You can enter multiple valid values in the "Values" field, separated by a comma. A parameter is considered to satisfy the condition if its value matches at least one valid value.</i1>
 		<i2>The condition "Presence of parameter" means that the element will be processed if there is such a parameter, regardless of the parameter value.</i2>
 		<i3>String parameters are checked only by the conditions "Equal", "Not equal", "Contains", "Not contains".</i3>
