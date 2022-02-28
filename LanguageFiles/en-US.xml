@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.6.16.0">
+<ModPlus Name="en-US" Version="5.6.17.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -133,6 +133,7 @@
 		<m4>Don't show again</m4>
 		<m5>No plugins are connected to the ModPlus platform! Start the Configurator from the ModPlus folder and connect the necessary plugins on the "Configuration" tab, and create a menu on the "Customize" tab</m5>
 		<m6>No menu has been created to build the ModPlus tab! Start the Configurator from the ModPlus folder and create a menu on the "Customize" tab</m6>
+		<m7>Enter a value from {0} to {1}</m7>
 		<em1>All error information is automatically sent to the ModPlus server, but in most cases we do not have enough information to solve the problem. You can help us by providing additional information. To do this, send us an</em1>
 		<em2>email</em2>
 		<em3>or write to our support chat in</em3>
@@ -1291,6 +1292,23 @@
 		<m9>The value of the property will be changed</m9>
 		<mm>mm</mm>
 	</ReinforcementBendRules>
+	<ReinforcementCoupler>
+		<rce1>Cannot place rebar coupler</rce1>
+		<rce2>The rebar sets have different numbers of bars</rce2>
+		<rce3>The selected ends of the bars are too far apart</rce3>
+		<rce4>The coupler cannot be placed at an end that already has a hook</rce4>
+		<rce5>The coupler cannot be placed at an end that already has a coupler</rce5>
+		<rce6>The selected legs are not aligned</rce6>
+		<rce7>The selected legs are not aligned</rce7>
+		<rce8>One of the selected bars has an incorrect shape</rce8>
+		<rce9>The selected coupler type cannot be applied to the selected bar size(s)</rce9>
+		<rce12>Cannot place rebar couplers on circular legs</rce12>
+		<rce13>The selected leg is shorter than the bar engagement</rce13>
+		<rce14>All the bars from the selected sets, which need to be connected, must be separated by the same distance</rce14>
+		<rce15>Cannot place rebar couplers on arcs with different radii</rce15>
+		<rce16>Cannot place rebar couplers on arcs with different centers</rce16>
+		<rce17>Cannot connect by coupler a straight segment with an arc segment</rce17>
+	</ReinforcementCoupler>
 	<mpTxtNumCopy LocalName="Copy with numbering"
                 Description="Copies the selected text or block with an attribute containing a numeric value, changing the value to a specified numerical step"
                 FullDescription="Copies the selected single line or multiline text, a block with an attribute or a multileader containing a digital value, with a value change to a specified numerical step. There are various settings - adding a prefix/suffix, suppressing tail zeros, etc.">
@@ -6543,11 +6561,11 @@
 		<p12>AP_Living area</p12>
 		<pd12>The sum of the living room areas of the apartment</pd12>
 		<p13>AP_Apartment area</p13>
-		<pd13>The sum of the areas of non-living rooms of the apartment. Excluding unheated (Total)</pd13>
+		<pd13>The sum of the areas of the apartment without taking into account unheated rooms (Total)</pd13>
 		<p14>AP_Total area</p14>
 		<pd14>The sum of all areas of the apartment. Including unheated with a reduction factor (Reduced)</pd14>
 		<p14-1>AP_Total area without factor</p14-1>
-		<pd14-1>The sum of all areas of the apartment without taking into account unheated rooms and without taking into account the reduction factor</pd14-1>
+		<pd14-1>The sum of all areas of the apartment without taking into account the reduction factor</pd14-1>
 		<p15>AP_Non-heated rooms area</p15>
 		<pd15>The sum of the areas of unheated rooms of the apartment. Without reduction factors</pd15>
 		<p16>AP_Non-heated rooms area with factor</p16>
@@ -6863,4 +6881,38 @@
 		<e7>Part does not contain a solid</e7>
 		<e8>Element does not contain a solid</e8>
 	</mprBreakLayers>
+	<mprSplitRebar LocalName=""
+	               Description="">
+		<sv1>Pick straight rebars</sv1>
+		<sv2>Straight rebars in view</sv2>
+		<sv3>Straight rebars in host</sv3>
+		<smn1>Exact length</smn1>
+		<smn2>Maximum length</smn2>
+		<smn3>Count</smn3>
+		<smd1>Cutting a rebar into parts of the specified length with one of the parts of shorter length, in case the original rebar is not divided by the specified length without a remainder</smd1>
+		<smd2>Cutting a rebar into parts of equal length, not exceeding the specified maximum length</smd2>
+		<smd3>Cutting a rebar into an equal number of parts</smd3>
+		<rb1>In start</rb1>
+		<rb2>In end</rb2>
+		<rb3>In middle</rb3>
+		<cmn1>Joint connection</cmn1>
+		<cmn2>Mechanical connection</cmn2>
+		<cmn3>Overlap</cmn3>
+		<cmn4>Curved rods</cmn4>
+		<ro1>Along the layout direction</ro1>
+		<ro2>Perpendicular to the layout direction</ro2>
+		<bd1>Up</bd1>
+		<bd2>Down</bd2>
+		<h1>Splitting method</h1>
+		<h2>Connection method</h2>
+		<h3>Remainder position</h3>
+		<h4>Coupler</h4>
+		<h5>Gap length (a)</h5>
+		<h6>Overlap length (a)</h6>
+		<h7>Bend indent (b)</h7>
+		<h8>Bend length (c)</h8>
+		<h9>Rods offset</h9>
+		<h10>Bend direction</h10>
+		<h11>Rebar Shape</h11>
+	</mprSplitRebar>
 </ModPlus>
