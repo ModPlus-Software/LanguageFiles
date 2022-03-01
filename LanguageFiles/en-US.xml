@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.6.17.0">
+<ModPlus Name="en-US" Version="5.7.0.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -6881,8 +6881,8 @@
 		<e7>Part does not contain a solid</e7>
 		<e8>Element does not contain a solid</e8>
 	</mprBreakLayers>
-	<mprSplitRebar LocalName=""
-	               Description="">
+	<mprSplitRebar LocalName="Split rebar"
+	               Description="Splitting of straight rebars by length with different connection options">
 		<sv1>Pick straight rebars</sv1>
 		<sv2>Straight rebars in view</sv2>
 		<sv3>Straight rebars in host</sv3>
@@ -6907,12 +6907,19 @@
 		<h2>Connection method</h2>
 		<h3>Remainder position</h3>
 		<h4>Coupler</h4>
-		<h5>Gap length (a)</h5>
-		<h6>Overlap length (a)</h6>
-		<h7>Bend indent (b)</h7>
-		<h8>Bend length (c)</h8>
+		<h5>Gap length</h5>
+		<h6>Overlap length</h6>
+		<h7>Bend indent</h7>
+		<h8>Bend length</h8>
 		<h9>Rods offset</h9>
 		<h10>Bend direction</h10>
 		<h11>Rebar Shape</h11>
+		<h12>Rebar selection</h12>
+		<m1>The center line of a rebar is not a line segment</m1>
+		<m2>Failed to split the rebar according to the specified conditions</m2>
+		<m3>The rebar does not meet the conditions of splitting</m3>
+		<m4>Failed to create a coupler</m4>
+		<m5>An unexpected error occurred during processing of the rebar</m5>
+		<m6>It is not possible to create a curved rebar with the current parameters</m6>
 	</mprSplitRebar>
 </ModPlus>
