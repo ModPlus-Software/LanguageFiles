@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.7.0.0">
+<ModPlus Name="en-US" Version="5.7.2.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -47,6 +47,9 @@
 		<white>White</white>
 		<and>And</and>
 		<or>Or</or>
+		<russia>Russia</russia>
+		<ukraine>Ukraine</ukraine>
+		<belarus>Belarus</belarus>
 	</Common>
 	<ModPlusAPI>
 		<msg1>Failed to create Word object! Make sure you installed Microsoft Office</msg1>
@@ -1962,7 +1965,6 @@
 	<mpSelSim LocalName="Select similar"
             Description="Plugins allow you to select objects that are similar to sample objects from all objects in the drawing, or from a specific set"
             FullDescription="Before using the plugin, you need to configure the conditions by which similar objects will be searched for - the same type, the same layer, the same color, etc. For some types, there are additional matching conditions. For example, the same text heights, blocks with the same name, etc.">
-		<h1>SELECT SIMILAR</h1>
 		<h2>General settings</h2>
 		<h3>Add sample objects to the final set (select similar from the selected)</h3>
 		<h4>Same types</h4>
@@ -1992,11 +1994,13 @@
 		<h28>Same length of lines</h28>
 		<h29>Polylines</h29>
 		<h30>Same length of polylines</h30>
+		<!-- todo remove -->
 		<h31>Save</h31>
 		<h32>Dimensions</h32>
 		<h33>Measurement</h33>
 		<h34>Text override</h34>
 		<h35>Text rotation</h35>
+		<h36>Multileaders</h36>
 		<msg1>Settings</msg1>
 		<msg2>Select sample objects or</msg2>
 		<msg3>Select objects to delete from the set or</msg3>
@@ -2112,8 +2116,10 @@
 		<err3>Do not hit the cell!</err3>
 		<err4>Invalid Input</err4>
 	</mpCalc>
+	<!-- todo remove -->
 	<mpDBviewer LocalName="Normative base"
-              Description="Plugin for viewing the normative base">
+	            Description="Plugin for viewing the normative base">
+		<!-- todo remove -->
 		<cancel>Cancel</cancel>
 		<cb1>Metal</cb1>
 		<cb2>Concrete</cb2>
@@ -2129,6 +2135,7 @@
 		<h7>Table</h7>
 		<h8>Name</h8>
 		<h9>Steel grade</h9>
+		<!-- todo remove -->
 		<h10>Export</h10>
 		<h11>Export document</h11>
 		<h12>Export to Excel</h12>
@@ -2318,9 +2325,11 @@
 	<mpProductInsert LocalName="Product insert"
                    Description="Plugin of inserting products from the ModPlus database as blocks containing extended data"
                    FullDescription="Plugin creates AutoCAD blocks based on data from the database. Extended data is added to the blocks, which allows processing these blocks with other plugins and creating a specification based on them\nPlugin also allows you to add extended data to ordinary AutoCAD entities\nImportant! Blocks must be inserted with this plugin or copy already inserted, otherwise (when inserted by normal means AutoCAD), extended data will not be added!">
+		<!-- todo remove start -->
 		<close>Close</close>
 		<accept>Accept</accept>
 		<cancel>Cancel</cancel>
+		<!-- todo remove end -->
 		<all>All</all>
 		<cb1>Metal</cb1>
 		<cb2>Concrete</cb2>
@@ -2329,6 +2338,7 @@
 		<cb5>Other</cb5>
 		<h1>Edit the list of documents used by the plugin</h1>
 		<h2>Open the database search bar</h2>
+		<!-- todo remove -->
 		<h3>Search</h3>
 		<h4>2 characters or more</h4>
 		<h5>PRODUCT INSERT</h5>
@@ -2447,8 +2457,10 @@
 	<mpPrToTable LocalName="Products to table"
                Description="Plugin allows you to fill the specification table with the selected ModPlus products"
                FullDescription="Plugin collects data for the specification from the extended product data (blocks created by the &quot;Insert product&quot; plugin, or AutoCAD primitives with the expanded data added by the &quot;Insert product&quot; plugin), as well as from blocks that have attributes for the specification. It is possible to specify a line from which the table will be populated">
+		<!-- todo remove start -->
 		<yes>Yes</yes>
 		<no>No</no>
+		<!-- todo remove end -->
 		<h1>Select entities that are ModPlus products</h1>
 		<h2>Row</h2>
 		<h3>Decimals</h3>
@@ -2585,6 +2597,7 @@
 	<mpSpecifications LocalName="Specifications"
                     Description="Plugin for the formation and filling of general specifications"
                     FullDescription="Plugin allows you to add items to the context menu of AutoCAD, allowing you to expand the ability to work with the specifications: Context menu for tables: Add product from the database - allows you to add products from the plugin database directly into the AutoCAD table; Context menu for blocks: Add/change attributes for the specification - allows you to add attributes to the blocks for the specification (see details in the help)">
+		<!-- todo remove start -->
 		<accept>Accept</accept>
 		<cancel>Cancel</cancel>
 		<h1>SPECIFICATIONS</h1>
@@ -2592,6 +2605,7 @@
 		<h3>Ukraine</h3>
 		<h4>Belarus</h4>
 		<h5>Settings</h5>
+		<!-- todo remove end -->
 		<h6>CONTEXTUAL MENUS</h6>
 		<h7>Available in the full version of the plugin</h7>
 		<h8>Context menu for tables:</h8>
@@ -2636,6 +2650,7 @@
 		<h47>Steel</h47>
 		<h48>Edit the list of documents used by the plugin</h48>
 		<h49>Open the database search bar</h49>
+		<!-- todo remove -->
 		<h50>Search</h50>
 		<h51>2 characters or more</h51>
 		<h52>PRODUCT FROM BASE</h52>
@@ -2643,9 +2658,9 @@
 		<h54>Filter by groups:</h54>
 		<h55>Select a document:</h55>
 		<h56>Open image</h56>
-		<h57>Document status: Valid</h57>
-		<h58>Document status: Not valid</h58>
-		<h59>Document status: No information or legislation</h59>
+		<h57>Valid</h57>
+		<h58>Not valid</h58>
+		<h59>No information or legislation</h59>
 		<h60>Length, mm</h60>
 		<h61>Measure between two points</h61>
 		<h62>Diameter, mm</h62>
@@ -2657,6 +2672,7 @@
 		<h68>Not all data entered</h68>
 		<h69>Add</h69>
 		<h70>Add and close</h70>
+		<h71>Document's status:</h71>
 		<cb1>Add from base</cb1>
 		<cb2>Add subsection</cb2>
 		<cb3>Manual input</cb3>
@@ -2695,6 +2711,13 @@
 		<ad3>Product name</ad3>
 		<ad4>Product mass</ad4>
 		<ad5>Note for the product</ad5>
+		<s1>Assemblies</s1>
+		<s2>Details</s2>
+		<s3>Standard products</s3>
+		<s4>Materials</s4>
+		<s5>Spatial frames</s5>
+		<s6>Meshes</s6>
+		<s7>Mortar products</s7>
 	</mpSpecifications>
 	<mpLayoutManager LocalName="Layout manager"
                    Description="Drawing layout manager displayed in the palette">
