@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.8.4.0">
+<ModPlus Name="en-US" Version="5.9.0.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -1493,6 +1493,11 @@
 		<kw8>CLeft</kw8>
 		<kw9>CRight</kw9>
 	</mpMultiScale>
+	<mpMultiRotate LocalName="Multi rotate"
+	              Description="The Plugin allows you to rotate each of the selected entities relative to the Z-axis with the center of rotation relative to themselves"
+	              FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
+		<msg3>Rotation angle in degrees:</msg3>
+	</mpMultiRotate>
 	<mpRotAtt LocalName="Rotation angle of attributes"
             Description="Plugin is used to change the rotation angle of attributes in the selected blocks">
 		<msg1>Select blocks:</msg1>
