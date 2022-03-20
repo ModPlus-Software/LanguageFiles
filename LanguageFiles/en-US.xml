@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.9.0.0">
+<ModPlus Name="en-US" Version="5.9.1.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -1494,7 +1494,7 @@
 		<kw9>CRight</kw9>
 	</mpMultiScale>
 	<mpMultiRotate LocalName="Multi rotate"
-	              Description="The Plugin allows you to rotate each of the selected entities relative to the Z-axis with the center of rotation relative to themselves"
+	              Description="Plugin allows you to rotate each of the selected entities relative to the Z-axis with the center of rotation relative to themselves"
 	              FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
 		<msg3>Rotation angle in degrees:</msg3>
 	</mpMultiRotate>
@@ -6551,6 +6551,7 @@
 		<tab6>Numbering</tab6>
 		<tab7>Schedules</tab7>
 		<tab8>Views of apartments</tab8>
+		<tab9>Apartment Editor</tab9>
 		<rt1>Not set</rt1>
 		<rt2>Residential</rt2>
 		<rt3>Non-residential</rt3>
@@ -6611,6 +6612,8 @@
 		<pd17>Auxiliary parameter that allows you to count the number of apartments in the schedules</pd17>
 		<p18>AP_Apartment Number</p18>
 		<pd18>To be completed at the end of the project</pd18>
+		<p19>AP_Levels count</p19>
+		<pd19>Levels count of a multilevel apartment</pd19>
 		<pt1>Text</pt1>
 		<pt2>Area</pt2>
 		<pt3>Currency</pt3>
@@ -6759,6 +6762,15 @@
 		<h140>All sources</h140>
 		<h141>Merging apartments</h141>
 		<h142>Delimiter</h142>
+		<h143>*DIFFERENT*</h143>
+		<h144>Open the parameter list in Notepad</h144>
+		<h145>Write changed values</h145>
+		<h146>Apartments</h146>
+		<h147>Data of checked apartments</h147>
+		<h148>Checked apartments count:</h148>
+		<h149>Changing apartment data</h149>
+		<h150>Merge into multilevel apartments</h150>
+		<h151>Merging into multilevel apartments</h151>
 		<msg1>Parameter "{0}" not found</msg1>
 		<msg2>Parameter "{0}" is not filled</msg2>
 		<msg3>Parameter "{0}" has an invalid value</msg3>
@@ -6793,6 +6805,10 @@
 		<msg32>The following characters - \ / * ? : [ ] - are not allowed for the name</msg32>
 		<msg33>The current room matrix will be deleted irretrievably! Are you sure you want to continue?</msg33>
 		<msg34>The current apartment type table will be deleted irretrievably! Are you sure you want to continue?</msg34>
+		<msg35>Data updated</msg35>
+		<msg36>For the following apartments (id) among the checked ones, no pairing options were found (apartments located on neighboring levels and having vertical intersection)</msg36>
+		<msg37>The apartments ({0}) are merged into a multilevel with id: {1}</msg37>
+		<msg38>There was an error in merging apartments</msg38>
 		<tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
 		<tt2>Hide instruction</tt2>
 		<tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -6805,6 +6821,7 @@
 		<tt10>Adding new positions to the current table, collected from the rooms of the current project. Items are added only with a filled "Room name" value</tt10>
 		<tt11>Merge the selected apartments in the list into one</tt11>
 		<tt12>Value used as a delimiter when adding a "Housing", "Section" and/or parameter value to the number</tt12>
+		<tt13>Select and show the checked apartments</tt13>
 		<instruction>Instruction</instruction>
 		<instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
 		<instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name. In the "Room name" column you can specify an asterisk at the end of the name, which will indicate a check for a match at the beginning of the room name (for example, the value "Bedroom*" will match the room names "Bedroom 1", "Bedroom 2", etc.)</instruction2>
@@ -6814,6 +6831,7 @@
 		<instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
 		<instruction6>Numbering can be done by grouping the apartments by Housings and/or Sections by enabling the corresponding options and by specifying the parameter names from which to take the value of the Housing and/or Sections. In this case, it is considered that the sections are subgroups for the housings. The "End-to-end numbering" property means that the numbering in the next group will continue, not start from the value set in the "Initial number" property. If you select the " Point " option in the "Start of numbering" property, you will need to select a room for each group of apartments</instruction6>
 		<instruction7>Creating apartment views is done by duplicating the current view, followed by cropping along the contour of the apartment. First of all, an attempt is made to create a crop contour considering the thickness of the enclosing walls (only for Revit 2020 and higher). If unsuccessful, an attempt is made to create a crop contour taking into account the thickest of the enclosing walls. If the crop contour is not created, the apartment contour obtained from the room boundaries will be used. If the option "Try to use apartment type as view name" is enabled, the created views will be given a name of the type "LEVEL_NAME - Apartment APARTMENT_TYPE".</instruction7>
+		<instruction8>The apartment editor allows you to make manual changes to the values of the apartment areas, as well as to merge multilevel apartments. When merging multilevel apartments, the areas are recalculated and the value of the "AP_Levels count" parameter is filled in. IMPORTANT: When recalculating apartments on a particular level, the parameter values of rooms belonging to the multilevel apartment, but located on another level, will not be recalculated</instruction8>
 	</mprApartmentBuildingLayout>
 	<mprRoomColorVolume LocalName="Room volume"
                       Description="Showing the volume of rooms in color using DirectShape"
