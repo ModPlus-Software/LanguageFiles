@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.9.1.0">
+<ModPlus Name="en-US" Version="5.10.0.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -2810,8 +2810,6 @@
 	<mprSheetCopy LocalName="Sheet copy"
                 Description="Plugin allows you to make copies of the specified sheets with different settings"
                 FullDescription="The selected sheets can be copied without views and with views. You can specify whether to copy legends and schedules. A unique numbering system allows you not to change the number for a copy of the sheet, if you specify a prefix or suffix to obtain a unique number">
-		<!-- todo remove -->
-		<h1>Sheet copy</h1>
 		<h2>Search by name/number</h2>
 		<h3>Number of copies</h3>
 		<h4>Select all sheets</h4>
@@ -2852,7 +2850,7 @@
 		<h39>Duplicate view</h39>
 		<h40>Can not create dependent view for view</h40>
 		<h41>An attempt will be made to duplicate with detail</h41>
-		<h42>Do not copy the view</h42>
+		<h42>Failed to duplicate the view</h42>
 		<h43>Failed to generate name for duplicate view</h43>
 		<h44>Duplicate viewport</h44>
 		<h45>Duplicate schedule</h45>
@@ -2864,7 +2862,7 @@
 		<h51>Search and replace in new sheet names</h51>
 		<h52>To find:</h52>
 		<h53>Replaced by:</h53>
-		<h54>Only in marked sheets</h54>
+		<h54>Only in checked sheets</h54>
 		<h55>Case sensitive</h55>
 		<h56>Search and replace</h56>
 		<h57>In the view name find and replace</h57>
@@ -2884,10 +2882,6 @@
 		<h71>Generic Annotations</h71>
 		<h72>Offset view depth</h72>
 		<h73>In schedule name find and replace</h73>
-		<!-- todo remove -->
-		<accept>Accept</accept>
-		<!-- todo remove -->
-		<cancel>Cancel</cancel>
 		<start>Start</start>
 		<notOrganized>!Not organized</notOrganized>
 		<end>End</end>
@@ -2895,6 +2889,57 @@
 		<cb2>Duplicate with Detailing</cb2>
 		<cb3>Duplicate as a Dependent</cb3>
 	</mprSheetCopy>
+	<mprViewCopy LocalName="View copy"
+	             Description="Plugin allows you to make copies of the specified views with different settings">
+		<h1>In the limited version, no more than 3 views are available for duplication</h1>
+		<h2>Search by name</h2>
+		<h3>Number of copies</h3>
+		<h4>Select all views</h4>
+		<h5>General duplication settings</h5>
+		<h10>When creating a new name, add the numbering in</h10>
+		<h16>Name prefix</h16>
+		<h17>Name</h17>
+		<h18>Name suffix</h18>
+		<h20>Case sensitive!</h20>
+		<h21>on</h21>
+		<h22>Do not add numbering if possible</h22>
+		<h23>If adding a prefix or suffix to a view name or legend name results in a unique name, the numbering will not be added</h23>
+		<h25>Views duplication settings</h25>
+		<h26>View copy option:</h26>
+		<h27>View template:</h27>
+		<h31>View Name</h31>
+		<h32>Proceed</h32>
+		<h35>Unselect all views</h35>
+		<h36>You did not specify duplicate views</h36>
+		<h37>View duplication</h37>
+		<h40>Can not create dependent view for view</h40>
+		<h41>An attempt will be made to duplicate with detail</h41>
+		<h42>Failed to duplicate the view</h42>
+		<h43>Failed to generate name for duplicate view</h43>
+		<h48>Views selected:</h48>
+		<h50>Duplicate name:</h50>
+		<h51>Search and replace in new view names</h51>
+		<h52>To find:</h52>
+		<h53>Replaced by:</h53>
+		<h54>Only in checked views</h54>
+		<h55>Case sensitive</h55>
+		<h56>Search and replace</h56>
+		<h57>In the view name find and replace</h57>
+		<h59>Crop view</h59>
+		<h60>Crop Region Visible</h60>
+		<h61>Annotation crop</h61>
+		<h62>By default, when you create a dependent view, the "Crop View", "Crop Region Visible", and "Annotation crop" properties are enabled. You can specify which of these properties to disable</h62>
+		<h64>Legends duplication settings</h64>
+		<h65>Offset view range:</h65>
+		<h69>View range and view depth offset is only performed for floor plans</h69>
+		<h72>Offset view depth</h72>
+		<notOrganized>!Not organized</notOrganized>
+		<start>Start</start>
+		<end>End</end>
+		<cb1>Duplicate</cb1>
+		<cb2>Duplicate with Detailing</cb2>
+		<cb3>Duplicate as a Dependent</cb3>
+	</mprViewCopy>
 	<mpDwgBase LocalName="Dwg base"
              Description="Base of various blocks and drawings"
              FullDescription="The dwg database allows you to insert both blocks and finished drawings (for example, details view). The dwg database is filled with users. Plugin requires access to the internet">
