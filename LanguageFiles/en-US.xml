@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.14.0.0">
+<ModPlus Name="en-US" Version="5.14.1.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -1303,7 +1303,7 @@
 		<m7>with diameter</m7>
 		<m8>must be:</m8>
 		<m9>The value of the property will be changed</m9>
-		<mm>mm</mm>
+		<m10>Correcting the bending radius of the rebar</m10>
 	</ReinforcementBendRules>
 	<ReinforcementCoupler>
 		<rce1>Cannot place rebar coupler</rce1>
@@ -5029,9 +5029,10 @@
 		<h221>Longitudinally curved rods (bent into a "bottle")</h221>
 		<h226>Removal of previously created reinforcement:</h226>
 		<h227>Binding of the working rebar to the edge of the column by the center of the rebar. Binding is calculated by model diameter</h227>
+		<h228>Install couplers</h228>
 		<srd>Saving data of selected columns</srd>
 		<hook>Hook:</hook>
-		<err1>No overlying floor found or distance to overlying column is 0</err1>
+		<err1>In the column reinforcement settings, there are bent "in the bottle" rods that must have a floor or non-zero distance between the columns in order to create them. No overlying floor found or distance to overlying column is 0</err1>
 		<npa1>do not create joint</npa1>
 		<npa2>create straight joints</npa2>
 		<npa3>assume a floor conditionally existing</npa3>
@@ -7109,7 +7110,7 @@
 		<v3>Elevation</v3>
 		<v4>Section</v4>
 		<v5>Apply view template</v5>
-		<v6>Число разбиения кривых</v6>
+		<v6>Number of curve splits</v6>
 		<v8>Projection depth</v8>
 		<v9>Select sheet for location</v9>
 		<a1>Run the plugin from the plan</a1>
