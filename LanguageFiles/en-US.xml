@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.14.7.0">
+<ModPlus Name="en-US" Version="5.14.8.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -5042,6 +5042,10 @@
 		<h231>Couplers will be installed only if the treated columns have the same cross-section and the coupler type is present in the document. Coupler types are searched in the document based on the rules specified in the </h231>
 		<h232> window. In columns where connectors will be installed, the longitudinal reinforcement will be made by individual reinforcing bars without a layout.</h232>
 		<h233>Specify the rules for the installation of couplers for certain types of rebars. You can specify either the full name of the rebar type or a partial name. For example, specify the value "10". Then the type of rebar will be considered as suitable if it has "10" in its name.</h233>
+		<h234>Bend the bottom of straight rebars</h234>
+		<h235>Bend offset (O), mm:</h235>
+		<h236>Bend length (L), mm:</h236>
+		<h237>Bottom bending is performed for straight rebars provided that the columns to be machined have the same cross-section.</h237>
 		<srd>Saving data of selected columns</srd>
 		<hook>Hook:</hook>
 		<err1>In the column reinforcement settings, there are bent "in the bottle" rods that must have a floor or non-zero distance between the columns in order to create them. No overlying floor found or distance to overlying column is 0</err1>
@@ -5083,6 +5087,7 @@
 		<p9>Calculation and modeling of longitudinal reinforcement</p9>
 		<p10>Calculation and modeling of transverse reinforcement</p10>
 		<p14>Calculation and modeling of joints from the plate</p14>
+		<p15>Creating couplers</p15>
 		<e1>Column analysis errors</e1>
 		<e2>Failed to initialize column</e2>
 		<e3>Failed to get solids</e3>
