@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="5.14.8.0">
+<ModPlus Name="en-US" Version="6.0.0.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -1332,6 +1332,7 @@
 		<rce16>Cannot place rebar couplers on arcs with different centers</rce16>
 		<rce17>Cannot connect by coupler a straight segment with an arc segment</rce17>
 	</ReinforcementCoupler>
+	<!-- AutoCAD -->
 	<mpTxtNumCopy LocalName="Copy with numbering"
                 Description="Copies the selected text or block with an attribute containing a numeric value, changing the value to a specified numerical step"
                 FullDescription="Copies the selected single line or multiline text, a block with an attribute or a multileader containing a digital value, with a value change to a specified numerical step. There are various settings - adding a prefix/suffix, suppressing tail zeros, etc.">
@@ -2787,139 +2788,6 @@
 		<apply>Apply</apply>
 		<close>Close</close>
 	</mpSheetNumbers>
-	<mprSheetCopy LocalName="Sheet copy"
-                Description="Plugin allows you to make copies of the specified sheets with different settings"
-                FullDescription="The selected sheets can be copied without views and with views. You can specify whether to copy legends and schedules. A unique numbering system allows you not to change the number for a copy of the sheet, if you specify a prefix or suffix to obtain a unique number">
-		<h2>Search by name/number</h2>
-		<h3>Number of copies</h3>
-		<h4>Select all sheets</h4>
-		<h5>General duplication settings</h5>
-		<h6>Duplicate sheet content:</h6>
-		<h7>Views</h7>
-		<h8>Set title block:</h8>
-		<h9>Sheets duplication settings</h9>
-		<h10>When creating a new name, add the numbering in</h10>
-		<h11>Schedules duplication settings</h11>
-		<h12>Failed to generate name for schedule duplicate</h12>
-		<h13>Number prefix</h13>
-		<h14>Number</h14>
-		<h15>Number suffix</h15>
-		<h16>Name prefix</h16>
-		<h17>Name</h17>
-		<h18>Name suffix</h18>
-		<h19>In the sheet number find and replace</h19>
-		<h20>Case sensitive!</h20>
-		<h21>on</h21>
-		<h22>Do not add numbering if possible</h22>
-		<h23>If adding a prefix or suffix to a sheet number, view name, schedule name or legend name results in a unique number or name, the numbering will not be added</h23>
-		<h24>Available in full version</h24>
-		<h25>Views duplication settings</h25>
-		<h26>View copy option:</h26>
-		<h27>View template:</h27>
-		<h28>Legends</h28>
-		<h29>Schedules Graphics</h29>
-		<h30>Additionally:</h30>
-		<h31>View Name</h31>
-		<h32>Proceed</h32>
-		<h33>Current title block</h33>
-		<h34>Do not change</h34>
-		<h35>Unselect all sheets</h35>
-		<h36>You did not specify duplicate sheets</h36>
-		<h37>Sheet duplication</h37>
-		<h38>Failed to generate name and number for duplicate sheet</h38>
-		<h39>Duplicate view</h39>
-		<h40>Can not create dependent view for view</h40>
-		<h41>An attempt will be made to duplicate with detail</h41>
-		<h42>Failed to duplicate the view</h42>
-		<h43>Failed to generate name for duplicate view</h43>
-		<h44>Duplicate viewport</h44>
-		<h45>Duplicate schedule</h45>
-		<h46>Copy values of sheet parameters</h46>
-		<h47>Create copies of schedules</h47>
-		<h48>Sheets selected:</h48>
-		<h49>Text notes</h49>
-		<h50>Duplicate name:</h50>
-		<h51>Search and replace in new sheet names</h51>
-		<h52>To find:</h52>
-		<h53>Replaced by:</h53>
-		<h54>Only in checked sheets</h54>
-		<h55>Case sensitive</h55>
-		<h56>Search and replace</h56>
-		<h57>In the view name find and replace</h57>
-		<h58>Raster images (+ PDF)</h58>
-		<h59>Crop view</h59>
-		<h60>Crop Region Visible</h60>
-		<h61>Annotation crop</h61>
-		<h62>By default, when you create a dependent view, the "Crop View", "Crop Region Visible", and "Annotation crop" properties are enabled. You can specify which of these properties to disable</h62>
-		<h63>Create copies of legends</h63>
-		<h64>Legends duplication settings</h64>
-		<h65>Offset view range:</h65>
-		<h66>The same schedule can be inserted several times on different sheets. To create a copy of the schedule placed on the duplicated sheet, enable the option "Create copies of schedules" and, if necessary, specify the prefix and/or suffix of the name in the appropriate group below</h66>
-		<h67>The same legend can be inserted on different sheets. To create a copy of the legend placed on the duplicated sheet, enable the option "Create copies of legends" and, if necessary, specify the prefix and/or suffix of the name in the appropriate group below</h67>
-		<h68>All standard views (floor plans, elevations, sections, etc.) can be inserted into a sheet only once. When this option is enabled, copies of the views placed on the duplicated sheet will be created. You can set various settings for duplicating views in the corresponding group below</h68>
-		<h69>View range and view depth offset is only performed for floor plans</h69>
-		<h70>Copy title block parameter values</h70>
-		<h71>Generic Annotations</h71>
-		<h72>Offset view depth</h72>
-		<h73>In schedule name find and replace</h73>
-		<start>Start</start>
-		<notOrganized>!Not organized</notOrganized>
-		<end>End</end>
-		<cb1>Duplicate</cb1>
-		<cb2>Duplicate with Detailing</cb2>
-		<cb3>Duplicate as a Dependent</cb3>
-	</mprSheetCopy>
-	<mprViewCopy LocalName="View copy"
-	             Description="Plugin allows you to make copies of the specified views with different settings">
-		<h1>In the limited version, no more than 3 views are available for duplication</h1>
-		<h2>Search by name</h2>
-		<h3>Number of copies</h3>
-		<h4>Select all views</h4>
-		<h5>General duplication settings</h5>
-		<h10>When creating a new name, add the numbering in</h10>
-		<h16>Name prefix</h16>
-		<h17>Name</h17>
-		<h18>Name suffix</h18>
-		<h20>Case sensitive!</h20>
-		<h21>on</h21>
-		<h22>Do not add numbering if possible</h22>
-		<h23>If adding a prefix or suffix to a view name or legend name results in a unique name, the numbering will not be added</h23>
-		<h25>Views duplication settings</h25>
-		<h26>View copy option:</h26>
-		<h27>View template:</h27>
-		<h31>View Name</h31>
-		<h32>Proceed</h32>
-		<h35>Unselect all views</h35>
-		<h36>You did not specify duplicate views</h36>
-		<h37>View duplication</h37>
-		<h40>Can not create dependent view for view</h40>
-		<h41>An attempt will be made to duplicate with detail</h41>
-		<h42>Failed to duplicate the view</h42>
-		<h43>Failed to generate name for duplicate view</h43>
-		<h48>Views selected:</h48>
-		<h50>Duplicate name:</h50>
-		<h51>Search and replace in new view names</h51>
-		<h52>To find:</h52>
-		<h53>Replaced by:</h53>
-		<h54>Only in checked views</h54>
-		<h55>Case sensitive</h55>
-		<h56>Search and replace</h56>
-		<h57>In the view name find and replace</h57>
-		<h59>Crop view</h59>
-		<h60>Crop Region Visible</h60>
-		<h61>Annotation crop</h61>
-		<h62>By default, when you create a dependent view, the "Crop View", "Crop Region Visible", and "Annotation crop" properties are enabled. You can specify which of these properties to disable</h62>
-		<h64>Legends duplication settings</h64>
-		<h65>Offset view range:</h65>
-		<h69>View range and view depth offset is only performed for floor plans</h69>
-		<h72>Offset view depth</h72>
-		<notOrganized>!Not organized</notOrganized>
-		<start>Start</start>
-		<end>End</end>
-		<cb1>Duplicate</cb1>
-		<cb2>Duplicate with Detailing</cb2>
-		<cb3>Duplicate as a Dependent</cb3>
-	</mprViewCopy>
 	<mpDwgBase LocalName="Dwg base"
              Description="Base of various blocks and drawings"
              FullDescription="The dwg database allows you to insert both blocks and finished drawings (for example, details view). The dwg database is filled with users. Plugin requires access to the internet">
@@ -3213,37 +3081,6 @@
 		<u60>Can not access the file. Maybe it's open</u60>
 		<u61>Already exists a file:</u61>
 	</mpDwgBase>
-	<ostViewIn3D LocalName="3D section box"
-			   Description="Cuts the selected elements in the view cube, with the possibility of specifying the size of the view cube"
-			   FullDescription="It is possible to dynamically change the dimensions of the view cubes uniformly in all directions relative to the selected elements">
-		<h1>3D section box</h1>
-		<msg1>Select elements for 3D trimming</msg1>
-	</ostViewIn3D>
-	<mmRebarSolidAndVisible LocalName="Rebar solid and visible"
-                          Description="Change the state of the visibility of the rebar (view unobscured and view as solid)"
-                          FullDescription="The visibility state of View unobscured is set to any view, whether 2D or 3D. View as solid - set only in 3D view"
-                          LocalName1="Disable visibility"
-                          Description1="Disable the state of the visibility of the rebar (view unobscured and view as solid)"
-                          LocalName2="Elements selection settings"
-                          Description2="Settings options for the selection of elements containing reinforcement for plugins">
-		<msg1>Select an element with rebar or reinforcement</msg1>
-		<msg2>Select an elements with rebar or reinforcement</msg2>
-		<t1>Process:</t1>
-		<h1>Turn on rebars visibility for:</h1>
-		<h2>Show as solid</h2>
-		<h3>Selected element</h3>
-		<h4>Selected elements</h4>
-		<h5>All elements on view</h5>
-		<h6>Change property "View unobscured"</h6>
-		<h7>Change property "View as solid"</h7>
-		<h8>Show as line</h8>
-		<h9>Make unobscured</h9>
-		<h10>Make obscured</h10>
-		<h11>All but selected elements on view</h11>
-		<close>Close</close>
-		<apply>Apply</apply>
-		<continue>Continue</continue>
-	</mmRebarSolidAndVisible>
 	<mpESKD LocalName="ModPlus ESKD"
           Description="A collection of plugins that creates smart entities (custom entities) for drawing up drawings according to the rules of ESKD">
 		<tab1>Lines</tab1>
@@ -3675,6 +3512,218 @@
 		<d107>The line formula is given by integers separated by hyphens. Each odd number (1, 3, 5, ...) specifies the stroke length. Each fair number (2, 4, 6, ...) specifies the length of the space</d107>
 		<p108>First text indent</p108>
 	</mpESKD>
+	<mpStripMtext LocalName="Clear formatting"
+	              Description="Remove specified formatting from multiline text"
+	              FullDescription="Plugin allows you to delete the formatting of multiline text, mleaders, dimensions, attributes of blocks and tables">
+		<h1>Select type of formatting to remove</h1>
+		<h2>Check all</h2>
+		<h3>Uncheck all</h3>
+		<h4>Accept</h4>
+		<m1>Select objects containing multiline text</m1>
+		<s1>Alignment</s1>
+		<st1>Remove vertical alignment. Vertical alignment appears when there are fractions in the text</st1>
+		<s2>Tabs</s2>
+		<st2>Remove horizontal tabs</st2>
+		<s3>Color</s3>
+		<st3>Remove text color</st3>
+		<s4>Fields</s4>
+		<st4>Convert fields to plain text</st4>
+		<s5>Fonts</s5>
+		<st5>Remove font overrides in text</st5>
+		<s6>Height</s6>
+		<st6>Remove text height overrides</st6>
+		<s7>Strikethrough</s7>
+		<st7>Remove strikethrough text</st7>
+		<s8>Linefeed</s8>
+		<st8>Remove leading linefeeds</st8>
+		<s9>Mask</s9>
+		<st9>Remove background mask</st9>
+		<s10>Columns</s10>
+		<st10>Remove columns from text</st10>
+		<s11>Overline</s11>
+		<st11>Remove overline from text</st11>
+		<s12>Paragraph</s12>
+		<st12>Remove paragraph breaks</st12>
+		<s13>Oblique</s13>
+		<st13>Remove oblique from text</st13>
+		<s14>Stacking</s14>
+		<st14>Convert stacking text to line text</st14>
+		<s15>Tracking</s15>
+		<st15>Remove space between characters</st15>
+		<s16>Underline</s16>
+		<st16>Turns underline off</st16>
+		<s17>Width</s17>
+		<st17>Reset width factor</st17>
+		<s18>Non-breaking space</s18>
+		<st18>Remove non-breaking spaces from text</st18>
+		<s19>Paragraph alignment</s19>
+		<st19>Remove paragraph alignments from text</st19>
+	</mpStripMtext>
+	<!-- Revit -->
+	<mprSheetCopy LocalName="Sheet copy"
+	              Description="Plugin allows you to make copies of the specified sheets with different settings"
+	              FullDescription="The selected sheets can be copied without views and with views. You can specify whether to copy legends and schedules. A unique numbering system allows you not to change the number for a copy of the sheet, if you specify a prefix or suffix to obtain a unique number">
+		<h2>Search by name/number</h2>
+		<h3>Number of copies</h3>
+		<h4>Select all sheets</h4>
+		<h5>General duplication settings</h5>
+		<h6>Duplicate sheet content:</h6>
+		<h7>Views</h7>
+		<h8>Set title block:</h8>
+		<h9>Sheets duplication settings</h9>
+		<h10>When creating a new name, add the numbering in</h10>
+		<h11>Schedules duplication settings</h11>
+		<h12>Failed to generate name for schedule duplicate</h12>
+		<h13>Number prefix</h13>
+		<h14>Number</h14>
+		<h15>Number suffix</h15>
+		<h16>Name prefix</h16>
+		<h17>Name</h17>
+		<h18>Name suffix</h18>
+		<h19>In the sheet number find and replace</h19>
+		<h20>Case sensitive!</h20>
+		<h21>on</h21>
+		<h22>Do not add numbering if possible</h22>
+		<h23>If adding a prefix or suffix to a sheet number, view name, schedule name or legend name results in a unique number or name, the numbering will not be added</h23>
+		<h24>Available in full version</h24>
+		<h25>Views duplication settings</h25>
+		<h26>View copy option:</h26>
+		<h27>View template:</h27>
+		<h28>Legends</h28>
+		<h29>Schedules Graphics</h29>
+		<h30>Additionally:</h30>
+		<h31>View Name</h31>
+		<h32>Proceed</h32>
+		<h33>Current title block</h33>
+		<h34>Do not change</h34>
+		<h35>Unselect all sheets</h35>
+		<h36>You did not specify duplicate sheets</h36>
+		<h37>Sheet duplication</h37>
+		<h38>Failed to generate name and number for duplicate sheet</h38>
+		<h39>Duplicate view</h39>
+		<h40>Can not create dependent view for view</h40>
+		<h41>An attempt will be made to duplicate with detail</h41>
+		<h42>Failed to duplicate the view</h42>
+		<h43>Failed to generate name for duplicate view</h43>
+		<h44>Duplicate viewport</h44>
+		<h45>Duplicate schedule</h45>
+		<h46>Copy values of sheet parameters</h46>
+		<h47>Create copies of schedules</h47>
+		<h48>Sheets selected:</h48>
+		<h49>Text notes</h49>
+		<h50>Duplicate name:</h50>
+		<h51>Search and replace in new sheet names</h51>
+		<h52>To find:</h52>
+		<h53>Replaced by:</h53>
+		<h54>Only in checked sheets</h54>
+		<h55>Case sensitive</h55>
+		<h56>Search and replace</h56>
+		<h57>In the view name find and replace</h57>
+		<h58>Raster images (+ PDF)</h58>
+		<h59>Crop view</h59>
+		<h60>Crop Region Visible</h60>
+		<h61>Annotation crop</h61>
+		<h62>By default, when you create a dependent view, the "Crop View", "Crop Region Visible", and "Annotation crop" properties are enabled. You can specify which of these properties to disable</h62>
+		<h63>Create copies of legends</h63>
+		<h64>Legends duplication settings</h64>
+		<h65>Offset view range:</h65>
+		<h66>The same schedule can be inserted several times on different sheets. To create a copy of the schedule placed on the duplicated sheet, enable the option "Create copies of schedules" and, if necessary, specify the prefix and/or suffix of the name in the appropriate group below</h66>
+		<h67>The same legend can be inserted on different sheets. To create a copy of the legend placed on the duplicated sheet, enable the option "Create copies of legends" and, if necessary, specify the prefix and/or suffix of the name in the appropriate group below</h67>
+		<h68>All standard views (floor plans, elevations, sections, etc.) can be inserted into a sheet only once. When this option is enabled, copies of the views placed on the duplicated sheet will be created. You can set various settings for duplicating views in the corresponding group below</h68>
+		<h69>View range and view depth offset is only performed for floor plans</h69>
+		<h70>Copy title block parameter values</h70>
+		<h71>Generic Annotations</h71>
+		<h72>Offset view depth</h72>
+		<h73>In schedule name find and replace</h73>
+		<start>Start</start>
+		<notOrganized>!Not organized</notOrganized>
+		<end>End</end>
+		<cb1>Duplicate</cb1>
+		<cb2>Duplicate with Detailing</cb2>
+		<cb3>Duplicate as a Dependent</cb3>
+	</mprSheetCopy>
+	<mprViewCopy LocalName="View copy"
+	             Description="Plugin allows you to make copies of the specified views with different settings">
+		<h1>In the limited version, no more than 3 views are available for duplication</h1>
+		<h2>Search by name</h2>
+		<h3>Number of copies</h3>
+		<h4>Select all views</h4>
+		<h5>General duplication settings</h5>
+		<h10>When creating a new name, add the numbering in</h10>
+		<h16>Name prefix</h16>
+		<h17>Name</h17>
+		<h18>Name suffix</h18>
+		<h20>Case sensitive!</h20>
+		<h21>on</h21>
+		<h22>Do not add numbering if possible</h22>
+		<h23>If adding a prefix or suffix to a view name or legend name results in a unique name, the numbering will not be added</h23>
+		<h25>Views duplication settings</h25>
+		<h26>View copy option:</h26>
+		<h27>View template:</h27>
+		<h31>View Name</h31>
+		<h32>Proceed</h32>
+		<h35>Unselect all views</h35>
+		<h36>You did not specify duplicate views</h36>
+		<h37>View duplication</h37>
+		<h40>Can not create dependent view for view</h40>
+		<h41>An attempt will be made to duplicate with detail</h41>
+		<h42>Failed to duplicate the view</h42>
+		<h43>Failed to generate name for duplicate view</h43>
+		<h48>Views selected:</h48>
+		<h50>Duplicate name:</h50>
+		<h51>Search and replace in new view names</h51>
+		<h52>To find:</h52>
+		<h53>Replaced by:</h53>
+		<h54>Only in checked views</h54>
+		<h55>Case sensitive</h55>
+		<h56>Search and replace</h56>
+		<h57>In the view name find and replace</h57>
+		<h59>Crop view</h59>
+		<h60>Crop Region Visible</h60>
+		<h61>Annotation crop</h61>
+		<h62>By default, when you create a dependent view, the "Crop View", "Crop Region Visible", and "Annotation crop" properties are enabled. You can specify which of these properties to disable</h62>
+		<h64>Legends duplication settings</h64>
+		<h65>Offset view range:</h65>
+		<h69>View range and view depth offset is only performed for floor plans</h69>
+		<h72>Offset view depth</h72>
+		<notOrganized>!Not organized</notOrganized>
+		<start>Start</start>
+		<end>End</end>
+		<cb1>Duplicate</cb1>
+		<cb2>Duplicate with Detailing</cb2>
+		<cb3>Duplicate as a Dependent</cb3>
+	</mprViewCopy>
+	<ostViewIn3D LocalName="3D section box"
+			   Description="Cuts the selected elements in the view cube, with the possibility of specifying the size of the view cube"
+			   FullDescription="It is possible to dynamically change the dimensions of the view cubes uniformly in all directions relative to the selected elements">
+		<h1>3D section box</h1>
+		<msg1>Select elements for 3D trimming</msg1>
+	</ostViewIn3D>
+	<mmRebarSolidAndVisible LocalName="Rebar solid and visible"
+                          Description="Change the state of the visibility of the rebar (view unobscured and view as solid)"
+                          FullDescription="The visibility state of View unobscured is set to any view, whether 2D or 3D. View as solid - set only in 3D view"
+                          LocalName1="Disable visibility"
+                          Description1="Disable the state of the visibility of the rebar (view unobscured and view as solid)"
+                          LocalName2="Elements selection settings"
+                          Description2="Settings options for the selection of elements containing reinforcement for plugins">
+		<msg1>Select an element with rebar or reinforcement</msg1>
+		<msg2>Select an elements with rebar or reinforcement</msg2>
+		<t1>Process:</t1>
+		<h1>Turn on rebars visibility for:</h1>
+		<h2>Show as solid</h2>
+		<h3>Selected element</h3>
+		<h4>Selected elements</h4>
+		<h5>All elements on view</h5>
+		<h6>Change property "View unobscured"</h6>
+		<h7>Change property "View as solid"</h7>
+		<h8>Show as line</h8>
+		<h9>Make unobscured</h9>
+		<h10>Make obscured</h10>
+		<h11>All but selected elements on view</h11>
+		<close>Close</close>
+		<apply>Apply</apply>
+		<continue>Continue</continue>
+	</mmRebarSolidAndVisible>
 	<whshScheduleLookup LocalName="Schedule lookup"
                       Description="Search for schedules in a project that contain the specified value"
                       FullDescription="Searches for specified rows (whole or part), as well as numbers among the project schedules in field names, column headers or in cells, with or without case registration">
@@ -4231,16 +4280,6 @@
 		<m15>No saved information for restoring views was found</m15>
 		<m16>Graphics override for elements is not available on the current view</m16>
 	</mprTools>
-	<mrObjectsFilter LocalName="Filter"
-                   Description="Filter selected objects by category">
-		<h1>Category:</h1>
-		<h2>Objects count:</h2>
-		<h3>Select all</h3>
-		<h4>Select none</h4>
-		<h5>Total selected objects:</h5>
-		<h6>Accept</h6>
-		<h7>Cancel</h7>
-	</mrObjectsFilter>
 	<mprWallsReinforcement LocalName="Walls reinforcement"
                          Description="Analysis, grouping and reinforcement according to given conditions of walls and openings"
                          FullDescription="Plugin works only with walls located in one level. Plugin analyzes the walls, allowing you to find three types of intersections (corner, end and cross) and openings. Flexible grouping allows you to specify exactly what type of reinforcement should be made. You can perform reinforcement only for the specified groups - walls, intersections or openings. Plugin can work even on an empty template">
@@ -5290,23 +5329,6 @@
 		<re5>Failed to create a rebar of shape "{0}" with a given preferred shape of rebar "{1}". Error: {2}\nAn attempt was made to create a rebar with automatic rebar shape selection or creation</re5>
 		<re6>Failed to set parameter values</re6>
 	</mprBeamsReinforcement>
-	<mrBatchSheetExport LocalName="Batch Sheets Export"
-	                    Description="Plugin allows you to export all specified sheets to dwg/dxf">
-		<t1>Select all sheets</t1>
-		<t2>Deselect all sheets</t2>
-		<t3>Invert selection</t3>
-		<t4>If the check mark is not set and there will be files with the same name in the destination folder, then the suffix will be added to the name of the sheet being exported</t4>
-		<h1>Export to:</h1>
-		<h2>AutoCAD file version:</h2>
-		<h3>Overwrite existing files</h3>
-		<h4>Export</h4>
-		<h5>Specify the folder for saving exported files</h5>
-		<h6>Cancel</h6>
-		<h7>Export to</h7>
-		<h8>Sheet export:</h8>
-		<m1>No sheets selected for export!</m1>
-		<m2>Before exporting sheets, it is strongly recommended to save the project!\nSave the project?</m2>
-	</mrBatchSheetExport>
 	<mmOrderMarking LocalName="Numbering"
                   Description="Adding numbering to the specified parameter of elements with the possibility of numbering in the schedules"
                   FullDescription="When working in a non-schedule view, you can specify the direction of numbering based on the arrangement of elements, or add numbering in the order in which elements were created. When working in a schedule, the plugin adds numbering in the order of items in the schedule (taking into account sorting). It is possible to set the prefix and suffix for the number">
@@ -5480,53 +5502,6 @@
 		<m3>Retrieving data from a document binding map</m3>
 		<m4>Reading a family</m4>
 	</mprCleaner>
-	<mpStripMtext LocalName="Clear formatting"
-                Description="Remove specified formatting from multiline text"
-                FullDescription="Plugin allows you to delete the formatting of multiline text, mleaders, dimensions, attributes of blocks and tables">
-		<h1>Select type of formatting to remove</h1>
-		<h2>Check all</h2>
-		<h3>Uncheck all</h3>
-		<h4>Accept</h4>
-		<m1>Select objects containing multiline text</m1>
-		<s1>Alignment</s1>
-		<st1>Remove vertical alignment. Vertical alignment appears when there are fractions in the text</st1>
-		<s2>Tabs</s2>
-		<st2>Remove horizontal tabs</st2>
-		<s3>Color</s3>
-		<st3>Remove text color</st3>
-		<s4>Fields</s4>
-		<st4>Convert fields to plain text</st4>
-		<s5>Fonts</s5>
-		<st5>Remove font overrides in text</st5>
-		<s6>Height</s6>
-		<st6>Remove text height overrides</st6>
-		<s7>Strikethrough</s7>
-		<st7>Remove strikethrough text</st7>
-		<s8>Linefeed</s8>
-		<st8>Remove leading linefeeds</st8>
-		<s9>Mask</s9>
-		<st9>Remove background mask</st9>
-		<s10>Columns</s10>
-		<st10>Remove columns from text</st10>
-		<s11>Overline</s11>
-		<st11>Remove overline from text</st11>
-		<s12>Paragraph</s12>
-		<st12>Remove paragraph breaks</st12>
-		<s13>Oblique</s13>
-		<st13>Remove oblique from text</st13>
-		<s14>Stacking</s14>
-		<st14>Convert stacking text to line text</st14>
-		<s15>Tracking</s15>
-		<st15>Remove space between characters</st15>
-		<s16>Underline</s16>
-		<st16>Turns underline off</st16>
-		<s17>Width</s17>
-		<st17>Reset width factor</st17>
-		<s18>Non-breaking space</s18>
-		<st18>Remove non-breaking spaces from text</st18>
-		<s19>Paragraph alignment</s19>
-		<st19>Remove paragraph alignments from text</st19>
-	</mpStripMtext>
 	<mprSheetRenumber LocalName="Sheet numerator"
                     Description="Plugin allows to renumber sheets in the project"
                     FullDescription="Renumbering of sheets is carried out within one group of sheets. You can display all sheets by analogy with the current settings of the project manager or display all sheets in one group. There is an opportunity to change the position of sheets by moving them in the group, while maintaining the initial numbering of sheets in this group">
@@ -6172,56 +6147,6 @@
 		<t1>Standard</t1>
 		<t2>By templates</t2>
 	</mprMepElementsBender>
-	<mrSearchBy LocalName="Search by condition"
-              Description="Search for objects by various conditions"
-              FullDescription="Plugin allows you to search by properties, parameters and quantities among all objects of the model or objects of the specified type. Found objects are highlighted in the model. There is an opportunity in the search bar to specify several values for the search, indicate the “AND-OR” operation option, and also use the “not equal”, “less”, “more” operators">
-		<h1>Object type:</h1>
-		<h2>Search in:</h2>
-		<h3>Properties</h3>
-		<h4>Parameters</h4>
-		<h5>Quantities</h5>
-		<h6>Units</h6>
-		<h7>String Match Type:</h7>
-		<h8>Search:</h8>
-		<h9>Reset current selection if nothing is found</h9>
-		<h10>Search</h10>
-		<h11>Found {0} objects</h11>
-		<h12>Nothing found</h12>
-		<h13>Show</h13>
-		<m1>Equal</m1>
-		<m2>Contain</m2>
-		<t1>Indicate in what units of values from the objects will be taken, and the accuracy of comparing the numerical values</t1>
-		<t2>Specify a match option for string values: whether the string to be checked must match the search value completely or the string to be checked may contain the search value</t2>
-		<t3>You can specify multiple values for the search by separating them with an asterisk. For example, “200*300”.</t3>
-		<t4>If several values are specified, the “OR” option will work. For example, when searching by the value “200*300”, a match of “200” or “300” will be satisfactory.</t4>
-		<t5>To use the “AND” option, specify “AND” at the beginning of the search query. For example, “AND200*300” indicates that the value “200” and the value “300” must match in the searched object.</t5>
-		<t6>When specifying fractional numbers, the separator of the integer and fractional part set in the regional settings of the operating system is taken into account. If you use a comma in the settings, then the value "1.75" will be processed as a string.</t6>
-		<t7>To search by “Yes/No” parameters, “true” or “false” should be indicated in the search bar, respectively.</t7>
-		<t8>For numerical values, you can specify comparison operators: “! =” Is not equal, “&lt;” is less, “&gt;” is more. For string values, you can specify the comparison operator "! =" (Not equal), which is processed only if the value "Equal" is selected in the "Match string type" property.</t8>
-		<t9>For example, the string “ANDConcrete*> 1,75” indicates that you need to find objects that have the string value “Concrete” and a numerical value greater than 1,75 among the values to be checked.</t9>
-		<t10>You can specify the specific name of the property or parameter in which you want to validate the entered value. For example, the string “Note=Concrete” with the “Search in properties” checkbox selected indicates that objects matching the search condition should have the “Note” property with the value “Concrete”. Name validation is also handled based on the “String Match Type”.</t10>
-		<t11>To search by the condition of empty values, you need to specify only the name of the property or parameter. For example, the line “Note=” with the checkbox “Search in properties” checked, indicates that objects satisfying the search condition should have the property “Note” with an empty value.</t11>
-		<t12>Checking all string values is not case sensitive.</t12>
-		<t13>Show found objects on a 3D scene</t13>
-		<all>All</all>
-		<qh1>Length:</qh1>
-		<qh2>Area:</qh2>
-		<qh3>Mass:</qh3>
-		<qh4>Volume:</qh4>
-		<qh5>Tolerance:</qh5>
-		<q1>Millimeters</q1>
-		<q2>Centimeters</q2>
-		<q3>Meters</q3>
-		<q4>Inches</q4>
-		<q5>Square millimeters</q5>
-		<q6>Square centimeters</q6>
-		<q7>Square meters</q7>
-		<q8>Grams</q8>
-		<q9>Kilograms</q9>
-		<q10>Cubic millimeters</q10>
-		<q11>Cubic centimeters</q11>
-		<q12>Cubic meters</q12>
-	</mrSearchBy>
 	<mprNotes LocalName="Notes"
            Description="Plugin for working with frequently-used notes">
 		<h1>Settings</h1>
@@ -6324,14 +6249,6 @@
                     Description="Create new dimensions from segments of the selected dimension chain">
 		<h1>Select dimensions with more than one segment</h1>
 	</mprSplitDimChain>
-	<mrLevelsList LocalName="Levels"
-                Description="Displaying a list of levels with the ability to control their visibility">
-		<h1>Not available on this view</h1>
-		<h2>Invert visibility</h2>
-		<h3>Isolate level</h3>
-		<h4>Select level</h4>
-		<all>All levels</all>
-	</mrLevelsList>
 	<mprCopyParameterValues LocalName="Copy values"
                           Description="Copy parameter values between elements or within one element"
                           FullDescription="The plugin contains various copying options, allowing you to configure which elements to copy to. There is a possibility of copying a composite value (from several parameters to one). There are filters for selecting items by category and parameter values. There is an opportunity to convert values between different types of parameters">
@@ -6863,11 +6780,6 @@
 		<h18>The room geometry does not satisfy the conditions for creating a volume view</h18>
 		<h19>An error occurred while processing the room:</h19>
 	</mprRoomColorVolume>
-	<mrLastHidden LocalName="Last hidden"
-                Description="Tracking and displaying hidden objects">
-		<h1>Various</h1>
-		<h2>Make Visible</h2>
-	</mrLastHidden>
 	<mprJoin LocalName="Elements join"
            Description="Apply to manage adjoining of walls and beams, and also join their">
 		<e1>Hasn't any elements to execute</e1>
@@ -7041,13 +6953,6 @@
 		<h5>No views found that are suitable for copying Crop Extents</h5>
 		<notOrganized>!Not organized</notOrganized>
 	</mprCopyCropBox>
-	<mrQuickProperties LocalName="Quick properties"
-	                   Description="Quickly view and edit the properties of selected elements">
-		<unknown>Unknown</unknown>
-		<dif>*DIFFERENT*</dif>
-		<h1>Selected items:</h1>
-		<h2>The number of elements with this property</h2>
-	</mrQuickProperties>
 	<mprWallSweep LocalName="Wall layouts"
 	              Description="Create wall layouts">
 		<v1>Cut to the top edge of the top slab</v1>
@@ -7076,4 +6981,102 @@
 		<m2>Specify the point that will be closest to the face along which the flat pattern will be created. For correct operation, the choice of a point must be made in the plan</m2>
 		<tr1>Create views</tr1>
 	</mprWallSweep>
+	<!-- Renga -->
+	<mrObjectsFilter LocalName="Filter"
+	                 Description="Filter selected objects by category">
+		<h1>Category:</h1>
+		<h2>Objects count:</h2>
+		<h3>Select all</h3>
+		<h4>Select none</h4>
+		<h5>Total selected objects:</h5>
+		<h6>Accept</h6>
+		<h7>Cancel</h7>
+	</mrObjectsFilter>
+	<mrBatchSheetExport LocalName="Batch Sheets Export"
+	                    Description="Plugin allows you to export all specified sheets to dwg/dxf">
+		<t1>Select all sheets</t1>
+		<t2>Deselect all sheets</t2>
+		<t3>Invert selection</t3>
+		<t4>If the check mark is not set and there will be files with the same name in the destination folder, then the suffix will be added to the name of the sheet being exported</t4>
+		<h1>Export to:</h1>
+		<h2>AutoCAD file version:</h2>
+		<h3>Overwrite existing files</h3>
+		<h4>Export</h4>
+		<h5>Specify the folder for saving exported files</h5>
+		<h6>Cancel</h6>
+		<h7>Export to</h7>
+		<h8>Sheet export:</h8>
+		<m1>No sheets selected for export!</m1>
+		<m2>Before exporting sheets, it is strongly recommended to save the project!\nSave the project?</m2>
+	</mrBatchSheetExport>
+	<mrSearchBy LocalName="Search by condition"
+              Description="Search for objects by various conditions"
+              FullDescription="Plugin allows you to search by properties, parameters and quantities among all objects of the model or objects of the specified type. Found objects are highlighted in the model. There is an opportunity in the search bar to specify several values for the search, indicate the “AND-OR” operation option, and also use the “not equal”, “less”, “more” operators">
+		<h1>Object type:</h1>
+		<h2>Search in:</h2>
+		<h3>Properties</h3>
+		<h4>Parameters</h4>
+		<h5>Quantities</h5>
+		<h6>Units</h6>
+		<h7>String Match Type:</h7>
+		<h8>Search:</h8>
+		<h9>Reset current selection if nothing is found</h9>
+		<h10>Search</h10>
+		<h11>Found {0} objects</h11>
+		<h12>Nothing found</h12>
+		<h13>Show</h13>
+		<m1>Equal</m1>
+		<m2>Contain</m2>
+		<t1>Indicate in what units of values from the objects will be taken, and the accuracy of comparing the numerical values</t1>
+		<t2>Specify a match option for string values: whether the string to be checked must match the search value completely or the string to be checked may contain the search value</t2>
+		<t3>You can specify multiple values for the search by separating them with an asterisk. For example, “200*300”.</t3>
+		<t4>If several values are specified, the “OR” option will work. For example, when searching by the value “200*300”, a match of “200” or “300” will be satisfactory.</t4>
+		<t5>To use the “AND” option, specify “AND” at the beginning of the search query. For example, “AND200*300” indicates that the value “200” and the value “300” must match in the searched object.</t5>
+		<t6>When specifying fractional numbers, the separator of the integer and fractional part set in the regional settings of the operating system is taken into account. If you use a comma in the settings, then the value "1.75" will be processed as a string.</t6>
+		<t7>To search by “Yes/No” parameters, “true” or “false” should be indicated in the search bar, respectively.</t7>
+		<t8>For numerical values, you can specify comparison operators: “! =” Is not equal, “&lt;” is less, “&gt;” is more. For string values, you can specify the comparison operator "! =" (Not equal), which is processed only if the value "Equal" is selected in the "Match string type" property.</t8>
+		<t9>For example, the string “ANDConcrete*> 1,75” indicates that you need to find objects that have the string value “Concrete” and a numerical value greater than 1,75 among the values to be checked.</t9>
+		<t10>You can specify the specific name of the property or parameter in which you want to validate the entered value. For example, the string “Note=Concrete” with the “Search in properties” checkbox selected indicates that objects matching the search condition should have the “Note” property with the value “Concrete”. Name validation is also handled based on the “String Match Type”.</t10>
+		<t11>To search by the condition of empty values, you need to specify only the name of the property or parameter. For example, the line “Note=” with the checkbox “Search in properties” checked, indicates that objects satisfying the search condition should have the property “Note” with an empty value.</t11>
+		<t12>Checking all string values is not case sensitive.</t12>
+		<t13>Show found objects on a 3D scene</t13>
+		<all>All</all>
+		<qh1>Length:</qh1>
+		<qh2>Area:</qh2>
+		<qh3>Mass:</qh3>
+		<qh4>Volume:</qh4>
+		<qh5>Tolerance:</qh5>
+		<q1>Millimeters</q1>
+		<q2>Centimeters</q2>
+		<q3>Meters</q3>
+		<q4>Inches</q4>
+		<q5>Square millimeters</q5>
+		<q6>Square centimeters</q6>
+		<q7>Square meters</q7>
+		<q8>Grams</q8>
+		<q9>Kilograms</q9>
+		<q10>Cubic millimeters</q10>
+		<q11>Cubic centimeters</q11>
+		<q12>Cubic meters</q12>
+	</mrSearchBy>
+	<mrLevelsList LocalName="Levels"
+	              Description="Displaying a list of levels with the ability to control their visibility">
+		<h1>Not available on this view</h1>
+		<h2>Invert visibility</h2>
+		<h3>Isolate level</h3>
+		<h4>Select level</h4>
+		<all>All levels</all>
+	</mrLevelsList>
+	<mrLastHidden LocalName="Last hidden"
+	              Description="Tracking and displaying hidden objects">
+		<h1>Various</h1>
+		<h2>Make Visible</h2>
+	</mrLastHidden>
+	<mrQuickProperties LocalName="Quick properties"
+	                   Description="Quickly view and edit the properties of selected elements">
+		<unknown>Unknown</unknown>
+		<dif>*DIFFERENT*</dif>
+		<h1>Selected items:</h1>
+		<h2>The number of elements with this property</h2>
+	</mrQuickProperties>
 </ModPlus>
