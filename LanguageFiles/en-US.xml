@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
-<ModPlus Name="en-US" Version="6.0.0.0">
+<!-- &quot; - double quote -->
+<ModPlus Name="en-US" Version="6.1.0.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -3559,6 +3560,12 @@
 		<s19>Paragraph alignment</s19>
 		<st19>Remove paragraph alignments from text</st19>
 	</mpStripMtext>
+	<mpRevitSheetsMerging LocalName="Merge Revit sheets"
+	                      Description="Merging files from Revit exports into one drawing. The plugin must be run in an empty drawing. The plugin processes files exported with the &quot;Export views on sheets and links as external references&quot; checkbox disabled">
+		<h1>File Processing...</h1>
+		<h2>Error importing sheets from a file</h2>
+		<h3>Selecting files to merge sheets</h3>
+	</mpRevitSheetsMerging>
 	<!-- Revit -->
 	<mprSheetCopy LocalName="Sheet copy"
 	              Description="Plugin allows you to make copies of the specified sheets with different settings"
