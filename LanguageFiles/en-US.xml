@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.1.2.0">
+<ModPlus Name="en-US" Version="6.1.3.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -63,6 +63,7 @@
 		<couplers>Couplers</couplers>
 		<coupler>Coupler</coupler>
 		<abort>Abort</abort>
+		<instruction>Instruction</instruction>
 	</Common>
 	<ModPlusAPI>
 		<msg1>Failed to create Word object! Make sure you installed Microsoft Office</msg1>
@@ -1050,11 +1051,40 @@
 		<h16>Managing the visibility of tabs on the ribbon</h16>
 		<h17>Displayed tabs:</h17>
 		<h18>Hidden tabs:</h18>
+		<h19>Filter elements by category:</h19>
+		<h20>Filter elements by parameters:</h20>
+		<h40>Delete selected item?</h40>
+		<h41>Search (enter * to display only selected items)</h41>
+		<h42>Selected categories:</h42>
+		<h43>Parameter name:</h43>
+		<h44>Condition:</h44>
+		<h45>Values:</h45>
+		<h47>Select categories</h47>
+		<h48>Equality parameters</h48>
+		<i1>You can enter multiple valid values in the "Values" field, separated by a comma. A parameter is considered to satisfy the condition if its value matches at least one valid value.</i1>
+		<i2>The condition "Presence of parameter" means that the element will be processed if there is such a parameter, regardless of the parameter value.</i2>
+		<i3>String parameters are checked only by the conditions "Equal", "Not equal", "Contains", "Not contains".</i3>
+		<i4>Numeric parameters are checked by all conditions except "Contains".</i4>
+		<i5>The "Contains" condition checks that the element parameter contains at least one of the valid values. The condition "Not contains", respectively, checks that the parameter does not contain at least one of the values.</i5>
+		<i6>String values are case-insensitive.</i6>
+		<i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
+		<et1>Equal</et1>
+		<et2>More</et2>
+		<et3>Less</et3>
+		<et4>More or equal</et4>
+		<et5>Less or equal</et5>
+		<et6>Not equal</et6>
+		<et7>Contains</et7>
+		<et8>Presence of parameter</et8>
+		<et9>Not contains</et9>
 		<tt1>Separator of integer and fractional part of numbers</tt1>
 		<tt2>To work with the modplus.org server, enter your e-mail address. A mail address is required to identify you on the server. It is recommended to use the e-mail address specified at the registration on modplus.org</tt2>
 		<tt3>You must enter your Login in the "Registration" tab! (ModPlus Configurator)</tt3>
 		<tt4>The specified mail address did not pass the verification!\nOr you have made a mistake in specifying the mail address or you have an very unique mail hoster =)</tt4>
 		<tt5>To change the language on the Ribbon, you need to restart the Revit</tt5>
+		<t13>Uncheck all categories</t13>
+		<t14>Add new item</t14>
+		<t15>Remove selected item</t15>
 		<err1>The configuration file is corrupt! Can not build a Ribbon</err1>
 		<err2>Plugin is not available for use in families</err2>
 		<err3>The allowed number of tabs created on the ribbon is exceeded. A maximum of 20 additional tabs are allowed. Tab "{0}" will not be added!</err3>
