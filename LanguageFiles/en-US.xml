@@ -5697,9 +5697,10 @@
 		<m16>Choose one of the options - use an existing Drafting View from the destination document or create and use a copy of the Draftin View from the source document</m16>
 		<notOrganized>!Not organized</notOrganized>
 	</mprCopySheetsToOpenDocuments>
+	<!-- todo все удаляемые значения после версии 1.5.11.0 -->
 	<mprWorksets LocalName="Worksets"
-               Description="Manage, create, and apply worksets"
-               FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element">
+	             Description="Manage, create, and apply worksets"
+	             FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element">
 		<!-- todo remove start -->
 		<yes>Yes</yes>
 		<no>No</no>
@@ -5711,12 +5712,14 @@
 		<h1>Create worksets</h1>
 		<h2>Create worksets and apply them by filters</h2>
 		<h3>Apply worksets by filters</h3>
+		<!-- todo remove start -->
 		<h4>Search (enter * to display only selected items)</h4>
 		<h5>Selected categories:</h5>
 		<h6>Instruction</h6>
 		<h7>Parameter name:</h7>
 		<h8>Condition:</h8>
 		<h9>Values:</h9>
+		<!-- todo remove end -->
 		<h10>Open file</h10>
 		<h11>Read settings</h11>
 		<h12>Each row is a group</h12>
@@ -5726,8 +5729,10 @@
 		<h16>Group name is preceded by a symbol:</h16>
 		<h17>Preview</h17>
 		<h18>Select a group to import worksets:</h18>
+		<!-- todo remove start -->
 		<h19>Filter elements by category:</h19>
 		<h20>Filter elements by parameters:</h20>
+		<!-- todo remove end -->
 		<h21>Copy filter settings to all worksets of the current group</h21>
 		<h22>Copy filter settings to all worksets of all groups</h22>
 		<h23>Handling work sets in a group</h23>
@@ -5769,11 +5774,12 @@
 		<t10>Remove group</t10>
 		<t11>Remove workset</t11>
 		<t12>Create new group</t12>
+		<!-- todo remove start -->
 		<t13>Uncheck all categories</t13>
 		<t14>Add new item</t14>
 		<t15>Remove selected item</t15>
-		<!-- todo remove -->
 		<t16>Open in notepad</t16>
+		<!-- todo remove end -->
 		<t17>This workset name is already in use</t17>
 		<t18>Empty workset name is not valid</t18>
 		<msg1>Remove?</msg1>
@@ -5814,6 +5820,7 @@
 		<msg33>The workset "{0}" is applied to {1} elements</msg33>
 		<msg34>An error "{0}" occurred while setting the workset to elements</msg34>
 		<msg35>The workset was not applied for the following elements because the elements are owned by user "{0}"</msg35>
+		<!-- todo remove start -->
 		<i1>You can enter multiple valid values in the "Values" field, separated by a comma. A parameter is considered to satisfy the condition if its value matches at least one valid value.</i1>
 		<i2>The condition "Presence of parameter" means that the element will be processed if there is such a parameter, regardless of the parameter value.</i2>
 		<i3>String parameters are checked only by the conditions "Equal", "Not equal", "Contains", "Not contains".</i3>
@@ -5830,6 +5837,7 @@
 		<c7>Contains</c7>
 		<c8>Presence of parameter</c8>
 		<c9>Not contains</c9>
+		<!-- todo remove end -->
 		<ie1>Text file</ie1>
 		<ie2>Excel file</ie2>
 		<ie3>Xml file</ie3>
@@ -6286,9 +6294,11 @@
                     Description="Create new dimensions from segments of the selected dimension chain">
 		<h1>Select dimensions with more than one segment</h1>
 	</mprSplitDimChain>
+	<!-- todo все удаляемые значения после версии 1.2.3.0 -->
 	<mprCopyParameterValues LocalName="Copy values"
-                          Description="Copy parameter values between elements or within one element"
-                          FullDescription="The plugin contains various copying options, allowing you to configure which elements to copy to. There is a possibility of copying a composite value (from several parameters to one). There are filters for selecting items by category and parameter values. There is an opportunity to convert values between different types of parameters">
+	                        Description="Copy parameter values between elements or within one element"
+	                        FullDescription="The plugin contains various copying options, allowing you to configure which elements to copy to. There is a possibility of copying a composite value (from several parameters to one). There are filters for selecting items by category and parameter values. There is an opportunity to convert values between different types of parameters">
+		<!-- todo remove start -->
 		<yes>Yes</yes>
 		<no>No</no>
 		<accept>Accept</accept>
@@ -6297,11 +6307,11 @@
 		<or>OR</or>
 		<add>Add</add>
 		<save>Save</save>
-		<saveNew>Save as new</saveNew>
 		<saved>Saved</saved>
+		<!-- todo remove end -->
+		<saveNew>Save as new</saveNew>
 		<full>Available in the full version of the plugin</full>
 		<to>to</to>
-		<no>No</no>
 		<space>Space</space>
 		<cn1>Copy within an element</cn1>
 		<cn2>Copying from one element to several</cn2>
@@ -6309,12 +6319,14 @@
 		<h1>Select copy option</h1>
 		<h2>Perform copy</h2>
 		<h3>Saved configurations</h3>
+		<!-- todo remove start -->
 		<h4>Search (enter * to display only selected items)</h4>
 		<h5>Selected categories:</h5>
 		<h6>Instruction</h6>
 		<h7>Parameter name:</h7>
 		<h8>Condition:</h8>
 		<h9>Values:</h9>
+		<!-- todo remove end -->
 		<h10>Sample element</h10>
 		<h11>The sample element is used to populate the list of parameter names in the parameter copy rule setup</h11>
 		<h12>Source element</h12>
@@ -6324,8 +6336,10 @@
 		<h16>Sample target element</h16>
 		<h17>The sample target element is used to populate the list of target parameter names in the parameter copy rule setup</h17>
 		<h18>Pick</h18>
+		<!-- todo remove start -->
 		<h19>Filter elements by category:</h19>
 		<h20>Filter elements by parameters:</h20>
+		<!-- todo remove end -->
 		<h21>Selecting the type of copy rule</h21>
 		<h22>Add a parameters copy rule of type:</h22>
 		<h23>Single</h23>
@@ -6382,6 +6396,7 @@
 		<err5>Source element not selected</err5>
 		<err6>No processing elements selected</err6>
 		<err7>No child elements selected</err7>
+		<!-- todo remove start -->
 		<t13>Uncheck all categories</t13>
 		<t14>Add new item</t14>
 		<t15>Remove selected item</t15>
@@ -6401,6 +6416,7 @@
 		<c7>Contains</c7>
 		<c8>Presence of parameter</c8>
 		<c9>Not contains</c9>
+		<!-- todo remove end -->
 		<sv1>Elements in the model with filter</sv1>
 		<sv2>Elements in the current view with filter</sv2>
 		<sv3>Custom selection with filter</sv3>
