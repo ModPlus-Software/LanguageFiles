@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.1.7.0">
+<ModPlus Name="en-US" Version="6.1.8.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -64,6 +64,7 @@
 		<coupler>Coupler</coupler>
 		<abort>Abort</abort>
 		<instruction>Instruction</instruction>
+		<remove>Remove</remove>
 	</Common>
 	<ModPlusAPI>
 		<msg1>Failed to create Word object! Make sure you installed Microsoft Office</msg1>
@@ -5711,7 +5712,9 @@
 	<!-- todo все удаляемые значения после версии 1.5.11.0 -->
 	<mprWorksets LocalName="Worksets"
 	             Description="Manage, create, and apply worksets"
-	             FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element">
+	             FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element"
+	             LocalName1="Update worksets"
+	             Description1="Calling the command &quot;Apply worksets by filters&quot; with the current settings without using the plugin window">
 		<!-- todo remove start -->
 		<yes>Yes</yes>
 		<no>No</no>
@@ -5773,6 +5776,7 @@
 		<h46>Applying worksets</h46>
 		<h47>Select categories</h47>
 		<h48>Equality parameters</h48>
+		<h49>Display in the results the id of the elements to which the workset is assigned</h49>
 		<t1>Rename configuration</t1>
 		<t2>Create new configuration</t2>
 		<t3>Import configuration</t3>
@@ -6308,7 +6312,7 @@
                     Description="Create new dimensions from segments of the selected dimension chain">
 		<h1>Select dimensions with more than one segment</h1>
 	</mprSplitDimChain>
-	<!-- todo все удаляемые значения после версии 1.2.3.0 -->
+	<!-- todo все удаляемые значения (без указания версии) после версии 1.2.3.0 -->
 	<mprCopyParameterValues LocalName="Copy values"
 	                        Description="Copy parameter values between elements or within one element"
 	                        FullDescription="The plugin contains various copying options, allowing you to configure which elements to copy to. There is a possibility of copying a composite value (from several parameters to one). There are filters for selecting items by category and parameter values. There is an opportunity to convert values between different types of parameters">
@@ -6374,9 +6378,11 @@
 		<h38>Source parameter</h38>
 		<h39>Target parameter</h39>
 		<h40>Add parameter</h40>
+		<!-- todo remove start after 1.4.0.0 -->
 		<h41>Separator after:</h41>
 		<h42>Add space before separator</h42>
 		<h43>Add space after separator</h43>
+		<!-- todo remove end -->
 		<h44>Parameter search option by name: "=" - full match of the parameter name. "≈" - parameter name must contain the specified value</h44>
 		<h45>Add parameter name from parameter list of sample element</h45>
 		<h46>Enter configuration name</h46>
@@ -6384,6 +6390,10 @@
 		<h48>Equality parameters</h48>
 		<h49>Instance parameters</h49>
 		<h50>Type parameters</h50>
+		<h51>Composite arithmetic</h51>
+		<h52>Preview:</h52>
+		<h53>Formula:</h53>
+		<h54>Formula contains errors and cannot be calculated</h54>
 		<msg1>Element is not a host element</msg1>
 		<msg2>No children found</msg2>
 		<msg3>Failed to copy composite value to parameter "{0}". Error: {1}</msg3>
