@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.1.9.0">
+<ModPlus Name="en-US" Version="6.2.0.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -7065,6 +7065,34 @@
 		<m2>Specify the point that will be closest to the face along which the flat pattern will be created. For correct operation, the choice of a point must be made in the plan</m2>
 		<tr1>Create views</tr1>
 	</mprWallSweep>
+	<mprWorldOrientation LocalName="Side of the world"
+	                     Description="Orientation analysis for rooms through windows, doors, curtain walls in the enclosing walls">
+		<d1>The orientation analysis for rooms is performed for windows, doors, curtain walls. The result of the analysis can be written in the room parameter or in the windows, doors, curtain walls parameter</d1>
+		<v1>Parameter:</v1>
+		<v2>Write the result to a parameter of:</v2>
+		<v3>Doors</v3>
+		<v4>Windows</v4>
+		<v5>Curtain walls</v5>
+		<v6>Filter rooms:</v6>
+		<v7>Rooms</v7>
+		<v8>Elements</v8>
+		<v9>Rooms and elements</v9>
+		<v10>Elements for analysis:</v10>
+		<s1>N</s1>
+		<s2>S</s2>
+		<s3>W</s3>
+		<s4>E</s4>
+		<s5>NW</s5>
+		<s6>SW</s6>
+		<s7>NE</s7>
+		<s8>SE</s8>
+		<h1>Selected elements</h1>
+		<h2>In active view</h2>
+		<h3>In project</h3>
+		<tr1>Determining the direction of openings</tr1>
+		<t1>Room elements do not have the "{0}" parameter, so it is not possible to fill in the analysis results</t1>
+		<t2>Failed to set the value to "{0}" parameter. Check the type of parameter to be filled - it must be string</t2>
+	</mprWorldOrientation>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
 	                 Description="Filter selected objects by category">
@@ -7156,11 +7184,4 @@
 		<h1>Various</h1>
 		<h2>Make Visible</h2>
 	</mrLastHidden>
-	<mrQuickProperties LocalName="Quick properties"
-	                   Description="Quickly view and edit the properties of selected elements">
-		<unknown>Unknown</unknown>
-		<dif>*DIFFERENT*</dif>
-		<h1>Selected items:</h1>
-		<h2>The number of elements with this property</h2>
-	</mrQuickProperties>
 </ModPlus>
