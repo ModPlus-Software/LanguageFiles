@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.2.1.0">
+<ModPlus Name="en-US" Version="6.2.2.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -6338,6 +6338,8 @@
 		<cn1>Copy within an element</cn1>
 		<cn2>Copying from one element to several</cn2>
 		<cn3>Copying from host to children</cn3>
+		<cn4>Copying from parent family to nested</cn4>
+		<cn5>Copying from one element of the linked file to several elements of the current file</cn5>
 		<h1>Select copy option</h1>
 		<h2>Perform copy</h2>
 		<h3>Saved configurations</h3>
@@ -6398,6 +6400,24 @@
 		<h52>Preview:</h52>
 		<h53>Formula:</h53>
 		<h54>Formula contains errors and cannot be calculated</h54>
+		<h55>Round up the result</h55>
+		<h56>Prefix and suffix are used only when the target parameter has a string data type</h56>
+		<h57>Sample parent family</h57>
+		<h58>The sample parent family is used to populate a list of source parameter names in the parameter copy rule setup</h58>
+		<h59>Sample nested family</h59>
+		<h60>The sample nested family is used to populate a list of source parameter names in the parameter copy rule setup</h60>
+		<h61>Parent families</h61>
+		<h62>Parent families, from which parameter values will be taken to be copied to nested elements according to specified rules</h62>
+		<h63>Filtering nested families</h63>
+		<h64>Optional filtering of nested families by categories and/or parameters. If no filters are specified, all nested families will be processed</h64>
+		<h65>Select from Link</h65>
+		<i1>The input fields before and after the names of the source parameters allow you to create a formula for the calculation.</i1>
+		<i2>To create a formula, you can use simple arithmetic operators such as "+", "-", "*", "/", parentheses, and mathematical functions:</i2>
+		<i3>Abs - absolute value,</i3>
+		<i4>Pow - taking a number to a specified power,</i4>
+		<i5>Sqrt - getting the square root of the number.</i5>
+		<i6>When using functions, the values to be processed must be in parentheses. For example, if you want to get an absolute value of a parameter, enter "Abs(" in the field before the parameter name and ")" in the field after the parameter name.</i6>
+		<i7>For a complete list of functions, see the help page.</i7>
 		<msg1>Element is not a host element</msg1>
 		<msg2>No children found</msg2>
 		<msg3>Failed to copy composite value to parameter "{0}". Error: {1}</msg3>
@@ -6417,6 +6437,10 @@
 		<msg17>Composite value copied to parameter "{0}"</msg17>
 		<msg18>Target parameter "{0}" is not a supported data type for copying a composite value. Copying only into a string parameter is allowed</msg18>
 		<msg19>Error while copying composite value to parameter "{0}": {1}</msg19>
+		<msg20>Failed to copy arithmetic value to parameter "{0}". Error: {1}</msg20>
+		<msg21>Error while copying the arithmetic value calculated by the formula "{0}" to parameter "{1}": {2}</msg21>
+		<msg22>Arithmetic value copied to parameter "{0}"</msg22>
+		<msg23>No nested families found</msg23>
 		<err1>Empty value is invalid</err1>
 		<err2>Entered value contains invalid characters</err2>
 		<err3>Name is already in use</err3>
