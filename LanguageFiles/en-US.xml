@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.2.15.0">
+<ModPlus Name="en-US" Version="6.2.16.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -3765,9 +3765,10 @@
 		<apply>Apply</apply>
 		<continue>Continue</continue>
 	</mmRebarSolidAndVisible>
+	<!--todo удаляемые значения после версии 1.2.1.0 -->
 	<whshScheduleLookup LocalName="Schedule lookup"
-                      Description="Search for schedules in a project that contain the specified value"
-                      FullDescription="Searches for specified rows (whole or part), as well as numbers among the project schedules in field names, column headers or in cells, with or without case registration">
+	                    Description="Search for schedules in a project that contain the specified value"
+	                    FullDescription="Searches for specified rows (whole or part), as well as numbers among the project schedules in field names, column headers or in cells, with or without case registration">
 		<h1>Results view</h1>
 		<h2>Search results</h2>
 		<h3>Double-click on the line opens the details window</h3>
@@ -3798,6 +3799,7 @@
 		<h28>Enter field (or parameter) names delimited by</h28>
 		<h29>Enter heading names delimited by</h29>
 		<h30>Enter cell values delimited by</h30>
+		<h31>Open schedule</h31>
 		<sr1>Searched string:</sr1>
 		<sr2>Found in name/value:</sr2>
 		<sr3>Containing schedule name:</sr3>
@@ -3818,10 +3820,12 @@
 		<sr18>Value was found?</sr18>
 		<sr19>Substring searched?</sr19>
 		<sr20>Case ignored?</sr20>
+		<!-- todo remove start -->
 		<yes>Yes</yes>
 		<no>No</no>
 		<cancel>Cancel</cancel>
 		<ok>Ok</ok>
+		<!-- todo remove end -->
 		<find>Find</find>
 		<clean>Clean</clean>
 	</whshScheduleLookup>
