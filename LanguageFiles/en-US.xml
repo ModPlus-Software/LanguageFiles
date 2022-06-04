@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.2.18.0">
+<ModPlus Name="en-US" Version="6.2.19.0">
 	<Common>
 		<ok>Ok</ok>
 		<accept>Accept</accept>
@@ -5491,6 +5491,7 @@
 		<h20>Deleted Templates -</h20>
 		<h21>Removed references to view templates -</h21>
 		<h22>Unused shared parameters</h22>
+		<!-- todo remove after 2.12.8.0 -->
 		<h23>Finding unused shared parameters can take some time, as it will require opening all families in the project</h23>
 		<h24>Parameter name</h24>
 		<h25>Parameters count:</h25>
@@ -5514,13 +5515,20 @@
 		<h43>Unplaced spaces</h43>
 		<h44>Removing unplaced spaces</h44>
 		<h45>Open in notepad</h45>
+		<!-- todo remove after 2.12.8.0 -->
 		<h46>Failed to process family. Error</h46>
 		<h47>Failed to remove shared parameter. Error</h47>
 		<h48>In current SPF by Guid</h48>
 		<h49>In current SPF by Name</h49>
 		<h50>Show</h50>
+		<h51>Used in</h51>
+		<h52>Used in schedule</h52>
+		<h53>Used in family</h53>
+		<h54>Finding a parameter in schedules and families</h54>
+		<h55>Parameter not found in schedules or families</h55>
 		<search>Search</search>
 		<name>Name</name>
+		<collect>Collect</collect>
 		<w1>Remove all views (Area plans only)</w1>
 		<w2>Remove all Areas</w2>
 		<w3>Remove all Area Separation Lines</w3>
@@ -5569,8 +5577,11 @@
 		<w42>Remove all Coordination models</w42>
 		<m1>The model must be saved to remove external links</m1>
 		<m2>Work in family document is not provided</m2>
+		<!-- todo remove after 2.12.8.0 start -->
 		<m3>Retrieving data from a document binding map</m3>
 		<m4>Reading a family</m4>
+		<m5>Search in schedules</m5>
+		<!-- todo remove after 2.12.8.0 end -->
 	</mprCleaner>
 	<mprSheetRenumber LocalName="Sheet numerator"
                     Description="Plugin allows to renumber sheets in the project"
