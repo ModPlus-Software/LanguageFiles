@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.3.0.0">
+<ModPlus Name="en-US" Version="6.3.1.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4238,8 +4238,10 @@
 	</mprNestedFamilyParamsTransfer>
 	<mprTools LocalName="Tools"
             Description="A collection of small auxiliary plugins">
+		<!-- todo remove start after 2.13.1.0 -->
 		<Hide>Hide</Hide>
 		<Show>Show</Show>
+		<!-- todo remove end -->
 		<ttShow>Show all items of the specified category in the current view</ttShow>
 		<ttHide>Hide all items of the specified category in the current view</ttHide>
 		<Walls>Walls</Walls>
@@ -4261,6 +4263,8 @@
 		<ReferencePlanes>Reference planes</ReferencePlanes>
 		<StructuralFraming>Structural Framing</StructuralFraming>
 		<StructuralFoundation>Structural Foundation</StructuralFoundation>
+		<Analytical>Analytical All</Analytical>
+		<!-- todo remove start after 2.13.1.0 -->
 		<AllAnalytical>Analytical All</AllAnalytical>
 		<BeamAnalytical>Analytical Beams</BeamAnalytical>
 		<BraceAnalytical>Analytical Braces</BraceAnalytical>
@@ -4276,9 +4280,17 @@
 		<InternalLoads>Structural Internal Loads</InternalLoads>
 		<LoadCases>Structural Load Cases</LoadCases>
 		<Loads>Structural Loads</Loads>
+		<!-- todo remove end -->
 		<GenericModels>Generic Models</GenericModels>
 		<Reinforcement>Reinforcement</Reinforcement>
 		<Lines>Lines</Lines>
+		<Mass>Mass</Mass>
+		<Ducts>Ducts</Ducts>
+		<FlexDucts>Flex ducts</FlexDucts>
+		<Pipes>Pipes</Pipes>
+		<Wires>Wires</Wires>
+		<CableTrays>Cable Trays</CableTrays>
+		<Conduits>Conduits</Conduits>
 		<h1>Notching distance</h1>
 		<h2>Notching distance, mm</h2>
 		<h3>Automatically change the Notching distance for the elements of the Structural framing</h3>
@@ -7102,21 +7114,6 @@
 		<ss13>Model text in project</ss13>
 		<ss14>Viewport label</ss14>
 	</mprFindAndReplace>
-	<!-- todo remove -->
-	<mprExportSheetsToDwg LocalName="Sheets export"
-	                      Description="Export sheets to a single dwg file">
-		<h1>Sheets selected:</h1>
-		<h2>in-session export setup</h2>
-		<h3>Select export setup</h3>
-		<h4>Check the sheets to export or select a saved set</h4>
-		<h5>Processing sheet "{0}"</h5>
-		<h6>Failed to process sheet</h6>
-		<h7>Sheets were exported to a file</h7>
-		<h8>Failed to export sheets</h8>
-		<h9>Export to dwg...</h9>
-		<h10>Open the folder with the result when the export is finished</h10>
-		<notOrganized>!Not organized</notOrganized>
-	</mprExportSheetsToDwg>
 	<mprCopyCropBox LocalName="Copy crop extents"
 	                Description="Copying the crop extents of the current view into the specified views">
 		<h1>Copy extents visibility settings</h1>

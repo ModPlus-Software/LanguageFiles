@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - символ перехода на новую строку для xaml -->
 <!-- &quot; - символ двойной кавычки -->
-<ModPlus Name="ru-RU" Version="6.3.0.0">
+<ModPlus Name="ru-RU" Version="6.3.1.0">
 	<Common>
     <abort>Прервать</abort>
     <accept>Принять</accept>
@@ -4238,8 +4238,10 @@
 	</mprNestedFamilyParamsTransfer>
 	<mprTools LocalName="Утилиты"
             Description="Сборник небольших вспомогательных плагинов">
+		<!-- todo remove start after 2.13.1.0 -->
 		<Hide>Скрыть</Hide>
 		<Show>Показать</Show>
+		<!-- todo remove end -->
 		<ttShow>Показать все элементы указанной категории на текущем виде</ttShow>
 		<ttHide>Скрыть все элементы указанной категории на текущем виде</ttHide>
 		<Walls>Стены</Walls>
@@ -4261,6 +4263,8 @@
 		<ReferencePlanes>Опорные плоскости</ReferencePlanes>
 		<StructuralFraming>Каркас несущий</StructuralFraming>
 		<StructuralFoundation>Фундамент несущей конструкции</StructuralFoundation>
+		<Analytical>Все категории аналитической модели</Analytical>
+		<!-- todo remove start after 2.13.1.0 -->
 		<AllAnalytical>Все категории аналитической модели</AllAnalytical>
 		<BeamAnalytical>Аналитические модели балки</BeamAnalytical>
 		<BraceAnalytical>Аналитические модели раскосов</BraceAnalytical>
@@ -4276,9 +4280,17 @@
 		<InternalLoads>Внутренние нагрузки несущих конструкций</InternalLoads>
 		<LoadCases>Варианты нагружений на конструкцию</LoadCases>
 		<Loads>Нагрузки на конструкцию</Loads>
+		<!-- todo remove end -->
 		<GenericModels>Обобщенные модели</GenericModels>
 		<Reinforcement>Армирование</Reinforcement>
 		<Lines>Линии</Lines>
+		<Mass>Формообразующие</Mass>
+		<Ducts>Воздуховоды</Ducts>
+		<FlexDucts>Гибкие воздуховоды</FlexDucts>
+		<Pipes>Трубы</Pipes>
+		<Wires>Провода</Wires>
+		<CableTrays>Кабельные лотки</CableTrays>
+		<Conduits>Короба</Conduits>
 		<h1>Отступ врезки</h1>
 		<h2>Отступ врезки, мм</h2>
 		<h3>Автоматическое изменение Отступа врезки для элементов несущего каркаса</h3>
@@ -7102,21 +7114,6 @@
 		<ss13>Текст модели в проекте</ss13>
 		<ss14>Заголовок видового экрана</ss14>
 	</mprFindAndReplace>
-	<!-- todo remove -->
-	<mprExportSheetsToDwg LocalName="Экспорт листов"
-	                      Description="Экспорт листов в единый dwg файл">
-		<h1>Выбрано листов:</h1>
-		<h2>параметры экспорта в сеансе</h2>
-		<h3>Выбор параметров экспорта</h3>
-		<h4>Отметьте листы для экспорта или выберите сохраненный набор</h4>
-		<h5>Обработка листа "{0}"</h5>
-		<h6>Неуспешная обработка листа</h6>
-		<h7>Листы были экспортированы в файл</h7>
-		<h8>Не удалось экспортировать листы</h8>
-		<h9>Экспорт в dwg...</h9>
-		<h10>Открыть папку с результатом после окончания экспорта</h10>
-		<notOrganized>!Не организованы</notOrganized>
-	</mprExportSheetsToDwg>
 	<mprCopyCropBox LocalName="Копировать обрезку вида"
 	                Description="Копирование границ обрезки текущего вида в указанные виды">
 		<h1>Копировать настройки видимости границ</h1>
