@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.3.1.0">
+<ModPlus Name="en-US" Version="6.3.2.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -5644,9 +5644,10 @@
 	<mprFamilyDuplicateFixer LocalName="Fix duplicates"
                            Description="Automate the fix for duplicate families or types"
                            FullDescription="Plugin allows you to copy types from duplicate families to the main families, copy the values ​​of the parameters of types, update instances of families, and also delete duplicate families. Plugin allows you to replace duplicate types of families and delete the replaced types">
-		<h1>Copy missing family types</h1>
+		<h1>Copy types</h1>
+		<!-- todo remove after 1.3.6.0 -->
 		<h2>Copy parameter values of family types</h2>
-		<h3>Replace types of family instances</h3>
+		<h3>Replace family instances</h3>
 		<h4>Delete duplicate families</h4>
 		<h5>Run</h5>
 		<h6>Add a couple of families "Duplicate-Main family"</h6>
@@ -5679,12 +5680,13 @@
 		<e7>Error deleting type "{0}" in family "{1}": {2}</e7>
 		<t1>Direction of processing: the family on the left is a duplicate, the family on the right is the main family</t1>
 		<t2>Add to the processing list a couple of families that did not match the standard duplicate search</t2>
-		<t3>In the main family new types will be created that are present in the duplicate family and are absent in the main family</t3>
-		<t4>The parameter values ​​will be copied from the types of the duplicate family to the main family. Copying is performed when the types names match</t4>
-		<t5>Instances of duplicate families will be replaced by instances of the main family with the installation of a similar types</t5>
+		<t3>New types will be created in the main family that are present and checked in the duplicate family and are absent in the main family</t3>
+		<!-- todo remove after 1.3.6.0 -->
+		<t4>Copy the instance parameter values from the replacing duplicate family to the replacing main family. Only for checked types</t4>
+		<t5>Duplicate family instances of checked types will be replaced with instances of the main family with the same type set. If an instance of the main family does not have the required type, the duplicate family instance will be skipped</t5>
 		<t6>Duplicate families that do not have instances in the model will be deleted</t6>
 		<t7>The instance parameters values ​​will be copied from the replaced duplicate family to the replacement main family</t7>
-		<t8>For instances of duplicate families, the checked type from the source family will be set</t8>
+		<t8>The instances of the duplicate family are set to the types from the main family, which are selected in the dropdown lists</t8>
 		<t9>Add to the list families that did not match the standard search for duplicates</t9>
 		<t10>On the left side there are the types of the family, on the right - drop-down lists for replacing the type. If the type is not selected in the list, then replacement will not be performed</t10>
 		<t11>Clear selection</t11>
