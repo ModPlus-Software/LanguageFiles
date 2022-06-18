@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.3.2.0">
+<ModPlus Name="en-US" Version="6.3.3.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -1072,6 +1072,7 @@
 		<h18>Hidden tabs:</h18>
 		<h19>Filter elements by category:</h19>
 		<h20>Filter elements by parameters:</h20>
+		<!-- todo remove -->
 		<h40>Delete selected item?</h40>
 		<h41>Search (enter * to display only selected items)</h41>
 		<h42>Selected categories:</h42>
@@ -1083,6 +1084,8 @@
 		<h49>Element is suitable if</h49>
 		<h50>all conditions match</h50>
 		<h51>any of conditions match</h51>
+		<h52>Simple condition</h52>
+		<h53>Group condition</h53>
 		<h77>Rebar bar type:</h77>
 		<h78>Diameter, mm:</h78>
 		<h100>Creating a rebar type</h100>
@@ -1099,6 +1102,7 @@
 		<i5>The "Contains" condition checks that the element parameter contains at least one of the valid values. The condition "Not contains", respectively, checks that the parameter does not contain at least one of the values.</i5>
 		<i6>String values are case-insensitive.</i6>
 		<i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
+		<i8>All simple nested conditions of a group condition are checked with the "AND" operator - i.e. all nested conditions must match.</i8>
 		<et1>Equal</et1>
 		<et2>More</et2>
 		<et3>Less</et3>
@@ -1114,8 +1118,8 @@
 		<tt4>The specified mail address did not pass the verification!\nOr you have made a mistake in specifying the mail address or you have an very unique mail hoster =)</tt4>
 		<tt5>To change the language on the Ribbon, you need to restart the Revit</tt5>
 		<t13>Uncheck all categories</t13>
-		<t14>Add new item</t14>
-		<t15>Remove selected item</t15>
+		<t14>Add condition</t14>
+		<t15>Remove condition</t15>
 		<err1>The configuration file is corrupt! Can not build a Ribbon</err1>
 		<err2>Plugin is not available for use in families</err2>
 		<err3>The allowed number of tabs created on the ribbon is exceeded. A maximum of 20 additional tabs are allowed. Tab "{0}" will not be added!</err3>
@@ -5749,31 +5753,14 @@
 		<m16>Choose one of the options - use an existing Drafting View from the destination document or create and use a copy of the Drafting View from the source document</m16>
 		<notOrganized>!Not organized</notOrganized>
 	</mprCopySheetsToOpenDocuments>
-	<!-- todo все удаляемые значения после версии 1.5.11.0 -->
 	<mprWorksets LocalName="Worksets"
 	             Description="Manage, create, and apply worksets"
 	             FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element"
 	             LocalName1="Update worksets"
 	             Description1="Calling the command &quot;Apply worksets by filters&quot; with the current settings without using the plugin window">
-		<!-- todo remove start -->
-		<yes>Yes</yes>
-		<no>No</no>
-		<accept>Accept</accept>
-		<cancel>Cancel</cancel>
-		<and>AND</and>
-		<or>OR</or>
-		<!-- todo remove end -->
 		<h1>Create worksets</h1>
 		<h2>Create worksets and apply them by filters</h2>
 		<h3>Apply worksets by filters</h3>
-		<!-- todo remove start -->
-		<h4>Search (enter * to display only selected items)</h4>
-		<h5>Selected categories:</h5>
-		<h6>Instruction</h6>
-		<h7>Parameter name:</h7>
-		<h8>Condition:</h8>
-		<h9>Values:</h9>
-		<!-- todo remove end -->
 		<h10>Open file</h10>
 		<h11>Read settings</h11>
 		<h12>Each row is a group</h12>
@@ -5783,10 +5770,6 @@
 		<h16>Group name is preceded by a symbol:</h16>
 		<h17>Preview</h17>
 		<h18>Select a group to import worksets:</h18>
-		<!-- todo remove start -->
-		<h19>Filter elements by category:</h19>
-		<h20>Filter elements by parameters:</h20>
-		<!-- todo remove end -->
 		<h21>Copy filter settings to all worksets of the current group</h21>
 		<h22>Copy filter settings to all worksets of all groups</h22>
 		<h23>Handling work sets in a group</h23>
@@ -5802,8 +5785,6 @@
 		<h33>Uncheck all</h33>
 		<h34>Inverse</h34>
 		<h35>Available in the full version of the plugin</h35>
-		<!-- todo remove -->
-		<h36>Result</h36>
 		<h37>Import worksets</h37>
 		<h38>Group export</h38>
 		<h39>Group</h39>
@@ -5817,6 +5798,9 @@
 		<h47>Select categories</h47>
 		<h48>Equality parameters</h48>
 		<h49>Display in the results the id of the elements to which the workset is assigned</h49>
+		<h50>Configuration file:</h50>
+		<h51>If this option is enabled, the specified configuration storage file will be used. If this option is disabled, the standard user configuration storage file located in the user data storage folder will be used</h51>
+		<h52>You do not have access to edit configurations!</h52>
 		<t1>Rename configuration</t1>
 		<t2>Create new configuration</t2>
 		<t3>Import configuration</t3>
@@ -5829,12 +5813,6 @@
 		<t10>Remove group</t10>
 		<t11>Remove workset</t11>
 		<t12>Create new group</t12>
-		<!-- todo remove start -->
-		<t13>Uncheck all categories</t13>
-		<t14>Add new item</t14>
-		<t15>Remove selected item</t15>
-		<t16>Open in notepad</t16>
-		<!-- todo remove end -->
 		<t17>This workset name is already in use</t17>
 		<t18>Empty workset name is not valid</t18>
 		<msg1>Remove?</msg1>
@@ -5849,15 +5827,6 @@
 		<msg10>No configuration selected!</msg10>
 		<msg11>Nothing selected!</msg11>
 		<msg12>Creating worksets is only possible in documents configured for collaboration (workshared)</msg12>
-		<!-- todo remove start -->
-		<msg13>A workset with the name "{0}" already exists in the current document</msg13>
-		<msg14>Workset "{0}" created</msg14>
-		<msg15>No workset "{0}" found</msg15>
-		<msg16>No apply conditions are set for the workset "{0}"</msg16>
-		<msg17>Element id={0} did not have a "Workset" parameter</msg17>
-		<msg18>The workset "{0}" is applied to {1} elements: {2}</msg18>
-		<msg19>An error "{0}" occurred while setting the workset to elements: {1}</msg19>
-		<!-- todo remove end -->
 		<msg20>No worksets configuration created</msg20>
 		<msg21>Worksets configuration not selected</msg21>
 		<msg22>No worksets groups created in current configuration</msg22>
@@ -5865,8 +5834,6 @@
 		<msg24>You are trying to import a worksets group storage file</msg24>
 		<msg25>The selected file is not a file for storing data about a group of worksets and cannot be imported!</msg25>
 		<msg26>You are trying to import a configuration storage file</msg26>
-		<!-- todo remove -->
-		<msg27>The workset was not applied for the following elements because the elements are owned by user "{0}": {1}</msg27>
 		<msg28>A workset already exists in the current document</msg28>
 		<msg29>Workset created</msg29>
 		<msg30>Workset not found</msg30>
@@ -5875,24 +5842,6 @@
 		<msg33>The workset "{0}" is applied to {1} elements</msg33>
 		<msg34>An error "{0}" occurred while setting the workset to elements</msg34>
 		<msg35>The workset was not applied for the following elements because the elements are owned by user "{0}"</msg35>
-		<!-- todo remove start -->
-		<i1>You can enter multiple valid values in the "Values" field, separated by a comma. A parameter is considered to satisfy the condition if its value matches at least one valid value.</i1>
-		<i2>The condition "Presence of parameter" means that the element will be processed if there is such a parameter, regardless of the parameter value.</i2>
-		<i3>String parameters are checked only by the conditions "Equal", "Not equal", "Contains", "Not contains".</i3>
-		<i4>Numeric parameters are checked by all conditions except "Contains".</i4>
-		<i5>The "Contains" condition checks that the element parameter contains at least one of the valid values. The condition "Not contains", respectively, checks that the parameter does not contain at least one of the values.</i5>
-		<i6>String values are case-insensitive.</i6>
-		<i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
-		<c1>Equal</c1>
-		<c2>More</c2>
-		<c3>Less</c3>
-		<c4>More or equal</c4>
-		<c5>Less or equal</c5>
-		<c6>Not equal</c6>
-		<c7>Contains</c7>
-		<c8>Presence of parameter</c8>
-		<c9>Not contains</c9>
-		<!-- todo remove end -->
 		<ie1>Text file</ie1>
 		<ie2>Excel file</ie2>
 		<ie3>Xml file</ie3>
