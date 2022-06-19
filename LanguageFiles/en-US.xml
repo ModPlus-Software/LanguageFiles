@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.3.3.0">
+<ModPlus Name="en-US" Version="6.3.4.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -5757,7 +5757,9 @@
 	             Description="Manage, create, and apply worksets"
 	             FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element"
 	             LocalName1="Update worksets"
-	             Description1="Calling the command &quot;Apply worksets by filters&quot; with the current settings without using the plugin window">
+	             Description1="Calling the command &quot;Apply worksets by filters&quot; with the current settings without using the plugin window"
+	             LocalName2="Workset Processing"
+	             Description3="Utilities for worksets - merge, hide, isolate, etc.">
 		<h1>Create worksets</h1>
 		<h2>Create worksets and apply them by filters</h2>
 		<h3>Apply worksets by filters</h3>
@@ -5798,9 +5800,18 @@
 		<h47>Select categories</h47>
 		<h48>Equality parameters</h48>
 		<h49>Display in the results the id of the elements to which the workset is assigned</h49>
-		<h50>Configuration file:</h50>
-		<h51>If this option is enabled, the specified configuration storage file will be used. If this option is disabled, the standard user configuration storage file located in the user data storage folder will be used</h51>
-		<h52>You do not have access to edit configurations!</h52>
+		<h50>Configuration storage file is set by the settings of your organization</h50>
+		<h51>You do not have access to edit configurations!</h51>
+		<h52>Workset</h52>
+		<h53>Editable</h53>
+		<h54>Opened</h54>
+		<h55>Elements count</h55>
+		<h56>Select</h56>
+		<h57>Hiding elements</h57>
+		<h58>Showing elements</h58>
+		<h59>Elements isolation</h59>
+		<h60>To merge worksets (move elements from one workset to another), select the source worksets and move them with the mouse to the target workset</h60>
+		<h61>Merging worksets</h61>
 		<t1>Rename configuration</t1>
 		<t2>Create new configuration</t2>
 		<t3>Import configuration</t3>
@@ -5813,6 +5824,10 @@
 		<t10>Remove group</t10>
 		<t11>Remove workset</t11>
 		<t12>Create new group</t12>
+		<t13>Select Elements</t13>.
+		<t14>Hide elements in current view</t14>
+		<t15>Show elements in current view</t15>
+		<t16>Isolate elements in current view</t16>
 		<t17>This workset name is already in use</t17>
 		<t18>Empty workset name is not valid</t18>
 		<msg1>Remove?</msg1>
@@ -5827,6 +5842,9 @@
 		<msg10>No configuration selected!</msg10>
 		<msg11>Nothing selected!</msg11>
 		<msg12>Creating worksets is only possible in documents configured for collaboration (workshared)</msg12>
+		<msg13>Elements are already hidden in the current view</msg13>.
+		<msg14>Elements cannot be hidden in current view</msg14>
+		<msg15>Elements already shown in current view</msg15>
 		<msg20>No worksets configuration created</msg20>
 		<msg21>Worksets configuration not selected</msg21>
 		<msg22>No worksets groups created in current configuration</msg22>
