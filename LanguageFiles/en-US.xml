@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.3.7.0">
+<ModPlus Name="en-US" Version="6.3.8.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4592,6 +4592,8 @@
 		<h228>Use the main vertical reinforcement settings</h228>
 		<h229>Level</h229>
 		<h230>Create joints for additional vertical bars of the background reinforcement</h230>
+		<h231>Distance of the bend start point from the top of the wall (a), mm:</h231>
+		<h232>Distance of the bend end point from the top of the plate (b), mm:</h232>
 		<srd>Saving data of selected walls</srd>
 		<rr1>Remove reinforcement of the same type that is created</rr1>
 		<rr2>Remove all previously created reinforcement</rr2>
@@ -4609,9 +4611,10 @@
 		<jtd3>Vertical bar releases are created by analogy with straight releases, but with different anchorage lengths</jtd3>
 		<jtd4>Joints of vertical rebars with anchoring in the overlying slab are created. The length of the anchorage is counted from the side face of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the slab</jtd4>
 		<jtd5>Created straight joints of vertical rebars. Overlap length is set from the top of the overlying slab or from the top of the wall</jtd5>
-		<jtd6>Straight joints of vertical rebars in the form of a "bottle" are created - the bends are bent to the center of intersection to the diameter of the rebar. The anchoring length is set from the top of the overlying slab or from the top of the wall</jtd6>
+		<jtd6>Straight joints of vertical rebars in the form of a "bottle" are created - the bends are bent to the center of intersection to the diameter of the rebar. The overlap length is set from the top of the overlying slab</jtd6>
 		<jtd7>Joints are created in the overlying slab in the form of separate L-shaped bars. The first anchoring length - the length of the anchoring of the rods into the slab - is counted from the side face of the wall. The second anchoring length - the length of the anchoring of the rods into the wall - is counted from the top edge of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the slab</jtd7>
 		<jtd8>Created straight joints of vertical rebars without taking into account the overlying elements</jtd8>
+		<jtd9>Straight joints of vertical rebars in the form of a “bottle” are created - the bends are bent to the center of the wall at a given distance or by the diameter of the rebar. The overlap length is set from the top of the overlying slab</jtd9>
 		<i1>1. Corner</i1>
 		<i2>2. T-shaped</i2>
 		<i3>3. Cross</i3>
@@ -6962,6 +6965,8 @@
 		<t19>It is not possible to create a view template for the current view!</t19>
 		<t20>The current view does not have a view template!</t20>
 		<t21>Unable to create filters for parameter</t21>
+		<t22>From the whole model</t22>
+		<t23>From the current view</t23>
 		<c1>Override for elements</c1>
 		<c2>Return override for elements</c2>
 		<c3>Create View Filters</c3>
