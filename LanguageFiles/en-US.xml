@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.3.8.0">
+<ModPlus Name="en-US" Version="6.3.9.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4509,7 +4509,7 @@
 		<h145>First anchorage length, mm:</h145>
 		<h146>Second anchoring length, mm:</h146>
 		<h147>Reset</h147>
-		<h148>Anchorage length in slab, mm:</h148>
+		<h148>Anchorage length into the slab, mm:</h148>
 		<h149>Underlying slab joints</h149>
 		<h150>Contiguous walls count</h150>
 		<h151>Additional vertical rebars in ends</h151>
@@ -4527,8 +4527,8 @@
 		<h163>If there is an opening in the overlying wall, then</h163>
 		<h164>Also apply to areas of the overlying wall whose height under the opening (or the height of the entire wall) is less than or equal to two wall widths (but not less than 400)</h164>
 		<h165>If the slab above the wall is missing, then</h165>
-		<h166>Binding bends to the top of the slab (by the center of the rebar)</h166>
-		<h167>Binding bends to the bottom of the slab (by the center of the rebar)</h167>
+		<h166>Binding bends to the top of the slab (by the center of the rebar), mm:</h166>
+		<h167>Binding bends to the bottom of the slab (by the center of the rebar), mm:</h167>
 		<h168>Select walls by rectangle</h168>
 		<h169>Pick walls</h169>
 		<h170>Trim joints by solid of wall</h170>
@@ -4594,6 +4594,16 @@
 		<h230>Create joints for additional vertical bars of the background reinforcement</h230>
 		<h231>Distance of the bend start point from the top of the wall (a), mm:</h231>
 		<h232>Distance of the bend end point from the top of the plate (b), mm:</h232>
+		<h233>Use rebar diameter as bending height (c)</h233>
+		<h234>Bending height (c), mm:</h234>
+		<h235>Detail binding to the top of the slab (on the outer edge of the detail), mm:</h235>
+		<h236>U-shaped rebars of vertical joints:</h236>
+		<h237>The distance between the vertical rebars (by the smallest wall in the group) is</h237>
+		<h238>According to Section 10.3.5 of SP 63.13330 the distance between the rods of vertical reinforcement should be at least 50 mm!</h238>
+		<h239>According to Section 10.3.5 of SP 63.13330 the distance between the rods of horizontal reinforcement should be at least 25 mm!</h239>
+		<h240>Side alternating</h240>
+		<h241>Additional L-shaped rebar, bent into the slab and placed in the extreme walls</h241>
+		<h242>Anchoring length into the wall, mm:</h242>
 		<srd>Saving data of selected walls</srd>
 		<rr1>Remove reinforcement of the same type that is created</rr1>
 		<rr2>Remove all previously created reinforcement</rr2>
@@ -4737,6 +4747,7 @@
 		<t49>The number of rows of vertical reinforcement (in a row is two bars "along" the opening)</t49>
 		<t50>The number of rows of horizontal reinforcement (in a row is two bars "along" the opening)</t50>
 		<t51>Selecting a underlying slab directly below the selected walls. Underlying slab selection available after wall selection, analysis and grouping. You can select one or more slabs. In the properties of the underlying slabs should be included properties "Structural"</t51>
+		<!-- todo remove after 5.12.35.0 -->
 		<t52>The maximum allowable value of the binding is calculated from the condition of the minimum allowable distance in the light according to section 10.3.5 of SP 63.13330 for the smallest wall width in the group</t52>
 		<t53>Reset all values ​​of the current default reinforcement settings to the default values ​​set in the plugin</t53>
 		<t54>Copy the current slab joints reinforcement settings to all selected plates</t54>
