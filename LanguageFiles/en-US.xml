@@ -1,70 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.2.11.0">
+<ModPlus Name="en-US" Version="6.4.0.0">
 	<Common>
-		<ok>Ok</ok>
+		<abort>Abort</abort>
 		<accept>Accept</accept>
-		<cancel>Cancel</cancel>
-		<close>Close</close>
-		<save>Save</save>
-		<saved>Saved</saved>
-		<copy>Copy</copy>
-		<paste>Paste</paste>
-		<insert>Insert</insert>
-		<search>Search</search>
-		<create>Create</create>
-		<value>Value</value>
-		<remove>Remove</remove>
-		<settings>Settings</settings>
-		<sheet>Sheet</sheet>
-		<convert>Convert</convert>
 		<add>Add</add>
-		<auto>Auto</auto>
-		<yes>Yes</yes>
-		<no>No</no>
-		<prefix>Prefix</prefix>
-		<suffix>Suffix</suffix>
 		<all>All</all>
-		<continue>Continue</continue>
-		<dot>Dot</dot>
-		<comma>Comma</comma>
-		<collapse>Collapse</collapse>
-		<warning>Warning</warning>
-		<export>Export</export>
-		<import>Import</import>
-		<type>Type</type>
-		<number>Number</number>
-		<layer>Layer</layer>
-		<mm>mm</mm>
+		<and>And</and>
+		<auto>Auto</auto>
+		<availFull>Available in the full version of the plugin!</availFull>
+		<belarus>Belarus</belarus>
+		<black>Black</black>
+		<cancel>Cancel</cancel>
+		<checkAll>Check all</checkAll>
+		<clear>Clear</clear>
+		<close>Close</close>
 		<cm>cm</cm>
+		<collapse>Collapse</collapse>
+		<collapseAll>Collapse all</collapseAll>
+		<comma>Comma</comma>
+		<configuration>Configuration</configuration>
+		<continue>Continue</continue>
+		<convert>Convert</convert>
+		<copy>Copy</copy>
+		<coupler>Coupler</coupler>
+		<couplers>Couplers</couplers>
+		<create>Create</create>
+		<degree>°</degree>
+		<dot>Dot</dot>
+		<execute>Execute</execute>
+		<expand>Expand</expand>
+		<expandAll>Expand all</expandAll>
+		<export>Export</export>
+		<height>Height</height>
+		<hide>Hide</hide>
+		<import>Import</import>
+		<insert>Insert</insert>
+		<instruction>Instruction</instruction>
+		<isolate>Isolate</isolate>
+		<kg>kg</kg>
+		<layer>Layer</layer>
+		<level>Level</level>
+		<levels>Levels</levels>
 		<m>m</m>
 		<m2>m²</m2>
 		<m3>m³</m3>
-		<kg>kg</kg>
-		<ton>ton</ton>
-		<degree>°</degree>
-		<room>Room</room>
+		<mm>mm</mm>
+		<no>No</no>
 		<number>Number</number>
-		<execute>Execute</execute>
-		<clear>Clear</clear>
-		<parameter>Parameter</parameter>
-		<black>Black</black>
-		<white>White</white>
-		<and>And</and>
+		<number>Number</number>
+		<ok>Ok</ok>
 		<or>Or</or>
-		<checkAll>Check all</checkAll>
-		<uncheckAll>Uncheck all</uncheckAll>
-		<russia>Russia</russia>
-		<ukraine>Ukraine</ukraine>
-		<belarus>Belarus</belarus>
-		<configuration>Configuration</configuration>
+		<parameter>Parameter</parameter>
+		<paste>Paste</paste>
+		<prefix>Prefix</prefix>
 		<property>Property</property>
-		<couplers>Couplers</couplers>
-		<coupler>Coupler</coupler>
-		<abort>Abort</abort>
-		<instruction>Instruction</instruction>
 		<remove>Remove</remove>
+		<remove>Remove</remove>
+		<room>Room</room>
+		<russia>Russia</russia>
+		<save>Save</save>
+		<saved>Saved</saved>
+		<search>Search</search>
+		<select>Select</select>
+		<setOrg>Set by your organization's settings</setOrg>
+		<settings>Settings</settings>
+		<sheet>Sheet</sheet>
+		<show>Show</show>
+		<suffix>Suffix</suffix>
+		<thickness>Thickness</thickness>
+		<ton>ton</ton>
+		<type>Type</type>
+		<ukraine>Ukraine</ukraine>
+		<uncheckAll>Uncheck all</uncheckAll>
+		<value>Value</value>
+		<warning>Warning</warning>
+		<white>White</white>
+		<width>Width</width>
+		<yes>Yes</yes>
 	</Common>
 	<ModPlusAPI>
 		<msg1>Failed to create Word object! Make sure you installed Microsoft Office</msg1>
@@ -1061,6 +1075,7 @@
 		<h18>Hidden tabs:</h18>
 		<h19>Filter elements by category:</h19>
 		<h20>Filter elements by parameters:</h20>
+		<!-- todo remove -->
 		<h40>Delete selected item?</h40>
 		<h41>Search (enter * to display only selected items)</h41>
 		<h42>Selected categories:</h42>
@@ -1072,8 +1087,11 @@
 		<h49>Element is suitable if</h49>
 		<h50>all conditions match</h50>
 		<h51>any of conditions match</h51>
+		<h52>Simple condition</h52>
+		<h53>Group condition</h53>
 		<h77>Rebar bar type:</h77>
 		<h78>Diameter, mm:</h78>
+		<h100>Creating a rebar type</h100>
 		<parameters>Parameters</parameters>
 		<name>Name</name>
 		<any>Any</any>
@@ -1087,6 +1105,7 @@
 		<i5>The "Contains" condition checks that the element parameter contains at least one of the valid values. The condition "Not contains", respectively, checks that the parameter does not contain at least one of the values.</i5>
 		<i6>String values are case-insensitive.</i6>
 		<i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
+		<i8>All simple nested conditions of a group condition are checked with the "AND" operator - i.e. all nested conditions must match.</i8>
 		<et1>Equal</et1>
 		<et2>More</et2>
 		<et3>Less</et3>
@@ -1102,8 +1121,8 @@
 		<tt4>The specified mail address did not pass the verification!\nOr you have made a mistake in specifying the mail address or you have an very unique mail hoster =)</tt4>
 		<tt5>To change the language on the Ribbon, you need to restart the Revit</tt5>
 		<t13>Uncheck all categories</t13>
-		<t14>Add new item</t14>
-		<t15>Remove selected item</t15>
+		<t14>Add condition</t14>
+		<t15>Remove condition</t15>
 		<err1>The configuration file is corrupt! Can not build a Ribbon</err1>
 		<err2>Plugin is not available for use in families</err2>
 		<err3>The allowed number of tabs created on the ribbon is exceeded. A maximum of 20 additional tabs are allowed. Tab "{0}" will not be added!</err3>
@@ -3596,6 +3615,7 @@
 		<h1>File Processing...</h1>
 		<h2>Error importing sheets from a file</h2>
 		<h3>Selecting files to merge sheets</h3>
+		<h4>Layers merging...</h4>
 	</mpRevitSheetsMerging>
 	<!-- Revit -->
 	<mprSheetCopy LocalName="Sheet copy"
@@ -3673,6 +3693,7 @@
 		<h71>Generic Annotations</h71>
 		<h72>Offset view depth</h72>
 		<h73>In schedule name find and replace</h73>
+		<h74>The "{0}" view cannot be copied with the "{1}" option</h74>
 		<start>Start</start>
 		<notOrganized>!Not organized</notOrganized>
 		<end>End</end>
@@ -3700,6 +3721,7 @@
 		<h27>View template:</h27>
 		<h31>View Name</h31>
 		<h32>Proceed</h32>
+		<h34>Do not change</h34>
 		<h35>Unselect all views</h35>
 		<h36>You did not specify duplicate views</h36>
 		<h37>View duplication</h37>
@@ -3724,6 +3746,9 @@
 		<h65>Offset view range:</h65>
 		<h69>View range and view depth offset is only performed for floor plans</h69>
 		<h72>Offset view depth</h72>
+		<h74>The "{0}" view cannot be copied with the "{1}" option</h74>
+		<h75>Failed to duplicate the schedule</h75>
+		<h76>Failed to duplicate the sheet</h76>
 		<notOrganized>!Not organized</notOrganized>
 		<start>Start</start>
 		<end>End</end>
@@ -3762,9 +3787,10 @@
 		<apply>Apply</apply>
 		<continue>Continue</continue>
 	</mmRebarSolidAndVisible>
+	<!--todo удаляемые значения после версии 1.2.1.0 -->
 	<whshScheduleLookup LocalName="Schedule lookup"
-                      Description="Search for schedules in a project that contain the specified value"
-                      FullDescription="Searches for specified rows (whole or part), as well as numbers among the project schedules in field names, column headers or in cells, with or without case registration">
+	                    Description="Search for schedules in a project that contain the specified value"
+	                    FullDescription="Searches for specified rows (whole or part), as well as numbers among the project schedules in field names, column headers or in cells, with or without case registration">
 		<h1>Results view</h1>
 		<h2>Search results</h2>
 		<h3>Double-click on the line opens the details window</h3>
@@ -3795,6 +3821,7 @@
 		<h28>Enter field (or parameter) names delimited by</h28>
 		<h29>Enter heading names delimited by</h29>
 		<h30>Enter cell values delimited by</h30>
+		<h31>Open schedule</h31>
 		<sr1>Searched string:</sr1>
 		<sr2>Found in name/value:</sr2>
 		<sr3>Containing schedule name:</sr3>
@@ -3815,10 +3842,12 @@
 		<sr18>Value was found?</sr18>
 		<sr19>Substring searched?</sr19>
 		<sr20>Case ignored?</sr20>
+		<!-- todo remove start -->
 		<yes>Yes</yes>
 		<no>No</no>
 		<cancel>Cancel</cancel>
 		<ok>Ok</ok>
+		<!-- todo remove end -->
 		<find>Find</find>
 		<clean>Clean</clean>
 	</whshScheduleLookup>
@@ -4221,8 +4250,10 @@
 	</mprNestedFamilyParamsTransfer>
 	<mprTools LocalName="Tools"
             Description="A collection of small auxiliary plugins">
+		<!-- todo remove start after 2.13.1.0 -->
 		<Hide>Hide</Hide>
 		<Show>Show</Show>
+		<!-- todo remove end -->
 		<ttShow>Show all items of the specified category in the current view</ttShow>
 		<ttHide>Hide all items of the specified category in the current view</ttHide>
 		<Walls>Walls</Walls>
@@ -4244,6 +4275,8 @@
 		<ReferencePlanes>Reference planes</ReferencePlanes>
 		<StructuralFraming>Structural Framing</StructuralFraming>
 		<StructuralFoundation>Structural Foundation</StructuralFoundation>
+		<Analytical>Analytical All</Analytical>
+		<!-- todo remove start after 2.13.1.0 -->
 		<AllAnalytical>Analytical All</AllAnalytical>
 		<BeamAnalytical>Analytical Beams</BeamAnalytical>
 		<BraceAnalytical>Analytical Braces</BraceAnalytical>
@@ -4259,9 +4292,17 @@
 		<InternalLoads>Structural Internal Loads</InternalLoads>
 		<LoadCases>Structural Load Cases</LoadCases>
 		<Loads>Structural Loads</Loads>
+		<!-- todo remove end -->
 		<GenericModels>Generic Models</GenericModels>
 		<Reinforcement>Reinforcement</Reinforcement>
 		<Lines>Lines</Lines>
+		<Mass>Mass</Mass>
+		<Ducts>Ducts</Ducts>
+		<FlexDucts>Flex ducts</FlexDucts>
+		<Pipes>Pipes</Pipes>
+		<Wires>Wires</Wires>
+		<CableTrays>Cable Trays</CableTrays>
+		<Conduits>Conduits</Conduits>
 		<h1>Notching distance</h1>
 		<h2>Notching distance, mm</h2>
 		<h3>Automatically change the Notching distance for the elements of the Structural framing</h3>
@@ -4377,8 +4418,10 @@
 		<h53>Group by height</h53>
 		<h54>Source</h54>
 		<h55>Openings in the group:</h55>
+		<!-- todo remove after 5.12.35.0 -->
 		<h56>Width</h56>
 		<h57>Height</h57>
+		<!-- todo remove end -->
 		<h58>You can drag and drop openings from the current group to other groups</h58>
 		<h59>Group reinforcement settings</h59>
 		<h60>Carry out reinforcement</h60>
@@ -4448,8 +4491,10 @@
 		<h122>First size group</h122>
 		<h123>Second size group</h123>
 		<h124>Third size group</h124>
+		<!-- todo remove start after 5.12.35.0 -->
 		<h125>Crossed by a Cut plane</h125>
 		<h126>Belonging to the current level</h126>
+		<!-- todo remove end -->
 		<h127>Joints from underlying slabs</h127>
 		<h128>Select underlying slabs</h128>
 		<h129>Underlying slabs</h129>
@@ -4471,7 +4516,7 @@
 		<h145>First anchorage length, mm:</h145>
 		<h146>Second anchoring length, mm:</h146>
 		<h147>Reset</h147>
-		<h148>Anchorage length in slab, mm:</h148>
+		<h148>Anchorage length into the slab, mm:</h148>
 		<h149>Underlying slab joints</h149>
 		<h150>Contiguous walls count</h150>
 		<h151>Additional vertical rebars in ends</h151>
@@ -4489,8 +4534,8 @@
 		<h163>If there is an opening in the overlying wall, then</h163>
 		<h164>Also apply to areas of the overlying wall whose height under the opening (or the height of the entire wall) is less than or equal to two wall widths (but not less than 400)</h164>
 		<h165>If the slab above the wall is missing, then</h165>
-		<h166>Binding bends to the top of the slab (by the center of the rebar)</h166>
-		<h167>Binding bends to the bottom of the slab (by the center of the rebar)</h167>
+		<h166>Binding bends to the top of the slab (by the center of the rebar), mm:</h166>
+		<h167>Binding bends to the bottom of the slab (by the center of the rebar), mm:</h167>
 		<h168>Select walls by rectangle</h168>
 		<h169>Pick walls</h169>
 		<h170>Trim joints by solid of wall</h170>
@@ -4552,6 +4597,20 @@
 		<h226>Removal of previously created reinforcement:</h226>
 		<h227>Vertical reinforcement at intersections</h227>
 		<h228>Use the main vertical reinforcement settings</h228>
+		<h229>Level</h229>
+		<h230>Create joints for additional vertical bars of the background reinforcement</h230>
+		<h231>Distance of the bend start point from the top of the wall (a), mm:</h231>
+		<h232>Distance of the bend end point from the top of the plate (b), mm:</h232>
+		<h233>Use rebar diameter as bending height (c)</h233>
+		<h234>Bending height (c), mm:</h234>
+		<h235>Detail binding to the top of the slab (on the outer edge of the detail), mm:</h235>
+		<h236>U-shaped rebars of vertical joints:</h236>
+		<h237>The distance between the vertical rebars (by the smallest wall in the group) is</h237>
+		<h238>According to Section 10.3.5 of SP 63.13330 the distance between the rods of vertical reinforcement should be at least 50 mm!</h238>
+		<h239>According to Section 10.3.5 of SP 63.13330 the distance between the rods of horizontal reinforcement should be at least 25 mm!</h239>
+		<h240>Side alternating</h240>
+		<h241>Additional L-shaped rebar, bent into the slab and placed in the extreme walls</h241>
+		<h242>Anchoring length into the wall, mm:</h242>
 		<srd>Saving data of selected walls</srd>
 		<rr1>Remove reinforcement of the same type that is created</rr1>
 		<rr2>Remove all previously created reinforcement</rr2>
@@ -4569,9 +4628,11 @@
 		<jtd3>Vertical bar releases are created by analogy with straight releases, but with different anchorage lengths</jtd3>
 		<jtd4>Joints of vertical rebars with anchoring in the overlying slab are created. The length of the anchorage is counted from the side face of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the slab</jtd4>
 		<jtd5>Created straight joints of vertical rebars. Overlap length is set from the top of the overlying slab or from the top of the wall</jtd5>
-		<jtd6>Straight joints of vertical rebars in the form of a "bottle" are created - the bends are bent to the center of intersection to the diameter of the rebar. The anchoring length is set from the top of the overlying slab or from the top of the wall</jtd6>
+		<jtd6>Straight joints of vertical rebars in the form of a "bottle" are created - the bends are bent to the center of intersection to the diameter of the rebar. The overlap length is set from the top of the overlying slab</jtd6>
 		<jtd7>Joints are created in the overlying slab in the form of separate L-shaped bars. The first anchoring length - the length of the anchoring of the rods into the slab - is counted from the side face of the wall. The second anchoring length - the length of the anchoring of the rods into the wall - is counted from the top edge of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the slab</jtd7>
 		<jtd8>Created straight joints of vertical rebars without taking into account the overlying elements</jtd8>
+		<jtd9>Straight joints of vertical rebars in the form of a “bottle” are created - the bends are bent to the center of the wall at a given distance or by the diameter of the rebar. The overlap length is set from the top of the overlying slab</jtd9>
+		<jtd10>The vertical rebars of the background reinforcement are cut along the top of the wall according to the specified value of cover from the rebars ends. Create an anchoring into the overlying slab in the form of a separate U-shaped rod</jtd10>
 		<i1>1. Corner</i1>
 		<i2>2. T-shaped</i2>
 		<i3>3. Cross</i3>
@@ -4579,6 +4640,7 @@
 		<i5>Various</i5>
 		<m1>Enter a value from</m1>
 		<m2>to</m2>
+		<!-- todo remove after 5.12.35.0 -->
 		<m3>To run the command, go to the slab plan</m3>
 		<m13>Reinforcement cover</m13>
 		<m14>Up to</m14>
@@ -4622,25 +4684,14 @@
 		<dd4>outside</dd4>
 		<dd5>S</dd5>
 		<dd6>U</dd6>
+		<!-- todo remove after 5.12.35.0 -->
 		<create>Create</create>
 		<rn>Rebar ⌀</rn>
+		<!-- todo remove start after 5.12.35.0 -->
 		<mm>mm</mm>
 		<full>Available in full version!</full>
-		<!-- todo remove start -->
-		<accept>Accept</accept>
-		<cancel>Cancel</cancel>
-		<yes>Yes</yes>
-		<no>No</no>
-		<saved>Saved</saved>
-		<!-- todo remove end -->
-		<!-- todo remove start after 5.12.35.0 -->
 		<parameters>Parameters</parameters>
 		<name>Name</name>
-		<!-- todo remove end -->
-		<!-- todo remove start -->
-		<value>Value</value>
-		<copy>Copy</copy>
-		<paste>Paste</paste>
 		<!-- todo remove end -->
 		<noInFamily>Plugin operation in families is not available!</noInFamily>
 		<c1>Move to the end of the wall</c1>
@@ -4697,13 +4748,14 @@
 		<t42>Load the reinforcement settings from the xml file and set it for the current group</t42>
 		<t43>Attention! The surface appearance of the reinforcement may depend on the class of reinforcement, diameter or other values that are not considered by the program. Read the normative documentation</t43>
 		<t44>α is a coefficient that takes into account the effect on the anchoring length of the stress state of concrete and reinforcement and the structural solution of the element in the anchoring zone. When anchoring rods of a periodic profile with straight ends (straight anchoring) or smooth reinforcement with hooks or loops without additional anchoring devices for stretched rods, take α = 1.0, and for compressed ones - α = 0.75. According to clause 10.3.30 of SP 63.13330, the coefficient α may be increased to 2.0</t44>
-		<t45>According to paragraph 10.3.8 of SP 63.13330.2012, the vertical bars take no more than 2t and 400 mm (t is the thickness of the wall). The maximum allowable value is calculated based on the smallest wall thickness in the group</t45>
+		<t45>According to paragraph 10.3.8 of SP 63.13330.2012, the vertical bars take no more than 2t and 400 mm (t is the thickness of the wall)</t45>
 		<t46>In accordance with GOST 21.501-2018, clause 6.4.7, the length of the detail is set along the outer edge of the rebar</t46>
 		<t47>Increases the time of the reinforcement generation!</t47>
 		<t48>The details of the reinforcement of the intersection will be established with the horizontal reinforcement of the walls - by the smallest or the largest step of horizontal reinforcement of the walls participating in the intersection</t48>
 		<t49>The number of rows of vertical reinforcement (in a row is two bars "along" the opening)</t49>
 		<t50>The number of rows of horizontal reinforcement (in a row is two bars "along" the opening)</t50>
 		<t51>Selecting a underlying slab directly below the selected walls. Underlying slab selection available after wall selection, analysis and grouping. You can select one or more slabs. In the properties of the underlying slabs should be included properties "Structural"</t51>
+		<!-- todo remove after 5.12.35.0 -->
 		<t52>The maximum allowable value of the binding is calculated from the condition of the minimum allowable distance in the light according to section 10.3.5 of SP 63.13330 for the smallest wall width in the group</t52>
 		<t53>Reset all values ​​of the current default reinforcement settings to the default values ​​set in the plugin</t53>
 		<t54>Copy the current slab joints reinforcement settings to all selected plates</t54>
@@ -4740,7 +4792,7 @@
 		<re15>Error while creating U-shaped bars of the opening frame along the horizontal (on top) in the wall id={0}</re15>
 		<re16>Error while creating diagonal rebars in the frame of opening in the wall id={0}:</re16>
 		<re17>Error while creating joints from slab id={0} to wall id={1}:</re17>
-		<re18>Error while creating stirrups at the top of the frame of the opening in the wall id={0}:</re18>
+		<re18>Error while creating stirrups of the frame of the opening in the wall id={0}:</re18>
 		<re19>Error while creating U-shaped bars of the opening frame along the horizontal (on bottom) in the wall id={0}</re19>
 		<re20>Failed to create rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re20>
 	</mprWallsReinforcement>
@@ -4751,8 +4803,6 @@
 		<h2>Pick slabs</h2>
 		<h3>Select all slabs on current view</h3>
 		<h4>Select all slabs in document</h4>
-		<!-- todo remove -->
-		<h5>Reinforcement is possible only in structural slabs</h5>
 		<h6>Select</h6>
 		<h7>Analyze</h7>
 		<h8>Total selected slabs:</h8>
@@ -4769,8 +4819,6 @@
 		<h19>Offset of the outermost rod (along the axis of the rod) from the edge of the slab:</h19>
 		<h20>Settings</h20>
 		<h21>PLUGIN WINDOW:</h21>
-		<!-- todo remove -->
-		<h22>Over the windows</h22>
 		<h23>First mesh (top)</h23>
 		<h24>Second mesh (bottom)</h24>
 		<h25>Longitudinal rebars (Major direction):</h25>
@@ -4794,8 +4842,6 @@
 		<h43>In the processed slabs (Floor) a rebar cover</h43>
 		<h44>set to zero</h44>
 		<h45>set based on the reinforcement settings</h45>
-		<!-- todo remove -->
-		<h46>Delete reinforcement previously created by the plugin</h46>
 		<h47>Zoom all</h47>
 		<h48>Copy to all checked holes of the current slab</h48>
 		<h49>Copy to all checked holes of all checked slabs</h49>
@@ -4863,6 +4909,7 @@
 		<h155>Rebar length:</h155>
 		<h173>Straight rebars:</h173>
 		<h180>U-shaped rebars:</h180>
+		<h181>Girth rebars:</h181>
 		<h183>Reset all values ​​to "Auto"</h183>
 		<h184>Preferred Rebar Shapes</h184>
 		<h185>Create:</h185>
@@ -4882,7 +4929,10 @@
 		<h212>straight bars</h212>
 		<h214>Transverse Tied Stirrups</h214>
 		<h226>Removal of previously created reinforcement:</h226>
+		<h229>To be able to create tied stirrups it is necessary to enable the creation of at least two straight bars in longitudinal direction with the option "Displace when hit by reinforcement bars" disabled</h229>
+		<h230>To be able to create tied stirrups it is necessary to enable the creation of at least two straight bars in transverse direction with the option "Displace when hit by reinforcement bars" disabled</h230>
 		<srd>Saving data of selected slabs</srd>
+		<hook>Hook:</hook>
 		<m1>Pick slabs</m1>
 		<m13>Reinforcement cover</m13>
 		<m24>You did not specify what type of reinforcement to create!</m24>
@@ -4900,8 +4950,6 @@
 		<e3>Failed to get slab thickness from parameter</e3>
 		<e4>Could not get solid from slab geometry</e4>
 		<e5>Failed to get top and/or bottom face from slab geometry</e5>
-		<!-- todo remove -->
-		<e6>The normal of the top or bottom face of the slab should be aligned with the Z axis</e6>
 		<e7>Failed to get outer contours from slab geometry</e7>
 		<e8>Failed to get contour for area reinforcement</e8>
 		<e9>Failed to create background reinforcement of slab:</e9>
@@ -4919,26 +4967,11 @@
 		<m11>must be:</m11>
 		<m12>The value of the property will be changed</m12>
 		<m23>Reinforcement settings copied</m23>
-		<!-- todo remove -->
-		<create>Create</create>
 		<rn>Rebar ⌀</rn>
-		<!-- todo remove -->
-		<mm>mm</mm>
 		<full>Available in full version!</full>
-		<!-- todo remove start -->
-		<accept>Accept</accept>
-		<cancel>Cancel</cancel>
-		<auto>Auto</auto>
-		<saved>Saved</saved>
-		<!-- todo remove end -->
 		<!-- todo remove start after 2.15.1.0 -->
 		<parameters>Parameters</parameters>
 		<name>Name</name>
-		<!-- todo remove end -->
-		<!-- todo remove start -->
-		<value>Value</value>
-		<copy>Copy</copy>
-		<paste>Paste</paste>
 		<!-- todo remove end -->
 		<noInFamily>Plugin operation in families is not available!</noInFamily>
 		<notSet>Do not set</notSet>
@@ -4952,12 +4985,11 @@
 		<t1>According to SP 63.13330.2012, p. 10.3.5 - the minimum distance in the light between the rebars should be at least the largest diameter of the rod, as well as at least 25 mm for the lower reinforcement and 30 mm for the upper reinforcement; p. 10.3.8 - the largest distance between the axes of the rods should not be more than 200 mm with a plate cross-section height h &lt;= 150 mm and no more than 1,5h and 400 mm with a cross-section height h> 150 mm</t1>
 		<t2>Check and offset when hit on the rods of the background reinforcement is made for the first (nearest) rod, which does not guarantee the correct displacement of the second or third rod. The minimum permissible distance between the rods in the light is taken into account - 30 mm</t2>
 		<t3>The reinforcement previously created by the plugin is deleted depending on the newly created reinforcement. For example, if you choose to create only the main (background) reinforcement, then previously created U-shaped rods along the contour of the slab will not be deleted</t3>
-		<!-- todo remove -->
-		<t4>Save current reinforcement settings as default reinforcement settings</t4>
 		<t5>If the option is enabled, then the upper and lower rebar cover will be applied when creating background reinforcement meshes, without taking into account the diameters of other reinforcement. If the option is disabled, the rebar cover will be applied for all types of reinforcement being created, and the position of the background reinforcement meshes relative to the upper and lower faces of the slab will be calculated from the established conditions</t5>
-		<t6>U-shaped rods will be created with the rod step of the upper mesh of the background reinforcement. If the background reinforcement is not created in the plate, the U-shaped rods will be created with the specified step</t6>
+		<t6>U-shaped rods will be created with the rod step of the upper mesh of the background reinforcement. If the background reinforcement is not created in the slab, the U-shaped rods will be created with the specified step</t6>
 		<t7>Check all openings in the list available for processing</t7>
 		<t8>Uncheck all openings in the list</t8>
+		<t9>Tied stirrups will be created with the rod step of the upper mesh of the background reinforcement. If the background reinforcement is not created in the slab, the Tied stirrups will be created with the specified step</t9>
 		<t37>Copy the reinforcement settings of the current hole to selected holes</t37>
 		<t38>Save the reinforcement settings of current hole in the xml file</t38>
 		<t39>Load the reinforcement settings from the xml file and set it for the current hole</t39>
@@ -4977,6 +5009,8 @@
 		<t65>When creating rebars, an attempt will be made to use the specified shape. If creating a rebar with the specified shape is not possible, Revit will automatically search for a suitable shape or create a new shape.</t65>
 		<re4>Failed to create a straight rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re4>
 		<re5>Failed to create a rebar of shape "{0}" with a given preferred shape of rebar "{1}". Error: {2}\nAn attempt was made to create a rebar with automatic rebar shape selection or creation</re5>
+		<re18>Error while creating stirrups of the frame of the hole in the slab id={0}</re18>
+		<re20>Failed to create rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re20>
 	</mprSlabsReinforcement>
 	<mprColumnsReinforcement LocalName="Columns reinforcement"
                            Description="Analysis, grouping and reinforcement of columns for specified conditions"
@@ -5512,8 +5546,14 @@
 		<h48>In current SPF by Guid</h48>
 		<h49>In current SPF by Name</h49>
 		<h50>Show</h50>
+		<h51>Used in</h51>
+		<h52>Used in schedule</h52>
+		<h53>Used in family</h53>
+		<h54>Finding a parameter in schedules and families</h54>
+		<h55>Parameter not found in schedules or families</h55>
 		<search>Search</search>
 		<name>Name</name>
+		<collect>Collect</collect>
 		<w1>Remove all views (Area plans only)</w1>
 		<w2>Remove all Areas</w2>
 		<w3>Remove all Area Separation Lines</w3>
@@ -5564,6 +5604,7 @@
 		<m2>Work in family document is not provided</m2>
 		<m3>Retrieving data from a document binding map</m3>
 		<m4>Reading a family</m4>
+		<m5>Search in schedules</m5>
 	</mprCleaner>
 	<mprSheetRenumber LocalName="Sheet numerator"
                     Description="Plugin allows to renumber sheets in the project"
@@ -5616,6 +5657,8 @@
 		<h40>Space before</h40>
 		<h41>of first sheet</h41>
 		<h42>of all sheets</h42>
+		<h43>Numbering in the sheet name prefix</h43>
+		<h44>Numbering in the sheet name suffix</h44>
 		<p1>whole sheet number</p1>
 		<p2>1 part</p2>
 		<p3>number of 1 part</p3>
@@ -5628,9 +5671,10 @@
 	<mprFamilyDuplicateFixer LocalName="Fix duplicates"
                            Description="Automate the fix for duplicate families or types"
                            FullDescription="Plugin allows you to copy types from duplicate families to the main families, copy the values ​​of the parameters of types, update instances of families, and also delete duplicate families. Plugin allows you to replace duplicate types of families and delete the replaced types">
-		<h1>Copy missing family types</h1>
+		<h1>Copy types</h1>
+		<!-- todo remove after 1.3.6.0 -->
 		<h2>Copy parameter values of family types</h2>
-		<h3>Replace types of family instances</h3>
+		<h3>Replace family instances</h3>
 		<h4>Delete duplicate families</h4>
 		<h5>Run</h5>
 		<h6>Add a couple of families "Duplicate-Main family"</h6>
@@ -5663,12 +5707,13 @@
 		<e7>Error deleting type "{0}" in family "{1}": {2}</e7>
 		<t1>Direction of processing: the family on the left is a duplicate, the family on the right is the main family</t1>
 		<t2>Add to the processing list a couple of families that did not match the standard duplicate search</t2>
-		<t3>In the main family new types will be created that are present in the duplicate family and are absent in the main family</t3>
-		<t4>The parameter values ​​will be copied from the types of the duplicate family to the main family. Copying is performed when the types names match</t4>
-		<t5>Instances of duplicate families will be replaced by instances of the main family with the installation of a similar types</t5>
+		<t3>New types will be created in the main family that are present and checked in the duplicate family and are absent in the main family</t3>
+		<!-- todo remove after 1.3.6.0 -->
+		<t4>Copy the instance parameter values from the replacing duplicate family to the replacing main family. Only for checked types</t4>
+		<t5>Duplicate family instances of checked types will be replaced with instances of the main family with the same type set. If an instance of the main family does not have the required type, the duplicate family instance will be skipped</t5>
 		<t6>Duplicate families that do not have instances in the model will be deleted</t6>
 		<t7>The instance parameters values ​​will be copied from the replaced duplicate family to the replacement main family</t7>
-		<t8>For instances of duplicate families, the checked type from the source family will be set</t8>
+		<t8>The instances of the duplicate family are set to the types from the main family, which are selected in the dropdown lists</t8>
 		<t9>Add to the list families that did not match the standard search for duplicates</t9>
 		<t10>On the left side there are the types of the family, on the right - drop-down lists for replacing the type. If the type is not selected in the list, then replacement will not be performed</t10>
 		<t11>Clear selection</t11>
@@ -5731,31 +5776,16 @@
 		<m16>Choose one of the options - use an existing Drafting View from the destination document or create and use a copy of the Drafting View from the source document</m16>
 		<notOrganized>!Not organized</notOrganized>
 	</mprCopySheetsToOpenDocuments>
-	<!-- todo все удаляемые значения после версии 1.5.11.0 -->
 	<mprWorksets LocalName="Worksets"
 	             Description="Manage, create, and apply worksets"
 	             FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element"
 	             LocalName1="Update worksets"
-	             Description1="Calling the command &quot;Apply worksets by filters&quot; with the current settings without using the plugin window">
-		<!-- todo remove start -->
-		<yes>Yes</yes>
-		<no>No</no>
-		<accept>Accept</accept>
-		<cancel>Cancel</cancel>
-		<and>AND</and>
-		<or>OR</or>
-		<!-- todo remove end -->
+	             Description1="Calling the command &quot;Apply worksets by filters&quot; with the current settings without using the plugin window"
+	             LocalName2="Workset Processing"
+	             Description3="Utilities for worksets - merge, hide, isolate, etc.">
 		<h1>Create worksets</h1>
 		<h2>Create worksets and apply them by filters</h2>
 		<h3>Apply worksets by filters</h3>
-		<!-- todo remove start -->
-		<h4>Search (enter * to display only selected items)</h4>
-		<h5>Selected categories:</h5>
-		<h6>Instruction</h6>
-		<h7>Parameter name:</h7>
-		<h8>Condition:</h8>
-		<h9>Values:</h9>
-		<!-- todo remove end -->
 		<h10>Open file</h10>
 		<h11>Read settings</h11>
 		<h12>Each row is a group</h12>
@@ -5765,10 +5795,6 @@
 		<h16>Group name is preceded by a symbol:</h16>
 		<h17>Preview</h17>
 		<h18>Select a group to import worksets:</h18>
-		<!-- todo remove start -->
-		<h19>Filter elements by category:</h19>
-		<h20>Filter elements by parameters:</h20>
-		<!-- todo remove end -->
 		<h21>Copy filter settings to all worksets of the current group</h21>
 		<h22>Copy filter settings to all worksets of all groups</h22>
 		<h23>Handling work sets in a group</h23>
@@ -5784,8 +5810,6 @@
 		<h33>Uncheck all</h33>
 		<h34>Inverse</h34>
 		<h35>Available in the full version of the plugin</h35>
-		<!-- todo remove -->
-		<h36>Result</h36>
 		<h37>Import worksets</h37>
 		<h38>Group export</h38>
 		<h39>Group</h39>
@@ -5799,6 +5823,18 @@
 		<h47>Select categories</h47>
 		<h48>Equality parameters</h48>
 		<h49>Display in the results the id of the elements to which the workset is assigned</h49>
+		<h50>Configuration storage file is set by the settings of your organization</h50>
+		<h51>You do not have access to edit configurations!</h51>
+		<h52>Workset</h52>
+		<h53>Editable</h53>
+		<h54>Opened</h54>
+		<h55>The elements are transferred from the worksets: {0}\ninto the workset\n{1}</h55>
+		<h56>Select</h56>
+		<h57>Hiding elements</h57>
+		<h58>Showing elements</h58>
+		<h59>Elements isolation</h59>
+		<h60>To merge worksets (move elements from one workset to another), select the source worksets and move them with the mouse to the target workset</h60>
+		<h61>Merging worksets</h61>
 		<t1>Rename configuration</t1>
 		<t2>Create new configuration</t2>
 		<t3>Import configuration</t3>
@@ -5811,12 +5847,10 @@
 		<t10>Remove group</t10>
 		<t11>Remove workset</t11>
 		<t12>Create new group</t12>
-		<!-- todo remove start -->
-		<t13>Uncheck all categories</t13>
-		<t14>Add new item</t14>
-		<t15>Remove selected item</t15>
-		<t16>Open in notepad</t16>
-		<!-- todo remove end -->
+		<t13>Select Elements</t13>.
+		<t14>Hide elements in current view</t14>
+		<t15>Show elements in current view</t15>
+		<t16>Isolate elements in current view</t16>
 		<t17>This workset name is already in use</t17>
 		<t18>Empty workset name is not valid</t18>
 		<msg1>Remove?</msg1>
@@ -5831,15 +5865,7 @@
 		<msg10>No configuration selected!</msg10>
 		<msg11>Nothing selected!</msg11>
 		<msg12>Creating worksets is only possible in documents configured for collaboration (workshared)</msg12>
-		<!-- todo remove start -->
-		<msg13>A workset with the name "{0}" already exists in the current document</msg13>
-		<msg14>Workset "{0}" created</msg14>
-		<msg15>No workset "{0}" found</msg15>
-		<msg16>No apply conditions are set for the workset "{0}"</msg16>
-		<msg17>Element id={0} did not have a "Workset" parameter</msg17>
-		<msg18>The workset "{0}" is applied to {1} elements: {2}</msg18>
-		<msg19>An error "{0}" occurred while setting the workset to elements: {1}</msg19>
-		<!-- todo remove end -->
+		<msg14>Elements cannot be hidden in current view</msg14>
 		<msg20>No worksets configuration created</msg20>
 		<msg21>Worksets configuration not selected</msg21>
 		<msg22>No worksets groups created in current configuration</msg22>
@@ -5847,8 +5873,6 @@
 		<msg24>You are trying to import a worksets group storage file</msg24>
 		<msg25>The selected file is not a file for storing data about a group of worksets and cannot be imported!</msg25>
 		<msg26>You are trying to import a configuration storage file</msg26>
-		<!-- todo remove -->
-		<msg27>The workset was not applied for the following elements because the elements are owned by user "{0}": {1}</msg27>
 		<msg28>A workset already exists in the current document</msg28>
 		<msg29>Workset created</msg29>
 		<msg30>Workset not found</msg30>
@@ -5857,24 +5881,6 @@
 		<msg33>The workset "{0}" is applied to {1} elements</msg33>
 		<msg34>An error "{0}" occurred while setting the workset to elements</msg34>
 		<msg35>The workset was not applied for the following elements because the elements are owned by user "{0}"</msg35>
-		<!-- todo remove start -->
-		<i1>You can enter multiple valid values in the "Values" field, separated by a comma. A parameter is considered to satisfy the condition if its value matches at least one valid value.</i1>
-		<i2>The condition "Presence of parameter" means that the element will be processed if there is such a parameter, regardless of the parameter value.</i2>
-		<i3>String parameters are checked only by the conditions "Equal", "Not equal", "Contains", "Not contains".</i3>
-		<i4>Numeric parameters are checked by all conditions except "Contains".</i4>
-		<i5>The "Contains" condition checks that the element parameter contains at least one of the valid values. The condition "Not contains", respectively, checks that the parameter does not contain at least one of the values.</i5>
-		<i6>String values are case-insensitive.</i6>
-		<i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
-		<c1>Equal</c1>
-		<c2>More</c2>
-		<c3>Less</c3>
-		<c4>More or equal</c4>
-		<c5>Less or equal</c5>
-		<c6>Not equal</c6>
-		<c7>Contains</c7>
-		<c8>Presence of parameter</c8>
-		<c9>Not contains</c9>
-		<!-- todo remove end -->
 		<ie1>Text file</ie1>
 		<ie2>Excel file</ie2>
 		<ie3>Xml file</ie3>
@@ -6818,6 +6824,17 @@
 		<h149>Changing apartment data</h149>
 		<h150>Merge into multilevel apartments</h150>
 		<h151>Merging into multilevel apartments</h151>
+		<h152>The numbering order of the rooms of the same name in the apartment (parameter "Room index"):</h152>
+		<h153>In ascending order of area</h153>
+		<h154>In descending order of area</h154>
+		<h155>Set the "Apartment tag" parameter for the room</h155>
+		<h156>with the largest area</h156>
+		<h157>with the largest area of the type</h157>
+		<h158>The "Apartment tag" parameter will be filled in for the room with the largest area of the specified type. If there are no rooms of the specified type in the apartment, the "Apartment tag" parameter will be filled for the room with the largest area</h158>
+		<h159>Option of pre-cleaning the parameters of the rooms to be treated before collecting the apartments:</h159>
+		<h160>Clean all</h160>
+		<h161>Clean only with Apartment Identifier</h161>
+		<h162>Do not clean (not recommended)</h162>
 		<msg1>Parameter "{0}" not found</msg1>
 		<msg2>Parameter "{0}" is not filled</msg2>
 		<msg3>Parameter "{0}" has an invalid value</msg3>
@@ -6954,6 +6971,22 @@
 		<t5>In the free version it is available to create no more than three configurations</t5>
 		<t6>In the free version it is available to create no more than five conditions</t6>
 		<t7>Incomplete conditions</t7>
+		<t8>Standard condition</t8>
+		<t9>By parameter values</t9>
+		<t10>Duplicate condition</t10>
+		<t11>Set random colors for all values</t11>
+		<t12>Values count:</t12>
+		<t13>Get</t13>
+		<t14>Search for elements in the current model and get parameter values that satisfy the filter</t14>
+		<t15>The list of configurations is not empty! Select action</t15>
+		<t16>Fill list</t16>
+		<t17>Rewrite list</t17>
+		<t18>No coloring configurations found in the specified file</t18>
+		<t19>It is not possible to create a view template for the current view!</t19>
+		<t20>The current view does not have a view template!</t20>
+		<t21>Unable to create filters for parameter</t21>
+		<t22>From the whole model</t22>
+		<t23>From the current view</t23>
 		<c1>Override for elements</c1>
 		<c2>Return override for elements</c2>
 		<c3>Create View Filters</c3>
@@ -6962,6 +6995,8 @@
 		<e2>To create a filter, the parameter could not be found among the elements that fell under the filters, parameter name: {0}</e2>
 		<e3>The value for the filter is not set. This condition will not participate in the construction of the filter: {0}</e3>
 		<e4>It is not possible to create this filter, i.e. creating conditions in Revit does not support this type of equality: {0}</e4>
+		<e5>You must specify one parameter in the parameter filter!</e5>
+		<e6>No categories selected!</e6>
 	</mprColorizer>
 	<mprBreakLayers LocalName="Layer breaking"
 	                Description="Breaking multilayer walls and floors into separate elements">
@@ -7054,6 +7089,7 @@
 		<h7>Search results:</h7>
 		<h8>Clear results</h8>
 		<h9>The query "{0}" did not find anything</h9>
+		<h10>Search by selected elements</h10>
 		<search>Search all</search>
 		<replace>Replace checked</replace>
 		<searchAndReplace>Search and replace all</searchAndReplace>
@@ -7074,21 +7110,6 @@
 		<ss13>Model text in project</ss13>
 		<ss14>Viewport label</ss14>
 	</mprFindAndReplace>
-	<!-- todo remove -->
-	<mprExportSheetsToDwg LocalName="Sheets export"
-	                      Description="Export sheets to a single dwg file">
-		<h1>Sheets selected:</h1>
-		<h2>in-session export setup</h2>
-		<h3>Select export setup</h3>
-		<h4>Check the sheets to export or select a saved set</h4>
-		<h5>Processing sheet "{0}"</h5>
-		<h6>Failed to process sheet</h6>
-		<h7>Sheets were exported to a file</h7>
-		<h8>Failed to export sheets</h8>
-		<h9>Export to dwg...</h9>
-		<h10>Open the folder with the result when the export is finished</h10>
-		<notOrganized>!Not organized</notOrganized>
-	</mprExportSheetsToDwg>
 	<mprCopyCropBox LocalName="Copy crop extents"
 	                Description="Copying the crop extents of the current view into the specified views">
 		<h1>Copy extents visibility settings</h1>
@@ -7248,9 +7269,33 @@
 		<h4>Select level</h4>
 		<all>All levels</all>
 	</mrLevelsList>
+	<!-- todo remove -->
 	<mrLastHidden LocalName="Last hidden"
 	              Description="Tracking and displaying hidden objects">
 		<h1>Various</h1>
 		<h2>Make Visible</h2>
 	</mrLastHidden>
+	<mrQuickProperties LocalName="Quick properties"
+	                   Description="Quickly view and edit the properties of selected elements">
+		<unknown>Unknown</unknown>
+		<dif>*DIFFERENT*</dif>
+		<h1>Selected items:</h1>
+		<h2>The number of elements with this property</h2>
+	</mrQuickProperties>
+	<mrLast LocalName="Last"
+	        Description="Tracking and displaying the last hidden or last selected elements">
+		<h1>Various</h1>
+		<h2>Make Visible</h2>
+		<h3>Selected</h3>
+		<h4>Hidden</h4>
+	</mrLast>
+	<mr3dViewOrientation LocalName="View orientation"
+	                     Description="Camera orientation in the 3D scene">
+		<top>Top</top>
+		<bottom>Bottom</bottom>
+		<front>Front</front>
+		<back>Back</back>
+		<left>Left</left>
+		<right>Right</right>
+	</mr3dViewOrientation>
 </ModPlus>
