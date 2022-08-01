@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.4.4.0">
+<ModPlus Name="en-US" Version="6.5.0.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -28,6 +28,7 @@
 		<couplers>Couplers</couplers>
 		<create>Create</create>
 		<degree>°</degree>
+		<dencity>Density</dencity>
 		<dot>Dot</dot>
 		<execute>Execute</execute>
 		<expand>Expand</expand>
@@ -40,6 +41,7 @@
 		<instruction>Instruction</instruction>
 		<isolate>Isolate</isolate>
 		<kg>kg</kg>
+		<kgPerM3>kg/m³</kgPerM3>
 		<layer>Layer</layer>
 		<level>Level</level>
 		<levels>Levels</levels>
@@ -409,6 +411,7 @@
 		<group13>Systems</group13>
 		<group14>Architecture</group14>
 		<group15>Modify</group15>
+		<group16>Steel</group16>
 		<general>General</general>
 		<acm>ACM</acm>
 		<all>All</all>
@@ -7163,8 +7166,6 @@
 		<m1>Choose a room or wall</m1>
 		<m2>Specify the point that will be closest to the face along which the flat pattern will be created. For correct operation, the choice of a point must be made in the plan</m2>
 		<tr1>Create views</tr1>
-		<!-- todo remove after ??? -->
-		<e11>Failed to create the view for the following reason:</e11>
 	</mprWallSweep>
 	<mprWorldOrientation LocalName="Side of the world"
 	                     Description="Orientation analysis for rooms through windows, doors, curtain walls in the enclosing walls">
@@ -7200,6 +7201,23 @@
 		<t5>Report</t5>
 		<t6>Elements in category "{0}" do not have a target parameter set to write result</t6>
 	</mprWorldOrientation>
+	<mprPlateWeight LocalName="Plate weight"
+	                Description="Calculation of plate weight with recording the result in the specified parameter">
+		<h1>Use density from material</h1>
+		<h2>Round the result up to</h2>
+		<h3>digits</h3>
+		<h4>Set in parameter:</h4>
+		<h5>Select elements</h5>
+		<h6>All elements in View</h6>
+		<msg1>The detail level of the current view will be temporarily changed to "Fine" to calculate the weight of the plates, which can lead to long regeneration of the graphics!</msg1>
+		<msg2>Plates processed</msg2>
+		<msg3>Pick Plates or Structural Connections</msg3>
+		<err1>No physical properties in the Material</err1>
+		<err2>Failed to obtain plate geometry</err2>
+		<err3>Unsupported data type of Parameter</err3>
+		<err4>Parameter "{0}" not found</err4>
+		<err5>Failed to get Plate from Connection</err5>
+	</mprPlateWeight>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
 	                 Description="Filter selected objects by category">
