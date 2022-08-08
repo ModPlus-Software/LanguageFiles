@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.4.2.0">
+<ModPlus Name="en-US" Version="6.5.3.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -28,6 +28,7 @@
 		<couplers>Couplers</couplers>
 		<create>Create</create>
 		<degree>°</degree>
+		<density>Density</density>
 		<dot>Dot</dot>
 		<execute>Execute</execute>
 		<expand>Expand</expand>
@@ -40,6 +41,7 @@
 		<instruction>Instruction</instruction>
 		<isolate>Isolate</isolate>
 		<kg>kg</kg>
+		<kgPerM3>kg/m³</kgPerM3>
 		<layer>Layer</layer>
 		<level>Level</level>
 		<levels>Levels</levels>
@@ -409,6 +411,7 @@
 		<group13>Systems</group13>
 		<group14>Architecture</group14>
 		<group15>Modify</group15>
+		<group16>Steel</group16>
 		<general>General</general>
 		<acm>ACM</acm>
 		<all>All</all>
@@ -3772,7 +3775,7 @@
 		<msg1>Select an element with rebar or reinforcement</msg1>
 		<msg2>Select an elements with rebar or reinforcement</msg2>
 		<t1>Process:</t1>
-		<h1>Turn on rebars visibility for:</h1>
+		<h1>Processing:</h1>
 		<h2>Show as solid</h2>
 		<h3>Selected element</h3>
 		<h4>Selected elements</h4>
@@ -6517,6 +6520,8 @@
 		<d3>Turn the selected rebar set into individual rebar bars</d3>
 		<n4>Split set</n4>.
 		<d4>Split a rebar set into two new rebar sets</d4>
+		<n5>Change Presentation</n5>
+		<d5>Batch change of rebar representation</d5>
 		<m1>Select the host elements</m1>
 		<m2>Select the source host element</m2>
 		<m3>Select target host elements</m3>
@@ -6529,6 +6534,20 @@
 		<h4>Skip copy</h4>
 		<h5>Copy</h5>
 		<h6>Cancel</h6>
+		<h7>Processing:</h7>
+		<h8>Presentation</h8>
+		<h9>Show all Rebars in Rebar Set</h9>
+		<h10>Show First and Last Rebar in Rebar Set</h10>
+		<h11>Show Middle Rebar in Rebar Set</h11>
+		<h12>Change Rebar presentation mode</h12>
+		<h13>On the current view it is not possible to change the representation of the rebar</h13>
+		<h14>It is not possible to change the representation for rebar with the "One" layout</h14>
+		<pv1>Selected element</pv1>
+		<pv2>Selected elements</pv2>
+		<pv3>All elements on view</pv3>
+		<pv4>All but selected elements on view</pv4>
+		<msg1>Select an element with rebar or reinforcement</msg1>
+		<msg2>Select an elements with rebar or reinforcement</msg2>
 	</mprRebarTools>
 	<mprSectionAnnotation LocalName="Section annotation"
                         Description="Creating annotations - dimensions, spot elevations, tags - on section views">
@@ -6946,6 +6965,8 @@
 		<tp7>Delete rule</tp7>
 		<tp8>Add a filter for the categories from which the attached element will be cut</tp8>
 		<tp9>Add configuration</tp9>
+		<tp10>Swap filters by category</tp10>
+		<tp11>Swap filters by parameters</tp11>
 		<op1>AND</op1>
 		<op2>OR</op2>
 		<op3>Equal</op3>
@@ -7123,22 +7144,27 @@
 		<v6>Number of curve splits</v6>
 		<v8>Projection depth</v8>
 		<v9>Select sheet for location</v9>
-		<v10>Down offset</v10>
-		<v11>Top offset</v11>
+		<v10>Inside offset</v10>
+		<v11>Set suffix/prefix</v11>
+		<v12>Suffix</v12>
+		<v13>Prefix</v13>
+		<v14>In current document</v14>
+		<v15>In linked document</v15>
+		<v16>Select element</v16>
 		<a1>Run the plugin from the plan</a1>
 		<t1>Selected element type: </t1>
 		<t2>Wall</t2>
 		<t3>Room</t3>
-		<e1>Failed to get walls from selected elements</e1>
+		<t4>Element is not select</t4>
+		<e1>Cancel selection</e1>
 		<e2>No matching item selected</e2>
 		<e4>Could not find dependent walls</e4>
 		<e5>Failed to determine closest plane to point</e5>
-		<e6>It was not possible to set the settings for the view, for the following reasons:</e6>
+		<e6>An unexpected error has occurred: </e6>
 		<e7>No views to build</e7>
-		<e8>Failed to create a sheet for views for the following reasons:</e8>
+		<e8>Selected element is not a wall or room</e8>
 		<e9>Failed to define a line to build a section</e9>
-		<e10>An unexpected error occurred while generating data for BbResult</e10>
-		<e11>Failed to create the view for the following reason:</e11>
+		<e10>Failed to get room or wall wrapper object</e10>
 		<m1>Choose a room or wall</m1>
 		<m2>Specify the point that will be closest to the face along which the flat pattern will be created. For correct operation, the choice of a point must be made in the plan</m2>
 		<tr1>Create views</tr1>
@@ -7177,6 +7203,23 @@
 		<t5>Report</t5>
 		<t6>Elements in category "{0}" do not have a target parameter set to write result</t6>
 	</mprWorldOrientation>
+	<mprPlateWeight LocalName="Plate weight"
+	                Description="Calculation of plate weight with recording the result in the specified parameter">
+		<h1>Use density from material</h1>
+		<h2>Round the result up to</h2>
+		<h3>digits</h3>
+		<h4>Set in parameter:</h4>
+		<h5>Select elements</h5>
+		<h6>All elements in View</h6>
+		<msg1>The detail level of the current view will be temporarily changed to "Fine" to calculate the weight of the plates, which can lead to long regeneration of the graphics!</msg1>
+		<msg2>Plates processed</msg2>
+		<msg3>Pick Plates or Structural Connections</msg3>
+		<err1>No physical properties in the Material</err1>
+		<err2>Failed to obtain plate geometry</err2>
+		<err3>Unsupported data type of Parameter</err3>
+		<err4>Parameter "{0}" not found</err4>
+		<err5>Failed to get Plate from Connection</err5>
+	</mprPlateWeight>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
 	                 Description="Filter selected objects by category">
