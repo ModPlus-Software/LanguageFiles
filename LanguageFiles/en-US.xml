@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.5.4.0">
+<ModPlus Name="en-US" Version="6.5.5.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4247,12 +4247,9 @@
 	</mprNestedFamilyParamsTransfer>
 	<mprTools LocalName="Tools"
             Description="A collection of small auxiliary plugins">
-		<!-- todo remove start after 2.13.1.0 -->
-		<Hide>Hide</Hide>
-		<Show>Show</Show>
-		<!-- todo remove end -->
 		<ttShow>Show all items of the specified category in the current view</ttShow>
 		<ttHide>Hide all items of the specified category in the current view</ttHide>
+		<Category>All</Category>
 		<Walls>Walls</Walls>
 		<Windows>Windows</Windows>
 		<Doors>Doors</Doors>
@@ -4273,23 +4270,6 @@
 		<StructuralFraming>Structural Framing</StructuralFraming>
 		<StructuralFoundation>Structural Foundation</StructuralFoundation>
 		<Analytical>Analytical All</Analytical>
-		<!-- todo remove start after 2.13.1.0 -->
-		<AllAnalytical>Analytical All</AllAnalytical>
-		<BeamAnalytical>Analytical Beams</BeamAnalytical>
-		<BraceAnalytical>Analytical Braces</BraceAnalytical>
-		<ColumnAnalytical>Analytical Columns</ColumnAnalytical>
-		<FloorAnalytical>Analytical Floors</FloorAnalytical>
-		<FoundationSlabAnalytical>Analytical Foundation Slabs</FoundationSlabAnalytical>
-		<IsolatedFoundationAnalytical>Analytical Isolated Foundations</IsolatedFoundationAnalytical>
-		<LinksAnalytical>Analytical Links</LinksAnalytical>
-		<AnalyticalNodes>Analytical Nodes</AnalyticalNodes>
-		<WallFoundationAnalytical>Analytical Wall Foundations</WallFoundationAnalytical>
-		<WallAnalytical>Analytical Walls</WallAnalytical>
-		<BoundaryConditions>Boundary Conditions</BoundaryConditions>
-		<InternalLoads>Structural Internal Loads</InternalLoads>
-		<LoadCases>Structural Load Cases</LoadCases>
-		<Loads>Structural Loads</Loads>
-		<!-- todo remove end -->
 		<GenericModels>Generic Models</GenericModels>
 		<Reinforcement>Reinforcement</Reinforcement>
 		<Lines>Lines</Lines>
@@ -4343,6 +4323,8 @@
 		<h41>Open views</h41>
 		<h42>Open the views and sheets selected in the Project Browser</h42>
 		<h43>Select views and sheets in the Project Browser, using Ctrl and/or Shift, and run the plugin to open them</h43>
+		<h44>Zoom selected</h44>
+		<h45>Zoom current View to selected elements</h45>
 		<m1>It is not possible to change the visibility for a category in the current view, as the view template is applied to the view</m1>
 		<m2>No rebars were found in the current project</m2>
 		<m3>Found in current project:</m3>
@@ -4359,6 +4341,7 @@
 		<m14>Nothing found</m14>
 		<m15>No saved information for restoring views was found</m15>
 		<m16>Graphics override for elements is not available on the current view</m16>
+		<m17>Unable to switch grids mode on the current view</m17>
 	</mprTools>
 	<mprWallsReinforcement LocalName="Walls reinforcement"
                          Description="Analysis, grouping and reinforcement according to given conditions of walls and openings"

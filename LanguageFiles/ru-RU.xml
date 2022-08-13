@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - символ перехода на новую строку для xaml -->
 <!-- &quot; - символ двойной кавычки -->
-<ModPlus Name="ru-RU" Version="6.5.4.0">
+<ModPlus Name="ru-RU" Version="6.5.5.0">
 	<Common>
     <abort>Прервать</abort>
     <accept>Принять</accept>
@@ -4247,12 +4247,9 @@
 	</mprNestedFamilyParamsTransfer>
 	<mprTools LocalName="Утилиты"
             Description="Сборник небольших вспомогательных плагинов">
-		<!-- todo remove start after 2.13.1.0 -->
-		<Hide>Скрыть</Hide>
-		<Show>Показать</Show>
-		<!-- todo remove end -->
 		<ttShow>Показать все элементы указанной категории на текущем виде</ttShow>
 		<ttHide>Скрыть все элементы указанной категории на текущем виде</ttHide>
+		<Category>Все</Category>
 		<Walls>Стены</Walls>
 		<Windows>Окна</Windows>
 		<Doors>Двери</Doors>
@@ -4273,23 +4270,6 @@
 		<StructuralFraming>Каркас несущий</StructuralFraming>
 		<StructuralFoundation>Фундамент несущей конструкции</StructuralFoundation>
 		<Analytical>Все категории аналитической модели</Analytical>
-		<!-- todo remove start after 2.13.1.0 -->
-		<AllAnalytical>Все категории аналитической модели</AllAnalytical>
-		<BeamAnalytical>Аналитические модели балки</BeamAnalytical>
-		<BraceAnalytical>Аналитические модели раскосов</BraceAnalytical>
-		<ColumnAnalytical>Аналитические модели колонн</ColumnAnalytical>
-		<FloorAnalytical>Аналитические модели перекрытий</FloorAnalytical>
-		<FoundationSlabAnalytical>Аналитические модели фундаментных плит</FoundationSlabAnalytical>
-		<IsolatedFoundationAnalytical>Аналитические модели изолированных фундаментов</IsolatedFoundationAnalytical>
-		<LinksAnalytical>Жесткие связи</LinksAnalytical>
-		<AnalyticalNodes>Узлы аналитической модели</AnalyticalNodes>
-		<WallFoundationAnalytical>Аналитические модели ленточных фундаментов</WallFoundationAnalytical>
-		<WallAnalytical>Аналитические модели стен</WallAnalytical>
-		<BoundaryConditions>Граничные условия</BoundaryConditions>
-		<InternalLoads>Внутренние нагрузки несущих конструкций</InternalLoads>
-		<LoadCases>Варианты нагружений на конструкцию</LoadCases>
-		<Loads>Нагрузки на конструкцию</Loads>
-		<!-- todo remove end -->
 		<GenericModels>Обобщенные модели</GenericModels>
 		<Reinforcement>Армирование</Reinforcement>
 		<Lines>Линии</Lines>
@@ -4343,6 +4323,8 @@
 		<h41>Открыть виды</h41>
 		<h42>Открыть виды и листы,  выделенные в диспетчере проекта</h42>
 		<h43>Выберите в диспетчере проекта виды и листы, используя Ctrl и/или Shift, и запустите плагин для их открытия</h43>
+		<h44>Вписать выбранное</h44>
+		<h45>Масштабирование и центрирование текущего вида к выбранным элементам</h45>
 		<m1>Невозможно изменить настройки видимости для категории на текущем виде, так как к виду применен шаблон вида</m1>
 		<m2>В текущем проекте не найдена арматура</m2>
 		<m3>В текущем проекте найдено:</m3>
@@ -4359,6 +4341,7 @@
 		<m14>Ничего не найдено</m14>
 		<m15>Не найдено сохраненной информации для восстановления видов</m15>
 		<m16>Переопределение графики для элементов недоступно на текущем виде</m16>
+		<m17>Невозможно переключить режим осей на текущем виде</m17>
 	</mprTools>
 	<mprWallsReinforcement LocalName="Армирование стен"
                          Description="Анализ, группировка и армирование по заданным условиям стен и проёмов"
