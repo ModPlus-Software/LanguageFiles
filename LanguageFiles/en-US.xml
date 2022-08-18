@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.5.7.0">
+<ModPlus Name="en-US" Version="6.5.8.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4247,6 +4247,10 @@
 	</mprNestedFamilyParamsTransfer>
 	<mprTools LocalName="Tools"
             Description="A collection of small auxiliary plugins">
+		<!-- todo remove start after 2.13.1.0 -->
+		<Hide>Hide</Hide>
+		<Show>Show</Show>
+		<!-- todo remove end -->
 		<ttShow>Show all items of the specified category in the current view</ttShow>
 		<ttHide>Hide all items of the specified category in the current view</ttHide>
 		<Category>All</Category>
@@ -4280,6 +4284,23 @@
 		<Wires>Wires</Wires>
 		<CableTrays>Cable Trays</CableTrays>
 		<Conduits>Conduits</Conduits>
+		<!-- todo remove start after 2.13.1.0 -->
+		<AllAnalytical>Analytical All</AllAnalytical>
+		<BeamAnalytical>Analytical Beams</BeamAnalytical>
+		<BraceAnalytical>Analytical Braces</BraceAnalytical>
+		<ColumnAnalytical>Analytical Columns</ColumnAnalytical>
+		<FloorAnalytical>Analytical Floors</FloorAnalytical>
+		<FoundationSlabAnalytical>Analytical Foundation Slabs</FoundationSlabAnalytical>
+		<IsolatedFoundationAnalytical>Analytical Isolated Foundations</IsolatedFoundationAnalytical>
+		<LinksAnalytical>Analytical Links</LinksAnalytical>
+		<AnalyticalNodes>Analytical Nodes</AnalyticalNodes>
+		<WallFoundationAnalytical>Analytical Wall Foundations</WallFoundationAnalytical>
+		<WallAnalytical>Analytical Walls</WallAnalytical>
+		<BoundaryConditions>Boundary Conditions</BoundaryConditions>
+		<InternalLoads>Structural Internal Loads</InternalLoads>
+		<LoadCases>Structural Load Cases</LoadCases>
+		<Loads>Structural Loads</Loads>
+		<!-- todo remove end -->
 		<h1>Notching distance</h1>
 		<h2>Notching distance, mm</h2>
 		<h3>Automatically change the Notching distance for the elements of the Structural framing</h3>

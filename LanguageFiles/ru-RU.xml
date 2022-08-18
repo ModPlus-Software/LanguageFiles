@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - символ перехода на новую строку для xaml -->
 <!-- &quot; - символ двойной кавычки -->
-<ModPlus Name="ru-RU" Version="6.5.7.0">
+<ModPlus Name="ru-RU" Version="6.5.8.0">
 	<Common>
     <abort>Прервать</abort>
     <accept>Принять</accept>
@@ -4247,6 +4247,10 @@
 	</mprNestedFamilyParamsTransfer>
 	<mprTools LocalName="Утилиты"
             Description="Сборник небольших вспомогательных плагинов">
+		<!-- todo remove start after 2.13.1.0 -->
+		<Hide>Скрыть</Hide>
+		<Show>Показать</Show>
+		<!-- todo remove end -->
 		<ttShow>Показать все элементы указанной категории на текущем виде</ttShow>
 		<ttHide>Скрыть все элементы указанной категории на текущем виде</ttHide>
 		<Category>Все</Category>
@@ -4280,6 +4284,23 @@
 		<Wires>Провода</Wires>
 		<CableTrays>Кабельные лотки</CableTrays>
 		<Conduits>Короба</Conduits>
+		<!-- todo remove start after 2.13.1.0 -->
+		<AllAnalytical>Все категории аналитической модели</AllAnalytical>
+		<BeamAnalytical>Аналитические модели балки</BeamAnalytical>
+		<BraceAnalytical>Аналитические модели раскосов</BraceAnalytical>
+		<ColumnAnalytical>Аналитические модели колонн</ColumnAnalytical>
+		<FloorAnalytical>Аналитические модели перекрытий</FloorAnalytical>
+		<FoundationSlabAnalytical>Аналитические модели фундаментных плит</FoundationSlabAnalytical>
+		<IsolatedFoundationAnalytical>Аналитические модели изолированных фундаментов</IsolatedFoundationAnalytical>
+		<LinksAnalytical>Жесткие связи</LinksAnalytical>
+		<AnalyticalNodes>Узлы аналитической модели</AnalyticalNodes>
+		<WallFoundationAnalytical>Аналитические модели ленточных фундаментов</WallFoundationAnalytical>
+		<WallAnalytical>Аналитические модели стен</WallAnalytical>
+		<BoundaryConditions>Граничные условия</BoundaryConditions>
+		<InternalLoads>Внутренние нагрузки несущих конструкций</InternalLoads>
+		<LoadCases>Варианты нагружений на конструкцию</LoadCases>
+		<Loads>Нагрузки на конструкцию</Loads>
+		<!-- todo remove end -->
 		<h1>Отступ врезки</h1>
 		<h2>Отступ врезки, мм</h2>
 		<h3>Автоматическое изменение Отступа врезки для элементов несущего каркаса</h3>
