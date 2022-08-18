@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - символ перехода на новую строку для xaml -->
 <!-- &quot; - символ двойной кавычки -->
-<ModPlus Name="ru-RU" Version="6.5.6.0">
+<ModPlus Name="ru-RU" Version="6.5.8.0">
 	<Common>
     <abort>Прервать</abort>
     <accept>Принять</accept>
@@ -4252,6 +4252,10 @@
 	</mprNestedFamilyParamsTransfer>
 	<mprTools LocalName="Утилиты"
             Description="Сборник небольших вспомогательных плагинов">
+		<!-- todo remove start after 2.13.1.0 -->
+		<Hide>Скрыть</Hide>
+		<Show>Показать</Show>
+		<!-- todo remove end -->
 		<ttShow>Показать все элементы указанной категории на текущем виде</ttShow>
 		<ttHide>Скрыть все элементы указанной категории на текущем виде</ttHide>
 		<Category>Все</Category>
@@ -4285,6 +4289,23 @@
 		<Wires>Провода</Wires>
 		<CableTrays>Кабельные лотки</CableTrays>
 		<Conduits>Короба</Conduits>
+		<!-- todo remove start after 2.13.1.0 -->
+		<AllAnalytical>Все категории аналитической модели</AllAnalytical>
+		<BeamAnalytical>Аналитические модели балки</BeamAnalytical>
+		<BraceAnalytical>Аналитические модели раскосов</BraceAnalytical>
+		<ColumnAnalytical>Аналитические модели колонн</ColumnAnalytical>
+		<FloorAnalytical>Аналитические модели перекрытий</FloorAnalytical>
+		<FoundationSlabAnalytical>Аналитические модели фундаментных плит</FoundationSlabAnalytical>
+		<IsolatedFoundationAnalytical>Аналитические модели изолированных фундаментов</IsolatedFoundationAnalytical>
+		<LinksAnalytical>Жесткие связи</LinksAnalytical>
+		<AnalyticalNodes>Узлы аналитической модели</AnalyticalNodes>
+		<WallFoundationAnalytical>Аналитические модели ленточных фундаментов</WallFoundationAnalytical>
+		<WallAnalytical>Аналитические модели стен</WallAnalytical>
+		<BoundaryConditions>Граничные условия</BoundaryConditions>
+		<InternalLoads>Внутренние нагрузки несущих конструкций</InternalLoads>
+		<LoadCases>Варианты нагружений на конструкцию</LoadCases>
+		<Loads>Нагрузки на конструкцию</Loads>
+		<!-- todo remove end -->
 		<h1>Отступ врезки</h1>
 		<h2>Отступ врезки, мм</h2>
 		<h3>Автоматическое изменение Отступа врезки для элементов несущего каркаса</h3>
@@ -6177,7 +6198,7 @@
 		<m18>Кабельные лотки</m18>
 		<m19>Выберите пересекаемые элементы</m19>
 		<m20>Изгиб выбранных элементов</m20>
-		<m21>Выберите пересекаемые элементы</m21>
+		<m21>Не выбрано элементов для обхода!</m21>
 		<m22>Элементы, не соответствующие выбранным категориям: {0}</m22>
 		<m23>При создании изгиба элемента произошла ошибка. Вероятно, указанные значения смещения и угла не позволяют выполнить изгиб.</m23>
 		<m24>Оригинальный текст ошибки:</m24>
@@ -6986,10 +7007,12 @@
 		<t17>Перезаписать список</t17>
 		<t18>В указанном файле не обнаружено конфигураций раскраски</t18>
 		<t19>Для текущего вида нельзя создать шаблон вида!</t19>
+		<!-- todo remove after 2.5.5.0 -->
 		<t20>У текущего вида отсутствует шаблон вида!</t20>
 		<t21>Невозможно создать фильтры для параметра</t21>
 		<t22>Со всей модели</t22>
 		<t23>С текущего вида</t23>
+		<t24>Внимание! Фильтры вида могут быть созданы только при наличии в модели экземпляров элементов с указанными параметрами</t24>
 		<c1>Переопределение для элементов</c1>
 		<c2>Вернуть переопределение для элементов</c2>
 		<c3>Создать фильтры вида</c3>

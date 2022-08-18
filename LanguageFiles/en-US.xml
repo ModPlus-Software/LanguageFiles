@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.5.6.0">
+<ModPlus Name="en-US" Version="6.5.8.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4247,6 +4247,10 @@
 	</mprNestedFamilyParamsTransfer>
 	<mprTools LocalName="Tools"
             Description="A collection of small auxiliary plugins">
+		<!-- todo remove start after 2.13.1.0 -->
+		<Hide>Hide</Hide>
+		<Show>Show</Show>
+		<!-- todo remove end -->
 		<ttShow>Show all items of the specified category in the current view</ttShow>
 		<ttHide>Hide all items of the specified category in the current view</ttHide>
 		<Category>All</Category>
@@ -4280,6 +4284,23 @@
 		<Wires>Wires</Wires>
 		<CableTrays>Cable Trays</CableTrays>
 		<Conduits>Conduits</Conduits>
+		<!-- todo remove start after 2.13.1.0 -->
+		<AllAnalytical>Analytical All</AllAnalytical>
+		<BeamAnalytical>Analytical Beams</BeamAnalytical>
+		<BraceAnalytical>Analytical Braces</BraceAnalytical>
+		<ColumnAnalytical>Analytical Columns</ColumnAnalytical>
+		<FloorAnalytical>Analytical Floors</FloorAnalytical>
+		<FoundationSlabAnalytical>Analytical Foundation Slabs</FoundationSlabAnalytical>
+		<IsolatedFoundationAnalytical>Analytical Isolated Foundations</IsolatedFoundationAnalytical>
+		<LinksAnalytical>Analytical Links</LinksAnalytical>
+		<AnalyticalNodes>Analytical Nodes</AnalyticalNodes>
+		<WallFoundationAnalytical>Analytical Wall Foundations</WallFoundationAnalytical>
+		<WallAnalytical>Analytical Walls</WallAnalytical>
+		<BoundaryConditions>Boundary Conditions</BoundaryConditions>
+		<InternalLoads>Structural Internal Loads</InternalLoads>
+		<LoadCases>Structural Load Cases</LoadCases>
+		<Loads>Structural Loads</Loads>
+		<!-- todo remove end -->
 		<h1>Notching distance</h1>
 		<h2>Notching distance, mm</h2>
 		<h3>Automatically change the Notching distance for the elements of the Structural framing</h3>
@@ -6152,7 +6173,7 @@
                         Description="Solves MEP elements clashes"
                         FullDescription="Plugin allows you to create a bypass of MEP elements without constantly selecting them from the plugin window: for this, you first need to select the intersected elements (i.e. those elements that need to be bypassed), and then just select the necessary elements in the model. In this case, the plugin will automatically add items to the list of processed">
 		<h1>Settings</h1>
-		<h2>Bending directions</h2>
+		<h2>Bend directions</h2>
 		<m1>Offset, mm</m1>
 		<m2>Angle, °</m2>
 		<m3>Categories</m3>
@@ -6162,7 +6183,7 @@
 		<m7>Down</m7>
 		<m8>Left</m8>
 		<m9>Right</m9>
-		<m10>Bendable elements</m10>
+		<m10>Bypassed elements</m10>
 		<m12>Bend</m12>
 		<m13>Apply</m13>
 		<m14>Cancel</m14>
@@ -6170,9 +6191,9 @@
 		<m16>Pipe</m16>
 		<m17>Conduit</m17>
 		<m18>Cable tray</m18>
-		<m19>Choose an alignment elements</m19>
+		<m19>Select intersecting elements</m19>
 		<m20>Create elements bending</m20>
-		<m21>The alignment elements were not chosen</m21>
+		<m21>No elements to bypass have been selected!</m21>
 		<m22>Elements doesn't match selected categories: {0}</m22>
 		<m23>An error occurred while creating an element bend. It is likely that the entered offset and angle do not allow bending.</m23>
 		<m24>Original error text:</m24>
@@ -6193,8 +6214,8 @@
 		<op6>Not Contains</op6>
 		<op7>Begin</op7>
 		<op8>Not Begin</op8>
-		<op9>Bendable elements:</op9>
-		<op10>Bending elements:</op10>
+		<op9>Bypassed elements:</op9>
+		<op10>Bendable elements:</op10>
 		<op11>Configuration:</op11>
 		<op12>Current file</op12>
 		<op13>Linked file</op13>
@@ -6981,10 +7002,12 @@
 		<t17>Rewrite list</t17>
 		<t18>No coloring configurations found in the specified file</t18>
 		<t19>It is not possible to create a view template for the current view!</t19>
+		<!-- todo remove after 2.5.5.0 -->
 		<t20>The current view does not have a view template!</t20>
 		<t21>Unable to create filters for parameter</t21>
 		<t22>From the whole model</t22>
 		<t23>From the current view</t23>
+		<t24>Attention! View filters can be created only if there are instances of elements with the specified parameters in the model</t24>
 		<c1>Override for elements</c1>
 		<c2>Return override for elements</c2>
 		<c3>Create View Filters</c3>
