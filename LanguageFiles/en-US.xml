@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.5.17.0">
+<ModPlus Name="en-US" Version="6.6.0.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -7248,6 +7248,19 @@
 		<err4>Parameter "{0}" not found</err4>
 		<err5>Failed to get Plate from Connection</err5>
 	</mprPlateWeight>
+	<mprFloorByRoom LocalName="Floor by Room"
+	                Description="Creating floors by contour of the rooms">
+		<t1>Rooms filter:</t1>
+		<t2>Floor type:</t2>
+		<t3>Height Offset from Level:</t3>
+		<t4>Lead into doors openings</t4>
+		<t5>Floor type is not set! This configuration cannot be processed!</t5>
+		<msg1>To run plugin, go to the Floor Plan!</msg1>
+		<msg2>Floor with type "{0}" is created by contour of the Room</msg2>
+		<msg3>It was not possible to create a Floor by contour of the Room</msg3>
+		<msg4>No rooms filtered by "{0}" were found</msg4>
+		<msg5>There are no Rooms on the current view!</msg5>
+	</mprFloorByRoom>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
 	                 Description="Filter selected objects by category">
