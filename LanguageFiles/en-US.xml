@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.6.4.0">
+<ModPlus Name="en-US" Version="6.6.5.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -1112,6 +1112,8 @@
 		<i3>String parameters are checked only by the conditions "Equal", "Not equal", "Contains", "Not contains".</i3>
 		<i4>Numeric parameters are checked by all conditions except "Contains".</i4>
 		<i5>The "Contains" condition checks that the element parameter contains at least one of the valid values. The condition "Not contains", respectively, checks that the parameter does not contain at least one of the values.</i5>
+		<i5-1>To use the "Starts with" condition, select the "Contains" condition and add an "*" to the end of the value. For example, "Wall*".</i5-1>
+		<i5-2>To use the "Ends on" condition, select the "Contains" condition and add a "*" at the beginning of the value. For example, "*Wall".</i5-2>
 		<i6>String values are case-insensitive.</i6>
 		<i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
 		<i8>All simple nested conditions of a group condition are checked with the "AND" operator - i.e. all nested conditions must match.</i8>
