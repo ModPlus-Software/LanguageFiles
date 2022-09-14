@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.6.8.0">
+<ModPlus Name="en-US" Version="6.6.9.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4094,6 +4094,8 @@
 		<h14>The direction of the offset relative to the dimension line:</h14>
 		<h15>Above</h15>
 		<h16>Below</h16>
+		<h17>Text width factor (from 0.1 to 2.0):</h17>
+		<h18>The text width calculation depends on the font. With some fonts, the software's calculated width may be greater than the width of the text drawn by Revit. In this case, you can use a width factor that will be taken into account when calculating the width of the text programmatically</h18>
 	</mprDimBias>
 	<mprExcelImport LocalName="Import from Excel"
                   Description="Plugin allows you to insert a table from Excel into a Revit drafting view"
@@ -7287,6 +7289,19 @@
 		<t12>Processing elements from linked files</t12>
 		<t13>The parent elements will be collected from the linked files. For example, for the InMass strategy, these are Masses, for the InSolid strategy, they are solid elements, etc. Elements will be collected according to the categories specified in the corresponding column of rules</t13>
 		<t14>Strategies that work with element geometry (such as InRoom, InSpace, InSolid, SolidTouch, etc.) are recommended to run on the active view! If you run in the entire document, the elements take geometry that does not take into account the connection with other elements, which can lead to incorrect results</t14>
+		<t15>Enter strategy name</t15>
+		<t16>Add new rule</t16>
+		<t17>Remove selected rules</t17>
+		<t18>Duplicate selected rules</t18>
+		<t19>Renumber according to the position in the table</t19>
+		<t20>Export current configuration</t20>
+		<t21>Import strategies into current configuration</t21>
+		<t23>Import rules into current strategy</t23>
+		<t24>Export rules of current strategy</t24>
+		<rh1>#</rh1>
+		<rh2>On</rh2>
+		<rh3>Formula</rh3>
+		<rh4>Formula options</rh4>
 		<sm1>Processing picked elements</sm1>
 		<sm2>Processing element on current View</sm2>
 		<sm3>Processing elements in Document</sm3>
