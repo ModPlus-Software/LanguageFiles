@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.6.9.0">
+<ModPlus Name="en-US" Version="6.6.10.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4078,11 +4078,12 @@
               FullDescription="The application monitors all the created or edited dimensions and in case the dimensional text falls on dimensional lines, it moves the text aside!"
               LocalName1="Restore"
               Description1="Restore the text position at selected dimensions">
+		<!-- todo remove -->
 		<h1>Dim offset</h1>
 		<h2>Automatic displacement of dimension text on dimension creation</h2>
 		<h3>Automatic displacement of dimension text on dimension modify</h3>
-		<h4>Coefficient of displacement (from 0.1 to 2.0):</h4>
-		<h5>You must enter a number between 0.1 and 2.0!</h5>
+		<h4>Displacement coefficient (from 0.1 to 2.0):</h4>
+		<h5>You must specify a number between 0.1 and 2.0 for the displacement coefficient</h5>
 		<h6>Attention! Include this item only when you understand what you are doing. Dimensional text offset will be triggered in a large number of cases when editing. For example, when you move objects or change scale of the view. Also, you cannot manually move the position of the text in the dimensions</h6>
 		<h7>Perform dimension text offset for selected dimensions</h7>
 		<h8>Restore the position of the dimension text for the selected dimensions</h8>
@@ -4096,6 +4097,7 @@
 		<h16>Below</h16>
 		<h17>Text width factor (from 0.1 to 2.0):</h17>
 		<h18>The text width calculation depends on the font. With some fonts, the software's calculated width may be greater than the width of the text drawn by Revit. In this case, you can use a width factor that will be taken into account when calculating the width of the text programmatically</h18>
+		<h19>You must specify a number between 0.1 and 2.0 for the text width factor</h19>
 	</mprDimBias>
 	<mprExcelImport LocalName="Import from Excel"
                   Description="Plugin allows you to insert a table from Excel into a Revit drafting view"
