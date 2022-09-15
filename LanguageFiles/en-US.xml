@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.6.10.0">
+<ModPlus Name="en-US" Version="6.6.11.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -15,6 +15,9 @@
 		<black>Black</black>
 		<cancel>Cancel</cancel>
 		<cantEditConfig>You do not have access to edit configurations!</cantEditConfig>
+		<caseSensitive>Case sensitive</caseSensitive>
+		<category>Category</category>
+		<categories>Categories</categories>
 		<checkAll>Check all</checkAll>
 		<clear>Clear</clear>
 		<close>Close</close>
@@ -57,6 +60,7 @@
 		<ok>Ok</ok>
 		<or>Or</or>
 		<parameter>Parameter</parameter>
+		<parameters>Parameters</parameters>
 		<paste>Paste</paste>
 		<prefix>Prefix</prefix>
 		<property>Property</property>
@@ -75,6 +79,7 @@
 		<show>Show</show>
 		<suffix>Suffix</suffix>
 		<thickness>Thickness</thickness>
+		<tolerance>Tolerance</tolerance>
 		<ton>ton</ton>
 		<type>Type</type>
 		<ukraine>Ukraine</ukraine>
@@ -7300,23 +7305,87 @@
 		<t21>Import strategies into current configuration</t21>
 		<t23>Import rules into current strategy</t23>
 		<t24>Export rules of current strategy</t24>
+		<t25>Write empty result</t25>
+		<t26>Write an empty result, obtained by calculating the expression, to the target parameter. For string parameters it is an empty string, for numeric parameters it is 0</t26>
+		<t27>Take into account the case when comparing string values in conditions</t27>
+		<t28>Tolerance used when comparing numerical values in conditions</t28>
+		<t29>Insert function</t29>
+		<t30>Formula preview</t30>
+		<t31>Formula Editor</t31>
+		<t32>Case sensitive</t32>
+		<t33>Write empty</t33>
+		<t34>Unique identifier of the strategy (do not change it!):</t34>
+		<t35>Custom name of the strategy:</t35>
 		<rh1>#</rh1>
 		<rh2>On</rh2>
 		<rh3>Formula</rh3>
 		<rh4>Formula options</rh4>
-		<sm1>Processing picked elements</sm1>
-		<sm2>Processing element on current View</sm2>
-		<sm3>Processing elements in Document</sm3>
+		<sm1>Process picked elements</sm1>
+		<sm2>Process element on current View</sm2>
+		<sm3>Process elements in Document</sm3>
 		<ssd1>Processing elements without relationships</ssd1>
+		<sld1>The strategy processes element instances without considering their relationships to other elements. At least one filter (by category or by parameter) must be filled</sld1>
 		<ssd2>Processing family instances without relationships</ssd2>
+		<sld2>The strategy processes instances of families without considering their relationships to other elements. It is acceptable not to use a filter by category or filter by parameter</sld2>
 		<ssd3>Processing types</ssd3>
+		<sld3>The strategy processes types. If the "Process picked elements" option is selected, then the types of the selected elements will be processed. If the "Process elements on current View" option is selected, then the types of elements on the current View will be processed. If the "Process elements in the document" option is selected then all types in the document are processed</sld3>
 		<ssd4>Processing elements in the Host</ssd4>
+		<sld4>The strategy processes elements that have information about the Hosts. Such elements include: Rebar, Area Reinforcement, Path Reinforcement, Rebar Container, Openings, Stacked Walls, and Families (including elements of Curtain Walls)</sld4>
 		<ssd5>Processing elements in the Group</ssd5>
+		<sld5>The strategy processes elements placed in groups. When creating formulas, keep in mind that the target parameter must be able to change across group instances</sld5>
 		<ssd6>Processing elements in the Room</ssd6>
+		<sld6>The strategy processes elements located in Rooms. You can use the strategy only in views that have Room geometry. For example, on 3D Views or when the option "Process elements in document" is selected, the strategy will not give results</sld6>
 		<ssd7>Processing elements in the Space</ssd7>
+		<sld7>The strategy processes elements located in Spaces. You can use the strategy only on views that have Space geometry. For example, on 3D Views or when the option "Process element in document" is selected, the strategy will not give results</sld7>
 		<ssd8>Processing elements in the Mass</ssd8>
+		<sld8>The strategy processes elements that have Solid geometry and are located in Masses. Masses must have a Solid form. Masses can be in linked files</sld8>
 		<ssd9>Processing elements in the Solid</ssd9>
+		<sld9>The strategy processes elements that have Solid geometry and are located inside other elements that have Solid geometry. The parent elements can be in linked files</sld9>
 		<ssd10>Processing elements that touch their solids</ssd10>
+		<sld10>This strategy processes elements that Solid geometry and have flat solid faces that touch each other. Touched elements can be in linked files</sld10>
+		<se1>Host</se1>
+		<sp1>Insert Host parameter</sp1>
+		<se2>Group</se2>
+		<sp2>Insert Group parameter</sp2>
+		<se3>Room</se3>
+		<sp3>Insert Room parameter</sp3>
+		<se4>Space</se4>
+		<sp4>Insert Space parameter</sp4>
+		<se5>Mass</se5>
+		<sp5>Insert Mass parameter</sp5>
+		<se6>Parent element</se6>
+		<sp6>Insert parameter of parent element</sp6>
+		<se7>Touchable element</se7>
+		<sp7>Insert parameter of touchable element</sp7>
+		<te1>Target element</te1>
+		<tp1>Insert parameter of target element</tp1>
+		<te2>Family instance</te2>
+		<tp2>Insert parameter of target family instance</tp2>
+		<te3>Type</te3>
+		<tp3>Insert parameter of target Type</tp3>
+		<d-min>Returns the smaller of numbers</d-min>
+		<d-max>Returns the larger of numbers</d-max>
+		<d-abs>Returns the absolute value of the number</d-abs>
+		<d-round>Rounds a value to the nearest integer or to the specified number of fractional digits</d-round>
+		<d-roundup>Returns the smallest integral value greater than or equal to the specified number</d-roundup>
+		<d-rounddown>Returns the largest integral value less than or equal to the specified number</d-rounddown>
+		<d-sqrt>Returns the square root of a specified number</d-sqrt>
+		<d-sin>Returns the sine of a specified angle</d-sin>
+		<d-cos>Returns the cosine of a specified angle</d-cos>
+		<d-tan>Returns the tangent of a specified angle</d-tan>
+		<d-asin>Returns the angle whose sine is the specified number</d-asin>
+		<d-acos>Returns the angle whose cosine is the specified number</d-acos>
+		<d-atan>Returns the angle whose tangent is the specified number</d-atan>
+		<d-log>Returns the logarithm of a specified number with a specified base</d-log>
+		<d-ln>Returns the natural logarithm (with base e) of the specified number</d-ln>
+		<d-exp>Returns e multiplied by the specified power</d-exp>
+		<d-pi>Returns the ratio of the circumference of a circle to its diameter</d-pi>
+		<d-if>Returns the first value &lt;true&gt; if the condition &lt;c&gt; is true. Returns the second value &lt;false&gt; if the condition &lt;c&gt; is not true</d-if>
+		<d-and>Returns TRUE if all conditions &lt;c&gt; are true. Otherwise returns FALSE</d-and>
+		<d-or>Returns TRUE if at least one condition &lt;c&gt; is true. Otherwise returns FALSE</d-or>
+		<d-inrange>Returns TRUE if the number &lt;x&gt; is greater than or equal to &lt;min&gt; and less than or equal to &lt;max&gt;. Otherwise returns FALSE</d-inrange>
+		<d-has>Returns TRUE if parameter &lt;p&gt; exists. Otherwise returns FALSE</d-has>
+		<d-firsttrue>Returns the first value of &lt;v&gt; whose &lt;c&gt; condition is true. If all conditions &lt;c&gt; are not true, returns &lt;v&gt; value</d-firsttrue>
 	</mprParametrization>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
