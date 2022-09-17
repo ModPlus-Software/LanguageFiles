@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.6.11.0">
+<ModPlus Name="en-US" Version="6.6.12.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -35,6 +35,7 @@
 		<degree>°</degree>
 		<density>Density</density>
 		<dot>Dot</dot>
+		<error>Error</error>
 		<execute>Execute</execute>
 		<expand>Expand</expand>
 		<expandAll>Expand all</expandAll>
@@ -65,7 +66,7 @@
 		<prefix>Prefix</prefix>
 		<property>Property</property>
 		<remove>Remove</remove>
-		<remove>Remove</remove>
+		<replace>Replace</replace>
 		<room>Room</room>
 		<russia>Russia</russia>
 		<save>Save</save>
@@ -7316,6 +7317,64 @@
 		<t33>Write empty</t33>
 		<t34>Unique identifier of the strategy (do not change it!):</t34>
 		<t35>Custom name of the strategy:</t35>
+		<t36>copy</t36>
+		<t37>Strategy</t37>
+		<t38>no parameter</t38>
+		<t39>Rule</t39>
+		<t40>Expression</t40>
+		<msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
+		<msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
+		<msg3>List of strategies is not empty</msg3>
+		<msg4>Replace current list of strategies or add imported strategies to list?</msg4>
+		<msh5>Searching for relationships between element instances</msh5>
+		<msg6>Processing strategy</msg6>
+		<msg7>no elements were processed</msg7>
+		<msg8>No elements were processed by the selected rules of the selected strategies</msg8>
+		<msg9>Committing changes to a document...</msg9>
+		<msg10>List of rules is not empty</msg10>
+		<msg11>Replace current list of rules or add imported rules to list?</msg11>
+		<msg12>Rule skipped because no formula is given</msg12>
+		<msg13>Processing rule</msg13>
+		<msg14>value setting is skipped, because the parameter "{0}" has the same value</msg14>
+		<msg15>processed</msg15>
+		<msg16>did not process with an error</msg16>
+		<err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
+		<err2>The number of opening round brackets must equal the number of closing ones</err2>
+		<err3>The number of opening curly brackets must equal the number of closing ones</err3>
+		<err4>Failed calculate an arithmetic expression</err4>
+		<err5>Condition "{0}" must contain conditional comparison operators ({1})</err5>
+		<err6>Condition "{0}" must contain values before and after "{1}"</err6>
+		<err7>Left part of expression "{0}" is a number, but right part is not a number</err7>
+		<err8>Right part of expression "{0}" is a number, but left part is not a number</err8>
+		<err9>Unexpected conditional operator</err9>
+		<err10>Failed to process the condition</err10>
+		<err11>Function must contain numbers separated by a comma</err11>
+		<err12>"{0}" is an invalid rounding strategy. It is allowed to use "z" for AwayFromZero, or "e" for ToEven</err12>
+		<err13>The number of fractional digits must be specified as an integer above 0 or as a fractional number from 0 to 1</err13>
+		<err14>The second argument must be a rounding strategy ("z" for the AwayFromZero strategy or "v" for the ToEven strategy) or the number of fractional digits</err14>
+		<err15>Function must contain no more than three arguments</err15>
+		<err16>Function must contain two numeric arguments separated by a comma</err16>
+		<err17>Function must contain three comma-separated arguments: a condition, a value when the condition is met, and a value when the condition is not met</err17>
+		<err18>Function must contain at least two conditions separated by a comma</err18>
+		<err19>Function must contain two comma-separated arguments: the number to be checked and the range of numbers separated by two dots ".."</err19>
+		<err20>Argument "{0}" must contain two numbers separated by two dots ".."</err20>
+		<err21>Function must contain at least two arguments separated by semicolons</err21>
+		<err22>Argument "{0}" must contain a condition and a value, separated by a colon</err22>
+		<err23>Failed to convert value "{0}" to a number</err23>
+		<err24>Failed calculate function</err24>
+		<err25>Sheet "{0}" contains the wrong number of rows and columns</err25>
+		<err26>Column 4 of row 1 on the "{0}" sheet should contain a unique strategy identifier (Self, OnlyFamilies, Types, InHost, etc.)</err26>
+		<err27>Error when reading categories</err27>.
+		<err28>Error when reading parameters</err28>
+		<err29>Invalid formula</err29>
+		<err30>Row processing failed with error</err30>
+		<err31>Unsupported type of strategy</err31>
+		<err32>error of the expression "{0}"</err32>
+		<err33>parameter "{0}" is not found</err33>
+		<err34>Revit could not set a value in the parameter</err34>
+		<err35>unsupported reference value type of parameter</err35>
+		<err36>reference value "{0}" when set to "{1}" is not found</err36>
+		<err37>parameter "{0}" is not available for editing</err37>
 		<rh1>#</rh1>
 		<rh2>On</rh2>
 		<rh3>Formula</rh3>
