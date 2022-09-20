@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.6.16.0">
+<ModPlus Name="en-US" Version="6.6.17.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -7343,6 +7343,9 @@
 		<msg14>value setting is skipped, because the parameter "{0}" has the same value</msg14>
 		<msg15>processed</msg15>
 		<msg16>did not process with an error</msg16>
+		<msg17>In a limited version of the plugin, you can create only one configuration</msg17>
+		<msg18>In a limited version of the plugin, you can create up to three strategies</msg18>
+		<msg19>In a limited version of the plugin, you can create up to three rules</msg19>
 		<err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
 		<err2>The number of opening round brackets must equal the number of closing ones</err2>
 		<err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -7449,7 +7452,7 @@
 		<d-or>Returns TRUE if at least one condition &lt;c&gt; is true. Otherwise returns FALSE</d-or>
 		<d-inrange>Returns TRUE if the number &lt;x&gt; is greater than or equal to &lt;min&gt; and less than or equal to &lt;max&gt;. Otherwise returns FALSE</d-inrange>
 		<d-has>Returns TRUE if parameter &lt;p&gt; exists. Otherwise returns FALSE</d-has>
-		<d-firsttrue>Returns the first value of &lt;v&gt; whose &lt;c&gt; condition is true. If all conditions &lt;c&gt; are not true, returns &lt;v&gt; value</d-firsttrue>
+		<d-firsttrue>Returns the first value of &lt;v&gt; whose &lt;c&gt; condition is true. If all conditions &lt;c&gt; are not true, returns last &lt;v&gt; value</d-firsttrue>
 	</mprParametrization>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
