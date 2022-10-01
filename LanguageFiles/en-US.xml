@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.6.24.0">
+<ModPlus Name="en-US" Version="6.6.25.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -5478,8 +5478,10 @@
 		<!-- todo remove end -->
 		<h7>Initial value:</h7>
 		<h8>Numbering direction:</h8>
-		<h9>Parameter name:</h9>
+		<h9>Target parameter:</h9>
+		<!-- todo remove after 4.4.12.0 -->
 		<h10>Search (enter * to display only selected items)</h10>
+		<!-- todo remove after 4.4.12.0 -->
 		<h11>Selected categories:</h11>
 		<h12>Instance parameter</h12>
 		<h13>Type parameter</h13>
@@ -5488,6 +5490,7 @@
 		<h16>It is not possible to change the instance parameter for an element located in a group if the parameter "Values ​​can vary by group instances" is not enabled for the parameter or it is not the "Mark" system parameter</h16>
 		<h17>Errors occurred while changing the parameter values ​​of the listed items</h17>
 		<h18>Attention! The parameter is cleared for all elements of this schedule, regardless of the filtering settings. This means that if, for example, 10 columns are presented in the schedule, and only 5 columns are displayed in the filter settings, then the parameter will be cleared for all 10 columns! Clear parameter?</h18>
+		<!-- todo remove after 4.4.12.0 -->
 		<h19>Categories to filter</h19>
 		<h20>Selection variant:</h20>
 		<h21>Selected elements count:</h21>
@@ -5496,6 +5499,13 @@
 		<!-- todo remove -->
 		<h23>If rows are selected before running the plugin, the plugin will number only the selected rows</h23>
 		<h24>Number only selected rows</h24>
+		<h25>Elements selection</h25>
+		<h26>Numbering settings</h26>
+		<h27>Step:</h27>
+		<h28>The "{0}" parameter has a "Read-only" property. Make sure that the elements to be processed are not in a Workset that is not available to you for editing</h28>
+		<h29>Prefix and suffix from</h29>
+		<h30>string</h30>
+		<h31>parameter</h31>
 		<!-- todo remove -->
 		<a1>Through deletion of rows</a1>
 		<!-- todo remove -->
@@ -5509,7 +5519,7 @@
 		<t3>Standard frame selection - selection of elements in the current view with a frame with confirmation of the selection by pressing the "Finish" button. With this option, the numbering direction has five options - in the order of creation and by the position of the elements.</t3>
 		<t4>Ordinal selection - selects each element for numbering in the order in which the numbering will be performed. With this option, the direction of numbering can be ascending or descending. Completion of the selection is invoked by pressing the Esc key.</t4>
 		<t5>Curve intersection - Select a curve (model line or detail line). The elements for numbering will be selected by finding the intersection of the curve with the geometry of the elements in the current view, projected onto the plane of the view. With this option, the direction of numbering can be ascending or descending.</t5>
-		<t6>For all selection variants elements can filter by category both before and after elements selection.</t6>
+		<t6>It is possible to apply a filter by category and/or parameters to all element selections.</t6>
 		<t7>The list of parameters is filled in after selecting the elements for numbering.</t7>
 		<!-- todo remove start -->
 		<t8>For schedules that have the "Itemized" checkbox unchecked, there are two algorithms for determining positions:</t8>
@@ -5517,6 +5527,9 @@
 		<t10>Through signal value - is a slow algorithm. This algorithm requires constant regeneration of the specification, which leads to high time costs. The more elements in the schedule, the more time is required.</t10>
 		<t11>It is recommended to use the fast algorithm first. If the fast algorithm fails, then use the slow algorithm</t11>
 		<!-- todo remove end -->
+		<t12>The initial value can be a fractional value. A dot must be used to separate the integer part from the fractional part. If the target parameter has the "Integer" data type, the numbering result will be converted to an integer by discarding the fractional part.</t12>
+		<t13>Leading zeros can be added to the initial value. For example, if the initial value is "01", and the step is "5", then the numbering result will be "01, 05, 10, 15...". Initial zeros are only taken into account if the target parameter has a string data type.</t13>
+		<t14>The geometric direction of numbering is calculated by the absolute values of X and Y of the element placement points. For linear objects the middle point is taken</t14>
 		<m1>Select elements for numbered marking</m1>
 		<m2>No items on current view schedule</m2>
 		<m3>Filter selected elements by the current list of categories?</m3>
