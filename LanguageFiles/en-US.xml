@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.6.30.0">
+<ModPlus Name="en-US" Version="6.6.31.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -46,6 +46,7 @@
 		<insert>Insert</insert>
 		<instruction>Instruction</instruction>
 		<isolate>Isolate</isolate>
+		<key>Key</key>
 		<kg>kg</kg>
 		<kgPerM3>kg/m³</kgPerM3>
 		<layer>Layer</layer>
@@ -7358,6 +7359,15 @@
 		<t45>Auxiliary Rays</t45>
 		<t46>Boolean operations</t46>
 		<t47>Sets the algorithm for finding solids entries for InRoom, InSpace, InMass, and InSolid strategies. The "Auxiliary Rays" algorithm works fast, but allows to determine if a solid belongs to only one parent solid. The "Boolean operations" algorithm works slow, but allows to determine if a solid belongs to more than one parent solid. See help for details</t47>
+		<t48>Fields</t48>
+		<t49>Favorite fields</t49>
+		<t50>Add new field</t50>
+		<t51>Remove field</t51>
+		<t52>Insert field in formula</t52>
+		<t53>Add fields from the list of favorite fields</t53>
+		<t54>Add field to the list of favorite fields</t54>
+		<t55>Remove field from the list of favorite fields</t55>
+		<t56>The list of fields already contains a field with this key</t56>
 		<msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
 		<msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
 		<msg3>List of strategies is not empty</msg3>
@@ -7377,6 +7387,7 @@
 		<msg17>In a limited version of the plugin, you can create only one configuration</msg17>
 		<msg18>In a limited version of the plugin, you can create up to three strategies</msg18>
 		<msg19>In a limited version of the plugin, you can create up to three rules</msg19>
+		<msg20>In the list of favorite fields there is already a field with this key</msg20>
 		<err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
 		<err2>The number of opening round brackets must equal the number of closing ones</err2>
 		<err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -7414,6 +7425,8 @@
 		<err37>parameter "{0}" is not available for editing</err37>
 		<err38>parameter "{0}" has data type "Integer", but set value "{1}" is not an integer</err38>
 		<err39>The parent strategy does not allow using parameters of conditional source elements (@[Parameter])</err39>
+		<err40>Failed to get the field from the value "{0}". The value must begin with a field key enclosed in angle brackets</err40>
+		<err41>The parameter "{0}" has no data type defined</err41>
 		<rh1>#</rh1>
 		<rh2>On</rh2>
 		<rh3>Formula</rh3>
@@ -7441,6 +7454,10 @@
 		<sld9>The strategy processes elements that have Solid geometry and are located inside other elements that have Solid geometry. The parent elements can be in linked files</sld9>
 		<ssd10>Processing elements that touch their solids</ssd10>
 		<sld10>This strategy processes elements that Solid geometry and have flat solid faces that touch each other. Touched elements can be in linked files</sld10>
+		<ssd11>Processing room boundaries</ssd11>
+		<sld11>Strategy processes elements that are room boundaries</sld11>
+		<ssd12>Processing sub-elements of Structure Connections</ssd12>
+		<sld12>Strategy processes elements placed in Structure Connections (Plates, bolts, etc.). Filtering of sub-elements by parameters, as well as the list of parameters of sub-elements in the formula editor, are not provided. Numerical parameters are set without conversion to internal units</sld12>
 		<se1>Host</se1>
 		<sp1>Insert Host parameter</sp1>
 		<se2>Group</se2>
@@ -7455,12 +7472,16 @@
 		<sp6>Insert parameter of parent element</sp6>
 		<se7>Touchable element</se7>
 		<sp7>Insert parameter of touchable element</sp7>
+		<se8>Connection</se8>
+		<sp8>Insert parameter of Structural Connection</sp8>
 		<te1>Target element</te1>
 		<tp1>Insert parameter of target element</tp1>
 		<te2>Family instance</te2>
 		<tp2>Insert parameter of target family instance</tp2>
 		<te3>Type</te3>
 		<tp3>Insert parameter of target Type</tp3>
+		<te4>SubElement</te4>
+		<tp4>Insert target Sub-element parameter</tp4>
 		<d-min>Returns the smaller of numbers</d-min>
 		<d-max>Returns the larger of numbers</d-max>
 		<d-abs>Returns the absolute value of the number</d-abs>
