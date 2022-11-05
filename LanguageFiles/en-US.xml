@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.7.0.0">
+<ModPlus Name="en-US" Version="6.7.1.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -6468,7 +6468,7 @@
 		<cn2>Copying from one element to several</cn2>
 		<cn3>Copying from host to children</cn3>
 		<cn4>Copying from parent family to nested</cn4>
-		<cn5>Copying from one element of the linked file to several elements of the current file</cn5>
+		<cn5>Copying from a group to its children</cn5>
 		<h1>Select copy option</h1>
 		<h2>Perform copy</h2>
 		<h3>Saved configurations</h3>
@@ -6540,6 +6540,16 @@
 		<h63>Filtering nested families</h63>
 		<h64>Optional filtering of nested families by categories and/or parameters. If no filters are specified, all nested families will be processed</h64>
 		<h65>Select from Link</h65>
+		<h66>Open the folder where the files of saved configurations are located. To exchange configurations, they must be placed in this folder</h66>
+		<h67>Sample group</h67>
+		<h68>The sample group is used to populate a list of source parameter names in the parameter copy rule setup</h68>
+		<h69>Sample child element</h69>
+		<h70>The sample child element is used to populate a list of source parameter names in the parameter copy rule setup</h70>
+		<h71>Groups</h71>
+		<h72>Groups, from which parameter values will be taken to be copied to child elements according to specified rules</h72>
+		<h73>Filtering child elements</h73>
+		<h74>Optional filtering of child elements by categories and/or parameters. If no filters are specified, all child elements will be processed</h74>
+		<h75>Rounding is used only when the value to be set is a number</h75>
 		<i1>The input fields before and after the names of the source parameters allow you to create a formula for the calculation.</i1>
 		<i2>To create a formula, you can use simple arithmetic operators such as "+", "-", "*", "/", parentheses, and mathematical functions:</i2>
 		<i3>Abs - absolute value,</i3>
@@ -6570,6 +6580,9 @@
 		<msg21>Error while copying the arithmetic value calculated by the formula "{0}" to parameter "{1}": {2}</msg21>
 		<msg22>Arithmetic value copied to parameter "{0}"</msg22>
 		<msg23>No nested families found</msg23>
+		<msg24>Using the plugin in the Family Editor is not possible</msg24>
+		<msg25>Using the plugin on the current View is not possible</msg25>
+		<msg26>No child elements found</msg26>
 		<err1>Empty value is invalid</err1>
 		<err2>Entered value contains invalid characters</err2>
 		<err3>Name is already in use</err3>
