@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.7.4.0">
+<ModPlus Name="en-US" Version="6.8.0.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -7589,6 +7589,29 @@
 		<d-toupper>Returns value converted to uppercase</d-toupper>
 		<d-tolower>Returns value converted to lowercase</d-tolower>
 	</mprParametrization>
+	<mprMEPConnect LocalName="MEP connect"
+	               Description="Collection of plugins for automation of engineering systems connections"
+	               LocalName1="Connect diffusers"
+	               Description1="Batch connection of diffusers to ducts">
+		<msg1>Select ducts and diffusers to be connected to them</msg1>
+		<msg2>No ducts selected</msg2>
+		<msg3>No diffusers selected! Only diffusers that have one unconnected connector oriented along the Z axis are allowed for processing</msg3>
+		<t1>Type of branch to be created:</t1>
+		<t2>Create a flexible connection between diffuser and branch</t2>
+		<t3>Flexible duct type:</t3>
+		<t4>Flexible duct length, mm:</t4>
+		<t5>Diffusers connection</t5>
+		<dt1>Oval diffuser</dt1>
+		<dt2>Round diffuser</dt2>
+		<dt3>Rectangular diffuser</dt3>
+		<err1>Vertical offset between diffuser and duct is not enough to create a connection</err1>
+		<err2>The distance between the diffuser and the duct is less than the specified length of the flexible connection</err2>
+		<err3>Failed to connect the diffuser</err3>
+		<err4>Failed to create Elbow fitting</err4>
+		<err5>Check the routing preferences for the specified duct types</err5>
+		<err6>Failed to create Tee fitting</err6>
+		<err7>Failed to create Transition fitting</err7>
+	</mprMEPConnect>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
 	                 Description="Filter selected objects by category">
