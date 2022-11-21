@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.8.3.0">
+<ModPlus Name="en-US" Version="6.8.4.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -58,7 +58,6 @@
 		<material>Material</material>
 		<mm>mm</mm>
 		<no>No</no>
-		<number>Number</number>
 		<number>Number</number>
 		<ok>Ok</ok>
 		<or>Or</or>
@@ -7598,10 +7597,17 @@
 	<mprMEPConnect LocalName="MEP connect"
 	               Description="Collection of plugins for automation of engineering systems connections"
 	               LocalName1="Connect diffusers"
-	               Description1="Batch connection of diffusers to ducts">
+	               Description1="Batch connection of diffusers to ducts"
+	               LocalName2="Connect fittings"
+	               Description2="Connect two fittings (or MEP curves) by rotating and moving the first selected one"
+	               LocalName3="Connect straight"
+	               Description3="Batch connection of straight pipes, ducts, wires, cable trays or conduits lying in one straight line">
 		<msg1>Select ducts and diffusers to be connected to them</msg1>
 		<msg2>No ducts selected</msg2>
 		<msg3>No diffusers selected! Only diffusers that have one unconnected connector oriented along the Z axis are allowed for processing</msg3>
+		<msg4>Select the element to connect</msg4>
+		<msg5>Select the element to connect to</msg5>
+		<msg6>Select straight pipes, ducts, wires, cable trays or conduits</msg6>
 		<t1>Type of branch to be created:</t1>
 		<t2>Create a flexible connection between diffuser and branch</t2>
 		<t3>Flexible duct type:</t3>
@@ -7617,6 +7623,8 @@
 		<err5>Check the routing preferences for the specified duct types</err5>
 		<err6>Failed to create Tee fitting</err6>
 		<err7>Failed to create Transition fitting</err7>
+		<err8>Failed to create Takeoff fitting</err8>
+		<err9>Selected element has no free connectors</err9>
 	</mprMEPConnect>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
