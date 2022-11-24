@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.8.5.0">
+<ModPlus Name="en-US" Version="6.9.0.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -7629,6 +7629,30 @@
 		<err8>Failed to create Takeoff fitting</err8>
 		<err9>Selected element has no free connectors</err9>
 	</mprMEPConnect>
+	<mprBaseLevel LocalName="Base level"
+	              Description="Change base level for elements">
+		<t1>Unable to determine old level to determine offset</t1>
+		<t2>Cannot find new level "{0}" for elements</t2>
+		<t3>For elements, it was not possible to determine the strategy for assigning a level</t3>
+		<t4>Configuration</t4>
+		<t5>Plugin completed successfully</t5>
+		<t6>Nearest</t6>
+		<t7>Failed to fill parameter "{0}" with value "{1}", please check the units for the parameter</t7>
+		<t8>Parameter "{1}" could not be found</t8>
+		<t9>Failed to populate parameter "{0}" with level {1}</t9>
+		<t10>Set configuration name</t10>
+		<tr1>Set levels</tr1>
+		<xt1>Selected elements</xt1>
+		<xt2>In active view</xt2>
+		<xt3>In model</xt3>
+		<xt4>Set levels</xt4>
+		<xt5>Configuration:</xt5>
+		<xt6>Settings list</xt6>
+		<e1>Failed to set levels for elements that got into the setting under the number {0} due to</e1>
+		<e2>An unexpected error occurred while setting levels</e2>
+		<e3>Failed to add the setting due to</e3>
+		<tt1>Processing at this level is not possible, because now it is not in the model, select another level</tt1>
+	</mprBaseLevel>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
 	                 Description="Filter selected objects by category">
@@ -7743,28 +7767,4 @@
 		<left>Left</left>
 		<right>Right</right>
 	</mr3dViewOrientation>
-	<mprBaseLevel LocalName="Base level"
-				  Description="Change base level for elements">
-		<t1>Unable to determine old level to determine offset</t1>
-		<t2>Cannot find new level \"{0}\" for items</t2>
-		<t3>For elements, it was not possible to determine the strategy for assigning a level:</t3>
-		<t4>Configuration</t4>
-		<t5>Plugin completed successfully</t5>
-		<t6>Nearest</t6>
-		<t7>Failed to fill parameter {0} with value {1}, please check the units for the parameter</t7>
-		<t8>Parameter {1} could not be found for elements</t8>
-		<t9>Failed to populate parameter {0} with level {1}</t9>
-		<t10>Set configuration name</t10>
-		<tr1>Set levels</tr1>
-		<xt1>Selected elements</xt1>
-		<xt2>In active view</xt2>
-		<xt3>In model</xt3>
-		<xt4>Set levels</xt4>
-		<xt5>Configuration: </xt5>
-		<xt6>Settings list: </xt6>
-		<e1>Failed to set levels for elements that got into the setting under the number {0} due to</e1>
-		<e2>An unexpected error occurred while setting levels</e2>
-		<e3>Failed to add the setting due to</e3>
-		<tt1>Processing at this level is not possible, because now it is not in the model, select another level</tt1>
-	</mprBaseLevel>
 </ModPlus>
