@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.9.2.0">
+<ModPlus Name="en-US" Version="6.9.3.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4070,6 +4070,7 @@
 		<h21>will be permanently deleted!</h21>
 		<h22>Sure?</h22>
 		<h23>There are no working configurations\nOpen settings window of working configurations?</h23>
+		<!-- todo remove after 2.5.5.0 -->
 		<h24>You need to go to the plan or section view!</h24>
 		<h25>Missing the ID attribute</h25>
 		<h26>No matching elements found!</h26>
@@ -7517,6 +7518,11 @@
 		<err43>type with the name "{0}" is not found in the list of allowable types of the element to be processed</err43>
 		<err44>type with name "{0}" already exists</err44>
 		<err45>Element identifier (ID) cannot be used as the target parameter</err45>
+		<err46>The second argument must be a positive integer greater than zero</err46>
+		<err47>The second argument must be a positive integer</err47>
+		<err48>The third argument must be a positive integer greater than zero</err48>
+		<err49>Function must contain two arguments</err49>
+		<err50>Function must contain two or three arguments</err50>
 		<rh1>#</rh1>
 		<rh2>On</rh2>
 		<rh3>Formula</rh3>
@@ -7597,6 +7603,11 @@
 		<d-firsttrue>Returns the first value of &lt;v&gt; whose &lt;c&gt; condition is true. If all conditions &lt;c&gt; are not true, returns last &lt;v&gt; value</d-firsttrue>
 		<d-toupper>Returns value converted to uppercase</d-toupper>
 		<d-tolower>Returns value converted to lowercase</d-tolower>
+		<d-lstr>Returns the specified number of characters from the start of the string</d-lstr>
+		<d-rstr>Returns the specified number of characters from the end of the string</d-rstr>
+		<d-sstr>Returns substring</d-sstr>
+		<d-tmirrored>Returns TRUE if the target family is mirrored</d-tmirrored>
+		<d-smirrored>Returns TRUE if the conditional source family is mirrored</d-smirrored>
 	</mprParametrization>
 	<mprMEPConnect LocalName="MEP connect"
 	               Description="Collection of plugins for automation of engineering systems connections"
