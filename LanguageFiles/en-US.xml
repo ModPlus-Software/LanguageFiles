@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.9.4.0">
+<ModPlus Name="en-US" Version="6.9.5.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -6642,7 +6642,18 @@
 		<h11>For linear MEP elements create by axis</h11>
 	</mprElevations>
 	<mprRebarTools LocalName="Utilities for working with rebar"
-                 Description="A collection of small auxiliary plugins for working with rebar">
+                 Description="A collection of small auxiliary plugins for working with rebar"
+                 LocalName1="Remove from host"
+                 Description1="Remove all reinforcement from the selected host element"
+                 LocalName2="Copy to host"
+                 Description2="Copy rebars from the original host element into multiple target host elements"
+                 LocalName3="Break set"
+                 Description3="Turn the selected rebar set into individual rebar bars"
+                 LocalName4="Split set"
+                 Description4="Split a rebar set into two new rebar sets"
+                 LocalName5="Change Presentation"
+                 Description5="Batch change of rebar representation">
+		<!-- todo remove start after 1.1.10.0-->
 		<n1>Remove from host</n1>
 		<d1>Remove all reinforcement from the selected host element</d1>
 		<n2>Copy to host</n2>
@@ -6653,6 +6664,7 @@
 		<d4>Split a rebar set into two new rebar sets</d4>
 		<n5>Change Presentation</n5>
 		<d5>Batch change of rebar representation</d5>
+		<!-- todo remove end after 1.1.10.0-->
 		<m1>Select the host elements</m1>
 		<m2>Select the source host element</m2>
 		<m3>Select target host elements</m3>
