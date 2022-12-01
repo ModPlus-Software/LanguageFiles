@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.9.10.0">
+<ModPlus Name="en-US" Version="6.9.11.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -40,6 +40,7 @@
 		<expand>Expand</expand>
 		<expandAll>Expand all</expandAll>
 		<export>Export</export>
+		<group>Group</group>
 		<height>Height</height>
 		<hide>Hide</hide>
 		<import>Import</import>
@@ -60,10 +61,12 @@
 		<no>No</no>
 		<number>Number</number>
 		<ok>Ok</ok>
+		<open>Open</open>
 		<or>Or</or>
 		<parameter>Parameter</parameter>
 		<parameters>Parameters</parameters>
 		<paste>Paste</paste>
+		<pin>Pin</pin>
 		<prefix>Prefix</prefix>
 		<property>Property</property>
 		<remove>Remove</remove>
@@ -87,6 +90,7 @@
 		<type>Type</type>
 		<ukraine>Ukraine</ukraine>
 		<uncheckAll>Uncheck all</uncheckAll>
+		<unpin>Unpin</unpin>
 		<value>Value</value>
 		<warning>Warning</warning>
 		<white>White</white>
@@ -5889,6 +5893,7 @@
 		<m16>Choose one of the options - use an existing Drafting View from the destination document or create and use a copy of the Drafting View from the source document</m16>
 		<notOrganized>!Not organized</notOrganized>
 	</mprCopySheetsToOpenDocuments>
+	<!-- todo все удаляемые значения после версии 2.1.1.0 -->
 	<mprWorksets LocalName="Worksets"
 	             Description="Manage, create, and apply worksets"
 	             FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element"
@@ -5912,8 +5917,10 @@
 		<h22>Copy filter settings to all worksets of all groups</h22>
 		<h23>Handling work sets in a group</h23>
 		<h24>Add prefix:</h24>
+		<!-- todo remove -->
 		<h25>Prefix</h25>
 		<h26>Add suffix:</h26>
+		<!-- todo remove -->
 		<h27>Suffix</h27>
 		<h28>Sought value</h28>
 		<h29>replaced by:</h29>
@@ -5922,9 +5929,11 @@
 		<h32>Check all</h32>
 		<h33>Uncheck all</h33>
 		<h34>Inverse</h34>
+		<!-- todo remove -->
 		<h35>Available in the full version of the plugin</h35>
 		<h37>Import worksets</h37>
 		<h38>Group export</h38>
+		<!-- todo remove -->
 		<h39>Group</h39>
 		<h40>Enter name</h40>
 		<h41>Enter new name</h41>
@@ -5936,7 +5945,9 @@
 		<h47>Select categories</h47>
 		<h48>Equality parameters</h48>
 		<h49>Display in the results the id of the elements to which the workset is assigned</h49>
+		<!-- todo remove -->
 		<h50>Configuration storage file is set by the settings of your organization</h50>
+		<!-- todo remove -->
 		<h51>You do not have access to edit configurations!</h51>
 		<h52>Workset</h52>
 		<h53>Editable</h53>
@@ -5948,6 +5959,10 @@
 		<h59>Elements isolation</h59>
 		<h60>To merge worksets (move elements from one workset to another), select the source worksets and move them with the mouse to the target workset</h60>
 		<h61>Merging worksets</h61>
+		<h62>When processing groups, apply workset to</h62>
+		<h63>group instance</h63>
+		<h64>group type</h64>
+		<h65>group instance and group type</h65>
 		<t1>Rename configuration</t1>
 		<t2>Create new configuration</t2>
 		<t3>Import configuration</t3>
@@ -5966,6 +5981,8 @@
 		<t16>Isolate elements in current view</t16>
 		<t17>This workset name is already in use</t17>
 		<t18>Empty workset name is not valid</t18>
+		<t19>Pin elements in selected Worksets</t19>
+		<t20>Unpin elements in selected Worksets</t20>
 		<msg1>Remove?</msg1>
 		<msg2>The current configuration "{0}" will be permanently deleted!</msg2>
 		<msg3>Group "{0}" will be permanently deleted!</msg3>
