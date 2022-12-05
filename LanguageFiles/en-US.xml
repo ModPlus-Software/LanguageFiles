@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.10.1.0">
+<ModPlus Name="en-US" Version="6.11.0.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -1623,6 +1623,13 @@
 	              FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
 		<msg3>Rotation angle in degrees:</msg3>
 	</mpMultiRotate>
+	<mpMultiMirror LocalName="Multi mirror"
+	               Description="Plugin allows to mirror each of the selected entities vertically or horizontally in relation to themselves"
+	               FullDescription="Each selected entity will be mirrored vertically or horizontally with respect to a line passing through a specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The point is determined by the rectangle that describes the object">
+		<o1>Mirror by</o1>
+		<o2>Vertical</o2>
+		<o3>Horizontal</o3>
+	</mpMultiMirror>
 	<mpRotAtt LocalName="Rotation angle of attributes"
             Description="Plugin is used to change the rotation angle of attributes in the selected blocks">
 		<msg1>Select blocks:</msg1>
