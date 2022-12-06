@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.11.1.0">
+<ModPlus Name="en-US" Version="6.11.2.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -1636,7 +1636,9 @@
 	<mpMultiRotate LocalName="Multi rotate"
 	              Description="Plugin allows you to rotate each of the selected entities relative to the Z-axis with the center of rotation relative to themselves"
 	              FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
+		<!-- todo remove after 1.0.1.0 -->
 		<msg3>Rotation angle in degrees:</msg3>
+		<h1>Rotation angle:</h1>
 	</mpMultiRotate>
 	<mpMultiMirror LocalName="Multi mirror"
 	               Description="Plugin allows to mirror each of the selected entities vertically or horizontally in relation to themselves"
