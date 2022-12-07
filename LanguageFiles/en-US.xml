@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.11.2.0">
+<ModPlus Name="en-US" Version="6.11.3.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -3409,11 +3409,11 @@
 		<h168>Base style for the view designation</h168>
 		<h169>Creating a view designation in accordance with GOST 2.305-68</h169>
 		<h170>Creating an smart entity based on an anonymous block describing the view designation according to GOST 2.305-68</h170>
-    <h171>Level mark on plan</h171>
-    <h172>Base style for the view designation for Level mark on the plan</h172>
-    <h173>Creating Level mark on the plan in accordance with GOST 2.307</h173>
-    <h174>Creating an smart entity based on an anonymous block describing the Level mark on the plan according to GOST 2.307</h174>
-    <so0>Refresh graphics</so0>
+		<h171>Level mark on plan</h171>
+		<h172>Base style for the view designation for Level mark on the plan</h172>
+		<h173>Creating Level mark on the plan in accordance with GOST 2.307</h173>
+		<h174>Creating an smart entity based on an anonymous block describing the Level mark on the plan according to GOST 2.307</h174>
+		<so0>Refresh graphics</so0>
 		<sot0>All found smart entities will have graphics regeneration</sot0>
 		<so1>Select</so1>
 		<sot1>All smart entities of the specified types in the current space will be selected</sot1>
@@ -3430,9 +3430,9 @@
 		<gp2>Move</gp2>
 		<gp3>Remove vertex</gp3>
 		<gp4>Add vertex</gp4>
-    <gp5>Add leader</gp5>
-    <gp6>Remove leader</gp6>
-    <gp7>Leader end type</gp7>
+		<gp5>Add leader</gp5>
+		<gp6>Remove leader</gp6>
+		<gp7>Leader end type</gp7>
 		<blt1>Linear</blt1>
 		<blt2>Curvilinear</blt2>
 		<blt3>Cylindrical</blt3>
@@ -3459,17 +3459,17 @@
 		<tha3>Right</tha3>
 		<ft1>Round</ft1>
 		<ft2>Rectangular</ft2>
-    <ft3>Line</ft3>
-    <ft4>No frame</ft4>
-    <let0>None</let0>
-    <let1>Half Arrow</let1>
-    <let2>Point</let2>
-    <let3>Resection</let3>
-    <let4>Angle</let4>
-    <let5>Arrow</let5>
-    <let6>Open Arrow</let6>
-    <let7>Closed Arrow</let7>
-    <wjt1>Butt factory solid on the visible side</wjt1>
+		<ft3>Line</ft3>
+		<ft4>No frame</ft4>
+		<let0>None</let0>
+		<let1>Half Arrow</let1>
+		<let2>Point</let2>
+		<let3>Resection</let3>
+		<let4>Angle</let4>
+		<let5>Arrow</let5>
+		<let6>Open Arrow</let6>
+		<let7>Closed Arrow</let7>
+		<wjt1>Butt factory solid on the visible side</wjt1>
 		<wjt2>Butt factory solid on the invisible side</wjt2>
 		<wjt3>Butt mounting solid from the visible side</wjt3>
 		<wjt4>Butt mounting solid from the invisible side</wjt4>
@@ -3623,9 +3623,9 @@
 		<d84>Leader with text will maintain a horizontal position after rotating the object with the "Rotate" command</d84>
 		<p85>Hide background</p85>
 		<d85>Adding wipeout along the text outline with a specified offset. The display of frames for wipeouts is controlled by the WIPEOUTFRAME and FRAME system variables.</d85>
-    <d85-1>Adding wipeout along the text outline with a specified offset. The display of frames for wipeouts is controlled by the WIPEOUTFRAME and FRAME system variables. If rectangular frame is set, then the wipeout is created along the frame without taking into account the offset</d85-1>
-    <p86>Wipeout offset</p86>
-    <d86>Wipeout offset is considered for frame types "Line" and "No frame"</d86>
+		<d85-1>Adding wipeout along the text outline with a specified offset. The display of frames for wipeouts is controlled by the WIPEOUTFRAME and FRAME system variables. If rectangular frame is set, then the wipeout is created along the frame without taking into account the offset</d85-1>
+		<p86>Wipeout offset</p86>
+		<d86>Wipeout offset is considered for frame types "Line" and "No frame"</d86>
 		<p87>Secant element thickness</p87>
 		<p88>Secant element length</p88>
 		<p89>Weld joint type</p89>
@@ -3652,7 +3652,7 @@
 		<p107>Line Formula</p107>
 		<d107>The line formula is given by integers separated by hyphens. Each odd number (1, 3, 5, ...) specifies the stroke length. Each fair number (2, 4, 6, ...) specifies the length of the space</d107>
 		<p108>First text indent</p108>
-    <p109>View designation</p109>
+		<p109>View designation</p109>
 		<p110>Level mark</p110>
 		<p111>Prefix</p111>
 		<p112>Suffix</p112>
@@ -7130,24 +7130,30 @@
                       Description="Showing the volume of rooms in color using DirectShape"
                       FullDescription="The Plugin lets you create DirectShape elements based on the volume of rooms in the model and assign different colors to the DirectShape elements you create. In the plugin window, you can group the created DirectShape elements by the value of the associated room parameter, and you can assign a single color to all DirectShape elements in the group">
 		<h1>Changing colors is available in the full version of the plugin</h1>
-		<h2>Set random colors for all room volume views in the group</h2>
-		<h3>For the current view of the room volume there is no room found in the model. Probably the room has been deleted</h3>
+		<h2>Set random colors for all Room or Space volume views in the group</h2>
+		<h3>No source element was found for the current volume view in the model. The Room or Space has probably been deleted</h3>.
 		<h4>Group by parameter:</h4>
 		<h5>Plugin work in family document is not available!</h5>
-		<h6>(Re)create for all rooms</h6>
-		<h7>Create missing</h7>
+		<h6>(Re)create for all Rooms</h6>
+		<h7>Create missing (Rooms)</h7>
 		<h8>Remove all volume views</h8>
-		<h9>Remove volume views without the source room</h9>
+		<h9>Remove volume views without the source Room and Space</h9>
 		<h10>Save grouping parameter</h10>
 		<h11>Parameter is not set or has no value</h11>
 		<h12>Missing</h12>
-		<h13>No room</h13>
+		<h13>No Room</h13>
 		<h14>(Re)create volume views</h14>
 		<h15>Create missing volume views</h15>
 		<h16>Remove volume views</h16>
 		<h17>Change the color of volume views</h17>
-		<h18>The room geometry does not satisfy the conditions for creating a volume view</h18>
-		<h19>An error occurred while processing the room:</h19>
+		<h18>Room geometry does not satisfy the conditions for creating a volume view</h18>
+		<h19>An error occurred while processing the Room:</h19>
+		<h20>(Re)create for all spaces</h20>
+		<h21>(Re)create for all Rooms and Spaces</h21>
+		<h22>Create missing (Spaces)</h22>
+		<h23>Create missing (Rooms and Spaces)</h23>
+		<h24>No Space</h24>
+		<h25>Space</h25>
 	</mprRoomColorVolume>
 	<mprJoin LocalName="Elements join"
            Description="Apply to manage adjoining of walls and beams, and also join their">
