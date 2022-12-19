@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="6.11.11.0">
+<ModPlus Name="en-US" Version="6.11.12.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -5623,7 +5623,7 @@
 		<t10>Through signal value - is a slow algorithm. This algorithm requires constant regeneration of the specification, which leads to high time costs. The more elements in the schedule, the more time is required.</t10>
 		<t11>It is recommended to use the fast algorithm first. If the fast algorithm fails, then use the slow algorithm</t11>
 		<!-- todo remove end -->
-		<t12>The initial value can be a fractional value. A dot must be used to separate the integer part from the fractional part. If the target parameter has the "Integer" data type, the numbering result will be converted to an integer by discarding the fractional part.</t12>
+		<t12>The initial value can be a fractional value. A point or comma can be used to separate the integer part from the fractional part. The specified separator will be used when setting values in the text parameter. If the target parameter is of data type "Number", the specified separator will not affect the displayed result. If the target parameter is of data type "Integer", the numbering result will be converted to an integer by discarding the fractional part.</t12>
 		<t13>Leading zeros can be added to the initial value. For example, if the initial value is "01", and the step is "5", then the numbering result will be "01, 05, 10, 15...". Initial zeros are only taken into account if the target parameter has a string data type.</t13>
 		<t14>The geometric direction of numbering is calculated by the absolute values of X and Y of the element placement points. For linear objects the middle point is taken</t14>
 		<m1>Select elements for numbered marking</m1>
