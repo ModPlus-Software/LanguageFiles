@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="7.0.1.0">
+<ModPlus Name="en-US" Version="7.0.2.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -7249,6 +7249,9 @@
 		<t22>From the whole model</t22>
 		<t23>From the current view</t23>
 		<t24>Attention! View filters can be created only if there are instances of elements with the specified parameters in the model</t24>
+		<t25>Duplicate configuration</t25>
+		<t26>Set a Shaded Visual Style for the View (if possible)</t26>
+		<t27>View filter name (optional)</t27>
 		<c1>Override for elements</c1>
 		<c2>Return override for elements</c2>
 		<c3>Create View Filters</c3>
@@ -7256,9 +7259,12 @@
 		<c5>Add Filters to an existing Template/View</c5>
 		<e2>To create a filter, the parameter could not be found among the elements that fell under the filters, parameter name: {0}</e2>
 		<e3>The value for the filter is not set. This condition will not participate in the construction of the filter: {0}</e3>
-		<e4>It is not possible to create this filter, i.e. creating conditions in Revit does not support this type of equality: {0}</e4>
+		<e4>It is not possible to create this filter because Revit condition creation does not support this type of equality: {0}</e4>
 		<e5>You must specify one parameter in the parameter filter!</e5>
 		<e6>No categories selected!</e6>
+		<cz1>Color surfaces and lines</cz1>
+		<cz2>Color only lines</cz2>
+		<cz3>Color only surfaces</cz3>
 	</mprColorizer>
 	<mprBreakLayers LocalName="Layer breaking"
 	                Description="Breaking multilayer walls and floors into separate elements">
