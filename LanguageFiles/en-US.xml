@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="7.0.5.0">
+<ModPlus Name="en-US" Version="7.1.0.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -180,6 +180,7 @@
 		<h65>Hide result items</h65>
 		<h66>Show result items</h66>
 		<h67>items</h67>
+		<h68>Перейти в магазин</h68>
 		<m1>Enter your email address</m1>
 		<m2>The email address is used as a unique key to identify your data on the server.\nIt is recommended to use the email address you provided when registering on modplus.org</m2>
 		<m3>Attention! The use of social networks for authorization is possible only after linking social network accounts to a personal account on the site! Otherwise, when you try to log in through social networks, a new account will be created on the site, and you will lose your license data!</m3>
@@ -423,7 +424,7 @@
 		<group6>View</group6>
 		<group7>Structure</group7>
 		<group8>Insert</group8>
-		<group9>ModPlus ESKD</group9>
+		<group9>ModPlus ISO</group9>
 		<group10>Parameters</group10>
 		<group11>Families</group11>
 		<group12>Manage</group12>
@@ -1070,7 +1071,7 @@
 		<msg21>Specify the position of the new vertex</msg21>
 		<msg22>Specify the vertex to remove</msg22>
 		<msg23>Unable to access AutoCAD Editor! Running another command.\nComplete the command and try again</msg23>
-		<msg24>Attention! Changing the language in the palette, panel in Ribbon for ESKD and plugins context menu will occur only after restarting AutoCAD</msg24>
+		<msg24>Attention! Changing the language in the palette, panel in Ribbon for "ModPlus ISO" and plugins context menu will occur only after restarting AutoCAD</msg24>
 		<p1>ATTENTION!</p1>
 		<p2>Trying to load the plugin into an incompatible version of the AutoCAD!</p2>
 		<p3>Download interrupt</p3>
@@ -2895,7 +2896,7 @@
 		<h17>No Title block</h17>
 		<h18>No cell for name</h18>
 		<h19>No Format</h19>
-		<h20>No data from layout</h20>
+		<h20>Retrieving data from layout</h20>
 		<h21>Setting data for layout</h21>
 		<h22>Setting data in model</h22>
 		<h23>Select all</h23>
@@ -3204,8 +3205,8 @@
 		<u60>Can not access the file. Maybe it's open</u60>
 		<u61>Already exists a file:</u61>
 	</mpDwgBase>
-	<mpESKD LocalName="ModPlus ESKD"
-          Description="A collection of plugins that creates smart entities (custom entities) for drawing up drawings according to the rules of ESKD">
+	<mpESKD LocalName="ModPlus ISO"
+          Description="A collection of plugins that create smart objects for drawings">
 		<tab1>Lines</tab1>
 		<tab2>Settings</tab2>
 		<tab3>Axes</tab3>
@@ -3256,7 +3257,7 @@
 		<h8>can be changed in the plugin</h8>
 		<h9>settings</h9>
 		<h10>plugins</h10>
-		<h11>ESKD properties</h11>
+		<h11>ISO properties</h11>
 		<h12>System</h12>
 		<h13>New User Style</h13>
 		<h14>Style editor</h14>
@@ -3393,7 +3394,7 @@
 		<h147>Creating a fragment mark</h147>
 		<h148>Creating an smart entity based on an anonymous block describing a fragment mark, by specifying two points</h148>
 		<h149>Continue the values of the fragment being created</h149>
-		<h150>When creating fragments, there will be a search for already created fragments in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created fragment, the value of the fragment next from the last found value will be set</h150>
+		<h150>When creating fragments, there will be a search for already created fragments in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created fragment will be set to the value of the fragment number following from the last value found</h150>
 		<h151>Designation View/Section label</h151>
 		<h152>Basic style for designation View/Section label</h152>
 		<h153>View label</h153>
@@ -3662,7 +3663,7 @@
 		<d105>Line type generation along the whole polyline</d105>
 		<p106>Distance between text</p106>
 		<p107>Line Formula</p107>
-		<d107>The line formula is given by integers separated by hyphens. Each odd number (1, 3, 5, ...) specifies the stroke length. Each fair number (2, 4, 6, ...) specifies the length of the space</d107>
+		<d107>The line formula is given by integers separated by hyphens. Each odd number (1, 3, 5, ...) specifies the stroke length. Each even number (2, 4, 6, ...) specifies a space length</d107>
 		<p108>First text indent</p108>
 		<p109>View designation</p109>
 		<p110>Level mark</p110>
