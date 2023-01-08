@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="7.1.1.0">
+<ModPlus Name="en-US" Version="7.2.0.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -32,6 +32,7 @@
 		<coupler>Coupler</coupler>
 		<couplers>Couplers</couplers>
 		<create>Create</create>
+		<default>Default</default>
 		<degree>°</degree>
 		<density>Density</density>
 		<dot>Dot</dot>
@@ -72,6 +73,7 @@
 		<property>Property</property>
 		<remove>Remove</remove>
 		<replace>Replace</replace>
+		<rewrite>Rewrite</rewrite>
 		<room>Room</room>
 		<russia>Russia</russia>
 		<save>Save</save>
@@ -7792,6 +7794,82 @@
 		<h3>By active view</h3>
 		<h4>When activated, the view will be selected as the source view for synchronization. The next activated view will be synchronized by the source view, and then will be selected as the source view for synchronization</h4>
 	</mprViewSync>
+	<mprSheetExport LocalName="Sheet export"
+	                Description="Export (print) selected sheets to PDF, DWG, etc. with automatic sheet format detection">
+		<h1>The trial period of the plugin is over! Purchase a license or a Revit subscription to continue using the "Sheet export" plugin</h1>
+		<h2>Trial period. Days to go</h2>
+		<h3>Export directory</h3>
+		<h4>PDF export settings</h4>
+		<h5>Printer Name</h5>
+		<h6>Printer supported</h6>
+		<h7>Printer not supported</h7>
+		<h8>Colors:</h8>
+		<c1>Color</c1>
+		<c2>Black Lines</c2>
+		<c3>Grayscale</c3>
+		<h9>Print type:</h9>
+		<pt1>Vector processing</pt1>
+		<pt2>Raster processing</pt2>
+		<h10>DWG/DXF export settings</h10>
+		<h11>Export Setups:</h11>
+		<h12>File name generation</h12>
+		<h13>Sheet Parameter:</h13>
+		<h14>Limit the number of characters:</h14>
+		<h15>Sheet Name</h15>
+		<h16>Centering</h16>
+		<h17>Sheet Number</h17>
+		<h18>Title Block</h18>
+		<h19>Height, mm</h19>
+		<h20>Width, mm</h20>
+		<h21>Orientation</h21>
+		<h22>Size in printer</h22>
+		<h23>Check Selected</h23>
+		<h24>Uncheck Selected</h24>
+		<h25>Uncheck All</h25>
+		<h26>Export to PDF</h26>
+		<h27>Export to DWG</h27>
+		<h28>Export to DXF</h28>
+		<h29>Sheets:</h29>
+		<h30>Total sheets in the document</h30>
+		<h31>Selected:</h31>
+		<h32>Number of sheets selected for export</h32>
+		<h33>No Format:</h33>
+		<h34>Number of sheets for which the format could not be determined</h34>
+		<h35>Format is fitted:</h35>
+		<h36>Number of sheets for which the nearest format is selected</h36>
+		<h37>Cancel export</h37>
+		<h38>The export directory already contains files with the same names as the export sheets. Select an action:</h38>
+		<h39>Are you sure you want to cancel the exports?</h39>
+		<h40>Select export directory</h40>
+		<h41>Open export directory?</h41>
+		<o1>Landscape</o1>
+		<o2>Portrait</o2>
+		<h42>All sheets</h42>
+		<notOrganized>!Not orginized</notOrganized>
+		<h43>Sheet formats have been added. You need to restart Revit.</h43>
+		<h44>Save the file before exporting</h44>
+		<h45>Try again or abort the export?</h45>
+		<err1>DWG/DXF Export Setups are not set</err1>
+		<err2>Configuration utility for the Bullzip printer was not found</err2>
+		<err3>{0} printer settings are not found in the registry</err3>
+		<err4>Cannot add format {0} for printer {1}</err4>
+		<err5>Cannot open the {0} printer settings. Check if the printer is installed and supported</err5>
+		<err6>No watermark exclusion file found</err6>
+		<err7>Watermark text not set</err7>
+		<err8>File not found</err8>
+		<err9>No printer is selected in the settings. Go to settings to select a printer.</err9>
+		<err10>The export directory is not selected or does not exist. Go to the settings and specify where to save the files.</err10>
+		<err11>The printer "{0}" is not installed. Go to the settings to select another printer, or install the desired one.</err11>
+		<err12>Printer "{0}" is not supported. It will not be possible to export to PDF. If you need to use this printer, contact support. Or select a supported printer ({1}) in the settings.</err12>
+		<err13>Format "{0}" was not found. Restart the plugin to check and add the formats required for printing.</err13>
+		<err14>File path "{0}" is not specified</err14>
+		<err15>File path is of zero length or contains invalid characters</err15>
+		<err16>Directory not found</err16>
+		<err17>File path exceeds 255 characters</err17>
+		<err18>File is used by another program</err18>
+		<err19>No permissions to delete file</err19>
+		<err20>Directory format is not defined</err20>
+	</mprSheetExport>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
 	                 Description="Filter selected objects by category">
