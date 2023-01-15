@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="7.2.1.0">
+<ModPlus Name="en-US" Version="7.2.2.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -6513,6 +6513,7 @@
 		<h14>View templates</h14>
 		<h15>Views</h15>
 		<h16>Select views to copy filters to</h16>
+		<!-- todo remove after 2.3.12.0 -->
 		<h17>Plugin operation in families is not available!</h17>
 		<h18>Active view</h18>
 		<h19>Visibility/Graphics Overrides will be copied for the filter</h19>
@@ -7509,6 +7510,9 @@
 		<t7>By picked Rooms</t7>
 		<t8>By pre-selected Rooms</t8>
 		<t9>Set the thickness value of the selected Floor type</t9>
+		<t10>Copy parameter value (from room to floor):</t10>
+		<t11>From</t11>
+		<t12>to</t12>
 		<l1>Do not lead Floor contour into door openings</l1>
 		<l2>Lead the contour to the middle of the wall</l2>
 		<l3>Lead the contour to the full wall width</l3>
@@ -7519,6 +7523,9 @@
 		<msg4>No rooms filtered by "{0}" were found</msg4>
 		<msg5>There are no Rooms on the current view!</msg5>
 		<msg6>Failed to process an opening contour. Error "{0}". The floor contour will not be lead into the opening</msg6>
+		<msg7>Parameter "{0}" not found</msg7>
+		<msg8>Failed to copy value of parameter "{0}" to parameter "{1}</msg8>
+		<msg9>Incompatible parameter types or unknown cause</msg9>
 	</mprFloorByRoom>
 	<mprParametrization LocalName="Parametrization"
 	                    Description="Fill element parameters with different strategies">
