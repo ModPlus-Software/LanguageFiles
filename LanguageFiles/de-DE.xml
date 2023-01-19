@@ -1,17 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!-- &#x0a; - символ перехода на новую строку для xaml -->
 <!-- &quot; - символ двойной кавычки -->
-<ModPlus Name="de-DE" Version="7.2.2.0">
+<ModPlus Name="de-DE" Version="7.2.3.0">
 	<!-- AutoCAD -->
 	<!-- Revit -->
 	<mprFloorByRoom LocalName="Geschossdecke nach Raum"
 	                Description="Geschossdecke entlang der Konturen der Räume">
-		<t1>Räume filtern:</t1>
+		<t1>Raume filtern:</t1>
 		<t2>Geschossdeckentyps:</t2>
 		<t3>Höhenversatz von der Ebene, mm:</t3>
 		<t4>Führen in Türöffnungen</t4>
 		<t5>Geschossdeckentyps ist nicht eingestellt! Diese Konfiguration kann nicht verarbeitet werden!</t5>
-		<t6></t6>
+		<t6>Nach Raum auf Ansicht</t6>
+		<t7>Nach ausgewählten Räume</t7>
+		<t8>Nach vorselektierten Räume</t8>
+		<t9>Legen Sie den Dickenwert des ausgewählten Geschossdeckentyps</t9>
+		<t10>Parameterwert kopieren (von Raum zu Geschossdecke):</t10>
+		<t11>Von</t11>
+		<t12>zu</t12>
+		<l1>Bodenkontur nicht in Türöffnungen führen</l1>
+		<l2>Führen Sie die Kontur bis zur Mitte der Wand</l2>
+		<l3>Führen Sie die Kontur über die gesamte Wandbreite</l3>
+		<l4>Führt die Kontur auf den angegebenen Wert, mm</l4>
+		<msg1>Um das Plugin auszuführen, gehen Sie auf den Grundriss!</msg1>
+		<msg2>Geschossdecke mit Typ "{0}" wird durch die Kontur des Raumes erzeugt</msg2>
+		<msg3>Es war nicht möglich, eine Geschossdecke nach Kontur des Raumes zu erstellen</msg3>
+		<msg4>Es wurden keine nach "{0}" gefilterten Räume gefunden</msg4>
+		<msg5>In der aktuellen Ansicht gibt es keine Räume!</msg5>
+		<msg6>Eine geöffnete Kontur konnte nicht verarbeitet werden. Fehler "{0}". Die Geschosskontur wird nicht in die Öffnung geführt</msg6>
 		<msg7>Parameter "{0}" nicht gefunden</msg7>
 		<msg8>Der Wert des Parameters "{0}" konnte nicht in den Parameter "{1}" kopiert werden</msg8>
 		<msg9>Inkompatible Parametertypen oder unbekannte Ursache</msg9>
@@ -29,6 +45,8 @@
 		<c1>Farbe</c1>
 		<c2>Schwarze Linien</c2>
 		<c3>Graustufen</c3>
+		<c4>S/W mit Ausschluss</c4>
+		<c5>Aus den Einstellungen</c5>
 		<h9>Drucktyp:</h9>
 		<pt1>Vektorverarbeitung</pt1>
 		<pt2>Rasterverarbeitung</pt2>
@@ -71,6 +89,16 @@
 		<h43>Es wurden Bogenformate hinzugefügt. Revit muss neu gestartet werden.</h43>
 		<h44>Speichern Sie die Datei vor dem Exportieren</h44>
 		<h45>Soll ich es noch einmal versuchen oder den Export abbrechen?</h45>
+		<h46>Druckset anwenden</h46>
+		<h47>Es gibt keine Drucksets</h47>
+		<h48>Löschen von *.pcp-Dateien</h48>
+		<h49>Erstellen eines Unterverzeichnisses nach Dokumentname</h49>
+		<h50>Erstellen Sie Unterverzeichnisse je nach Art des Exportformats</h50>
+		<h51>Erstellen eines Unterverzeichnisses nach Blattgruppennamen</h51>
+		<h52>Kombinieren exportierter PDF-Dateien</h52>
+		<h53>Das Bogenformat passt in keines der unterstützten Druckformate</h53>
+		<h54>Für Blattformat wird das nächstgrößere Druckformat gewählt</h54>
+		<h55>Liste der Farben bearbeiten, die nicht in Schwarz-Weiß umgewandelt werden sollen</h55>
 		<err1>DWG/DXF Exporteinrichtungen sind nicht eingestellt</err1>
 		<err2>Konfigurationsprogramm für den Bullzip-Drucker nicht gefunden</err2>
 		<err3>{0}-Druckereinstellungen nicht in der Registry gefunden</err3>
@@ -91,6 +119,7 @@
 		<err18>Die Datei wird von einem anderen Programm verwendet</err18>
 		<err19>Keine Rechte zum Löschen der Datei</err19>
 		<err20>Verzeichnisformat nicht definiert</err20>
+		<err21>Fehler bei der Druckerinitialisierung</err21>
 	</mprSheetExport>
 	<!-- Renga -->
 </ModPlus>

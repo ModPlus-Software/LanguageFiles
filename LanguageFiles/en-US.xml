@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="7.2.2.0">
+<ModPlus Name="en-US" Version="7.2.3.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -35,6 +35,7 @@
 		<default>Default</default>
 		<degree>°</degree>
 		<density>Density</density>
+		<document>Document</document>
 		<dot>Dot</dot>
 		<duplicate>Дублировать</duplicate>
 		<error>Error</error>
@@ -42,6 +43,7 @@
 		<expand>Expand</expand>
 		<expandAll>Expand all</expandAll>
 		<export>Export</export>
+		<file>File</file>
 		<group>Group</group>
 		<height>Height</height>
 		<hide>Hide</hide>
@@ -7816,10 +7818,12 @@
 		<h5>Printer Name</h5>
 		<h6>Printer supported</h6>
 		<h7>Printer not supported</h7>
-		<h8>Colors:</h8>
+		<h8>Colors</h8>
 		<c1>Color</c1>
 		<c2>Black Lines</c2>
 		<c3>Grayscale</c3>
+		<c4>B&amp;W with exclusion</c4>
+		<c5>From settings</c5>
 		<h9>Print type:</h9>
 		<pt1>Vector processing</pt1>
 		<pt2>Raster processing</pt2>
@@ -7862,6 +7866,16 @@
 		<h43>Sheet formats have been added. You need to restart Revit.</h43>
 		<h44>Save the file before exporting</h44>
 		<h45>Try again or abort the export?</h45>
+		<h46>Apply Print Set</h46>
+		<h47>There are no Print Sets</h47>
+		<h48>Delete *.pcp files</h48>
+		<h49>Create subdirectory by document name</h49>
+		<h50>Create subdirectories by export format type</h50>
+		<h51>Create subdirectories by sheet group names</h51>
+		<h52>Merge exported PDF files</h52>
+		<h53>Sheet format does not fit into any of the supported print formats</h53>
+		<h54>For the Sheet Format, the closest largest printing format is selected</h54>
+		<h55>Edit the list of colors that will not be converted to black and white</h55>
 		<err1>DWG/DXF Export Setups are not set</err1>
 		<err2>Configuration utility for the Bullzip printer was not found</err2>
 		<err3>{0} printer settings are not found in the registry</err3>
@@ -7882,6 +7896,7 @@
 		<err18>File is used by another program</err18>
 		<err19>No permissions to delete file</err19>
 		<err20>Directory format is not defined</err20>
+		<err21>Failed initialize printer</err21>
 	</mprSheetExport>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
