@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="7.2.5.0">
+<ModPlus Name="en-US" Version="7.2.6.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -81,6 +81,7 @@
 		<russia>Russia</russia>
 		<save>Save</save>
 		<saved>Saved</saved>
+		<scale>Scale</scale>
 		<search>Search</search>
 		<select>Select</select>
 		<setOrg>Set by your organization's settings</setOrg>
@@ -7880,6 +7881,11 @@
 		<h56>Launch Setup</h56>
 		<h57>Process all opened files</h57>
 		<h58>Process linked files</h58>
+		<h59>Format detection algorithm</h59>
+		<h60>By Sheet contents</h60>
+		<h61>By Title Block</h61>
+		<h62>The print format is determined by the entire contents of the Sheet. After the Sheet is printed to pdf, it is trimmed to fit the size of the Title Block. This algorithm can cause regeneration of all sheets, which can lead to long loading of the plugin</h62>
+		<h63>The print format is determined by the size of the Title Blocks on the Sheets. If there are elements on the Sheet that exceed the border of the Title Blokc, the Sheet will be printed incorrectly in the pdf. This algorithm does not cause regeneration of Sheets</h63>
 		<err1>DWG/DXF Export Setups are not set</err1>
 		<err2>Configuration utility for the Bullzip printer was not found</err2>
 		<err3>{0} printer settings are not found in the registry</err3>
