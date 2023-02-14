@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="7.2.13.0">
+<ModPlus Name="en-US" Version="7.3.0.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -71,6 +71,7 @@
 		<parameter>Parameter</parameter>
 		<parameters>Parameters</parameters>
 		<paste>Paste</paste>
+		<pick>Pick</pick>
 		<pin>Pin</pin>
 		<prefix>Prefix</prefix>
 		<property>Property</property>
@@ -7933,6 +7934,42 @@
 		<err20>Directory format is not defined</err20>
 		<err21>Failed initialize printer</err21>
 	</mprSheetExport>
+	<mprHeightSplitter LocalName="Split by height"
+	                   Description="Splitting walls and columns by levels, refernece planes or by specified parameters">
+		<h1>Split method</h1>
+		<h2>Top offset (down), mm</h2>
+		<h3>Base offset (up), mm</h3>
+		<h4>Split walls</h4>
+		<h5>Split columns</h5>
+		<h6>Split</h6>
+		<h7>Selected reference planes</h7>
+		<h8>Walls Top Constraint</h8>
+		<h9>Remainder position</h9>
+		<h10>Pick Walls</h10>
+		<h11>Pick Columns</h11>
+		<h12>Pick Walls and Columns</h12>
+		<h13>Pick reference planes</h13>
+		<err1>Failed to split Wall by Level</err1>
+		<err2>Failed to split Wall by reference plane</err2>
+		<err3>Failed to split Wall</err3>
+		<err4>Failed to split Column by Level</err4>
+		<err5>Failed to split Column by reference plane</err5>
+		<err6>Failed to split Column</err6>
+		<err7>Cannot set offsets</err7>
+		<f1>In the free version of the plugin you can select no more than 3 levels</f1>
+		<f2>In the free version of the plugin, only splitting by level is available</f2>
+		<sm1>By levels</sm1>
+		<sm2>By reference planes</sm2>
+		<sm3>Maximum height</sm3>
+		<sm4>Exact height</sm4>
+		<sm5>Parts count</sm5>
+		<tc1>Nearest level</tc1>
+		<tc2>Nearest level from top</tc2>
+		<tc3>Unconnected height</tc3>
+		<ro1>Top</ro1>
+		<ro2>Middle</ro2>
+		<ro3>Bottom</ro3>
+	</mprHeightSplitter>
 	<!-- Renga -->
 	<mrObjectsFilter LocalName="Filter"
 	                 Description="Filter selected objects by category">
