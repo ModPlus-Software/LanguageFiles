@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- &#x0a; - newline character for xaml -->
 <!-- &quot; - double quote -->
-<ModPlus Name="en-US" Version="7.3.2.0">
+<ModPlus Name="en-US" Version="7.3.3.0">
 	<Common>
 		<abort>Abort</abort>
 		<accept>Accept</accept>
@@ -4767,6 +4767,9 @@
 		<h240>Side alternating</h240>
 		<h241>Additional L-shaped rebar, bent into the slab and placed in the extreme walls</h241>
 		<h242>Anchoring length into the wall, mm:</h242>
+		<h243>"Breaking in" joints by offset</h243>
+		<h244>Create only in areas where there is no overlying slab or wall</h244>
+		<h245>U-shaped rebars along bottom wall end</h245>
 		<srd>Saving data of selected walls</srd>
 		<rr1>Remove reinforcement of the same type that is created</rr1>
 		<rr2>Remove all previously created reinforcement</rr2>
@@ -4919,7 +4922,7 @@
 		<t56>Load the joints reinforcement settings from the xml file and set for the current slab</t56>
 		<t57>The minimum and maximum values ​​are calculated based on the specified diameters and vertical reinforcement step</t57>
 		<t58>Rebar length consists of two anchoring lengths</t58>
-		<t59>When you turn on the "Breaking in" option, each first pair of joints along the wall will be created with the first anchoring length, every second pair - with the second anchoring length</t59>
+		<t59>When you turn on the "Breaking in" option, each first pair of joints along the wall will be created with the first overlap length, every second pair - with the second overlap length</t59>
 		<t60>If the joints exceed the height of the overlying wall, they will be cut off along the upper face of the wall, taking into account the specified ends cover of the rebars</t60>
 		<t61>The selection variant applies to the selection of foundation plates</t61>
 		<t62>The vertical rebar is moved to the place where the U-shaped rebar bend begins, which is obtained by adding the values of the cover layer of the horizontal reinforcement from the ends, the diameter of the U-shaped rebar and the standard bending diameter of the U-shaped rebar</t62>
@@ -4931,6 +4934,7 @@
 		<t68>When this option is enabled, stirrups will not be created at intersections of walls and at the ends of walls where details are created (for example, U-shaped details)</t68>
 		<t69>If the horizontal bars of the background reinforcement are on the inside and the vertical bars are on the outside, it is recommended to specify the girth of the vertical bars. For the opposite case, when the horizontal bars of the background reinforcement are located outside, it is recommended to specify the girth of the horizontal bars</t69>
 		<t70>The length of the detail is taken as the length of the anchoring</t70>
+		<t71>Each second pair of rods will be indented at the bottom by a distance equal to the absolute value of the overlap length difference. The indentation does not affect the second overlap length. For example, if the first overlap length is 500 mm and the second overlap length is 750 mm, then the rods of each second pair will be indented from below 250 mm</t71>
 		<re1>Error while creating vertical bars of background reinforcement in the wall id={0}:</re1>
 		<re2>Error while creating vertical bars of background reinforcement at the intersection in the wall id={0}:</re2>
 		<re3>Error while creating additional vertical bars at the end of the wall id={0}:</re3>
@@ -4951,6 +4955,7 @@
 		<re18>Error while creating stirrups of the frame of the opening in the wall id={0}:</re18>
 		<re19>Error while creating U-shaped bars of the opening frame along the horizontal (on bottom) in the wall id={0}</re19>
 		<re20>Failed to create rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re20>
+		<re21>Error when creating U-shaped bars along the bottom end of the wall</re21>
 	</mprWallsReinforcement>
 	<mprSlabsReinforcement LocalName="Slabs reinforcement"
                          Description="Analysis, grouping and reinforcement of slabs for specified conditions"
