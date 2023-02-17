@@ -1,0 +1,2285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+	<mpTxtNumCopy LocalName="Copy with numbering"
+                Description="Copies the selected text or block with an attribute containing a numeric value, changing the value to a specified numerical step"
+                FullDescription="Copies the selected single line or multiline text, a block with an attribute or a multileader containing a digital value, with a value change to a specified numerical step. There are various settings - adding a prefix/suffix, suppressing tail zeros, etc.">
+		<accept>Accept</accept>
+		<cancel>Cancel</cancel>
+		<next>Continue</next>
+		<prefix>Prefix</prefix>
+		<suffix>Suffix</suffix>
+		<msg1>Select text, block with attributes or a multileader:</msg1>
+		<msg2>Wrong choice!</msg2>
+		<msg3>Selected block does not contain attributes</msg3>
+		<msg4>Selected text does not contain numeric values</msg4>
+		<msg5>Could not get number</msg5>
+		<msg6>Error number search</msg6>
+		<msg7>Base number:</msg7>
+		<msg8>Enter the increment step:</msg8>
+		<msg9>Base point:</msg9>
+		<msg10>Selected multileader does not contain text</msg10>
+		<msg11>Specify a point:</msg11>
+		<h1>Select attribute</h1>
+		<h2>Tag:</h2>
+		<h3>Value:</h3>
+		<h4>Settings</h4>
+		<h5>Increment Step:</h5>
+		<h6>Save text BEFORE and text AFTER</h6>
+		<h7>Leading zeros</h7>
+		<h8>Adding zeros to the beginning of a number</h8>
+		<h9>Suppression of tail zeros</h9>
+		<h10>Removal from number all tail zeros</h10>
+		<h11>Result:</h11>
+		<cb1>Tens</cb1>
+		<cb2>Hundreds</cb2>
+		<cb3>Thousands</cb3>
+		<cb4>Ten of thousands</cb4>
+		<cb5>Hundreds of thousands</cb5>
+	</mpTxtNumCopy>
+	<mpMultiCopy LocalName="Multi copy"
+               Description="Multiple copies of selected primitives with a certain step"
+               FullDescription="Plugin supports two types of copying:\nmarkup - copies primitives with a specified distance between them along the specified line;\ndivide - copies primitives by dividing the specified line by the number of segments entered.\nThere is a possibility to select an entity (line, polyline, spline) to set the copy path.">
+		<msg1>Select entities:</msg1>
+		<msg2>Specify distance or [Divide]</msg2>
+		<msg3>Enter the number of segments or [Mark]</msg3>
+		<msg4>Specify a base point or:</msg4>
+		<msg5>Select a line, a polyline, or a spline:</msg5>
+		<msg6>Specify the second point:</msg6>
+		<kw1>Divide</kw1>
+		<kw2>Mark</kw2>
+		<kw3>Entity</kw3>
+	</mpMultiCopy>
+	<mpTxtCenter LocalName="Text by center"
+               Description="Plugin allows you to create a single line text or align the existing one in the middle between two specified points">
+		<msg1>Specify the first point or [Existing]</msg1>
+		<msg2>Existing</msg2>
+		<msg3>Enter text:</msg3>
+		<msg4>Select single line text:</msg4>
+		<msg5>Select single line text or [New]:</msg5>
+		<msg6>New</msg6>
+		<msg7>Wrong choice!</msg7>
+		<msg8>Specify the first point:</msg8>
+		<msg9>Specify the second point:</msg9>
+	</mpTxtCenter>
+	<mpStandards LocalName="Standards"
+               Description="Plugin allows you to create, store and add layer sets, text styles, dimensional styles and multileader styles">
+		<accept>Accept</accept>
+		<cancel>Cancel</cancel>
+		<copy>Copy</copy>
+		<no>No</no>
+		<h1>Set name:</h1>
+		<h2>Enter the name of the set</h2>
+		<h3>Add Layer</h3>
+		<h4>Refresh list</h4>
+		<h5>Name</h5>
+		<h6>Freeze</h6>
+		<h7>Lock</h7>
+		<h8>Color</h8>
+		<h9>Linetype</h9>
+		<h10>Lineweight</h10>
+		<h11>Plot</h11>
+		<h12>On</h12>
+		<h13>Layer</h13>
+		<h14>Default</h14>
+		<h15>STANDARDS</h15>
+		<h16>Styles</h16>
+		<h17>Layer sets</h17>
+		<h18>Standard set of ModPlus layers. Can not delete</h18>
+		<h19>Create a new set of layers</h19>
+		<h20>Edit (view) the selected set of layers</h20>
+		<h21>Delete selected layer set</h21>
+		<h22>Text styles</h22>
+		<h23>Standard style of ModPlus. Can not delete</h23>
+		<h24>A text style is associated with a dimension style or a multileader style</h24>
+		<h25>Add one or more text styles from the current drawing</h25>
+		<h26>Delete the selected text style from the set</h26>
+		<h27>Dimension styles</h27>
+		<h28>Add one or more dimension styles from the current drawing</h28>
+		<h29>Delete the selected dimension style from the set</h29>
+		<h30>Multileader styles</h30>
+		<h31>Add one or more multileader styles from the current drawing</h31>
+		<h32>Delete the selected dimension style from the set</h32>
+		<h33>Add Selected</h33>
+		<h34>Add selected standards to the current drawing</h34>
+		<h35>From file</h35>
+		<h36>Specify the file from which you want to copy the standards:</h36>
+		<h37>Specify the standards that you want to copy:</h37>
+		<h38>Settings</h38>
+		<h39>Editing settings is only available in the full version of the plugin</h39>
+		<h40>Create groups for sets of layers</h40>
+		<h41>Auto-load standards when creating a drawing</h41>
+		<h42>Auto-load standards when opening a drawing</h42>
+		<h43>Copying standards from a file when creating a drawing</h43>
+		<h44>Copying standards from a file when opening a drawing</h44>
+		<h45>Details in the command line</h45>
+		<h46>After adding make current:</h46>
+		<h47>Text style:</h47>
+		<h48>Dimensional style:</h48>
+		<h49>Multileader style:</h49>
+		<h50>EDITOR SET LAYERS</h50>
+		<h51>VIEWING SET LAYERS</h51>
+		<h52>Export</h52>
+		<h53>Import</h53>
+		<h54>Available in the full version of the plugin!</h54>
+		<h55>Specify the location to create the xml file</h55>
+		<h56>Specify the xml file to import standards</h56>
+		<h57>The selected file is not a standards storage file!</h57>
+		<cb1>Layers of the current set</cb1>
+		<cb2>Layers of the current set + layers of the drawing</cb2>
+		<cb3>Layers</cb3>
+		<cb4>Text styles</cb4>
+		<cb5>Dimension styles</cb5>
+		<cb6>Multileader styles</cb6>
+		<msg1>Enter the name of the set</msg1>
+		<msg2>A set with this name already exists</msg2>
+		<msg3>The set does not have layers</msg3>
+		<msg4>Could not copy the helper file to disk!\nThere may be no administrator rights</msg4>
+		<msg5>The following dependent styles will be removed:</msg5>
+		<msg6>Continue?</msg6>
+		<msg7>Delete the dependent text style?\nYes - delete, No - untie</msg7>
+		<msg8>Specify the source file</msg8>
+		<msg9>No source file specified!</msg9>
+		<msg10>The specified source file was not found</msg10>
+		<msg11>No standard is selected for copying</msg11>
+		<msg12>Configuration file not found!</msg12>
+		<msg13>Failed to load linetype:</msg13>
+		<p1>ModPlus: Added text style</p1>
+		<p2>ModPlus: Added dimension style</p2>
+		<p3>ModPlus: Added multileader style</p3>
+		<p4>ModPlus: Added a set of layers</p4>
+		<p5>with layers:</p5>
+		<p6>ModPlus: Created layer group</p6>
+		<p7>ModPlus: The current text style is set</p7>
+		<p8>ModPlus: The current dimension style is set</p8>
+		<p9>ModPlus: The current multileader style is set</p9>
+		<l1>Mp_Basic</l1>
+		<l2>Mp_Thin</l2>
+		<l3>Mp_Dimensions</l3>
+		<l4>Mp_Leaders</l4>
+		<l5>Mp_Thick</l5>
+		<l6>Mp_Hatching</l6>
+		<l7>Mp_Axial</l7>
+		<l8>Mp_Nonprinting</l8>
+		<l9>Mp_Text</l9>
+	</mpStandards>
+	<mpMultiScale LocalName="Multi scale"
+                Description="Plugin allows you to scale each of the selected objects relative to themselves"
+                FullDescription="Each selected entity will be scaled relative to the specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The scale point is determined by the rectangle describing the entity (Bounding Box)">
+		<!-- todo remove start after 1.1.5.0-->
+		<msg1>Copy</msg1>
+		<msg2>Select objects:</msg2>
+		<msg3>Scale:</msg3>
+		<msg4>Select a base point:</msg4>
+		<kw1>Center</kw1>
+		<kw2>LBottom</kw2>
+		<kw3>LTop</kw3>
+		<kw4>RTop</kw4>
+		<kw5>RBottom</kw5>
+		<kw6>CBottom</kw6>
+		<kw7>CTop</kw7>
+		<kw8>CLeft</kw8>
+		<kw9>CRight</kw9>
+		<!-- todo remove end after 1.1.5.0-->
+		<h1>Create copies of selected entities</h1>
+		<h2>Base Point:</h2>
+		<h3>Select entities:</h3>
+		<h4>Scale:</h4>
+		<bp1>Center</bp1>
+		<bp2>Bottom left</bp2>
+		<bp3>Top left</bp3>
+		<bp4>Top right</bp4>
+		<bp5>Bottom right</bp5>
+		<bp6>Middle bottom</bp6>
+		<bp7>Middle top</bp7>
+		<bp8>Middle left</bp8>
+		<bp9>Middle right</bp9>
+	</mpMultiScale>
+	<mpMultiRotate LocalName="Multi rotate"
+	              Description="Plugin allows you to rotate each of the selected entities relative to the Z-axis with the center of rotation relative to themselves"
+	              FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
+		<!-- todo remove after 1.0.1.0 -->
+		<msg3>Rotation angle in degrees:</msg3>
+		<h1>Rotation angle:</h1>
+	</mpMultiRotate>
+	<mpMultiMirror LocalName="Multi mirror"
+	               Description="Plugin allows to mirror each of the selected entities vertically or horizontally in relation to themselves"
+	               FullDescription="Each selected entity will be mirrored vertically or horizontally with respect to a line passing through a specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The point is determined by the rectangle that describes the entity (Bounding Box)">
+		<o1>Mirror by</o1>
+		<o2>Vertical</o2>
+		<o3>Horizontal</o3>
+	</mpMultiMirror>
+	<mpRotAtt LocalName="Rotation angle of attributes"
+            Description="Plugin is used to change the rotation angle of attributes in the selected blocks">
+		<msg1>Select blocks:</msg1>
+		<msg2>New angle of rotation attributes:</msg2>
+	</mpRotAtt>
+	<mpLayerAuto LocalName="Auto layers"
+               Description="Plugin is used to automatically add a layer to the created objects"
+               FullDescription="Plugin processes the creation, copying, pasting and other commands when working with AutoCAD objects - dimensions, text, multileaders, hatching, tables, viewports, lines, polylines, xLines, rays, circles, ellipses, splines, arcs, blocks - and sets the layer specified in the plugin settings for them. There is an option to specify the specified layers for the selected objects. There is an opportunity to set block layers by name">
+		<save>Save</save>
+		<h1>Layers for entities</h1>
+		<h2>Layer assignment</h2>
+		<h3>Available in the full version of the plugin</h3>
+		<h4>For dimensions:</h4>
+		<h5>For text:</h5>
+		<h6>For multileaders:</h6>
+		<h7>For hatch:</h7>
+		<h8>For tables:</h8>
+		<h9>For viewports:</h9>
+		<h10>Excluding commands</h10>
+		<h11>Learn More</h11>
+		<h12>The function of the plugin is based on the processing of the command completion event. However, not all commands create new objects and can also cause errors when working with this plugin. You can edit the list of excluding yourself</h12>
+		<h13>More details on</h13>
+		<h14>forum</h14>
+		<h15>Remove a command from the list</h15>
+		<h16>Enter the command to exclude</h16>
+		<h17>Add</h17>
+		<h18>Load</h18>
+		<h19>Remember</h19>
+		<h20>You can save the current layers in the settings in order to quickly set them. ATTENTION! If the layer saved in the settings is not present in the current document, it will be ignored</h20>
+		<h21>Save the settings for the current drawing and close the window</h21>
+		<h22>Apply to selected</h22>
+		<h23>Apply settings to selected objects</h23>
+		<h24>Layers for blocks by name</h24>
+		<h25>The limited version is available to three positions</h25>
+		<h26>Default Layer</h26>
+		<h27>You did not enter command!</h27>
+		<h28>Command</h28>
+		<h29>already in the list</h29>
+		<h30>Saved!</h30>
+		<h31>Select objects:</h31>
+		<h32>ModPlus: The object is moved to the layer:</h32>
+		<h33>Error of AutoLayers plugin:</h33>
+		<h34>objects were assigned layers</h34>
+		<h35>For lines:</h35>
+		<h36>For polylines:</h36>
+		<h37>For rays:</h37>
+		<h38>For xLines:</h38>
+		<h39>For circles:</h39>
+		<h40>For ellipses:</h40>
+		<h41>For splines:</h41>
+		<h42>For arcs:</h42>
+		<h43>For blocks:</h43>
+		<h44>Layer settings for blocks by name are not saved in the drawing, as layer settings for entities, but in a user configuration file</h44>
+		<h45>Block name:</h45>
+		<h46>Layer:</h46>
+		<h47>Full match of block name</h47>
+		<h48>Partial match of block name</h48>
+		<h49>Save layer settings for blocks by name to xml file</h49>
+		<h50>Load layer settings for blocks by names from xml file</h50>
+		<h51>The selected file is not a file for storing layer settings for blocks by name</h51>
+	</mpLayerAuto>
+	<mpFormats LocalName="Formats"
+             Description="Plugin of inserting in the drawing formats according to GOST 2.301-68/ISO 216"
+             FullDescription="Formats are inserted in the form of a block with a special label in the extended data. A label in the extended data is required to define the formats with other plugins (for example, &quot;Sheet Numbering&quot;). Therefore, you should not insert the formats with standard means of inserting a block into AutoCAD. Plugin allows you to add title blocks to the format - for this you need to install and at least once started the plugin &quot;Title blocks&quot;">
+		<accept>Accept</accept>
+		<no>No</no>
+		<h1>Russia</h1>
+		<h2>Ukraine</h2>
+		<h3>Belarus</h3>
+		<h4>Formats</h4>
+		<h5>GOST 2.301-68</h5>
+		<h6>Format/multiplicity</h6>
+		<h7>Sheet Orientation</h7>
+		<h8>Landscape</h8>
+		<h9>Portrait</h9>
+		<h10>Side of multiplicity</h10>
+		<h11>Short</h11>
+		<h12>Long</h12>
+		<h13>Manual input</h13>
+		<h14>Length of the format, mm</h14>
+		<h15>Height of the format, mm</h15>
+		<h16>"Copied"</h16>
+		<h17>Bottom frame:</h17>
+		<h18>5 mm</h18>
+		<h19>10 mm</h19>
+		<h20>Text style:</h20>
+		<h21>Format scale:</h21>
+		<h22>Title block:</h22>
+		<h23>Use fields</h23>
+		<h24>Launching the "Fields" plugin</h24>
+		<h25>Main text height:</h25>
+		<h26>Additional text height:</h26>
+		<h27>Logo</h27>
+		<h28>from block:</h28>
+		<h29>from file:</h29>
+		<h30>Specify a dwg file as a logo</h30>
+		<h31>Posts</h31>
+		<h32>Edit the list of user posts</h32>
+		<h33>Add post to title block</h33>
+		<h34>Remove post from title block</h34>
+		<h35>Posts in the title block</h35>
+		<h36>One line up</h36>
+		<h37>One line down</h37>
+		<h38>Length of the format (mm) x Height of the format (mm)</h38>
+		<h39>Insert</h39>
+		<h40>Replace</h40>
+		<h41>Create layout</h41>
+		<h42>New layout name</h42>
+		<h43>Add to title block:</h43>
+		<h44>Layout name</h44>
+		<h45>Layout number</h45>
+		<h46>Scale 1:1</h46>
+		<h47>If you uncheck the box, the scale of the format will correspond to the scale indicated in the main window of the plugin</h47>
+		<h49>Post</h49>
+		<h50>Add new post</h50>
+		<h51>Remove selected post</h51>
+		<h52>Layout</h52>
+		<h53>Use dwg-file as a logo</h53>
+		<h54>Set the current layer</h54>
+		<h55>Compliance with GOST table</h55>
+		<h56>The sizes of formats at multiplicity more than 1 are taken by multiplication of the parties of a format with multiplicity 1 on size of multiplicity that corresponds to limiting deviations in table 3 (paragraph 6). When you check the box, the sizes of the formats will be taken in full accordance with table 2 (paragraph 5)</h56>
+		<h57>Format</h57>
+		<h79>Thin lines:</h79>
+		<h80>Thick lines:</h80>
+		<h81>The line thickness changes after the stamp is created. Changing the thickness of thin lines is done by processing the thickness of the lines of the original stamp, in which the default value of thin lines is "ByBlock"</h81>
+		<h82>The line thickness changes after the stamp is created. Changing the thickness of thick lines is done by processing the thickness of the lines of the original stamp, in which the default value of thick lines is "0.40 mm"</h82>
+		<h83>Insert signatures</h83>
+		<h84>Launch "Signatures" plugin</h84>
+		<err1>The configuration file is corrupt!\nRun the ModPlus Configurator</err1>
+		<err2>An error has occurred!</err2>
+		<err3>Invalid characters in the layout name:</err3>
+		<err4>The following characters are not allowed:</err4>
+		<err5>No file with title blocks was found!\nRun the "Title blocks" plugin to unpack a dwg file with title blocks</err5>
+		<err6>Length of the format is not entered</err6>
+		<err7>Height of the format is not entered</err7>
+		<err8>Length of the format must be at least 30 mm</err8>
+		<err9>Height of the format should be not less than 15 mm</err9>
+		<err10>A title block with a table style was not found in the title block file</err10>
+		<err11>Run the "Title blocks" plugin to overwrite the title blocks file</err11>
+		<err12>The title block does not correspond to the title block ModPlus! Invalid number of cells</err12>
+		<err13>The file was created in a later version of AutoCAD!</err13>
+		<err14>Invalid block name</err14>
+		<msg1>Value</msg1>
+		<msg2>already contained in the list of standard values</msg2>
+		<msg3>The list contains the same values!</msg3>
+		<msg4>Available with the full version of the "Title blocks" plugin</msg4>
+		<msg5>You can not add more than</msg5>
+		<msg6>posts</msg6>
+		<msg7>In file</msg7>
+		<msg8>no fields found</msg8>
+		<msg9>Choose the replacement format:</msg9>
+		<msg10>Wrong choice!</msg10>
+		<msg11>Insertion point:</msg11>
+		<msg12>Empty sheet name is not allowed!</msg12>
+	</mpFormats>
+	<mpNotes LocalName="Notes"
+           Description="Plugin for working with frequently-used notes">
+		<h1>Settings</h1>
+		<h2>Context menu for text</h2>
+		<h3>Double click on a note</h3>
+		<h4>For standard notes:</h4>
+		<h5>Insert as Mtext</h5>
+		<h6>Add to Mtext</h6>
+		<h7>For user notes:</h7>
+		<h8>Edit</h8>
+		<h15>Notes</h15>
+		<h26>Text Height:</h26>
+		<h28>Text Width:</h28>
+		<h29>Text style:</h29>
+		<h30>The selected text style is annotative. Consider the scale of the annotation</h30>
+		<h31>Annotative</h31>
+		<h41>User notes file is not found</h41>
+		<h49>Select text:</h49>
+		<h50>Wrong choice!</h50>
+		<h52>Select multiline text:</h52>
+		<h53>Not specified (or not created) file of user notes!</h53>
+		<h74>Specify the insertion point:</h74>
+		<h75>MP:Save as a note</h75>
+	</mpNotes>
+	<mpMeshes LocalName="Meshes"
+			Description="Selection and calculation of the mass of rebar according to normative documents">
+		<kg>kg</kg>
+		<mm>mm</mm>
+		<insert>Insert</insert>
+		<h1>Meshes</h1>
+		<h2>GOST 23279-2012</h2>
+		<h3>Mesh type</h3>
+		<h4>Roll</h4>
+		<h5>Image</h5>
+		<h6>Mesh width (b)</h6>
+		<h7>Mesh length (l)</h7>
+		<h8>Diameter of bars</h8>
+		<h9>Longitudinal (d)</h9>
+		<h10>Transverse (d1)</h10>
+		<h11>Step bars</h11>
+		<h12>Longitudinal (s1)</h12>
+		<h13>Transverse (s)</h13>
+		<h14>Rebar releases</h14>
+		<h15>Longitudinal (a1,a2)</h15>
+		<h16>Transverse (a)</h16>
+		<h17>Mesh weight:</h17>
+		<h18>Rounding the mass</h18>
+		<h19>GOST 8478-81</h19>
+		<h20>Mesh type by dimensional accuracy</h20>
+		<h21>Mesh width - 2350 mm</h21>
+		<h22>Main step (s)</h22>
+		<h23>Longitudinal (a1)</h23>
+		<h24>Number of longitudinal bars in mesh, pcs.</h24>
+		<h25>Break mesh width by the number of steps</h25>
+		<h26>s or (s)+s2</h26>
+		<h27>Mesh length L=</h27>
+		<h28>Series 1.410-3</h28>
+		<h29>Mesh type: working reinforcement</h29>
+		<h30>Diameter ratio</h30>
+		<h31>of bars (d1/d2)</h31>
+		<h32>Transverse (a2)</h32>
+		<h33>Longitudinal (m)</h33>
+		<h34>Transverse (n)</h34>
+		<h35>Welded reinforcing mesh for reinforced concrete structures and products</h35>
+		<h36>Welded mesh for reinforced concrete structures</h36>
+		<h37>Issue 1. Meshes with working reinforcement diameter from 10 to 32 mm</h37>
+		<h38>Mesh type: Heavy</h38>
+		<h39>Mesh type: Light</h39>
+		<h40>(From 850 to the length of the roll)</h40>
+		<h41>(From 3950 to the length of the roll)</h41>
+		<h42>(From 850 to 9000)</h42>
+		<h43>(From 3950 to 9000)</h43>
+		<h44>The ratio of the smaller bar diameter to the larger should be at least 0.25</h44>
+		<h45>The value of the output of the reinforcement must be a multiple of 25</h45>
+		<h46>The output value should be 25 mm. It is allowed to take from 30 to 200 mm a multiple of 5 mm</h46>
+		<h47>The output value should be 25 mm. It is allowed to take from 15,20 and 30 mm, and also from 25 to 100 mm multiples of 25 mm</h47>
+		<h48>The additional step of longitudinal bars in heavy meshes is not allowed!</h48>
+		<h49>The additional step of the longitudinal bars in the light meshes should be from 50 mm to the size of the main step</h49>
+		<h50>multiple of 10 mm</h50>
+		<h51>The additional step of the transverse bars in heavy type 1 meshes should be 100, 200 or 300 mm!</h51>
+		<h52>The additional step of the transverse bars in heavy meshes of type 2,3 is not allowed!</h52>
+		<h53>The additional step of the transverse bars in the light meshes should be from 50 to 250 mm in multiples of 10 mm!</h53>
+		<h54>Not all data is entered correctly! Continue?</h54>
+		<h55>Normal accuracy</h55>
+		<h56>Increased accuracy</h56>
+		<h57>Invalid mesh length!</h57>
+		<h58>in one direction</h58>
+		<h59>in two directions</h59>
+		<h60>The width of mesh must be at least</h60>
+		<h61>The width of mesh should be no more than</h61>
+		<h62>The length of mesh must be at least</h62>
+		<h63>The length of mesh should be no more than</h63>
+	</mpMeshes>
+	<mpTables LocalName="Tables"
+			Description="Plugin of inserting AutoCAD tables into the drawing according to GOST/DSTU/STB or from the specified file">
+		<insert>Insert</insert>
+		<all>All</all>
+		<favorite>Favorite</favorite>
+		<current>Current</current>
+		<h1>TABLES</h1>
+		<h2>ModPlus tables</h2>
+		<h3>Normative documents for:</h3>
+		<h4>Russia</h4>
+		<h5>Ukraine</h5>
+		<h6>Belarus</h6>
+		<h7>Tables filter:</h7>
+		<h8>Choosing a table filtering option</h8>
+		<h9>Table name</h9>
+		<h10>Normative document:</h10>
+		<h11>Description:</h11>
+		<h12>Brief description (reference to the table in the normative document)</h12>
+		<h13>Document's name</h13>
+		<h14>You can scale and pan the image with the mouse wheel</h14>
+		<h15>Inactive</h15>
+		<h16>Inserting a table with Top-left binding</h16>
+		<h17>Inserting a table with Top-right binding</h17>
+		<h18>Inserting a table with Bottom-Left binding</h18>
+		<h19>Inserting a table with Bottom-right binding</h19>
+		<h20>Reduce image</h20>
+		<h21>Enlarge Image</h21>
+		<h22>TABLE SETTINGS</h22>
+		<h23>Table scale:</h23>
+		<h24>Text height:</h24>
+		<h25>Row height:</h25>
+		<h26>Text style:</h26>
+		<h27>Dynamic row insertion</h27>
+		<h28>Tables from file</h28>
+		<h29>File</h29>
+		<h30>Clear path to file</h30>
+		<h31>Specify the path to the file</h31>
+		<h32>TABLES FROM FILE</h32>
+		<h33>Drawing file</h33>
+		<h34>Select a file</h34>
+		<h35>Add to Favorite Tables List</h35>
+		<h36>Remove from Favorite Tables List</h36>
+		<h37>Layer:</h37>
+		<h38>Layer locked!</h38>
+		<msg1>Could not copy file to disk!\nThere may be no administrator rights</msg1>
+		<msg2>Could not copy table</msg2>
+		<msg3>In the "Tables from file" section, the file is incompatible with this version of AutoCAD!</msg3>
+		<msg4>Insertion point</msg4>
+		<msg5>Specify second point</msg5>
+	</mpTables>
+	<mpDimJustif LocalName="Aligning Dimensions"
+			   Description="Aligning the extension or dimension lines along the specified straight line">
+		<h1>ALIGNMENT DIMENSIONS</h1>
+		<h2>Align extension lines</h2>
+		<h3>Align dimension lines</h3>
+		<msg1>Select dimensions for alignment of extension lines</msg1>
+		<msg2>First point of the alignment line:</msg2>
+		<msg3>Select dimensions for alignment of dimension lines</msg3>
+		<msg4>Second point of the alignment line:</msg4>
+	</mpDimJustif>
+	<mpStamps LocalName="Title blocks"
+            Description="Plugin of inserting title blocks in the drawing (as AutoCAD tables) according to normative documentation, with field support"
+            FullDescription="Using the &quot;Field&quot; plugin allows you to add additional values to the document that you can insert into the title block in the form of fields. This allows you to change the values in the title block at once in all the title blocks throughout the document">
+		<h1>Title blocks</h1>
+		<h2>Name of title block</h2>
+		<h3>Normative documents for:</h3>
+		<h4>Russia</h4>
+		<h5>Ukraine</h5>
+		<h6>Belarus</h6>
+		<h7>Weed of normative document:</h7>
+		<h8>Selecting the normative document</h8>
+		<h9>Table name</h9>
+		<h10>Normative document:</h10>
+		<h11>Description:</h11>
+		<h12>Brief description (reference to the title block in the normative document)</h12>
+		<h13>Inactive</h13>
+		<h14>Inserting a title block with Top-left binding</h14>
+		<h15>Inserting a title block with Top-right binding</h15>
+		<h16>Inserting a title block with Bottom-left binding</h16>
+		<h17>Inserting a title block with Bottom-right binding</h17>
+		<h18>Show image</h18>
+		<h19>Hide image</h19>
+		<h21>Title block scale:</h21>
+		<h22>Text style:</h22>
+		<h23>Main text height:</h23>
+		<h24>Additional text height:</h24>
+		<h25>Logo</h25>
+		<h26>from block:</h26>
+		<h27>from file:</h27>
+		<h28>Specify a dwg file as a logo</h28>
+		<h29>Available in full version</h29>
+		<h30>Use fields</h30>
+		<h31>Posts</h31>
+		<h32>Edit the list of user posts</h32>
+		<h33>Add post to title block</h33>
+		<h34>Remove post from title block</h34>
+		<h35>Posts in the title block</h35>
+		<h36>One line up</h36>
+		<h37>One line down</h37>
+		<h38>Launch "Fields" plugin</h38>
+		<h39>The height of the text in all cells of the title block. The default is 2.5, which corresponds to ESKD GOST 2.304-81 "Drawing fonts"</h39>
+		<h40>Additional text height. It is installed in such cells as "Document designation", "Stage", "Sheet", etc., which gives the title block expressiveness and readability. The default is 3.5, which corresponds to ESKD GOST 2.304-81 "Drawing fonts"</h40>
+		<h41>Specify the block defined in this drawing to insert it into the title block as a logo</h41>
+		<h42>The specified dwg-file will be added to the current drawing in the form of a block, which will be inserted into the title block as a logo. The file name will be the file name. If a block with this name already exists in the current drawing, the block from the drawing will be used</h42>
+		<h43>POSTS</h43>
+		<h44>Post</h44>
+		<h45>FIELDS</h45>
+		<h46>Surnames</h46>
+		<h47>Standard</h47>
+		<h48>Custom</h48>
+		<h49>POST</h49>
+		<h50>Add new post</h50>
+		<h51>Remove selected post</h51>
+		<h52>SURNAME</h52>
+		<h53>GOST R 21.1101-2013</h53>
+		<h54>Appendix Z</h54>
+		<h55>Box 1</h55>
+		<h56>Box 2</h56>
+		<h57>Box 3</h57>
+		<h58>Box 6</h58>
+		<h59>Box 9</h59>
+		<h60>Appendix L</h60>
+		<h61>Add to drawing</h61>
+		<h62>Add completed fields to the drawing</h62>
+		<h63>From file</h63>
+		<h64>Load and set the field values from the specified dwg file</h64>
+		<h65>Save</h65>
+		<h66>Save filled fields as standard</h66>
+		<h67>Load</h67>
+		<h68>Load saved field values</h68>
+		<h69>Add fields to title block</h69>
+		<h70>Set Default Values</h70>
+		<h71>Get the value from the drawing</h71>
+		<h72>DSTU B A.2.4-4: 2009</h72>
+		<h73>STB 2255-2012</h73>
+		<h74>Update in drawing</h74>
+		<h75>You can use line breaks in boxes 2,3 and 9. To add line breaks use Enter</h75>
+		<h76>Date</h76>
+		<h77>Date is added if there is a surname in the line</h77>
+		<h78>The width factor for the field that is inserted into the stamp. The width factor will be applied directly to the inserted field, regardless of the width factor set in the text style. Valid values are from 0.01 to 100.0. In order not to change the width factor, specify the value 0</h78>
+		<h79>Thin lines:</h79>
+		<h80>Thick lines:</h80>
+		<h81>The line thickness changes after the stamp is created. Changing the thickness of thin lines is done by processing the thickness of the lines of the original stamp, in which the default value of thin lines is "ByBlock"</h81>
+		<h82>The line thickness changes after the stamp is created. Changing the thickness of thick lines is done by processing the thickness of the lines of the original stamp, in which the default value of thick lines is "0.40 mm"</h82>
+		<h83>W.F.</h83>
+		<h84>Width factor</h84>
+		<h85>Signatures</h85>
+		<h86>Selecting a signature block</h86>
+		<h87>Enabling or disabling the use of signature</h87>
+		<h88>Surname:</h88>
+		<h89>Signature block file:</h89>
+		<h90>Signature block name:</h90>
+		<h91>Signature block:</h91>
+		<h92>The specified file was not found!</h92>
+		<h93>Specify file and signature block</h93>
+		<h94>Add new signature</h94>
+		<h95>Remove selected signature</h95>
+		<h96>Add signatures to title block</h96>
+		<h97>Insert signatures</h97>
+		<h98>Launch "Signatures" plugin</h98>
+		<h99>The signature is inserted in the lower left corner of the cell to the right of the cell with the surname. The scale of tables (title blocks) is not taken into account!</h99>
+		<h100>Default layer</h100>
+		<h101>Copy layout name into the title block</h101>
+		<msg1>The configuration file is corrupt!\nRun the ModPlus Configurator</msg1>
+		<msg2>An error has occurred!</msg2>
+		<msg3>Value</msg3>
+		<msg4>already contained in the list of standard values</msg4>
+		<msg5>The list contains the same values!</msg5>
+		<msg6>Filled values updated in the current drawing\nDo not forget to call regeneration to update the values in the title blocks</msg6>
+		<msg7>Filled values added to the drawing</msg7>
+		<msg8>Saved</msg8>
+		<msg9>Select title block:</msg9>
+		<msg10>Wrong choice! This is not a title block!</msg10>
+		<msg11>Specify the object to retrieve the text (text, multileader, table):</msg11>
+		<msg12>Specify the cell:</msg12>
+		<msg13>Add fields from file</msg13>
+		<msg14>In file</msg14>
+		<msg15>no fields found</msg15>
+		<msg16>File was created in a later version of AutoCAD!</msg16>
+		<msg17>Could not copy file to disk!\nThere may be no administrator rights</msg17>
+		<msg18>Could not copy table from resource file</msg18>
+		<msg19>You can not add more than</msg19>
+		<msg20>posts</msg20>
+		<msg21>The title block does not correspond to the title block ModPlus!\nInvalid number of cells</msg21>
+		<msg22>The "Organization" cell contains a logo\nReplace on field?</msg22>
+		<msg23>Use dwg-file as a logo</msg23>
+		<msg24>Insertion point:</msg24>
+		<msg25>Field values ​​exported</msg25>
+		<msg26>At the moment, the area for working with the tag "{0}" is selected, and the tag "{1}" is specified in the loading file.\nDo you want to continue loading?</msg26>
+		<msg27>The selected file is not a field storage file</msg27>
+		<msg28>There are no more than three signatures available in the free version!</msg28>
+		<msg29>There are no labels available to insert into the title block!</msg29>
+		<msg30>There are no signatures in the list!</msg30>
+		<msg31>The selected file is not a signature storage file!</msg31>
+	</mpStamps>
+	<mpSummLength LocalName="Sum of lengths"
+                Description="Gets and displays the number and sum of the lengths of selected lines, polylines, circles, arcs and splines">
+		<h2>Total length:</h2>
+		<h3>Rounding Result</h3>
+		<h4>Count:</h4>
+		<h5>Entities</h5>
+		<h6>Insert result as a single line text</h6>
+		<h7>Insert result into a table cell</h7>
+		<h8>Export result to a txt file</h8>
+		<h9>Line</h9>
+		<h10>Circle</h10>
+		<h11>Polyline</h11>
+		<h12>Arc</h12>
+		<h13>Spline</h13>
+		<h14>Ellipse</h14>
+		<h15>Length:</h15>
+		<h16>Show object</h16>
+		<h17>Arithmetic mean</h17>
+		<h18>Arithmetic mean of all objects:</h18>
+	</mpSummLength>
+	<mpSelSim LocalName="Select similar"
+            Description="Plugins allow you to select objects that are similar to sample objects from all objects in the drawing, or from a specific set"
+            FullDescription="Before using the plugin, you need to configure the conditions by which similar objects will be searched for - the same type, the same layer, the same color, etc. For some types, there are additional matching conditions. For example, the same text heights, blocks with the same name, etc.">
+		<h2>General settings</h2>
+		<h3>Add sample objects to the final set (select similar from the selected)</h3>
+		<h4>Same types</h4>
+		<h5>On the same layer</h5>
+		<h6>With the same color</h6>
+		<h7>With the same linetype</h7>
+		<h8>With the same linetype scale</h8>
+		<h9>With the same lineweight</h9>
+		<h10>Blocks</h10>
+		<h11>With the same block name</h11>
+		<h12>The block name contains:</h12>
+		<h13>With the same block scale</h13>
+		<h14>Hatch</h14>
+		<h15>With the same hatch pattern</h15>
+		<h16>With the same hatching scale</h16>
+		<h17>Raster images</h17>
+		<h18>With the same image</h18>
+		<h19>Circles</h19>
+		<h20>With the same radius</h20>
+		<h21>Single-line text</h21>
+		<h22>With the same contents of the text</h22>
+		<h23>With the same text style</h23>
+		<h24>With the same text height</h24>
+		<h25>With the same number of characters</h25>
+		<h26>Multi-line text</h26>
+		<h27>Lines</h27>
+		<h28>Same length of lines</h28>
+		<h29>Polylines</h29>
+		<h30>Same length of polylines</h30>
+		<h32>Dimensions</h32>
+		<h33>Measurement</h33>
+		<h34>Text override</h34>
+		<h35>Text rotation</h35>
+		<h36>Multileaders</h36>
+		<msg1>Settings</msg1>
+		<msg2>Select sample objects or</msg2>
+		<msg3>Select objects to delete from the set or</msg3>
+		<msg4>Select objects among which to search for analogues:</msg4>
+		<msg5>Select the objects to be removed from the set:</msg5>
+		<mi1>MP:Select similar</mi1>
+		<mi2>Select similar</mi2>
+		<mi3>Select similar from selected</mi3>
+		<mi4>SelSim Settings</mi4>
+		<mi5>MP:Select similar from selected</mi5>
+		<mi6>MP:SelSim Settings</mi6>
+	</mpSelSim>
+	<mpHandDim LocalName="Hand dims"
+             Description="Color highlight, restore or delete dimensions with an override value">
+		<msg1>Select dimensions:</msg1>
+		<msg2>Options [Color/Select/Restore/Delete]</msg2>
+	</mpHandDim>
+	<mpCalc LocalName="Calculator"
+          Description="It is an analog of a standard calculator, with the ability to retrieve data from a drawing, adding a result to a drawing, and the ability to manually write a formula for calculating">
+		<prefix>Prefix</prefix>
+		<suffix>Suffix</suffix>
+		<mi1>Absolute value of the specified number</mi1>
+		<mi2>The angle whose cosine is equal to the specified number</mi2>
+		<mi3>The angle whose sine is equal to the specified number</mi3>
+		<mi4>Angle, the tangent of which is equal to the specified number</mi4>
+		<mi5>The smallest integer is greater than or equal to a given number</mi5>
+		<mi6>E, raised to the specified degree</mi6>
+		<mi7>The largest integer is less than or equal to a given number</mi7>
+		<mi8>The remainder of dividing the indicated number by another specified number</mi8>
+		<mi9>The logarithm of the specified number</mi9>
+		<mi10>Logarithm with base 10 of the specified number</mi10>
+		<mi11>The greater of the two numbers</mi11>
+		<mi12>The smaller of the two numbers</mi12>
+		<mi13>The specified number, raised to the specified degree</mi13>
+		<mi14>Rounds a value to the nearest integer or specified number of decimal places</mi14>
+		<mi15>The value that specifies the sign of a number</mi15>
+		<mi16>The integer part of number</mi16>
+		<h1>Calculator</h1>
+		<h2>Interpolation</h2>
+		<h3>Degree, slope</h3>
+		<h4>Use transparency</h4>
+		<h5>CALCULATOR</h5>
+		<h6>INTERPOLATION</h6>
+		<h7>DEGREE, SLOPE</h7>
+		<h8>Insert function</h8>
+		<h9>Rounding:</h9>
+		<h10>A number of symbols after comma</h10>
+		<h11>Data from drawing</h11>
+		<h12>Measure the distance between two points</h12>
+		<h13>Get the sum of lengths from entities</h13>
+		<h14>Get coordinate</h14>
+		<h15>Get the area</h15>
+		<h16>Get value from text</h16>
+		<h17>Get value from multileader</h17>
+		<h18>Get value from table cell</h18>
+		<h19>Get value from dimension</h19>
+		<h20>Several</h20>
+		<h21>Round</h21>
+		<h22>Round the taken value</h22>
+		<h23>Separator:</h23>
+		<h24>Linear interpolation</h24>
+		<h25>Linear extrapolation of a smaller</h25>
+		<h26>Linear extrapolation of a larger</h26>
+		<h27>DEGREE</h27>
+		<h28>Angular degree:</h28>
+		<h29>Decimal degree:</h29>
+		<h30>Radian:</h30>
+		<h31>SLOPE</h31>
+		<h32>Slope (dimensionless):</h32>
+		<h33>Percent (%):</h33>
+		<h34>ppm (‰):</h34>
+		<h35>Translation of degrees</h35>
+		<h36>Ratio:</h36>
+		<h37>Result to drawing:</h37>
+		<h38>Insert result as a single line text</h38>
+		<h39>Insert result into existing single line text (with replacement)</h39>
+		<h40>Insert result into a table cell</h40>
+		<h41>Add result to multiline text</h41>
+		<h42>Insert result as multileader</h42>
+		<h43>Journal</h43>
+		<h44>Clear journal</h44>
+		<h45>Add</h45>
+		<h46>Subtract</h46>
+		<h47>Multiply</h47>
+		<h48>Divide</h48>
+		<h49>Dot</h49>
+		<h50>Comma</h50>
+		<msg1>An error has occurred. Possible formula for calculation is incorrect</msg1>
+		<msg2>Specify point:</msg2>
+		<msg3>Select the coordinate: [X/Y/Z]</msg3>
+		<msg4>Get the area: [Polyline/Hatch]</msg4>
+		<msg5>Select polyline:</msg5>
+		<msg6>Select several polylines:</msg6>
+		<msg7>Select hatch:</msg7>
+		<msg8>Select several hatching:</msg8>
+		<msg9>Select single-line or multi-line text:</msg9>
+		<msg10>Select several single-line or multi-line texts:</msg10>
+		<msg11>Select multileader:</msg11>
+		<msg12>Select several multileaders:</msg12>
+		<msg13>Select table:</msg13>
+		<msg14>Select cell:</msg14>
+		<msg15>First corner of the frame:</msg15>
+		<msg16>Second corner of the frame:</msg16>
+		<msg17>Select dimension:</msg17>
+		<msg18>Select several dimensions:</msg18>
+		<msg19>Select multi-line text:</msg19>
+		<msg20>Select single-line text:</msg20>
+		<msg21>x0 is equal to x2</msg21>
+		<msg22>x1 does not belong\nto interval x0-x2</msg22>
+		<msg23>is equal to</msg23>
+		<err1>Wrong choice!</err1>
+		<err2>Selected text does not contain numeric values</err2>
+		<err3>Do not hit the cell!</err3>
+		<err4>Invalid Input</err4>
+	</mpCalc>
+	<mpArmature LocalName="Reinforcement"
+              Description="Working with assortments of reinforcement - obtaining various information and calculations"
+              FullDescription="Plugin requires plug-in databases. Plugin allows you to obtain various information and calculation data (area, weight, anchoring, etc.) for a large number of different assortments">
+		<cancel>Cancel</cancel>
+		<h1>REINFORCEMENT</h1>
+		<h2>Norm. document</h2>
+		<h3>Selecting the normative document</h3>
+		<h4>Diameter</h4>
+		<h5>Selecting by diameter of the reinforcement</h5>
+		<h6>Sectional area, cm²</h6>
+		<h7>Selection by cross-sectional area of the reinforcement</h7>
+		<h8>Weight 1 m, kg</h8>
+		<h9>Selection by weight of one running meter of reinforcement</h9>
+		<h10>Reinforcement class</h10>
+		<h11>Selecting a class of steel reinforcement</h11>
+		<h12>Mass</h12>
+		<h13>Length, mm:</h13>
+		<h14>The field for entering the length (mm) for calculating the mass</h14>
+		<h15>m</h15>
+		<h16>In running meters</h16>
+		<h17>Measure the length between two points</h17>
+		<h18>Get the sum of lengths from entities</h18>
+		<h19>RESULT, KG</h19>
+		<h20>A number of symbols after comma</h20>
+		<h21>Result to table</h21>
+		<h22>Insert the result of the calculation in the AutoCAD table</h22>
+		<h23>Name to table</h23>
+		<h24>Insert the name of the selected reinforcement into the AutoCAD table</h24>
+		<h25>Insert result and name</h25>
+		<h26>Insert the result of the calculation and the name of the selected reinforcement in the AutoCAD table</h26>
+		<h27>Areas</h27>
+		<h28>With the number of rods:</h28>
+		<h29>Area, cm²:</h29>
+		<h30>At step rods (mm):</h30>
+		<h31>Area, cm²/1m:</h31>
+		<h32>Anchoring/Overlap</h32>
+		<h33>SP 52-101-2003</h33>
+		<h34>Concrete class:</h34>
+		<h35>Concrete class for compressive strength</h35>
+		<h36>Estimated tensile strength</h36>
+		<h37>View of the surface of reinforcement</h37>
+		<h38>Attention! The surface appearance of the reinforcement may depend on the class of reinforcement, diameter or other values that are not considered by the program. Read the normative documentation</h38>
+		<h39>Estimated tensile strength, MPa</h39>
+		<h40>Basic (main) length of anchoring, mm:</h40>
+		<h41>Coefficient α:</h41>
+		<h42>α is a coefficient that takes into account the effect on the anchoring length of the stress state of concrete and reinforcement and the structural solution of the element in the anchoring zone. When anchoring rods of a periodic profile with straight ends (straight anchoring) or smooth reinforcement with hooks or loops without additional anchoring devices for stretched rods, take α = 1.0, and for compressed ones - α = 0.75. According to clause 10.3.30 of SP 63.13330, the coefficient α may be increased to 2.0</h42>
+		<h43>Required and actual reinforcement are equal</h43>
+		<h44>Actually installed reinforcement (diameter)</h44>
+		<h45>By default, we accept that the required reinforcement and the actual installed reinforcement are equal. In case the reinforcement is different, select the actually installed reinforcement. The required reinforcement is selected in the left part of the window</h45>
+		<h46>Required (estimated) anchoring length, mm:</h46>
+		<h47>Generate report in MS Word</h47>
+		<h48>In detail</h48>
+		<h49>Document status: Acting</h49>
+		<h50>Document status: Inactive</h50>
+		<h51>Document status: No information or legislation</h51>
+		<h52>Calculation of the length of anchorage or overlap for the current diameter of the reinforcement is performed in a separate window</h52>
+		<h53>Open</h53>
+		<h54>Add diameter symbol (Ø)</h54>
+		<msg1>Available in full version!</msg1>
+		<msg2>No value in the "Length" field</msg2>
+		<msg3>Not selected reinforcement</msg3>
+		<msg4>Allowed to enter only numbers and point</msg4>
+		<msg5>Not all data entered</msg5>
+		<msg6>Mass of one meter to table</msg6>
+		<msg7>Select the "Specification" table</msg7>
+		<msg8>Select the "Name" cell</msg8>
+		<msg9>kg/m</msg9>
+		<msg10>Select the "Mass" cell</msg10>
+		<err1>Wrong choice!</err1>
+		<err2>Do not hit the cell!</err2>
+		<mpa>MPa</mpa>
+		<cb1>Smooth rebar</cb1>
+		<cb2>Cold-deformed (periodic profile)</cb2>
+		<cb3>Hot rolled (periodic profile)</cb3>
+		<cb4>Thermo-mechanically processed (periodic profile)</cb4>
+		<p1>Result of calculation in Word</p1>
+		<p2>Create a new document</p2>
+		<p3>Filling data</p3>
+	</mpArmature>
+	<mpTxtCopyPaste LocalName="Fast text copy"
+                  Description="Fast copying of single line or multiline text content, mleaders, dimensions or table cells">
+		<msg1>Select the source entity (text, mleader, table or dimension):</msg1>
+		<msg2>Select source entity (text, mleader, table or dimension) or [Delete]:</msg2>
+		<msg3>Wrong choice!</msg3>
+		<msg4>Delete source entity (for tables - cell content)?</msg4>
+		<msg5>Select entity (text, mleader or table) to replace the content</msg5>
+		<msg6>Specify a table cell:</msg6>
+	</mpTxtCopyPaste>
+	<mpRemoveAnnotScale LocalName="Clear scales"
+                      Description="Clears the list of annotative scales in the selected annotative objects, leaving the current scale">
+		<msg1>Select annotative entities:</msg1>
+	</mpRemoveAnnotScale>
+	<mpTotals LocalName="Totals"
+            Description="Plugin for quickly creating Totals with the possibility of obtaining values from the drawing"
+            FullDescription="Plugin collects data from tables inserted into the current document. The list of reference documents is collected according to the regulatory documents that are present in the plugin database">
+		<insert>Insert table</insert>
+		<accept>Accept</accept>
+		<cancel>Cancel</cancel>
+		<xml>xml-file</xml>
+		<h1>Russia</h1>
+		<h2>Ukraine</h2>
+		<h3>Belarus</h3>
+		<h4>Settings</h4>
+		<h5>Create a file automatically</h5>
+		<h6>If this option is enabled and the current document is saved, the shared data file (Drawing name_Totals.xml) will be automatically created in the current drawing location directory when the plugin starts</h6>
+		<h7>Inserting tables</h7>
+		<h8>Table scale:</h8>
+		<h9>Text height:</h9>
+		<h10>Row height:</h10>
+		<h11>Text style:</h11>
+		<h13>Not saved!</h13>
+		<h14>Save Totals file</h14>
+		<h15>Load Totals file</h15>
+		<h16>Get Totals from model or specified layouts</h16>
+		<h17>Get Totals</h17>
+		<h18>Statement drawings</h18>
+		<h19>Sheet</h19>
+		<h20>Name</h20>
+		<h21>Note</h21>
+		<h22>Add new row</h22>
+		<h23>Delete selected row</h23>
+		<h24>Move selected row up</h24>
+		<h25>Move selected row down</h25>
+		<h26>Insert table in current drawing</h26>
+		<h27>Statement specifications</h27>
+		<h28>Statement reference documents</h28>
+		<h29>Designation</h29>
+		<h30>In model</h30>
+		<h31>As formats use:</h31>
+		<h32>ModPlus formats</h32>
+		<h33>Formats from list (in form of blocks):</h33>
+		<h34>In layouts</h34>
+		<h35>Search in layouts is made on tables without taking into account the format! It is conventionally accepted that one layout corresponds to one format</h35>
+		<h36>Collect:</h36>
+		<h37>Tables are not saved to file! After closing, all data will be lost!\nAre you sure you want to close the window?</h37>
+		<h38>Existing tables will be overwritten!\nContinue?</h38>
+		<h39>The selected item will be permanently deleted\nContinue?</h39>
+		<!-- todo remove start -->
+		<h40>Statement drawings has no values</h40>
+		<h41>Statement specifications has no values</h41>
+		<h42>Statement reference documents has no values</h42>
+		<!-- todo remove end -->
+		<h43>Available in full version!</h43>
+		<h44>Overwrite existing tables?\nYes - overwrite, No - supplement</h44>
+		<h45>No blocks found in the current space!</h45>
+		<!-- todo remove -->
+		<h46>Error reading settings!</h46>
+		<h47>In the table file not found a table with a table style</h47>
+		<h48>Run the "Tables" plugin to overwrite the table file</h48>
+		<h49>No file with tables found!\nYou need to start the "Tables" plugin</h49>
+		<h50>Finding data in layout:</h50>
+		<h51>The view screen is cropped by an unhandled object!</h51>
+		<h52>Viewport №</h52>
+		<h53>trimming object:</h53>
+		<h54>Insertion point:</h54>
+		<h55>No endpoints have been selected for searching!</h55>
+		<h56>No variants have been chosen for searching the format!</h56>
+		<h57>No layouts have been selected for searching!</h57>
+		<h58>Unselect</h58>
+		<h59>Select all</h59>
+		<h60>Search only in current drawing</h60>
+		<h61>You must select one or more drawings in the list of open drawings or set the checkbox "Search only in current drawing"</h61>
+		<h62>Write back</h62>
+		<h63>Write back the modified data</h63>
+		<h64>There is modified data that can be written back</h64>
+	</mpTotals>
+	<mpProductInsert LocalName="Product insert"
+                   Description="Plugin of inserting products from the ModPlus database as blocks containing extended data"
+                   FullDescription="Plugin creates AutoCAD blocks based on data from the database. Extended data is added to the blocks, which allows processing these blocks with other plugins and creating a specification based on them\nPlugin also allows you to add extended data to ordinary AutoCAD entities\nImportant! Blocks must be inserted with this plugin or copy already inserted, otherwise (when inserted by normal means AutoCAD), extended data will not be added!">
+		<!-- todo remove start -->
+		<close>Close</close>
+		<accept>Accept</accept>
+		<cancel>Cancel</cancel>
+		<!-- todo remove end -->
+		<all>All</all>
+		<cb1>Metal</cb1>
+		<cb2>Concrete</cb2>
+		<cb3>Wood/Plastics</cb3>
+		<cb4>Materials</cb4>
+		<cb5>Other</cb5>
+		<h1>Edit the list of documents used by the plugin</h1>
+		<h2>Open the database search bar</h2>
+		<!-- todo remove -->
+		<h3>Search</h3>
+		<h4>2 characters or more</h4>
+		<h5>PRODUCT INSERT</h5>
+		<h6>Choose a section:</h6>
+		<h7>Filter by groups:</h7>
+		<h8>Select a document:</h8>
+		<h9>Open image</h9>
+		<h10>Acting</h10>
+		<h11>Inactive</h11>
+		<h12>No information or legislation</h12>
+		<h13>Length, mm</h13>
+		<h14>Measure between two points</h14>
+		<h15>Diameter, mm</h15>
+		<h16>Width, mm</h16>
+		<h17>Height (thickness), mm</h17>
+		<h18>Steel:</h18>
+		<h19>Density, kg/m³:</h19>
+		<h20>Save the entered dimension values</h20>
+		<h21>Product position</h21>
+		<h22>Insertion Option</h22>
+		<h23>Masking</h23>
+		<h24>Add masking to hide items behind the block</h24>
+		<h25>Insert</h25>
+		<h26>Inserting a product in the form of a block with a simple geometry and with extended data</h26>
+		<h27>Replace block</h27>
+		<h28>Replace block representing the product</h28>
+		<h29>Add to entity</h29>
+		<h30>Add to the specified entity extended data containing information about the product</h30>
+		<h31>Show documents for the database section:</h31>
+		<h32>Document status:</h32>
+		<h33>Valid</h33>
+		<h34>Not valid</h34>
+		<h35>No information or legislation</h35>
+		<h36>PRODUCT DATA</h36>
+		<h37>By two points</h37>
+		<h38>In the form of polyline</h38>
+		<h39>The insertion options "By two points" and "In the form of polyline" are only available for linear products (products whose length is required). The insertion option will use if it is active and selected. When using either of the two options, you do not need to pre-specify the length of the product in the window. The "By two point" insert option is available when you select the "Side view" or "Top view" display option. The insertion option "In the form of polyline" is available when selecting the "Front view (section)" display option</h39>
+		<h40>Document's status:</h40>
+		<h41>Block scale:</h41>
+		<rb1>Side view</rb1>
+		<rb2>Front view (section)</rb2>
+		<rb3>Top view</rb3>
+		<s1>Side</s1>
+		<s2>Front (Section)</s2>
+		<err1>Error creating block name!</err1>
+		<err2>Incorrect block name!</err2>
+		<msg1>Select block for replace:</msg1>
+		<msg2>The selected block does not contain the extended data of the ModPlus product\nReplace this block?</msg2>
+		<msg3>Select entities in which you want to add data for the product</msg3>
+		<msg4>Enter the length of the product</msg4>
+		<msg5>Enter the diameter of the product</msg5>
+		<msg6>Enter the width of the product</msg6>
+		<msg7>Enter the height of the product</msg7>
+		<msg8>Insertion point:</msg8>
+		<msg9>MP:Product data</msg9>
+		<msg10>First point</msg10>
+		<msg11>Second point</msg11>
+	</mpProductInsert>
+	<mpDrawOrderByLayer LocalName="Draworder by layer"
+                      Description="Plugin serves to change the draworder according to the layers"
+                      FullDescription="Plugin processes the layers marked with check marks in the window, changing the drawing order according to the order of the marked layers. There is a mode &quot;Auto&quot;, which automatically changes the order of drawing objects on one of the two specified layers when creating or editing">
+		<h1>DRAWORDER BY LAYER</h1>
+		<h2>Reverse list</h2>
+		<h3>Select all</h3>
+		<h4>Unselect all</h4>
+		<h5>Inversion selection</h5>
+		<h6>Auto mode</h6>
+		<h7>Move front</h7>
+		<h8>Move back</h8>
+		<h9>Apply</h9>
+		<h10>ModPlus: Entity on layer:</h10>
+		<h11>moved front</h11>
+		<h12>moved back</h12>
+		<h13>Save the current position of layers in the drawing</h13>
+		<h14>Load and apply the layer position stored in the current drawing. Layers that have been added after the position is saved will be moved to the end of the list</h14>
+	</mpDrawOrderByLayer>
+	<mpDocTemplates LocalName="Templates. Stage P"
+                  Description="Plugin allows you to create templates of the text part of the section according to &quot;Resolution of the Russian Federation No.87&quot; with the title page according to GOST R 21.1101-2013">
+		<h1>TEMPLATES. STAGE P</h1>
+		<h2>Common Properties</h2>
+		<h3>Project Name</h3>
+		<h4>Project Number</h4>
+		<h5>Chief Engineer</h5>
+		<h6>Chief Project Engineer</h6>
+		<h7>Completed</h7>
+		<h8>Standard control</h8>
+		<h9>Organization</h9>
+		<h10>Certificate of admission (SRO)</h10>
+		<h11>Customer</h11>
+		<h12>Get from fields</h12>
+		<h13>Get data from fields (see plugin "Title blocks")</h13>
+		<h14>Templates</h14>
+		<h15>Objects of capital constr.</h15>
+		<h16>Linear Objects</h16>
+		<h17>Create</h17>
+		<h18>Cancel</h18>
+		<h19>You did not specify any template to create</h19>
+		<h20>Creating templates</h20>
+		<h21>Opening the Word application</h21>
+		<h22>Creating a template</h22>
+		<h23>Open a Word file</h23>
+	</mpDocTemplates>
+	<mpPrPosition LocalName="Product position"
+                Description="Plugin adds/removes a position to the selected products and allows position marking of the item">
+		<h1>Select entities that are ModPlus products</h1>
+		<h2>Delete</h2>
+		<h3>Element</h3>
+		<h4>Specify position</h4>
+		<h5>Select entities that are ModPlus products to delete a position</h5>
+		<h6>Select the type of marking for the product</h6>
+		<h7>Position</h7>
+		<h8>Nothing/Text/Multileader</h8>
+		<h9>MP:Multileader with mark</h9>
+		<h10>Insertion point</h10>
+	</mpPrPosition>
+	<mpPrToTable LocalName="Products to table"
+               Description="Plugin allows you to fill the specification table with the selected ModPlus products"
+               FullDescription="Plugin collects data for the specification from the extended product data (blocks created by the &quot;Insert product&quot; plugin, or AutoCAD primitives with the expanded data added by the &quot;Insert product&quot; plugin), as well as from blocks that have attributes for the specification. It is possible to specify a line from which the table will be populated">
+		<!-- todo remove start -->
+		<yes>Yes</yes>
+		<no>No</no>
+		<!-- todo remove end -->
+		<h1>Select entities that are ModPlus products</h1>
+		<h2>Row</h2>
+		<h3>Decimals</h3>
+		<h4>Ask a row to start filling</h4>
+		<h5>A number of symbols after comma</h5>
+		<h6>Select table</h6>
+		<h7>Wrong choice! This is not a table!</h7>
+		<h8>MP:Add to specification</h8>
+		<h9>Product search</h9>
+	</mpPrToTable>
+	<mpDimBreak LocalName="Dim break"
+              Description="Break the selected dimension into two or more new"
+              FullDescription="Plugin allows you to break the selected linear or parallel dimension into two or more dimensions by dynamically specifying a new point that will be common for the two new dimensions">
+		<h1>Select dimension</h1>
+		<h2>Wrong choice!</h2>
+		<h3>Break point</h3>
+	</mpDimBreak>
+	<mpBlkReplace LocalName="Block replace"
+                Description="Plugin allows quick replacement of blocks in the drawing with a sample block"
+                FullDescription="Plugin works in two modes: Replace selected - allows you to replace all selected blocks with one sample block; Replace similar - allows you to replace all occurrences of one block with one sample block. Allows you to delete the description of the replaced block from the drawing database. By analogy with the command &quot;PURGE&quot;. There are various settings">
+		<h1>Select replaced block</h1>
+		<wrong>Wrong choice!</wrong>
+		<h2>Select replacing block</h2>
+		<h3>Select multiple blocks to replace them</h3>
+		<h4>Eliminate unnecessary blocks</h4>
+		<h5>Delete replaced blocks from the drawing database?</h5>
+		<yes>Yes</yes>
+		<no>No</no>
+		<h6>Plugin work variant</h6>
+		<k1>seLected</k1>
+		<k2>Similar</k2>
+		<k3>seTtings</k3>
+		<h7>For copied blocks, repeat:</h7>
+		<h8>layer of replaced block</h8>
+		<h9>scale of replaced block</h9>
+		<h10>transformation (mirror and rotation) of replaced block</h10>
+		<h11>only rotation of replaced block</h11>
+		<h12>Removing replaced blocks from DB:</h12>
+		<h13>Ask</h13>
+		<h14>Automatically remove</h14>
+		<h15>Do not remove</h15>
+		<h16>Close</h16>
+		<h17>All settings are automatically saved</h17>
+	</mpBlkReplace>
+	<mpPlinesEdit LocalName="Polylines"
+                Description="Collection of various plugins for working with polylines">
+		<h1>POLYLINES</h1>
+		<h2>Plugin works with 3D polylines</h2>
+		<h3>Plugin works with 2D polylines</h3>
+		<h4>Plugin works with LW polylines</h4>
+		<h5>Add Panel to Ribbon</h5>
+		<h6>Color of auxiliary geometry:</h6>
+		<h7>The ModPlus tab is not found</h7>
+		<h8>The ModPlus tab was not found to add a work panel to polylines</h8>
+		<h9>Polylines</h9>
+		<h10>Work option:</h10>
+		<h11>Min. machined arc radius:</h11>
+		<h12>Any</h12>
+		<h13>Divide the arc by an equal number of segments\nThe image shows a variant of dividing by 3 segments\nR is the arc radius in the polyline</h13>
+		<h14>Divide the arc into segments by specifying the length of the arc segments resulting from the division\nR is the arc radius in the polyline\nL - length of the arc segment</h14>
+		<h15>Divide the arc into segments by specifying the chord deviation (segment height)\nR is the arc radius in the polyline\nH - segment height</h15>
+		<h16>Divide the arc into segments by specifying the length of the chord\nR is the arc radius in the polyline\nX - chord length</h16>
+		<h17>Delete selected polylines</h17>
+		<h18>Exclude endpoints</h18>
+		<h19>Copy blocks:</h19>
+		<h20>Rotate:</h20>
+		<h21>TOLERANCES</h21>
+		<h22>P is the point of the polyline</h22>
+		<h23>- Plugin works by checking both conditions</h23>
+		<h24>H is the maximum deviation from the straight line:</h24>
+		<h25>a - angle tolerance:</h25>
+		<accept>Accept</accept>
+		<cancel>Cancel</cancel>
+		<cb1>Number of segments</cb1>
+		<cb2>Length of segment</cb2>
+		<cb3>Chord deviation</cb3>
+		<cb4>Chord length</cb4>
+		<cb5>by insertion point of the block</cb5>
+		<cb6>by geometric center</cb6>
+		<cb7>do not rotate</cb7>
+		<cb8>rotate by previous segment</cb8>
+		<cb9>rotate by next segment</cb9>
+		<l1>Convert 3D polyline to LW</l1>
+		<d1>Create copies of selected 3D polylines as LW-polylines (2D) with transfer to level 0.0</d1>
+		<l2>Deleting matching polyline vertices</l2>
+		<d2>Deleting adjacent vertices of selected polylines that have the same coordinates</d2>
+		<l3>Removing vertices that lie on a straight line</l3>
+		<d3>Deleting adjacent vertices of selected polyline, which lie on a straight line. It is possible to set tolerance for deviation from the straight or angular tolerance</d3>
+		<l4>Placing an object at the vertices of a polyline</l4>
+		<d4>Place the selected object in the vertices of the polyline. It is possible to rotate the object along the polyline segment. Blocks can be placed both on the geometric center, and on the insertion point</d4>
+		<l5>Replacing an arc segment with linear</l5>
+		<d5>Replacing the specified arc segment of the polyline with a linear</d5>
+		<l6>Replacing an linear segment with arc</l6>
+		<d6>Replacing the specified linear (or arc) segment of the polyline with an arc. It is possible to construct an arc along a tangent or a point on an arc</d6>
+		<l7>Dynamically adding a vertex</l7>
+		<d7>Dynamically adding a vertex to the specified polyline</d7>
+		<l8>Drawing a rectangle by three points</l8>
+		<l9>Removing Arc Segments from a Polyline</l9>
+		<d9>Remove polyline arc segments by replacing them with linear segments. There are several options for the plugin: the number of segments, the length of segments, the height of segments (chord deviation), the length of the chord</d9>
+		<l10>Building the middle line</l10>
+		<d10>The construction of a middle line (as polyline) between two specified curves (segments, polylines or splines)</d10>
+		<wrong>Wrong choice!</wrong>
+		<k1>Select 3D polylines</k1>
+		<k2>Select polylines</k2>
+		<k3>Vertices removed</k3>
+		<k4>Polyline</k4>
+		<k5>does not contain matching vertices</k5>
+		<k6>Select polylines or</k6>
+		<k7>Tolerances</k7>
+		<k8>The maximum deviation from the straight line (H) is accepted</k8>
+		<k9>Angular tolerance in degrees (a) accepted</k9>
+		<k10>contains only</k10>
+		<k11>vertices</k11>
+		<k12>does not contain vertices lying on a straight line or suitable under the conditions of tolerance</k12>
+		<k13>Select polyline</k13>
+		<k14>Select an object to place</k14>
+		<k15>Select an arc segment of the polyline</k15>
+		<k16>Select the polyline segment</k16>
+		<k17>Specify a point on the tangent or: [Tangent/traverse Point]</k17>
+		<k18>Specify a point on the arc or: [Tangent/traverse Point]</k18>
+		<k19>Specify the point (hold Ctrl to move the vertex forward)</k19>
+		<k20>Specify first point</k20>
+		<k21>Specify second point</k21>
+		<k22>Specify third point</k22>
+		<k23>Enter the number of segments</k23>
+		<k24>Enter the length of the segment</k24>
+		<k25>Enter the chord deviation (segment height)</k25>
+		<k26>Enter the length of the chord</k26>
+		<k27>Select first support element (line, polyline or spline)</k27>
+		<k28>Select second support element (line, polyline or spline)</k28>
+		<k29>Number of control points</k29>
+		<k30>Simplify the polyline?\nThe points on the same straight line will be deleted</k30>
+	</mpPlinesEdit>
+	<mpSpecifications LocalName="Specifications"
+                    Description="Plugin for the formation and filling of general specifications"
+                    FullDescription="Plugin allows you to add items to the context menu of AutoCAD, allowing you to expand the ability to work with the specifications: Context menu for tables: Add product from the database - allows you to add products from the plugin database directly into the AutoCAD table; Context menu for blocks: Add/change attributes for the specification - allows you to add attributes to the blocks for the specification (see details in the help)">
+		<!-- todo remove start -->
+		<accept>Accept</accept>
+		<cancel>Cancel</cancel>
+		<h1>SPECIFICATIONS</h1>
+		<h2>Russia</h2>
+		<h3>Ukraine</h3>
+		<h4>Belarus</h4>
+		<h5>Settings</h5>
+		<!-- todo remove end -->
+		<h6>CONTEXTUAL MENUS</h6>
+		<h7>Available in the full version of the plugin</h7>
+		<h8>Context menu for tables:</h8>
+		<h9>Add product from the database</h9>
+		<h10>Context menu for blocks:</h10>
+		<h11>Add/Change attributes for specification</h11>
+		<h12>TABLE SETTINGS</h12>
+		<h13>Table scale:</h13>
+		<h14>Text height:</h14>
+		<h15>Row height:</h15>
+		<h16>Text style:</h16>
+		<h17>Only for the current file</h17>
+		<h18>Save</h18>
+		<h19>Delete current specification</h19>
+		<h20>Create a new empty specification</h20>
+		<h21>Add a new item. The item is added one line lower than the currently selected line in the specification. If nothing is selected in the specification, then the item is inserted at the end of the specification</h21>
+		<h22>Edit selected item</h22>
+		<h23>Add selected products from the drawing to the specification</h23>
+		<h24>Move selected item up</h24>
+		<h25>Move selected item down</h25>
+		<h26>Delete selected item</h26>
+		<h27>Fill table</h27>
+		<h28>Insert table</h28>
+		<h29>Binding:</h29>
+		<h30>Select from the list or write</h30>
+		<h31>Show documents for the database section:</h31>
+		<h32>Document status:</h32>
+		<h33>Valid</h33>
+		<h34>Not valid</h34>
+		<h35>No information or legislation</h35>
+		<h36>SPECIFICATION NAME</h36>
+		<h37>Enter a name for the specification</h37>
+		<h38>For this drawing there is already a specification with this name!</h38>
+		<h39>Product search</h39>
+		<h40>MANUAL INPUT</h40>
+		<h41>Pos.</h41>
+		<h42>Designation</h42>
+		<h43>Name</h43>
+		<h44>Count</h44>
+		<h45>Mass</h45>
+		<h46>Note</h46>
+		<h47>Steel</h47>
+		<h48>Edit the list of documents used by the plugin</h48>
+		<h49>Open the database search bar</h49>
+		<!-- todo remove -->
+		<h50>Search</h50>
+		<h51>2 characters or more</h51>
+		<h52>PRODUCT FROM BASE</h52>
+		<h53>Choose a section:</h53>
+		<h54>Filter by groups:</h54>
+		<h55>Select a document:</h55>
+		<h56>Open image</h56>
+		<h57>Valid</h57>
+		<h58>Not valid</h58>
+		<h59>No information or legislation</h59>
+		<h60>Length, mm</h60>
+		<h61>Measure between two points</h61>
+		<h62>Diameter, mm</h62>
+		<h63>Width, mm</h63>
+		<h64>Height (thickness), mm</h64>
+		<h65>Steel:</h65>
+		<h66>Density, kg/m³:</h66>
+		<h67>Save the entered dimension values</h67>
+		<h68>Not all data entered</h68>
+		<h69>Add</h69>
+		<h70>Add and close</h70>
+		<h71>Document's status:</h71>
+		<cb1>Add from base</cb1>
+		<cb2>Add subsection</cb2>
+		<cb3>Manual input</cb3>
+		<cb4>Top left</cb4>
+		<cb5>Top right</cb5>
+		<k1>The current specification is not saved! Data will be lost!\nAre you sure you want to exit the plugin?</k1>
+		<k2>Select entities that are ModPlus products</k2>
+		<k3>Delete the selected item?</k3>
+		<k4>Specification</k4>
+		<k5>An error occurred while generating the key for the current drawing</k5>
+		<k6>The current specification is not saved and will be lost irrevocably!\nContinue?</k6>
+		<k7>The specification will be permanently deleted!\nContinue?</k7>
+		<k8>There is no file with tables! You need to run the "Tables" plugin to create it</k8>
+		<k9>Could not copy table from resource file</k9>
+		<k10>The file is created by the plugin "Specification" (mpSpecifications), which is part of the ModPlus plugin.\nDO NOT change this file manually. This can lead to errors in the plugin!</k10>
+		<k11>Insertion point</k11>
+		<k12>You did not enter anything!</k12>
+		<k13>MP:Add product from database</k13>
+		<k14>Select row</k14>
+		<k15>Do not hit the cell!</k15>
+		<k16>MP:Attributes for specification</k16>
+		<k17>ATTRIBUTES FOR SPECIFICATION</k17>
+		<all>All</all>
+		<cb6>Metal</cb6>
+		<cb7>Concrete</cb7>
+		<cb8>Wood/Plastics</cb8>
+		<cb9>Materials</cb9>
+		<cb10>Other</cb10>
+		<msg1>Enter the length of the product</msg1>
+		<msg2>Enter the diameter of the product</msg2>
+		<msg3>Enter the width of the product</msg3>
+		<msg4>Enter the height of the product</msg4>
+		<msg5>Specify density</msg5>
+		<ad1>Product position</ad1>
+		<ad2>Designation for the product</ad2>
+		<ad3>Product name</ad3>
+		<ad4>Product mass</ad4>
+		<ad5>Note for the product</ad5>
+		<s1>Assemblies</s1>
+		<s2>Details</s2>
+		<s3>Standard products</s3>
+		<s4>Materials</s4>
+		<s5>Spatial frames</s5>
+		<s6>Meshes</s6>
+		<s7>Mortar products</s7>
+	</mpSpecifications>
+	<mpLayoutManager LocalName="Layout manager"
+                   Description="Drawing layout manager displayed in the palette">
+		<accept>Accept</accept>
+		<cancel>Cancel</cancel>
+		<close>Close</close>
+		<h1>New layout</h1>
+		<h2>New layout from template</h2>
+		<h3>Layout</h3>
+		<h4>Are you sure you want to delete layout</h4>
+		<h5>Are you sure you want to delete selected layouts?</h5>
+		<h6>You can not rename the "Model" tab</h6>
+		<h7>Please select one layout</h7>
+		<h8>Layout manager</h8>
+		<h9>CREATE LAYOUT</h9>
+		<h10>Layout name:</h10>
+		<h11>Specify layout name</h11>
+		<h12>There is already layout with this name in the current drawing!\nPlease enter a different name</h12>
+		<h13>LAYOUT MANAGER: SETTINGS</h13>
+		<h14>Autostart with AutoCAD</h14>
+		<h15>Connect to the ModPlus palette</h15>
+		<h16>Request name when creating layout</h16>
+		<h17>Switch to a new layout when creating</h17>
+		<h18>Display Model in the list</h18>
+		<h19>MOVE/COPY</h19>
+		<h20>Place selected layouts</h20>
+		<h21>Before layout:</h21>
+		<h22>Create a copy</h22>
+		<h23>Number of copies:</h23>
+		<h24>You need to select a layout in the list!</h24>
+		<h25>move to the end</h25>
+		<h26>RENAME LAYOUT</h26>
+		<h27>Current layout name:</h27>
+		<h28>New layout name:</h28>
+		<h29>Following characters are not permitted in the layout name</h29>
+		<mi1>Open</mi1>
+		<mi2>Delete</mi2>
+		<mi3>Rename</mi3>
+		<mi4>Move/Copy</mi4>
+		<mi5>Select all layouts</mi5>
+		<mi6>Layout settings manager</mi6>
+		<mi7>Print</mi7>
+		<mi8>Export Layout to Model</mi8>
+	</mpLayoutManager>
+	<mpSheetNumbers LocalName="Sheet numbering"
+                  Description="Plugin for setting the sheet number in the document and in the volume in ModPlus format and title blocks"
+                  FullDescription="Plugin works in models and in sheets. First you need to get data that is read from the title blocks and formats of the ModPlus plugin. After specifying new data, you just need to apply the changes">
+		<h1>SHEET NUMBERING</h1>
+		<h2>Get data from current drawing</h2>
+		<h3>In model</h3>
+		<h4>Unselect all</h4>
+		<h5>Sheet name</h5>
+		<h6>No. in doc.</h6>
+		<h7>Autonumbering values down</h7>
+		<h8>All "Number in document" values will be automatically numbered from this cell. An integer must be entered in the cell</h8>
+		<h9>No. in volume</h9>
+		<h10>All "Number in volume" values will be automatically numbered from this cell. An integer must be entered in the cell</h10>
+		<h11>In layouts</h11>
+		<h12>Layout name</h12>
+		<h13>Available in full version</h13>
+		<h14>You need to go to the "Model" tab</h14>
+		<h15>Search by ModPlus Formats</h15>
+		<h16>No field for number</h16>
+		<h17>No Title block</h17>
+		<h18>No cell for name</h18>
+		<h19>No Format</h19>
+		<h20>Retrieving data from layout</h20>
+		<h21>Setting data for layout</h21>
+		<h22>Setting data in model</h22>
+		<h23>Select all</h23>
+		<h24>You must enter an integer in the "Number in document"</h24>
+		<h25>You must enter an integer in the "Number in volume"</h25>
+		<h26>Sorting:</h26>
+		<h27>Processing Search Results</h27>
+		<d1>Without sorting</d1>
+		<d2>Left to right and top to bottom</d2>
+		<d3>Left to right and bottom to top</d3>
+		<d4>Right to left and top to bottom</d4>
+		<d5>Right to left and bottom to top</d5>
+		<apply>Apply</apply>
+		<close>Close</close>
+	</mpSheetNumbers>
+	<mpDwgBase LocalName="Dwg base"
+             Description="Base of various blocks and drawings"
+             FullDescription="The dwg database allows you to insert both blocks and finished drawings (for example, details view). The dwg database is filled with users. Plugin requires access to the internet">
+		<h1>Sending user blocks and drawings to the modplus.org server</h1>
+		<h2>Search by database</h2>
+		<h3>Search</h3>
+		<h4>Search by database from 3 characters...</h4>
+		<h5>Path:</h5>
+		<h6>Description:</h6>
+		<h7>Author:</h7>
+		<h8>Source:</h8>
+		<h9>Dwg base</h9>
+		<h10>Add a new item to the local database</h10>
+		<h11>Auxiliary methods for managing the user base</h11>
+		<h12>Delete</h12>
+		<h13>Rename Group</h13>
+		<h14>Edit</h14>
+		<h15>You can scale and pan the image with the mouse wheel</h15>
+		<h16>Reduce image</h16>
+		<h17>Enlarge image</h17>
+		<h18>This is a three-dimensional block</h18>
+		<h19>Layer:</h19>
+		<h20>Close the window after inserting</h20>
+		<h21>Rotation</h21>
+		<h22>Add block to base</h22>
+		<h23>Add drawing to base</h23>
+		<h24>Change block data</h24>
+		<h25>Change drawing data</h25>
+		<h26>Sending base to the server</h26>
+		<h27>Specify one or more files from your dwg database. Plugin will archive these files and create an index file for the items stored in these files</h27>
+		<h28>Files in the user base:</h28>
+		<h29>Elements that are stored in the file:</h29>
+		<h30>The path to the file:</h30>
+		<h31>Comment</h31>
+		<h32>You can leave a comment on the archive and we will pay attention to it</h32>
+		<h33>Collect archive</h33>
+		<h34>View archive</h34>
+		<h35>Delete archive</h35>
+		<h36>Send archive to server</h36>
+		<h37>Recommendations for adding blocks</h37>
+		<h38>Recommendations</h38>
+		<h39>Select a block in the current drawing</h39>
+		<h40>Upload last entered data</h40>
+		<h41>Dwg-file:</h41>
+		<h42>Current file</h42>
+		<h43>Dwg-file into which the block will be copied</h43>
+		<h44>This is a 3D block</h44>
+		<h45>Check if the specified block is three-dimensional</h45>
+		<h46>Name:</h46>
+		<h47>The name of the block that is displayed in the plugin window</h47>
+		<h48>Brief description of the block</h48>
+		<h49>Normative document:</h49>
+		<h50>Normative document - source</h50>
+		<h51>If there is no normative document, just leave the field blank</h51>
+		<h52>Added by:</h52>
+		<h53>Who added the block to the dwg database</h53>
+		<h54>Add attributes for specifications</h54>
+		<h55>Attribute name</h55>
+		<h56>Default value</h56>
+		<h57>Block attributes:</h57>
+		<h58>Take attribute values from the block</h58>
+		<h59>Name</h59>
+		<h60>Prompt</h60>
+		<h61>Value</h61>
+		<h62>Recommendations for adding drawing</h62>
+		<h63>Rename group</h63>
+		<h64>Current group name:</h64>
+		<h65>New group name:</h65>
+		<h66>Add</h66>
+		<h67>What do you want to add?</h67>
+		<h68>Add block</h68>
+		<h69>Add drawing</h69>
+		<h70>Property</h70>
+		<h71>Value</h71>
+		<h72>Video instruction for working with the database</h72>
+		<h73>Feedback</h73>
+		<h74>Please leave an email address, a link to a VK page, Facebook, Telegram or other options for contacting you. Your contacts may be needed to inform you if the blocks (drawings) you send need to be adjusted</h74>
+		<h75>You did not specify contacts for feedback. If the blocks (drawings) you send need adjustment, then we will not be able to inform you about it!\nCollect archive anyway?</h75>
+		<h76>Alphabetical Sort</h76>
+		<h77>The path to the folder where the dwg user base is located</h77>
+		<h78>Specify the path to the dwg user base storage folder</h78>
+		<h79>Restore default value of path to dwg user base storage folder</h79>
+		<bt1>ModPlus base</bt1>
+		<bt2>User base</bt2>
+		<insert>Insert</insert>
+		<insertBlock>Insert as block</insertBlock>
+		<msg1>ModPlus database file pointer is not found!\nClose AutoCAD and run the update check by the auto-update module</msg1>
+		<msg2>Current layer</msg2>
+		<msg3>The user database file pointer was not created. Create?</msg3>
+		<msg4>The source file is missing! Download?</msg4>
+		<msg5>Downloading the database file</msg5>
+		<msg6>There is no access to the internet or modplus.org!\nPlease try again later</msg6>
+		<msg7>The group will be deleted</msg7>
+		<msg8>and all subgroups</msg8>
+		<msg9>However, dwg-files will not be deleted</msg9>
+		<msg10>Delete group</msg10>
+		<msg11>The selected item will be removed from the database</msg11>
+		<msg12>Delete item</msg12>
+		<msg13>Insertion point</msg13>
+		<msg14>Angle of rotation</msg14>
+		<msg15>You have not selected any files to archive!</msg15>
+		<msg16>Create temporary folder</msg16>
+		<msg17>Collection of required items from the database</msg17>
+		<msg18>Could not create index file</msg18>
+		<msg19>The file is ready to be sent</msg19>
+		<msg20>Could not delete temporary folder</msg20>
+		<msg21>Perhaps you have an archive opened</msg21>
+		<msg22>Could not find the file to send. Perhaps you deleted it?</msg22>
+		<msg23>There is no access to the internet or modplus.org!</msg23>
+		<msg24>Sending</msg24>
+		<msg25>Uploading a file to the server</msg25>
+		<msg26>Notification submission</msg26>
+		<msg27>File</msg27>
+		<msg28>was sent to the modplus.org server</msg28>
+		<msg29>Once the file is verified, we will add its contents to the public database</msg29>
+		<msg30>Delete the created archive?</msg30>
+		<msg31>Could not delete archive! Maybe it's open at the moment</msg31>
+		<msg32>Add a block with such data?</msg32>
+		<msg33>Could not copy the selected block to the specified file</msg33>
+		<msg34>Select block to add to database</msg34>
+		<msg35>The plugin dwg database contains a block named</msg35>
+		<msg36>Error parsing the file-pointer of plugin database!</msg36>
+		<msg37>The dwg user database contains a block named</msg37>
+		<msg38>Error parsing the file-pointer of user database!</msg38>
+		<msg39>Specify the display name of the block</msg39>
+		<msg40>Specify the path in the catalog</msg40>
+		<msg41>Check the "Current file" for dwg-file, however, the current file is not located in the directory dwg-base!</msg41>
+		<msg42>Catalog of dwg-base</msg42>
+		<msg43>Catalog of current file</msg43>
+		<msg44>Perhaps the current file has not been saved yet!</msg44>
+		<msg45>Check the "Current file" for dwg-file, however, it failed to recognize the current location of the file directory</msg45>
+		<msg46>Specify the dwg file to copy the block</msg46>
+		<msg47>Selecting a file to add a block</msg47>
+		<msg49>The specified file must be located in a subfolder of the folder</msg49>
+		<msg50>Create a new dwg database file</msg50>
+		<msg51>Do not create a file in the root of the</msg51>
+		<msg52>Create a subfolder!</msg52>
+		<msg53>Attention! The selected block is dynamic! The attributes for the specification are counted for one instance of the block!\nIf the block has several visibility options, then working with such a block will be confusing!</msg53>
+		<msg54>The current values of the attributes are filled with the default values specified when the block was created\nIf you continue, the values of the attributes will be filled with values from the selected block insert!\nGet the values of the attributes from the selected block insert?</msg54>
+		<msg55>The current file is not located in the dwg-database directory!</msg55>
+		<msg56>Unable to recognize the location directory of the current file</msg56>
+		<msg58>Save the entered data as "Last entered data"?</msg58>
+		<msg59>Selecting a drawing to add to the database</msg59>
+		<msg60>The selected file contains proxy objects and can not be added to the database!\nDelete all proxy objects and try again</msg60>
+		<msg61>Specify the folder to copy the selected file</msg61>
+		<msg62>In the specified folder there is already a file</msg62>
+		<msg63>Replace?</msg63>
+		<msg64>Do not select a folder</msg64>
+		<msg65>The selected folder should be in the subfolder of the folder</msg65>
+		<msg66>Add a drawing with such data?</msg66>
+		<msg67>The plugin database contains a drawing with the name</msg67>
+		<msg68>The user database contains a drawing with the name</msg68>
+		<msg69>Specify a display name for the drawing</msg69>
+		<msg70>Specify the dwg file for the drawing</msg70>
+		<msg71>Enter new group name</msg71>
+		<wrong>Wrong choice!</wrong>
+		<p1>Document</p1>
+		<p2>Description</p2>
+		<p3>Object type</p3>
+		<p4>Annotative</p4>
+		<p5>Dynamic</p5>
+		<p6>3D block</p6>
+		<p7>Attributes for specification</p7>
+		<p8>Added by</p8>
+		<p9>Source</p9>
+		<yes>Yes</yes>
+		<no>No</no>
+		<block>Block</block>
+		<drawing>Drawing</drawing>
+		<close>Close</close>
+		<select>Select</select>
+		<create>Create</create>
+		<accept>Accept</accept>
+		<cancel>Cancel</cancel>
+		<copy>Copy</copy>
+		<ad1>Product position</ad1>
+		<ad2>Designation for the product</ad2>
+		<ad3>Product name</ad3>
+		<ad4>Product mass</ad4>
+		<ad5>Note for the product</ad5>
+		<a1>Position</a1>
+		<a2>Designation</a2>
+		<a3>Name</a3>
+		<a4>Mass</a4>
+		<a5>Note</a5>
+		<r1>The default plugin assumes that the blocks added to the local (user) database will be added to the global database that is available to all users.</r1>
+		<r2>Therefore, try to follow the recommendations:</r2>
+		<r3>The added block should be useful in the work. No matter what professional orientation it will be</r3>
+		<r4>Do not use a wide variety of layers in the blocks, if this is not necessary. The best option is to use the standard layers of the ModPlus plugin</r4>
+		<r5>If the block is dynamic, then perhaps it is not necessary to add attributes for the specification</r5>
+		<r6>Let the blocks understandable names and descriptions, so that the user does not have to guess what it is and why</r6>
+		<r7>If you took a block from some resource, then be sure to specify the source!</r7>
+		<r8>Do not be lazy to think over the path to the block in the database</r8>
+		<r10>The default plugin assumes that the drawings added to the local (user) database will be added to the global database, which is accessible to all users.</r10>
+		<r11>Therefore, some restrictions are added to the attached drawings:</r11>
+		<r13>In the attached drawing, Proxy primitives should not be used</r13>
+		<r14>Drawings made in poor quality (for example, with multileaders from lines and text, etc.) will not be taken to the public database</r14>
+		<r15>Also try to follow the recommendations:</r15>
+		<r16>Do not use a wide variety of layers in the drawings, if this is not necessary. The best option is to use the standard layers of the ModPlus plugin</r16>
+		<r17>Do not use a large number of annotation styles in your drawings. The best option is to use the annotations styles of the ModPlus plugin</r17>
+		<r18>Do not use line types in drawings that are not standard for AutoCAD</r18>
+		<r19>Do not use fonts that are not part of the standard AutoCAD font set in drawings</r19>
+		<r20>If you took a drawing from some resource, then be sure to specify the source!</r20>
+		<r21>Do not be lazy to think over the way to the drawing in the database</r21>
+		<pp1>It is assumed that you have selected a block in a file that is not yet located in the ModPlus/Data/DwgBase directory. Therefore, you must either specify a file previously created in the ModPlus/Data/DwgBase directory to place blocks in it, or create this file. The selected block will be copied to the specified file.</pp1>
+		<pp2>If you add several blocks with a common orientation (for example, blocks of floor slabs), then create one file for them. You do not need to create a separate file for each block!</pp2>
+		<pp3>Files in the root of the ModPlus/Data/DwgBase folder can not be created! Create subfolders in it (for example, ModPlus/Data/DwgBase/Floor slabs).</pp3>
+		<pp4>If you created a file with blocks, put it in the folder DwgBase and now add blocks from the file to the database, check the "Current file" check box.</pp4>
+		<pp5>The field is filled in according to your wish</pp5>
+		<pp6>P.S. We are very happy for you, if you have an original and beautiful Nick, but try all the same to write Surname and First Name</pp6>
+		<pp7>If you are not the author of the block, then indicate the source from where this block was taken, so as not to offend its creator</pp7>
+		<pp8>The conditional path to the block in the directory that forms the structure of the tree</pp8>
+		<pp9>For example, the path "Блоки/Каталог1/Каталог2/Каталог3" will yield the following result:</pp9>
+		<pp10>Each conditional sub directory must be separated by a "/"</pp10>
+		<pp11>Adding attributes for the specifications to the block </pp11>
+		<pp12>Attributes will be added to the block when it is inserted by this plugin.</pp12>
+		<pp13>All attributes will be invisible. You can change their value in the block properties after inserting.</pp13>
+		<pp14>You can fill in the default values.</pp14>
+		<pp15>Existing block attributes</pp15>
+		<pp16>Specify the default values for the attributes. These values will be added to the block when it is inserted.</pp16>
+		<pp17>By default, the values of the attributes that were set as the "default value" when the attribute is created are populated. You can fill the attribute values with the values of the currently selected block.</pp17>
+		<pp18>Dwg-file of the drawing</pp18>
+		<pp19>To add to the database, the file must be saved in AutoCAD 2013 version!</pp19>
+		<pp20>If you have already located the file in the subfolder of the ModPlus/Data/DwgBase folder, then you can "Select" it.</pp20>
+		<pp21>If the drawing file is not located in the subfolder of the ModPlus/Data/DwgBase folder, then you can "Copy" it to it.</pp21>
+		<pp22>If you are adding an open drawing currently located in the subfolder of the ModPlus/Data/DwgBase folder, check the "Current file" check box.</pp22>
+		<pp23>The name of the drawing that is displayed in the plugin window</pp23>
+		<pp24>Brief Description of the Drawing</pp24>
+		<pp25>Who added the drawing to the dwg database</pp25>
+		<pp26>If you are not the author of the drawing, then indicate the source from where this drawing was taken, so as not to offend its creator</pp26>
+		<pp27>The conditional path to the drawing in the directory that forms the structure of the tree</pp27>
+		<u1>UTILITIES OF THE DWG USER BASE</u1>
+		<u2>Statistics</u2>
+		<u3>Edit "Path" for multiple items</u3>
+		<u4>Edit "Source" and "Added by"</u4>
+		<u5>Unused files</u5>
+		<u6>Elements without source file</u6>
+		<u7>Collect statistics</u7>
+		<u8>Select several items in the list (check the boxes) for which you want to change the "Path" in the database. Specify a new value for "Path" and click "Apply"</u8>
+		<u9>Ctrl+A - select all</u9>
+		<u10>Enter the main group</u10>
+		<u11>Blocks</u11>
+		<u12>Drawings</u12>
+		<u13>New "Path" for the specified elements of the database:</u13>
+		<u14>Select several items in the list (check the boxes) for which you want to change "Source" and "Added by". Specify a new value for "Source" and "Added by" and click "Apply" (Leave the field blank if you do not want to change the value)</u14>
+		<u15>Unused files are files located in the directory</u15>
+		<u16>that are not referenced by any element in databases (plug-in base and user database)</u16>
+		<u17>Find unused files</u17>
+		<u18>Delete selected unused files</u18>
+		<u19>Also, images for these files and .bak files will be deleted</u19>
+		<u20>Elements without a source file are items in the user database that reference a non-existent source file</u20>
+		<u21>Find items without source file</u21>
+		<u22>Specified source file:</u22>
+		<u23>Delete selected items</u23>
+		<u24>Processing of base elements:</u24>
+		<u25>You can not specify only the main group!</u25>
+		<u26>You did not choose anything!</u26>
+		<u27>Attention! The changes you made can not be undone!\nContinue?</u27>
+		<u28>Processing of database elements completed</u28>
+		<u29>The user database contains</u29>
+		<u30>items</u30>
+		<u31>Of them:</u31>
+		<u32>Blocks:</u32>
+		<u33>Drawings:</u33>
+		<u34>Among</u34>
+		<u35>blocks there are:</u35>
+		<u36>Dynamic blocks:</u36>
+		<u37>Annotative blocks:</u37>
+		<u38>Three-dimensional blocks:</u38>
+		<u39>Blocks that have attributes for the specification:</u39>
+		<u40>User database is filled with</u40>
+		<u41>authors:</u41>
+		<u42>Existing dwg files used by the database:</u42>
+		<u43>Among references to dwg-files</u43>
+		<u44>invalid references were found. Those. source files are missing!</u44>
+		<u45>Unused files not found!</u45>
+		<u46>The selected files will be permanently deleted!\nContinue?</u46>
+		<u47>Deleted files</u47>
+		<u48>Failed to delete files:</u48>
+		<u49>Files can not be accessed. Perhaps they are open</u49>
+		<u50>No matching items were found!</u50>
+		<u51>The selected items will be deleted irrevocably!\nContinue?</u51>
+		<u52>Items deleted:</u52>
+		<u53>Specify at least one value ("Source" or "Added by") to replace</u53>
+		<u54>Rename source file</u54>
+		<u55>Select one of the database files in the list, specify a new file name without an extension, and click "Apply"</u55>
+		<u56>New file name without extension</u56>
+		<u57>Rename</u57>
+		<u58>You did not specify a new file name</u58>
+		<u59>The file name can not contain the following characters:</u59>
+		<u60>Can not access the file. Maybe it's open</u60>
+		<u61>Already exists a file:</u61>
+	</mpDwgBase>
+	<mpESKD LocalName="ModPlus ISO"
+          Description="A collection of plugins that create smart objects for drawings">
+		<tab1>Lines</tab1>
+		<tab2>Settings</tab2>
+		<tab3>Axes</tab3>
+		<tab4>Styles and settings</tab4>
+		<tab5>Working with styles and settings of ModPlus smart entities</tab5>
+		<tab6>Properties palette</tab6>
+		<tab7>ModPlus smart entities properties palette</tab7>
+		<tab8>Views, sections</tab8>
+		<tab9>Tools</tab9>
+		<tab10>Search</tab10>
+		<tab11>Level marks</tab11>
+		<tab12>Search by value</tab12>
+		<tab13>Search for smart entities by type</tab13>
+		<tab14>Search for smart entities by the value of string and numeric properties</tab14>
+		<tab15>Leaders</tab15>
+		<tab16>Marks</tab16>
+		<defl>Default</defl>
+		<err1>Could not find file</err1>
+		<err2>Failed to load linetype</err2>
+		<err5>Error getting data from the registry! Run the Configurator to update the data in the registry</err5>
+		<msg1>Specify the insertion point:</msg1>
+		<msg2>Specify an endpoint:</msg2>
+		<msg3>Select a block that is an ModPlus smart entity</msg3>
+		<msg5>Specify next point:</msg5>
+		<msg6>Select Polyline:</msg6>
+		<msg7>Delete the original polyline?</msg7>
+		<msg8>Copy layer? [Yes/No]</msg8>
+		<msg9>Processed smart entities</msg9>
+		<msg10>smart entities of the specified types are not found in the current space</msg10>
+		<msg11>Specify the base point:</msg11>
+		<msg12>Specify the level point:</msg12>
+		<msg13>Specify the position point of the Level Mark:</msg13>
+		<msg14>Select Level Marks:</msg14>
+		<msg15>Select reference Level Mark:</msg15>
+		<msg16>Remove objects from the selection:</msg16>
+		<msg17>Specify the frame point:</msg17>
+		<msg18>Specify the leader point:</msg18>
+		<wrong>Invalid object!</wrong>
+		<vc1>VARIOUS</vc1>
+		<vc2>UNDEFINED</vc2>
+		<h1>Palette settings</h1>
+		<h2>Autostart with AutoCAD</h2>
+		<h3>Connect to the ModPlus palette</h3>
+		<h4>Exceeded maximum limit</h4>
+		<h5>of the selected objects</h5>
+		<h6>Palette work is stopped</h6>
+		<h7>Maximum limit of the selected objects</h7>
+		<h8>can be changed in the plugin</h8>
+		<h9>settings</h9>
+		<h10>plugins</h10>
+		<h11>ISO properties</h11>
+		<h12>System</h12>
+		<h13>New User Style</h13>
+		<h14>Style editor</h14>
+		<h15>Settings</h15>
+		<h16>Add a new custom style</h16>
+		<h17>Delete the selected custom style</h17>
+		<h18>Set the selected style as the default style</h18>
+		<h19>Create a new style based on the selected smart entity</h19>
+		<h20>Property description:</h20>
+		<h21>General settings</h21>
+		<h22>When creating an entity, set the scale from the style</h22>
+		<h23>If checked, then when creating the smart entity, the scale will be applied to it, set in the current style, regardless of the annotative scale of the drawing. Otherwise, the annotative scale of the drawing will be applied to the entity</h23>
+		<h24>When creating an entity, set the layer from the style</h24>
+		<h25>If checked, then when creating the smart entity, it will be applied layer, installed in the current style, regardless of the current layer of the drawing. Otherwise, the current layer of the drawing will be applied to the entity</h25>
+		<h26>If there is no layer in the current document specified in the style:</h26>
+		<h27>Apply current layer</h27>
+		<h28>When you create a smart entity, the current drawing layer is applied to it</h28>
+		<h29>Create and apply a layer from the style</h29>
+		<h30>In the current document, a layer set in style will be created and applied to the smart entity</h30>
+		<h31>When creating an entity, set the text style from the style</h31>
+		<h32>If checked, then when you create the smart entity, a text style will be applied to it, set in the current style, regardless of the current text style of the drawing. Otherwise, the current text style of the drawing will be applied to the entity</h32>
+		<h33>If there is no text style specified in the style in the current document:</h33>
+		<h34>Apply current text style</h34>
+		<h35>When creating an smart entity, the current text style of the drawing will be applied to it</h35>
+		<h36>Create and apply a text style from the style</h36>
+		<h37>In the current document, a text style will be created and applied to the entity, set in style</h37>
+		<h38>The maximum limit of the selected entities when the property palette stops working. This setting is needed to speed up the work in the AutoCAD environment by disabling the reading of object properties. For example, if you need to select 1000 objects to copy to another drawing, then processing the properties of all these objects is not necessary</h38>
+		<h39>Maximum limit of the selected entities (0 - always work):</h39>
+		<h40>Smart entities settings</h40>
+		<h41>Straight axis</h41>
+		<h42>Change the scale of the line type in proportion to the scale of the entity</h42>
+		<h43>The scale of the line type that is set for the axis will vary in proportion to the basic scale of the axis. For example, if you set the axis scale to 1:1 and scale the line type to 2, then if you set the axis scale to 1:100, the line type scale becomes 200</h43>
+		<h44>Continue values of created axes</h44>
+		<h45>When creating axes, there will be search for already created axes in the drawing and collect their values from the first axis marker, followed by sorting the values in ascending order. For the created axis, the axis marker value will be set next from the last found value</h45>
+		<h46>Show helper lines</h46>
+		<h47>When you select a Level Mark, auxiliary lines from the base point to the level point and from the level point to the level mark will be shown</h47>
+		<h48>Break Line</h48>
+		<h49>General</h49>
+		<h50>Style:</h50>
+		<h51>Geometry</h51>
+		<h52>Style of smart entity</h52>
+		<h53>Basic style for Break Line</h53>
+		<h54>Style name</h54>
+		<h55>Style description</h55>
+		<h56>Create break line according to GOST 2.303-68</h56>
+		<h57>Creation of an smart entity on the basis of an anonymous block describing the line of the break according to GOST 2.303-68, by specifying two points</h57>
+		<h58>Curvilinear break</h58>
+		<h59>Cylindrical break</h59>
+		<h60>Create curvilinear break</h60>
+		<h61>Create cylindrical break</h61>
+		<h62>Creating an smart entity based on an anonymous block describing a curvilinear break, by specifying two points</h62>
+		<h63>Creating an smart entity based on an anonymous block describing a cylindrical break, by specifying two points</h63>
+		<h64>Content</h64>
+		<h65>Creating a straight axis according to GOST 21.101-97</h65>
+		<h66>Creating an smart entity based on an anonymous block describing the straight axis in accordance with GOST 21.101-97, by specifying two points</h66>
+		<h67></h67>
+		<h68>Basic style for Straight Axis</h68>
+		<h69>The selected style will be permanently deleted! Continue?</h69>
+		<h70>Style group</h70>
+		<h71>contains styles with the same name</h71>
+		<h72>Rename the styles so that there are no identical names</h72>
+		<h73>Ground line</h73>
+		<h74>Creating a ground marking line</h74>
+		<h75>Creating an smart entity based on an anonymous block describing the ground line</h75>
+		<h76>Ground line from polyline</h76>
+		<h77>Converting the selected polyline to the ground line</h77>
+		<h78>Basic style for Ground line</h78>
+		<h79>Section</h79>
+		<h80>Creating a section designation according to GOST 2.305-68</h80>
+		<h81>Creating an smart entity based on an anonymous block describing the section according to GOST 2.305-68</h81>
+		<h82>Broken section</h82>
+		<h83>Section from polyline</h83>
+		<h84>Creating a broken section designation according to GOST 2.305-68</h84>
+		<h85>Convert selected polyline to section designation</h85>
+		<h86>Continue values ​​for new sections</h86>
+		<h87>When creating a new section in the current space, the last created section will be searched, the value of which will be taken as the basis for the new section.</h87>
+		<h88>Display auxiliary section line</h88>
+		<h89>When you select a section, an auxiliary line will be displayed that passes through all points of the section</h89>
+		<h90>Dependent text movement</h90>
+		<h93>Restore text position</h93>
+		<h94></h94>
+		<h95>MP:Create analog</h95>
+		<h96>Base style for Section</h96>
+		<h97>When you move one of the texts of Section, the second text will automatically shift to the same distance</h97>
+		<h98>How to handle the "Layer" property in the "Create analog" command:</h98>
+		<h99>Search for smart entities</h99>
+		<h100>Specify types of entities to search</h100>
+		<h101>Check all</h101>
+		<h102>Uncheck all</h102>
+		<h103>Style is not in the database</h103>
+		<h104>One or more entities are located on the locked layer, they cannot be updated</h104>
+		<h105>Level mark</h105>
+		<h106>Creating a elevation in accordance with GOST 21.101-97</h106>
+		<h107>Creating an smart entity based on an anonymous block describing the elevation according to GOST 21.101-97</h107>
+		<h108>Base style for Level Mark</h108>
+		<h109></h109>
+		<h110>Align Level Marks</h110>
+		<h111>Vertical alignment of Level Marks</h111>
+		<h112>Combining the starting points</h112>
+		<h113>This command allows you to align the Level Marks according to various conditions</h113>
+		<h114>Waterproofing</h114>
+		<h115>Creating a waterproofing marking line</h115>
+		<h116>Creating an smart entity based on an anonymous block describing the waterproofing line</h116>
+		<h117>Waterproofing from polyline</h117>
+		<h118>Convert selected polyline to waterproofing line</h118>
+		<h119>For the smart entity being created that contains the displayed number, set the separator for integer and fractional parts:</h119>
+		<h120>Search value</h120>
+		<h121>Search</h121>
+		<h122>Whole word</h122>
+		<h123>Case sensitive</h123>
+		<h124>No results were found for "{0}"</h124>
+		<h125>Add all to the current selection</h125>
+		<h126>Nodal leader</h126>
+		<h127>Creating a nodal leader</h127>
+		<h128>Creating an smart entity based on an anonymous block describing the nodal leader</h128>
+		<h129>Base style for Waterproofing</h129>
+		<h130>Base style for Nodal Leader</h130>
+		<h131>Continue the values of the nodal leaders being created</h131>
+		<h132>When creating nodal leaders, there will be a search for already created nodal leaders in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created nodal leader, the value of the node number next from the last found value will be set</h132>
+		<h133>Secant nodal leader</h133>
+		<h134>Creating a secant nodal leader</h134>
+		<h135>Creating an smart entity based on an anonymous block describing the secant nodal leader</h135>
+		<h136>Continue the values of the secant nodal leaders being created</h136>
+		<h137>When creating secant nodal leaders, there will be a search for already created secant nodal leaders in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created secant nodal leader, the value of the node number next from the last found value will be set</h137>
+		<h138>Base style for Secant Nodal Leader</h138>
+		<h139>Weld joint</h139>
+		<h140>Creating of a seam symbol for welded joints in accordance with GOST 21.502-2016</h140>
+		<h141>Creating an smart entity based on an anonymous block describing the seam of welded joints in accordance with GOST 21.502-2016</h141>
+		<h142>Base style for seam symbol for welded joints</h142>
+		<h143>Weld joint from polyline</h143>
+		<h144>Convert selected polyline into a line for marking the weld seam in accordance with GOST 21.502-2016</h144>
+		<h145>Fragment mark</h145>
+		<h146>Basic style for the fragment mark</h146>
+		<h147>Creating a fragment mark</h147>
+		<h148>Creating an smart entity based on an anonymous block describing a fragment mark, by specifying two points</h148>
+		<h149>Continue the values of the fragment being created</h149>
+		<h150>When creating fragments, there will be a search for already created fragments in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created fragment will be set to the value of the fragment number following from the last value found</h150>
+		<h151>Designation View/Section label</h151>
+		<h152>Basic style for designation View/Section label</h152>
+		<h153>View label</h153>
+		<h154>Creating designation View label</h154>
+		<h155>Creating an smart entity based on an anonymous block describing the View label</h155>
+		<h156>Continue the values of the View/Section being created</h156>
+		<h157>When creating View/Section label, there will be a search for already created View/Section label in the drawing and collecting their number values, followed by sorting the values in ascending order. For the created View/Section label, the value of the number next from the last found value will be set</h157>
+		<h158>Section label</h158>
+		<h159>Creating Designation Section label</h159>
+		<h160>Creating an smart entity based on an anonymous block describing the Section label</h160>
+		<h161>Letter Line</h161>
+		<h162>Basic style for Letter Line</h162>
+		<h163>Drawing a letter line designation</h163>
+		<h164>Creating an smart entity based on an anonymous block describing the Letter Line</h164>
+		<h165>Letter Line from polyline</h165>
+		<h166>Convert the selected polyline to a Letter Line</h166>
+		<h167>View</h167>
+		<h168>Base style for the view designation</h168>
+		<h169>Creating a view designation in accordance with GOST 2.305-68</h169>
+		<h170>Creating an smart entity based on an anonymous block describing the view designation according to GOST 2.305-68</h170>
+		<h171>Level mark on plan</h171>
+		<h172>Base style for the view designation for Level mark on the plan</h172>
+		<h173>Creating Level mark on the plan in accordance with GOST 2.307</h173>
+		<h174>Creating an smart entity based on an anonymous block describing the Level mark on the plan according to GOST 2.307</h174>
+    <h175>Chain leader</h175>
+    <h176>Base style for the view designation for chain leader</h176>
+    <h177>Creating chain leader designation in accordance with GOST 2.307</h177>
+    <h178>Creating an smart entity based on an anonymous block describing the Chain leader according to GOST 2.307</h178>
+    <h179>Continue the values of the chain leader being created</h179>
+    <h180>When creating chain leaders, there will be a search for already created leaders in the drawing and collection of their values, and then sorting the values in ascending order. The value of the number or letter next to the last found value will be set for the created leader. The function works only if all created chain leaders have numeric or alphabetic values</h180>
+    <h181>Consider block rotation angle when rotating text</h181>
+    <h182>The text of the straight axis will rotate together with the axis block, when using the ROTATE command</h182>
+		<so0>Refresh graphics</so0>
+		<sot0>All found smart entities will have graphics regeneration</sot0>
+		<so1>Select</so1>
+		<sot1>All smart entities of the specified types in the current space will be selected</sot1>
+		<so2>Remove data</so2>
+		<sot2>All smart entities of the specified types in the current space will delete the extended data, which will turn the entities into ordinary blocks</sot2>
+		<so3>Explode</so3>
+		<sot3>All smart entities of the specified types in the current space will be explode</sot3>
+		<so4>Delete</so4>
+		<sot4>All smart entities of the specified types in the current space will be delete</sot4>
+		<la1>Copy</la1>
+		<la2>Do not copy</la2>
+		<la3>To ask</la3>
+		<gp1>Stretch</gp1>
+		<gp2>Move</gp2>
+		<gp3>Remove vertex</gp3>
+		<gp4>Add vertex</gp4>
+		<gp5>Add leader</gp5>
+		<gp6>Remove leader</gp6>
+		<gp7>Leader end type</gp7>
+		<blt1>Linear</blt1>
+		<blt2>Curvilinear</blt2>
+		<blt3>Cylindrical</blt3>
+		<amt1>From two sides</amt1>
+		<amt2>From above</amt2>
+		<amt3>From below</amt3>
+		<vlt1>Section</vlt1>
+		<vlt2>View</vlt2>
+		<llt1>Standard</llt1>
+		<llt2>Composite</llt2>
+		<type1>Type 1</type1>
+		<type2>Type 2</type2>
+		<glfst1>Distance between strokes</glfst1>
+		<glfst2>Half the distance between groups of strokes</glfst2>
+		<glfst3>The distance between groups of strokes</glfst3>
+		<wpfst1>Half distance between strokes</wpfst1>
+		<wpfst2>No offset</wpfst2>
+		<separator1>From ModPlus settings</separator1>
+		<separator2>From style</separator2>
+		<separator3>Dot</separator3>
+		<separator4>Comma</separator4>
+		<tha1>Left</tha1>
+		<tha2>Center</tha2>
+		<tha3>Right</tha3>
+		<ft1>Round</ft1>
+		<ft2>Rectangular</ft2>
+		<ft3>Line</ft3>
+		<ft4>No frame</ft4>
+		<let0>None</let0>
+		<let1>Half Arrow</let1>
+		<let2>Point</let2>
+    <let3>Resection</let3>
+		<let4>Angle</let4>
+		<let5>Arrow</let5>
+		<let6>Open Arrow</let6>
+		<let7>Closed Arrow</let7>
+    <let8>Section</let8>
+		<wjt1>Butt factory solid on the visible side</wjt1>
+		<wjt2>Butt factory solid on the invisible side</wjt2>
+		<wjt3>Butt mounting solid from the visible side</wjt3>
+		<wjt4>Butt mounting solid from the invisible side</wjt4>
+		<wjt5>Butt factory intermittent on the visible side</wjt5>
+		<wjt6>Butt factory intermittent on the invisible side</wjt6>
+		<wjt7>Butt mounting intermittent from the visible side</wjt7>
+		<wjt8>Butt mounting intermittent from the invisible side</wjt8>
+		<wjt9>Corner factory solid on the visible side</wjt9>
+		<wjt10>Corner factory solid on the invisible side</wjt10>
+		<wjt11>Corner mounting solid from the visible side</wjt11>
+		<wjt12>Corner mounting solid from the invisible side</wjt12>
+		<wjt13>Corner factory intermittent on the visible side</wjt13>
+		<wjt14>Corner factory intermittent on the invisible side</wjt14>
+		<wjt15>Corner mounting intermittent from the visible side</wjt15>
+		<wjt16>Corner mounting intermittent on the invisible side</wjt16>
+		<dot>Dot</dot>
+		<comma>Comma</comma>
+		<len>Length</len>
+		<p1>BreakLine type</p1>
+		<d1>BreakLine type: linear, curved or cylindrical</d1>
+		<p2>Projections per object</p2>
+		<d2>For linear break value of the projection is specified in mm For curved break the value of the projection is specified in % of the length between the main points. For cylindrical break value of the projection is not being used</d2>
+		<p3>Break width</p3>
+		<d3>Break width in mm. Only for linear type BreakLine</d3>
+		<p4>Break height</p4>
+		<d4>Break height in mm. Only for linear type BreakLine</d4>
+		<p5>Scale</p5>
+		<d5>BreakLine scale</d5>
+		<d5-1>Axis scale</d5-1>
+		<p6>Linetype scale</p6>
+		<d6>The scale of the linetype specified in the properties of block</d6>
+		<p7>Layer</p7>
+		<d7>Entity layer</d7>
+		<p8>Markers position</p8>
+		<d8>Position of markers: from two sides, from above or from below</d8>
+		<p9>Fracture</p9>
+		<d9>Fracture height of axis</d9>
+		<p10>Markers diameter</p10>
+		<d10>Diameter of axis markers</d10>
+		<p11>Markers count</p11>
+		<d11>Number of axis markers</d11>
+		<p12>First marker type</p12>
+		<d12>Type of axis first marker</d12>
+		<p13>Second marker type</p13>
+		<d13>Type of axis second marker</d13>
+		<p14>Third marker type</p14>
+		<d14>Type of axis third marker</d14>
+		<p15>Bottom fracture offset</p15>
+		<d15>Offset of bottom axis fracture</d15>
+		<p16>Top fracture offset</p16>
+		<d16>Offset of top axis fracture</d16>
+		<p16-2>Fracture offset</p16-2>
+		<d16-2>Offset of top or bottom axis fracture</d16-2>
+		<p17>Text style</p17>
+		<d17>Text style for axis text elements</d17>
+		<p18>Text height</p18>
+		<d18>Text height of axis text elements</d18>
+		<p19>Axis line type</p19>
+		<p20>First value prefix</p20>
+		<p21>First value suffix:</p21>
+		<p22>First value</p22>
+		<p23>Second value prefix</p23>
+		<p24>Second value suffix</p24>
+		<p25>Second value</p25>
+		<p26>Third value prefix</p26>
+		<p27>Third value suffix</p27>
+		<p28>Third value</p28>
+		<p29>Arrows size</p29>
+		<p30>Bottom orient marker value</p30>
+		<p31>Top orient marker value</p31>
+		<p32>Bottom orient marker</p32>
+		<d32>Visibility of the bottom orient marker</d32>
+		<p33>Top orient marker</p33>
+		<d33>Visibility of the top orient marker</d33>
+		<p34>Orient marker type</p34>
+		<d34>Type of axis orient marker</d34>
+		<p35>Line type</p35>
+		<d35>Line type of main polyline</d35>
+		<d35-1>Line type standard or compound</d35-1>
+		<p36>First stroke indent</p36>
+		<d36>Indent the first stroke in each segment of the ground line</d36>
+		<d36-1>Indent the first stroke in each segment of the waterproofing line</d36-1>
+		<p37>Stroke length</p37>
+		<p38>Distance between strokes</p38>
+		<p39>Tilt angle of the stroke</p39>
+		<p40>Indent group of strokes</p40>
+		<p41>Text style</p41>
+		<d41>Text style for text elements</d41>
+		<p42>Middle stroke length</p42>
+		<d42>The length of the middle stroke to the point of fracture</d42>
+		<p43>Stroke thickness</p43>
+		<d43>Thickness of all section strokes</d43>
+		<p44>Stroke length</p44>
+		<d44>The length of the main strokes of the section</d44>
+		<p45>Shelf indent</p45>
+		<d45>Shelf indent along the stroke in percent</d45>
+		<p46>Shelf length</p46>
+		<p47>Arrow length</p47>
+		<p48>Arrow thickness</p48>
+		<p49>Text height</p49>
+		<p50>Small text height</p50>
+		<p51>Designation</p51>
+		<p52>Designation prefix</p52>
+		<p53>Sheet number</p53>
+		<p54>Sheet number position</p54>
+		<d54>Sheet number position: on both sides, bottom, top</d54>
+		<p55>Object line</p55>
+		<d55>Whether to draw a line from the Level Mark to the measurement object</d55>
+		<p56>Object line offset</p56>
+		<d56>Offset of the object line from the measurement object</d56>
+		<p57>Bottom shelf length</p57>
+		<d57>The length of the bottom shelf from the edge of the shelf from the side of the measurement object to the arrow of the Level mark</d57>
+		<p58>Bottom shelf ledge</p58>
+		<d58>Ledge of the bottom shelf from the Level Mark arrow to the edge of the shelf on the opposite side of the measurement object</d58>
+		<p59>Arrow height</p59>
+		<p60>Arrow thickness</p60>
+		<p61>Text indent</p61>
+		<p62>Vertical text offset</p62>
+		<p63>Shelf ledge</p63>
+		<d63>Shelf ledge relative to the longest text</d63>
+		<p63-1>Shelf height</p63-1>
+		<p64>Show plus</p64>
+		<d64>Show plus if the measured value is greater than zero. This property is ignored if the text is redefined</d64>
+		<p65>Measured value</p65>
+		<p66>Redefining the text</p66>
+		<p67>Accuracy</p67>
+		<d67>Accuracy of the measured value. Sets the number of decimal places</d67>
+		<p68>Note</p68>
+		<p69>Scale of measurement</p69>
+		<d69>Sets a value in the range from 0.000001 to 1000000 by which the distance measured in the drawing is multiplied</d69>
+		<p70>Line thickness</p70>
+		<p71>Text rotation angle</p71>
+		<p72>Number separator</p72>
+		<d72>Separator for integer and fractional parts of a number</d72>
+		<p73>Text alignment</p73>
+		<d73>Horizontal text alignment</d73>
+		<p74>Note alignment</p74>
+		<p75>Show asterisk</p75>
+		<d75>Adding an asterisk at the end of the main value</d75>
+		<p76>Frame height</p76>
+		<p77>Frame width</p77>
+		<p78>Shelf position</p78>
+		<p79>Node number</p79>
+		<p80>Sheet number</p80>
+		<p81>Node address</p81>
+		<p82>Frame type</p82>
+		<p83>Corner radius</p83>
+		<d83>Corner radius of the rectangular frame</d83>
+		<d83-1>Corner radius of the fragment mark</d83-1>
+		<p84>Text is always horizontal</p84>
+		<d84>Leader with text will maintain a horizontal position after rotating the object with the "Rotate" command</d84>
+		<p85>Hide background</p85>
+		<d85>Adding wipeout along the text outline with a specified offset. The display of frames for wipeouts is controlled by the WIPEOUTFRAME and FRAME system variables.</d85>
+		<d85-1>Adding wipeout along the text outline with a specified offset. The display of frames for wipeouts is controlled by the WIPEOUTFRAME and FRAME system variables. If rectangular frame is set, then the wipeout is created along the frame without taking into account the offset</d85-1>
+		<p86>Wipeout offset</p86>
+		<d86>Wipeout offset is considered for frame types "Line" and "No frame"</d86>
+		<p87>Secant element thickness</p87>
+		<p88>Secant element length</p88>
+		<p89>Weld joint type</p89>
+		<p90>Tick mark step</p90>
+		<p91>Tick mark half-height</p91>
+		<p92>Large cross step</p92>
+		<p93>Small cross step</p93>
+		<p94>Large cross half-height</p94>
+		<p95>Small cross height</p95>
+		<p96>Series length</p96>
+		<p97>Space length</p97>
+		<p98>Interval between series</p98>
+		<p99>Small tick mark height</p99>
+		<p100>Corner radius</p100>
+		<p101>Main text</p101>
+		<p102>Small text</p102>
+		<p103>View type</p103>
+		<d103>View type: Section or View</d103>
+		<p104>Leader</p104>
+		<d104>Leader on/off</d104>
+		<p105>Line type generation</p105>
+		<d105>Line type generation along the whole polyline</d105>
+		<p106>Distance between text</p106>
+		<p107>Line Formula</p107>
+		<d107>The line formula is given by integers separated by hyphens. Each odd number (1, 3, 5, ...) specifies the stroke length. Each even number (2, 4, 6, ...) specifies a space length</d107>
+		<p108>First text indent</p108>
+		<p109>View designation</p109>
+		<p110>Level mark</p110>
+		<p111>Prefix</p111>
+		<p112>Suffix</p112>
+    <p113>Value</p113>
+	</mpESKD>
+	<mpStripMtext LocalName="Clear formatting"
+	              Description="Remove specified formatting from multiline text"
+	              FullDescription="Plugin allows you to delete the formatting of multiline text, mleaders, dimensions, attributes of blocks and tables">
+		<h1>Select type of formatting to remove</h1>
+		<h2>Check all</h2>
+		<h3>Uncheck all</h3>
+		<h4>Accept</h4>
+		<m1>Select objects containing multiline text</m1>
+		<s1>Alignment</s1>
+		<st1>Remove vertical alignment. Vertical alignment appears when there are fractions in the text</st1>
+		<s2>Tabs</s2>
+		<st2>Remove horizontal tabs</st2>
+		<s3>Color</s3>
+		<st3>Remove text color</st3>
+		<s4>Fields</s4>
+		<st4>Convert fields to plain text</st4>
+		<s5>Fonts</s5>
+		<st5>Remove font overrides in text</st5>
+		<s6>Height</s6>
+		<st6>Remove text height overrides</st6>
+		<s7>Strikethrough</s7>
+		<st7>Remove strikethrough text</st7>
+		<s8>Linefeed</s8>
+		<st8>Remove leading linefeeds</st8>
+		<s9>Mask</s9>
+		<st9>Remove background mask</st9>
+		<s10>Columns</s10>
+		<st10>Remove columns from text</st10>
+		<s11>Overline</s11>
+		<st11>Remove overline from text</st11>
+		<s12>Paragraph</s12>
+		<st12>Remove paragraph breaks</st12>
+		<s13>Oblique</s13>
+		<st13>Remove oblique from text</st13>
+		<s14>Stacking</s14>
+		<st14>Convert stacking text to line text</st14>
+		<s15>Tracking</s15>
+		<st15>Remove space between characters</st15>
+		<s16>Underline</s16>
+		<st16>Turns underline off</st16>
+		<s17>Width</s17>
+		<st17>Reset width factor</st17>
+		<s18>Non-breaking space</s18>
+		<st18>Remove non-breaking spaces from text</st18>
+		<s19>Paragraph alignment</s19>
+		<st19>Remove paragraph alignments from text</st19>
+	</mpStripMtext>
+	<mpRevitSheetsMerging LocalName="Merge Revit sheets"
+	                      Description="Merging files from Revit exports into one drawing. The plugin must be run in an empty drawing. The plugin processes files exported with the &quot;Export views on sheets and links as external references&quot; checkbox disabled">
+		<h1>File Processing...</h1>
+		<h2>Error importing sheets from a file</h2>
+		<h3>Selecting files to merge sheets</h3>
+		<h4>Layers merging...</h4>
+	</mpRevitSheetsMerging>
+</ModPlus>
