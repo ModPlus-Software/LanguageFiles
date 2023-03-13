@@ -4156,7 +4156,7 @@
 		<h11>Export Setups:</h11>
 		<h12>File name generation</h12>
 		<h13>Sheet Parameter:</h13>
-		<h14>Limit the number of characters:</h14>
+		<h14>Limit number of characters:</h14>
 		<h15>Sheet Name</h15>
 		<h16>Centering</h16>
 		<h17>Sheet Number</h17>
@@ -4248,6 +4248,12 @@
 		<h99>Project Parameter:</h99>
 		<h100>Variable:</h100>
 		<h101>You can add any system variable to the mask by enclosing it with a % symbol. For example, %OS%</h101>
+		<h102>File name mask</h102>
+		<h103>Merged file name generation</h103>
+		<h104>Activating the "Limit number of characters" option may result in identical file names if the initial part of the names of different sheets has the same value within the length limit. In this case the export will result in one file with the contents of the last processed sheet. If you activate the "Limit number of characters" option, make sure that the file names will be unique</h104>
+		<h105>User formats</h105>
+		<h106>Name</h106>
+		<h107>When creating a custom format, make sure that the entered format sizes are acceptable for the selected pdf printer</h107>
 		<iq1>Low</iq1>
 		<iq2>Medium</iq2>
 		<iq3>High</iq3>
@@ -4282,6 +4288,9 @@
 		<err19>No permissions to delete file</err19>
 		<err20>Directory format is not defined</err20>
 		<err21>Failed initialize printer</err21>
+		<err22> Linked files are only processed in saved projects! Save project "{0}" and read the sheets of linked files again</err22>
+		<err23>Format with this name is already in the list of formats</err23>
+		<err24>Format with this size is already in the list of formats</err24>
 	</mprSheetExport>
 	<mprHeightSplitter LocalName="Split by height"
 	                   Description="Splitting walls and columns by levels, reference planes or by specified parameters">
