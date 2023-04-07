@@ -3902,6 +3902,8 @@
 		<t63>Dissociate</t63>
 		<t64>Remove the association of the target parameter with the global project parameter if there is an association</t64>
 		<t65>Remove all strategies</t65>
+		<t66>Copy selected rules to clipboard</t66>
+		<t67>Paste rules from clipboard</t67>
 		<msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
 		<msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
 		<msg3>List of strategies is not empty</msg3>
@@ -3973,6 +3975,7 @@
 		<err50>Function must contain two or three arguments</err50>
 		<err51>The field with the key "{0}" is already in the list of fields of the current formula</err51>
 		<err52>Parameter "{0}" is not a reference to another model element</err52>
+		<err53>The target parameter must not contain the character "|"</err53>
 		<rh1>#</rh1>
 		<rh2>On</rh2>
 		<rh3>Formula</rh3>
@@ -4008,6 +4011,8 @@
 		<sld13>Strategy processes families that are nested within the parent family</sld13>
 		<ssd14>Pipe and Duct Insulation processing</ssd14>
 		<sld14>Processing Pipe insulation elements and/or Duct insulation elements. It is acceptable not to use a parameter filter for insulation</sld14>
+		<ssd15>Processing of rebars in the system</ssd15>
+		<sld15>Strategy processes rebars as part of reinforcement systems - Area reinforcement and Path reinforcement</sld15>
 		<se1>Host</se1>
 		<sp1>Insert Host parameter</sp1>
 		<se2>Group</se2>
@@ -4028,6 +4033,8 @@
 		<sp9>Insert parameter of parent family</sp9>
 		<se10>Pipe or Duct</se10>
 		<sp10>Insert Pipe or Duct parameter</sp10>
+		<se11>System</se11>
+		<sp11>Insert parent reinforcement system parameter</sp11>
 		<te1>Target element</te1>
 		<tp1>Insert parameter of target element</tp1>
 		<te2>Family instance</te2>
@@ -4040,6 +4047,8 @@
 		<tp5>Insert nested family parameter</tp5>
 		<te6>Insolation</te6>
 		<tp6>Insert insolation parameter</tp6>
+		<te7>Rebar</te7>
+		<tp7>Insert target rebar parameter</tp7>
 		<d-min>Returns the smaller of numbers</d-min>
 		<d-max>Returns the larger of numbers</d-max>
 		<d-abs>Returns the absolute value of the number</d-abs>
@@ -4070,6 +4079,7 @@
 		<d-sstr>Returns substring</d-sstr>
 		<d-tmirrored>Returns TRUE if the target family is mirrored</d-tmirrored>
 		<d-smirrored>Returns TRUE if the conditional source family is mirrored</d-smirrored>
+		<d-strlen>Returns string length</d-strlen>
 	</mprParametrization>
 	<mprMEPConnect LocalName="MEP connect"
 	               Description="Collection of plugins for automation of engineering systems connections"
