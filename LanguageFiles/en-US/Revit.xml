@@ -246,18 +246,24 @@
 		<h1>CAD manager</h1>
 		<h2>Copied!</h2>
 		<h3>Belonging to the view:</h3>
-		<h4>Search by name or view...</h4>
+		<h4>Search by name and id of Import or by name and id of view...</h4>
 		<h5>Name:</h5>
 		<h6>Copy Id to clipboard</h6>
 		<h7>View:</h7>
-		<h8>Select and show element</h8>
+		<h8>Select and show Import</h8>
 		<h9>Delete element</h9>
+    <!-- todo remove -->
 		<h10>Select all</h10>
+    <!-- todo remove -->
 		<h11>Unselect all</h11>
 		<h12>Change the transparency of the window while hovering the mouse cursor</h12>
-		<h13>Delete selected elements:</h13>
+		<h13>Delete selected Imports:</h13>
 		<h14>The import instance is the linked CAD file</h14>
 		<h15>Insert type:</h15>
+    <h16>Remove Import</h16>
+    <h17>Remove Imports</h17>
+    <h18>Open the folder where the Import file is located</h18>
+    <h19>Number (visible/total):</h19>
 		<all>All</all>
 		<sv1>Unidentified</sv1>
 		<sv2>View specific imports</sv2>
@@ -268,14 +274,14 @@
 		<yes>Yes</yes>
 		<no>No</no>
 		<!-- todo remove end -->
-		<msg1>The selected imports will be permanently deleted!\nContinue?</msg1>
+		<msg1>The selected imports will be deleted!\nContinue?</msg1>
 		<!-- todo remove after 1.3.8.0  -->
 		<msg2>The current document does not contain imports!</msg2>
 		<msg3>Unrecognized insertion element</msg3>
 		<msg4>Error retrieving view name</msg4>
 		<msg5>Does not belong to the view</msg5>
 		<msg6>Import</msg6>
-		<msg7>will be permanently deleted!\nContinue?</msg7>
+		<msg7>will be deleted!\nContinue?</msg7>
 		<msg8>On view</msg8>
 		<msg9>all imported categories are hidden\nSelect a further action:</msg9>
 		<msg10>Show all imported categories</msg10>
@@ -2047,6 +2053,7 @@
 		<w41>Remove all element in workset</w41>
 		<w42>Remove all Coordination models</w42>
     <w43>Remove all unused Grid types</w43>
+    <w44>Remove all unused Level types</w44>
 		<m1>The model must be saved to remove external links</m1>
 		<m2>Work in family document is not provided</m2>
 		<m3>Retrieving data from a document binding map</m3>
@@ -3705,6 +3712,7 @@
 		<ss20>Instance parameter in project</ss20>
 		<ss21>Type parameter in current view</ss21>
 		<ss22>Type parameter in project</ss22>
+    <ss23>Material Name</ss23>
 	</mprFindAndReplace>
 	<mprCopyCropBox LocalName="Copy crop extents"
 	                Description="Copying the crop extents of the current view into the specified views">
@@ -4389,6 +4397,9 @@
 		<t12>Select an export folder</t12>
 		<t13>Export schedules to Excel</t13>
 		<t14>Open export folder?</t14>
+    <t15>Check all visible</t15>
+    <t16>Uncheck all visible</t16>
+    <t17>File name:</t17>
 		<err1>File name generation error</err1>
 		<err2>Cannot delete file {0}</err2>
 		<err3>Failure to access the file {0}</err3>
