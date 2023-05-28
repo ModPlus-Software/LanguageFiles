@@ -553,7 +553,7 @@
 		<h8>Step:</h8>
 		<h9>Floor plan</h9>
 		<h10>Columns</h10>
-		<h11>Bind to nearest grids</h11>
+		<h11>Bind to nearest Grids</h11>
 		<h12>Dimension chain offset</h12>
 		<h13>Position of horizontal dimensions</h13>
 		<h14>Position of vertical dimensions</h14>
@@ -561,9 +561,13 @@
 		<h16>Add a pile to the group if the distance from the pile insertion point to the insertion point of</h16>
 		<h17>in the group does not exceed</h17>
 		<h18>Piles</h18>
-		<h19>Creating the overall dimensions of the columns. Only orthogonally placed (vertically or horizontally in plan) rectangular columns are processed. If the “Bind to nearest grids” option is enabled and a grid intersects a column, then two dimensional chains are created</h19>
-		<h20>Creating the positional dimensions of the piles. The dimensions are placed in the middle of the piles with bind to the nearest grids, if the grids have been selected. The piles are processed in groups. Pile groups are piles that are close to each other. Families are processed in the category "Structural columns" and "Structural foundation"</h20>
+		<h19>Creating the overall dimensions of the columns. Only orthogonally placed (vertically or horizontally in plan) rectangular columns are processed. If the “Bind to nearest Grids” option is enabled and a grid intersects a column, then two dimensional chains are created</h19>
+		<h20>Creating the positional dimensions of the piles. The dimensions are placed in the middle of the piles with bind to the nearest Grids, if the Grids have been selected. The piles are processed in groups. Pile groups are piles that are close to each other. Families are processed in the category "Structural columns" and "Structural foundation"</h20>
     <h21>Create outline dimension when intersecting Grids</h21>
+    <h22>Floors</h22>
+    <h23>Creation of dimensions on the outer faces of the Floor and on the holes in the Floor. The dimensions on the outer faces are set for all Floor faces. The dimensions for the holes are set in the specified direction (left/right and up/down)</h23>
+    <h24>Outer faces dimensioning</h24>
+    <h25>Binding outer faces to Grids</h25>
 		<pgc1>each pile</pgc1>
 		<pgc2>any pile</pgc2>
 		<top>Top</top>
@@ -3993,6 +3997,7 @@
 		<err51>The field with the key "{0}" is already in the list of fields of the current formula</err51>
 		<err52>Parameter "{0}" is not a reference to another model element</err52>
 		<err53>The target parameter must not contain the character "|"</err53>
+    <err54>An expression must not contain parentheses that are not function boundaries. To add parentheses to an expression, they must be escaped - "\)" and "\("</err54>
 		<rh1>#</rh1>
 		<rh2>On</rh2>
 		<rh3>Formula</rh3>
@@ -4030,6 +4035,8 @@
 		<sld14>Processing Pipe insulation elements and/or Duct insulation elements. It is acceptable not to use a parameter filter for insulation</sld14>
 		<ssd15>Processing of rebars in the system</ssd15>
 		<sld15>Strategy processes rebars as part of reinforcement systems - Area reinforcement and Path reinforcement</sld15>
+    <ssd16>Processing materials</ssd16>
+    <sld16>Strategy processes all materials of the current document regardless of the element selection option</sld16>
 		<se1>Host</se1>
 		<sp1>Insert Host parameter</sp1>
 		<se2>Group</se2>
@@ -4052,7 +4059,7 @@
 		<sp10>Insert Pipe or Duct parameter</sp10>
 		<se11>System</se11>
 		<sp11>Insert parent reinforcement system parameter</sp11>
-		<te1>Target element</te1>
+    <te1>Target element</te1>
 		<tp1>Insert parameter of target element</tp1>
 		<te2>Family instance</te2>
 		<tp2>Insert parameter of target family instance</tp2>
@@ -4066,6 +4073,8 @@
 		<tp6>Insert insolation parameter</tp6>
 		<te7>Rebar</te7>
 		<tp7>Insert target rebar parameter</tp7>
+    <te8>Material</te8>
+    <tp8>Insert material parameter</tp8>
 		<d-min>Returns the smaller of numbers</d-min>
 		<d-max>Returns the larger of numbers</d-max>
 		<d-abs>Returns the absolute value of the number</d-abs>
