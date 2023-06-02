@@ -553,7 +553,7 @@
     <h8>Step:</h8>
     <h9>Floor plan</h9>
     <h10>Columns</h10>
-    <h11>Bind to nearest Grids</h11>
+    <h11>Bind to nearest Grid</h11>
     <h12>Dimension chain offset</h12>
     <h13>Position of horizontal dimensions</h13>
     <h14>Position of vertical dimensions</h14>
@@ -568,6 +568,17 @@
     <h23>Creation of dimensions on the outer faces of the Floor and on the holes in the Floor. The dimensions on the outer faces are set for all Floor faces. The dimensions for the holes are set in the specified direction (left/right and up/down)</h23>
     <h24>Outer faces dimensioning</h24>
     <h25>Binding outer faces to Grids</h25>
+    <h26>Walls</h26>
+    <h27>Creation longitudinal and transverse (thickness) dimensions of straight walls without taking into account their relationship to other walls</h27>
+    <h28>Transverse dimension at center of wall</h28>
+    <h29>Bind transverse dimension at center of wall to the nearest Grid</h29>
+    <h30>Longitudinal dimension of wall</h30>
+    <h31>Bind longitudinal dimension of wall to the nearest Grid</h31>
+    <h32>Processing of middle faces (openings)</h32>
+    <h33>Dimension openings</h33>
+    <h34>Bind openings to the nearest Grids</h34>
+    <h35>Position of horizontal dimensions for openings</h35>
+    <h36>Position of vertical dimensions for openings</h36>
     <pgc1>each pile</pgc1>
     <pgc2>any pile</pgc2>
     <top>Top</top>
@@ -588,15 +599,20 @@
     <!-- todo remove -->
     <msg1>You need to go to the floor plan!</msg1>
     <msg2>Select elements to process</msg2>
+    <!-- todo remove -->
     <err1>The selected walls do not satisfy the processing conditions: failed to obtain a solid, failed to obtain faces or they are not located orthogonally</err1>
     <err2>In this set there are no walls intersected by Primary range Cut plane!</err2>
     <err3>At runtime, the program went into an endless loop! If you see this message, please contact the developer!</err3>
     <err4>It is necessary to choose more than one element!</err4>
     <err5>Among the selected elements there are no walls!</err5>
+    <!-- todo remove -->
     <err6>The selected columns do not satisfy the processing conditions: failed to obtain a solid, failed to obtain faces, have no insertion point or are not located orthogonally</err6>
     <!-- todo remove -->
     <err7>In this set there are no columns intersected by Primary range Cut plane!</err7>
     <err8>The selected piles do not satisfy the processing conditions: failed to obtain a solid or do not have an insertion point</err8>
+    <err9>Selected columns do not satisfy machining conditions: failed solid, failed faces, have no insertion point or have curved faces</err9>
+    <err10>Selected floors do not satisfy the processing conditions: failed solid or failed faces</err10>
+    <err11>Selected walls do not satisfy the processing conditions: failed solid or failed faces</err11>
     <s1>Filtering the initial list of walls</s1>
     <s2>Search internal and external walls</s2>
     <s3>Creating analytical dimensions</s3>
@@ -3926,6 +3942,8 @@
     <t66>Copy selected rules to clipboard</t66>
     <t67>Paste rules from clipboard</t67>
     <t68>Update field value in all rules</t68>
+    <t69>Show formula</t69>
+    <t70>Hide formula</t70>
     <msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
     <msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
     <msg3>List of strategies is not empty</msg3>
