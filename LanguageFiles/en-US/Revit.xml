@@ -4283,7 +4283,7 @@
     <h60>By Sheet contents</h60>
     <h61>By Title Block</h61>
     <h62>The print format is determined by the entire contents of the Sheet. After the Sheet is printed to pdf, it is trimmed to fit the size of the Title Block. This algorithm can cause regeneration of all sheets, which can lead to long loading of the plugin</h62>
-    <h63>The print format is determined by the size of the Title Blocks on the Sheets. If there are elements on the Sheet that exceed the border of the Title Blokc, the Sheet will be printed incorrectly in the pdf. This algorithm does not cause regeneration of Sheets</h63>
+    <h63>The print format is determined by the size of the Title Blocks on the Sheets. If there are elements on the Sheet that exceed the border of the Title Block, the Sheet will be printed incorrectly in the pdf. This algorithm does not cause regeneration of Sheets</h63>
     <h64>Main</h64>
     <h65>Combine sheets into one dwf file</h65>
     <h66>Stop on error</h66>
@@ -4342,6 +4342,23 @@
     <h119>Export to file format:</h119>
     <h120>Export completed</h120>
     <h121>Apply selected action in the future</h121>
+    <h122>Incorrect group name</h122>
+    <h123>General export settings</h123>
+    <h124>Temporary mode handling (hiding/isolating or showing hidden elements) of views</h124>
+    <h125>View links in blue (Color prints only)</h125>
+    <h126>Hide ref/work planes</h126>
+    <h127>Hide unreferenced view tags</h127>
+    <h128>Region edges mask coincident lines</h128>
+    <h129>Hide scope boxes</h129>
+    <h130>Hide crop boundaries</h130>
+    <h131>Replace halfton with thin lines</h131>
+    <h132>Print options</h132>
+    <h133>Merged PDF</h133>
+    <h134>By contents</h134>
+    <h135>Determine the print format of this sheet over the entire contents of a Revit Sheet. This function should be used if the Sheet contains elements that exceed the border of the Title Block. Causes the sheet to regenerate</h135>
+    <tvm1>Disable mode</tvm1>
+    <tvm2>Leave mode</tvm2>
+    <tvm3>Ask</tvm3>
     <iq1>Low</iq1>
     <iq2>Medium</iq2>
     <iq3>High</iq3>
@@ -4358,6 +4375,7 @@
     <sv5>%mm% - The minute, from 00 through 59</sv5>
     <sv6>%ss% - The second, from 00 through 59</sv6>
     <sv7>%ParentGroup% - Sheet parent group</sv7>
+    <sv8>%DocName% - Document Name</sv8>
     <ff0>AutoCAD 2007 Format</ff0>
     <ff1>AutoCAD 2010 Format</ff1>
     <ff2>AutoCAD 2013 Format</ff2>
