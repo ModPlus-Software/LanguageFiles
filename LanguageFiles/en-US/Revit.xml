@@ -2075,6 +2075,7 @@
     <w42>Remove all Coordination models</w42>
     <w43>Remove all unused Grid types</w43>
     <w44>Remove all unused Level types</w44>
+    <w45>Remove all Unreferenced views (Legends only)</w45>
     <m1>The model must be saved to remove external links</m1>
     <m2>Work in family document is not provided</m2>
     <m3>Retrieving data from a document binding map</m3>
@@ -4469,8 +4470,52 @@
     <err2>Cannot delete file {0}</err2>
     <err3>Failure to access the file {0}</err3>
   </mprExportToExcel>
-  <mprSumParameters LocalName=""
-                    Description="">
-
-  </mprSumParameters>
+  <mprStructureToParameter LocalName="Structure to parameter"
+                           Description="Transferring the structure of a multilayer type to a multiline parameter">
+    <t1>Search by type or material name:</t1>
+    <t2>Show only Types with required parameters</t2>
+    <t3>Show only used Types</t3>
+    <t4>Usable are the Types used in at least one instance of the element in the model</t4>
+    <t5>Number of instances in the model with the current Type</t5>
+    <t6>Structure</t6>
+    <t7>Layer thickness</t7>
+    <t8>Number of uses of the material in other Types (loaded in the plugin), including the current Type</t8>
+    <t9>This layer has variable thickness</t9>
+    <t10>Var. thick</t10>
+    <t11>Current result</t11>
+    <t12>New result</t12>
+    <t13>Update</t13>
+    <t14>Types:</t14>
+    <t15>Number of Types loaded in the plugin</t15>
+    <t16>Displayed:</t16>
+    <t17>Number of Types displayed in table with all filters</t17>
+    <t18>Templates:</t18>
+    <t19>Number of displayed Types with filled in parameter "Template"</t19>
+    <t20>Changed:</t20>
+    <t21>Number of displayed Types, in which the value of the new result is different from the value of the current result</t21>
+    <t22>Will be updated:</t22>
+    <t23>Number of displayed Types, whose value will be updated</t23>
+    <t24>Selected:</t24>
+    <t25>Number of displayed Types selected in the table</t25>
+    <t26>Result:</t26>.
+    <t27>Variable thickness:</t27>
+    <t28>Structure wildcard</t28>
+    <t29>Numbering</t29>
+    <t30>Number format:</t30>
+    <t31>String format</t31>
+    <t32>{0} - material name. {1} - layer thickness. {2} - variable thickness</t32>
+    <t33>Standard layer:</t33>
+    <t34>Zero-thickness layer:</t34>
+    <t35>Variable thickness layer:</t35>
+    <t36>Required parameter with the data type "Multiline text". This parameter specifies the template of the result formation. To output the list of structure layers in the template it is necessary to specify the wildcard of the structure</t36>
+    <t37>Required parameter with the data type "Multiline text". In this parameter is written the numbered list of layers of the structure, taking into account the specified line formats and numbering settings</t37>
+    <t38>Optional parameter with data type "Text". This parameter specifies a custom variable thickness value that can be used in string format for a variable thickness layer</t38>
+    <t39>The wildcard specified in the template, which is replaced by a formatted list of structure layers in the result</t39>
+    <t40>By Category</t40>
+    <t41>No parameter</t41>
+    <s1>No change. The Type parameters will not be updated</s1>
+    <s2>The required parameters "Template" and "Result" are missing</s2>
+    <s3>The new result value is different from the current result value. The Type parameters will not be updated, because the "Update" checkbox is not checked</s3>
+    <s4>The new result value is different from the current result value. The Type parameters will be updated</s4>
+  </mprStructureToParameter>
 </ModPlus>
