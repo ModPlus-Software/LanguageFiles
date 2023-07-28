@@ -4354,7 +4354,7 @@
     <h115>Export current configuration to xml file</h115>
     <h116>Import custom formats from xml file</h116>
     <h117>Export custom formats to xml file</h117>
-    <h118>Export views on sheets and lins as external references</h118>
+    <h118>Export views on sheets and links as external references</h118>
     <h119>Export to file format:</h119>
     <h120>Export completed</h120>
     <h121>Apply selected action in the future</h121>
@@ -4372,6 +4372,10 @@
     <h133>Merged PDF</h133>
     <h134>By contents</h134>
     <h135>Determine the print format of this sheet over the entire contents of a Revit Sheet. This function should be used if the Sheet contains elements that exceed the border of the Title Block. Causes the sheet to regenerate</h135>
+    <h136>Export current</h136>
+    <h137>Export to PDF of the current sheet of the current document ignoring the checked export formats</h137>
+    <h138>Do not add the index of a composite sheet (a sheet with more than one Title Block) to the file name if only one composite sheet is exported</h138>
+    <h139>Retry to create a merged PDF file?</h139>
     <tvm1>Disable mode</tvm1>
     <tvm2>Leave mode</tvm2>
     <tvm3>Ask</tvm3>
@@ -4420,6 +4424,7 @@
     <err22> Linked files are only processed in saved projects! Save project "{0}" and read the sheets of linked files again</err22>
     <err23>Format with this name is already in the list of formats</err23>
     <err24>Format with this size is already in the list of formats</err24>
+    <err25>Format has no name and will not be processed when added to the printer</err25>
   </mprSheetExport>
   <mprHeightSplitter LocalName="Split by height"
 	                   Description="Splitting walls and columns by levels, reference planes or by specified parameters">
