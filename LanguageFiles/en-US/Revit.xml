@@ -1201,8 +1201,8 @@
     <t46>In accordance with GOST 21.501-2018, clause 6.4.7, the length of the detail is set along the outer edge of the rebar</t46>
     <t47>Increases the time of the reinforcement generation!</t47>
     <t48>The details of the reinforcement of the intersection will be established with the horizontal reinforcement of the walls - by the smallest or the largest step of horizontal reinforcement of the walls participating in the intersection</t48>
-    <t49>The number of rows of vertical reinforcement (in a row is two bars "along" the opening)</t49>
-    <t50>The number of rows of horizontal reinforcement (in a row is two bars "along" the opening)</t50>
+    <t49>The number of rows of vertical reinforcement</t49>
+    <t50>The number of rows of horizontal reinforcement</t50>
     <t51>Selecting a underlying slab directly below the selected walls. Underlying slab selection available after wall selection, analysis and grouping. You can select one or more slabs. In the properties of the underlying slabs should be included properties "Structural"</t51>
     <!-- todo remove after 5.12.35.0 -->
     <t52>The maximum allowable value of the binding is calculated from the condition of the minimum allowable distance in the light according to section 10.3.5 of SP 63.13330 for the smallest wall width in the group</t52>
@@ -2770,7 +2770,9 @@
   </mprNotes>
   <mprContextFilter LocalName="Context filter"
                     Description="Filter elements by parameters, which works as a context menu"
-                    FullDescription="The filter is launched in one of three ways: by left-clicking the mouse while holding down the Ctrl key, by sequential pressing of keys, or by pressing a key combination. The filter has three processing levels - all elements of the model, elements in the current view, or selected elements. There is the ability to use presets for quick filter use.">
+                    FullDescription="The filter is launched in one of three ways: by left-clicking the mouse while holding down the Ctrl key, by sequential pressing of keys, or by pressing a key combination. The filter has three processing levels - all elements of the model, elements in the current view, or selected elements. There is the ability to use presets for quick filter use."
+                    LocalName1="Filter. Window mode"
+                    Description1="Filter elements by parameters, which works in window mode">
     <h1>Presets</h1>
     <!-- todo remove start 1.9.22.0 -->
     <h2>Search</h2>
@@ -2810,10 +2812,17 @@
     <h36>Got it</h36>
     <h37>Shared parameter</h37>
     <h38>Type parameter</h38>
+    <h39>Same parameters</h39>
+    <h40>Check more than one category to display the same parameters of the checked categories</h40>
+    <h41>Without values</h41>
+    <h42>Save only categories and parameter names in the preset for later selection of all parameter values</h42>
     <fo1>All elements</fo1>
     <fo2>All elements in view</fo2>
     <fo3>Selected elements</fo3>
     <fo4>All by selected</fo4>
+    <fo5>Found on view</fo5>
+    <fo6>Found in model</fo6>
+    <fo7>By filter on view</fo7>
     <!-- todo remove start after 1.9.22.0 -->
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
