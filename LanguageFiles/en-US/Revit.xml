@@ -3466,6 +3466,13 @@
     <h171>Parameter "Section":</h171>
     <h172>Lock selected apartments</h172>
     <h173>Target parameter</h173>
+    <h174>Add the selected rooms to the selected apartment. Rooms are added to an apartment only if the room and apartment levels match</h174>
+    <h175>Typical floors</h175>
+    <h176>Current table of typical floors:</h176>
+    <h177>Column "Floor"</h177>
+    <h178>Column "Typical floor"</h178>
+    <h179>Floor</h179>
+    <h180>Typical floor</h180>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -3479,7 +3486,7 @@
     <msg11>The list of apartment types is empty! Nothing to export</msg11>
     <msg12>No data to import!</msg12>
     <msg13>The number of filled rows is less than the specified number of the first row!</msg13>
-    <msg14>Delete the current values from the matrix? Yes - delete, No - append.</msg14>
+    <msg14>Delete the current values from the matrix? Yes - delete, No - append</msg14>
     <msg15>Delete the current values from the list of room types? Yes - delete, No - append</msg15>
     <msg16>Failed to construct an auxiliary solid and failed to obtain an auxiliary boundary</msg16>
     <msg17>Failed to get room boundaries. Check the boundary of the room for small imperfections. Such imperfections are most often caused by inaccurate construction of the boundary elements</msg17>
@@ -3496,10 +3503,10 @@
     <msg28>The option of creating the contour of the apartment according to the contours of the rooms was used</msg28>
     <msg29>Failed to get the contour of the apartment. Error:</msg29>
     <msg30>The view of the apartment is not created</msg30>
-    <msg31>The length of the name cannot exceed 31 characters</msg31>
+    <msg31>The length of the name cannot exceed 28 characters</msg31>
     <msg32>The following characters - \ / * ? : [ ] - are not allowed for the name</msg32>
-    <msg33>The current room matrix will be deleted irretrievably! Are you sure you want to continue?</msg33>
-    <msg34>The current apartment type table will be deleted irretrievably! Are you sure you want to continue?</msg34>
+    <msg33>The current room matrix will be deleted permanently! Are you sure you want to continue?</msg33>
+    <msg34>The current apartment type table will be deleted permanently! Are you sure you want to continue?</msg34>
     <msg35>Data updated</msg35>
     <msg36>For the following apartments (id) among the checked ones, no pairing options were found (apartments located on neighboring levels and having vertical intersection)</msg36>
     <msg37>The apartments ({0}) are merged into a multilevel with id: {1}</msg37>
@@ -3507,6 +3514,13 @@
     <msg39>One or more rooms in the apartment do not have the "Room type" parameter filled in.</msg39>
     <msg40>Failed to set value in parameter "{0}" of room {1} - parameter has a "Read Only" property. Perhaps the room is in a workset that is not available to you for editing</msg40>
     <msg41>Parameter "{0}" is not found in room {1}. If you are numbering, make sure you select the correct parameter in the "Target parameter" setting</msg41>
+    <msg42>The current table of typical floors will be deleted permanently! Are you sure you want to continue?</msg42>
+    <msg43>Delete current values from the list of typical floors? Yes - delete, No - append</msg43>
+    <msg44>No floor specified</msg44>
+    <msg45>No typical floor specified</msg45>
+    <msg46>The given floor is already specified as a typical floor in another entry</msg46>
+    <msg47>The floor specified as a typical floor is specified as a non-typical floor in another entry</msg47>
+    <msg48>This floor is already specified in another entry</msg48>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -3525,10 +3539,12 @@
     <tt16>Unlock selected apartments</tt16>
     <tt17>Select curve</tt17>
     <tt18>Apartment is locked</tt18>
+    <tt19>Add floor from current document</tt19>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
     <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name. In the "Room name" column you can specify an asterisk at the end of the name, which will indicate a check for a match at the beginning of the room name (for example, the value "Bedroom*" will match the room names "Bedroom 1", "Bedroom 2", etc.)</instruction2>
     <instruction2_1>This table specifies the data used to define the apartment type. The values "Contains rooms" and " Not contains rooms" are filled in with the names of rooms, separated by semicolons (;)</instruction2_1>
+    <instruction2_2>The list specifies mapping of floors and typical floors. If a typical floor is specified for a floor, then when collecting and calculating apartments, all parameters of rooms located on the specified floor will be taken from the corresponding room located on the typical floor. The room of a typical floor is defined by a vertical ray passed through the insertion point of the processed room. Floors can be defined both by level names and by level elevations</instruction2_2>
     <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "Functional purpose" and "Name". If the value of the "Functional purpose" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
     <instruction4>The apartments are collected through the geometric characteristics of the rooms, taking into account the connection of the rooms through windows, doors and room separators. All rooms of the same apartment are assigned the same value of the "Apartment ID" parameter. It is recommended to perform an additional visual check by creating a color scheme according to the "Apartment ID" parameter</instruction4>
     <instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
@@ -4579,4 +4595,8 @@
     <s3>The new result value is different from the current result value. The Type parameters will not be updated, because the "Update" checkbox is not checked</s3>
     <s4>The new result value is different from the current result value. The Type parameters will be updated</s4>
   </mprStructureToParameter>
+  <mprSumParameters LocalName=""
+                    Description="">
+    <t1>Take</t1>
+  </mprSumParameters>
 </ModPlus>
