@@ -78,7 +78,7 @@ static string GetSolutionDirectory()
 {
     var executingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     var parent = Directory.GetParent(executingDirectory);
-    while (parent.Name != "LanguageFiles")
+    while (parent.Name != "LanguageFiles" && parent.Name != "Core_LanguageFiles")
     {
         parent = Directory.GetParent(parent.FullName);
     }
