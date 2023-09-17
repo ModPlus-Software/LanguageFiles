@@ -2,7 +2,7 @@
 <ModPlus>
 	<mpTxtNumCopy LocalName="Copy with numbering"
                 Description="Copies the selected text or block with an attribute containing a numeric value, changing the value to a specified numerical step"
-                FullDescription="Copies the selected single line or multiline text, a block with an attribute or a multileader containing a digital value, with a value change to a specified numerical step. There are various settings - adding a prefix/suffix, suppressing tail zeros, etc.">
+                FullDescription="Copies the selected single line or multiline text, a block with an attribute or a multileader containing a digital value, with a value change to a specified numerical step. There are various settings – adding a prefix/suffix, suppressing tail zeros, etc.">
 		<accept>Accept</accept>
 		<cancel>Cancel</cancel>
 		<next>Continue</next>
@@ -38,7 +38,7 @@
 	</mpTxtNumCopy>
 	<mpMultiCopy LocalName="Multi copy"
                Description="Multiple copies of selected primitives with a certain step"
-               FullDescription="Plugin supports two types of copying:\nmarkup - copies primitives with a specified distance between them along the specified line;\ndivide - copies primitives by dividing the specified line by the number of segments entered.\nThere is a possibility to select an entity (line, polyline, spline) to set the copy path.">
+               FullDescription="Plugin supports two types of copying:\nmarkup – copies primitives with a specified distance between them along the specified line;\ndivide – copies primitives by dividing the specified line by the number of segments entered.\nThere is a possibility to select an entity (line, polyline, spline) to set the copy path.">
 		<msg1>Select entities:</msg1>
 		<msg2>Specify distance or [Divide]</msg2>
 		<msg3>Enter the number of segments or [Mark]</msg3>
@@ -136,7 +136,7 @@
 		<msg4>Could not copy the helper file to disk!\nThere may be no administrator rights</msg4>
 		<msg5>The following dependent styles will be removed:</msg5>
 		<msg6>Continue?</msg6>
-		<msg7>Delete the dependent text style?\nYes - delete, No - untie</msg7>
+		<msg7>Delete the dependent text style?\nYes – delete, No – untie</msg7>
 		<msg8>Specify the source file</msg8>
 		<msg9>No source file specified!</msg9>
 		<msg10>The specified source file was not found</msg10>
@@ -164,7 +164,7 @@
 	</mpStandards>
 	<mpMultiScale LocalName="Multi scale"
                 Description="Plugin allows you to scale each of the selected objects relative to themselves"
-                FullDescription="Each selected entity will be scaled relative to the specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The scale point is determined by the rectangle describing the entity (Bounding Box)">
+                FullDescription="Each selected entity will be scaled relative to the specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The scale point is determined by the rectangle describing the entity (Bounding Box)">
 		<!-- todo remove start after 1.1.5.0-->
 		<msg1>Copy</msg1>
 		<msg2>Select objects:</msg2>
@@ -196,14 +196,14 @@
 	</mpMultiScale>
 	<mpMultiRotate LocalName="Multi rotate"
 	              Description="Plugin allows you to rotate each of the selected entities relative to the Z-axis with the center of rotation relative to themselves"
-	              FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
+	              FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
 		<!-- todo remove after 1.0.1.0 -->
 		<msg3>Rotation angle in degrees:</msg3>
 		<h1>Rotation angle:</h1>
 	</mpMultiRotate>
 	<mpMultiMirror LocalName="Multi mirror"
 	               Description="Plugin allows to mirror each of the selected entities vertically or horizontally in relation to themselves"
-	               FullDescription="Each selected entity will be mirrored vertically or horizontally with respect to a line passing through a specified point - Left Bottom, Right Bottom, Left Top, Right Top or Center. The point is determined by the rectangle that describes the entity (Bounding Box)">
+	               FullDescription="Each selected entity will be mirrored vertically or horizontally with respect to a line passing through a specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The point is determined by the rectangle that describes the entity (Bounding Box)">
 		<o1>Mirror by</o1>
 		<o2>Vertical</o2>
 		<o3>Horizontal</o3>
@@ -215,7 +215,7 @@
 	</mpRotAtt>
 	<mpLayerAuto LocalName="Auto layers"
                Description="Plugin is used to automatically add a layer to the created objects"
-               FullDescription="Plugin processes the creation, copying, pasting and other commands when working with AutoCAD objects - dimensions, text, multileaders, hatching, tables, viewports, lines, polylines, xLines, rays, circles, ellipses, splines, arcs, blocks - and sets the layer specified in the plugin settings for them. There is an option to specify the specified layers for the selected objects. There is an opportunity to set block layers by name">
+               FullDescription="Plugin processes the creation, copying, pasting and other commands when working with AutoCAD objects – dimensions, text, multileaders, hatching, tables, viewports, lines, polylines, xLines, rays, circles, ellipses, splines, arcs, blocks – and sets the layer specified in the plugin settings for them. There is an option to specify the specified layers for the selected objects. There is an opportunity to set block layers by name">
     <!-- todo remove -->
     <save>Save</save>
 		<h1>Layers for entities</h1>
@@ -275,7 +275,7 @@
 	</mpLayerAuto>
 	<mpFormats LocalName="Formats"
              Description="Plugin of inserting in the drawing formats according to GOST 2.301-68/ISO 216"
-             FullDescription="Formats are inserted in the form of a block with a special label in the extended data. A label in the extended data is required to define the formats with other plugins (for example, &quot;Sheet Numbering&quot;). Therefore, you should not insert the formats with standard means of inserting a block into AutoCAD. Plugin allows you to add title blocks to the format - for this you need to install and at least once started the plugin &quot;Title blocks&quot;">
+             FullDescription="Formats are inserted in the form of a block with a special label in the extended data. A label in the extended data is required to define the formats with other plugins (for example, &quot;Sheet Numbering&quot;). Therefore, you should not insert the formats with standard means of inserting a block into AutoCAD. Plugin allows you to add title blocks to the format – for this you need to install and at least once started the plugin &quot;Title blocks&quot;">
 		<accept>Accept</accept>
 		<no>No</no>
 		<h1>Russia</h1>
@@ -416,7 +416,7 @@
 		<h18>Rounding the mass</h18>
 		<h19>GOST 8478-81</h19>
 		<h20>Mesh type by dimensional accuracy</h20>
-		<h21>Mesh width - 2350 mm</h21>
+		<h21>Mesh width – 2350 mm</h21>
 		<h22>Main step (s)</h22>
 		<h23>Longitudinal (a1)</h23>
 		<h24>Number of longitudinal bars in mesh, pcs.</h24>
@@ -677,7 +677,7 @@
 	</mpSummLength>
 	<mpSelSim LocalName="Select similar"
             Description="Plugins allow you to select objects that are similar to sample objects from all objects in the drawing, or from a specific set"
-            FullDescription="Before using the plugin, you need to configure the conditions by which similar objects will be searched for - the same type, the same layer, the same color, etc. For some types, there are additional matching conditions. For example, the same text heights, blocks with the same name, etc.">
+            FullDescription="Before using the plugin, you need to configure the conditions by which similar objects will be searched for – the same type, the same layer, the same color, etc. For some types, there are additional matching conditions. For example, the same text heights, blocks with the same name, etc.">
 		<h2>General settings</h2>
 		<h3>Add sample objects to the final set (select similar from the selected)</h3>
 		<h4>Same types</h4>
@@ -831,7 +831,7 @@
 		<err4>Invalid Input</err4>
 	</mpCalc>
 	<mpArmature LocalName="Reinforcement"
-              Description="Working with assortments of reinforcement - obtaining various information and calculations"
+              Description="Working with assortments of reinforcement – obtaining various information and calculations"
               FullDescription="Plugin requires plug-in databases. Plugin allows you to obtain various information and calculation data (area, weight, anchoring, etc.) for a large number of different assortments">
 		<cancel>Cancel</cancel>
 		<h1>REINFORCEMENT</h1>
@@ -875,7 +875,7 @@
 		<h39>Estimated tensile strength, MPa</h39>
 		<h40>Basic (main) length of anchoring, mm:</h40>
 		<h41>Coefficient α:</h41>
-		<h42>α is a coefficient that takes into account the effect on the anchoring length of the stress state of concrete and reinforcement and the structural solution of the element in the anchoring zone. When anchoring rods of a periodic profile with straight ends (straight anchoring) or smooth reinforcement with hooks or loops without additional anchoring devices for stretched rods, take α = 1.0, and for compressed ones - α = 0.75. According to clause 10.3.30 of SP 63.13330, the coefficient α may be increased to 2.0</h42>
+		<h42>α is a coefficient that takes into account the effect on the anchoring length of the stress state of concrete and reinforcement and the structural solution of the element in the anchoring zone. When anchoring rods of a periodic profile with straight ends (straight anchoring) or smooth reinforcement with hooks or loops without additional anchoring devices for stretched rods, take α = 1.0, and for compressed ones – α = 0.75. According to clause 10.3.30 of SP 63.13330, the coefficient α may be increased to 2.0</h42>
 		<h43>Required and actual reinforcement are equal</h43>
 		<h44>Actually installed reinforcement (diameter)</h44>
 		<h45>By default, we accept that the required reinforcement and the actual installed reinforcement are equal. In case the reinforcement is different, select the actually installed reinforcement. The required reinforcement is selected in the left part of the window</h45>
@@ -914,7 +914,7 @@
 		<msg1>Select the source entity (text, mleader, table or dimension):</msg1>
 		<msg2>Select source entity (text, mleader, table or dimension) or [Delete]:</msg2>
 		<msg3>Wrong choice!</msg3>
-		<msg4>Delete source entity (for tables - cell content)?</msg4>
+		<msg4>Delete source entity (for tables – cell content)?</msg4>
 		<msg5>Select entity (text, mleader or table) to replace the content</msg5>
 		<msg6>Specify a table cell:</msg6>
 	</mpTxtCopyPaste>
@@ -973,7 +973,7 @@
 		<h42>Statement reference documents has no values</h42>
 		<!-- todo remove end -->
 		<h43>Available in full version!</h43>
-		<h44>Overwrite existing tables?\nYes - overwrite, No - supplement</h44>
+		<h44>Overwrite existing tables?\nYes – overwrite, No – supplement</h44>
 		<h45>No blocks found in the current space!</h45>
 		<!-- todo remove -->
 		<h46>Error reading settings!</h46>
@@ -1154,7 +1154,7 @@
 	</mpDimBreak>
 	<mpBlkReplace LocalName="Block replace"
                 Description="Plugin allows quick replacement of blocks in the drawing with a sample block"
-                FullDescription="Plugin works in two modes: Replace selected - allows you to replace all selected blocks with one sample block; Replace similar - allows you to replace all occurrences of one block with one sample block. Allows you to delete the description of the replaced block from the drawing database. By analogy with the command &quot;PURGE&quot;. There are various settings">
+                FullDescription="Plugin works in two modes: Replace selected – allows you to replace all selected blocks with one sample block; Replace similar – allows you to replace all occurrences of one block with one sample block. Allows you to delete the description of the replaced block from the drawing database. By analogy with the command &quot;PURGE&quot;. There are various settings">
 		<h1>Select replaced block</h1>
 		<wrong>Wrong choice!</wrong>
 		<h2>Select replacing block</h2>
@@ -1194,9 +1194,9 @@
 		<h11>Min. machined arc radius:</h11>
 		<h12>Any</h12>
 		<h13>Divide the arc by an equal number of segments\nThe image shows a variant of dividing by 3 segments\nR is the arc radius in the polyline</h13>
-		<h14>Divide the arc into segments by specifying the length of the arc segments resulting from the division\nR is the arc radius in the polyline\nL - length of the arc segment</h14>
-		<h15>Divide the arc into segments by specifying the chord deviation (segment height)\nR is the arc radius in the polyline\nH - segment height</h15>
-		<h16>Divide the arc into segments by specifying the length of the chord\nR is the arc radius in the polyline\nX - chord length</h16>
+		<h14>Divide the arc into segments by specifying the length of the arc segments resulting from the division\nR is the arc radius in the polyline\nL – length of the arc segment</h14>
+		<h15>Divide the arc into segments by specifying the chord deviation (segment height)\nR is the arc radius in the polyline\nH – segment height</h15>
+		<h16>Divide the arc into segments by specifying the length of the chord\nR is the arc radius in the polyline\nX – chord length</h16>
 		<h17>Delete selected polylines</h17>
 		<h18>Exclude endpoints</h18>
 		<h19>Copy blocks:</h19>
@@ -1205,7 +1205,7 @@
 		<h22>P is the point of the polyline</h22>
 		<h23>- Plugin works by checking both conditions</h23>
 		<h24>H is the maximum deviation from the straight line:</h24>
-		<h25>a - angle tolerance:</h25>
+		<h25>a – angle tolerance:</h25>
 		<accept>Accept</accept>
 		<cancel>Cancel</cancel>
 		<cb1>Number of segments</cb1>
@@ -1270,7 +1270,7 @@
 	</mpPlinesEdit>
 	<mpSpecifications LocalName="Specifications"
                     Description="Plugin for the formation and filling of general specifications"
-                    FullDescription="Plugin allows you to add items to the context menu of AutoCAD, allowing you to expand the ability to work with the specifications: Context menu for tables: Add product from the database - allows you to add products from the plugin database directly into the AutoCAD table; Context menu for blocks: Add/change attributes for the specification - allows you to add attributes to the blocks for the specification (see details in the help)">
+                    FullDescription="Plugin allows you to add items to the context menu of AutoCAD, allowing you to expand the ability to work with the specifications: Context menu for tables: Add product from the database – allows you to add products from the plugin database directly into the AutoCAD table; Context menu for blocks: Add/change attributes for the specification – allows you to add attributes to the blocks for the specification (see details in the help)">
 		<!-- todo remove start -->
 		<accept>Accept</accept>
 		<cancel>Cancel</cancel>
@@ -1526,7 +1526,7 @@
 		<h47>The name of the block that is displayed in the plugin window</h47>
 		<h48>Brief description of the block</h48>
 		<h49>Normative document:</h49>
-		<h50>Normative document - source</h50>
+		<h50>Normative document – source</h50>
 		<h51>If there is no normative document, just leave the field blank</h51>
 		<h52>Added by:</h52>
 		<h53>Who added the block to the dwg database</h53>
@@ -1713,7 +1713,7 @@
 		<u6>Elements without source file</u6>
 		<u7>Collect statistics</u7>
 		<u8>Select several items in the list (check the boxes) for which you want to change the "Path" in the database. Specify a new value for "Path" and click "Apply"</u8>
-		<u9>Ctrl+A - select all</u9>
+		<u9>Ctrl+A – select all</u9>
 		<u10>Enter the main group</u10>
 		<u11>Blocks</u11>
 		<u12>Drawings</u12>
@@ -1847,7 +1847,7 @@
 		<h36>Create and apply a text style from the style</h36>
 		<h37>In the current document, a text style will be created and applied to the entity, set in style</h37>
 		<h38>The maximum limit of the selected entities when the property palette stops working. This setting is needed to speed up the work in the AutoCAD environment by disabling the reading of object properties. For example, if you need to select 1000 objects to copy to another drawing, then processing the properties of all these objects is not necessary</h38>
-		<h39>Maximum limit of the selected entities (0 - always work):</h39>
+		<h39>Maximum limit of the selected entities (0 – always work):</h39>
 		<h40>Smart entities settings</h40>
 		<h41>Straight axis</h41>
 		<h42>Change the scale of the line type in proportion to the scale of the entity</h42>
