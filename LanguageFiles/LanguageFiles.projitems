@@ -9,6 +9,10 @@
     <Import_RootNamespace>LanguageFiles</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)de-de\AutoCAD.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)de-de\Common.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)de-de\Renga.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)de-de\Revit.xml" />
     <Content Include="$(MSBuildThisFileDirectory)en-US\Common.xml" />
     <Content Include="$(MSBuildThisFileDirectory)en-US\AutoCAD.xml" />
     <Content Include="$(MSBuildThisFileDirectory)en-US\Renga.xml" />
@@ -23,5 +27,8 @@
     <Content Include="$(MSBuildThisFileDirectory)uk-UA\Revit.xml" />
     <Content Include="$(MSBuildThisFileDirectory)uk-UA\Renga.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Version.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)de-DE\" />
   </ItemGroup>
 </Project>

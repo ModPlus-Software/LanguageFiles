@@ -176,7 +176,6 @@
     <apply>Apply</apply>
     <continue>Continue</continue>
   </mmRebarSolidAndVisible>
-  <!--todo удаляемые значения после версии 1.2.1.0 -->
   <whshScheduleLookup LocalName="Schedule lookup"
 	                    Description="Search for schedules in a project that contain the specified value"
 	                    FullDescription="Searches for specified rows (whole or part), as well as numbers among the project schedules in field names, column headers or in cells, with or without case registration">
@@ -231,12 +230,6 @@
     <sr18>Value was found?</sr18>
     <sr19>Substring searched?</sr19>
     <sr20>Case ignored?</sr20>
-    <!-- todo remove start -->
-    <yes>Yes</yes>
-    <no>No</no>
-    <cancel>Cancel</cancel>
-    <ok>Ok</ok>
-    <!-- todo remove end -->
     <find>Find</find>
     <clean>Clean</clean>
   </whshScheduleLookup>
@@ -252,10 +245,6 @@
     <h7>View:</h7>
     <h8>Select and show Import</h8>
     <h9>Delete element</h9>
-    <!-- todo remove -->
-    <h10>Select all</h10>
-    <!-- todo remove -->
-    <h11>Unselect all</h11>
     <h12>Change the transparency of the window while hovering the mouse cursor</h12>
     <h13>Delete selected Imports:</h13>
     <h14>The import instance is the linked CAD file</h14>
@@ -270,13 +259,7 @@
     <sv3>Model imports</sv3>
     <iv1>Imported (or unidentified)</iv1>
     <iv2>Inserted as link</iv2>
-    <!-- todo remove start after 1.3.8.0  -->
-    <yes>Yes</yes>
-    <no>No</no>
-    <!-- todo remove end -->
     <msg1>The selected imports will be deleted!\nContinue?</msg1>
-    <!-- todo remove after 1.3.8.0  -->
-    <msg2>The current document does not contain imports!</msg2>
     <msg3>Unrecognized insertion element</msg3>
     <msg4>Error retrieving view name</msg4>
     <msg5>Does not belong to the view</msg5>
@@ -308,8 +291,6 @@
     <h4>Create a new configuration</h4>
     <h5>Delete the current configuration</h5>
     <h6>To process the wall thickness of</h6>
-    <!-- todo remove after 1.6.3.0 -->
-    <h7>mm</h7>
     <h8>When the distance between faces is less than</h8>
     <h9>exclude</h9>
     <h10>face</h10>
@@ -325,12 +306,8 @@
     <h20>Add dimension chain</h20>
     <msg1>You need to specify the name of the configuration!</msg1>
     <msg2>You need to specify at least one side of the dimensioning!</msg2>
-    <!-- todo remove after 1.6.3.0 -->
-    <msg3>Missing the ID attribute</msg3>
     <msg4>Dimensional chain №</msg4>
     <msg5>There are no working configurations\nOpen settings window of working configurations?</msg5>
-    <!-- todo remove after 1.6.3.0 -->
-    <msg6>You need to go to the floor plan!</msg6>
     <msg7>No Walls and Grids selected or the selected Walls and Grids do not meet the conditions for processing by the plugin!</msg7>
     <msg8>In the specified set there are no walls, suitable for the minimum permissible width!</msg8>
     <msg9>In this set, there are no walls intersected by view range!</msg9>
@@ -397,8 +374,6 @@
     <h21>will be permanently deleted!</h21>
     <h22>Sure?</h22>
     <h23>There are no working configurations\nOpen settings window of working configurations?</h23>
-    <!-- todo remove after 2.5.5.0 -->
-    <h24>You need to go to the plan or section view!</h24>
     <h25>Missing the ID attribute</h25>
     <h26>No matching elements found!</h26>
     <h27>Enter first point</h27>
@@ -420,37 +395,15 @@
     <c3>Mechanical</c3>
     <c4>Electrical</c4>
     <c5>Piping</c5>
-    <e1>Walls</e1>
-    <e2>Grids</e2>
-    <e3>Columns</e3>
-    <e4>Structural columns</e4>
     <e5>Model lines</e5>
     <e6>Room separation lines</e6>
-    <e7>Ramps</e7>
-    <e8>Rebars</e8>
-    <e9>Structural framing</e9>
     <e10>Rectangular/oval ducts</e10>
     <e11>Round ducts</e11>
-    <e12>Pipes</e12>
-    <e13>Cable trays</e13>
-    <e14>Conduits</e14>
-    <e15>Trusses</e15>
-    <e16>Floors</e16>
-    <e17>Mechanical equipment</e17>
-    <e18>Air terminals</e18>
-    <e19>Windows</e19>
-    <e20>Doors</e20>
-    <e21>Parts</e21>
-    <e22>Ceilings</e22>
-    <e23>Structural foundation</e23>
     <e24>Curtain walls (contour)</e24>
     <e25>Curtain grid lines</e25>
-    <e26>Curtain wall panels</e26>
-    <e27>Curtain wall mullion</e27>
     <e28>IFC rebars</e28>
     <e29>Foundation slabs</e29>
     <e30>Detail lines</e30>
-    <e31>Reference planes</e31>
     <n1>Only on Section Views</n1>
   </mprDimByLine>
   <mprDimBias LocalName="Dim offset"
@@ -458,8 +411,6 @@
               FullDescription="The application monitors all the created or edited dimensions and in case the dimensional text falls on dimensional lines, it moves the text aside!"
               LocalName1="Restore"
               Description1="Restore the text position at selected dimensions">
-    <!-- todo remove -->
-    <h1>Dim offset</h1>
     <h2>Automatic displacement of dimension text on dimension creation</h2>
     <h3>Automatic displacement of dimension text on dimension modify</h3>
     <h4>Displacement coefficient (from 0.1 to 2.0):</h4>
@@ -530,8 +481,6 @@
     <m8>All data on the selected drafting view will be deleted! Continue?</m8>
     <m9>You must specify a name for the new drafting view</m9>
     <m10>Drafting view with this name is already present in the document</m10>
-    <!-- todo remove after 1.5.4.0 -->
-    <m11>To run the plugin, go to the project</m11>
     <m12>Do you want to open the created view?</m12>
     <m13>Source file not found!</m13>
     <m14>The selected table and the associated drafting view will be permanently deleted! Continue?</m14>
@@ -591,24 +540,11 @@
     <tt4>_Insul,Finishing,Ceramic</tt4>
     <tt5>Specify, by comma, the values that can be contained in the material name of the "Structure" layer of the wall</tt5>
     <tt6>concrete,brick</tt6>
-    <!-- todo remove start -->
-    <mm>mm</mm>
-    <accept>Accept</accept>
-    <cancel>Cancel</cancel>
-    <!-- todo remove end -->
-    <!-- todo remove -->
-    <msg1>You need to go to the floor plan!</msg1>
     <msg2>Select elements to process</msg2>
-    <!-- todo remove -->
-    <err1>The selected walls do not satisfy the processing conditions: failed to obtain a solid, failed to obtain faces or they are not located orthogonally</err1>
     <err2>In this set there are no walls intersected by Primary range Cut plane!</err2>
     <err3>At runtime, the program went into an endless loop! If you see this message, please contact the developer!</err3>
     <err4>It is necessary to choose more than one element!</err4>
     <err5>Among the selected elements there are no walls!</err5>
-    <!-- todo remove -->
-    <err6>The selected columns do not satisfy the processing conditions: failed to obtain a solid, failed to obtain faces, have no insertion point or are not located orthogonally</err6>
-    <!-- todo remove -->
-    <err7>In this set there are no columns intersected by Primary range Cut plane!</err7>
     <err8>The selected piles do not satisfy the processing conditions: failed to obtain a solid or do not have an insertion point</err8>
     <err9>Selected columns do not satisfy machining conditions: failed solid, failed faces, have no insertion point or have curved faces</err9>
     <err10>Selected floors do not satisfy the processing conditions: failed solid or failed faces</err10>
@@ -628,8 +564,6 @@
   <mprNestedFamilyParamsTransfer LocalName="Associate parameters"
                                  Description="Plugin allows you to simplify the work of establishing a associating between the parameters of nested families with the parameters of the parent family"
                                  FullDescription="Using the plugin, you can create new parameters in the parent family based on one or more parameters of nested families. There is a possibility to set a mask for the name of the created parameter by adding a prefix or suffix. Plugin also allows you to set and delete a link to existing parameters of the parent family">
-    <!-- todo remove after 1.1.1.0 -->
-    <msg1>Plugin is only available in the Family Editor</msg1>
     <msg2>Attention! There are no standard types in the current family! Correct operation plugin is not possible!</msg2>
     <msg3>You can choose the option "Continue and create type" – then the plugin will create a type with the name:</msg3>
     <msg4>If you do not want to create a new type, then you need to do the following:</msg4>
@@ -678,10 +612,6 @@
   </mprNestedFamilyParamsTransfer>
   <mprTools LocalName="Tools"
             Description="A collection of small auxiliary plugins">
-    <!-- todo remove start after 2.13.1.0 -->
-    <Hide>Hide</Hide>
-    <Show>Show</Show>
-    <!-- todo remove end -->
     <ttShow>Show all items of the specified category in the current view</ttShow>
     <ttHide>Hide all items of the specified category in the current view</ttHide>
     <Category>All</Category>
@@ -718,23 +648,6 @@
     <Conduits>Conduits</Conduits>
     <PointClouds>Point Clouds</PointClouds>
     <Equipment>Equipment</Equipment>
-    <!-- todo remove start after 2.13.1.0 -->
-    <AllAnalytical>Analytical All</AllAnalytical>
-    <BeamAnalytical>Analytical Beams</BeamAnalytical>
-    <BraceAnalytical>Analytical Braces</BraceAnalytical>
-    <ColumnAnalytical>Analytical Columns</ColumnAnalytical>
-    <FloorAnalytical>Analytical Floors</FloorAnalytical>
-    <FoundationSlabAnalytical>Analytical Foundation Slabs</FoundationSlabAnalytical>
-    <IsolatedFoundationAnalytical>Analytical Isolated Foundations</IsolatedFoundationAnalytical>
-    <LinksAnalytical>Analytical Links</LinksAnalytical>
-    <AnalyticalNodes>Analytical Nodes</AnalyticalNodes>
-    <WallFoundationAnalytical>Analytical Wall Foundations</WallFoundationAnalytical>
-    <WallAnalytical>Analytical Walls</WallAnalytical>
-    <BoundaryConditions>Boundary Conditions</BoundaryConditions>
-    <InternalLoads>Structural Internal Loads</InternalLoads>
-    <LoadCases>Structural Load Cases</LoadCases>
-    <Loads>Structural Loads</Loads>
-    <!-- todo remove end -->
     <h1>Notching distance</h1>
     <h2>Notching distance, mm</h2>
     <h3>Automatically change the Notching distance for the elements of the Structural framing</h3>
@@ -780,13 +693,6 @@
     <h43>Select views and sheets in the Project Browser, using Ctrl and/or Shift, and run the plugin to open them</h43>
     <h44>Zoom selected</h44>
     <h45>Zoom current View to selected elements</h45>
-    <!-- todo remove start after 2.18.12.0 -->
-    <h46>Model Lines selected:</h46>
-    <h47>Detail Lines selected:</h47>
-    <h48>Sum of lengths of selected lines:</h48>
-    <h49>Lines length</h49>
-    <h50>Displays the total length of the selected linear model elements</h50>
-    <!-- todo remove end after 2.18.12.0 -->
     <h51>The total length of {0} elements in the "{1}" category</h51>
     <h52>The total length of all selected elements</h52>
     <h53>Sum of lengths</h53>
@@ -864,10 +770,6 @@
     <h53>Group by height</h53>
     <h54>Source</h54>
     <h55>Openings in the group:</h55>
-    <!-- todo remove after 5.12.35.0 -->
-    <h56>Width</h56>
-    <h57>Height</h57>
-    <!-- todo remove end -->
     <h58>You can drag and drop openings from the current group to other groups</h58>
     <h59>Group reinforcement settings</h59>
     <h60>Carry out reinforcement</h60>
@@ -887,10 +789,6 @@
     <h74>Replace with reinforcement settings of the group</h74>
     <h75>Leave the reinforcement settings</h75>
     <h76>Vertical reinforcement</h76>
-    <!-- todo remove start after 5.12.35.0 -->
-    <h77>Rebar bar type:</h77>
-    <h78>Diameter, mm:</h78>
-    <!-- todo remove end -->
     <h79>Step, mm:</h79>
     <h80>Binding of the center to the edge of the wall, mm:</h80>
     <h81>Processing additional step:</h81>
@@ -937,10 +835,6 @@
     <h122>First size group</h122>
     <h123>Second size group</h123>
     <h124>Third size group</h124>
-    <!-- todo remove start after 5.12.35.0 -->
-    <h125>Crossed by a Cut plane</h125>
-    <h126>Belonging to the current level</h126>
-    <!-- todo remove end -->
     <h127>Joints from underlying slabs</h127>
     <h128>Select underlying slabs</h128>
     <h129>Underlying slabs</h129>
@@ -1089,8 +983,6 @@
     <i5>Various</i5>
     <m1>Enter a value from</m1>
     <m2>to</m2>
-    <!-- todo remove after 5.12.35.0 -->
-    <m3>To run the command, go to the slab plan</m3>
     <m13>Reinforcement cover</m13>
     <m14>Up to</m14>
     <m15>From</m15>
@@ -1133,15 +1025,7 @@
     <dd4>outside</dd4>
     <dd5>S</dd5>
     <dd6>U</dd6>
-    <!-- todo remove after 5.12.35.0 -->
-    <create>Create</create>
     <rn>Rebar ⌀</rn>
-    <!-- todo remove start after 5.12.35.0 -->
-    <mm>mm</mm>
-    <full>Available in full version!</full>
-    <parameters>Parameters</parameters>
-    <name>Name</name>
-    <!-- todo remove end -->
     <noInFamily>Plugin operation in families is not available!</noInFamily>
     <c1>Move to the end of the wall</c1>
     <c2>Move to the middle of the wall</c2>
@@ -1204,8 +1088,6 @@
     <t49>The number of rows of vertical reinforcement</t49>
     <t50>The number of rows of horizontal reinforcement</t50>
     <t51>Selecting a underlying slab directly below the selected walls. Underlying slab selection available after wall selection, analysis and grouping. You can select one or more slabs. In the properties of the underlying slabs should be included properties "Structural"</t51>
-    <!-- todo remove after 5.12.35.0 -->
-    <t52>The maximum allowable value of the binding is calculated from the condition of the minimum allowable distance in the light according to section 10.3.5 of SP 63.13330 for the smallest wall width in the group</t52>
     <t53>Reset all values ​​of the current default reinforcement settings to the default values ​​set in the plugin</t53>
     <t54>Copy the current slab joints reinforcement settings to all selected plates</t54>
     <t55>Save the current slab joints reinforcement settings to the xml-file</t55>
@@ -1214,7 +1096,7 @@
     <t58>Rebar length consists of two anchoring lengths</t58>
     <t59>When you turn on the "Breaking in" option, each first pair of joints along the wall will be created with the first overlap length, every second pair – with the second overlap length</t59>
     <t60>If the joints exceed the height of the overlying wall, they will be cut off along the upper face of the wall, taking into account the specified ends cover of the rebars</t60>
-    <t61>The selection variant applies to the selection of foundation plates</t61>
+    <t61>The selection variant applies to the selection of plates</t61>
     <t62>The vertical rebar is moved to the place where the U-shaped rebar bend begins, which is obtained by adding the values of the cover layer of the horizontal reinforcement from the ends, the diameter of the U-shaped rebar and the standard bending diameter of the U-shaped rebar</t62>
     <t63>You can specify preferred rebar shapes for different types of rebars created by the plugin.</t63>
     <t64>Setting the preferred shapes does not guarantee that the reinforcement will be created using the specified shape of the rebar.</t64>
@@ -1321,10 +1203,6 @@
     <h72>rebars of top mesh</h72>
     <h73>rebars of bottom mesh</h73>
     <h76>Slab reinforcement</h76>
-    <!-- todo remove start after 2.15.1.0 -->
-    <h77>Rebar bar type:</h77>
-    <h78>Diameter, mm:</h78>
-    <!-- todo remove end -->
     <h79>Step, mm:</h79>
     <h80>Set the type for the created "Area Reinforcement" instances:</h80>
     <h81>Each mesh</h81>
@@ -1420,11 +1298,6 @@
     <m23>Reinforcement settings copied</m23>
     <rn>Rebar ⌀</rn>
     <full>Available in full version!</full>
-    <!-- todo remove start after 2.15.1.0 -->
-    <parameters>Parameters</parameters>
-    <name>Name</name>
-    <noInFamily>Plugin operation in families is not available!</noInFamily>
-    <!-- todo remove end -->
     <notSet>Do not set</notSet>
     <br1>Individual rebars</br1>
     <br2>Area reinforcement</br2>
@@ -1540,10 +1413,6 @@
     <h74>Replace with reinforcement settings of the group</h74>
     <h75>Leave the reinforcement settings</h75>
     <h76>Columns reinforcement</h76>
-    <!-- todo remove start after 3.19.1.0 -->
-    <h77>Rebar bar type:</h77>
-    <h78>Diameter, mm:</h78>
-    <!-- todo remove end -->
     <h79>Shape hooks by default:</h79>
     <h80>Shape hooks:</h80>
     <h81>set in sketch</h81>
@@ -1557,8 +1426,6 @@
     <h89>Thickening distance, fraction:</h89>
     <h90>Thickening of longitudinal reinforcement in the lower zone of the column</h90>
     <h91>If there are incoming joints, set the thickening distance of the lower zone along the length of joints</h91>
-    <!-- todo remove (last version 3.14.27.0)-->
-    <h92>Attention! The number and position of longitudinal reinforcement bars, as well as the layout of the transverse reinforcement are not saved and not copied!</h92>
     <h93>Triangular stirrups:</h93>
     <h94>Circle girth rebars:</h94>
     <h95>Hooks cannot be used in this form in a sketch</h95>
@@ -1659,10 +1526,6 @@
     <rn>Rebar ⌀</rn>
     <full>Available in full version!</full>
     <full2>Limited version only has one form available</full2>
-    <!-- todo remove start after 3.19.1.0 -->
-    <parameters>Parameters</parameters>
-    <name>Name</name>
-    <!-- todo remove end -->
     <noInFamily>Plugin operation in families is not available!</noInFamily>
     <p1>Analysis of the column:</p1>
     <p2>Search for related elements:</p2>
@@ -1770,10 +1633,6 @@
     <h74>Replace with reinforcement settings of the group</h74>
     <h75>Leave the reinforcement settings</h75>
     <h76>Beams reinforcement</h76>
-    <!-- todo remove start after 1.15.1.0 -->
-    <h77>Rebar bar type:</h77>
-    <h78>Diameter, mm:</h78>
-    <!-- todo remove end -->
     <h79>Shape hooks by default:</h79>
     <h80>Shape hooks:</h80>
     <h81>set in sketch</h81>
@@ -1786,8 +1645,6 @@
     <h89>Thickening distance, fraction:</h89>
     <h90>Thickening at the ends of the beam</h90>
     <h91>Thickening of reinforcement at the ends of the beam in the absence of underlying elements (cantilevered beam ends)</h91>
-    <!-- todo remove (last version 1.12.25.0) -->
-    <h92>Attention! The number and position of longitudinal reinforcement bars, as well as the layout of the transverse reinforcement are not saved and not copied!</h92>
     <h93>Triangular stirrups:</h93>
     <h94>Take into account underlying and end columns and walls</h94>
     <h97>Parameter</h97>
@@ -1830,10 +1687,6 @@
     <rn>Rebar ⌀</rn>
     <full>Available in full version!</full>
     <full2>Limited version only has one form available</full2>
-    <!-- todo remove start after 1.15.1.0 -->
-    <parameters>Parameters</parameters>
-    <name>Name</name>
-    <!-- todo remove end -->
     <noInFamily>Plugin operation in families is not available!</noInFamily>
     <p1>Analysis of the beam:</p1>
     <p2>Search for related elements:</p2>
@@ -1881,22 +1734,9 @@
   <mmOrderMarking LocalName="Numbering"
                   Description="Adding numbering to the specified parameter of elements with the possibility of numbering in the schedules"
                   FullDescription="When working in a non-schedule view, you can specify the direction of numbering based on the arrangement of elements, or add numbering in the order in which elements were created. When working in a schedule, the plugin adds numbering in the order of items in the schedule (taking into account sorting). It is possible to set the prefix and suffix for the number">
-    <!-- todo remove start -->
-    <h1>Prefix</h1>
-    <h2>Number</h2>
-    <h3>Suffix</h3>
-    <h4>Execute</h4>
-    <h5>Clear</h5>
-    <h6>Settings</h6>
-    <accept>Accept</accept>
-    <!-- todo remove end -->
     <h7>Initial value:</h7>
     <h8>Numbering direction:</h8>
     <h9>Target parameter:</h9>
-    <!-- todo remove after 4.4.12.0 -->
-    <h10>Search (enter * to display only selected items)</h10>
-    <!-- todo remove after 4.4.12.0 -->
-    <h11>Selected categories:</h11>
     <h12>Instance parameter</h12>
     <h13>Type parameter</h13>
     <h14>Parameter</h14>
@@ -1904,14 +1744,8 @@
     <h16>It is not possible to change the instance parameter for an element located in a group if the parameter "Values ​​can vary by group instances" is not enabled for the parameter or it is not the "Mark" system parameter</h16>
     <h17>Errors occurred while changing the parameter values ​​of the listed items</h17>
     <h18>Attention! The parameter is cleared for all elements of this schedule, regardless of the filtering settings. This means that if, for example, 10 columns are presented in the schedule, and only 5 columns are displayed in the filter settings, then the parameter will be cleared for all 10 columns! Clear parameter?</h18>
-    <!-- todo remove after 4.4.12.0 -->
-    <h19>Categories to filter</h19>
     <h20>Selection variant:</h20>
     <h21>Selected elements count:</h21>
-    <!-- todo remove -->
-    <h22>Algorithm for determining positions:</h22>
-    <!-- todo remove -->
-    <h23>If rows are selected before running the plugin, the plugin will number only the selected rows</h23>
     <h24>Number only selected rows</h24>
     <h25>Elements selection</h25>
     <h26>Numbering settings</h26>
@@ -1920,27 +1754,17 @@
     <h29>Prefix and suffix from</h29>
     <h30>string</h30>
     <h31>parameter</h31>
-    <!-- todo remove -->
-    <a1>Through deletion of rows</a1>
-    <!-- todo remove -->
-    <a2>Through signal value</a2>
     <sv1>Standard frame selection</sv1>
     <sv2>Ordinal selection</sv2>
     <sv3>Curve intersection</sv3>
     <select>Select</select>
     <t1>The work of the plugin is possible only in the schedule in the sorting settings of which the property "Itemize every instance" is checked</t1>
     <t2>Uncheck all categories</t2>
-    <t3>Standard frame selection – selection of elements in the current view with a frame with confirmation of the selection by pressing the "Finish" button. With this option, the numbering direction has five options – in the order of creation and by the position of the elements.</t3>
+    <t3>Standard frame selection – selection of elements in the current view with a frame with confirmation of the selection by pressing the "Finish" button. With this option, the numbering direction has nine options – in the order of creation and by the position of the elements.</t3>
     <t4>Ordinal selection – selects each element for numbering in the order in which the numbering will be performed. With this option, the direction of numbering can be ascending or descending. Completion of the selection is invoked by pressing the Esc key.</t4>
     <t5>Curve intersection – Select a curve (model line or detail line). The elements for numbering will be selected by finding the intersection of the curve with the geometry of the elements in the current view, projected onto the plane of the view. With this option, the direction of numbering can be ascending or descending.</t5>
     <t6>It is possible to apply a filter by category and/or parameters to all element selections.</t6>
     <t7>The list of parameters is filled in after selecting the elements for numbering.</t7>
-    <!-- todo remove start -->
-    <t8>For schedules that have the "Itemized" checkbox unchecked, there are two algorithms for determining positions:</t8>
-    <t9>Through deletion of rows – fast algorithm. This algorithm does not always work correctly, as there are cases when it is impossible to delete rows, and there are cases when deleting some rows leads to other rows.</t9>
-    <t10>Through signal value – is a slow algorithm. This algorithm requires constant regeneration of the specification, which leads to high time costs. The more elements in the schedule, the more time is required.</t10>
-    <t11>It is recommended to use the fast algorithm first. If the fast algorithm fails, then use the slow algorithm</t11>
-    <!-- todo remove end -->
     <t12>The initial value can be a fractional value. A point or comma can be used to separate the integer part from the fractional part. The specified separator will be used when setting values in the text parameter. If the target parameter is of data type "Number", the specified separator will not affect the displayed result. If the target parameter is of data type "Integer", the numbering result will be converted to an integer by discarding the fractional part.</t12>
     <t13>Leading zeros can be added to the initial value. For example, if the initial value is "01", and the step is "5", then the numbering result will be "01, 05, 10, 15...". Initial zeros are only taken into account if the target parameter has a string data type.</t13>
     <t14>The geometric direction of numbering is calculated by the absolute values of X and Y of the element placement points. For linear objects the middle point is taken</t14>
@@ -2123,8 +1947,6 @@
     <h20>in the parameter</h20>
     <h21>Part</h21>
     <h22>You must select at least one part</h22>
-    <!-- todo remove after 2.3.0.0 -->
-    <h23>Errors occurred while setting parameter values</h23>
     <h24>Parameter</h24>
     <h25>not found in ViewSheet</h25>
     <h26>Error while set parameter</h26>
@@ -2164,8 +1986,6 @@
                            Description="Automate the fix for duplicate families or types"
                            FullDescription="Plugin allows you to copy types from duplicate families to the main families, copy the values ​​of the parameters of types, update instances of families, and also delete duplicate families. Plugin allows you to replace duplicate types of families and delete the replaced types">
     <h1>Copy types</h1>
-    <!-- todo remove after 1.3.6.0 -->
-    <h2>Copy parameter values of family types</h2>
     <h3>Replace family instances</h3>
     <h4>Delete duplicate families</h4>
     <h5>Run</h5>
@@ -2200,8 +2020,6 @@
     <t1>Direction of processing: the family on the left is a duplicate, the family on the right is the main family</t1>
     <t2>Add to the processing list a couple of families that did not match the standard duplicate search</t2>
     <t3>New types will be created in the main family that are present and checked in the duplicate family and are absent in the main family</t3>
-    <!-- todo remove after 1.3.6.0 -->
-    <t4>Copy the instance parameter values from the replacing duplicate family to the replacing main family. Only for checked types</t4>
     <t5>Duplicate family instances of checked types will be replaced with instances of the main family with the same type set. If an instance of the main family does not have the required type, the duplicate family instance will be skipped</t5>
     <t6>Duplicate families that do not have instances in the model will be deleted</t6>
     <t7>The instance parameters values ​​will be copied from the replaced duplicate family to the replacement main family</t7>
@@ -2214,18 +2032,8 @@
                   Description="Quickly create a crop view by specifying a rectangular crop area"
                   LocalName1="Cut plan to 3D"
                   Description1="Creating a 3D view with the section box by the rectangular area indicated on the plan">
-    <!-- todo remove start after 2.0.2.0 -->
-    <h1>Impossible to work in view template</h1>
-    <h2>Impossible to work in Legends</h2>
-    <h3>Impossible to work in Schedules</h3>
-    <h4>Impossible to work in Drafting Views</h4>
-    <!-- todo remove endt after 2.0.2.0 -->
     <h5>Specify a rectangular area to create crop borders</h5>
     <h6>Could not get a valid rectangular area. Try again</h6>
-    <!-- todo remove start after 2.0.2.0 -->
-    <h7>Work on sheets is currently unavailable. Use the plugin on specific views</h7>
-    <h8>To run the command, go to the floor plan</h8>
-    <!-- todo remove end after 2.0.2.0 -->
   </mprFastViewCut>
   <mprCopySheetsToOpenDocuments LocalName="Copy sheets to documents"
                                 Description="Batch copy sheets to open documents"
@@ -2272,7 +2080,6 @@
     <m16>Choose one of the options – use an existing Drafting View from the destination document or create and use a copy of the Drafting View from the source document</m16>
     <notOrganized>!Not organized</notOrganized>
   </mprCopySheetsToOpenDocuments>
-  <!-- todo все удаляемые значения после версии 2.1.1.0 -->
   <mprWorksets LocalName="Worksets"
 	             Description="Manage, create, and apply worksets"
 	             FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element"
@@ -2296,11 +2103,7 @@
     <h22>Copy filter settings to all worksets of all groups</h22>
     <h23>Handling work sets in a group</h23>
     <h24>Add prefix:</h24>
-    <!-- todo remove -->
-    <h25>Prefix</h25>
     <h26>Add suffix:</h26>
-    <!-- todo remove -->
-    <h27>Suffix</h27>
     <h28>Sought value</h28>
     <h29>replaced by:</h29>
     <h30>New value</h30>
@@ -2308,12 +2111,8 @@
     <h32>Check all</h32>
     <h33>Uncheck all</h33>
     <h34>Inverse</h34>
-    <!-- todo remove -->
-    <h35>Available in the full version of the plugin</h35>
     <h37>Import worksets</h37>
     <h38>Group export</h38>
-    <!-- todo remove -->
-    <h39>Group</h39>
     <h40>Enter name</h40>
     <h41>Enter new name</h41>
     <h42>Enter name of group</h42>
@@ -2324,10 +2123,6 @@
     <h47>Select categories</h47>
     <h48>Equality parameters</h48>
     <h49>Display in the results the id of the elements to which the workset is assigned</h49>
-    <!-- todo remove -->
-    <h50>Configuration storage file is set by the settings of your organization</h50>
-    <!-- todo remove -->
-    <h51>You do not have access to edit configurations!</h51>
     <h52>Workset</h52>
     <h53>Editable</h53>
     <h54>Opened</h54>
@@ -2628,11 +2423,6 @@
     <h32>Changes to viewports are only available from Revit 2023!</h32>
     <filters>Filters</filters>
     <link>Link:</link>
-    <!-- todo remove start -->
-    <co1>Allow duplicates</co1>
-    <co2>Refuse duplicates</co2>
-    <co3>Ask user</co3>
-    <!-- todo remove end -->
     <b1>Use destination document names</b1>
     <b2>Abort paste</b2>
     <b3>Default behavior</b3>
@@ -2645,8 +2435,6 @@
     <m5>{0} – Start elements copying from "{1}" to "{2}".</m5>
     <m6>{0} – Finish elements copying from "{1}" to "{2}".</m6>
     <m7>{0} – Error! The error (message: "{4}") occured during the copying process of an element "{1} (id: {2})" of category "{3}".</m7>
-    <!-- todo remove -->
-    <m8>Copying options: "{0}".</m8>
     <m9>{0} – Warning! The document ({1}) is not workshared one. The worksets will not be copied.</m9>
     <m10>Worksets</m10>
     <m11> (Type)</m11>
@@ -2669,8 +2457,6 @@
     <m28>All groups</m28>
     <m29>Views (Templates)</m29>
     <m30>Copying finished</m30>
-    <!-- todo remove -->
-    <m31>Elements copied: {0};{1}Skipped: {2};{3}Errors: {4};{5}View log for details</m31>
     <m32>Cancel</m32>
     <m33>Search</m33>
     <m34>Area plan</m34>
@@ -2811,8 +2597,6 @@
                     LocalName1="Filter. Window mode"
                     Description1="Filter elements by parameters, which works in window mode">
     <h1>Presets</h1>
-    <!-- todo remove start 1.9.22.0 -->
-    <h2>Search</h2>
     <h3>Apply preset to current list</h3>
     <h4>Category search</h4>
     <h5>Select checked elements</h5>
@@ -2860,12 +2644,6 @@
     <fo5>Found on view</fo5>
     <fo6>Found in model</fo6>
     <fo7>By filter on view</fo7>
-    <!-- todo remove start after 1.9.22.0 -->
-    <accept>Accept</accept>
-    <cancel>Cancel</cancel>
-    <and>AND</and>
-    <or>OR</or>
-    <!-- todo remove end -->
   </mprContextFilter>
   <mprCopyViewTemplateFilters LocalName="View filters"
                               Description="Managing view filters and view template filters with the ability to copy filters between view templates and/or views while maintaining graphics override settings">
@@ -2885,8 +2663,6 @@
     <h14>View templates</h14>
     <h15>Views</h15>
     <h16>Select views to copy filters to</h16>
-    <!-- todo remove after 2.3.12.0 -->
-    <h17>Plugin operation in families is not available!</h17>
     <h18>Active view</h18>
     <h19>Visibility/Graphics Overrides will be copied for the filter</h19>
     <all>All</all>
@@ -2895,8 +2671,6 @@
     <vtf3>Elevations, Sections, Detail Views</vtf3>
     <vtf4>Floor, Structural, Area Plans</vtf4>
     <vtf5>Rendering, Drafting Views, Legends</vtf5>
-    <!-- todo remove after 2.2.7.0 -->
-    <apply>Apply</apply>
   </mprCopyViewTemplateFilters>
   <mprMergeDims LocalName="Merge dimensions"
                 Description="Create a new dimension chain from selected dimensions that lie on one straight line">
@@ -2906,21 +2680,9 @@
                     Description="Create new dimensions from segments of the selected dimension chain">
     <h1>Select dimensions with more than one segment</h1>
   </mprSplitDimChain>
-  <!-- todo все удаляемые значения (без указания версии) после версии 1.2.3.0 -->
   <mprCopyParameterValues LocalName="Copy values"
 	                        Description="Copy parameter values between elements or within one element"
 	                        FullDescription="The plugin contains various copying options, allowing you to configure which elements to copy to. There is a possibility of copying a composite value (from several parameters to one). There are filters for selecting items by category and parameter values. There is an opportunity to convert values between different types of parameters">
-    <!-- todo remove start -->
-    <yes>Yes</yes>
-    <no>No</no>
-    <accept>Accept</accept>
-    <cancel>Cancel</cancel>
-    <and>AND</and>
-    <or>OR</or>
-    <add>Add</add>
-    <save>Save</save>
-    <saved>Saved</saved>
-    <!-- todo remove end -->
     <saveNew>Save as new</saveNew>
     <full>Available in the full version of the plugin</full>
     <to>to</to>
@@ -2933,14 +2695,6 @@
     <h1>Select copy option</h1>
     <h2>Perform copy</h2>
     <h3>Saved configurations</h3>
-    <!-- todo remove start -->
-    <h4>Search (enter * to display only selected items)</h4>
-    <h5>Selected categories:</h5>
-    <h6>Instruction</h6>
-    <h7>Parameter name:</h7>
-    <h8>Condition:</h8>
-    <h9>Values:</h9>
-    <!-- todo remove end -->
     <h10>Sample element</h10>
     <h11>The sample element is used to populate the list of parameter names in the parameter copy rule setup</h11>
     <h12>Source element</h12>
@@ -2950,10 +2704,6 @@
     <h16>Sample target element</h16>
     <h17>The sample target element is used to populate the list of target parameter names in the parameter copy rule setup</h17>
     <h18>Pick</h18>
-    <!-- todo remove start -->
-    <h19>Filter elements by category:</h19>
-    <h20>Filter elements by parameters:</h20>
-    <!-- todo remove end -->
     <h21>Selecting the type of copy rule</h21>
     <h22>Add a parameters copy rule of type:</h22>
     <h23>Single</h23>
@@ -2974,11 +2724,6 @@
     <h38>Source parameter</h38>
     <h39>Target parameter</h39>
     <h40>Add parameter</h40>
-    <!-- todo remove start after 1.4.0.0 -->
-    <h41>Separator after:</h41>
-    <h42>Add space before separator</h42>
-    <h43>Add space after separator</h43>
-    <!-- todo remove end -->
     <h44>Parameter search option by name: "=" – full match of the parameter name. "≈" – parameter name must contain the specified value</h44>
     <h45>Add parameter name from parameter list of sample element</h45>
     <h46>Enter configuration name</h46>
@@ -3041,10 +2786,6 @@
     <msg21>Error while copying the arithmetic value calculated by the formula "{0}" to parameter "{1}": {2}</msg21>
     <msg22>Arithmetic value copied to parameter "{0}"</msg22>
     <msg23>No nested families found</msg23>
-    <!-- todo remove start -->
-    <msg24>Using the plugin in the Family Editor is not possible</msg24>
-    <msg25>Using the plugin on the current View is not possible</msg25>
-    <!-- todo remove end -->
     <msg26>No child elements found</msg26>
     <msg27>Element identifier (ID) cannot be used as the target parameter</msg27>
     <msg28>Failed to set "{0}" to "{1}"</msg28>
@@ -3056,27 +2797,6 @@
     <err5>Source element not selected</err5>
     <err6>No processing elements selected</err6>
     <err7>No child elements selected</err7>
-    <!-- todo remove start -->
-    <t13>Uncheck all categories</t13>
-    <t14>Add new item</t14>
-    <t15>Remove selected item</t15>
-    <i1>You can enter multiple valid values in the "Values" field, separated by a comma. A parameter is considered to satisfy the condition if its value matches at least one valid value.</i1>
-    <i2>The condition "Presence of parameter" means that the element will be processed if there is such a parameter, regardless of the parameter value.</i2>
-    <i3>String parameters are checked only by the conditions "Equal", "Not equal", "Contains", "Not contains".</i3>
-    <i4>Numeric parameters are checked by all conditions except "Contains".</i4>
-    <i5>The "Contains" condition checks that the element parameter contains at least one of the valid values. The condition "Not contains", respectively, checks that the parameter does not contain at least one of the values.</i5>
-    <i6>String values are case-insensitive.</i6>
-    <i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
-    <c1>Equal</c1>
-    <c2>More</c2>
-    <c3>Less</c3>
-    <c4>More or equal</c4>
-    <c5>Less or equal</c5>
-    <c6>Not equal</c6>
-    <c7>Contains</c7>
-    <c8>Presence of parameter</c8>
-    <c9>Not contains</c9>
-    <!-- todo remove end -->
     <sv1>Elements in the model with filter</sv1>
     <sv2>Elements in the current view with filter</sv2>
     <sv3>Custom selection with filter</sv3>
@@ -3086,8 +2806,6 @@
                  Description="Quick creation of spot dimensions on section and elevation views"
                  LocalName1="Spot dimensions by links"
                  Description1="Quick creation of spot dimensions on section and elevation views by elements from linked files">
-    <!-- todo remove -->
-    <h1>The current view is not a section or elevation</h1>
     <h2>No elements selected. To continue, you must select elements</h2>
     <h3>Select the end point</h3>
     <h4>Select categories to process:</h4>
@@ -3111,18 +2829,6 @@
                  Description4="Split a rebar set into two new rebar sets"
                  LocalName5="Change Presentation"
                  Description5="Batch change of rebar representation">
-    <!-- todo remove start after 1.1.10.0-->
-    <n1>Remove from host</n1>
-    <d1>Remove all reinforcement from the selected host element</d1>
-    <n2>Copy to host</n2>
-    <d2>Copy rebars from the original host element into multiple target host elements</d2>
-    <n3>Break set</n3>
-    <d3>Turn the selected rebar set into individual rebar bars</d3>
-    <n4>Split set</n4>
-    <d4>Split a rebar set into two new rebar sets</d4>
-    <n5>Change Presentation</n5>
-    <d5>Batch change of rebar representation</d5>
-    <!-- todo remove end after 1.1.10.0-->
     <m1>Select the host elements</m1>
     <m2>Select the source host element</m2>
     <m3>Select target host elements</m3>
@@ -3196,15 +2902,11 @@
     <h40>Duplicate current configuration</h40>
     <h41>copy</h41>
     <h42>Process pre-selected elements</h42>
-    <!-- todo remove after 1.9.5.0 -->
-    <m1>To start the plugin, go to section view</m1>
     <m2>Select elements</m2>
     <m3>Do you really want to irrevocably delete the "{0}" configuration?</m3>
     <err1>Need to name the new configuration</err1>
     <err2>The configuration named "{0}" already exists! Set another name</err2>
     <err3>Type not set to the category "{0}" of configuration "{1}"</err3>
-    <!-- todo remove after 1.9.5.0 -->
-    <noInFamily>The plugin is not available in families</noInFamily>
     <full>Available in full version of the plugin</full>
     <mm>mm</mm>
     <o1>Element</o1>
@@ -3664,8 +3366,6 @@
     <t17>Rewrite list</t17>
     <t18>No coloring configurations found in the specified file</t18>
     <t19>It is not possible to create a view template for the current view!</t19>
-    <!-- todo remove after 2.5.5.0 -->
-    <t20>The current view does not have a view template!</t20>
     <t21>Unable to create filters for parameter</t21>
     <t22>From the whole model</t22>
     <t23>From the current view</t23>
@@ -3824,8 +3524,6 @@
     <h1>Copy extents visibility settings</h1>
     <h2>Set the same values for "Crop View", "Crop Region Visible", and "Annotation Crop" parameters</h2>
     <h3>Copy 3D View Section Box</h3>
-    <!-- todo remove after 1.1.0.0 -->
-    <h4>The active View has no Crop extents</h4>
     <h5>No views found that are suitable for copying Crop Extents</h5>
     <notOrganized>!Not organized</notOrganized>
   </mprCopyCropBox>
@@ -3859,8 +3557,6 @@
     <t9>Dimensions</t9>
     <t10>Other</t10>
     <t11>Reversed order</t11>
-    <!-- todo remove -->
-    <a1>Run the plugin from the plan</a1>
     <t1>Selected element type: </t1>
     <t4>Element is not select</t4>
     <e1>Cancel selection</e1>
@@ -3906,8 +3602,6 @@
     <t3>Total rooms found: {0}</t3>
     <t4>Total elements in category "{0}" that were assigned a value after analysis: {1}</t4>
     <t5>Failed to determine direction for element</t5>
-    <!-- todo remove after 1.1.4.0 -->
-    <t5>Report</t5>
     <t6>Elements in category "{0}" do not have a target parameter set to write result</t6>
   </mprWorldOrientation>
   <mprPlateWeight LocalName="Plate weight"
@@ -4318,8 +4012,6 @@
     <h13>Sheet Parameter:</h13>
     <h14>Limit number of characters:</h14>
     <h15>Sheet Name</h15>
-    <!-- todo remove -->
-    <h16>Centering</h16>
     <h17>Sheet Number</h17>
     <h18>Title Block</h18>
     <h19>Height, mm</h19>
@@ -4403,8 +4095,6 @@
     <h94>Enter name for the Print Set</h94>
     <h95>Create Print Set</h95>
     <h96>Enter Print Set name already in use</h96>
-    <!-- todo remove -->
-    <h97>Content trim</h97>
     <h98>The File Name Mask does not contain the sheet parameters, which may result in generating the same file name for all exported sheets. When you create a file name mask, make sure that the file names will be unique</h98>
     <h99>Project Parameter:</h99>
     <h100>Variable:</h100>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModPlus>
+  <mrObjectsFilter LocalName="Filter"
+                   Description="Filtern von ausgewählten Elementen nach Kategorie">
+    <h1>Kategorie:</h1>
+    <h2>Anzahl von Objekten:</h2>
+    <h3>Alle auswählen</h3>
+    <h4>Abwählen</h4>
+    <h5>Gesamtzahl der ausgewählten Objekte:</h5>
+    <h6>Akzeptieren</h6>
+    <h7>Abbrechen</h7>
+  </mrObjectsFilter>
+  <mrBatchSheetExport LocalName="Gruppenexport von Plänen"
+                      Description="Mit dem Plugin können Sie alle angegebenen Pläne in dwg/dxf/pdf/oxps exportieren">
+    <t1>Alle Pläne auswählen</t1>
+    <t2>Alle Pläne abwählen</t2>
+    <t3>Umkehrung der Wahlmöglichkeit</t3>
+    <t4>Wenn das Kontrollkästchen nicht aktiviert ist und der Zielordner Dateien mit demselben Namen enthält, wird ein Suffix dem Namen des exportierten Plans hinzugefügt</t4>
+    <h1>Exportieren in:</h1>
+    <h2>Version der AutoCAD-Datei:</h2>
+    <h3>Vorhandene Dateien überschreiben</h3>
+    <h5>Geben Sie den Ordner an, in dem die exportierten Dateien gespeichert werden sollen</h5>
+    <h7>Export in</h7>
+    <h8>Export von Plan:</h8>
+    <m1>Keine Pläne zum Export ausgewählt!</m1>
+    <m2>Es wird dringend empfohlen, das Projekt vor dem Exportieren der Pläne zu speichern!\nWollen Sie das Projekt speichern?</m2>
+  </mrBatchSheetExport>
+  <mrSearchBy LocalName="Suche nach Bedingung" Description="Suche nach Objekten nach verschiedenen Bedingungen"
+              FullDescription="Mit dem Plugin können Sie nach Eigenschaften, Parametern und berechneten Merkmalen unter allen Modellobjekten oder Objekten eines bestimmten Typs suchen. Gefundene Objekte werden im Modell hervorgehoben. Sie können mehrere Werte für die Suche in der Suchzeile angeben, die Arbeitsvariante &quot;UND-ODER&quot; festlegen und die Operatoren &quot;ungleich&quot;, &quot;kleiner als&quot;, &quot;größer als&quot; verwenden.">
+    <h1>Typ der Objekte:</h1>
+    <h2>Suchen in:</h2>
+    <h3>Eigenschaften</h3>
+    <h4>Parametern</h4>
+    <h5>Über Berechnungen definierten Eigenschaften</h5>
+    <h6>Maßeinheiten</h6>
+    <h7>Typ der Übereinstimmung von Zeilen:</h7>
+    <h8>Suchen:</h8>
+    <h9>Die aktuelle Auswahl zurücksetzen, wenn nichts gefunden wird</h9>
+    <h10>Suchen</h10>
+    <h11>{0} Objekte gefunden</h11>
+    <h12>Nichts gefunden</h12>
+    <h13>Zeigen</h13>
+    <h14>Ausblenden</h14>
+    <h15>Isolieren</h15>
+    <m1>Gleich</m1>
+    <m2>Enthält</m2>
+    <t1>Geben Sie Maßeinheiten zum Erfassen von Werten in Objekten und die Genauigkeit des Vergleichs von numerischen Werten an</t1>
+    <t2>Geben Sie die Übereinstimmungsoption für Zeichenfolgen an: ob die zu prüfende Zeichenkette vollständig mit dem Suchwert übereinstimmen muss, oder ob die zu prüfende Zeichenkette einen Suchwert enthalten kann</t2>
+    <t3>Sie können mehrere Werte angeben, nach denen gesucht werden soll, indem Sie sie mit einem Sternchen voneinander trennen. Zum Beispiel, "200*300".</t3>
+    <t4>Wenn mehrere Werte angegeben werden, wird die Arbeitsvariante "ODER" verwendet. Wenn Sie beispielsweise nach dem Wert "200*300" suchen, ist eine Übereinstimmung von "200" oder "300" zufriedenstellend.</t4>
+    <t5>Um die Arbeitsvariante "AND" zu verwenden, geben Sie den Wert "UND" ganz am Anfang der Suchabfrage an. Zum Beispiel, "AND200*300'' zeigt an, dass sowohl der Wert "200" als auch der Wert "300" im gesuchten Objekt übereinstimmen müssen.</t5>
+    <t6>Bei der Angabe von Bruchzahlen werden die Trennzeichen zwischen dem ganzzahligen und dem gebrochenen Teil, die in den regionalen Einstellungen des Operationssystems festgelegt sind, berücksichtigt. Wenn Sie ein Komma in den Einstellungen verwenden, wird der Wert "1,75" als eine Zeichenfolge verarbeitet.</t6>
+    <t7>Um nach Parametern wie ''Ja/Nein'' zu suchen, müssen Sie in der Suchzeile "wahr" bzw. "falsch" angeben.</t7>
+    <t8>Für numerische Werte können Sie Vergleichsoperatoren angeben: "!=" – ungleich, "&lt;" – kleiner als, "&gt;" – größer als. Für Zeichenfolgenwerte können Sie den Vergleichsoperator "!=" angeben. (ungleich), der nur verarbeitet wird, wenn die Eigenschaft "Typ der Übereinstimmung von Zeilen" auf "gleich" gestellt ist.</t8>
+    <t9>Zum Beispiel, zeigt die Zeichenfolge "UNDBeton*&gt;1.75" an, dass Sie Objekte finden müssen, bei denen überprüfte Werten den Zeichenfolgenwert "Beton" und einen numerischen Wert größer als 1,75 enthalten.</t9>
+    <t10>Man kann eine bestimmte Eigenschaft oder einen bestimmten Namen des Parameters angeben, bei dem der eingegebene Wert überprüft werden soll. Zum Beispiel, zeigt die Zeichenfolge "Kommentar=Beton" mit aktiviertem Kontrollkästchen "In Eigenschaften suchen" an, dass Objekte, die die Suchbedingung erfüllen, die Eigenschaft "Kommentar" mit dem Wert "Beton" enthalten sollten. Die Überprüfung des Namens wird auch anhand des Wertes "Typ der Übereinstimmung von Zeilen" durchgeführt.</t10>
+    <t11>Um eine Suche mit Bedingung für leere Werte durchzuführen, braucht man nur einen Namen für die Eigenschaft oder den Parameter anzugeben. Zum Beispiel, zeigt die Zeichenfolge "Kommentar=" mit aktiviertem Kontrollkästchen "In Eigenschaften suchen" an, dass Objekte, die die Suchbedingung erfüllen, die Eigenschaft "Kommentar" mit dem leeren Wert enthalten sollten.</t11>
+    <t12>Bei der Überprüfung aller Zeichenfolgenwerte wird die Groß- und Kleinschreibung nicht berücksichtigt.</t12>
+    <t13>Gefundene Objekte in der 3D-Ansicht an</t13>
+    <all>Alle</all>
+    <qh1>Länge:</qh1>
+    <qh2>Fläche:</qh2>
+    <qh3>Masse:</qh3>
+    <qh4>Inhalt:</qh4>
+    <qh5>Genauigkeit:</qh5>
+    <q1>Millimeter</q1>
+    <q2>Zentimeter</q2>
+    <q3>Meter</q3>
+    <q4>Zölle</q4>
+    <q5>Quadratmillimeter</q5>
+    <q6>Quadratzentimeter</q6>
+    <q7>Quadratmeter</q7>
+    <q8>Gramme</q8>
+    <q9>Kilogramme</q9>
+    <q10>Kubikmillimeter</q10>
+    <q11>Kubikzentimeter</q11>
+    <q12>Kubikmeter</q12>
+  </mrSearchBy>
+  <mrLevelsList LocalName="Ebenen"
+                Description="Darstellung einer Liste von Ebenen mit der Möglichkeit, deren Sichtbarkeit zu verwalten">
+    <h1>In dieser Ansicht nicht verfügbar</h1>
+    <h2>Sichtbarkeit invertieren</h2>
+    <h3>Die Ebene isolieren</h3>
+    <h4>Ebene auswählen</h4>
+    <all>Alle Ebenen</all>
+  </mrLevelsList>
+  <mrQuickProperties LocalName="Kurzübersicht von Eigenschaften"
+                     Description="Kurzübersicht und Bearbeiten von Eigenschaften ausgewählter Elemente ">
+    <unknown>Unbekannt</unknown>
+    <dif>*UNTERSCHIEDLICHE*</dif>
+    <h1>Ausgewählte Elemente:</h1>
+    <h2>Anzahl der Elemente mit dieser Eigenschaft</h2>
+    <h3>Rundung von Zahlen:</h3>
+    <nothing>Nichts</nothing>
+    <several>Mehrere</several>
+  </mrQuickProperties>
+  <mrLast LocalName="Letzte"
+          Description="Verfolgung und Darstellung von letzten ausgeblendeten oder ausgewählten Elementen">
+    <h1>Unterschiedliche</h1>
+    <h2>Sichtbar machen</h2>
+    <h3>Ausgewählte</h3>
+    <h4>Ausblendete</h4>
+  </mrLast>
+  <mr3dViewOrientation LocalName="Ansichtausrichtung"
+                       Description="Kameraausrichtung in der 3D-Ansicht">
+    <top>Oberhalb</top>
+    <bottom>Unterhalb</bottom>
+    <front>Vorne</front>
+    <back>Hinten</back>
+    <left>Links</left>
+    <right>Rechts</right>
+  </mr3dViewOrientation>
+</ModPlus>

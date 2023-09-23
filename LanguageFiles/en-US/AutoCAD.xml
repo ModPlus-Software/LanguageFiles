@@ -165,21 +165,6 @@
 	<mpMultiScale LocalName="Multi scale"
                 Description="Plugin allows you to scale each of the selected objects relative to themselves"
                 FullDescription="Each selected entity will be scaled relative to the specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The scale point is determined by the rectangle describing the entity (Bounding Box)">
-		<!-- todo remove start after 1.1.5.0-->
-		<msg1>Copy</msg1>
-		<msg2>Select objects:</msg2>
-		<msg3>Scale:</msg3>
-		<msg4>Select a base point:</msg4>
-		<kw1>Center</kw1>
-		<kw2>LBottom</kw2>
-		<kw3>LTop</kw3>
-		<kw4>RTop</kw4>
-		<kw5>RBottom</kw5>
-		<kw6>CBottom</kw6>
-		<kw7>CTop</kw7>
-		<kw8>CLeft</kw8>
-		<kw9>CRight</kw9>
-		<!-- todo remove end after 1.1.5.0-->
 		<h1>Create copies of selected entities</h1>
 		<h2>Base Point:</h2>
 		<h3>Select entities:</h3>
@@ -197,8 +182,6 @@
 	<mpMultiRotate LocalName="Multi rotate"
 	              Description="Plugin allows you to rotate each of the selected entities relative to the Z-axis with the center of rotation relative to themselves"
 	              FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
-		<!-- todo remove after 1.0.1.0 -->
-		<msg3>Rotation angle in degrees:</msg3>
 		<h1>Rotation angle:</h1>
 	</mpMultiRotate>
 	<mpMultiMirror LocalName="Multi mirror"
@@ -216,8 +199,6 @@
 	<mpLayerAuto LocalName="Auto layers"
                Description="Plugin is used to automatically add a layer to the created objects"
                FullDescription="Plugin processes the creation, copying, pasting and other commands when working with AutoCAD objects – dimensions, text, multileaders, hatching, tables, viewports, lines, polylines, xLines, rays, circles, ellipses, splines, arcs, blocks – and sets the layer specified in the plugin settings for them. There is an option to specify the specified layers for the selected objects. There is an opportunity to set block layers by name">
-    <!-- todo remove -->
-    <save>Save</save>
 		<h1>Layers for entities</h1>
 		<h2>Layer assignment</h2>
 		<h3>Available in the full version of the plugin</h3>
@@ -234,12 +215,6 @@
 		<h14>forum</h14>
 		<h15>Remove a command from the list</h15>
 		<h16>Enter the command to exclude</h16>
-    <!-- todo remove start -->
-    <h17>Add</h17>
-    <h18>Load</h18>
-		<h19>Remember</h19>
-		<h20>You can save the current layers in the settings in order to quickly set them. ATTENTION! If the layer saved in the settings is not present in the current document, it will be ignored</h20>
-    <!-- todo remove end -->
 		<h21>Save the settings for the current drawing and close the window</h21>
 		<h22>Apply to selected</h22>
 		<h23>Apply settings to selected objects</h23>
@@ -249,8 +224,6 @@
 		<h27>You did not enter command!</h27>
 		<h28>Command</h28>
 		<h29>already in the list</h29>
-    <!-- todo remove -->
-		<h30>Saved!</h30>
 		<h31>Select objects:</h31>
 		<h32>ModPlus: The object is moved to the layer:</h32>
 		<h33>Error of AutoLayers plugin:</h33>
@@ -967,16 +940,9 @@
 		<h37>Tables are not saved to file! After closing, all data will be lost!\nAre you sure you want to close the window?</h37>
 		<h38>Existing tables will be overwritten!\nContinue?</h38>
 		<h39>The selected item will be permanently deleted\nContinue?</h39>
-		<!-- todo remove start -->
-		<h40>Statement drawings has no values</h40>
-		<h41>Statement specifications has no values</h41>
-		<h42>Statement reference documents has no values</h42>
-		<!-- todo remove end -->
 		<h43>Available in full version!</h43>
 		<h44>Overwrite existing tables?\nYes – overwrite, No – supplement</h44>
 		<h45>No blocks found in the current space!</h45>
-		<!-- todo remove -->
-		<h46>Error reading settings!</h46>
 		<h47>In the table file not found a table with a table style</h47>
 		<h48>Run the "Tables" plugin to overwrite the table file</h48>
 		<h49>No file with tables found!\nYou need to start the "Tables" plugin</h49>
@@ -999,11 +965,6 @@
 	<mpProductInsert LocalName="Product insert"
                    Description="Plugin of inserting products from the ModPlus database as blocks containing extended data"
                    FullDescription="Plugin creates AutoCAD blocks based on data from the database. Extended data is added to the blocks, which allows processing these blocks with other plugins and creating a specification based on them\nPlugin also allows you to add extended data to ordinary AutoCAD entities\nImportant! Blocks must be inserted with this plugin or copy already inserted, otherwise (when inserted by normal means AutoCAD), extended data will not be added!">
-		<!-- todo remove start -->
-		<close>Close</close>
-		<accept>Accept</accept>
-		<cancel>Cancel</cancel>
-		<!-- todo remove end -->
 		<all>All</all>
 		<cb1>Metal</cb1>
 		<cb2>Concrete</cb2>
@@ -1012,8 +973,6 @@
 		<cb5>Other</cb5>
 		<h1>Edit the list of documents used by the plugin</h1>
 		<h2>Open the database search bar</h2>
-		<!-- todo remove -->
-		<h3>Search</h3>
 		<h4>2 characters or more</h4>
 		<h5>PRODUCT INSERT</h5>
 		<h6>Choose a section:</h6>
@@ -1131,10 +1090,6 @@
 	<mpPrToTable LocalName="Products to table"
                Description="Plugin allows you to fill the specification table with the selected ModPlus products"
                FullDescription="Plugin collects data for the specification from the extended product data (blocks created by the &quot;Insert product&quot; plugin, or AutoCAD primitives with the expanded data added by the &quot;Insert product&quot; plugin), as well as from blocks that have attributes for the specification. It is possible to specify a line from which the table will be populated">
-		<!-- todo remove start -->
-		<yes>Yes</yes>
-		<no>No</no>
-		<!-- todo remove end -->
 		<h1>Select entities that are ModPlus products</h1>
 		<h2>Row</h2>
 		<h3>Decimals</h3>
@@ -1271,15 +1226,6 @@
 	<mpSpecifications LocalName="Specifications"
                     Description="Plugin for the formation and filling of general specifications"
                     FullDescription="Plugin allows you to add items to the context menu of AutoCAD, allowing you to expand the ability to work with the specifications: Context menu for tables: Add product from the database – allows you to add products from the plugin database directly into the AutoCAD table; Context menu for blocks: Add/change attributes for the specification – allows you to add attributes to the blocks for the specification (see details in the help)">
-		<!-- todo remove start -->
-		<accept>Accept</accept>
-		<cancel>Cancel</cancel>
-		<h1>SPECIFICATIONS</h1>
-		<h2>Russia</h2>
-		<h3>Ukraine</h3>
-		<h4>Belarus</h4>
-		<h5>Settings</h5>
-		<!-- todo remove end -->
 		<h6>CONTEXTUAL MENUS</h6>
 		<h7>Available in the full version of the plugin</h7>
 		<h8>Context menu for tables:</h8>
@@ -1324,8 +1270,6 @@
 		<h47>Steel</h47>
 		<h48>Edit the list of documents used by the plugin</h48>
 		<h49>Open the database search bar</h49>
-		<!-- todo remove -->
-		<h50>Search</h50>
 		<h51>2 characters or more</h51>
 		<h52>PRODUCT FROM BASE</h52>
 		<h53>Choose a section:</h53>
@@ -1864,8 +1808,8 @@
 		<h53>Basic style for Break Line</h53>
 		<h54>Style name</h54>
 		<h55>Style description</h55>
-		<h56>Create break line according to GOST 2.303-68</h56>
-		<h57>Creation of an smart entity on the basis of an anonymous block describing the line of the break according to GOST 2.303-68, by specifying two points</h57>
+		<h56>Create break line</h56>
+		<h57>Creation of an smart entity on the basis of an anonymous block describing the line of the break, by specifying two points</h57>
 		<h58>Curvilinear break</h58>
 		<h59>Cylindrical break</h59>
 		<h60>Create curvilinear break</h60>
@@ -1873,8 +1817,8 @@
 		<h62>Creating an smart entity based on an anonymous block describing a curvilinear break, by specifying two points</h62>
 		<h63>Creating an smart entity based on an anonymous block describing a cylindrical break, by specifying two points</h63>
 		<h64>Content</h64>
-		<h65>Creating a straight axis according to GOST 21.101-97</h65>
-		<h66>Creating an smart entity based on an anonymous block describing the straight axis in accordance with GOST 21.101-97, by specifying two points</h66>
+		<h65>Creating a straight axis</h65>
+		<h66>Creating an smart entity based on an anonymous block describing the straight axis, by specifying two points</h66>
 		<h67></h67>
 		<h68>Basic style for Straight Axis</h68>
 		<h69>The selected style will be permanently deleted! Continue?</h69>
@@ -1888,11 +1832,11 @@
 		<h77>Converting the selected polyline to the ground line</h77>
 		<h78>Basic style for Ground line</h78>
 		<h79>Section</h79>
-		<h80>Creating a section designation according to GOST 2.305-68</h80>
-		<h81>Creating an smart entity based on an anonymous block describing the section according to GOST 2.305-68</h81>
+		<h80>Creating a section designation</h80>
+		<h81>Creating an smart entity based on an anonymous block describing the section</h81>
 		<h82>Broken section</h82>
 		<h83>Section from polyline</h83>
-		<h84>Creating a broken section designation according to GOST 2.305-68</h84>
+		<h84>Creating a broken section designation</h84>
 		<h85>Convert selected polyline to section designation</h85>
 		<h86>Continue values ​​for new sections</h86>
 		<h87>When creating a new section in the current space, the last created section will be searched, the value of which will be taken as the basis for the new section.</h87>
@@ -1912,8 +1856,8 @@
 		<h103>Style is not in the database</h103>
 		<h104>One or more entities are located on the locked layer, they cannot be updated</h104>
 		<h105>Level mark</h105>
-		<h106>Creating a elevation in accordance with GOST 21.101-97</h106>
-		<h107>Creating an smart entity based on an anonymous block describing the elevation according to GOST 21.101-97</h107>
+		<h106>Creating a elevation</h106>
+		<h107>Creating an smart entity based on an anonymous block describing the elevation</h107>
 		<h108>Base style for Level Mark</h108>
 		<h109></h109>
 		<h110>Align Level Marks</h110>
@@ -1946,11 +1890,11 @@
 		<h137>When creating secant nodal leaders, there will be a search for already created secant nodal leaders in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created secant nodal leader, the value of the node number next from the last found value will be set</h137>
 		<h138>Base style for Secant Nodal Leader</h138>
 		<h139>Weld joint</h139>
-		<h140>Creating of a seam symbol for welded joints in accordance with GOST 21.502-2016</h140>
-		<h141>Creating an smart entity based on an anonymous block describing the seam of welded joints in accordance with GOST 21.502-2016</h141>
+		<h140>Creating of a seam symbol for welded joints</h140>
+		<h141>Creating an smart entity based on an anonymous block describing the seam of welded joints</h141>
 		<h142>Base style for seam symbol for welded joints</h142>
 		<h143>Weld joint from polyline</h143>
-		<h144>Convert selected polyline into a line for marking the weld seam in accordance with GOST 21.502-2016</h144>
+		<h144>Convert selected polyline into a line for marking the weld seam</h144>
 		<h145>Fragment mark</h145>
 		<h146>Basic style for the fragment mark</h146>
 		<h147>Creating a fragment mark</h147>
@@ -1975,24 +1919,24 @@
 		<h166>Convert the selected polyline to a Letter Line</h166>
 		<h167>View</h167>
 		<h168>Base style for the view designation</h168>
-		<h169>Creating a view designation in accordance with GOST 2.305-68</h169>
-		<h170>Creating an smart entity based on an anonymous block describing the view designation according to GOST 2.305-68</h170>
+		<h169>Creating a view designation</h169>
+		<h170>Creating an smart entity based on an anonymous block describing the view designation</h170>
 		<h171>Level mark on plan</h171>
 		<h172>Base style for the view designation for Level mark on the plan</h172>
-		<h173>Creating Level mark on the plan in accordance with GOST 2.307</h173>
-		<h174>Creating an smart entity based on an anonymous block describing the Level mark on the plan according to GOST 2.307</h174>
+		<h173>Creating Level mark on the plan</h173>
+		<h174>Creating an smart entity based on an anonymous block describing the Level mark on the plan</h174>
     <h175>Chain leader</h175>
     <h176>Base style for the view designation for chain leader</h176>
-    <h177>Creating chain leader designation in accordance with GOST 2.307</h177>
-    <h178>Creating an smart entity based on an anonymous block describing the Chain leader according to GOST 2.307</h178>
+    <h177>Creating chain leader designation</h177>
+    <h178>Creating an smart entity based on an anonymous block describing the Chain leader</h178>
     <h179>Continue the values of the chain leader being created</h179>
     <h180>When creating chain leaders, there will be a search for already created leaders in the drawing and collection of their values, and then sorting the values in ascending order. The value of the number or letter next to the last found value will be set for the created leader. The function works only if all created chain leaders have numeric or alphabetic values</h180>
     <h181>Consider block rotation angle when rotating text</h181>
     <h182>The text of the straight axis will rotate together with the axis block, when using the ROTATE command</h182>
     <h183>Crested leader</h183>
     <h184>Base style for the view designation for crested leader</h184>
-    <h185>Creating crested leader designation in accordance with GOST 2.307</h185>
-    <h186>Creating an smart entity based on an anonymous block describing the crested leader according to GOST 2.307</h186>
+    <h185>Creating crested leader designation</h185>
+    <h186>Creating an smart entity based on an anonymous block describing the crested leader</h186>
     <so0>Refresh graphics</so0>
 		<sot0>All found smart entities will have graphics regeneration</sot0>
 		<so1>Select</so1>
@@ -2293,7 +2237,5 @@
 		<h3>Selecting files to merge sheets</h3>
 		<h4>Layers merging...</h4>
     <h5>Lock the viewports on the imported sheets?</h5>
-    <!-- todo remove -->
-    <h6>Correcting the position of the contents of the sheets...</h6>
 	</mpRevitSheetsMerging>
 </ModPlus>

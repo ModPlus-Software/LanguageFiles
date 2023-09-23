@@ -1,0 +1,2230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpTxtNumCopy LocalName="Kopieren mit Nummerierung"
+                Description="Kopiert den ausgewählten Text oder einen Block mit dem Attribut, das einen numerischen Wert enthält, und ändert den Wert um den angegebenen numerischen Schritt"
+                FullDescription="Kopiert den ausgewählten einzeiligen oder mehrzeiligen Text, einen Block mit dem Attribut oder eine Multi-Führungslinie, der einen numerischen Wert enthält, und ändert den Wert um den angegebenen numerischen Schritt. Es gibt verschiedene Einstellungen: Hinzufügen eines Präfixes/Suffixes, Unterdrücken des nachgestellten Nulls usw.">
+    <accept>Akzeptieren</accept>
+    <cancel>Abbrechen</cancel>
+    <next>Fortsetzen</next>
+    <prefix>Präfix</prefix>
+    <suffix>Suffix</suffix>
+    <msg1>Wählen Sie einen Text, einen Block mit Attributen oder eine Führungslinie:</msg1>
+    <msg2>Ungültige Wahl!</msg2>
+    <msg3>Der ausgewählte Block enthält keine Attribute</msg3>
+    <msg4>Der ausgewählte Text enthält keine numerischen Werte</msg4>
+    <msg5>Konnte keine Zahl abgerufen werden</msg5>
+    <msg6>Fehler bei der Zahlsuche</msg6>
+    <msg7>Basiszahl:</msg7>
+    <msg8>Geben Sie einen Inkrementschritt ein:</msg8>
+    <msg9>Basispunkt:</msg9>
+    <msg10>Ausgewählte Multi-Führungslinie enthält keinen Text</msg10>
+    <msg11>Geben Sie einen Punkt an:</msg11>
+    <h1>Attribut auswählen</h1>
+    <h2>Teg:</h2>
+    <h3>Wert:</h3>
+    <h4>Einstellungen</h4>
+    <h5>Wachstumsrate:</h5>
+    <h6>Text VOR und Text NACH speichern</h6>
+    <h7>Nullen einfügen</h7>
+    <h8>Nullen an den Anfang einer Zahl anfügen</h8>
+    <h9>Unterdrückung von Nullen am Ende</h9>
+    <h10>Entfernen aller Nullen am Ende aus der Zahl</h10>
+    <h11>Ergebnis:</h11>
+    <cb1>Zehner</cb1>
+    <cb2>Hunderte</cb2>
+    <cb3>Tausende</cb3>
+    <cb4>Zehntausende</cb4>
+    <cb5>Hunderttausende</cb5>
+  </mpTxtNumCopy>
+  <mpMultiCopy LocalName="Multi-Kopieren"
+               Description="Mehrfaches Kopieren ausgewählter Objekte mit einem bestimmten Schritt"
+               FullDescription="Das Plugin unterstützt zwei Arten des Kopierens:\nMarkieren: Kopiert Objekte mit den angegebenen Abständen dazwischen entlang der genannten Linie;\nTeilen: Kopiert Objekte durch Teilen der angegebenen Zeile durch die eingegebene Anzahl von Segmenten\nEs gibt die Möglichkeit, ein Objekt (Linie, Polylinie, Spline) auszuwählen, um den Kopierpfad festzulegen">
+    <msg1>Wählen Sie die Objekte aus:</msg1>
+    <msg2>Entfernung angeben oder [Teilen]</msg2>
+    <msg3>Anzahl der Segmente eingeben oder [Markieren]</msg3>
+    <msg4>Bestimmen Sie einen Basispunkt oder:</msg4>
+    <msg5>Wählen Sie eine Linie, eine Polylinie oder einen Spline:</msg5>
+    <msg6>Geben Sie den zweiten Punkt an:</msg6>
+    <kw1>Teilen</kw1>
+    <kw2>Markieren</kw2>
+    <kw3>Objekt</kw3>
+  </mpMultiCopy>
+  <mpTxtCenter LocalName="Text in der Mitte"
+               Description="Mit dem Plugin können Sie einen einzeiligen Text erstellen oder den vorhandenen Text in der Mitte zwischen zwei angegebenen Punkten ausrichten">
+    <msg1>Geben Sie den ersten Punkt an oder [Bestehend]</msg1>
+    <msg2>Bestehend</msg2>
+    <msg3>Text eingeben:</msg3>
+    <msg4>Wählen Sie einzeiligen Text:</msg4>
+    <msg5>Wählen Sie einzeiligen Text oder [Neu] aus:</msg5>
+    <msg6>Neu</msg6>
+    <msg7>Ungültige Wahl!</msg7>
+    <msg8>Geben Sie den ersten Punkt an:</msg8>
+    <msg9>Geben Sie den zweiten Punkt an:</msg9>
+  </mpTxtCenter>
+  <mpStandards LocalName="Standarte"
+               Description="Mit dem Plugin können Sie Layer-Sets, Textstile, Bemaßungsstile und Multi-Führungslinienstile erstellen, speichern und hinzufügen">
+    <accept>Akzeptieren</accept>
+    <cancel>Abbrechen</cancel>
+    <copy>Kopieren</copy>
+    <no>Nein</no>
+    <h1>Name des Sets:</h1>
+    <h2>Geben Sie einen Namen des Sets ein</h2>
+    <h3>Layer hinzufügen</h3>
+    <h4>Die Liste aktualisieren</h4>
+    <h5>Name</h5>
+    <h6>Einfrieren</h6>
+    <h7>Blockieren</h7>
+    <h8>Farbe</h8>
+    <h9>Linientyp</h9>
+    <h10>Linienstärke</h10>
+    <h11>Plotten</h11>
+    <h12>Ein</h12>
+    <h13>Layer</h13>
+    <h14>Standardmäßig</h14>
+    <h15>STANDARDS</h15>
+    <h16>Stile</h16>
+    <h17>Layer-Sets</h17>
+    <h18>Standard-Sets der ModPlus-Layer. Kann nicht gelöscht werden</h18>
+    <h19>Ein neues Layer-Set erstellen</h19>
+    <h20>das ausgewählte Layer-Set bearbeiten (anzeigen)</h20>
+    <h21>Das ausgewählte Layer-Set löschen</h21>
+    <h22>Textstile</h22>
+    <h23>Standardstil von ModPlus. Kann nicht gelöscht werden</h23>
+    <h24>Ein Textstil ist mit einem Bemaßungsstil oder einer Multi-Führungslinie-Stil verbunden</h24>
+    <h25>Einen oder mehrere Textstile aus der aktuellen Zeichnung hinzufügen</h25>
+    <h26>Den ausgewählten Textstil aus dem Set löschen</h26>
+    <h27>Bemaßungsstile</h27>
+    <h28>Einen oder mehrere Bemaßungsstile aus der aktuellen Zeichnung hinzufügen</h28>
+    <h29>Den ausgewählten Bemaßungsstil aus dem Set löschen</h29>
+    <h30>Multi-Führungslinien-Stile</h30>
+    <h31>Eine oder mehrere Multi-Führungslinie-Stile aus der aktuellen Zeichnung hinzufügen</h31>
+    <h32>Den ausgewählten Bemaßungsstil aus dem Set löschen</h32>
+    <h33>Ausgewählte hinzufügen</h33>
+    <h34>Ausgewählte Standards zur aktuellen Zeichnung hinzufügen</h34>
+    <h35>Aus Datei</h35>
+    <h36>Geben Sie eine Datei an, aus der Sie die Standards kopieren möchten:</h36>
+    <h37>Geben Sie Standards an, die Sie kopieren möchten:</h37>
+    <h38>Einstellungen</h38>
+    <h39>Ändern der Einstellungen ist nur in der Vollversion des Plugins verfügbar</h39>
+    <h40>Gruppen für Layer-Sets erstellen</h40>
+    <h41>Standards beim Erstellen einer Zeichnung automatisch laden</h41>
+    <h42>Standards beim Öffnen einer Zeichnung automatisch laden</h42>
+    <h43>Kopieren von Standards aus einer Datei beim Erstellen einer Zeichnung</h43>
+    <h44>Kopieren von Standards aus einer Datei beim Öffnen einer Zeichnung</h44>
+    <h45>Details in der Befehlszeile</h45>
+    <h46>Nach dem Hinzufügen muss aktuell sein:</h46>
+    <h47>Textstil:</h47>
+    <h48>Bemaßungsstil:</h48>
+    <h49>Multi-Führungslinie-Stil:</h49>
+    <h50>EDITOR DER LAYER DES SETS</h50>
+    <h51>ANSCHAUEN DER LAYER DES SETS</h51>
+    <h52>Export</h52>
+    <h53>Import</h53>
+    <h54>Erhältlich in der vollständigen Plugin-Version!</h54>
+    <h55>Bestimmen Sie den Speicherort für die xml-Datei</h55>
+    <h56>Bestimmen Sie die xml-Datei für den Import von Standards</h56>
+    <h57>Die ausgewählte Datei ist keine Standard-Speicherdatei!</h57>
+    <cb1>Layer des aktuellen Sets</cb1>
+    <cb2>Layer des aktuellen Sets + Zeichenlayer</cb2>
+    <cb3>Layer</cb3>
+    <cb4>Textstile</cb4>
+    <cb5>Bemaßungsstile</cb5>
+    <cb6>Multi-Führungslinien-Stile</cb6>
+    <msg1>Bestimmen Sie den Namen des Sets</msg1>
+    <msg2>Es gibt bereits das Set mit diesem Namen</msg2>
+    <msg3>Im Set sind keine Layer vorhanden</msg3>
+    <msg4>Die Hilfedatei konnte nicht auf die Festplatte kopiert werden!\nMöglicherweise haben Sie keine Administratorrechte</msg4>
+    <msg5>Die folgenden abhängigen Stile werden gelöscht:</msg5>
+    <msg6>Wollen Sie fortsetzen?</msg6>
+    <msg7>Wollen Sie den abhängigen Textstil löschen?\nJa – löschen, Nein - abbinden</msg7>
+    <msg8>Geben Sie eine Quelldatei an</msg8>
+    <msg9>Keine Quelldatei angegeben!</msg9>
+    <msg10>Die angegebene Quelldatei wurde nicht gefunden</msg10>
+    <msg11>Es wurde kein Standard zum Kopieren ausgewählt</msg11>
+    <msg12>Keine Konfigurationsdatei gefunden!</msg12>
+    <msg13>Linientyp konnte nicht heruntergeladen werden:</msg13>
+    <p1>ModPlus: Textstil ist hinzugefügt</p1>
+    <p2>ModPlus: Bemaßungsstil ist hinzugefügt</p2>
+    <p3>ModPlus: Multi-Führungslinie-Stil ist hinzugefügt</p3>
+    <p4>ModPlus: Layer-Set ist hinzugefügt</p4>
+    <p5>mit Layern:</p5>
+    <p6>ModPlus: Layergruppe ist erstellt</p6>
+    <p7>ModPlus: Der aktuelle Textstil ist eingestellt</p7>
+    <p8>ModPlus: Der aktuelle Bemaßungsstil ist eingestellt</p8>
+    <p9>ModPlus: Der aktuelle Multi-Führungslinie-Stil ist eingestellt</p9>
+    <l1>Mp_Grundlegende</l1>
+    <l2>Mp_Fine</l2>
+    <l3>Mp_Bemaßung</l3>
+    <l4>Mp_Führungslinien</l4>
+    <l5>Mp_Dickere</l5>
+    <l6>Mp_Füllmuster</l6>
+    <l7>Mp_Axiale</l7>
+    <l8>Mp_Nicht druckbar</l8>
+    <l9>Mp_Text</l9>
+  </mpStandards>
+  <mpMultiScale LocalName="Multi-Skalieren"
+                Description="Mit dem Plugin können Sie jedes der ausgewählten Objekte in Bezug auf sich selbst skalieren"
+                FullDescription="Jedes ausgewählte Objekt wird in Bezug auf den angegebenen Punkt skaliert – unten links, unten rechts, oben links, oben rechts oder in der Mitte. Der Skalierpunkt wird durch das Rechteck bestimmt, das das Objekt beschreibt">
+    <h1>Kopien von den ausgewählten Objekten erstellen</h1>
+    <h2>Basispunkt:</h2>
+    <h3>Wählen Sie Objekte aus:</h3>
+    <h4>Maßstab:</h4>
+    <bp1>Zentrum</bp1>
+    <bp2>Links unten</bp2>
+    <bp3>Links oben</bp3>
+    <bp4>Rechts oben</bp4>
+    <bp5>Rechts unten</bp5>
+    <bp6>Mitte unten</bp6>
+    <bp7>Mitte oben</bp7>
+    <bp8>Mitte links</bp8>
+    <bp9>Mitte rechts</bp9>
+  </mpMultiScale>
+  <mpMultiRotate LocalName="Multi-Drehen"
+                 Description="Mit dem Plugin können Sie jedes der ausgewählten Objekte um die Z-Achse drehen, wobei der Drehpunkt in Bezug auf die Objekte selbst bestimmt wird"
+                 FullDescription="Jedes ausgewählte Objekt wird um die Z-Achse gedreht und auf den angegebenen Punkt zentriert: unten links, unten rechts, oben links, oben rechts oder in der Mitte. Der Drehpunkt wird durch das Rechteck bestimmt, das das Objekt beschreibt">
+    <h1>Drehwinkel:</h1>
+  </mpMultiRotate>
+  <mpMultiMirror LocalName="Multi-Spiegelung"
+                 Description="Mit dem Plugin können Sie jedes der ausgewählten Objekte vertikal oder horizontal in Bezug auf sich selbst spiegeln"
+                 FullDescription="Jedes ausgewählte Objekt wird vertikal oder horizontal in Bezug auf die Linie gespiegelt, die durch den angegebenen Punkt verläuft – unten links, unten rechts, oben links, oben rechts oder in der Mitte. Dieser Punkt wird durch ein Rechteck bestimmt, das das Objekt beschreibt">
+    <o1>Spiegeln</o1>
+    <o2>Vertikal</o2>
+    <o3>Horizontal</o3>
+  </mpMultiMirror>
+  <mpRotAtt LocalName="Drehwinkel der Attribute"
+            Description="Mit dem Plugin können Sie den Drehwinkel der Attribute in den ausgewählten Blöcken ändern">
+    <msg1>Wählen Sie die Blöcke aus:</msg1>
+    <msg2>Neue Drehwinkel der Attribute:</msg2>
+  </mpRotAtt>
+  <mpLayerAuto LocalName="Auto-Layers"
+               Description="Mit dem Plugin können Sie einen Layer zu den erstellten Objekten hinzuzufügen"
+               FullDescription="Das Plugin lässt die Ereignisse des Erstellens, Kopierens, Einfügens und anderer Befehle beim Arbeiten mit AutoCAD-Objekten – Bemaßungen, Text, Führungslinien, Füllmuster, Tabellen, Ansichtsfenstern, Linien, Polylinien, Linien, Strahlen, Kreisen, Ellipsen, Splines, Bögen, Blöcken – verarbeiten und legt den in den Plugin-Einstellungen angegebene Layer für sie fest. Es gibt die Möglichkeit, bestimmte Layer für ausgewählte Objekte festzulegen. Es gibt auch die Möglichkeit, Layer für Blöcke nach Namen festzulegen.">
+    <h1>Layer für die Objekte</h1>
+    <h2>Layer-Zuordnung</h2>
+    <h3>Erhältlich in der vollständigen Plugin-Version</h3>
+    <h4>Für Bemaßung:</h4>
+    <h5>Für Text:</h5>
+    <h6>Für Führungslinien:</h6>
+    <h7>Für Füllmuster:</h7>
+    <h8>Für Tabellen:</h8>
+    <h9>Für Ansichtsfenster:</h9>
+    <h10>Ausschließende Befehle</h10>
+    <h11>Ausführliche Informationen</h11>
+    <h12>Die Funktion des Plugins basiert auf der Verarbeitung des Befehlsabschlussereignisses. Allerdings erzeugen nicht alle Befehle neue Objekte und können auch bei der Arbeit mit diesem Plugin Fehler verursachen. Sie können die Liste der Ausschlüsse selbst ändern</h12>
+    <h13>Mehr dazu im</h13>
+    <h14>Forum</h14>
+    <h15>Einen Befehl aus der Liste entfernen</h15>
+    <h16>Geben Sie einen Befehl zum Ausschluss ein</h16>
+    <h21>Die Einstellungen für die aktuelle Zeichnung speichern und das Fenster schließen</h21>
+    <h22>Auf die ausgewählte anwenden</h22>
+    <h23>Einstellungen auf ausgewählte Objekte anwenden</h23>
+    <h24>Layer für Blöcke nach Namen</h24>
+    <h25>In der eingeschränkten Version sind nicht mehr als drei Positionen verfügbar</h25>
+    <h26>Standard-Layer</h26>
+    <h27>Sie haben keinen Befehl eingegeben!</h27>
+    <h28>Der Befehl</h28>
+    <h29>ist bereits in der Liste</h29>
+    <h31>Wählen Sie Objekte aus:</h31>
+    <h32>ModPlus: Das Objekt ist auf den Layer verschoben:</h32>
+    <h33>Fehler des AutoLayers-Plugins:</h33>
+    <h34>Objekte wurden Layern zugewiesen</h34>
+    <h35>Für Linien:</h35>
+    <h36>Für Polylinien:</h36>
+    <h37>Für Strahlen:</h37>
+    <h38>Für xLinien:</h38>
+    <h39>Für Kreise:</h39>
+    <h40>Für Ellipsen:</h40>
+    <h41>Für Splines:</h41>
+    <h42>Für Bögen:</h42>
+    <h43>Für Blöcke:</h43>
+    <h44>Die Layer-Einstellungen für Blöcke nach Namen werden nicht wie die Layer-Einstellungen für die Objekte in der Zeichnung gespeichert, sondern in einer benutzerdefinierten Konfigurationsdatei</h44>
+    <h45>Blockname:</h45>
+    <h46>Layer:</h46>
+    <h47>Vollständige Übereinstimmung des Blocknamens</h47>
+    <h48>Teilweise Übereinstimmung des Blocknamens</h48>
+    <h49>Die Layer-Einstellungen für Blöcke nach Namen in einer xml-Datei speichern</h49>
+    <h50>Die Layer-Einstellungen für Blöcke nach Namen in einer xml-Datei herunterladen</h50>
+    <h51>Die ausgewählte Datei ist keine Datei zum Speichern von Layer-Einstellungen für Blöcke nach Namen</h51>
+  </mpLayerAuto>
+  <mpFormats LocalName="Formate"
+             Description="Das Plugin ermöglicht das Einfügen von Formaten in die Zeichnung gemäß GOST 2.301-68/ISO 216"
+             FullDescription="Die Formate werden als Block mit einem besonderen Label in der erweiterten Daten eingefügt. Das Label in den erweiterten Daten dient zur Identifizierung der Formate durch andere Plugins (z. B. &quot;Plannummerierung&quot;). Daher müssen Formate mit den Standardwerkzeugen zum Einfügen der Blöcke in AutoCAD nicht eingefügt werden. Das Plugin ermöglicht das Hinzufügen von Schriftfeldern zum Format. Dazu muss das Plugin &quot;Schriftfelder&quot; installiert und mindestens einmal gestartet werden.&quot;">
+    <accept>Akzeptieren</accept>
+    <no>Nein</no>
+    <h1>Russland</h1>
+    <h2>Ukraine</h2>
+    <h3>Belarus</h3>
+    <h4>Formate</h4>
+    <h5>GOST 2.301-68</h5>
+    <h6>Format/Multiplikation</h6>
+    <h7>Seitenausrichtung</h7>
+    <h8>Querformat</h8>
+    <h9>Hochformat</h9>
+    <h10>Seite der Multiplizität</h10>
+    <h11>Kurz</h11>
+    <h12>Lang</h12>
+    <h13>Manuelle Eingabe</h13>
+    <h14>Länge des Formats, mm</h14>
+    <h15>Höhe des Formats, mm</h15>
+    <h16>"Kopiert"</h16>
+    <h17>Unterer Rahmen:</h17>
+    <h18>5 mm</h18>
+    <h19>10 mm</h19>
+    <h20>Textstil:</h20>
+    <h21>Maßstab des Formats:</h21>
+    <h22>Schriftfeld:</h22>
+    <h23>Felder verwenden</h23>
+    <h24>Aufrufen des Plugins Felder</h24>
+    <h25>Haupttexthöhe:</h25>
+    <h26>Zusätzliche Texthöhe:</h26>
+    <h27>Logo</h27>
+    <h28>aus Block:</h28>
+    <h29>aus Datei:</h29>
+    <h30>Eine dwg-Datei als Logo angeben</h30>
+    <h31>Stellen</h31>
+    <h32>Die Liste der Benutzerstellen ändern</h32>
+    <h33>Eine Stelle zum Titelblock hinzufügen</h33>
+    <h34>Eine Stelle aus dem Titelblock löschen</h34>
+    <h35>Stellen im Titelblock</h35>
+    <h36>Eine Zeile nach oben</h36>
+    <h37>Eine Zeile nach unten</h37>
+    <h38>Länge des Formats (mm) x Höhe des Formats (mm)</h38>
+    <h39>Einfügen</h39>
+    <h40>Ersetzen</h40>
+    <h41>Plan erstellen</h41>
+    <h42>Name des neuen Planes</h42>
+    <h43>Zum Schriftfeld hinzufügen:</h43>
+    <h44>Planname</h44>
+    <h45>Nummer des Plans</h45>
+    <h46>Maßstab 1:1</h46>
+    <h47>Wenn Sie das Häkchen entfernen, entspricht der Maßstab des Formats dem im Hauptfenster des Plugins angegebenen Maßstab</h47>
+    <h49>Stelle</h49>
+    <h50>Eine neue Stelle hinzufügen</h50>
+    <h51>Ausgewählte Stelle löschen</h51>
+    <h52>Plan</h52>
+    <h53>Eine dwg-Datei als Logo verwenden</h53>
+    <h54>Den aktuellen Layer einstellen</h54>
+    <h55>Konformität mit GOST-Tabelle</h55>
+    <h56>Die Bemaßung der Formate bei der Multiplizität mehr als 1 wird durch die Multiplikation der Parteien des Formats mit der Multiplizität 1 auf die Größe der Multiplizität genommen, die den Grenzabweichungen in der Tabelle 3 (Punkt 6) entspricht. Wenn das Häkchen markiert ist, wird die Bemaßung der Formate in voller Übereinstimmung mit Tabelle 2 (Punkt 5) genommen</h56>
+    <h57>Format</h57>
+    <h79>Dünne Linien:</h79>
+    <h80>Dicke Linien:</h80>
+    <h81>Die Linienstärke ändert sich nach der Erstellung des Titelblocks. Das Ändern der Dicke von dünnen Linien erfolgt durch die Verarbeitung der Linienstärke des ursprünglichen Titelblocks, wobei der Standardwert für dünne Linien "ByBlock" ist</h81>
+    <h82>Die Linienstärke ändert sich nach der Erstellung des Titelblocks. Das Ändern der Dicke von dicken Linien erfolgt durch die Verarbeitung der Liniendicke des ursprünglichen Schriftfelds, wobei der Standardwert für dünne Linien "0.40 mm" ist</h82>
+    <h83>Unterschriften einfügen</h83>
+    <h84>Start des Plugins "Unterschriften"</h84>
+    <err1>Die Konfigurationsdatei ist beschädigt!\nStarten Sie den ModPlus Konfigurator</err1>
+    <err2>Ein Fehler ist aufgetreten!</err2>
+    <err3>Ungültige Zeichen im Plannamen:</err3>
+    <err4>Die folgenden Zeichen sind nicht erlaubt:</err4>
+    <err5>Keine Datei mit Schriftfeldern gefunden!\nStarten Sie das Plugin "Schriftdelder", um eine dwg-Datei mit Schriftfeldern zu entpacken</err5>
+    <err6>Länge des Formats ist nicht eingegeben</err6>
+    <err7>Höhe des Formats ist nicht eingegeben</err7>
+    <err8>Länge des Formats muss mindestens 30 mm sein</err8>
+    <err9>Höhe des Formats muss nicht weniger als 15 mm sein</err9>
+    <err10>Ein Schriftfeld mit einem Tabellenstil wurde in der Schriftfelddatei nicht gefunden\n</err10>
+    <err11>Starten Sie das Plugin "Schriftfelder", um die Schriftfelddatei zu überschreiben</err11>
+    <err12>Das Schriftfeld stimmt nicht mit dem Schriftfeld ModPlus überein! Ungültige Anzahl von Zellen</err12>
+    <err13>Die Datei wurde in einer späteren Version von AutoCAD erstellt!</err13>
+    <err14>Ungültiger Blockname</err14>
+    <msg1>Wert</msg1>
+    <msg2>ist bereits in der Liste der Standardwerte</msg2>
+    <msg3>Die Liste enthält die gleichen Werte!</msg3>
+    <msg4>Erhältlich mit der Vollversion des Plugins "Schriftfelder"</msg4>
+    <msg5>Sie können nicht hinzufügen mehr als</msg5>
+    <msg6>Stellen</msg6>
+    <msg7>In der Datei</msg7>
+    <msg8>keine Felder gefunden</msg8>
+    <msg9>Wählen Sie das Ersetzungsformat:</msg9>
+    <msg10>Ungültige Wahl!</msg10>
+    <msg11>Einfügepunkt:</msg11>
+    <msg12>Ein leerer Planname ist nicht erlaubt!</msg12>
+  </mpFormats>
+  <mpNotes LocalName="Notizen" Description="Das Plugin dient zur Verarbeitung von oft verwendeten Notizen">
+    <h1>Einstellungen</h1>
+    <h2>Kontextmenü für Text</h2>
+    <h3>Doppelklick auf eine Notiz</h3>
+    <h4>Für Standardnotizen:</h4>
+    <h5>Als Mtext einfügen</h5>
+    <h6>Zu Mtext hinzufügen</h6>
+    <h7>Für Benutzerhinweise:</h7>
+    <h8>Ändern</h8>
+    <h15>Notiz</h15>
+    <h26>Texthöhe:</h26>
+    <h28>Textbreite:</h28>
+    <h29>Textstil:</h29>
+    <h30>Der ausgewählte Textstil ist annotativ. Berücksichtigen Sie den Maßstab der Beschriftung</h30>
+    <h31>Beschriftung</h31>
+    <h41>Benutzernotizdatei ist nicht gefunden</h41>
+    <h49>Text auswählen:</h49>
+    <h50>Ungültige Wahl!</h50>
+    <h52>Wählen Sie mehrzeiligen Text aus:</h52>
+    <h53>Nicht angegebene (oder nicht erstellte) Benutzernotizdatei!</h53>
+    <h74>Geben Sie einen Einfügepunkt an:</h74>
+    <h75>MP:Als Notiz speichern</h75>
+  </mpNotes>
+  <mpMeshes LocalName="Matten"
+            Description="Auswahl und Berechnung der Masse der Bewehrungsmatten gemäß den normativen Dokumenten">
+    <kg>kg</kg>
+    <mm>mm</mm>
+    <insert>Einfügen</insert>
+    <h1>Matten</h1>
+    <h2>GOST 23279-2012</h2>
+    <h3>Typ der Einzelmatte</h3>
+    <h4>Rolle</h4>
+    <h5>Bild</h5>
+    <h6>Mattenbreite (b)</h6>
+    <h7>Mattenlänge (l)</h7>
+    <h8>Durchmesser der Bewehrung</h8>
+    <h9>Längs (d)</h9>
+    <h10>Quer (d1)</h10>
+    <h11>Abstand der Stäbe</h11>
+    <h12>Längs (s1)</h12>
+    <h13>Quer (s)</h13>
+    <h14>Bewehrungsüberstände</h14>
+    <h15>Längs (a1,a2)</h15>
+    <h16>Quer (a)</h16>
+    <h17>Mattenmasse:</h17>
+    <h18>Massenrundung</h18>
+    <h19>GOST 8478-81</h19>
+    <h20>Typ der Einzelmatte in Bezug auf die Bemessungsgenauigkeit</h20>
+    <h21>Mattenbreite - 2350 mm</h21>
+    <h22>Hauptabstand (s)</h22>
+    <h23>Längs (a1)</h23>
+    <h24>Anzahl der Längsstäbe in der Matte, Stk.</h24>
+    <h25>Aufteilung der Matte nach der Anzahl der Abstände</h25>
+    <h26>s oder (s)+s2</h26>
+    <h27>Mattenlänge L=</h27>
+    <h28>Serie 1.410-3</h28>
+    <h29>Typ der Einzelmatte: mit Arbeitsbewehrung</h29>
+    <h30>Verhältnis der Durchmesser</h30>
+    <h31>der Bewehrung (d1/d2)</h31>
+    <h32>Quer (a2)</h32>
+    <h33>Längs (m)</h33>
+    <h34>Quer (n)</h34>
+    <h35>Geschweißte Bewehrungsmatten für Stahlbetonkonstruktionen und -produkte</h35>
+    <h36>Geschweißte Matten für Stahlbetonkonstruktionen</h36>
+    <h37>Ausgabe 1. Matten mit Arbeitsbewehrung mit einem Durchmesser von 10 bis 32 mm</h37>
+    <h38>Mattentyp: Schwere</h38>
+    <h39>Mattentyp: Leichte</h39>
+    <h40>(Von 850 bis Rollenlänge)</h40>
+    <h41>(Von 3950 bis Rollenlänge)</h41>
+    <h42>(Von 850 bis 9000)</h42>
+    <h43>(Von 3950 bis 9000)</h43>
+    <h44>Das Verhältnis zwischen dem kleineren Durchmesser und dem größeren Durchmesser des Stabes muss mindestens 0.25 betragen</h44>
+    <h45>Der Überstandswert muss ein Vielfaches von 25 mm sein</h45>
+    <h46>Der Auslasswert muss 25 mm betragen. Zulässig von 30 bis 200 mm ein Vielfaches von 5 mm</h46>
+    <h47>Der Auslasswert muss 25 mm betragen. Zulässig von 15, 20 und 30 mm und von 25 bis 100 mm in Vielfachen von 25 mm</h47>
+    <h48>Kein zusätzlicher Abstand der Längsstäbe in Schwerlastmatten ist erlaubt!</h48>
+    <h49>Der zusätzliche Abstand der Längsstäbe in Leichtmatten muss 50 mm im Verhältnis zum Hauptabstand betragen</h49>
+    <h50>in Vielfachen von 10 mm</h50>
+    <h51>Der zusätzliche Abstand der Querstäbe in Schwerlastmatten des Typs 1 müssen 100, 200 oder 300 mm betragen!</h51>
+    <h52>Kein zusätzlicher Abstand der Querstäbe in Schwerlastmatten des Typs 2,3 ist erlaubt!</h52>
+    <h53>Der zusätzliche Abstand der Querstäbe in Leichtmatten muss zwischen 50 und 250 mm in Vielfachen von 10 mm betragen!</h53>
+    <h54>Nicht alle Daten sind korrekt eingegeben! Wollen Sie fortsetzen?</h54>
+    <h55>Normale Genauigkeit</h55>
+    <h56>Höhere Genauigkeit</h56>
+    <h57>Ungültiger Wert für die Mattenlänge!</h57>
+    <h58>in einer Richtung</h58>
+    <h59>in zwei Richtungen</h59>
+    <h60>Die Mattenbreite muss mindestens betragen</h60>
+    <h61>Die Mattenbreite muss nicht größer sein als</h61>
+    <h62>Die Mattenlänge muss mindestens betragen</h62>
+    <h63>Die Mattenlänge muss nicht größer sein als</h63>
+  </mpMeshes>
+  <mpTables LocalName="Tabellen"
+            Description="Das Plugin ermöglicht das Einfügen von AutoCAD-Tabellen in eine Zeichnung gemäß GOST/DSTU/STB oder aus einer angegebenen Datei">
+    <insert>Einfügen</insert>
+    <all>Alle</all>
+    <favorite>Favorit</favorite>
+    <current>Aktuell</current>
+    <h1>TABELLEN</h1>
+    <h2>ModPlus Tabellen</h2>
+    <h3>Vorschriftsmäßige Dokumente für:</h3>
+    <h4>Russland</h4>
+    <h5>Ukraine</h5>
+    <h6>Belarus</h6>
+    <h7>Filtern von Daten in der Tabelle:</h7>
+    <h8>Tabellenfilteroption auswählen</h8>
+    <h9>Tabellenname</h9>
+    <h10>Vorschriftsmäßiges Dokument:</h10>
+    <h11>Beschreibung:</h11>
+    <h12>Zusammenfassung (Verweis auf die Tabelle im vorschriftsmäßigen Dokument)</h12>
+    <h13>Name des Dokuments</h13>
+    <h14>Sie können das Bild mit dem Mausrad zoomen und schwenken</h14>
+    <h15>Ungültig</h15>
+    <h16>Einfügung der Tabelle mit der Verknüpfung Oben-Links</h16>
+    <h17>Einfügung der Tabelle mit der Verknüpfung Oben-Rechts</h17>
+    <h18>Einfügung der Tabelle mit der Verknüpfung Unten-Links</h18>
+    <h19>Einfügung der Tabelle mit der Verknüpfung Unten-Rechts</h19>
+    <h20>Bild verkleinern</h20>
+    <h21>Bild vergrößern</h21>
+    <h22>TABELLENEINSTELLUNG</h22>
+    <h23>Tabellenmaßstab:</h23>
+    <h24>Texthöhe:</h24>
+    <h25>Zeilenhöhe:</h25>
+    <h26>Textstil:</h26>
+    <h27>Dynamische Zeileneinfügung</h27>
+    <h28>Tabellen aus der Datei</h28>
+    <h29>Die Datei</h29>
+    <h30>Dateipfad löschen</h30>
+    <h31>Dateipfad angeben</h31>
+    <h32>TABELLEN AUS DER DATEI</h32>
+    <h33>Zeichnungsdatei</h33>
+    <h34>Wählen Sie eine Datei</h34>
+    <h35>Zu den Favoriten hinzufügen</h35>
+    <h36>Aus den Favoriten entfernen</h36>
+    <h37>Layer:</h37>
+    <h38>Der Layer ist blockiert!</h38>
+    <msg1>Die Datei konnte nicht auf die Festplatte kopiert werden!\nMöglicherweise haben Sie keine Administratorrechte</msg1>
+    <msg2>Kopieren der Tabelle fehlgeschlagen</msg2>
+    <msg3>In der Sektion "Tabellen aus der Datei" ist die Datei angegeben, die mit dieser Version von AutoCAD nicht kompatibel ist!</msg3>
+    <msg4>Einfügepunkt</msg4>
+    <msg5>Geben Sie den zweiten Punkt an</msg5>
+  </mpTables>
+  <mpDimJustif LocalName="Ausrichten der Bemaßungen"
+               Description="Ausrichten der Verlängerungs- oder Bemaßungslinien entlang einer angegebenen Linie">
+    <h1>AUSRICHTEN DER BEMAßUNGEN</h1>
+    <h2>Ausrichten der Verlängerungslinien</h2>
+    <h3>Ausrichten der Bemaßungslinien</h3>
+    <msg1>Wählen Sie die Bemaßungen für das Ausrichten der Verlängerungslinien</msg1>
+    <msg2>Erster Punkt der Ausrichtungslinie:</msg2>
+    <msg3>Wählen Sie die Bemaßungen für das Ausrichten der Bemaßungslinien</msg3>
+    <msg4>Zweiter Punkt der Ausrichtungslinie:</msg4>
+  </mpDimJustif>
+  <mpStamps LocalName="Schriftfelder"
+            Description="Das Plugin ermöglicht das Einfügen von Schriftfeldern (als AutoCAD-Tabellen) in eine Zeichnung gemäß den normativen Dokumenten, mit Unterstützung für Felder"
+            FullDescription="Mit Hilfe des Plugins &apos;&apos;Felder&apos;&apos; können Sie zusätzliche Werte zum Dokument hinzufügen, die als Felder ins Schriftfeld eingefügt werden können. Dadurch können Sie die Werte in allen Schriftfeldern des gesamten Dokuments gleichzeitig ändern.">
+    <h1>Schriftfelder</h1>
+    <h2>Schriftfeldname</h2>
+    <h3>Vorschriftsmäßige Dokumente für:</h3>
+    <h4>Russland</h4>
+    <h5>Ukraine</h5>
+    <h6>Belarus</h6>
+    <h7>Entnahme in Übereinstimmung mit dem vorschriftsmäßigem Dokument:</h7>
+    <h8>Auswahl des vorschriftsmäßiges Dokument</h8>
+    <h9>Tabellenname</h9>
+    <h10>Vorschriftsmäßiges Dokument:</h10>
+    <h11>Beschreibung:</h11>
+    <h12>Zusammenfassung (Verweis auf das Schriftfeld im vorschriftsmäßigen Dokument)</h12>
+    <h13>Ungültig</h13>
+    <h14>Einfügung des Schriftfeldes mit der Verknüpfung Oben-Links</h14>
+    <h15>Einfügung des Schriftfeldes mit der Verknüpfung Oben-Rechts</h15>
+    <h16>Einfügung des Schriftfeldes mit der Verknüpfung Unten-Links</h16>
+    <h17>Einfügung des Schriftfeldes mit der Verknüpfung Unten-Rechts</h17>
+    <h18>Bild anzeigen</h18>
+    <h19>Bild ausblenden</h19>
+    <h21>Schriftfeldmaßstab:</h21>
+    <h22>Textstil:</h22>
+    <h23>Haupttexthöhe:</h23>
+    <h24>Zusätzliche Texthöhe:</h24>
+    <h25>Logo</h25>
+    <h26>aus Block:</h26>
+    <h27>aus Datei:</h27>
+    <h28>Eine dwg-Datei als Logo angeben</h28>
+    <h29>Erhältlich in der vollständigen Version</h29>
+    <h30>Felder verwenden</h30>
+    <h31>Stellen</h31>
+    <h32>Die Liste der Benutzerstellen ändern</h32>
+    <h33>Eine Stelle zum Titelblock hinzufügen</h33>
+    <h34>Eine Stelle aus dem Titelblock löschen</h34>
+    <h35>Stellen im Titelblock</h35>
+    <h36>Eine Zeile nach oben</h36>
+    <h37>Eine Zeile nach unten</h37>
+    <h38>Aufrufen des Plugins "Felder"</h38>
+    <h39>Texthöhe in allen Zellen des Schriftfeldes. Die Standardeinstellung ist 2.5, was der GOST-Norm 2.304-81 "Zeichnungsschriftarten" entspricht</h39>
+    <h40>Zusätzliche Texthöhe. In Feldern wie "Dokumentenbezeichnung", "Phase", "Plan" usw., die dem Schriftfeld ein unverwechselbares und lesbares Aussehen verleihen. Die Standardeinstellung ist 3.5, was der GOST-Norm 2.304-81 "Zeichnungsschriftarten" entspricht</h40>
+    <h41>Geben Sie den in dieser Zeichnung bestimmten Block an, der als Logo in das Schriftfeld eingefügt werden soll</h41>
+    <h42>Die angegebene dwg-Datei wird der aktuellen Zeichnung als Block hinzugefügt, der als Logo in das Schriftfeld eingefügt wird. Der Dateiname wird als Blockname verwendet. Wenn in der aktuellen Zeichnung bereits ein Block mit diesem Namen vorhanden ist, wird der Block aus der Zeichnung verwendet</h42>
+    <h43>STELLEN</h43>
+    <h44>Stelle</h44>
+    <h45>FELDER</h45>
+    <h46>Familiennamen</h46>
+    <h47>Standard</h47>
+    <h48>Benutzerdefiniert</h48>
+    <h49>STELLE</h49>
+    <h50>Eine neue Stelle hinzufügen</h50>
+    <h51>Ausgewählte Stelle löschen</h51>
+    <h52>FAMILIENNAME</h52>
+    <h53>GOST R 21.1101-2013</h53>
+    <h54>Anlage ZH</h54>
+    <h55>Spalte 1</h55>
+    <h56>Spalte 2</h56>
+    <h57>Spalte 3</h57>
+    <h58>Spalte 6</h58>
+    <h59>Spalte 9</h59>
+    <h60>Anlage L</h60>
+    <h61>Zur Zeichnung hinzufügen</h61>
+    <h62>Ausgefüllte Felder zur Zeichnung hinzufügen</h62>
+    <h63>Aus Datei</h63>
+    <h64>Feldwerte aus der angegebenen dwg-Datei herunterladen und einstellen</h64>
+    <h65>Speichern</h65>
+    <h66>Ausgefüllte Felder als standardmäßige speichern</h66>
+    <h67>Herunterladen</h67>
+    <h68>Gespeicherte Feldwerte herunterladen</h68>
+    <h69>Felder zum Schriftfeld hinzufügen</h69>
+    <h70>Standardwerte einstellen</h70>
+    <h71>Wert aus der Zeichnung abrufen</h71>
+    <h72>DSTU B A.2.4-4:2009</h72>
+    <h73>STB 2255-2012</h73>
+    <h74>In der Zeichnung aktualisieren</h74>
+    <h75>Sie können in den Feldern 2, 3 und 9 Zeilenumbrüche verwenden. Verwenden Sie die Eingabetaste, um einen Zeilenumbruch einzufügen</h75>
+    <h76>Datum</h76>
+    <h77>Datum wird hinzugefügt, wenn eine Stelle in der Zeile vorhanden ist</h77>
+    <h78>Breitenfaktor für das in das in das Schriftfeld eingefügte Feld. Der Breitenfaktor wird direkt auf das eingefügte Feld angewendet, unabhängig von dem im Textstil eingestellten Breitenfaktor. Zulässige Werte reichen von 0,01 bis 100,0. Um eine Änderung des Breitenfaktors zu vermeiden, geben Sie den Wert 0 an</h78>
+    <h79>Dünne Linien:</h79>
+    <h80>Dicke Linien:</h80>
+    <h81>Die Linienstärke ändert sich nach der Erstellung des Titelblocks. Das Ändern der Dicke von dünnen Linien erfolgt durch die Verarbeitung der Linienstärke des ursprünglichen Titelblocks, wobei der Standardwert für dünne Linien "ByBlock" ist</h81>
+    <h82>Die Linienstärke ändert sich nach der Erstellung des Titelblocks. Das Ändern der Dicke von dicken Linien erfolgt durch die Verarbeitung der Liniendicke des ursprünglichen Schriftfelds, wobei der Standardwert für dünne Linien "0.40 mm" ist</h82>
+    <h83>B.F.</h83>
+    <h84>Breitenfaktor</h84>
+    <h85>Unterschriften</h85>
+    <h86>Auswahl eines Unterschriftsblocks</h86>
+    <h87>Aktivieren oder deaktivieren der Verwendung einer Unterschrift</h87>
+    <h88>Familienname:</h88>
+    <h89>Unterschriftsblock-Datei:</h89>
+    <h90>Name des Unterschriftsblocks:</h90>
+    <h91>Unterschriftenblock:</h91>
+    <h92>Die angegebene Datei wurde nicht gefunden!</h92>
+    <h93>Datei und Unterschriftsblock angeben</h93>
+    <h94>Eine neue Unterschrift hinzufügen</h94>
+    <h95>Ausgewählte Unterschrift löschen</h95>
+    <h96>Unterschriften zum Schriftfeld hinzufügen</h96>
+    <h97>Unterschriften einfügen</h97>
+    <h98>Start des Plugins "Unterschriften"</h98>
+    <h99>Die Unterschrift wird in der linken unteren Ecke der Zelle rechts neben dem Namen eingefügt. Der Maßstab der Tabellen (Schriftfelder) wird nicht berücksichtigt!</h99>
+    <h100>Standard-Layer</h100>
+    <h101>Den Plannamen in das Schriftfeld kopieren</h101>
+    <msg1>Die Konfigurationsdatei ist beschädigt!\nStarten Sie den ModPlus Konfigurator</msg1>
+    <msg2>Ein Fehler ist aufgetreten!</msg2>
+    <msg3>Wert</msg3>
+    <msg4>ist bereits in der Liste der Standardwerte</msg4>
+    <msg5>Die Liste enthält die gleichen Werte!</msg5>
+    <msg6>Vervollständigte Werte wurden in der aktuellen Zeichnung aktualisiert. \nVergessen Sie nicht, die Regeneration aufzurufen, um die Werte in dem Schriftfeld zu aktualisieren</msg6>
+    <msg7>Vervollständigte Werte wurden in die Zeichnung hinzugefügt</msg7>
+    <msg8>Gespeichert</msg8>
+    <msg9>Wählen Sie ein Schriftfeld aus:</msg9>
+    <msg10>Ungültige Wahl! Das ist kein Schriftfeld!</msg10>
+    <msg11>Geben Sie ein Objekt an, das den Text abrufen soll (Text, Führungslinie, Tabelle):</msg11>
+    <msg12>Geben Sie eine Zelle an:</msg12>
+    <msg13>Felder aus der Datei hinzufügen</msg13>
+    <msg14>In der Datei</msg14>
+    <msg15>keine Felder gefunden</msg15>
+    <msg16>Die Datei wurde in einer späteren Version von AutoCAD erstellt!</msg16>
+    <msg17>Die Datei konnte nicht auf die Festplatte kopiert werden!\nMöglicherweise haben Sie keine Administratorrechte</msg17>
+    <msg18>Kopieren der Tabelle aus einer Ressourcendatei fehlgeschlagen</msg18>
+    <msg19>Sie können nicht hinzufügen mehr als</msg19>
+    <msg20>Stellen</msg20>
+    <msg21>Das Schriftfeld stimmt nicht mit dem Schriftfeld ModPlus überein!\nUngültige Anzahl von Zellen</msg21>
+    <msg22>Die Zelle "Organisation" enthält das Logo \nWollen Sie sie durch Feld ersetzen?</msg22>
+    <msg23>Eine dwg-Datei als Logo verwenden</msg23>
+    <msg24>Einfügepunkt:</msg24>
+    <msg25>Feldwerte sind exportiert</msg25>
+    <msg26>Der aktuell ausgewählte Arbeitsbereich hat den Tag "{0}" und die hochgeladene Datei den Tag "{1}".\nWollen Sie Hochladen fortsetzen?</msg26>
+    <msg27>Die ausgewählte Datei ist keine Feldspeicherdatei</msg27>
+    <msg28>In der kostenlosen Version sind maximal drei Unterschriften möglich!</msg28>
+    <msg29>Keine Unterschriften zum Einfügen in das Schriftfeld vorhanden!</msg29>
+    <msg30>Es gibt keine Unterschriften in der Liste!</msg30>
+    <msg31>Die ausgewählte Datei ist keine Unterschriftenspeicherdatei!</msg31>
+  </mpStamps>
+  <mpSummLength LocalName="Längensumme"
+                Description="Abrufen und Anzeigen der Anzahl und Summe der Längen von ausgewählten Linien, Polylinien, Kreise, Bögen und Splines">
+    <h2>Gesamtlänge:</h2>
+    <h3>Rundung des Ergebnisses</h3>
+    <h4>Anzahl:</h4>
+    <h5>Objekte</h5>
+    <h6>Das Ergebnis als einzeiligen Text einfügen</h6>
+    <h7>Das Ergebnis in eine Tabellenzelle einfügen</h7>
+    <h8>Exportieren des Ergebnisses in eine txt-Datei</h8>
+    <h9>Linie</h9>
+    <h10>Kreis</h10>
+    <h11>Polylinie</h11>
+    <h12>Bogen</h12>
+    <h13>Spline</h13>
+    <h14>Ellipse</h14>
+    <h15>Länge:</h15>
+    <h16>Objekt anzeigen</h16>
+    <h17>Das arithmetische Mittel</h17>
+    <h18>Das arithmetische Mittel aller Objekte:</h18>
+  </mpSummLength>
+  <mpSelSim LocalName="Auswahl nach Muster"
+            Description="Mit dem Plugin können Sie Objekte auswählen, die Musterobjekten ähnlich sind, sowohl aus allen Objekten in der Zeichnung als auch aus einem bestimmten Satz"
+            FullDescription="Bevor Sie das Plugin verwenden, müssen Sie die Kriterien festlegen, nach denen nach ähnlichen Objekten gesucht wird – der gleiche Typ, die gleiche Layer, die gleiche Farbe usw. Für einige Typen gelten zusätzliche Übereinstimmungskriterien, zum Beispiel, gleiche Texthöhe, gleicher Name der Blöcke usw.">
+    <h2>Allgemeine Einstellungen</h2>
+    <h3>Musterobjekte zur endgültigen Menge hinzufügen (Auswahl von ähnlichen aus der ausgewählten Objekten)</h3>
+    <h4>Gleiche Typen</h4>
+    <h5>Auf dem gleichen Layer</h5>
+    <h6>Mit der gleichen Farbe</h6>
+    <h7>Mit dem gleichen Linientyp</h7>
+    <h8>Mit dem gleichen Linientyp-Maßstab</h8>
+    <h9>Mit der gleichen Liniendicken</h9>
+    <h10>Baugruppen</h10>
+    <h11>Mit dem gleichen Blocknamen</h11>
+    <h12>Der Blockname enthält:</h12>
+    <h13>Mit dem gleichen Blockmaßstab</h13>
+    <h14>Füllmuster</h14>
+    <h15>Mit dem gleichen Füllmuster</h15>
+    <h16>Mit dem gleichen Füllmustermaßstab</h16>
+    <h17>Rasterbilder</h17>
+    <h18>Mit dem gleichen Bild</h18>
+    <h19>Kreise</h19>
+    <h20>Mit dem gleichen Radius</h20>
+    <h21>Einzeiliger Text</h21>
+    <h22>Mit dem gleichen Textinhalt</h22>
+    <h23>Mit dem gleichen Textstil</h23>
+    <h24>Mit der gleichen Texthöhe</h24>
+    <h25>Mit der gleichen Anzahl von Zeichen</h25>
+    <h26>Mehrzeiliger Text</h26>
+    <h27>Linien</h27>
+    <h28>Gleiche Länge der Linien</h28>
+    <h29>Polylinien</h29>
+    <h30>Gleiche Länge der Polylinien</h30>
+    <h32>Bemaßungen</h32>
+    <h33>Bemaßungswert</h33>
+    <h34>Textzeile</h34>
+    <h35>Textdrehung</h35>
+    <h36>Multi-Führungslinien</h36>
+    <msg1>Einstellung</msg1>
+    <msg2>Wählen Sie Musterobjekte aus oder</msg2>
+    <msg3>Wählen Sie die zu löschenden Objekte aus der Menge oder</msg3>
+    <msg4>Wählen Sie die Objekte aus, bei denen Sie nach Analoga suchen möchten:</msg4>
+    <msg5>Wählen Sie die zu löschenden Objekte aus der Menge:</msg5>
+    <mi1>MP:Auswahl nach Muster</mi1>
+    <mi2>Auswahl von ähnlichen aus der ausgewählten Objekte</mi2>
+    <mi3>Auswahl von ähnlichen aus der ausgewählten Objekten</mi3>
+    <mi4>Einstellung der Auswahl nach Muster</mi4>
+    <mi5>MP:Auswahl nach Muster aus ausgewählten</mi5>
+    <mi6>MP:Einstellung der Auswahl nach Muster</mi6>
+  </mpSelSim>
+  <mpHandDim LocalName="Manuelle Bemaßungen"
+             Description="Farbliche Hervorhebung, Wiederherstellung oder Löschung von Bemaßungen mit dem neu bestimmten Wert">
+    <msg1>Wählen Sie Bemaßungen aus:</msg1>
+    <msg2>Optionen [Farbe/Auswählen/Wiederherstellen/Löschen]</msg2>
+  </mpHandDim>
+  <mpCalc LocalName="Berechnungsfunktion"
+          Description="Ähnlich einem Standardrechners, gibt die Möglichkeit, Daten aus einer Zeichnung abzurufen, das Ergebnis zur Zeichnung hinzuzufügen und eine Formel für die Berechnung manuell zu schreiben">
+    <prefix>Präfix</prefix>
+    <suffix>Suffix</suffix>
+    <mi1>Absoluter Wert der angegebenen Zahl</mi1>
+    <mi2>Der Winkel, dessen Kosinus gleich der bestimmten Zahl ist</mi2>
+    <mi3>Der Winkel, dessen Kosinuswert gleich der bestimmten Zahl ist</mi3>
+    <mi4>Der Winkel, dessen Sinuswert gleich der bestimmten Zahl ist</mi4>
+    <mi5>Die kleinste Ganzzahl, die größer oder gleich der bestimmten Zahl ist</mi5>
+    <mi6>E, auf einen bestimmten Grad angehoben</mi6>
+    <mi7>Die größte Ganzzahl, die kleiner oder gleich der bestimmten Zahl ist</mi7>
+    <mi8>Der Rest bei Division der bestimmten Zahl durch eine andere bestimmte Zahl</mi8>
+    <mi9>Der Logarithmus der angegebenen Zahl</mi9>
+    <mi10>Logarithmus zur Basis 10 einer bestimmten Zahl</mi10>
+    <mi11>Die höhere der beiden angegebenen Zahlen</mi11>
+    <mi12>Die kleinere der beiden angegebenen Zahlen</mi12>
+    <mi13>Angegebene Zahl, die auf eine angegebene Potenz erhöht wird</mi13>
+    <mi14>Rundet den Wert auf die nächste ganze Zahl oder die angegebene Anzahl von Dezimalstellen</mi14>
+    <mi15>Der Wert, der das Vorzeichen der Zahl bestimmt</mi15>
+    <mi16>Ganzzahliger Teil der Zahl</mi16>
+    <h1>Berechnungsfunktion</h1>
+    <h2>Interpolation</h2>
+    <h3>Grad, Neigung</h3>
+    <h4>Transparenz nutzen</h4>
+    <h5>BERECHNUGSFUNKTION</h5>
+    <h6>INTERPOLATION</h6>
+    <h7>GRAD, NEIGUNG</h7>
+    <h8>Funktion einfügen</h8>
+    <h9>Rundung:</h9>
+    <h10>Anzahl der Nachkommastellen</h10>
+    <h11>Daten aus der Zeichnung</h11>
+    <h12>Den Abstand zwischen zwei Punkten messen</h12>
+    <h13>Die Summe der Längen von Objekten abrufen</h13>
+    <h14>Die Koordinate ermitteln</h14>
+    <h15>Die Fläche abrufen</h15>
+    <h16>Den Wert aus dem Text ermitteln</h16>
+    <h17>Den Wert aus der Führungslinie ermitteln</h17>
+    <h18>Den Wert aus der Tabellenzelle abrufen</h18>
+    <h19>Den Wert aus der Bemaßung ermitteln</h19>
+    <h20>Mehrere</h20>
+    <h21>Runden</h21>
+    <h22>Den genommenen Wert runden</h22>
+    <h23>Begrenzungssymbol:</h23>
+    <h24>Lineare Interpolation</h24>
+    <h25>Lineare Extrapolation von Weniger</h25>
+    <h26>Lineare Extrapolation von Mehr</h26>
+    <h27>GRAD</h27>
+    <h28>Winkelgrad:</h28>
+    <h29>Dezimalgrad:</h29>
+    <h30>Radian:</h30>
+    <h31>NEIGUNG</h31>
+    <h32>Neigung (dimensionslos):</h32>
+    <h33>Prozent (%):</h33>
+    <h34>Promille (‰):</h34>
+    <h35>Umrechnung von Graden</h35>
+    <h36>Verhältnis:</h36>
+    <h37>Ergebnis zur Zeichnung:</h37>
+    <h38>Das Ergebnis als einzeiligen Text einfügen</h38>
+    <h39>Das Ergebnis in den vorhandenen einzeiligen Text (mit Ersetzung) einfügen</h39>
+    <h40>Das Ergebnis in eine Tabellenzelle einfügen</h40>
+    <h41>Das Ergebnis in einen mehrzeiligen Text hinzufügen</h41>
+    <h42>Das Ergebnis als eine Führungslinie einfügen</h42>
+    <h43>Protokoll</h43>
+    <h44>Das Protokoll löschen</h44>
+    <h45>Addieren</h45>
+    <h46>Subtrahien</h46>
+    <h47>Multiplizieren</h47>
+    <h48>Teilen</h48>
+    <h49>Punkt</h49>
+    <h50>Komma</h50>
+    <msg1>Ein Fehler ist aufgetreten. Vielleicht ist die Formel für die Berechnung falsch</msg1>
+    <msg2>Geben Sie einen Punkt an:</msg2>
+    <msg3>Wählen Sie eine Koordinate aus: [X/Y/Z]</msg3>
+    <msg4>Die Fläche abrufen: [Polylinie/Füllmuster]</msg4>
+    <msg5>Wählen Sie eine Polylinie aus:</msg5>
+    <msg6>Wählen Sie mehrere Polylinien aus:</msg6>
+    <msg7>Wählen Sie ein Füllmuster aus:</msg7>
+    <msg8>Wählen Sie mehrere Füllmuster aus:</msg8>
+    <msg9>Wählen Sie einen einzeiligen oder mehrzeiligen Text aus:</msg9>
+    <msg10>Wählen Sie mehrere ein- oder mehrzeilige Texte aus:</msg10>
+    <msg11>Wählen Sie Multi-Führungslinie aus:</msg11>
+    <msg12>Wählen Sie mehrere Führungslinien aus:</msg12>
+    <msg13>Wählen Sie eine Tabelle aus:</msg13>
+    <msg14>Wählen Sie eine Zelle aus:</msg14>
+    <msg15>Erste Ecke des Rahmens:</msg15>
+    <msg16>Zweite Ecke des Rahmens:</msg16>
+    <msg17>Wählen Sie Bemaßung aus:</msg17>
+    <msg18>Wählen Sie mehrere Bemaßungen aus:</msg18>
+    <msg19>Wählen Sie mehrzeiligen Text aus:</msg19>
+    <msg20>Wählen Sie einzeiligen Text:</msg20>
+    <msg21>x0 ist gleich x2</msg21>
+    <msg22>x1 gehört nicht zum \nIntervall x0-x2</msg22>
+    <msg23>gleich</msg23>
+    <err1>Ungültige Wahl!</err1>
+    <err2>Der ausgewählte Text enthält keine numerischen Werte</err2>
+    <err3>Nicht in die Zelle getroffen!</err3>
+    <err4>Ungültige Eingabe</err4>
+  </mpCalc>
+  <mpArmature LocalName="Bewehrung"
+              Description="Verarbeitung von Bewehrungssortimenten – Abrufen verschiedener Informationen und Berechnungen"
+              FullDescription="Um das Plugin zu verwenden, benötigt man verschiedene Datenbanken. Über das Plugin erhalten Sie verschiedene Informationen und Berechnungsdaten (Fläche, Gewicht, Verankerung etc.) für eine Vielzahl unterschiedlicher Sortimente">
+    <cancel>Abbrechen</cancel>
+    <h1>BEWEHRUNG</h1>
+    <h2>Vorschriftsmäßiges Dokument</h2>
+    <h3>Auswahl des vorschriftsmäßiges Dokument</h3>
+    <h4>Durchmesser</h4>
+    <h5>Auswahl nach Bewehrungsdurchmesser</h5>
+    <h6>Querschnittsfläche, cm²</h6>
+    <h7>Auswahl nach der Bewehrungsquerschnittsfläche</h7>
+    <h8>Masse von 1 lfm, kg</h8>
+    <h9>Auswahl nach Masse pro Laufenden Meter der Bewehrung</h9>
+    <h10>Bewehrungsklasse</h10>
+    <h11>Auswahl der Stahlsorte für die Bewehrung</h11>
+    <h12>Masse</h12>
+    <h13>Länge, mm:</h13>
+    <h14>Längeneingabefeld (mm) für die Massenberechnung</h14>
+    <h15>lfm</h15>
+    <h16>In laufenden Metern</h16>
+    <h17>Die Länge zwischen zwei Punkten messen</h17>
+    <h18>Die Summe der Längen von Objekten abrufen</h18>
+    <h19>ERGEBNIS, kg</h19>
+    <h20>Anzahl der Nachkommastellen</h20>
+    <h21>Ergebnis in Tabelle</h21>
+    <h22>Das Berechnungsergebnis in eine AutoCAD-Tabelle einfügen</h22>
+    <h23>Name in Tabelle</h23>
+    <h24>Den Namens der ausgewählten Bewehrung in die AutoCAD-Tabelle einfügen</h24>
+    <h25>Ergebnis und Name einfügen</h25>
+    <h26>Das Berechnungsergebnis und den Namen der ausgewählten Bewehrung in die AutoCAD-Tabelle einfügen</h26>
+    <h27>Flächen</h27>
+    <h28>Bei der Anzahl der Bewehrungsstäbe:</h28>
+    <h29>Fläche, cm²:</h29>
+    <h30>Bei der Abstand zwischen den Stäben (mm):</h30>
+    <h31>Fläche, cm²/1 m:</h31>
+    <h32>Verankerung/Überlappung</h32>
+    <h33>SP 52-101-2003</h33>
+    <h34>Betonklasse:</h34>
+    <h35>Betonklasse hinsichtlich der Druckfestigkeit</h35>
+    <h36>Bemessungszugfestigkeit</h36>
+    <h37>Art der Bewehrungsoberfläche</h37>
+    <h38>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</h38>
+    <h39>Bemessungszugfestigkeit, MPa</h39>
+    <h40>Länge der Grundverankerung (Basis), mm:</h40>
+    <h41>Faktor α:</h41>
+    <h42>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe. Nach Punkt 10.3.30 der SP 63.13330 kann der Faktor α auf 2,0 erhöht werden</h42>
+    <h43>Geforderte und tatsächliche Bewehrung sind gleich</h43>
+    <h44>Tatsächlich eingebaute Bewehrung (Durchmesser)</h44>
+    <h45>Standardmäßig gehen wir davon aus, dass die rechnerisch erforderliche Bewehrung und die tatsächlich eingebaute Bewehrung gleich sind. Falls die Bewehrungen unterschiedlich sind, wählen Sie die tatsächlich eingebaute Bewehrung aus. Die für die Berechnung erforderliche Bewehrung wird auf der linken Seite des Fensters ausgewählt</h45>
+    <h46>Erforderliche (berechnete) Verankerungslänge, mm:</h46>
+    <h47>Einen Bericht in MS Word erstellen</h47>
+    <h48>Ausführliche Informationen</h48>
+    <h49>Status des Dokuments: Aktuell</h49>
+    <h50>Status des Dokuments: Ungültig</h50>
+    <h51>Status des Dokuments: Keine Informationen verfügbar oder nicht gesetzlich definiert</h51>
+    <h52>Berechnung der Verankerungs- oder Überlappungslänge für den aktuellen Bewehrungsdurchmesser erfolgt in einem einzelnen Fenster</h52>
+    <h53>Öffnen</h53>
+    <h54>Durchmesser-Symbol (Ø) hinzufügen</h54>
+    <msg1>Erhältlich in der vollständigen Plugin-Version!</msg1>
+    <msg2>Kein Wert im Feld "Länge"</msg2>
+    <msg3>Bewehrung nicht ausgewählt</msg3>
+    <msg4>Für die Eingabe sind nur Zahlen und ein Punkt zulässig</msg4>
+    <msg5>Nicht alle Daten sind eingegeben</msg5>
+    <msg6>Masse von 1 lfm in die Tabelle</msg6>
+    <msg7>Wählen Sie die Tabelle "Bauteilliste"</msg7>
+    <msg8>Wählen Sie die Zelle "Name"</msg8>
+    <msg9>kg/lfm</msg9>
+    <msg10>Wählen Sie die Zelle "Masse"</msg10>
+    <err1>Ungültige Wahl!</err1>
+    <err2>Nicht in die Zelle getroffen!</err2>
+    <mpa>МРа</mpa>
+    <cb1>Glatte Bewehrung</cb1>
+    <cb2>Kaltgezogene (periodisches Profil)</cb2>
+    <cb3>Warmgewalzte (periodisches Profil)</cb3>
+    <cb4>Thermo-mechanisch behandelte (periodisches Profil)</cb4>
+    <p1>Berechnungsergebnis in Word</p1>
+    <p2>Ein neues Dokument erstellen</p2>
+    <p3>Ausfüllen der Angaben</p3>
+  </mpArmature>
+  <mpTxtCopyPaste LocalName="Schnellkopieren des Textes"
+                  Description="Schnellkopieren des Inhalts eines einzeiligen oder mehrzeiligen Textes, mehrerer Führungslinien, Bemaßungen und Tabellenzellen">
+    <msg1>Wählen Sie das Quellobjekt (Text, Führungslinie, Tabelle oder Bemaßung):</msg1>
+    <msg2>Wählen Sie das Quellobjekt (Text, Führungslinie, Tabelle oder Bemaßung) oder [Löschen]:</msg2>
+    <msg3>Ungültige Wahl!</msg3>
+    <msg4>Wollen Sie das Quellobjekt löschen (bei Tabellen – Zellinhalte)?</msg4>
+    <msg5>Wählen Sie das Objekt (Text, Führungslinie oder Tabelle), das den Inhalt ersetzen soll:</msg5>
+    <msg6>Geben Sie eine Zelle der Tabelle an:</msg6>
+  </mpTxtCopyPaste>
+  <mpRemoveAnnotScale LocalName="Maßstäbe löschen"
+                      Description="Löscht die Liste der Beschriftungsmaßstäbe in den ausgewählten Beschriftungsobjekten und belässt den aktuellen Maßstab">
+    <msg1>Wählen Sie Beschriftungsobjekte aus:</msg1>
+  </mpRemoveAnnotScale>
+  <mpTotals LocalName="Allgemeine Daten"
+            Description="Mit dem Plugin können Sie allgemeine Daten schnell erstellen, mit der Möglichkeit, Werte aus einer Zeichnung abzurufen"
+            FullDescription="Das Plugin sammelt Daten aus den Tabellen, die in das aktuelle Dokument eingefügt sind. Die Liste der Referenzdokumente wird anhand der in der Datenbank vorhandenen normativen Dokumenten zusammengestellt">
+    <insert>Tabelle einfügen</insert>
+    <accept>Akzeptieren</accept>
+    <cancel>Abbrechen</cancel>
+    <xml>xml-Datei</xml>
+    <h1>Russland</h1>
+    <h2>Ukraine</h2>
+    <h3>Belarus</h3>
+    <h4>Einstellungen</h4>
+    <h5>Eine Datei automatisch erstellen</h5>
+    <h6>Wenn diese Option aktiviert ist und das aktuelle Dokument gespeichert wird, wird beim Starten des Plugins automatisch eine generische Datenspeicherdatei (Zeichnungsname_totals.xml) im Verzeichnis der aktuellen Zeichnung erstellt</h6>
+    <h7>Einfügen von Tabellen</h7>
+    <h8>Tabellenmaßstab:</h8>
+    <h9>Texthöhe:</h9>
+    <h10>Zeilenhöhe:</h10>
+    <h11>Textstil:</h11>
+    <h13>Nicht gespeichert!</h13>
+    <h14>Allgemeine Datendatei speichern</h14>
+    <h15>Allgemeine Datendatei herunterladen</h15>
+    <h16>Allgemeine Daten aus dem Modell oder den angegebenen Plänen abrufen</h16>
+    <h17>Allgemeine Daten ermitteln</h17>
+    <h18>Zeichnungsliste</h18>
+    <h19>Plan</h19>
+    <h20>Benennung</h20>
+    <h21>Notiz</h21>
+    <h22>Eine neue Zeile hinzufügen</h22>
+    <h23>Die ausgewählte Zeile löschen</h23>
+    <h24>Die ausgewählte Zeile nach oben verschieben</h24>
+    <h25>Die ausgewählte Zeile nach unten verschieben</h25>
+    <h26>Tabelle in die aktuelle Zeichnung einfügen</h26>
+    <h27>Bauteillisten</h27>
+    <h28>Liste der Referenzdokumente</h28>
+    <h29>Bezeichnung</h29>
+    <h30>Im Modell</h30>
+    <h31>Als Formate verwenden:</h31>
+    <h32>ModPlus Formate</h32>
+    <h33>Formate aus der Liste (blockweise):</h33>
+    <h34>In Plänen</h34>
+    <h35>Die Pläne werden nach Tabellen ohne Berücksichtigung der Formate durchsucht! Es wird davon ausgegangen, dass ein Plan einem Format entspricht</h35>
+    <h36>Sammeln:</h36>
+    <h37>Die Tabellen sind nicht in einer Datei gespeichert! Wenn das Fenster geschlossen wird, gehen alle Daten verloren!\nSind Sie sicher, dass Sie das Fenster schließen wollen?</h37>
+    <h38>Bestehende Tabellen werden überschrieben!\nWollen Sie fortsetzen?</h38>
+    <h39>Das ausgewählte Element wird unwiderruflich gelöscht. \nWollen Sie fortsetzen?</h39>
+    <h43>Erhältlich in der vollständigen Plugin-Version!</h43>
+    <h44>Wollen Sie die bestehenden Tabellen überschreiben?\nJa – überschreiben. Nein — ergänzen</h44>
+    <h45>Keine Blöcke im aktuellen Bereich gefunden!</h45>
+    <h47>Tabellenstil-Tabelle wurde in der Tabellendatei nicht gefunden</h47>
+    <h48>Starten Sie das Plugin "Tabellen", um die Tabellendatei zu überschreiben</h48>
+    <h49>Keine Tabellendatei gefunden!\nMan muß das Plugin "Tabellen" starten</h49>
+    <h50>Suche nach Daten im Plan:</h50>
+    <h51>Das Ansichtsfenster wird von einem Objekt zugeschnitten, das nicht verarbeitet wird!</h51>
+    <h52>Das Ansichtsfenster Nr.</h52>
+    <h53>Objekt zum Zuschneiden:</h53>
+    <h54>Einfügepunkt:</h54>
+    <h55>Keine Endpunkte für die Suche ausgewählt!</h55>
+    <h56>Keine Optionen für die Formatsuche ausgewählt!</h56>
+    <h57>Keine Blätter zum Suchen!</h57>
+    <h58>Alle abwählen</h58>
+    <h59>Alle auswählen</h59>
+    <h60>Nur in der aktuellen Zeichnung suchen</h60>
+    <h61>Sie müssen eine oder mehrere Zeichnungen aus der Liste der geöffneten Zeichnungen auswählen oder durch einen Haken "Nur in der aktuellen Zeichnung suchen" markieren</h61>
+    <h62>Zurückschreiben</h62>
+    <h63>Die geänderten Daten zurückschreiben</h63>
+    <h64>Es gibt geänderte Daten, die zurückgeschrieben werden können</h64>
+  </mpTotals>
+  <mpProductInsert LocalName="Produkt einfügen"
+                   Description="Mit dem Plugin können Sie Produkte aus der ModPlus-Datenbank in Form von Blöcken mit erweiterten Daten einfügen"
+                   FullDescription="Das Plugin erstellt AutoCAD-Blöcke anhand der Daten aus der Plugin-Datenbank. Den Blöcken werden erweiterte Daten hinzugefügt, die es anderen Plugins ermöglichen, diese Blöcke zu verarbeiten und damit eine Bauteilliste zu erstellen\nMit dem Plugin können Sie die erweiterten Daten in gewöhnliche AutoCAD-Objekte hinzufügen\nWichtig: Sie müssen Blöcke mit diesem Plugin einfügen oder bereits eingefügte Blöcke kopieren, sonst werden keine erweiterten Daten beim Einfügen mit den üblichen AutoCAD-Werkzeuge hinzugefügt!">
+    <all>Alle</all>
+    <cb1>Metall</cb1>
+    <cb2>Stahlbeton</cb2>
+    <cb3>Holz/Kunststoffe</cb3>
+    <cb4>Werkstoffe</cb4>
+    <cb5>Sonstiges</cb5>
+    <h1>Die Liste der vom Plugin verwendeten Dokumente ändern</h1>
+    <h2>Die Suchleiste der Datenbank öffnen</h2>
+    <h4>Ab 2 Zeichen</h4>
+    <h5>PRODUKT EINFÜGEN</h5>
+    <h6>Wählen Sie eine Sektion:</h6>
+    <h7>Filtern nach Gruppen:</h7>
+    <h8>Wählen Sie ein Dokument aus:</h8>
+    <h9>Bild öffnen</h9>
+    <h10>Aktuell</h10>
+    <h11>Ungültig</h11>
+    <h12>Keine Informationen verfügbar oder nicht gesetzlich definiert</h12>
+    <h13>Länge mm</h13>
+    <h14>Zwischen zwei Punkten messen</h14>
+    <h15>Durchmesser, mm</h15>
+    <h16>Breite, mm</h16>
+    <h17>Höhe (Dicke), mm</h17>
+    <h18>Stahl:</h18>
+    <h19>Dichte (kg/m3):</h19>
+    <h20>Die eingegebenen Bemaßungswerte speichern</h20>
+    <h21>Position des Produkts</h21>
+    <h22>Einfügeoption</h22>
+    <h23>Wipeout</h23>
+    <h24>Wipeout hinzufügen, um Elemente hinter dem Block zu verbergen</h24>
+    <h25>Einfügen</h25>
+    <h26>Einfügen eines Produkts als Block mit einfacher Geometrie und erweiterten Daten</h26>
+    <h27>Den Block ersetzen</h27>
+    <h28>Den Block ersetzen, der das Produkt darstellt</h28>
+    <h29>Zum Objekt hinzufügen</h29>
+    <h30>Die erweiterten Daten, die Produktinformationen enthalten, zum angegebenen Objekt hinzufügen</h30>
+    <h31>Dokumente für den Datenbankbereich anzeigen:</h31>
+    <h32>Status des Dokuments:</h32>
+    <h33>Aktuell</h33>
+    <h34>Nicht aktuell</h34>
+    <h35>Keine Informationen verfügbar oder nicht gesetzlich definiert</h35>
+    <h36>PRODUKTDATEN</h36>
+    <h37>An zwei Punkten</h37>
+    <h38>In Form einer Polylinie</h38>
+    <h39>Die Einfügeoptionen "Mit zwei Punkten" und "In Form einer Polylinie" sind nur für lineare Produkte verfügbar (Produkte, deren Länge erforderlich ist). Die Einfügeoption wird verwendet, wenn sie aktiv und ausgewählt ist. Bei beiden Optionen müssen Sie die Produktlänge nicht im Voraus im Plugin-Fenster angeben. Die Einfügeoption "Mit zwei Punkten" ist verfügbar, wenn die Anzeigeoption "Ansicht von der Seite" oder "Ansicht von oben" ausgewählt ist. Die Einfügeoption "In Form einer Polylinie" ist verfügbar, wenn die Anzeigeoption "Ansicht von vorne (Schnittansicht)" ausgewählt ist</h39>
+    <h40>Status des Dokuments:</h40>
+    <h41>Blockmaßstab:</h41>
+    <rb1>Ansicht von der Seite</rb1>
+    <rb2>Ansicht von vorne (Schnittansicht)</rb2>
+    <rb3>Ansicht von oben</rb3>
+    <s1>Von der Seite</s1>
+    <s2>Von vorne (Schnittansicht)</s2>
+    <err1>Fehler beim Erstellen des Blocknamens!</err1>
+    <err2>Inkorrekter Blockname!</err2>
+    <msg1>Wählen Sie den Ersetzungsblock aus:</msg1>
+    <msg2>Der ausgewählte Block enthält nicht die erweiterten ModPlus-Produktdaten. \nWollen Sie dieses Block ersetzen?</msg2>
+    <msg3>Wählen Sie die Objekte aus, für die Sie Produktdaten hinzufügen möchten</msg3>
+    <msg4>Geben Sie Länge des Produkts an</msg4>
+    <msg5>Geben Sie Durchmesser des Produkts an</msg5>
+    <msg6>Geben Sie Breite des Produkts an</msg6>
+    <msg7>Geben Sie Höhe des Produkts an</msg7>
+    <msg8>Einfügepunkt:</msg8>
+    <msg9>MP:Produktdaten</msg9>
+    <msg10>Erster Punkt</msg10>
+    <msg11>Zweiter Punkt</msg11>
+  </mpProductInsert>
+  <mpDrawOrderByLayer LocalName="Zeichnungsreihenfolge nach Layer"
+                      Description="Das Plugin wird verwendet, um die Zeichnungsreihenfolge entsprechend den Layern zu ändern"
+                      FullDescription="Das Plugin verarbeitet die im Fenster mit Häkchen markierten Layer und ändert die Zeichenreihenfolge entsprechend der Reihenfolge der markierten Layer. Es gibt auch ein Auto-Modus, der dazu dient, die Zeichenreihenfolge von Objekten in einem der beiden angegebenen Layer beim Erstellen oder Bearbeiten automatisch zu ändern">
+    <h1>ZEICHNUNGSREIHENFOLGE NACH LAYER</h1>
+    <h2>Umgekehrte Liste</h2>
+    <h3>Alle auswählen</h3>
+    <h4>Alle abwählen</h4>
+    <h5>Umkehrung der Wahlmöglichkeit</h5>
+    <h6>Auto-Modus</h6>
+    <h7>In den Vordergrund</h7>
+    <h8>In den Hintergrund</h8>
+    <h9>Verwenden</h9>
+    <h10>ModPlus: Objekt auf einem Layer:</h10>
+    <h11>in den Vordergrund verschoben</h11>
+    <h12>in den Hintergrund verschoben</h12>
+    <h13>Die aktuellen Layer-Positionen in der Zeichnung speichern</h13>
+    <h14>Die in der aktuellen Zeichnung gespeicherten Layer-Position herunterladen und anwenden. Layer, die nach dem Speichern der Position hinzugefügt wurden, werden an das Ende der Liste verschoben</h14>
+  </mpDrawOrderByLayer>
+  <mpDocTemplates LocalName="Vorlagen. Stufung P"
+                  Description="Mit dem Plugin können Sie Vorlagen für den Textteil des Abschnitts gemäß dem &quot;Verordung der Russischen Föderation Nr. 87&quot; mit einer Titelseite gemäß GOST R 21.1101-2013 erstellen">
+    <h1>VORLAGEN. STUFUNG P</h1>
+    <h2>Allgemeine Eigenschaften</h2>
+    <h3>Name des Projektes</h3>
+    <h4>Projekt-Nr.</h4>
+    <h5>Hauptingenieur</h5>
+    <h6>Hauptingenieur des Projektes</h6>
+    <h7>Ausführen</h7>
+    <h8>Normokontrolle</h8>
+    <h9>Organisation</h9>
+    <h10>Zulassungsbescheinigung (SRO)</h10>
+    <h11>Auftraggeber</h11>
+    <h12>Von den Feldern nehmen</h12>
+    <h13>Abrufen von Daten aus den Feldern (siehe Plugin "Schriftfelder")</h13>
+    <h14>Vorlagen</h14>
+    <h15>Bauliche Anlagen</h15>
+    <h16>Lineare Einrichtungen</h16>
+    <h17>Erstellen</h17>
+    <h18>Abbrechen</h18>
+    <h19>Sie haben keine Vorlagen zum Erstellen angegeben</h19>
+    <h20>Erstellen von Vorlagen</h20>
+    <h21>Öffnen der Word-Anwendung</h21>
+    <h22>Erstellen von Vorlage</h22>
+    <h23>Öffnen einer Word-Datei</h23>
+  </mpDocTemplates>
+  <mpPrPosition LocalName="Position der Produkte"
+                Description="Das Plugin fügt eine Position den ausgewählten Produkten hinzu bzw. entfernt die Position und ermöglicht Ihnen, die Position zu markieren">
+    <h1>Wählen Sie Objekte aus, die ModPlus-Produkte sind</h1>
+    <h2>Löschen</h2>
+    <h3>Element</h3>
+    <h4>Geben Sie eine Position an</h4>
+    <h5>Wählen Sie Objekte, die ModPlus-Produkte sind, um die Position zu löschen</h5>
+    <h6>Wählen Sie die Art der Markierung für das Produkt</h6>
+    <h7>Position</h7>
+    <h8>Nichts/Text/Führungslinie</h8>
+    <h9>MP:Führungslinie mit Beschriftung</h9>
+    <h10>Einfügepunkt</h10>
+  </mpPrPosition>
+  <mpPrToTable LocalName="Einfügen von Produkten in die Tabelle"
+               Description="Mit dem Plugin können Sie die Tabelle der Bauteilliste mit ausgewählten ModPlus-Produkten ausfüllen"
+               FullDescription="Das Plugin sammelt Daten für die Bauteilliste aus erweiterten Produktdaten (Blöcke, die durch das Plugin &apos;&apos;Produkt einfügen&apos;&apos; erstellt wurden, oder AutoCAD-Objekte mit erweiterten Daten, die durch das Plugin &apos;&apos;Produkt einfügen&apos;&apos; hinzugefügt wurden) sowie aus Blöcken, die Attribute für die Bauteilliste haben. Es gibt eine Möglichkeit, eine Zeile anzugeben, wovon man mit dem Füllen der Tabelle begonnen werden soll">
+    <h1>Wählen Sie Objekte aus, die ModPlus-Produkte sind</h1>
+    <h2>ZEichenfolge</h2>
+    <h3>DEzimalen</h3>
+    <h4>Nach einer Zeichenfolge fragen, um mit dem Ausfüllen zu beginnen</h4>
+    <h5>Anzahl der Nachkommastellen</h5>
+    <h6>Wählen Sie eine Tabelle aus</h6>
+    <h7>Ungültige Wahl! Das ist keine Tabelle!</h7>
+    <h8>MP:in die Bauteilliste hinzufügen</h8>
+    <h9>Suche nach Produkten</h9>
+  </mpPrToTable>
+  <mpDimBreak LocalName="Aufteilen von Bemaßungen"
+              Description="Aufteilen der ausgewählten Bemaßung in zwei oder mehr neue Varianten"
+              FullDescription="Mit dem Plugin können Sie die ausgewählte lineare oder parallele Bemaßung in zwei oder mehr Bemaßungen aufteilen, indem Sie dynamisch einen neuen Punkt angeben, der für zwei neuen Bemaßungen gemeinsam ist">
+    <h1>Wählen Sie Bemaßung aus</h1>
+    <h2>Ungültige Wahl!</h2>
+    <h3>Bruchpunkt</h3>
+  </mpDimBreak>
+  <mpBlkReplace LocalName="Ersetzen von Blöcken"
+                Description="Mit dem Plugin können Sie Blöcke in einer Zeichnung schnell durch einen Musterblock ersetzen"
+                FullDescription="Das Plugin funktioniert in zwei Modi: &quot;Ausgewähltes ersetzen&quot; – ermöglicht es Ihnen, alle ausgewählten Blöcke durch einen Musterblock zu ersetzen; &quot;Ähnliches ersetzen&quot; – ermöglicht es Ihnen, alle Auftreten eines Blocks durch einen Musterblock zu ersetzen. Ausserdem können Sie die Beschreibung des ersetzten Blocks aus der Zeichnungsdatenbank entfernen (wie mit dem Befehl &quot;Löschen&quot; (_PURGE). Es gibt verschiedene Einstellungen">
+    <h1>Wählen Sie den zu ersetzenden Block aus</h1>
+    <wrong>Ungültige Wahl!</wrong>
+    <h2>Wählen Sie ein Ersatzblock aus</h2>
+    <h3>Wählen Sie eine Anzahl von Blöcken, um sie zu ersetzen</h3>
+    <h4>Beseitigen Sie die unnötigen Blöcke</h4>
+    <h5>Wollen Sie die ersetzten Blöcke aus der Zeichnungsdatenbank entfernen?</h5>
+    <yes>Ja</yes>
+    <no>Nein</no>
+    <h6>Arbeitsvariante des Plugins</h6>
+    <k1>Ausgewählte</k1>
+    <k2>Ähnliche</k2>
+    <k3>Einstellungen</k3>
+    <h7>Für kopierte Blöcke wiederholen:</h7>
+    <h8>Layer des zu ersetzenden Blocks</h8>
+    <h9>Maßstab des zu ersetzenden Blocks</h9>
+    <h10>Transformationen (Spiegelung und Drehung) des zu ersetzenden Blocks</h10>
+    <h11>nur das Drehen der zu ersetzenden Blocks</h11>
+    <h12>Entfernen von ersetzten Blöcken aus der DB:</h12>
+    <h13>Fragen</h13>
+    <h14>Automatisch löschen</h14>
+    <h15>Nicht löschen</h15>
+    <h16>Schließen</h16>
+    <h17>Alle Einstellungen werden automatisch gespeichert</h17>
+  </mpBlkReplace>
+  <mpPlinesEdit LocalName="Polylinien" Description="Eine Sammlung verschiedener Plugins für die Arbeit mit Polylinien">
+    <h1>POLYLINIEN</h1>
+    <h2>Das Plugin arbeitet mit 3D-Polylinien</h2>
+    <h3>Das Plugin arbeitet mit 2D-Polylinien</h3>
+    <h4>Das Plugin arbeitet mit LW-Polylinien</h4>
+    <h5>Der Multifunktionsleiste ein Panel hinzufügen</h5>
+    <h6>Die Farbe der Hilfsgeometrie:</h6>
+    <h7>ModPlus-Registerkarte nicht gefunden</h7>
+    <h8>ModPlus-Registerkarte zum Hinzufügen eines Polylinien-Panels nicht gefunden</h8>
+    <h9>Polylinien</h9>
+    <h10>Arbeitsvariante:</h10>
+    <h11>Min. bearbeiteter Radius des Bogens:</h11>
+    <h12>Beliebig</h12>
+    <h13>Unterteilung des Bogens in eine gleiche Anzahl von Segmenten. \nDie Abbildung zeigt eine Unterteilung in 3 Segmente \nR ist der Radius des Bogens in der Polylinie</h13>
+    <h14>Unterteilung des Bogens in Segmente durch Angabe der Länge der sich aus der Teilung ergebenden Bogensegmente \nR – Radius des Bogens in der Polylinie \nL – Länge des Bogensegments</h14>
+    <h15>Unterteilung des Bogens in Segmente durch Angabe der Sehnenauslenkung (Segmenthöhe) \nR – Radius des Bogens in der Polylinie \nH – Segmenthöhe</h15>
+    <h16>Unterteilung des Bogens in Segmente durch Angabe der Sehnenlänge \nR – Radius des Bogens in der Polylinie \nX – Sehnenlänge</h16>
+    <h17>Die ausgewählten Polylinien löschen</h17>
+    <h18>Endpunkte beseitigen</h18>
+    <h19>Blöcke kopieren:</h19>
+    <h20>Drehen:</h20>
+    <h21>TOLERANZEN</h21>
+    <h22>P ist der betrachtete Punkt der Polylinie</h22>
+    <h23>– Das Plugin arbeitet mit einer Prüfung für beide Bedingungen</h23>
+    <h24>H ist die maximale Abweichung von der Geraden:</h24>
+    <h25>a – Winkeltoleranz:</h25>
+    <accept>Akzeptieren</accept>
+    <cancel>Abbrechen</cancel>
+    <cb1>Anzahl der Segmente</cb1>
+    <cb2>Segmentlänge</cb2>
+    <cb3>Sehnenauslenkung</cb3>
+    <cb4>Sehnenlänge</cb4>
+    <cb5>durch Einfügepunkt des Blocks</cb5>
+    <cb6>nach geometrischer Mitte</cb6>
+    <cb7>nicht drehen</cb7>
+    <cb8>durch vorheriges Segment drehen</cb8>
+    <cb9>durch nächstes Segment drehen</cb9>
+    <l1>3D-Polylinie in LW konvertieren</l1>
+    <d1>Erstellen von Kopien ausgewählter 3D-Polylinien als LW-Polylinien (2D) mit Übertragung auf Ebene 0.0</d1>
+    <l2>Entfernen von kongruenten Scheitelpunkten einer Polylinie</l2>
+    <d2>Entfernen von benachbarten Scheitelpunkten ausgewählter Polylinien, die dieselben Koordinaten haben</d2>
+    <l3>Entfernen von Scheitelpunkten, die auf der gleichen Linie liegen</l3>
+    <d3>Entfernen von benachbarten Scheitelpunkten ausgewählter Polylinien, die auf der gleichen Linie liegen. Es besteht die Möglichkeit, eine gerade oder winklige Abweichungstoleranz einzustellen</d3>
+    <l4>Positionierung eines Objekts in den Scheitelpunkten einer Polylinie</l4>
+    <d4>Positionierung eines ausgewählten Objekts in den Scheitelpunkten einer Polylinie. Es besteht die Möglichkeit, ein Objekt durch ein Segment der Polylinie zu drehen. Blöcke können entweder durch geometrische Mitte oder Einfügepunkt positioniert werden</d4>
+    <l5>Ersetzen des Bogensegments durch ein lineares Segment</l5>
+    <d5>Ersetzen eines angegebenen Bogensegments einer Polylinie durch ein lineares Segment (Ersetzen eines Bogens durch eine Linie)</d5>
+    <l6>Ersetzen eines linearen Segments durch ein Bogensegment</l6>
+    <d6>Ersetzen eines angegebenen linearen (oder bogenförmigen) Segments einer Polylinie durch ein Bogensegment (Ersetzen einer Linie durch einen Bogen). Es besteht die Möglichkeit, einen Bogen durch eine Tangente oder einen Punkt auf einen Bogen zu zeichnen</d6>
+    <l7>Dynamisches Hinzufügen eines Scheitelpunkts</l7>
+    <d7>Dynamisches Hinzufügen eines Scheitelpunkts zu der angegebenen Polylinie</d7>
+    <l8>Zeichnen eines Rechtecks durch drei Punkte</l8>
+    <l9>Entfernen von Bogensegmenten aus der Polylinie</l9>
+    <d9>Entfernen von Bogensegmenten aus der Polylinie, indem sie durch Liniensegmente ersetzt werden. Es gibt mehrere Optionen für den Plugin-Betrieb: Anzahl der Segmente, Segmentlänge, Segmenthöhe (Sehnenauslenkung), Sehnenlänge</d9>
+    <l10>Zeichnen der Mittellinie</l10>
+    <d10>Zeichnen einer Mittellinie (als Polylinie) zwischen zwei angegebenen Kurven (Linien, Polylinien oder Splines)</d10>
+    <wrong>Ungültige Wahl!</wrong>
+    <k1>Wählen Sie 3D-Polylinien aus</k1>
+    <k2>Wählen Sie die Polylinien aus</k2>
+    <k3>Gelöschte Scheitelpunkte</k3>
+    <k4>Polylinie</k4>
+    <k5>enthält keine gleichen Scheitelpunkte</k5>
+    <k6>Wählen Sie Polylinien oder</k6>
+    <k7>TOLeranzen</k7>
+    <k8>Die maximale Abweichung von einer geraden Linie (H) wird angenommen</k8>
+    <k9>Winkeltoleranz in Grad (a) wird angenommen</k9>
+    <k10>enthält nur</k10>
+    <k11>Scheitelpunkte</k11>
+    <k12>Enthält keine Scheitelpunkte, die auf derselben Linie liegen oder den Toleranzbedingungen entsprechen</k12>
+    <k13>Wählen Sie eine Polylinie aus</k13>
+    <k14>Wählen Sie ein zu positionierendes Objekt</k14>
+    <k15>Wählen Sie ein Bogensegment der Polylinie</k15>
+    <k16>Wählen Sie ein Segment der Polylinie</k16>
+    <k17>Geben Sie einen Punkt auf der Tangente an oder: [Tangente/Durchgangspunkt]</k17>
+    <k18>Geben Sie einen Punkt auf dem Bogen an oder: [Tangente/Durchgangspunkt]</k18>
+    <k19>Geben Sie einen Punkt an (klicken Sie bei gedrückter Strg-Taste, um den Scheitelpunkt nach vorne zu verschieben)</k19>
+    <k20>Geben Sie den ersten Punkt an</k20>
+    <k21>Geben Sie den zweiten Punkt an</k21>
+    <k22>Geben Sie den dritten Punkt an</k22>
+    <k23>Geben Sie Anzahl der Segmente an</k23>
+    <k24>Geben Sie Länge des Segments an</k24>
+    <k25>Geben Sie Sehnenabweichung (Segmenthöhe) an</k25>
+    <k26>Geben Sie Länge der Sehne an</k26>
+    <k27>Wählen Sie das erste Referenzelement (Linie, Polylinie oder Spline)</k27>
+    <k28>Wählen Sie das zweite Referenzelement (Linie, Polylinie oder Spline)</k28>
+    <k29>Die Anzahl der Referenzpunkte</k29>
+    <k30>Wollen Sie die Polylinie vereinfachen?\nDie Punkte auf derselben Linie werden gelöscht</k30>
+  </mpPlinesEdit>
+  <mpSpecifications LocalName="Bauteillisten"
+                    Description="Ein Plugin zur Erstellung und Ausfüllung allgemeiner Bauteillisten"
+                    FullDescription="Mit dem Plugin können Sie Einträge zum AutoCAD-Kontextmenü hinzufügen und damit die Möglichkeiten der Verarbeitung von Bauteillisten erweitern: Kontextmenü für Tabellen: &quot;Produkt aus der Datenbank hinzufügen&quot; – ermöglicht das direkte Hinzufügen von Produkten aus der Plugin-Datenbank zur AutoCad-Tabelle, Kontextmenü für Blöcke: Attribute für Bauteilliste hinzufügen/ändern – ermöglicht das Hinzufügen von Attributen für die Bauteilliste zu Blöcken (weitere Informationen finden Sie im Menü &quot;Hilfe&quot;).">
+    <h6>KONTEXTMENÜ</h6>
+    <h7>Erhältlich in der vollständigen Plugin-Version</h7>
+    <h8>Kontextmenü für Tabellen:</h8>
+    <h9>Ein Produkt aus der Datenbank hinzufügen</h9>
+    <h10>Kontextmenü für Blöcke:</h10>
+    <h11>Hinzufügen/Ändern von Attributen für die Bauteilliste</h11>
+    <h12>TABELLENEINSTELLUNGEN</h12>
+    <h13>Tabellenmaßstab:</h13>
+    <h14>Texthöhe:</h14>
+    <h15>Zeilenhöhe:</h15>
+    <h16>Textstil:</h16>
+    <h17>Nur für die aktuelle Datei</h17>
+    <h18>Speichern</h18>
+    <h19>Aktuelle Bauteilliste löschen</h19>
+    <h20>Eine neue leere Bauteilliste erstellen</h20>
+    <h21>Eine neue Position hinzufügen. Die Position wird mit einer Zeile unterhalb der aktuell ausgewählten Zeile in der Bauteilliste hinzugefügt. Wenn in der Bauteilliste nichts ausgewählt ist, wird die Position am Ende der Bauteilliste eingefügt</h21>
+    <h22>Ausgewählte Position ändern</h22>
+    <h23>Aus der Zeichnung ausgewählte Produkte zur Bauteilliste hinzufügen</h23>
+    <h24>Die ausgewählte Position nach oben verschieben</h24>
+    <h25>Die ausgewählte Position nach unten verschieben</h25>
+    <h26>Die ausgewählte Position löschen</h26>
+    <h27>Tabelle ausfüllen</h27>
+    <h28>Tabelle einfügen</h28>
+    <h29>Anpassung:</h29>
+    <h30>Aus der Liste wählen oder schreiben</h30>
+    <h31>Dokumente für den Datenbankbereich anzeigen:</h31>
+    <h32>Status des Dokuments:</h32>
+    <h33>Aktuell</h33>
+    <h34>Nicht aktuell</h34>
+    <h35>Keine Informationen verfügbar oder nicht gesetzlich definiert</h35>
+    <h36>NAME DER BAUTEILLISTE</h36>
+    <h37>Geben Sie einen Namen der Bauteilliste ein</h37>
+    <h38>Für diese Zeichnung gibt es bereits eine Bauteilliste mit diesem Namen!</h38>
+    <h39>Suche nach Produkten</h39>
+    <h40>MANUELLE EINGABE</h40>
+    <h41>Position</h41>
+    <h42>Bezeichnung</h42>
+    <h43>Benennung</h43>
+    <h44>Anzahl</h44>
+    <h45>Masse</h45>
+    <h46>Notiz</h46>
+    <h47>Stahl</h47>
+    <h48>Die Liste der vom Plugin verwendeten Dokumente ändern</h48>
+    <h49>Die Suchleiste der Datenbank öffnen</h49>
+    <h51>Ab 2 Zeichen</h51>
+    <h52>PRODUKT AUS DER DATENBANK</h52>
+    <h53>Wählen Sie eine Sektion:</h53>
+    <h54>Filtern nach Gruppen:</h54>
+    <h55>Wählen Sie ein Dokument aus:</h55>
+    <h56>Bild öffnen</h56>
+    <h57>Aktuell</h57>
+    <h58>Nicht aktuell</h58>
+    <h59>Keine Informationen verfügbar oder nicht gesetzlich definiert</h59>
+    <h60>Länge mm</h60>
+    <h61>Die Länge zwischen zwei Punkten messen</h61>
+    <h62>Durchmesser, mm</h62>
+    <h63>Breite, mm</h63>
+    <h64>Höhe (Dicke), mm</h64>
+    <h65>Stahl:</h65>
+    <h66>Dichte (kg/m3):</h66>
+    <h67>Die eingegebenen Bemaßungswerte speichern</h67>
+    <h68>Nicht alle Daten sind eingegeben</h68>
+    <h69>Hinzufügen</h69>
+    <h70>Hinzufügen und schließen</h70>
+    <h71>Status des Dokuments:</h71>
+    <cb1>Aus der Datenbank hinzufügen</cb1>
+    <cb2>Unterabschnitt hinzufügen</cb2>
+    <cb3>Manuelle Eingabe</cb3>
+    <cb4>Oben links</cb4>
+    <cb5>Oben rechts</cb5>
+    <k1>Die aktuelle Bauteilliste wurde nicht gespeichert! Alle Daten gehen verloren!\nSind Sie sicher, dass Sie das Plugin beenden wollen?</k1>
+    <k2>Wählen Sie Objekte aus, die ModPlus-Produkte sind</k2>
+    <k3>Wollen Sie die ausgewählte Position löschen?</k3>
+    <k4>Bauteilliste</k4>
+    <k5>Beim Generieren des Schlüssels für die aktuelle Zeichnung ist ein Fehler aufgetreten</k5>
+    <k6>Die aktuelle Bauteilliste wurde nicht gespeichert und ist unwiederbringlich verloren!\nWollen Sie fortsetzen?</k6>
+    <k7>Die Bauteilliste wird unwiderruflich gelöscht!\nWollen Sie fortsetzen?</k7>
+    <k8>Die Datei mit den Tabellen fehlt! Der Start des Plugins "Tabellen" ist erforderlich, um sie zu erstellen</k8>
+    <k9>Kopieren der Tabelle aus einer Ressourcendatei fehlgeschlagen</k9>
+    <k10>Die Datei wurde vom Plugin "Bauteillisten" (mpSpecifications) erstellt, das Teil von ModPlus ist \nÄndern Sie diese Datei nicht manuell, da dies zu Fehlfunktionen des Plugins führen kann!</k10>
+    <k11>Einfügepunkt</k11>
+    <k12>Sie haben nichts eingegeben!</k12>
+    <k13>MP: Ein Produkt aus der Datenbank hinzufügen</k13>
+    <k14>Bitte eine Zeile auswählen</k14>
+    <k15>Nicht in die Zelle getroffen!</k15>
+    <k16>MP: Attributen für die Bauteilliste</k16>
+    <k17>ATTRIBUTEN FÜR DIE BAUTEILLISTE</k17>
+    <all>Alle</all>
+    <cb6>Metall</cb6>
+    <cb7>Stahlbeton</cb7>
+    <cb8>Holz/Kunststoff</cb8>
+    <cb9>Werkstoffe</cb9>
+    <cb10>Sonstiges</cb10>
+    <msg1>Geben Sie Länge des Produkts an</msg1>
+    <msg2>Geben Sie Durchmesser des Produkts an</msg2>
+    <msg3>Geben Sie Breite des Produkts an</msg3>
+    <msg4>Geben Sie Höhe des Produkts an</msg4>
+    <msg5>Geben Sie Dichte an</msg5>
+    <ad1>Position des Produkts</ad1>
+    <ad2>Bezeichnung für das Produkt</ad2>
+    <ad3>Name des Produkts</ad3>
+    <ad4>Masse des Produkts</ad4>
+    <ad5>Notiz zum Produkt</ad5>
+    <s1>Baugruppen</s1>
+    <s2>Details</s2>
+    <s3>Standard-Produkte</s3>
+    <s4>Werkstoffe</s4>
+    <s5>Räumliche Drahtmodelle</s5>
+    <s6>Matten</s6>
+    <s7>Eingebettete Teile</s7>
+  </mpSpecifications>
+  <mpLayoutManager LocalName="Plan-Manager"
+                   Description="Plan-Manager für die Zeichnung, der in der Palette angezeigt wird">
+    <accept>Akzeptieren</accept>
+    <cancel>Abbrechen</cancel>
+    <close>Schließen</close>
+    <h1>Neuer Plan</h1>
+    <h2>Neuer Plan nach Vorlage</h2>
+    <h3>Plan</h3>
+    <h4>Sind Sie sicher, dass Sie den Plan löschen wollen?</h4>
+    <h5>Sind Sie sicher, dass Sie die ausgewählten Pläne löschen wollen?</h5>
+    <h6>Sie können die Registerkarte "Modell" nicht umbenennen</h6>
+    <h7>Bitte wählen Sie einen Plan</h7>
+    <h8>Plan-Manager</h8>
+    <h9>PLAN ERSTELLEN</h9>
+    <h10>Planname:</h10>
+    <h11>Bestimmen Sie den Namen des Plans</h11>
+    <h12>In der aktuellen Zeichnung ist bereits ein Plan mit diesem Namen vorhanden!\nGeben Sie einen neuen Namen an</h12>
+    <h13>PLAN-MANAGER EINSTELLUNGEN</h13>
+    <h14>Autostart mit AutoCAD</h14>
+    <h15>Verbindung mit der ModPlus-Palette</h15>
+    <h16>Abfrage eines Namens beim Erstellen eines Plans</h16>
+    <h17>Beim Erstellen zu einem neuen Plan wechseln</h17>
+    <h18>Modell in der Liste anzeigen</h18>
+    <h19>BEWEGUNG/KOPIEREN</h19>
+    <h20>Die ausgewählten Pläne einlegen</h20>
+    <h21>Vor dem Plan:</h21>
+    <h22>Eine Kopie erstellen</h22>
+    <h23>Anzahl der Kopien:</h23>
+    <h24>Man muss einen Plan aus der Liste auswählen!</h24>
+    <h25>bis zum Ende bewegen</h25>
+    <h26>DEN PLAN UMBENENNEN</h26>
+    <h27>Der aktuelle Name des Plans:</h27>
+    <h28>Der neue Name des Plans:</h28>
+    <h29>Die folgenden Zeichen sind in dem Namen des Plans nicht erlaubt</h29>
+    <mi1>Öffnen</mi1>
+    <mi2>Löschen</mi2>
+    <mi3>Umbenennen</mi3>
+    <mi4>Bewegen/kopieren</mi4>
+    <mi5>Alle Pläne auswählen</mi5>
+    <mi6>Planparameter-Manager</mi6>
+    <mi7>Plotten</mi7>
+    <mi8>Export der Registerkarte Plan in eine Registerkarte Modell</mi8>
+  </mpLayoutManager>
+  <mpSheetNumbers LocalName="Plannummerierung"
+                  Description="Ein Plugin zum Einfügen der Plannummer ins Dokument und Volumen in ModPlus-Formaten und -Schriftfeldern"
+                  FullDescription="Das Plugin kann sowohl auf Modelle als auch auf Pläne angewendet werden. Zuerst müssen Sie die Daten abrufen, die aus Formaten und Schriftfeldern des ModPlus-Plugins gelesen werden. Nachdem Sie neue Daten eingegeben haben, müssen Sie nur noch die Änderungen übernehmen">
+    <h1>PLANNUMMERIERUNG</h1>
+    <h2>Daten aus der aktuellen Zeichnung abrufen</h2>
+    <h3>Im Modell</h3>
+    <h4>Alle abwählen</h4>
+    <h5>Planname</h5>
+    <h6>Nr. im Dok.</h6>
+    <h7>Automatische Nummerierung des Wertes nach unten</h7>
+    <h8>Alle "Nummer im Dokument"-Werte werden automatisch ab dieser Zelle nummeriert. In die Zelle muss eine Ganzzahl eingegeben werden</h8>
+    <h9>Nr. im Volumen</h9>
+    <h10>Alle "Nummer im Volumen"-Werte werden automatisch ab dieser Zelle nummeriert. In die Zelle muss eine Ganzzahl eingegeben werden</h10>
+    <h11>In Plänen</h11>
+    <h12>Planname</h12>
+    <h13>Erhältlich in der vollständigen Version</h13>
+    <h14>Gehen Sie auf die Registerkarte "Modell"</h14>
+    <h15>Suche nach ModPlus-Formaten</h15>
+    <h16>Kein Nummernfeld</h16>
+    <h17>Kein Schildfeld</h17>
+    <h18>Keine Zelle für den Namen</h18>
+    <h19>Keine Formate</h19>
+    <h20>Abrufen von Plandaten</h20>
+    <h21>Einstellung der Daten für den Plan</h21>
+    <h22>Einstellung der Daten im Modell</h22>
+    <h23>Alle auswählen</h23>
+    <h24>Sie müssen eine Ganzzahl in die Zelle "Nummer im Dokument" eingeben</h24>
+    <h25>Sie müssen eine Ganzzahl in die Zelle "Nummer im Volumen" eingeben</h25>
+    <h26>Sortierung:</h26>
+    <h27>Verarbeitung der Suchergebnisse</h27>
+    <d1>Ohne Sortierung</d1>
+    <d2>Von links nach rechts und von oben nach unten</d2>
+    <d3>Von links nach rechts und von unten nach oben</d3>
+    <d4>Von rechts nach links und von oben nach unten</d4>
+    <d5>Von rechts nach links und von unten nach oben</d5>
+    <apply>Verwenden</apply>
+    <close>Schließen</close>
+  </mpSheetNumbers>
+  <mpDwgBase LocalName="dwg-Datenbank" Description="Eine Datenbank mit verschiedenen Blöcken und Zeichnungen"
+             FullDescription="Die dwg-Datenbank kann zum Einfügen von Blöcken und vorgefertigten Zeichnungen (z. B. Knoten) verwendet werden. Die dwg-Datenbank wird von Benutzern geführt. Das Plugin erfordert einen Internetzugang">
+    <h1>Senden Sie benutzerdefinierte Blöcke und Zeichnungen an den modplus.org Server</h1>
+    <h2>Suche in der Datenbank</h2>
+    <h3>Suchen</h3>
+    <h4>Suche in der Datenbank nach Eingabe von 3 Zeichen...</h4>
+    <h5>Pfad:</h5>
+    <h6>Beschreibung:</h6>
+    <h7>Autor:</h7>
+    <h8>Quelle:</h8>
+    <h9>Datenbank dwg</h9>
+    <h10>Einen neuen Eintrag in die lokale Datenbank hinzufügen</h10>
+    <h11>Hilfsmethoden zur Verwaltung der benutzerdefinierten Datenbank</h11>
+    <h12>Löschen</h12>
+    <h13>Die Gruppe umbenennen</h13>
+    <h14>Ändern</h14>
+    <h15>Sie können das Bild mit dem Mausrad zoomen und schwenken</h15>
+    <h16>Bild verkleinern</h16>
+    <h17>Bild vergrößern</h17>
+    <h18>Das ist ein dreidimensionaler Block</h18>
+    <h19>Layer:</h19>
+    <h20>Das Fenster nach dem Einfügen schließen</h20>
+    <h21>Drehen</h21>
+    <h22>Den Block zur Datenbank hinzufügen</h22>
+    <h23>Die Zeichnung zur Datenbank hinzufügen</h23>
+    <h24>Die Daten über den Block ändern</h24>
+    <h25>Die Daten über die Zeichnung ändern</h25>
+    <h26>Senden der Datenbank an den Server</h26>
+    <h27>Geben Sie eine oder mehrere Dateien aus Ihrer dwg-Datenbank an. Das Plugin archiviert diese Dateien und erstellt eine Zeiger-Datei mit den in diesen Dateien gespeicherten Elementen</h27>
+    <h28>Dateien in der benutzerdefinierten Datenbank:</h28>
+    <h29>Die in der Datei gespeicherten Elemente:</h29>
+    <h30>Pfadname:</h30>
+    <h31>Kommentar</h31>
+    <h32>Sie können einen Kommentar zum Archiv hinterlassen und wir werden uns darum kümmern</h32>
+    <h33>Das Archiv sammeln</h33>
+    <h34>Das Archiv ansehen</h34>
+    <h35>Das Archiv löschen</h35>
+    <h36>Senden des Archiv an den Server</h36>
+    <h37>Empfehlungen zum Hinzufügen von Blöcken</h37>
+    <h38>Empfehlungen</h38>
+    <h39>Einen Block in der aktuellen Zeichnung auswählen</h39>
+    <h40>Die zuletzt eingegebenen Daten laden</h40>
+    <h41>Dwg-Datei:</h41>
+    <h42>Aktuelle Datei</h42>
+    <h43>Dwg-Datei, in die der Block kopiert wird</h43>
+    <h44>Das ist ein 3D-Block</h44>
+    <h45>Markieren Sie durch einen Haken, ob der angegebene Block dreidimensional ist</h45>
+    <h46>Name:</h46>
+    <h47>Blockname, der im Plug-in-Fenster angezeigt wird</h47>
+    <h48>Kurzbeschreibung des Blocks</h48>
+    <h49>Vorschriftsmäßiges Dokument:</h49>
+    <h50>Vorschriftsmäßiges Dokument – Quelle</h50>
+    <h51>Wenn es kein normatives Dokument gibt, lassen Sie das Feld leer</h51>
+    <h52>Hinzugefügt:</h52>
+    <h53>Wer hat den Block zur dwg-Datenbank hinzugefügt</h53>
+    <h54>Hinzufügen von Attributen für die Bauteilliste</h54>
+    <h55>Name des Attributs</h55>
+    <h56>Der Standardwert</h56>
+    <h57>Attribute des Blocks:</h57>
+    <h58>Attributwerte aus dem Block übernehmen</h58>
+    <h59>Name</h59>
+    <h60>Hilfsinformation</h60>
+    <h61>Wert</h61>
+    <h62>Empfehlungen zum Hinzufügen von Zeichnungen</h62>
+    <h63>Die Gruppe umbenennen</h63>
+    <h64>Der aktuelle Name der Gruppe:</h64>
+    <h65>Der neue Name der Gruppe:</h65>
+    <h66>Hinzufügen</h66>
+    <h67>Was wollen Sie hinzufügen?</h67>
+    <h68>Einen Block hinzufügen</h68>
+    <h69>Eine Zeichnung hinzufügen</h69>
+    <h70>Eigenschaft</h70>
+    <h71>Wert</h71>
+    <h72>Video-Anleitung zur Verwendung der Datenbank</h72>
+    <h73>Rückmeldung</h73>
+    <h74>Bitte hinterlassen Sie eine E-Mail-Adresse, einen Link zu einer vk.com-, Facebook-Seite, Telegram oder eine andere Möglichkeit, Sie zu kontaktieren. Ihre Kontakte werden möglicherweise benötigt, um Ihnen mitzuteilen, ob die von Ihnen gesendeten Blöcke korrigiert werden müssen</h74>
+    <h75>Sie haben keine Kontaktangaben für Rückmeldungen angegeben. Wenn die von Ihnen eingesandten Blöcke (Zeichnungen) korrigiert werden müssen, können wir Ihnen dies nicht mitteilen!\nWollen Sie das Archiv trotzdem sammeln?</h75>
+    <h76>Sortierung nach alphabetischer Reihenfolge</h76>
+    <h77>Pfad zu dem Ordner, in dem sich die benutzerdefinierte dwg-Datenbank befindet</h77>
+    <h78>Geben Sie einen Pfad zum Speicherordner der benutzerdefinierten dwg-Datenbank an</h78>
+    <h79>Den Standardpfad für den Speicherordner der benutzerdefinierten dwg-Datenbank wiederherstellen</h79>
+    <bt1>ModPlus-Datenbank</bt1>
+    <bt2>Benutzerdefiniert</bt2>
+    <insert>Einfügen</insert>
+    <insertBlock>Als Block einfügen</insertBlock>
+    <msg1>Keine Zeiger-Datei der ModPlus dwg-Datenbank gefunden!\nSchließen Sie AutoCAD und führen Sie eine Aktualisierungsprüfung mit dem Auto Update Modul durch</msg1>
+    <msg2>Der aktuelle Layer</msg2>
+    <msg3>Keine Zeiger-Datei der benutzerdefinierten Datenbank wurde erstellt. Erstellen?</msg3>
+    <msg4>Die Quelldatei ist nicht vorhanden! Herunterladen?</msg4>
+    <msg5>Herunterladen der Datenbankdatei</msg5>
+    <msg6>Es besteht kein Zugriff auf Internet oder auf Website! modplus.org\nVersuchen Sie es später erneut</msg6>
+    <msg7>Die ganze Gruppe wird gelöscht</msg7>
+    <msg8>und alle Untergruppen</msg8>
+    <msg9>Die dwg-Dateien bleiben erhalten</msg9>
+    <msg10>Gruppe löschen</msg10>
+    <msg11>Das ausgewählte Element wird aus der Datenbank gelöscht</msg11>
+    <msg12>Das Element löschen</msg12>
+    <msg13>Einfügepunkt</msg13>
+    <msg14>Drehwinkel</msg14>
+    <msg15>Sie haben keine Dateien zum Archivieren ausgewählt!</msg15>
+    <msg16>Erstellen eines temporären Ordners</msg16>
+    <msg17>Sammeln der benötigten Elemente aus der Datenbank</msg17>
+    <msg18>Erstellung einer Zeiger-Datei fehlgeschlagen</msg18>
+    <msg19>Die Datei ist bereit zum Senden</msg19>
+    <msg20>Temporärer Ordner konnte nicht gelöscht werden</msg20>
+    <msg21>Sie haben möglicherweise ein offenes Archiv</msg21>
+    <msg22>Die zu sendende Datei kann nicht gefunden werden. Haben Sie es vielleicht gelöscht?</msg22>
+    <msg23>Es besteht kein Zugriff auf Internet oder auf Website! modplus.org</msg23>
+    <msg24>Senden</msg24>
+    <msg25>Hochladen der Datei auf den Server</msg25>
+    <msg26>Senden einer Benachrichtigung</msg26>
+    <msg27>Die Datei</msg27>
+    <msg28>ist an den Server von modplus.org gesendet</msg28>
+    <msg29>Sobald die Datei geprüft wurde, wird ihr Inhalt in die öffentliche Datenbank aufgenommen</msg29>
+    <msg30>Wollen Sie das erstellte Archiv löschen?</msg30>
+    <msg31>Das Archiv konnte nicht gelöscht werden! Es kann im Moment geöffnet sein</msg31>
+    <msg32>Wollen Sie den Block mit diesen Daten hinzufügen?</msg32>
+    <msg33>Der ausgewählte Block konnte nicht in die angegebene Datei kopiert werden</msg33>
+    <msg34>Wählen Sie den Block, der zur Datenbank hinzugefügt werden soll</msg34>
+    <msg35>Die dwg-Datenbank des Plugins enthält den Block mit dem Namen</msg35>
+    <msg36>Fehler beim Parsen der Zeiger-Datei der Datenbank des Plugins!</msg36>
+    <msg37>Die benutzerdefinierte dwg-Datenbank enthält den Block mit dem Namen</msg37>
+    <msg38>Fehler beim Parsen der Zeiger-Datei der benutzerdefinierten Datenbank!</msg38>
+    <msg39>Geben Sie einen angezeigten Blocknamen an (Bezeichnung)</msg39>
+    <msg40>Geben Sie einen Pfad im Verzeichnis an</msg40>
+    <msg41>Haken "Aktuelle Datei" für die dwg-Datei ist gesetzt, aber die aktuelle Datei befindet sich nicht im Verzeichnis der dwg-Datenbank!</msg41>
+    <msg42>Verzeichnis der dwg-Datenbank</msg42>
+    <msg43>Verzeichnis der aktuellen Datei</msg43>
+    <msg44>Die aktuelle Datei ist möglicherweise noch nicht gespeichert worden!</msg44>
+    <msg45>Haken "Aktuelle Datei" für die dwg-Datei ist gesetzt, aber das Verzeichnis, in dem sich die aktuelle Datei befindet, wurde nicht erkannt</msg45>
+    <msg46>Geben Sie eine dwg-Datei zum Kopieren des Blocks an</msg46>
+    <msg47>Auswählen einer Datei zum Hinzufügen eines Blocks</msg47>
+    <msg49>Die angegebene Datei muss sich in einem Unterordner des Ordners befinden</msg49>
+    <msg50>Eine neue Datei der dwg-Datenbank erstellen</msg50>
+    <msg51>Sie brauchen keine Datei im Stammverzeichnis des Ordners zu erstellen</msg51>
+    <msg52>Erstellen Sie einen Unterordner!</msg52>
+    <msg53>Achtung! Der ausgewählte Einheit ist dynamisch! Die Attribute für die Bauteilliste werden für ein Exemplar des Blocks gezählt!\nDas heißt, wenn es mehrere Auswahlmöglichkeiten in einem Block gibt, wird die Arbeit mit einem solchen Block verwirrend sein!</msg53>
+    <msg54>Die aktuellen Attributwerte werden mit den Standardwerten gefüllt, die bei der Erstellung des Blocks eingestellt wurden. \nWenn Sie fortsetzen, werden die Attributwerte mit den Werten des ausgewählten Blocks gefüllt!\nWollen Sie die Attributwerte des ausgewählten Blocks übernehmen?</msg54>
+    <msg55>Die aktuelle Datei befindet sich nicht im Verzeichnis der dwg-Datenbank!</msg55>
+    <msg56>Der Verzeichnisort der aktuellen Datei konnte nicht erkannt werden</msg56>
+    <msg58>Wollen Sie die eingegebenen Daten als "die zuletzt eingegebenen Daten" speichern?</msg58>
+    <msg59>Auswählen einer Zeichnung zum Hinzufügen zur Datenbank</msg59>
+    <msg60>Die ausgewählte Datei enthält Proxy-Objekte und kann nicht zur Datenbank hinzugefügt werden!\nLöschen Sie alle Proxy-Objekte und versuchen Sie es erneut</msg60>
+    <msg61>Geben Sie einen Ordner an, in den die ausgewählte Datei kopiert werden soll</msg61>
+    <msg62>Es gibt bereits eine Datei in dem angegebenen Ordner</msg62>
+    <msg63>Wollen Sie sie ersetzen?</msg63>
+    <msg64>Sie sollten keinen Ordner auswählen</msg64>
+    <msg65>Der ausgewählte Ordner muss sich in einem Unterordner des Ordners befinden</msg65>
+    <msg66>Wollen Sie die Zeichnung mit diesen Daten hinzufügen?</msg66>
+    <msg67>Die Datenbank des Plugins enthält die Zeichnung mit dem Namen</msg67>
+    <msg68>Die benutzerdefinierte Datenbank enthält die Zeichnung mit dem Namen</msg68>
+    <msg69>Geben Sie einen angezeigten Namen der Zeichnung an (Bezeichnung)</msg69>
+    <msg70>Geben Sie eine dwg-Datei der Zeichnung an</msg70>
+    <msg71>Geben Sie einen neuen Gruppennamen an</msg71>
+    <wrong>Ungültige Wahl!</wrong>
+    <p1>Unterlage</p1>
+    <p2>Beschreibung</p2>
+    <p3>Objekttyp</p3>
+    <p4>Beschriftung</p4>
+    <p5>Dynamisch</p5>
+    <p6>3D-Block</p6>
+    <p7>Attributen für die Bauteilliste</p7>
+    <p8>Hinzugefügt</p8>
+    <p9>Quelle</p9>
+    <yes>Ja</yes>
+    <no>Nein</no>
+    <block>Block</block>
+    <drawing>Zeichnung</drawing>
+    <close>Schließen</close>
+    <select>Auswählen</select>
+    <create>Erstellen</create>
+    <accept>Akzeptieren</accept>
+    <cancel>Abbrechen</cancel>
+    <copy>Kopieren</copy>
+    <ad1>Position des Produkts</ad1>
+    <ad2>Bezeichnung für das Produkt</ad2>
+    <ad3>Name des Produkts</ad3>
+    <ad4>Masse des Produkts</ad4>
+    <ad5>Notiz zum Produkt</ad5>
+    <a1>Position</a1>
+    <a2>Bezeichnung</a2>
+    <a3>Benennung</a3>
+    <a4>Masse</a4>
+    <a5>Notiz</a5>
+    <r1>Standardmäßig wird angenommen, dass Blöcke, die der lokalen (benutzerdefinierten) Datenbank hinzugefügt werden, anschließend auch der globalen Datenbank hinzugefügt werden, die für alle Benutzer zugänglich ist.</r1>
+    <r2>Versuchen Sie also, die Empfehlungen zu befolgen:</r2>
+    <r3>Der hinzuzufügende Block muss für die Arbeit nützlich sein. Unabhängig von seiner fachlichen Gezieltheit</r3>
+    <r4>Verwenden Sie in den Blöcken keine große Anzahl von Layer, soweit dies nicht erforderlich ist. Die beste Lösung ist die Verwendung der Standard-ModPlus-Plugin-Layer</r4>
+    <r5>Wenn der Block dynamisch ist, lohnt es sich möglicherweise nicht, Attributen für die Bauteilliste hinzuzufügen</r5>
+    <r6>Geben Sie den Blöcken klare Namen und Beschreibungen, damit der Benutzer nicht raten muss, was sie sind und wozu</r6>
+    <r7>Wenn Sie einen Block aus einer beliebigen Quelle übernommen haben, geben Sie unbedingt die Quelle an!</r7>
+    <r8>Seien Sie nicht zu faul, sich den Pfad zum Block in der Datenbank genau zu überlegen</r8>
+    <r10>Standardmäßig wird angenommen, dass Zeichnungen, die der lokalen (benutzerdefinierten) Datenbank hinzugefügt werden, anschließend auch der globalen Datenbank hinzugefügt werden, die für alle Benutzer zugänglich ist.</r10>
+    <r11>Daher gibt es einige Einschränkungen für die hinzuzufügenden Zeichnungen:</r11>
+    <r13>In der hinzuzufügenden Zeichnung sollten keine Proxy-Objekte verwendet werden</r13>
+    <r14>Zeichnungen in schlechter Qualität (z. B. mit Führungslinien aus Linien und Text usw.) werden nicht in die öffentlich zugängliche Datenbank aufgenommen</r14>
+    <r15>Versuchen Sie auch, die Empfehlungen zu befolgen:</r15>
+    <r16>Verwenden Sie in den Zeichugen keine große Anzahl von Layer, soweit dies nicht erforderlich ist. Die beste Lösung ist die Verwendung der Standard-ModPlus-Plugin-Layer</r16>
+    <r17>Verwenden Sie in Ihren Zeichnungen nicht eine große Anzahl von Beschriftungsstilen. Die beste Lösung ist die Verwendung von Beschriftungsstilen des ModPlus-Plugins</r17>
+    <r18>Verwenden Sie in Zeichnungen keine Linientypen, die nicht zum Standard von AutoCAD gehören</r18>
+    <r19>Verwenden Sie in Ihren Zeichnungen keine Schriftarten, die nicht zum standardmäßigen AutoCAD-Schriftsatz gehören</r19>
+    <r20>Wenn Sie eine Zeichnung aus einer beliebigen Quelle übernommen haben, geben Sie unbedingt die Quelle an!</r20>
+    <r21>Denken Sie sorgfältig über den Weg zur Zeichnung in der Datenbank nach</r21>
+    <pp1>Es wird davon ausgegangen, dass Sie einen Block in einer Datei ausgewählt haben, die sich noch nicht im Verzeichnis ModPlus/Data/DwgBase befindet. Daher müssen Sie entweder eine zuvor erstellte Datei im Verzeichnis ModPlus/Data/DwgBase angeben, um Blöcke darin festzulegen, oder diese Datei erstellen. Der ausgewählte Block wird in die angegebene Datei kopiert.</pp1>
+    <pp2>Wenn Sie mehrere Blöcke mit einer gemeinsamen Gezieltheit hinzufügen (z. B. Hohlkörperplattenblöcke nach Serien), erstellen Sie eine Datei für sie. Sie brauchen nicht für jeden Block eine eigene Datei erstellen!</pp2>
+    <pp3>Dateien im Stammverzeichnis des Ordners ModPlus/Data/DwgBase können nicht erstellt werden! Erstellen Sie darin Unterordner (z. B. ModPlus/Data/DwgBase/Stahlbetonplatten).</pp3>
+    <pp4>Wenn Sie eine Datei mit Blöcken erstellt und im DwgBase-Ordner abgelegt haben und nun Blöcke aus dieser Datei zur Datenbank hinzufügen, markieren Sie den Haken bei "Aktuelle Datei.</pp4>
+    <pp5>Dieses Feld kann nach Belieben ausgefüllt werden</pp5>
+    <pp6>P.S. Wir freuen uns sehr, wenn Sie einen originellen und schönen Bildschirmnamen haben, aber schreiben Sie lieber Ihren Vor- und Nachnamen</pp6>
+    <pp7>Wenn Sie nicht der Autor des Blocks sind, geben Sie bitte die Quelle des Blocks an, um seinen Urheber nicht zu benachteiligen</pp7>
+    <pp8>Bedingter Pfad zu dem Block im Verzeichnis, der die Baumstruktur bildet</pp8>
+    <pp9>Der Pfad "Blöcke/Verzeichnis1/Verzeichnis2/Verzeichnis3" ergibt zum Beispiel dieses Ergebnis:</pp9>
+    <pp10>Jedes bedingte Unterverzeichnis muss durch ein "/" getrennt werden</pp10>
+    <pp11>Hinzufügen zum Block von Attributen für die Bauteillisten</pp11>
+    <pp12>Die Attribute werden dem Block hinzugefügt, wenn er von diesem Plugin eingefügt wird.</pp12>
+    <pp13>Alle Attribute werden unsichtbar sein. Sie können ihren Wert nach dem Einfügen in den Blockeigenschaften ändern.</pp13>
+    <pp14>Sie können die Standardwerte ausfüllen.</pp14>
+    <pp15>Vorhandene Attribute des Blocks</pp15>
+    <pp16>Geben Sie Standardwerte für die Attribute an. Diese Werte werden dem Block hinzugefügt, wenn er eingefügt wird.</pp16>
+    <pp17>Die Attributwerte, die bei der Erstellung des Attributs als "Standardwert" festgelegt wurden, werden standardmäßig ausgefüllt. Sie können die Attributwerte mit den Werten des aktuell ausgewählten Blocks ausfüllen.</pp17>
+    <pp18>Dwg-Datei der Zeichnung</pp18>
+    <pp19>Um in die Datenbank hinzugefügt zu werden, muss die Datei in der Version AutoCAD 2013 gespeichert sein!</pp19>
+    <pp20>Wenn Sie die Datei bereits in einem Unterordner des Ordners ModPlus/Data/DwgBase gespeichert haben, können Sie sie "Auswählen".</pp20>
+    <pp21>Wenn sich die Zeichnungsdatei nicht in einem Unterordner des Ordners ModPlus/Data/DwgBase befindet, können Sie es dorthin "Kopieren".</pp21>
+    <pp22>Wenn Sie eine bereits geöffnete Zeichnung hinzufügen wollen, die sich in einem Unterordner des Ordners ModPlus/Data/DwgBase befindet, markieren Sie mit dem Haken "Aktuelle Datei".</pp22>
+    <pp23>Blockname, der im Plugin-Fenster angezeigt wird</pp23>
+    <pp24>Kurzbeschreibung der Zeichnung</pp24>
+    <pp25>Wer hat die Zeichnung zur dwg-Datenbank hinzugefügt</pp25>
+    <pp26>Wenn Sie nicht der Autor der Zeichnung sind, geben Sie bitte die Quelle der Zeichnung an, um ihren Urheber nicht zu benachteiligen</pp26>
+    <pp27>Bedingter Pfad zu der Zeichnung im Verzeichnis, der die Baumstruktur bildet</pp27>
+    <u1>DIENSTPROGRAMME DER DWG-DATENBANK</u1>
+    <u2>Statistik</u2>
+    <u3>Den "Pfad" für mehrere Elemente ändern</u3>
+    <u4>"Quelle" und "Hinzugefügt" ändern</u4>
+    <u5>Nicht verwendete Dateien</u5>
+    <u6>Elemente ohne Quelldatei</u6>
+    <u7>Statistiken sammeln</u7>
+    <u8>Wählen Sie mehrere Elemente in der Liste aus (durch Markieren mit einem Haken), für die Sie den "Pfad" in der Datenbank ändern möchten. Geben Sie einen neuen Wert für "Pfade" an und klicken Sie auf "Übernehmen"</u8>
+    <u9>Strg+A – alle auswählen</u9>
+    <u10>Geben Sie eine Hauptgruppe an</u10>
+    <u11>Baugruppen</u11>
+    <u12>Zeichnungen</u12>
+    <u13>Neuer "Pfad" für die angegebenen Elemente der Datenbank:</u13>
+    <u14>Wählen Sie mehrere Elemente in der Liste aus (durch Markieren mit einem Haken), für die Sie die "Quelle" und "Hinzugefügt" ändern möchten. Geben Sie einen neuen Wert für "Quelle" und "Hinzugefügt" an und klicken Sie auf "Verwenden" (lassen Sie das Feld leer, wenn Sie den Wert nicht ändern möchten)</u14>
+    <u15>Nicht verwendete Dateien – sind Dateien, die sich in dem Verzeichnis befinden</u15>
+    <u16>und von keinem Element in den Datenbanken (Datenbank des Plugins und benutzerdefinierten Datenbank) referenziert wird</u16>
+    <u17>Nicht verwendete Dateien finden</u17>
+    <u18>Ausgewählte, nicht verwendete Dateien löschen</u18>
+    <u19>Die Bilder für diese Dateien und die .bak-Dateien werden auch gelöscht</u19>
+    <u20>Elemente ohne Quelldatei – sind Elemente in der benutzerdefinierten Datenbank, die auf eine nicht existierende Quelldatei verweisen</u20>
+    <u21>Elemente ohne Quelldatei finden</u21>
+    <u22>Die angegebene Quelldatei:</u22>
+    <u23>Die ausgewählten Elemente löschen</u23>
+    <u24>Verarbeitung von Elementen der Datenbank:</u24>
+    <u25>Sie können nicht nur die Hauptgruppe angeben!</u25>
+    <u26>Sie haben nichts ausgewählt!</u26>
+    <u27>Achtung! Vorgenommene Änderungen können nicht rückgängig gemacht werden!\nWollen Sie fortsetzen?</u27>
+    <u28>Verarbeitung von Elementen der Datenbank wurde abgeschlossen</u28>
+    <u29>Die benutzerdefinierte Datenbank enthält</u29>
+    <u30>Elemente</u30>
+    <u31>Darunter:</u31>
+    <u32>Blöcke:</u32>
+    <u33>Zeichnungen:</u33>
+    <u34>Unter den</u34>
+    <u35>Blöcken sind verfügbar:</u35>
+    <u36>Dynamische Blöcke:</u36>
+    <u37>Beschriftungsblöcke:</u37>
+    <u38>Dreidimensionale Blöcke:</u38>
+    <u39>Blöcke, die Attribute zur Bauteilliste haben:</u39>
+    <u40>Die benutzerdefinierte Datenbank ist aufgefüllt</u40>
+    <u41>Autor(-en):</u41>
+    <u42>Der vorhandenen dwg-Dateien, die von der Datenbank verwendet werden:</u42>
+    <u43>Unter den gefundenen Verweisen auf die dwg-Dateien sind</u43>
+    <u44>ungültige Verweise gefunden. Das heißt, es gibt keine Quelldateien!</u44>
+    <u45>Keine nicht verwendeten Dateien gefunden!</u45>
+    <u46>Die ausgewählten Dateien werden unwiderruflich gelöscht!\nWollen Sie fortsetzen?</u46>
+    <u47>Gelöschte Dateien</u47>
+    <u48>Die Dateien konnten nicht gelöscht werden:</u48>
+    <u49>Es besteht kein Zugriff zu den Dateien. Möglicherweise sind sie geöffnet</u49>
+    <u50>Es konnten keine passenden Elemente gefunden werden!</u50>
+    <u51>Die ausgewählten Elemente werden unwiderruflich gelöscht!\nWollen Sie fortsetzen?</u51>
+    <u52>Gelöschte Elemente:</u52>
+    <u53>Geben Sie mindestens einen zu ersetzenden Wert ("Quelle" oder "Hinzugefügt") an</u53>
+    <u54>Die angegebene Quelldatei umbenennen</u54>
+    <u55>Wählen Sie eine der Datenbankdateien aus der Liste aus, geben Sie einen neuen Dateinamen ohne Verbreitung an und drücken Sie "Übernehmen"</u55>
+    <u56>Neuer Dateiname ohne Verbreitung</u56>
+    <u57>Umbenennen</u57>
+    <u58>Sie haben keinen neuen Dateinamen angegeben</u58>
+    <u59>Der Dateiname darf die folgenden Zeichen nicht enthalten:</u59>
+    <u60>Kein Zugriff auf die Datei. Möglicherweise ist sie geöffnet</u60>
+    <u61>Es ist bereits eine Datei vorhanden:</u61>
+  </mpDwgBase>
+  <mpESKD LocalName="ModPlus DIN"
+          Description="Eine Sammlung von Plugins, die zum Erstellen intelligenter Objekte für das Entwerfen von Zeichnungen verwendet wird">
+    <tab1>Linien</tab1>
+    <tab2>Einstellungen</tab2>
+    <tab3>Achsen</tab3>
+    <tab4>Stile und Einstellungen</tab4>
+    <tab5>Verwendung von Stilen und Einstellungen der intelligenten ModPlus-Objekte</tab5>
+    <tab6>Palette der Eigenschaften</tab6>
+    <tab7>Palette der Eigenschaften von intelligenten ModPlus-Objekten</tab7>
+    <tab8>Ansichten, Schnittansichten</tab8>
+    <tab9>Dienstprogramme</tab9>
+    <tab10>Suchen</tab10>
+    <tab11>Höhen der Ebene</tab11>
+    <tab12>Nach Wert finden</tab12>
+    <tab13>Suche nach intelligenten Objekten nach Typ</tab13>
+    <tab14>Suche nach intelligenten Objekten auf der Grundlage der Werte von Zeichenketten- und numerischen Eigenschaften</tab14>
+    <tab15>Führungslinien</tab15>
+    <tab16>Darstellungsweisen</tab16>
+    <defl>Standardmäßig</defl>
+    <err1>Die Datei konnte nicht gefunden werden</err1>
+    <err2>Linientyp konnte nicht heruntergeladen werden</err2>
+    <err5>Fehler beim Abrufen von Daten aus dem Register! Starten Sie den Konfigurator, um die Daten im Register zu aktualisieren</err5>
+    <msg1>Geben Sie einen Einfügepunkt an:</msg1>
+    <msg2>Geben Sie einen Endpunkt an:</msg2>
+    <msg3>Wählen Sie den Block aus, der das intelligente ModPlus-Objekt darstellt</msg3>
+    <msg5>Geben Sie den nächsten Punkt an:</msg5>
+    <msg6>Wählen Sie eine Polylinie aus:</msg6>
+    <msg7>Wollen Sie die ursprüngliche Polylinie löschen?</msg7>
+    <msg8>Wollen Sie den Layer kopieren? [Ja/Nein]</msg8>
+    <msg9>Intelligente Objekte verarbeitet</msg9>
+    <msg10>Im aktuellen Bereich wurden keine intelligenten Objekte der angegebenen Typen gefunden</msg10>
+    <msg11>Geben Sie einen Startpunkt an:</msg11>
+    <msg12>Geben Sie einen Ebenenpunkt an:</msg12>
+    <msg13>Geben Sie eine Position von der Ansicht der Ebene an:</msg13>
+    <msg14>Wählen Sie die Ansichten der Ebenen an:</msg14>
+    <msg15>Wählen Sie die Ursprungsansicht der Ebenen an:</msg15>
+    <msg16>Objekte aus der Auswahl entfernen:</msg16>
+    <msg17>Geben Sie einen Punkt des Rahmens an:</msg17>
+    <msg18>Geben Sie einen Punkt der Führungslinie an:</msg18>
+    <wrong>Ungültiges Objekt!</wrong>
+    <vc1>UNTERSCHIEDLICHE</vc1>
+    <vc2>NICHT BESTIMMT</vc2>
+    <h1>Einstellungen der Palette</h1>
+    <h2>Autostart mit AutoCAD</h2>
+    <h3>Verbindung mit der ModPlus-Palette</h3>
+    <h4>Die maximale Anzahl wurde überschritten</h4>
+    <h5>für die ausgewählten Objekte</h5>
+    <h6>Der Palettenbetrieb wurde gestoppt</h6>
+    <h7>Die maximale Anzahl von den ausgewählten Objekten</h7>
+    <h8>kann geändert werden in</h8>
+    <h9>den Einstellungen</h9>
+    <h10>des Plugins</h10>
+    <h11>Eigenschaften nach DIN</h11>
+    <h12>System</h12>
+    <h13>Neuer benutzerdefinierte Stil</h13>
+    <h14>Stil-Editor</h14>
+    <h15>Einstellungen</h15>
+    <h16>Einen neuen benutzerdefinierten Stil hinzufügen</h16>
+    <h17>Den ausgewählten benutzerdefinierten Stil löschen</h17>
+    <h18>Den ausgewählten Stil als Standardstil festlegen</h18>
+    <h19>Einen neuen Stil auf der Grundlage der ausgewählten intelligenten Objekte erstellen</h19>
+    <h20>Beschreibung der Eigenschaft:</h20>
+    <h21>Allgemeine Einstellungen</h21>
+    <h22>Beim Erstellen des Objekts den Maßstab aus dem Stil einstellen</h22>
+    <h23>Wenn dies durch einen Haken markiert ist, wird beim Erstellen eines intelligenten Objekts der im aktuellen Stil eingestellte Maßstab unabhängig vom Beschriftungsmaßstab der Zeichnung auf das Objekt angewendet. Andernfalls wird ein beschreibender Zeichnungsmaßstab auf das Objekt angewendet</h23>
+    <h24>Beim Erstellen des Objekts den Layer aus dem Stil einstellen</h24>
+    <h25>Wenn dies durch einen Haken markiert ist, wird beim Erstellen eines intelligenten Objekts der im aktuellen Stil eingestellte Layer unabhängig vom aktuellen Layer der Zeichnung auf das Objekt angewendet. Andernfalls wird der aktuelle Zeichenlayer auf das Objekt angewendet</h25>
+    <h26>Wenn der im Stil angegebene Layer im aktuellen Dokument nicht vorhanden ist:</h26>
+    <h27>Den aktuellen Layer anwenden</h27>
+    <h28>Beim Erstellen des Objekts wird der aktuelle Zeichenlayer auf das Objekt angewendet</h28>
+    <h29>Einen Layer aus dem Stil erstellen und anwenden</h29>
+    <h30>Im aktuellen Dokument wird ein Layer erstellt und auf das intelligente Objekt angewendet, der im Stil festgelegt ist</h30>
+    <h31>Beim Erstellen des Objekts den Textstil aus dem Stil einstellen</h31>
+    <h32>Wenn dies durch einen Haken markiert ist, wird beim Erstellen eines intelligenten Objekts der im aktuellen Stil eingestellte Textstil unabhängig vom aktuellen Textstil der Zeichnung auf das Objekt angewendet. Andernfalls wird der aktuelle Zeichnungstextstil auf das Objekt angewendet</h32>
+    <h33>Wenn der im Stil angegebene Textlayer im aktuellen Dokument nicht vorhanden ist:</h33>
+    <h34>Den aktuellen Textstil anwenden</h34>
+    <h35>Beim Erstellen des intelligenten Objekts wird der aktuelle Textstil der Zeichnung auf das Objekt angewendet</h35>
+    <h36>Einen Textstil aus dem Stil erstellen und anwenden</h36>
+    <h37>Im aktuellen Dokument wird der im Stil festgelegte Textstil erstellt und danach auf das Objekt angewendet</h37>
+    <h38>Die maximale Anzahl von den ausgewählten Objekten, bei der die Eigenschaftenpalette nicht mehr funktioniert. Mit dieser Einstellung können Sie Ihre Arbeit in der AutoCAD-Umgebung beschleunigen, indem Sie die Ablesung von Objekteigenschaften deaktivieren. Wenn Sie zum Beispiel 1000 Objekte auswählen, um sie in eine andere Zeichnung zu kopieren, müssen Sie nicht die Eigenschaften all dieser Objekte verarbeiten</h38>
+    <h39>Die maximale Anzahl von den ausgewählten Objekten (0 – immer funktionieren):</h39>
+    <h40>Einstellungen für intelligente Objekte</h40>
+    <h41>Gerade Achse</h41>
+    <h42>Den Maßstab des Linientyps im Verhältnis zum Maßstab des Objekts ändern</h42>
+    <h43>Der Maßstab des für die Achse eingestellten Linientyp ändert sich proportional zum Hauptmaßstab der Achse. Wenn zum Beispiel der Achsenmaßstab auf 1:1 und der Maßstab für den Linientyp auf 2 eingestellt wurde, wird der Maßstab für den Linientyp 200, wenn der Achsenmaßstab auf 1:100 eingestellt wird</h43>
+    <h44>Werte der zu erstellenden Achsen fortsetzen</h44>
+    <h45>Beim Erstellen der Achsen wird nach bereits in der Zeichnung erstellten Achsen gesucht und deren Werte von der ersten Achsenmarkierung gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Achsenmarkierung für die zu erstellende Achse wird auf den folgenden Wert des zuletzt gefundenen Wertes gesetzt</h45>
+    <h46>Hilfslinien anzeigen</h46>
+    <h47>Bei der Auswahl der Höhe der Ebene werden die Hilfslinien vom Referenzpunkt zum Ebenenpunkt und vom Ebenenpunkt zur Höhe der Ebene angezeigt</h47>
+    <h48>Schnittverlauf</h48>
+    <h49>Grundlegende</h49>
+    <h50>Stil:</h50>
+    <h51>Geometrie</h51>
+    <h52>Stil des intelligenten Objekts</h52>
+    <h53>Grundstil für Schnittverlauf</h53>
+    <h54>Name des Stils</h54>
+    <h55>Beschreibung des Stils</h55>
+    <h56>Erstellen vom Schnittverlauf</h56>
+    <h57>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den Schnittverlauf durch Angabe von zwei Punkten beschreibt</h57>
+    <h58>Gekrümmter Schnittverlauf</h58>
+    <h59>Zylindrischer Schnittverlauf</h59>
+    <h60>Erstellen des gekrümmten Schnittverlaufs</h60>
+    <h61>Erstellen des zylindrischen Schnittverlaufs</h61>
+    <h62>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den gekrümmten Schnittverlaufs durch Angabe von zwei Punkten beschreibt</h62>
+    <h63>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den zylindrischen Schnittverlaufs durch Angabe von zwei Punkten beschreibt</h63>
+    <h64>Inhalt</h64>
+    <h65>Erstellen von der geraden Achse</h65>
+    <h66>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den Schnittverlauf durch Angabe von zwei Punkten beschreibt</h66>
+    <h67></h67>
+    <h68>Grundstil für eine gerade Achse</h68>
+    <h69>Der ausgewählte Stil wird unwiderruflich gelöscht! Wollen Sie fortsetzen?</h69>
+    <h70>Stilgruppe</h70>
+    <h71>enthält Stile mit demselben Namen</h71>
+    <h72>Benennen Sie die Stile so um, dass sie nicht denselben Namen haben</h72>
+    <h73>Bodenlinie</h73>
+    <h74>Erstellen einer Bodenmarkierungslinie</h74>
+    <h75>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Bodenlinie beschreibt</h75>
+    <h76>Bodenmarkierungslinie der ausgewählten Polylinie</h76>
+    <h77>Umwandlung der ausgewählten Polylinie in eine Bodenmarkierungslinie</h77>
+    <h78>Grundstil für Bodenlinie</h78>
+    <h79>Schnittansicht</h79>
+    <h80>Erstellen der Darstellung von Schnitt (Querschnitt)</h80>
+    <h81>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den Schnitt (Querschnitt) durch Angabe von zwei Punkten beschreibt</h81>
+    <h82>Schnittlinie mit Verkürzungen</h82>
+    <h83>Schnittlinie aus einer Polylinie</h83>
+    <h84>Erstellen der Darstellung von der Schnittlinie mit Verkürzungen (Querschnitt)</h84>
+    <h85>Umwandlung der ausgewählten Polylinie in eine Schnittmarkierungslinie</h85>
+    <h86>Werte für neue Schnitte fortsetzen</h86>
+    <h87>Beim Erstellen eines neuen Schnitts im aktuellen Bereich wird der zuletzt erstellte Schnitt gesucht und dessen Wert als Grundlage für einen neuen Schnitt genommen</h87>
+    <h88>Hilfsschnittlinie anzeigen</h88>
+    <h89>Bei der Auswahl eines Schnitts wird eine Hilfslinie angezeigt, die durch alle Punkte des Schnitts verläuft</h89>
+    <h90>Abhängiges Verschieben von Text</h90>
+    <h93>Textposition wiederherstellen</h93>
+    <h94></h94>
+    <h95>MP: Ein Analogon erstellen</h95>
+    <h96>Grundstil für den Schnitt</h96>
+    <h97>Beim Verschieben eines der Texte des Schnitts wird der andere automatisch um die gleiche Strecke verschoben</h97>
+    <h98>Verarbeitung der Eigenschaft "Layer" während des Befehls "Ein Analogon erstellen":</h98>
+    <h99>Suche nach intelligenten Objekten</h99>
+    <h100>Geben Sie die zu suchenden Typen von Objekten an</h100>
+    <h101>Alle auswählen</h101>
+    <h102>Alle abwählen</h102>
+    <h103>Der Stil fehlt in der Datenbank</h103>
+    <h104>Ein oder mehrere Objekte befinden sich auf einem blockierten Layer und können nicht aktualisiert werden</h104>
+    <h105>Höhe der Ebene</h105>
+    <h106>Erstellen von der Höhe der Ebene</h106>
+    <h107>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Höhe der Ebene beschreibt</h107>
+    <h108>Grundstil für die Höhe der Ebene</h108>
+    <h109></h109>
+    <h110>Ausrichten der Höhen der Ebene</h110>
+    <h111>Vertikales Ausrichten der Position der Marken</h111>
+    <h112>Angleichung der Startpunkte</h112>
+    <h113>Mit diesem Befehl kann man die Höhen der Ebene an verschiedenen Bedingungen ausrichten</h113>
+    <h114>Wasserabdichtung</h114>
+    <h115>Erstellen einer Markierungslinie für Wasserabdichtung</h115>
+    <h116>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Wasserabdichtungslinie beschreibt</h116>
+    <h117>Wasserabdichtung aus Polylinie</h117>
+    <h118>Umwandlung der ausgewählten Polylinie in eine Markierungslinie für Wasserabdichtung</h118>
+    <h119>Für das zu erstellte intelligente Objekt, das die anzuzeigende Zahl enthält Trennzeichen zwischen dem ganzzahligen und dem gebrochenen Teil einstellen:</h119>
+    <h120>Wert für die Suche</h120>
+    <h121>Suchen</h121>
+    <h122>Das ganze Wort</h122>
+    <h123>Unter Berücksichtigung des Registers</h123>
+    <h124>Die Abfrage "{0}" hat nichts ergeben</h124>
+    <h125>Alle zur aktuellen Auswahl hinzufügen</h125>
+    <h126>Führungslinie des Details</h126>
+    <h127>Erstellen von einer Führungslinie des Details</h127>
+    <h128>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Führungslinie des Details beschreibt</h128>
+    <h129>Grundstil für die Wasserabdichtung</h129>
+    <h130>Grundstil für die Führungslinie des Details</h130>
+    <h131>Werte der zu erstellenden Führungslinien des Details fortsetzen</h131>
+    <h132>Beim Erstellen der Führungslinien des Details wird nach bereits in der Zeichnung erstellten Führungslinien des Details gesucht und deren Werte der Detailnummer gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Nummer der zu erstellender Führungslinie des Details wird auf die nächste Nummer des Details ab dem zuletzt gefundenen Wert gesetzt</h132>
+    <h133>Schnittführungslinie des Details</h133>
+    <h134>Erstellen von einer Schnittführungslinie des Details</h134>
+    <h135>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Schnittführungslinie des Details beschreibt</h135>
+    <h136>Werte der zu erstellenden Schnittführungslinien des Details fortsetzen</h136>
+    <h137>Beim Erstellen der Schnittführungslinien des Details wird nach bereits in der Zeichnung erstellten Schnittführungslinien des Details gesucht und deren Werte der Detailnummer gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Nummer des zu erstellenden Führungslinie des Details wird auf die nächste Nummer des Details ab dem zuletzt gefundenen Wert gesetzt</h137>
+    <h138>Grundstil für die Schnittführungslinie des Details</h138>
+    <h139>Schweißnaht</h139>
+    <h140>Erstellen der Darstellung von Schweißverbindungen</h140>
+    <h141>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Schweißverbindungen beschreibt</h141>
+    <h142>Grundstil für die Darstellung von Schweißverbindungen</h142>
+    <h143>Schweißnaht als Polylinie</h143>
+    <h144>Umwandlung der ausgewählten Polylinie in eine Schweißnahtmarkierungslinie</h144>
+    <h145>Darstellung des Detailausschnittes</h145>
+    <h146>Grundstil für die Darstellung des Detailausschnittes</h146>
+    <h147>Erstellen von der Darstellung des Detailausschnittes</h147>
+    <h148>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Darstellung des Detailausschnittes durch Angabe von zwei Punkten beschreibt</h148>
+    <h149>Werte der zu erstellenden Detailausschnitte fortsetzen</h149>
+    <h150>Beim Erstellen der Detailausschnitte wird nach bereits in der Zeichnung erstellten Detailausschnitten gesucht und deren Werte der Nummer gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Nummer des zu erstellenden Detailausschnittes wird auf die nächste Nummer des Detailausschnittes ab dem zuletzt gefundenen Wert gesetzt</h150>
+    <h151>Darstellung der Ansicht/des Schnittes</h151>
+    <h152>Grundstil für die Darstellung der Ansicht/des Schnittes</h152>
+    <h153>Darstellung der Ansicht</h153>
+    <h154>Erstellen von der Darstellung der Ansicht </h154>
+    <h155>Erstellen eines intelligenten Objekts von der Darstellung der Ansicht auf der Grundlage eines anonymen Blocks</h155>
+    <h156>Werte für neue Ansichten fortsetzen</h156>
+    <h157>Beim Erstellen einer neuen Darstellung der Ansicht/des Schnittes im aktuellen Bereich wird die zuletzt erstellte Darstellung gesucht und deren Wert als Grundlage für eine neue Darstellung der Ansicht/des Schnittes genommen</h157>
+    <h158>Darstellung des Schnittes</h158>
+    <h159>Erstellen von der Darstellung des Schnittes</h159>
+    <h160>Erstellen eines intelligenten Objekts von der Darstellung des Schnittes auf der Grundlage eines anonymen Blocks</h160>
+    <h161>Buchstäbliche Linie</h161>
+    <h162>Grundstil für die Buchstabenlinie</h162>
+    <h163>Zeichnen einer Darstellung von der Buchstabenlinie</h163>
+    <h164>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Buchstabenlinie beschreibt</h164>
+    <h165>Buchstabenlinie als Polylinie</h165>
+    <h166>Umwandlung der ausgewählten Polylinie in eine Buchstabenlinie</h166>
+    <h167>Ansicht</h167>
+    <h168>Grundstil für die Darstellung der Ansicht</h168>
+    <h169>Erstellen der Darstellung von Ansicht</h169>
+    <h170>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Darstellung der Ansicht beschreibt</h170>
+    <h171>Höhe der Ebene auf dem Plan</h171>
+    <h172>Grundstil für die Darstellung der Höhe der Ebene auf dem Plan</h172>
+    <h173>Erstellen der Höhe der Ebene auf dem Plan</h173>
+    <h174>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Höhe der Ebene auf dem Plan beschreibt</h174>
+    <h175>Multi-Führungslinie mit mehreren Bemaßungszeichen</h175>
+    <h176>Grundstil für die Multi-Führungslinie mit mehreren Bemaßungszeichen</h176>
+    <h177>Erstellen der Multi-Führungslinie mit mehreren Bemaßungszeichen</h177>
+    <h178>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Multi-Führungslinie mit mehreren Bemaßungszeichen beschreibt</h178>
+    <h179>Werte der zu erstellenden Multi-Führungslinien mit mehreren Bemaßungszeichen fortsetzen</h179>
+    <h180>Beim Erstellen der Multi-Führungslinien mit mehreren Bemaßungszeichen wird nach bereits in der Zeichnung erstellten Multi-Führungslinien mit mehreren Bemaßungszeichen gesucht und deren Werte gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Nummer oder des Buchstabens der zu erstellender Führungslinie wird auf die nächste Nummer oder Buchstabe ab dem zuletzt gefundenen Wert gesetzt. Die Funktion ist nur dann wirksam, wenn alle erstellten Multi-Führungslinien mit mehreren Bemaßungszeichen numerische oder buchstäbliche Werte haben</h180>
+    <h181>Bei Textdrehung ist der Drehwinkel des Blockes zu berücksichtigen</h181>
+    <h182>Der Text der geraden Achse dreht sich mit dem Achsenblock, wenn der Befehl DREHEN verwendet wird</h182>
+    <so0>Grafiken aktualisieren</so0>
+    <sot0>Die Grafiken aller gefundenen intelligenten Objekte werden regeneriert</sot0>
+    <so1>Auswählen</so1>
+    <sot1>Alle intelligenten Objekte der angegebenen Typen im aktuellen Bereich werden ausgewählt</sot1>
+    <so2>Daten löschen</so2>
+    <sot2>Bei allen intelligenten Objekten der angegebenen Typen im aktuellen Bereich werden die erweiterten Daten gelöscht, so dass die Objekte zu gewöhnlichen Blöcken werden</sot2>
+    <so3>Explodieren</so3>
+    <sot3>Alle intelligenten Objekte der angegebenen Typen im aktuellen Bereich werden explodiert</sot3>
+    <so4>Löschen</so4>
+    <sot4>Alle intelligenten Objekte der angegebenen Typen im aktuellen Bereich werden gelöscht</sot4>
+    <la1>Kopieren</la1>
+    <la2>Nicht kopieren</la2>
+    <la3>Fragen</la3>
+    <gp1>Strecken</gp1>
+    <gp2>Verschieben</gp2>
+    <gp3>Scheitelpunkt löschen</gp3>
+    <gp4>Scheitelpunkt hinzufügen</gp4>
+    <gp5>Multi-Führungslinie hinzufügen</gp5>
+    <gp6>Multi-Führungslinie entfernen</gp6>
+    <gp7>Pfeilspitzentyp</gp7>
+    <blt1>Linear</blt1>
+    <blt2>Gekrümmt</blt2>
+    <blt3>Zylindrisch</blt3>
+    <amt1>Beiderseitig</amt1>
+    <amt2>Oberhalb</amt2>
+    <amt3>Unterhalb</amt3>
+    <vlt1>Schnittansicht</vlt1>
+    <vlt2>Ansicht</vlt2>
+    <llt1>Standard</llt1>
+    <llt2>Zusammengesetzt</llt2>
+    <type1>Typ 1</type1>
+    <type2>Typ 2</type2>
+    <glfst1>Abstand zwischen den Strichlinien</glfst1>
+    <glfst2>Die Hälfte des Abstands zwischen den Gruppen der Strichlinien</glfst2>
+    <glfst3>Abstand zwischen den Gruppen der Strichlinien</glfst3>
+    <wpfst1>Die Hälfte des Abstands zwischen den Strichlinien</wpfst1>
+    <wpfst2>Kein Einzug</wpfst2>
+    <separator1>Aus den ModPlus Einstellungen</separator1>
+    <separator2>Aus dem Stil</separator2>
+    <separator3>Punkt</separator3>
+    <separator4>Komma</separator4>
+    <tha1>Links</tha1>
+    <tha2>Mittig</tha2>
+    <tha3>Rechts</tha3>
+    <ft1>Rund</ft1>
+    <ft2>Rechteckig</ft2>
+    <ft3>Linie</ft3>
+    <ft4>Ohne Rahmen</ft4>
+    <let0>Nein</let0>
+    <let1>Halbpfeil</let1>
+    <let2>Punkt</let2>
+    <let3>Doppeltes Bemaßungszeichen</let3>
+    <let4>Rechter Winkel</let4>
+    <let5>Gefüllte geschlossene</let5>
+    <let6>Geöffnete</let6>
+    <let7>Geschlossene</let7>
+    <let8>Pfeilspitze</let8>
+    <wjt1>Stumpfnaht, werkseitig hergestellte, durchgehende, auf der sichtbaren Seite</wjt1>
+    <wjt2>Stumpfnaht, werkseitig hergestellte, durchgehende, auf der unsichtbaren Seite</wjt2>
+    <wjt3>Stumpfnaht mit Montagestoß, durchgehende, auf der sichtbaren Seite</wjt3>
+    <wjt4>Stumpfnaht mit Montagestoß, durchgehende, auf der unsichtbaren Seite</wjt4>
+    <wjt5>Stumpfnaht, werkseitig hergestellte, unterbrochene, auf der sichtbaren Seite</wjt5>
+    <wjt6>Stumpfnaht, werkseitig hergestellte, unterbrochene, auf der unsichtbaren Seite</wjt6>
+    <wjt7>Stumpfnaht mit Montagestoß, unterbrochene, auf der sichtbaren Seite</wjt7>
+    <wjt8>Stumpfnaht mit Montagestoß, unterbrochene, auf der unsichtbaren Seite</wjt8>
+    <wjt9>Kehlnaht, werkseitig hergestellte, durchgehende, auf der sichtbaren Seite</wjt9>
+    <wjt10>Kehlnaht, werkseitig hergestellte, durchgehende, auf der unsichtbaren Seite</wjt10>
+    <wjt11>Kehlnaht mit Montagestoß, durchgehende, auf der sichtbaren Seite</wjt11>
+    <wjt12>Kehlnaht mit Montagestoß, durchgehende, auf der unsichtbaren Seite</wjt12>
+    <wjt13>Kehlnaht, werkseitig hergestellte, unterbrochene, auf der sichtbaren Seite</wjt13>
+    <wjt14>Kehlnaht, werkseitig hergestellte, unterbrochene, auf der unsichtbaren Seite</wjt14>
+    <wjt15>Kehlnaht mit Montagestoß, unterbrochene, auf der sichtbaren Seite</wjt15>
+    <wjt16>Kehlnaht mit Montagestoß, unterbrochene, auf der unsichtbaren Seite</wjt16>
+    <dot>Punkt</dot>
+    <comma>Komma</comma>
+    <len>Länge</len>
+    <p1>Typ des Schnittverlaufs</p1>
+    <d1>Linientyp: linear, gekrümmt oder zylindrisch</d1>
+    <p2>Überstand vom Objekt</p2>
+    <d2>Bei einem linearen Schnittverlauf wird der Überstandswert in mm angegeben. Bei einem gekrümmten Schnittverlauf wird der Überstandswert in % der Länge zwischen den Hauptpunkten angegeben. Bei einem zylindrischen Schnittverlauf wird kein Überstandswert verwendet</d2>
+    <p3>Breite des Bruches</p3>
+    <d3>Breite des Bruches in mm. Nur für den Schnittverlauf des linearen Typs</d3>
+    <p4>Höhe des Bruches</p4>
+    <d4>Höhe des Bruches in mm. Nur für den Schnittverlauf des linearen Typs</d4>
+    <p5>Maßstab</p5>
+    <d5>Maßstab des Schnittverlaufs</d5>
+    <d5-1>Maßstab der Achse</d5-1>
+    <p6>Maßstab des Linientyps</p6>
+    <d6>Maßstab des Linientyps für den in den Blockeigenschaften angegebenen Linientyp</d6>
+    <p7>Layer</p7>
+    <d7>Layer der Objekt</d7>
+    <p8>Position der Rasterlinien</p8>
+    <d8>Position der Rasterlinien: beiderseits, oberhalb oder unterhalb</d8>
+    <p9>Bogen</p9>
+    <d9>Höhe des Bogens der Achse</d9>
+    <p10>Durchmesser der Rasterlinien</p10>
+    <d10>Durchmesser der Rasterlinien der Achse</d10>
+    <p11>Anzahl der Rasterlinien</p11>
+    <d11>Anzahl der Rasterlinien der Achse</d11>
+    <p12>Typ der ersten Rasterlinie</p12>
+    <d12>Typ der ersten Rasterlinie der Achse</d12>
+    <p13>Typ der zweiten Rasterlinie</p13>
+    <d13>Typ der zweiten Rasterlinie der Achse</d13>
+    <p14>Typ der dritten Rasterlinie</p14>
+    <d14>Typ der dritten Rasterlinie der Achse</d14>
+    <p15>Der untere Abstand des Bogens</p15>
+    <d15>Der untere Abstand des Bogens der Achse</d15>
+    <p16>Der obere Abstand des Bogens</p16>
+    <d16>Der obere Abstand des Bogens der Achse</d16>
+    <p16-2>Abstand des Bogens</p16-2>
+    <d16-2>Der obere oder der untere Abstand des Bogens der Achse</d16-2>
+    <p17>Textstil</p17>
+    <d17>Textstil für Textelemente der Achse</d17>
+    <p18>Texthöhe</p18>
+    <d18>Texthöhe der Textelemente der Achse</d18>
+    <p19>Linientyp der Achse</p19>
+    <p20>Präfix des ersten Wertes</p20>
+    <p21>Suffix des ersten Wertes</p21>
+    <p22>Der erste Wert</p22>
+    <p23>Präfix des zweiten Wertes</p23>
+    <p24>Suffix des zweiten Wertes</p24>
+    <p25>Der zweite Wert</p25>
+    <p26>Präfix des dritten Wertes</p26>
+    <p27>Suffix des dritten Wertes</p27>
+    <p28>Der dritte Wert</p28>
+    <p29>Pfeilspitzengröße</p29>
+    <p30>Wert der unteren Referenzmarker</p30>
+    <p31>Wert der oberen Referenzmarker</p31>
+    <p32>Die untere Referenzmarker</p32>
+    <d32>Sichtbarkeit der unteren Referenzmarker</d32>
+    <p33>Die obere Referenzmarker</p33>
+    <d33>Sichtbarkeit der oberen Referenzmarker</d33>
+    <p34>Typ der Referenzmarker</p34>
+    <d34>Typ der Referenzmarker der Achse</d34>
+    <p35>Linientyp</p35>
+    <d35>Typ der Hauptpolylinie</d35>
+    <d35-1>Linientyp Standard oder zusammengesetzt</d35-1>
+    <p36>Versatz der ersten Strichlinie</p36>
+    <d36>Versatz der ersten Strichlinie auf jedem Segment der Bodenlinie</d36>
+    <d36-1>Versatz der ersten Strichlinie auf jedem Segment der Wasserabdichtungslinie</d36-1>
+    <p37>Länge der Strichlinie</p37>
+    <p38>Abstand zwischen den Strichlinien</p38>
+    <p39>Neigungswinkel der Strichlinie</p39>
+    <p40>Versatz der Gruppe der Strichlinien</p40>
+    <p41>Textstil</p41>
+    <d41>Textstil für Textelemente</d41>
+    <p42>Länge der mittigen Strichlinie</p42>
+    <d42>Länge der mittigen Strichlinie bis zum Bruchpunkt</d42>
+    <p43>Dicke der Strichlinien</p43>
+    <d43>Dicke aller Strichlinien von Schnitt</d43>
+    <p44>Länge der Strichlinie</p44>
+    <d44>Länge der Hauptstrichlinien von Schnitt</d44>
+    <p45>Versatz der Verlängerung</p45>
+    <d45>Versatz der Verlängerung über die Länge der Strichlinie</d45>
+    <p46>Länge der Verlängerung</p46>
+    <p47>Länge der Pfeilspitze</p47>
+    <p48>Dicke der Pfeilspitze</p48>
+    <p49>Texthöhe</p49>
+    <p50>Texthöhe des kleinformatigen Textes</p50>
+    <p51>Darstellung des Schnittes</p51>
+    <p52>Präfix der Darstellung</p52>
+    <p53>Nummer des Plans</p53>
+    <p54>Position der Nummer des Plans</p54>
+    <d54>Optionen für Position der Nummer des Plans: beiderseits, unterhalb, oberhalb</d54>
+    <p55>Linie zum Objekt</p55>
+    <d55>ob eine Linie von der Höhe der Ebene zum Messobjekt gezeichnet werden soll</d55>
+    <p56>Versatz der Linie zum Objekt</p56>
+    <d56>Versatz der Linie zum Objekt vom Messobjekt</d56>
+    <p57>Länge der unteren Verlängerung</p57>
+    <d57>Länge der unteren Verlängerung von dem Rand der Verlängerung auf der Seite des Messobjekts bis zur Pfeilspitze der Höhenmarke</d57>
+    <p58>Überstand der unteren Verlängerung</p58>
+    <d58>Überstand der unteren Verlängerung von der Pfeilspitze der Höhenmarke bis zu dem Rand der Verlängerung auf der gegenüberliegenden Seite des Messobjekts</d58>
+    <p59>Höhe der Pfeilspitze</p59>
+    <p60>Dicke der Pfeilspitze</p60>
+    <p61>Textversatz</p61>
+    <p62>Vertikaler Textversatz</p62>
+    <p63>Überstand der Verlängerung</p63>
+    <d63>Überstand der Verlängerung relativ zum Text mit der größten Länge</d63>
+    <p63-1>Höhe der Verlängerung</p63-1>
+    <p64>Pluszeichen anzeigen</p64>
+    <d64>Pluszeichen anzeigen, wenn der gemessene Wert größer als Null ist. Die Eigenschaft wird nicht berücksichtigt, wenn der Text überschrieben ist</d64>
+    <p65>Gemessener Wert</p65>
+    <p66>Textüberschreibung</p66>
+    <p67>Genauigkeit</p67>
+    <d67>Genauigkeit des gemessenen Wertes. Legt die Anzahl der Nachkommastellen</d67>
+    <p68>Notiz</p68>
+    <p69>Maßstab der Messung</p69>
+    <d69>Legt einen Wert im Bereich von 0,000001 bis 1000000 fest, mit dem der in der Zeichnung gemessene Abstand multipliziert wird</d69>
+    <p70>Liniendicke</p70>
+    <p71>Drehwinkel des Textes</p71>
+    <p72>Zahlentrennzeichen</p72>
+    <d72>Trennzeichen zwischen dem ganzzahligen und dem gebrochenen Teil von Zahl</d72>
+    <p73>Textausrichtung</p73>
+    <d73>Horizontale Textausrichtung</d73>
+    <p74>Ausrichten der Notiz</p74>
+    <p75>Sternchen anzeigen</p75>
+    <d75>Hinzufügen eines Sternchens am Ende des Hauptwertes</d75>
+    <p76>Höhe des Rahmens</p76>
+    <p77>Breite des Rahmens</p77>
+    <p78>Position der Verlängerung</p78>
+    <p79>Nummer des Details</p79>
+    <p80>Nummer des Plans</p80>
+    <p81>Planadresse</p81>
+    <p82>Rahmentyp</p82>
+    <p83>Radius von Rundung</p83>
+    <d83>Radius von Rundung der Ecken eines rechteckigen Rahmens</d83>
+    <d83-1>Radius von Rundung der Ecken von der Darstellung des Detailausschnittes</d83-1>
+    <p84>Der Text ist immer horizontal</p84>
+    <d84>Die Führungslinie mit dem Text wird ihre horizontale Position beibehalten, wenn das Objekt mit dem Befehl "Drehen" gedreht wird</d84>
+    <p85>Den Hintergrund ausblenden</p85>
+    <d85>Hinzufügen einer Maskierung um den Umriss des Textes mit der eingestellten Versetzung. Die Anzeige von Maskierungsrahmen wird durch die Systemvariablen WIPEOUTFRAME und FRAME gesteuert</d85>
+    <d85-1>Hinzufügen einer Maskierung um den Umriss des Textes mit der eingestellten Versetzung. Die Anzeige von Maskierungsrahmen wird durch die Systemvariablen WIPEOUTFRAME und FRAME gesteuert. Wenn ein rechteckiger Rahmen eingestellt ist, wird die Maskierung entlang des Rahmens ohne Berücksichtigung von Abstand erstellt</d85-1>
+    <p86>Abstand der Maskierung</p86>
+    <d86>Bei den Rahmentypen "Linie" und "Kein Rahmen" wird der Abstand der Maskierung berücksichtigt</d86>
+    <p87>Dicke des Ansichtselements</p87>
+    <p88>Länge des Ansichtselements</p88>
+    <p89>Schweißnahttyp</p89>
+    <p90>Abstand des Bemaßungszeichens</p90>
+    <p91>Halbe Höhe des Bemaßungszeichens</p91>
+    <p92>Abstand des großen Kreuzsymbols</p92>
+    <p93>Abstand des kleinen Kreuzsymbols</p93>
+    <p94>Halbe Höhe des großen Kreuzsymbols</p94>
+    <p95>Höhe des kleinen Kreuzsymbols</p95>
+    <p96>Länge der Reihe</p96>
+    <p97>Länge der Leerstelle</p97>
+    <p98>Intervall zwischen den Reihen</p98>
+    <p99>Höhe des kleinen Bemaßungszeichens</p99>
+    <p100>Radius von Rundung</p100>
+    <p101>Haupttext</p101>
+    <p102>Kleinformatiger Text</p102>
+    <p103>Ansichtstyp</p103>
+    <d103>Ansichtstyp: Schnittansicht oder Ansicht</d103>
+    <p104>Führungslinie</p104>
+    <d104>Aktivieren/Deaktivieren von Führungslinie</d104>
+    <p105>Generieren des Linientyps</p105>
+    <d105>Generieren von Linientyp über die gesamte Polylinie</d105>
+    <p106>Abstand zwischen Text</p106>
+    <p107>Formel für die Linie</p107>
+    <d107>Die Formel für die Linie wird durch ganze Zahlen angegeben, die durch Bindestriche getrennt sind. Jede ungerade Zahl (1, 3, 5, ...) gibt die Länge der Strichlinie an. Jede gerade Zahl (2, 4, 6, ...) gibt die Länge der Leerstelle an</d107>
+    <p108>Versatz des ersten Textes</p108>
+    <p109>Darstellung der Ansicht</p109>
+    <p110>Höhe der Ebene</p110>
+    <p111>Präfix</p111>
+    <p112>Suffix</p112>
+    <p113>Wert</p113>
+  </mpESKD>
+  <mpStripMtext LocalName="Entfernen der Formattierung"
+                Description="Entfernen der angegebenen Formatierung aus dem mehrzeiligen Text"
+                FullDescription="Mit dem Plugin können Sie Formatierung eines mehrzeiligen Textes, Multi-Führungslinien, Bemaßungen, Blockattributen und Tabellen entfernen">
+    <h1>Wählen Sie den Typ der zu löschenden Formatierung</h1>
+    <h2>Alle auswählen</h2>
+    <h3>Alle abwählen</h3>
+    <h4>Akzeptieren</h4>
+    <m1>Wählen Sie Objekte mit mehrzeiligem Text aus</m1>
+    <s1>Ausrichten</s1>
+    <st1>Entfernung des vertikalen Ausrichtens. Vertikales Ausrichten erscheint, wenn Brüche im Text vorkommen</st1>
+    <s2>Tabellierung</s2>
+    <st2>Entfernen der horizontalen Tabellierung</st2>
+    <s3>Farbe</s3>
+    <st3>Entfernen der Textfarbe</st3>
+    <s4>Felder</s4>
+    <st4>Umwandlung von Feldern in einfachen Text</st4>
+    <s5>Schrift</s5>
+    <st5>Entfernen von Schriftartüberschreibungen im Text</st5>
+    <s6>Höhe</s6>
+    <st6>Entfernen von Texthöhenüberschreibungen</st6>
+    <s7>Durchgestrichen</s7>
+    <st7>Entfernen der Durchstreichung des Textes</st7>
+    <s8>Zeilenumbruch</s8>
+    <st8>Entfernen von Umbuchungen auf eine neue Zeile</st8>
+    <s9>Maske</s9>
+    <st9>Entfernen der Hintergrundmaske</st9>
+    <s10>Spalten</s10>
+    <st10>Entfernen von Spalten aus dem Text</st10>
+    <s11>Überstrichen</s11>
+    <st11>Entfernen von Überstreichung aus dem Text</st11>
+    <s12>Absatz</s12>
+    <st12>Entfernen von Absatzumbrüchen</st12>
+    <s13>Neigung</s13>
+    <st13>Entfernen der Textneigung</st13>
+    <s14>Untereinander anordnen</s14>
+    <st14>Entfernen des Symbols für gebrochenen Text</st14>
+    <s15>Zeichenabstand</s15>
+    <st15>Entfernen der Formatierung des Zeichenabstands</st15>
+    <s16>Unterstrichen</s16>
+    <st16>Entfernen von Überstreichung aus dem Text</st16>
+    <s17>Breitenfaktor</s17>
+    <st17>Zurücksetzen des Wertes von Breitenfaktor</st17>
+    <s18>Geschütztes Leerzeichen</s18>
+    <st18>Entfernen von geschütztem Leerzeichen aus dem Text</st18>
+    <s19>Absatzausrichtung</s19>
+    <st19>Entfernen von Absatzausrichtungen aus dem Text</st19>
+  </mpStripMtext>
+  <mpRevitSheetsMerging LocalName="Zusammenführen von Plänen in Revit"
+                        Description="Zusammenführen von aus Revit exportierten Dateien in eine einzige Zeichnung. Das Plugin muss an einer leeren Zeichnung gestartet werden. Das Plugin verarbeitet Dateien, die mit deaktiviertem Kontrollkästchen &quot;Planansichten und Links als externe Verknüpfungen exportieren&quot; hochgeladen wurden.">
+    <h1>Dateibearbeitung...</h1>
+    <h2>Fehler beim Importieren von Plänen aus der Datei</h2>
+    <h3>Auswählen von Dateien zum Zusammenführen von Plänen</h3>
+    <h4>Layer-Zusammenführen...</h4>
+  </mpRevitSheetsMerging>
+</ModPlus>
