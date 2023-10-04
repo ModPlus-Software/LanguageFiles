@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ModPlus>
   <mprSheetCopy LocalName="Duplizieren von Plänen"
                 Description="Mit dem Plugin können Sie Kopien der angegebenen Pläne mit unterschiedlichen Einstellungen erstellen"
@@ -88,7 +87,7 @@
     <cb3>Eine abhängige Ansicht erstellen</cb3>
   </mprSheetCopy>
   <mprViewCopy LocalName="Duplizieren von Ansichten"
-               Description="Mit dem Plugin können Sie Kopien der angegebenen Ansichten mit unterschiedlichen Einstellungen erstellen">
+               Description="Mit dem Plugin können Sie Kopien der angegebenen Ansichten und Bauteillisten mit unterschiedlichen Einstellungen erstellen">
     <h1>In der limitierten Version sind nicht mehr als 3 Ansichten zum Duplizieren verfügbar</h1>
     <h2>Suche nach Namen</h2>
     <h3>Anzahl der Kopien</h3>
@@ -240,28 +239,32 @@
     <h1>CAD-Manager</h1>
     <h2>Kopiert!</h2>
     <h3>Zugehörigkeit zur Ansicht:</h3>
-    <h4>Suche nach Namen oder Ansicht...</h4>
+    <h4>Suche nach Namen und Import-ID oder nach Namen und Ansichts-ID...</h4>
     <h5>Name:</h5>
     <h6>Id in die Zwischenablage kopieren</h6>
     <h7>Ansicht:</h7>
-    <h8>Das Element auswählen und anzeigen</h8>
+    <h8>Einfügung auswählen und anzeigen</h8>
     <h9>Das Element löschen</h9>
     <h12>Die Transparenz des Fensters ändern, wenn der Mauszeiger über dem Fenster verweilt wird</h12>
-    <h13>Die ausgewählten Elemente löschen:</h13>
+    <h13>Ausgewählte Einfügungen löschen:</h13>
     <h14>Importsymbol ist die verknüpfte CAD-Datei</h14>
     <h15>Einfügungstyp:</h15>
+    <h16>Einfügung löschen</h16>
+    <h17>Einfügungen löschen</h17>
+    <h18>Verzeichnis mit Importdatei öffnen</h18>
+    <h19>Anzahl (sichtbar/gesamt):</h19>
     <all>Alle</all>
     <sv1>Unbestimmte</sv1>
     <sv2>Zugehörigkeit zu einer Ansicht</sv2>
     <sv3>Keine Zugehörigkeit zu einer Ansicht</sv3>
     <iv1>Importiert (oder undefiniert)</iv1>
     <iv2>als Link eingefügt</iv2>
-    <msg1>Die ausgewählten Importsymbole werden unwiderruflich gelöscht!\nWollen Sie fortsetzen?</msg1>
+    <msg1>Die ausgewählten Importsymbole werden gelöscht!\nWollen Sie fortsetzen?</msg1>
     <msg3>Nicht identifiziertes Einfügeelement</msg3>
     <msg4>Fehler beim Abrufen eines Ansichtsnamen</msg4>
     <msg5>Gehört nicht zur Ansicht</msg5>
     <msg6>Importsymbol</msg6>
-    <msg7>wird unwiderruflich gelöscht!\nWollen Sie fortsetzen?</msg7>
+    <msg7>wird gelöscht!\nWollen Sie fortsetzen?</msg7>
     <msg8>In der Ansicht</msg8>
     <msg9>alle importierten Kategorien sind ausgeblendet.\nWählen Sie eine weitere Aktivität aus:</msg9>
     <msg10>Alle importierten Kategorien anzeigen</msg10>
@@ -503,12 +506,28 @@
     <h12>Abstand der Bemaßungskette</h12>
     <h13>Position der horizontalen Bemaßungen</h13>
     <h14>Position der vertikalen Bemaßungen</h14>
-    <h15>Anordnung von den Bemaßungsketten entlang der Wände auf dem gesamten Grundriss. Für korrekte Bearbeitung brauchen Sie alle Wände in der Draufsicht auszuwählen, die das Stockwerk des Gebäudes bilden. Es werden nur orthogonal angeordnete Elemente (senkrecht oder waagerecht in der Draufsicht angeordnet) ohne Bogensegmente in der Geometrie bearbeitet</h15>
+    <h15>Anordnung von den Bemaßungsketten entlang der Wände auf dem gesamten Grundriss. Für korrekte Bearbeitung brauchen Sie alle Wände in der Draufsicht auszuwählen, die das Stockwerk des Gebäudes bilden. Bearbeitungsfähig sind nur gerade Elemente. Für eine korrekte Funktion müssen die zu bearbeitende Elemente orthogonal zueinander angeordnet sein</h15>
     <h16>Pfahl zur Gruppe hinzufügen, wenn der Abstand vom Pfahleinfügepunkt zum Einfügepunkt</h16>
     <h17>in einer Gruppe von nicht mehr als</h17>
     <h18>Pfähle</h18>
-    <h19>Vermaßen von Stützen. Es werden nur rechteckige Stützen bearbeitet, die orthogonal (vertikal oder horizontal in der Draufsicht angeordnet) angeordnet sind. Wenn die Option "Anpassung den nächstgelegenen Achsen" aktiviert ist und die Achse kreuzt die Stütze, dann entstehen zwei Bemaßungsketten</h19>
+    <h19>Vermaßen von Stützen. Bearbeitungsfähig sind nur rechteckige Stützen</h19>
     <h20>Positionsbemaßung von Pfählen. Die Bemaßungen werden in der Mitte der Pfähle mit Verknüpfung mit den nächstgelegenen Achsen platziert, wenn die Achsen ausgewählt wurden. Die Bearbeitung von Pfählen erfolgt gruppenweise. Gruppe von Pfählen sind nahe beieinanderliegende Pfähle. Familien unter den Kategorien "Tragwerksstützen" und "Fundament" werden bearbeitet</h20>
+    <h21>Außenmaß bei Schnittpunkten mit Achsen erstellen</h21>
+    <h22>Geschossdecken</h22>
+    <h23>Bemaßung an den äußeren Flächen der Geschossdecke und an den Bohrungen in der Geschossdecke. Bemaßung an den äußeren Flächen wird für alle Flächen der Geschossdecke ausgeführt. Bemaßung an den Bohrungen wird in der angegebenen Richtung (nach links/rechts bzw. aufwärts/abwärts) ausgeführt</h23>
+    <h24>Äußere Flächen bemaßen</h24>
+    <h25>Fangen von äußeren Flächen an Achsen</h25>
+    <h26>Wände</h26>
+    <h27>Bemaßung der geraden Wände mit Längs- und Quermaßen (Dicke) ohne ihren Zusammenhang mit anderen Wänden zu berücksichtigen</h27>
+    <h28>Quermaß in der Wandmitte</h28>
+    <h29>Fangen des Quermaßes in der Wandmitte an die nächstgelegene Achse</h29>
+    <h30>Längsmaß der Wand</h30>
+    <h31>Fangen des Längsmaßes der Wand an die nächstgelegene Achse</h31>
+    <h32>Bearbeitung von Mittelflächen (Öffnungen)</h32>
+    <h33>Bemaßung von Öffnungen</h33>
+    <h34>Fangen der Öffnungen an die nächstgelegenen Achsen</h34>
+    <h35>Position der horizontalen Bemaßungen für Öffnungen</h35>
+    <h36>Position der vertikalen Bemaßungen für Öffnungen</h36>
     <pgc1>von jedem Pfahl</pgc1>
     <pgc2>von einem beliebigen der Pfähle</pgc2>
     <top>Oberhalb</top>
@@ -527,6 +546,9 @@
     <err4>Man muss mehr als ein Element auswählen!</err4>
     <err5>Keine Wände unter den ausgewählten Elementen!</err5>
     <err8>Die ausgewählten Pfählen erfüllen die Bearbeitungsbedingungen nicht: es konnte kein Vollkörper erhalten werden, es gibt keinen Einfügepunkt</err8>
+    <err9>Die ausgewählten Stützen erfüllen die Bearbeitungsbedingungen nicht: es konnte kein Vollkörper erhalten werden, es konnten keine Flächen erhalten werden, es gibt keinen Einfügepunkt oder es gibt gebogene Flächen</err9>
+    <err10>Die ausgewählten Geschossdecken erfüllen die Bearbeitungsbedingungen nicht: es konnte kein Vollkörper erhalten werden, es konnten keine Flächen erhalten werden</err10>
+    <err11>Die ausgewählten Wände erfüllen die Bearbeitungsbedingungen nicht: es konnte kein Vollkörper erhalten werden bzw. es konnten keine Flächen erhalten werden</err11>
     <s1>Filtern für die ursprüngliche Liste der Wände</s1>
     <s2>Suche nach Innen- und Außenwänden</s2>
     <s3>Erstellen von analytischen Bemaßungen</s3>
@@ -616,7 +638,8 @@
     <GenericModels>Generische Modelle</GenericModels>
     <Reinforcement>Bewehrung</Reinforcement>
     <Lines>Linien</Lines>
-    <Mass>Körper-</Mass>
+    <Links>Verknüpfungen</Links>
+    <Mass>Körper</Mass>
     <Ducts>Luftkanäle</Ducts>
     <FlexDucts>Flexkanäle</FlexDucts>
     <Pipes>Rohre</Pipes>
@@ -670,6 +693,10 @@
     <h43>Wählen Sie Ansichten und Pläne im Projektbrowser aus, verwenden Sie die Tasten Strg und/oder Shift dabei, und starten Sie das Plugin, um sie zu öffnen</h43>
     <h44>Ausgewähltes einfügen</h44>
     <h45>Skalieren und Zentrieren der aktuellen Ansicht auf die ausgewählten Elemente</h45>
+    <h51>Gesamtlänge {0} der Elemente in der Kategorie "{1}"</h51>
+    <h52>Gesamtlänge aller ausgewählten Elemente</h52>
+    <h53>Gesamtlänge</h53>
+    <h54>Die Gesamtlänge der ausgewählten linearen Elemente wird angezeigt</h54>
     <m1>Die Sichtbarkeitseinstellungen für die Kategorie in der aktuellen Ansicht können nicht geändert werden, da auf die Ansicht eine Ansichtsvorlage angewendet wurde</m1>
     <m2>Keine Bewehrung im aktuellen Projekt gefunden</m2>
     <m3>Im aktuellen Projekt gefunden:</m3>
@@ -924,6 +951,9 @@
     <h240>Seite abwechseln</h240>
     <h241>Zusätzlicher L-Stab, der in die Platte gebogen und in den Abschlusswänden eingesetzt wird</h241>
     <h242>Verankerungslänge in der Wand, mm:</h242>
+    <h243>Verschränkung durch Versatz</h243>
+    <h244>Nur in Bereichen ohne darüber liegende Geschossdecke bzw. Wand erstellen</h244>
+    <h245>U-förmige Stäbe entlang des unteren Wandabschlusses</h245>
     <srd>Speichern von Daten für die ausgewählte Wände</srd>
     <rr1>Bewehrung des gleichen Typs löschen wie die, die erstellt wird</rr1>
     <rr2>Die ganze zuvor erstellte Bewehrung löschen</rr2>
@@ -1056,7 +1086,7 @@
     <t47>Erhöht die Zeit der Generierung von Bewehrung!</t47>
     <t48>Die Bewehrungsteile der Schnittpunkte werden mit dem Abstand der horizontalen Wandbewehrung eingefügt – entsprechend dem kleinsten bzw. größten Abstand der horizontalen Bewehrung der im Schnittpunkt betroffenen Wände</t48>
     <t49>Anzahl der Reihen der vertikalen Bewehrung (in einer Reihe zwei Stäbe "entlang" der Öffnung)</t49>
-    <t50>Anzahl der Reihen der horizontalen Bewehrung (in einer Reihe zwei Stäbe "entlang" der Öffnung)</t50>
+    <t50>Anzahl der Reihen horizontaler Bewehrung</t50>
     <t51>Auswahl der unterliegenden Platte, die sich unmittelbar unter den gewählten Wänden befindet. Auswahl der unterliegenden Platte ist nach Auswahl, Analyse und Gruppierung der Wände möglich. Sie können eine oder mehrere Platten auswählen. In den Eigenschaften der unterliegenden Platten muss die Eigenschaft "Tragwerke" enthalten sein</t51>
     <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
     <t54>Kopieren der Bewehrungseinstellungen von Überständen der aktuellen Platte in alle markierten Platten</t54>
@@ -1064,7 +1094,7 @@
     <t56>Bewehrungseinstellungen für die Überstände aus xml-Datei herunterladen und für die aktuelle Platte einstellen</t56>
     <t57>Die Mindest- und Höchstwerte werden aus den angegebenen Durchmessern und vertikaler Bewehrung berechnet</t57>
     <t58>Die Länge des Stabes ergibt sich aus der Summe der beiden Verankerungslängen</t58>
-    <t59>Wenn die Option "verschränkt angeordnete" aktiviert ist, wird jedes erste Paar von Überständen entlang der Wand mit der ersten Verankerungslänge erstellt, jedes zweite Paar mit der zweiten Verankerungslänge</t59>
+    <t59>Wenn die Option "verschränkt angeordnete" aktiviert ist, wird jedes erste Paar von Überständen entlang der Wand mit der ersten Überlappungslänge erstellt, jedes zweite Paar mit der zweiten Überlappungslänge</t59>
     <t60>Wenn die Überstände die Höhe der oberen Wand überschreiten, werden sie bis zur Oberkante der Wand abgeschnitten, wobei die vorgeschriebene Überdeckung an den Bewehrungsanschlussen berücksichtigt wird</t60>
     <t61>Die Auswahlmöglichkeit bezieht sich auch auf die Auswahl der Platten</t61>
     <t62>Der vertikale Stab wird zum Biegeanfangspunkt des U-förmigen Stabes verschoben, der sich aus der Summe der Werte der Überdeckung der horizontalen Bewehrung an den Anschlussen, dem Durchmesser des U-förmigen Stabes und dem normativen Biegedurchmesser des U-förmigen Stabes ergibt</t62>
@@ -1076,6 +1106,7 @@
     <t68>Wenn diese Option aktiviert ist, werden an Wandschnittpunkten und an Wandabschlüssen, an denen Teile montiert sind (z.B. U-förmige Stäbe), keine Ständer eingesetzt</t68>
     <t69>Wenn die horizontalen Stäbe der Grundbewehrung innen und die vertikalen Stäbe außen liegen, ist es empfehlenswert, die Umschlingung der vertikalen Stäbe anzugeben. Umgekehrt, wenn die horizontalen Stäbe der Grundbewehrung außen liegen, ist es empfehlenswert, die Umschlingung der horizontalen Stäbe anzugeben</t69>
     <t70>Die Länge des Bauteils ist die Verankerungslänge</t70>
+    <t71>Auf jedes zweite Stabspaar wird von unten einen Abstand um die absolute Differenz der Überlappungslängen angewandt. Der Abstand hat keinen Einfluss auf die zweite Überlappungslänge. Wenn z.B. die erste Überlappungslänge 500 mm und die zweite Überlappungslänge 750 mm beträgt, haben die Stäbe von jedem zweiten Paar einen unteren Abstand von 250 mm</t71>
     <re1>Fehler beim Erstellen von vertikalen Stäben der Grundbewehrung in der Wand id={0}:</re1>
     <re2>Fehler beim Erstellen von vertikalen Stäben der Grundbewehrung am Schnittpunkt in der Wand id={0}:</re2>
     <re3>Fehler beim Erstellen von zusätzlichen vertikalen Stäben im Wandabschluss id={0}:</re3>
@@ -1096,6 +1127,7 @@
     <re18>Fehler beim Erstellen von Bügeln der Einrahmung von Öffnung in der Wand id={0}:</re18>
     <re19>Fehler beim Erstellen von U-förmigen Stäben der Einrahmung von Öffnung entlang der Horizontalen (unten) in der Wand id={0}</re19>
     <re20>Die Erstellung eines Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re20>
+    <re21>Fehler beim Erstellen von U-förmigen Stäben entlang des unteren Wandabschlusses</re21>
   </mprWallsReinforcement>
   <mprSlabsReinforcement LocalName="Plattenbewehrung"
                          Description="Analyse, Gruppierung und Bewehrung von Platten entsprechend den festgelegten Bedingungen "
@@ -1577,8 +1609,8 @@
     <h35>Querschnittsfläche der Bewehrung, mm²:</h35>
     <h36>Prozentsatz der Bewehrung:</h36>
     <h37>Es wird empfohlen, dass die Querschnittsfläche der Längsbewehrung nicht mehr als 5% der Querschnittsfläche des Trägers beträgt</h37>
-    <h38>Abstand zwischen den Kanten der Stäbe entlang der Breite des Trägers:</h38>
-    <h39>Abstand zwischen den Kanten der Stäbe entlang der Höhe des Trägers:</h39>
+    <h38>Abstand zwischen den Stäben entlang der Balkenbreite:</h38>
+    <h39>Abstand zwischen den Stäben entlang der Balkenhöhe:</h39>
     <h40>Achtung! Wird der Durchmesser, die Überdeckung oder die Anzahl der Stäbe verändert, so wird der Abstand zwischen den Stäben auf gleiche Werte zurückgesetzt!</h40>
     <h41>Überstände der Längsbewehrung</h41>
     <h42>Querbewehrung (Verlegung)</h42>
@@ -1788,7 +1820,7 @@
     <h33>Bauteillisten</h33>
     <h34>Löschen von Bauteillisten</h34>
     <h35>Auf dem Plan platziert</h35>
-    <h36>Allgemeine Projektparameter</h36>
+    <h36>Allgemeine Parameter</h36>
     <h37>Löschen von allgemeinen Parametern</h37>
     <h38>Nicht platzierte Räume</h38>
     <h39>Löschen von nicht platzierten Räumen</h39>
@@ -1806,8 +1838,8 @@
     <h51>Wird verwendet in</h51>
     <h52>Wird in der Bauteilliste verwendet</h52>
     <h53>Wird in der Familie verwendet</h53>
-    <h54>Suche nach einem Parameter in Bauteillisten, Familien und Projektinformationen</h54>
-    <h55>Der Parameter wurde nicht in den Bauteillisten, Familien oder Projektinformationen gefunden</h55>
+    <h54>Suche nach einem Parameter in Bauteillisten, Familien, Projektinformationen und Filtern</h54>
+    <h55>Der Parameter wurde nicht in den Bauteillisten, Familien, Projektinformationen oder Filtern gefunden</h55>
     <h56>Projektparameter</h56>
     <h57>Titel des Projekts</h57>
     <h58>Name des Parameters</h58>
@@ -1815,6 +1847,15 @@
     <h60>Löschen von Projektparametern</h60>
     <h61>Löschen des Projektparameters fehlgeschlagen. Fehler</h61>
     <h62>{0} Projektparameter gelöscht</h62>
+    <h63>Wird in einem Filter verwendet</h63>
+    <h64>Wird in einem Familienexemplar verwendet</h64>
+    <h65>Optionen ausgewählt</h65>
+    <h66>Ansichten</h66>
+    <h67>Im Plan platziert</h67>
+    <h68>Löschen von Ansichten</h68>
+    <h69>Die Liste aller gefundenen allgemeinen Parameter im Notepad öffnen</h69>
+    <h70>Abruftabellen</h70>
+    <h71>Löschen der Abruftabellen</h71>
     <search>Suchen</search>
     <name>Name</name>
     <collect>Sammeln</collect>
@@ -1864,11 +1905,17 @@
     <w40>Alle Ansichtsvorlagen löschen</w40>
     <w41>Alle Elemente im Bearbeitungsbereich löschen</w41>
     <w42>Alle Koordinationsmodellen löschen</w42>
+    <w43>Alle nicht verwendeten Achsentype löschen</w43>
+    <w44>Alle nicht verwendeten Ebenentype löschen</w44>
+    <w45>Alle Ansichten ohne Referenzen löschen (nur Legenden)</w45>
+    <w46>Alle nicht verwendeten Filter löschen</w46>
+    <w47>Alle leeren Bearbeitungsbereiche löschen</w47>
     <m1>Modell muss gespeichert werden, um äußere Referenzen zu entfernen</m1>
     <m2>Die Bearbeitung des Familiendokuments ist nicht vorgesehen</m2>
     <m3>Abrufen von Daten aus der Karte der Dokumentbindung</m3>
     <m4>Das Lesen der Familie</m4>
     <m5>Suche in den Bauteillisten</m5>
+    <m6>Unter den ausgewählten Suchtabellen befinden sich Tabellen, die in der aktuellen Familie verwendet werden! Sind Sie sicher, dass sie trotzdem gelöscht werden müssen?</m6>
   </mprCleaner>
   <mprSheetRenumber LocalName="Plannummerierung"
                     Description="Mit dem Plugin können Sie Pläne in einem Projekt umnummerieren"
@@ -2094,6 +2141,10 @@
     <h67>Verknüpfungsexemplar</h67>
     <h68>Verknüpfungstyp</h68>
     <h69>das Exemplar und den Verknüpfungstyp</h69>
+    <h70>Bei der Bearbeitung von Importbezeichnungen den Datensatz auf Folgendes anwenden</h70>
+    <h71>Importexemplar</h71>
+    <h72>Importtyp</h72>
+    <h73>Importexemplar und -typ</h73>
     <t1>Umbenennen der Konfiguration</t1>
     <t2>Konfiguration erstellen</t2>
     <t3>Konfiguration importieren</t3>
@@ -2354,8 +2405,29 @@
     <h14>Typen</h14>
     <h15>Sonstige Elemente</h15>
     <h16>Warnungen unterdrücken</h16>
+    <h17>Verknüpfte Dateien anzeigen</h17>
+    <h18>Verhalten bei doppelten Namen</h18>
+    <h19>Verhalten bei doppelten Namen für Typen</h19>
+    <h20>Datensatz</h20>
+    <h21>Verhalten bei doppelten Namen für Filter</h21>
+    <h22>Verhalten bei doppelten Namen für Ansichten</h22>
+    <h23>Legt das Verhalten bei doppelten Namen für zugehörige Elemente fest. Wenn Sie z.B. ein Wandexemplar kopieren, während das Zieldokument bereits über einen Wandtyp mit demselben Namen verfügt, bietet Revit an, den Typ des Zieldokuments zu verwenden oder eine Kopie des Typs mit Ergänzung des Namens um ein digitales Suffix zu erstellen.</h23>
+    <h24>Diese Option beeinflusst keine vom Plugin kopierten Elemente, sie muss jedoch in der von der Revit-API verwendeten Kopiermethode festgelegt werden. Die meisten Elemente werden mit einem ergänzenden digitalen Suffix kopiert, unabhängig von der ausgewählten Option.</h24>
+    <h25>Wenn Sie die Option "Ersetzen" gewählt haben, wird bei doppelten Typennamen folgende Strategie durch Plugin implementiert: der Typ mit dem gleichen Namen, wie bei dem zu kopierenden Typ, wird im Zieldokument umbenannt. Dann wird der neue Typ kopiert. Der neue Typ wird allen Elementenexemplaren zugewiesen, die mit dem alten Typ verknüpft waren. Der alte Typ wird gelöscht.</h25>
+    <h26>Wenn Sie die Option "Ersetzen" gewählt haben, wird bei doppelten Filternamen folgende Strategie durch Plugin implementiert: im Zieldokument werden alle Ansichten und Ansichtsvorlagen gefunden, auf die der Filter mit dem gleichen Namen wie bei dem zu kopierenden (alten) Filter angewandt wurde. Dann wird der neue Filter mit einem ergänzenden digitalen Suffix im Namen kopiert. Die Filter werden auf alle zuvor gefundenen Ansichten und Ansichtsvorlagen erneut angewandt, wobei der alte Filter durch den neuen ersetzt wird, jedoch mit Beibehaltung der vorhandenen Sichtbarkeitseinstellungen. Der alte Filter wird gelöscht. Der neue Filter erhält den Namen des alten Filters.</h26>
+    <h27>Wenn Sie die Option "Ersetzen" gewählt haben, wird bei doppelten Ansichtsnamen folgende Strategie durch Plugin implementiert: im Zieldokument werden alle Ansichtsfenster gefunden, die die alte Ansicht zeigen, bzw. alle Ansichten, die die alte Ansicht als eine Vorlage verwenden (wenn der zu kopierende Ansicht eine Vorlage ist). Dann wird die neue Ansicht mit einem ergänzenden digitalen Suffix im Namen kopiert. Die neue Ansicht wird als die angezeigte Ansicht für alle zuvor gefundenen Ansichtsfenster bzw. als Vorlage für alle zuvor gefundenen Ansichten festgelegt. Die alte Ansicht wird gelöscht. Die neue Ansicht erhält den Namen der alten Ansicht.</h27>
+    <h28>Als neuen Datensatz speichern</h28>
+    <h29>Aktuellen Datensatz behalten</h29>
+    <h30>Datensatz löschen</h30>
+    <h31>Geben Sie einen Namen für den neuen Datensatz ein</h31>
+    <h32>Die Änderung der Ansichtsfenster ist nur ab Revit 2023 möglich!</h32>
     <filters>Filter</filters>
     <link>Verknüpfung:</link>
+    <b1>Die Namen des Zieldokuments verwenden</b1>
+    <b2>Einfügen abbrechen</b2>
+    <b3>Standardmäßiges Verhalten</b3>
+    <b4>Ersetzen</b4>
+    <b5>Fragen</b5>
     <m1>{0} - FEHLER! Beim Abrufen eines Elements ist ein Fehler aufgetreten. Id: "{1}". Fehler: "{2}".</m1>
     <m2>{0} - Beginn des Vorgangs zu dem Zusammenbau von Modellelementen ({1}).</m2>
     <m3>{0} - Ende des Vorgangs zu dem Zusammenbau von Modellelementen ({1}).</m3>
@@ -2419,10 +2491,20 @@
     <m63>Allgemeine Parameter</m63>
     <m64>Keine Kategorie</m64>
     <m65>{0} - das Kopieren des Elements "{1} (id {2})" der Kategorie "{3}" fehlt.</m65>
-    <m66>Das Zieldokument enthält bereits die Familie "{0}" mit dem Typ "{1}".{2}Wollen Sie Kopiervorgang durchführen?</m66>
+    <m66>Das Zieldokument enthält bereits die Familie "{0}" mit dem Typ "{1}".{2}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m66>
     <m67>Globale Parameter</m67>
     <m68>Linienmuster</m68>
     <m69>Farbschemata</m69>
+    <m70>Projektparameter</m70>
+    <m71>Das Zieldokument enthält bereits den Filter "{0}".{1}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m71>
+    <m72>Das Zieldokument enthält bereits die Ansicht "{0}".{1}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m72>
+    <m73>Elemente kopiert:</m73>
+    <m74>Elemente übersprungen:</m74>
+    <m75>Anzahl Fehler:</m75>
+    <m76>Details im Arbeitstagebuch</m76>
+    <m77>Exporteinstellungen</m77>
+    <m78>Einstellungen für DWG/DXF-Export</m78>
+    <m79>Einstellungen für DGN-Export</m79>
   </mprCopyElementsToOpenDocuments>
   <mprMepElementsBender LocalName="Umgehen von Schnittpunkten"
                         Description="Umgehen von MEP-Elementen mit Schnittpunkten"
@@ -2492,7 +2574,8 @@
     <t2>Nach den Vorlagen</t2>
     <e1>Es ist nicht gelungen, einen Rohrverbinder (Kniestück) zu erstellen. Überprüfen Sie, ob die erforderlichen Familien im Projekt vorhanden sind und ob die Routing-Einstellungen für die zu verarbeitenden Elemente vorhanden sind</e1>
   </mprMepElementsBender>
-  <mprNotes LocalName="Notizen" Description="Das Plugin dient zur Verarbeitung von oft verwendeten Notizen">
+  <mprNotes LocalName="Notizen" 
+            Description="Das Plugin dient zur Verarbeitung von oft verwendeten Notizen">
     <h1>Einstellungen</h1>
     <h3>Doppelklick auf eine Notiz</h3>
     <h4>Für Standardnotizen:</h4>
@@ -2510,7 +2593,9 @@
   </mprNotes>
   <mprContextFilter LocalName="Kontextbezogener Filter"
                     Description="Filter, um Elemente nach Parametern zu filtern, der als Kontextmenü funktioniert"
-                    FullDescription="Der Filter kann auf drei Arten gestartet werden: durch Klicken mit der linken Maustaste bei gedrückter Strg-Taste, durch Drücken bestimmter Tasten der Reihe nach oder durch Drücken einer Tastenkombination. Der Filter verfügt über drei Verarbeitungsebenen: alle Elemente des Modells, Elemente in der aktuellen Ansicht oder ausgewählte Elemente. Es ist auch möglich, Voreinstellungen anzuwenden, um schnell auf den Filter zuzugreifen.">
+                    FullDescription="Der Filter kann auf drei Arten gestartet werden: durch Klicken mit der linken Maustaste bei gedrückter Strg-Taste, durch Drücken bestimmter Tasten der Reihe nach oder durch Drücken einer Tastenkombination. Der Filter verfügt über drei Verarbeitungsebenen: alle Elemente des Modells, Elemente in der aktuellen Ansicht oder ausgewählte Elemente. Es ist auch möglich, Voreinstellungen anzuwenden, um schnell auf den Filter zuzugreifen."
+                    LocalName1="Filter Fenstermodus" 
+                    Description1="Ein im Fenstermodus funktionierender Filter, der die Elemente nach Parameter filtert">
     <h1>Voreinstellungen</h1>
     <h3>Eine Voreinstellung auf die aktuelle Liste anwenden</h3>
     <h4>Suche nach Kategorien</h4>
@@ -2548,10 +2633,17 @@
     <h36>Klar</h36>
     <h37>Der allgemeine Parameter</h37>
     <h38>Parameter des Typs</h38>
+    <h39>Gleiche Parameter</h39>
+    <h40>Markieren Sie mehr als eine Kategorie, um die gleichen Parameter für die markierten Kategorien anzuzeigen</h40>
+    <h41>Ohne Werteingaben</h41>
+    <h42>Für die spätere Auswahl aller Parameterwerte nur Kategorien und Parameternamen in der Voreinstellung speichern</h42>
     <fo1>Alle Elemente</fo1>
     <fo2>Alle Elemente in der Ansicht</fo2>
     <fo3>Ausgewählte Elemente</fo3>
     <fo4>Alles entsprechend der gewählten</fo4>
+    <fo5>Gefunden in der Ansicht</fo5>
+    <fo6>Gefunden im Modell</fo6>
+    <fo7>Nach dem Filter in der Ansicht</fo7>
   </mprContextFilter>
   <mprCopyViewTemplateFilters LocalName="Filter von Ansichten"
                               Description="Verwalten von Filtern für Ansichten und Ansichtsvorlagen mit der Möglichkeit, Filter zwischen Ansichtsvorlagen und/oder Ansichten zu kopieren und dabei die Einstellungen für das Überschreiben von Grafiken beizubehalten">
@@ -2735,7 +2827,8 @@
                  Description3="Die ausgewählte Bewehrungsgruppe in einzelne Bewehrungsstäbe umwandeln"
                  LocalName4="Die Gruppe teilen"
                  Description4="Die Bewehrungsgruppe in zwei neue Bewehrungsgruppen teilen"
-                 LocalName5="Die Darstellung ändern" Description5="Gruppenänderung der Bewehrungsdarstellung">
+                 LocalName5="Die Darstellung ändern"
+                 Description5="Gruppenänderung der Bewehrungsdarstellung">
     <m1>Wählen Sie Basiselemente</m1>
     <m2>Wählen Sie ein ursprüngliches Basiselement aus</m2>
     <m3>Wählen Sie Ziel-Basiselemente aus</m3>
@@ -2826,7 +2919,10 @@
     <left>Links</left>
     <right>Rechts</right>
   </mprSectionAnnotation>
-  <mprApartmentBuildingLayout LocalName="Wohnungslayout" Description="Umfassende Realisierung von Wohnungslayout">
+  <mprApartmentBuildingLayout LocalName="Wohnungslayout" 
+                              Description="Umfassende Realisierung von Wohnungslayout"
+                              LocalName1="Autom. Berechnung"
+                              Description1="Dienst zur automatischen Neuberechnung der Wohnungsflächen bei Änderung der Raumgröße">
     <tab1>Parameter</tab1>
     <tab2>Quellen</tab2>
     <tab3>Ursprüngliche Überprüfung</tab3>
@@ -2917,7 +3013,7 @@
     <h10>Rundung der Fläche:</h10>
     <h11>Allgemeine</h11>
     <h12>Flächen der Wohnungen</h12>
-    <h13>Geben Sie an, ob bei der Berechnung der Gesamtfläche der Wohnung die gerundete oder die mit einem Faktor gerundete Grundfläche verwendet werden soll. Bei der Berechnung nach SP 54.13330 "Mehrfamilien-Wohngebäude" wählen Sie "Gerundete Fläche mit Faktor"</h13>
+    <h13>Geben Sie an, ob bei der Berechnung der Gesamtfläche der Wohnung die gerundete oder die mit einem Faktor gerundete Grundfläche verwendet werden soll</h13>
     <h14>Raummatrix</h14>
     <h15>Wohnungstypen</h15>
     <h16>Fehlende Parameter erstellen</h16>
@@ -3076,6 +3172,18 @@
     <h169>Wählen Sie eine Kurve für die Nummerierung der Wohnungen</h169>
     <h170>Parameter "Haus":</h170>
     <h171>Parameter "Block":</h171>
+    <h172>Ausgewählte Wohnungen blockieren</h172>
+    <h173>Zielparameter</h173>
+    <h174>Ausgewählte Räume zur ausgewählten Wohnung hinzufügen. Die Räume werden nur dann zu einer Wohnung hinzugefügt, wenn der Raum und die Wohnung auf der gleichen Ebene sind</h174>
+    <h175>Typenstockwerke</h175>
+    <h176>Die aktuelle Tabelle der Typenstockwerke:</h176>
+    <h177>Die Spalte "Stockwerk"</h177>
+    <h178>Die Spalte "Typenstockwerk"</h178>
+    <h179>Stockwerk</h179>
+    <h180>Typenstockwerk</h180>
+    <h181>Typenstockwerke berücksichtigen</h181>
+    <h182>Typenstockwerke bei der Zusammenstellung und Berechnung der Wohnungen berücksichtigen</h182>
+    <h183>Kopie der Typenwohnungsparameter</h183>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -3106,7 +3214,7 @@
     <msg28>Es wurde die Option der Erstellung eines Umrisses der Wohnung entsprechend den Umrissen der Räume genutzt</msg28>
     <msg29>Es ist nicht gelungen, ein Umriss der Wohnung zu erhalten. Fehler:</msg29>
     <msg30>Die Ansicht der Wohnung ist nicht erstellt</msg30>
-    <msg31>Die Länge des Namens darf nicht mehr als 31 Zeichen betragen</msg31>
+    <msg31>Die Länge des Namens darf nicht mehr als 28 Zeichen betragen</msg31>
     <msg32>Die folgenden Zeichen - \ / * ? : [ ] - sind für einen Namen inakzeptabel</msg32>
     <msg33>Die aktuelle Raummatrix wird endgültig gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg33>
     <msg34>Die aktuelle Tabelle der Wohnungstypen wird endgültig gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg34>
@@ -3116,6 +3224,15 @@
     <msg38>Beim Kombinieren von Wohnungen ist ein Fehler aufgetreten</msg38>
     <msg39>Für einen oder mehrere Räume der Wohnung ist der Parameter "Typ des Raums" nicht ausgefüllt</msg39>
     <msg40>Fehler beim Bestimmen eines Wertes im Parameter "{0}" des Raums {1} — der Parameter hat die Eigenschaft "Schreibgeschützt. Möglicherweise befindet sich der Raum in dem Verarbeitungsbereich, der Ihnen nicht zur Verarbeitung verfügbar ist</msg40>
+    <msg41>Der Parameter "{0}" wird im Raum {1} nicht gefunden. Wenn Sie eine Nummerierung durchführen, stellen Sie sicher, dass Sie den richtigen Parameter in der Eigenschaft "Zielparameter" auswählen</msg41>
+    <msg42>Die aktuelle Tabelle der Typenstockwerke wird dauerhaft gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg42>
+    <msg43>Wollen Sie die aktuellen Werte aus der Liste der Typenstockwerke löschen? Ja — löschen, Nein — ergänzen</msg43>
+    <msg44>Kein Stockwerk angegeben</msg44>
+    <msg45>Kein Typenstockwerk angegeben</msg45>
+    <msg46>Dieses Stockwerk ist bereits in einem anderen Eintrag als Typenstockwerk angegeben</msg46>
+    <msg47>Das als typisch angegebene Stockwerk ist in einem anderen Eintrag als nicht typisch angegeben</msg47>
+    <msg48>Dieses Stockwerk ist bereits in einem anderen Eintrag angegeben</msg48>
+    <msg49>Kein entsprechender Raum (kein senkrechter Schnittpunkt) im Typenstockwerk "{0}" gefunden</msg49>
     <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
     <tt2>Die Anweisung ausblenden</tt2>
     <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
@@ -3133,10 +3250,14 @@
     <tt15>Die ausgewählten Wohnungen blockieren. Räume von blockierten Wohnungen werden beim nachfolgenden Kombinieren von Wohnungen nicht verarbeitet</tt15>
     <tt16>Die ausgewählten Wohnungen freischalten</tt16>
     <tt17>Eine Kurve auswählen</tt17>
+    <tt18>Wohnung gesperrt</tt18>
+    <tt19>Stockwerk aus dem aktuellen Dokument hinzufügen</tt19>
+    <tt20>Alle fraglichen Räume auswählen und anzeigen</tt20>
     <instruction>Anweisung</instruction>
     <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
     <instruction2>In der Raummatrix werden die Grundeigenschaften für die Auswahl der zu verarbeitenden Räume, die Nummerierung der Räume in der Wohnung und die Werte für die Berechnung der Wohnungsflächen festgelegt. Die Werte aus der Matrix werden anhand der funktionalen Bestimmung (Spalte FB) und des Namens des Raums ausgewählt. In der Spalte "Name des Raums" können Sie ein Sternchen an das Ende des Namens setzen, um anzugeben, dass eine Übereinstimmung am Anfang des Namens des Raums geprüft wird (z. B. "Schlafzimmer*" entspricht den Namen der Räume "Schlafzimmer 1", "Schlafzimmer 2" usw.)</instruction2>
     <instruction2_1>In dieser Tabelle werden die Daten angegeben, die zur Bestimmung des Wohnungstyps verwendet werden. Die Werte "Enthält Räume" und "Enthält keine Räume" werden mit den Namen der Räume ausgefüllt, die durch ein Semikolon (;) getrennt sind</instruction2_1>
+    <instruction2_2>In der Liste wird das Mapping der Stockwerke und der Typenstockwerke festgelegt. Wenn für das Stockwerk ein Typenstockwerk festgelegt ist, werden bei der Zusammenstellung und Berechnung der Wohnungen alle Parameter für die im angegebenen Stockwerk liegenden Räume von den entsprechenden Räumen des Typenstockwerks übernommen. Der Raum eines Typenstockwerks wird mithilfe eines senkrechten Strahls definiert, der durch den Einfügepunkt des zu bearbeitenden Raums gezogen wird. Die Stockwerke können sowohl durch Ebenennamen als auch durch Ebenenmarkierungen festgelegt werden</instruction2_2>
     <instruction3>Die Überprüfung umfasst zwei Teile: eine Überprüfung auf nicht platzierte Räume und eine Überprüfung auf Ausfüllung der Parameter "Funktionale Bestimmung" und "Name". Wenn ein Raum eine "Funktionale Bedeutung" hat, die mit dem in den Einstellungen angegebenen Wert "Der Identifikator der Wohnungen" übereinstimmt, wird der Parameter "Name" mit der aktuellen Raummatrix überprüft</instruction3>
     <instruction4>Die Wohnungen werden durch die geometrischen Merkmale der Räume zusammengestellt, wobei die Verbindung der Räume durch Fenster, Türen und Raumteiler berücksichtigt wird. Allen Räumen in einer Wohnung wird derselbe Parameterwert "Wohnungs-ID" zugewiesen. Es wird empfohlen, eine zusätzliche visuelle Überprüfung durchzuführen, indem ein Farbschema über den Parameter "Wohnungs-ID" erstellt wird</instruction4>
     <instruction5>Berechnung der Wohnungsfläche umfasst die Berechnung der Wohnungsflächen, der Anzahl der Wohnräume und die Bestimmung des Wohnungstyps anhand der Quelle "Wohnungstypen". Alle ermittelten Werte werden den Parametern der Räume, aus denen die Wohnung besteht, zugeordnet. Alle Wohnungen werden durch den Wert "Wohnungs-ID" bestimmt, der im Schritt "Zusammenstellung der Wohnungen" festgelegt wurde</instruction5>
@@ -3173,9 +3294,10 @@
     <h23>Fehlende (Räume und Bereiche) erstellen</h23>
     <h24>Ohne Bereich</h24>
     <h25>MEP-Raum</h25>
+    <h26>Bearbeitung der Räume aus den verknüpften Dateien</h26>
   </mprRoomColorVolume>
   <mprJoin LocalName="Elementenverbindung"
-           Description="Ermöglicht das Verwalten der Anbindung von Wänden und Balken sowie der Verbindung von Elementen">
+           Description="Ermöglicht das Verwalten des Anschlusses von Wänden und Balken sowie der Verbindung und des Schneidens von Elementen">
     <e1>Die Auswahl enthält keine Elemente</e1>
     <e2>Keine Paaren zur Verbindung ausgewählt</e2>
     <t1>Anschluss von Elementen</t1>
@@ -3197,6 +3319,11 @@
     <h11>Zuschneiden aufheben</h11>
     <h12>Konfiguration duplizieren</h12>
     <h13>Regel duplizieren</h13>
+    <h14>Was schneiden</h14>
+    <h15>Woraus schneiden</h15>
+    <h16>Was verbinden</h16>
+    <h17>Womit verbinden</h17>
+    <h18>Kein Element wurde bearbeitet. Bitte die Parameter für das Filtern präzisieren</h18>
     <tp1>Neue Regel hinzufügen</tp1>
     <tp2>Filter löschen</tp2>
     <tp3>Konfiguration löschen</tp3>
@@ -3333,6 +3460,9 @@
     <h11>Biegeform</h11>
     <h12>Auswahl von Bewehrung</h12>
     <h13>Verarbeitung des Bewehrungsstabs:</h13>
+    <h14>Bewehrungsfugenverschränkung</h14>
+    <h15>Wählen Sie Bewehrung aus</h15>
+    <h16>Wählen Sie Basisbauteil aus</h16>
     <m1>Die Mittellinie eines Bewehrungsstabs ist keine Linie</m1>
     <m2>Fehlende Trennung von Bewehrungsstab gemäß den festgelegten Bedingungen</m2>
     <m3>Der Bewehrungsstab erfüllt nicht die Bedingungen für die Trennung</m3>
@@ -3352,9 +3482,17 @@
     <h8>Ergebnisse löschen</h8>
     <h9>Die Abfrage "{0}" hat nichts ergeben</h9>
     <h10>Suche nach den ausgewählten Elementen</h10>
+    <h11>Einstellungen für Parametersuche</h11>
+    <h12>Name, Systemname oder GUID des Parameters</h12>
+    <h13>Wenn Sie die Parameter-ID nicht angeben, wird die Suche in allen zur Bearbeitung verfügbaren Textparametern durchgeführt</h13>
+    <h14>Elementen-ID in die Zwischenablage kopieren</h14>
+    <h15>Element anzeigen</h15>
+    <h16>Parameter des Exemplars</h16>
+    <h17>Parameter des Typs</h17>
     <search>Alle suchen</search>
     <replace>Die markierten ersetzen</replace>
     <searchAndReplace>Alle suchen und ersetzen</searchAndReplace>
+    <copied>Kopiert</copied>
     <msg1>Fehler beim Versuch, die Ersetzung durchzuführen</msg1>
     <msg2>Ersetzte Exemplare</msg2>
     <ss1>Ansichtsname</ss1>
@@ -3371,6 +3509,15 @@
     <ss12>Modelltext in der aktuellen Ansicht</ss12>
     <ss13>Modelltext in dem Projekt</ss13>
     <ss14>Titel des Ansichtsfensters</ss14>
+    <ss15>Plannummer</ss15>
+    <ss16>Ansichtsname des Ansichtsfensters</ss16>
+    <ss17>Allgemeine Beschriftung in der aktuellen Ansicht</ss17>
+    <ss18>Allgemeine Beschriftung im Projekt</ss18>
+    <ss19>Exemplarparameter in der aktuellen Ansicht</ss19>
+    <ss20>Exemplarparameter im Projekt</ss20>
+    <ss21>Typenparameter in der aktuellen Ansicht</ss21>
+    <ss22>Typenparameter im Projekt</ss22>
+    <ss23>Materialname</ss23>
   </mprFindAndReplace>
   <mprCopyCropBox LocalName="Kopieren zugeschnittener Ansicht"
                   Description="Kopieren von Zuschneideumgrenzung der aktuellen Ansicht in angegebene Ansichten">
@@ -3380,7 +3527,8 @@
     <h5>Keine Ansichten gefunden, die zum Kopieren von Zuschneideumgrenzung anpassen</h5>
     <notOrganized>!Nicht organisiert</notOrganized>
   </mprCopyCropBox>
-  <mprWallSweep LocalName="Wändeabwicklung" Description="Erstellen von Wändeabwicklungen">
+  <mprWallSweep LocalName="Wändeabwicklung"
+                Description="Erstellen von Wändeabwicklungen">
     <v1>Unter der Oberkante der oberen Geschossdecke zuschneiden</v1>
     <v2>Unter der unteren Kante der unteren Geschossdecke zuschneiden</v2>
     <v3>Ansichten</v3>
@@ -3388,7 +3536,7 @@
     <v5>Ansichtsvorlage anwenden</v5>
     <v6>Anzahl von Kurvenaufteilungen</v6>
     <v8>Ansichtstiefe</v8>
-    <v9>Auswahl eines Plans zur Platzierung</v9>
+    <v9>Auf den Plan platzieren</v9>
     <v10>Versatz nach innen</v10>
     <v11>Suffix/Präfix festlegen</v11>
     <v12>Suffix</v12>
@@ -3399,6 +3547,7 @@
     <v17>Versatz nach oben</v17>
     <v18>Versatz nach unten</v18>
     <v19>In der aktuellen Ansicht in dem vorliegenden Dokument</v19>
+    <v20>Plan erstellen</v20>
     <t2>Wand</t2>
     <t3>Raum</t3>
     <t5>Name des UV-Koordinaten-Systems:</t5>
@@ -3407,6 +3556,7 @@
     <t8>Erstellen nach:</t8>
     <t9>Bemaßungen</t9>
     <t10>Anderes</t10>
+    <t11>Umgekehrte Reihenfolge</t11>
     <t1>Ausgewählter Typ des Elements: </t1>
     <t4>Kein Element ist ausgewählt</t4>
     <e1>Abwahl</e1>
@@ -3485,6 +3635,11 @@
     <t10>Den Parameterwert kopieren (aus dem Raum in die Geschossdecke):</t10>
     <t11>Aus</t11>
     <t12>in</t12>
+    <t13>Beim Hineinführen der Böden in Türöffnungen über die gesamte Wandstärke gilt als Hauptraum:</t13>
+    <t14>Bei Ausgangstür</t14>
+    <t15>Bei Eingangstür</t15>
+    <t16>Der Boden des Hauptraumes wird mit dem Hineinführen in die Türöffnung erstellt. Für einen Raum, der nicht als Hauptraum festgelegt ist, wird entsprechend kein Hineinführen in die Türöffnung erstellt. Diese Option ist funktionsfähig nur für die Familien in der Kategorie "Türen", bei denen die internen Eigenschaften FromRoom und ToRoom ausgefüllt sind. Bestimmend für die Bewegungsrichtung in der Türöffnung ist die Richtung der Außenseite der Familie</t16>
+    <t17>Die Formgeometrie der Tür mit einer Volumenkörperform aus dem Bodenumriss schneiden</t17>
     <l1>Die Kontur der Geschossdecke in Türöffnungen nicht hineinführen</l1>
     <l2>Die Kontur bis zur Mitte der Wand verlaufen</l2>
     <l3>Die Kontur auf die gesamte Wandstärke verlaufen</l3>
@@ -3557,6 +3712,19 @@
     <t55>Ein Feld aus der Liste der Favoritenfelder entfernen</t55>
     <t56>Die Liste der Felder enthält bereits ein Feld mit diesem Schlüssel</t56>
     <t57>Ein Feld duplizieren</t57>
+    <t58>Mapping von Funktionsnamen</t58>
+    <t59>In diesem Fenster können Sie Ihre eigene Namen für die im Formeleditor verwendeten Funktionen festlegen. Die Funktionsnamen dürfen keine Leerzeichen oder Steuerzeichen (Klammern, Kommas, Punkte usw.) enthalten. Klein- bzw. Großschreibung ist ohne Belang</t59>
+    <t60>Suchen und Ersetzen</t60>
+    <t61>Feld erstellen</t61>
+    <t62>Geben Sie einen eindeutigen Schlüssel für das neue Feld ein</t62>
+    <t63>Abbinden</t63>
+    <t64>Die evtl. Verknüpfung des Zielparameters mit dem globalen Projektparameter löschen</t64>
+    <t65>Alle Strategien löschen</t65>
+    <t66>Ausgewählte Regeln in die Zwischenablage kopieren</t66>
+    <t67>Regeln aus der Zwischenablage einfügen</t67>
+    <t68>Feldwert in allen Regeln aktualisieren</t68>
+    <t69>Formel anzeigen</t69>
+    <t70>Formel ausblenden</t70>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -3577,6 +3745,10 @@
     <msg18>In der limitierten Version des Plugins können maximal drei Strategien erstellt werden</msg18>
     <msg19>In der limitierten Version des Plugins können maximal drei Regeln erstellt werden</msg19>
     <msg20>Die Liste der Favoritenfelder enthält bereits ein Feld mit diesem Schlüssel</msg20>
+    <msg21>Sind Sie sicher, dass Sie alle Strategien in der aktuellen Konfiguration dauerhaft löschen wollen?</msg21>
+    <msg22>Der Wert für dieses Feld wird in allen Regeln aller Konfigurationen bei der Übereinstimmung der Feldschlüssel aktualisiert.\nWollen Sie fortsetzen?</msg22>
+    <msg23>Das Feld "{0}" wurde aktualisiert: die Konfiguration "{1}" – Strategie "{2}" – Regel "{3}"</msg23>
+    <msg24>Das Feld "{0}" wurde in keiner Regel gefunden!</msg24>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -3620,10 +3792,18 @@
     <err43>Die Typeneigenschaft mit dem Namen "{0}" wurde in der Liste der gültigen Typeigenschaften des verarbeiteten Elements nicht gefunden</err43>
     <err44>Die Typeneigenschaft mit dem Namen "{0}" existiert schon</err44>
     <err45>Der Identifikator (ID) des Elements kann nicht als Zielparameter verwendet werden</err45>
-    <err46>Das zweite Argument muss eine positive Ganzzahl größer als Null sein</err46>
+    <err46>Das zweite Argument muss eine ganze Zahl größer als Null sein</err46>
+    <!-- todo remove -->
+    <err47>Второй аргумент должен быть положительным целым числом</err47>
     <err48>Das dritte Argument muss eine positive Ganzzahl größer als Null sein</err48>
     <err49>Die Funktion muss zwei Argumente enthalten</err49>
     <err50>Die Funktion muss zwei oder drei Argumente enthalten</err50>
+    <err51>Das Feld mit dem Schlüssel "{0}" ist bereits in der Feldliste der aktuellen Formel vorhanden</err51>
+    <err52>Der Parameter "{0}" verweist nicht auf ein anderes Modellelement</err52>
+    <err53>Der Zielparameter darf kein Zeichen "|" enthalten</err53>
+    <err54>Die Anweisung darf keine Klammern enthalten, wenn sie keine Funktionsgrenzen sind. Um einer Anweisung Klammern hinzuzufügen, müssen diese mit Escapezeichen "\)" und "\(" versehen werden</err54>
+    <err55>Die Funktion muss als Argument einen Verweis auf einen Parameter (@[] oder $[]) enthalten</err55>
+    <err56>Die Liste enthält Felder mit dem gleichen Schlüssel!</err56>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -3657,6 +3837,14 @@
     <sld12>Die Strategie verarbeitet Elemente, die in den Verbindungen von Tragwerken platziert sind (Platten, Schrauben, etc.). Das Filtern von untergeordneten Elementen nach Parametern sowie die Liste der Parameter von untergeordneten Elementen im Formel-Editor sind nicht vorgesehen. Numerische Parameter werden ohne Konvertierung in interne Einheiten eingestellt</sld12>
     <ssd13>Verarbeitung von Unterfamilien</ssd13>
     <sld13>Die Strategie verarbeitet Familien, die in die Hauptfamilie untergeordnet sind</sld13>
+    <ssd14>Bearbeitung von Rohr- und Luftkanalisolierungen</ssd14>
+    <sld14>Die Strategie bearbeitet Rohr- bzw. Luftkanalisolationselemente. Für die Isolierung ist es zulässig keinen Parameterfilter zu verwenden</sld14>
+    <ssd15>Bearbeitung der Bewehrung im Bewehrungssystem</ssd15>
+    <sld15>Die Strategie bearbeitet Bewehrungsstäbe innerhalb der Bewehrungssysteme, und zwar der Flächenbewehrung und der linearen Bewehrung</sld15>
+    <ssd16>Bearbeitung der Materialien</ssd16>
+    <sld16>Die Strategie bearbeitet alle Materialien im aktuellen Dokument, unabhängig von der ausgewählten Elementen</sld16>
+    <ssd17>Bearbeitung der Elemente von MEP-Systemen</ssd17>
+    <sld17>Die Strategie bearbeitet die Elemente, aus denen ein MEP-System (elektrisches System, Rohrleitungs- bzw. Luftkanalsystem) besteht. Als Ausgangselement gilt konventionell das übergeordnete System des Elements</sld17>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -3675,6 +3863,12 @@
     <sp8>Parameter der Verbindung von Tragwerken einfügen</sp8>
     <se9>Hauptfamilie</se9>
     <sp9>Parameter der Hauptfamilie einfügen</sp9>
+    <se10>Rohr bzw. Luftkanal</se10>
+    <sp10>Rohr- oder Luftkanalparameter einfügen</sp10>
+    <se11>System</se11>
+    <sp11>Parameter des übergeordneten Bewehrungssystems einfügen</sp11>
+    <se12>MEP-System</se12>
+    <sp12>Parameter des übergeordneten MEP-Systems einfügen</sp12>
     <te1>Zielelement</te1>
     <tp1>Parameter des Zielelementes einfügen</tp1>
     <te2>Exemplar der Familie</te2>
@@ -3685,6 +3879,12 @@
     <tp4>Parameter des untergeordnetes Zielelementes einfügen</tp4>
     <te5>Unterfamilie</te5>
     <tp5>Parameter der Unterfamilie einfügen</tp5>
+    <te6>Isolierung</te6>
+    <tp6>Isolationsparameter einfügen</tp6>
+    <te7>Bewehrung</te7>
+    <tp7>Zielbewehrungsparameter einfügen</tp7>
+    <te8>Material</te8>
+    <tp8>Materialparameter einfügen</tp8>
     <d-min>Gibt die kleinere der beiden Zahlen zurück</d-min>
     <d-max>Gibt die größere der beiden Zahlen zurück</d-max>
     <d-abs>Gibt den absoluten Wert der Zahl zurück</d-abs>
@@ -3715,12 +3915,17 @@
     <d-sstr>Gibt die Teilzeichenkette zurück</d-sstr>
     <d-tmirrored>Gibt TRUE zurück, wenn die Zielfamilie gespiegelt ist</d-tmirrored>
     <d-smirrored>Gibt TRUE zurück, wenn die bedingte Quellfamilie gespiegelt ist</d-smirrored>
+    <d-strlen>Gibt die Länge einer Zeichenfolge zurück</d-strlen>
+    <d-strindex>Sucht eine Textzeichenfolge in einer anderen und gibt die Startposition der ersten Textzeichenfolge ab dem ersten Zeichen der zweiten Textzeichenfolge zurück</d-strindex>
+    <d-valuestr>Gibt den Parameterwert als Zeichenfolge mit Maßeinheiten zurück</d-valuestr>
+    <d-eindex>Gibt den Index der erfolgreicher Verwendung der aktuellen Formelanweisung zurück</d-eindex>
   </mprParametrization>
   <mprMEPConnect LocalName="MEP-Verbindungen"
                  Description="Sammlung von Plugins zur Automatisierung der Verbindung von Gebäudetechnik"
-                 LocalName1="Diffusoren anschließen" Description1="Gruppenanschluss von Diffusoren an Luftkanäle"
-                 LocalName2="Anschlussstücke verbinden "
-                 Description2="Verbinden von zwei Formstücken (oder MEP-Kurven) mit Drehen und Verschieben des ersten ausgewählten Formstücks"
+                 LocalName1="Diffusoren anschließen"
+                 Description1="Gruppenanschluss von Diffusoren an Luftkanäle"
+                 LocalName2="Anschlüsse verbinden"
+                 Description2="Verbinden zweier Anschlüsse (oder MEP-Kurven) durch Drehen und Verschieben des ersten ausgewählten Anschlusses"
                  LocalName3="Gerade Teile verbinden"
                  Description3="Gruppenverbindung von geraden Rohren, Luftkanälen, Kabel, Kabeltrassen oder -kanälen, die auf derselben geraden Linie liegen">
     <msg1>Wählen Sie die Luftkanäle und die daran anzuschließenden Diffusoren aus</msg1>
@@ -3747,7 +3952,8 @@
     <err8>Ansatz konnte nicht erstellt werden</err8>
     <err9>Das ausgewählte Element hat keine freien Anschlüsse</err9>
   </mprMEPConnect>
-  <mprBaseLevel LocalName="Grundebene" Description="Ändern der Grundebene für Elemente">
+  <mprBaseLevel LocalName="Grundebene"
+                Description="Ändern der Grundebene für Elemente">
     <t1>Es ist nicht möglich, eine alte Ebene für die Versatzerkennung zu bestimmen</t1>
     <t2>Die neue Ebene "{0}" für Elemente kann nicht gefunden werden</t2>
     <t3>Bei Elementen war es nicht möglich, eine Strategie für die Zuweisung von Ebenen zu bestimmen</t3>
@@ -3857,6 +4063,105 @@
     <h61>Nach dem Plankopf</h61>
     <h62>Das Druckformat wird nach dem gesamten Inhalt des Plans festgelegt. Nachdem der Plan im PDF-Format gedruckt wurde, wird er auf die Maße des Plankopfs zugeschnitten. Dieser Algorithmus kann dazu führen, dass alle Blätter neu generiert werden, was dazu führen kann, dass das Plugin eine lange Zeit zum Laden benötigt</h62>
     <h63>Das Druckformat wird durch die Größe der Planköpfe auf den Plänen bestimmt. Wenn es auf dem Plan Elemente gibt, die über den Rand des Plankopfes hinausgehen, wird der Plan in dem PDF-Format nicht korrekt gedruckt. Dieser Algorithmus führt nicht dazu, dass die Pläne neu generiert werden</h63>
+    <h64>Grundlegende</h64>
+    <h65>Pläne in einer DWF-Datei kombinieren</h65>
+    <h66>Bei Fehler abbrechen</h66>
+    <h67>Wenn die Option deaktiviert ist, wird der Export fortgesetzt, bis alle Pläne bearbeitet sind</h67>
+    <h68>Exportieren von Objektdaten:</h68>
+    <h69>Elementeigenschaften</h69>
+    <h70>Räume, MEP-Räume und Zonen in einem separaten Grenzenlayer</h70>
+    <h71>Texturparameter für Materialdarstellungen</h71>
+    <h72>Grafikdarstellungsparameter:</h72>
+    <h73>Standardformat verwenden</h73>
+    <h74>Komprimiertes Rasterformat verwenden</h74>
+    <h75>Bildqualität:</h75>
+    <h76>Einstellungen für den DWF/DWFx-Export</h76>
+    <h77>Pläne lesen</h77>
+    <h78>Beim Starten</h78>
+    <h79>Die Pläne mit gespeicherten Einstellungen beim Starten des Plugins lesen</h79>
+    <h80>Geben Sie einen Namen für die neue Konfiguration ein</h80>
+    <h81>Geben Sie einen neuen Konfigurationsnamen ein</h81>
+    <h82>Kopie</h82>
+    <h83>Sind Sie sicher, dass Sie das Konfiguration "{0}" löschen wollen?</h83>
+    <h84>In DWF exportieren</h84>
+    <h85>In DWFx exportieren</h85>
+    <h86>Unterverzeichnis nach Datum erstellen</h86>
+    <h87>Beispiel für einen vollständigen Speicherverzeichnispfad:</h87>
+    <h88>Entwurf</h88>
+    <h89>АР</h89>
+    <h90>Es ist nicht möglich, ein Speicherverzeichnis zu erstellen, weil der angegebene Pfad falsch ist!</h90>
+    <h91>Bitte die zu bearbeitenden Dokumente (wenn vorhanden) markieren, den Algorithmus zur Formatbestimmung auswählen und die Taste "Pläne lesen" drücken</h91>
+    <h92>Die ausgewählten Optionen als Datensatz zum Ausdrucken speichern</h92>
+    <h93>Dis markierten Optionen als Datensatz zum Ausdrucken speichern</h93>
+    <h94>Geben Sie einen Namen für den Datensatz zum Ausdrucken ein</h94>
+    <h95>Datensatz zum Ausdrucken erstellen</h95>
+    <h96>Der eingegebene Name für den Datensatz zum Ausdrucken wird bereits verwendet</h96>
+    <h98>Die Dateinamenmaske enthält keine Planparameter, was dazu führen kann, dass derselbe Dateiname für alle exportierten Pläne generiert wird. Stellen Sie beim Erstellen einer Dateinamenmaske sicher, dass die Dateinamen eindeutig sind</h98>
+    <h99>Projektparameter:</h99>
+    <h100>Variable:</h100>
+    <h101>Sie können der Maske eine beliebige Systemvariable hinzufügen, indem Sie sie in die %-Symbole einschließen. Z.B. %OS%</h101>
+    <h102>Dateinamenmaske</h102>
+    <h103>Namen für kombinierte Datei bilden</h103>
+    <h104>Bei Aktivierung der Option "Anzahl der Zeichen begrenzen" kann es zu gleichen Dateinamen kommen, wenn der Anfangsteil in den Namen verschiedener Pläne den gleichen Wert innerhalb der Längengrenzen aufweist. In diesem Fall ist das Exportergebnis eine Datei mit dem Inhalt des zuletzt bearbeiteten Plans. Stellen Sie bei der Aktivierung der Option "Anzahl der Zeichen begrenzen" sicher, dass die eindeutigen Dateinamen gebildet werden</h104>
+    <h105>Benutzerdefinierte Formate</h105>
+    <h106>Benennung</h106>
+    <h107>Stellen Sie beim Erstellen eines benutzerdefinierten Formats sicher, dass die eingegebene Seitengröße mit dem ausgewählten PDF-Drucker kompatibel ist</h107>
+    <h108>Neue Konfiguration erstellen</h108>
+    <h109>Aktuelle Konfiguration umbenennen</h109>
+    <h110>Aktuelle Konfiguration duplizieren</h110>
+    <h111>Aktuelle Konfiguration löschen</h111>
+    <h112>Neuen benutzerdefinierten Format hinzufügen</h112>
+    <h113>Ausgewählte benutzerdefinierte Formate löschen</h113>
+    <h114>Neue Konfiguration aus xml-Datei importieren</h114>
+    <h115>Aktuelle Konfiguration in xml-Datei exportieren</h115>
+    <h116>Benutzerdefinierte Formate aus xml-Datei importieren</h116>
+    <h117>Benutzerdefinierte Formate in xml-Datei exportieren</h117>
+    <h118>Planansichten und Links als externe Verknüpfungen exportieren</h118>
+    <h119>Export-Dateiformat:</h119>
+    <h120>Export abgeschlossen</h120>
+    <h121>Ausgewählte Aktion fortan anwenden</h121>
+    <h122>Inkorrekter Gruppenname</h122>
+    <h123>Allgemeine Exporteinstellungen</h123>
+    <h124>Bearbeitung des temporären Modus (Ausblenden/Isolieren oder Anzeigen ausgeblendeter Elemente) von Ansichten</h124>
+    <h125>Verknüpfungen blau anzeigen (nur Farbdruck)</h125>
+    <h126>Referenz-/Arbeitsebenen ausblenden</h126>
+    <h127>Die in der Ansicht verfügbaren Marken drucken</h127>
+    <h128>Bereichskanten maskieren zusammenfallende Linien</h128>
+    <h129>Bildausschnitte ausblenden</h129>
+    <h130>Zuschneidegrenzen ausblenden</h130>
+    <h131>Halbton durch dünne Linien ersetzen</h131>
+    <h132>Druckereinrichtung</h132>
+    <h133>Kombinierte PDF</h133>
+    <h134>Nach Inhalt</h134>
+    <h135>Druckformat dieses Plans nach dem gesamten Inhalt des Revit-Plans definieren. Diese Funktion sollte verwendet werden, wenn der Plan Elemente enthält, die über den Rahmen des Plankopfs hinausragen. Bewirkt eine Planregeneration</h135>
+    <h136>Aktuellen exportieren</h136>
+    <h137>Die markierten Exportformate werden beim Export des aktuellen Plans vom aktuellen Dokument in PDF ignoriert</h137>
+    <h138>Den Index des zusammengesetzten Plans (d.h. ein Plan mit mehreren Planköpfen) zum Dateinamen nicht hinzufügen, wenn nur ein einzelner zusammengesetzter Plan exportiert wird</h138>
+    <h139>Wollen Sie erneut versuchen eine kombinierte PDF-Datei zu erstellen?</h139>
+    <tvm1>Modus deaktivieren</tvm1>
+    <tvm2>Modus aktiviert lassen</tvm2>
+    <tvm3>Fragen</tvm3>
+    <iq1>Niedrig</iq1>
+    <iq2>Mäßig</iq2>
+    <iq3>Hoch</iq3>
+    <dt1>Datum (TT-MM-JJJJ) und Zeit</dt1>
+    <dt2>Datum (TT-MM-JJJJ)</dt2>
+    <dt3>Zeit</dt3>
+    <dt4>Datum (JJJJ-MM-TT) und Zeit</dt4>
+    <dt5>Datum (JJJJ-MM-TT)</dt5>
+    <sv0>%UserName% – Benutzername</sv0>
+    <sv1>%yyyy% – Jahr als vierstellige Zahl</sv1>
+    <sv2>%MM% – Monat von 01 bis 12</sv2>
+    <sv3>%dd% – Tag von 01 bis 31</sv3>
+    <sv4>%HH% – Stunde im 24-Stunden-Format von 00 bis 23</sv4>
+    <sv5>%mm% – Minuten von 00 bis 59</sv5>
+    <sv6>%ss% – Sekunden von 00 bis 59</sv6>
+    <sv7>%ParentGroup% – Übergeordnete Plangruppe</sv7>
+    <sv8>%DocName% – Dokumentname</sv8>
+    <ff0>Format AutoCAD 2007</ff0>
+    <ff1>Format AutoCAD 2010</ff1>
+    <ff2>Format AutoCAD 2013</ff2>
+    <ff3>Format AutoCAD 2018</ff3>
     <err1>Exporteinstellungen für den DWG/DXF-Export sind nicht festgelegt</err1>
     <err2>Dienstprogramm zur Druckerkonfiguration von Bullzip nicht gefunden</err2>
     <err3>Druckereinstellungen {0} sind im Register nicht gefunden</err3>
@@ -3878,5 +4183,140 @@
     <err19>Keine Berechtigung zum Löschen von Datei</err19>
     <err20>Format des Verzeichnisses nicht bestimmt</err20>
     <err21>Fehler bei der Initialisierung des Druckers</err21>
+    <err22>Verknüpfte Dateien werden nur in den gespeicherten Projekten bearbeitet! Speichern Sie bitte das Projekt "{0}" und wiederholen Sie bitte den Versuch Pläne der verknüpften Dateien zu lesen</err22>
+    <err23>In der Formatliste ist bereits ein Format mit diesem Namen vorhanden</err23>
+    <err24>In der Formatliste ist bereits ein Format mit dieser Größe vorhanden</err24>
+    <err25>Das Format hat keinen Namen und wird beim Hinzufügen zum Drucker nicht bearbeitet</err25>
   </mprSheetExport>
+  <mprHeightSplitter LocalName="In die Höhe teilen" 
+                     Description="Teilen von Wänden und Stützen nach Ebenen, Referenzflächen oder vorgegebenen Parametern">
+    <h1>Teilungsverfahren</h1>
+    <h2>Versetzen von oben (abwärts), mm</h2>
+    <h3>Versetzen von unten (aufwärts), mm</h3>
+    <h4>Wände teilen</h4>
+    <h5>Stützen teilen</h5>
+    <h6>Teilen</h6>
+    <h7>Referenzflächen ausgewählt</h7>
+    <h8>Obere Abhängigkeit für Wände</h8>
+    <h9>Versatz des Restes</h9>
+    <h10>Wählen Sie Wände aus</h10>
+    <h11>Wählen Sie Stützen aus</h11>
+    <h12>Wählen Sie Wände und Stützen aus</h12>
+    <h13>Wählen Sie Referenzfläche aus</h13>
+    <err1>Teilen der Wand nach der Ebene fehlgeschlagen</err1>
+    <err2>Teilen der Wand nach der Referenzfläche fehlgeschlagen</err2>
+    <err3>Teilen der Wand fehlgeschlagen</err3>
+    <err4>Teilen der Stütze nach der Ebene fehlgeschlagen</err4>
+    <err5>Teilen der Stütze nach der Referenzfläche fehlgeschlagen</err5>
+    <err6>Teilen der Stütze fehlgeschlagen</err6>
+    <err7>Versatzvorgabe unmöglich</err7>
+    <err8>Versatzvorgabe von unten unmöglich, weil die Stütze den unteren Anschluss hat</err8>
+    <err9>Versatzvorgabe von oben unmöglich, weil die Stütze den oberen Anschluss hat</err9>
+    <f1>In der limitierten Version des Plugins können maximal 3 Ebenen ausgewählt werden</f1>
+    <f2>In der limitierten Version des Plugins ist nur das Teilen nach den Ebenen verfügbar</f2>
+    <sm1>Nach den Ebenen</sm1>
+    <sm2>Nach den Referenzflächen</sm2>
+    <sm3>Max. Höhe</sm3>
+    <sm4>Exakte Höhe</sm4>
+    <sm5>Anzahl der Ebenen</sm5>
+    <tc1>Nächste Ebene</tc1>
+    <tc2>Nächste Ebene von oben</tc2>
+    <tc3>Nicht verknüpfte Höhe</tc3>
+    <ro1>Nach oben</ro1>
+    <ro2>Zur Mitte</ro2>
+    <ro3>Nach unten</ro3>
+  </mprHeightSplitter>
+  <mprExportToExcel LocalName="Export in Excel"
+                    Description="Export der Bauteillisten in Excel">
+    <t1>Bauteillisten</t1>
+    <t2>Ausgewählt:</t2>
+    <t3>Optionen für Export</t3>
+    <t4>Exportverzeichnis:</t4>
+    <t5>Text in Zahlen umwandeln (empfohlen)</t5>
+    <t6>Komma als Trennzeichen verwenden</t6>
+    <t7>Jede einzelne Bauteilliste in eine separate Datei</t7>
+    <t8>Präfix des Dateinamens:</t8>
+    <t9>Export abbrechen</t9>
+    <t10>Im Exportverzeichnis sind bereits Dateien mit denselben Namen wie bei den exportierten Bauteillisten enthalten. Wählen Sie einen Vorgang:</t10>
+    <t11>Export abbrechen?</t11>
+    <t12>Bitte Exportverzeichnis auswählen</t12>
+    <t13>Export von Bauteillisten in Excel</t13>
+    <t14>Exprotverzeichnis öffnen?</t14>
+    <t15>Alle sichtbare auswählen</t15>
+    <t16>Alle sichtbare abwählen</t16>
+    <t17>Dateiname:</t17>
+    <err1>Fehler beim Bilden des Dateinamens</err1>
+    <err2>Löschen der Datei {0} unmöglich</err2>
+    <err3>Zugriffsfehler auf die Datei {0}</err3>
+  </mprExportToExcel>
+  <mprStructureToParameter LocalName="Struktur in Parameter übernehmen" 
+                           Description="Die Struktur des mehrschaligen Typs wird in den mehrzeiligen Parameter übernommen">
+    <t1>Suche nach Typ- oder Materialnnamen:</t1>
+    <t2>Nur Type mit erforderlichen Parametern anzeigen</t2>
+    <t3>Nur verwendete Type anzeigen</t3>
+    <t4>Die Type gelten als verwendete, wenn sie mindestens in einem Elementenexemplar des Models verwendet werden</t4>
+    <t5>Anzahl der Exemplare im Model mit diesem Typ</t5>
+    <t6>Struktur</t6>
+    <t7>Schichtdicke</t7>
+    <t8>Häufigkeit, mit der das Material in anderen (in das Plugin geladenen) Typen verwendet wurde, einschließlich den aktuellen Typ</t8>
+    <t9>Diese Schicht hat eine variable Dicke</t9>
+    <t10>Var. Dicke</t10>
+    <t11>Aktuelles Ergebnis</t11>
+    <t12>Neues Ergebnis</t12>
+    <t13>Aktualisieren</t13>
+    <t14>Anzahl Type:</t14>
+    <t15>Anzahl der in das Plugin geladenen Type</t15>
+    <t16>Angezeigt:</t16>
+    <t17>Anzahl der in der Tabelle angezeigten Type unter Berücksichtigung aller Filter</t17>
+    <t18>Anzahl Vorlagen:</t18>
+    <t19>Anzahl der angezeigten Type mit ausgefülltem Parameter "Vorlage"</t19>
+    <t20>Anzahl Geänderte:</t20>
+    <t21>Anzahl der angezeigten Typen, bei denen der Wert des neuen Ergebnisses vom Wert des aktuellen Ergebnisses abweicht</t21>
+    <t22>Wird aktualisiert:</t22>
+    <t23>Anzahl der angezeigten Typen, deren Parameterwerte aktualisiert werden</t23>
+    <t24>Ausgewählt:</t24>
+    <t25>Anzahl der angezeigten Typen, die in der Tabelle ausgewählt sind</t25>
+    <t26>Ergebnis:</t26>
+    <t27>Variable Dicke:</t27>
+    <t28>Strukturplatzhalter</t28>
+    <t29>Nummerierung</t29>
+    <t30>Format Nummer:</t30>
+    <t31>Format Zeichenfolge</t31>
+    <t32>{0} – Materialname. {1} – Schichtdicke. {2} – variable Dicke</t32>
+    <t33>Standartschicht:</t33>
+    <t34>Schicht mit Null-Dicke:</t34>
+    <t35>Schicht mit variabler Dicke:</t35>
+    <t36>Erforderlicher Parameter mit dem Datentyp "Mehrzeiliger Text". In diesem Parameter wird die Vorlage zur Generierung des Ergebnisses angegeben. Um eine Liste der Strukturschichten in der Vorlage anzuzeigen, müssen Sie den Strukturplatzhalter angeben</t36>
+    <t37>Erforderlicher Parameter mit dem Datentyp "Mehrzeiliger Text". In diesen Parameter wird eine nummerierte Liste von Strukturschichten unter Berücksichtigung der angegebenen Zeichenfolgenformate und Nummerierungseinstellungen geschrieben</t37>
+    <t38>Optionaler Parameter mit dem Datentyp "Text". In diesem Parameter wird ein benutzerdefinierter Wert der variablen Dicke angegeben, der im Zeichenfolgenformat für eine Schicht mit variabler Dicke verwendet werden kann</t38>
+    <t39>Ein in der Vorlage definierter Platzhalter, der im Ergebnis durch eine formatierte Liste von Strukturschichten ersetzt wird</t39>
+    <t40>Nach Kategorie</t40>
+    <t41>Parameter fehlt</t41>
+    <t42>Materialnamen vom Materialparemeter übernehmen:</t42>
+    <s1>Keine Änderungen. Die Parameter des Typs werden nicht aktualisiert</s1>
+    <s2>Die erforderlichen Parameter "Vorlage" und "Ergebnis" fehlen</s2>
+    <s3>Der neue Ergebniswert unterscheidet sich vom aktuellen Ergebniswert. Die Parameter des Typs werden nicht aktualisiert, weil das Kontrollkästchen "Aktualisieren" nicht aktiviert ist</s3>
+    <s4>Der neue Ergebniswert unterscheidet sich vom aktuellen Ergebniswert. Die Parameter des Typs werden aktualisiert</s4>
+  </mprStructureToParameter>
+  <mprSumParameters LocalName="Summe der Parameter"
+                    Description="Summieren der Werte der numerischen Parameter für die ausgewählte Elemente">
+    <t1>Erhalten</t1>
+    <t2>Das Ergebnis runden auf</t2>
+    <t3>Nachkommastellen</t3>
+    <t4>Name des Parameters</t4>
+    <t5>Maßeinheit</t5>
+  </mprSumParameters>
+  <mprViewColorOn3D LocalName="Ansichten in 3D anzeigen"
+                    Description="Der Sichtbarkeitsbereich von Ansichten wird mit DirectShape farbig in 3D angezeigt"
+                    FullDescription="Das Plugin ermöglicht das Erstellen von Sichtbarkeitsbereiche der Ansichten in Farbe DirectShape in 3D-Ansichten auf der Basis der Zuschneidegrenze der Ansicht mit der Tiefe des Hauptsekantenbereichs von Draufsichten oder der Zuschneidetiefe von Schnittansichten, Ansichten und Detailansichten. Im Plugin-Fenster gibt es eine Möglichkeit, zu Ansichten zu wechseln">
+    <t1>Zur 3D-Ansicht wechseln</t1>
+    <t2>In der freien Version ist nur die Bearbeitung von Schnittansichten verfügbar</t2>
+    <t3>Sichtbarkeitsbereich der Ansicht anzeigen</t3>
+    <t4>Ansicht öffnen</t4>
+    <t5>3D-Trimmgrenzen nach Sichtbarkeitsbereich festlegen</t5>
+    <tr1>Sichtbarkeitsbereich für Ansicht erstellen</tr1>
+    <tr2>Sichtbarkeitsbereich der Ansicht löschen</tr2>
+    <tr3>Alle Sichtbarkeitsbereiche löschen</tr3>
+    <tr4>Einstellung der 3D-Trimmgrenze nach Sichtbarkeitsbereich</tr4>
+  </mprViewColorOn3D>
 </ModPlus>

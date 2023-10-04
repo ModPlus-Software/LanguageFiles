@@ -340,7 +340,8 @@
     <msg11>Einfügepunkt:</msg11>
     <msg12>Ein leerer Planname ist nicht erlaubt!</msg12>
   </mpFormats>
-  <mpNotes LocalName="Notizen" Description="Das Plugin dient zur Verarbeitung von oft verwendeten Notizen">
+  <mpNotes LocalName="Notizen" 
+           Description="Das Plugin dient zur Verarbeitung von oft verwendeten Notizen">
     <h1>Einstellungen</h1>
     <h2>Kontextmenü für Text</h2>
     <h3>Doppelklick auf eine Notiz</h3>
@@ -771,6 +772,7 @@
     <h48>Teilen</h48>
     <h49>Punkt</h49>
     <h50>Komma</h50>
+    <h51>Die Höhe eines 3D-Volumenkörpers ermitteln</h51>
     <msg1>Ein Fehler ist aufgetreten. Vielleicht ist die Formel für die Berechnung falsch</msg1>
     <msg2>Geben Sie einen Punkt an:</msg2>
     <msg3>Wählen Sie eine Koordinate aus: [X/Y/Z]</msg3>
@@ -794,6 +796,8 @@
     <msg21>x0 ist gleich x2</msg21>
     <msg22>x1 gehört nicht zum \nIntervall x0-x2</msg22>
     <msg23>gleich</msg23>
+    <msg24>Wählen Sie einen 3D-Volumenkörper aus, der über die Eigenschaft "Höhe" verfügt</msg24>
+    <msg25>Wählen Sie mehrere 3D-Volumenkörper aus, die über die Eigenschaft "Höhe" verfügen</msg25>
     <err1>Ungültige Wahl!</err1>
     <err2>Der ausgewählte Text enthält keine numerischen Werte</err2>
     <err3>Nicht in die Zelle getroffen!</err3>
@@ -1130,7 +1134,8 @@
     <h16>Schließen</h16>
     <h17>Alle Einstellungen werden automatisch gespeichert</h17>
   </mpBlkReplace>
-  <mpPlinesEdit LocalName="Polylinien" Description="Eine Sammlung verschiedener Plugins für die Arbeit mit Polylinien">
+  <mpPlinesEdit LocalName="Polylinien" 
+                Description="Eine Sammlung verschiedener Plugins für die Arbeit mit Polylinien">
     <h1>POLYLINIEN</h1>
     <h2>Das Plugin arbeitet mit 3D-Polylinien</h2>
     <h3>Das Plugin arbeitet mit 2D-Polylinien</h3>
@@ -1413,7 +1418,8 @@
     <apply>Verwenden</apply>
     <close>Schließen</close>
   </mpSheetNumbers>
-  <mpDwgBase LocalName="dwg-Datenbank" Description="Eine Datenbank mit verschiedenen Blöcken und Zeichnungen"
+  <mpDwgBase LocalName="dwg-Datenbank"
+             Description="Eine Datenbank mit verschiedenen Blöcken und Zeichnungen"
              FullDescription="Die dwg-Datenbank kann zum Einfügen von Blöcken und vorgefertigten Zeichnungen (z. B. Knoten) verwendet werden. Die dwg-Datenbank wird von Benutzern geführt. Das Plugin erfordert einen Internetzugang">
     <h1>Senden Sie benutzerdefinierte Blöcke und Zeichnungen an den modplus.org Server</h1>
     <h2>Suche in der Datenbank</h2>
@@ -1927,6 +1933,10 @@
     <h180>Beim Erstellen der Multi-Führungslinien mit mehreren Bemaßungszeichen wird nach bereits in der Zeichnung erstellten Multi-Führungslinien mit mehreren Bemaßungszeichen gesucht und deren Werte gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Nummer oder des Buchstabens der zu erstellender Führungslinie wird auf die nächste Nummer oder Buchstabe ab dem zuletzt gefundenen Wert gesetzt. Die Funktion ist nur dann wirksam, wenn alle erstellten Multi-Führungslinien mit mehreren Bemaßungszeichen numerische oder buchstäbliche Werte haben</h180>
     <h181>Bei Textdrehung ist der Drehwinkel des Blockes zu berücksichtigen</h181>
     <h182>Der Text der geraden Achse dreht sich mit dem Achsenblock, wenn der Befehl DREHEN verwendet wird</h182>
+    <h183>Kammförmige Führungslinie</h183>
+    <h184>Grundstil für die kammförmige Führungslinie</h184>
+    <h185>Erstellen einer kammförmigen Führungslinie</h185>
+    <h186>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die kammförmige Führungslinie beschreibt</h186>
     <so0>Grafiken aktualisieren</so0>
     <sot0>Die Grafiken aller gefundenen intelligenten Objekte werden regeneriert</sot0>
     <so1>Auswählen</so1>
@@ -2226,5 +2236,6 @@
     <h2>Fehler beim Importieren von Plänen aus der Datei</h2>
     <h3>Auswählen von Dateien zum Zusammenführen von Plänen</h3>
     <h4>Layer-Zusammenführen...</h4>
+    <h5>Wollen Sie Ansichtsfenster in den zu importierenden Layouts sperren?</h5>
   </mpRevitSheetsMerging>
 </ModPlus>
