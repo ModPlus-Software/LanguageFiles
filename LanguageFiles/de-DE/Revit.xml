@@ -3197,8 +3197,8 @@
     <h182>Typenstockwerke bei der Zusammenstellung und Berechnung der Wohnungen berücksichtigen</h182>
     <h183>Kopie der Typenwohnungsparameter</h183>
     <h184>Redundanter Raum</h184>
-    <h185>Nicht umschlossen</h185>
-    <h186>Den Namen der aktuellen Tabelle durch den Blattnamen aus der importierten Excel-Datei ersetzen</h186>
+    <h185>Nicht umgeben</h185>
+    <h186>Den Namen für die aktuelle Tabelle anhand des Plannamens aus der importierten Excel-Datei festlegen</h186>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -3986,7 +3986,7 @@
     <t9>Der Parameter "{0}" konnte mit der Ebene "{1}" nicht gefüllt werden</t9>
     <t10>Geben Sie einen Namen der Konfiguration ein</t10>
     <t11>Die Basis für Elemente kann nicht geändert werden, da sie auf der Grundlage einer Ebene oder einer Fläche erstellt werden</t11>
-    <t12>Base level change is skipped because the element is already located at level "{0}"</t12>
+    <t12>Das Ändern der Grundebene ist übersprungen, da sich das Element bereits auf der Ebene "{0}" befindet</t12>
     <tr1>Einstellung der Ebenen</tr1>
     <xt1>Ausgewählte Elemente</xt1>
     <xt2>In der aktuellen Ansicht</xt2>
@@ -4375,69 +4375,69 @@
     <msg7>Das Ersetzen der Texteigenschaften in den Elementen der Unterfamilie ist fehlgeschlagen. Fehler:</msg7>
     <msg8>Das Ersetzen der Texteigenschaften in den Elementen der Familie ist fehlgeschlagen. Fehler:</msg8>
   </mprFontReplacer>
-  <mprTypeManager LocalName="Type manager"
-                  Description="Changing and comparing type parameters">
-    <msg1>Column customization is available in the full version of the plugin</msg1>
-    <msg2>There are no differences in the parameter values of identical types</msg2>
-    <msg3>Close the open type property windows</msg3>
-    <t1>Compare</t1>
-    <t2>Columns</t2>
-    <t3>&lt;absent&gt;</t3>
-    <t4>*DIFFERENT*</t4>
-    <t5>Document 1:</t5>
-    <t6>Document 2:</t6>
-    <t7>Trial period. Days to go</t7>
-    <t8>The trial period of the plugin is over! Purchase a license or a Revit subscription to continue using the "Type manager" plugin</t8>
-    <t9>Current model</t9>
-    <t10>Comparison of models</t10>
-    <t11>Types</t11>
-    <t12>Searching for type by name</t12>
-    <t13>Changes</t13>
-    <t14>No category</t14>
-    <t15>Only used</t15>
+  <mprTypeManager LocalName="Typenmanager"
+	                Description="Ändern und Vergleichen von Typenparametern">
+    <msg1>Die Spalteneinstellung ist in der Vollversion des Plugins verfügbar</msg1>
+    <msg2>Keine Unterschiede in den Parameterwerten gleicher Typen vorhanden</msg2>
+    <msg3>Schließen Sie die geöffneten Fenster der Typeneigenschaften</msg3>
+    <t1>Vergleichen</t1>
+    <t2>Spalten</t2>
+    <t3>&lt;nicht vorhanden&gt;</t3>
+    <t4>*UNTERSCHIEDLICHE*</t4>
+    <t5>Dokument 1:</t5>
+    <t6>Dokument 2:</t6>
+    <t7>Testversion. Tage bis zum Ablauf</t7>
+    <t8>Die Testversion des Plugins ist abgelaufen! Erwerben Sie eine Lizenz für das Plugin oder ein Revit-Abonnement, um das Plugin "Typenmanager" weiterhin nutzen zu können</t8>
+    <t9>Aktuelles Modell</t9>
+    <t10>Modellvergleich</t10>
+    <t11>Typen</t11>
+    <t12>Typ nach Namen suchen</t12>
+    <t13>Änderungen</t13>
+    <t14>Keine Kategorie</t14>
+    <t15>Nur verwendete</t15>
     <t16>Status</t16>
-    <t17>Family</t17>
-    <t18>Type parameters</t18>
-    <t19>Parameter name</t19>
-    <t20>Elements</t20>
-    <t21>Instances</t21>
-    <t22>Edit type parameters</t22>
-    <t23>Total types (including unused)</t23>
-    <t24>Total:</t24>
-    <t25>Total types in current model (used in current model)</t25>
-    <t26>In model:</t26>
-    <t27>Displayed (actual displayed types)</t27>
-    <t28>Displayed:</t28>
-    <t29>Selected types</t29>
-    <t30>Selected:</t30>
-    <t31>Select document 1</t31>
-    <t32>Select document 2</t32>
-    <t33>Types</t33>
-    <t34>Value in document 1</t34>
-    <t35>Value in document 2</t35>
-    <t36>Number of changed parameters</t36>
-    <t37>Changes:</t37>
-    <t38>Open editor in Revit</t38>
-    <t39>Editing parameters of more than three selected types is available in the full version of the plugin!</t39>
-    <t40>Show only selected</t40>
-    <t41>Customizing columns</t41>
-    <t42>Parameter changes have not been applied</t42>
-    <t43>No changes in parameters</t43>
-    <t44>Number of instances of this type</t44>
-    <t45>Number of parameter changes</t45>
-    <t46>Search for a parameter by name</t46>
-    <tr1>Setting parameters</tr1>
+    <t17>Familie</t17>
+    <t18>Parameter des Typs</t18>
+    <t19>Parametername</t19>
+    <t20>Anzahl der Elemente</t20>
+    <t21>Exemplare</t21>
+    <t22>Typenparamenter bearbeiten</t22>
+    <t23>Gesamtzahl der Typen (inkl. nicht verwendete)</t23>
+    <t24>Gesamtzahl:</t24>
+    <t25>Gesamtzahl der Typen im aktuellen Modell (im aktuellen Modell verwendet)</t25>
+    <t26>Im Modell:</t26>
+    <t27>Angezeigt (Ist-Anzahl der angezeigten Typen)</t27>
+    <t28>Angezeigt:</t28>
+    <t29>Anzahl der ausgewählten Typen</t29>
+    <t30>Ausgewählt:</t30>
+    <t31>Wählen Sie Dokument 1 aus</t31>
+    <t32>Wählen Sie Dokument 2 aus</t32>
+    <t33>Typen</t33>
+    <t34>Wert in Dokument 1</t34>
+    <t35>Wert in Dokument 2</t35>
+    <t36>Anzahl der geänderten Parameter</t36>
+    <t37>Änderungen:</t37>
+    <t38>Editor in Revit öffnen</t38>
+    <t39>Das Bearbeiten der Parameter für über drei ausgewählten Typen ist in der Vollversion des Plugins verfügbar!</t39>
+    <t40>Nur ausgewählte anzeigen</t40>
+    <t41>Spalteneinstellung</t41>
+    <t42>Parameteränderungen sind nicht implementiert</t42>
+    <t43>Keine Parameteränderungen</t43>
+    <t44>Anzahl der Exemplare dieses Typs</t44>
+    <t45>Anzahl der Parameteränderungen</t45>
+    <t46>Parameter nach Namen suchen</t46>
+    <tr1>Parameter Setup</tr1>
   </mprTypeManager>
-  <mprMEPRotate LocalName="Rotate system elements"
-                Description="Rotation of fittings or part of the engineering system">
-    <tr1>Rotation</tr1>
-    <t1>Clockwise</t1>
-    <t2>Perform clockwise rotation</t2>
-    <t3>Standard angles</t3>
-    <t4>Counterclockwise</t4>
-    <t5>Perform counterclockwise rotation</t5>
-    <t6>Rotate all elements</t6>
-    <t7>Select the element to rotate</t7>
-    <t8>Select the element around which you want to rotate</t8>
+  <mprMEPRotate LocalName="Elemente des Systems drehen"
+                Description="Armaturen oder Teile einer Installation drehen">
+    <tr1>Drehen</tr1>
+    <t1>Im Uhrzeigersinn</t1>
+    <t2>Im Uhrzeigersinn drehen</t2>
+    <t3>Standardwinkel</t3>
+    <t4>Gegen Uhrzeigersinn</t4>
+    <t5>Gegen Uhrzeigersinn drehen</t5>
+    <t6>Alle Elemente drehen</t6>
+    <t7>Wählen Sie das Element, das Sie drehen wollen</t7>
+    <t8>Wählen Sie das Element, um das Sie drehen wollen</t8>
   </mprMEPRotate>
 </ModPlus>
