@@ -2585,7 +2585,16 @@
     <h6>Add to exist text</h6>
     <h7>For user notes:</h7>
     <h8>Edit</h8>
+    <h9>Horizontal alignment:</h9>
+    <h10>Align Left</h10>
+    <h11>Align Center</h11>
+    <h12>Align Right</h12>
     <h15>Notes</h15>
+    <h16>List:</h16>
+    <h17>Bullets</h17>
+    <h18>Numbers</h18>
+    <h19>Letters - Lowercase</h19>
+    <h20>Letters - Uppercase</h20>
     <h28>Text Width:</h28>
     <h29>Text type:</h29>
     <h41>User notes file is not found</h41>
@@ -2758,6 +2767,7 @@
     <h73>Filtering child elements</h73>
     <h74>Optional filtering of child elements by categories and/or parameters. If no filters are specified, all child elements will be processed</h74>
     <h75>Rounding is used only when the value to be set is a number</h75>
+    <h76>Support for this plugin has been discontinued. We recommend switching to the "Parametrization" plugin, which allows you to perform almost all the tasks that this plugin does</h76>
     <i1>The input fields before and after the names of the source parameters allow you to create a formula for the calculation.</i1>
     <i2>To create a formula, you can use simple arithmetic operators such as "+", "-", "*", "/", parentheses, and mathematical functions:</i2>
     <i3>Abs – absolute value,</i3>
@@ -3618,6 +3628,8 @@
     <h4>Set in parameter:</h4>
     <h5>Select elements</h5>
     <h6>All elements in View</h6>
+    <h7>Write total weight to the Connection parameter</h7>
+    <h8>If a Structural Connection is selected and a parameter is specified, the total weight of the plates included in the Connection will be written to the specified parameter</h8>
     <msg1>The detail level of the current view will be temporarily changed to "Fine" to calculate the weight of the plates, which can lead to long regeneration of the graphics!</msg1>
     <msg2>Plates processed</msg2>
     <msg3>Pick Plates or Structural Connections</msg3>
@@ -4260,7 +4272,9 @@
     <err3>Failure to access the file {0}</err3>
   </mprExportToExcel>
   <mprStructureToParameter LocalName="Structure to parameter"
-                           Description="Transferring the structure of a multilayer type to a multiline parameter">
+                           Description="Transferring the structure of a multilayer type to a multiline parameter"
+                           LocalName1="Volume of layers to parameter"
+                           Description1="Transferring of layer volumes of multilayer elements into a multiline parameter">
     <t1>Search by type or material name:</t1>
     <t2>Show only Types with required parameters</t2>
     <t3>Show only used Types</t3>
@@ -4303,10 +4317,18 @@
     <t40>By Category</t40>
     <t41>No parameter</t41>
     <t42>Take material name from material parameter:</t42>
+    <t43>Reverse result:</t43>
+    <t44>Optional parameter with the data type "Multiline Text". The same result is written to this parameter as to the "Result" parameter, but in reverse order. The parameter is processed if the Type being processed has it</t44>
+    <t45>Example result</t45>
+    <t46>Required parameter of an instance with the data type "Multiline text". In this parameter, a numbered list of volumes of the structure layers is written, taking into account the specified line formats and numbering settings</t46>
+    <t47>{0} – material name. {1} – material volume</t47>
+    <t48>Rounding the volume value</t48>
     <s1>No change. The Type parameters will not be updated</s1>
     <s2>The required parameters "Template" and "Result" are missing</s2>
     <s3>The new result value is different from the current result value. The Type parameters will not be updated, because the "Update" checkbox is not checked</s3>
     <s4>The new result value is different from the current result value. The Type parameters will be updated</s4>
+    <msg1>Parameter "{0}" not found</msg1>
+    <msg2>The volume of layers is set to the parameter of the instance of the Type "{0}"</msg2>
   </mprStructureToParameter>
   <mprSumParameters LocalName="Sum of parameters"
                     Description="Summarizing the values of numerical parameters of selected elements">
@@ -4334,6 +4356,7 @@
     <c1>Dimensional styles</c1>
     <c2>Text styles</c2>
     <c3>Annotation symbol families</c3>
+    <c4>Title text of Schedules</c4>
     <t1>Change Text Font</t1>
     <t2>Change Text Size</t2>
     <t3>Change Width Factor</t3>
@@ -4352,4 +4375,69 @@
     <msg7>Failed to change text properties in nested family elements. Error:</msg7>
     <msg8>Failed to change text properties in family elements. Error:</msg8>
   </mprFontReplacer>
+  <mprTypeManager LocalName="Type manager"
+                  Description="Changing and comparing type parameters">
+    <msg1>Column customization is available in the full version of the plugin</msg1>
+    <msg2>There are no differences in the parameter values of identical types</msg2>
+    <msg3>Close the open type property windows</msg3>
+    <t1>Compare</t1>
+    <t2>Columns</t2>
+    <t3>&lt;absent&gt;</t3>
+    <t4>*DIFFERENT*</t4>
+    <t5>Document 1:</t5>
+    <t6>Document 2:</t6>
+    <t7>Trial period. Days to go</t7>
+    <t8>The trial period of the plugin is over! Purchase a license or a Revit subscription to continue using the "Type manager" plugin</t8>
+    <t9>Current model</t9>
+    <t10>Comparison of models</t10>
+    <t11>Types</t11>
+    <t12>Searching for type by name</t12>
+    <t13>Changes</t13>
+    <t14>No category</t14>
+    <t15>Only used</t15>
+    <t16>Status</t16>
+    <t17>Family</t17>
+    <t18>Type parameters</t18>
+    <t19>Parameter name</t19>
+    <t20>Elements</t20>
+    <t21>Instances</t21>
+    <t22>Edit type parameters</t22>
+    <t23>Total types (including unused)</t23>
+    <t24>Total:</t24>
+    <t25>Total types in current model (used in current model)</t25>
+    <t26>In model:</t26>
+    <t27>Displayed (actual displayed types)</t27>
+    <t28>Displayed:</t28>
+    <t29>Selected types</t29>
+    <t30>Selected:</t30>
+    <t31>Select document 1</t31>
+    <t32>Select document 2</t32>
+    <t33>Types</t33>
+    <t34>Value in document 1</t34>
+    <t35>Value in document 2</t35>
+    <t36>Number of changed parameters</t36>
+    <t37>Changes:</t37>
+    <t38>Open editor in Revit</t38>
+    <t39>Editing parameters of more than three selected types is available in the full version of the plugin!</t39>
+    <t40>Show only selected</t40>
+    <t41>Customizing columns</t41>
+    <t42>Parameter changes have not been applied</t42>
+    <t43>No changes in parameters</t43>
+    <t44>Number of instances of this type</t44>
+    <t45>Number of parameter changes</t45>
+    <t46>Search for a parameter by name</t46>
+    <tr1>Setting parameters</tr1>
+  </mprTypeManager>
+  <mprMEPRotate LocalName="Rotate system elements"
+                Description="Rotation of fittings or part of the engineering system">
+    <tr1>Rotation</tr1>
+    <t1>Clockwise</t1>
+    <t2>Perform clockwise rotation</t2>
+    <t3>Standard angles</t3>
+    <t4>Counterclockwise</t4>
+    <t5>Perform counterclockwise rotation</t5>
+    <t6>Rotate all elements</t6>
+    <t7>Select the element to rotate</t7>
+    <t8>Select the element around which you want to rotate</t8>
+  </mprMEPRotate>
 </ModPlus>

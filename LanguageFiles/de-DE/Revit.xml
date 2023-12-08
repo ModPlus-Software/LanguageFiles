@@ -2585,7 +2585,16 @@
     <h6>Zu bestehendem Text hinzufügen</h6>
     <h7>Für Benutzerhinweise:</h7>
     <h8>Ändern</h8>
+    <h9>Horizontale Ausrichtung:</h9>
+    <h10>Linksbündig ausrichten</h10>
+    <h11>Zentriert ausrichten</h11>
+    <h12>Rechtsbündig ausrichten</h12>
     <h15>Notiz</h15>
+    <h16>Liste:</h16>
+    <h17>Aufzählungszeichen</h17>
+    <h18>Nummern</h18>
+    <h19>Kleinbuchstaben</h19>
+    <h20>Großbuchstaben</h20>
     <h28>Textbreite:</h28>
     <h29>Typ:</h29>
     <h41>Benutzernotizdatei ist nicht gefunden</h41>
@@ -2758,6 +2767,7 @@
     <h73>Filtern von Unterelementen</h73>
     <h74>Fakultatives Filtern der Unterelemente nach Kategorie und/oder Parameter. Wenn keine Filter festgelegt sind, werden alle Unterelemente verarbeitet</h74>
     <h75>Die Rundung wird nur dann verwendet, wenn der zu setzende Wert eine Zahl ist</h75>
+    <h76>Support for this plugin has been discontinued. We recommend switching to the "Parametrization" plugin, which allows you to perform almost all the tasks that this plugin does</h76>
     <i1>Die Eingabefelder vor und nach den Namen der Quellparameter ermöglichen es eine Formel für die Berechnung zu erstellen.</i1>
     <i2>Einfache arithmetische Operatoren wie "+", "-", "*", "/", Klammern und mathematische Funktionen können verwendet werden, um eine Formel zu erstellen:</i2>
     <i3>Abs — der absolute Wert,</i3>
@@ -3187,8 +3197,8 @@
     <h182>Typenstockwerke bei der Zusammenstellung und Berechnung der Wohnungen berücksichtigen</h182>
     <h183>Kopie der Typenwohnungsparameter</h183>
     <h184>Redundanter Raum</h184>
-    <h185>Nicht umschlossen</h185>
-    <h186>Den Namen der aktuellen Tabelle durch den Blattnamen aus der importierten Excel-Datei ersetzen</h186>
+    <h185>Nicht umgeben</h185>
+    <h186>Den Namen für die aktuelle Tabelle anhand des Plannamens aus der importierten Excel-Datei festlegen</h186>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -3618,6 +3628,8 @@
     <h4>In den Parameter schreiben:</h4>
     <h5>Elemente auswählen</h5>
     <h6>Alle Elemente in der Ansicht</h6>
+    <h7>Write total weight to the Connection parameter</h7>
+    <h8>If a Structural Connection is selected and a parameter is specified, the total weight of the plates included in the Connection will be written to the specified parameter</h8>
     <msg1>Um das Gewicht der Platten zu berechnen, wird der Detaillierungsgrad der aktuellen Ansicht vorübergehend auf "Hoch" geändert, was zu einer langen Grafikregenerierung führen kann!</msg1>
     <msg2>Verarbeitete Platten</msg2>
     <msg3>Wählen Sie Platten oder Verbindungen für Tragwerke</msg3>
@@ -3974,7 +3986,7 @@
     <t9>Der Parameter "{0}" konnte mit der Ebene "{1}" nicht gefüllt werden</t9>
     <t10>Geben Sie einen Namen der Konfiguration ein</t10>
     <t11>Die Basis für Elemente kann nicht geändert werden, da sie auf der Grundlage einer Ebene oder einer Fläche erstellt werden</t11>
-    <t12>Base level change is skipped because the element is already located at level "{0}"</t12>
+    <t12>Das Ändern der Grundebene ist übersprungen, da sich das Element bereits auf der Ebene "{0}" befindet</t12>
     <tr1>Einstellung der Ebenen</tr1>
     <xt1>Ausgewählte Elemente</xt1>
     <xt2>In der aktuellen Ansicht</xt2>
@@ -4260,7 +4272,9 @@
     <err3>Zugriffsfehler auf die Datei {0}</err3>
   </mprExportToExcel>
   <mprStructureToParameter LocalName="Struktur in Parameter übernehmen" 
-                           Description="Die Struktur des mehrschaligen Typs wird in den mehrzeiligen Parameter übernommen">
+                           Description="Die Struktur des mehrschaligen Typs wird in den mehrzeiligen Parameter übernommen"
+                           LocalName1="Volume of layers to parameter"
+                           Description1="Transferring of layer volumes of multilayer elements into a multiline parameter">
     <t1>Suche nach Typ- oder Materialnnamen:</t1>
     <t2>Nur Type mit erforderlichen Parametern anzeigen</t2>
     <t3>Nur verwendete Type anzeigen</t3>
@@ -4303,10 +4317,18 @@
     <t40>Nach Kategorie</t40>
     <t41>Parameter fehlt</t41>
     <t42>Materialnamen vom Materialparemeter übernehmen:</t42>
+    <t43>Reverse result:</t43>
+    <t44>Optional parameter with the data type "Multiline Text". The same result is written to this parameter as to the "Result" parameter, but in reverse order. The parameter is processed if the Type being processed has it</t44>
+    <t45>Example result</t45>
+    <t46>Required parameter of an instance with the data type "Multiline text". In this parameter, a numbered list of volumes of the structure layers is written, taking into account the specified line formats and numbering settings</t46>
+    <t47>{0} – material name. {1} – material volume</t47>
+    <t48>Rounding the volume value</t48>
     <s1>Keine Änderungen. Die Parameter des Typs werden nicht aktualisiert</s1>
     <s2>Die erforderlichen Parameter "Vorlage" und "Ergebnis" fehlen</s2>
     <s3>Der neue Ergebniswert unterscheidet sich vom aktuellen Ergebniswert. Die Parameter des Typs werden nicht aktualisiert, weil das Kontrollkästchen "Aktualisieren" nicht aktiviert ist</s3>
     <s4>Der neue Ergebniswert unterscheidet sich vom aktuellen Ergebniswert. Die Parameter des Typs werden aktualisiert</s4>
+    <msg1>Parameter "{0}" not found</msg1>
+    <msg2>The volume of layers is set to the parameter of the instance of the Type "{0}"</msg2>
   </mprStructureToParameter>
   <mprSumParameters LocalName="Summe der Parameter"
                     Description="Summieren der Werte der numerischen Parameter für die ausgewählte Elemente">
@@ -4334,6 +4356,7 @@
     <c1>Bemaßungsstile</c1>
     <c2>Textstile</c2>
     <c3>Familien von Typenbeschriftungen</c3>
+    <c4>Title text of Schedules</c4>
     <t1>Textschriftart ändern</t1>
     <t2>Textgröße ändern</t2>
     <t3>Breitenfaktor ändern</t3>
@@ -4352,4 +4375,69 @@
     <msg7>Das Ersetzen der Texteigenschaften in den Elementen der Unterfamilie ist fehlgeschlagen. Fehler:</msg7>
     <msg8>Das Ersetzen der Texteigenschaften in den Elementen der Familie ist fehlgeschlagen. Fehler:</msg8>
   </mprFontReplacer>
+  <mprTypeManager LocalName="Typenmanager"
+	                Description="Ändern und Vergleichen von Typenparametern">
+    <msg1>Die Spalteneinstellung ist in der Vollversion des Plugins verfügbar</msg1>
+    <msg2>Keine Unterschiede in den Parameterwerten gleicher Typen vorhanden</msg2>
+    <msg3>Schließen Sie die geöffneten Fenster der Typeneigenschaften</msg3>
+    <t1>Vergleichen</t1>
+    <t2>Spalten</t2>
+    <t3>&lt;nicht vorhanden&gt;</t3>
+    <t4>*UNTERSCHIEDLICHE*</t4>
+    <t5>Dokument 1:</t5>
+    <t6>Dokument 2:</t6>
+    <t7>Testversion. Tage bis zum Ablauf</t7>
+    <t8>Die Testversion des Plugins ist abgelaufen! Erwerben Sie eine Lizenz für das Plugin oder ein Revit-Abonnement, um das Plugin "Typenmanager" weiterhin nutzen zu können</t8>
+    <t9>Aktuelles Modell</t9>
+    <t10>Modellvergleich</t10>
+    <t11>Typen</t11>
+    <t12>Typ nach Namen suchen</t12>
+    <t13>Änderungen</t13>
+    <t14>Keine Kategorie</t14>
+    <t15>Nur verwendete</t15>
+    <t16>Status</t16>
+    <t17>Familie</t17>
+    <t18>Parameter des Typs</t18>
+    <t19>Parametername</t19>
+    <t20>Anzahl der Elemente</t20>
+    <t21>Exemplare</t21>
+    <t22>Typenparamenter bearbeiten</t22>
+    <t23>Gesamtzahl der Typen (inkl. nicht verwendete)</t23>
+    <t24>Gesamtzahl:</t24>
+    <t25>Gesamtzahl der Typen im aktuellen Modell (im aktuellen Modell verwendet)</t25>
+    <t26>Im Modell:</t26>
+    <t27>Angezeigt (Ist-Anzahl der angezeigten Typen)</t27>
+    <t28>Angezeigt:</t28>
+    <t29>Anzahl der ausgewählten Typen</t29>
+    <t30>Ausgewählt:</t30>
+    <t31>Wählen Sie Dokument 1 aus</t31>
+    <t32>Wählen Sie Dokument 2 aus</t32>
+    <t33>Typen</t33>
+    <t34>Wert in Dokument 1</t34>
+    <t35>Wert in Dokument 2</t35>
+    <t36>Anzahl der geänderten Parameter</t36>
+    <t37>Änderungen:</t37>
+    <t38>Editor in Revit öffnen</t38>
+    <t39>Das Bearbeiten der Parameter für über drei ausgewählten Typen ist in der Vollversion des Plugins verfügbar!</t39>
+    <t40>Nur ausgewählte anzeigen</t40>
+    <t41>Spalteneinstellung</t41>
+    <t42>Parameteränderungen sind nicht implementiert</t42>
+    <t43>Keine Parameteränderungen</t43>
+    <t44>Anzahl der Exemplare dieses Typs</t44>
+    <t45>Anzahl der Parameteränderungen</t45>
+    <t46>Parameter nach Namen suchen</t46>
+    <tr1>Parameter Setup</tr1>
+  </mprTypeManager>
+  <mprMEPRotate LocalName="Elemente des Systems drehen"
+                Description="Armaturen oder Teile einer Installation drehen">
+    <tr1>Drehen</tr1>
+    <t1>Im Uhrzeigersinn</t1>
+    <t2>Im Uhrzeigersinn drehen</t2>
+    <t3>Standardwinkel</t3>
+    <t4>Gegen Uhrzeigersinn</t4>
+    <t5>Gegen Uhrzeigersinn drehen</t5>
+    <t6>Alle Elemente drehen</t6>
+    <t7>Wählen Sie das Element, das Sie drehen wollen</t7>
+    <t8>Wählen Sie das Element, um das Sie drehen wollen</t8>
+  </mprMEPRotate>
 </ModPlus>
