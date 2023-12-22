@@ -2767,7 +2767,7 @@
     <h73>Filtern von Unterelementen</h73>
     <h74>Fakultatives Filtern der Unterelemente nach Kategorie und/oder Parameter. Wenn keine Filter festgelegt sind, werden alle Unterelemente verarbeitet</h74>
     <h75>Die Rundung wird nur dann verwendet, wenn der zu setzende Wert eine Zahl ist</h75>
-    <h76>Support for this plugin has been discontinued. We recommend switching to the "Parametrization" plugin, which allows you to perform almost all the tasks that this plugin does</h76>
+    <h76>Das Plugin wird nicht mehr unterstützt. Wir empfehlen zum Plugin "Parametrierung" zu wechseln, der fast alle Funktionen dieses Plugins beinhaltet</h76>
     <i1>Die Eingabefelder vor und nach den Namen der Quellparameter ermöglichen es eine Formel für die Berechnung zu erstellen.</i1>
     <i2>Einfache arithmetische Operatoren wie "+", "-", "*", "/", Klammern und mathematische Funktionen können verwendet werden, um eine Formel zu erstellen:</i2>
     <i3>Abs — der absolute Wert,</i3>
@@ -3628,8 +3628,8 @@
     <h4>In den Parameter schreiben:</h4>
     <h5>Elemente auswählen</h5>
     <h6>Alle Elemente in der Ansicht</h6>
-    <h7>Write total weight to the Connection parameter</h7>
-    <h8>If a Structural Connection is selected and a parameter is specified, the total weight of the plates included in the Connection will be written to the specified parameter</h8>
+    <h7>Gesamtgewicht in den Parameter der Verbindung schreiben</h7>
+    <h8>Wurde eine Verbindung von Tragwerken ausgewählt und ein Parameter angegeben, wird das Gesamtplattengewicht der in der Verbindung enthaltenen Platten in den angegebenen Parameter geschrieben</h8>
     <msg1>Um das Gewicht der Platten zu berechnen, wird der Detaillierungsgrad der aktuellen Ansicht vorübergehend auf "Hoch" geändert, was zu einer langen Grafikregenerierung führen kann!</msg1>
     <msg2>Verarbeitete Platten</msg2>
     <msg3>Wählen Sie Platten oder Verbindungen für Tragwerke</msg3>
@@ -4317,18 +4317,18 @@
     <t40>Nach Kategorie</t40>
     <t41>Parameter fehlt</t41>
     <t42>Materialnamen vom Materialparemeter übernehmen:</t42>
-    <t43>Reverse result:</t43>
-    <t44>Optional parameter with the data type "Multiline Text". The same result is written to this parameter as to the "Result" parameter, but in reverse order. The parameter is processed if the Type being processed has it</t44>
-    <t45>Example result</t45>
-    <t46>Required parameter of an instance with the data type "Multiline text". In this parameter, a numbered list of volumes of the structure layers is written, taking into account the specified line formats and numbering settings</t46>
-    <t47>{0} – material name. {1} – material volume</t47>
-    <t48>Rounding the volume value</t48>
+    <t43>Umgekehrtes Ergebnis:</t43>
+    <t44>Optionaler Parameter mit dem Datentyp "Mehrzeiliger Text". In diesen Parameter wird das gleiche Ergebnis geschrieben wie in den Parameter "Ergebnis", jedoch in umgekehrter Reihenfolge. Der Parameter wird behandelt, wenn er beim behandelten Typ vorhanden ist</t44>
+    <t45>Beispielergebnis</t45>
+    <t46>Erforderlicher Parameter des Exemplars mit dem Datentyp "Mehrzeiliger Text". In diesen Parameter wird eine nummerierte Liste von Strukturschichtvolumen unter Berücksichtigung der angegebenen Zeichenfolgenformate und Numerierungseinstellungen geschrieben</t46>
+    <t47>{0} – Materialname. {1} – Materialvolumen</t47>
+    <t48>Runden des Volumenwertes</t48>
     <s1>Keine Änderungen. Die Parameter des Typs werden nicht aktualisiert</s1>
     <s2>Die erforderlichen Parameter "Vorlage" und "Ergebnis" fehlen</s2>
     <s3>Der neue Ergebniswert unterscheidet sich vom aktuellen Ergebniswert. Die Parameter des Typs werden nicht aktualisiert, weil das Kontrollkästchen "Aktualisieren" nicht aktiviert ist</s3>
     <s4>Der neue Ergebniswert unterscheidet sich vom aktuellen Ergebniswert. Die Parameter des Typs werden aktualisiert</s4>
-    <msg1>Parameter "{0}" not found</msg1>
-    <msg2>The volume of layers is set to the parameter of the instance of the Type "{0}"</msg2>
+    <msg1>Parameter "{0}" nicht gefunden</msg1>
+    <msg2>Schichtvolumen ist in den Exemplarparameter des Typs "{0}" geschrieben</msg2>
   </mprStructureToParameter>
   <mprSumParameters LocalName="Summe der Parameter"
                     Description="Summieren der Werte der numerischen Parameter für die ausgewählte Elemente">
@@ -4356,7 +4356,7 @@
     <c1>Bemaßungsstile</c1>
     <c2>Textstile</c2>
     <c3>Familien von Typenbeschriftungen</c3>
-    <c4>Title text of Schedules</c4>
+    <c4>Titeltext für Bauteillisten</c4>
     <t1>Textschriftart ändern</t1>
     <t2>Textgröße ändern</t2>
     <t3>Breitenfaktor ändern</t3>
@@ -4440,224 +4440,224 @@
     <t7>Wählen Sie das Element, das Sie drehen wollen</t7>
     <t8>Wählen Sie das Element, um das Sie drehen wollen</t8>
   </mprMEPRotate>
-  <mprParameters LocalName="Parameters"
-                 Description="Batch editing/adding parameters to projects and families">
-    <pcn1>Create parameters in project</pcn1>
-    <pcd1>Allows batch creation of parameters in the current project</pcd1>
-    <pcn2>Create parameters in families</pcn2>
-    <pcd2>Allows batch creation of parameters in project families, open families, or families on disk</pcd2>
-    <pcn3>Family Editor</pcn3>
-    <pcd3>Analog of the standard parameter editor of the current family, allowing to use an alternative formula editor</pcd3>
-    <pcn4>Edit parameters in project</pcn4>
-    <pcd4>Allows batch editing of parameters in the current project</pcd4>
-    <pcn5>Edit parameters in families</pcn5>
-    <pcd5>Allows batch editing of parameters in project families, open families, or families on disk</pcd5>
-    <t1>No document</t1>
-    <t2>Family</t2>
-    <t3>Project</t3>
-    <t4>Formula validation is performed by the family {0}</t4>
-    <t5>The formula editor is opened based on the {0} family data. The formula is not validated</t5>
-    <t6>Closing family {0}</t6>
-    <t7>Families with parameter "{0}"</t7>
-    <t8>Select parameters</t8>
-    <t9>Change formula</t9>
-    <t10>Change group</t10>
-    <t11>Change behavior</t11>
-    <t12>Values can vary by group instance</t12>
-    <t13>Values are aligned per group type</t13>
-    <t14>Make "By instance"</t14>
-    <t15>Make "By Type"</t15>
-    <t16>Rename</t16>
-    <t17>Parameter exists in the current document</t17>
-    <t18>New parameter</t18>
-    <t19>By instance</t19>
-    <t20>Shared parameter</t20>
-    <t21>Built-in parameter</t21>
-    <t22>Family parameter</t22>
-    <t23>Families</t23>
-    <t24>*DIFFERENT*</t24>
-    <t25>Data type not defined</t25>
-    <t26>Project parameter</t26>
-    <t27>By type</t27>
-    <t28>Check parameter properties</t28>
-    <t29>Other</t29>
-    <t30>SPF Group</t30>
-    <t31>Type of Parameter</t31>
-    <t32>Group parameter under</t32>
-    <t33>Family processing</t33>
-    <t34>Adding parameter</t34>
-    <t35>Setting parameter values...</t35>
-    <t36>Setting formula values...</t36>
-    <t37>Adding parameters</t37>
-    <t38>Parameter created</t38>
-    <t39>Parameter updated</t39>
-    <t40>Parameter update skipped</t40>
-    <t41>Enter new name</t41>
-    <t42>Select new group</t42>
-    <t43>Enter type name</t43>
-    <t44>Parameter processing</t44>
-    <t45>Family reading</t45>
-    <t46>Obtaining parameter data</t46>
-    <t47>Batch editing of parameters</t47>
-    <t48>Update project parameter</t48>
-    <t49>Create project parameter</t49>
-    <t50>Setting standard values</t50>
+  <mprParameters LocalName="Parameter"
+                 Description="Stapelbearbeitung/Hinzufügen von Parametern zu Projekten und Familien">
+    <pcn1>Parameter in einem Projekt erstellen</pcn1>
+    <pcd1>Ermöglicht die Stapelerstellung von Parametern im aktuellen Projekt</pcd1>
+    <pcn2>Parameter in Familien erstellen</pcn2>
+    <pcd2>Ermöglicht die Stapelerstellung von Parametern in Familien des Projekts, offenen Familien oder auf der Festplatte enthaltenen Familien</pcd2>
+    <pcn3>Familieneditor</pcn3>
+    <pcd3>Ein Editor mit ähnlichen Funktionalitäten wie bei dem standardmäßigen Parametereditor der aktuellen Familie, der jedoch die Verwendung eines alternativen Formeleditors ermöglicht</pcd3>
+    <pcn4>Parameter in einem Projekt bearbeiten</pcn4>
+    <pcd4>Ermöglicht die Stapelbearbeitung von Parametern im aktuellen Projekt</pcd4>
+    <pcn5>Parameter in Familien bearbeiten</pcn5>
+    <pcd5>Ermöglicht die Stapelbearbeitung von Parametern in Familien des Projekts, offenen Familien oder auf der Festplatte enthaltenen Familien</pcd5>
+    <t1>Kein Dokument vorhanden</t1>
+    <t2>Familie</t2>
+    <t3>Projekt</t3>
+    <t4>Die Formel wird gemäß der Familie {0} überprüft</t4>
+    <t5>Der Formeleditor ist auf der Grundlage der Daten von der Familie {0} geöffnet. Die Formel wird nicht überprüft</t5>
+    <t6>Familie {0} schließen</t6>
+    <t7>Familien mit Parameter "{0}"</t7>
+    <t8>Wählen Sie Parameter aus</t8>
+    <t9>Formel ändern</t9>
+    <t10>Gruppe ändern</t10>
+    <t11>Verhalten ändern</t11>
+    <t12>Die Werte können je nach Gruppenexemplar variieren</t12>
+    <t13>Die Werte werden für jeden Gruppentyp angepasst</t13>
+    <t14>Als "Exemplarweise" setzen</t14>
+    <t15>Als "Typweise" setzen</t15>
+    <t16>Umbenennen</t16>
+    <t17>Der Parameter ist im aktuellen Dokument vorhanden</t17>
+    <t18>Neuer Parameter</t18>
+    <t19>Exemplarweise</t19>
+    <t20>Gemeinsam genutzte Parameter</t20>
+    <t21>Integrierter Parameter</t21>
+    <t22>Familienparameter</t22>
+    <t23>Familien</t23>
+    <t24>*UNTERSCHIEDLICHE*</t24>
+    <t25>Datentyp ist nicht definiert</t25>
+    <t26>Projektparameter</t26>
+    <t27>Gruppenweise</t27>
+    <t28>Parametereigenschaften prüfen</t28>
+    <t29>Andere</t29>
+    <t30>Gruppe gem. DfGGP</t30>
+    <t31>Datentyp</t31>
+    <t32>Parameter gruppieren</t32>
+    <t33>Familien bearbeiten</t33>
+    <t34>Einen Parameter hinzufügen</t34>
+    <t35>Parameterwerte setzen...</t35>
+    <t36>Formelwerte setzen...</t36>
+    <t37>Parameter hinzufügen</t37>
+    <t38>Parameter ist erstellt</t38>
+    <t39>Parameter ist aktualisiert</t39>
+    <t40>Parameteraktualisierung übersprungen</t40>
+    <t41>Geben Sie einen neuen Namen ein</t41>
+    <t42>Wählen Sie eine neue Gruppe aus</t42>
+    <t43>Geben Sie einen Typnamen ein</t43>
+    <t44>Parameterbearbeitung</t44>
+    <t45>Familie lesen</t45>
+    <t46>Daten nach Parametern abrufen</t46>
+    <t47>Stapelbearbeitung von Parametern</t47>
+    <t48>Projektparameter aktualisieren</t48>
+    <t49>Projektparameter erstellen</t49>
+    <t50>Standardwerte setzen</t50>
     <t51>Name</t51>
-    <t52>Instance/Type</t52>
-    <t53>Values by groups</t53>
-    <t54>Default value</t54>
-    <t55>Categories</t55>
-    <t56>Project parameters</t56>
-    <t57>Family parameters</t57>
-    <t58>Select the path to save the file</t58>
-    <t59>Change current type</t59>
-    <t60>Create type</t60>
-    <t61>Remove type</t61>
-    <t62>Rename type</t62>
-    <t63>Remove parameter</t63>
-    <t64>Replace parameter</t64>
-    <t65>Set formula</t65>
-    <t66>Set parameter value</t66>
-    <t67>Change parameter lock</t67>
-    <t68>Change "Instance/Type" property</t68>
-    <t69>Create parameter</t69>
-    <t70>Custom parameter</t70>
-    <t71>Shared Parameters File</t71>
-    <t72>Action after exporting to Excel:</t72>
-    <t73>Action when parameter exists:</t73>
-    <t74>Retrieve data</t74>
-    <t75>From files</t75>
-    <t76>From folder</t76>
-    <t77>Processed families</t77>
-    <t78>Remove all families from the list</t78>
-    <t79>Insert parameter</t79>
-    <t80>Insert function</t80>
-    <t81>Select all or deselect</t81>
-    <t82>Select SPF:</t82>
-    <t83>Current SPF</t83>
-    <t84>Selected SPF</t84>
-    <t85>Path to SPF:</t85>
-    <t86>Add from SPF</t86>
-    <t87>Add selected parameters from the SPF to the current parameter list</t87>
-    <t88>Groups</t88>
-    <t89>Parameter definitions</t89>
-    <t90>Total parameters:</t90>
-    <t91>Selected parameters:</t91>
-    <t92>Create family parameter</t92>
-    <t93>Export parameter list to Excel</t93>
-    <t94>Import parameter list from Excel</t94>
-    <t95>Remove selected parameters from the list</t95>
-    <t96>Remove all parameters from the list</t96>
-    <t97>Create</t97>
-    <t98>Instance</t98>
-    <t99>Type</t99>
-    <t100>Formula Editor</t100>
-    <t101>Execute and close</t101>
-    <t102>Edit the list of categories of the selected parameters</t102>
-    <t103>Create a custom parameter. The custom parameter will be a Shared parameter with a random GUID, but with no binding to a specific SPF</t103>
-    <t104>State</t104>
-    <t105>Not supported</t105>
-    <t106>Type name:</t106>
-    <t107>Create new type</t107>
-    <t108>Remove current type</t108>
-    <t109>Replace the shared parameter with a family parameter</t109>
-    <t110>Lock</t110>
-    <t111>Not available</t111>
-    <t112>Make parameter of instance</t112>
-    <t113>Make parameter of type</t113>
-    <t114>Clear the list of actions</t114>
-    <t115>Count</t115>
-    <t116>Count of families with this parameter</t116>
-    <t117>Actions</t117>
-    <t118>Change by group</t118>
-    <t119>Change by instance</t119>
-    <t120>Values by group</t120>
-    <t121>Validate</t121>
-    <t122>Accept without validation</t122>
-    <t123>Add the current formula to the favorites list</t123>
-    <t124>Insert a formula from the favorites list</t124>
-    <t125>Section</t125>
-    <t126>Current document type:</t126>
-    <t127>Available sections:</t127>
-    <t128>Unavailable sections:</t128>
-    <t129>{0} categories</t129>
-    <t130>Trial Period. Days left</t130>
-    <t131>The plugin's trial period is over! Purchase a plugin license or Revit subscription to continue using the "Parameters" plugin</t131>
-    <t132>Favorite formulas</t132>
+    <t52>Exemplar/Typ</t52>
+    <t53>Werte nach Gruppen</t53>
+    <t54>Standardwert</t54>
+    <t55>Kategorien</t55>
+    <t56>Projektparameter</t56>
+    <t57>Familienparameter</t57>
+    <t58>Wählen Sie einen Pfad zum Speicherort der Datei</t58>
+    <t59>Aktuellen Typ ändern</t59>
+    <t60>Typ erstellen</t60>
+    <t61>Typ löschen</t61>
+    <t62>Typ umbenennen</t62>
+    <t63>Parameter löschen</t63>
+    <t64>Parameter ersetzen</t64>
+    <t65>Formel vorgeben</t65>
+    <t66>Parameterwert vorgeben</t66>
+    <t67>Parameterblockierung ändern</t67>
+    <t68>Eigenschaft "Exemplar/Typ" ändern</t68>
+    <t69>Parameter erstellen</t69>
+    <t70>Benutzerdefinierter Parameter</t70>
+    <t71>Datei für gemeinsam genutzten Parametern</t71>
+    <t72>Aktion nach dem Export in Excel:</t72>
+    <t73>Aktion beim Vorhandensein des Parameters:</t73>
+    <t74>Daten erhalten</t74>
+    <t75>Aus Dateien</t75>
+    <t76>Aus Ordner</t76>
+    <t77>Behandelte Familien</t77>
+    <t78>Alle Familien aus der Liste entfernen</t78>
+    <t79>Parameter einfügen</t79>
+    <t80>Funktion einfügen</t80>
+    <t81>Alle auswählen oder abwählen</t81>
+    <t82>Wählen Sie DfGGP:</t82>
+    <t83>Aktuelle DfGGP</t83>
+    <t84>Ausgewählte DfGGP</t84>
+    <t85>Pfad zu DfGGP:</t85>
+    <t86>Aus DfGGP hinzufügen</t86>
+    <t87>Ausgewählte Parameter aus DfGGP zur aktuellen Parameterliste hinzufügen</t87>
+    <t88>Gruppen</t88>
+    <t89>Parameterdefinitionen</t89>
+    <t90>Parameter insgesamt:</t90>
+    <t91>Parameter ausgewählt:</t91>
+    <t92>Familienparameter erstellen</t92>
+    <t93>Export der Parameterliste in Excel</t93>
+    <t94>Import der Parameterliste aus Excel</t94>
+    <t95>Ausgewählte Parameter aus der Liste löschen</t95>
+    <t96>Alle Parameter aus der Liste löschen</t96>
+    <t97>Erstellen</t97>
+    <t98>Exemplar</t98>
+    <t99>Typ</t99>
+    <t100>Formeleditor</t100>
+    <t101>Ausführen und schließen</t101>
+    <t102>Kategorieliste ausgewählter Parameter bearbeiten</t102>
+    <t103>Benutzerdefinierten Parameter erstellen. Benutzerdefinierter Parameter wird mit einer zufälligen GUID gemeinsam genutzt, jedoch ohne Verknüpfung an eine bestimmte DfGGP</t103>
+    <t104>Status</t104>
+    <t105>Nicht unterstützt</t105>
+    <t106>Typname:</t106>
+    <t107>Neuen Typ erstellen</t107>
+    <t108>Aktuellen Typ löschen</t108>
+    <t109>Gemeinsam genutzten Parameter durch Familienparameter ersetzen</t109>
+    <t110>Blockieren</t110>
+    <t111>Nicht verfügbar</t111>
+    <t112>Als Exemplarparameter setzen</t112>
+    <t113>Als Typparameter setzen</t113>
+    <t114>Aktionsliste löschen</t114>
+    <t115>Anzahl</t115>
+    <t116>Anzahl der Familien mit diesem Parameter</t116>
+    <t117>Aktionen</t117>
+    <t118>Gruppenweise ändern</t118>
+    <t119>Exemplarweise ändern</t119>
+    <t120>Werte nach Gruppen</t120>
+    <t121>Überprüfen</t121>
+    <t122>Ohne Überprüfung akzeptieren</t122>
+    <t123>Aktuelle Formel zu den Favoriten hinzufügen</t123>
+    <t124>Formel aus der Favoritenliste einfügen</t124>
+    <t125>Unterteilung</t125>
+    <t126>Typ des aktuellen Dokuments:</t126>
+    <t127>Verfügbare Unterteilungen:</t127>
+    <t128>Nicht verfügbare Unterteilungen:</t128>
+    <t129>{0} Kategorien</t129>
+    <t130>Testversion. Tage bis zum Ablauf</t130>
+    <t131>Die Testversion des Plugins ist abgelaufen! Erwerben Sie eine Lizenz für das Plugin oder ein Revit-Abonnement, um das Plugin "Parameter" nach Ablauf der Testversion zu verwenden</t131>
+    <t132>Ausgewählte Formeln</t132>
     <t133>Ignore nested families</t133>
-    <ea1>Nothing</ea1>
-    <ea2>Open target folder</ea2>
-    <ea3>Open created file</ea3>
-    <ea4>Ask for opening target folder</ea4>
-    <ep1>Skip</ep1>
-    <ep2>Set formula (if possible)</ep2>
-    <ep3>Set value (if possible)</ep3>
-    <ep4>Set formula or value (if possible)</ep4>
-    <fs1>From file</fs1>
-    <fs2>From project</fs2>
-    <fs3>Open families</fs3>
-    <s1>Selected elements</s1>
-    <s2>On active view</s2>
-    <s3>In project</s3>
-    <d1>Common</d1>
-    <d2>Electrical</d2>
-    <d3>Energy</d3>
-    <d4>HVAC</d4>
-    <d5>Piping</d5>
-    <d6>Structural</d6>
-    <d7>Infrastructure</d7>
-    <msg1>The formula has been added to the favorites list</msg1>
-    <msg2>The current formula is not empty. Are you sure to replace it with a formula from the favorites list?</msg2>
-    <msg3>Shared parameter is already present in the current parameter list</msg3>
-    <msg4>A parameter with this name, data type and grouping is already present in the current parameter list</msg4>
-    <msg5>All selected parameters cannot be renamed</msg5>
-    <msg6>The type named "{0}" already exists</msg6>
-    <msg7>Are you sure you want to remove the type "{0}"?</msg7>
-    <msg8>Remove the "{0}" parameter?</msg8>
-    <msg9>Remove selected parameters ({0})?</msg9>
-    <msg10>The parameter creation is skipped, because the family already has such a parameter</msg10>
-    <msg11>Parameter created</msg11>
-    <msg12>The parameter has not been created</msg12>
-    <msg13>The value of the parameter is set</msg13>
-    <msg14>Failed to set the parameter value</msg14>
-    <msg15>Parameter formula updated</msg15>
-    <msg16>Failed to update the parameter formula</msg16>
-    <msg17>Parameter removed</msg17>
-    <msg18>Parameter renamed</msg18>
-    <msg19>The value "{0}" is set</msg19>
-    <msg20>Unknown action</msg20>
-    <msg21>Parameter "{0}" has been deleted</msg21>
-    <msg22>The formula has been changed</msg22>
-    <msg23>Parameter made "By instance"</msg23>
-    <msg24>Parameter made "By type"</msg24>
-    <msg25>Parameter moved to group "{0}"</msg25>
-    <msg26>Open the export folder?</msg26>
-    <msg27>Process families from nested directories?</msg27>
-    <msg28>The formula editor will be opened without the ability to validate the formula</msg28>
-    <msg29>No Shared Parameter File has been set in the current project</msg29>
-    <msg30>Check if the parameter name and type values are filled in</msg30>
-    <msg31>Check if the parameter name, type, group and category list values are filled in</msg31>
-    <msg32>The entered value does not match the parameter type</msg32>
-    <err1>An unexpected error occurred during window initialization</err1>
-    <err2>An unexpected error occurred when closing the window</err2>
-    <err3>An error occurred while creating the parameter</err3>
-    <err4>Failed to add parameter binding</err4>
-    <err5>Failed to get parameter binding</err5>
-    <err6>Failed to update parameter binding</err6>
-    <err7>Failed to execute action</err7>
-    <err8>Failed to execute action with parameter "{0}"</err8>
-    <err9>Parameter with GUID "{0}" is omitted because no SPF is specified</err9>
-    <err10>Parameter with GUID "{0}" is not found in the current SPF</err10>
-    <err11>Not recognized data type "{0}" for parameter</err11>
-    <err12>Not recognized group "{0}" for parameter</err12>
-    <err13>Not recognized category for parameter "{0}"</err13>
-    <err14>Failed to read row</err14>
-    <err15>The family has been saved in a later version of Revit</err15>
-    <err16>Unable to set the value "{0}" to an integer parameter</err16>
-    <err17>Unsupported data type "{0}"</err17>
-    <err18>Instance Parameters can't be used in Type Parameter formulas</err18>
-    <err19>Failed to set the formula</err19>
-    <err20>Failed to create parameter "{0}" in family "{1}"</err20>
+    <ea1>Nichts</ea1>
+    <ea2>Zielordner öffnen</ea2>
+    <ea3>Erstellte Datei öffnen</ea3>
+    <ea4>Über die Öffnung des Zielordners nachfragen</ea4>
+    <ep1>Überspringen</ep1>
+    <ep2>Formel vorgeben (wenn möglich)</ep2>
+    <ep3>Wert vorgeben (wenn möglich)</ep3>
+    <ep4>Formel oder Wert vorgeben (wenn möglich)</ep4>
+    <fs1>Aus Datei</fs1>
+    <fs2>Aus Projekt</fs2>
+    <fs3>Geöffnete Familien</fs3>
+    <s1>Ausgewählte Elemente</s1>
+    <s2>In der aktuellen Ansicht</s2>
+    <s3>Im gesamten Projekt</s3>
+    <d1>Allgemeine</d1>
+    <d2>Elektro</d2>
+    <d3>Energie</d3>
+    <d4>HLK</d4>
+    <d5>Rohre</d5>
+    <d6>Tragwerke</d6>
+    <d7>Infrastruktur</d7>
+    <msg1>Formel ist zu der Favoritenliste hinzugefügt</msg1>
+    <msg2>Die aktuelle Formel ist nicht leer. Wollen Sie sie trotzdem durch eine Formel aus der Favoritenliste ersetzen?</msg2>
+    <msg3>Der gemeinsam genutzte Parameter ist in der aktuellen Parameterliste bereits vorhanden</msg3>
+    <msg4>Parameter mit diesem Namen, Datentyp und Gruppieren ist in der aktuellen Parameterliste bereits vorhanden</msg4>
+    <msg5>Alle ausgewählten Parameter können nicht umbenannt werden</msg5>
+    <msg6>Typ mit dem Namen "{0}" ist bereits vorhanden</msg6>
+    <msg7>Sind Sie sicher, dass Sie den Typ "{0}" löschen wollen?</msg7>
+    <msg8>Wollen Sie den Parameter "{0}" löschen?</msg8>
+    <msg9>Wollen Sie die ausgewählten Parameter ({0}) löschen?</msg9>
+    <msg10>Das Erstellen des Parameters wurde übersprungen, weil dieser Parameter in der Familie bereits vorhanden ist</msg10>
+    <msg11>Parameter ist erstellt</msg11>
+    <msg12>Parameter ist nicht erstellt</msg12>
+    <msg13>Parameterwert ist festgelegt</msg13>
+    <msg14>Festlegen des Parameterwertes ist fehlgeschlagen</msg14>
+    <msg15>Parameterformel ist aktualisiert</msg15>
+    <msg16>Aktualisieren der Parameterformel ist fehlgeschlagen</msg16>
+    <msg17>Parameter ist gelöscht</msg17>
+    <msg18>Parameter ist umbenannt</msg18>
+    <msg19>Wert "{0}" ist festgelegt</msg19>
+    <msg20>Unbekannte Aktion</msg20>
+    <msg21>Parameter "{0}" ist gelöscht</msg21>
+    <msg22>Formel ist geändert</msg22>
+    <msg23>Parameter ist auf "Exemplarweise" gesetzt</msg23>
+    <msg24>Parameter ist auf "Typweise" gesetzt</msg24>
+    <msg25>Parameter ist in die Gruppe "{0}" verschoben</msg25>
+    <msg26>Exportverzeichnis öffnen?</msg26>
+    <msg27>Familien aus Unterverzeichnissen bearbeiten?</msg27>
+    <msg28>Der Formeleditor wird geöffnet, ohne dass die Formel überprüft werden kann</msg28>
+    <msg29>Im aktuellen Projekt ist keine Datei für gemeinsam genutzten Parametern definiert</msg29>
+    <msg30>Überprüfen Sie, ob die Wertfelder für den Parameternamen und den Typ ausgefüllt sind</msg30>
+    <msg31>Überprüfen Sie, ob die Wertfelder für den Parameternamen, den Typ und der Gruppe sowie für die Kategorieliste ausgefüllt sind</msg31>
+    <msg32>Festlegen des Parameterwertes ist fehlgeschlagen</msg32>
+    <err1>Unerwarteter Fehler beim Initialisieren des Fensters aufgetreten</err1>
+    <err2>Unerwarteter Fehler beim Schließen des Fensters aufgetreten</err2>
+    <err3>Beim Erstellen des Parameters ist ein Fehler aufgetreten</err3>
+    <err4>Hinzufügen der Verknüpfung des Parameters ist fehlgeschlagen</err4>
+    <err5>Erhalten der Verknüpfung des Parameters ist fehlgeschlagen</err5>
+    <err6>Aktualisieren der Verknüpfung des Parameters ist fehlgeschlagen</err6>
+    <err7>Aktionen sind fehlgeschlagen</err7>
+    <err8>Ausführen der Aktionen mit Parameter "{0}" ist fehlgeschlagen</err8>
+    <err9>Parameter mit GUID "{0}" ist übersprungen, weil keine DfGGP festgelegt ist</err9>
+    <err10>Parameter mit GUID "{0}" ist in der aktuellen DfGGP nicht gefunden</err10>
+    <err11>Der Datentyp für den Parameter "{0}" ist nicht erkannt</err11>
+    <err12>Die Gruppe "{0}" für den Parameter ist nicht erkannt</err12>
+    <err13>Die Kategorie für den Parameter "{0}" ist nicht erkannt</err13>
+    <err14>Lesen der Zeichenfolge ist fehlgeschlagen</err14>
+    <err15>Die Familie wurde in einer späteren Version von Revit gespeichert</err15>
+    <err16>Der Wert "{0}" kann für einen ganzzahligen Parameter nicht festgelegt werden</err16>
+    <err17>Nicht unterstützter Datentyp "{0}"</err17>
+    <err18>Parameter der Exemplare können nicht in den Formeln für Typparameter verwendet werden</err18>
+    <err19>Festlegen der Formel ist fehlgeschlagen</err19>
+    <err20>Erstellen des Parameters "{0}" in der Familie "{1}" ist fehlgeschlagen</err20>
     <err21>The family is not loaded because the family file has a "Read Only" attribute</err21>
   </mprParameters>
 </ModPlus>
