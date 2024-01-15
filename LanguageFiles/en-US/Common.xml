@@ -1130,6 +1130,12 @@
     <h112>Element ID</h112>
     <h113>Element Type ID</h113>
     <h114>Element parent Group</h114>
+    <h115>Element parent Assembly</h115>
+    <h116>Select Rebars</h116>
+    <h117>Enables you to select the Rebars included in the selected Structural Area Reinforcement</h117>
+    <h118>Enables you to select the Rebars included in the selected Structural Path Reinforcement</h118>
+    <h119>Select Host</h119>
+    <h120>Enables you to select an elements that is the Host for the selected elements</h120>
 		<parameters>Parameters</parameters>
 		<name>Name</name>
 		<any>Any</any>
@@ -1146,10 +1152,12 @@
 		<i5-2>To use the "Ends on" condition, select the "Contains" condition and add a "*" at the beginning of the value. For example, "*Wall".</i5-2>
     <i5-3>To use the "Not starts with" condition, select the "Not contains" condition and add an "*" to the end of the value. For example, "Wall*".</i5-3>
     <i5-4>To use the "Not ends with " condition, select the "Not contains" condition and add a "*" sign to the beginning of the value. For example, "*Wall".</i5-4>
-    <i6>String values are case-insensitive.</i6>
+    <i6>String values are case-sensitive.</i6>
 		<i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
 		<i8>All simple nested conditions of a group condition are checked with the "AND" operator – i.e. all nested conditions must match.</i8>
 		<i9>Instead of parameter name it is possible to specify GUID for shared parameters or system name for built-in parameters.</i9>
+    <i10>The conditions "Presence of parameter" and "Absence of parameter" when checking the parent Group (keyword Group) check, respectively, whether the element is in the Group or not.</i10>
+    <i11>The conditions "Presence of parameter" and "Absence of parameter" when checking the parent Assembly (keyword Assembly) check, respectively, whether the element is in the Assembly or not.</i11>
 		<et1>Equal</et1>
 		<et2>More</et2>
 		<et3>Less</et3>
