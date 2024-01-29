@@ -79,6 +79,8 @@
     <h75>Kopieren der Bauteilliste fehlgeschlagen</h75>
     <h76>Kopieren des Plans fehlgeschlagen</h76>
     <h77>In dem Namen des Plans suchen und ersetzen</h77>
+    <h78>In the legend name find and replace</h78>
+    <h79>In filters find and replace</h79>
     <start>Anfang</start>
     <notOrganized>!Nicht organisiert</notOrganized>
     <end>Ende</end>
@@ -4434,8 +4436,14 @@
     <t46>Parameter nach Namen suchen</t46>
     <tr1>Parameter Setup</tr1>
   </mprTypeManager>
-  <mprMEPRotate LocalName="MEP drehen"
-                Description="Armaturen oder Teile einer Installation drehen">
+  <mprMEPRotate LocalName="MEP rotate"
+                Description="A collection of plugins for rotating parts of MEP systems"
+                LocalName1="MEP Element Rotation"
+                Description1="Rotation of fittings or parts of MEP systems"
+                LocalName2="MEP Rotation in direction"
+                Description2="Rotation of fittings or parts of MEP systems in the direction of the MEP curve"
+                LocalName3="Edge-mounted Tray"
+                Description3="Turning the cable tray on its edge">
     <tr1>Drehen</tr1>
     <t1>Im Uhrzeigersinn</t1>
     <t2>Im Uhrzeigersinn drehen</t2>
@@ -4445,6 +4453,10 @@
     <t6>Alle Elemente drehen</t6>
     <t7>Wählen Sie das Element, das Sie drehen wollen</t7>
     <t8>Wählen Sie das Element, um das Sie drehen wollen</t8>
+    <t9>Select the reference MEP curve element</t9>
+    <t10>Select trays for rotation</t10>
+    <msg1>Missing fitting for rotation</msg1>
+    <msg2>It's impossible to turn in that direction</msg2>
   </mprMEPRotate>
   <mprParameters LocalName="Parameter"
                  Description="Stapelbearbeitung/Hinzufügen von Parametern zu Projekten und Familien">

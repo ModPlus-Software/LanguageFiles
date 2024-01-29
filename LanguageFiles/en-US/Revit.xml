@@ -79,6 +79,8 @@
     <h75>Failed to copy the schedule</h75>
     <h76>Failed to copy the sheet</h76>
     <h77>In the sheet name find and replace</h77>
+    <h78>In the legend name find and replace</h78>
+    <h79>In filters find and replace</h79>
     <start>Start</start>
     <notOrganized>!Not organized</notOrganized>
     <end>End</end>
@@ -4435,16 +4437,26 @@
     <tr1>Setting parameters</tr1>
   </mprTypeManager>
   <mprMEPRotate LocalName="MEP rotate"
-                Description="Rotation of fittings or part of the engineering system">
+                Description="A collection of plugins for rotating parts of MEP systems"
+                LocalName1="MEP Element Rotation"
+                Description1="Rotation of fittings or parts of MEP systems"
+                LocalName2="MEP Rotation in direction"
+                Description2="Rotation of fittings or parts of MEP systems in the direction of the MEP curve"
+                LocalName3="Edge-mounted Tray"
+                Description3="Turning the cable tray on its edge">
     <tr1>Rotation</tr1>
     <t1>Clockwise</t1>
     <t2>Perform clockwise rotation</t2>
-    <t3>Standard angles</t3>
+    <t3>Standard Angles</t3>
     <t4>Counterclockwise</t4>
     <t5>Perform counterclockwise rotation</t5>
-    <t6>Rotate all elements</t6>
-    <t7>Select the element to rotate</t7>
+    <t6>Rotate All Elements</t6>
+    <t7>Select an element to rotate</t7>
     <t8>Select the element around which you want to rotate</t8>
+    <t9>Select the reference MEP curve element</t9>
+    <t10>Select trays for rotation</t10>
+    <msg1>Missing fitting for rotation</msg1>
+    <msg2>It's impossible to turn in that direction</msg2>
   </mprMEPRotate>
   <mprParameters LocalName="Parameters"
                  Description="Batch editing/adding parameters to projects and families">
