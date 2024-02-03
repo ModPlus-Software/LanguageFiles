@@ -79,8 +79,8 @@
     <h75>Kopieren der Bauteilliste fehlgeschlagen</h75>
     <h76>Kopieren des Plans fehlgeschlagen</h76>
     <h77>In dem Namen des Plans suchen und ersetzen</h77>
-    <h78>In the legend name find and replace</h78>
-    <h79>In filters find and replace</h79>
+    <h78>In dem Namen der Legende suchen und ersetzen</h78>
+    <h79>In den Filtern suchen und ersetzen</h79>
     <start>Anfang</start>
     <notOrganized>!Nicht organisiert</notOrganized>
     <end>Ende</end>
@@ -2657,7 +2657,7 @@
     <h40>Markieren Sie mehr als eine Kategorie, um die gleichen Parameter für die markierten Kategorien anzuzeigen</h40>
     <h41>Ohne Werteingaben</h41>
     <h42>Für die spätere Auswahl aller Parameterwerte nur Kategorien und Parameternamen in der Voreinstellung speichern</h42>
-    <h43>[No Category]</h43>
+    <h43>[Keine Kategorie]</h43>
     <h44>ModPlus filter</h44>
     <fo1>Alle Elemente</fo1>
     <fo2>Alle Elemente in der Ansicht</fo2>
@@ -3836,7 +3836,7 @@
     <err54>Die Anweisung darf keine Klammern enthalten, wenn sie keine Funktionsgrenzen sind. Um einer Anweisung Klammern hinzuzufügen, müssen diese mit Escapezeichen "\)" und "\(" versehen werden</err54>
     <err55>Die Funktion muss als Argument einen Verweis auf einen Parameter (@[] oder $[]) enthalten</err55>
     <err56>Die Liste enthält Felder mit dem gleichen Schlüssel!</err56>
-    <err57>A workset named "{0}" was not found</err57>
+    <err57>Kein Bearbeitungsbereich mit dem Namen "{0}" gefunden</err57>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -4441,14 +4441,14 @@
     <t46>Parameter nach Namen suchen</t46>
     <tr1>Parameter Setup</tr1>
   </mprTypeManager>
-  <mprMEPRotate LocalName="MEP rotate"
-                Description="A collection of plugins for rotating parts of MEP systems"
-                LocalName1="MEP Element Rotation"
-                Description1="Rotation of fittings or parts of MEP systems"
-                LocalName2="MEP Rotation in direction"
-                Description2="Rotation of fittings or parts of MEP systems in the direction of the MEP curve"
-                LocalName3="Edge-mounted Tray"
-                Description3="Turning the cable tray on its edge">
+  <mprMEPRotate LocalName="MEP drehen"
+                Description="Sammlung von Plugins zum Drehen von Teilen einer Installation"
+                LocalName1="МЕР-Elemente drehen"
+                Description1="Armaturen oder Teile einer Installation drehen"
+                LocalName2="MEP drehen in Richtung"
+                Description2="Armaturen oder Teile einer Installation in Richtung МЕР-Kurve drehen"
+                LocalName3="Kabeltrasse auf Kante"
+                Description3="Kabeltrasse auf Kante drehen">
     <tr1>Drehen</tr1>
     <t1>Im Uhrzeigersinn</t1>
     <t2>Im Uhrzeigersinn drehen</t2>
@@ -4458,10 +4458,10 @@
     <t6>Alle Elemente drehen</t6>
     <t7>Wählen Sie das Element, das Sie drehen wollen</t7>
     <t8>Wählen Sie das Element, um das Sie drehen wollen</t8>
-    <t9>Select the reference MEP curve element</t9>
-    <t10>Select trays for rotation</t10>
-    <msg1>Missing fitting for rotation</msg1>
-    <msg2>It's impossible to turn in that direction</msg2>
+    <t9>Wählen Sie ein Referenzelement der MEP-Kurve</t9>
+    <t10>Wählen Sie die Trassen, die Sie drehen wollen</t10>
+    <msg1>Keine Armatur zum Drehen vorhanden</msg1>
+    <msg2>Das Drehen in dieser Richtung ist unmöglich</msg2>
   </mprMEPRotate>
   <mprParameters LocalName="Parameter"
                  Description="Stapelbearbeitung/Hinzufügen von Parametern zu Projekten und Familien">
@@ -4609,10 +4609,10 @@
     <t132>Ausgewählte Formeln</t132>
     <t133>Unterfamilien ignorieren</t133>
     <t134>Andere</t134>
-    <t135>On plugin startup, open a section in the family document:</t135>
-    <t136>Case sensitive searches in the list of data types, parameter groups, column filters and the dialog box for adding parameters from the SPF</t136>
-    <t137>Change group</t137>
-    <t138>Select a new group for the parameter "{0}"</t138>
+    <t135>Folgende Unterteilung beim Starten des Plugins in einem Familiendokument öffnen:</t135>
+    <t136>Berücksichtigung der Groß- und Kleinschreibung bei der Suche in der Liste der Datentype, Parametergruppen, Spaltenfilter und im Dialogfeld zum Hinzufügen von Parametern aus DfGGP</t136>
+    <t137>Gruppe ändern</t137>
+    <t138>Wählen Sie eine neue Gruppe für den Parameter "{0}"</t138>
     <ea1>Nichts</ea1>
     <ea2>Zielordner öffnen</ea2>
     <ea3>Erstellte Datei öffnen</ea3>
@@ -4687,12 +4687,12 @@
     <err19>Festlegen der Formel ist fehlgeschlagen</err19>
     <err20>Erstellen des Parameters "{0}" in der Familie "{1}" ist fehlgeschlagen</err20>
     <err21>Die Familie ist nicht geladen, weil die Datei der Familie das Attribut "Nur Lesen" hat</err21>
-    <err22>Failed to set a formula to a parameter because an uncontrolled error occurred in the Revit API, indicating a bug in the Revit API. To set a formula to this parameter, use the standard parameter editing dialog</err22>
+    <err22>Keine Formel konnte in dem Parameter festgelegt werden, da in der Revit-API ein unkontrollierbarer Fehler aufgetreten ist, der auf einen Fehler in der Revit-API hinweist. Um eine Formel für diesen Parameter festzulegen, verwenden Sie das Standarddialogfeld zur Parameterbearbeitung</err22>
   </mprParameters>
-  <mprOverrideGraphicManager LocalName="Graphics Override Manager"
-                             Description="Manage and view graphics overrides in the current view, with the ability to reset an override for an elements">
-    <t2>There are no elements with overridden graphics in this view</t2>
-    <t3>Resetting an element's graphic override to default</t3>
-    <t4>Reset category element graphics overrides to defaults</t4>
+  <mprOverrideGraphicManager LocalName="Manager zur Grafiküberschreibung"
+                             Description="Verwalten und Anzeigen von Grafiküberschreibungen in der aktuellen Ansicht mit der Möglichkeit Überschreibungen für Elemente zurückzusetzen">
+    <t2>Keine Elemente mit überschriebenen Grafiken in dieser Ansicht</t2>
+    <t3>Grafiküberschreibung eines Elements auf Standardwert zurücksetzen</t3>
+    <t4>Grafiküberschreibung von Kategorieelementen auf Standardwert zurücksetzen</t4>
   </mprOverrideGraphicManager>
 </ModPlus>
