@@ -1763,6 +1763,24 @@
     <h29>Präfix und Suffix aus</h29>
     <h30>der Zeile</h30>
     <h31>dem Parameter</h31>
+    <h32>Create a new configuration</h32>
+    <h33>Rename the configuration</h33>
+    <h34>Enter a new configuration name</h34>
+    <h35>Remove configuration</h35>
+    <h36>Numeric parameter</h36>
+    <h37>String parameter</h37>
+    <h38>Alphabet:</h38>
+    <h39>Custom</h39>
+    <h40>Russian</h40>
+    <h41>English</h41>
+    <h42>Ukrainian</h42>
+    <h43>Enter the letters of the alphabet without spaces in any case. You can also</h43>
+    <h44>insert</h44>
+    <h45>and edit</h45>
+    <h46>alphabet</h46>
+    <h47>Custom alphabet</h47>
+    <h48>Grouping by parameter:</h48>
+    <h49>Group behavior:</h49>
     <sv1>Implizierte Fensterauswahl</sv1>
     <sv2>Ordnungsauswahl</sv2>
     <sv3>Schnittpunkt mit einer Kurve</sv3>
@@ -1776,13 +1794,19 @@
     <t7>Die Parameterliste wird nach der Auswahl der zu nummerierenden Elemente ausgefüllt.</t7>
     <t12>Der Anfangswert kann ein gebrochener Wert sein. Um den ganzzahligen Teil vom gebrochenen Teil zu trennen, kann ein Punkt oder Komma verwendet werden. Das angegebene Trennzeichen wird beim Einstellen von Werten im Textparameter verwendet. Wenn der Zielparameter vom Datentyp "Zahl" ist, hat das angegebene Trennzeichen keinen Einfluss auf das angezeigte Ergebnis. Wenn der Zielparameter vom Datentyp "Ganzzahl" ist, wird das Ergebnis der Nummerierung in eine Ganzzahl konvertiert, wobei der Bruchteil verworfen wird.</t12>
     <t13>Führende Nullen können zum Anfangswert hinzugefügt werden. Wenn zum Beispiel der Anfangswert "01" und die Schrittweite "5" ist, lautet das Ergebnis der Nummerierung "01, 05, 10, 15.... Anfängliche Nullen werden nur berücksichtigt, wenn der Zielparameter ein String-Datentyp ist.</t13>
+    <!-- todo remove after 5.2.16.0 -->
     <t14>Die geometrische Richtung der Nummerierung wird aus den absoluten X- und Y-Werten der Platzierungspunkte der Elemente berechnet. Bei linearen Objekten wird der Mittelpunkt ausgewählt</t14>
+    <t15>When sorting linear objects, the center point is used. When sorting viewports, the center of the viewport is used. In other cases, the insertion point of the element is used</t15>
+    <t16>You can apply letter numbering. To do this, specify the letter of the alphabet from which the alphabetic numbering will start as the initial value. Alphabetic numbering will be performed in the same case in which the initial value is specified.</t16>
     <m1>Wählen Sie Elemente für die nummerierte Markierung</m1>
     <m2>In der aktuellen Ansicht der Bauteilliste gibt es keine Elemente</m2>
     <m3>Wollen Sie die ausgewählten Elemente in der aktuellen Kategorieliste filtern?</m3>
-    <o1>in aufsteigender Reihenfolge</o1>
-    <o2>in absteigender Reihenfolge</o2>
-    <d1>in der Reihenfolge der Erstellung</d1>
+    <o1>In aufsteigender Reihenfolge</o1>
+    <o2>In absteigender Reihenfolge</o2>
+    <b1>Numbering in each group</b1>
+    <b2>One number per group</b2>
+    <d1>In ascending order of creation</d1>
+    <d1-1>In descending order of creation</d1-1>
     <d2>Von links nach rechts und von oben nach unten</d2>
     <d3>Von links nach rechts und von unten nach oben</d3>
     <d4>Von rechts nach links und von oben nach unten</d4>
@@ -1791,6 +1815,12 @@
     <d7>Von oben nach unten und von rechts nach links</d7>
     <d8>Von unten nach oben und von links nach rechts</d8>
     <d9>Von unten nach oben und von rechts nach links</d9>
+    <r1>Initial value not set</r1>
+    <r2>No elements selected for processing</r2>
+    <r3>Empty custom alphabet</r3>
+    <r4>The letter "{0}" is not in the selected alphabet</r4>
+    <r5>Letter numbering cannot be performed because the numeric parameter is selected</r5>
+    <r6>Parameter for grouping not selected</r6>
   </mmOrderMarking>
   <mprCleaner LocalName="Bereinigen des Modells"
               Description="Entfernen von Objekten bestimmter Kategorien aus dem Modell mit der Möglichkeit, nicht verwendete Elemente zu löschen">
