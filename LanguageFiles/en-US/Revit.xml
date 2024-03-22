@@ -348,6 +348,7 @@
     <d23>Overall size in current direction is the distance from the extreme edges of the outer walls</d23>
     <d24>This option disables all other options</d24>
   </mprExteriorPlanDimensions>
+  <!-- todo remove LocalName1 and Desctition1 after 2.6.13.0-->
   <mprDimByLine LocalName="Dimensions by line"
                 Description="Placing dimensions along the specified line"
                 FullDescription="Plugin allows you to place dimensions on the plan or section view along the conditional line formed by the two indicated points. Elements that will be dimensioned and ways of dimensioning (in the center and/or on the extreme sides) are specified in the working configuration"
@@ -363,18 +364,21 @@
     <h8>You must select at least one element category</h8>
     <h9>You checked the "Dimension" check box but did not specify the option of dimension ("At extreme edges" and/or "By center") for categories:</h9>
     <h10>Elements of this category will not be processed! Do you want to save this configuration option?</h10>
+    <!-- todo remove after 2.6.13.0-->
     <h11>Dimensions by line settings</h11>
+    <!-- todo remove after 2.6.13.0-->
     <h12>Current working configuration of dimensions by line:</h12>
     <h13>Edit the current configuration</h13>
     <h14>Create a new configuration</h14>
     <h15>Delete the current configuration</h15>
     <h16>Work Cycle</h16>
     <h17>Will work in cycles until the user terminates the operation by pressing the Esc</h17>
-    <h18>Create configuration for dimensions by line</h18>
-    <h19>Edit configuration for dimensions by line</h19>
+    <h18>Create configuration</h18>
+    <h19>Edit configuration</h19>
     <h20>Configuration</h20>
     <h21>will be permanently deleted!</h21>
     <h22>Sure?</h22>
+    <!-- todo remove after 2.6.13.0-->
     <h23>There are no working configurations\nOpen settings window of working configurations?</h23>
     <h25>Missing the ID attribute</h25>
     <h26>No matching elements found!</h26>
@@ -388,9 +392,13 @@
     <h34>Proceed linked files</h34>
     <h35>Object snap when specifying points</h35>
     <attention>Attention!</attention>
+    <!-- todo remove after 2.6.13.0-->
     <edit>Edit</edit>
+    <!-- todo remove after 2.6.13.0-->
     <create>Create</create>
+    <!-- todo remove after 2.6.13.0-->
     <delete>Delete</delete>
+    <!-- todo remove after 2.6.13.0-->
     <accept>Accept</accept>
     <c1>Architecture</c1>
     <c2>Structure</c2>
@@ -406,7 +414,10 @@
     <e28>IFC rebars</e28>
     <e29>Foundation slabs</e29>
     <e30>Detail lines</e30>
+    <e31>Structural Rebar. Dimensions</e31>
     <n1>Only on Section Views</n1>
+    <n2>No intersection check</n2>
+    <n3>Only in the family editor</n3>
   </mprDimByLine>
   <mprDimBias LocalName="Dim offset"
               Description="Automatic movement of the dimension value that falls on the dimension lines"
@@ -2732,6 +2743,7 @@
   <mprSplitDimChain LocalName="Split dimensions"
                     Description="Create new dimensions from segments of the selected dimension chain">
     <h1>Select dimensions with more than one segment</h1>
+    <h2>Some segments of the original dimension could not be recreated. Accept the changes made?</h2>
   </mprSplitDimChain>
   <mprCopyParameterValues LocalName="Copy values"
 	                        Description="Copy parameter values between elements or within one element"
@@ -4060,8 +4072,10 @@
     <h3>By active view</h3>
     <h4>When activated, the view will be selected as the source view for synchronization. The next activated view will be synchronized by the source view, and then will be selected as the source view for synchronization</h4>
     <h5>Synchronize view crop</h5>
-    <h6>When activated, 3D view bounds and view crop (for 2D views) will be synchronized</h6>
+    <h6>Synchronize 3D view section box</h6>
     <h7>View cropping</h7>
+    <h8>When activated, view crop settings will be synchronized</h8>
+    <h9>When activated, 3D view bounds will be synchronized</h9>
   </mprViewSync>
   <mprSheetExport LocalName="Sheet export"
 	                Description="Export (print) selected sheets to PDF, DWG, etc. with automatic sheet format detection">

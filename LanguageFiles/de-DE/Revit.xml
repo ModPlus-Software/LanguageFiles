@@ -348,6 +348,7 @@
     <d23>Maß in dieser Richtung ist der Abstand von den äußersten Flächen der äußersten Wände</d23>
     <d24>Mit dieser Option werden alle anderen Optionen deaktiviert</d24>
   </mprExteriorPlanDimensions>
+  <!-- todo remove LocalName1 and Desctition1 after 2.6.13.0-->
   <mprDimByLine LocalName="Bemaßungen entlang der Linie"
                 Description="Festlegen von Bemaßungen entlang der angegebenen Linie"
                 FullDescription="Mit dem Plugin können Sie Bemaßungen im Grundriß, der Schnittansicht oder der Ansicht entlang einer angenommenen Linie festlegen, die durch zwei angegebene Punkte gebildet wird. In der Arbeitskonfiguration werden die zu bemessenden Elemente und die Methoden für das Festlegen von Bemaßungen (in der Mitte und/oder an den äußersten Seiten) definiert"
@@ -363,18 +364,21 @@
     <h8>Man muss mindestens eine Kategorie von Elementen auswählen</h8>
     <h9>Sie haben "Bemaßung" durch einen Haken markiert, aber keine Option von der Bemaßung angegeben ("von äußeren Flächen" und/oder "von der Achse") für die Kategorien:</h9>
     <h10>Elemente dieser Kategorie werden nicht verarbeitet! Wollen Sie diese Konfigurationsoption speichern?</h10>
+    <!-- todo remove after 2.6.13.0-->
     <h11>Einstellungen der Bemaßungen entlang der Linie</h11>
+    <!-- todo remove after 2.6.13.0-->
     <h12>Die aktuelle Arbeitskonfiguration der Bemaßungen entlang der Linie:</h12>
     <h13>Die aktuelle Konfiguration ändern</h13>
     <h14>Eine neue Konfiguration erstellen</h14>
     <h15>Die aktuelle Konfiguration löschen</h15>
     <h16>Zyklisch ablaufen</h16>
     <h17>Das Plugin läuft zyklisch ab, bis der Benutzer es durch Drücken der Esc-Taste unterbricht</h17>
-    <h18>Erstellen einer Konfiguration für Bemaßungen entlang der Linie</h18>
-    <h19>Ändern einer Konfiguration für Bemaßungen entlang der Linie</h19>
+    <h18>Erstellen einer Konfiguration</h18>
+    <h19>Ändern einer Konfiguration</h19>
     <h20>Konfiguration</h20>
     <h21>wird unwiderruflich gelöscht!</h21>
     <h22>Sind Sie sicher?</h22>
+    <!-- todo remove after 2.6.13.0-->
     <h23>Fehlende Arbeitskonfigurationen. \nDie Einstellung von Arbeitskonfigurationen öffnen?</h23>
     <h25>Kein ID-Attribut</h25>
     <h26>Keine passenden Elemente gefunden!</h26>
@@ -388,9 +392,13 @@
     <h34>Verknüpfte Dateien verarbeiten</h34>
     <h35>Objektfang bei der Angabe von Punkten</h35>
     <attention>Achtung!</attention>
+    <!-- todo remove after 2.6.13.0-->
     <edit>Ändern</edit>
+    <!-- todo remove after 2.6.13.0-->
     <create>Erstellen</create>
+    <!-- todo remove after 2.6.13.0-->
     <delete>Löschen</delete>
+    <!-- todo remove after 2.6.13.0-->
     <accept>Akzeptieren</accept>
     <c1>Architektur</c1>
     <c2>Entwurf</c2>
@@ -406,7 +414,10 @@
     <e28>IFC Bewehrung</e28>
     <e29>Fundamentplatten</e29>
     <e30>Detaillinien</e30>
+    <e31>Structural Rebar. Dimensions</e31>
     <n1>Nur in Schnittansichten und Ansichten</n1>
+    <n2>No intersection check</n2>
+    <n3>Only in the family editor</n3>
   </mprDimByLine>
   <mprDimBias LocalName="Verschieben von Bemaßungen"
               Description="Automatisches Verschieben des Bemaßungswertes, der auf Bemaßungslinien liegt"
@@ -2732,6 +2743,7 @@
   <mprSplitDimChain LocalName="Aufteilen von Bemaßungen"
                     Description="Erstellen neuer Bemaßungen aus Segmenten der ausgewählten Bemaßungskette">
     <h1>Wählen Sie Bemaßungen aus, die mehr als ein Segment enthalten</h1>
+    <h2>Some segments of the original dimension could not be recreated. Accept the changes made?</h2>
   </mprSplitDimChain>
   <mprCopyParameterValues LocalName="Kopieren von Werten"
                           Description="Kopieren von Parameterwerten zwischen Elementen oder innerhalb eines Elements"
@@ -4060,8 +4072,10 @@
     <h3>Nach der aktuellen Ansicht</h3>
     <h4>Bei Aktivierung wird die Ansicht als Startansicht für die Synchronisierung ausgewählt. Die nächste aktivierte Ansicht wird nach der ursprünglichen Ansicht synchronisiert und dann als Startansicht für die Synchronisierung ausgewählt</h4>
     <h5>Synchronize view crop</h5>
-    <h6>When activated, 3D view bounds and view crop (for 2D views) will be synchronized</h6>
+    <h6>Synchronize 3D view section box</h6>
     <h7>View cropping</h7>
+    <h8>When activated, view crop settings will be synchronized</h8>
+    <h9>When activated, 3D view bounds will be synchronized</h9>
   </mprViewSync>
   <mprSheetExport LocalName="Export von Plänen"
                   Description="Export (Druck) von ausgewählten Plänen in die Formate PDF, DWG usw. mit automatischer Planformaterkennung">
