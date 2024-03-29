@@ -4036,9 +4036,9 @@
     <err9>Das ausgewählte Element hat keine freien Anschlüsse</err9>
   </mprMEPConnect>
   <mprBaseLevel LocalName="Grundebene"
-                Description="Ändern der Grundebene für Elemente">
-    <t1>Es ist nicht möglich, eine alte Ebene für die Versatzerkennung zu bestimmen</t1>
-    <t2>Die neue Ebene "{0}" für Elemente kann nicht gefunden werden</t2>
+                Description="Changing constraints for elements">
+    <t1>Unable to determine old base level to determine offset</t1>
+    <t2>Cannot find new base level "{0}" for elements</t2>
     <t3>Bei Elementen war es nicht möglich, eine Strategie für die Zuweisung von Ebenen zu bestimmen</t3>
     <t4>Konfiguration</t4>
     <t5>Die Grundebene für Elemente {0} ist geändert</t5>
@@ -4048,7 +4048,7 @@
     <t9>Der Parameter "{0}" konnte mit der Ebene "{1}" nicht gefüllt werden</t9>
     <t10>Geben Sie einen Namen der Konfiguration ein</t10>
     <t11>Die Basis für Elemente kann nicht geändert werden, da sie auf der Grundlage einer Ebene oder einer Fläche erstellt werden</t11>
-    <t12>Das Ändern der Grundebene ist übersprungen, da sich das Element bereits auf der Ebene "{0}" befindet</t12>
+    <t12>Base level change is skipped because the element is already located at level "{0}"</t12>
     <tr1>Einstellung der Ebenen</tr1>
     <xt1>Ausgewählte Elemente</xt1>
     <xt2>In der aktuellen Ansicht</xt2>
@@ -4064,6 +4064,11 @@
     <tt3>Den Namen der Konfiguration ändern</tt3>
     <tt4>Konfiguration duplizieren</tt4>
     <tt5>Konfiguration löschen</tt5>
+    <y1>Do not change</y1>
+    <y2>Do not bind</y2>
+    <u1>Could not determine old top level for offset definition</u1>
+    <u2>Could not find new top level "{0}" for elements</u2>
+    <u12>Top level change skipped because element is already located at level "{0}"</u12>
     <copy>Kopie</copy>
   </mprBaseLevel>
   <mprViewSync LocalName="Synchronisierung von Ansichten"
