@@ -91,7 +91,7 @@
     <refresh>Aktualisieren</refresh>
     <remoteGeneralVersion>Verfügbare allgemeine Version</remoteGeneralVersion>
     <remove>Löschen</remove>
-    <rename>Rename</rename>
+    <rename>Umbenennen</rename>
     <replace>Ersetzen</replace>
     <result>Ergebnis</result>
     <rewrite>Überschreiben</rewrite>
@@ -111,6 +111,8 @@
     <suffix>Suffix</suffix>
     <sum>Summe</sum>
     <template>Vorlage</template>
+    <testPeriod>Testversion. Tage bis zum Ablauf</testPeriod>
+    <testPeriodEnd>Die Testversion des Plugins ist abgelaufen! Erwerben Sie eine Lizenz für das Plugin oder ein Abonnement, um das Plugin nach Ablauf der Testversion zu verwenden</testPeriodEnd>
     <thickness>Dicke</thickness>
     <tolerance>Toleranz</tolerance>
     <ton>t</ton>
@@ -284,7 +286,7 @@
     <u55>Die Beantragung eines kostenlosen Abonnements ist fehlgeschlagen. Fehler:</u55>
     <u56>Unbekannt</u56>
     <u57>Wenn Sie den Support kontaktieren, geben Sie bitte die folgenden Informationen an:</u57>
-    <u58>Pressing the "Logout all devices" button will reset the counter of used computers to zero</u58>
+    <u58>Durch Betätigen der Schaltfläche "An allen Geräten abmelden" wird der Zähler der verwendeten Computer auf Null gestellt</u58>
     <nnAll>Alle Neuigkeiten</nnAll>
     <nndAll>Alle Neuigkeiten anzeigen</nndAll>
     <nn0>Wichtige Neuigkeiten werden unabhängig von den Einstellungen angezeigt</nn0>
@@ -873,6 +875,7 @@
     <b4>Alle abwählen</b4>
     <!-- todo remove after 35.3.0.0 -->
     <b5>Nicht an alles erinnert werden</b5>
+    <b6>Remind me later</b6>
     <t1>30 Minuten</t1>
     <t2>1 Stunde</t2>
     <t3>2 Stunden</t3>
@@ -1135,7 +1138,9 @@
     <h51>mindestens eine Bedingung erfüllt ist</h51>
     <h52>Einfache Bedingung</h52>
     <h53>Gruppenbedingung</h53>
+    <!-- todo remove with removing reinforcement utils -->
     <h77>Bewehrungstyp:</h77>
+    <!-- todo remove with removing reinforcement utils -->
     <h78>Durchmesser, mm:</h78>
     <h80>Hinzufügen von Befehlen aus ModPlus-Plugins in die Favoritenleiste</h80>
     <h81>Alle Befehle</h81>
@@ -1163,17 +1168,36 @@
     <h117>Ermöglicht die Auswahl einer Bewehrung, die in der ausgewählten Flächenbewehrung oder linearen Bewehrung des Tragwerks enthalten ist</h117>
     <h119>Basiselement auswählen</h119>
     <h120>Ermöglicht die Auswahl von Elementen, die als Basis für die ausgewählten Elemente dienen</h120>
-    <h121>Hide text on small buttons</h121>
-    <h122>Um einen Befehl zur Registerkarte "Favoriten" hinzuzufügen, ziehen Sie ihn aus der Liste "Alle Befehle" in die Liste "Favoritenbefehle". Durch Verschieben der Befehle in der Liste "Favoritenbefehle" können Sie ihre Reihenfolge in der Leiste festlegen. Small buttons are recommended to be placed one behind the other</h122>
-    <h123>Important: some Revit commands are automatically hidden on the ribbon depending on the current view, currently selected elements, or other conditions</h123>
-    <h124>Built-in commands</h124>
-    <h125>Enables you to select the elements of the current document referenced by the selected dimensions</h125>
-    <h126>Important: do not add commands placed in the Favorites menu to the Quick Access Toolbar</h126>
-    <h127>Reload</h127>
-    <h128>Enables you to Reload the Link</h128>
+    <h121>Text bei den kleinen Schaltflächen ausblenden</h121>
+    <h122>Kleine Schaltflächen sollten nebeneinander angereiht werden</h122>
+    <h123>Wichtig!Einige Revit-Befehle werden je nach aktueller Ansicht bzw. aktuell ausgewählten Elementen oder anderen Bedingungen automatisch in der Multifunktionsleiste ausgeblendet</h123>
+    <h124>Integrierte Befehle</h124>
+    <h125>Ermöglicht die Auswahl der von den ausgewählten Bemaßungen referenzierten Elementen des aktuellen Dokuments</h125>
+    <h126>Wichtig: Fügen Sie der Schnellzugriffsleiste keine Befehle aus dem Menü "Favoriten" hinzu</h126>
+    <h127>Aktualisieren</h127>
+    <h128>Ermöglicht die Aktualisierung der Verbindung</h128>
     <parameters>Parameter</parameters>
     <name>Benennung</name>
     <any>Beliebige</any>
+    <rtw1>Bewehrungstyp</rtw1>
+    <rtw2>Durchmesser, mm</rtw2>
+    <rtw3>Form</rtw3>
+    <rtw4>Haken</rtw4>
+    <rtw5>Gerade Stäbe</rtw5>
+    <rtw6>In Längsrichtung gebogene Stäbe</rtw6>
+    <rtw7>L-förmige Stäbe</rtw7>
+    <rtw8>L-förmige Stäbe mit großer Biegung</rtw8>
+    <rtw9>U-förmige Stäbe</rtw9>
+    <rtw10>C-förmige Stäbe. Haken in der Skizze</rtw10>
+    <rtw11>C-förmige Stäbe</rtw11>
+    <rtw12>S-förmige Stäbe. Haken in der Skizze</rtw12>
+    <rtw13>S-förmige Stäbe</rtw13>
+    <rtw14>Rectangular shaped girth rebars</rtw14>
+    <rtw15>Round girth rebars</rtw15>
+    <rtw16>Spirale</rtw16>
+    <rtw17>Triangular rebars</rtw17>
+    <rtw18>Rebars with knot type shape</rtw18>
+    <rtw19>Diamond shaped girth rebars</rtw19>
     <p1>Parameter des Exemplares</p1>
     <p2>Parameter des Typs</p2>
     <p3>Gemeinsam für alle</p3>
@@ -1211,7 +1235,7 @@
     <t13>Alle Kategorien abwählen</t13>
     <t14>Bedingung hinzufügen</t14>
     <t15>Bedingung löschen</t15>
-    <t16>Check categories whose elements are present on the current view</t16>
+    <t16>Kategorien markieren, deren Elemente in der aktuellen Ansicht vorhanden sind</t16>
     <err1>Die Konfigurationsdatei ist beschädigt! Es ist unmöglich, die Multifunktionsleiste zu erstellen</err1>
     <err2>Das Plugin ist nicht für die Verwendung in Familien verfügbar</err2>
     <err3>Die zulässige Anzahl der in der Multifunktionsleiste erstellten Registerkarten wurde überschritten. Es sind maximal 20 zusätzliche Registerkarten zulässig. Die Registerkarte "{0}" wird nicht hinzugefügt!</err3>
@@ -1220,7 +1244,8 @@
     <err6>Im Filter nach Parametern sind keine Gruppenbedingungen erlaubt, aber in der Zeichenfolge gibt es Gruppenbedingungen</err6>
     <err7>Der Filter nach Parametern kann nur gefüllt werden, wenn mindestens eine Kategorie im Filter nach Kategorien vorhanden ist.</err7>
     <err8>In der aktuellen Ansicht "{0}" ist es nicht möglich, Elemente auszuwählen</err8>
-    <err9>Contour orientation failed: The contour curves are not contiguous because the original contour has discontinuities. Check if the model elements that form the contour to be processed are built correctly and try again</err9>
+    <err9>Die Umgrenzung konnte nicht ausgerichtet werden: Die Umgrenzungskurven sind aneinander nicht angrenzend, da die ursprüngliche Umgrenzung Unterbrechungen aufweist. Bitte die Zeichnung der Modellelemente der zu bearbeitenden Umgrenzung auf Richtigkeit prüfen und erneut versuchen</err9>
+    <err10>Failed to set the shape "{0}" to the created rebar. Error:</err10>
     <c1>Färben von Registerkarten</c1>
     <c2>Farbschemata:</c2>
     <c3>Färbungsbereich:</c3>
@@ -1272,8 +1297,8 @@
     <s29>Achtung! In den Einstellungen des Dienstes für automatisches Speichern ist als Speicherort für Sicherungsdateien der Ordner "{0}" angegeben. Der Ordner wurde nicht gefunden. Der Ordner ist entweder gelöscht oder umbenannt! Bitte den korrekten Ordner für die Sicherungsdateien angeben!</s29>
     <s30>Wenn ein Ordner für die Sicherungsdateien angegeben wird, werden Sicherungsdateien (Dateien der Form name_project.nnnn.rvt) in den angegebenen Ordner verschoben</s30>
     <s31>Wenn ein Ordner für die Sicherungsdateien angegeben wird, Ordner für die Sicherungsdateien während der Zusammenarbeit (Ordner der Form name_project_backup) in den angegebenen Ordner verschoben</s31>
-    <s32>Move backup folders</s32>
-    <s33>Moving backup files and folders</s33>
+    <s32>Sicherungsordner verschieben</s32>
+    <s33>Verschiebung von Sicherungsdateien und -ordnern</s33>
     <sd1>Projekte</sd1>
     <sd2>Familien</sd2>
     <sd3>Projekte und Familien</sd3>
@@ -1309,10 +1334,10 @@
     <tcm9>Dokument schließen</tcm9>
     <tcm10>Ansicht schließen</tcm10>
     <tcm11>Übrige Registerkarten im aktuellen Dokument schließen</tcm11>
-    <tcm12>Close all documents</tcm12>
-    <tcm13>Close all documents except current</tcm13>
-    <tcm14>Close all documents without saving</tcm14>
-    <tcm15>Close all documents except current without saving</tcm15>
+    <tcm12>Alle Dokumente schließen</tcm12>
+    <tcm13>Alle Dokumente außer dem aktuellen schließen</tcm13>
+    <tcm14>Alle Dokumente ohne Speichern schließen</tcm14>
+    <tcm15>Alle Dokumente außer dem aktuellen ohne Speichern schließen</tcm15>
   </RevitDlls>
   <RengaDlls LocalName="Bibliotheken ausführbarer Programme für Renga">
     <h1>MODPLUS EINSTELLUNGEN</h1>

@@ -391,7 +391,7 @@
     <h33>Geben Sie einen Platzierungspunkt der Bemaßungslinie an</h33>
     <h34>Verknüpfte Dateien verarbeiten</h34>
     <h35>Objektfang bei der Angabe von Punkten</h35>
-    <h36>Line preview on Plan</h36>
+    <h36>Vorschau der Linie auf dem Plan</h36>
     <attention>Achtung!</attention>
     <!-- todo remove after 2.6.13.0-->
     <edit>Ändern</edit>
@@ -415,11 +415,11 @@
     <e28>IFC Bewehrung</e28>
     <e29>Fundamentplatten</e29>
     <e30>Detaillinien</e30>
-    <e31>Structural Rebar. Dimensions</e31>
+    <e31>Tragende Bewehrung. Außenmaße</e31>
     <n1>Nur in Schnittansichten und Ansichten</n1>
-    <n2>No intersection check</n2>
-    <n3>Only in the family editor</n3>
-    <n4>Only on Plans</n4>
+    <n2>Ohne Überprüfung des Schnittpunkts</n2>
+    <n3>Nur im Familieneditor</n3>
+    <n4>Nur auf den Plänen</n4>
   </mprDimByLine>
   <mprDimBias LocalName="Verschieben von Bemaßungen"
               Description="Automatisches Verschieben des Bemaßungswertes, der auf Bemaßungslinien liegt"
@@ -744,6 +744,7 @@
     <h4>Im Vordergrund</h4>
     <h5>IM MODELL ANZEIGEN:</h5>
     <h6>Skalierfaktor:</h6>
+    <!-- todo remove after 5.24.16.0 -->
     <h7>STANDARDBEWEHRUNG:</h7>
     <h8>Grundlegende Wandbewehrung</h8>
     <h9>Bewehrung der Schnittpunkte</h9>
@@ -806,10 +807,15 @@
     <h68>Faktor α:</h68>
     <h69>Erforderliche (berechnete) Verankerungslänge, mm:</h69>
     <h70>Verankerungslänge:</h70>
+    <!-- todo remove after 5.24.16.0 -->
     <h71>Die Einstellungen für die Bewehrung des Schnittpunktes</h71>
+    <!-- todo remove after 5.24.16.0 -->
     <h72>Die Einstellungen für die Bewehrung der Öffnung</h72>
+    <!-- todo remove after 5.24.16.0 -->
     <h73>Die Einstellungen für die Bewehrung der Wand</h73>
+    <!-- todo remove after 5.24.16.0 -->
     <h74>Durch die Einstellungen für die Gruppenbewehrung ersetzen</h74>
+    <!-- todo remove after 5.24.16.0 -->
     <h75>Die Einstellungen der Bewehrung unverändert lassen</h75>
     <h76>Vertikale Bewehrung</h76>
     <h79>Abstand, mm:</h79>
@@ -859,9 +865,11 @@
     <h123>Zweite Größengruppe</h123>
     <h124>Dritte Größengruppe</h124>
     <h127>Überstände von unterliegenden Platten</h127>
+    <!-- todo remove after 5.24.16.0 start -->
     <h128>Unterliegende Platten auswählen</h128>
     <h129>Unterliegende Platten</h129>
     <h130>Dicke</h130>
+    <!-- todo remove after 5.24.16.0 -->
     <h131>Wandgruppen, die auf die Platte treffen:</h131>
     <h132>Einstellungen von Bewehrung der Plattenüberstände</h132>
     <h133>Überstände entlang der Mittelwände</h133>
@@ -878,6 +886,7 @@
     <h144>Abstand des Teils von der Unterkante der unterliegenden Platte:</h144>
     <h145>Erste Verankerungslänge, mm:</h145>
     <h146>Zweite Verankerungslänge, mm:</h146>
+    <!-- todo remove after 5.24.16.0 -->
     <h147>Zurücksetzen</h147>
     <h148>Verankerungslänge in der Platte, mm:</h148>
     <h149>Überstände aus der unterliegenden Platte</h149>
@@ -904,6 +913,7 @@
     <h170>Die Überstände entlang des Volumenkörpers der Wand zuschneiden</h170>
     <h171>Anzahl der zusätzlichen Stäbepaare:</h171>
     <h172>Abstand der Stäbe:</h172>
+    <!-- todo remove after 5.24.16.0 start -->
     <h173>Gerade Stäbe:</h173>
     <h174>L-förmige Stäbe (bei der Erstellung von Biegungen von vertikalen Stäben):</h174>
     <h175>U-förmige Stäbe in den Wandabschlüssen:</h175>
@@ -916,6 +926,7 @@
     <h182>L-förmige Stäbe mit großer Biegung:</h182>
     <h183>Alle Werte auf "Auto" zurücksetzen</h183>
     <h184>Bevorzugte Formen von Bewehrungsstäben</h184>
+    <!-- todo remove after 5.24.16.0 end -->
     <h185>Die Parameterwerte für einige Elemente konnten nicht eingestellt werden. ID, Parameternamen und eingestellte Werte sind unten aufgeführt:</h185>
     <h186>Horizontal geknüpfte Bügel</h186>
     <h187>Nur in Wänden, die keine Randschnittpunkte mit anderen Wänden haben</h187>
@@ -977,6 +988,7 @@
     <h243>Verschränkung durch Versatz</h243>
     <h244>Nur in Bereichen ohne darüber liegende Geschossdecke bzw. Wand erstellen</h244>
     <h245>U-förmige Stäbe entlang des unteren Wandabschlusses</h245>
+    <h246>Walls in contact with the slab:</h246>
     <srd>Speichern von Daten für die ausgewählte Wände</srd>
     <rr1>Bewehrung des gleichen Typs löschen wie die, die erstellt wird</rr1>
     <rr2>Die ganze zuvor erstellte Bewehrung löschen</rr2>
@@ -1013,16 +1025,22 @@
     <m17>Tür</m17>
     <m18>Generisches Modell</m18>
     <m19>Rechteckige Öffnung</m19>
+    <!-- todo remove after 5.24.16.0 -->
     <m20>Die Liste der Wände enthält Wände, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m20>
+    <!-- todo remove after 5.24.16.0 -->
     <m21>Die Liste der Schnittpunkte enthält Schnittpunkte, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m21>
+    <!-- todo remove after 5.24.16.0 -->
     <m22>Die Liste der Öffnungen enthält Öffnungen, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m22>
     <m23>Bewehrungseinstellungen kopiert</m23>
     <m24>Sie haben nicht angegeben, für welche Gruppen Bewehrung zu erstellen ist!</m24>
     <m25>Es wurde keine Gruppe ausgewählt, um Bewehrung zu erstellen!</m25>
     <m26>Wählen Sie die Wände aus</m26>
     <m27>Achtung! Im aktuellen Projekt wurden keine geladenen Bewehrungsformen gefunden! In diesem Fall können die vom Plugin erstellten Bewehrungsformen nicht im Familieneditor geöffnet werden! Es wird empfohlen, Bewehrungsformen in das Projekt herunterzuladen, bevor Sie das Plugin verwenden!\nDie Bewehrung trotz der fehlenden Bewehrungsformen durchführen?</m27>
+    <!-- todo remove after 5.24.16.0 -->
     <m28>Wählen Sie unterliegende Platten aus</m28>
+    <!-- todo remove after 5.24.16.0 -->
     <m29>Die ausgewählte unterliegende Platte (id: {0}) hat keine Verbindung mit den ausgewählten Wänden</m29>
+    <!-- todo remove after 5.24.16.0 -->
     <m30>Achtung! Die Bewehrungseinstellungen für die Überstände der unterliegenden Platten werden zurückgesetzt! Wollen Sie fortsetzen?</m30>
     <m31>Der Biegeradius des Bewehrungsstabs ist kleiner als der zulässige Mindestradius</m31>
     <m32>Die angegebenen Bewehrungseinstellungen führen dazu, dass die Bewehrungsteile nicht simuliert werden können!</m32>
@@ -1042,6 +1060,7 @@
     <p13>Verbinden der horizontalen Stäbe der erstellten Bewehrung</p13>
     <p14>Berechnung und Modellierung von Plattenüberständen entlang der Mittelwände</p14>
     <p15>Berechnung und Modellierung von Plattenüberständen entlang der Abschlusswände</p15>
+    <p16>Searching for underlying slabs</p16>
     <dd1>В</dd1>
     <dd2>H</dd2>
     <dd3>nach innen</dd3>
@@ -1049,6 +1068,7 @@
     <dd5>S</dd5>
     <dd6>P</dd6>
     <rn>Bewehrungsstahl ⌀</rn>
+    <!-- todo remove after 5.24.16.0 -->
     <noInFamily>Die Ausführung des Plugins in Familien ist nicht möglich!</noInFamily>
     <c1>Verschiebung zu der Wandkante</c1>
     <c2>Verschiebung zu der Mitte der Wand</c2>
@@ -1066,21 +1086,29 @@
     <t4>Die Eigenschaft "Tragwerke" ist aktiviert</t4>
     <t5>Die Wand ist keine Fassade</t5>
     <t6>Wanddicke von mindestens 100 mm</t6>
+    <!-- todo remove after 5.24.16.0 -->
     <t7>Die Gruppe enthält Wände, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t7>
     <t8>Eine neue leere Gruppe hinzufügen</t8>
     <t9>Eine leere Gruppe löschen</t9>
     <t10>Alle Gruppen markieren</t10>
     <t11>Alle Gruppen abwählen</t11>
+    <!-- todo remove after 5.24.16.0 -->
     <t12>Die Bewehrungseinstellungen der Wände wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t12>
+    <!-- todo remove after 5.24.16.0 -->
     <t13>Die Bewehrungseinstellungen für die ausgewählte Wand ändern</t13>
+    <!-- todo remove after 5.24.16.0 -->
     <t14>Die Einstellungen für die Wandbewehrung durch Einstellungen aus der Gruppe ersetzen</t14>
     <t15>Anzeige der vorherigen Wand in der Liste im Modell</t15>
     <t16>Anzeige der in der Liste ausgewählten Wand im Modell</t16>
     <t17>Anzeige der nächsten Wand in der Liste im Modell</t17>
     <t18>Wandhöhen werden nur an Schnittpunkten bestimmt</t18>
+    <!-- todo remove after 5.24.16.0 -->
     <t19>Die Gruppe enthält Schnittpunkte, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t19>
+    <!-- todo remove after 5.24.16.0 -->
     <t20>Die Bewehrungseinstellungen der Schnittpunkte wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t20>
+    <!-- todo remove after 5.24.16.0 -->
     <t21>Die Bewehrungseinstellungen für den ausgewählten Schnittpunkt ändern</t21>
+    <!-- todo remove after 5.24.16.0 -->
     <t22>Die Bewehrungseinstellungen der Schnittpunkte durch die Einstellungen aus der Gruppe ersetzen</t22>
     <t23>Anzeige des vorherigen Schnittpunktes in der Liste im Modell</t23>
     <t24>Anzeige des in der Liste ausgewählten Schnittpunktes im Modell</t24>
@@ -1091,10 +1119,15 @@
     <t29>H – horizontale Bewehrung mit Angabe des Durchmessers, des Abstands und der Position von Stäben</t29>
     <t30>S – Grundbewehrung (Ständer) mit Angabe des Durchmessers</t30>
     <t31>U – U-förmige Stäbe in den Wandabschlüssen mit Angabe des Durchmessers</t31>
+    <!-- todo remove after 5.24.16.0 -->
     <t32>Die Bewehrungseinstellungen für die Abmessungsgruppe ändern</t32>
+    <!-- todo remove after 5.24.16.0 -->
     <t33>Die Gruppe enthält Öffnungen, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t33>
+    <!-- todo remove after 5.24.16.0 -->
     <t34>Die Bewehrungseinstellungen der Öffnung wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t34>
+    <!-- todo remove after 5.24.16.0 -->
     <t35>Die Bewehrungseinstellungen für die ausgewählte Öffnung ändern</t35>
+    <!-- todo remove after 5.24.16.0 -->
     <t36>Die Bewehrungseinstellungen der Öffnung durch die Einstellungen aus der Gruppe ersetzen</t36>
     <t37>Anzeige der vorherigen Öffnung in der Liste im Modell</t37>
     <t38>Anzeige der in der Liste ausgewählten Öffnung im Modell</t38>
@@ -1110,7 +1143,9 @@
     <t48>Die Bewehrungsteile der Schnittpunkte werden mit dem Abstand der horizontalen Wandbewehrung eingefügt – entsprechend dem kleinsten bzw. größten Abstand der horizontalen Bewehrung der im Schnittpunkt betroffenen Wände</t48>
     <t49>Anzahl der Reihen der vertikalen Bewehrung (in einer Reihe zwei Stäbe "entlang" der Öffnung)</t49>
     <t50>Anzahl der Reihen horizontaler Bewehrung</t50>
+    <!-- todo remove after 5.24.16.0 start -->
     <t51>Auswahl der unterliegenden Platte, die sich unmittelbar unter den gewählten Wänden befindet. Auswahl der unterliegenden Platte ist nach Auswahl, Analyse und Gruppierung der Wände möglich. Sie können eine oder mehrere Platten auswählen. In den Eigenschaften der unterliegenden Platten muss die Eigenschaft "Tragwerke" enthalten sein</t51>
+    <!-- todo remove after 5.24.16.0 -->
     <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
     <t54>Kopieren der Bewehrungseinstellungen von Überständen der aktuellen Platte in alle markierten Platten</t54>
     <t55>Speichern der Bewehrungseinstellungen der Überstände der aktuellen Platte in eine xml-Datei</t55>
@@ -1121,8 +1156,11 @@
     <t60>Wenn die Überstände die Höhe der oberen Wand überschreiten, werden sie bis zur Oberkante der Wand abgeschnitten, wobei die vorgeschriebene Überdeckung an den Bewehrungsanschlussen berücksichtigt wird</t60>
     <t61>Die Auswahlmöglichkeit bezieht sich auch auf die Auswahl der Platten</t61>
     <t62>Der vertikale Stab wird zum Biegeanfangspunkt des U-förmigen Stabes verschoben, der sich aus der Summe der Werte der Überdeckung der horizontalen Bewehrung an den Anschlussen, dem Durchmesser des U-förmigen Stabes und dem normativen Biegedurchmesser des U-förmigen Stabes ergibt</t62>
+    <!-- todo remove after 5.24.16.0 -->
     <t63>Sie können bevorzugte Formen von Bewehrungsstäben für verschiedene Bewehrungstypen, die durch das Plugin erzeugt werden, angeben.</t63>
+    <!-- todo remove after 5.24.16.0 -->
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
+    <!-- todo remove after 5.24.16.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
     <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
     <t67>Gruppierung von Wänden, Schnittpunkten und Öffnungen entsprechend den aktuellen Gruppierungseinstellungen durchführen</t67>
@@ -1185,6 +1223,7 @@
     <h30>Art der Erstellung von Grundbewehrung:</h30>
     <h31>Den zusätzlichen Abstand verschieben zu:</h31>
     <h32>Erstellen:</h32>
+    <!-- todo remove after 2.20.2.0 -->
     <h33>STANDARDBEWEHRUNG:</h33>
     <h34>Plattenbewehrung</h34>
     <h35>Das Element "Flächenbewehrung" verwenden für:</h35>
@@ -1251,18 +1290,26 @@
     <h116>U-förmige Stäbe in Querrichtung</h116>
     <h117>Länge des Teils, mm:</h117>
     <h118>Abstand des Teils, mm:</h118>
+    <!-- todo remove after 2.20.2.0 -->
     <h119>Bewehrungseinstellungen gemäß Vorgabe für Platten</h119>
+    <!-- todo remove after 2.20.2.0 -->
     <h120>Bewehrungseinstellungen gemäß Vorgabe für Bohrungen</h120>
     <h121>Parameter der Stäbe der oberen Matte</h121>
     <h122>Parameter der Stäbe der unteren Matte</h122>
     <h141>Das Fenster nach dem Erstellen der Bewehrung nicht schließen</h141>
+    <!-- todo remove after 2.20.2.0 -->
     <h147>Zurücksetzen</h147>
     <h153>Indirekte Bewehrung</h153>
     <h155>Länge der Stäbe:</h155>
+    <!-- todo remove after 2.20.2.0 -->
     <h173>Gerade Stäbe:</h173>
+    <!-- todo remove after 2.20.2.0 -->
     <h180>U-förmige Stäbe:</h180>
+    <!-- todo remove after 2.20.2.0 -->
     <h181>Bügelbewehrung (Bügel):</h181>
+    <!-- todo remove after 2.20.2.0 -->
     <h183>Alle Werte auf "Auto" zurücksetzen</h183>
+    <!-- todo remove after 2.20.2.0 -->
     <h184>Bevorzugte Formen von Bewehrungsstäben</h184>
     <h185>Erstellen:</h185>
     <h186>Quer- und Längsbewehrung</h186>
@@ -1320,6 +1367,7 @@
     <m12>Der Wert der Eigenschaft wird geändert</m12>
     <m23>Bewehrungseinstellungen kopiert</m23>
     <rn>Bewehrungsstahl ⌀</rn>
+    <!-- todo remove after 2.20.2.0 -->
     <full>Erhältlich in der vollständigen Plugin-Version!</full>
     <notSet>Nicht feststellen</notSet>
     <br1>Als einzelne Stäbe</br1>
@@ -1349,10 +1397,14 @@
     <t47>Die Länge des Bauteils ist die Verankerungslänge</t47>
     <t49>Anzahl der Reihen der Längsbewehrung (in einer Reihe zwei Stäbe "entlang" der Öffnung)</t49>
     <t50>Anzahl der Reihen der Querbewehrung (in einer Reihe zwei Stäbe "entlang" der Öffnung)</t50>
+    <!-- todo remove after 2.20.2.0 -->
     <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
     <t58>Die Länge des Stabes ergibt sich aus der Summe der beiden Verankerungslängen</t58>
+    <!-- todo remove after 2.20.2.0 -->
     <t63>Sie können bevorzugte Formen von Bewehrungsstäben für verschiedene Bewehrungstypen, die durch das Plugin erzeugt werden, angeben.</t63>
+    <!-- todo remove after 2.20.2.0 -->
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
+    <!-- todo remove after 2.20.2.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
     <re4>Die Erstellung eines geraden Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re4>
     <re5>Die Erstellung eines Bewehrungsstabes mit Form "{0}" mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{1}" konnte nicht durchgeführt werden. Fehler: {2}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re5>
@@ -1406,6 +1458,7 @@
     <h42>Querbewehrung (Verlegung)</h42>
     <h43>Querbewehrung (Formen)</h43>
     <h45>Anzahl der Eckstäbe:</h45>
+    <!-- todo remove after 3.22.12.0 -->
     <h46>Anzahl der Zwischenstäbe:</h46>
     <h47>Überstände der Längsbewehrung der unteren und mittleren Stützen mit gleichem ( oder minimal anderem ) Querschnitt der oben liegenden Stützen</h47>
     <h48>Überstände der Längsbewehrung von unteren und mittleren Stützen mit großem Querschnitt (≥ 100 mm auf jeder Seite) in die oben liegende Stütze mit kleinerem Querschnitt</h48>
@@ -1414,10 +1467,12 @@
     <h51>PLUGIN-FENSTER:</h51>
     <h53>IM MODELL ANZEIGEN:</h53>
     <h54>Skalierfaktor:</h54>
+    <!-- todo remove after 3.22.12.0 -->
     <h55>STANDARDBEWEHRUNG:</h55>
     <h56>Verschiebung</h56>
     <h57>Umschlingung</h57>
     <h58>Die ausgewählte Form löschen</h58>
+    <!-- todo remove after 3.22.12.0 -->
     <h59>Geben Sie den Typ der Formhaken, die Parameter, den Durchmesser und den Typ des Bewehrungsstabes an, die als Standard für die hinzuzufügenden Querbewehrungsformen eingestellt werden sollen</h59>
     <h60>Abstand der Querbewehrung in den Eindickungsbereichen, mm:</h60>
     <h61>Verankerungsberechnung nach SP 52-101-2003</h61>
@@ -1432,6 +1487,7 @@
     <h70>Verankerungslänge:</h70>
     <h71>Es wird empfohlen, dass der Basisabstand der Querbewehrung 15d und der Abstand der Querbewehrung in den Eindickungsbereichen 10d beträgt. Wobei d ist der Durchmesser der Längsbewehrung (Nutzbewehrung)</h71>
     <h72>Das Hinzufügen einer Form zum aktuellen Layout ist fehlgeschlagen: Es gibt keinen Platz, um die Form zu platzieren!</h72>
+    <!-- todo remove after 3.22.12.0 -->
     <h73>Die Einstellungen für die Bewehrung der Stütze</h73>
     <h74>Durch die Einstellungen für die Gruppenbewehrung ersetzen</h74>
     <h75>Die Einstellungen der Bewehrung unverändert lassen</h75>
@@ -1456,6 +1512,7 @@
     <h97>Parameter</h97>
     <h98>Abstand zwischen den Mittelpunkten der Stäbe</h98>
     <h99>Abstand zwischen den Kanten der Stäbe</h99>
+    <!-- todo remove after 3.22.12.0 -->
     <h100>Achtung! Die Anzahl und Lage der Stäbe der Längsbewehrung und die Verlegung der Querbewehrung können gespeichert, geladen und in die markierten Stützen eines entsprechenden Querschnitts kopiert werden, können aber nicht standardmäßig gespeichert werden!</h100>
     <h104>Überlappungslänge der geraden Überstände, mm:</h104>
     <h105>Die Verankerungslänge berechnen</h105>
@@ -1464,12 +1521,14 @@
     <h108>Überlappungslänge in der oben liegenden Stütze, mm:</h108>
     <h109>Die berechnete Überlappungslänge mit 2 multiplizieren</h109>
     <h110>Bewehrung erstellen</h110>
+    <!-- todo remove after 3.22.12.0 -->
     <h119>Bewehrungseinstellungen (Standard)</h119>
     <h127>Überstände aus der unterliegenden Platte</h127>
     <h135>Typ der Überstände:</h135>
     <h138>Bewehrungsüberdeckung:</h138>
     <h141>Das Fenster nach dem Erstellen der Bewehrung nicht schließen</h141>
     <h144>Abstand des Teils von der Unterkante der Bodenplatte:</h144>
+    <!-- todo remove after 3.22.12.0 -->
     <h147>Zurücksetzen</h147>
     <h148>Verankerungslänge in der Platte, mm:</h148>
     <h149>Erstellen von Überständen nur aus Platten in der Kategorie "Fundament"</h149>
@@ -1479,6 +1538,7 @@
     <h165>Wenn es keine Geschossdeckenplatte oberhalb der Stütze gibt, dann</h165>
     <h166>Anpassung der Biegung der Oberfläche der Platte (in der Mitte der Bewehrung)</h166>
     <h167>Anpassung der Biegung dem Boden der Platte (in der Mitte der Bewehrung)</h167>
+    <!-- todo remove after 3.22.12.0 start -->
     <h173>Gerade Stäbe:</h173>
     <h174>L-förmige Stäbe (bei der Erstellung von Biegungen von vertikalen Stäben):</h174>
     <h177>C-förmige Querbügel (Ständer). Haken in der Skizze:</h177>
@@ -1489,6 +1549,7 @@
     <h182>L-förmige Stäbe mit großer Biegung:</h182>
     <h183>Alle Werte auf "Auto" zurücksetzen</h183>
     <h184>Bevorzugte Formen von Bewehrungsstäben</h184>
+    <!-- todo remove after 3.22.12.0 end -->
     <h185>Die Parameterwerte für einige Elemente konnten nicht eingestellt werden. ID, Parameternamen und eingestellte Werte sind unten aufgeführt:</h185>
     <h186>Erneut auswählen</h186>
     <h187>Erneute Auswahl von Stützen, die bei der vorherigen Verwendung des Plugins in der aktuellen Ansicht bearbeitet wurden</h187>
@@ -1517,6 +1578,10 @@
     <h235>Versatz der Biegung (O), mm:</h235>
     <h236>Länge der Biegung (L), mm:</h236>
     <h237>Das Biegen des unteren Teils erfolgt bei geraden Stäben, sofern die zu bearbeitenden Stützen den gleichen Querschnitt haben.</h237>
+    <h238>Erstellen:</h238>
+    <h239>Querbewehrung</h239>
+    <h240>Default form properties</h240>
+    <h241>If there is already a form with the same sketch in the list, the properties will be taken from it</h241>
     <srd>Speichern von Daten für die ausgewählte Stützen</srd>
     <hook>Haken:</hook>
     <err1>In den Einstellungen für die Bewehrung der Stütze werden die Überstände von gebogenen Stäben in einer "Flaschenform" angegeben, die zu ihrer Erstellung Platten oder einen von Null unterschiedlichen Abstand zwischen den Stützen haben müssen. Es wurde keine oben liegende Platte gefunden oder der Abstand zur oben liegenden Stütze ist 0</err1>
@@ -1544,11 +1609,15 @@
     <m13>Bewehrungsüberdeckung</m13>
     <m20>Die Liste der Stützen enthält Stützen, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m20>
     <m23>Bewehrungseinstellungen kopiert</m23>
+    <m24>Sie haben nicht angegeben, für welche Gruppen Bewehrung zu erstellen ist!</m24>
     <m25>Es wurde keine Gruppe ausgewählt, um Bewehrung zu erstellen!</m25>
     <m27>Achtung! Im aktuellen Projekt wurden keine geladenen Bewehrungsformen gefunden! In diesem Fall können die vom Plugin erstellten Bewehrungsformen nicht im Familieneditor geöffnet werden! Es wird empfohlen, Bewehrungsformen in das Projekt herunterzuladen, bevor Sie das Plugin verwenden!\nDie Bewehrung trotz der fehlenden Bewehrungsformen durchführen?</m27>
     <rn>Bewehrungsstahl ⌀</rn>
+    <!-- todo remove after 3.22.12.0 -->
     <full>Erhältlich in der vollständigen Plugin-Version!</full>
+    <!-- todo remove after 3.22.12.0 -->
     <full2>In der limitierten Version ist nur eine Form verfügbar</full2>
+    <!-- todo remove after 3.22.12.0 -->
     <noInFamily>Die Ausführung des Plugins in Familien ist nicht möglich!</noInFamily>
     <p1>Analyse der Stütze:</p1>
     <p2>Suche nach anpassenden Elementen:</p2>
@@ -1565,11 +1634,15 @@
     <e6>Das Querschnittsprofil konnte nicht ermittelt werden</e6>
     <e7>Der Name der Form, die zur Erstellung der spiralförmigen Bewehrung verwendet wurde, ist nicht angegeben. Verwenden Sie das Fenster zum Einstellen der bevorzugten Bewehrungsformen, um die Form der spiralförmigen Bewehrung festzulegen</e7>
     <e9>Der angegebene Parameter, der den Radius der spiralförmigen Bewehrung angibt, ist im Dokument nicht gefunden</e9>
+    <!-- todo remove after 3.22.12.0 -->
     <t7>Die Gruppe enthält Stützen, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t7>
     <t10>Alle Gruppen markieren</t10>
     <t11>Alle Gruppen abwählen</t11>
+    <!-- todo remove after 3.22.12.0 -->
     <t12>Die Bewehrungseinstellungen der Stütze wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t12>
+    <!-- todo remove after 3.22.12.0 -->
     <t13>Die Bewehrungseinstellungen für die ausgewählte Stütze ändern</t13>
+    <!-- todo remove after 3.22.12.0 -->
     <t14>Die Bewehrungseinstellungen der Stütze durch die Einstellungen aus der Gruppe ersetzen</t14>
     <t15>Anzeige der vorherigen Stütze in der Liste im Modell</t15>
     <t16>Anzeige der in der Liste ausgewählten Stütze im Modell</t16>
@@ -1579,9 +1652,13 @@
     <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
     <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
     <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe. Nach Punkt 10.3.30 der SP 63.13330 kann der Faktor α auf 2,0 erhöht werden</t44>
+    <!-- todo remove after 3.22.12.0 -->
     <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
+    <!-- todo remove after 3.22.12.0 -->
     <t63>Sie können bevorzugte Formen von Bewehrungsstäben für verschiedene Bewehrungstypen, die durch das Plugin erzeugt werden, angeben.</t63>
+    <!-- todo remove after 3.22.12.0 -->
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
+    <!-- todo remove after 3.22.12.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
     <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
     <re1>Beim Erstellen der Längsbewehrung der Stütze id={0} ist ein Fehler aufgetreten:</re1>
@@ -1644,17 +1721,21 @@
     <h51>PLUGIN-FENSTER:</h51>
     <h53>IM MODELL ANZEIGEN:</h53>
     <h54>Skalierfaktor:</h54>
+    <!-- todo remove after 1.18.16.0 -->
     <h55>STANDARDBEWEHRUNG:</h55>
     <h56>Verschiebung</h56>
     <h57>Umschlingung</h57>
     <h58>Die ausgewählte Form löschen</h58>
+    <!-- todo remove after 1.18.16.0 -->
     <h59>Geben Sie den Typ der Formhaken, die Parameter, den Durchmesser und den Typ des Bewehrungsstabes an, die als Standard für die hinzuzufügenden Querbewehrungsformen eingestellt werden sollen</h59>
     <h60>Abstand der Querbewehrung in den Eindickungsbereichen, mm:</h60>
     <h61>Verankerungsberechnung nach SP 52-101-2003</h61>
     <h72>Das Hinzufügen einer Form zum aktuellen Layout ist fehlgeschlagen: Es gibt keinen Platz, um die Form zu platzieren!</h72>
+    <!-- todo remove after 1.18.16.0 -->
     <h73>Bewehrungseinstellungen des Trägers</h73>
     <h74>Durch die Einstellungen für die Gruppenbewehrung ersetzen</h74>
     <h75>Die Einstellungen der Bewehrung unverändert lassen</h75>
+    <!-- todo remove after 1.18.16.0 -->
     <h76>Balkenbewehrung</h76>
     <h79>Die Haken der Standardform:</h79>
     <h80>Haken der Form:</h80>
@@ -1674,9 +1755,11 @@
     <h97>Parameter</h97>
     <h98>Abstand zwischen den Mittelpunkten der Stäbe</h98>
     <h99>Abstand zwischen den Kanten der Stäbe</h99>
+    <!-- todo remove after 1.18.16.0 -->
     <h100>Achtung! Die Anzahl und Lage der Stäbe der Längsbewehrung und die Verlegung der Querbewehrung können gespeichert, geladen und in die markierten Träger eines entsprechenden Querschnitts kopiert werden, können aber nicht standardmäßig gespeichert werden!</h100>
     <h104>Verankerungslänge der geraden Überstände, mm:</h104>
     <h141>Das Fenster nach dem Erstellen der Bewehrung nicht schließen</h141>
+    <!-- todo remove after 1.18.16.0 start -->
     <h147>Zurücksetzen</h147>
     <h173>Gerade Stäbe:</h173>
     <h174>L-förmige Stäbe:</h174>
@@ -1687,12 +1770,18 @@
     <h182>L-förmige Stäbe mit großer Biegung:</h182>
     <h183>Alle Werte auf "Auto" zurücksetzen</h183>
     <h184>Bevorzugte Formen von Bewehrungsstäben</h184>
+    <!-- todo remove after 1.18.16.0 end -->
     <h186>Erneut auswählen</h186>
     <h187>Erneute Auswahl von Trägern, die bei der vorherigen Verwendung des Plugins in der aktuellen Ansicht bearbeitet wurden</h187>
     <h205>C-förmige Querbügel (Ständer). Revit-Haken:</h205>
     <h206>S-förmige Querbügel (Ständer). Revit-Haken:</h206>
     <h207>Verwendung der Geometrie von Trägern ohne Berücksichtigung von Verbindungen</h207>
     <h208>Die Stäbe der Längsbewehrung in die angrenzenden senkrechten Träger, die sich an den Enden des aktuellen Trägers befinden, einsetzen</h208>
+    <h226>Löschen der zuvor erstellten Bewehrung:</h226>
+    <h238>Erstellen:</h238>
+    <h239>Querbewehrung</h239>
+    <h240>Default form properties</h240>
+    <h241>If there is already a form with the same sketch in the list, the properties will be taken from it</h241>
     <srd>Speichern von Daten für die ausgewählte Träger</srd>
     <hook>Haken:</hook>
     <jt1>Überstände der Längsbewehrung werden nicht erstellt. Die Stäbe werden entsprechend dem vorgegebenen Wert der Überdeckung an den Enden der Bewehrung am Ende des Trägers geschnitten</jt1>
@@ -1705,11 +1794,15 @@
     <m13>Bewehrungsüberdeckung</m13>
     <m20>Die Liste der Träger enthält Träger, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m20>
     <m23>Bewehrungseinstellungen kopiert</m23>
+    <m24>Sie haben nicht angegeben, für welche Gruppen Bewehrung zu erstellen ist!</m24>
     <m25>Es wurde keine Gruppe ausgewählt, um Bewehrung zu erstellen!</m25>
     <m27>Achtung! Im aktuellen Projekt wurden keine geladenen Bewehrungsformen gefunden! In diesem Fall können die vom Plugin erstellten Bewehrungsformen nicht im Familieneditor geöffnet werden! Es wird empfohlen, Bewehrungsformen in das Projekt herunterzuladen, bevor Sie das Plugin verwenden!\nDie Bewehrung trotz der fehlenden Bewehrungsformen durchführen?</m27>
     <rn>Bewehrungsstahl ⌀</rn>
+    <!-- todo remove after 1.18.16.0 -->
     <full>Erhältlich in der vollständigen Plugin-Version!</full>
+    <!-- todo remove after 1.18.16.0 -->
     <full2>In der limitierten Version ist nur eine Form verfügbar</full2>
+    <!-- todo remove after 1.18.16.0 -->
     <noInFamily>Die Ausführung des Plugins in Familien ist nicht möglich!</noInFamily>
     <p1>Analyse des Trägers:</p1>
     <p2>Suche nach anpassenden Elementen:</p2>
@@ -1720,6 +1813,9 @@
     <pt5>Nicht bestimmt</pt5>
     <pt6>Trapez</pt6>
     <pt7>L-Form</pt7>
+    <rr1>Bewehrung des gleichen Typs löschen wie die, die erstellt wird</rr1>
+    <rr2>Die ganze zuvor erstellte Bewehrung löschen</rr2>
+    <rr3>Nicht löschen</rr3>
     <e1>Fehler bei der Analyse von Trägern</e1>
     <e2>Der Träger kann nicht initialisiert werden</e2>
     <e3>Die Vollkörper können nicht erhalten werden</e3>
@@ -1730,11 +1826,15 @@
     <p8>Entfernen der zuvor erstellten Bewehrung</p8>
     <p9>Berechnung und Modellierung der Längsbewehrung</p9>
     <p10>Berechnung und Modellierung der Querbewehrung</p10>
+    <!-- todo remove after 1.18.16.0 -->
     <t7>Die Gruppe enthält Träger, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t7>
     <t10>Alle Gruppen markieren</t10>
     <t11>Alle Gruppen abwählen</t11>
+    <!-- todo remove after 1.18.16.0 -->
     <t12>Die Bewehrungseinstellungen des Trägers wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t12>
+    <!-- todo remove after 1.18.16.0 -->
     <t13>Die Bewehrungseinstellungen für den ausgewählten Träger ändern</t13>
+    <!-- todo remove after 1.18.16.0 -->
     <t14>Die Bewehrungseinstellungen der Stütze durch die Einstellungen aus der Gruppe ersetzen</t14>
     <t15>Anzeige des vorherigen Trägers in der Liste im Modell</t15>
     <t16>Anzeige des in der Liste ausgewählten Trägers im Modell</t16>
@@ -1742,9 +1842,13 @@
     <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
     <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
     <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
+    <!-- todo remove after 1.18.16.0 -->
     <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
+    <!-- todo remove after 1.18.16.0 -->
     <t63>Sie können bevorzugte Formen von Bewehrungsstäben für verschiedene Bewehrungstypen, die durch das Plugin erzeugt werden, angeben.</t63>
+    <!-- todo remove after 1.18.16.0 -->
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
+    <!-- todo remove after 1.18.16.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
     <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
     <re1>Beim Erstellen der Längsbewehrung des Trägers id={0} ist ein Fehler aufgetreten</re1>
@@ -1810,7 +1914,7 @@
     <t13>Führende Nullen können zum Anfangswert hinzugefügt werden. Wenn zum Beispiel der Anfangswert "01" und die Schrittweite "5" ist, lautet das Ergebnis der Nummerierung "01, 05, 10, 15.... Anfängliche Nullen werden nur berücksichtigt, wenn der Zielparameter ein String-Datentyp ist.</t13>
     <!-- todo remove after 5.2.16.0 -->
     <t14>Die geometrische Richtung der Nummerierung wird aus den absoluten X- und Y-Werten der Platzierungspunkte der Elemente berechnet. Bei linearen Objekten wird der Mittelpunkt ausgewählt</t14>
-    <t15>Beim Sortieren von linearen Objekten wird der Mittelpunkt verwendet. Beim Sortieren von Ansichtsfenstern wird der Ansichtsfenster-Mittelpunkt verwendet. In den übrigen Fällen wird der Einfügepunkt des Elements verwendet</t15>
+    <t15>Beim Sortieren von linearen Objekten wird der Mittelpunkt verwendet. Beim Sortieren von Ansichtsfenstern wird der Ansichtsfenster-Mittelpunkt verwendet. Beim Sortieren der Marken wird der Platzierungspunkt verwendet. In den übrigen Fällen wird der Einfügepunkt des Elements verwendet</t15>
     <t16>Sie können eine alphabetische Nummerierung verwenden. Geben Sie dazu als Anfangswert den Buchstaben an, mit dem die alphabetische Nummerierung beginnen soll. Die alphabetische Nummerierung erfolgt jeweils in der Groß- oder Kleinschreibung gemäß dem Anfangswert.</t16>
     <m1>Wählen Sie Elemente für die nummerierte Markierung</m1>
     <m2>In der aktuellen Ansicht der Bauteilliste gibt es keine Elemente</m2>
@@ -2746,7 +2850,7 @@
   <mprSplitDimChain LocalName="Aufteilen von Bemaßungen"
                     Description="Erstellen neuer Bemaßungen aus Segmenten der ausgewählten Bemaßungskette">
     <h1>Wählen Sie Bemaßungen aus, die mehr als ein Segment enthalten</h1>
-    <h2>Some segments of the original dimension could not be recreated. Accept the changes made?</h2>
+    <h2>Einige Segmente in Originalgröße konnten nicht wieder erstellt werden. Die vorgenommenen Änderungen akzeptieren?</h2>
   </mprSplitDimChain>
   <mprCopyParameterValues LocalName="Kopieren von Werten"
                           Description="Kopieren von Parameterwerten zwischen Elementen oder innerhalb eines Elements"
@@ -3243,7 +3347,7 @@
     <h171>Parameter "Block":</h171>
     <h172>Ausgewählte Wohnungen blockieren</h172>
     <h173>Zielparameter</h173>
-    <h174>Ausgewählte Räume zur ausgewählten Wohnung hinzufügen. Die Räume werden nur dann zu einer Wohnung hinzugefügt, wenn der Raum und die Wohnung auf der gleichen Ebene sind</h174>
+    <h174>Ausgewählte Räume zur ausgewählten Wohnung hinzufügen</h174>
     <h175>Typenstockwerke</h175>
     <h176>Die aktuelle Tabelle der Typenstockwerke:</h176>
     <h177>Die Spalte "Stockwerk"</h177>
@@ -3305,6 +3409,8 @@
     <msg47>Das als typisch angegebene Stockwerk ist in einem anderen Eintrag als nicht typisch angegeben</msg47>
     <msg48>Dieses Stockwerk ist bereits in einem anderen Eintrag angegeben</msg48>
     <msg49>Kein entsprechender Raum (kein senkrechter Schnittpunkt) im Typenstockwerk "{0}" gefunden</msg49>
+    <msg50>The following rooms and the selected apartment are located on different levels</msg50>
+    <msg51>Still add these rooms to the apartment?</msg51>
     <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
     <tt2>Die Anweisung ausblenden</tt2>
     <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
@@ -4038,9 +4144,9 @@
     <err9>Das ausgewählte Element hat keine freien Anschlüsse</err9>
   </mprMEPConnect>
   <mprBaseLevel LocalName="Grundebene"
-                Description="Changing constraints for elements">
-    <t1>Unable to determine old base level to determine offset</t1>
-    <t2>Cannot find new base level "{0}" for elements</t2>
+                Description="Die Abhängigkeiten (Verknüpfungen) für Elemente ändern">
+    <t1>Es ist nicht möglich, eine alte Grundebene für die Versatzerkennung zu bestimmen</t1>
+    <t2>Die neue Grundebene "{0}" für Elemente kann nicht gefunden werden</t2>
     <t3>Bei Elementen war es nicht möglich, eine Strategie für die Zuweisung von Ebenen zu bestimmen</t3>
     <t4>Konfiguration</t4>
     <t5>Die Grundebene für Elemente {0} ist geändert</t5>
@@ -4068,12 +4174,12 @@
     <tt3>Den Namen der Konfiguration ändern</tt3>
     <tt4>Konfiguration duplizieren</tt4>
     <tt5>Konfiguration löschen</tt5>
-    <y1>Do not change</y1>
-    <y2>Do not bind</y2>
-    <u1>Could not determine old top level for offset definition</u1>
-    <u2>Could not find new top level "{0}" for elements</u2>
-    <u5>Top level changed for {0} elements</u5>
-    <u12>Top level change skipped because element is already located at level "{0}"</u12>
+    <y1>Nicht ändern</y1>
+    <y2>Nicht verknüpfen</y2>
+    <u1>Die alte Abhängigkeit oben für die Versatzerkennung kann nicht bestimmt werden</u1>
+    <u2>Die neue Abhängigkeit oben "{0}" für Elemente kann nicht gefunden werden</u2>
+    <u5>Die Abhängigkeit oben ist für {0} Elemente geändert</u5>
+    <u12>Das Ändern der Abhängigkeit oben ist übersprungen, da sich die Abhängigkeit bereits auf der Ebene "{0}" befindet</u12>
     <copy>Kopie</copy>
   </mprBaseLevel>
   <mprViewSync LocalName="Synchronisierung von Ansichten"
@@ -4082,11 +4188,11 @@
     <h2>Keine Ansicht ausgewählt</h2>
     <h3>Nach der aktuellen Ansicht</h3>
     <h4>Bei Aktivierung wird die Ansicht als Startansicht für die Synchronisierung ausgewählt. Die nächste aktivierte Ansicht wird nach der ursprünglichen Ansicht synchronisiert und dann als Startansicht für die Synchronisierung ausgewählt</h4>
-    <h5>Synchronize view crop</h5>
-    <h6>Synchronize 3D view section box</h6>
-    <h7>View cropping</h7>
-    <h8>When activated, view crop settings will be synchronized</h8>
-    <h9>When activated, 3D view bounds will be synchronized</h9>
+    <h5>Zuschneiden von Ansichten synchronisieren</h5>
+    <h6>Grenzen der 3D-Ansicht synchronisieren</h6>
+    <h7>Zuschneiden von Ansichten</h7>
+    <h8>Bei Aktivierung werden die Zuschneidegrenzen der Ansicht synchronisiert</h8>
+    <h9>Bei Aktivierung werden die Grenzen der 3D-Ansicht synchronisiert</h9>
   </mprViewSync>
   <mprSheetExport LocalName="Export von Plänen"
                   Description="Export (Druck) von ausgewählten Plänen in die Formate PDF, DWG usw. mit automatischer Planformaterkennung">
@@ -4344,14 +4450,14 @@
     <t15>Alle sichtbare auswählen</t15>
     <t16>Alle sichtbare abwählen</t16>
     <t17>Dateiname:</t17>
-    <t18>Conversion</t18>
-    <t19>Exporting Schedules ({0}) to a single file</t19>
-    <t20>Enter new name</t20>
-    <t21>Export Title</t21>
-    <t22>Save formatting</t22>
-    <t23>If not specified, the name of the current document will be used</t23>
-    <t24>Not necessarily</t24>
-    <t25>Set:</t25>
+    <t18>Konvertierung</t18>
+    <t19>Export von Bauteillisten ({0}) in eine gemeinsame Datei</t19>
+    <t20>Geben Sie einen neuen Namen ein</t20>
+    <t21>Titel exportieren</t21>
+    <t22>Formatierung speichern</t22>
+    <t23>Wenn nicht angegeben, wird der Name des aktuellen Dokuments verwendet</t23>
+    <t24>Optional</t24>
+    <t25>Datensatz:</t25>
     <err1>Fehler beim Bilden des Dateinamens</err1>
     <err2>Löschen der Datei {0} unmöglich</err2>
     <err3>Zugriffsfehler auf die Datei {0}</err3>
@@ -4471,7 +4577,9 @@
     <t4>*UNTERSCHIEDLICHE*</t4>
     <t5>Dokument 1:</t5>
     <t6>Dokument 2:</t6>
+    <!-- todo remove after 1.0.7.0 -->
     <t7>Testversion. Tage bis zum Ablauf</t7>
+    <!-- todo remove after 1.0.7.0 -->
     <t8>Die Testversion des Plugins ist abgelaufen! Erwerben Sie eine Lizenz für das Plugin oder ein Revit-Abonnement, um das Plugin "Typenmanager" weiterhin nutzen zu können</t8>
     <t9>Aktuelles Modell</t9>
     <t10>Modellvergleich</t10>
@@ -4511,6 +4619,9 @@
     <t44>Anzahl der Exemplare dieses Typs</t44>
     <t45>Anzahl der Parameteränderungen</t45>
     <t46>Parameter nach Namen suchen</t46>
+    <t47>All categories</t47>
+    <t48>Showing {0} categories</t48>
+    <t49>Search category by name</t49>
     <tr1>Parameter Setup</tr1>
   </mprTypeManager>
   <mprMEPRotate LocalName="MEP drehen"
@@ -4527,11 +4638,12 @@
     <t3>Standardwinkel</t3>
     <t4>Gegen Uhrzeigersinn</t4>
     <t5>Gegen Uhrzeigersinn drehen</t5>
-    <t6>Alle Elemente drehen</t6>
+    <t6>Rotate connected elements</t6>
     <t7>Wählen Sie das Element, das Sie drehen wollen</t7>
-    <t8>Wählen Sie das Element, um das Sie drehen wollen</t8>
+    <t8>Select the nearest element to the connector around which you want to rotate</t8>
     <t9>Wählen Sie ein Referenzelement der MEP-Kurve</t9>
     <t10>Wählen Sie die Trassen, die Sie drehen wollen</t10>
+    <t11>Including longitudinally connected elements</t11>
     <msg1>Keine Armatur zum Drehen vorhanden</msg1>
     <msg2>Das Drehen in dieser Richtung ist unmöglich</msg2>
   </mprMEPRotate>
@@ -4785,11 +4897,11 @@
     <t14>Linien färben</t14>
     <t15>Flächen färben</t15>
     <t16>Erstellte Ansichten beim Schließen nicht löschen</t16>
-    <t17>Reset graphics overrides on close</t17>
-    <t18>Colorize</t18>
-    <t19>Decolorize</t19>
-    <t20>Refresh warning list</t20>
-    <t21>Failed to delete elements</t21>
+    <t17>Grafiküberschreibungen beim Schließen rücksetzen</t17>
+    <t18>Färben</t18>
+    <t19>Färben ausschalten</t19>
+    <t20>Die Liste der Warnmeldungen aktualisieren</t20>
+    <t21>Die Elemente konnten nicht gelöscht werden</t21>
   </mprWarningViewer>
   <mprMEPAlign LocalName="MEP ausrichten"
                Description="Sammlung von Plugins zum Ausrichten von MEP-Kurven"
@@ -4808,7 +4920,7 @@
     <t2>Wählen Sie die auszurichtende MEP-Kurve aus</t2>
     <t3>Wählen Sie MEP-Kurven aus</t3>
     <t4>Wählen Sie einen Punkt aus</t4>
-    <t5>Begrenzte Winkel:</t5>
+    <t5>Feste Winkel:</t5>
     <t6>Abstand:</t6>
     <t7>Zwischen Achsen</t7>
     <t8>Zwischen Kanten</t8>
@@ -4816,20 +4928,20 @@
     <t10>Horizontal</t10>
     <t11>Vertikal</t11>
     <t12>Wählen Sie eine MEP-Basiskurve</t12>
-    <t13>Group transactions</t13>
+    <t13>Transaktionen gruppieren</t13>
   </mprMEPAlign>
-  <mprMEPCopy LocalName="MEP Copy"
-              Description="A collection of plugins for copying MEP elements"
-              LocalName1="Copy by Levels"
-              Description1="Copying MEP elements with alignment to selected levels"
-              LocalName2="Copy vertically"
-              Description2="Copying MEP elements vertically by distance">
-    <msg1>MEP elements not selected</msg1>
-    <msg2>Select MEP elements to copy</msg2>
+  <mprMEPCopy LocalName="MEP kopieren"
+              Description="Sammlung von Plugins zum Kopieren von MEP-Elementen"
+              LocalName1="Ebenenweise kopieren"
+              Description1="Kopieren von MEP-Elementen mit Ausrichten gemäß der ausgewählten Ebenen"
+              LocalName2="Vertikal kopieren"
+              Description2="Vertikales Kopieren von MEP-Elementen mit Beabstandung">
+    <msg1>Keine MEP-Elemente ausgewählt</msg1>
+    <msg2>Wählen Sie Elemente für das Kopieren aus</msg2>
     <msg3>Failed to identify a base level of elements</msg3>
-    <t1>Quantity up:</t1>
-    <t2>Quantities down:</t2>
-    <t3>Distance:</t3>
-    <err1>Failed to connect elements</err1>
+    <t1>Anzahl nach oben:</t1>
+    <t2>Anzahl nach unten:</t2>
+    <t3>Abstand:</t3>
+    <err1>Die Elemente konnten nicht verbunden werden</err1>
   </mprMEPCopy>
 </ModPlus>
