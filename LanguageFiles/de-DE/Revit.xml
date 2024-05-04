@@ -425,7 +425,9 @@
               Description="Automatisches Verschieben des Bemaßungswertes, der auf Bemaßungslinien liegt"
               FullDescription="Das Plugin überwacht alle erstellten Bemaßungen und verschiebt den Bemaßungstext zur Seite, wenn er auf die Bemaßungslinien liegt."
               LocalName1="Wiederherstellen"
-              Description1="Wiederherstellen der Textposition für ausgewählte  Bemaßungen">
+              Description1="Wiederherstellen der Textposition für ausgewählte  Bemaßungen"
+              LocalName2="Offset selected"
+              Description2="Offset dimension text of selected dimensions">
     <h2>Automatisches Verschieben von Bemaßungswerten beim Erstellen</h2>
     <h3>Automatisches Verschieben von Bemaßungswerten beim Ändern</h3>
     <h4>Verschiebungsfaktor (von 0.1 bis 2.0):</h4>
@@ -439,11 +441,15 @@
     <h12>Wenn für den Text eines Segments in der Bemaßungkette ein Verschieben erforderlich ist und das Verschieben in Richtung des benachbarten Segments erfolgen kann, wird der Text nicht nur seitlich, sondern auch nach unten verschoben</h12>
     <h13>Achtung! Bevor der Befehl "Auf die neueste Version aktualisieren" auf der Registerkarte "Zusammenarbeit" gestartet wird, muss das Plugin deaktiviert werden, da das Verschieben des Bemaßungstextes auf die aus den hochgeladenen Änderungen abgeleiteten Bemaßungen angewendet wird!</h13>
     <h14>Richtung des Verschiebens in Bezug auf die Bemaßungslinie:</h14>
+    <!-- todo remove after 5.2.2.0 -->
     <h15>Oben</h15>
+    <!-- todo remove after 5.2.2.0 -->
     <h16>Unten</h16>
     <h17>Faktor der Textbreite (von 0.1 bis 2.0):</h17>
     <h18>Die Berechnung der Textbreite hängt von der Schriftart ab. Bei einigen Schriftarten kann die von der Software berechnete Breite größer sein als die Breite des von Revit gezeichneten Textes. In diesem Fall kann ein Breitenfaktor verwendet werden, der bei der Berechnung der Breite des Textes in der Software berücksichtigt wird</h18>
     <h19>Für den Faktor der Textbreite muss eine Zahl zwischen 0.1 und 2.0 angegeben werden</h19>
+    <h20>From the element</h20>
+    <h21>To the element</h21>
   </mprDimBias>
   <mprExcelImport LocalName="Import aus Excel"
                   Description="Mit dem Plugin können Sie Tabellen aus Excel in eine Revit-Zeichnungsansicht einfügen"
@@ -1903,6 +1909,7 @@
     <sv1>Implizierte Fensterauswahl</sv1>
     <sv2>Ordnungsauswahl</sv2>
     <sv3>Schnittpunkt mit einer Kurve</sv3>
+    <!-- todo remove after 6.1.2.0 -->
     <select>Auswählen</select>
     <t1>Das Plugin kann nur in einer Bauteilliste funktionieren, deren Sortiereinstellungen die Eigenschaft "Für jedes Exemplar" aktiviert haben</t1>
     <t2>Alle Kategorien abwählen</t2>
@@ -1920,6 +1927,7 @@
     <m1>Wählen Sie Elemente für die nummerierte Markierung</m1>
     <m2>In der aktuellen Ansicht der Bauteilliste gibt es keine Elemente</m2>
     <m3>Wollen Sie die ausgewählten Elemente in der aktuellen Kategorieliste filtern?</m3>
+    <m4>Select a curve (model line or detail line)</m4>
     <o1>In aufsteigender Reihenfolge</o1>
     <o2>In absteigender Reihenfolge</o2>
     <b1>Numerierung in jeder Gruppe</b1>
