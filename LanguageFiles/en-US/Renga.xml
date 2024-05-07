@@ -4,15 +4,7 @@
 	                 Description="Filter selected objects by category">
 		<h1>Category:</h1>
 		<h2>Objects count:</h2>
-    <!-- todo remove after 1.0.5.0 -->
-		<h3>Select all</h3>
-    <!-- todo remove after 1.0.5.0 -->
-		<h4>Select none</h4>
 		<h5>Total selected objects:</h5>
-    <!-- todo remove after 1.0.5.0 -->
-		<h6>Accept</h6>
-    <!-- todo remove after 1.0.5.0 -->
-		<h7>Cancel</h7>
 	</mrObjectsFilter>
 	<mrBatchSheetExport LocalName="Batch Sheets Export"
 	                    Description="Plugin allows you to export all specified sheets to dwg/dxf/pdf/oxps">
@@ -20,16 +12,27 @@
 		<t2>Deselect all sheets</t2>
 		<t3>Invert selection</t3>
 		<t4>If the check mark is not set and there will be files with the same name in the destination folder, then the suffix will be added to the name of the sheet being exported</t4>
+    <t5>The pdf files will be merged into a single pdf file with the same order in which the sheets were exported. The original pdf files will be deleted</t5>
+    <t6>Save the current list of sheets as a new set</t6>
+    <t7>Save changes to the current set</t7>
+    <t8>Rename the current set</t8>
+    <t9>Delete the current set</t9>
+    <t10>Sets allow you to save the state (checked/unchecked) and position of sheets. Sets are saved with reference to the project name</t10>
 		<h1>Export to:</h1>
 		<h2>AutoCAD file version:</h2>
 		<h3>Overwrite existing files</h3>
-		<!-- todo remove after 1.0.1.0 -->
-		<h4>Export</h4>
 		<h5>Specify the folder for saving exported files</h5>
-		<!-- todo remove after 1.0.1.0 -->
-		<h6>Cancel</h6>
 		<h7>Export to</h7>
 		<h8>Sheet export:</h8>
+    <h9>By sheets</h9>
+    <h10>By sections</h10>
+    <h11>Merge PDF</h11>
+    <h12>Open folder after exporting</h12>
+    <h13>Set:</h13>
+    <h14>Enter the name of the new set</h14>
+    <h15>Enter a new name for the set</h15>
+    <h16>Exporting a section</h16>
+    <!-- todo remove after 1.2.3.0 -->
 		<m1>No sheets selected for export!</m1>
 		<m2>Before exporting sheets, it is strongly recommended to save the project!\nSave the project?</m2>
 	</mrBatchSheetExport>
@@ -48,12 +51,6 @@
 		<h10>Search</h10>
 		<h11>Found {0} objects</h11>
 		<h12>Nothing found</h12>
-    <!-- todo remove after 1.3.3.0 -->
-		<h13>Show</h13>
-    <!-- todo remove after 1.3.3.0 -->
-		<h14>Hide</h14>
-    <!-- todo remove after 1.3.3.0 -->
-		<h15>Isolate</h15>
     <h16>Search in selected</h16>
 		<m1>Equal</m1>
 		<m2>Contain</m2>
