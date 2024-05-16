@@ -426,8 +426,8 @@
               FullDescription="Das Plugin überwacht alle erstellten Bemaßungen und verschiebt den Bemaßungstext zur Seite, wenn er auf die Bemaßungslinien liegt."
               LocalName1="Wiederherstellen"
               Description1="Wiederherstellen der Textposition für ausgewählte  Bemaßungen"
-              LocalName2="Offset selected"
-              Description2="Offset dimension text of selected dimensions">
+              LocalName2="Ausgewähltes verschieben"
+              Description2="Verschiebung des Bemaßungstextes für die ausgewählten Bemaßungen">
     <h2>Automatisches Verschieben von Bemaßungswerten beim Erstellen</h2>
     <h3>Automatisches Verschieben von Bemaßungswerten beim Ändern</h3>
     <h4>Verschiebungsfaktor (von 0.1 bis 2.0):</h4>
@@ -448,8 +448,8 @@
     <h17>Faktor der Textbreite (von 0.1 bis 2.0):</h17>
     <h18>Die Berechnung der Textbreite hängt von der Schriftart ab. Bei einigen Schriftarten kann die von der Software berechnete Breite größer sein als die Breite des von Revit gezeichneten Textes. In diesem Fall kann ein Breitenfaktor verwendet werden, der bei der Berechnung der Breite des Textes in der Software berücksichtigt wird</h18>
     <h19>Für den Faktor der Textbreite muss eine Zahl zwischen 0.1 und 2.0 angegeben werden</h19>
-    <h20>From the element</h20>
-    <h21>To the element</h21>
+    <h20>Vom Element</h20>
+    <h21>Zum Element</h21>
   </mprDimBias>
   <mprExcelImport LocalName="Import aus Excel"
                   Description="Mit dem Plugin können Sie Tabellen aus Excel in eine Revit-Zeichnungsansicht einfügen"
@@ -672,7 +672,7 @@
     <Images>Rasterbilder</Images>
     <Annotations>Beschriftungen</Annotations>
     <ElectricalDevices>Elektrische Ausstattung</ElectricalDevices>
-    <Imports>Import Symbols</Imports>
+    <Imports>Importbezeichnungen</Imports>
     <h1>Ausklinkungsabstand</h1>
     <h2>Ausklinkungsabstand, mm</h2>
     <h3>Automatisches Ändern des Ausklinkungsabstands für Tragwerkselemente</h3>
@@ -725,8 +725,8 @@
     <h55>Splines kombinieren</h55>
     <h56>Kombinieren von Detaillinien oder Modelllinien, die als Splines ausgeführt sind und einen gemeinsamen Endpunkt haben</h56>
     <h57>Wählen Sie Splines aus</h57>
-    <h58>Unhide Elements</h58>
-    <h59>Displays the selected elements in the view, reversing their hidden status</h59>
+    <h58>Elemente darstellen</h58>
+    <h59>Darstellung der ausgewählten Elemente in einer Ansicht mit Ändern ihrer Zustände von "ausgeblendet" auf "eingeblendet"</h59>
     <m1>Die Sichtbarkeitseinstellungen für die Kategorie in der aktuellen Ansicht können nicht geändert werden, da auf die Ansicht eine Ansichtsvorlage angewendet wurde</m1>
     <m2>Keine Bewehrung im aktuellen Projekt gefunden</m2>
     <m3>Im aktuellen Projekt gefunden:</m3>
@@ -995,7 +995,7 @@
     <h243>Verschränkung durch Versatz</h243>
     <h244>Nur in Bereichen ohne darüber liegende Geschossdecke bzw. Wand erstellen</h244>
     <h245>U-förmige Stäbe entlang des unteren Wandabschlusses</h245>
-    <h246>Walls in contact with the slab:</h246>
+    <h246>Wände, die auf die Platte treffen:</h246>
     <h247>Source parameter</h247>
     <h248>No parameter</h248>
     <srd>Speichern von Daten für die ausgewählte Wände</srd>
@@ -1071,7 +1071,7 @@
     <p13>Verbinden der horizontalen Stäbe der erstellten Bewehrung</p13>
     <p14>Berechnung und Modellierung von Plattenüberständen entlang der Mittelwände</p14>
     <p15>Berechnung und Modellierung von Plattenüberständen entlang der Abschlusswände</p15>
-    <p16>Searching for underlying slabs</p16>
+    <p16>Unterliegende Platten suchen</p16>
     <dd1>В</dd1>
     <dd2>H</dd2>
     <dd3>nach innen</dd3>
@@ -1179,8 +1179,8 @@
     <t69>Wenn die horizontalen Stäbe der Grundbewehrung innen und die vertikalen Stäbe außen liegen, ist es empfehlenswert, die Umschlingung der vertikalen Stäbe anzugeben. Umgekehrt, wenn die horizontalen Stäbe der Grundbewehrung außen liegen, ist es empfehlenswert, die Umschlingung der horizontalen Stäbe anzugeben</t69>
     <t70>Die Länge des Bauteils ist die Verankerungslänge</t70>
     <t71>Auf jedes zweite Stabspaar wird von unten einen Abstand um die absolute Differenz der Überlappungslängen angewandt. Der Abstand hat keinen Einfluss auf die zweite Überlappungslänge. Wenn z.B. die erste Überlappungslänge 500 mm und die zweite Überlappungslänge 750 mm beträgt, haben die Stäbe von jedem zweiten Paar einen unteren Abstand von 250 mm</t71>
-    <t72>Display in the model the slab selected in the list</t72>
-    <t73>Display in the model the walls that are in contact with the selected slab in the list</t73>
+    <t72>Die in der Liste ausgewählte Platte im Modell darstellen</t72>
+    <t73>Die Wände im Modell darstellen, die auf die in der Liste ausgewählten Platte treffen</t73>
     <re1>Fehler beim Erstellen von vertikalen Stäben der Grundbewehrung in der Wand id={0}:</re1>
     <re2>Fehler beim Erstellen von vertikalen Stäben der Grundbewehrung am Schnittpunkt in der Wand id={0}:</re2>
     <re3>Fehler beim Erstellen von zusätzlichen vertikalen Stäben im Wandabschluss id={0}:</re3>
@@ -1343,8 +1343,8 @@
     <h226>Löschen der zuvor erstellten Bewehrung:</h226>
     <h229>Um Bügel erstellen zu können, muss die Erstellung von mindestens zwei geraden Stäben in der Längsrichtung aktiviert und die Option "Versatz beim Auftreffen der Stäbe der Hauptbewehrung" deaktiviert sein</h229>
     <h230>Um Bügel erstellen zu können, muss die Erstellung von mindestens zwei geraden Stäben in der Querrichtung aktiviert und die Option "Versatz beim Auftreffen der Stäbe der Hauptbewehrung" deaktiviert sein</h230>
-    <h231>Anchoring length of the filler rod:</h231>
-    <h232>Cut U-shaped rods with the slab body if the rods protrude beyond the boundaries of the slab body</h232>
+    <h231>Verankerungslänge des Zusatzbewehrungsstabs:</h231>
+    <h232>U-förmige Stäbe mit dem Plattenkörper abschneiden, wenn die Stäbe über die Grenzen des Plattenkörpers hinausragen</h232>
     <srd>Speichern von Daten für die ausgewählte Platten</srd>
     <hook>Haken:</hook>
     <m1>Wählen Sie Platten aus</m1>
@@ -1596,8 +1596,8 @@
     <h237>Das Biegen des unteren Teils erfolgt bei geraden Stäben, sofern die zu bearbeitenden Stützen den gleichen Querschnitt haben.</h237>
     <h238>Erstellen:</h238>
     <h239>Querbewehrung</h239>
-    <h240>Default form properties</h240>
-    <h241>If there is already a form with the same sketch in the list, the properties will be taken from it</h241>
+    <h240>Standardmäßige Formeneigenschaften</h240>
+    <h241>Wenn in der Liste bereits eine Form mit derselben Skizze vorhanden ist, werden die Eigenschaften von dieser übernommen</h241>
     <srd>Speichern von Daten für die ausgewählte Stützen</srd>
     <hook>Haken:</hook>
     <err1>In den Einstellungen für die Bewehrung der Stütze werden die Überstände von gebogenen Stäben in einer "Flaschenform" angegeben, die zu ihrer Erstellung Platten oder einen von Null unterschiedlichen Abstand zwischen den Stützen haben müssen. Es wurde keine oben liegende Platte gefunden oder der Abstand zur oben liegenden Stütze ist 0</err1>
@@ -1797,8 +1797,8 @@
     <h226>Löschen der zuvor erstellten Bewehrung:</h226>
     <h238>Erstellen:</h238>
     <h239>Querbewehrung</h239>
-    <h240>Default form properties</h240>
-    <h241>If there is already a form with the same sketch in the list, the properties will be taken from it</h241>
+    <h240>Standardmäßige Formeneigenschaften</h240>
+    <h241>Wenn in der Liste bereits eine Form mit derselben Skizze vorhanden ist, werden die Eigenschaften von dieser übernommen</h241>
     <srd>Speichern von Daten für die ausgewählte Träger</srd>
     <hook>Haken:</hook>
     <jt1>Überstände der Längsbewehrung werden nicht erstellt. Die Stäbe werden entsprechend dem vorgegebenen Wert der Überdeckung an den Enden der Bewehrung am Ende des Trägers geschnitten</jt1>
@@ -1938,7 +1938,7 @@
     <m1>Wählen Sie Elemente für die nummerierte Markierung</m1>
     <m2>In der aktuellen Ansicht der Bauteilliste gibt es keine Elemente</m2>
     <m3>Wollen Sie die ausgewählten Elemente in der aktuellen Kategorieliste filtern?</m3>
-    <m4>Select a curve (model line or detail line)</m4>
+    <m4>Wählen Sie eine Kurve (Modellinie oder Detaillinie) aus</m4>
     <o1>In aufsteigender Reihenfolge</o1>
     <o2>In absteigender Reihenfolge</o2>
     <b1>Numerierung in jeder Gruppe</b1>
@@ -2700,7 +2700,7 @@
     <m8>Links</m8>
     <m9>Rechts</m9>
     <m10>Umhüllte Elemente</m10>
-    <m11>Select and bend</m11>
+    <m11>Biegung auswählen und durchführen</m11>
     <!-- todo remove after 2.4.5.0 -->
     <m12>Eine Biegung durchführen</m12>
     <m13>Verwenden</m13>
@@ -2719,7 +2719,7 @@
     <m26>Träger und Stützen</m26>
     <m29>Lücke, mm</m29>
     <m30>Abstand von der Achse, mm</m30>
-    <m31>Select the intersecting elements to be bent</m31>
+    <m31>Wählen Sie überschneidende Elemente aus, die gebogen werden müssen</m31>
     <o1>Die vorgenommenen Änderungen annehmen und fortsetzen</o1>
     <o2>Die vorgenommenen Änderungen verwerfen und fortfahren</o2>
     <o3>Die Arbeit unterbrechen</o3>
@@ -3429,8 +3429,8 @@
     <msg47>Das als typisch angegebene Stockwerk ist in einem anderen Eintrag als nicht typisch angegeben</msg47>
     <msg48>Dieses Stockwerk ist bereits in einem anderen Eintrag angegeben</msg48>
     <msg49>Kein entsprechender Raum (kein senkrechter Schnittpunkt) im Typenstockwerk "{0}" gefunden</msg49>
-    <msg50>The following rooms and the selected apartment are located on different levels</msg50>
-    <msg51>Still add these rooms to the apartment?</msg51>
+    <msg50>Die folgenden Räume und die ausgewählte Wohnung befinden sich auf verschiedenen Ebenen</msg50>
+    <msg51>Diese Räume trotzdem zur Wohnung hinzufügen?</msg51>
     <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
     <tt2>Die Anweisung ausblenden</tt2>
     <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
@@ -4163,9 +4163,9 @@
     <err7>Die Erstellung eines variablen Formadapters ist fehlgeschlagen</err7>
     <err8>Ansatz konnte nicht erstellt werden</err8>
     <err9>Das ausgewählte Element hat keine freien Anschlüsse</err9>
-    <err10>The selected elements have a connector of different shapes</err10>
-    <err11>The selected elements have a connector of different sizes</err11>
-    <err12>The selected elements have a connector of different system types</err12>
+    <err10>Die ausgewählten Elemente haben Anschluss mit unterschiedlichen Formen</err10>
+    <err11>Die ausgewählten Elemente haben Anschluss mit unterschiedlichen Bemaßungen</err11>
+    <err12>Die ausgewählten Elemente haben Anschluss von unterschiedlichen Systemtypen</err12>
   </mprMEPConnect>
   <mprBaseLevel LocalName="Grundebene"
                 Description="Die Abhängigkeiten (Verknüpfungen) für Elemente ändern">
@@ -4181,8 +4181,8 @@
     <t10>Geben Sie einen Namen der Konfiguration ein</t10>
     <t11>Die Basis für Elemente kann nicht geändert werden, da sie auf der Grundlage einer Ebene oder einer Fläche erstellt werden</t11>
     <t12>Base level change is skipped because the element is already located at level "{0}"</t12>
-    <t13>Base level (Bottom constraint)</t13>
-    <t14>Top level (Top constraint)</t14>
+    <t13>Grundebene (Abhängigkeit von unten)</t13>
+    <t14>Obere Ebene (Abhängigkeit von oben)</t14>
     <tr1>Einstellung der Ebenen</tr1>
     <xt1>Ausgewählte Elemente</xt1>
     <xt2>In der aktuellen Ansicht</xt2>
@@ -4651,12 +4651,12 @@
     <t44>Anzahl der Exemplare dieses Typs</t44>
     <t45>Anzahl der Parameteränderungen</t45>
     <t46>Parameter nach Namen suchen</t46>
-    <t47>All categories</t47>
-    <t48>Showing {0} categories</t48>
-    <t49>Search category by name</t49>
-    <t50>Select documents</t50>
-    <t51>Document {0}: {1}</t51>
-    <t52>Value in document {0}</t52>
+    <t47>Alle Kategorien</t47>
+    <t48>{0} Kategorien dargestellt</t48>
+    <t49>Kategoriensuche nach Namen</t49>
+    <t50>Wählen Sie Dokumente aus</t50>
+    <t51>Dokument {0}: {1}</t51>
+    <t52>Wert im Dokument {0}</t52>
     <tr1>Parameter Setup</tr1>
   </mprTypeManager>
   <mprMEPRotate LocalName="MEP drehen"
@@ -4673,12 +4673,12 @@
     <t3>Standardwinkel</t3>
     <t4>Gegen Uhrzeigersinn</t4>
     <t5>Gegen Uhrzeigersinn drehen</t5>
-    <t6>Rotate connected elements</t6>
+    <t6>Verbundene Elemente drehen</t6>
     <t7>Wählen Sie das Element, das Sie drehen wollen</t7>
-    <t8>Select the nearest element to the connector around which you want to rotate</t8>
+    <t8>Wählen Sie das dem Anschluss am nächsten liegenden Element, um das Sie drehen wollen</t8>
     <t9>Wählen Sie ein Referenzelement der MEP-Kurve</t9>
     <t10>Wählen Sie die Trassen, die Sie drehen wollen</t10>
-    <t11>Including longitudinally connected elements</t11>
+    <t11>Einschließlich längsverbundene Elemente</t11>
     <msg1>Keine Armatur zum Drehen vorhanden</msg1>
     <msg2>Das Drehen in dieser Richtung ist unmöglich</msg2>
   </mprMEPRotate>
@@ -4973,26 +4973,26 @@
               Description2="Vertikales Kopieren von MEP-Elementen mit Beabstandung">
     <msg1>Keine MEP-Elemente ausgewählt</msg1>
     <msg2>Wählen Sie Elemente für das Kopieren aus</msg2>
-    <msg3>Failed to identify a base level of elements</msg3>
+    <msg3>Die Grundebene der Elemente konnte nicht ermittelt werden</msg3>
     <t1>Anzahl nach oben:</t1>
     <t2>Anzahl nach unten:</t2>
     <t3>Abstand:</t3>
     <err1>Die Elemente konnten nicht verbunden werden</err1>
   </mprMEPCopy>
-  <mprCopyAlongCurve LocalName="Copy Along Curve"
-                     Description="Copy elements along curve with a given spacing">
-    <t1>Select elements to copy</t1>
-    <t2>Select curves to copy</t2>
-    <t3>Curves are not connected</t3>
-    <t4>Removing source items</t4>
-    <w1>Quantity of copies: </w1>
-    <w2>Copy settings</w2>
-    <w3>Spacing, mm</w3>
-    <w6>Copy at endpoint</w6>
-    <w7>Place a copy at the end point of the curve</w7>
-    <w8>Remove source elements</w8>
-    <w9>Rotate along a curve</w9>
-    <w10>Select elements to copy</w10>
-    <w11>Select curves to copy</w11>
+  <mprCopyAlongCurve LocalName="Kopieren entlang einer Kurve"
+                     Description="Kopieren von Elementen entlang einer Kurve mit dem bestimmten Abstand">
+    <t1>Wählen Sie Elemente für Kopieren aus</t1>
+    <t2>Wählen Sie Kurven für Kopieren aus</t2>
+    <t3>Die Kurven sind nicht verbunden</t3>
+    <t4>Löschen von Quellelementen</t4>
+    <w1>Anzahl der Kopien: </w1>
+    <w2>Kopierparameter</w2>
+    <w3>Abstand, mm</w3>
+    <w6>Kopie am Endpunkt</w6>
+    <w7>Kopie am Endpunkt der Kurve platzieren</w7>
+    <w8>Quellelemente löschen</w8>
+    <w9>Entlang der Kurve drehen</w9>
+    <w10>Elemente für Kopieren auswählen</w10>
+    <w11>Kurven für Kopieren auswählen</w11>
   </mprCopyAlongCurve>
 </ModPlus>
