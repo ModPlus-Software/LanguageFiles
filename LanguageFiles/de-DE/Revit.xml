@@ -631,7 +631,7 @@
     <ok>Ok</ok>
     <cancel>Abbrechen</cancel>
   </mprNestedFamilyParamsTransfer>
-  <mprTools LocalName="Dienstprogramme" 
+  <mprTools LocalName="Dienstprogramme"
             Description="Eine Sammlung von kleinen Hilfs-Plugins">
     <ttShow>Alle Elemente der angegebenen Kategorie in der aktuellen Ansicht anzeigen</ttShow>
     <ttHide>Alle Elemente der angegebenen Kategorie in der aktuellen Ansicht ausblenden</ttHide>
@@ -1020,11 +1020,13 @@
     <jtd8>Die geraden Überstände der vertikalen Stäbe werden erstellt ohne Berücksichtigung überlagernder Elemente</jtd8>
     <jtd9>Die geraden Überstände der vertikalen Stäbe werden erstellt in einer "Flaschenform" – die Überstände werden um den definierten Abstand und um den Durchmesser des Stabes zur Mitte des Schnittpunktes gebogen. Die Überlappungslänge wird von der Oberfläche der oben liegenden Geschossdecke angegeben</jtd9>
     <jtd10>Vertikale Stäbe der Grundbewehrung werden an der Oberfläche der Wand entsprechend dem eingestellten Wert der Überdeckung abgeschnitten. Die Verankerung in die oben liegende Platte erfolgt in Form eines einzelnen U-förmigen Stabes</jtd10>
+    <!-- todo remove after 5.24.16.0 start -->
     <i1>1. Winkel</i1>
     <i2>2. T-förmiger</i2>
     <i3>3. Kreuz</i3>
     <i4>0. nicht bestimmt</i4>
     <i5>Unterschiedliche</i5>
+    <!-- todo remove after 5.24.16.0 end -->
     <m1>Geben Sie einen Wert von</m1>
     <m2>bis</m2>
     <!-- todo remove after 5.24.16.0 -->
@@ -2769,7 +2771,7 @@
     <t2>Nach den Vorlagen</t2>
     <e1>Es ist nicht gelungen, einen Rohrverbinder (Kniestück) zu erstellen. Überprüfen Sie, ob die erforderlichen Familien im Projekt vorhanden sind und ob die Routing-Einstellungen für die zu verarbeitenden Elemente vorhanden sind</e1>
   </mprMepElementsBender>
-  <mprNotes LocalName="Notizen" 
+  <mprNotes LocalName="Notizen"
             Description="Das Plugin dient zur Verarbeitung von oft verwendeten Notizen">
     <h1>Einstellungen</h1>
     <h3>Doppelklick auf eine Notiz</h3>
@@ -2798,7 +2800,7 @@
   <mprContextFilter LocalName="Kontextbezogener Filter"
                     Description="Filter, um Elemente nach Parametern zu filtern, der als Kontextmenü funktioniert"
                     FullDescription="Der Filter kann auf drei Arten gestartet werden: durch Klicken mit der linken Maustaste bei gedrückter Strg-Taste, durch Drücken bestimmter Tasten der Reihe nach oder durch Drücken einer Tastenkombination. Der Filter verfügt über drei Verarbeitungsebenen: alle Elemente des Modells, Elemente in der aktuellen Ansicht oder ausgewählte Elemente. Es ist auch möglich, Voreinstellungen anzuwenden, um schnell auf den Filter zuzugreifen."
-                    LocalName1="Filter Fenstermodus" 
+                    LocalName1="Filter Fenstermodus"
                     Description1="Ein im Fenstermodus funktionierender Filter, der die Elemente nach Parameter filtert">
     <h1>Voreinstellungen</h1>
     <h3>Eine Voreinstellung auf die aktuelle Liste anwenden</h3>
@@ -3127,7 +3129,7 @@
     <left>Links</left>
     <right>Rechts</right>
   </mprSectionAnnotation>
-  <mprApartmentBuildingLayout LocalName="Wohnungslayout" 
+  <mprApartmentBuildingLayout LocalName="Wohnungslayout"
                               Description="Umfassende Realisierung von Wohnungslayout"
                               LocalName1="Autom. Berechnung"
                               Description1="Dienst zur automatischen Neuberechnung der Wohnungsflächen bei Änderung der Raumgröße">
@@ -4232,6 +4234,7 @@
     <h7>Zuschneiden von Ansichten</h7>
     <h8>Bei Aktivierung werden die Zuschneidegrenzen der Ansicht synchronisiert</h8>
     <h9>Bei Aktivierung werden die Grenzen der 3D-Ansicht synchronisiert</h9>
+    <h10>Nach der Ansicht</h10>
   </mprViewSync>
   <mprSheetExport LocalName="Export von Plänen"
                   Description="Export (Druck) von ausgewählten Plänen in die Formate PDF, DWG usw. mit automatischer Planformaterkennung">
@@ -4434,7 +4437,7 @@
     <err24>In der Formatliste ist bereits ein Format mit dieser Größe vorhanden</err24>
     <err25>Das Format hat keinen Namen und wird beim Hinzufügen zum Drucker nicht bearbeitet</err25>
   </mprSheetExport>
-  <mprHeightSplitter LocalName="In die Höhe teilen" 
+  <mprHeightSplitter LocalName="In die Höhe teilen"
                      Description="Teilen von Wänden und Stützen nach Ebenen, Referenzflächen oder vorgegebenen Parametern">
     <h1>Teilungsverfahren</h1>
     <h2>Versetzen von oben (abwärts), mm</h2>
@@ -4503,7 +4506,7 @@
     <err2>Löschen der Datei {0} unmöglich</err2>
     <err3>Zugriffsfehler auf die Datei {0}</err3>
   </mprExportToExcel>
-  <mprStructureToParameter LocalName="Struktur in Parameter übernehmen" 
+  <mprStructureToParameter LocalName="Struktur in Parameter übernehmen"
                            Description="Die Struktur des mehrschaligen Typs wird in den mehrzeiligen Parameter übernommen"
                            LocalName1="Volume of layers to parameter"
                            Description1="Transferring of layer volumes of multilayer elements into a multiline parameter">
@@ -4961,7 +4964,7 @@
                Description2="Abstand zwischen MEP-Kurven vorgeben"
                LocalName3="Multiformation"
                Description3="Multiformation von МЕР-Kurven"
-               LocalName4="Align vertical" 
+               LocalName4="Align vertical"
                Description4="Vertical alignment of MEP curves">
     <msg1>Die ausgewählten МЕР-Kurven sind nicht parallel</msg1>
     <msg2>Drehen um Winkel</msg2>
