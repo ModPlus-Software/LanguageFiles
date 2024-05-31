@@ -776,6 +776,7 @@
     <h28>Width</h28>
     <h29>Heights</h29>
     <h30>Parameter</h30>
+    <!-- todo remove after 5.24.16.0 -->
     <h31>You can drag a wall from the current group to other groups</h31>
     <h32>Create:</h32>
     <h33>Intersection type</h33>
@@ -785,6 +786,7 @@
     <h37>Intersection type</h37>
     <h38>Parameters</h38>
     <h39>Intersections in the group:</h39>
+    <!-- todo remove after 5.24.16.0 -->
     <h40>You can drag and drop the intersections from the current group to other groups</h40>
     <h41>Walls in the intersection:</h41>
     <h42>Reinforcement</h42>
@@ -801,6 +803,7 @@
     <h53>Group by height</h53>
     <h54>Source</h54>
     <h55>Openings in the group:</h55>
+    <!-- todo remove after 5.24.16.0 -->
     <h58>You can drag and drop openings from the current group to other groups</h58>
     <h59>Group reinforcement settings</h59>
     <h60>Carry out reinforcement</h60>
@@ -1204,6 +1207,7 @@
     <re19>Error while creating U-shaped bars of the opening frame along the horizontal (on bottom) in the wall id={0}</re19>
     <re20>Failed to create rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re20>
     <re21>Error when creating U-shaped bars along the bottom end of the wall</re21>
+    <re22>It is not possible to display the intersection in the current view! Go to the floor plan</re22>
   </mprWallsReinforcement>
   <mprSlabsReinforcement LocalName="Slabs reinforcement"
                          Description="Analysis, grouping and reinforcement of slabs for specified conditions"
@@ -1882,6 +1886,7 @@
     <p8>Removing the reinforcement created earlier</p8>
     <p9>Calculation and modeling of longitudinal reinforcement</p9>
     <p10>Calculation and modeling of transverse reinforcement</p10>
+    <p11>Calculation and modeling of intersection reinforcement</p11>
     <!-- todo remove after 1.18.16.0 -->
     <t7>The group contains beams whose reinforcement settings have been manually edited and differ from the group reinforcement settings</t7>
     <t8>Add a new empty group</t8>
@@ -1919,6 +1924,10 @@
     <re5>Failed to create a rebar of shape "{0}" with a given preferred shape of rebar "{1}". Error: {2}\nAn attempt was made to create a rebar with automatic rebar shape selection or creation</re5>
     <!-- todo remove after 1.18.16.0 -->
     <re6>Failed to set parameter values</re6>
+    <re9>Error when creating details of corner intersection in the beams {0}:</re9>
+    <re10>Error while creating details of T-shaped intersection in the beams {0}:</re10>
+    <re11>Error while creating details of cross intersection in the beams {0}:</re11>
+    <re22>It is not possible to display the intersection in the current view! Go to the floor plan</re22>
   </mprBeamsReinforcement>
   <mmOrderMarking LocalName="Numbering"
                   Description="Adding numbering to the specified parameter of elements with the possibility of numbering in the schedules"
@@ -5038,7 +5047,7 @@
     <t6>Levels selected:</t6>
     <err1>Failed to connect elements</err1>
   </mprMEPCopy>
-  <mprCopyAlongCurve LocalName="Copy Along Curve"
+  <mprCopyAlongCurve LocalName="Copy along Curve"
                      Description="Copy elements along curve with a given spacing">
     <t1>Select elements to copy</t1>
     <t2>Select curves to copy</t2>

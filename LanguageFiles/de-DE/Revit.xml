@@ -776,6 +776,7 @@
     <h28>Dicke</h28>
     <h29>Höhen</h29>
     <h30>Parameter</h30>
+    <!-- todo remove after 5.24.16.0 -->
     <h31>Sie können Wände aus der aktuellen Gruppe in andere Gruppen ziehen und dort ablegen</h31>
     <h32>Erstellen:</h32>
     <h33>Typ des Schnittpunktes</h33>
@@ -785,6 +786,7 @@
     <h37>Typ des Schnittpunktes</h37>
     <h38>Parameter</h38>
     <h39>Schnittpunkte in der Gruppe:</h39>
+    <!-- todo remove after 5.24.16.0 -->
     <h40>Sie können Schnittpunkte aus der aktuellen Gruppe in andere Gruppen ziehen und dort ablegen</h40>
     <h41>Wände in dem Schnittpunkt:</h41>
     <h42>Bewehrung</h42>
@@ -801,6 +803,7 @@
     <h53>Gruppe nach Höhe</h53>
     <h54>Quelle</h54>
     <h55>Öffnungen in der Gruppe:</h55>
+    <!-- todo remove after 5.24.16.0 -->
     <h58>Sie können Öffnungen aus der aktuellen Gruppe in andere Gruppen ziehen und dort ablegen</h58>
     <h59>Die Einstellungen für die Gruppenbewehrung</h59>
     <h60>Bewehrung durchführen</h60>
@@ -1067,7 +1070,7 @@
     <p7>Feststellung, ob Wände zu Schnittpunkten gehören</p7>
     <p8>Entfernen der zuvor erstellten Bewehrung</p8>
     <p9>Berechnung und Modellierung der Wandbewehrung</p9>
-    <p10>Berechnung und Modellierung der Querbewehrung</p10>
+    <p10>Calculation and modeling of intersection reinforcement</p10>
     <p11>Berechnung und Modellierung der Öffnungsbewehrung</p11>
     <p12>Generierung von Bewehrung Revit</p12>
     <p13>Verbinden der horizontalen Stäbe der erstellten Bewehrung</p13>
@@ -1204,6 +1207,7 @@
     <re19>Fehler beim Erstellen von U-förmigen Stäben der Einrahmung von Öffnung entlang der Horizontalen (unten) in der Wand id={0}</re19>
     <re20>Die Erstellung eines Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re20>
     <re21>Fehler beim Erstellen von U-förmigen Stäben entlang des unteren Wandabschlusses</re21>
+    <re22>It is not possible to display the intersection in the current view! Go to the floor plan</re22>
   </mprWallsReinforcement>
   <mprSlabsReinforcement LocalName="Plattenbewehrung"
                          Description="Analyse, Gruppierung und Bewehrung von Platten entsprechend den festgelegten Bedingungen "
@@ -1882,6 +1886,7 @@
     <p8>Entfernen der zuvor erstellten Bewehrung</p8>
     <p9>Berechnung und Modellierung der Längsbewehrung</p9>
     <p10>Berechnung und Modellierung der Querbewehrung</p10>
+    <p11>Calculation and modeling of intersection reinforcement</p11>
     <!-- todo remove after 1.18.16.0 -->
     <t7>Die Gruppe enthält Träger, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t7>
     <t8>Eine neue leere Gruppe hinzufügen</t8>
@@ -1919,6 +1924,10 @@
     <re5>Die Erstellung eines Bewehrungsstabes mit Form "{0}" mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{1}" konnte nicht durchgeführt werden. Fehler: {2}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re5>
     <!-- todo remove after 1.18.16.0 -->
     <re6>Parameterwerte konnten nicht festgelegt werden</re6>
+    <re9>Fehler beim Erstellen von Bauteilen der abgewinkelten Verbindung in den Träger {0}:</re9>
+    <re10>Fehler beim Erstellen von Bauteilen der T-förmigen Verbindung in den Träger {0}:</re10>
+    <re11>Fehler beim Erstellen von Bauteilen der Kreuzverbindung in den Träger {0}:</re11>
+    <re22>It is not possible to display the intersection in the current view! Go to the floor plan</re22>
   </mprBeamsReinforcement>
   <mmOrderMarking LocalName="Nummerierung"
                   Description="Hinzufügen einer Nummerierung zum angegebenen Elementenparameter mit der Möglichkeit der Nummerierung in der Bauteilliste"
