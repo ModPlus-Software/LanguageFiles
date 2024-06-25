@@ -1157,8 +1157,11 @@
     <t37>Anzeige der vorherigen Öffnung in der Liste im Modell</t37>
     <t38>Anzeige der in der Liste ausgewählten Öffnung im Modell</t38>
     <t39>Anzeige der nächsten Öffnung in der Liste im Modell</t39>
+    <!-- todo remove after 5.24.16.0 -->
     <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 5.24.16.0 -->
     <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 5.24.16.0 -->
     <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
     <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
     <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe. Nach Punkt 10.3.30 der SP 63.13330 kann der Faktor α auf 2,0 erhöht werden</t44>
@@ -1173,8 +1176,8 @@
     <!-- todo remove after 5.24.16.0 -->
     <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
     <t54>Kopieren der Bewehrungseinstellungen von Überständen der aktuellen Platte in alle markierten Platten</t54>
-    <t55>Speichern der Bewehrungseinstellungen der Überstände der aktuellen Platte in eine xml-Datei</t55>
-    <t56>Bewehrungseinstellungen für die Überstände aus xml-Datei herunterladen und für die aktuelle Platte einstellen</t56>
+    <t55>Speichern der Bewehrungseinstellungen der Überstände der aktuellen Platte</t55>
+    <t56>Bewehrungseinstellungen für die Überstände und für die aktuelle Platte einstellen</t56>
     <t57>Die Mindest- und Höchstwerte werden aus den angegebenen Durchmessern und vertikaler Bewehrung berechnet</t57>
     <t58>Die Länge des Stabes ergibt sich aus der Summe der beiden Verankerungslängen</t58>
     <t59>Wenn die Option "verschränkt angeordnete" aktiviert ist, wird jedes erste Paar von Überständen entlang der Wand mit der ersten Überlappungslänge erstellt, jedes zweite Paar mit der zweiten Überlappungslänge</t59>
@@ -1187,6 +1190,7 @@
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
     <!-- todo remove after 5.24.16.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 5.24.16.0 -->
     <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
     <t67>Gruppierung von Wänden, Schnittpunkten und Öffnungen entsprechend den aktuellen Gruppierungseinstellungen durchführen</t67>
     <t68>Wenn diese Option aktiviert ist, werden an Wandschnittpunkten und an Wandabschlüssen, an denen Teile montiert sind (z.B. U-förmige Stäbe), keine Ständer eingesetzt</t68>
@@ -1414,6 +1418,7 @@
     <rr3>Nicht löschen</rr3>
     <t1>Gemäß Punkt 10.3.5 SP 63.13330.2012 ist der Mindestabstand zwischen den Kanten der Bewehrungsstäbe nicht kleiner als der größte Durchmesser des Stabes und nicht kleiner als 25 mm für die untere Bewehrung und 30 mm für die obere Bewehrung; gemäß Punkt 10.3.8 ist der größte Abstand zwischen den Achsen der Stäbe nicht kleiner als 200 mm bei der Querschnittshöhe der Platte h &lt;= 150 mm und nicht mehr als 1,5h und 400 mm bei der Querschnittshöhe h &gt; 150 mm ist</t1>
     <t2>Die Überprüfung und der Versatz beim Auftreffen auf die Stäbe der Grundbewehrung erfolgt für den ersten (nächstgelegenen) Stab, wodurch kein korrekter Versatz für den zweiten oder dritten Stab gewährleistet ist. Beim Versatz wird der zulässige Mindestabstand von 30 mm zwischen den Stäben berücksichtigt</t2>
+    <!-- todo remove after 2.20.2.0 -->
     <t4>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t4>
     <t5>Wenn die Option aktiviert ist, werden die obere und untere Überdeckung bei der Erstellung von Rastern der Grundbewehrung angewandt, wobei die Durchmesser der anderen Bewehrung nicht berücksichtigt werden. Wenn die Option deaktiviert ist, wird die Überdeckung auf alle zu erstellenden Bewehrungstypen angewandt und die Position der Raster der Grundbewehrung relativ zur Ober- und Unterkante der Platte wird aus den eingestellten Bedingungen berechnet</t5>
     <t6>Die U-förmigen Stäbe werden mit dem Abstand der Stäbe der oberen Matte der Grundbewehrung gestgestellt. Wenn keine Grundbewehrung in der Platte erstellt wird, werden die U-Stäbe mit einem bestimmten Abstand erstellt</t6>
@@ -1421,11 +1426,11 @@
     <t8>Alle Öffnungen in der Liste abwählen</t8>
     <t9>Die Bügel werden mit dem Abstand der Stäbe der oberen Matte der Grundbewehrung festgelegt. Wenn keine Grundbewehrung in der Platte erstellt wird, werden die Bügel mit dem bestimmten Abstand erstellt</t9>
     <t37>Kopieren der Bewehrungseinstellungen der aktuellen Bohrung auf die markierten Bohrungen</t37>
-    <t38>Speichern der Bewehrungseinstellungen der aktuellen Bohrung in eine xml-Datei</t38>
-    <t39>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Bohrung einstellen</t39>
+    <t38>Speichern der Bewehrungseinstellungen der aktuellen Bohrung</t38>
+    <t39>Bewehrungseinstellungen und für die aktuelle Bohrung einstellen</t39>
     <t40>Kopieren der Bewehrungseinstellungen der aktuellen Platte in alle markierten Platten</t40>
-    <t41>Speichern der Bewehrungseinstellungen der aktuellen Platte in eine xml-Datei</t41>
-    <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Platte einstellen</t42>
+    <t41>Speichern der Bewehrungseinstellungen der aktuellen Platte</t41>
+    <t42>Bewehrungseinstellungen und für die aktuelle Platte einstellen</t42>
     <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
     <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe.</t44>
     <t46>Gemäß GOST-Norm 21.501-2018, Punkt 6.4.7, wird die Länge des Bauteils durch die Außenkante des Bewehrungsstabs bestimmt</t46>
@@ -1692,8 +1697,11 @@
     <t15>Anzeige der vorherigen Stütze in der Liste im Modell</t15>
     <t16>Anzeige der in der Liste ausgewählten Stütze im Modell</t16>
     <t17>Anzeige der nächsten Stütze in der Liste im Modell</t17>
+    <!-- todo remove after 3.22.12.0 -->
     <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 3.22.12.0 -->
     <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 3.22.12.0 -->
     <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
     <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
     <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe. Nach Punkt 10.3.30 der SP 63.13330 kann der Faktor α auf 2,0 erhöht werden</t44>
@@ -1705,6 +1713,7 @@
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
     <!-- todo remove after 3.22.12.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 3.22.12.0 -->
     <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
     <re1>Beim Erstellen der Längsbewehrung der Stütze id={0} ist ein Fehler aufgetreten:</re1>
     <re2>Bei der Berechnung der Punkte der Querbewehrung der Stütze id={0} ist ein Fehler aufgetreten:</re2>
@@ -1921,8 +1930,11 @@
     <t23>Anzeige des vorherigen Schnittpunktes in der Liste im Modell</t23>
     <t24>Anzeige des in der Liste ausgewählten Schnittpunktes im Modell</t24>
     <t25>Anzeige des nächsten Schnittpunktes in der Liste im Modell</t25>
+    <!-- todo remove after 1.18.16.0 -->
     <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 1.18.16.0 -->
     <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 1.18.16.0 -->
     <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
     <!-- todo remove after 1.18.16.0 -->
     <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
@@ -1932,6 +1944,7 @@
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
     <!-- todo remove after 1.18.16.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 1.18.16.0 -->
     <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
     <t67>Gruppierung von Träger und Schnittpunkten entsprechend den aktuellen Gruppierungseinstellungen durchführen</t67>
     <re1>Beim Erstellen der Längsbewehrung des Trägers id={0} ist ein Fehler aufgetreten</re1>

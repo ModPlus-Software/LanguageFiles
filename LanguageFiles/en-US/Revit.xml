@@ -1157,8 +1157,11 @@
     <t37>Display in the model the previous opening in the list</t37>
     <t38>Display in the model the selected aperture in the list</t38>
     <t39>Display in the model the next opening in the list</t39>
+    <!-- todo remove after 5.24.16.0 -->
     <t40>Copy the reinforcement settings of the current group to all selected groups</t40>
+    <!-- todo remove after 5.24.16.0 -->
     <t41>Save the reinforcement settings of current group in the xml-file</t41>
+    <!-- todo remove after 5.24.16.0 -->
     <t42>Load the reinforcement settings from the xml-file and set it for the current group</t42>
     <t43>Attention! The surface appearance of the reinforcement may depend on the class of reinforcement, diameter or other values that are not considered by the program. Read the normative documentation</t43>
     <t44>α is a coefficient that takes into account the effect on the anchoring length of the stress state of concrete and reinforcement and the structural solution of the element in the anchoring zone. When anchoring rods of a periodic profile with straight ends (straight anchoring) or smooth reinforcement with hooks or loops without additional anchoring devices for stretched rods, take α = 1.0, and for compressed ones – α = 0.75. According to clause 10.3.30 of SP 63.13330, the coefficient α may be increased to 2.0</t44>
@@ -1173,8 +1176,8 @@
     <!-- todo remove after 5.24.16.0 -->
     <t53>Reset all values ​​of the current default reinforcement settings to the default values ​​set in the plugin</t53>
     <t54>Copy the current slab joints reinforcement settings to all selected plates</t54>
-    <t55>Save the current slab joints reinforcement settings to the xml-file</t55>
-    <t56>Load the joints reinforcement settings from the xml-file and set for the current slab</t56>
+    <t55>Save the current slab joints reinforcement settings</t55>
+    <t56>Load the joints reinforcement settings and set for the current slab</t56>
     <t57>The minimum and maximum values ​​are calculated based on the specified diameters and vertical reinforcement step</t57>
     <t58>Rebar length consists of two anchoring lengths</t58>
     <t59>When you turn on the "Breaking in" option, each first pair of joints along the wall will be created with the first overlap length, every second pair – with the second overlap length</t59>
@@ -1187,6 +1190,7 @@
     <t64>Setting the preferred shapes does not guarantee that the reinforcement will be created using the specified shape of the rebar.</t64>
     <!-- todo remove after 5.24.16.0 -->
     <t65>When creating rebars, an attempt will be made to use the specified shape. If creating a rebar with the specified shape is not possible, Revit will automatically search for a suitable shape or create a new shape.</t65>
+    <!-- todo remove after 5.24.16.0 -->
     <t66>Save current reinforcement settings as default reinforcement settings</t66>
     <t67>Group walls, intersections and openings according to the current grouping settings</t67>
     <t68>When this option is enabled, stirrups will not be created at intersections of walls and at the ends of walls where details are created (for example, U-shaped details)</t68>
@@ -1414,18 +1418,19 @@
     <rr3>Do not remove</rr3>
     <t1>According to SP 63.13330.2012, p. 10.3.5 – the minimum distance in the light between the rebars should be at least the largest diameter of the rod, as well as at least 25 mm for the lower reinforcement and 30 mm for the upper reinforcement; p. 10.3.8 – the largest distance between the axes of the rods should not be more than 200 mm with a plate cross-section height h &lt;= 150 mm and no more than 1,5h and 400 mm with a cross-section height h> 150 mm</t1>
     <t2>Check and offset when hit on the rods of the background reinforcement is made for the first (nearest) rod, which does not guarantee the correct displacement of the second or third rod. The minimum permissible distance between the rods in the light is taken into account – 30 mm</t2>
-    <t3>The reinforcement previously created by the plugin is deleted depending on the newly created reinforcement. For example, if you choose to create only the main (background) reinforcement, then previously created U-shaped rods along the contour of the slab will not be deleted</t3>
+    <!-- todo remove after 2.20.2.0 -->
+    <t4>Save current reinforcement settings as default reinforcement settings</t4>
     <t5>If the option is enabled, then the upper and lower rebar cover will be applied when creating background reinforcement meshes, without taking into account the diameters of other reinforcement. If the option is disabled, the rebar cover will be applied for all types of reinforcement being created, and the position of the background reinforcement meshes relative to the upper and lower faces of the slab will be calculated from the established conditions</t5>
     <t6>U-shaped rods will be created with the rod step of the upper mesh of the background reinforcement. If the background reinforcement is not created in the slab, the U-shaped rods will be created with the specified step</t6>
     <t7>Check all openings in the list available for processing</t7>
     <t8>Uncheck all openings in the list</t8>
     <t9>Tied stirrups will be created with the rod step of the upper mesh of the background reinforcement. If the background reinforcement is not created in the slab, the Tied stirrups will be created with the specified step</t9>
     <t37>Copy the reinforcement settings of the current hole to selected holes</t37>
-    <t38>Save the reinforcement settings of current hole in the xml-file</t38>
-    <t39>Load the reinforcement settings from the xml-file and set it for the current hole</t39>
+    <t38>Save the reinforcement settings of current hole</t38>
+    <t39>Load the reinforcement settings and set it for the current hole</t39>
     <t40>Copy the reinforcement settings of the current slab to all selected slabs</t40>
-    <t41>Save the reinforcement settings of current slab in the xml-file</t41>
-    <t42>Load the reinforcement settings from the xml-file and set it for the current slab</t42>
+    <t41>Save the reinforcement settings of current slab</t41>
+    <t42>Load the reinforcement settings and set it for the current slab</t42>
     <t43>Attention! The surface appearance of the reinforcement may depend on the class of reinforcement, diameter or other values that are not considered by the program. Read the normative documentation</t43>
     <t44>α is a coefficient that takes into account the effect on the anchoring length of the stress state of concrete and reinforcement and the structural solution of the element in the anchoring zone. When anchoring rods of a periodic profile with straight ends (straight anchoring) or smooth reinforcement with hooks or loops without additional anchoring devices for stretched rods, take α = 1.0, and for compressed ones – α = 0.75.</t44>
     <t46>In accordance with GOST 21.501-2018, clause 6.4.7, the length of the detail is set along the outer edge of the rebar</t46>
@@ -1692,8 +1697,11 @@
     <t15>Display in the model the previous column in the list</t15>
     <t16>Display in the model the column selected in the list</t16>
     <t17>Display in the model the next column in the list</t17>
+    <!-- todo remove after 3.22.12.0 -->
     <t40>Copy the reinforcement settings of the current group to all selected groups</t40>
+    <!-- todo remove after 3.22.12.0 -->
     <t41>Save the reinforcement settings of current group in the xml-file</t41>
+    <!-- todo remove after 3.22.12.0 -->
     <t42>Load the reinforcement settings from the xml-file and set it for the current group</t42>
     <t43>Attention! The surface appearance of the reinforcement may depend on the class of reinforcement, diameter or other values that are not considered by the program. Read the normative documentation</t43>
     <t44>α is a coefficient that takes into account the effect on the anchoring length of the stress state of concrete and reinforcement and the structural solution of the element in the anchoring zone. When anchoring rods of a periodic profile with straight ends (straight anchoring) or smooth reinforcement with hooks or loops without additional anchoring devices for stretched rods, take α = 1.0, and for compressed ones – α = 0.75. According to clause 10.3.30 of SP 63.13330, the coefficient α may be increased to 2.0</t44>
@@ -1705,6 +1713,7 @@
     <t64>Setting the preferred shapes does not guarantee that the reinforcement will be created using the specified shape of the rebar.</t64>
     <!-- todo remove after 3.22.12.0 -->
     <t65>When creating rebars, an attempt will be made to use the specified shape. If creating a rebar with the specified shape is not possible, Revit will automatically search for a suitable shape or create a new shape.</t65>
+    <!-- todo remove after 3.22.12.0 -->
     <t66>Save current reinforcement settings as default reinforcement settings</t66>
     <re1>An error occurred while creating longitudinal reinforcement for column id = {0}:</re1>
     <re2>An error occurred while calculating the location points of the transverse reinforcement for column id = {0}:</re2>
@@ -1921,8 +1930,11 @@
     <t23>Display in the model the previous intersection in the list</t23>
     <t24>Display in the model the intersection selected in the list</t24>
     <t25>Display in the model the next intersection in the list</t25>
+    <!-- todo remove after 1.18.16.0 -->
     <t40>Copy the reinforcement settings of the current group to all selected groups</t40>
+    <!-- todo remove after 1.18.16.0 -->
     <t41>Save the reinforcement settings of current group in the xml-file</t41>
+    <!-- todo remove after 1.18.16.0 -->
     <t42>Load the reinforcement settings from the xml-file and set it for the current group</t42>
     <!-- todo remove after 1.18.16.0 -->
     <t53>Reset all values ​​of the current default reinforcement settings to the default values ​​set in the plugin</t53>
@@ -1932,6 +1944,7 @@
     <t64>Setting the preferred shapes does not guarantee that the reinforcement will be created using the specified shape of the rebar.</t64>
     <!-- todo remove after 1.18.16.0 -->
     <t65>When creating rebars, an attempt will be made to use the specified shape. If creating a rebar with the specified shape is not possible, Revit will automatically search for a suitable shape or create a new shape.</t65>
+    <!-- todo remove after 1.18.16.0 -->
     <t66>Save current reinforcement settings as default reinforcement settings</t66>
     <t67>Group beams and intersections according to the current grouping settings</t67>
     <re1>An error occurred while creating longitudinal reinforcement for beam id = {0}</re1>
