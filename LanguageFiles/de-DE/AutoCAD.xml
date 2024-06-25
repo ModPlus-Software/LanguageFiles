@@ -63,7 +63,9 @@
   </mpTxtCenter>
   <mpStandards LocalName="Standarte"
                Description="Mit dem Plugin können Sie Layer-Sets, Textstile, Bemaßungsstile und Multi-Führungslinienstile erstellen, speichern und hinzufügen">
+    <!-- todo remove after 2.5.13.0 -->
     <accept>Akzeptieren</accept>
+    <!-- todo remove after 2.5.13.0 -->
     <cancel>Abbrechen</cancel>
     <copy>Kopieren</copy>
     <no>Nein</no>
@@ -81,6 +83,7 @@
     <h12>Ein</h12>
     <h13>Layer</h13>
     <h14>Standardmäßig</h14>
+    <!-- todo remove after 2.5.13.0 -->
     <h15>STANDARDS</h15>
     <h16>Stile</h16>
     <h17>Layer-Sets</h17>
@@ -124,6 +127,8 @@
     <h55>Bestimmen Sie den Speicherort für die xml-Datei</h55>
     <h56>Bestimmen Sie die xml-Datei für den Import von Standards</h56>
     <h57>Die ausgewählte Datei ist keine Standard-Speicherdatei!</h57>
+    <h58>Update existing</h58>
+    <h59>If the current drawing already has layers or styles with the same names as the added one, their properties will be updated</h59>
     <cb1>Layer des aktuellen Sets</cb1>
     <cb2>Layer des aktuellen Sets + Zeichenlayer</cb2>
     <cb3>Layer</cb3>
@@ -1051,7 +1056,7 @@
     <h12>in den Hintergrund verschoben</h12>
     <h13>Die aktuellen Layer-Positionen in der Zeichnung speichern</h13>
     <h14>Die in der aktuellen Zeichnung gespeicherten Layer-Position herunterladen und anwenden. Layer, die nach dem Speichern der Position hinzugefügt wurden, werden an das Ende der Liste verschoben</h14>
-    <h15>Move the selected layer to the beginning of the list</h15>
+    <h15>Den ausgewählten Layer zum Listenanfang schieben</h15>
   </mpDrawOrderByLayer>
   <mpDocTemplates LocalName="Vorlagen. Stufung P"
                   Description="Mit dem Plugin können Sie Vorlagen für den Textteil des Abschnitts gemäß dem &quot;Verordung der Russischen Föderation Nr. 87&quot; mit einer Titelseite gemäß GOST R 21.1101-2013 erstellen">
@@ -1722,7 +1727,7 @@
     <u61>Es ist bereits eine Datei vorhanden:</u61>
   </mpDwgBase>
   <mpESKD LocalName="Smart"
-          Description="Create smart objects that extend the capabilities of AutoCAD, as well as allow to perform design according to state standards (ISO)">
+          Description="Erstellung intelligenter Objekte, die Möglichkeiten von AutoCAD erweitern und eine Gestaltung nach geltenden landesspezifischen Normen (ISO) zulassen">
     <tab1>Linien</tab1>
     <tab2>Einstellungen</tab2>
     <tab3>Achsen</tab3>
@@ -1967,11 +1972,11 @@
     <h204>Änderungskennung erstellen</h204>
     <h205>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Änderungskennung beschreibt</h205>
     <h206>Grundstil für die Änderungskennung</h206>
-	<h207>Crested leader</h207>
-	<h208>Basic style for crested leader</h208>
-	<h209>Creation of the crested leader</h209>
-	<h210>Creating an smart entity based on an anonymous block describing the crested leader</h210>
-	  <so0>Grafiken aktualisieren</so0>
+    <h207>Crested leader</h207>
+    <h208>Basic style for crested leader</h208>
+    <h209>Creation of the crested leader</h209>
+    <h210>Creating an smart entity based on an anonymous block describing the crested leader</h210>
+    <so0>Grafiken aktualisieren</so0>
     <sot0>Die Grafiken aller gefundenen intelligenten Objekte werden regeneriert</sot0>
     <so1>Auswählen</so1>
     <sot1>Alle intelligenten Objekte der angegebenen Typen im aktuellen Bereich werden ausgewählt</sot1>
@@ -2229,7 +2234,7 @@
     <p119>Höhe des Bogens</p119>
     <p120>Kreisdurchmesser</p120>
     <p121>Äußerer Kreisdurchmesser</p121>
-    <p122>Vertikaler Abstand des kleinformatigen Textes </p122>
+    <p122>Vertikaler Abstand des kleinformatigen Textes</p122>
     <d122>Vertikaler Abstand des kleinformatigen Textes von der Linie</d122>
     <p123>Äußerer Kreis</p123>
     <p124>Textversatz für die Nummer</p124>
@@ -2240,11 +2245,11 @@
     <p129>Höhe der Nummer</p129>
     <p130>Höhe der Notiz</p130>
     <p131>Nummer</p131>
-	<p132>Top text</p132>
-	<p133>Bottom text</p133>
-	<p134>Top text heigth</p134>
-	<p135>Bottom text heigth</p135>
-	<p136>Enter text</p136>
+    <p132>Oberer Text</p132>
+    <p133>Unterer Text</p133>
+    <p134>Höhe des oberen Textes</p134>
+    <p135>Höhe des unteren Textes</p135>
+    <p136>Bitte Text eingeben</p136>
   </mpESKD>
   <mpStripMtext LocalName="Entfernen der Formattierung"
                 Description="Entfernen der angegebenen Formatierung aus dem mehrzeiligen Text"

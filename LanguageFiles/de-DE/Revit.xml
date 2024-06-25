@@ -999,15 +999,15 @@
     <h244>Nur in Bereichen ohne darüber liegende Geschossdecke bzw. Wand erstellen</h244>
     <h245>U-förmige Stäbe entlang des unteren Wandabschlusses</h245>
     <h246>Wände, die auf die Platte treffen:</h246>
-    <h247>Source parameter</h247>
-    <h248>No parameter</h248>
-    <h249>Horizontal U-shaped rods</h249>
-    <h250>Ends type:</h250>
-    <h251>Length of end(s), mm:</h251>
-    <h252>Calculate the length of the U-shaped rod end(s)</h252>
-    <et1>Both ends are set by wall length</et1>
-    <et2>One end is set by wall length, the other end is set by value</et2>
-    <et3>Both ends are set by value</et3>
+    <h247>Quellenparameter</h247>
+    <h248>Kein Parameter</h248>
+    <h249>Horizontale U-förmige Stäbe</h249>
+    <h250>Endetyp:</h250>
+    <h251>Endelänge (mm):</h251>
+    <h252>Endelänge des U-förmigen Stabes berechnen</h252>
+    <et1>Beide Enden werden durch die Wandlänge vorgegeben</et1>
+    <et2>Ein Ende wird durch die Wandlänge, das zweite durch einen Wert vorgegeben</et2>
+    <et3>Beide Enden werden durch einen Wert vorgegeben</et3>
     <srd>Speichern von Daten für die ausgewählte Wände</srd>
     <rr1>Bewehrung des gleichen Typs löschen wie die, die erstellt wird</rr1>
     <rr2>Die ganze zuvor erstellte Bewehrung löschen</rr2>
@@ -1067,7 +1067,7 @@
     <m31>Der Biegeradius des Bewehrungsstabs ist kleiner als der zulässige Mindestradius</m31>
     <m32>Die angegebenen Bewehrungseinstellungen führen dazu, dass die Bewehrungsteile nicht simuliert werden können!</m32>
     <m33>Achtung! Bei einer erneuten Analyse werden die aktuellen Gruppenlisten und die Liste der unterliegenden Platten gelöscht! Wollen Sie eine erneute Analyse durchführen?</m33>
-    <m34>Wall Profile</m34>
+    <m34>Wandprofil</m34>
     <p1>Suche nach nicht bearbeiteten Wänden, die sich mit ausgewählten Wänden überschneiden</p1>
     <p2>Initialisierung der Wandgeometrie</p2>
     <p3>Suche nach Wandschnittpunkten</p3>
@@ -1077,7 +1077,7 @@
     <p7>Feststellung, ob Wände zu Schnittpunkten gehören</p7>
     <p8>Entfernen der zuvor erstellten Bewehrung</p8>
     <p9>Berechnung und Modellierung der Wandbewehrung</p9>
-    <p10>Calculation and modeling of intersection reinforcement</p10>
+    <p10>Berechnung und Modellierung der Schnittpunktbewehrung</p10>
     <p11>Berechnung und Modellierung der Öffnungsbewehrung</p11>
     <p12>Generierung von Bewehrung Revit</p12>
     <p13>Verbinden der horizontalen Stäbe der erstellten Bewehrung</p13>
@@ -1157,8 +1157,11 @@
     <t37>Anzeige der vorherigen Öffnung in der Liste im Modell</t37>
     <t38>Anzeige der in der Liste ausgewählten Öffnung im Modell</t38>
     <t39>Anzeige der nächsten Öffnung in der Liste im Modell</t39>
+    <!-- todo remove after 5.24.16.0 -->
     <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 5.24.16.0 -->
     <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 5.24.16.0 -->
     <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
     <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
     <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe. Nach Punkt 10.3.30 der SP 63.13330 kann der Faktor α auf 2,0 erhöht werden</t44>
@@ -1173,8 +1176,8 @@
     <!-- todo remove after 5.24.16.0 -->
     <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
     <t54>Kopieren der Bewehrungseinstellungen von Überständen der aktuellen Platte in alle markierten Platten</t54>
-    <t55>Speichern der Bewehrungseinstellungen der Überstände der aktuellen Platte in eine xml-Datei</t55>
-    <t56>Bewehrungseinstellungen für die Überstände aus xml-Datei herunterladen und für die aktuelle Platte einstellen</t56>
+    <t55>Speichern der Bewehrungseinstellungen der Überstände der aktuellen Platte</t55>
+    <t56>Bewehrungseinstellungen für die Überstände und für die aktuelle Platte einstellen</t56>
     <t57>Die Mindest- und Höchstwerte werden aus den angegebenen Durchmessern und vertikaler Bewehrung berechnet</t57>
     <t58>Die Länge des Stabes ergibt sich aus der Summe der beiden Verankerungslängen</t58>
     <t59>Wenn die Option "verschränkt angeordnete" aktiviert ist, wird jedes erste Paar von Überständen entlang der Wand mit der ersten Überlappungslänge erstellt, jedes zweite Paar mit der zweiten Überlappungslänge</t59>
@@ -1187,6 +1190,7 @@
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
     <!-- todo remove after 5.24.16.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 5.24.16.0 -->
     <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
     <t67>Gruppierung von Wänden, Schnittpunkten und Öffnungen entsprechend den aktuellen Gruppierungseinstellungen durchführen</t67>
     <t68>Wenn diese Option aktiviert ist, werden an Wandschnittpunkten und an Wandabschlüssen, an denen Teile montiert sind (z.B. U-förmige Stäbe), keine Ständer eingesetzt</t68>
@@ -1216,7 +1220,7 @@
     <re19>Fehler beim Erstellen von U-förmigen Stäben der Einrahmung von Öffnung entlang der Horizontalen (unten) in der Wand id={0}</re19>
     <re20>Die Erstellung eines Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re20>
     <re21>Fehler beim Erstellen von U-förmigen Stäben entlang des unteren Wandabschlusses</re21>
-    <re22>It is not possible to display the intersection in the current view! Go to the floor plan</re22>
+    <re22>Der Schnittpunkt kann in der aktuellen Ansicht nicht angezeigt werden! Bitte zur Grundrissansicht wechseln</re22>
   </mprWallsReinforcement>
   <mprSlabsReinforcement LocalName="Plattenbewehrung"
                          Description="Analyse, Gruppierung und Bewehrung von Platten entsprechend den festgelegten Bedingungen "
@@ -1414,6 +1418,7 @@
     <rr3>Nicht löschen</rr3>
     <t1>Gemäß Punkt 10.3.5 SP 63.13330.2012 ist der Mindestabstand zwischen den Kanten der Bewehrungsstäbe nicht kleiner als der größte Durchmesser des Stabes und nicht kleiner als 25 mm für die untere Bewehrung und 30 mm für die obere Bewehrung; gemäß Punkt 10.3.8 ist der größte Abstand zwischen den Achsen der Stäbe nicht kleiner als 200 mm bei der Querschnittshöhe der Platte h &lt;= 150 mm und nicht mehr als 1,5h und 400 mm bei der Querschnittshöhe h &gt; 150 mm ist</t1>
     <t2>Die Überprüfung und der Versatz beim Auftreffen auf die Stäbe der Grundbewehrung erfolgt für den ersten (nächstgelegenen) Stab, wodurch kein korrekter Versatz für den zweiten oder dritten Stab gewährleistet ist. Beim Versatz wird der zulässige Mindestabstand von 30 mm zwischen den Stäben berücksichtigt</t2>
+    <!-- todo remove after 2.20.2.0 -->
     <t4>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t4>
     <t5>Wenn die Option aktiviert ist, werden die obere und untere Überdeckung bei der Erstellung von Rastern der Grundbewehrung angewandt, wobei die Durchmesser der anderen Bewehrung nicht berücksichtigt werden. Wenn die Option deaktiviert ist, wird die Überdeckung auf alle zu erstellenden Bewehrungstypen angewandt und die Position der Raster der Grundbewehrung relativ zur Ober- und Unterkante der Platte wird aus den eingestellten Bedingungen berechnet</t5>
     <t6>Die U-förmigen Stäbe werden mit dem Abstand der Stäbe der oberen Matte der Grundbewehrung gestgestellt. Wenn keine Grundbewehrung in der Platte erstellt wird, werden die U-Stäbe mit einem bestimmten Abstand erstellt</t6>
@@ -1421,11 +1426,11 @@
     <t8>Alle Öffnungen in der Liste abwählen</t8>
     <t9>Die Bügel werden mit dem Abstand der Stäbe der oberen Matte der Grundbewehrung festgelegt. Wenn keine Grundbewehrung in der Platte erstellt wird, werden die Bügel mit dem bestimmten Abstand erstellt</t9>
     <t37>Kopieren der Bewehrungseinstellungen der aktuellen Bohrung auf die markierten Bohrungen</t37>
-    <t38>Speichern der Bewehrungseinstellungen der aktuellen Bohrung in eine xml-Datei</t38>
-    <t39>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Bohrung einstellen</t39>
+    <t38>Speichern der Bewehrungseinstellungen der aktuellen Bohrung</t38>
+    <t39>Bewehrungseinstellungen und für die aktuelle Bohrung einstellen</t39>
     <t40>Kopieren der Bewehrungseinstellungen der aktuellen Platte in alle markierten Platten</t40>
-    <t41>Speichern der Bewehrungseinstellungen der aktuellen Platte in eine xml-Datei</t41>
-    <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Platte einstellen</t42>
+    <t41>Speichern der Bewehrungseinstellungen der aktuellen Platte</t41>
+    <t42>Bewehrungseinstellungen und für die aktuelle Platte einstellen</t42>
     <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
     <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe.</t44>
     <t46>Gemäß GOST-Norm 21.501-2018, Punkt 6.4.7, wird die Länge des Bauteils durch die Außenkante des Bewehrungsstabs bestimmt</t46>
@@ -1617,10 +1622,9 @@
     <h239>Querbewehrung</h239>
     <h240>Standardmäßige Formeneigenschaften</h240>
     <h241>Wenn in der Liste bereits eine Form mit derselben Skizze vorhanden ist, werden die Eigenschaften von dieser übernommen</h241>
-    <h242>Bending direction:</h242>
+    <h242>Biegungsrichtung:</h242>
     <h243>Grundlegende Bewehrungseinstellungen</h243>
-    <h244>It is not recommended to set the cover based on the reinforcement settings if the transverse reinforcement has different diameters and/or different values of the "Stirrup/Tie Attachment" property</h244>
-    <h245>Do not create transverse reinforcement over underlying walls and columns</h245>
+    <h244>Es ist nicht empfohlen, die Überdeckung nach den Bewehrungseinstellungen einzustellen, wenn die Querbewehrung unterschiedliche Durchmesser bzw. unterschiedliche Eigenschaftswerte "Querbewehrungsanschluß" aufweist</h244>
     <srd>Speichern von Daten für die ausgewählte Stützen</srd>
     <hook>Haken:</hook>
     <err1>In den Einstellungen für die Bewehrung der Stütze werden die Überstände von gebogenen Stäben in einer "Flaschenform" angegeben, die zu ihrer Erstellung Platten oder einen von Null unterschiedlichen Abstand zwischen den Stützen haben müssen. Es wurde keine oben liegende Platte gefunden oder der Abstand zur oben liegenden Stütze ist 0</err1>
@@ -1640,12 +1644,12 @@
     <jt4>Die Überstände werden in Form von zusätzlichen Stäben mit einem bestimmten Durchmesser erstellt</jt4>
     <jt5>Es werden gerade Überstände der Stäbe der Längsbewehrung erstellt. Die Verankerungslänge wird von der Oberfläche der oben liegenden Geschossdecke oder von der Oberfläche der Stütze (wenn keine Geschossdecke vorhanden ist) angegeben</jt5>
     <jt6>Überstände der Bewehrungsstäbe der Längsbewehrung werden erstellt und in der oben liegenden Geschossdecke verankert. Verankerungslänge wird von der Seitenfläche der Stütze aus gemessen</jt6>
-    <bbd1>All joints are bent along the short side of the column</bbd1>
-    <bbd2>All joints are bent along the long side of the column</bbd2>
-    <bbd3>The corner joints are bent towards the center of the column, while the other joints are bent along the column faces</bbd3>
-    <bbd4>The corner joints are bent towards the center of the column. On the long side - along the edges of the column. On the short side - across the edges of the column</bbd4>
-    <bbd5>The corner joints are bent along the long side of the column, while the rest are bent inwards into the column</bbd5>
-    <bbd6>The corner joints are bent along the short side of the column, while the other releases are bent along the column faces</bbd6>
+    <bbd1>Alle Überstände werden entlang der kurzen Stützenseite gebogen</bbd1>
+    <bbd2>Alle Überstände werden entlang der langen Stützenseite gebogen</bbd2>
+    <bbd3>Die Eckenüberstände werden zum Stützenmittelpunkt und die übrigen entlang der Stützenkanten gebogen</bbd3>
+    <bbd4>Die Eckenüberstände werden zum Stützenmittelpunkt gebogen. Entlang der Stützenkanten an der langen Seite. Quer zu den Stützenkanten an der kurzen Seite</bbd4>
+    <bbd5>Die Eckenüberstände werden entlang der langen Stützenseite und die übrigen in das Stützeninnere gebogen</bbd5>
+    <bbd6>Die Eckenüberstände werden entlang der kurzen Stützenseite und die übrigen entlang der Stützenkanten gebogen</bbd6>
     <m1>Wählen Sie die Stützen aus</m1>
     <m2>Geben Sie einen Wert von</m2>
     <m3>bis</m3>
@@ -1693,8 +1697,11 @@
     <t15>Anzeige der vorherigen Stütze in der Liste im Modell</t15>
     <t16>Anzeige der in der Liste ausgewählten Stütze im Modell</t16>
     <t17>Anzeige der nächsten Stütze in der Liste im Modell</t17>
+    <!-- todo remove after 3.22.12.0 -->
     <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 3.22.12.0 -->
     <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 3.22.12.0 -->
     <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
     <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
     <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe. Nach Punkt 10.3.30 der SP 63.13330 kann der Faktor α auf 2,0 erhöht werden</t44>
@@ -1706,6 +1713,7 @@
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
     <!-- todo remove after 3.22.12.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 3.22.12.0 -->
     <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
     <re1>Beim Erstellen der Längsbewehrung der Stütze id={0} ist ein Fehler aufgetreten:</re1>
     <re2>Bei der Berechnung der Punkte der Querbewehrung der Stütze id={0} ist ein Fehler aufgetreten:</re2>
@@ -1853,6 +1861,10 @@
     <h255>Träger in dem Schnittpunkt:</h255>
     <h256>Anzahl der Träger</h256>
     <h257>Die Einstellungen für die Gruppenbewehrung</h257>
+    <h258>Keine Querbewehrung über den untengelegenen Wänden und Stützen erstellen</h258>
+    <h259>Different rebar diameter for the top row:</h259>
+    <h260>The width spacing of the bars is derived for the main diameter of the reinforcement. Other rebar diameters for the top row are not taken into account</h260>
+    <h261>Indent from the beginning of the section, mm:</h261>
     <srd>Speichern von Daten für die ausgewählte Träger</srd>
     <hook>Haken:</hook>
     <jt1>Überstände der Längsbewehrung werden nicht erstellt. Die Stäbe werden entsprechend dem vorgegebenen Wert der Überdeckung an den Enden der Bewehrung am Ende des Trägers geschnitten</jt1>
@@ -1898,7 +1910,7 @@
     <p8>Entfernen der zuvor erstellten Bewehrung</p8>
     <p9>Berechnung und Modellierung der Längsbewehrung</p9>
     <p10>Berechnung und Modellierung der Querbewehrung</p10>
-    <p11>Calculation and modeling of intersection reinforcement</p11>
+    <p11>Berechnung und Modellierung der Schnittpunktbewehrung</p11>
     <!-- todo remove after 1.18.16.0 -->
     <t7>Die Gruppe enthält Träger, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t7>
     <!-- todo remove after 1.18.16.0 -->
@@ -1919,8 +1931,11 @@
     <t23>Anzeige des vorherigen Schnittpunktes in der Liste im Modell</t23>
     <t24>Anzeige des in der Liste ausgewählten Schnittpunktes im Modell</t24>
     <t25>Anzeige des nächsten Schnittpunktes in der Liste im Modell</t25>
+    <!-- todo remove after 1.18.16.0 -->
     <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 1.18.16.0 -->
     <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 1.18.16.0 -->
     <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
     <!-- todo remove after 1.18.16.0 -->
     <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
@@ -1930,6 +1945,7 @@
     <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
     <!-- todo remove after 1.18.16.0 -->
     <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 1.18.16.0 -->
     <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
     <t67>Gruppierung von Träger und Schnittpunkten entsprechend den aktuellen Gruppierungseinstellungen durchführen</t67>
     <re1>Beim Erstellen der Längsbewehrung des Trägers id={0} ist ein Fehler aufgetreten</re1>
@@ -1942,7 +1958,7 @@
     <re9>Fehler beim Erstellen von Bauteilen der abgewinkelten Verbindung in den Träger {0}:</re9>
     <re10>Fehler beim Erstellen von Bauteilen der T-förmigen Verbindung in den Träger {0}:</re10>
     <re11>Fehler beim Erstellen von Bauteilen der Kreuzverbindung in den Träger {0}:</re11>
-    <re22>It is not possible to display the intersection in the current view! Go to the floor plan</re22>
+    <re22>Der Schnittpunkt kann in der aktuellen Ansicht nicht angezeigt werden! Bitte zur Grundrissansicht wechseln</re22>
   </mprBeamsReinforcement>
   <mmOrderMarking LocalName="Nummerierung"
                   Description="Hinzufügen einer Nummerierung zum angegebenen Elementenparameter mit der Möglichkeit der Nummerierung in der Bauteilliste"
@@ -4213,7 +4229,7 @@
     <msg4>Wählen Sie das zu verbindende Element aus</msg4>
     <msg5>Wählen Sie das Element aus, an das Sie eine Verbindung herstellen möchten</msg5>
     <msg6>Wählen Sie gerade Rohre, Luftkanäle, Kabel, Kabeltrassen oder -kanäle aus</msg6>
-    <msg7>Make the connection?</msg7>
+    <msg7>Wollen Sie die Verbindung ausführen?</msg7>
     <t1>Der Typ des zu erstellenden Abzweigabschnittes:</t1>
     <t2>Eine flexible Verbindung zwischen Diffusor und Abzweigabschnitt schaffen</t2>
     <t3>Typ des Flexkanals:</t3>
@@ -4436,8 +4452,8 @@
     <h137>Die markierten Exportformate werden beim Export des aktuellen Plans vom aktuellen Dokument in PDF ignoriert</h137>
     <h138>Den Index des zusammengesetzten Plans (d.h. ein Plan mit mehreren Planköpfen) zum Dateinamen nicht hinzufügen, wenn nur ein einzelner zusammengesetzter Plan exportiert wird</h138>
     <h139>Wollen Sie erneut versuchen eine kombinierte PDF-Datei zu erstellen?</h139>
-    <h140>Compress PDF</h140>
-    <h141>Image Quality:</h141>
+    <h140>PDF komprimieren</h140>
+    <h141>Bildqualität:</h141>
     <tvm1>Modus deaktivieren</tvm1>
     <tvm2>Modus aktiviert lassen</tvm2>
     <tvm3>Fragen</tvm3>
@@ -4553,7 +4569,7 @@
     <t23>Wenn nicht angegeben, wird der Name des aktuellen Dokuments verwendet</t23>
     <t24>Optional</t24>
     <t25>Datensatz:</t25>
-    <t26>Export current</t26>
+    <t26>Aktuelles exportieren</t26>
     <err1>Fehler beim Bilden des Dateinamens</err1>
     <err2>Löschen der Datei {0} unmöglich</err2>
     <err3>Zugriffsfehler auf die Datei {0}</err3>
@@ -5016,15 +5032,15 @@
                Description2="Abstand zwischen MEP-Kurven vorgeben"
                LocalName3="Multiformation"
                Description3="Multiformation von МЕР-Kurven"
-               LocalName4="Align vertical"
-               Description4="Vertical alignment of MEP curves">
+               LocalName4="Vertikal ausrichten"
+               Description4="Vertikales Ausrichten von МЕР-Kurven">
     <msg1>Die ausgewählten МЕР-Kurven sind nicht parallel</msg1>
     <msg2>Drehen um Winkel</msg2>
     <msg3>nicht möglich</msg3>
     <msg4>Verbindung konnte nicht erstellt werden</msg4>
     <msg5>Routing-Einstellungen</msg5>
-    <msg6>Selected MEP curves do not have the same slope</msg6>
-    <msg7>Less than two MEP curves selected</msg7>
+    <msg6>Die ausgewählten МЕР-Kurven haben keine gleiche Neigung</msg6>
+    <msg7>Weniger als zwei МЕР-Kurven ausgewählt</msg7>
     <!-- todo remove after 1.1.2.0 -->
     <t1>Wählen Sie eine MEP-Referenzkurve für das Ausrichten aus</t1>
     <t2>Wählen Sie die auszurichtende MEP-Kurve aus</t2>
@@ -5039,9 +5055,9 @@
     <t11>Vertikal</t11>
     <t12>Wählen Sie eine MEP-Basiskurve</t12>
     <t13>Transaktionen gruppieren</t13>
-    <t14>Select the MEP reference element</t14>
-    <t15>Select the MEP element to be aligned</t15>
-    <t16>Run in cycles</t16>
+    <t14>Wählen Sie ein MEP-Referenzelement aus</t14>
+    <t15>Wählen Sie das auszurichtende MEP-Element aus</t15>
+    <t16>Zyklisch ausführen</t16>
   </mprMEPAlign>
   <mprMEPCopy LocalName="MEP kopieren"
               Description="Sammlung von Plugins zum Kopieren von MEP-Elementen"
@@ -5049,18 +5065,18 @@
               Description1="Kopieren von MEP-Elementen mit Ausrichten gemäß der ausgewählten Ebenen"
               LocalName2="Vertikal kopieren"
               Description2="Vertikales Kopieren von MEP-Elementen mit Beabstandung"
-              LocalName3="Copy in direction"
-              Description3="Copying MEP elements in direction by distance">
+              LocalName3="Kopieren in der Richtung"
+              Description3="Kopieren von MEP-Elementen in der Richtung mit Beabstandung">
     <msg1>Keine MEP-Elemente ausgewählt</msg1>
     <msg2>Wählen Sie Elemente für das Kopieren aus</msg2>
     <msg3>Die Grundebene der Elemente konnte nicht ermittelt werden</msg3>
-    <msg4>Specify a point on the MEP curve to select a direction</msg4>
+    <msg4>Geben Sie einen Punkt auf der МЕР-Kurve an, um die Richtung auszuwählen</msg4>
     <t1>Anzahl nach oben:</t1>
     <t2>Anzahl nach unten:</t2>
     <t3>Abstand:</t3>
-    <t4>Quantity:</t4>
+    <t4>Anzahl:</t4>
     <t5>Nur ausgewählte anzeigen</t5>
-    <t6>Levels selected:</t6>
+    <t6>Die Anzahl der ausgewählten Ebenen:</t6>
     <err1>Die Elemente konnten nicht verbunden werden</err1>
   </mprMEPCopy>
   <mprCopyAlongCurve LocalName="Kopieren entlang einer Kurve"
@@ -5069,6 +5085,7 @@
     <t2>Wählen Sie Kurven für Kopieren aus</t2>
     <t3>Die Kurven sind nicht verbunden</t3>
     <t4>Löschen von Quellelementen</t4>
+    <t5>Die Handlung ist in der Familie von diesem Typ nicht zugelassen</t5>
     <w1>Anzahl der Kopien: </w1>
     <w2>Kopierparameter</w2>
     <w3>Abstand, mm</w3>
@@ -5082,16 +5099,16 @@
     <w13>Start copying from the position where the element projection on the curve is located</w13>
     <t5>The attempted operation is not permitted in this type of family</t5>
   </mprCopyAlongCurve>
-  <mprTagless LocalName="Tagless elements"
-              Description="Tagless elements detection">
-    <t1>Restore view</t1>
+  <mprTagless LocalName="Elemente ohne Beschriftung"
+              Description="Erkennung der Elemente ohne Beschriftung">
+    <t1>Ausgangsansicht wiederherstellen</t1>
     <t2>Grafik für Element überschreiben</t2>
-    <x1>There are no tagless elements in the view</x1>
+    <x1>Keine Elemente ohne Beschriftung in der Ansicht vorhanden</x1>
     <x2>Linien färben</x2>
     <x3>Flächen färben</x3>
     <x4>Grafiküberschreibungen beim Schließen rücksetzen</x4>
-    <x5>Do not count</x5>
-    <x6>Display report</x6>
+    <x5>Nicht berücksichtigen</x5>
+    <x6>Report anzeigen</x6>
     <x7>Färben</x7>
     <x8>Färben ausschalten</x8>
   </mprTagless>
