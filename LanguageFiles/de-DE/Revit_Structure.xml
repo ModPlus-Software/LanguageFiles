@@ -1,0 +1,1347 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ModPlus>
+  <mmRebarSolidAndVisible LocalName="Bewehrung als Volumenkörper"
+                          Description="Ändern des Sichtbarkeitszustand der Bewehrung (&quot;Unverdeckt anzeigen&quot; und &quot;Als Volumenkörper anzeigen&quot;)"
+                          FullDescription="Der Sichtbarkeitszustand &quot;Unverdeckt anzeigen&quot; können Sie in jeder Ansicht (sowohl in der 2D- als auch in der 3D-Ansicht), &quot;Als Volumenkörper anzeigen&quot; – nur in der 3D-Ansicht"
+                          LocalName1="Sichtbarkeit aufheben"
+                          Description1="Sichtbarkeitszustandes der Bewehrung aufheben (&quot;Unverdeckt anzeigen&quot; und &quot;Als Volumenkörper anzeigen&quot;)"
+                          LocalName2="Einstellungen für die Elementauswahl"
+                          Description2="Einstellungen der Auswahlmöglichkeiten für Elemente mit Bewehrung während der Ausführung des Plugins">
+    <msg1>Wählen Sie ein Bewehrungselement oder Bewehrung</msg1>
+    <msg2>Wählen Sie Bewährungselemente oder Bewehrung</msg2>
+    <t1>Das Ändern des Sichtbarkeitszustandes der Bewehrung</t1>
+    <h1>Verarbeiten:</h1>
+    <h2>Als Volumenkörper anzeigen</h2>
+    <h3>Ausgewähltes Element</h3>
+    <h4>Ausgewählte Elemente</h4>
+    <h5>Alle Elemente in der Ansicht</h5>
+    <h6>Die Eigenschaft "Unverdeckte" anzeigen" ändern</h6>
+    <h7>Die Eigenschaft "Als Volumenkörper anzeigen" ändern</h7>
+    <h8>Als Linien anzeigen</h8>
+    <h9>Unverdeckt machen</h9>
+    <h10>Verdeckt machen</h10>
+    <h11>Alle Elemente außer den ausgewählten in der Ansicht</h11>
+    <close>Schließen</close>
+    <apply>Verwenden</apply>
+    <continue>Fortsetzen</continue>
+  </mmRebarSolidAndVisible>
+ <mprWallsReinforcement LocalName="Wandbewehrung"
+                         Description="Analyse, Gruppierung und Bewehrung von Wänden und Öffnungen entsprechend den festgelegten Bedingungen"
+                         FullDescription="Das Plugin kann nur an Wänden, die auf gleicher Höhe liegen, angewendet werden. Das Plugin analysiert Wände und ermöglicht es Ihnen, drei Arten von Schnittpunkten (Ecke, Ende und Kreuz) und Öffnungen zu finden. Durch die flexible Gruppierung können Sie genau festlegen, welche Bewehrungsart gewählt werden soll. Sie können die Bewehrung nur für bestimmte Gruppen durchführen – Wände, Schnittpunkte oder Öffnungen. Das Plugin kann sogar mit einer leeren Vorlage funktionieren">
+    <h4>Im Vordergrund</h4>
+    <h5>IM MODELL ANZEIGEN:</h5>
+    <h6>Skalierfaktor:</h6>
+    <!-- todo remove after 5.24.16.0 -->
+    <h7>STANDARDBEWEHRUNG:</h7>
+    <h8>Grundlegende Wandbewehrung</h8>
+    <h9>Bewehrung der Schnittpunkte</h9>
+    <h10>Einrahmung von Öffnungen</h10>
+    <h11>Auswählen</h11>
+    <h12>Analysieren</h12>
+    <h13>Alles gruppieren</h13>
+    <h14>Ausgewählte Wände:</h14>
+    <h15>Gruppierung</h15>
+    <h16>Wände</h16>
+    <h17>Schnittpunkte</h17>
+    <h18>Öffnungen</h18>
+    <h19>Gruppierung nach:</h19>
+    <h20>Wanddicke</h20>
+    <h21>Wandhöhe</h21>
+    <h22>Wandparameter</h22>
+    <h23>Gruppierung</h23>
+    <h24>Anzahl der Wände</h24>
+    <h25>Wanddicken</h25>
+    <h26>Wandhöhen</h26>
+    <h27>Die Wände in der Gruppe:</h27>
+    <h28>Dicke</h28>
+    <h29>Höhen</h29>
+    <h30>Parameter</h30>
+    <!-- todo remove after 5.24.16.0 -->
+    <h31>Sie können Wände aus der aktuellen Gruppe in andere Gruppen ziehen und dort ablegen</h31>
+    <h32>Erstellen:</h32>
+    <h33>Typ des Schnittpunktes</h33>
+    <h34>Wandhöhen</h34>
+    <h35>Wandbewehrung</h35>
+    <h36>Anzahl der Schnittpunkte</h36>
+    <h37>Typ des Schnittpunktes</h37>
+    <h38>Parameter</h38>
+    <h39>Schnittpunkte in der Gruppe:</h39>
+    <!-- todo remove after 5.24.16.0 -->
+    <h40>Sie können Schnittpunkte aus der aktuellen Gruppe in andere Gruppen ziehen und dort ablegen</h40>
+    <h41>Wände in dem Schnittpunkt:</h41>
+    <h42>Bewehrung</h42>
+    <h43>Abmessungen der Öffnung</h43>
+    <h44>1. Öffnungen bis</h44>
+    <h45>2. Öffnungen von</h45>
+    <h46>mm bis:</h46>
+    <h47>3. Öffnungen von</h47>
+    <h48>Basisbewehrung nach Abmessungsgruppen festlegen</h48>
+    <h49>Quelle</h49>
+    <h50>Anzahl der Öffnungen</h50>
+    <h51>Wanddicke</h51>
+    <h52>Gruppe nach Dicke</h52>
+    <h53>Gruppe nach Höhe</h53>
+    <h54>Quelle</h54>
+    <h55>Öffnungen in der Gruppe:</h55>
+    <!-- todo remove after 5.24.16.0 -->
+    <h58>Sie können Öffnungen aus der aktuellen Gruppe in andere Gruppen ziehen und dort ablegen</h58>
+    <h59>Die Einstellungen für die Gruppenbewehrung</h59>
+    <h60>Bewehrung durchführen</h60>
+    <h61>Verankerungsberechnung nach SP 52-101-2003</h61>
+    <h62>Durchmesser:</h62>
+    <h63>Schnittfläche, mm²:</h63>
+    <h64>Betonklasse:</h64>
+    <h65>Art der Bewehrungsoberfläche:</h65>
+    <h66>Bemessungszugfestigkeit, MPa:</h66>
+    <h67>Länge der Grundverankerung (Basis), mm:</h67>
+    <h68>Faktor α:</h68>
+    <h69>Erforderliche (berechnete) Verankerungslänge, mm:</h69>
+    <h70>Verankerungslänge:</h70>
+    <!-- todo remove after 5.24.16.0 -->
+    <h71>Die Einstellungen für die Bewehrung des Schnittpunktes</h71>
+    <!-- todo remove after 5.24.16.0 -->
+    <h72>Die Einstellungen für die Bewehrung der Öffnung</h72>
+    <!-- todo remove after 5.24.16.0 -->
+    <h73>Die Einstellungen für die Bewehrung der Wand</h73>
+    <!-- todo remove after 5.24.16.0 -->
+    <h74>Durch die Einstellungen für die Gruppenbewehrung ersetzen</h74>
+    <!-- todo remove after 5.24.16.0 -->
+    <h75>Die Einstellungen der Bewehrung unverändert lassen</h75>
+    <h76>Vertikale Bewehrung</h76>
+    <h79>Abstand, mm:</h79>
+    <h80>Anpassung der Mitte der Wandkante, mm:</h80>
+    <h81>Bearbeitung des letzten Schrittes:</h81>
+    <h82>Abstand vom Wandabschluss, mm:</h82>
+    <h83>Verlängerungsabstand über der Wand, mm:</h83>
+    <h84>Überdeckung an den Bewehrungsanschlussen, mm:</h84>
+    <h85>Die Bewehrung ist oberhalb der letzten Öffnung anzuordnen, wenn die Wandhöhe über der Öffnung größer als (mm) ist:</h85>
+    <h86>Keine Bewehrung unter der Öffnung anordnen, wenn die Wandhöhe unter der Öffnung weniger als oder gleich zwei Wanddicken (aber nicht weniger als 400 mm) beträgt</h86>
+    <h87>Horizontale Bewehrung</h87>
+    <h88>Anordnung:</h88>
+    <h89>Abstand des ersten Stabes, mm:</h89>
+    <h90>Abstand des letzten Stabes, mm:</h90>
+    <h91>U-förmige Stäbe in den Wandabschlüssen</h91>
+    <h92>Länge des Teils, mm:</h92>
+    <h93>Die Länge des U-förmigen Stabes berechnen</h93>
+    <h94>Querbügel (Ständer)</h94>
+    <h95>Ständertyp:</h95>
+    <h96>Ständer um 45° drehen, wobei die Hauptbewehrung die Schnittpunktknoten gürtet</h96>
+    <h97>Typ der Verlegung:</h97>
+    <h98>Horizontaler Abstand, mm:</h98>
+    <h99>Vertikaler Abstand, mm:</h99>
+    <h100>Winkelschnittpunkte</h100>
+    <h101>Abstand der Teile:</h101>
+    <h102>Typ der Bewehrung:</h102>
+    <h103>Teil Nr.1</h103>
+    <h104>Verankerungslänge, mm:</h104>
+    <h105>Die Verankerungslänge berechnen</h105>
+    <h106>Teil Nr.2</h106>
+    <h107>T-förmige Schnittpunkte</h107>
+    <h108>Kreuzschnittpunkte</h108>
+    <h109>Vertikale Stäbe</h109>
+    <h110>Bewehrung erstellen</h110>
+    <h111>Abstand von der Öffnung:</h111>
+    <h112>Anzahl der Reihen:</h112>
+    <h113>Versatz beim Auftreffen der vertikalen Stäbe der Hauptbewehrung</h113>
+    <h114>Horizontale Stäbe an der Oberfläche</h114>
+    <h115>U-Stäbe in vertikaler Richtung</h115>
+    <h116>U-Stäbe an der Oberfläche</h116>
+    <h117>Länge des Teils, mm:</h117>
+    <h118>Abstand des Teils, mm:</h118>
+    <h119>Bewehrungseinstellungen gemäß Vorgabe für Wände</h119>
+    <h120>Bewehrungseinstellungen gemäß Vorgabe für Schnittpunkte</h120>
+    <h121>Bewehrungseinstellungen gemäß Vorgabe für Öffnungen</h121>
+    <h122>Erste Größengruppe</h122>
+    <h123>Zweite Größengruppe</h123>
+    <h124>Dritte Größengruppe</h124>
+    <h127>Überstände von unterliegenden Platten</h127>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h128>Unterliegende Platten auswählen</h128>
+    <h129>Unterliegende Platten</h129>
+    <h130>Dicke</h130>
+    <!-- todo remove after 5.24.16.0 -->
+    <h131>Wandgruppen, die auf die Platte treffen:</h131>
+    <h132>Einstellungen von Bewehrung der Plattenüberstände</h132>
+    <h133>Überstände entlang der Mittelwände</h133>
+    <h134>Bewehrungseinstellungen gemäß Vorgabe für Überstände von unterliegenden Platten</h134>
+    <h135>Typ der Überstände:</h135>
+    <h136>Überstände entlang der Abschlusswände</h136>
+    <h137>Einstellungen für Überstände entlang der Mittelwände verwenden</h137>
+    <h138>Bewehrungsüberdeckung:</h138>
+    <h139>Die horizontale Bewehrung befindet sich im inneren – die Überdeckung über der vertikalen Bewehrung beträgt</h139>
+    <h140>Die horizontale Bewehrung befindet sich auf der Außenseite – die Überdeckung über der horizontalen Bewehrung beträgt</h140>
+    <h141>Das Fenster nach dem Erstellen der Bewehrung nicht schließen</h141>
+    <h142>Anzeigen des Schnittpunktes</h142>
+    <h143>Löschen von Hilfsgeometrie</h143>
+    <h144>Abstand des Teils von der Unterkante der unterliegenden Platte:</h144>
+    <h145>Erste Verankerungslänge, mm:</h145>
+    <h146>Zweite Verankerungslänge, mm:</h146>
+    <!-- todo remove after 5.24.16.0 -->
+    <h147>Zurücksetzen</h147>
+    <h148>Verankerungslänge in der Platte, mm:</h148>
+    <h149>Überstände aus der unterliegenden Platte</h149>
+    <h150>Anzahl der angrenzenden Wände</h150>
+    <h151>Zusätzliche vertikale Stäbe an den Abschlüssen</h151>
+    <h152>Abstand von den äußersten vertikalen Stäben</h152>
+    <h153>Obere indirekte Bewehrung</h153>
+    <h154>Untere indirekte Bewehrung</h154>
+    <h155>Länge der Stäbe:</h155>
+    <h156>U-förmige Stäbe entlang des oberen Wandabschlusses</h156>
+    <h157>Überstände</h157>
+    <h158>Überstände von vertikalen Stäben der Grundbewehrung</h158>
+    <h159>Überstände von vertikalen Stäben der Schnittpunkte</h159>
+    <h160>Typ der Überstände:</h160>
+    <h161>Konventionelle Plattendicke, mm:</h161>
+    <h162>"verschränkt angeordnete" Überstände erstellen</h162>
+    <h163>Wenn es eine Öffnung in der oberen Wand gibt, dann</h163>
+    <h164>Anwendung auch für Wandteile der oberen Wand, deren Höhe unter der Öffnung (oder die Höhe der gesamten Wand) kleiner oder gleich zwei Wanddicken (aber nicht kleiner als 400) ist</h164>
+    <h165>Wenn es keine Geschossdeckenplatte oberhalb der Wand gibt, dann</h165>
+    <h166>Anpassung der Biegung der Oberfläche der Platte (in der Mitte der Bewehrung), mm:</h166>
+    <h167>Anpassung der Biegung dem Boden der Platte (in der Mitte der Bewehrung), mm:</h167>
+    <h168>Auswählen mit Auswahlrahmen der Wände</h168>
+    <h169>Auswählen der Wände</h169>
+    <h170>Die Überstände entlang des Volumenkörpers der Wand zuschneiden</h170>
+    <h171>Anzahl der zusätzlichen Stäbepaare:</h171>
+    <h172>Abstand der Stäbe:</h172>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h173>Gerade Stäbe:</h173>
+    <h174>L-förmige Stäbe (bei der Erstellung von Biegungen von vertikalen Stäben):</h174>
+    <h175>U-förmige Stäbe in den Wandabschlüssen:</h175>
+    <h176>U-förmige Stäbe entlang des oberen Wandabschlusses:</h176>
+    <h177>C-förmige Querbügel (Ständer). Haken in der Skizze:</h177>
+    <h178>S-förmige Querbügel (Ständer). Haken in der Skizze:</h178>
+    <h179>L-förmige Stäbe:</h179>
+    <h180>U-förmige Stäbe:</h180>
+    <h181>Bügelbewehrung (Stäbe):</h181>
+    <h182>L-förmige Stäbe mit großer Biegung:</h182>
+    <h183>Alle Werte auf "Auto" zurücksetzen</h183>
+    <h184>Bevorzugte Formen von Bewehrungsstäben</h184>
+    <h185>Die Parameterwerte für einige Elemente konnten nicht eingestellt werden. ID, Parameternamen und eingestellte Werte sind unten aufgeführt:</h185>
+    <!-- todo remove after 5.24.16.0 end -->
+    <h186>Horizontal geknüpfte Bügel</h186>
+    <h187>Nur in Wänden, die keine Randschnittpunkte mit anderen Wänden haben</h187>
+    <h188>In Wänden mit der Länge bis zu, mm:</h188>
+    <h189>Keine horizontalen Stäbe der Grundbewehrung erstellen</h189>
+    <h190>Anzahl der erfassten Stäbepaare:</h190>
+    <h191>Berücksichtigung von Teilen in Abschlüssen und Schnittpunkten</h191>
+    <h192>Typ des Umfangs von Stäben der Grundbewehrung:</h192>
+    <h193>Erste Überlappungslänge, mm:</h193>
+    <h194>Zweite Überlappungslänge, mm:</h194>
+    <h195>Die Überlappungslänge berechnen</h195>
+    <h196>Überlappungslänge, mm:</h196>
+    <h197>LADEN</h197>
+    <h198>Horizontale Stäbe entlang des Bodens</h198>
+    <h199>Bügel über die Oberfläche</h199>
+    <h200>Haken der Form:</h200>
+    <h201>In der Skizze einstellen</h201>
+    <h202>Revit-Haken verwenden</h202>
+    <h203>Erneut auswählen</h203>
+    <h204>Erneute Auswahl von Wänden, die bei der vorherigen Verwendung des Plugins in der aktuellen Ansicht bearbeitet wurden</h204>
+    <h205>C-förmige Querbügel (Ständer). Revit-Haken:</h205>
+    <h206>S-förmige Querbügel (Ständer). Revit-Haken:</h206>
+    <h207>Für jeden Teil einen eigenen Bewehrungsstab erstellen</h207>
+    <h208>Keine Bewehrungsstäbe mit Öffnungen bis zu (LxH) schneiden:</h208>
+    <h209>Stäbe in einer Reihe:</h209>
+    <h210>Layout nach Länge:</h210>
+    <h211>der Öffnung</h211>
+    <h212>der geraden Stäbe</h212>
+    <h213>U-Stäbe entlang des Bodens</h213>
+    <h214>Bügel entlang des Bodens</h214>
+    <h215>Bügel in vertikaler Richtung</h215>
+    <h216>Überstandslänge, mm:</h216>
+    <h217>Die äußersten vertikalen Stäbe der Grundbewehrung beim Treffen des U-Bügels versetzen</h217>
+    <h218>Zusätzliche vertikale Stäbe neben Schnittpunkten</h218>
+    <h219>Anpassung dem Rand des Schnittpunktes (in der Mitte der Bewehrung):</h219>
+    <h220>Nur für rechtwinklig geschnittene Wände</h220>
+    <h221>In Längsrichtung gebogene Stäbe</h221>
+    <h222>Abstand in den Eindickungsbereichen, mm:</h222>
+    <h223>Eindickungsabstand, mm:</h223>
+    <h224>Eindickungsabstand, Raten:</h224>
+    <h225>Eindickung der horizontalen Bewehrung im unteren Bereich der Wand</h225>
+    <h226>Löschen der zuvor erstellten Bewehrung:</h226>
+    <h227>Vertikale Bewehrung in den Schnittpunkten</h227>
+    <h228>Die Einstellungen für die vertikale Hauptbewehrung verwenden</h228>
+    <h229>Ebene</h229>
+    <h230>Überstände für zusätzliche vertikale Stäben der Grundbewehrung erstellen</h230>
+    <h231>Versatz des Biegeanfangspunktes von der Oberfläche der Wand (a), mm:</h231>
+    <h232>Versatz des Biegeendpunktes von der Oberfläche der Platte (b), mm:</h232>
+    <h233>Stabdurchmesser als Biegehöhe (c) verwenden</h233>
+    <h234>Biegehöhe (c), mm:</h234>
+    <h235>Anpassung des Teils der Oberfläche der Platte (am äußeren Rand des Teils), mm:</h235>
+    <h236>U-Stäbe von vertikalen Überständen:</h236>
+    <h237>Der Abstand zwischen den vertikalen Bewehrungsstäben (in der kleinsten Wand der Gruppe) beträgt</h237>
+    <h238>Nach Abschnitt 10.3.5 SP 63.13330 muss der Abstand zwischen den vertikalen Bewehrungsstäben mindestens 50 mm betragen!</h238>
+    <h239>Nach Abschnitt 10.3.5 SP 63.13330 muss der Abstand zwischen den horizontalen Bewehrungsstäben mindestens 25 mm betragen!</h239>
+    <h240>Seite abwechseln</h240>
+    <h241>Zusätzlicher L-Stab, der in die Platte gebogen und in den Abschlusswänden eingesetzt wird</h241>
+    <h242>Verankerungslänge in der Wand, mm:</h242>
+    <h243>Verschränkung durch Versatz</h243>
+    <h244>Nur in Bereichen ohne darüber liegende Geschossdecke bzw. Wand erstellen</h244>
+    <h245>U-förmige Stäbe entlang des unteren Wandabschlusses</h245>
+    <h246>Wände, die auf die Platte treffen:</h246>
+    <h247>Quellenparameter</h247>
+    <h248>Kein Parameter</h248>
+    <h249>Horizontale U-förmige Stäbe</h249>
+    <h250>Endetyp:</h250>
+    <h251>Endelänge (mm):</h251>
+    <h252>Endelänge des U-förmigen Stabes berechnen</h252>
+    <et1>Beide Enden werden durch die Wandlänge vorgegeben</et1>
+    <et2>Ein Ende wird durch die Wandlänge, das zweite durch einen Wert vorgegeben</et2>
+    <et3>Beide Enden werden durch einen Wert vorgegeben</et3>
+    <srd>Speichern von Daten für die ausgewählte Wände</srd>
+    <rr1>Bewehrung des gleichen Typs löschen wie die, die erstellt wird</rr1>
+    <rr2>Die ganze zuvor erstellte Bewehrung löschen</rr2>
+    <rr3>Nicht löschen</rr3>
+    <hook>Haken:</hook>
+    <g1>Umschließen der vertikalen Stäbe mit Bügeln</g1>
+    <g2>Umschließen der horizontalen Stäbe mit Bügeln</g2>
+    <auto>Auto</auto>
+    <oa1>Überstände nicht erstellen</oa1>
+    <oa2>Biegung in der Platte (falls vorhanden)</oa2>
+    <npa1>die Platte als bedingt vorhanden betrachten</npa1>
+    <npa2>die Überlappungslänge von der Oberfläche der Wand zählen</npa2>
+    <jtd1>Überstände von vertikalen Stäben der Grundbewehrung werden nicht erstellt. Die Stäbe werden entsprechend dem vorgegebenen Wert der Überdeckung an den Bewehrungsanschlussen auf die Oberseite der Wand geschnitten</jtd1>
+    <jtd2>Die geraden Überstände der vertikalen Stäbe werden erstellt. Die Überlappungslänge wird von der Oberfläche der oben liegenden Geschossdecke oder von der Oberfläche der Wand angegeben. Wenn die Dicke der oben liegenden Wand verringert wird, wird die Bewehrung gebogen (wenn eine Geschossdecke vorhanden ist)</jtd2>
+    <jtd3>Überstände von vertikalen Stäben ähnlich wie die geraden Überstände werden erstellt, jedoch mit unterschiedlichen Verankerungslänge</jtd3>
+    <jtd4>Überstände von vertikalen Stäben werden erstellt und in der oben liegenden Geschossdecke verankert. Verankerungslänge wird von der Seitenfläche der Wand aus gemessen. Falls es nicht möglich ist, die Stäbe in zwei Richtungen zu biegen, werden die Stäbe auf verschiedenen Ebenen der Platte in eine Richtung gebogen</jtd4>
+    <jtd5>Die geraden Überstände der vertikalen Stäbe werden erstellt. Die Überlappungslänge wird von der Oberfläche der oben liegenden Geschossdecke oder von der Oberfläche der Wand angegeben</jtd5>
+    <jtd6>Die geraden Überstände der vertikalen Stäbe werden erstellt in einer "Flaschenform" – die Überstände werden um den Durchmesser des Stabes zur Mitte des Schnittpunktes gebogen. Die Überlappungslänge wird von der Oberfläche der oben liegenden Geschossdecke angegeben</jtd6>
+    <jtd7>Die Überstände in Form von einzelnen L-förmigen Stäben in eine oben liegende Geschossdecke werden erstellt. Die erste Verankerungslänge – die Länge der Verankerung der Stäbe in der Platte – wird von der Seitenfläche der Wand aus gemessen. Die zweite Verankerungslänge – die Länge der Verankerung der Stäbe in der Wand – wird von der Oberkante der Wand aus gemessen. Falls die Abbiegung in zwei Richtungen nicht möglich ist, werden die Stäbe auf verschiedenen Ebenen der Platte in eine Richtung gebogen</jtd7>
+    <jtd8>Die geraden Überstände der vertikalen Stäbe werden erstellt ohne Berücksichtigung überlagernder Elemente</jtd8>
+    <jtd9>Die geraden Überstände der vertikalen Stäbe werden erstellt in einer "Flaschenform" – die Überstände werden um den definierten Abstand und um den Durchmesser des Stabes zur Mitte des Schnittpunktes gebogen. Die Überlappungslänge wird von der Oberfläche der oben liegenden Geschossdecke angegeben</jtd9>
+    <jtd10>Vertikale Stäbe der Grundbewehrung werden an der Oberfläche der Wand entsprechend dem eingestellten Wert der Überdeckung abgeschnitten. Die Verankerung in die oben liegende Platte erfolgt in Form eines einzelnen U-förmigen Stabes</jtd10>
+    <!-- todo remove after 5.24.16.0 start -->
+    <i1>1. Winkel</i1>
+    <i2>2. T-förmiger</i2>
+    <i3>3. Kreuz</i3>
+    <i4>0. nicht bestimmt</i4>
+    <i5>Unterschiedliche</i5>
+    <!-- todo remove after 5.24.16.0 end -->
+    <m1>Geben Sie einen Wert von</m1>
+    <m2>bis</m2>
+    <!-- todo remove after 5.24.16.0 -->
+    <m13>Bewehrungsüberdeckung</m13>
+    <m14>Bis</m14>
+    <m15>Von</m15>
+    <m16>Fenster</m16>
+    <m17>Tür</m17>
+    <m18>Generisches Modell</m18>
+    <m19>Rechteckige Öffnung</m19>
+    <!-- todo remove after 5.24.16.0 -->
+    <m20>Die Liste der Wände enthält Wände, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m20>
+    <!-- todo remove after 5.24.16.0 -->
+    <m21>Die Liste der Schnittpunkte enthält Schnittpunkte, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m21>
+    <!-- todo remove after 5.24.16.0 -->
+    <m22>Die Liste der Öffnungen enthält Öffnungen, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m22>
+    <m23>Bewehrungseinstellungen kopiert</m23>
+    <m24>Sie haben nicht angegeben, für welche Gruppen Bewehrung zu erstellen ist!</m24>
+    <m25>Es wurde keine Gruppe ausgewählt, um Bewehrung zu erstellen!</m25>
+    <m26>Wählen Sie die Wände aus</m26>
+    <m27>Achtung! Im aktuellen Projekt wurden keine geladenen Bewehrungsformen gefunden! In diesem Fall können die vom Plugin erstellten Bewehrungsformen nicht im Familieneditor geöffnet werden! Es wird empfohlen, Bewehrungsformen in das Projekt herunterzuladen, bevor Sie das Plugin verwenden!\nDie Bewehrung trotz der fehlenden Bewehrungsformen durchführen?</m27>
+    <!-- todo remove after 5.24.16.0 -->
+    <m28>Wählen Sie unterliegende Platten aus</m28>
+    <!-- todo remove after 5.24.16.0 -->
+    <m29>Die ausgewählte unterliegende Platte (id: {0}) hat keine Verbindung mit den ausgewählten Wänden</m29>
+    <!-- todo remove after 5.24.16.0 -->
+    <m30>Achtung! Die Bewehrungseinstellungen für die Überstände der unterliegenden Platten werden zurückgesetzt! Wollen Sie fortsetzen?</m30>
+    <m31>Der Biegeradius des Bewehrungsstabs ist kleiner als der zulässige Mindestradius</m31>
+    <m32>Die angegebenen Bewehrungseinstellungen führen dazu, dass die Bewehrungsteile nicht simuliert werden können!</m32>
+    <m33>Achtung! Bei einer erneuten Analyse werden die aktuellen Gruppenlisten und die Liste der unterliegenden Platten gelöscht! Wollen Sie eine erneute Analyse durchführen?</m33>
+    <m34>Wandprofil</m34>
+    <p1>Suche nach nicht bearbeiteten Wänden, die sich mit ausgewählten Wänden überschneiden</p1>
+    <p2>Initialisierung der Wandgeometrie</p2>
+    <p3>Suche nach Wandschnittpunkten</p3>
+    <p4>Entfernen von gleichen Schnittpunkten</p4>
+    <p5>Verbinden von Schnittpunkten</p5>
+    <p6>Analyse der Querschnittsgeometrie</p6>
+    <p7>Feststellung, ob Wände zu Schnittpunkten gehören</p7>
+    <p8>Entfernen der zuvor erstellten Bewehrung</p8>
+    <p9>Berechnung und Modellierung der Wandbewehrung</p9>
+    <p10>Berechnung und Modellierung der Schnittpunktbewehrung</p10>
+    <p11>Berechnung und Modellierung der Öffnungsbewehrung</p11>
+    <p12>Generierung von Bewehrung Revit</p12>
+    <p13>Verbinden der horizontalen Stäbe der erstellten Bewehrung</p13>
+    <p14>Berechnung und Modellierung von Plattenüberständen entlang der Mittelwände</p14>
+    <p15>Berechnung und Modellierung von Plattenüberständen entlang der Abschlusswände</p15>
+    <p16>Unterliegende Platten suchen</p16>
+    <dd1>В</dd1>
+    <dd2>H</dd2>
+    <dd3>nach innen</dd3>
+    <dd4>nach außen</dd4>
+    <dd5>S</dd5>
+    <dd6>P</dd6>
+    <rn>Bewehrungsstahl ⌀</rn>
+    <!-- todo remove after 5.24.16.0 -->
+    <noInFamily>Die Ausführung des Plugins in Familien ist nicht möglich!</noInFamily>
+    <c1>Verschiebung zu der Wandkante</c1>
+    <c2>Verschiebung zu der Mitte der Wand</c2>
+    <c3>Verteilen der vertikalen Bewehrung</c3>
+    <c4>Nach innen</c4>
+    <c5>Nach außen</c5>
+    <c6>Einfache Anordnung</c6>
+    <c7>Schachbrett</c7>
+    <c8>Der kleinste Abstand</c8>
+    <c9>Der größte Abstand</c9>
+    <c10>Verschiebung zu beiden Kanten der Wand</c10>
+    <t1>Wände für eine spätere Analyse auswählen</t1>
+    <t2>Bei der Filterauswahl werden nur Wände mit den folgenden Parametern aufgenommen:</t2>
+    <t3>Die Wand ist durch gerade Linien begrenzt</t3>
+    <t4>Die Eigenschaft "Tragwerke" ist aktiviert</t4>
+    <t5>Die Wand ist keine Fassade</t5>
+    <t6>Wanddicke von mindestens 100 mm</t6>
+    <!-- todo remove after 5.24.16.0 -->
+    <t7>Die Gruppe enthält Wände, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t7>
+    <!-- todo remove after 5.24.16.0 -->
+    <t8>Eine neue leere Gruppe hinzufügen</t8>
+    <!-- todo remove after 5.24.16.0 -->
+    <t9>Eine leere Gruppe löschen</t9>
+    <t10>Alle Gruppen markieren</t10>
+    <t11>Alle Gruppen abwählen</t11>
+    <!-- todo remove after 5.24.16.0 -->
+    <t12>Die Bewehrungseinstellungen der Wände wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t12>
+    <!-- todo remove after 5.24.16.0 -->
+    <t13>Die Bewehrungseinstellungen für die ausgewählte Wand ändern</t13>
+    <!-- todo remove after 5.24.16.0 -->
+    <t14>Die Einstellungen für die Wandbewehrung durch Einstellungen aus der Gruppe ersetzen</t14>
+    <t15>Anzeige der vorherigen Wand in der Liste im Modell</t15>
+    <t16>Anzeige der in der Liste ausgewählten Wand im Modell</t16>
+    <t17>Anzeige der nächsten Wand in der Liste im Modell</t17>
+    <t18>Wandhöhen werden nur an Schnittpunkten bestimmt</t18>
+    <!-- todo remove after 5.24.16.0 -->
+    <t19>Die Gruppe enthält Schnittpunkte, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t19>
+    <!-- todo remove after 5.24.16.0 -->
+    <t20>Die Bewehrungseinstellungen der Schnittpunkte wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t20>
+    <!-- todo remove after 5.24.16.0 -->
+    <t21>Die Bewehrungseinstellungen für den ausgewählten Schnittpunkt ändern</t21>
+    <!-- todo remove after 5.24.16.0 -->
+    <t22>Die Bewehrungseinstellungen der Schnittpunkte durch die Einstellungen aus der Gruppe ersetzen</t22>
+    <t23>Anzeige des vorherigen Schnittpunktes in der Liste im Modell</t23>
+    <t24>Anzeige des in der Liste ausgewählten Schnittpunktes im Modell</t24>
+    <t25>Anzeige des nächsten Schnittpunktes in der Liste im Modell</t25>
+    <t26>Diese Wand wird vom Plugin nicht bearbeitet (nicht verstärkt) und dient nur dazu, einen Schnittpunkt mit einer der ausgewählten Wände zu bestimmen</t26>
+    <t27>Kurze Beschreibung der Wandbewehrung, wobei:</t27>
+    <t28>V – vertikale Bewehrung mit Angabe des Durchmessers und des Abstands von Stäben</t28>
+    <t29>H – horizontale Bewehrung mit Angabe des Durchmessers, des Abstands und der Position von Stäben</t29>
+    <t30>S – Grundbewehrung (Ständer) mit Angabe des Durchmessers</t30>
+    <t31>U – U-förmige Stäbe in den Wandabschlüssen mit Angabe des Durchmessers</t31>
+    <!-- todo remove after 5.24.16.0 -->
+    <t32>Die Bewehrungseinstellungen für die Abmessungsgruppe ändern</t32>
+    <!-- todo remove after 5.24.16.0 -->
+    <t33>Die Gruppe enthält Öffnungen, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t33>
+    <!-- todo remove after 5.24.16.0 -->
+    <t34>Die Bewehrungseinstellungen der Öffnung wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t34>
+    <!-- todo remove after 5.24.16.0 -->
+    <t35>Die Bewehrungseinstellungen für die ausgewählte Öffnung ändern</t35>
+    <!-- todo remove after 5.24.16.0 -->
+    <t36>Die Bewehrungseinstellungen der Öffnung durch die Einstellungen aus der Gruppe ersetzen</t36>
+    <t37>Anzeige der vorherigen Öffnung in der Liste im Modell</t37>
+    <t38>Anzeige der in der Liste ausgewählten Öffnung im Modell</t38>
+    <t39>Anzeige der nächsten Öffnung in der Liste im Modell</t39>
+    <!-- todo remove after 5.24.16.0 -->
+    <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 5.24.16.0 -->
+    <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 5.24.16.0 -->
+    <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
+    <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
+    <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe. Nach Punkt 10.3.30 der SP 63.13330 kann der Faktor α auf 2,0 erhöht werden</t44>
+    <t45>Gemäß Punkt 10.3.8 der SP 63.13330.2012 darf der Abstand der vertikalen Stäbe 2 t und 400 mm (t steht für Wanddicke) nicht überschreiten</t45>
+    <t46>Gemäß GOST-Norm 21.501-2018, Punkt 6.4.7, wird die Länge des Bauteils durch die Außenkante des Bewehrungsstabs bestimmt</t46>
+    <t47>Erhöht die Zeit der Generierung von Bewehrung!</t47>
+    <t48>Die Bewehrungsteile der Schnittpunkte werden mit dem Abstand der horizontalen Wandbewehrung eingefügt – entsprechend dem kleinsten bzw. größten Abstand der horizontalen Bewehrung der im Schnittpunkt betroffenen Wände</t48>
+    <t49>Anzahl der Reihen der vertikalen Bewehrung (in einer Reihe zwei Stäbe "entlang" der Öffnung)</t49>
+    <t50>Anzahl der Reihen horizontaler Bewehrung</t50>
+    <!-- todo remove after 5.24.16.0 start -->
+    <t51>Auswahl der unterliegenden Platte, die sich unmittelbar unter den gewählten Wänden befindet. Auswahl der unterliegenden Platte ist nach Auswahl, Analyse und Gruppierung der Wände möglich. Sie können eine oder mehrere Platten auswählen. In den Eigenschaften der unterliegenden Platten muss die Eigenschaft "Tragwerke" enthalten sein</t51>
+    <!-- todo remove after 5.24.16.0 -->
+    <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
+    <t54>Kopieren der Bewehrungseinstellungen von Überständen der aktuellen Platte in alle markierten Platten</t54>
+    <t55>Speichern der Bewehrungseinstellungen der Überstände der aktuellen Platte</t55>
+    <t56>Bewehrungseinstellungen für die Überstände und für die aktuelle Platte einstellen</t56>
+    <t57>Die Mindest- und Höchstwerte werden aus den angegebenen Durchmessern und vertikaler Bewehrung berechnet</t57>
+    <t58>Die Länge des Stabes ergibt sich aus der Summe der beiden Verankerungslängen</t58>
+    <t59>Wenn die Option "verschränkt angeordnete" aktiviert ist, wird jedes erste Paar von Überständen entlang der Wand mit der ersten Überlappungslänge erstellt, jedes zweite Paar mit der zweiten Überlappungslänge</t59>
+    <t60>Wenn die Überstände die Höhe der oberen Wand überschreiten, werden sie bis zur Oberkante der Wand abgeschnitten, wobei die vorgeschriebene Überdeckung an den Bewehrungsanschlussen berücksichtigt wird</t60>
+    <t61>Die Auswahlmöglichkeit bezieht sich auch auf die Auswahl der Platten</t61>
+    <t62>Der vertikale Stab wird zum Biegeanfangspunkt des U-förmigen Stabes verschoben, der sich aus der Summe der Werte der Überdeckung der horizontalen Bewehrung an den Anschlussen, dem Durchmesser des U-förmigen Stabes und dem normativen Biegedurchmesser des U-förmigen Stabes ergibt</t62>
+    <!-- todo remove after 5.24.16.0 -->
+    <t63>Sie können bevorzugte Formen von Bewehrungsstäben für verschiedene Bewehrungstypen, die durch das Plugin erzeugt werden, angeben.</t63>
+    <!-- todo remove after 5.24.16.0 -->
+    <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
+    <!-- todo remove after 5.24.16.0 -->
+    <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 5.24.16.0 -->
+    <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
+    <t67>Gruppierung von Wänden, Schnittpunkten und Öffnungen entsprechend den aktuellen Gruppierungseinstellungen durchführen</t67>
+    <t68>Wenn diese Option aktiviert ist, werden an Wandschnittpunkten und an Wandabschlüssen, an denen Teile montiert sind (z.B. U-förmige Stäbe), keine Ständer eingesetzt</t68>
+    <t69>Wenn die horizontalen Stäbe der Grundbewehrung innen und die vertikalen Stäbe außen liegen, ist es empfehlenswert, die Umschlingung der vertikalen Stäbe anzugeben. Umgekehrt, wenn die horizontalen Stäbe der Grundbewehrung außen liegen, ist es empfehlenswert, die Umschlingung der horizontalen Stäbe anzugeben</t69>
+    <t70>Die Länge des Bauteils ist die Verankerungslänge</t70>
+    <t71>Auf jedes zweite Stabspaar wird von unten einen Abstand um die absolute Differenz der Überlappungslängen angewandt. Der Abstand hat keinen Einfluss auf die zweite Überlappungslänge. Wenn z.B. die erste Überlappungslänge 500 mm und die zweite Überlappungslänge 750 mm beträgt, haben die Stäbe von jedem zweiten Paar einen unteren Abstand von 250 mm</t71>
+    <t72>Die in der Liste ausgewählte Platte im Modell darstellen</t72>
+    <t73>Die Wände im Modell darstellen, die auf die in der Liste ausgewählten Platte treffen</t73>
+    <re1>Fehler beim Erstellen von vertikalen Stäben der Grundbewehrung in der Wand id={0}:</re1>
+    <re2>Fehler beim Erstellen von vertikalen Stäben der Grundbewehrung am Schnittpunkt in der Wand id={0}:</re2>
+    <re3>Fehler beim Erstellen von zusätzlichen vertikalen Stäben im Wandabschluss id={0}:</re3>
+    <re4>Fehler beim Erstellen von horizontalen gestrickten Stäben in der Wand id={0}:</re4>
+    <re5>Fehler beim Erstellen von horizontalen Stäben der Grundbewehrung in der Wand id={0}:</re5>
+    <re6>Fehler beim Erstellen von U-förmigen Stäben in den Wandabschlüssen id={0}:</re6>
+    <re7>Fehler beim Erstellen von U-förmigen Stäben entlang des oberen Wandabschlusses id={0}:</re7>
+    <re8>Fehler beim Erstellen von Ständern in der Wand id={0}:</re8>
+    <re9>Fehler beim Erstellen von Bauteilen der abgewinkelten Verbindung in Wänden {0}:</re9>
+    <re10>Fehler beim Erstellen von Bauteilen der T-förmigen Verbindung in den Wänden {0}:</re10>
+    <re11>Fehler beim Erstellen von Bauteilen der Kreuzverbindung in den Wänden {0}:</re11>
+    <re12>Fehler beim Erstellen von vertikalen Stäben der Einrahmung von Öffnung in der Wand id={0}:</re12>
+    <re13>Fehler beim Erstellen von horizontalen Stäben der Einrahmung von Öffnung in der Wand id={0}:</re13>
+    <re14>Fehler beim Erstellen von U-förmigen Stäben der Einrahmung von Öffnung entlang der Vertikalen in der Wand id={}{0}</re14>
+    <re15>Fehler beim Erstellen von U-förmigen Stäben der Einrahmung von Öffnung entlang der Horizontalen ( oben) in der Wand id={}{0}</re15>
+    <re16>Fehler beim Erstellen von indirekten Bewehrungen in der Einrahmung von Öffnung in der Wand id={0}:</re16>
+    <re17>Fehler beim Erstellen von Plattenüberständen id={0} in der Wand id={1}:</re17>
+    <re18>Fehler beim Erstellen von Bügeln der Einrahmung von Öffnung in der Wand id={0}:</re18>
+    <re19>Fehler beim Erstellen von U-förmigen Stäben der Einrahmung von Öffnung entlang der Horizontalen (unten) in der Wand id={0}</re19>
+    <re20>Die Erstellung eines Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re20>
+    <re21>Fehler beim Erstellen von U-förmigen Stäben entlang des unteren Wandabschlusses</re21>
+    <re22>Der Schnittpunkt kann in der aktuellen Ansicht nicht angezeigt werden! Bitte zur Grundrissansicht wechseln</re22>
+  </mprWallsReinforcement>
+  <mprSlabsReinforcement LocalName="Plattenbewehrung"
+                         Description="Analyse, Gruppierung und Bewehrung von Platten entsprechend den festgelegten Bedingungen "
+                         FullDescription="Mit dem Plugin können Sie sowohl einzelne ausgewählte Platten als auch alle Platten in einer Ansicht oder einem Dokument verarbeiten. Es ist möglich, die Grundbewehrung der Platte sowohl mit einzelnen Stäben als auch in Form der Flächenbewehrung durchzuführen. Die Analyse von Bohrungen erfolgt anhand der Geometrie der Platte unabhängig von den verwendeten Familien. Das Plugin kann sogar mit einer leeren Vorlage funktionieren">
+    <h1>Auswahlmöglichkeiten</h1>
+    <h2>Platten auswählen</h2>
+    <h3>Alle Platten in der aktuellen Ansicht auswählen</h3>
+    <h4>Alle Platten im Projekt auswählen</h4>
+    <h6>Auswählen</h6>
+    <h7>Analysieren</h7>
+    <h8>Insgesamt ausgewählte Platten:</h8>
+    <h9>Davon wurde es erfolgreich analysiert:</h9>
+    <h10>Bewehrung durchführen</h10>
+    <h11>Bewehrungseinstellungen</h11>
+    <h12>Dicke</h12>
+    <h13>Untere Marke</h13>
+    <h14>Grundbewehrung</h14>
+    <h15>Zusätzliche Bewehrung</h15>
+    <h16>Abschlussbewehrung</h16>
+    <h17>Einrahmung der Bohrungen</h17>
+    <h18>Anzahl der Matten der Grundbewehrung</h18>
+    <h19>Verschiebung des äußersten Stabes (entlang der Achse des Stabes) vom Rand der Platte:</h19>
+    <h20>Einstellungen</h20>
+    <h21>PLUGIN-FENSTER:</h21>
+    <h23>Erste Matte (oben)</h23>
+    <h24>Zweite Matte (unten)</h24>
+    <h25>Längsbewehrung (Hauptrichtung):</h25>
+    <h26>Querbewehrung (Sekundärrichtung):</h26>
+    <h27>Obere Bewehrungsüberdeckung (von der Oberkante der Platte):</h27>
+    <h28>Untere Bewehrungsüberdeckung (von der Unterkante der Platte):</h28>
+    <h29>Bewehrungseinstellungen der unteren Matte sind dieselben wie für die obere Matte</h29>
+    <h30>Art der Erstellung von Grundbewehrung:</h30>
+    <h31>Den zusätzlichen Abstand verschieben zu:</h31>
+    <h32>Erstellen:</h32>
+    <!-- todo remove after 2.20.2.0 -->
+    <h33>STANDARDBEWEHRUNG:</h33>
+    <h34>Plattenbewehrung</h34>
+    <h35>Das Element "Flächenbewehrung" verwenden für:</h35>
+    <h36>Jede Richtung in jeder Matte</h36>
+    <h37>Jede Richtung</h37>
+    <h38>Gesamte Grundbewehrung</h38>
+    <h39>Grundlegende Bewehrungseinstellungen</h39>
+    <h40>Platten</h40>
+    <h41>Bohrungen in der ausgewählten Platte</h41>
+    <h42>Bemaßung</h42>
+    <!-- todo remove after 2.20.2.0 -->
+    <h43>In den zu bearbeitenden Platten die Überdeckung</h43>
+    <!-- todo remove after 2.20.2.0 -->
+    <h44>Auf Null setzen</h44>
+    <!-- todo remove after 2.20.2.0 -->
+    <h45>Auf der Grundlage von Bewehrungseinstellungen einstellen</h45>
+    <h47>Zoomen</h47>
+    <h48>Kopieren auf alle markierten Bohrungen der aktuellen Platte</h48>
+    <h49>Kopieren auf alle markierten Bohrungen aller markierten Platten</h49>
+    <h50>Nicht bestimmt</h50>
+    <h51>Die Einrahmung von Bohrungen bis zu 300 mm wird nicht empfohlen</h51>
+    <h52>Die Kanten der Bohrung liegen nicht in Richtung der Bewehrung. Die Einrahmung kann nicht durchgeführt werden!</h52>
+    <h53>Die Einstellungen für die obere und untere Überdeckung nur für die Raster der Grundbewehrung verwenden</h53>
+    <h54>Für jeden Teil einen eigenen Bewehrungsstab erstellen</h54>
+    <h55>Abstand im Verhältnis zum Abstand der Grundbewehrungsstäbe</h55>
+    <!-- todo remove after 2.20.2.0 -->
+    <h56>Die Parameterwerte für einige Elemente konnten nicht eingestellt werden. ID, Parameternamen und eingestellte Werte sind unten aufgeführt:</h56>
+    <h57>Parameter der Längsbewehrung</h57>
+    <h58>Parameter der Querbewehrung</h58>
+    <h59>Verlegung mit Abstand der Grundbewehrung</h59>
+    <h60>Zusatzstab am Rand der Platte mit Abstand, eingerückt (zentriert) vom äußersten Stab:</h60>
+    <h61>Verankerungsberechnung nach SP 52-101-2003</h61>
+    <h62>Durchmesser:</h62>
+    <h63>Schnittfläche, mm²:</h63>
+    <h64>Betonklasse:</h64>
+    <h65>Art der Bewehrungsoberfläche:</h65>
+    <h66>Bemessungszugfestigkeit, MPa:</h66>
+    <h67>Länge der Grundverankerung (Basis), mm:</h67>
+    <h68>Faktor α:</h68>
+    <h69>Erforderliche (berechnete) Verankerungslänge, mm:</h69>
+    <h70>Verankerungslänge:</h70>
+    <h71>Der Abstand der U-Stäbe an den Enden muss bei dem Unterschied zwischen Abständen der Raster der Grundbewehrung wie folgt festgelegt werden</h71>
+    <h72>nach den oberen Stäben der Matte</h72>
+    <h73>nach den unteren Stäben der Matte</h73>
+    <h76>Plattenbewehrung</h76>
+    <h79>Abstand, mm:</h79>
+    <h80>Den Typ für die erstellte "Flächenbewehrung" Instanzen bestimmen:</h80>
+    <h81>Jeder Matte</h81>
+    <h82>Parameterwerte "Flächenbewehrung" in Bewehrungsstäbe umrechnen</h82>
+    <h84>Überdeckung an den Bewehrungsanschlussen, mm:</h84>
+    <h85>Abschlussbewehrung in Längsrichtung</h85>
+    <h86>Abschlussbewehrung in Querrichtung</h86>
+    <h87>Die Einstellungen der Abschlussbewehrung in Längsrichtung wiederholen</h87>
+    <h88>Ausrichtung der unteren Matte:</h88>
+    <h89>Bei der Verwendung von Flächenbewehrung für die gesamte Grundbewehrung ist es nicht möglich, die gemeinsame Ausrichtung der unteren Matte zu verwenden. Die Spiegelausrichtung wird verwendet</h89>
+    <h91>Erstellen Sie keinen Teil, wenn durch die Generierung die Länge des Teils weniger als, mm beträgt:</h91>
+    <h92>Länge des Teils, mm:</h92>
+    <h93>Die Länge des U-förmigen Stabes berechnen</h93>
+    <h104>Verankerungslänge, mm:</h104>
+    <h105>Die Verankerungslänge berechnen</h105>
+    <h109>Gerade Stäbe in Längsrichtung</h109>
+    <h110>Bewehrung erstellen</h110>
+    <h111>Abstand von der Bohrung:</h111>
+    <h112>Anzahl der Reihen:</h112>
+    <h113>Versatz beim Auftreffen der Stäbe der Hauptbewehrung</h113>
+    <h114>Gerade Stäbe in Querrichtung</h114>
+    <h115>U-förmige Stäbe in Längsrichtung</h115>
+    <h116>U-förmige Stäbe in Querrichtung</h116>
+    <h117>Länge des Teils, mm:</h117>
+    <h118>Abstand des Teils, mm:</h118>
+    <!-- todo remove after 2.20.2.0 -->
+    <h119>Bewehrungseinstellungen gemäß Vorgabe für Platten</h119>
+    <!-- todo remove after 2.20.2.0 -->
+    <h120>Bewehrungseinstellungen gemäß Vorgabe für Bohrungen</h120>
+    <h121>Parameter der Stäbe der oberen Matte</h121>
+    <h122>Parameter der Stäbe der unteren Matte</h122>
+    <h141>Das Fenster nach dem Erstellen der Bewehrung nicht schließen</h141>
+    <!-- todo remove after 2.20.2.0 -->
+    <h147>Zurücksetzen</h147>
+    <h153>Indirekte Bewehrung</h153>
+    <h155>Länge der Stäbe:</h155>
+    <!-- todo remove after 2.20.2.0 -->
+    <h173>Gerade Stäbe:</h173>
+    <!-- todo remove after 2.20.2.0 -->
+    <h180>U-förmige Stäbe:</h180>
+    <!-- todo remove after 2.20.2.0 -->
+    <h181>Bügelbewehrung (Bügel):</h181>
+    <!-- todo remove after 2.20.2.0 -->
+    <h183>Alle Werte auf "Auto" zurücksetzen</h183>
+    <!-- todo remove after 2.20.2.0 -->
+    <h184>Bevorzugte Formen von Bewehrungsstäben</h184>
+    <h185>Erstellen:</h185>
+    <h186>Quer- und Längsbewehrung</h186>
+    <h187>Nur die Längsbewehrung</h187>
+    <h188>Nur die Querbewehrung</h188>
+    <h199>Bügelberhrung in Längsrichtung</h199>
+    <h203>Erneut auswählen</h203>
+    <h204>Erneute Auswahl von Platten, die bei der vorherigen Verwendung des Plugins in der aktuellen Ansicht bearbeitet wurden</h204>
+    <h205>DIE AUSWAHL DER BOHRUNGEN:</h205>
+    <h206>Standardmäßig als unmarkiert lässt man die Bohrungen deren umschreibendes Rechteck</h206>
+    <h207>eine Seite</h207>
+    <h208>alle Seiten</h208>
+    <h209>weniger</h209>
+    <h210>Layout nach Länge:</h210>
+    <h211>der Öffnung</h211>
+    <h212>der geraden Stäbe</h212>
+    <h214>Bügelberhrung in Querbewehrung</h214>
+    <h226>Löschen der zuvor erstellten Bewehrung:</h226>
+    <h229>Um Bügel erstellen zu können, muss die Erstellung von mindestens zwei geraden Stäben in der Längsrichtung aktiviert und die Option "Versatz beim Auftreffen der Stäbe der Hauptbewehrung" deaktiviert sein</h229>
+    <h230>Um Bügel erstellen zu können, muss die Erstellung von mindestens zwei geraden Stäben in der Querrichtung aktiviert und die Option "Versatz beim Auftreffen der Stäbe der Hauptbewehrung" deaktiviert sein</h230>
+    <h231>Verankerungslänge des Zusatzbewehrungsstabs:</h231>
+    <h232>U-förmige Stäbe mit dem Plattenkörper abschneiden, wenn die Stäbe über die Grenzen des Plattenkörpers hinausragen</h232>
+    <srd>Speichern von Daten für die ausgewählte Platten</srd>
+    <hook>Haken:</hook>
+    <m1>Wählen Sie Platten aus</m1>
+    <!-- todo remove after 2.20.2.0 -->
+    <m13>Bewehrungsüberdeckung</m13>
+    <m24>Sie haben nicht angegeben, welcher Typ der Bewehrung zu erstellen ist!</m24>
+    <m25>Sie haben keine Platte ausgewählt, um Bewehrung zu erstellen!</m25>
+    <m27>Achtung! Im aktuellen Projekt wurden keine geladenen Bewehrungsformen gefunden! In diesem Fall können die vom Plugin erstellten Bewehrungsformen nicht im Familieneditor geöffnet werden! Es wird empfohlen, Bewehrungsformen in das Projekt herunterzuladen, bevor Sie das Plugin verwenden!\nDie Bewehrung trotz der fehlenden Bewehrungsformen durchführen?</m27>
+    <p1>Analyse der Platte:</p1>
+    <p2>Berechnung und Modellierung der Grundbewehrung</p2>
+    <p3>Berechnung und Modellierung der zusätzlichen Bewehrung</p3>
+    <p4>Berechnung und Modellierung der Abschlussbewehrung</p4>
+    <p5>Berechnung und Modellierung von Einrahmung der Bohrungen</p5>
+    <p8>Entfernen der zuvor erstellten Bewehrung</p8>
+    <p12>Generierung von Bewehrung Revit</p12>
+    <e1>Fehler bei der Analyse von Platte</e1>
+    <e2>Die Platte kann nicht initialisiert werden</e2>
+    <e3>Die Dicke der Platte kann nicht aus dem Parameter erhalten werden</e3>
+    <e4>Der Vollkörper kann nicht aus der Geometrie der Platte erhalten werden</e4>
+    <e5>Die obere und/oder untere Kante konnte nicht aus der Geometrie der Platte erhalten werden</e5>
+    <e7>Die Außenkonturen konnten nicht aus der Geometrie der Platte erhalten werden</e7>
+    <e8>Es ist nicht möglich, eine Kontur für Flächenbewehrung zu erhalten</e8>
+    <e9>Die Grundbewehrung der Platte konnte nicht erstellt werden:</e9>
+    <e10>Die Abschlussbewehrung der Platte konnte nicht erstellt werden:</e10>
+    <e11>Die zusätzliche Bewehrung der Platte konnte nicht erstellt werden:</e11>
+    <e12>Die Einrahmung von Bohrungen der Platte konnte nicht erstellt werden:</e12>
+    <e13>Es ist nicht möglich, Linien aus der erstellten Flächenbewehrung erhalten. Die weitere Bewehrung der Platte wird unterbrochen. Fehler:</e13>
+    <m1>Geben Sie einen Wert von</m1>
+    <m2>bis</m2>
+    <m6>Für Bewehrungsstab</m6>
+    <m7>Eigenschaftswert "Standard-Biegedurchmesser"</m7>
+    <m8>entspricht nicht SP-Normen 63.13330.2012</m8>
+    <m9>Mindestwert des Biegedurchmessers für Bewehrung</m9>
+    <m10>mit Durchmesser</m10>
+    <m11>muss gleich sein:</m11>
+    <m12>Der Wert der Eigenschaft wird geändert</m12>
+    <m23>Bewehrungseinstellungen kopiert</m23>
+    <rn>Bewehrungsstahl ⌀</rn>
+    <!-- todo remove after 2.20.2.0 -->
+    <full>Erhältlich in der vollständigen Plugin-Version!</full>
+    <notSet>Nicht feststellen</notSet>
+    <br1>Als einzelne Stäbe</br1>
+    <br2>Flächenbewehrung</br2>
+    <as1>zum Rand der Platte</as1>
+    <as2>zur Mitte der Platte</as2>
+    <rr1>Bewehrung des gleichen Typs löschen wie die, die erstellt wird</rr1>
+    <rr2>Die ganze zuvor erstellte Bewehrung löschen</rr2>
+    <rr3>Nicht löschen</rr3>
+    <t1>Gemäß Punkt 10.3.5 SP 63.13330.2012 ist der Mindestabstand zwischen den Kanten der Bewehrungsstäbe nicht kleiner als der größte Durchmesser des Stabes und nicht kleiner als 25 mm für die untere Bewehrung und 30 mm für die obere Bewehrung; gemäß Punkt 10.3.8 ist der größte Abstand zwischen den Achsen der Stäbe nicht kleiner als 200 mm bei der Querschnittshöhe der Platte h &lt;= 150 mm und nicht mehr als 1,5h und 400 mm bei der Querschnittshöhe h &gt; 150 mm ist</t1>
+    <t2>Die Überprüfung und der Versatz beim Auftreffen auf die Stäbe der Grundbewehrung erfolgt für den ersten (nächstgelegenen) Stab, wodurch kein korrekter Versatz für den zweiten oder dritten Stab gewährleistet ist. Beim Versatz wird der zulässige Mindestabstand von 30 mm zwischen den Stäben berücksichtigt</t2>
+    <!-- todo remove after 2.20.2.0 -->
+    <t4>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t4>
+    <t5>Wenn die Option aktiviert ist, werden die obere und untere Überdeckung bei der Erstellung von Rastern der Grundbewehrung angewandt, wobei die Durchmesser der anderen Bewehrung nicht berücksichtigt werden. Wenn die Option deaktiviert ist, wird die Überdeckung auf alle zu erstellenden Bewehrungstypen angewandt und die Position der Raster der Grundbewehrung relativ zur Ober- und Unterkante der Platte wird aus den eingestellten Bedingungen berechnet</t5>
+    <t6>Die U-förmigen Stäbe werden mit dem Abstand der Stäbe der oberen Matte der Grundbewehrung gestgestellt. Wenn keine Grundbewehrung in der Platte erstellt wird, werden die U-Stäbe mit einem bestimmten Abstand erstellt</t6>
+    <t7>Wählen Sie alle für die Bearbeitung verfügbaren Öffnungen in der Liste aus</t7>
+    <t8>Alle Öffnungen in der Liste abwählen</t8>
+    <t9>Die Bügel werden mit dem Abstand der Stäbe der oberen Matte der Grundbewehrung festgelegt. Wenn keine Grundbewehrung in der Platte erstellt wird, werden die Bügel mit dem bestimmten Abstand erstellt</t9>
+    <t37>Kopieren der Bewehrungseinstellungen der aktuellen Bohrung auf die markierten Bohrungen</t37>
+    <t38>Speichern der Bewehrungseinstellungen der aktuellen Bohrung</t38>
+    <t39>Bewehrungseinstellungen und für die aktuelle Bohrung einstellen</t39>
+    <t40>Kopieren der Bewehrungseinstellungen der aktuellen Platte in alle markierten Platten</t40>
+    <t41>Speichern der Bewehrungseinstellungen der aktuellen Platte</t41>
+    <t42>Bewehrungseinstellungen und für die aktuelle Platte einstellen</t42>
+    <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
+    <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe.</t44>
+    <t46>Gemäß GOST-Norm 21.501-2018, Punkt 6.4.7, wird die Länge des Bauteils durch die Außenkante des Bewehrungsstabs bestimmt</t46>
+    <t47>Die Länge des Bauteils ist die Verankerungslänge</t47>
+    <t49>Anzahl der Reihen der Längsbewehrung (in einer Reihe zwei Stäbe "entlang" der Öffnung)</t49>
+    <t50>Anzahl der Reihen der Querbewehrung (in einer Reihe zwei Stäbe "entlang" der Öffnung)</t50>
+    <!-- todo remove after 2.20.2.0 -->
+    <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
+    <t58>Die Länge des Stabes ergibt sich aus der Summe der beiden Verankerungslängen</t58>
+    <!-- todo remove after 2.20.2.0 -->
+    <t63>Sie können bevorzugte Formen von Bewehrungsstäben für verschiedene Bewehrungstypen, die durch das Plugin erzeugt werden, angeben.</t63>
+    <!-- todo remove after 2.20.2.0 -->
+    <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
+    <!-- todo remove after 2.20.2.0 -->
+    <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <re4>Die Erstellung eines geraden Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re4>
+    <re5>Die Erstellung eines Bewehrungsstabes mit Form "{0}" mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{1}" konnte nicht durchgeführt werden. Fehler: {2}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re5>
+    <re18>Fehler beim Erstellen von Bügeln der Einrahmung von Bohrung in der Platte id={0}</re18>
+    <re20>Die Erstellung eines Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re20>
+  </mprSlabsReinforcement>
+  <mprColumnsReinforcement LocalName="Stützenbewehrung"
+                           Description="Analyse, Gruppierung und Bewehrung von Stützen entsprechend den festgelegten Bedingungen"
+                           FullDescription="Mit dem Plugin können Sie sowohl einzelne ausgewählte Stützen als auch alle Stützen in einer Ansicht oder einem Dokument verarbeiten. Die Bewehrung erfolgt unter Berücksichtigung der gegenseitigen Lage der Stützen übereinander. Die Querbewehrung kann aus verschiedenen Bewehrungsstabformen zusammengestellt werden. Das Plugin kann sogar mit einer leeren Vorlage funktionieren">
+    <h1>Auswahlmöglichkeiten</h1>
+    <h2>Stützen auswählen</h2>
+    <h3>Alle Stützen in der aktuellen Ansicht auswählen</h3>
+    <h4>Alle Stützen im Projekt auswählen</h4>
+    <h5>Bewehrung kann nur in Tragwerksstützen erstellt werden</h5>
+    <h6>Auswählen</h6>
+    <h7>Analysieren</h7>
+    <h8>Die Gesamtzahl der ausgewählten Stützen:</h8>
+    <h9>Davon wurde es erfolgreich analysiert:</h9>
+    <h10>Bewehrung durchführen</h10>
+    <h11>Die Einstellungen für die Bewehrung der Gruppe</h11>
+    <h12>Gruppierung</h12>
+    <h13>nach Ebene</h13>
+    <h14>nach Höhe</h14>
+    <h15>Gruppierung</h15>
+    <h16>Anzahl</h16>
+    <h17>Profile</h17>
+    <h18>Ebenen</h18>
+    <h19>Höhen</h19>
+    <h20>Stützen in der Gruppe:</h20>
+    <h21>Ebene</h21>
+    <h22>Höhe</h22>
+    <h23>Gruppierung nach:</h23>
+    <h24>Schnittansicht</h24>
+    <h25>Längsbewehrung</h25>
+    <h26>Längsbewehrung (Nutzbewehrung)</h26>
+    <h27>Dicke der Betonüberdeckung für die Nutzbewehrung:</h27>
+    <h28>Die Überdeckung für die Nutzbewehrung muss mindestens 20 mm oder mindestens so groß wie der Durchmesser der Bewehrung sein</h28>
+    <h29>Es wird empfohlen, dass der Durchmesser der Längsstäbe von Fertigteilstützen mindestens 16 mm beträgt. Für monolithische Stützen sowie für die konstruktive Bewehrung ist ein Stabdurchmesser von 12 mm zulässig</h29>
+    <h30>Parameter</h30>
+    <h31>Anzahl der Stäbe entlang der Breite:</h31>
+    <h32>Anzahl der Stäbe entlang der Tiefe:</h32>
+    <h33>Abstände ändern</h33>
+    <h34>Querschnittsfläche der Stütze, mm²:</h34>
+    <h35>Querschnittsfläche der Bewehrung, mm²:</h35>
+    <h36>Prozentsatz der Bewehrung:</h36>
+    <h37>Es wird empfohlen, dass die Querschnittsfläche der Längsbewehrung nicht mehr als 5% der Querschnittsfläche der Stütze beträgt</h37>
+    <h38>Abstand zwischen den Kanten der Stäbe entlang der Breite der Stütze:</h38>
+    <h39>Abstand zwischen den Kanten der Stäbe entlang der Tiefe der Stütze:</h39>
+    <h40>Achtung! Wird der Durchmesser, die Überdeckung oder die Anzahl der Stäbe verändert, so wird der Abstand zwischen den Stäben auf gleiche Werte zurückgesetzt!</h40>
+    <h41>Überstände der Längsbewehrung</h41>
+    <h42>Querbewehrung (Verlegung)</h42>
+    <h43>Querbewehrung (Formen)</h43>
+    <h45>Anzahl der Eckstäbe:</h45>
+    <!-- todo remove after 3.22.12.0 -->
+    <h46>Anzahl der Zwischenstäbe:</h46>
+    <h47>Überstände der Längsbewehrung der unteren und mittleren Stützen mit gleichem ( oder minimal anderem ) Querschnitt der oben liegenden Stützen</h47>
+    <h48>Überstände der Längsbewehrung von unteren und mittleren Stützen mit großem Querschnitt (≥ 100 mm auf jeder Seite) in die oben liegende Stütze mit kleinerem Querschnitt</h48>
+    <h49>Überstände der Längsbewehrung von oberen Stützen</h49>
+    <h50>Einstellungen</h50>
+    <h51>PLUGIN-FENSTER:</h51>
+    <h53>IM MODELL ANZEIGEN:</h53>
+    <h54>Skalierfaktor:</h54>
+    <!-- todo remove after 3.22.12.0 -->
+    <h55>STANDARDBEWEHRUNG:</h55>
+    <h56>Verschiebung</h56>
+    <h57>Umschlingung</h57>
+    <h58>Die ausgewählte Form löschen</h58>
+    <!-- todo remove after 3.22.12.0 -->
+    <h59>Geben Sie den Typ der Formhaken, die Parameter, den Durchmesser und den Typ des Bewehrungsstabes an, die als Standard für die hinzuzufügenden Querbewehrungsformen eingestellt werden sollen</h59>
+    <h60>Abstand der Querbewehrung in den Eindickungsbereichen, mm:</h60>
+    <h61>Verankerungsberechnung nach SP 52-101-2003</h61>
+    <h62>Durchmesser:</h62>
+    <h63>Schnittfläche, mm²:</h63>
+    <h64>Betonklasse:</h64>
+    <h65>Art der Bewehrungsoberfläche:</h65>
+    <h66>Bemessungszugfestigkeit, MPa:</h66>
+    <h67>Länge der Grundverankerung (Basis), mm:</h67>
+    <h68>Faktor α:</h68>
+    <h69>Erforderliche (berechnete) Verankerungslänge, mm:</h69>
+    <h70>Verankerungslänge:</h70>
+    <h71>Es wird empfohlen, dass der Basisabstand der Querbewehrung 15d und der Abstand der Querbewehrung in den Eindickungsbereichen 10d beträgt. Wobei d ist der Durchmesser der Längsbewehrung (Nutzbewehrung)</h71>
+    <h72>Das Hinzufügen einer Form zum aktuellen Layout ist fehlgeschlagen: Es gibt keinen Platz, um die Form zu platzieren!</h72>
+    <!-- todo remove after 3.22.12.0 -->
+    <h73>Die Einstellungen für die Bewehrung der Stütze</h73>
+    <h74>Durch die Einstellungen für die Gruppenbewehrung ersetzen</h74>
+    <h75>Die Einstellungen der Bewehrung unverändert lassen</h75>
+    <h76>Stützenbewehrung</h76>
+    <h79>Die Haken der Standardform:</h79>
+    <h80>Haken der Form:</h80>
+    <h81>in der Skizze einstellen</h81>
+    <h82>Revit-Haken verwenden</h82>
+    <h83>Default-Parameter</h83>
+    <h84>Überdeckung an den Bewehrungsanschlussen, mm:</h84>
+    <h85>Basisabstand der Querbewehrung, mm:</h85>
+    <h86>Abstand von der Oberkante der Stütze, mm:</h86>
+    <h87>Verdichtung der Querbewehrung im oberen Bereich der Stütze</h87>
+    <h88>Eindickungsabstand, mm:</h88>
+    <h89>Eindickungsabstand, Raten:</h89>
+    <h90>Verdickung der Längsbewehrung im unteren Bereich der Stütze</h90>
+    <h91>Wenn es ankommende Überstände gibt, stellen Sie den Eindickungsabstand des unteren Bereichs entlang der Länge der Überstände ein</h91>
+    <h93>Dreieckige Bügel:</h93>
+    <h94>Runde Bügel:</h94>
+    <h95>Die Haken in der Skizze können in dieser Form nicht verwendet werden</h95>
+    <h96>Nach Parameter:</h96>
+    <h97>Parameter</h97>
+    <h98>Abstand zwischen den Mittelpunkten der Stäbe</h98>
+    <h99>Abstand zwischen den Kanten der Stäbe</h99>
+    <!-- todo remove after 3.22.12.0 -->
+    <h100>Achtung! Die Anzahl und Lage der Stäbe der Längsbewehrung und die Verlegung der Querbewehrung können gespeichert, geladen und in die markierten Stützen eines entsprechenden Querschnitts kopiert werden, können aber nicht standardmäßig gespeichert werden!</h100>
+    <h104>Überlappungslänge der geraden Überstände, mm:</h104>
+    <h105>Die Verankerungslänge berechnen</h105>
+    <h106>Verankerungslänge der Überstände in der Platte, mm:</h106>
+    <h107>Verankerungslänge in der Stütze, mm:</h107>
+    <h108>Überlappungslänge in der oben liegenden Stütze, mm:</h108>
+    <h109>Die berechnete Überlappungslänge mit 2 multiplizieren</h109>
+    <h110>Bewehrung erstellen</h110>
+    <!-- todo remove after 3.22.12.0 -->
+    <h119>Bewehrungseinstellungen (Standard)</h119>
+    <h127>Überstände aus der unterliegenden Platte</h127>
+    <h135>Typ der Überstände:</h135>
+    <h138>Bewehrungsüberdeckung:</h138>
+    <h141>Das Fenster nach dem Erstellen der Bewehrung nicht schließen</h141>
+    <h144>Abstand des Teils von der Unterkante der Bodenplatte:</h144>
+    <!-- todo remove after 3.22.12.0 -->
+    <h147>Zurücksetzen</h147>
+    <h148>Verankerungslänge in der Platte, mm:</h148>
+    <h149>Erstellen von Überständen nur aus Platten in der Kategorie "Fundament"</h149>
+    <h150>Überstände aus der unterliegenden Platte werden nur erstellt, wenn es keine unterliegende Stütze gibt. Die Verbindungen zwischen den Stützen werden nur zwischen den ausgewählten Stützen bestimmt</h150>
+    <h160>Typ der Überstände:</h160>
+    <h161>Konventionelle Plattendicke, mm:</h161>
+    <h165>Wenn es keine Geschossdeckenplatte oberhalb der Stütze gibt, dann</h165>
+    <h166>Anpassung der Biegung der Oberfläche der Platte (in der Mitte der Bewehrung)</h166>
+    <h167>Anpassung der Biegung dem Boden der Platte (in der Mitte der Bewehrung)</h167>
+    <!-- todo remove after 3.22.12.0 start -->
+    <h173>Gerade Stäbe:</h173>
+    <h174>L-förmige Stäbe (bei der Erstellung von Biegungen von vertikalen Stäben):</h174>
+    <h177>C-förmige Querbügel (Ständer). Haken in der Skizze:</h177>
+    <h178>S-förmige Querbügel (Ständer). Haken in der Skizze:</h178>
+    <h179>L-förmige Stäbe:</h179>
+    <h180>U-förmige Stäbe:</h180>
+    <h181>Rechteckige Bügel:</h181>
+    <h182>L-förmige Stäbe mit großer Biegung:</h182>
+    <h183>Alle Werte auf "Auto" zurücksetzen</h183>
+    <h184>Bevorzugte Formen von Bewehrungsstäben</h184>
+    <h185>Die Parameterwerte für einige Elemente konnten nicht eingestellt werden. ID, Parameternamen und eingestellte Werte sind unten aufgeführt:</h185>
+    <!-- todo remove after 3.22.12.0 end -->
+    <h186>Erneut auswählen</h186>
+    <h187>Erneute Auswahl von Stützen, die bei der vorherigen Verwendung des Plugins in der aktuellen Ansicht bearbeitet wurden</h187>
+    <h188>Abstand von der Unterkante der Stütze, mm:</h188>
+    <h189>Radius in:</h189>
+    <h190>Geben Sie einen Parameter für die Form des Bewehrungsstabs an, der den Radius der Spirale festlegt</h190>
+    <h191>Steigung:</h191>
+    <h193>Erste Überlappungslänge, mm:</h193>
+    <h194>Zweite Überlappungslänge, mm:</h194>
+    <h195>Die Überlappungslänge berechnen</h195>
+    <h196>Überlappungslänge, mm:</h196>
+    <h205>C-förmige Querbügel (Ständer). Revit-Haken:</h205>
+    <h206>S-förmige Querbügel (Ständer). Revit-Haken:</h206>
+    <h207>Spiralförmige Stäbe:</h207>
+    <h208>Verwendung der Geometrie von Stützen ohne Berücksichtigung von Verbindungen</h208>
+    <h221>In Längsrichtung gebogene Stäbe</h221>
+    <h226>Löschen der zuvor erstellten Bewehrung:</h226>
+    <h227>Anpassung der Nutzbewehrung dem Rand der Stütze in der Mitte der Bewehrung. Die Anpassung wird anhand des Durchmessers von dem Stab des Modells berechnet</h227>
+    <h228>Verbindungsmittel festlegen</h228>
+    <h229>Die erste Bewehrung</h229>
+    <h230>Die zweite Bewehrung</h230>
+    <h231>Verbindungsmittel werden nur dann festgelegt, wenn die zu bearbeitenden Stützen den gleichen Querschnitt haben und der Verbindungsmitteltyp im Dokument vorhanden ist. Die Verbindungsmitteltypen werden im Dokument auf der Grundlage der im Fenster angegebenen Regeln gesucht </h231>
+    <h232>. In den Stützen, in denen die Verbindungsmittel festgelegt werden, wird die Längsbewehrung durch einzelne Bewehrungsstäbe ohne Verlegung durchgeführt.</h232>
+    <h233>Geben Sie Regeln für den Einsatz von Verbindungsmitteln für bestimmte Bewehrungstypen an. Sie können entweder den vollständigen Namen der Typeneigenschaften oder einen Teil dieses Namens angeben. Geben Sie zum Beispiel den Wert "10" an. Dann werden die Typeneigenschaften des Bewehrungsstabs als geeignet angesehen, wenn sie "10" in ihrem Namen haben.</h233>
+    <h234>Biegen der Unterseite von geraden Stäben</h234>
+    <h235>Versatz der Biegung (O), mm:</h235>
+    <h236>Länge der Biegung (L), mm:</h236>
+    <h237>Das Biegen des unteren Teils erfolgt bei geraden Stäben, sofern die zu bearbeitenden Stützen den gleichen Querschnitt haben.</h237>
+    <h238>Erstellen:</h238>
+    <h239>Querbewehrung</h239>
+    <h240>Standardmäßige Formeneigenschaften</h240>
+    <h241>Wenn in der Liste bereits eine Form mit derselben Skizze vorhanden ist, werden die Eigenschaften von dieser übernommen</h241>
+    <h242>Biegungsrichtung:</h242>
+    <h243>Grundlegende Bewehrungseinstellungen</h243>
+    <h244>Es ist nicht empfohlen, die Überdeckung nach den Bewehrungseinstellungen einzustellen, wenn die Querbewehrung unterschiedliche Durchmesser bzw. unterschiedliche Eigenschaftswerte "Querbewehrungsanschluß" aufweist</h244>
+    <srd>Speichern von Daten für die ausgewählte Stützen</srd>
+    <hook>Haken:</hook>
+    <err1>In den Einstellungen für die Bewehrung der Stütze werden die Überstände von gebogenen Stäben in einer "Flaschenform" angegeben, die zu ihrer Erstellung Platten oder einen von Null unterschiedlichen Abstand zwischen den Stützen haben müssen. Es wurde keine oben liegende Platte gefunden oder der Abstand zur oben liegenden Stütze ist 0</err1>
+    <npa1>Überstände nicht erstellen</npa1>
+    <npa2>gerade Überstände erstellen</npa2>
+    <npa3>die Platte als bedingt vorhanden betrachten</npa3>
+    <pt1>Kreis</pt1>
+    <pt3>Rechteck</pt3>
+    <pt4>Quadrat</pt4>
+    <pt5>Nicht bestimmt</pt5>
+    <rr1>Bewehrung des gleichen Typs löschen wie die, die erstellt wird</rr1>
+    <rr2>Die ganze zuvor erstellte Bewehrung löschen</rr2>
+    <rr3>Nicht löschen</rr3>
+    <jt1>Überstände der Längsbewehrung werden nicht erstellt. Die Stäbe werden entsprechend dem vorgegebenen Wert der Überdeckung an den Enden der Bewehrung auf die Oberseite der Stütze geschnitten</jt1>
+    <jt2>Es werden gerade Überstände der Stäbe der Längsbewehrung erstellt. Die Verankerungslänge wird von der Oberfläche der oben liegenden Geschossdecke oder von der Oberfläche der Stütze (wenn keine Geschossdecke vorhanden ist) angegeben. Die Anordnung der Stäbe der Längsbewehrung der oben liegenden Stützen wird nicht berücksichtigt</jt2>
+    <jt3>Überstände der Bewehrungsstäbe der Längsbewehrung werden mit einer Biegung in der oben liegenden Stütze erstellt. Die Verankerungslänge wird von der Oberfläche der oben liegenden Geschossdecke oder von der Oberfläche der Stütze (wenn keine Geschossdecke vorhanden ist) angegeben.</jt3>
+    <jt4>Die Überstände werden in Form von zusätzlichen Stäben mit einem bestimmten Durchmesser erstellt</jt4>
+    <jt5>Es werden gerade Überstände der Stäbe der Längsbewehrung erstellt. Die Verankerungslänge wird von der Oberfläche der oben liegenden Geschossdecke oder von der Oberfläche der Stütze (wenn keine Geschossdecke vorhanden ist) angegeben</jt5>
+    <jt6>Überstände der Bewehrungsstäbe der Längsbewehrung werden erstellt und in der oben liegenden Geschossdecke verankert. Verankerungslänge wird von der Seitenfläche der Stütze aus gemessen</jt6>
+    <bbd1>Alle Überstände werden entlang der kurzen Stützenseite gebogen</bbd1>
+    <bbd2>Alle Überstände werden entlang der langen Stützenseite gebogen</bbd2>
+    <bbd3>Die Eckenüberstände werden zum Stützenmittelpunkt und die übrigen entlang der Stützenkanten gebogen</bbd3>
+    <bbd4>Die Eckenüberstände werden zum Stützenmittelpunkt gebogen. Entlang der Stützenkanten an der langen Seite. Quer zu den Stützenkanten an der kurzen Seite</bbd4>
+    <bbd5>Die Eckenüberstände werden entlang der langen Stützenseite und die übrigen in das Stützeninnere gebogen</bbd5>
+    <bbd6>Die Eckenüberstände werden entlang der kurzen Stützenseite und die übrigen entlang der Stützenkanten gebogen</bbd6>
+    <m1>Wählen Sie die Stützen aus</m1>
+    <m2>Geben Sie einen Wert von</m2>
+    <m3>bis</m3>
+    <m4>Gerippter Stabtyp</m4>
+    <m5>Glatter Stabtyp</m5>
+    <!-- todo remove after 3.22.12.0 -->
+    <m13>Bewehrungsüberdeckung</m13>
+    <m20>Die Liste der Stützen enthält Stützen, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m20>
+    <m23>Bewehrungseinstellungen kopiert</m23>
+    <m24>Sie haben nicht angegeben, für welche Gruppen Bewehrung zu erstellen ist!</m24>
+    <m25>Es wurde keine Gruppe ausgewählt, um Bewehrung zu erstellen!</m25>
+    <m27>Achtung! Im aktuellen Projekt wurden keine geladenen Bewehrungsformen gefunden! In diesem Fall können die vom Plugin erstellten Bewehrungsformen nicht im Familieneditor geöffnet werden! Es wird empfohlen, Bewehrungsformen in das Projekt herunterzuladen, bevor Sie das Plugin verwenden!\nDie Bewehrung trotz der fehlenden Bewehrungsformen durchführen?</m27>
+    <rn>Bewehrungsstahl ⌀</rn>
+    <!-- todo remove after 3.22.12.0 -->
+    <full>Erhältlich in der vollständigen Plugin-Version!</full>
+    <!-- todo remove after 3.22.12.0 -->
+    <full2>In der limitierten Version ist nur eine Form verfügbar</full2>
+    <!-- todo remove after 3.22.12.0 -->
+    <noInFamily>Die Ausführung des Plugins in Familien ist nicht möglich!</noInFamily>
+    <p1>Analyse der Stütze:</p1>
+    <p2>Suche nach anpassenden Elementen:</p2>
+    <p8>Entfernen der zuvor erstellten Bewehrung</p8>
+    <p9>Berechnung und Modellierung der Längsbewehrung</p9>
+    <p10>Berechnung und Modellierung der Querbewehrung</p10>
+    <p14>Berechnung und Modellierung von Plattenüberständen</p14>
+    <p15>Festlegung der Verbindungsmittel</p15>
+    <e1>Fehler bei der Analyse von Stützen</e1>
+    <e2>Die Stütze kann nicht initialisiert werden</e2>
+    <e3>Die Vollkörper können nicht erhalten werden</e3>
+    <e4>Es wurde kein Haupt- oder kombinierter Vollkörper erhalten</e4>
+    <e5>Die obere oder untere Kante konnte nicht erhalten werden</e5>
+    <e6>Das Querschnittsprofil konnte nicht ermittelt werden</e6>
+    <e7>Der Name der Form, die zur Erstellung der spiralförmigen Bewehrung verwendet wurde, ist nicht angegeben. Verwenden Sie das Fenster zum Einstellen der bevorzugten Bewehrungsformen, um die Form der spiralförmigen Bewehrung festzulegen</e7>
+    <e9>Der angegebene Parameter, der den Radius der spiralförmigen Bewehrung angibt, ist im Dokument nicht gefunden</e9>
+    <!-- todo remove after 3.22.12.0 -->
+    <t7>Die Gruppe enthält Stützen, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t7>
+    <t10>Alle Gruppen markieren</t10>
+    <t11>Alle Gruppen abwählen</t11>
+    <!-- todo remove after 3.22.12.0 -->
+    <t12>Die Bewehrungseinstellungen der Stütze wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t12>
+    <!-- todo remove after 3.22.12.0 -->
+    <t13>Die Bewehrungseinstellungen für die ausgewählte Stütze ändern</t13>
+    <!-- todo remove after 3.22.12.0 -->
+    <t14>Die Bewehrungseinstellungen der Stütze durch die Einstellungen aus der Gruppe ersetzen</t14>
+    <t15>Anzeige der vorherigen Stütze in der Liste im Modell</t15>
+    <t16>Anzeige der in der Liste ausgewählten Stütze im Modell</t16>
+    <t17>Anzeige der nächsten Stütze in der Liste im Modell</t17>
+    <!-- todo remove after 3.22.12.0 -->
+    <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 3.22.12.0 -->
+    <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 3.22.12.0 -->
+    <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
+    <t43>Achtung! Art der Bewehrungsoberfläche kann von der Bewehrungsklasse, dem Durchmesser oder anderen Werten abhängen, die vom Programm nicht berücksichtigt werden. Lesen Sie die vorschriftsmäßige Dokumentation</t43>
+    <t44>α ist ein Faktor, der den Einfluss des Spannungsverlaufs von Beton und Bewehrung sowie der Bemessung des Elements im Verankerungsbereich auf die Verankerungslänge berücksichtigt. Bei der Verankerung vom gerippten Stabtyp mit geraden Enden (gerade Verankerung) oder vom glatten Stabtyp mit Haken oder Schlaufen ohne zusätzliche Verankerungsvorrichtungen gilt α = 1,0 für Zugstäbe und α = 0,75 für Druckstäbe. Nach Punkt 10.3.30 der SP 63.13330 kann der Faktor α auf 2,0 erhöht werden</t44>
+    <!-- todo remove after 3.22.12.0 -->
+    <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
+    <!-- todo remove after 3.22.12.0 -->
+    <t63>Sie können bevorzugte Formen von Bewehrungsstäben für verschiedene Bewehrungstypen, die durch das Plugin erzeugt werden, angeben.</t63>
+    <!-- todo remove after 3.22.12.0 -->
+    <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
+    <!-- todo remove after 3.22.12.0 -->
+    <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 3.22.12.0 -->
+    <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
+    <re1>Beim Erstellen der Längsbewehrung der Stütze id={0} ist ein Fehler aufgetreten:</re1>
+    <re2>Bei der Berechnung der Punkte der Querbewehrung der Stütze id={0} ist ein Fehler aufgetreten:</re2>
+    <re3>Beim Erstellen eines Teils der Querbewehrung vom Typ "{0}" in der Stütze id={1} ist ein Fehler aufgetreten:</re3>
+    <re4>Die Erstellung eines geraden Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re4>
+    <re5>Die Erstellung eines Bewehrungsstabes mit Form "{0}" mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{1}" konnte nicht durchgeführt werden. Fehler: {2}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re5>
+    <re17>Fehler beim Erstellen von Plattenüberständen id={0} in der Stütze id={1}:</re17>
+    <re18>Fehler beim Erstellen von Verbindungsmitteln beim Verbinden der Stützen id={0} und id={1}:</re18>
+    <re19>Fehler beim Erstellen von Verbindungsmitteln bei Bearbeitung der Stütze id={0}:</re19>
+  </mprColumnsReinforcement>
+  <mprBeamsReinforcement LocalName="Balkenbewehrung"
+                         Description="Analyse, Gruppierung und Bewehrung von Balken entsprechend den festgelegten Bedingungen"
+                         FullDescription="Mit dem Plugin können Sie sowohl einzelne ausgewählte Balken als auch alle Balken in einer Ansicht oder einem Dokument verarbeiten. Die Querbewehrung kann aus verschiedenen Bewehrungsstabformen zusammengestellt werden. Das Plugin kann sogar mit einer leeren Vorlage funktionieren">
+    <h1>Auswahlmöglichkeiten</h1>
+    <h2>Träger auswählen</h2>
+    <h3>Alle Träger in der aktuellen Ansicht auswählen</h3>
+    <h4>Alle Träger im Projekt auswählen</h4>
+    <h5>Bewehrung kann nur in Tragwerksträgern erstellt werden</h5>
+    <h6>Auswählen</h6>
+    <h7>Analysieren</h7>
+    <h8>Die Gesamtzahl der ausgewählten Träger:</h8>
+    <h9>Davon wurde es erfolgreich analysiert:</h9>
+    <h10>Bewehrung durchführen</h10>
+    <h11>Die Einstellungen für die Bewehrung der Gruppe</h11>
+    <h12>Gruppierung</h12>
+    <h13>nach Ebene</h13>
+    <h15>Gruppierung</h15>
+    <h16>Anzahl</h16>
+    <h17>Profile</h17>
+    <h18>Ebenen</h18>
+    <h19>Alles gruppieren</h19>
+    <h20>Träger in der Gruppe:</h20>
+    <h21>Ebene</h21>
+    <h23>Gruppierung nach:</h23>
+    <h24>Schnittansicht</h24>
+    <h25>Längsbewehrung</h25>
+    <h27>Dicke der Betonüberdeckung für die Nutzbewehrung:</h27>
+    <coverTop>Oberhalb:</coverTop>
+    <coverBottom>Unterhalb:</coverBottom>
+    <coverSide>An den Seiten:</coverSide>
+    <coverEnd>An den Enden:</coverEnd>
+    <h28>Die Überdeckung für die Nutzbewehrung muss mindestens 20 mm oder mindestens so groß wie der Durchmesser der Bewehrung sein</h28>
+    <h30>Parameter</h30>
+    <h31>Anzahl der Stäbe entlang der Breite:</h31>
+    <h32>Anzahl der Stäbe entlang der Höhe:</h32>
+    <h33>Abstände ändern</h33>
+    <h34>Querschnittsfläche des Trägers, mm²:</h34>
+    <h35>Querschnittsfläche der Bewehrung, mm²:</h35>
+    <h36>Prozentsatz der Bewehrung:</h36>
+    <h37>Es wird empfohlen, dass die Querschnittsfläche der Längsbewehrung nicht mehr als 5% der Querschnittsfläche des Trägers beträgt</h37>
+    <h38>Abstand zwischen den Stäben entlang der Balkenbreite:</h38>
+    <h39>Abstand zwischen den Stäben entlang der Balkenhöhe:</h39>
+    <h40>Achtung! Wird der Durchmesser, die Überdeckung oder die Anzahl der Stäbe verändert, so wird der Abstand zwischen den Stäben auf gleiche Werte zurückgesetzt!</h40>
+    <h41>Überstände der Längsbewehrung</h41>
+    <h42>Querbewehrung (Verlegung)</h42>
+    <h43>Querbewehrung (Formen)</h43>
+    <h44>Die oberen Stäbe biegen, wenn der Abstand zur Verankerung nicht ausreicht</h44>
+    <h45>Anpassung der Nutzbewehrung dem Rand des Trägers in der Mitte der Bewehrung. Die Anpassung wird anhand des Durchmessers von dem Stab des Modells berechnet</h45>
+    <h50>Einstellungen</h50>
+    <h51>PLUGIN-FENSTER:</h51>
+    <h53>IM MODELL ANZEIGEN:</h53>
+    <h54>Skalierfaktor:</h54>
+    <!-- todo remove after 1.18.16.0 -->
+    <h55>STANDARDBEWEHRUNG:</h55>
+    <h56>Verschiebung</h56>
+    <h57>Umschlingung</h57>
+    <h58>Die ausgewählte Form löschen</h58>
+    <!-- todo remove after 1.18.16.0 -->
+    <h59>Geben Sie den Typ der Formhaken, die Parameter, den Durchmesser und den Typ des Bewehrungsstabes an, die als Standard für die hinzuzufügenden Querbewehrungsformen eingestellt werden sollen</h59>
+    <h60>Abstand der Querbewehrung in den Eindickungsbereichen, mm:</h60>
+    <h61>Verankerungsberechnung nach SP 52-101-2003</h61>
+    <h72>Das Hinzufügen einer Form zum aktuellen Layout ist fehlgeschlagen: Es gibt keinen Platz, um die Form zu platzieren!</h72>
+    <!-- todo remove after 1.18.16.0 -->
+    <h73>Bewehrungseinstellungen des Trägers</h73>
+    <h74>Durch die Einstellungen für die Gruppenbewehrung ersetzen</h74>
+    <h75>Die Einstellungen der Bewehrung unverändert lassen</h75>
+    <!-- todo remove after 1.18.16.0 -->
+    <h76>Balkenbewehrung</h76>
+    <h79>Die Haken der Standardform:</h79>
+    <h80>Haken der Form:</h80>
+    <h81>in der Skizze einstellen</h81>
+    <h82>Revit-Haken verwenden</h82>
+    <h84>Überdeckung an den Bewehrungsanschlussen, mm:</h84>
+    <h85>Basisabstand der Querbewehrung, mm:</h85>
+    <h86>Abstand vom Trägerende, mm:</h86>
+    <h87>Verdickung der Querbewehrung</h87>
+    <h88>Eindickungsabstand, mm:</h88>
+    <h89>Eindickungsabstand, Raten:</h89>
+    <h90>Verdichtung der Bewehrung an den Enden des Trägers</h90>
+    <h91>Verdichtung der Bewehrung an den Enden des Trägers bei Fehlen der unterliegenden Elemente (freitragende Trägerenden)</h91>
+    <h93>Dreieckige Bügel:</h93>
+    <h94>Unter- und Endstützen sowie Wände sind zu berücksichtigen</h94>
+    <h96>Nach Parameter:</h96>
+    <h97>Parameter</h97>
+    <h98>Abstand zwischen den Mittelpunkten der Stäbe</h98>
+    <h99>Abstand zwischen den Kanten der Stäbe</h99>
+    <!-- todo remove after 1.18.16.0 -->
+    <h100>Achtung! Die Anzahl und Lage der Stäbe der Längsbewehrung und die Verlegung der Querbewehrung können gespeichert, geladen und in die markierten Träger eines entsprechenden Querschnitts kopiert werden, können aber nicht standardmäßig gespeichert werden!</h100>
+    <h102>Typ der Bewehrung:</h102>
+    <h103>Teil Nr.1</h103>
+    <h104>Verankerungslänge der geraden Überstände, mm:</h104>
+    <h105>Die Verankerungslänge berechnen</h105>
+    <h106>Teil Nr.2</h106>
+    <h107>T-förmige Schnittpunkte</h107>
+    <h108>Kreuzschnittpunkte</h108>
+    <h110>Bewehrung erstellen</h110>
+    <h141>Das Fenster nach dem Erstellen der Bewehrung nicht schließen</h141>
+    <h142>Anzeigen des Schnittpunktes</h142>
+    <h143>Löschen von Hilfsgeometrie</h143>
+    <!-- todo remove after 1.18.16.0 start -->
+    <h147>Zurücksetzen</h147>
+    <h173>Gerade Stäbe:</h173>
+    <h174>L-förmige Stäbe:</h174>
+    <h177>C-förmige Querbügel (Ständer). Haken in der Skizze:</h177>
+    <h178>S-förmige Querbügel (Ständer). Haken in der Skizze:</h178>
+    <h180>U-förmige Stäbe:</h180>
+    <h181>Rechteckige Bügel:</h181>
+    <h182>L-förmige Stäbe mit großer Biegung:</h182>
+    <h183>Alle Werte auf "Auto" zurücksetzen</h183>
+    <h184>Bevorzugte Formen von Bewehrungsstäben</h184>
+    <!-- todo remove after 1.18.16.0 end -->
+    <h186>Erneut auswählen</h186>
+    <h187>Erneute Auswahl von Trägern, die bei der vorherigen Verwendung des Plugins in der aktuellen Ansicht bearbeitet wurden</h187>
+    <h205>C-förmige Querbügel (Ständer). Revit-Haken:</h205>
+    <h206>S-förmige Querbügel (Ständer). Revit-Haken:</h206>
+    <h207>Verwendung der Geometrie von Trägern ohne Berücksichtigung von Verbindungen</h207>
+    <h208>Die Stäbe der Längsbewehrung in die angrenzenden senkrechten Träger, die sich an den Enden des aktuellen Trägers befinden, einsetzen</h208>
+    <h226>Löschen der zuvor erstellten Bewehrung:</h226>
+    <h229>Ebene</h229>
+    <h238>Erstellen:</h238>
+    <h239>Querbewehrung</h239>
+    <h240>Standardmäßige Formeneigenschaften</h240>
+    <h241>Wenn in der Liste bereits eine Form mit derselben Skizze vorhanden ist, werden die Eigenschaften von dieser übernommen</h241>
+    <h243>Grundlegende Bewehrungseinstellungen</h243>
+    <h244>Bewehrung der Schnittpunkte</h244>
+    <h245>Träger</h245>
+    <h246>Schnittpunkte</h246>
+    <h247>Typ des Schnittpunktes</h247>
+    <h248>Winkelschnittpunkte</h248>
+    <h249>Verankerungslänge, mm:</h249>
+    <h250>Anzahl der Schnittpunkte</h250>
+    <h251>Typ des Schnittpunktes</h251>
+    <h252>Parameter</h252>
+    <h253>Schnittpunkte in der Gruppe:</h253>
+    <h255>Träger in dem Schnittpunkt:</h255>
+    <h256>Anzahl der Träger</h256>
+    <h257>Die Einstellungen für die Gruppenbewehrung</h257>
+    <h258>Keine Querbewehrung über den untengelegenen Wänden und Stützen erstellen</h258>
+    <h259>Different rebar diameter for the top row:</h259>
+    <h260>The width spacing of the bars is derived for the main diameter of the reinforcement. Other rebar diameters for the top row are not taken into account</h260>
+    <h261>Indent from the beginning of the section, mm:</h261>
+    <srd>Speichern von Daten für die ausgewählte Träger</srd>
+    <hook>Haken:</hook>
+    <jt1>Überstände der Längsbewehrung werden nicht erstellt. Die Stäbe werden entsprechend dem vorgegebenen Wert der Überdeckung an den Enden der Bewehrung am Ende des Trägers geschnitten</jt1>
+    <jt2>Es werden gerade Überstände der Stäbe der Längsbewehrung erstellt. Die Verankerungslänge wird vom Rand des Trägers aus festgelegt. Überstände werden nur dann erstellt, wenn sich am Ende des Trägers eine Wand oder Stütze befindet, andernfalls werden keine Überstände erstellt und die Längsstäbe werden am Ende des Trägers unter Berücksichtigung der angegebenen Überdeckung geschnitten.</jt2>
+    <m1>Wählen Sie Träger aus</m1>
+    <m2>Geben Sie einen Wert von</m2>
+    <m3>bis</m3>
+    <m4>Gerippter Stabtyp</m4>
+    <m5>Glatter Stabtyp</m5>
+    <!-- todo remove after 1.18.16.0 -->
+    <m13>Bewehrungsüberdeckung</m13>
+    <m20>Die Liste der Träger enthält Träger, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m20>
+    <m23>Bewehrungseinstellungen kopiert</m23>
+    <m24>Sie haben nicht angegeben, für welche Gruppen Bewehrung zu erstellen ist!</m24>
+    <m25>Es wurde keine Gruppe ausgewählt, um Bewehrung zu erstellen!</m25>
+    <m27>Achtung! Im aktuellen Projekt wurden keine geladenen Bewehrungsformen gefunden! In diesem Fall können die vom Plugin erstellten Bewehrungsformen nicht im Familieneditor geöffnet werden! Es wird empfohlen, Bewehrungsformen in das Projekt herunterzuladen, bevor Sie das Plugin verwenden!\nDie Bewehrung trotz der fehlenden Bewehrungsformen durchführen?</m27>
+    <rn>Bewehrungsstahl ⌀</rn>
+    <!-- todo remove after 1.18.16.0 -->
+    <full>Erhältlich in der vollständigen Plugin-Version!</full>
+    <!-- todo remove after 1.18.16.0 -->
+    <full2>In der limitierten Version ist nur eine Form verfügbar</full2>
+    <!-- todo remove after 1.18.16.0 -->
+    <noInFamily>Die Ausführung des Plugins in Familien ist nicht möglich!</noInFamily>
+    <p1>Analyse des Trägers:</p1>
+    <p2>Suche nach anpassenden Elementen:</p2>
+    <pt1>T-Träger</pt1>
+    <pt2>Doppel-T-Träger</pt2>
+    <pt3>Rechteck</pt3>
+    <pt4>Quadrat</pt4>
+    <pt5>Nicht bestimmt</pt5>
+    <pt6>Trapez</pt6>
+    <pt7>L-Form</pt7>
+    <rr1>Bewehrung des gleichen Typs löschen wie die, die erstellt wird</rr1>
+    <rr2>Die ganze zuvor erstellte Bewehrung löschen</rr2>
+    <rr3>Nicht löschen</rr3>
+    <e1>Fehler bei der Analyse von Trägern</e1>
+    <e2>Der Träger kann nicht initialisiert werden</e2>
+    <e3>Die Vollkörper können nicht erhalten werden</e3>
+    <e4>Es wurde kein Haupt- oder kombinierter Vollkörper erhalten</e4>
+    <e6>Das Querschnittsprofil konnte nicht ermittelt werden</e6>
+    <p1>Analyse des Trägers:</p1>
+    <p2>Suche nach anpassenden Elementen:</p2>
+    <p8>Entfernen der zuvor erstellten Bewehrung</p8>
+    <p9>Berechnung und Modellierung der Längsbewehrung</p9>
+    <p10>Berechnung und Modellierung der Querbewehrung</p10>
+    <p11>Berechnung und Modellierung der Schnittpunktbewehrung</p11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t7>Die Gruppe enthält Träger, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t7>
+    <!-- todo remove after 1.18.16.0 -->
+    <t8>Eine neue leere Gruppe hinzufügen</t8>
+    <!-- todo remove after 1.18.16.0 -->
+    <t9>Eine leere Gruppe löschen</t9>
+    <t10>Alle Gruppen markieren</t10>
+    <t11>Alle Gruppen abwählen</t11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t12>Die Bewehrungseinstellungen des Trägers wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t12>
+    <!-- todo remove after 1.18.16.0 -->
+    <t13>Die Bewehrungseinstellungen für den ausgewählten Träger ändern</t13>
+    <!-- todo remove after 1.18.16.0 -->
+    <t14>Die Bewehrungseinstellungen der Stütze durch die Einstellungen aus der Gruppe ersetzen</t14>
+    <t15>Anzeige des vorherigen Trägers in der Liste im Modell</t15>
+    <t16>Anzeige des in der Liste ausgewählten Trägers im Modell</t16>
+    <t17>Anzeige des nächsten Trägers in der Liste im Modell</t17>
+    <t23>Anzeige des vorherigen Schnittpunktes in der Liste im Modell</t23>
+    <t24>Anzeige des in der Liste ausgewählten Schnittpunktes im Modell</t24>
+    <t25>Anzeige des nächsten Schnittpunktes in der Liste im Modell</t25>
+    <!-- todo remove after 1.18.16.0 -->
+    <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 1.18.16.0 -->
+    <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 1.18.16.0 -->
+    <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
+    <!-- todo remove after 1.18.16.0 -->
+    <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
+    <!-- todo remove after 1.18.16.0 -->
+    <t63>Sie können bevorzugte Formen von Bewehrungsstäben für verschiedene Bewehrungstypen, die durch das Plugin erzeugt werden, angeben.</t63>
+    <!-- todo remove after 1.18.16.0 -->
+    <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
+    <!-- todo remove after 1.18.16.0 -->
+    <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 1.18.16.0 -->
+    <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
+    <t67>Gruppierung von Träger und Schnittpunkten entsprechend den aktuellen Gruppierungseinstellungen durchführen</t67>
+    <re1>Beim Erstellen der Längsbewehrung des Trägers id={0} ist ein Fehler aufgetreten</re1>
+    <re2>Bei der Berechnung der Punkte der Querbewehrung des Trägers id={0} ist ein Fehler aufgetreten</re2>
+    <re3>Beim Erstellen eines Teils der Querbewehrung vom Typ "{0}" in dem Träger id={1} ist ein Fehler aufgetreten</re3>
+    <re4>Die Erstellung eines geraden Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re4>
+    <re5>Die Erstellung eines Bewehrungsstabes mit Form "{0}" mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{1}" konnte nicht durchgeführt werden. Fehler: {2}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re5>
+    <!-- todo remove after 1.18.16.0 -->
+    <re6>Parameterwerte konnten nicht festgelegt werden</re6>
+    <re9>Fehler beim Erstellen von Bauteilen der abgewinkelten Verbindung in den Träger {0}:</re9>
+    <re10>Fehler beim Erstellen von Bauteilen der T-förmigen Verbindung in den Träger {0}:</re10>
+    <re11>Fehler beim Erstellen von Bauteilen der Kreuzverbindung in den Träger {0}:</re11>
+    <re22>Der Schnittpunkt kann in der aktuellen Ansicht nicht angezeigt werden! Bitte zur Grundrissansicht wechseln</re22>
+  </mprBeamsReinforcement>
+  <mprRebarTools LocalName="Dienstprogramme zur Verarbeitung von Bewehrung"
+                 Description="Eine Sammlung von kleinen Hilfs-Plugins zur Verarbeitung von Bewehrung"
+                 LocalName1="Aus der Basis entfernen"
+                 Description1="Alle Bewehrungen aus dem ausgewählten Basiselement entfernen"
+                 LocalName2="In die Basis kopieren"
+                 Description2="Bewehrungsstäbe aus einem Quellbasiselement in mehrere Zielbasiselemente"
+                 LocalName3="Die Gruppe explodieren"
+                 Description3="Die ausgewählte Bewehrungsgruppe in einzelne Bewehrungsstäbe umwandeln"
+                 LocalName4="Die Gruppe teilen"
+                 Description4="Die Bewehrungsgruppe in zwei neue Bewehrungsgruppen teilen"
+                 LocalName5="Die Darstellung ändern"
+                 Description5="Gruppenänderung der Bewehrungsdarstellung">
+    <m1>Wählen Sie Basiselemente</m1>
+    <m2>Wählen Sie ein ursprüngliches Basiselement aus</m2>
+    <m3>Wählen Sie Ziel-Basiselemente aus</m3>
+    <m4>Wählen Sie Bewehrungsgruppen aus</m4>
+    <m5>Wählen Sie Bewehrungsgruppe aus</m5>
+    <m6>Wählen Sie einen Punkt der Teilung der Bewehrungsgruppe</m6>
+    <h1>Ungeeignetes Element</h1>
+    <h2>Das ausgewählte Element hat ein Vollkörper, das nicht dasselbe Volumen hat wie das Quellelement. Die kopierte Bewehrung wird nicht richtig angeordnet! Wählen Sie eine weitere Maßnahme aus:</h2>
+    <h3>Den ausgewählten Vorgang auf nachfolgende Fälle anwenden</h3>
+    <h4>Kopiervorgang auslassen</h4>
+    <h5>Kopiervorgang durchführen</h5>
+    <h6>Abbrechen</h6>
+    <h7>Verarbeiten:</h7>
+    <h8>Darstellung</h8>
+    <h9>Alle Stäbe in der Bewehrungsgruppe anzeigen</h9>
+    <h10>Den ersten und letzten Stab in der Bewehrungsgruppe anzeigen</h10>
+    <h11>Den mittleren Stab in der Bewehrungsgruppe anzeigen</h11>
+    <h12>Ändern der Darstellung von Stäben in Bewehrungsgruppen</h12>
+    <h13>In der aktuellen Ansicht kann die Darstellung von Stäben in Bewehrungsgruppen nicht geändert werden</h13>
+    <h14>Die Darstellung von Stäben in Bewehrungsgruppen mit dem Layout "Eins" kann nicht geändert werden</h14>
+    <h15>Den ersten, letzten und mittleren Stab in der Bewehrungsgruppe anzeigen</h15>
+    <pv1>Ausgewähltes Element</pv1>
+    <pv2>Ausgewählte Elemente</pv2>
+    <pv3>Alle Elemente in der Ansicht</pv3>
+    <pv4>Alle Elemente außer den ausgewählten in der Ansicht</pv4>
+    <msg1>Wählen Sie ein Bewehrungselement oder Bewehrung</msg1>
+    <msg2>Wählen Sie Bewährungselemente oder Bewehrung</msg2>
+  </mprRebarTools>
+  <mprSplitRebar LocalName="Aufteilen von Bewehrung"
+                 Description="Aufteilen von geraden Bewehrungsstäben nach der Länge mit verschiedenen Verbindungsmöglichkeiten">
+    <sv1>Die geraden Bewehrungsstäbe auswählen</sv1>
+    <sv2>Die geraden Bewehrungsstäbe in der Ansicht</sv2>
+    <sv3>Die geraden Bewehrungsstäbe in dem Basisbauteil</sv3>
+    <smn1>Genaue Länge</smn1>
+    <smn2>Maximale Länge</smn2>
+    <smn3>Zahl</smn3>
+    <smd1>Teilen eines Bewehrungsstabes in Teile der angegebenen Länge mit einem der Teile der kürzeren Länge, falls der ursprüngliche Bewehrungsstab nicht ohne Rest durch die angegebene Länge geteilt wird</smd1>
+    <smd2>Teilen eines Bewehrungsstabs in Teile gleicher Länge, die angegebene Höchstlänge nicht überschreiten</smd2>
+    <smd3>Teilen des Bewehrungsstabs in eine gleiche Anzahl von Teilen</smd3>
+    <rb1>Zu Beginn</rb1>
+    <rb2>Zum Ende</rb2>
+    <rb3>Zur Mitte</rb3>
+    <cmn1>Stumpf</cmn1>
+    <cmn2>Mechanische Verbindung</cmn2>
+    <cmn3>Stoß</cmn3>
+    <cmn4>Gebogene Stäbe</cmn4>
+    <ro1>Entlang der Richtung des Layouts</ro1>
+    <ro2>Senkrecht zur Richtung des Layouts</ro2>
+    <bd1>Oben</bd1>
+    <bd2>Unten</bd2>
+    <h1>Verfahren der Trennung</h1>
+    <h2>Verfahren der Verbindung</h2>
+    <h3>Versatz des Restes</h3>
+    <h4>Das Verbindungsmittel</h4>
+    <h5>Spaltlänge</h5>
+    <h6>Stoßlänge</h6>
+    <h7>Abstand der Biegung</h7>
+    <h8>Länge der Biegung</h8>
+    <h9>Versatz der Stäbe</h9>
+    <h10>Biegerichtung</h10>
+    <h11>Biegeform</h11>
+    <h12>Auswahl von Bewehrung</h12>
+    <h13>Verarbeitung des Bewehrungsstabs:</h13>
+    <h14>Bewehrungsfugenverschränkung</h14>
+    <h15>Wählen Sie Bewehrung aus</h15>
+    <h16>Wählen Sie Basisbauteil aus</h16>
+    <m1>Die Mittellinie eines Bewehrungsstabs ist keine Linie</m1>
+    <m2>Fehlende Trennung von Bewehrungsstab gemäß den festgelegten Bedingungen</m2>
+    <m3>Der Bewehrungsstab erfüllt nicht die Bedingungen für die Trennung</m3>
+    <m4>Die Erstellung eines passenden Verbindungsmittels ist fehlgeschlagen</m4>
+    <m5>Bei der Verarbeitung des Bewehrungsstabes ist ein unerwarteter Fehler aufgetreten</m5>
+    <m6>Es ist nicht möglich, einen gebogenen Bewehrungsstab mit den aktuellen Parametern zu erstellen</m6>
+  </mprSplitRebar>
+  <mprPlateWeight LocalName="Plattengewicht"
+                  Description="Berechnung des Plattengewichts mit Eintragung des Ergebnisses in den angegebenen Parameter">
+    <h1>Die Dichte aus dem Material verwenden</h1>
+    <h2>Das Ergebnis runden auf</h2>
+    <h3>Nachkommastellen</h3>
+    <h4>In den Parameter schreiben:</h4>
+    <h5>Elemente auswählen</h5>
+    <h6>Alle Elemente in der Ansicht</h6>
+    <h7>Gesamtgewicht in den Parameter der Verbindung schreiben</h7>
+    <h8>Wurde eine Verbindung von Tragwerken ausgewählt und ein Parameter angegeben, wird das Gesamtplattengewicht der in der Verbindung enthaltenen Platten in den angegebenen Parameter geschrieben</h8>
+    <msg1>Um das Gewicht der Platten zu berechnen, wird der Detaillierungsgrad der aktuellen Ansicht vorübergehend auf "Hoch" geändert, was zu einer langen Grafikregenerierung führen kann!</msg1>
+    <msg2>Verarbeitete Platten</msg2>
+    <msg3>Wählen Sie Platten oder Verbindungen für Tragwerke</msg3>
+    <err1>Es gibt keine physikalischen Eigenschaften im Material</err1>
+    <err2>Geometrie der Platte konnte nicht ermittelt werden</err2>
+    <err3>Fremder Datentyp des Parameters</err3>
+    <err4>Parameter "{0}" ist nicht gefunden</err4>
+    <err5>Es ist nicht gelungen, eine Platte aus der Verbindung zu ermitteln</err5>
+  </mprPlateWeight>
+</ModPlus>

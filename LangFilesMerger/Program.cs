@@ -53,8 +53,14 @@ try
 
             resultDoc.Add(new XComment(fileName));
 
-            var file = Path.Combine(directory, $"{fileName}.xml");
-            foreach (var xElement in XElement.Load(file).Elements().OrderBy(e => e.Name.LocalName))
+            var elements = new List<XElement>();
+            
+            foreach (var file in Directory.GetFiles(directory, $"{fileName}*.xml", SearchOption.TopDirectoryOnly))
+            {
+                elements.AddRange(XElement.Load(file).Elements());
+            }
+            
+            foreach (var xElement in elements.OrderBy(e => e.Name.LocalName))
             {
                 xElement.DescendantNodes().Where(x => x.NodeType == XmlNodeType.Comment).Remove();
                 resultDoc.Add(xElement);

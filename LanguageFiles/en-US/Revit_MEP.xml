@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ModPlus>
+  <mprMepElementsBender LocalName="MEP clash solver"
+                        Description="Solves MEP elements clashes"
+                        FullDescription="Plugin allows you to create a bypass of MEP elements without constantly selecting them from the plugin window: for this, you first need to select the intersected elements (i.e. those elements that need to be bypassed), and then just select the necessary elements in the model. In this case, the plugin will automatically add items to the list of processed">
+    <h1>Settings</h1>
+    <h2>Bend directions</h2>
+    <m1>Offset, mm</m1>
+    <m2>Angle, °</m2>
+    <m3>Categories</m3>
+    <m4>Vertical</m4>
+    <m5>Horizontal</m5>
+    <m6>Up</m6>
+    <m7>Down</m7>
+    <m8>Left</m8>
+    <m9>Right</m9>
+    <m10>Bypassed elements</m10>
+    <m11>Select and bend</m11>
+    <!-- todo remove after 2.4.5.0 -->
+    <m12>Bend</m12>
+    <m13>Apply</m13>
+    <m14>Cancel</m14>
+    <m15>Duct</m15>
+    <m16>Pipe</m16>
+    <m17>Conduit</m17>
+    <m18>Cable tray</m18>
+    <m19>Select intersecting elements</m19>
+    <m20>Create elements bending</m20>
+    <m21>No elements to bypass have been selected!</m21>
+    <m22>Elements doesn't match selected categories: {0}</m22>
+    <m23>An error occurred while creating an element bend. It is likely that the entered offset and angle do not allow bending.</m23>
+    <m24>Original error text:</m24>
+    <m25>Choose the option for further work, taking into account the applied changes:</m25>
+    <m26>Beams and columns</m26>
+    <m29>Gap, mm</m29>
+    <m30>Axis offset, mm</m30>
+    <m31>Select the intersecting elements to be bent</m31>
+    <o1>Accept changes and continue</o1>
+    <o2>Discard changes and continue</o2>
+    <o3>Abort process</o3>
+    <op1>AND</op1>
+    <op2>OR</op2>
+    <op3>Equal</op3>
+    <op4>Not Equal</op4>
+    <op5>Contains</op5>
+    <op6>Not Contains</op6>
+    <op7>Begin</op7>
+    <op8>Not Begin</op8>
+    <op9>Bypassed elements:</op9>
+    <op10>Bendable elements:</op10>
+    <op11>Configuration:</op11>
+    <op12>Current file</op12>
+    <op13>Linked file</op13>
+    <op14>Linked</op14>
+    <tp1>Add new rule</tp1>
+    <tp2>Delete Filter</tp2>
+    <tp3>Delete configuration</tp3>
+    <tp4>Show/Hide filters</tp4>
+    <tp5>Add filters for element categories that will bend</tp5>
+    <tp6>Conditions for filters: AND – for an element to be selected, it needs to match all filters, OR – it is enough to match one of the filters</tp6>
+    <tp7>Delete rule</tp7>
+    <tp8>Add filters for element categories that will be bended</tp8>
+    <tp9>Add configuration</tp9>
+    <tp10>Search elements in linked files</tp10>
+    <tp11>Add new Rule</tp11>
+    <tp12>Remove Rule</tp12>
+    <n1>Standard</n1>
+    <t1>Standard</t1>
+    <t2>By templates</t2>
+    <e1>Failed to create elbow fitting. Check the existence of the necessary families in the project and the trace settings of the elements to be processed</e1>
+  </mprMepElementsBender>
+  <mprMEPConnect LocalName="MEP connect"
+	               Description="Collection of plugins for automation of engineering systems connections"
+	               LocalName1="Connect diffusers"
+	               Description1="Batch connection of diffusers to ducts"
+	               LocalName2="Connect connectors"
+	               Description2="Connect two connectors (or MEP curves) by rotating and moving the first selected one"
+	               LocalName3="Connect straight"
+	               Description3="Batch connection of straight pipes, ducts, wires, cable trays or conduits lying in one straight line">
+    <msg1>Select ducts and diffusers to be connected to them</msg1>
+    <msg2>No ducts selected</msg2>
+    <msg3>No diffusers selected! Only diffusers that have one unconnected connector oriented along the Z axis are allowed for processing</msg3>
+    <msg4>Select the element to connect</msg4>
+    <msg5>Select the element to connect to</msg5>
+    <msg6>Select straight pipes, ducts, wires, cable trays or conduits</msg6>
+    <msg7>Make the connection?</msg7>
+    <t1>Type of branch to be created:</t1>
+    <t2>Create a flexible connection between diffuser and branch</t2>
+    <t3>Flexible duct type:</t3>
+    <t4>Flexible duct length, mm:</t4>
+    <t5>Diffusers connection</t5>
+    <dt1>Oval diffuser</dt1>
+    <dt2>Round diffuser</dt2>
+    <dt3>Rectangular diffuser</dt3>
+    <err1>Vertical offset between diffuser and duct is not enough to create a connection</err1>
+    <err2>The distance between the diffuser and the duct is less than the specified length of the flexible connection</err2>
+    <err3>Failed to connect the diffuser</err3>
+    <err4>Failed to create Elbow fitting</err4>
+    <err5>Check the routing preferences for the specified duct types</err5>
+    <err6>Failed to create Tee fitting</err6>
+    <err7>Failed to create Transition fitting</err7>
+    <err8>Failed to create Takeoff fitting</err8>
+    <err9>Selected element has no free connectors</err9>
+    <err10>The selected elements have a connector of different shapes</err10>
+    <err11>The selected elements have a connector of different sizes</err11>
+    <err12>The selected elements have a connector of different system types</err12>
+  </mprMEPConnect>
+  <mprMEPRotate LocalName="MEP rotate"
+                Description="A collection of plugins for rotating parts of MEP systems"
+                LocalName1="MEP Element Rotation"
+                Description1="Rotation of fittings or parts of MEP systems"
+                LocalName2="MEP Rotation in direction"
+                Description2="Rotation of fittings or parts of MEP systems in the direction of the MEP curve"
+                LocalName3="Edge-mounted Tray"
+                Description3="Turning the cable tray on its edge">
+    <tr1>Rotation</tr1>
+    <t1>Clockwise</t1>
+    <t2>Perform clockwise rotation</t2>
+    <t3>Standard Angles</t3>
+    <t4>Counterclockwise</t4>
+    <t5>Perform counterclockwise rotation</t5>
+    <t6>Rotate connected elements</t6>
+    <t7>Select an element to rotate</t7>
+    <t8>Select the nearest element to the connector around which you want to rotate</t8>
+    <t9>Select the reference MEP curve element</t9>
+    <t10>Select trays for rotation</t10>
+    <t11>Including longitudinally connected elements</t11>
+    <msg1>Missing fitting for rotation</msg1>
+    <msg2>It's impossible to turn in that direction</msg2>
+  </mprMEPRotate>
+  <mprMEPAlign LocalName="MEP alignment"
+               Description="A collection of plugins for aligning MEP curves"
+               LocalName1="Align"
+               Description1="Alignment of MEP curves"
+               LocalName2="Set Distance"
+               Description2="Setting the distance between MEP curves"
+               LocalName3="Multibuild"
+               Description3="Multibuild of MEP curves"
+               LocalName4="Align vertical" 
+               Description4="Vertical alignment of MEP curves">
+    <msg1>Selected MEP curves are not parallel</msg1>
+    <msg2>Rotation by angle</msg2>
+    <msg3>is not possible</msg3>
+    <msg4>Failed to create a connection</msg4>
+    <msg5>Check the trace settings</msg5>
+    <msg6>Selected MEP curves do not have the same slope</msg6>
+    <msg7>Less than two MEP curves selected</msg7>
+    <!-- todo remove after 1.1.2.0 -->
+    <t1>Select the reference MEP curve for alignment</t1>
+    <t2>Select the MEP curve to be aligned</t2>
+    <t3>Select MEP curves</t3>
+    <t4>Select a point</t4>
+    <t5>Fixed angles:</t5>
+    <t6>Distance:</t6>
+    <t7>Between axes</t7>
+    <t8>Between edges</t8>
+    <t9>Including insulation</t9>
+    <t10>Horizontally</t10>
+    <t11>Vertically</t11>
+    <t12>Select the base MEP curve</t12>
+    <t13>Group transactions</t13>
+    <t14>Select the MEP reference element</t14>
+    <t15>Select the MEP element to be aligned</t15>
+    <t16>Run in cycles</t16>
+  </mprMEPAlign>
+  <mprMEPCopy LocalName="MEP Copy"
+              Description="A collection of plugins for copying MEP elements"
+              LocalName1="Copy by Levels"
+              Description1="Copying MEP elements with alignment to selected levels"
+              LocalName2="Copy vertically"
+              Description2="Copying MEP elements vertically by distance"
+              LocalName3="Copy in direction"
+              Description3="Copying MEP elements in direction by distance">
+    <msg1>MEP elements not selected</msg1>
+    <msg2>Select MEP elements to copy</msg2>
+    <msg3>Failed to identify a base level of elements</msg3>
+    <msg4>Specify a point on the MEP curve to select a direction</msg4>
+    <t1>Quantity up:</t1>
+    <t2>Quantity down:</t2>
+    <t3>Distance:</t3>
+    <t4>Quantity:</t4>
+    <t5>Show only selected</t5>
+    <t6>Levels selected:</t6>
+    <err1>Failed to connect elements</err1>
+  </mprMEPCopy>
+</ModPlus>
