@@ -2116,7 +2116,7 @@
     <h184>Redundanter Raum</h184>
     <h185>Nicht umgeben</h185>
     <h186>Den Namen für die aktuelle Tabelle anhand des Plannamens aus der importierten Excel-Datei festlegen</h186>
-    <h187>You can specify multiple apartment identifier values separated by semicolons without spaces</h187>
+    <h187>Sie können mehrere Wohnungs-ID-Werte angeben, indem Sie sie durch Semikolons ohne Leerzeichen trennen</h187>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -2169,7 +2169,7 @@
     <msg49>Kein entsprechender Raum (kein senkrechter Schnittpunkt) im Typenstockwerk "{0}" gefunden</msg49>
     <msg50>Die folgenden Räume und die ausgewählte Wohnung befinden sich auf verschiedenen Ebenen</msg50>
     <msg51>Diese Räume trotzdem zur Wohnung hinzufügen?</msg51>
-    <msg52>For the following apartments (id), no pairing options were found among the marked ones (apartments with the same functional purpose, located on neighboring levels and having a vertical intersection)</msg52>
+    <msg52>Für die folgenden (id) unter den markierten Wohnungen wurden keine zum Kombinieren gültigen Optionen (die auf benachbarten Ebenen liegenden Wohnungen mit gleicher funktionaler Bestimmung und einem Schnittpunkt in der Hochrichtung) gefunden</msg52>
     <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
     <tt2>Die Anweisung ausblenden</tt2>
     <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
@@ -2192,8 +2192,8 @@
     <tt19>Stockwerk aus dem aktuellen Dokument hinzufügen</tt19>
     <tt20>Alle fraglichen Räume auswählen und anzeigen</tt20>
     <tt21>Mehrstöckigen Wohnung</tt21>
-    <tt22>Merge the apartments selected in the list into one apartment. Only apartments with the same functional purpose can be merged</tt22>
-    <tt23>Add the selected rooms to the selected apartment. The apartment and the room must have the same functional purpose</tt23>
+    <tt22>Die in der Liste ausgewählten Wohnungen zu einer Wohnung kombinieren. Kombinierbar sind nur noch Wohnungen mit gleicher funktionaler Bestimmung</tt22>
+    <tt23>Ausgewählte Räume zur ausgewählten Wohnung hinzufügen. Die Wohnung und der Raum sollen die gleiche funktionale Bestimmung haben</tt23>
     <instruction>Anweisung</instruction>
     <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
     <instruction2>In der Raummatrix werden die Grundeigenschaften für die Auswahl der zu verarbeitenden Räume, die Nummerierung der Räume in der Wohnung und die Werte für die Berechnung der Wohnungsflächen festgelegt. Die Werte aus der Matrix werden anhand der funktionalen Bestimmung (Spalte FB) und des Namens des Raums ausgewählt. In der Spalte "Name des Raums" können Sie ein Sternchen an das Ende des Namens setzen, um anzugeben, dass eine Übereinstimmung am Anfang des Namens des Raums geprüft wird (z. B. "Schlafzimmer*" entspricht den Namen der Räume "Schlafzimmer 1", "Schlafzimmer 2" usw.)</instruction2>
@@ -2477,9 +2477,9 @@
   <mprWorldOrientation LocalName="Himmelsrichtung"
                        Description="Orientierungsanalyse für Räume anhand der Fenster, Türen, Fassaden in umschließenden Wänden">
     <d1>Die Orientierungsanalyse für Räume wird anhand von Fenstern, Türen und Fassaden durchgeführt. Das Ergebnis der Analyse kann in den Parameter des Raumes oder in den Parameter der Fenster, Türen, Fassaden geschrieben werden</d1>
-    <d2>The orientation analysis for elements. The result of the analysis can be written in the windows, doors and curtain walls parameter</d2>
-    <tab1>By rooms</tab1>
-    <tab2>By elements</tab2>
+    <d2>Die Analyse der Ausrichtung für Elemente. Das Ergebnis der Analyse kann in einen Parameter für die Fenster, Türen, Fassaden eingeschrieben werden</d2>
+    <tab1>Nach Räumen</tab1>
+    <tab2>Nach Elementen</tab2>
     <v1>Der Parameter:</v1>
     <v2>Das Ergebnis in den Parameter schreiben:</v2>
     <v3>Türen</v3>
@@ -3579,8 +3579,8 @@
     <w9>Entlang der Kurve drehen</w9>
     <w10>Elemente für Kopieren auswählen</w10>
     <w11>Kurven für Kopieren auswählen</w11>
-    <w12>Start from projection</w12>
-    <w13>Start copying from the position where the element projection on the curve is located</w13>
+    <w12>Von der Projektion anfangen</w12>
+    <w13>Mit dem Kopieren von der Stelle anfangen, wo sich die Projektion des Elements auf die Kurve befindet</w13>
   </mprCopyAlongCurve>
   <mprTagless LocalName="Elemente ohne Beschriftung"
               Description="Erkennung der Elemente ohne Beschriftung">
@@ -3595,54 +3595,54 @@
     <x7>Färben</x7>
     <x8>Färben ausschalten</x8>
   </mprTagless>
-  <mprMaterialManager LocalName="Material Manager"
-                      Description="Changes in properties and parameters of materials">
-    <msg1>Select materials</msg1>
-    <msg2>Do you really want to delete the selected materials?</msg2>
-    <msg3>Loading materials...</msg3>
-    <msg4>Failed to replace the material in the elements</msg4>
-    <msg5>Pattern type "{0}" cannot be assigned to material "{1}"</msg5>
-    <t1>Materials</t1>
-    <t2>Search for material by name</t2>
-    <t3>Only used</t3>
-    <t4>*DIFFERENT*</t4>
-    <t5>&lt;No&gt;</t5>
+  <mprMaterialManager LocalName="Materialien-Manager" 
+                      Description="Ändern der Eigenschaften und Parameter von Materialien">
+    <msg1>Wählen Sie Materialien aus</msg1>
+    <msg2>Wollen Sie die ausgewählten Materialien wirklich löschen?</msg2>
+    <msg3>Materialien werden geladen...</msg3>
+    <msg4>Das Material konnte in den Elementen nicht ersetzt werden</msg4>
+    <msg5>Der Füllmustertyp "{0}" konnte dem Material "{1}" nicht zugewiesen werden</msg5>
+    <t1>Materialien</t1>
+    <t2>Materialsuche nach Namen</t2>
+    <t3>Nur verwendete</t3>
+    <t4>*UNTERSCHIEDLICHE*</t4>
+    <t5>&lt;Keine&gt;</t5>
     <t6>Status</t6>
-    <t7>The changes have not been applied</t7>
-    <t8>No change</t8>
-    <t9>Color</t9>
-    <t10>Basic material color in shading mode</t10>
-    <t11>Material Name</t11>
-    <t12>Material class</t12>
-    <t13>Elements</t13>
-    <t14>Elements using this material</t14>
-    <t15>Editing materials</t15>
-    <t16>Identity</t16>
+    <t7>Änderungen sind nicht implementiert</t7>
+    <t8>Keine Änderungen</t8>
+    <t9>Farbe</t9>
+    <t10>Primärfarbe des Materials im Tönungsmodus</t10>
+    <t11>Materialname</t11>
+    <t12>Materialklasse</t12>
+    <t13>Anzahl der Elemente</t13>
+    <t14>Die Anzahl der Elemente, die dieses Material verwenden</t14>
+    <t15>Editieren der Materialien</t15>
+    <t16>ID</t16>
     <t17>Name</t17>
-    <t18>Class</t18>
-    <t19>Shading</t19>
-    <t20>Use Render Appearance</t20>
-    <t21>Assign in all modes</t21>
-    <t22>Transparency</t22>
-    <t23>Surfice Pattern</t23>
-    <t24>Foreground:</t24>
-    <t25>Pattern</t25>
-    <t26>Background:</t26>
-    <t27>Cut Pattern</t27>
-    <t29>Highlight selected materials in Revit</t29>
-    <t30>When selecting materials, the parameters are displayed in the properties palette</t30>
-    <t31>Total:</t31>
-    <t32>Total materials in the current model</t32>
-    <t33>Displayed (actually displayed materials)</t33>
-    <t34>Displayed:</t34>
-    <t35>Selected materials</t35>
-    <t36>Selected:</t36>
-    <t37>Material replacement in all elements</t37>
-    <t38>Copying ID items to the clipboard</t38>
-    <t39>Show the materials of the selected elements</t39>
-    <t40>Delete selected materials</t40>
-    <t41>Duplicate selected materials</t41>
-    <t42>Assign color in all modes</t42>
-    <t43>Highlight materials</t43>
+    <t18>Klasse</t18>
+    <t19>Tönung</t19>
+    <t20>Visuelle Darstellung verwenden</t20>
+    <t21>In allen Modi zuweisen</t21>
+    <t22>Transparenz</t22>
+    <t23>Füllmuster der Oberfläche</t23>
+    <t24>Vordergrund:</t24>
+    <t25>Muster</t25>
+    <t26>Hintergrund:</t26>
+    <t27>Füllmuster des Schnitts</t27>
+    <t29>Die ausgewählten Materialien in Revit markieren</t29>
+    <t30>Beim Markieren der Materialien werden die Parameter in der Eigenschaftenpalette angezeigt</t30>
+    <t31>Gesamtzahl:</t31>
+    <t32>Gesamtzahl der Materialien im aktuellen Modell</t32>
+    <t33>Angezeigt (Ist-Anzahl der angezeigten Materialien)</t33>
+    <t34>Angezeigt:</t34>
+    <t35>Materialien ausgewählt</t35>
+    <t36>Ausgewählt:</t36>
+    <t37>Das Ersetzen des Materials in allen Elementen</t37>
+    <t38>Das Kopieren der Elementen-ID in die Zwischenablage</t38>
+    <t39>Materialien der ausgewählten Elemente anzeigen</t39>
+    <t40>Ausgewählte Materialien löschen</t40>
+    <t41>Ausgewählte Materialien duplizieren</t41>
+    <t42>Die Farbe in allen Modi zuweisen</t42>
+    <t43>Materialien markieren</t43>
   </mprMaterialManager>
 </ModPlus>
