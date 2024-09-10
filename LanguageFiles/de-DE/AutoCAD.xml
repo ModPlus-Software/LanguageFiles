@@ -251,7 +251,7 @@
     <h50>Die Layer-Einstellungen für Blöcke nach Namen in einer xml-Datei herunterladen</h50>
     <h51>Die ausgewählte Datei ist keine Datei zum Speichern von Layer-Einstellungen für Blöcke nach Namen</h51>
     <h52>Für Revisionswolken:</h52>
-    <h53>For points:</h53>
+    <h53>Für Punkte:</h53>
   </mpLayerAuto>
   <mpFormats LocalName="Formate"
              Description="Das Plugin ermöglicht das Einfügen von Formaten in die Zeichnung gemäß GOST 2.301-68/ISO 216"
@@ -654,7 +654,7 @@
     <h16>Objekt anzeigen</h16>
     <h17>Das arithmetische Mittel</h17>
     <h18>Das arithmetische Mittel aller Objekte:</h18>
-    <h19>Length by objects</h19>
+    <h19>Länge nach Objekten</h19>
   </mpSummLength>
   <mpSelSim LocalName="Auswahl nach Muster"
             Description="Mit dem Plugin können Sie Objekte auswählen, die Musterobjekten ähnlich sind, sowohl aus allen Objekten in der Zeichnung als auch aus einem bestimmten Satz"
@@ -1122,8 +1122,8 @@
     <h3>Bruchpunkt</h3>
   </mpDimBreak>
   <mpBlkReplace LocalName="Ersetzen von Blöcken"
-                Description="Mit dem Plugin können Sie Blöcke in einer Zeichnung schnell durch einen Musterblock ersetzen"
-                FullDescription="Das Plugin funktioniert in zwei Modi: &quot;Ausgewähltes ersetzen&quot; – ermöglicht es Ihnen, alle ausgewählten Blöcke durch einen Musterblock zu ersetzen; &quot;Ähnliches ersetzen&quot; – ermöglicht es Ihnen, alle Auftreten eines Blocks durch einen Musterblock zu ersetzen. Ausserdem können Sie die Beschreibung des ersetzten Blocks aus der Zeichnungsdatenbank entfernen (wie mit dem Befehl &quot;Löschen&quot; (_PURGE). Es gibt verschiedene Einstellungen">
+                Description="Plugin allows to quickly replace blocks or entities in a drawing with a specified block"
+                FullDescription="Plugin works in three modes: Replace selected - allows to replace all selected blocks by one specified block; Replace similar - allows to replace all instances of one block by one specified block; Replace entities - allows to replace selected entities of Circle, Ellipse and Point types by one specified block. It allows to delete the description of the replaced block from the drawing base. Similar to the command &quot;Clear&quot; (_PURGE). Various settings are present">
     <h1>Wählen Sie den zu ersetzenden Block aus</h1>
     <wrong>Ungültige Wahl!</wrong>
     <h2>Wählen Sie ein Ersatzblock aus</h2>
@@ -1132,10 +1132,12 @@
     <h5>Wollen Sie die ersetzten Blöcke aus der Zeichnungsdatenbank entfernen?</h5>
     <yes>Ja</yes>
     <no>Nein</no>
-    <h6>Arbeitsvariante des Plugins</h6>
+    <h6>Arbeitsvariante des Plugins:</h6>
     <k1>Ausgewählte</k1>
     <k2>Ähnliche</k2>
+    <!-- todo remove after 1.4.3.0 -->
     <k3>Einstellungen</k3>
+    <k4>Replacing entities</k4>
     <h7>Für kopierte Blöcke wiederholen:</h7>
     <h8>Layer des zu ersetzenden Blocks</h8>
     <h9>Maßstab des zu ersetzenden Blocks</h9>
@@ -1145,8 +1147,13 @@
     <h13>Fragen</h13>
     <h14>Automatisch löschen</h14>
     <h15>Nicht löschen</h15>
+    <!-- todo remove after 1.4.3.0 -->
     <h16>Schließen</h16>
+    <!-- todo remove after 1.4.3.0 -->
     <h17>Alle Einstellungen werden automatisch gespeichert</h17>
+    <h18>Attributes with the same name of replaced block</h18>
+    <h19>Select multiple objects to replace</h19>
+    <h20>Exclude unnecessary objects</h20>
   </mpBlkReplace>
   <mpPlinesEdit LocalName="Polylinien"
                 Description="Eine Sammlung verschiedener Plugins für die Arbeit mit Polylinien">
@@ -1769,8 +1776,8 @@
     <msg16>Objekte aus der Auswahl entfernen:</msg16>
     <msg17>Geben Sie einen Punkt des Rahmens an:</msg17>
     <msg18>Geben Sie einen Punkt der Führungslinie an:</msg18>
-    <msg19>Specify the text placement point:</msg19>
-    <msg20>Specify the point of a text indent:</msg20>
+    <msg19>Geben Sie einen Platzierungspunkt für den Text an:</msg19>
+    <msg20>Geben Sie einen Punkt für den Textversatz an:</msg20>
     <wrong>Ungültiges Objekt!</wrong>
     <vc1>UNTERSCHIEDLICHE</vc1>
     <vc2>NICHT BESTIMMT</vc2>
@@ -1982,10 +1989,10 @@
     <h208>Basic style for crested leader</h208>
     <h209>Creation of the crested leader</h209>
     <h210>Creating an smart entity based on an anonymous block describing the crested leader</h210>
-    <h211>Pile mark</h211>
-    <h212>Basic style for pile mark</h212>
-    <h213>Creation of the pile mark</h213>
-    <h214>Creating an smart entity based on an anonymous block describing the pile mark</h214>
+    <h211>Pfählenbeschriftung</h211>
+    <h212>Grundstil für Pfählenbeschriftung</h212>
+    <h213>Pfählenbeschriftung erstellen</h213>
+    <h214>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Pfählenbeschriftung beschreibt</h214>
     <so0>Grafiken aktualisieren</so0>
     <sot0>Die Grafiken aller gefundenen intelligenten Objekte werden regeneriert</sot0>
     <so1>Auswählen</so1>
@@ -2030,11 +2037,11 @@
     <tha1>Links</tha1>
     <tha2>Mittig</tha2>
     <tha3>Rechts</tha3>
-    <tha4>Top right</tha4>
-    <tha5>Bottom right</tha5>
-    <tha6>Bottom left</tha6>
-    <tha7>Top left</tha7>
-    <tha8>Free</tha8>
+    <tha4>Rechts oben</tha4>
+    <tha5>Rechts unten</tha5>
+    <tha6>Links unten</tha6>
+    <tha7>Links oben</tha7>
+    <tha8>Beliebig</tha8>
     <ft1>Rund</ft1>
     <ft2>Rechteckig</ft2>
     <ft3>Linie</ft3>
@@ -2265,35 +2272,35 @@
     <p134>Höhe des oberen Textes</p134>
     <p135>Höhe des unteren Textes</p135>
     <p136>Bitte Text eingeben</p136>
-    <p137>Section width</p137>
-    <p138>Section height</p138>
-    <p139>Section diameter</p139>
-    <p140>Отступ осевых линий</p140>
-    <p141>Number position</p141>
-    <p142>Number visibility</p142>
-    <p143>Axis visibility</p143>
-    <p144>Leader visibility</p144>
-    <p145>Number indent</p145>
-    <p146>Vertical offset of number</p146>
-    <p147>Thickness of main line</p147>
-    <p148>Type of center line</p148>
-    <p149>Scale of the centerline</p149>
-    <p150>Contour only</p150>
-    <p151>Cross section type</p151>
-    <p152>Designation type</p152>
-    <pil0>Type 0</pil0>
-    <pil1>Type 1</pil1>
-    <pil2>Type 2</pil2>
-    <pil3>Type 3</pil3>
-    <pil4>Type 4</pil4>
-    <pil5>Type 5</pil5>
-    <pil6>Type 6</pil6>
-    <pil7>Type 7</pil7>
-    <pil8>Type 8</pil8>
-    <pil9>Type 9</pil9>
-    <pil10>Type 10</pil10>
-    <pit0>Round</pit0>
-    <pit1>Rectangle</pit1>
+    <p137>Schnittbreite</p137>
+    <p138>Schnitthöhe</p138>
+    <p139>Schnittdurchmesser</p139>
+    <p140>Abstand der Mittellinien</p140>
+    <p141>Position der Nummer</p141>
+    <p142>Sichtbarkeit der Nummer</p142>
+    <p143>Sichtbarkeit der Achsen</p143>
+    <p144>Sichtbarkeit der Führungslinie</p144>
+    <p145>Abstand der Nummer</p145>
+    <p146>Vertikaler Abstand der Nummer</p146>
+    <p147>Dicke der Hauptlinie</p147>
+    <p148>Mittellinientyp</p148>
+    <p149>Mittellinienmaßstab</p149>
+    <p150>Nur Umgrenzung</p150>
+    <p151>Querschnittstyp</p151>
+    <p152>Bezeichnungstyp</p152>
+    <pil0>Typ 0</pil0>
+    <pil1>Typ 1</pil1>
+    <pil2>Typ 2</pil2>
+    <pil3>Typ 3</pil3>
+    <pil4>Typ 4</pil4>
+    <pil5>Typ 5</pil5>
+    <pil6>Typ 6</pil6>
+    <pil7>Typ 7</pil7>
+    <pil8>Typ 8</pil8>
+    <pil9>Typ 9</pil9>
+    <pil10>Typ 10</pil10>
+    <pit0>Kreis</pit0>
+    <pit1>Rechteck</pit1>
   </mpESKD>
   <mpStripMtext LocalName="Entfernen der Formattierung"
                 Description="Entfernen der angegebenen Formatierung aus dem mehrzeiligen Text"
@@ -2358,26 +2365,26 @@
     <ct4>Bemaßungen</ct4>
     <h1>Wählen Sie Objekte aus:</h1>
   </mpAppendText>
-  <mpSumArea LocalName="Sum of areas"
-             Description="Gets and displays the number and sum of areas of selected polylines, circles, arcs, splines and hatches">
-    <h2>Total area:</h2>
-    <h3>Rounding result</h3>
-    <h4>Quantity:</h4>
-    <h5>Objects</h5>
-    <h6>Insert the result as a single-line text</h6>
-    <h7>Insert the result into a table cell</h7>
-    <h8>Export result to txt-file</h8>
-    <h9>Hatch</h9>
-    <h10>Circle</h10>
-    <h11>Polyline</h11>
-    <h12>Arc</h12>
+  <mpSumArea LocalName="Flächensumme" 
+             Description="Abrufen und Anzeigen der Anzahl und Summe der Flächen von ausgewählten Polylinien, Kreisen, Bögen, Splines und Füllmustern">
+    <h2>Gesamtfläche:</h2>
+    <h3>Rundung des Ergebnisses</h3>
+    <h4>Anzahl:</h4>
+    <h5>Objekte</h5>
+    <h6>Das Ergebnis als einzeiligen Text einfügen</h6>
+    <h7>Das Ergebnis in eine Tabellenzelle einfügen</h7>
+    <h8>Exportieren des Ergebnisses in eine txt-Datei</h8>
+    <h9>Füllung</h9>
+    <h10>Kreis</h10>
+    <h11>Polylinie</h11>
+    <h12>Bogen</h12>
     <h13>Spline</h13>
     <h14>Ellipse</h14>
-    <h15>Area:</h15>
-    <h16>Show object</h16>
-    <h17>Arithmetic mean</h17>
-    <h18>Arithmetic mean of all objects:</h18>
+    <h15>Fläche:</h15>
+    <h16>Objekt anzeigen</h16>
+    <h17>Das arithmetische Mittel</h17>
+    <h18>Das arithmetische Mittel aller Objekte:</h18>
     <h19>Nur geschlossene Objekte</h19>
-    <h20>Area by objects</h20>
+    <h20>Fläche nach Objekten</h20>
   </mpSumArea>
 </ModPlus>

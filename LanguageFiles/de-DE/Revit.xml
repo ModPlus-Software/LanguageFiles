@@ -944,6 +944,7 @@
                     Description="Mit dem Plugin können Sie Pläne in einem Projekt umnummerieren"
                     FullDescription="Die Umnummerierung der Pläne erfolgt innerhalb einer Plangruppe. Sie können alle Pläne als eine Gruppe anzeigen oder so, wie es in den aktuellen Projektmanagereinstellungen ist. Es ist auch möglich, die Position der Pläne durch Verschieben innerhalb einer Gruppe zu ändern und dabei die ursprüngliche Nummerierung der Pläne in dieser Gruppe beizubehalten">
     <m1>Um das Plugin zu starten, wählen Sie das Projekt</m1>
+    <!-- todo remove after 2.7.10.0 -->
     <m2>Erhältlich in der vollständigen Plugin-Version</m2>
     <l1>Anzeige nach Gruppen</l1>
     <l2>Alle anzeigen</l2>
@@ -996,6 +997,15 @@
     <h47>Umnummerierung durch Verschieben ist nicht verfügbar, da Zwischenergebnisse der Umnummerierung angezeigt werden. Brechen Sie die Anzeige von Zwischenergebnissen der Umnummerierung ab</h47>
     <h48>Gruppenumnummerierung durch Verschieben für die Pläne der aktuellen Gruppe durchführen</h48>
     <h49>Drücken Sie die Strg- oder Shift-Taste, um mehrere Pläne in der Gruppe auszuwählen</h49>
+    <h50>Enter a new sheet name</h50>
+    <h51>Sheet renaming</h51>
+    <h52>This sheet will be deleted in the project! Are you sure?</h52>
+    <h53>Sheet deleting</h53>
+    <h54>Unable to delete the active sheet</h54>
+    <h55>Decrease or increase numbers in group</h55>
+    <h56>Decrease or increase existing sheet numbers in the group by the specified value</h56>
+    <h57>Decrease by</h57>
+    <h58>Increase by</h58>
     <p1>der ganzen Nummer des Plans</p1>
     <p2>des 1. Teils</p2>
     <p3>der Nummer des 1. Teils</p3>
@@ -1079,7 +1089,12 @@
     <co8>Hilfslinienraster kopieren</co8>
     <co9>Änderungen (Revisionen) kopieren und einsetzen</co9>
     <co10>Rasterbilder des Renderns kopieren (+ PDF)</co10>
+    <co11>Copy Detail Lines</co11>
+    <co12>Copy Title Block parameter values</co12>
+    <co13>Copy Sheet parameter values</co13>
+    <!-- todo remove after 1.7.0.0 -->
     <yes>Ja</yes>
+    <!-- todo remove after 1.7.0.0 -->
     <no>Nein</no>
     <copy>Eine Kopie erstellen</copy>
     <copyAll>Eine Kopie erstellen (für alle Fälle)</copyAll>
@@ -2117,7 +2132,7 @@
     <h185>Nicht umgeben</h185>
     <h186>Den Namen für die aktuelle Tabelle anhand des Plannamens aus der importierten Excel-Datei festlegen</h186>
     <h187>Sie können mehrere Wohnungs-ID-Werte angeben, indem Sie sie durch Semikolons ohne Leerzeichen trennen</h187>
-    <h188>Reset numbering for each level (non-directional numbering)</h188>
+    <h188>Nummerierung für jede Ebene zurücksetzen (keine fortlaufende Nummerierung)</h188>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -2315,12 +2330,12 @@
     <t25>Konfiguration duplizieren</t25>
     <t26>Bildstil Schattiert für die Ansicht festlegen (falls möglich)</t26>
     <t27>Name des Ansichtsfilters (optional)</t27>
-    <t28>Elements missing</t28>
-    <t29>By material</t29>
-    <t30>By object style</t30>
-    <t31>Transparency</t31>
-    <t32>Select and show the elements in the model</t32>
-    <t33>Select elements</t33>
+    <t28>Elemente nicht vorhanden</t28>
+    <t29>Nach Material</t29>
+    <t30>Nach Objektstil</t30>
+    <t31>Transparenz</t31>
+    <t32>Elemente im Modell markieren und anzeigen</t32>
+    <t33>Elemente aussondern</t33>
     <c1>Überschreiben für Elemente</c1>
     <c2>Überschreiben für Elemente zurückgeben</c2>
     <c3>Ansichtsfilter erstellen</c3>
@@ -2397,7 +2412,7 @@
     <searchAndReplace>Alle suchen und ersetzen</searchAndReplace>
     <copied>Kopiert</copied>
     <msg1>Fehler beim Versuch, die Ersetzung durchzuführen</msg1>
-    <copyError>Copy to buffer failed. Try again</copyError>
+    <copyError>Beim Kopieren in die Zwischenablage ist ein Fehler aufgetreten. Versuchen Sie es noch einmal</copyError>
     <msg2>Ersetzte Exemplare</msg2>
     <ss1>Ansichtsname</ss1>
     <ss2>Name der Bauteilliste</ss2>
@@ -2422,7 +2437,7 @@
     <ss21>Typenparameter in der aktuellen Ansicht</ss21>
     <ss22>Typenparameter im Projekt</ss22>
     <ss23>Materialname</ss23>
-    <ss24>Headers in the schedule</ss24>
+    <ss24>Titel in der Bauteilliste</ss24>
   </mprFindAndReplace>
   <mprCopyCropBox LocalName="Kopieren zugeschnittener Ansicht"
                   Description="Kopieren von Zuschneideumgrenzung der aktuellen Ansicht in angegebene Ansichten">
@@ -3024,7 +3039,8 @@
     <h139>Wollen Sie erneut versuchen eine kombinierte PDF-Datei zu erstellen?</h139>
     <h140>PDF komprimieren</h140>
     <h141>Bildqualität:</h141>
-    <h142>Open folder in Explorer</h142>
+    <h142>Ordner im Datei-Explorer öffnen</h142>
+    <h143>Current configuration of settings</h143>
     <tvm1>Modus deaktivieren</tvm1>
     <tvm2>Modus aktiviert lassen</tvm2>
     <tvm3>Fragen</tvm3>
@@ -3231,7 +3247,8 @@
     <c2>Textstile</c2>
     <c3>Familien von Typenbeschriftungen</c3>
     <c4>Titeltext für Bauteillisten</c4>
-    <c5>Content text of Schedules</c5>
+    <c5>Text des Bauteillisteninhalts</c5>
+    <c6>Tag Label types</c6>
     <t1>Textschriftart ändern</t1>
     <t2>Textgröße ändern</t2>
     <t3>Breitenfaktor ändern</t3>
@@ -3241,13 +3258,14 @@
     <t7>Kursiv</t7>
     <t8>Eigenschaft Unterstrichen ändern</t8>
     <t9>Unterstrichen</t9>
-    <t10>Ignore by font</t10>
-    <t11>Rename text style</t11>
-    <t12>Rename dimension style</t12>
-    <t13>Name format</t13>
-    <t14>{0} - font, {1} - size, {2} - width factor, {3} - bold, {4} - italic, {5} - underline</t14>
+    <t10>Schriftart ignorieren</t10>
+    <t11>Textstil umbenennen</t11>
+    <t12>Bemaßungsstil umbenennen</t12>
+    <t13>Namensformat</t13>
+    <t14>{0} - Schriftart, {1} - Maß, {2} - Breitenverhältnis, {3} - Fett, {4} - Kursiv, {5} - Unterstrichen</t14>
     <t14def>{1} mm {0}</t14def>
-    <t15>Do not process Schedules that have been assigned a view template</t15>
+    <t15>Keine Bauteillisten mit vorgegebener Ansichtsvorlage bearbeiten</t15>
+    <t16>Change "Color" property</t16>
     <msg1>Bearbeitung:</msg1>
     <msg2>Die Texteigenschaften im Element der Kategorie "{0}" sind erfolgreich ersetzt</msg2>
     <msg3>Das Ersetzen der Texteigenschaften im Element der Kategorie "{0}" ist fehlgeschlagen. Fehler:</msg3>
@@ -3256,8 +3274,8 @@
     <msg6>Die Texteigenschaften in den Elementen der Familie sind erfolgreich ersetzt</msg6>
     <msg7>Das Ersetzen der Texteigenschaften in den Elementen der Unterfamilie ist fehlgeschlagen. Fehler:</msg7>
     <msg8>Das Ersetzen der Texteigenschaften in den Elementen der Familie ist fehlgeschlagen. Fehler:</msg8>
-    <msg9>Failed to change style name in category "{0}"</msg9>
-    <msg10>Schedule is skipped because a view template is assigned</msg10>
+    <msg9>Der Stilname in der Kategorie "{0}" konnte nicht geändert werden</msg9>
+    <msg10>Die Bauteilliste ist übersprungen, weil eine Ansichtsvorlage vorgegeben ist</msg10>
   </mprFontReplacer>
   <mprTypeManager LocalName="Typenmanager"
 	                Description="Ändern und Vergleichen von Typenparametern">
@@ -3664,20 +3682,21 @@
     <t42>Die Farbe in allen Modi zuweisen</t42>
     <t43>Materialien markieren</t43>
   </mprMaterialManager>
-  <mprCommands LocalName="Commands"
-               Description="Search and run commands">
-    <t1>Commands. Panel mode</t1>
-    <t2>Search and run commands through a floating panel with tracking of recent commands and a list of favorite commands</t2>
-    <t3>Command line</t3>
-    <t4>Search and run commands via the command line built into the Revit interface</t4>
-    <t5>Panel is not registered!</t5>
-    <t6>Add command to Favorites</t6>
-    <t7>Remove command from Favorites</t7>
-    <t8>Recent</t8>
-    <t9>Favorites</t9>
-    <t10>Search for commands</t10>
-    <t11>Enter the command</t11>
-    <t12>Add at the top</t12>
-    <t13>Add at the bottom</t13>
+  <mprCommands LocalName="Befehle"
+               Description="Befehle suchen und ausführen">
+    <t1>Befehle. Bedienfeldmodus</t1>
+    <t2>Befehlssuche und Ausführen von Befehlen über ein schwebendes Bedienfeld mit dem Tracken von den jüngsten Befehlen und einer Liste von bevorzugten Befehlen</t2>
+    <t3>Befehlszeile</t3>
+    <t4>Befehlssuche und Ausführen von Befehlen über eine im Revit-Benutzeroberfläche integrierte Befehlszeile</t4>
+    <t5>Das Bedienfeld ist nicht registriert!</t5>
+    <t6>Befehl zu Favoriten hinzufügen</t6>
+    <t7>Befehl aus Favoriten entfernen</t7>
+    <!-- Recent -->
+    <t8>Die jüngsten</t8>
+    <t9>Favoriten</t9>
+    <t10>Befehlssuche</t10>
+    <t11>Geben Sie einen Befehl ein</t11>
+    <t12>Oben hinzufügen</t12>
+    <t13>Unten hinzufügen</t13>
   </mprCommands>
 </ModPlus>

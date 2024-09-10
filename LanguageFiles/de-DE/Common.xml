@@ -20,6 +20,7 @@
     <clear>Löschen</clear>
     <close>Schließen</close>
     <cm>cm</cm>
+    <color>Farbe</color>
     <collapse>Zusammenklappen</collapse>
     <collapseAll>Alle zusammenklappen</collapseAll>
     <collapseWindow>Den Inhalt des Fensters minimieren</collapseWindow>
@@ -146,7 +147,7 @@
     <suffix>Suffix</suffix>
     <exportWord>In Word exportieren</exportWord>
     <result>Ergebnis</result>
-    <h1>In ModPlus ist ein Fehler aufgetreten</h1>
+    <h1>Unexpected error</h1>
     <h2>Meldung</h2>
     <h3>Einzelheiten</h3>
     <h4>Quelle</h4>
@@ -431,6 +432,15 @@
     <c10>Zoomen</c10>
     <c11>Die ausgewählte Geometrie annähern</c11>
   </Geometry>
+  <Style>
+    <t1>Standard colors</t1>
+    <t2>Colour palette</t2>
+    <t3>Primary colors</t3>
+    <t4>Opacity:</t4>
+    <t5>Red:</t5>
+    <t6>Green:</t6>
+    <t7>Blue:</t7>
+  </Style>
   <CUI>
     <group1>Beschriftungen</group1>
     <group2>Gestaltung</group2>
@@ -1190,20 +1200,20 @@
     <h126>Wichtig: Fügen Sie der Schnellzugriffsleiste keine Befehle aus dem Menü "Favoriten" hinzu</h126>
     <h127>Aktualisieren</h127>
     <h128>Ermöglicht die Aktualisierung der Verbindung</h128>
-    <h129>Properties not available for modification are set by your organization's settings</h129>
-    <h130>Enables you to select the reinforcement included in the selected host elements</h130>
-    <h131>Select Groups</h131>
-    <h132>Select Assemblies</h132>
-    <h133>Enables you to select the parent Groups that the selected elements belong to</h133>
-    <h134>Enables you to select the parent Assemblies that the selected elements belong to</h134>
-    <h135>Save the set with the selected categories</h135>
-    <h136>Load a set of categories ( check the categories from the selected set)</h136>
-    <h137>Save for plugin</h137>
-    <h138>The saved set of categories will only be available for loading in the current plugin</h138>
-    <h139>Save globally</h139>
-    <h140>The saved set of categories will be available for loading in any plugins that use the category selection dialog</h140>
-    <h141>Select parent family</h141>
-    <h142>Enables you to select the parent families that contain the selected nested families</h142>
+    <h129>Die für Änderung unzugänglichen Eigenschaften sind durch die Einstellungen Ihres Unternehmens festgelegt</h129>
+    <h130>Ermöglicht die Auswahl der in den ausgewählten Basiselementen enthaltenen Bewehrung</h130>
+    <h131>Gruppen auswählen</h131>
+    <h132>Baugruppen auswählen</h132>
+    <h133>Ermöglicht die Auswahl von übergeordneten Gruppen, in denen ausgewählte Elemente enthalten sind</h133>
+    <h134>Ermöglicht die Auswahl von übergeordneten Baugruppen, in denen ausgewählte Elemente enthalten sind</h134>
+    <h135>Datensatz mit ausgewählten Kategorien speichern</h135>
+    <h136>Kategoriensatz laden (Kategorien des ausgewählten Datensatzes markieren)</h136>
+    <h137>Für Plugin speichern</h137>
+    <h138>Der gespeicherte Kategoriensatz wird zum Laden nur im aktuellen Plugin zugänglich sein</h138>
+    <h139>Global speichern</h139>
+    <h140>Der gespeicherte Kategoriensatz wird zum Laden in allen Plugins zugänglich sein, wo der Dialog zur Kategorienauswahl benutzt wird</h140>
+    <h141>Hauptfamilie auswählen</h141>
+    <h142>Ermöglicht die Auswahl von Hauptfamilien, in denen die ausgewählten Unterfamilien enthalten sind</h142>
     <parameters>Parameter</parameters>
     <name>Benennung</name>
     <any>Beliebige</any>
@@ -1428,10 +1438,10 @@
     <h7>Benutzerkonto</h7>
     <h9>Einstellungen</h9>
     <h10>Achtung! Der Sprachwechsel im Hauptmenü und in den Kontextmenüs erfolgt nach einem Neustart von Renga</h10>
-    <h11>Notification when a level is deleted</h11>
-    <h12>The service displays a message if levels have been deleted in the project. The service processes the selection event. If levels were deleted without their selection, the message will not be displayed</h12>
-    <h13>Warning! A level has been deleted</h13>
-    <h14>Warning! Levels have been deleted</h14>
+    <h11>Benachrichtigung beim Löschen einer Ebene</h11>
+    <h12>Der Dienst zeigt eine Meldung an, wenn Ebenen im Projekt gelöscht wurden. Der Dienst bearbeitet das Auswahlereignis. Wenn Ebenen gelöscht wurden, ohne sie auszuwählen, wird keine Meldung angezeigt</h12>
+    <h12>Achtung! Eine Ebene wurde gelöscht</h12>
+    <h14>Achtung! Die Ebenen wurden gelöscht</h14>
     <undef>Nicht bestimmt</undef>
     <tt2>Um mit dem modplus.org-Server zu kommunizieren, geben Sie bitte Ihre EMail-Adresse an. Die EMail-Adresse ist erforderlich, um Sie auf dem Server zu identifizieren. Verwenden Sie vorzugsweise die EMail-Adresse, die Sie bei der Registrierung auf modplus.org angegeben haben</tt2>
     <tt3>Sie müssen Ihr Login in der Registerkarte "Registrierung" eingeben! (ModPlus Konfigurator)</tt3>
@@ -1440,12 +1450,12 @@
     <AirDuct>Luftkanal/-rohr</AirDuct>
     <AirEquipment>Luftausrüstung</AirEquipment>
     <AirFitting>Luftkanal/-rohr-Formstück</AirFitting>
-    <AngularDimension>Angular dimension</AngularDimension>
+    <AngularDimension>Winkelmaß</AngularDimension>
     <AssemblyInstance>Anbau</AssemblyInstance>
     <Axis>Achse</Axis>
     <Beam>Träger</Beam>
     <Column>Stütze</Column>
-    <DiametralDimension>Diametral dimension</DiametralDimension>
+    <DiametralDimension>Durchmessermaß</DiametralDimension>
     <Dimension>Bemaßung</Dimension>
     <DistributionBoard>Elektrische Schalttafel</DistributionBoard>
     <Door>Tür</Door>
@@ -1458,13 +1468,13 @@
     <Equipment>Ausrüstung</Equipment>
     <Floor>Geschossdecke</Floor>
     <Hatch>Füllmuster</Hatch>
-    <Hole>Hole</Hole>
+    <Hole>Bohrung</Hole>
     <IfcObject>IFC-Objekt</IfcObject>
     <IsolatedFoundation>Einzelfundament</IsolatedFoundation>
     <Level>Ebene</Level>
     <LightFixture>Leuchten</LightFixture>
     <Line3D>Modelllinie</Line3D>
-    <LinearDimension>Linear dimension</LinearDimension>
+    <LinearDimension>Lineares Maß</LinearDimension>
     <LineElectricalCircuit>Stromkreisleitung</LineElectricalCircuit>
     <MechanicalEquipment>HLS-Bauteilsatz</MechanicalEquipment>
     <Opening>Öffnung</Opening>
@@ -1474,7 +1484,7 @@
     <PipelineAccessory>Rohrleitungszubehör</PipelineAccessory>
     <Plate>Platte</Plate>
     <PlumbingFixture>Sanitärinstallation</PlumbingFixture>
-    <RadialDimension>Radial dimension</RadialDimension>
+    <RadialDimension>Radiales Maß</RadialDimension>
     <Railing>Geländer</Railing>
     <Ramp>Rampe</Ramp>
     <Rebar>Bewehrung</Rebar>

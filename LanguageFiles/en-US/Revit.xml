@@ -944,6 +944,7 @@
                     Description="Plugin allows to renumber sheets in the project"
                     FullDescription="Renumbering of sheets is carried out within one group of sheets. You can display all sheets by analogy with the current settings of the project manager or display all sheets in one group. There is an opportunity to change the position of sheets by moving them in the group, while maintaining the initial numbering of sheets in this group">
     <m1>To launch plugin go to the project</m1>
+    <!-- todo remove after 2.7.10.0 -->
     <m2>Available in the full version of the plugin</m2>
     <l1>Display by groups</l1>
     <l2>Display all</l2>
@@ -996,6 +997,15 @@
     <h47>Movement renumbering is not available because the result of intermediate renumbering is displayed. Cancel the display of intermediate renumbering</h47>
     <h48>Perform batch renumbering by moving the sheets of the current group</h48>
     <h49>To select multiple sheets in a group, use the Ctrl or Shift key</h49>
+    <h50>Enter a new sheet name</h50>
+    <h51>Sheet renaming</h51>
+    <h52>This sheet will be deleted in the project! Are you sure?</h52>
+    <h53>Sheet deleting</h53>
+    <h54>Unable to delete the active sheet</h54>
+    <h55>Decrease or increase numbers in group</h55>
+    <h56>Decrease or increase existing sheet numbers in the group by the specified value</h56>
+    <h57>Decrease by</h57>
+    <h58>Increase by</h58>
     <p1>whole sheet number</p1>
     <p2>1 part</p2>
     <p3>number of 1 part</p3>
@@ -1079,7 +1089,12 @@
     <co8>Copy Guide Grids</co8>
     <co9>Copy and Set Sheet Revisions</co9>
     <co10>Copy raster images (+ PDF)</co10>
+    <co11>Copy Detail Lines</co11>
+    <co12>Copy Title Block parameter values</co12>
+    <co13>Copy Sheet parameter values</co13>
+    <!-- todo remove after 1.7.0.0 -->
     <yes>Yes</yes>
+    <!-- todo remove after 1.7.0.0 -->
     <no>No</no>
     <copy>Create copy</copy>
     <copyAll>Create copy (for all cases)</copyAll>
@@ -3025,6 +3040,7 @@
     <h140>Compress PDF</h140>
     <h141>Image Quality:</h141>
     <h142>Open folder in Explorer</h142>
+    <h143>Current configuration of settings</h143>
     <tvm1>Disable mode</tvm1>
     <tvm2>Leave mode</tvm2>
     <tvm3>Ask</tvm3>
@@ -3232,6 +3248,7 @@
     <c3>Annotation symbol families</c3>
     <c4>Title text of Schedules</c4>
     <c5>Content text of Schedules</c5>
+    <c6>Tag Label types</c6>
     <t1>Change Text Font</t1>
     <t2>Change Text Size</t2>
     <t3>Change Width Factor</t3>
@@ -3248,6 +3265,7 @@
     <t14>{0} - font, {1} - size, {2} - width factor, {3} - bold, {4} - italic, {5} - underline</t14>
     <t14def>{1} mm {0}</t14def>
     <t15>Do not process Schedules that have been assigned a view template</t15>
+    <t16>Change "Color" property</t16>
     <msg1>Processing:</msg1>
     <msg2>Text properties in the "{0}" category element have been successfully changed</msg2>
     <msg3>Failed to replace text properties in the "{0}" category element. Error:</msg3>

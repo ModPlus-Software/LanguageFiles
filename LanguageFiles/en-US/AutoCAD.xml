@@ -1122,31 +1122,38 @@
     <h3>Break point</h3>
   </mpDimBreak>
   <mpBlkReplace LocalName="Block replace"
-                Description="Plugin allows quick replacement of blocks in the drawing with a sample block"
-                FullDescription="Plugin works in two modes: Replace selected – allows you to replace all selected blocks with one sample block; Replace similar – allows you to replace all occurrences of one block with one sample block. Allows you to delete the description of the replaced block from the drawing database. By analogy with the command &quot;PURGE&quot;. There are various settings">
+                Description="Plugin allows to quickly replace blocks or entities in a drawing with a specified block"
+                FullDescription="Plugin works in three modes: Replace selected - allows to replace all selected blocks by one specified block; Replace similar - allows to replace all instances of one block by one specified block; Replace entities - allows to replace selected entities of Circle, Ellipse and Point types by one specified block. It allows to delete the description of the replaced block from the drawing base. Similar to the command &quot;PURGE&quot;. Various settings are present">
     <h1>Select replaced block</h1>
     <wrong>Wrong choice!</wrong>
     <h2>Select replacing block</h2>
     <h3>Select multiple blocks to replace them</h3>
     <h4>Eliminate unnecessary blocks</h4>
-    <h5>Delete replaced blocks from the drawing database?</h5>
+    <h5>Remove replaced blocks from the drawing database?</h5>
     <yes>Yes</yes>
     <no>No</no>
-    <h6>Plugin work variant</h6>
-    <k1>seLected</k1>
+    <h6>Plugin work variant:</h6>
+    <k1>Selected</k1>
     <k2>Similar</k2>
+    <!-- todo remove after 1.4.3.0 -->
     <k3>seTtings</k3>
+    <k4>Replacing entities</k4>
     <h7>For copied blocks, repeat:</h7>
-    <h8>layer of replaced block</h8>
-    <h9>scale of replaced block</h9>
-    <h10>transformation (mirror and rotation) of replaced block</h10>
-    <h11>only rotation of replaced block</h11>
+    <h8>Layer of replaced block</h8>
+    <h9>Scale of replaced block</h9>
+    <h10>Transformation (mirror and rotation) of replaced block</h10>
+    <h11>Only rotation of replaced block</h11>
     <h12>Removing replaced blocks from DB:</h12>
     <h13>Ask</h13>
     <h14>Automatically remove</h14>
     <h15>Do not remove</h15>
+    <!-- todo remove after 1.4.3.0 -->
     <h16>Close</h16>
+    <!-- todo remove after 1.4.3.0 -->
     <h17>All settings are automatically saved</h17>
+    <h18>Attributes with the same name of replaced block</h18>
+    <h19>Select multiple objects to replace</h19>
+    <h20>Exclude unnecessary objects</h20>
   </mpBlkReplace>
   <mpPlinesEdit LocalName="Polylines"
                 Description="Collection of various plugins for working with polylines">
