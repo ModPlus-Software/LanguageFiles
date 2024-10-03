@@ -3123,7 +3123,7 @@
     <err25>Format has no name and will not be processed when added to the printer</err25>
   </mprSheetExport>
   <mprHeightSplitter LocalName="Split by height"
-	                   Description="Splitting walls and columns by levels, reference planes or by specified parameters">
+	                   Description="Splitting walls and columns by levels, reference planes, floors, beams or by specified parameters">
     <h1>Split method</h1>
     <h2>Top offset (down), mm</h2>
     <h3>Base offset (up), mm</h3>
@@ -3137,6 +3137,10 @@
     <h11>Pick Columns</h11>
     <h12>Pick Walls and Columns</h12>
     <h13>Pick reference planes</h13>
+    <h14>Floors selected:</h14>
+    <h15>Beams selected:</h15>
+    <h16>Pick Floors</h16>
+    <h17>Pick Beams</h17>
     <err1>Failed to split Wall by Level</err1>
     <err2>Failed to split Wall by reference plane</err2>
     <err3>Failed to split Wall</err3>
@@ -3146,6 +3150,10 @@
     <err7>Cannot set offsets</err7>
     <err8>Unable to set bottom offset because column has a bottom attachment</err8>
     <err9>Unable to set top offset because column has top attachment</err9>
+    <err10>Failed to split Wall by Floor</err10>
+    <err11>Failed to split Wall by Beam</err11>
+    <err12>Failed to split Column by Floor</err12>
+    <err13>Failed to split Column by Beam</err13>
     <f1>In the free version of the plugin you can select no more than 3 levels</f1>
     <f2>In the free version of the plugin, only splitting by level is available</f2>
     <sm1>By levels</sm1>
@@ -3153,6 +3161,7 @@
     <sm3>Maximum height</sm3>
     <sm4>Exact height</sm4>
     <sm5>Parts count</sm5>
+    <sm6>By Floors or Beams</sm6>
     <tc1>Nearest level</tc1>
     <tc2>Nearest level from top</tc2>
     <tc3>Unconnected height</tc3>
