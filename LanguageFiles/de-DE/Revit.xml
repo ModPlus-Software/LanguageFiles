@@ -3120,6 +3120,7 @@
   </mprSheetExport>
   <mprHeightSplitter LocalName="In die Höhe teilen"
                      Description="Teilen von Wänden und Stützen nach Ebenen, Referenzflächen oder vorgegebenen Parametern">
+    <!--TODO: Добавить в описание плагина плиты и балки -->
     <h1>Teilungsverfahren</h1>
     <h2>Versetzen von oben (abwärts), mm</h2>
     <h3>Versetzen von unten (aufwärts), mm</h3>
@@ -3133,6 +3134,10 @@
     <h11>Wählen Sie Stützen aus</h11>
     <h12>Wählen Sie Wände und Stützen aus</h12>
     <h13>Wählen Sie Referenzfläche aus</h13>
+    <h14>Floors selected:</h14>
+    <h15>Beams selected:</h15>
+    <h16>Pick Floors</h16>
+    <h17>Pick Beams</h17>
     <err1>Teilen der Wand nach der Ebene fehlgeschlagen</err1>
     <err2>Teilen der Wand nach der Referenzfläche fehlgeschlagen</err2>
     <err3>Teilen der Wand fehlgeschlagen</err3>
@@ -3142,6 +3147,10 @@
     <err7>Versatzvorgabe unmöglich</err7>
     <err8>Versatzvorgabe von unten unmöglich, weil die Stütze den unteren Anschluss hat</err8>
     <err9>Versatzvorgabe von oben unmöglich, weil die Stütze den oberen Anschluss hat</err9>
+    <err10>Failed to split Wall by Floor</err10>
+    <err11>Failed to split Wall by Beam</err11>
+    <err12>Failed to split Column by Floor</err12>
+    <err13>Failed to split Column by Beam</err13>
     <f1>In der limitierten Version des Plugins können maximal 3 Ebenen ausgewählt werden</f1>
     <f2>In der limitierten Version des Plugins ist nur das Teilen nach den Ebenen verfügbar</f2>
     <sm1>Nach den Ebenen</sm1>
@@ -3149,6 +3158,7 @@
     <sm3>Max. Höhe</sm3>
     <sm4>Exakte Höhe</sm4>
     <sm5>Anzahl der Ebenen</sm5>
+    <sm6>By Floors or Beams</sm6>
     <tc1>Nächste Ebene</tc1>
     <tc2>Nächste Ebene von oben</tc2>
     <tc3>Nicht verknüpfte Höhe</tc3>
