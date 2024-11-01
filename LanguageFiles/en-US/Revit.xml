@@ -2671,6 +2671,9 @@
     <t96>Select views</t96>
     <t97>Data source</t97>
     <t98>Strategy filter</t98>
+    <t99>Expand list of rules</t99>
+    <t100>Collapse list of rules</t100>
+    <t101>Select the source element in the model</t101>
     <msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
     <msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
     <msg3>List of strategies is not empty</msg3>
@@ -2769,25 +2772,25 @@
     <sm3>Process elements in Document</sm3>
     <sm4>Process elements on selected views</sm4>
     <ssd1>Processing elements without relationships</ssd1>
-    <sld1>The strategy processes element instances without considering their relationships to other elements. At least one filter (by category or by parameter) must be filled</sld1>
+    <sld1>Strategy processes elements without considering their relationships to other elements. At least one filter (by category or by parameter) must be filled</sld1>
     <ssd2>Processing family instances without relationships</ssd2>
-    <sld2>The strategy processes instances of families without considering their relationships to other elements. It is acceptable not to use a filter by category or filter by parameter</sld2>
+    <sld2>Strategy processes instances of families without considering their relationships to other elements. It is acceptable not to use a filter by category or filter by parameter</sld2>
     <ssd3>Processing types</ssd3>
-    <sld3>The strategy processes types. If the "Process picked elements" option is selected, then the types of the selected elements will be processed. If the "Process elements on current View" option is selected, then the types of elements on the current View will be processed. If the "Process elements in the document" option is selected then all types in the document are processed</sld3>
+    <sld3>Strategy processes types. If the "Process picked elements" option is selected, then the types of the selected elements will be processed. If the "Process elements on current View" option is selected, then the types of elements on the current View will be processed. If the "Process elements in the document" option is selected then all types in the document are processed</sld3>
     <ssd4>Processing elements in the Host</ssd4>
-    <sld4>The strategy processes elements that have information about the Hosts. Such elements include: Rebar, Area Reinforcement, Path Reinforcement, Rebar Container, Openings, Stacked Walls, and Families (including elements of Curtain Walls)</sld4>
+    <sld4>Strategy processes elements that have information about the Hosts. Such elements include: Rebar, Area Reinforcement, Path Reinforcement, Rebar Container, Openings, Stacked Walls, and Families (including elements of Curtain Walls)</sld4>
     <ssd5>Processing elements in the Group</ssd5>
-    <sld5>The strategy processes elements placed in groups. When creating formulas, keep in mind that the target parameter must be able to change across group instances</sld5>
+    <sld5>Strategy processes elements placed in groups. When creating formulas, keep in mind that the target parameter must be able to change across group instances</sld5>
     <ssd6>Processing elements in the Room</ssd6>
-    <sld6>The strategy processes elements located in Rooms. You can use the strategy only in views that have Room geometry. For example, on 3D Views the strategy will not give results</sld6>
+    <sld6>Strategy processes elements located in Rooms. You can use the strategy only in views that have Room geometry. For example, on 3D Views the strategy will not give results</sld6>
     <ssd7>Processing elements in the Space</ssd7>
-    <sld7>The strategy processes elements located in Spaces. You can use the strategy only on views that have Space geometry. For example, on 3D Views the strategy will not give results</sld7>
+    <sld7>Strategy processes elements located in Spaces. You can use the strategy only on views that have Space geometry. For example, on 3D Views the strategy will not give results</sld7>
     <ssd8>Processing elements in the Mass</ssd8>
-    <sld8>The strategy processes elements that have Solid geometry and are located in Masses. Masses must have a Solid form. Masses can be in linked files</sld8>
+    <sld8>Strategy processes elements that have Solid geometry and are located in Masses. Masses must have a Solid form. Masses can be in linked files</sld8>
     <ssd9>Processing elements in the Solid</ssd9>
-    <sld9>The strategy processes elements that have Solid geometry and are located inside other elements that have Solid geometry. The parent elements can be in linked files</sld9>
+    <sld9>Strategy processes elements that have Solid geometry and are located inside other elements that have Solid geometry. The parent elements can be in linked files</sld9>
     <ssd10>Processing elements that touch their solids</ssd10>
-    <sld10>This strategy processes elements that Solid geometry and have flat solid faces that touch each other. Touched elements can be in linked files</sld10>
+    <sld10>Strategy processes elements that Solid geometry and have flat solid faces that touch each other. Touched elements can be in linked files</sld10>
     <ssd11>Processing room boundaries</ssd11>
     <sld11>Strategy processes elements that are room boundaries</sld11>
     <ssd12>Processing sub-elements of Structure Connections</ssd12>
@@ -2804,6 +2807,8 @@
     <sld17>Strategy processes elements that are part of an MEP system (electrical system, piping system or duct system). Conditional source element is the element's parent system</sld17>
     <ssd18>Processing of Curtain Wall components</ssd18>
     <sld18>Strategy processes the components of the Curtain Wall (imposts and panels). Conditional source element is the wall</sld18>
+    <ssd19>Processing of elements in relation to a single source element</ssd19>
+    <sld19>Strategy processes elements with the possibility to use any specified element of the model as a source element. If several elements are found in the model by the source element filter, the first element will be used</sld19>
     <se1>Host</se1>
     <sp1>Insert Host parameter</sp1>
     <se2>Group</se2>
@@ -2830,6 +2835,8 @@
     <sp12>Insert parent MEP system parameter</sp12>
     <se13>Curtain Wall</se13>
     <sp13>Insert Curtain Wall parameter</sp13>
+    <se14>Source element</se14>
+    <sp14>Insert source element parameter</sp14>
     <te1>Target element</te1>
     <tp1>Insert parameter of target element</tp1>
     <te2>Family instance</te2>
