@@ -81,6 +81,8 @@
     <h77>In dem Namen des Plans suchen und ersetzen</h77>
     <h78>In dem Namen der Legende suchen und ersetzen</h78>
     <h79>In den Filtern suchen und ersetzen</h79>
+    <h80>In the headers find and replace</h80>
+    <h81>Reset temporary view</h81>
     <start>Anfang</start>
     <notOrganized>!Nicht organisiert</notOrganized>
     <end>Ende</end>
@@ -140,6 +142,8 @@
     <h73>In dem Namen der Bauteilliste suchen und ersetzen</h73>
     <h74>Ansicht "{0}" kann nicht mit Option "{1}" kopiert werden</h74>
     <h75>Kopieren der Bauteilliste fehlgeschlagen</h75>
+    <h80>In the headers find and replace</h80>
+    <h81>Reset temporary view</h81>
     <notOrganized>!Nicht organisiert</notOrganized>
     <start>Anfang</start>
     <end>Ende</end>
@@ -2140,6 +2144,9 @@
     <h186>Den Namen für die aktuelle Tabelle anhand des Plannamens aus der importierten Excel-Datei festlegen</h186>
     <h187>Sie können mehrere Wohnungs-ID-Werte angeben, indem Sie sie durch Semikolons ohne Leerzeichen trennen</h187>
     <h188>Nummerierung für jede Ebene zurücksetzen (keine fortlaufende Nummerierung)</h188>
+    <h189>When calculating the area with a factor to use:</h189>
+    <h190>Rounded area</h190>
+    <h191>Original area</h191>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -2217,6 +2224,9 @@
     <tt21>Mehrstöckigen Wohnung</tt21>
     <tt22>Die in der Liste ausgewählten Wohnungen zu einer Wohnung kombinieren. Kombinierbar sind nur noch Wohnungen mit gleicher funktionaler Bestimmung</tt22>
     <tt23>Ausgewählte Räume zur ausgewählten Wohnung hinzufügen. Die Wohnung und der Raum sollen die gleiche funktionale Bestimmung haben</tt23>
+    <tt24>For example, the original room area is 3.48. Rounding of areas is 0.1. Coefficient 0.5.</tt24>
+    <tt25>If you select the "Rounded area" option, first the rounded area will be calculated - 3.5, the result will be multiplied by a factor - 3.5 * 0.5 = 1.75, and then rounded - 1.8.</tt25>
+    <tt26>If you select the "Original area" option, the original area will be multiplied by a factor - 3.48 * 0.5 = 1.74 and then rounded up - 1.7.</tt26>
     <instruction>Anweisung</instruction>
     <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
     <instruction2>In der Raummatrix werden die Grundeigenschaften für die Auswahl der zu verarbeitenden Räume, die Nummerierung der Räume in der Wohnung und die Werte für die Berechnung der Wohnungsflächen festgelegt. Die Werte aus der Matrix werden anhand der funktionalen Bestimmung (Spalte FB) und des Namens des Raums ausgewählt. In der Spalte "Name des Raums" können Sie ein Sternchen an das Ende des Namens setzen, um anzugeben, dass eine Übereinstimmung am Anfang des Namens des Raums geprüft wird (z. B. "Schlafzimmer*" entspricht den Namen der Räume "Schlafzimmer 1", "Schlafzimmer 2" usw.)</instruction2>
@@ -2664,13 +2674,17 @@
     <t89>Alle isolieren</t89>
     <t90>Export in txt</t90>
     <t91>Inhaltsverzeichnis:</t91>
-    <t92>Einführung</t92>
-    <t93>Select the result of expression processing to see a list of processed element IDs</t93>
-    <t94>Restricted mode</t94>
-    <t95>If no filter is specified in the rule, a common strategy filter will be used</t95>
-    <t96>Select views</t96>
-    <t97>Data source</t97>
-    <t98>Strategy filter</t98>
+    <t93>Wählen Sie das Ergebnis der Ausdrucksverarbeitung aus, um eine Liste mit den IDs der verarbeiteten Elemente anzeigen zu lassen</t93>
+    <t94>Eingeschränkter Modus</t94>
+    <t95>Wenn kein Filter für die Regel angegeben ist, wird der allgemeine Strategiefilter verwendet</t95>
+    <t96>Wählen Sie Ansichten aus</t96>
+    <t97>Datenquelle</t97>
+    <t98>Strategiefilter</t98>
+    <t99>Regelliste maximieren</t99>
+    <t100>Regelliste minimieren</t100>
+    <t101>Quellelement im Modell auswählen</t101>
+    <t102>Anzahl der Ausdrücke:</t102>
+    <t103>The following settings are saved in the current configuration</t103>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -2695,9 +2709,9 @@
     <msg22>Der Wert für dieses Feld wird in allen Regeln aller Konfigurationen bei der Übereinstimmung der Feldschlüssel aktualisiert.\nWollen Sie fortsetzen?</msg22>
     <msg23>Das Feld "{0}" wurde aktualisiert: die Konfiguration "{1}" – Strategie "{2}" – Regel "{3}"</msg23>
     <msg24>Das Feld "{0}" wurde in keiner Regel gefunden!</msg24>
-    <msg25>You cannot select elements in the current view. Switch to another view</msg25>
-    <msg26>Replace the current strategy filters with the strategy filters from the imported file?</msg26>
-    <msg27>Replace the current strategy data source with the data source from the imported file?</msg27>
+    <msg25>Es ist nicht möglich, Elemente in der aktuellen Ansicht auszuwählen. Wechseln Sie zu einer anderen Ansicht</msg25>
+    <msg26>Wollen Sie die aktuellen Strategiefilter durch die Strategiefilter aus der importierten Datei ersetzen?</msg26>
+    <msg27>Wollen Sie die aktuelle Strategiedatenquelle durch die Datenquelle aus der importierten Datei ersetzen?</msg27>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -2730,6 +2744,7 @@
     <err32>Ausdrucksfehler "{0}"</err32>
     <err33>Parameter "{0}" ist nicht gefunden</err33>
     <err34>Revit konnte keinen Wert in Parameter setzen</err34>
+    <!-- todo remove after 2.31.10.0 -->
     <err35>fremder Referenzwerttyp des Parameters</err35>
     <err36>Referenzwert "{0}" bei Einstellung des Parameters "{1}" nicht gefunden</err36>
     <err37>Parameter "{0}" kann nicht bearbeitet werden</err37>
@@ -2754,9 +2769,19 @@
     <err57>Kein Bearbeitungsbereich mit dem Namen "{0}" gefunden</err57>
     <err58>Die Funktion darf keine Argumente haben</err58>
     <err59>Die Funktion muss drei Argumente haben: Ausgangswert, Suchwert und den Wert zum Ersetzen</err59>
-    <err60>The unique strategy identifier "{0}" on sheet "{1}" does not match the current strategy identifier "{2}"</err60>
-    <err61>Function must contain the address of the cell, of the form "A1"</err61>
-    <err62>Data source Excel-file not specified or not found</err62>
+    <err60>Die eindeutige Strategie-ID "{0}" auf dem Plan "{1}" entspricht der ID der aktuellen Strategie "{2}" nicht</err60>
+    <err61>Die Funktion muss die Zellenadresse vom Typ "A1" enthalten</err61>
+    <err62>Die Excel-Datei der Datenquelle ist nicht angegeben oder nicht gefunden</err62>
+    <err63>Der Isolationstyp "{0}" ist im aktuellen Projekt nicht gefunden</err63>
+    <err64>Die Schlüsselparameter "ToRoom" und "FromRoom" dürfen ausschließlich bei der Bearbeitung von Familien in den Kategorien "Türen", "Fenster" verwendet werden</err64>
+    <err65>Kein den Filterbedingungen entsprechendes Quellelement ist im Modell gefunden</err65>
+    <err66>Keine Daten zur Zuordnung des Ergebnisses der Ausdruckauswertung sind definiert</err66>
+    <err67>Jeder Ausdruck der Formel muss mit dem Zielparameter "$[ParemeterName]=" oder mit der Funktion zum Schreiben der Ergebniskombination in das bedingte Quellelement "JOIN(@[ParameterName],)=", oder mit der Funktion zum Schreiben der Summe der Ergebnisse in das bedingte Quellelement "SUM(@[ParameterName])=" anfangen</err67>
+    <err68>Aus dem Wert "{0}" konnte keine Zahl abgerufen werden</err68>
+    <err69>Das Ergebnis kann nicht aus der verknüpften Datei in das bedingte Quellelement geschrieben werden</err69>
+    <err70>Das Element wird aktuell vom Benutzer "{0}" verwendet und kann nicht geändert werden</err70>
+    <err71>No source element matching the filtering conditions was found on the current view</err71>
+    <err72>Unable to write result to parameter of element from linked file</err72>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -2764,9 +2789,9 @@
     <sm1>Verarbeitung der ausgewählten Elemente</sm1>
     <sm2>Verarbeitung der Elemente in der aktuellen Ansicht</sm2>
     <sm3>Verarbeitung der Elemente in dem Dokument</sm3>
-    <sm4>Process elements on selected views</sm4>
+    <sm4>Bearbeitung von Elementen in den ausgewählten Ansichten</sm4>
     <ssd1>Verarbeitung der Elemente ohne Zusammenhänge</ssd1>
-    <sld1>Die Strategie verarbeitet Exemplare von Elementen ohne Berücksichtigung ihrer Zusammenhänge mit anderen Elementen. Mindestens ein Filter (für Kategorien oder für Parameter) muss ausgefüllt werden</sld1>
+    <sld1>Die Strategie verarbeitet Elemente ohne Berücksichtigung ihrer Zusammenhänge mit anderen Elementen. Mindestens ein Filter (für Kategorien oder für Parameter) muss ausgefüllt werden</sld1>
     <ssd2>Verarbeitung der Exemplaren von Familien ohne Zusammenhänge</ssd2>
     <sld2>Die Strategie verarbeitet Exemplare von Familien ohne Berücksichtigung ihrer Zusammenhänge mit anderen Elementen. Es ist zulässig, weder einen Filter für Kategorien noch einen Filter für Parameter zu verwenden</sld2>
     <ssd3>Verarbeitung der Typen</ssd3>
@@ -2776,15 +2801,15 @@
     <ssd5>Verarbeitung der Elemente in der Gruppe</ssd5>
     <sld5>Die Strategie verarbeitet Elemente, die in Gruppen angeordnet sind. Beachten Sie bei der Erstellung von Formeln, dass sich der Zielparameter für das Exemplar einer Gruppe geändert werden können muss.</sld5>
     <ssd6>Verarbeitung der Elemente in dem Raum</ssd6>
-    <sld6>Die Strategie verarbeitet Elemente, die sich innerhalb von Räumen befinden. Die Strategie kann nur für Ansichten verwendet werden, die eine Raumgeometrie aufweisen. Zum Beispiel wird die Strategie bei 3D-Ansichten keine Ergebnisse bringen</sld6>
+    <sld6>Die Strategie verarbeitet Elemente, die sich innerhalb von Räumen befinden</sld6>
     <ssd7>Verarbeitung von Elementen im MEP-Raum</ssd7>
-    <sld7>Die Strategie verarbeitet Elemente, die sich innerhalb von MEP-Räumen befinden. Die Strategie kann nur für Ansichten verwendet werden, die eine MEP-Räume-geometrie aufweisen. Zum Beispiel wird die Strategie bei 3D-Ansichten keine Ergebnisse bringen</sld7>
+    <sld7>Die Strategie verarbeitet Elemente, die sich innerhalb von MEP-Räumen befinden</sld7>
     <ssd8>Verarbeitung von Elementen mithilfe von Körpermodellstudien</ssd8>
-    <sld8>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich innerhalb von Körpermodellstudien befinden. Die Körpermodellstudien müssen einen Vollkörper haben. Die Körpermodellstudien können sich in verknüpften Dateien befinden</sld8>
+    <sld8>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich innerhalb von Körpermodellstudien befinden. Die Körpermodellstudien müssen einen Vollkörper haben</sld8>
     <ssd9>Verarbeitung von Elementen in einem Vollkörper</ssd9>
-    <sld9>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich innerhalb anderer Elemente befinden, die einen Vollkörper haben. Die übergeordnete Elemente können sich in verknüpften Dateien befinden</sld9>
+    <sld9>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich innerhalb anderer Elemente befinden, die einen Vollkörper haben</sld9>
     <ssd10>Verarbeitung von Elementen, die mit den Kanten ihrer Vollkörper in Berührung sind</ssd10>
-    <sld10>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich mit flachen Körperkanten berühren. Die tangierende Elemente können sich in verknüpften Dateien befinden</sld10>
+    <sld10>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich mit flachen Körperkanten berühren</sld10>
     <ssd11>Verarbeitung der Begrenzungselemente von Räumen</ssd11>
     <sld11>Die Strategie verarbeitet Elemente, die Begrenzungselemente von Räumen sind</sld11>
     <ssd12>Verarbeitung der untergeordneten Elementen in den Verbindungen von Tragwerken</ssd12>
@@ -2799,6 +2824,10 @@
     <sld16>Die Strategie bearbeitet alle Materialien im aktuellen Dokument, unabhängig von der ausgewählten Elementen</sld16>
     <ssd17>Bearbeitung der Elemente von MEP-Systemen</ssd17>
     <sld17>Die Strategie bearbeitet die Elemente, aus denen ein MEP-System (elektrisches System, Rohrleitungs- bzw. Luftkanalsystem) besteht. Als Ausgangselement gilt konventionell das übergeordnete System des Elements</sld17>
+    <ssd18>Bearbeitung von Fassadenbestandteilen</ssd18>
+    <sld18>Die Strategie bearbeitet Bestandteile der Fassade (Pfosten und Platten). Das bedingte Quellelement ist die Wand</sld18>
+    <ssd19>Bearbeitung der Elemente im Bezug auf ein einzelnes Quellelement</ssd19>
+    <sld19>Die Strategie bearbeitet Elemente mit der Möglichkeit, beliebiges angegebenes Modellelement als Quellelement zu verwenden</sld19>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -2823,6 +2852,10 @@
     <sp11>Parameter des übergeordneten Bewehrungssystems einfügen</sp11>
     <se12>MEP-System</se12>
     <sp12>Parameter des übergeordneten MEP-Systems einfügen</sp12>
+    <se13>Fassade</se13>
+    <sp13>Fassadenparameter einfügen</sp13>
+    <se14>Quellelement</se14>
+    <sp14>Parameter des Quellelements einfügen</sp14>
     <te1>Zielelement</te1>
     <tp1>Parameter des Zielelementes einfügen</tp1>
     <te2>Exemplar der Familie</te2>
@@ -2879,8 +2912,8 @@
     <d-valuestr>Gibt den Parameterwert als Zeichenfolge mit Maßeinheiten zurück</d-valuestr>
     <d-eindex>Gibt den Index der erfolgreicher Verwendung der aktuellen Formelanweisung zurück</d-eindex>
     <d-replace>Gibt den Wert zurück, im dem alle Auftreten der Vorgabezeile durch eine andere Vorgabezeile ersetzt sind</d-replace>
-    <d-format>Converts a number to a string using the specified format</d-format>
-    <d-cv>Returns the value from the specified cell of the strategy data source</d-cv>
+    <d-format>Konvertiert eine Zahl im angegebenen Format in eine Zeichenfolge</d-format>
+    <d-cv>Gibt den Wert aus der angegebenen Zelle der Strategiedatenquelle zurück</d-cv>
   </mprParametrization>
   <mprBaseLevel LocalName="Grundebene"
                 Description="Die Abhängigkeiten (Verknüpfungen) für Elemente ändern">
@@ -3022,6 +3055,7 @@
     <h75>Bildqualität:</h75>
     <h76>Einstellungen für den DWF/DWFx-Export</h76>
     <h77>Pläne lesen</h77>
+    <!-- todo remove 4.11.0.0 -->
     <h78>Beim Starten</h78>
     <h79>Die Pläne mit gespeicherten Einstellungen beim Starten des Plugins lesen</h79>
     <h80>Geben Sie einen Namen für die neue Konfiguration ein</h80>
@@ -3087,6 +3121,9 @@
     <h141>Bildqualität:</h141>
     <h142>Ordner im Datei-Explorer öffnen</h142>
     <h143>Aktuelle Konfiguration der Einstellungen</h143>
+    <h144>Group sheets from assemblies</h144>
+    <h145>When this option is enabled, sheets placed in assemblies will be grouped separately from the main sheets</h145>
+    <h146>Sheet reading settings</h146>
     <tvm1>Modus deaktivieren</tvm1>
     <tvm2>Modus aktiviert lassen</tvm2>
     <tvm3>Fragen</tvm3>
@@ -3136,12 +3173,14 @@
     <err23>In der Formatliste ist bereits ein Format mit diesem Namen vorhanden</err23>
     <err24>In der Formatliste ist bereits ein Format mit dieser Größe vorhanden</err24>
     <err25>Das Format hat keinen Namen und wird beim Hinzufügen zum Drucker nicht bearbeitet</err25>
-    <err26>Failed to compress file "{0}". Error:</err26>
+    <err26>Das Komprimieren der Datei "{0}" ist fehlgeschlagen. Fehler:</err26>
   </mprSheetExport>
   <mprHeightSplitter LocalName="In die Höhe teilen"
                      Description="Teilen von Wänden und Stützen nach Ebenen, Referenzflächen Platten, Trägern oder vorgegebenen Parametern">
     <h1>Teilungsverfahren</h1>
+    <!-- todo remove after 1.4.0.0 -->
     <h2>Versetzen von oben (abwärts), mm</h2>
+    <!-- todo remove after 1.4.0.0 -->
     <h3>Versetzen von unten (aufwärts), mm</h3>
     <h4>Wände teilen</h4>
     <h5>Stützen teilen</h5>
@@ -3157,6 +3196,9 @@
     <h15>Träger ausgewählt:</h15>
     <h16>Wählen Sie Platten aus</h16>
     <h17>Wählen Sie Träger aus</h17>
+    <h18>Versetzen von oben, mm</h18>
+    <h19>Versetzen von unten, mm</h19>
+    <h20>Gleiche Werte verwenden (zum Behalten der Abhängigkeit)</h20>
     <err1>Teilen der Wand nach der Ebene fehlgeschlagen</err1>
     <err2>Teilen der Wand nach der Referenzfläche fehlgeschlagen</err2>
     <err3>Teilen der Wand fehlgeschlagen</err3>
@@ -3283,8 +3325,8 @@
     <t3>nachkommastellen.</t3>
     <t4>Name des Parameters</t4>
     <t5>Maßeinheit</t5>
-    <t6>With factor</t6>
-    <t7>Factor</t7>
+    <t6>Mit Faktor</t6>
+    <t7>Faktor</t7>
   </mprSumParameters>
   <mprViewColorOn3D LocalName="Ansichten in 3D anzeigen"
                     Description="Der Sichtbarkeitsbereich von Ansichten wird mit DirectShape farbig in 3D angezeigt"
@@ -3690,6 +3732,7 @@
     <x6>Report anzeigen</x6>
     <x7>Färben</x7>
     <x8>Färben ausschalten</x8>
+    <x9>Die Ausführung des Plugins in Familien ist nicht vorgesehen</x9>
   </mprTagless>
   <mprMaterialManager LocalName="Materialien-Manager"
                       Description="Ändern der Eigenschaften und Parameter von Materialien">

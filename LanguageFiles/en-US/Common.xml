@@ -625,7 +625,7 @@
 		<h121>Displayed plugins:</h121>
 		<h122>Notification settings</h122>
 		<h123>Not added to menu</h123>
-		<h124>Plugin is enabled, but not added to the menu on the “Adaptation” tab. Plugin will not be added to the Ribbon</h124>
+		<h124>Plugin is enabled, but not added to the menu on the "Adaptation" tab. Plugin will not be added to the Ribbon</h124>
 		<sks1>Invalid activation key for subscription</sks1>
 		<sks2>Subscription activation key not specified</sks2>
 		<sks3>Subscription expires</sks3>
@@ -929,7 +929,7 @@
 		<tt3>Open Modplus Configurator</tt3>
 		<tt4>Modplus Auto Update Module Settings</tt4>
     <!-- todo remove after 35.3.0.0 -->
-		<tt6>When you check the box, the auto-update module will no longer report the possibility to install this plugin if it is not available. Use the ModPlus Configurator to install the plugins marked with the “Do not remind” flag</tt6>
+		<tt6>When you check the box, the auto-update module will no longer report the possibility to install this plugin if it is not available. Use the ModPlus Configurator to install the plugins marked with the "Do not remind" flag</tt6>
 		<tt7>Open the location folder of the installed version of ModPlus</tt7>
 		<tt8>Open user data storage folder</tt8>
 		<tt9>Go to the description of the component on the site</tt9>
@@ -1216,6 +1216,8 @@
     <h140>The saved set of categories will be available for loading in any plugins that use the category selection dialog</h140>
     <h141>Select parent family</h141>
     <h142>Enables you to select the parent families that contain the selected nested families</h142>
+    <h143>The lowest Z elevation obtained from the geometry of the element</h143>
+    <h144>The highest Z elevation obtained from the geometry of the element</h144>
 		<parameters>Parameters</parameters>
 		<name>Name</name>
 		<any>Any</any>
@@ -1284,6 +1286,7 @@
 		<i9>Instead of parameter name it is possible to specify GUID for shared parameters or system name for built-in parameters.</i9>
     <i10>The conditions "Presence of parameter" and "Absence of parameter" when checking the parent Group (keyword Group) check, respectively, whether the element is in the Group or not.</i10>
     <i11>The conditions "Presence of parameter" and "Absence of parameter" when checking the parent Assembly (keyword Assembly) check, respectively, whether the element is in the Assembly or not.</i11>
+    <i12>When using the key parameters "BottomZ" and "TopZ", the lowest and highest elevation from the element geometry are checked, respectively. The key parameters "BottomZ" and "TopZ" are considered numeric and are checked by the corresponding conditions. The values of the elevations are taken in millimeters rounded to three decimal places. In the "Value" field you can specify level names: if the specified level is found, its elevation in millimeters rounded to 3 decimal places will be used.</i12>
 		<et1>Equal</et1>
 		<et2>More</et2>
 		<et3>Less</et3>
