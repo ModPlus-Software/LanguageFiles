@@ -2915,12 +2915,14 @@
     <d-tmirrored>Returns TRUE if the target family is mirrored</d-tmirrored>
     <d-smirrored>Returns TRUE if the conditional source family is mirrored</d-smirrored>
     <d-strlen>Returns string length</d-strlen>
-    <d-strindex>Finds one text string in another and returns the starting position of the first text string, counting from the first character of the second text string</d-strindex>
+    <d-strindex>Returns an index counting from zero of the first occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-strindex>
     <d-valuestr>Returns the value of the parameter as a string with units</d-valuestr>
     <d-eindex>Returns the index of the successful use of the current formula expression</d-eindex>
     <d-replace>Returns value in which all occurrences of the given string are replaced by another given string</d-replace>
     <d-format>Converts a number to a string using the specified format</d-format>
     <d-cv>Returns the value from the specified cell of the strategy data source</d-cv>
+    <d-count>Returns the number of times the substring occurs in the string. If the substring is not found in the string, returns 0</d-count>
+    <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-lstrindex>
   </mprParametrization>
   <mprBaseLevel LocalName="Base level"
 	              Description="Changing constraints for elements">
