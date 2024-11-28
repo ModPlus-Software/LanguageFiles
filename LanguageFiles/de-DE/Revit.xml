@@ -2590,7 +2590,7 @@
     <msg5>In der aktuellen Ansicht gibt es keine Räume!</msg5>
     <msg6>Die Kontur der Öffnung konnte nicht verarbeitet werden. Fehler "{0}". Die Kontur der Geschossdecke wird in die Öffnung nicht geführt</msg6>
     <msg7>Parameter "{0}" ist nicht gefunden</msg7>
-    <msg8>Das Kopieren des Parameterwertes "{0}'' in den Parameter "{1}" ist fehlgeschlagen </msg8>
+    <msg8>Das Kopieren des Parameterwertes "{0}" in den Parameter "{1}" ist fehlgeschlagen </msg8>
     <msg9>Inkompatible Parametertypen oder unbekannte Ursache</msg9>
   </mprFloorByRoom>
   <mprParametrization LocalName="Parametrisierung"
@@ -3829,4 +3829,48 @@
     <t12>Oben hinzufügen</t12>
     <t13>Unten hinzufügen</t13>
   </mprCommands>
+  <mprRoomFinishing LocalName="Finishing"
+                    Description="Room finishing">
+    <t1>Rooms filter:</t1>
+    <t2>Floors</t2>
+    <t3>Floor type:</t3>
+    <t4>Height Offset from Level, mm:</t4>
+    <t5>Set the thickness value of the selected Floor type, taking into account previous Floor type</t5>
+    <t6>Copy parameter value (from room to floor):</t6>
+    <t7>From</t7>
+    <t8>to</t8>
+    <t9>Ceilings</t9>
+    <t10>Walls</t10>
+    <t11>When leading the floor to the doorways to the full wall width consider the main room:</t11>
+    <t12>If door leads to exit</t12>
+    <t13>If door leads to entrance</t13>
+    <t14>The floor of the main room will be created with the lead-in to the doorway. Respectively, for a room that is defined as non-main room, no door leading into the doorway will be created. This option works only for families in the "Doors" category with filled FromRoom and ToRoom internal properties. The direction of movement in the opening is determined by the direction of the family's exterior side</t14>
+    <t15>Cut solid door geometry from the floor contour</t15>
+    <t16>Delete previously created</t16>
+    <t17>By picked Rooms</t17>
+    <t18>By Rooms on View</t18>
+    <t19>All rooms</t19>
+    <t20>All rooms from linked files</t20>
+    <t21>Update parameters</t21>
+    <t22>Move up</t22>
+    <t23>Move down</t23>
+    <t24>By pre-selected Rooms</t24>
+    <t25>Enter name</t25>
+    <t26>Floor type is not set or the corresponding type is not found in the model. This configuration cannot be processed!</t26>
+    <l1>Do not lead Floor contour into door openings</l1>
+    <l2>Lead the contour to the middle of the wall</l2>
+    <l3>Lead the contour to the full wall width</l3>
+    <l4>Lead the contour to the specified value, mm</l4>
+    <msg1>There are no Rooms on the current view!</msg1>
+    <msg2>No rooms filtered by "{0}" were found</msg2>
+    <msg3>Floor type not specified</msg3>
+    <msg4>Floor type “{0}” not found</msg4>
+    <msg5>Floor with type "{0}" is created by contour of the Room</msg5>
+    <msg6>It was not possible to create a Floor by contour of the Room</msg6>
+    <msg7>The room contour has errors</msg7>
+    <msg8>Failed to process an opening contour. Error "{0}". The floor contour will not be lead into the opening</msg8>
+    <msg9>Parameter "{0}" not found</msg9>
+    <msg10>Failed to copy value of parameter "{0}" to parameter "{1}"</msg10>
+    <msg11>Incompatible parameter types or unknown cause</msg11>
+  </mprRoomFinishing>
 </ModPlus>
