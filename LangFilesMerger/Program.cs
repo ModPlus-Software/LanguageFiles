@@ -43,6 +43,12 @@ try
         var langName = new DirectoryInfo(directory).Name;
         Console.WriteLine($"Process language: {langName}");
 
+        if (langName == "es-ES")
+        {
+            Console.WriteLine("Skip");
+            continue;
+        }
+
         var resultDoc = new XElement("ModPlus");
         resultDoc.SetAttributeValue("Name", langName);
         resultDoc.SetAttributeValue("Version", version);
