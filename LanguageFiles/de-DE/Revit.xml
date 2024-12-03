@@ -83,13 +83,13 @@
     <h77>In dem Namen des Plans suchen und ersetzen</h77>
     <h78>In dem Namen der Legende suchen und ersetzen</h78>
     <h79>In den Filtern suchen und ersetzen</h79>
-    <h80>In the headers find and replace</h80>
-    <h81>Reset temporary view</h81>
-    <h82>Separate the numbering with a symbol:</h82>
-    <h83>Space</h83>
-    <h84>Text notes duplication settings</h84>
-    <h85>In the Text notes find and replace</h85>
-    <h86>In the parameter find and replace</h86>
+    <h80>In den Titeln suchen und ersetzen</h80>
+    <h81>Temporäre Ansicht zurücksetzen</h81>
+    <h82>Trennen der Nummerierung durch das folgende Zeichen:</h82>
+    <h83>Leerstelle</h83>
+    <h84>Einstellungen zum Duplizieren von Textnotizen</h84>
+    <h85>In den Textnotizen suchen und ersetzen</h85>
+    <h86>Im Parameter suchen und ersetzen</h86>
     <start>Anfang</start>
     <notOrganized>!Nicht organisiert</notOrganized>
     <end>Ende</end>
@@ -154,11 +154,11 @@
     <h75>Kopieren der Bauteilliste fehlgeschlagen</h75>
     <h78>In dem Namen der Legende suchen und ersetzen</h78>
     <h79>In den Filtern suchen und ersetzen</h79>
-    <h80>In the headers find and replace</h80>
-    <h81>Reset temporary view</h81>
-    <h82>Separate the numbering with a symbol:</h82>
-    <h83>Space</h83>
-    <h86>In the parameter find and replace</h86>
+    <h80>In den Titeln suchen und ersetzen</h80>
+    <h81>Temporäre Ansicht zurücksetzen</h81>
+    <h82>Trennen der Nummerierung durch das folgende Zeichen:</h82>
+    <h83>Leerstelle</h83>
+    <h86>Im Parameter suchen und ersetzen</h86>
     <notOrganized>!Nicht organisiert</notOrganized>
     <start>Anfang</start>
     <end>Ende</end>
@@ -2166,9 +2166,9 @@
     <h186>Den Namen für die aktuelle Tabelle anhand des Plannamens aus der importierten Excel-Datei festlegen</h186>
     <h187>Sie können mehrere Wohnungs-ID-Werte angeben, indem Sie sie durch Semikolons ohne Leerzeichen trennen</h187>
     <h188>Nummerierung für jede Ebene zurücksetzen (keine fortlaufende Nummerierung)</h188>
-    <h189>When calculating the area with a factor to use:</h189>
-    <h190>Rounded area</h190>
-    <h191>Original area</h191>
+    <h189>Bei der Berechnung mit einem Faktor die folgende Fläche verwenden:</h189>
+    <h190>Gerundete Fläche</h190>
+    <h191>Ursprüngliche Fläche</h191>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -2246,9 +2246,9 @@
     <tt21>Mehrstöckigen Wohnung</tt21>
     <tt22>Die in der Liste ausgewählten Wohnungen zu einer Wohnung kombinieren. Kombinierbar sind nur noch Wohnungen mit gleicher funktionaler Bestimmung</tt22>
     <tt23>Ausgewählte Räume zur ausgewählten Wohnung hinzufügen. Die Wohnung und der Raum sollen die gleiche funktionale Bestimmung haben</tt23>
-    <tt24>For example, the original room area is 3.48. Rounding of areas is 0.1. Coefficient 0.5.</tt24>
-    <tt25>If you select the "Rounded area" option, first the rounded area will be calculated - 3.5, the result will be multiplied by a factor - 3.5 * 0.5 = 1.75, and then rounded - 1.8.</tt25>
-    <tt26>If you select the "Original area" option, the original area will be multiplied by a factor - 3.48 * 0.5 = 1.74 and then rounded up - 1.7.</tt26>
+    <tt24>Beispielsweise beträgt die ursprüngliche Raumfläche 3.48. Die Flächen werden auf 0.1 gerundet. Der Faktor ist 0.5.</tt24>
+    <tt25>Bei Auswahl der Option "Gerundete Fläche" wird zuerst die gerundete Fläche berechnet, im Beispiel: 3.5. Das Ergebnis wird um den Faktor multipliziert: 3.5 * 0.5 = 1.75; und dann gerundet: 1.8.</tt25>
+    <tt26>Bei Auswahl der Option "Ursprüngliche Fläche" wird die ursprüngliche Fläche um den Faktor multipliziert, im Beispiel: 3.48 * 0.5 = 1.74; und dann gerundet: 1.7.</tt26>
     <instruction>Anweisung</instruction>
     <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
     <instruction2>In der Raummatrix werden die Grundeigenschaften für die Auswahl der zu verarbeitenden Räume, die Nummerierung der Räume in der Wohnung und die Werte für die Berechnung der Wohnungsflächen festgelegt. Die Werte aus der Matrix werden anhand der funktionalen Bestimmung (Spalte FB) und des Namens des Raums ausgewählt. In der Spalte "Name des Raums" können Sie ein Sternchen an das Ende des Namens setzen, um anzugeben, dass eine Übereinstimmung am Anfang des Namens des Raums geprüft wird (z. B. "Schlafzimmer*" entspricht den Namen der Räume "Schlafzimmer 1", "Schlafzimmer 2" usw.)</instruction2>
@@ -2311,8 +2311,10 @@
     <h7>In der aktuellen Ansicht</h7>
     <h8>Im Projekt</h8>
     <h9>Nur parallel verlaufende Wände</h9>
+    <!-- todo remove after 1.14.4.0 -->
     <h10>Konfiguration:</h10>
     <h11>Zuschneiden aufheben</h11>
+    <!-- todo remove after 1.14.4.0 -->
     <h12>Konfiguration duplizieren</h12>
     <h13>Regel duplizieren</h13>
     <h14>Was schneiden</h14>
@@ -2322,12 +2324,14 @@
     <h18>Kein Element wurde bearbeitet. Bitte die Parameter für das Filtern präzisieren</h18>
     <tp1>Neue Regel hinzufügen</tp1>
     <tp2>Filter löschen</tp2>
+    <!-- todo remove after 1.14.4.0 -->
     <tp3>Konfiguration löschen</tp3>
     <tp4>Filter anzeigen/ausblenden</tp4>
     <tp5>Filter für Elemente hinzufügen, die verbunden werden sollen</tp5>
     <tp6>Bedingungen für Filter: Und - damit ein Element ausgewählt werden kann, muss es allen Filtern entsprechen ODER es muss nur einem der Filter entsprechen</tp6>
     <tp7>Regel löschen</tp7>
     <tp8>Einen Filter für die Kategorien hinzufügen, aus denen der verbundene Element zugeschnitten werden soll</tp8>
+    <!-- todo remove after 1.14.4.0 -->
     <tp9>Eine Konfiguration hinzufügen</tp9>
     <tp10>Die Filter nach Kategorien untereinander austauschen</tp10>
     <tp11>Die Filter nach Parametern untereinander austauschen</tp11>
@@ -2709,14 +2713,14 @@
     <t100>Regelliste minimieren</t100>
     <t101>Quellelement im Modell auswählen</t101>
     <t102>Anzahl der Ausdrücke:</t102>
-    <t103>The following settings are saved in the current configuration</t103>
-    <t104>Committing changes to the document:</t104>
-    <t105>When setting value to parameter</t105>
-    <t106>When processing rule</t106>
-    <t107>When processing strategy</t107>
-    <t108>When setting value to parameter - after setting each value to the parameter of each element, the changes in the document will be committed. In this case, in each subsequent formula expression you can use the values of the parameters changed in the previous formula expression. This option may require more time for processing.</t108>
-    <t109>When processing rule - committing changes in the document will be performed after all expressions of one rule are processed. In this case it is not possible to change and then reuse the same parameter within one rule, because the changed parameter value is not yet committed in the document.</t109>
-    <t110>When processing strategy - committing changes in the document will be performed after all strategy rules have been processed. In this case it is not possible to change and then reuse the same parameter in different rules of the same strategy, because the changed parameter value is not yet committed in the document.</t110>
+    <t103>Die Speicherung der folgenden Einstellungen erfolgt in der aktuellen Konfiguration</t103>
+    <t104>Festlegen von Änderungen im Dokument:</t104>
+    <t105>Beim Setzen eines Wertes im Parameter</t105>
+    <t106>Bei der Verarbeitung der Regel</t106>
+    <t107>Bei der Verarbeitung der Strategie</t107>
+    <t108>Beim Setzen eines Wertes im Parameter: Nach dem Setzen jedes Wertes für jeweilige Parameter aller Elemente erfolgt das Festlegen der Änderungen im Dokument. In diesem Fall können Sie in jeder nachfolgenden Formelanweisung die in der vorherigen Formelanweisung geänderten Parameterwerte verwenden. Diese Option kann mehr Verarbeitungszeit erfordern.</t108>
+    <t109>Bei der Verarbeitung der Regel: Das Festlegen der Änderungen im Dokument erfolgt nach der Verarbeitung aller Ausdrücke einer Regel. In diesem Fall ist es nicht möglich, denselben Parameter innerhalb einer Regel zu ändern und anschließend wiederzuverwenden, weil der geänderte Parameterwert noch nicht im Dokument festgelegt wurde.</t109>
+    <t110>Bei der Verarbeitung der Strategie: Das Festlegen der Änderungen im Dokument erfolgt nach der Verarbeitung aller Regel der jeweiligen Strategie. In diesem Fall ist es nicht möglich, denselben Parameter in verschiedenen Regeln einer Strategie zu ändern und anschließend wiederzuverwenden, weil der geänderte Parameterwert noch nicht im Dokument festgelegt wurde.</t110>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -2812,8 +2816,8 @@
     <err68>Aus dem Wert "{0}" konnte keine Zahl abgerufen werden</err68>
     <err69>Das Ergebnis kann nicht aus der verknüpften Datei in das bedingte Quellelement geschrieben werden</err69>
     <err70>Das Element wird aktuell vom Benutzer "{0}" verwendet und kann nicht geändert werden</err70>
-    <err71>No source element matching the filtering conditions was found on the current view</err71>
-    <err72>Unable to write result to parameter of element from linked file</err72>
+    <err71>Kein den Filterbedingungen entsprechendes Quellelement in der aktuellen Ansicht gefunden</err71>
+    <err72>Das Ergebnis kann nicht aus der verknüpften Datei in den Parameter des Elements geschrieben werden</err72>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -2858,7 +2862,7 @@
     <sld17>Die Strategie bearbeitet die Elemente, aus denen ein MEP-System (elektrisches System, Rohrleitungs- bzw. Luftkanalsystem) besteht. Als Ausgangselement gilt konventionell das übergeordnete System des Elements</sld17>
     <ssd18>Bearbeitung von Fassadenbestandteilen</ssd18>
     <sld18>Die Strategie bearbeitet Bestandteile der Fassade (Pfosten und Platten). Das bedingte Quellelement ist die Wand</sld18>
-    <ssd19>Bearbeitung der Elemente im Bezug auf ein einzelnes Quellelement</ssd19>
+    <ssd19>Bearbeitung der Elemente im Bezug auf die angegebenen Quellelemente</ssd19>
     <sld19>Die Strategie bearbeitet Elemente mit der Möglichkeit, beliebiges angegebenes Modellelement als Quellelement zu verwenden</sld19>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
@@ -2940,14 +2944,14 @@
     <d-tmirrored>Gibt TRUE zurück, wenn die Zielfamilie gespiegelt ist</d-tmirrored>
     <d-smirrored>Gibt TRUE zurück, wenn die bedingte Quellfamilie gespiegelt ist</d-smirrored>
     <d-strlen>Gibt die Länge einer Zeichenfolge zurück</d-strlen>
-    <d-strindex>Returns an index counting from zero of the first occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-strindex>
+    <d-strindex>Gibt den Index zurück, der auf Null des ersten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-strindex>
     <d-valuestr>Gibt den Parameterwert als Zeichenfolge mit Maßeinheiten zurück</d-valuestr>
     <d-eindex>Gibt den Index der erfolgreicher Verwendung der aktuellen Formelanweisung zurück</d-eindex>
     <d-replace>Gibt den Wert zurück, im dem alle Auftreten der Vorgabezeile durch eine andere Vorgabezeile ersetzt sind</d-replace>
     <d-format>Konvertiert eine Zahl im angegebenen Format in eine Zeichenfolge</d-format>
     <d-cv>Gibt den Wert aus der angegebenen Zelle der Strategiedatenquelle zurück</d-cv>
-    <d-count>Returns the number of times the substring occurs in the string. If the substring is not found in the string, returns 0</d-count>
-    <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-lstrindex>
+    <d-count>Gibt die Anzahl der Vorkommen der Teilzeichenfolge in der Zeichenfolge zurück. Gibt 0 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-count>
+    <d-lstrindex>Gibt den Index zurück, der auf Null des letzten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-lstrindex>
   </mprParametrization>
   <mprBaseLevel LocalName="Grundebene"
                 Description="Die Abhängigkeiten (Verknüpfungen) für Elemente ändern">
@@ -3161,9 +3165,9 @@
     <h141>Bildqualität:</h141>
     <h142>Ordner im Datei-Explorer öffnen</h142>
     <h143>Aktuelle Konfiguration der Einstellungen</h143>
-    <h144>Group sheets from assemblies</h144>
-    <h145>When this option is enabled, sheets placed in assemblies will be grouped separately from the main sheets</h145>
-    <h146>Sheet reading settings</h146>
+    <h144>Pläne aus Baugruppen gruppieren</h144>
+    <h145>Wenn diese Option aktiviert ist, werden die in Baugruppen platzierten Pläne getrennt von den Hauptplänen gruppiert</h145>
+    <h146>Einstellungen zum Lesen von Plänen</h146>
     <tvm1>Modus deaktivieren</tvm1>
     <tvm2>Modus aktiviert lassen</tvm2>
     <tvm3>Fragen</tvm3>
