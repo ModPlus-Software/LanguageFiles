@@ -2092,8 +2092,10 @@
     <h112>Haus in Nummer</h112>
     <h113>Block in Nummer</h113>
     <h114>Nicht ausgewählt</h114>
+    <!-- todo remove after 2.11.15.0 -->
     <h115>Keine Wohnungen in der aktuellen Ansicht gefunden</h115>
     <h116>Parameterwert in Nummer</h116>
+    <!-- todo remove after 2.11.15.0 start -->
     <h117>Eine Variante der Duplizierung der Ansicht:</h117>
     <h118>Duplizieren</h118>
     <h119>Duplizieren mit Hinzufügen von Details</h119>
@@ -2102,6 +2104,7 @@
     <h122>Ansichtsmaßstab anwenden:</h122>
     <h123>Anwendung des Wohnungstyps als Ansichtsname versuchen</h123>
     <h124>Ansichten der Wohnungen erstellen</h124>
+    <!-- todo remove after 2.11.15.0 end -->
     <h125>Die Testversion des Plugins ist abgelaufen! Erwerben Sie eine Lizenz für das Plugin oder ein Revit-Abonnement, um das Plugin "Wohnungslayout" nach Ablauf der Testversion zu verwenden</h125>
     <h126>Testversion. Tage bis zum Ablauf</h126>
     <h127>Anzahl der Räume. (Wohn.)</h127>
@@ -2194,12 +2197,14 @@
     <msg22>Start des Plugins in dem Familiendokument ist nicht erlaubt!</msg22>
     <msg23>Diese Anweisung wird bei allen nachfolgenden Starts des Plugins nicht angezeigt. Sind Sie sicher, dass Sie sie schließen wollen?</msg23>
     <msg24>Beim Erstellen der Ansicht ist ein Fehler aufgetreten</msg24>
+    <!-- todo remove after 2.11.15.0 start -->
     <msg25>Es ist nicht gelungen, einen Umriss entlang der umschließenden Konstruktionen zu erstellen, die jede Struktur berücksichtigt</msg25>
     <msg26>Es wurde die Option genutzt, den Umriss entsprechend der größten Dicke der umschließenden Konstruktionen zu erstellen</msg26>
     <msg27>Es ist nicht gelungen, einen Umriss entlang der umschließenden Konstruktionen zu erstellen, die größte Dicke der umschließenden Konstruktionen berücksichtigt</msg27>
     <msg28>Es wurde die Option der Erstellung eines Umrisses der Wohnung entsprechend den Umrissen der Räume genutzt</msg28>
     <msg29>Es ist nicht gelungen, ein Umriss der Wohnung zu erhalten. Fehler:</msg29>
     <msg30>Die Ansicht der Wohnung ist nicht erstellt</msg30>
+    <!-- todo remove after 2.11.15.0 end -->
     <msg31>Die Länge des Namens darf nicht mehr als 28 Zeichen betragen</msg31>
     <msg32>Die folgenden Zeichen - \ / * ? : [ ] - sind für einen Namen inakzeptabel</msg32>
     <msg33>Die aktuelle Raummatrix wird endgültig gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg33>
@@ -2259,6 +2264,7 @@
     <instruction4>Die Wohnungen werden durch die geometrischen Merkmale der Räume zusammengestellt, wobei die Verbindung der Räume durch Fenster, Türen und Raumteiler berücksichtigt wird. Allen Räumen in einer Wohnung wird derselbe Parameterwert "Wohnungs-ID" zugewiesen. Es wird empfohlen, eine zusätzliche visuelle Überprüfung durchzuführen, indem ein Farbschema über den Parameter "Wohnungs-ID" erstellt wird</instruction4>
     <instruction5>Berechnung der Wohnungsfläche umfasst die Berechnung der Wohnungsflächen, der Anzahl der Wohnräume und die Bestimmung des Wohnungstyps anhand der Quelle "Wohnungstypen". Alle ermittelten Werte werden den Parametern der Räume, aus denen die Wohnung besteht, zugeordnet. Alle Wohnungen werden durch den Wert "Wohnungs-ID" bestimmt, der im Schritt "Zusammenstellung der Wohnungen" festgelegt wurde</instruction5>
     <instruction6>Die Nummerierung der Wohnungen kann durch Gruppierung der Wohnungen in Häuser und/oder Blöcke erfolgen, indem die entsprechenden Optionen aktiviert und die Namen der Parameter angegeben werden, aus denen der Wert der Häuser und/oder Blöcke entnommen werden soll. Die Blöcke werden als Untergruppen für die Häuser betrachtet. Die Eigenschaft "fortlaufende Nummerierung" bedeutet, dass die Nummerierung in der nächsten Gruppe fortgesetzt wird und nicht mit dem in der Eigenschaft "Startnummer" festgelegten Wert beginnt. Wenn Sie bei der Eigenschaft "Der Beginn der Nummerierung" "angeben" wählen, müssen Sie für jede Gruppe von Wohnungen einen Raum auswählen</instruction6>
+    <!-- todo remove after 2.11.15.0 -->
     <instruction7>Erstellen von Ansichten der Wohnungen erfolgt durch Duplizieren der aktuellen Ansicht und mit nachfolgendem Zuschneiden entlang des Umrisses der Wohnung. Zunächst wird versucht, einen Zuschneidebereich auf der Grundlage der Dicke der umschließenden Wände zu erstellen (nur für Revit 2020 und höher). Bei Misserfolg wird versucht, einen Zuschneidebereich unter Berücksichtigung der größten der umschließenden Wanddicken zu erstellen. Wenn kein Zuschneidebereich erstellt wird, wird der von den Raumgrenzen abgeleitete Umriss verwendet. Wenn die Option "Anwendung des Wohnungstyps als Ansichtsname versuchen" aktiviert ist, erhalten die erstellten Ansichten den Ansichtsnamen "NAME_DER EBENE — Wohnung WOHNUNGSTYP"</instruction7>
     <instruction8>Wohnung-Editor ermöglicht es Ihnen, manuelle Änderungen an den Werten der Wohnungsflächen vorzunehmen und mehrstöckige Wohnungen zusammenzustellen. Bei der Zusammenstellung von mehrstöckigen Wohnungen werden die Flächen neu berechnet und der Wert des Parameters "WO_Anzahl der Ebenen" wird ausgefüllt WICHTIG! Bei der Neuberechnung der Wohnungsfläche auf einer bestimmten Ebene werden die Parameterwerte von Räumen, die zu einer mehrstöckigen Wohnung gehören, aber auf einer anderen Ebene liegen, nicht neu berechnet</instruction8>
     <instruction9>Blockierte Wohnungen sind Wohnungen, deren Räume bei der Zusammenstellung der Wohnungen nicht verarbeitet werden. Die Blockierung von Wohnungen wird auf der Registerkarte "Zusammenstellung der Wohnungen" vorgenommen. Die blockierten Wohnungen werden in der Liste angezeigt, unabhängig vom aktuellen Wert der "Der Identifikator der Wohnungen" (Wert des Parameters "Funktionale Bestimmung")</instruction9>
