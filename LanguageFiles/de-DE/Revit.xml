@@ -2131,6 +2131,7 @@
     <h148>Anzahl der markierten Wohnungen:</h148>
     <h149>Ändern von Wohnungsdaten</h149>
     <h150>In mehrstöckigen Wohnungen kombinieren</h150>
+    <!-- todo remove after 2.11.15.0 -->
     <h151>Kombinieren in mehrstöckigen Wohnungen</h151>
     <h152>Die Reihenfolge, in der die gleichnamigen Räume in der Wohnung nummeriert sind (Parameter "Raumindex"):</h152>
     <h153>Aufsteigend nach Fläche</h153>
@@ -2173,6 +2174,10 @@
     <h189>Bei der Berechnung mit einem Faktor die folgende Fläche verwenden:</h189>
     <h190>Gerundete Fläche</h190>
     <h191>Ursprüngliche Fläche</h191>
+    <h192>Remove room from apartment</h192>
+    <h193>Calculate selected apartments</h193>
+    <h194>Delete selected apartments</h194>
+    <h195>Apartment total area without factor</h195>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -2228,6 +2233,8 @@
     <msg50>Die folgenden Räume und die ausgewählte Wohnung befinden sich auf verschiedenen Ebenen</msg50>
     <msg51>Diese Räume trotzdem zur Wohnung hinzufügen?</msg51>
     <msg52>Für die folgenden (id) unter den markierten Wohnungen wurden keine zum Kombinieren gültigen Optionen (die auf benachbarten Ebenen liegenden Wohnungen mit gleicher funktionaler Bestimmung und einem Schnittpunkt in der Hochrichtung) gefunden</msg52>
+    <msg53>Among the selected apartments there are apartments with a functional purpose that does not correspond to the current apartment ID specified in the settings. Are you sure you want to calculate these apartments with the current settings?</msg53>
+    <msg54>Apartment ID={0} deleted: apartment room parameters cleared (string parameters) or reset to zero (numeric parameters)</msg54>
     <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
     <tt2>Die Anweisung ausblenden</tt2>
     <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
@@ -2256,6 +2263,11 @@
     <tt25>Bei Auswahl der Option "Gerundete Fläche" wird zuerst die gerundete Fläche berechnet, im Beispiel: 3.5. Das Ergebnis wird um den Faktor multipliziert: 3.5 * 0.5 = 1.75; und dann gerundet: 1.8.</tt25>
     <tt26>Bei Auswahl der Option "Ursprüngliche Fläche" wird die ursprüngliche Fläche um den Faktor multipliziert, im Beispiel: 3.48 * 0.5 = 1.74; und dann gerundet: 1.7.</tt26>
     <tt27>This apartment is locked: the apartment rooms will not be processed when collecting apartments</tt27>
+    <tt28>Clear the list</tt28>
+    <tt29>The room will be removed from the apartment. All room parameters will be cleared (string parameters) or reset to zero (numeric parameters)</tt29>
+    <tt30>Perform calculation of selected apartments with current settings and sources. The calculated apartments will additionally be displayed on the "Calculate apartments" tab</tt30>
+    <tt31>The number of rooms of the apartment has been changed! It is required to recalculate the apartment</tt31>
+    <tt32>All apartment room parameters will be cleared (string parameters) or reset to zero (numeric parameters)</tt32>
     <instruction>Anweisung</instruction>
     <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
     <instruction2>In der Raummatrix werden die Grundeigenschaften für die Auswahl der zu verarbeitenden Räume, die Nummerierung der Räume in der Wohnung und die Werte für die Berechnung der Wohnungsflächen festgelegt. Die Werte aus der Matrix werden anhand der funktionalen Bestimmung (Spalte FB) und des Namens des Raums ausgewählt. In der Spalte "Name des Raums" können Sie ein Sternchen an das Ende des Namens setzen, um anzugeben, dass eine Übereinstimmung am Anfang des Namens des Raums geprüft wird (z. B. "Schlafzimmer*" entspricht den Namen der Räume "Schlafzimmer 1", "Schlafzimmer 2" usw.)</instruction2>

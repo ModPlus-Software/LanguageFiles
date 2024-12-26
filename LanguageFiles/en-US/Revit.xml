@@ -2131,6 +2131,7 @@
     <h148>Checked apartments count:</h148>
     <h149>Changing apartment data</h149>
     <h150>Merge into multilevel apartments</h150>
+    <!-- todo remove after 2.11.15.0 -->
     <h151>Merging into multilevel apartments</h151>
     <h152>The numbering order of the rooms of the same name in the apartment (parameter "Room index"):</h152>
     <h153>In ascending order of area</h153>
@@ -2173,6 +2174,10 @@
     <h189>When calculating the area with a factor to use:</h189>
     <h190>Rounded area</h190>
     <h191>Original area</h191>
+    <h192>Remove room from apartment</h192>
+    <h193>Calculate selected apartments</h193>
+    <h194>Delete selected apartments</h194>
+    <h195>Apartment total area without factor</h195>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -2228,6 +2233,8 @@
     <msg50>The following rooms and the selected apartment are located on different levels</msg50>
     <msg51>Still add these rooms to the apartment?</msg51>
     <msg52>For the following apartments (id), no pairing options were found among the marked ones (apartments with the same functional purpose, located on neighboring levels and having a vertical intersection)</msg52>
+    <msg53>Among the selected apartments there are apartments with a functional purpose that does not correspond to the current apartment ID specified in the settings. Are you sure you want to calculate these apartments with the current settings?</msg53>
+    <msg54>Apartment ID={0} deleted: apartment room parameters cleared (string parameters) or reset to zero (numeric parameters)</msg54>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -2256,6 +2263,11 @@
     <tt25>If you select the "Rounded area" option, first the rounded area will be calculated - 3.5, the result will be multiplied by a factor - 3.5 * 0.5 = 1.75, and then rounded - 1.8.</tt25>
     <tt26>If you select the "Original area" option, the original area will be multiplied by a factor - 3.48 * 0.5 = 1.74 and then rounded up - 1.7.</tt26>
     <tt27>This apartment is locked: the apartment rooms will not be processed when collecting apartments</tt27>
+    <tt28>Clear the list</tt28>
+    <tt29>The room will be removed from the apartment. All room parameters will be cleared (string parameters) or reset to zero (numeric parameters)</tt29>
+    <tt30>Perform calculation of selected apartments with current settings and sources. The calculated apartments will additionally be displayed on the "Calculate apartments" tab</tt30>
+    <tt31>The number of rooms of the apartment has been changed! It is required to recalculate the apartment</tt31>
+    <tt32>All apartment room parameters will be cleared (string parameters) or reset to zero (numeric parameters)</tt32>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
     <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name. In the "Room name" column you can specify an asterisk at the end of the name, which will indicate a check for a match at the beginning of the room name (for example, the value "Bedroom*" will match the room names "Bedroom 1", "Bedroom 2", etc.)</instruction2>
