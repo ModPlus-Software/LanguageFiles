@@ -1,0 +1,1366 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModPlus>
+  <mmRebarSolidAndVisible LocalName="Armadura como sólido"
+                          Description="Cambiar estado de visibilidad de armadura (Mostrar sin tapar y Mostrar como sólido)"
+                          FullDescription="Estado de visibilidad &quot;Mostrar sin tapar&quot; se establece en cualquier vista, tanto 2D como 3D. Mostrar como sólido – se establece sólo en vista 3D"
+                          LocalName1="Cancelar visibilidad"
+                          Description1="Cancelar estado de visibilidad de armadura (&quot;Mostrar sin tapar&quot; y &quot;Mostrar como sólido&quot;)"
+                          LocalName2="Ajustes de selección de elementos"
+                          Description2="Ajustes de opciones de selección para elementos que contienen armadura cuando complemento se está ejecutando">
+    <msg1>Seleccionar armadura o elemento con armadura</msg1>
+    <msg2>Seleccionar elementos con armadura o armadura</msg2>
+    <t1>Cambiar visibilidad de armadura</t1>
+    <h1>Procesar:</h1>
+    <h2>Mostrar como sólido</h2>
+    <h3>Elemento seleccionado</h3>
+    <h4>Elementos seleccionados</h4>
+    <h5>Todos elementos a vista</h5>
+    <h6>Cambiar propiedad "Mostrar abierta"</h6>
+    <h7>Cambiar propiedad "Mostrar como sólido"</h7>
+    <h8>Mostrar como líneas</h8>
+    <h9>Hacer abierta</h9>
+    <h10>Hacer cubierta</h10>
+    <h11>Todos elementos excepto los seleccionados en vista</h11>
+    <h12>Procesar conectores de armadura de apoyo</h12>
+    <!-- todo remove after 3.3.4.0 -->
+    <close>Cerrar</close>
+    <!-- todo remove after 3.3.4.0 -->
+    <apply>Aplicar</apply>
+    <!-- todo remove after 3.3.4.0 -->
+    <continue>Continuar</continue>
+  </mmRebarSolidAndVisible>
+  <mprWallsReinforcement LocalName="Refuerzo de muro"
+                         Description="Análisis, agrupamiento y refuerzo según condiciones especificadas de muros y huecos"
+                         FullDescription="Complemento sólo funciona con muros ubicados en mismo nivel. Complemento analiza muros, lo que le permite encontrar tres tipos de intersecciones (esquina, final y cruz) y huecos. Agrupamiento flexible le permite especificar exactamente qué tipo de refuerzo se debe realizar. Puede realizar refuerzo sólo para grupos específicos: muros, intersecciones o huecos. Complemento puede funcionar incluso en una plantilla vacía">
+    <h2>VENTANA DEL COMPLEMENTO:</h2>
+    <h4>Encima de ventanas</h4>
+    <h5>REPRESENTACIÓN EN MODELO:</h5>
+    <h6>Factor de escalado:</h6>
+    <!-- todo remove after 5.24.16.0 -->
+    <h7>REFUERZO PREDETERMINADO:</h7>
+    <h8>Refuerzo principal de muro</h8>
+    <h9>Refuerzo de intersección</h9>
+    <h10>Enmarcamiento de huecos</h10>
+    <h11>Seleccionar</h11>
+    <h12>Analizar</h12>
+    <h13>Agrupar todos</h13>
+    <h14>Muros seleccionadas:</h14>
+    <h15>Agrupamiento</h15>
+    <h16>Muros</h16>
+    <h17>Intersecciones</h17>
+    <h18>Huecos</h18>
+    <h19>Agrupar por:</h19>
+    <h20>Espesor de muros</h20>
+    <h21>Altura de muro</h21>
+    <h22>Parámetro de muro</h22>
+    <h23>Agrupar</h23>
+    <h24>Número de muros</h24>
+    <h25>Espesores de muros</h25>
+    <h26>Alturas de muros</h26>
+    <h27>Muros en grupo:</h27>
+    <h28>Espesor</h28>
+    <h29>Alturas</h29>
+    <h30>Parámetro</h30>
+    <!-- todo remove after 5.24.16.0 -->
+    <h31>Puede arrastrar muros de grupo actual a otros grupos con mouse</h31>
+    <h32>Crear:</h32>
+    <h33>Tipo de intersección</h33>
+    <h34>Alturas de muros</h34>
+    <h35>Refuerzo de muro</h35>
+    <h36>Núm.de intersec.</h36>
+    <h37>Tipo de intersección</h37>
+    <h38>Parámetros</h38>
+    <h39>Intersecciones en grupo:</h39>
+    <!-- todo remove after 5.24.16.0 -->
+    <h40>Puede arrastrar intersecciones de grupo actual a otros grupos con mouse</h40>
+    <h41>Muros en intersección:</h41>
+    <h42>Refuerzo</h42>
+    <h43>Dimensiones de hueco</h43>
+    <h44>1. Huecos hasta</h44>
+    <h45>2. Huecos de</h45>
+    <h46>mm a:</h46>
+    <h47>3. Huecos de</h47>
+    <h48>Establecer refuerzo básico de grupos por dimensiones exteriores</h48>
+    <h49>Origen</h49>
+    <h50>Número de huecos</h50>
+    <h51>Espesor de muro</h51>
+    <h52>Grupo de anchura</h52>
+    <h53>Grupo de altura</h53>
+    <h54>Origen</h54>
+    <h55>Huecos en grupo:</h55>
+    <!-- todo remove after 5.24.16.0 -->
+    <h58>Puede arrastrar huecos de grupo actual a otros grupos con mouse</h58>
+    <h59>Ajustes de refuerzo de grupos</h59>
+    <h60>Reforzar</h60>
+    <h61>Calcular anclaje según SP 52-101-2003</h61>
+    <h62>Diámetro:</h62>
+    <h63>Escuadría, mm²:</h63>
+    <h64>Clase de hormigón:</h64>
+    <h65>Tipo de superficie de refuerzo:</h65>
+    <h66>Resistencia de diseño a tracción, MPa:</h66>
+    <h67>Longitud de anclaje base (principal), mm:</h67>
+    <h68>Factor α:</h68>
+    <h69>Longitud de anclaje requerida (calculada), mm:</h69>
+    <h70>Longitud de anclaje:</h70>
+    <!-- todo remove after 5.24.16.0 -->
+    <h71>Ajustes de refuerzo de intersección</h71>
+    <!-- todo remove after 5.24.16.0 -->
+    <h72>Ajustes de refuerzo de huecos</h72>
+    <!-- todo remove after 5.24.16.0 -->
+    <h73>Ajustes de refuerzo de muro</h73>
+    <!-- todo remove after 5.24.16.0 -->
+    <h74>Reemplazar con ajustes de refuerzo de grupo</h74>
+    <!-- todo remove after 5.24.16.0 -->
+    <h75>Dejar ajustes de refuerzo</h75>
+    <h76>Refuerzo vertical</h76>
+    <h79>Paso, mm:</h79>
+    <h80>Forzado de cursor de centro al borde de muro:</h80>
+    <h81>Procesamiento del paso adicional:</h81>
+    <h82>Distancia desde tope de muro, mm:</h82>
+    <h83>Saliente sobre muro, mm:</h83>
+    <h84>Capa protectora en extremos de armadura, mm:</h84>
+    <h85>Instalar armadura sobre último hueco si altura de muro sobre hueco es superior a (mm):</h85>
+    <h86>No instalar armadura debajo de hueco si altura de muro debajo de hueco es menor o igual a dos espesores de muro (pero no menos de 400 mm)</h86>
+    <h87>Refuerzo horizontal</h87>
+    <h88>Ubicación:</h88>
+    <h89>Distancia de primera barra, mm:</h89>
+    <h90>Distancia de última barra, mm:</h90>
+    <h91>Barras en forma de U en topes de muro</h91>
+    <h92>Longitud de pieza, mm:</h92>
+    <h93>Calcular longitud del barra en forma de U</h93>
+    <h94>Estribos transversales (clavijas)</h94>
+    <h95>Tipo de clavija:</h95>
+    <h96>Atornillar clavijas a 45° con circunferencia de nodos de intersección del refuerzo principal</h96>
+    <h97>Tipo de diseño:</h97>
+    <h98>Paso horizontal, mm:</h98>
+    <h99>Paso vertical, mm:</h99>
+    <h100>Intersecciones angulares</h100>
+    <h101>Paso entre piezas:</h101>
+    <h102>Tipo de refuerzo:</h102>
+    <h103>Pieza No. 1</h103>
+    <h104>Longitud de anclaje, mm:</h104>
+    <h105>Calcular longitud del anclaje</h105>
+    <h106>Pieza No. 2</h106>
+    <h107>Intersecciones en T</h107>
+    <h108>Intersecciones cruzadas</h108>
+    <h109>Barras verticales</h109>
+    <h110>Crear refuerzo</h110>
+    <h111>Distancia hasta hueco:</h111>
+    <h112>Número de filas:</h112>
+    <h113>Desplazar al golpear barras verticales del refuerzo principal</h113>
+    <h114>Barras horizontales en superior</h114>
+    <h115>Barras en forma de U verticalmente</h115>
+    <h116>Barras en forma de U en superior</h116>
+    <h117>Longitud de pieza, mm:</h117>
+    <h118>Paso de pieza, mm:</h118>
+    <h119>Ajustes de refuerzo predeterminados para muros</h119>
+    <h120>Ajustes de refuerzo predeterminados para intersecciones</h120>
+    <h121>Ajustes de refuerzo predeterminados para huecos</h121>
+    <h122>Primer grupo de tamaño</h122>
+    <h123>Segundo grupo de tamaño</h123>
+    <h124>Tercer grupo de tamaño</h124>
+    <h127>Salientes de losas inferiores</h127>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h128>Seleccionar losas inferiores</h128>
+    <h129>Losas inferiores</h129>
+    <h130>Espesor</h130>
+    <!-- todo remove after 5.24.16.0 -->
+    <h131>Grupos de muros en contacto con losa:</h131>
+    <h132>Ajustes de refuerzo de saliente de losa</h132>
+    <h133>Salientes en muros intermedios</h133>
+    <h134>Ajustes de refuerzo predeterminados para salientes de losas inferiores</h134>
+    <h135>Tipo de salientes:</h135>
+    <h136>Salientes en muros externos</h136>
+    <h137>Utilizar ajustes de salientes para muros intermedios</h137>
+    <h138>Capa protectora de armadura:</h138>
+    <h139>Refuerzo horizontal se encuentra en interior – capa protectora a lo largo de armadura vertical está</h139>
+    <h140>Refuerzo horizontal se encuentra en exterior – capa protectora a lo largo de armadura horizontal está</h140>
+    <h141>No cerrar ventana después de crear refuerzo</h141>
+    <h142>Ver intersección</h142>
+    <h143>Eliminar geometría auxiliar</h143>
+    <h144>Distancia de pieza hasta base de losa inferior:</h144>
+    <h145>Primera longitud del anclaje, mm:</h145>
+    <h146>Segunda longitud del anclaje, mm:</h146>
+    <!-- todo remove after 5.24.16.0 -->
+    <h147>Restablecer</h147>
+    <h148>Longitud de anclaje en losa, mm:</h148>
+    <h149>Salientes de losa inferior</h149>
+    <h150>Número de muros en contacto</h150>
+    <h151>Barras verticales adicionales en topes de muros</h151>
+    <h152>Distancia hasta barras verticales externos</h152>
+    <h153>Refuerzo indirecto superior</h153>
+    <h154>Refuerzo indirecto inferior</h154>
+    <h155>Longitud de barra:</h155>
+    <h156>barras en forma de U a lo largo del tope superior de muro</h156>
+    <h157>Salientes</h157>
+    <h158>Salientes de barras verticales de refuerzo de fondo</h158>
+    <h159>Salientes de barras verticales de intersección</h159>
+    <h160>Tipo de salientes:</h160>
+    <h161>Espesor de losa condicional, mm:</h161>
+    <h162>Crear salientes "A enredar"</h162>
+    <h163>Si hay un hueco en muro superior, entonces</h163>
+    <h164>Aplicar también a secciones de muro superior, cuya altura debajo de hueco (o altura de todo muro) es menor o igual a dos espesores de muro (pero no menos de 400)</h164>
+    <h165>Si falta losa plana encima de muro, entonces</h165>
+    <h166>Forzado de cursor de flexiones en parte superior de losa (en centro de armadura), mm:</h166>
+    <h167>Forzado de cursor de flexiones en parte inferior de losa (en centro de armadura), mm:</h167>
+    <h168>Seleccionar muros con red de selección</h168>
+    <h169>Seleccionar muros por indicación</h169>
+    <h170>Cortar salientes a lo largo del sólido de muro</h170>
+    <h171>Número de pares adicionales de barras:</h171>
+    <h172>Paso entre barras:</h172>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h173>Barras rectas:</h173>
+    <h174>Barras en forma de L (al crear flexiones de barras verticales):</h174>
+    <h175>Barras en forma de U en topes de muro:</h175>
+    <h176>Barras en forma de U a lo largo del tope superior de muro:</h176>
+    <h177>Barras transversales en forma de C (clavijas). Ganchos en boceto:</h177>
+    <h178>Barras transversales en forma de S (clavijas). Ganchos en boceto:</h178>
+    <h179>Barras en forma de L:</h179>
+    <h180>Barras en forma de U:</h180>
+    <h181>Barras de estribo:</h181>
+    <h182>Barras en forma de L con gran flexión:</h182>
+    <h183>Restablecer todos valores a "Auto"</h183>
+    <h184>Formas de barras de refuerzo preferidas</h184>
+    <h185>No se puede establecer valores de parámetros para algunos elementos. A continuación se muestran códigos de elementos (id), nombres de parámetros y valores establecidos:</h185>
+    <!-- todo remove after 5.24.16.0 end -->
+    <h186>Estribos con nudos horizontales</h186>
+    <h187>Sólo en padres que no tienen intersecciones de bordes con otros muros</h187>
+    <h188>En muros hasta, mm:</h188>
+    <h189>No crear barras horizontales de refuerzo de fondo</h189>
+    <h190>Número de pares de varillas cubiertas:</h190>
+    <h191>Tener en cuenta piezas en topes e intersecciones</h191>
+    <h192>Tipo de envolvimiento de barras de refuerzo de fondo:</h192>
+    <h193>Primera longitud de empalme solapado, mm:</h193>
+    <h194>Segunda longitud de empalme solapado, mm:</h194>
+    <h195>Calcular longitud de empalme solapado</h195>
+    <h196>Longitud de empalme solapado, mm:</h196>
+    <h197>DESCARGAR</h197>
+    <h198>Barras horizontales en parte inferior</h198>
+    <h199>Estribos en parte superior</h199>
+    <h200>Ganchos en forma:</h200>
+    <h201>Establecer en boceto</h201>
+    <h202>Utilizar ganchos Revit</h202>
+    <h203>Seleccionar de nuevo</h203>
+    <h204>Volver a seleccionar muros que se editaron en vista actual cuando se utilizó anteriormente complemento</h204>
+    <h205>Barras transversales en forma de C (clavijas). Ganchos Revit:</h205>
+    <h206>Barras transversales en forma de S (clavijas). Ganchos Revit:</h206>
+    <h207>Crear cada pieza con una barra de refuerzo separada</h207>
+    <h208>No cortar barras de refuerzo con hueco de hasta (LxH):</h208>
+    <h209>Barras seguidas:</h209>
+    <h210>Disposición por longitud de:</h210>
+    <h211>hueco</h211>
+    <h212>barras rectas</h212>
+    <h213>barras en forma de U en parte inferior</h213>
+    <h214>Estribos inferiores</h214>
+    <h215>Estribos verticales</h215>
+    <h216>Longitud de salientes, mm:</h216>
+    <h217>Desplazar barras verticales más externas del refuerzo de fondo en colisión con una barra en forma de U</h217>
+    <h218>Barras verticales adicionales cerca de intersecciones</h218>
+    <h219>Forzado de cursor a cara de intersección (en centro de armadura):</h219>
+    <h220>Sólo para muros intersecadas en ángulo recto</h220>
+    <h221>Barras plegadas longitudinalmente (forma "botella")</h221>
+    <h222>Paso en zonas de engrosamiento, mm:</h222>
+    <h223>Distancia de engrosamiento, mm:</h223>
+    <h224>Distancia de engrosamiento, partes:</h224>
+    <h225>Engrosamiento de armadura horizontal en parte inferior de muro</h225>
+    <h226>Eliminar armadura creada anteriormente:</h226>
+    <h227>Refuerzo vertical en intersecciones</h227>
+    <h228>Utilizar ajustes de refuerzo principal vertical</h228>
+    <h229>Nivel</h229>
+    <h230>Crear salientes a lo largo de barras verticales adicionales de refuerzo de fondo</h230>
+    <h231>Distancia de punto inicial de curvatura hasta parte superior de muro (a), mm:</h231>
+    <h232>Distancia de final de curvatura hasta parte superior de losa (b), mm:</h232>
+    <h233>Utilizar diámetro de armadura como altura de flexión (c)</h233>
+    <h234>Altura de flexión (c), mm:</h234>
+    <h235>Forzado de cursor de pieza a parte superior de losa (a lo largo de cara exterior de pieza), mm:</h235>
+    <h236>Barras en forma de U de salientes verticales:</h236>
+    <h237>Distancia entre barras de refuerzo vertical (a lo largo de muro más pequeño de grupo) es</h237>
+    <h238>¡Según cláusula 10.3.5 SP 63.13330, distancia entre barras de refuerzo vertical debe ser de al menos 50 mm!</h238>
+    <h239>¡Según cláusula 10.3.5 SP 63.13330, distancia entre barras de refuerzo horizontal debe ser de al menos 25 mm!</h239>
+    <h240>Alternar lados</h240>
+    <h241>Barra adicional en forma de L, doblada en losa e instalada en muros externos</h241>
+    <h242>Longitud del anclaje a muro, mm:</h242>
+    <h243>Enredar por desfase</h243>
+    <h244>Crear sólo en áreas sin losa plana o muro superior</h244>
+    <h245>Barras en forma de U a lo largo del tope inferior de muro</h245>
+    <h246>Muros en contacto con losa:</h246>
+    <h247>Parámetro de origen</h247>
+    <h248>Sin parámetro</h248>
+    <h249>Barras horizontales en forma de U</h249>
+    <h250>Tipo de extremos:</h250>
+    <h251>Longitud del extremo(s), mm:</h251>
+    <h252>Calcular longitud del extremo(s) de barra en forma de U</h252>
+    <h253>Aplicar capa protectora a extremos de armadura en parte inferior de muro</h253>
+    <h254>Instalar con paso de refuerzo de fondo</h254>
+    <h255>Engrosamiento de refuerzo horizontal en parte superior de muro</h255>
+    <et1>Ambos extremos se especifican a longitud de muro</et1>
+    <et2>Un extremo se especifica por longitud de muro, segundo por valor</et2>
+    <et3>Ambos extremos están especificados por valor</et3>
+    <srd>Guardar datos sobre muros seleccionados</srd>
+    <rr1>Eliminar armadura del mismo tipo que se creó</rr1>
+    <rr2>Eliminar toda armadura creada anteriormente</rr2>
+    <rr3>No eliminar</rr3>
+    <hook>Gancho:</hook>
+    <g1>Envolver barras verticales</g1>
+    <g2>Envolver barras horizontales</g2>
+    <auto>Auto</auto>
+    <oa1>no crear salientes</oa1>
+    <oa2>doblar en una losa (si está disponible)</oa2>
+    <npa1>considerar condicionalmente que losa existe</npa1>
+    <npa2>contar longitud de empalme solapado desde parte superior de muro</npa2>
+    <jtd1>No se crean salientes de barras verticales de refuerzo de fondo. Barras se cortan a lo largo de parte superior de muro de acuerdo con valor especificado de capa protectora en extremos de armadura</jtd1>
+    <jtd2>Se crean salientes rectos de barras verticales. Longitud de empalme solapado se establece desde parte superior de losa plana superior o desde parte superior de muro. Al reducir espesor de muro superior, armadura se pliega (si hay losa plana)</jtd2>
+    <jtd3>Salientes de barras verticales se crean por analogía con salientes rectos, pero con diferentes longitudes de anclaje</jtd3>
+    <jtd4>Se crean salientes de barras verticales anclando en losa plana superior. Longitud del anclaje se mide desde cara lateral de muro. Si no es posible doblar barras en ambas direcciones, entonces se doblan barras en dirección en diferentes niveles de losa</jtd4>
+    <jtd5>Se crean salientes rectos de barras verticales. Longitud de empalme solapado se establece desde parte superior de losa plana superior o desde parte superior de muro</jtd5>
+    <jtd6>Salientes rectos de barras verticales se crean en forma de "botella" – salientes se pliegan hacia centro de intersección según diámetro de barra. Longitud de empalme solapado se establece desde parte superior de losa plana superior</jtd6>
+    <jtd7>Se crean salientes en losa plana superior como barras separadas en forma de L. Primera longitud de anclaje (longitud de anclaje de barras a losa) se mide desde superficie lateral de muro. Segunda longitud de anclaje, longitud de anclaje de barras a muro, se mide desde cara superior de muro. Si no es posible doblar barras en ambas direcciones, entonces se doblan barras en dirección en diferentes niveles de losa</jtd7>
+    <jtd8>Se crean salientes rectas de barras verticales sin tener en cuenta elementos superpuestos</jtd8>
+    <jtd9>Salientes rectos de barras verticales se crean en forma de "botella" – salientes se pliegan hacia centro de muro a una distancia determinada o al diámetro de barra. Longitud de empalme solapado se establece desde parte superior de losa plana superior</jtd9>
+    <jtd10>Barras de refuerzo de fondo verticales se cortan a lo largo de parte superior de muro de acuerdo con valor especificado de capa protectora. Se crea anclaje en losa plana superior como una barra en forma de U separada</jtd10>
+    <!-- todo remove after 5.24.16.0 start -->
+    <i1>1. Esquina</i1>
+    <i2>2. Forma de T</i2>
+    <i3>3. Forma de cruz</i3>
+    <i4>0. No definido</i4>
+    <i5>Varios</i5>
+    <!-- todo remove after 5.24.16.0 end -->
+    <m1>Ingresar valor de</m1>
+    <m2>a</m2>
+    <!-- todo remove after 5.24.16.0 -->
+    <m13>Capa protectora de armadura</m13>
+    <m14>A</m14>
+    <m15>De</m15>
+    <m16>Ventana</m16>
+    <m17>Puerta</m17>
+    <m18>Modelo generalizado</m18>
+    <m19>Hueco rectangular</m19>
+    <!-- todo remove after 5.24.16.0 -->
+    <m20>Lista de muros contiene muros cuyos ajustes de refuerzo se cambiaron manualmente y difieren de ajustes de refuerzo grupal</m20>
+    <!-- todo remove after 5.24.16.0 -->
+    <m21>Lista de intersecciones contiene intersecciones cuyas ajustes de refuerzo se cambiaron manualmente y difieren de ajustes de refuerzo grupal</m21>
+    <!-- todo remove after 5.24.16.0 -->
+    <m22>Lista de huecos contiene huecos cuyos ajustes de refuerzo se cambiaron manualmente y difieren de ajustes de refuerzo grupal</m22>
+    <m23>Ajustes de refuerzo copiados</m23>
+    <m24>¡No se especifica para qué grupos crear refuerzo!</m24>
+    <m25>¡No se ha seleccionado grupos para crear refuerzo!</m25>
+    <m26>Seleccionar muros</m26>
+    <m27>¡Atención! ¡No se han encontrado formas de barras de refuerzo descargadas en proyecto actual! ¡En este caso, formas de barras de refuerzo creadas al ejecutar complemento no podrán abrirse en editor familiar! ¡Se recomienda descargar formas de barras de refuerzo en proyecto antes de usar complemento!\n¿Reforzar a pesar de que faltan formas de barras de refuerzo?</m27>
+    <!-- todo remove after 5.24.16.0 -->
+    <m28>Seleccionar losas inferiores</m28>
+    <!-- todo remove after 5.24.16.0 -->
+    <m29>Losa inferior seleccionada (id: {0}) o tiene conexión con muros seleccionados</m29>
+    <!-- todo remove after 5.24.16.0 -->
+    <m30>¡Atención! ¡Se restablecen ajustes de refuerzo para salientes de losas inferiores! ¿Continuar?</m30>
+    <m31>Radio de flexión de barra de refuerzo es menor que mínimo permitido</m31>
+    <m32>¡Ajustes de refuerzo especificados provocarán imposibilidad de modelar piezas de refuerzo!</m32>
+    <m33>¡Atención! ¡Análisis repetido limpiará listas de grupos actuales y lista de placas inferiores! ¿Reanalizar?</m33>
+    <m34>Perfil de muro</m34>
+    <p1>Buscar muros sin procesar que se cruzan con muros seleccionados</p1>
+    <p2>Inicialización de la geometría de muro</p2>
+    <p3>Buscar intersecciones de muro</p3>
+    <p4>Eliminar intersecciones idénticas</p4>
+    <p5>Unir intersecciones</p5>
+    <p6>Analizar geometría de intersecciones</p6>
+    <p7>Determinar si muros pertenecen a intersecciones</p7>
+    <p8>Eliminar refuerzo creado anteriormente</p8>
+    <p9>Calcular y modelar refuerzo de muros</p9>
+    <p10>Calcular y modelar refuerzo de intersección</p10>
+    <p11>Calcular y modelar refuerzo de hueco</p11>
+    <p12>Generar armaduras de Revit</p12>
+    <p13>Combinar barras horizontales de refuerzo creado</p13>
+    <p14>Calcular y modelar saliente de losa en muros intermedios</p14>
+    <p15>Calcular y modelar saliente de losa en muros externos</p15>
+    <p16>Buscar losas inferiores</p16>
+    <dd1>V</dd1>
+    <dd2>H</dd2>
+    <dd3>adentro</dd3>
+    <dd4>exterior</dd4>
+    <dd5>C</dd5>
+    <dd6>U</dd6>
+    <rn>Armadura de apoyo ⌀</rn>
+    <!-- todo remove after 5.24.16.0 -->
+    <noInFamily>¡Complemento no está disponible en familias!</noInFamily>
+    <c1>Desplazar al borde de muro</c1>
+    <c2>Desplazar al medio de muro</c2>
+    <c3>Distribuir refuerzo vertical</c3>
+    <c4>Adentro</c4>
+    <c5>Exterior</c5>
+    <c6>Orden directa</c6>
+    <c7>Contrapeado</c7>
+    <c8>Por paso más pequeño</c8>
+    <c9>Por paso más grande</c9>
+    <c10>Desplazar a ambos bordes de muro</c10>
+    <t1>Seleccionar muros para un análisis más detallado</t1>
+    <t2>Filtro de selección sólo incluye muros con siguientes parámetros:</t2>
+    <t3>Muro está limitado por líneas rectas</t3>
+    <t4>Propiedad "Estructuras" está activada</t4>
+    <t5>Muro no es un vitral</t5>
+    <t6>Espesor de muro no inferior a 100 mm</t6>
+    <!-- todo remove after 5.24.16.0 -->
+    <t7>Grupo contiene muros cuyos ajustes de refuerzo se han editado manualmente y difieren de ajustes de refuerzo grupal</t7>
+    <!-- todo remove after 5.24.16.0 -->
+    <t8>Añadir un nuevo grupo vacío</t8>
+    <!-- todo remove after 5.24.16.0 -->
+    <t9>Eliminar grupo vacío</t9>
+    <t10>Marcar todos grupos</t10>
+    <t11>Desmarcar todos grupos</t11>
+    <!-- todo remove after 5.24.16.0 -->
+    <t12>Ajustes de refuerzo de muro se han editado manualmente y difieren de ajustes de refuerzo grupal</t12>
+    <!-- todo remove after 5.24.16.0 -->
+    <t13>Editar ajustes de refuerzo para muro seleccionado</t13>
+    <!-- todo remove after 5.24.16.0 -->
+    <t14>Reemplazar ajustes de refuerzo de muro con ajustes de grupo</t14>
+    <t15>Mostrar en modelo muro anterior en lista</t15>
+    <t16>Mostrar en modelo muro seleccionado en lista</t16>
+    <t17>Mostrar en modelo siguiente muro en lista</t17>
+    <t18>Alturas de muros se determinan sólo en intersecciones</t18>
+    <!-- todo remove after 5.24.16.0 -->
+    <t19>Grupo contiene intersecciones cuyas ajustes de refuerzo se han editado manualmente y difieren de ajustes de refuerzo grupal</t19>
+    <!-- todo remove after 5.24.16.0 -->
+    <t20>Ajustes de refuerzo de intersección se han editado manualmente y difieren de ajustes de refuerzo grupal</t20>
+    <!-- todo remove after 5.24.16.0 -->
+    <t21>Editar ajustes de refuerzo para intersección seleccionada</t21>
+    <!-- todo remove after 5.24.16.0 -->
+    <t22>Reemplazar ajustes de refuerzo de intersección con ajustes de grupo</t22>
+    <t23>Mostrar en modelo intersección anterior en lista</t23>
+    <t24>Mostrar en modelo intersección seleccionada en lista</t24>
+    <t25>Mostrar en modelo siguiente intersección en lista</t25>
+    <t26>Este muro no es procesado por complemento (no reforzada) y sólo se usa para determinar intersección con un de muros seleccionadas</t26>
+    <t27>Breve descripción del refuerzo de muro, donde:</t27>
+    <t28>V - refuerzo vertical que indica diámetro y paso de barras</t28>
+    <t29>H – refuerzo horizontal que indica diámetro, paso y posición de barras</t29>
+    <t30>C – refuerzo transversal (clavijas) con indicación del diámetro</t30>
+    <t31>U – Barras en forma de U en extremos con indicación del diámetro</t31>
+    <!-- todo remove after 5.24.16.0 -->
+    <t32>Editar ajustes de refuerzo para un grupo de dimensiones</t32>
+    <!-- todo remove after 5.24.16.0 -->
+    <t33>Grupo contiene huecos cuyos ajustes de refuerzo se han editado manualmente y difieren de ajustes de refuerzo grupal</t33>
+    <!-- todo remove after 5.24.16.0 -->
+    <t34>Ajustes de refuerzo de hueco se han editado manualmente y difieren de ajustes de refuerzo grupal</t34>
+    <!-- todo remove after 5.24.16.0 -->
+    <t35>Editar ajustes de refuerzo para hueco seleccionado</t35>
+    <!-- todo remove after 5.24.16.0 -->
+    <t36>Reemplazar ajustes de refuerzo de hueco con ajustes de grupo</t36>
+    <t37>Mostrar en modelo hueco anterior en lista</t37>
+    <t38>Mostrar en modelo hueco seleccionada en lista</t38>
+    <t39>Mostrar en modelo siguiente hueco en lista</t39>
+    <!-- todo remove after 5.24.16.0 -->
+    <t40>Copiar ajustes de refuerzo de grupo actual a todos grupos seleccionados</t40>
+    <!-- todo remove after 5.24.16.0 -->
+    <t41>Guardar ajustes de refuerzo de grupo actual en un archivo .xml</t41>
+    <!-- todo remove after 5.24.16.0 -->
+    <t42>Descargar ajustes de refuerzo del archivo .xml y establecerlos para grupo actual</t42>
+    <t43>¡Atención! Tipo de superficie de refuerzo puede depender de clase de armadura, diámetro u otros valores que programa no tiene en cuenta. Leer documentación reglamentaria</t43>
+    <t44>α es un factor que tiene en cuenta influencia del comportamiento esfuerzo del hormigón y de armadura sobre longitud de anclaje y concepto estructural del elemento en zona de anclaje. Al anclar barras corrugadas con extremos rectos (anclaje recto) o barras lisas con bisagras de ganchos sin dispositivos de anclaje adicionales, se toma α = 1,0 para barras de tensión y α = 0,75 para barras de compresión. Según cláusula 10.3.30 del SP 63.13330, factor α se puede aumentar a 2,0</t44>
+    <t45>Según cláusula 10.3.8 SP 63.13330.2012 paso de barras verticales se considera no superior a 2t y 400 mm (t es espesor de muro )</t45>
+    <t46>Según GOST 21.501-2018, cláusula 6.4.7, longitud de pieza se especifica a lo largo del cara exterior de barra de refuerzo</t46>
+    <t47>¡Aumenta tiempo de generación de refuerzo!</t47>
+    <t48>Piezas de refuerzo de intersección se instalarán con paso de refuerzo horizontal de muros - según paso más pequeño o más grande de refuerzo horizontal de muros involucrados en intersección</t48>
+    <t49>Número de filas de refuerzo vertical</t49>
+    <t50>Número de filas de refuerzo horizontal</t50>
+    <!-- todo remove after 5.24.16.0 start -->
+    <t51>Seleccionar losa inferior directamente debajo de muros seleccionados. Selección de losa inferior está posible después de seleccionar, analizar y agrupar muros. Puede seleccionar una losa o más. Propiedad "Estructuras portantes" debe estar activada en propiedades de losas inferiores</t51>
+    <!-- todo remove after 5.24.16.0 -->
+    <t53>Restablecer todos valores de ajustes de refuerzo predeterminados actual a valores estándar incluidos en complemento</t53>
+    <t54>Copiar ajustes de refuerzo para salientes de losa actual a todas losas marcadas</t54>
+    <t55>Guardar ajustes de refuerzo para salientes de losa actual</t55>
+    <t56>Descargar ajustes de refuerzo de salientes y establecerlos para grupo actual</t56>
+    <t57>Valores mínimo y máximo se calculan en función de diámetros especificados y paso del refuerzo vertical</t57>
+    <t58>Longitud de barra es suma de dos longitudes de anclaje</t58>
+    <t59>Cuando opción "A enredar" está activada, cada primer par de salientes a lo largo de muro se creará con primera longitud de empalme solapado , cada segundo par – con segunda longitud de empalme solapado</t59>
+    <t60>Si salientes exceden altura de muro superior, se cortarán a lo largo del cara superior de muro, teniendo en cuenta capa protectora especificada en extremos de armadura</t60>
+    <!-- todo remove after 5.24.16.0 -->
+    <t61>Opción de selección se aplica a selección de losas</t61>
+    <t62>Barra vertical se barre hasta punto donde comienza flexión de barra en forma de U, que se obtiene sumando valores de capa protectora de refuerzo horizontal en extremos, diámetro de barra en forma de U y diámetro estándar de flexión de barra en forma de U</t62>
+    <!-- todo remove after 5.24.16.0 -->
+    <t63>Puede especificar formas preferidas de barras de refuerzo para diferentes tipos de barras de refuerzo creadas por complemento.</t63>
+    <!-- todo remove after 5.24.16.0 -->
+    <t64>Establecer formas preferidas no garantiza que se creará refuerzo utilizando forma de barra de refuerzo especificada.</t64>
+    <!-- todo remove after 5.24.16.0 -->
+    <t65>Al crear barras de refuerzo, se intentará utilizar forma especificada. Si no es posible crear una barra con forma especificada, Revit buscará automáticamente una forma adecuada o creará una nueva forma.</t65>
+    <!-- todo remove after 5.24.16.0 -->
+    <t66>Guardar ajustes de refuerzo actual como ajustes de refuerzo predeterminados</t66>
+    <t67>Agrupar muros, intersecciones y huecos utilizando configuración de agrupación actual</t67>
+    <t68>Si esta opción está activada, clavijas no se instalarán en intersecciones de muros ni en topes de muros donde se instalan piezas (por ejemplo, barras en forma de U)</t68>
+    <t69>Si se ubican barras de refuerzo de fondo horizontales en interior y barras verticales en exterior, se recomienda indicar envolvimiento de barras verticales. Para caso contrario, cuando barras horizontales del refuerzo de fondo se ubican en exterior, se recomienda indicar envolvimiento de barras horizontales</t69>
+    <t70>Longitud de pieza se toma como longitud del anclaje</t70>
+    <t71>Cada segundo par de barras se retranqueará desde abajo una distancia igual al valor absoluto de diferencia en longitudes de empalmes solapados. Distancia no afecta la segunda longitud de empalme solapado. Por ejemplo, si primera longitud de empalme solapado es de 500 mm y segunda longitud de empalme solapado de 750 mm, entonces barras de cada segundo par tendrán una distancia inferior de 250 mm</t71>
+    <t72>Mostrar en modelo losa seleccionada en lista</t72>
+    <t73>Mostrar en modelo muros en contacto con losa seleccionada en lista</t73>
+    <re1>Error al crear barras verticales de refuerzo de fondo en muro id={0}:</re1>
+    <re2>Error al crear barras verticales de refuerzo de fondo en una intersección en muro id={0}:</re2>
+    <re3>Error al crear barras verticales adicionales al tope de muro id={0}:</re3>
+    <re4>Error al crear barras tejidas horizontales en muro id={0}:</re4>
+    <re5>Error al crear barras horizontales de refuerzo de fondo en muro id={0}:</re5>
+    <re6>Error al crear barras en forma de U al tope de muro id={0}:</re6>
+    <re7>Error al crear barras en forma de U a lo largo del tope superior de muro id={0}:</re7>
+    <re8>Error al crear clavijas en muro id={0}:</re8>
+    <re9>Error al crear piezas de junta angular en muros {0}:</re9>
+    <re10>Error al crear piezas de conexión en T en muros {0}:</re10>
+    <re11>Error al crear piezas de conexión en cruz en muros {0}:</re11>
+    <re12>Error al crear barras verticales para enmarcamiento de hueco en muro id={0}:</re12>
+    <re13>Error al crear barras horizontales para enmarcamiento de hueco en muro id={0}:</re13>
+    <re14>Error al crear barras en forma de U para enmarcamiento de hueco a lo largo de vertical en muro id={0}</re14>
+    <re15>Error al crear barras en forma de U para enmarcamiento de hueco a lo largo de horizontal (de parte superior) en muro id={0}</re15>
+    <re16>Error al crear barras de refuerzo indirecto en enmarcamiento de hueco en muro id={0}:</re16>
+    <re17>Error al crear salientes desde losa id={0} en muro id={1}:</re17>
+    <re18>Error al crear estribos para enmarcamiento de hueco en muro id={0}:</re18>
+    <re19>Error al crear barras en forma de U para enmarcamiento de hueco a lo largo de horizontal (en parte inferior) en muro id={0}</re19>
+    <re20>No se puede crear una barra de refuerzo con forma de barra de refuerzo preferida especificada "{0}". Error: {1}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re20>
+    <re21>Error al crear barras en forma de U a lo largo del extremo inferior de muro</re21>
+    <re22>¡No es posible mostrar intersección en vista actual! Ir al plano de planta</re22>
+    <re23>Error al crear barras horizontales en forma de U en muro id={0}:</re23>
+    <re24>Error al crear barras verticales adicionales cerca de una intersección en muro id={0}:</re24>
+  </mprWallsReinforcement>
+  <mprSlabsReinforcement LocalName="Refuerzo de losa" 
+                         Description="Análisis, agrupamiento y refuerzo de losas según condiciones especificadas"
+                         FullDescription="Complemento le permite procesar tanto losas seleccionadas individualmente como todas losas en una vista o documento. Refuerzo principal de losa se puede realizar bien con barras individuales o bien con refuerzo sobre una zona. Análisis de agujeros se ejecuta de geometría de propia losa y es independiente de familias utilizadas. Complemento puede funcionar incluso en plantilla vacía">
+    <h1>Opciones</h1>
+    <h2>Seleccionar losas</h2>
+    <h3>Seleccionar todas losas en vista actual</h3>
+    <h4>Seleccionar todas losas del proyecto</h4>
+    <h6>Seleccionar</h6>
+    <h7>Analizar</h7>
+    <h8>Total losas seleccionadas:</h8>
+    <h9>De ellos, se han analizado con éxito los siguientes:</h9>
+    <h10>Reforzar</h10>
+    <h11>Ajustes de refuerzo</h11>
+    <h12>Espesor</h12>
+    <h13>Marca inferior</h13>
+    <h14>Refuerzo principal (de fondo)</h14>
+    <h15>Refuerzo adicional</h15>
+    <h16>Refuerzo de topes</h16>
+    <h17>Enmarcamiento de agujeros</h17>
+    <h18>Número de mallazos de refuerzo de fondo</h18>
+    <h19>Desfase de barra más externa (a lo largo del eje de barra) desde borde de losa:</h19>
+    <h19-1>Смещение крайнего стержня (по грани стержня) от края плиты:</h19-1>
+    <h20>Ajustes</h20>
+    <h21>VENTANA DEL COMPLEMENTO:</h21>
+    <h23>Primer mallazo (superior)</h23>
+    <h24>Segundo mallazo (inferior)</h24>
+    <h25>Armadura longitudinal (dirección principal):</h25>
+    <h26>Armadura transversal (dirección menor):</h26>
+    <h27>Capa protectora superior de refuerzo (desde cara superior de losa):</h27>
+    <h28>Capa protectora inferior de refuerzo (desde borde inferior de losa):</h28>
+    <h29>Ajustes de refuerzo de mallazo inferior son mismos que ajustes de refuerzo de mallazo superior</h29>
+    <h30>Método para crear refuerzo de fondo:</h30>
+    <h31>Desplazar paso adicional a:</h31>
+    <h32>Crear:</h32>
+    <!-- todo remove after 2.20.2.0 -->
+    <h33>REFUERZO PREDETERMINADO:</h33>
+    <h34>Refuerzo de losa</h34>
+    <h35>Utilizar elemento "Refuerzo de área" para:</h35>
+    <h36>cada dirección en cado mallazo</h36>
+    <h37>cada dirección</h37>
+    <h38>todo lo refuerzo de fondo</h38>
+    <h39>Ajustes generales de refuerzo</h39>
+    <h40>Losas</h40>
+    <h41>Agujeros en losa seleccionada</h41>
+    <h42>Dimensión</h42>
+    <!-- todo remove after 2.20.2.0 -->
+    <h43>Capa protectora en losas procesadas</h43>
+    <!-- todo remove after 2.20.2.0 -->
+    <h44>Establecer como nulo</h44>
+    <!-- todo remove after 2.20.2.0 -->
+    <h45>Establecer según ajuntes de refuerzo</h45>
+    <h47>Ingresar</h47>
+    <h48>Copiar a todos agujeros marcados de losa actual</h48>
+    <h49>Copiar a todos agujeros marcados de todas losas marcadas</h49>
+    <h50>No definido</h50>
+    <h51>No se recomienda enmarcar agujeros de hasta 300 mm</h51>
+    <h52>Límites de agujeros no están alineados con dirección del refuerzo. ¡Enmarcar no es posible!</h52>
+    <h53>Aplicar ajustes de capa protectora superior e inferior sólo a mallazos de refuerzo de fondo</h53>
+    <h54>Crear cada pieza con una barra de refuerzo separada</h54>
+    <h55>Multiplicidad de paso en relación con paso de barras de refuerzo de fondo</h55>
+    <!-- todo remove after 2.20.2.0 -->
+    <h56>No se puede establecer valores de parámetros para algunos elementos. A continuación se muestran códigos de elementos (id), nombres de parámetros y valores establecidos:</h56>
+    <h57>Parámetros de refuerzo longitudinal</h57>
+    <h58>Parámetros de refuerzo transversal</h58>
+    <h59>Instalar con paso de refuerzo de fondo</h59>
+    <h60>Barra de refuerzo adicional a lo largo del cara de losa con un desfase (en centro) de barra externa:</h60>
+    <h61>Calcular anclaje según SP 52-101-2003</h61>
+    <h62>Diámetro:</h62>
+    <h63>Escuadría, mm²:</h63>
+    <h64>Clase de hormigón:</h64>
+    <h65>Tipo de superficie de refuerzo:</h65>
+    <h66>Resistencia de diseño a tracción, MPa:</h66>
+    <h67>Longitud de anclaje base (principal), mm:</h67>
+    <h68>Factor α:</h68>
+    <h69>Longitud de anclaje requerida (calculada), mm:</h69>
+    <h70>Longitud de anclaje:</h70>
+    <h71>Paso de barras en forma de U en extremos, si pasos de mallazos de refuerzo de fondo difieren, se debe establecer de acuerdo con</h71>
+    <h72>barras de mallazo superior</h72>
+    <h73>barras de mallazo inferior</h73>
+    <h76>Refuerzo de losa</h76>
+    <h79>Paso, mm:</h79>
+    <h80>Establecer tipo de ejemplares de "Refuerzo de área":</h80>
+    <h81>Cado mallazo</h81>
+    <h82>Conviertir valores de parámetros de "refuerzo de área" en barras de refuerzo</h82>
+    <h84>Capa protectora en extremos de armadura, mm:</h84>
+    <h85>Refuerzo de topes en dirección longitudinal</h85>
+    <h86>Refuerzo de topes en dirección transversal</h86>
+    <h87>Repetir ajustes de refuerzo de topes en dirección longitudinal</h87>
+    <h88>Orientación del mallazo inferior:</h88>
+    <h89>Cuando se utiliza refuerzo de área para todo refuerzo de fondo, no es posible utilizar orientación codireccional del mallazo de fondo. Se utilizará orientación del espejo</h89>
+    <h91>No crear una pieza si, durante generación, longitud de pieza es menor, mm:</h91>
+    <h92>Longitud de pieza, mm:</h92>
+    <h93>Calcular longitud del barra en forma de U</h93>
+    <h104>Longitud de anclaje, mm:</h104>
+    <h105>Calcular longitud del anclaje</h105>
+    <h109>Barras rectas en dirección longitudinal</h109>
+    <h110>Crear refuerzo</h110>
+    <h111>Distancia hasta agujero:</h111>
+    <h112>Número de filas:</h112>
+    <h113>Desplazar al encontrar barras del refuerzo principal</h113>
+    <h114>Barras rectas en dirección transversal</h114>
+    <h115>Barras en forma de U en dirección longitudinal</h115>
+    <h116>Barras en forma de U en dirección transversal</h116>
+    <h117>Longitud de pieza, mm:</h117>
+    <h118>Paso de pieza, mm:</h118>
+    <!-- todo remove after 2.20.2.0 -->
+    <h119>Ajustes de refuerzo predeterminados para losas</h119>
+    <!-- todo remove after 2.20.2.0 -->
+    <h120>Ajustes de refuerzo predeterminados para agujeros</h120>
+    <h121>Parámetros de barras de mallazo superior</h121>
+    <h122>Parámetros de barras de mallazo inferior</h122>
+    <h141>No cerrar ventana después de crear refuerzo</h141>
+    <!-- todo remove after 2.20.2.0 -->
+    <h147>Restablecer</h147>
+    <h153>Refuerzo indirecto</h153>
+    <h155>Longitud de barra:</h155>
+    <!-- todo remove after 2.20.2.0 -->
+    <h173>Barras rectas:</h173>
+    <!-- todo remove after 2.20.2.0 -->
+    <h180>Barras en forma de U:</h180>
+    <!-- todo remove after 2.20.2.0 -->
+    <h181>Barras de sujeción (estribos):</h181>
+    <!-- todo remove after 2.20.2.0 -->
+    <h183>Restablecer todos valores a "Auto"</h183>
+    <!-- todo remove after 2.20.2.0 -->
+    <h184>Formas preferidas de barras de refuerzo</h184>
+    <h185>Crear:</h185>
+    <h186>Refuerzo longitudinal y transversal</h186>
+    <h187>Sólo refuerzo longitudinal</h187>
+    <h188>Sólo refuerzo transversal</h188>
+    <h199>Estribos longitudinales</h199>
+    <h203>Seleccionar de nuevo</h203>
+    <h204>Volver a seleccionar losas que se procesaron en vista actual cuando se utilizó anteriormente complemento</h204>
+    <h205>SELECCIÓN DE AGUJEROS:</h205>
+    <h206>Por defecto, dejar sin marcar agujeros cuyo rectángulo descriptivo</h206>
+    <h207>uno de los lados</h207>
+    <h208>todos lados</h208>
+    <h209>menos</h209>
+    <h210>Disposición por longitud de:</h210>
+    <h211>hueco</h211>
+    <h212>barras rectas</h212>
+    <h214>Estribos transversales</h214>
+    <h226>Eliminar armadura creada anteriormente:</h226>
+    <h229>Para poder crear estribos es necesario activar creación de al menos dos barras rectas en sentido longitudinal con opción "Desplazar al encontrar barras del refuerzo principal"</h229>
+    <h230>Para poder crear estribos es necesario activar creación de al menos dos barras rectas en sentido transversal con opción "Desplazar al encontrar barras del refuerzo principal"</h230>
+    <h231>Longitud de anclaje de barra de refuerzo adicional:</h231>
+    <h232>Cortar barras en forma de U con sólido de losa si barras sobresalen más allá de límites del sólido de losa</h232>
+    <srd>Guardar datos sobre losas seleccionadas</srd>
+    <hook>Gancho:</hook>
+    <m1>Seleccionar losas</m1>
+    <!-- todo remove after 2.20.2.0 -->
+    <m13>Capa protectora de armadura</m13>
+    <m24>¡No se especifica qué tipo de refuerzo crear!</m24>
+    <m25>¡No se ha seleccionado losa para crear refuerzo!</m25>
+    <m27>¡Atención! ¡No se han encontrado formas de barras de refuerzo descargadas en proyecto actual! ¡En este caso, formas de barras de refuerzo creadas al ejecutar complemento no podrán abrirse en editor familiar! ¡Se recomienda descargar formas de barras de refuerzo en proyecto antes de usar complemento!\n¿Reforzar a pesar de que faltan formas de barras de refuerzo?</m27>
+    <p1>Análisis de losa:</p1>
+    <p2>Calcular y modelar refuerzo de fondo</p2>
+    <p3>Calcular y modelar refuerzo adicional</p3>
+    <p4>Calcular y modelar refuerzo de topes</p4>
+    <p5>Calcular y modelar enmarcamiento de agujero</p5>
+    <p8>Eliminar refuerzo creado anteriormente</p8>
+    <p12>Generar armaduras de Revit</p12>
+    <e1>Errores de análisis de losa</e1>
+    <e2>No se puede inicializar losa</e2>
+    <e3>No se puede obtener espesor de losa de parámetro</e3>
+    <e4>No se puede obtener sólido de geometría de losa</e4>
+    <e5>No se puede obtener borde superior o inferior de geometría de losa</e5>
+    <e7>No se puede obtener contornos externos de geometría de losa</e7>
+    <e8>No se puede obtener contorno para refuerzo de área</e8>
+    <e9>No se puede crear refuerzo de fondo de losa:</e9>
+    <e10>No se puede crear refuerzo de topes de losa:</e10>
+    <e11>No se puede crear refuerzo adicional de losa :</e11>
+    <e12>No se puede crear enmarcamiento de agujeros de losa:</e12>
+    <e13>No se puede obtener líneas del refuerzo de área creado. Se interrumpe refuerzo adicional de losa. Error:</e13>
+    <m1>Ingresar valor de</m1>
+    <m2>a</m2>
+    <m6>Para barra de armadura</m6>
+    <m7>valor de propiedad "Diámetro estándar de flexión"</m7>
+    <m8>no cumple con normas SP 63.13330.2012</m8>
+    <m9>Diámetro mínimo de flexión para armadura</m9>
+    <m10>diámetro</m10>
+    <m11>debe ser igual a:</m11>
+    <m12>Valor de propiedad será reemplazado</m12>
+    <m23>Ajustes de refuerzo copiados</m23>
+    <rn>Armadura de apoyo ⌀</rn>
+    <!-- todo remove after 2.20.2.0 -->
+    <full>¡Disponible en versión completa del complemento!</full>
+    <notSet>No establecer</notSet>
+    <br1>Barras separadas</br1>
+    <br2>Refuerzo de área</br2>
+    <as1>hasta borde de losa</as1>
+    <as2>hasta medio de losa</as2>
+    <rr1>Eliminar armadura del mismo tipo que se creó</rr1>
+    <rr2>Eliminar toda armadura creada anteriormente</rr2>
+    <rr3>No eliminar</rr3>
+    <t1>Según SP 63.13330.2012 cláusula 10.3.5 – distancia libre mínima entre barras de refuerzo debe considerarse al menos diámetro más grande de barra, así como al menos 25 mm para refuerzo inferior y 30 mm para refuerzo superior; cláusula 10.3.8 - distancia máxima entre ejes de barras no debe ser superior a 200 mm cuando altura de sección transversal de losa sea h &gt; 150 mm y no superior a 1,5 h y 400 mm cuando altura de sección transversal sea h &gt; 150 mm</t1>
+    <t2>Verificación y desfase al encontrar barras de refuerzo de fondo se realiza para primera barra (la más cercana), lo que no asegura un correcto desfase para segunda o tercera barra. Al desfase, tener en cuenta vano mínimo permitido entre barras – 30 mm</t2>
+    <!-- todo remove after 2.20.2.0 -->
+    <t4>Guardar ajustes de refuerzo actual como ajustes de refuerzo predeterminados</t4>
+    <t5>Si opción está activada, entonces se aplicará capa protectora superior e inferior al crear mallazos de refuerzo de fondo, sin tener en cuenta diámetros de otros refuerzos. Si opción está desactivada, capa protectora se aplicará a todos tipos de refuerzo creado y posición de mallazos de refuerzo de fondo en relación con caras superior e inferior de losa se calculará a partir de condiciones especificadas</t5>
+    <t6>Se instalarán barras en forma de U con paso de barras de mallazo superior de refuerzo de fondo. Si no se crea refuerzo de fondo en losa, entonces se crearán barras en forma de U con un espaciado dado</t6>
+    <t7>Seleccione todos huecos en lista disponibles para procesar</t7>
+    <t8>Deseleccionar todos huecos en lista</t8>
+    <t9>Estribos se instalarán con paso de barras de mallazo superior del refuerzo del fondo. Si no se crea refuerzo de fondo en losa, entonces se crearán estribos con un espaciado dado</t9>
+    <t37>Copiar ajustes de refuerzo de agujero actual en aperturas marcadas</t37>
+    <t38>Guardar ajustes de refuerzo para agujero actual</t38>
+    <t39>Descargar ajustes de refuerzo y establecerlos para agujero actual</t39>
+    <t40>Copiar ajustes de refuerzo de losa actual a todas losas seleccionadas</t40>
+    <t41>Guardar ajustes de refuerzo para losa actual</t41>
+    <t42>Descargar ajustes de refuerzo y establecerlos para losa actual</t42>
+    <t43>¡Atención! Tipo de superficie de refuerzo puede depender de clase de armadura, diámetro u otros valores que programa no tiene en cuenta. Leer documentación reglamentaria</t43>
+    <t44>α es un factor que tiene en cuenta influencia del comportamiento esfuerzo del hormigón y de armadura sobre longitud de anclaje y concepto estructural del elemento en zona de anclaje. Al anclar barras corrugadas con extremos rectos (anclaje recto) o barras lisas con bisagras de ganchos sin dispositivos de anclaje adicionales, se toma α = 1,0 para barras de tensión y α = 0,75 para barras de compresión.</t44>
+    <t46>Según GOST 21.501-2018, cláusula 6.4.7, longitud de pieza se especifica a lo largo del cara exterior de barra de refuerzo</t46>
+    <t47>Longitud de pieza se toma como longitud del anclaje</t47>
+    <t49>Número de filas de armadura en dirección longitudinal (hay dos barras "a lo largo" de agujero en fila)</t49>
+    <t50>Número de filas de armadura transversal (hay dos barras "a lo largo" de agujero en una fila)</t50>
+    <!-- todo remove after 2.20.2.0 -->
+    <t53>Restablecer todos valores de ajustes de refuerzo predeterminados actual a valores estándar incluidos en complemento</t53>
+    <t58>Longitud de barra es suma de dos longitudes de anclaje</t58>
+    <!-- todo remove after 2.20.2.0 -->
+    <t63>Puede especificar formas preferidas de barras de refuerzo para diferentes tipos de barras de refuerzo creadas por complemento.</t63>
+    <!-- todo remove after 2.20.2.0 -->
+    <t64>Establecer formas preferidas no garantiza que se creará refuerzo utilizando forma de barra de refuerzo especificada.</t64>
+    <!-- todo remove after 2.20.2.0 -->
+    <t65>Al crear barras de refuerzo, se intentará utilizar forma especificada. Si no es posible crear una barra con forma especificada, Revit buscará automáticamente una forma adecuada o creará una nueva forma.</t65>
+    <re4>No se puede crear una barra de refuerzo recta con forma de barra preferida especificada "{0}". Error: {1}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re4>
+    <re5>No se puede crear una barra de refuerzo con forma "{0}" con forma de barra preferida especificada "{1}". Error: {2}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re5>
+    <re18>Error al crear estribos para enmarcar un agujero en losa id={0}</re18>
+    <re20>No se puede crear una barra de refuerzo con forma de barra de refuerzo preferida especificada "{0}". Error: {1}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re20>
+  </mprSlabsReinforcement>
+  <mprColumnsReinforcement LocalName="Refuerzo del pilar"
+                           Description="Análisis, agrupamiento y refuerzo de pilares según condiciones especificadas"
+                           FullDescription="Complemento le permite procesar tanto pilares seleccionados individualmente como todas pilares en una vista o documento. Refuerzo se realiza teniendo en cuenta posición relativa de pilares una encima de otra. Refuerzo transversal se puede configurar utilizando varias opciones para formas de barras de refuerzo. Complemento puede funcionar incluso en plantilla vacía">
+    <h1>Opciones</h1>
+    <h2>Seleccionar pilares</h2>
+    <h3>Seleccionar todos pilares en vista actual</h3>
+    <h4>Seleccionar todos pilares del proyecto</h4>
+    <h5>Crear refuerzo sólo es posible en pilares portantes</h5>
+    <h6>Seleccionar</h6>
+    <h7>Analizar</h7>
+    <h8>Total de pilares seleccionados:</h8>
+    <h9>De ellos, se han analizado con éxito los siguientes:</h9>
+    <h10>Reforzar</h10>
+    <h11>Ajustes de refuerzo de grupo</h11>
+    <h12>Agrupamiento</h12>
+    <h13>Por nivel</h13>
+    <h14>Por altura</h14>
+    <h15>Agrupar</h15>
+    <h16>Cantidad</h16>
+    <h17>Perfil</h17>
+    <h18>Niveles</h18>
+    <h19>Alturas</h19>
+    <h20>pilares en un grupo:</h20>
+    <h21>Nivel</h21>
+    <h22>Altura</h22>
+    <h23>Agrupar por:</h23>
+    <h24>Sección</h24>
+    <h25>Refuerzo longitudinal</h25>
+    <h26>Armadura longitudinal (de trabajo)</h26>
+    <h27>Espesor de capa protectora de hormigón para armadura de trabajo:</h27>
+    <h28>Capa protectora para armadura de trabajo debe ser de al menos 20 mm o al menos diámetro de armadura</h28>
+    <h29>Se recomienda que diámetro de barras longitudinales de trabajo de pilares prefabricados sea de al menos 16 mm. Para pilares monolíticos, así como para armadura estructural, se permite utilizar un diámetro de barra de 12 mm</h29>
+    <h30>Parámetro</h30>
+    <h31>Número de barras a lo ancho:</h31>
+    <h32>Número de barras a profundidad:</h32>
+    <h33>Editar distancias</h33>
+    <h34>Escuadría del pilar, mm²:</h34>
+    <h35>Escuadría de armadura, mm²:</h35>
+    <h36>Porcentaje de refuerzo:</h36>
+    <h37>No se recomienda asignar escuadría de armadura longitudinal a más del 5% del escuadría del pilar</h37>
+    <h38>Distancias entre bordes de barras a lo ancho del pilar:</h38>
+    <h39>Distancias entre bordes de barras a profundidad del pilar:</h39>
+    <h40>¡Atención! ¡Al cambiar diámetro, capa protectora o número de barras, distancias entre barras se restablecerán a valores equivalentes!</h40>
+    <h41>Salientes de refuerzo longitudinal</h41>
+    <h42>Refuerzo transversal (disposición)</h42>
+    <h43>Refuerzo transversal (formas)</h43>
+    <h45>Número de barras de esquina:</h45>
+    <!-- todo remove after 3.22.12.0 -->
+    <h46>Número de barras intermedias:</h46>
+    <h47>Salientes de refuerzo longitudinal de pilares inferiores y medias con misma (o ligeramente diferente) sección transversal de pilares superiores</h47>
+    <h48>Salientes del refuerzo longitudinal de pilares inferiores y medias con una sección transversal grande (≥ 100 mm en cada lado) en un pilar superior con una sección transversal más pequeña</h48>
+    <h49>Salientes de refuerzo longitudinal de pilares superiores</h49>
+    <h50>Ajustes</h50>
+    <h51>VENTANA DEL COMPLEMENTO:</h51>
+    <h53>REPRESENTACIÓN EN MODELO:</h53>
+    <h54>Factor de escalado:</h54>
+    <!-- todo remove after 3.22.12.0 -->
+    <h55>REFUERZO PREDETERMINADO:</h55>
+    <h56>Desfase</h56>
+    <h57>Envolvimiento</h57>
+    <h58>Eliminar forma seleccionada</h58>
+    <!-- todo remove after 3.22.12.0 -->
+    <h59>Especificar tipo de gancho de forma, parámetros, diámetro y tipo de barra de refuerzo que se establecerán de forma predeterminada para formas de refuerzo transversal añadidas</h59>
+    <h60>Paso del refuerzo transversal en zonas de engrosamiento, mm:</h60>
+    <h61>Calcular anclaje según SP 52-101-2003</h61>
+    <h62>Diámetro:</h62>
+    <h63>Escuadría, mm²:</h63>
+    <h64>Clase de hormigón:</h64>
+    <h65>Tipo de superficie de refuerzo:</h65>
+    <h66>Resistencia de diseño a tracción, MPa:</h66>
+    <h67>Longitud de anclaje base (principal), mm:</h67>
+    <h68>Factor α:</h68>
+    <h69>Longitud de anclaje requerida (calculada), mm:</h69>
+    <h70>Longitud de anclaje:</h70>
+    <h71>Se recomienda que paso principal del refuerzo transversal sea igual a 15d, y paso del refuerzo transversal en zonas de engrosamiento sea 10d. Donde d es diámetro de armadura longitudinal (de trabajo)</h71>
+    <h72>No se puede añadir un formulario al diseño actual: ¡no hay lugares disponibles para ubicar forma!</h72>
+    <!-- todo remove after 3.22.12.0 -->
+    <h73>Ajustes de refuerzo del pilar</h73>
+    <h74>Reemplazar con ajustes de refuerzo de grupo</h74>
+    <h75>Dejar ajustes de refuerzo</h75>
+    <h76>Refuerzo del pilar</h76>
+    <h79>Ganchos de forma predeterminada:</h79>
+    <h80>Ganchos en forma:</h80>
+    <h81>establecer en boceto</h81>
+    <h82>utilizar ganchos Revit</h82>
+    <h83>Parámetros predeterminados</h83>
+    <h84>Capa protectora en extremos de armadura, mm:</h84>
+    <h85>Paso principal del refuerzo transversal, mm:</h85>
+    <h86>Distancia hasta cara superior del pilar, mm:</h86>
+    <h87>Engrosamiento de refuerzo transversal en zona superior del pilar</h87>
+    <h88>Distancia de engrosamiento, mm:</h88>
+    <h89>Distancia de engrosamiento, partes:</h89>
+    <h90>Engrosamiento de refuerzo longitudinal en zona inferior del pilar</h90>
+    <h91>Si hay salientes entrantes, establecer distancia de engrosamiento de zona inferior a lo largo de salientes</h91>
+    <h93>Estribos triangular:</h93>
+    <h94>Estribos redondos:</h94>
+    <h95>Ganchos del boceto de esta forma no se pueden utilizar</h95>
+    <h96>Por parámetro:</h96>
+    <h97>Parámetro</h97>
+    <h98>Distancia entre centros de barras</h98>
+    <h99>Distancia entre bordes de barras</h99>
+    <!-- todo remove after 3.22.12.0 -->
+    <h100>¡Atención! Número y posición de barras de refuerzo longitudinal, así como disposición de refuerzo transversal, se pueden guardar, descargar y copiar en pilares marcados de una sección adecuada, ¡pero no se pueden guardar de forma predeterminada!</h100>
+    <h104>Longitud de empalme solapado de salientes rectos, mm:</h104>
+    <h105>Calcular longitud del anclaje</h105>
+    <h106>Longitud de anclaje de salientes en losa, mm:</h106>
+    <h107>Longitud de anclaje en pilar, mm:</h107>
+    <h108>Longitud de empalme solapado hacia pilar superior, mm:</h108>
+    <h109>Valor calculado de longitud de empalme solapado se multiplica por 2</h109>
+    <h110>Crear refuerzo</h110>
+    <!-- todo remove after 3.22.12.0 -->
+    <h119>Ajustes de refuerzo predeterminados</h119>
+    <h127>Salientes de losa inferior</h127>
+    <h135>Tipo de salientes:</h135>
+    <h138>Capa protectora de armadura:</h138>
+    <h141>No cerrar ventana después de crear refuerzo</h141>
+    <h144>Distancia de pieza hasta base de losa de cimentación:</h144>
+    <!-- todo remove after 3.22.12.0 -->
+    <h147>Restablecer</h147>
+    <h148>Longitud de anclaje en losa, mm:</h148>
+    <h149>Crear salientes sólo de losas en categoría "Cimentación de estructura portante"</h149>
+    <h150>Salientes de losa inferior se crean sólo si no hay un pilar inferior. Vínculos de pilares se determinan sólo entre pilares seleccionados</h150>
+    <h160>Tipo de salientes:</h160>
+    <h161>Espesor de losa condicional, mm:</h161>
+    <h165>Si falta una losa plana encima del pilar, entonces</h165>
+    <h166>Forzado de cursor de flexiones en parte superior de losa (en centro de armadura)</h166>
+    <h167>Forzado de cursor de flexiones en parte inferior de losa (en centro de armadura)</h167>
+    <!-- todo remove after 3.22.12.0 start -->
+    <h173>Barras rectas:</h173>
+    <h174>Barras en forma de L (al crear flexiones de barras verticales):</h174>
+    <h177>Barras transversales en forma de C (clavijas). Ganchos en boceto:</h177>
+    <h178>Barras transversales en forma de S (clavijas). Ganchos en boceto:</h178>
+    <h179>Barras en forma de L:</h179>
+    <h180>Barras en forma de U:</h180>
+    <h181>Estribos rectangulares:</h181>
+    <h182>Barras en forma de L con gran flexión:</h182>
+    <h183>Restablecer todos valores a "Auto"</h183>
+    <h184>Formas preferidas de barras de refuerzo</h184>
+    <h185>No se puede establecer valores de parámetros para algunos elementos. A continuación se muestran códigos de elementos (id), nombres de parámetros y valores establecidos:</h185>
+    <!-- todo remove after 3.22.12.0 end -->
+    <h186>Seleccionar de nuevo</h186>
+    <h187>Volver a seleccionar pilares que se procesaron en vista actual cuando se utilizó anteriormente complemento</h187>
+    <h188>Distancia hasta cara inferior del pilar, mm:</h188>
+    <h189>Radio en:</h189>
+    <h190>Especificar parámetro de forma de barra de refuerzo que especifique radio de espiral</h190>
+    <h191>Paso en espiral:</h191>
+    <h193>Primera longitud de empalme solapado, mm:</h193>
+    <h194>Segunda longitud de empalme solapado, mm:</h194>
+    <h195>Calcular longitud de empalme solapado</h195>
+    <h196>Longitud de empalme solapado, mm:</h196>
+    <h205>Barras transversales en forma de C (clavijas). Ganchos Revit:</h205>
+    <h206>Barras transversales en forma de S (clavijas). Ganchos Revit:</h206>
+    <h207>Barras en espiral:</h207>
+    <h208>Utilizar geometría del pilar sin considerar conexiones</h208>
+    <h221>Barras plegadas longitudinalmente (forma "botella")</h221>
+    <h226>Eliminar armadura creada anteriormente:</h226>
+    <h227>Forzado de cursor de armadura de trabajo al borde del pilar en centro de armadura. Forzado de cursor se calcula en función del diámetro de barra del modelo</h227>
+    <h228>Instalar conectores</h228>
+    <h229>Primera armadura</h229>
+    <h230>Segunda armadura</h230>
+    <h231>Conectores sólo se instalarán si pilares a procesar tienen misma sección, así como tipo de conector está presente en documento. Buscar tipos de conectores en documento según reglas especificadas en ventana </h231>
+    <h232>. En pilares en los que se fijan conectores, refuerzo longitudinal se realiza mediante barras de refuerzo individuales sin composición.</h232>
+    <h233>Especificar reglas de instalación de conectores para tipos específicos de barras de refuerzo. Puede especificar nombre completo del tipo de armadura o un nombre parcial. Por ejemplo, especificar valor "10". Entonces, tipo de barra de refuerzo se considerará adecuado si su nombre contiene "10".</h233>
+    <h234>Plegar parte inferior de barras rectas</h234>
+    <h235>Distancia de plegado (O), mm:</h235>
+    <h236>Longitud de plegado (L), mm:</h236>
+    <h237>Plegado de parte inferior se realiza para barras rectas, siempre que pilares a procesar tengan misma sección transversal.</h237>
+    <h238>Crear:</h238>
+    <h239>Refuerzo transversal</h239>
+    <h240>Propiedades de formas predeterminadas</h240>
+    <h241>Si ya existe forma con mismo boceto en lista, propiedades se heredarán de ella</h241>
+    <h242>Dirección de plegado:</h242>
+    <h243>Ajustes generales de refuerzo</h243>
+    <h244>No se recomienda instalar capa protectora en función de ajustes de refuerzo si refuerzo transversal tiene diferentes diámetros y/o diferentes valores de propiedad "Conexión de refuerzo transversal"</h244>
+    <h245>Combinar refuerzo longitudinal en conjuntos de barras de refuerzo</h245>
+    <h262>Restablecer a valores equivalentes</h262>
+    <srd>Guardar datos sobre pilares seleccionados</srd>
+    <hook>Gancho:</hook>
+    <err1>Ajustes del refuerzo de pilares indican salientes en forma de barras encorvadas en forma "botella", para cuya creación debe haber losas o una distancia distinta de cero entre pilares. No encontrada la losa superior o distancia a pilar superior es 0</err1>
+    <npa1>no crear salientes</npa1>
+    <npa2>crear salientes rectos</npa2>
+    <npa3>considerar condicionalmente que losa existe</npa3>
+    <pt1>Círculo</pt1>
+    <pt3>Rectángulo</pt3>
+    <pt4>Cuadrado</pt4>
+    <pt5>No definido</pt5>
+    <rr1>Eliminar armadura del mismo tipo que se creó</rr1>
+    <rr2>Eliminar toda armadura creada anteriormente</rr2>
+    <rr3>No eliminar</rr3>
+    <jt1>No se crean salientes de refuerzo longitudinal. Barras se cortan a lo largo de parte superior del pilar de acuerdo con valor especificado de capa protectora en extremos de armadura</jt1>
+    <jt2>Se crean salientes rectos de barras de refuerzo para refuerzo longitudinal. Longitud del anclaje se establece desde parte superior de a losa plana superior o desde parte superior del pilar si falta losa plana. No se tiene en cuenta posición de barras de refuerzo longitudinal de pilares superior</jt2>
+    <jt3>Se crean salientes de barras de refuerzo longitudinal con una patilla en pilar superior. Longitud del anclaje se establece desde parte superior de a losa plana superior o desde parte superior del pilar si falta losa plana.</jt3>
+    <jt4>Salientes se crean en forma de barras adicionales con un diámetro determinado</jt4>
+    <jt5>Se crean salientes rectos de barras de refuerzo para refuerzo longitudinal. Longitud del anclaje se establece desde parte superior de losa plana superior o desde parte superior del pilar si falta losa plana</jt5>
+    <jt6>Se crean salientes de barras de refuerzo longitudinal anclando en losa plana superior. Longitud del anclaje se mide desde cara lateral del pilar</jt6>
+    <bbd1>Todos salientes se doblan a lo largo del lado corto del pilar</bbd1>
+    <bbd2>Todos salientes se doblan a lo largo del lado largo del pilar</bbd2>
+    <bbd3>Salientes de esquina se doblan hacia centro del pilar, restos – a lo largo de bordes del pilar</bbd3>
+    <bbd4>Salientes de esquina se doblan hacia centro del pilar. A lo largo del lado largo – a lo largo de bordes del pilar. A lo largo del lado corto – a lo largo de bordes del pilar</bbd4>
+    <bbd5>Salientes de esquina se doblan a lo largo del lado largo del pilar, los restos – dentro del pilar</bbd5>
+    <bbd6>Salientes de esquina se doblan a lo largo del lado corto del pilar, los restos – a lo largo de bordes del pilar</bbd6>
+    <m1>Seleccionar pilares</m1>
+    <m2>Ingresar valor de</m2>
+    <m3>a</m3>
+    <m4>Barras corrugadas</m4>
+    <m5>Barras lisas</m5>
+    <!-- todo remove after 3.22.12.0 -->
+    <m13>Capa protectora de armadura</m13>
+    <m20>Lista de pilares contiene pilares cuyos ajustes de refuerzo se han cambiado manualmente y difieren de ajustes de refuerzo grupal</m20>
+    <m23>Ajustes de refuerzo copiados</m23>
+    <m24>¡No se especifica para qué grupos crear refuerzo!</m24>
+    <m25>¡No se ha seleccionado grupos para crear refuerzo!</m25>
+    <m27>¡Atención! ¡No se han encontrado formas de barras de refuerzo descargadas en proyecto actual! ¡En este caso, formas de barras de refuerzo creadas al ejecutar complemento no podrán abrirse en editor familiar! ¡Se recomienda descargar formas de barras de refuerzo en proyecto antes de usar complemento!\n¿Reforzar a pesar de que faltan formas de barras de refuerzo?</m27>
+    <rn>Armadura de apoyo ⌀</rn>
+    <!-- todo remove after 3.22.12.0 -->
+    <full>¡Disponible en versión completa del complemento!</full>
+    <!-- todo remove after 3.22.12.0 -->
+    <full2>En versión limitada, sólo hay una forma disponible</full2>
+    <!-- todo remove after 3.22.12.0 -->
+    <noInFamily>¡Complemento no está disponible en familias!</noInFamily>
+    <p1>Análisis de pilares:</p1>
+    <p2>Buscar elementos vinculados:</p2>
+    <p8>Eliminar refuerzo creado anteriormente</p8>
+    <p9>Calcular y modelar reforzamiento de refuerzo longitudinal</p9>
+    <p10>Calcular y modelar reforzamiento de refuerzo transversal</p10>
+    <p14>Calcular y modelar salientes de losa</p14>
+    <p15>Instalación de conectores</p15>
+    <e1>Errores de análisis de pilares</e1>
+    <e2>No se puede inicializar pilar</e2>
+    <e3>No se puede obtener cuerpos sólidos</e3>
+    <e4>No se puede obtener ningún sólido principal o combinado</e4>
+    <e5>No se puede obtener borde superior o inferior</e5>
+    <e6>No se puede determinar perfil de sección transversal</e6>
+    <e7>No se ha especificado nombre de forma utilizada para crear refuerzo en espiral. Utilizar ventana de ajustes de formas de barra de refuerzo preferidas para especificar forma de refuerzo en espiral</e7>
+    <e9>Parámetro especificado que especifica radio del refuerzo en espiral no se ha encontrado en documento</e9>
+    <!-- todo remove after 3.22.12.0 -->
+    <t7>Grupo contiene pilares cuyos ajustes de refuerzo se han editado manualmente y difieren de ajustes de refuerzo grupal</t7>
+    <t10>Marcar todos grupos</t10>
+    <t11>Desmarcar todos grupos</t11>
+    <!-- todo remove after 3.22.12.0 -->
+    <t12>Ajustes de refuerzo del pilar se han editado manualmente y difieren de ajustes de refuerzo grupal</t12>
+    <!-- todo remove after 3.22.12.0 -->
+    <t13>Editar ajustes de refuerzo para pilar seleccionado</t13>
+    <!-- todo remove after 3.22.12.0 -->
+    <t14>Reemplazar ajustes de refuerzo del pilar con ajustes de grupo</t14>
+    <t15>Mostrar en modelo pilar anterior en lista</t15>
+    <t16>Mostrar en modelo pilar seleccionado en lista</t16>
+    <t17>Mostrar en modelo siguiente pilar de lista</t17>
+    <!-- todo remove after 3.22.12.0 -->
+    <t40>Copiar ajustes de refuerzo de grupo actual a todos grupos seleccionados</t40>
+    <!-- todo remove after 3.22.12.0 -->
+    <t41>Guardar ajustes de refuerzo de grupo actual en un archivo .xml</t41>
+    <!-- todo remove after 3.22.12.0 -->
+    <t42>Descargar ajustes de refuerzo del archivo .xml y establecerlos para grupo actual</t42>
+    <t43>¡Atención! Tipo de superficie de refuerzo puede depender de clase de armadura, diámetro u otros valores que programa no tiene en cuenta. Leer documentación reglamentaria</t43>
+    <t44>α es un factor que tiene en cuenta influencia del comportamiento esfuerzo del hormigón y de armadura sobre longitud de anclaje y concepto estructural del elemento en zona de anclaje. Al anclar barras corrugadas con extremos rectos (anclaje recto) o barras lisas con bisagras de ganchos sin dispositivos de anclaje adicionales, se toma α = 1,0 para barras de tensión y α = 0,75 para barras de compresión. Según cláusula 10.3.30 del SP 63.13330, factor α se puede aumentar a 2,0</t44>
+    <!-- todo remove after 3.22.12.0 -->
+    <t53>Restablecer todos valores de ajustes de refuerzo predeterminados actual a valores estándar incluidos en complemento</t53>
+    <!-- todo remove after 3.22.12.0 -->
+    <t63>Puede especificar formas preferidas de barras de refuerzo para diferentes tipos de barras de refuerzo creadas por complemento.</t63>
+    <!-- todo remove after 3.22.12.0 -->
+    <t64>Establecer formas preferidas no garantiza que se creará refuerzo utilizando forma de barra de refuerzo especificada.</t64>
+    <!-- todo remove after 3.22.12.0 -->
+    <t65>Al crear barras de refuerzo, se intentará utilizar forma especificada. Si no es posible crear una barra con forma especificada, Revit buscará automáticamente una forma adecuada o creará una nueva forma.</t65>
+    <!-- todo remove after 3.22.12.0 -->
+    <t66>Guardar ajustes de refuerzo actual como ajustes de refuerzo predeterminados</t66>
+    <re1>Se ha producido un error al crear refuerzo longitudinal de pilar id={0}:</re1>
+    <re2>Se ha producido un error al calcular puntos de ubicación del refuerzo transversal del pilar id={0}:</re2>
+    <re3>Se ha producido un error al crear una pieza de refuerzo transversal de tipo "{0}" en pilar id={1} :</re3>
+    <re4>No se puede crear una barra de refuerzo recta con forma de barra preferida especificada "{0}". Error: {1}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re4>
+    <re5>No se puede crear una barra de refuerzo con forma "{0}" con forma de barra preferida especificada "{1}". Error: {2}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re5>
+    <re17>Error al crear salientes desde losa id={0} en pilar id={1}:</re17>
+    <re18>Error al crear conectores al conectar pilares id={0} y id={1}:</re18>
+    <re19>Error al crear conectores al procesar pilar id={0}:</re19>
+  </mprColumnsReinforcement>
+  <mprBeamsReinforcement LocalName="Refuerzo de viga"
+                         Description="Análisis, agrupamiento y refuerzo de vigas según condiciones especificadas"
+                         FullDescription="Complemento le permite procesar tanto vigas seleccionadas individualmente como todas vigas en vista o documento. Refuerzo transversal se puede configurar utilizando varias opciones para formas de barras de refuerzo. Complemento puede funcionar incluso en plantilla vacía">
+    <h1>Opciones</h1>
+    <h2>Seleccionar vigas</h2>
+    <h3>Seleccionar todas vigas en vista actual</h3>
+    <h4>Seleccionar todas vigas del proyecto</h4>
+    <h5>Crear refuerzo sólo es posible en vigas portantes</h5>
+    <h6>Seleccionar</h6>
+    <h7>Analizar</h7>
+    <h8>Total de vigas seleccionadas:</h8>
+    <h9>De ellos, se han analizado con éxito los siguientes:</h9>
+    <h10>Reforzar</h10>
+    <h11>Ajustes de refuerzo de grupo</h11>
+    <h12>Agrupamiento</h12>
+    <h13>Por nivel</h13>
+    <h15>Agrupar</h15>
+    <h16>Cantidad</h16>
+    <h17>Perfil</h17>
+    <h18>Niveles</h18>
+    <h19>Agrupar todos</h19>
+    <h20>Vigas en grupo:</h20>
+    <h21>Nivel</h21>
+    <h23>Agrupar por:</h23>
+    <h24>Sección</h24>
+    <h25>Refuerzo longitudinal</h25>
+    <h27>Espesor de capa protectora de hormigón para armadura de trabajo:</h27>
+    <coverTop>Arriba:</coverTop>
+    <coverBottom>Abajo:</coverBottom>
+    <coverSide>A lados:</coverSide>
+    <coverEnd>Desde extremos:</coverEnd>
+    <h28>Capa protectora para armadura de trabajo debe ser de al menos 20 mm o al menos diámetro de armadura</h28>
+    <h30>Parámetro</h30>
+    <h31>Número de barras a lo ancho:</h31>
+    <h32>Número de barras a altura:</h32>
+    <h33>Editar distancias</h33>
+    <h34>Escuadría de viga, mm²:</h34>
+    <h35>Escuadría de armadura, mm²:</h35>
+    <h36>Porcentaje de refuerzo:</h36>
+    <h37>No se recomienda asignar escuadría de armadura longitudinal a más del 5% del escuadría de viga</h37>
+    <h38>Distancias entre barras a lo ancho de viga:</h38>
+    <h39>Distancias entre barras a lo largo de altura de viga:</h39>
+    <h40>¡Atención! ¡Al cambiar diámetro, capa protectora o número de barras, distancias entre barras se restablecerán a valores equivalentes!</h40>
+    <h41>Salientes de refuerzo longitudinal</h41>
+    <h42>Refuerzo transversal (disposición)</h42>
+    <h43>Refuerzo transversal (formas)</h43>
+    <h44>Doblar barras superiores si no hay suficiente distancia para anclaje</h44>
+    <h45>Forzado de cursor de armadura de trabajo al borde de viga en centro de armadura. Forzado de cursor se calcula en función del diámetro de barra del modelo</h45>
+    <h50>Ajustes</h50>
+    <h51>VENTANA DEL COMPLEMENTO:</h51>
+    <h53>REPRESENTACIÓN EN MODELO:</h53>
+    <h54>Factor de escalado:</h54>
+    <!-- todo remove after 1.18.16.0 -->
+    <h55>REFUERZO PREDETERMINADO:</h55>
+    <h56>Desfase</h56>
+    <h57>Envolvimiento</h57>
+    <h58>Eliminar forma seleccionada</h58>
+    <!-- todo remove after 1.18.16.0 -->
+    <h59>Especificar tipo de gancho de forma, parámetros, diámetro y tipo de barra de refuerzo que se establecerán de forma predeterminada para formas de refuerzo transversal añadidas</h59>
+    <h60>Paso del refuerzo transversal en zonas de engrosamiento, mm:</h60>
+    <h61>Calcular anclaje según SP 52-101-2003</h61>
+    <h72>No se puede añadir un formulario al diseño actual: ¡no hay lugares disponibles para ubicar forma!</h72>
+    <!-- todo remove after 1.18.16.0 -->
+    <h73>Ajustes de refuerzo de viga</h73>
+    <h74>Reemplazar con ajustes de refuerzo de grupo</h74>
+    <h75>Dejar ajustes de refuerzo</h75>
+    <!-- todo remove after 1.18.16.0 -->
+    <h76>Refuerzo de viga</h76>
+    <h79>Ganchos de forma predeterminada:</h79>
+    <h80>Ganchos en forma:</h80>
+    <h81>establecer en boceto</h81>
+    <h82>utilizar ganchos Revit</h82>
+    <h84>Capa protectora en extremos de armadura, mm:</h84>
+    <h85>Paso principal del refuerzo transversal, mm:</h85>
+    <h86>Distancia de extremo de viga, mm:</h86>
+    <h87>Engrosamiento del refuerzo transversal</h87>
+    <h88>Distancia de engrosamiento, mm:</h88>
+    <h89>Distancia de engrosamiento, partes:</h89>
+    <h90>Engrosamiento de refuerzo en extremos de viga</h90>
+    <h91>Engrosamiento de refuerzo en extremos de viga en ausencia de elementos inferiores (extremos voladizos de viga)</h91>
+    <h93>Estribos triangular:</h93>
+    <h94>Tener en cuenta pilares inferiores y de topes, así como muros</h94>
+    <h96>Por parámetro:</h96>
+    <h97>Parámetro</h97>
+    <h98>Distancia entre centros de barras</h98>
+    <h99>Distancia entre bordes de barras</h99>
+    <!-- todo remove after 1.18.16.0 -->
+    <h100>¡Atención! Número y posición de barras de refuerzo longitudinal, así como disposición de refuerzo transversal, se pueden guardar, descargar y copiar en vigas marcadas de una sección adecuada, ¡pero no se pueden guardar de forma predeterminada!</h100>
+    <h102>Tipo de refuerzo:</h102>
+    <h103>Pieza No. 1</h103>
+    <h104>Longitud de anclaje de salientes rectos, mm:</h104>
+    <h105>Calcular longitud del anclaje</h105>
+    <h106>Pieza No. 2</h106>
+    <h107>Intersecciones en T</h107>
+    <h108>Intersecciones cruzadas</h108>
+    <h110>Crear refuerzo</h110>
+    <h141>No cerrar ventana después de crear refuerzo</h141>
+    <h142>Ver intersección</h142>
+    <h143>Eliminar geometría auxiliar</h143>
+    <!-- todo remove after 1.18.16.0 start -->
+    <h147>Restablecer</h147>
+    <h173>Barras rectas:</h173>
+    <h174>Barras en forma de L:</h174>
+    <h177>Barras transversales en forma de C (clavijas). Ganchos en boceto:</h177>
+    <h178>Barras transversales en forma de S (clavijas). Ganchos en boceto:</h178>
+    <h180>Barras en forma de U:</h180>
+    <h181>Estribos rectangulares:</h181>
+    <h182>Barras en forma de L con gran flexión:</h182>
+    <h183>Restablecer todos valores a "Auto"</h183>
+    <h184>Formas preferidas de barras de refuerzo</h184>
+    <!-- todo remove after 1.18.16.0 end -->
+    <h186>Seleccionar de nuevo</h186>
+    <h187>Volver a seleccionar vigas que se procesaron en vista actual cuando se utilizó anteriormente complemento</h187>
+    <h205>Barras transversales en forma de C (clavijas). Ganchos Revit:</h205>
+    <h206>Barras transversales en forma de S (clavijas). Ganchos Revit:</h206>
+    <h207>Utilizar geometría de viga sin considerar conexiones</h207>
+    <h208>Insertar barras de refuerzo longitudinales en vigas verticales en contacto ubicadas en extremos de viga actual</h208>
+    <h226>Eliminar armadura creada anteriormente:</h226>
+    <h229>Nivel</h229>
+    <h238>Crear:</h238>
+    <h239>Refuerzo transversal</h239>
+    <h240>Propiedades de formas predeterminadas</h240>
+    <h241>Si ya existe forma con mismo boceto en lista, propiedades se heredarán de ella</h241>
+    <h243>Ajustes generales de refuerzo</h243>
+    <h244>Refuerzo de intersección</h244>
+    <h245>vigas</h245>
+    <h246>Intersecciones</h246>
+    <h247>Tipo de intersección</h247>
+    <h248>Intersecciones angulares</h248>
+    <h249>Longitud de anclaje, mm:</h249>
+    <h250>Núm.de intersec.</h250>
+    <h251>Tipo de intersección</h251>
+    <h252>Parámetros</h252>
+    <h253>Intersecciones en grupo:</h253>
+    <h255>Vigas en intersección:</h255>
+    <h256>Número de vigas</h256>
+    <h257>Ajustes de refuerzo de grupos</h257>
+    <h258>No crear refuerzo transversal sobre muros y pilares inferiores</h258>
+    <h259>Otro diámetro de refuerzo para fila superior:</h259>
+    <h260>Distancia entre barras a lo ancho se calcula para diámetro principal del refuerzo. Para fila superior no tener en cuenta otros diámetros de refuerzo</h260>
+    <h261>Distancia hasta inicio de parte, mm:</h261>
+    <h262>Restablecer a valores equivalentes</h262>
+    <srd>Guardar datos sobre vigas seleccionadas</srd>
+    <hook>Gancho:</hook>
+    <jt1>No se crean salientes de refuerzo longitudinal. Barras se cortan al extremo de viga de acuerdo con valor especificado de capa protectora en extremos de armadura</jt1>
+    <jt2>Se crean salientes rectos de barras de refuerzo para refuerzo longitudinal. Longitud del anclaje se establece desde borde de viga. Salientes se crean sólo si hay muro o pilar al extremo de viga. De lo contrario, salientes no se crearán y barras longitudinales se cortarán al final de viga teniendo en cuenta capa protectora especificada</jt2>
+    <m1>Seleccionar vigas</m1>
+    <m2>Ingresar valor de</m2>
+    <m3>a</m3>
+    <m4>Barras corrugadas</m4>
+    <m5>Barras lisas</m5>
+    <!-- todo remove after 1.18.16.0 -->
+    <m13>Capa protectora de armadura</m13>
+    <m20>Lista de vigas contiene vigas cuyas ajustes de refuerzo se han cambiado manualmente y difieren de ajustes de refuerzo grupal</m20>
+    <m23>Ajustes de refuerzo copiados</m23>
+    <m24>¡No se especifica para qué grupos crear refuerzo!</m24>
+    <m25>¡No se ha seleccionado grupos para crear refuerzo!</m25>
+    <m27>¡Atención! ¡No se han encontrado formas de barras de refuerzo descargadas en proyecto actual! ¡En este caso, formas de barras de refuerzo creadas al ejecutar complemento no podrán abrirse en editor familiar! ¡Se recomienda descargar formas de barras de refuerzo en proyecto antes de usar complemento!\n¿Reforzar a pesar de que faltan formas de barras de refuerzo?</m27>
+    <rn>Armadura de apoyo ⌀</rn>
+    <!-- todo remove after 1.18.16.0 -->
+    <full>¡Disponible en versión completa del complemento!</full>
+    <!-- todo remove after 1.18.16.0 -->
+    <full2>En versión limitada, sólo hay una forma disponible</full2>
+    <!-- todo remove after 1.18.16.0 -->
+    <noInFamily>¡Complemento no está disponible en familias!</noInFamily>
+    <p1>Análisis de viga:</p1>
+    <p2>Buscar elementos vinculados:</p2>
+    <pt1>Viga en T</pt1>
+    <pt2>Viga en doble T</pt2>
+    <pt3>Rectángulo</pt3>
+    <pt4>Cuadrado</pt4>
+    <pt5>No definido</pt5>
+    <pt6>Trapecio</pt6>
+    <pt7>forma de L</pt7>
+    <rr1>Eliminar armadura del mismo tipo que se creó</rr1>
+    <rr2>Eliminar toda armadura creada anteriormente</rr2>
+    <rr3>No eliminar</rr3>
+    <e1>Errores de análisis de vigas</e1>
+    <e2>No se puede inicializar viga</e2>
+    <e3>No se puede obtener cuerpos sólidos</e3>
+    <e4>No se puede obtener ningún sólido principal o combinado</e4>
+    <e6>No se puede determinar perfil de sección transversal</e6>
+    <p1>Análisis de viga:</p1>
+    <p2>Buscar elementos vinculados:</p2>
+    <p8>Eliminar refuerzo creado anteriormente</p8>
+    <p9>Calcular y modelar reforzamiento de refuerzo longitudinal</p9>
+    <p10>Calcular y modelar reforzamiento de refuerzo transversal</p10>
+    <p11>Calcular y modelar refuerzo de intersección</p11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t7>Grupo contiene vigas cuyas ajustes de refuerzo se han editado manualmente y difieren de ajustes de refuerzo grupal</t7>
+    <!-- todo remove after 1.18.16.0 -->
+    <t8>Añadir un nuevo grupo vacío</t8>
+    <!-- todo remove after 1.18.16.0 -->
+    <t9>Eliminar grupo vacío</t9>
+    <t10>Marcar todos grupos</t10>
+    <t11>Desmarcar todos grupos</t11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t12>Ajustes de refuerzo de viga se han editado manualmente y difieren de los ajustes de refuerzo grupal</t12>
+    <!-- todo remove after 1.18.16.0 -->
+    <t13>Editar ajustes de refuerzo para viga seleccionada</t13>
+    <!-- todo remove after 1.18.16.0 -->
+    <t14>Reemplazar ajustes de refuerzo del pilar con ajustes de grupo</t14>
+    <t15>Mostrar en modelo viga anterior en lista</t15>
+    <t16>Mostrar en modelo viga seleccionada en lista</t16>
+    <t17>Mostrar en modelo siguiente viga en lista</t17>
+    <t23>Mostrar en modelo intersección anterior en lista</t23>
+    <t24>Mostrar en modelo intersección seleccionada en lista</t24>
+    <t25>Mostrar en modelo siguiente intersección en lista</t25>
+    <!-- todo remove after 1.18.16.0 -->
+    <t40>Copiar ajustes de refuerzo de grupo actual a todos grupos seleccionados</t40>
+    <!-- todo remove after 1.18.16.0 -->
+    <t41>Guardar ajustes de refuerzo de grupo actual en un archivo .xml</t41>
+    <!-- todo remove after 1.18.16.0 -->
+    <t42>Descargar ajustes de refuerzo del archivo .xml y establecerlos para grupo actual</t42>
+    <!-- todo remove after 1.18.16.0 -->
+    <t53>Restablecer todos valores de ajustes de refuerzo predeterminados actual a valores estándar incluidos en complemento</t53>
+    <!-- todo remove after 1.18.16.0 -->
+    <t63>Puede especificar formas preferidas de barras de refuerzo para diferentes tipos de barras de refuerzo creadas por complemento.</t63>
+    <!-- todo remove after 1.18.16.0 -->
+    <t64>Establecer formas preferidas no garantiza que se creará refuerzo utilizando forma de barra de refuerzo especificada.</t64>
+    <!-- todo remove after 1.18.16.0 -->
+    <t65>Al crear barras de refuerzo, se intentará utilizar forma especificada. Si no es posible crear una barra con forma especificada, Revit buscará automáticamente una forma adecuada o creará una nueva forma.</t65>
+    <!-- todo remove after 1.18.16.0 -->
+    <t66>Guardar ajustes de refuerzo actual como ajustes de refuerzo predeterminados</t66>
+    <t67>Agrupar vigas e intersecciones utilizando configuración de agrupación actual</t67>
+    <re1>Se ha producido un error al crear refuerzo longitudinal de viga id={0}</re1>
+    <re2>Se ha producido un error al calcular puntos de ubicación del refuerzo transversal de viga id={0}</re2>
+    <re3>Se ha producido un error al crear una pieza de refuerzo transversal de tipo "{0}" en viga id={1}</re3>
+    <re4>No se puede crear una barra de refuerzo recta con forma de barra preferida especificada "{0}". Error: {1}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re4>
+    <re5>No se puede crear una barra de refuerzo con forma "{0}" con forma de barra preferida especificada "{1}". Error: {2}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re5>
+    <!-- todo remove after 1.18.16.0 -->
+    <re6>No se puede establecer valores de parámetros</re6>
+    <re9>Error al crear piezas de conexión de esquina en vigas {0}:</re9>
+    <re10>Error al crear piezas de conexión T en vigas {0}:</re10>
+    <re11>Error al crear piezas de conexión en cruz en vigas {0}:</re11>
+    <re22>¡No es posible mostrar intersección en vista actual! Ir al plano de planta</re22>
+  </mprBeamsReinforcement>
+  <mprRebarTools LocalName="Utilidades para trabajar con refuerzo"
+                 Description="Una colección de pequeños complementos auxiliares para trabajar con refuerzo"
+                 LocalName1="Eliminar de base"
+                 Description1="Eliminar todo refuerzo del elemento básico seleccionado"
+                 LocalName2="Copiar a base"
+                 Description2="Copiar barras de refuerzo de elemento básico original a varios elementos básicos objetivos"
+                 LocalName3="Explotar conjunto"
+                 Description3="Convertir conjunto de barras de refuerzo seleccionado en barras de refuerzo individuales"
+                 LocalName4="Dividir conjunto"
+                 Description4="Dividir conjunto de refuerzos en dos nuevos conjuntos de refuerzos"
+                 LocalName5="Cambiar representación"
+                 Description5="Cambiar por lotes de representación de refuerzo">
+    <m1>Seleccionar elementos básicos</m1>
+    <m2>Seleccionar elemento básico original</m2>
+    <m3>Seleccionar elementos básicos objetivos</m3>
+    <m4>Seleccionar conjuntos de refuerzo</m4>
+    <m5>Seleccionar conjunto de refuerzo</m5>
+    <m6>Seleccionar un punto de división de conjunto</m6>
+    <h1>Elemento inapropiado</h1>
+    <h2>Elemento seleccionado tiene sólido que no tiene mismo volumen que elemento original. ¡Refuerzo copiado no estará ubicado correctamente! Seleccionar siguiente acción:</h2>
+    <h3>Aplicar acción seleccionada a casos posteriores</h3>
+    <h4>Saltar de copiar</h4>
+    <h5>Copiar</h5>
+    <h6>Cancelar</h6>
+    <h7>Procesar:</h7>
+    <h8>Representación</h8>
+    <h9>Mostrar todas barras de un conjunto</h9>
+    <h10>Mostrar primera y última barra del conjunto</h10>
+    <h11>Mostrar barra central en conjunto</h11>
+    <h12>Cambiar representación de barras de refuerzo</h12>
+    <h13>Imposible cambiar representación del refuerzo en vista actual</h13>
+    <h14>Imposible cambiar representación de una armadura con un diseño "Uno"</h14>
+    <h15>Mostrar primera, última y media barra del conjunto</h15>
+    <h16>Mostrar ventana de resultados, si no se puede cambiar representación</h16>
+    <h17>Saltar conjuntos compuestos de dos barras</h17>
+    <pv1>Elemento seleccionado</pv1>
+    <pv2>Elementos seleccionados</pv2>
+    <pv3>Todos elementos a vista</pv3>
+    <pv4>Todos elementos de vista excepto seleccionados</pv4>
+    <msg1>Seleccionar armadura o elemento con armadura</msg1>
+    <msg2>Seleccionar elementos con armadura o armadura</msg2>
+  </mprRebarTools>
+  <mprSplitRebar LocalName="División de refuerzo"
+                 Description="División de armaduras rectas en su longitud con varias opciones de unión">
+    <sv1>Seleccionar barras de refuerzo rectas</sv1>
+    <sv2>Barras de refuerzo rectas en vista</sv2>
+    <sv3>Barras de refuerzo rectas en base</sv3>
+    <smn1>Longitud exacta</smn1>
+    <smn2>Longitud máxima</smn2>
+    <smn3>Número</smn3>
+    <smd1>Dividir barra de refuerzo en partes de longitud especificada con una de partes de longitud más corta, si barra de refuerzo original no se divide en longitud especificada sin un resto</smd1>
+    <smd2>Dividir una barra de refuerzo en partes de igual longitud que no excedan longitud máxima especificada</smd2>
+    <smd3>Dividir una barra de refuerzo en un número igual de partes</smd3>
+    <rb1>Al principio</rb1>
+    <rb2>Hacia final</rb2>
+    <rb3>Hacia medio</rb3>
+    <cmn1>Empalme a tope</cmn1>
+    <cmn2>Conexión mecánica</cmn2>
+    <cmn3>Empalme solapado</cmn3>
+    <cmn4>Barras plegadas</cmn4>
+    <ro1>A lo largo de dirección de disposición</ro1>
+    <ro2>Perpendicular a dirección de disposición</ro2>
+    <bd1>Arriba</bd1>
+    <bd2>Abajo</bd2>
+    <h1>Método de división</h1>
+    <h2>Método de conectar</h2>
+    <h3>Desfase del resto</h3>
+    <h4>Conector</h4>
+    <h5>Longitud del espacio</h5>
+    <h6>Longitud de empalme solapado</h6>
+    <h7>Distancia de curvatura</h7>
+    <h8>Longitud de flexión</h8>
+    <h9>Desfase de barras</h9>
+    <h10>Dirección de flexión</h10>
+    <h11>Forma de barra de refuerzo</h11>
+    <!-- todo remove after 2.1.1.0 -->
+    <h12>Seleccionar armadura</h12>
+    <h13>Procesar barra:</h13>
+    <h14>Enredo de juntas de refuerzo</h14>
+    <h15>Seleccionar barras de refuerzo</h15>
+    <h16>Seleccionar base</h16>
+    <h17>Copiar valores de parámetros generales de barra de refuerzo al conector de armadura de apoyo</h17>
+    <m1>Línea central de una barra de refuerzo no es un segmento de línea</m1>
+    <m2>No se puede dividir barra de refuerzo según condiciones especificadas</m2>
+    <m3>Barra de refuerzo no cumple condiciones de división</m3>
+    <m4>No se puede crear conector de barra de refuerzo</m4>
+    <m5>Error inesperado al procesar barra de refuerzo</m5>
+    <m6>No es posible crear una barra de refuerzo plegada con configuración actual</m6>
+  </mprSplitRebar>
+  <mprPlateWeight LocalName="Peso de placa"
+                  Description="Cálculo del peso de placas con registrar resultado en parámetro especificado">
+    <h1>Usar densidad del material</h1>
+    <h2>Redondear resultado a</h2>
+    <h3>signos</h3>
+    <h4>Registrar en parámetro:</h4>
+    <h5>Seleccionar elementos</h5>
+    <h6>Todos elementos a vista</h6>
+    <h7>Registrar peso total en parámetro de conexión</h7>
+    <h8>Si se selecciona conexión de estructura portante y se especifica parámetro, peso total de placas incluidas en conexión se registrará en parámetro especificado</h8>
+    <msg1>¡Para calcular peso de placas, nivel de detalle de vista actual se cambiar temporalmente a "Alto", lo que puede provocar una regeneración de gráficos prolongada!</msg1>
+    <msg2>Placas procesadas</msg2>
+    <msg3>Seleccionar placas o conexiones de estructura portante</msg3>
+    <err1>Faltan propiedades físicas en material</err1>
+    <err2>No se puede obtener geometría de placa</err2>
+    <err3>Tipo de datos de parámetro no admitido</err3>
+    <err4>Parámetro "{0}" no se ha encontrado</err4>
+    <err5>No se puede obtener placa de conexión</err5>
+  </mprPlateWeight>
+</ModPlus>

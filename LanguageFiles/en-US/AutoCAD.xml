@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ModPlus>
   <mpTxtNumCopy LocalName="Copy with numbering"
                 Description="Copies the selected text or block with an attribute containing a numeric value, changing the value to a specified numerical step"
@@ -214,7 +214,7 @@
 	               FullDescription="Each selected entity will be mirrored vertically or horizontally with respect to a line passing through a specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The point is determined by the rectangle that describes the entity (Bounding Box)">
     <o1>Mirror by</o1>
     <o2>Vertical</o2>
-    <o3>Horizontal</o3>    
+    <o3>Horizontal</o3>
   </mpMultiMirror>
   <mpRotAtt LocalName="Rotation angle of attributes"
             Description="Plugin is used to change the rotation angle of attributes in the selected blocks">
@@ -2068,6 +2068,8 @@
     <amt1>From two sides</amt1>
     <amt2>From above</amt2>
     <amt3>From below</amt3>
+    <amt4>First</amt4>
+    <amt5>Second</amt5>
     <vlt1>Section</vlt1>
     <vlt2>View</vlt2>
     <llt1>Standard</llt1>
@@ -2120,6 +2122,24 @@
     <wjt14>Corner factory intermittent on the invisible side</wjt14>
     <wjt15>Corner mounting intermittent from the visible side</wjt15>
     <wjt16>Corner mounting intermittent on the invisible side</wjt16>
+    <pil0>Type 0</pil0>
+    <pil1>Type 1</pil1>
+    <pil2>Type 2</pil2>
+    <pil3>Type 3</pil3>
+    <pil4>Type 4</pil4>
+    <pil5>Type 5</pil5>
+    <pil6>Type 6</pil6>
+    <pil7>Type 7</pil7>
+    <pil8>Type 8</pil8>
+    <pil9>Type 9</pil9>
+    <pil10>Type 10</pil10>
+    <pit0>Round</pit0>
+    <pit1>Rectangle</pit1>
+    <dmt0>Ppm</dmt0>
+    <dmt1>Degrees</dmt1>
+    <dmt2>Ratio</dmt2>
+    <dmt3>Number</dmt3>
+    <dmt4>Percentages</dmt4>
     <dot>Dot</dot>
     <comma>Comma</comma>
     <len>Length</len>
@@ -2262,6 +2282,7 @@
     <d85-1>Adding wipeout along the text outline with a specified offset. The display of frames for wipeouts is controlled by the WIPEOUTFRAME and FRAME system variables. If rectangular frame is set, then the wipeout is created along the frame without taking into account the offset</d85-1>
     <p86>Wipeout offset</p86>
     <d86>Wipeout offset is considered for frame types "Line" and "No frame"</d86>
+    <d87>Presence of arrows: on both sides, a first or second</d87>
     <p87>Secant element thickness</p87>
     <p88>Secant element length</p88>
     <p89>Weld joint type</p89>
@@ -2295,9 +2316,6 @@
     <p113>Value</p113>
     <p114>Line thickness</p114>
     <p115>Presence of arrows</p115>
-    <d87>Presence of arrows: on both sides, a first or second</d87>
-    <amt4>First</amt4>
-    <amt5>Second</amt5>
     <p116>Break width</p116>
     <p117>Line length at the left edge</p117>
     <d117>Line length at the left edge of the joint line segment</d117>
@@ -2338,19 +2356,6 @@
     <p150>Contour only</p150>
     <p151>Cross section type</p151>
     <p152>Designation type</p152>
-    <pil0>Type 0</pil0>
-    <pil1>Type 1</pil1>
-    <pil2>Type 2</pil2>
-    <pil3>Type 3</pil3>
-    <pil4>Type 4</pil4>
-    <pil5>Type 5</pil5>
-    <pil6>Type 6</pil6>
-    <pil7>Type 7</pil7>
-    <pil8>Type 8</pil8>
-    <pil9>Type 9</pil9>
-    <pil10>Type 10</pil10>
-    <pit0>Round</pit0>
-    <pit1>Rectangle</pit1>
     <p153>Mark type</p153>
     <p154>Arrow size</p154>
     <p155>As direction</p155>
@@ -2359,11 +2364,6 @@
     <d156>Display the taper symbol instead of the slope symbol</d156>
     <p157>Starting from the left point</p157>
     <d157>Take the leftmost of the two points as the first point when calculating the slope</d157>
-    <dmt0>Ppm</dmt0>
-    <dmt1>Degrees</dmt1>
-    <dmt2>Ratio</dmt2>
-    <dmt3>Number</dmt3>
-    <dmt4>Percentages</dmt4>
   </mpESKD>
   <mpStripMtext LocalName="Clear formatting"
 	              Description="Remove specified formatting from multiline text"

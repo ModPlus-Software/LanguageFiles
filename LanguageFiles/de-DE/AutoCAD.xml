@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ModPlus>
   <mpTxtNumCopy LocalName="Kopieren mit Nummerierung"
                 Description="Kopiert den ausgewählten Text oder einen Block mit dem Attribut, das einen numerischen Wert enthält, und ändert den Wert um den angegebenen numerischen Schritt"
@@ -214,7 +214,7 @@
                  FullDescription="Jedes ausgewählte Objekt wird vertikal oder horizontal in Bezug auf die Linie gespiegelt, die durch den angegebenen Punkt verläuft – unten links, unten rechts, oben links, oben rechts oder in der Mitte. Dieser Punkt wird durch ein Rechteck bestimmt, das das Objekt beschreibt">
     <o1>Spiegeln</o1>
     <o2>Vertikal</o2>
-    <o3>Horizontal</o3>    
+    <o3>Horizontal</o3>
   </mpMultiMirror>
   <mpRotAtt LocalName="Drehwinkel der Attribute"
             Description="Mit dem Plugin können Sie den Drehwinkel der Attribute in den ausgewählten Blöcken ändern">
@@ -2068,6 +2068,8 @@
     <amt1>Beiderseitig</amt1>
     <amt2>Oberhalb</amt2>
     <amt3>Unterhalb</amt3>
+    <amt4>Erster</amt4>
+    <amt5>Zweiter</amt5>
     <vlt1>Schnittansicht</vlt1>
     <vlt2>Ansicht</vlt2>
     <llt1>Standard</llt1>
@@ -2120,6 +2122,24 @@
     <wjt14>Kehlnaht, werkseitig hergestellte, unterbrochene, auf der unsichtbaren Seite</wjt14>
     <wjt15>Kehlnaht mit Montagestoß, unterbrochene, auf der sichtbaren Seite</wjt15>
     <wjt16>Kehlnaht mit Montagestoß, unterbrochene, auf der unsichtbaren Seite</wjt16>
+    <pil0>Typ 0</pil0>
+    <pil1>Typ 1</pil1>
+    <pil2>Typ 2</pil2>
+    <pil3>Typ 3</pil3>
+    <pil4>Typ 4</pil4>
+    <pil5>Typ 5</pil5>
+    <pil6>Typ 6</pil6>
+    <pil7>Typ 7</pil7>
+    <pil8>Typ 8</pil8>
+    <pil9>Typ 9</pil9>
+    <pil10>Typ 10</pil10>
+    <pit0>Kreis</pit0>
+    <pit1>Rechteck</pit1>
+    <dmt0>Promille</dmt0>
+    <dmt1>Grad</dmt1>
+    <dmt2>Verhältnis</dmt2>
+    <dmt3>Zahl</dmt3>
+    <dmt4>Prozent</dmt4>
     <dot>Punkt</dot>
     <comma>Komma</comma>
     <len>Länge</len>
@@ -2262,6 +2282,7 @@
     <d85-1>Hinzufügen einer Maskierung um den Umriss des Textes mit der eingestellten Versetzung. Die Anzeige von Maskierungsrahmen wird durch die Systemvariablen WIPEOUTFRAME und FRAME gesteuert. Wenn ein rechteckiger Rahmen eingestellt ist, wird die Maskierung entlang des Rahmens ohne Berücksichtigung von Abstand erstellt</d85-1>
     <p86>Abstand der Maskierung</p86>
     <d86>Bei den Rahmentypen "Linie" und "Kein Rahmen" wird der Abstand der Maskierung berücksichtigt</d86>
+    <d87>Vorhandensein von Pfeilen: beidseitig, erster oder zweiter</d87>
     <p87>Dicke des Ansichtselements</p87>
     <p88>Länge des Ansichtselements</p88>
     <p89>Schweißnahttyp</p89>
@@ -2295,9 +2316,6 @@
     <p113>Wert</p113>
     <p114>Liniendicke</p114>
     <p115>Vorhandensein von Pfeilen</p115>
-    <d87>Vorhandensein von Pfeilen: beidseitig, erster oder zweiter</d87>
-    <amt4>Erster</amt4>
-    <amt5>Zweiter</amt5>
     <p116>Breite des Bogens</p116>
     <p117>Länge der Linie am linken Rand</p117>
     <d117>Länge der Linie am linken Rand des Nahtliniensegments</d117>
@@ -2338,19 +2356,6 @@
     <p150>Nur Umgrenzung</p150>
     <p151>Querschnittstyp</p151>
     <p152>Bezeichnungstyp</p152>
-    <pil0>Typ 0</pil0>
-    <pil1>Typ 1</pil1>
-    <pil2>Typ 2</pil2>
-    <pil3>Typ 3</pil3>
-    <pil4>Typ 4</pil4>
-    <pil5>Typ 5</pil5>
-    <pil6>Typ 6</pil6>
-    <pil7>Typ 7</pil7>
-    <pil8>Typ 8</pil8>
-    <pil9>Typ 9</pil9>
-    <pil10>Typ 10</pil10>
-    <pit0>Kreis</pit0>
-    <pit1>Rechteck</pit1>
     <p153>Markentyp</p153>
     <p154>Pfeilgröße</p154>
     <p155>Als Richtung</p155>
@@ -2359,11 +2364,6 @@
     <d156>Kegelsymbol statt Neigungssymbol anzeigen</d156>
     <p157>Bezug auf den linken Punkt</p157>
     <d157>Bei der Berechnung der Neigung den Punkt am linken Rand als ersten Punkt nehmen</d157>
-    <dmt0>Promille</dmt0>
-    <dmt1>Grad</dmt1>
-    <dmt2>Verhältnis</dmt2>
-    <dmt3>Zahl</dmt3>
-    <dmt4>Prozent</dmt4>
   </mpESKD>
   <mpStripMtext LocalName="Entfernen der Formattierung"
                 Description="Entfernen der angegebenen Formatierung aus dem mehrzeiligen Text"
@@ -2428,7 +2428,7 @@
     <ct4>Bemaßungen</ct4>
     <h1>Wählen Sie Objekte aus:</h1>
   </mpAppendText>
-  <mpSumArea LocalName="Flächensumme" 
+  <mpSumArea LocalName="Flächensumme"
              Description="Abrufen und Anzeigen der Anzahl und Summe der Flächen von ausgewählten Polylinien, Kreisen, Bögen, Splines und Füllmustern">
     <h2>Gesamtfläche:</h2>
     <h3>Rundung des Ergebnisses</h3>

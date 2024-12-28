@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModPlus>
+  <mprMepElementsBender LocalName="Paseo a través de interferencias"
+                        Description="Realizar un paseo de elementos MEP que intersecan"
+                        FullDescription="Complemento le permite crear un paseo a través de elementos MEP sin tener que seleccionarlos constantemente desde ventana de complemento: para ello, primero es necesario seleccionar elementos intersectados (es decir, aquel elementos que deben ser ignorados) y luego simplemente seleccionar elementos deseados en modelo. En este caso, ventana de complemento añadirá automáticamente elementos a lista de elementos procesados">
+    <h1>Ajustes</h1>
+    <h2>Direcciones de plegado</h2>
+    <m1>Desfase, mm</m1>
+    <m2>Ángulo, °</m2>
+    <m3>Categorías</m3>
+    <m4>Vertical</m4>
+    <m5>Horizontal</m5>
+    <m6>Arriba</m6>
+    <m7>Abajo</m7>
+    <m8>Izquierda</m8>
+    <m9>Derecha</m9>
+    <m10>Elementos envueltos</m10>
+    <m11>Seleccionar y plegar</m11>
+    <!-- todo remove after 2.4.5.0 -->
+    <m12>Plegar</m12>
+    <m13>Aplicar</m13>
+    <m14>Cancelar</m14>
+    <m15>Conductos de aire</m15>
+    <m16>Tubería</m16>
+    <m17>Foseados</m17>
+    <m18>Bandejas de cables</m18>
+    <m19>Seleccionar elementos para intersectar</m19>
+    <m20>Plegar elementos seleccionados</m20>
+    <m21>¡No se ha seleccionado elementos para paseo!</m21>
+    <m22>Elementos que no coinciden con categorías seleccionadas: {0}</m22>
+    <m23>Se ha producido un error al crear el plegado de elemento. Es posible que valores de ángulo y desfase especificados no permiten plegar.</m23>
+    <m24>Texto original de error:</m24>
+    <m25>Seleccionar opción para seguir trabajando teniendo en cuenta cambios aplicados:</m25>
+    <m26>Vigas y pilares</m26>
+    <m29>Espacio, mm</m29>
+    <m30>Desfase del eje, mm</m30>
+    <m31>Seleccionar elementos de intersección que desea plegar</m31>
+    <o1>Aceptar cambios realizados y continuar</o1>
+    <o2>Cancelar cambios realizados y continuar</o2>
+    <o3>Anular trabajo</o3>
+    <op1>AND</op1>
+    <op2>OR</op2>
+    <op3>Igual</op3>
+    <op4>No igual</op4>
+    <op5>Contiene</op5>
+    <op6>No contiene</op6>
+    <op7>Comienza</op7>
+    <op8>No comienza</op8>
+    <op9>Elementos para doblar:</op9>
+    <op10>Elementos para plegar:</op10>
+    <op11>Configuración:</op11>
+    <op12>Archivo actual</op12>
+    <op13>Archivo vinculado</op13>
+    <op14>Vínculos</op14>
+    <tp1>Añadir una regla nueva</tp1>
+    <tp2>Eliminar filtro</tp2>
+    <tp3>Eliminar configuración</tp3>
+    <tp4>Mostrar/Ocultar filtros</tp4>
+    <tp5>Añadir filtros para categorías de elementos que se plegarán</tp5>
+    <tp6>AND – para que se seleccione un elemento, debe coincidir con todos filtros, OR – con coincidir uno de filtros es suficiente</tp6>
+    <tp7>Eliminar regla</tp7>
+    <tp8>Añadir filtros para categorías de elementos que se doblarán</tp8>
+    <tp9>Añadir configuración</tp9>
+    <tp10>Buscar elementos en archivos vinculados</tp10>
+    <tp11>Añadir una regla nueva</tp11>
+    <tp12>Eliminar regla</tp12>
+    <n1>Estándar</n1>
+    <t1>Estándar</t1>
+    <t2>Por plantillas</t2>
+    <e1>No es posible crear conexión del codo. Verifique presencia de familias necesarias en proyecto y ajustes de enrutamiento de elementos procesados</e1>
+  </mprMepElementsBender>
+  <mprMEPConnect LocalName="Conectores MEP"
+                 Description="Colección de complementos para automatizar conectores de sistemas de ingeniería"
+                 LocalName1="Conectar difusores"
+                 Description1="Conectar por lotes difusores a conductos de aire"
+                 LocalName2="Conectar conectores"
+                 Description2="Conectar dos conectores (o curvas MEP) girando y moviendo el primero seleccionado"
+                 LocalName3="Conectar en línea recta"
+                 Description3="Conectar por lotes tuberías rectas, conductos de aire, cables, bandejas de cables o canales que se encuentran en misma línea recta">
+    <msg1>Seleccione conductos de aire y difusores conectados a ellos</msg1>
+    <msg2>¡No se ha seleccionado conductos de aire!</msg2>
+    <msg3>¡No se ha seleccionado difusores! Sólo se permiten procesamiento de difusores que tengan un conector no conectado orientado a lo largo del eje Z</msg3>
+    <msg4>Selecciona elemento a conectar</msg4>
+    <msg5>Seleccione elemento al que conectar</msg5>
+    <msg6>Seleccione tuberías rectas, conductos de aire, cables, bandejas de cables o conductos</msg6>
+    <msg7>¿Conectar?</msg7>
+    <t1>Tipo de entroncamento creado:</t1>
+    <t2>Cree una conexión flexible entre difusor y entroncamento</t2>
+    <t3>Tipo de conducto de aire flexible:</t3>
+    <t4>Longitud del conducto de aire flexible, mm:</t4>
+    <t5>Conexión de difusores</t5>
+    <dt1>Difusor ovalado</dt1>
+    <dt2>Difusor redondo</dt2>
+    <dt3>Difusor rectangular</dt3>
+    <err1>Desfase vertical entre difusor y conducto de aire no es suficiente para crear una conexión</err1>
+    <err2>Distancia entre difusor y conducto de aire es menor que longitud especificada de conexión flexible</err2>
+    <err3>No es posible conectar difusor</err3>
+    <err4>No es posible crear entroncamento</err4>
+    <err5>Verifique configuración de seguimiento para tipos de conducto de aire específicos</err5>
+    <err6>No es posible crear conector en T</err6>
+    <err7>No es posible crear adaptador de forma variable</err7>
+    <err8>No es posible crear injerto</err8>
+    <err9>Elemento seleccionado no tiene conectores libres</err9>
+    <err10>Elementos seleccionados tienen conector de diferentes formas</err10>
+    <err11>Elementos seleccionados tienen conector de diferentes tamaños</err11>
+    <err12>Elementos seleccionados tienen conector de diferentes tipos de sistemas</err12>
+  </mprMEPConnect>
+  <mprMEPRotate LocalName="Revolución MEP"
+                Description="Colección de complementos para girar partes del sistema de ingeniería"
+                LocalName1="Revolución de elementos MEP"
+                Description1="Rotación de accesorios o parte del sistema de ingeniería"
+                LocalName2="Revolución MEP en dirección"
+                Description2="Revolución de accesorios o parte del sistema de ingeniería en dirección de curva MEP"
+                LocalName3="bandeja de cables sobre un borde"
+                Description3="Girar bandeja de cables sobre su borde">
+    <tr1>Revolución</tr1>
+    <t1>Dextrorso</t1>
+    <t2>Girar en sentido de agujas del reloj</t2>
+    <t3>Ángulos estándar</t3>
+    <t4>Sinistrorso</t4>
+    <t5>Rotar en sentido antihorario</t5>
+    <t6>Girar elementos conectados</t6>
+    <t7>Seleccionar elemento para girar</t7>
+    <t8>Seleccionar elemento más cercano al conector alrededor del cual desea girar</t8>
+    <t9>Seleccionar elemento de referencia de curva MEP</t9>
+    <t10>Seleccionar bandejas para girar</t10>
+    <t11>Incluyendo elementos conectados longitudinalmente</t11>
+    <msg1>Falta accesorio para revolución</msg1>
+    <msg2>No es posible girar en esta dirección</msg2>
+  </mprMEPRotate>
+  <mprMEPAlign LocalName="Justificación MEP"
+               Description="Colección de complementos para justificar curvas MEP"
+               LocalName1="Justificar"
+               Description1="Justificación de curvas MEP"
+               LocalName2="Establecer desfase"
+               Description2="Establecer desfase entre curvas MEP"
+               LocalName3="Multidibujo"
+               Description3="Multidibujo de curvas MEP"
+               LocalName4="Justificar verticalmente"
+               Description4="Justificación vertical de curvas MEP">
+    <msg1>Curvas MEP seleccionadas no son paralelas</msg1>
+    <msg2>Girar un ángulo</msg2>
+    <msg3>imposible</msg3>
+    <msg4>No es posible crear conexión</msg4>
+    <msg5>Verificar ajustes de enrutamiento</msg5>
+    <msg6>Curvas MEP seleccionadas no tienen misma inclinación</msg6>
+    <msg7>Menos de dos curvas MEP seleccionadas</msg7>
+    <!-- todo remove after 1.1.2.0 -->
+    <t1>Seleccionar curva MEP de referencia para justificar</t1>
+    <t2>Seleccionar curva MEP a justificar</t2>
+    <t3>Seleccionar curvas MEP</t3>
+    <t4>Seleccionar un punto</t4>
+    <t5>Ángulos fijos:</t5>
+    <t6>Distancia:</t6>
+    <t7>Entre ejes</t7>
+    <t8>Entre caras</t8>
+    <t9>Con cuenta aislamiento</t9>
+    <t10>Horizontal</t10>
+    <t11>Vertical</t11>
+    <t12>Seleccionar una curva MEP de referencia</t12>
+    <t13>Agrupar transacciones</t13>
+    <t14>Seleccionar elemento MEP de referencia</t14>
+    <t15>Seleccione elemento MEP a justificar</t15>
+    <t16>Ejecutar cíclicamente</t16>
+  </mprMEPAlign>
+  <mprMEPCopy LocalName="Copia MEP"
+              Description="Colección de complementos para copiar elementos MEP"
+              LocalName1="Copiar por nivel"
+              Description1="Copiar elementos MEP justificados a niveles seleccionados"
+              LocalName2="Copiar verticalmente"
+              Description2="Copiar elementos MEP verticalmente a distancia"
+              LocalName3="Copiar en dirección"
+              Description3="Copiar elementos MEP en una dirección a distancia">
+    <msg1>No se ha seleccionado elementos MEP</msg1>
+    <msg2>Seleccionar elementos MEP para copiar</msg2>
+    <msg3>No es posible determinar nivel de referencia de elemento</msg3>
+    <msg4>Especificar punto en curva MEP para seleccionar dirección</msg4>
+    <t1>Número hacia arriba:</t1>
+    <t2>Número hacia abajo:</t2>
+    <t3>Distancia:</t3>
+    <t4>Cantidad:</t4>
+    <t5>Mostrar solo los seleccionados</t5>
+    <t6>Niveles seleccionados:</t6>
+    <err1>No se pudieron conectar elementos</err1>
+  </mprMEPCopy>
+  <mprMEPSplit LocalName="Dividir MEP"
+               Description="Dividir curvas MEP por niveles, planos de referencia o por parámetros especificados">
+    <t1>Desfase de uniones (arriba o abajo)</t1>
+    <t2>Planos de referencia seleccionados</t2>
+    <t3>Número de partes</t3>
+    <t4>Seleccionar curvas MEP</t4>
+    <t5>Longitud máxima</t5>
+    <t6>Método de división:</t6>
+    <t7>Por niveles</t7>
+    <t8>Por planos de referencia</t8>
+    <t9>Longitud exacta</t9>
+    <t10>Número</t10>
+    <t11>Filtración</t11>
+    <t12>Duplicar condición</t12>
+    <t13>Marcar y mostrar elementos en modelo</t13>
+    <t14>Eliminar condición</t14>
+    <t15>Dividir</t15>
+    <t16>Unir</t16>
+    <t17>Por filtrado</t17>
+    <t18>Elementos seleccionados</t18>
+    <t19>Conectado a elementos seleccionados</t19>
+    <t20>Procesar curvas MEP:</t20>
+    <t21>Ingresar nombre</t21>
+    <t22>Configuraciones de división MEP no se encontraron en archivo especificado</t22>
+    <t23>¡Lista de configuraciones no está vacía! Seleccionar acción</t23>
+    <t24>Añadir a lista</t24>
+    <t25>Sobrescribir lista</t25>
+    <t26>Duplicar configuración</t26>
+    <t27>Añadir configuración</t27>
+    <t28>Cambiar nombre de configuración</t28>
+    <t29>Eliminar configuración</t29>
+  </mprMEPSplit>
+</ModPlus>

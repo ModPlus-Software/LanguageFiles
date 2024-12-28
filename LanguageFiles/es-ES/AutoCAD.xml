@@ -1,6 +1,2453 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ModPlus>
-  <mpTxtNumCopy>
-    <!-- todo h19 перенести из ModPlusAPI h7, удалив двоеточие-->
+  <mpTxtNumCopy LocalName="Copiar con numeración"
+                Description="Copia texto seleccionado o un bloque de atributos que contiene valor numérico, cambiando valor según incrementos numéricos especificados"
+                FullDescription="Copia texto de una o varias líneas, bloque de atributos o directriz múltiple seleccionado que contiene un valor numérico, cambiando valor según incremento numérico especificado. Hay varios ajustes – añadir prefijo/sufijo, suprimir ceros finales, etc.">
+    <!-- todo remove after 3.1.2.0 -->
+    <accept>Aceptar</accept>
+    <!-- todo remove after 3.1.2.0 -->
+    <cancel>Cancelar</cancel>
+    <next>Continuar</next>
+    <!-- todo remove after 3.1.2.0 -->
+    <prefix>Prefijo</prefix>
+    <!-- todo remove after 3.1.2.0 -->
+    <suffix>Sufijo</suffix>
+    <msg1>Seleccionar texto, bloque de atributos o directriz:</msg1>
+    <msg2>¡Selección incorrecta!</msg2>
+    <msg3>Bloque seleccionado no contiene atributos</msg3>
+    <msg4>Texto seleccionado no contiene valores numéricos</msg4>
+    <!-- todo remove after 3.2.0.0 -->
+    <msg5>No es posible obtener número</msg5>
+    <!-- todo remove after 3.2.0.0 -->
+    <msg6>Error de búsqueda del número</msg6>
+    <msg7>Número base:</msg7>
+    <msg8>Ingresar incremento:</msg8>
+    <msg9>Punto base:</msg9>
+    <msg10>Directriz múltiple seleccionado no contiene texto</msg10>
+    <msg11>Especificar punto:</msg11>
+    <msg12>Seleccionar curva:</msg12>
+    <h1>Selección de atributo</h1>
+    <h2>Etiqueta:</h2>
+    <h3>Valor:</h3>
+    <h4>Ajustes</h4>
+    <h5>Incremento:</h5>
+    <h6>Guardar texto ANTES y texto DESPUÉS</h6>
+    <h7>Ceros a izquierda</h7>
+    <h8>Añadir ceros al principio de un número</h8>
+    <h9>Suprimir cero final</h9>
+    <h10>Eliminar todos ceros finales del número</h10>
+    <h11>Resultado:</h11>
+    <h12>Copiar a lo largo de curva</h12>
+    <h13>Intervalo:</h13>
+    <h14>Cantidad:</h14>
+    <h15>Barrido:</h15>
+    <h16>Insertar copias en curva</h16>
+    <h17>Copiar con división de curvas</h17>
+    <h18>Orientación</h18>
+    <h19>Delimitador decimal</h19>
+    <cb1>Docenas</cb1>
+    <cb2>Cientos</cb2>
+    <cb3>Miles</cb3>
+    <cb4>Decenas de miles</cb4>
+    <cb5>Cientos de miles</cb5>
+    <cb6>No cambiar</cb6>
+    <cb7>A lo largo de curva</cb7>
+    <cb8>Perpendicular a curva (a izquierda)</cb8>
+    <cb9>Perpendicular a curva (a derecha)</cb9>
   </mpTxtNumCopy>
+  <mpMultiCopy LocalName="Multicopiar"
+               Description="Copia múltiple de primitivas seleccionadas con intervalo determinado"
+               FullDescription="Complemento admite dos tipos de copia:\nmarcar – copia primitivas con una distancia determinada entre ellos a lo largo de línea especificada;\ndividir – copia primitivas dividiendo línea especificada en número de segmentos ingresado\nEs posible seleccionar una primitiva (línea, polilínea, splíne) para especificar ruta de copia">
+    <msg1>Seleccionar primitivas:</msg1>
+    <msg2>Especificar distancia o [Dividir]</msg2>
+    <msg3>Ingresar número de segmentos o [Marcar]</msg3>
+    <msg4>Especificar punto base o:</msg4>
+    <msg5>Seleccionar una línea, polilínea o spline:</msg5>
+    <msg6>Especificar segundo punto:</msg6>
+    <kw1>Dividir</kw1>
+    <kw2>Marcar</kw2>
+    <kw3>Primitiva</kw3>
+  </mpMultiCopy>
+  <mpTxtCenter LocalName="Texto en medio"
+               Description="Complemento le permite crear texto de una sola línea o alinear texto existente al medio entre dos puntos específicos">
+    <msg1>Especificar primer punto o [Existente]</msg1>
+    <msg2>Existente</msg2>
+    <msg3>Ingresar texto:</msg3>
+    <msg4>Seleccionar texto de una sola línea:</msg4>
+    <msg5>Seleccionar texto de una sola línea o [Nuevo]:</msg5>
+    <msg6>Nuevo</msg6>
+    <msg7>¡Selección incorrecta!</msg7>
+    <msg8>Especificar primer punto:</msg8>
+    <msg9>Especificar segundo punto:</msg9>
+  </mpTxtCenter>
+  <mpStandards LocalName="Estándares"
+               Description="Complemento le permite crear, almacenar y añadir conjuntos de capas, estilos de texto, estilos de cota y estilos de directrices múltiples">
+    <!-- todo remove after 2.5.13.0 -->
+    <accept>Aceptar</accept>
+    <!-- todo remove after 2.5.13.0 -->
+    <cancel>Cancelar</cancel>
+    <copy>Copiar</copy>
+    <no>No</no>
+    <h1>Nombre del conjunto:</h1>
+    <h2>Ingresar nombre de conjunto</h2>
+    <h3>Añadir una capa</h3>
+    <h4>Actualizar lista</h4>
+    <h5>Nombre</h5>
+    <h6>Congelar</h6>
+    <h7>Bloquear</h7>
+    <h8>Color</h8>
+    <h9>Tipo de línea</h9>
+    <h10>Grosor de línea</h10>
+    <h11>Imprimir</h11>
+    <h12>Activar</h12>
+    <h13>Capa</h13>
+    <h14>Por defecto</h14>
+    <!-- todo remove after 2.5.13.0 -->
+    <h15>ESTÁNDARES</h15>
+    <h16>Estilos</h16>
+    <h17>Conjuntos de capas</h17>
+    <h18>Conjunto estándar de capas ModPlus. Imposible eliminar</h18>
+    <h19>Crear un nuevo conjunto de capas</h19>
+    <h20>Editar (ver) un conjunto seleccionado de capas</h20>
+    <h21>Eliminar conjunto de capas seleccionado</h21>
+    <h22>Estilos de texto</h22>
+    <h23>Estilo ModPlus estándar. Imposible eliminar</h23>
+    <h24>Un estilo de texto está relacionado con estilo de cota o estilo de directriz múltiple</h24>
+    <h25>Añadir uno o más estilos de texto del dibujo actual</h25>
+    <h26>Eliminar estilo de texto seleccionado de conjunto</h26>
+    <h27>Estilos de cota</h27>
+    <h28>Añadir uno o más estilos de cota del dibujo actual</h28>
+    <h29>Eliminar estilo de cota seleccionado de conjunto</h29>
+    <h30>Estilos de directrices múltiples</h30>
+    <h31>Añadir uno o más estilos de directrices múltiples desde dibujo actual</h31>
+    <h32>Eliminar estilo de cota seleccionado de conjunto</h32>
+    <h33>Añadir seleccionado</h33>
+    <h34>Añadir estándares seleccionados al dibujo actual</h34>
+    <h35>Desde archivo</h35>
+    <h36>Especificar archivo desde que desea copiar estándares:</h36>
+    <h37>Especificar estándares que desea copiar:</h37>
+    <h38>Ajustes</h38>
+    <h39>Edición de ajustes sólo está disponible en versión completa del complemento</h39>
+    <h40>Crear grupos para conjuntos de capas</h40>
+    <h41>Descarga automática de estándares al crear un dibujo</h41>
+    <h42>Descarga automática de estándares al abrir un dibujo</h42>
+    <h43>Copiar estándares de un archivo al crear un dibujo</h43>
+    <h44>Copiar estándares de un archivo al abrir un dibujo</h44>
+    <h45>Detalles de línea de comando</h45>
+    <h46>Después de añadirlo, actualícelo:</h46>
+    <h47>Estilo de texto:</h47>
+    <h48>Estilo de cota:</h48>
+    <h49>Estilo de directriz múltiple:</h49>
+    <h50>EDITOR DE CAPAS DE CONJUNTO</h50>
+    <h51>VER CAPAS DE UN CONJUNTO</h51>
+    <h52>Exportar</h52>
+    <h53>Importar</h53>
+    <h54>¡Disponible en versión completa del complemento!</h54>
+    <h55>Especificar ubicación del archivo .xml</h55>
+    <h56>Especificar archivo .xml para importar estándares</h56>
+    <h57>¡Archivo seleccionado no es archivo de almacenamiento estándar!</h57>
+    <h58>Actualizar los existentes</h58>
+    <h59>Si dibujo actual ya contiene capas o estilos con mismos nombres que se están añadiendo, sus propiedades se actualizarán</h59>
+    <cb1>Capas del conjunto actual</cb1>
+    <cb2>Capas del conjunto actual + capas de dibujo</cb2>
+    <cb3>Capas</cb3>
+    <cb4>Estilos de texto</cb4>
+    <cb5>Estilos de cota</cb5>
+    <cb6>Estilos de directrices múltiples</cb6>
+    <msg1>Especificar nombre del conjunto</msg1>
+    <msg2>Conjunto con mismo nombre ya existe</msg2>
+    <msg3>No hay capas en conjunto</msg3>
+    <msg4>¡No es posible copiar archivo auxiliar en el disco!\nEs posible que no tenga derechos de administrador</msg4>
+    <msg5>Se eliminarán siguientes estilos dependientes:</msg5>
+    <msg6>¿Continuar?</msg6>
+    <msg7>¿Eliminar estilo de texto dependiente?\nSí – eliminar, No – desvincular</msg7>
+    <msg8>Especificar archivo de origen</msg8>
+    <msg9>¡Archivo de origen no se ha especificado!</msg9>
+    <msg10>No se ha encontrado archivo de origen especificado</msg10>
+    <msg11>No se ha seleccionado ningún estándar para copiar</msg11>
+    <msg12>¡No se ha encontrado archivo de configuración!</msg12>
+    <msg13>No es posible cargar tipo de línea:</msg13>
+    <p1>ModPlus: estilo de texto añadiendo</p1>
+    <p2>ModPlus: estilo de cota añadiendo</p2>
+    <p3>ModPlus: estilo de directriz múltiple añadiendo</p3>
+    <p4>ModPlus: conjunto de capas añadiendo</p4>
+    <p5>con capas:</p5>
+    <p6>ModPlus: grupo de capas creado</p6>
+    <p7>ModPlus: estilo de texto actual establecido</p7>
+    <p8>ModPlus: estilo de cota actual establecido</p8>
+    <p9>ModPlus: actual estilo de directriz múltiple establecido</p9>
+    <l1>Mp_Principal</l1>
+    <l2>Mp_Fina</l2>
+    <l3>Mp_Cotas</l3>
+    <l4>Mp_Directrices</l4>
+    <l5>Mp_Gruesa</l5>
+    <l6>Mp_Sombreado</l6>
+    <l7>Mp_Axial</l7>
+    <l8>Mp_No imprimible</l8>
+    <l9>Mp_Texto</l9>
+  </mpStandards>
+  <mpMultiScale LocalName="Multiescala"
+                Description="Complemento le permite escalar cada uno de objetos seleccionados en relación con ellos mismos"
+                FullDescription="Cada objeto seleccionado se escalará en relación con punto especificado: Abajo a izquierda, Abajo a derecha, Arriba a izquierda, Arriba a derecha o Centro. Punto de escala está determinado por rectángulo que describe objeto">
+    <h1>Crear copias de objetos seleccionados</h1>
+    <h2>Punto base:</h2>
+    <h3>Seleccionar objetos:</h3>
+    <h4>Escala:</h4>
+    <bp1>Centro</bp1>
+    <bp2>Abajo a izquierda</bp2>
+    <bp3>Arriba a izquierda</bp3>
+    <bp4>Arriba a derecha</bp4>
+    <bp5>Abajo a derecha</bp5>
+    <bp6>Centro parte inferior</bp6>
+    <bp7>Centro parte superior</bp7>
+    <bp8>Centro a izquierda</bp8>
+    <bp9>Centro a derecha</bp9>
+    <bp10>Центр или точка вставки блока</bp10>
+  </mpMultiScale>
+  <mpMultiRotate LocalName="Multirotación"
+                 Description="Complemento le permite rotar cada uno de objetos seleccionados alrededor del eje Z con centro de rotación relativo a ellos mismos"
+                 FullDescription="Cada objeto seleccionado rotará alrededor del eje Z, centrado en punto especificado: Abajo-izquierda, Abajo-derecha, Arriba-izquierda, Arriba-derecha o Centro. Centro de rotación está definido por rectángulo que describe objeto">
+    <h1>Ángulo de rotación:</h1>
+  </mpMultiRotate>
+  <mpMultiMirror LocalName="Multiespejo"
+                 Description="Complemento le permite reflejar cada uno de objetos seleccionados vertical u horizontalmente con respecto a ellos mismos"
+                 FullDescription="Cada objeto seleccionado se volteará vertical u horizontalmente en relación con línea que pasa por punto especificado: Abajo a izquierda, Abajo a derecha, Arriba a izquierda, Arriba a derecha o Centro. Punto está determinado por rectángulo que describe objeto">
+    <o1>Reflejar</o1>
+    <o2>verticalmente</o2>
+    <o3>horizontalmente</o3>
+  </mpMultiMirror>
+  <mpRotAtt LocalName="Ángulo de rotación de atributos"
+            Description="Complemento le permite cambiar ángulo de rotación de atributos en bloques seleccionados">
+    <msg1>Seleccionar bloques:</msg1>
+    <msg2>Nuevo ángulo de rotación de atributos:</msg2>
+  </mpRotAtt>
+  <mpLayerAuto LocalName="Capas automáticas"
+               Description="Complemento se utiliza para añadir automáticamente capa a objetos creados"
+               FullDescription="Complemento procesa eventos de crear, copiar, pegar y otros comandos cuando se trabaja con objetos de AutoCAD (cotas, textos, directrices, sombreados, tablas, ventanas gráficas, segmentos, polilíneas, líneas, rayos, círculos, elipses, splines, arcos, bloques) y establece para ellos capa especificada en ajustes del complemento. Es posible establecer capas especificadas para objetos seleccionados. Es posible establecer capas de bloques por nombre">
+    <h1>Capas para primitivas</h1>
+    <h2>Asignar capas</h2>
+    <h3>Disponible en versión completa del complemento</h3>
+    <h4>Para cotas:</h4>
+    <h5>Para texto:</h5>
+    <h6>Para directrices múltiples:</h6>
+    <h7>Para sombreado:</h7>
+    <h8>Para tablas:</h8>
+    <h9>Para ventanas gráficas:</h9>
+    <h10>Excepciones de comando</h10>
+    <h11>Más detalles</h11>
+    <h12>Trabajo de complemento se basa en procesar evento de finalización del comando. Sin embargo, no todos comandos crean nuevos objetos y, además, pueden provocar errores al ejecutar este complemento. Puedes editar lista de excepciones tú mismo</h12>
+    <h13>Más detalles en</h13>
+    <h14>foro</h14>
+    <h15>Eliminar comando de lista</h15>
+    <h16>Ingresar comando para excluir</h16>
+    <h21>Guardar ajustes para dibujo actual y cerrar ventana</h21>
+    <h22>Aplicar a los seleccionados</h22>
+    <h23>Aplicar ajustes especificados a objetos seleccionados</h23>
+    <h24>Capas para bloques por nombre</h24>
+    <h25>En versión limitada no hay más de tres posiciones disponibles</h25>
+    <h26>Capa predeterminada</h26>
+    <h27>¡No ingresaste comando!</h27>
+    <h28>Comando</h28>
+    <h29>ya esta en lista</h29>
+    <h31>Seleccionar objetos:</h31>
+    <h32>ModPlus: Objeto se desplaza a capa:</h32>
+    <h33>Error de complemento "Capas automáticas":</h33>
+    <h34>se han asignado capas a objetos</h34>
+    <h35>Para segmentos:</h35>
+    <h36>Para polilíneas:</h36>
+    <h37>Para semirrectas:</h37>
+    <h38>Para rectas:</h38>
+    <h39>Para círculos:</h39>
+    <h40>Para elipses:</h40>
+    <h41>Para splines:</h41>
+    <h42>Para arcos:</h42>
+    <h43>Para bloques:</h43>
+    <h44>Ajustes de capas para bloques por nombre no se guardan en dibujo, como ajustes de capa para primitivas, sino en archivo de configuración del usuario</h44>
+    <h45>Nombre del bloque:</h45>
+    <h46>Capa:</h46>
+    <h47>Coincidencia exacta del nombre del bloque</h47>
+    <h48>Coincidencia parcial del nombre del bloque</h48>
+    <h49>Guardar ajustes de capa para bloques por nombre en archivo .xml</h49>
+    <h50>Descargar ajustes de capa para bloques por nombre del archivo .xml</h50>
+    <h51>Archivo seleccionado no es un archivo de almacenamiento de ajustes de capa para bloques por nombre</h51>
+    <h52>Para nubes de revisión:</h52>
+    <h53>Por puntos:</h53>
+  </mpLayerAuto>
+  <mpFormats LocalName="Formatos"
+             Description="Complemento para insertar formatos en dibujo según GOST 2.301-68/ISO 216"
+             FullDescription="Formatos se insertan como bloque con etiqueta especial en datos extendidos. Etiqueta en datos extendidos es necesaria para que otros complementos (por ejemplo, Numerador de hojas) definan formatos. Por lo tanto, no debe insertar formatos utilizando herramientas estándar de inserción de bloques de AutoCAD. Complemento permite añadir cuadros de rotulación a formato; para ello, es necesario de instalar complemento &quot;Cuadro de rotulación&quot; y ejecutarlo al menos una vez &quot;">
+    <accept>Aceptar</accept>
+    <no>No</no>
+    <h1>Rusia</h1>
+    <h2>Ucrania</h2>
+    <h3>Bielorrusia</h3>
+    <h4>Formatos</h4>
+    <h5>GOST 2.301-68</h5>
+    <h6>Formato/multiplicidad</h6>
+    <h7>Orientación de hoja</h7>
+    <h8>Paisaje</h8>
+    <h9>Libro</h9>
+    <h10>Lado de multiplicidad</h10>
+    <h11>Corto</h11>
+    <h12>Largo</h12>
+    <h13>Entrada manual</h13>
+    <h14>Longitud del formato, mm</h14>
+    <h15>Altura del formato, mm</h15>
+    <h16>"Copiado"</h16>
+    <h17>Marco inferior:</h17>
+    <h18>5 mm</h18>
+    <h19>10 mm</h19>
+    <h20>Estilo de texto:</h20>
+    <h21>Escala de formato:</h21>
+    <h22>Cuadro de rotulación:</h22>
+    <h23>Utilizar campos</h23>
+    <h24>Iniciar complemento "Campos"</h24>
+    <h25>Altura del texto básica:</h25>
+    <h26>Altura del texto adicional:</h26>
+    <h27>Logo</h27>
+    <h28>del bloque:</h28>
+    <h29>del archivo:</h29>
+    <h30>Especificar archivo .dwg como logotipo</h30>
+    <h31>Posiciones</h31>
+    <h32>Editar lista de posiciones del usuario</h32>
+    <h33>Añadir posición al cuadro de rotulación</h33>
+    <h34>Eliminar posición del cuadro de rotulación</h34>
+    <h35>Posiciones en cuadro de rotulación</h35>
+    <h36>Cambiar posición una línea hacia arriba</h36>
+    <h37>Cambiar posición una línea hacia abajo</h37>
+    <h38>Longitud del formato (mm) x Altura del formato (mm)</h38>
+    <h39>Insertar</h39>
+    <h40>Reemplazar</h40>
+    <h41>Crear hoja</h41>
+    <h42>Nombre de nueva hoja</h42>
+    <h43>Añadir al cuadro de rotulación:</h43>
+    <h44>Nombre de hoja</h44>
+    <h45>Número de hoja</h45>
+    <h46>Escala 1:1</h46>
+    <h47>Si desmarca casilla, escala de formato corresponderá a escala especificada en ventana principal del complemento</h47>
+    <h49>Posición</h49>
+    <h50>Añadir una nueva posición</h50>
+    <h51>Eliminar posición seleccionada</h51>
+    <h52>Hoja</h52>
+    <h53>Utilizar archivo .dwg como logotipo</h53>
+    <h54>Establecer capa actual</h54>
+    <h55>Cumplimiento de tabla en GOST</h55>
+    <h56>Cotas de formatos con un múltiplo superior a 1 se toman multiplicando lados del formato con un múltiplo de 1 por valor del múltiplo, que corresponde a desviaciones máximas de Tabla 3 (cláusula 6). Al marcar casilla, cotas de formato se tomarán en conformidad completa con Tabla 2 (cláusula 5)</h56>
+    <h57>Formato</h57>
+    <h79>Líneas finas:</h79>
+    <h80>Líneas gruesas:</h80>
+    <h81>Cambio del grosor de líneas se produce después de crear cuadro de rotulación. Cambio del grosor de líneas finas se realiza procesando grosor de línea del cuadro de rotulación original, que tiene valor de línea fina predeterminado "PorBloque"</h81>
+    <h82>Cambio del grosor de líneas se produce después de crear cuadro de rotulación. Cambio del grosor de líneas gruesas se realiza procesando grosor de línea del cuadro de rotulación original, que tiene valor predeterminado de líneas gruesas de "0,40 mm"</h82>
+    <h83>Insertar firmas</h83>
+    <h84>Iniciar complemento "Firmas"</h84>
+    <err1>¡Archivo de configuración está dañado!\nIniciar Configurador ModPlus</err1>
+    <err2>¡Se ha producido un error!</err2>
+    <err3>Caracteres ilegales en nombre de hoja:</err3>
+    <err4>No se permiten siguientes símbolos:</err4>
+    <err5>¡No se ha encontrado archivo con cuadro de rotulación!\nEjecutar complemento "Cuadros de rotulación" para descomprimir archivo .dwg con cuadros de rotulación</err5>
+    <err6>Longitud del formato no ingresada</err6>
+    <err7>Altura de formato no ingresada</err7>
+    <err8>Longitud del formato debe ser de al menos 30 mm</err8>
+    <err9>Altura del formato debe ser de al menos 15 mm</err9>
+    <err10>Cuadro de rotulación con estilo de tabla no se ha encontrado en archivo de cuadros de rotulación\n</err10>
+    <err11>Ejecutar complemento "Cuadros de rotulación" para sobrescribir archivo de cuadros de rotulación</err11>
+    <err12>¡Cuadro de rotulación no coincide con el de ModPlus! Número de celdas incorrecto</err12>
+    <err13>¡Archivo fue creado en versión posterior de AutoCAD!</err13>
+    <err14>Nombre de bloque no válido</err14>
+    <msg1>Valor</msg1>
+    <msg2>ya esta en lista de valores estándar</msg2>
+    <msg3>¡Lista contiene mismos valores!</msg3>
+    <msg4>Disponible con versión completa del complemento "Cuadro de rotulación"</msg4>
+    <msg5>No puedo añadir más</msg5>
+    <msg6>posiciones</msg6>
+    <msg7>En archivo</msg7>
+    <msg8>campos no se han encontrado</msg8>
+    <msg9>Seleccionar formato a reemplazar:</msg9>
+    <msg10>¡Selección incorrecta!</msg10>
+    <msg11>Punto de inserción:</msg11>
+    <msg12>¡No se permite un nombre de hoja vacío!</msg12>
+  </mpFormats>
+  <mpNotes LocalName="Notas"
+           Description="Complemento para trabajar con notas de uso frecuente">
+    <h1>Ajustes</h1>
+    <h2>Menú contextual para texto</h2>
+    <h3>Doble clic en una nota</h3>
+    <h4>Para notas estándar:</h4>
+    <h5>Insertar como MTexto</h5>
+    <h6>Añadir a MTexto</h6>
+    <h7>Para notas del usuario:</h7>
+    <h8>Editar</h8>
+    <h15>Notas</h15>
+    <h26>Altura del texto:</h26>
+    <h28>Anchura de texto:</h28>
+    <h29>Estilo de texto:</h29>
+    <h30>Estilo de texto seleccionado es de tipo de anotación. Considerar escala de anotación</h30>
+    <h31>Anotativo</h31>
+    <h41>No se ha encontrado archivo de notas del usuario</h41>
+    <h49>Seleccionar texto:</h49>
+    <h50>¡Selección incorrecta!</h50>
+    <h52>Seleccionar texto multilínea:</h52>
+    <h53>¡Archivo de notas del usuario no se ha especificado (o no se ha creado)!</h53>
+    <h74>Especificar punto de inserción:</h74>
+    <h75>MP:Guardar como nota</h75>
+  </mpNotes>
+  <mpMeshes LocalName="Mallazos"
+            Description="Selección y cálculo de masa de mallazo de refuerzo de acuerdo con documentos reglamentarios">
+    <kg>kg</kg>
+    <mm>mm</mm>
+    <insert>Insertar</insert>
+    <h1>Mallazos</h1>
+    <h2>GOST 23279-2012</h2>
+    <h3>Tipo del mallazo</h3>
+    <h4>Enrollable</h4>
+    <h5>Imagen</h5>
+    <h6>Anchura de mallazo (b)</h6>
+    <h7>Longitud del mallazo (l)</h7>
+    <h8>Diámetros de barra</h8>
+    <h9>Longitudinal (d)</h9>
+    <h10>Transversal (d1)</h10>
+    <h11>Espaciado de barras</h11>
+    <h12>Longitudinal (s1)</h12>
+    <h13>Transversales</h13>
+    <h14>Salientes de barra</h14>
+    <h15>longitudinales (a1,a2)</h15>
+    <h16>Transversal (a)</h16>
+    <h17>Masa del mallazo:</h17>
+    <h18>Redondeo de masa</h18>
+    <h19>GOST 8478-81</h19>
+    <h20>Tipo del mallazo por precisión de cotas</h20>
+    <h21>Anchura de mallazo – 2350 mm</h21>
+    <h22>Espaciado principal (s)</h22>
+    <h23>Longitudinales (a1)</h23>
+    <h24>Número de barras longitudinales en mallazo, uds.</h24>
+    <h25>División de anchura del mallazo por número de espaciados</h25>
+    <h26>s o (s)+s2</h26>
+    <h27>Longitud del mallazo L=</h27>
+    <h28>Serie 1.410-3</h28>
+    <h29>Tipo del mallazo: con armadura de trabajo</h29>
+    <h30>Relación del diámetro</h30>
+    <h31>barras (d1/d2)</h31>
+    <h32>Transversal (a2)</h32>
+    <h33>Longitudinales (m)</h33>
+    <h34>Transversales (n)</h34>
+    <h35>Mallazos para estructuras y artículos de hormigón armado</h35>
+    <h36>Mallazos para hormigón armado</h36>
+    <h37>Versión 1. Mallazos con armadura de trabajo con un diámetro de 10 a 32 mm</h37>
+    <h38>Tipo del mallazo: pesados</h38>
+    <h39>Tipo del mallazo: ligeros</h39>
+    <h40>(a 850 de longitud del rollo)</h40>
+    <h41>(a 3950 de longitud del rollo)</h41>
+    <h42>(a 850 de 9000)</h42>
+    <h43>(a 3950 de 9000)</h43>
+    <h44>Relación entre diámetro de barra más pequeño y más grande debe ser al menos 0,25</h44>
+    <h45>Valor de saliente debe ser múltiplo de 25 mm</h45>
+    <h46>Valor de saliente debe ser de 25 mm. Se permite tomar de 30 a 200 mm en múltiplos de 5 mm</h46>
+    <h47>Valor de saliente debe ser de 25 mm. Se permite aceptar desde 15, 20 y 30 mm, así como desde 25 a 100 mm en múltiplos de 25 mm</h47>
+    <h48>¡No se permiten espaciados adicionales entre barras longitudinales en mallazos pesados!</h48>
+    <h49>Espaciado adicional de barras longitudinales en mallazos ligeros debe ser de 50 mm a cota del espaciado principal</h49>
+    <h50>en múltiplos de 10 mm</h50>
+    <h51>¡Espaciado adicional de barras transversales en mallazos pesados tipo 1 debe ser de 100, 200 o 300 mm!</h51>
+    <h52>¡No se permiten espaciados adicionales entre barras transversales en mallazos pesados de tipo 2, 3!</h52>
+    <h53>¡Espaciado adicional de barras transversales en mallazos ligeros debe ser de 50 a 250 mm en múltiplos de 10 mm!</h53>
+    <h54>¡No todos datos se ingresan correctamente! ¿Continuar?</h54>
+    <h55>Precisión normal</h55>
+    <h56>Mayor precisión</h56>
+    <h57>¡Valor de longitud de mallazo no válido!</h57>
+    <h58>en una dirección</h58>
+    <h59>en dos direcciones</h59>
+    <h60>Anchura de mallazo no debe ser menor</h60>
+    <h61>Anchura de mallazo no debe ser mayor</h61>
+    <h62>Longitud del mallazo no debe ser menor</h62>
+    <h63>Longitud del mallazo no debe ser mayor</h63>
+  </mpMeshes>
+  <mpTables LocalName="Tablas"
+            Description="Complemento para insertar tablas de AutoCAD en un dibujo de acuerdo con GOST/DSTU/STB o desde un archivo específico">
+    <insert>Insertar</insert>
+    <all>Todo</all>
+    <favorite>Favoritos</favorite>
+    <current>Actual</current>
+    <h1>TABLAS</h1>
+    <h2>Tablas ModPlus</h2>
+    <h3>Documentos reglamentarios para:</h3>
+    <h4>Rusia</h4>
+    <h5>Ucrania</h5>
+    <h6>Bielorrusia</h6>
+    <h7>Filtro de tablas:</h7>
+    <h8>Seleccionar una opción para filtrar tablas</h8>
+    <h9>Nombre de tabla</h9>
+    <h10>Documento reglamentario:</h10>
+    <h11>Descripción:</h11>
+    <h12>Breve descripción (enlace a tabla en documento reglamentario)</h12>
+    <h13>Título del documento</h13>
+    <h14>Вы можете масштабировать изображение с помощью колесика мышки, панорамировать с зажатой левой кнопкой мышки и вписать изображение, нажав правую кнопку мышки</h14>
+    <h15>Inválido</h15>
+    <h16>Insertar tabla con referencia a Arriba-izquierda</h16>
+    <h17>Insertar tabla con referencia a Arriba-derecha</h17>
+    <h18>Insertar tabla con referencia a Abajo-izquierda</h18>
+    <h19>Insertar tabla con referencia a Abajo-derecha</h19>
+    <h20>Alejar imagen</h20>
+    <h21>Acercar imagen</h21>
+    <h22>AJUSTE DE TABLA</h22>
+    <h23>Escala de tabla:</h23>
+    <h24>Altura del texto:</h24>
+    <h25>Altura de fila:</h25>
+    <h26>Estilo de texto:</h26>
+    <h27>Inserción dinámica de filas</h27>
+    <h28>Tablas del archivo</h28>
+    <h29>Archivo</h29>
+    <h30>Limpiar ruta del archivo</h30>
+    <h31>Especificar ruta del archivo</h31>
+    <h32>TABLAS DEL ARCHIVO</h32>
+    <h33>Archivo de dibujo</h33>
+    <h34>Seleccionar archivo</h34>
+    <h35>Añadir a lista de tablas favoritas</h35>
+    <h36>Eliminar lista de tablas favoritas</h36>
+    <h37>Capa:</h37>
+    <h38>¡Capa bloqueada!</h38>
+    <msg1>¡No es posible copiar archivo en disco!\nEs posible que no tenga derechos de administrador</msg1>
+    <msg2>No es posible copiar tabla</msg2>
+    <msg3>¡Sección «Tablas del archivo» muestra un archivo que no es compatible con esta versión de AutoCAD!</msg3>
+    <msg4>Punto de inserción</msg4>
+    <msg5>Especificar segundo punto</msg5>
+  </mpTables>
+  <mpDimJustif LocalName="Alinear cotas"
+               Description="Alineación de líneas directriz o de cota a lo largo de una línea recta especificada">
+    <h1>ALINEAR COTAS</h1>
+    <h2>Alineación de líneas directriz</h2>
+    <h3>Alinear líneas de cota</h3>
+    <msg1>Seleccionar cotas para alinear líneas directriz</msg1>
+    <msg2>Primer punto de línea de alineación:</msg2>
+    <msg3>Seleccionar cotas para alinear líneas de cota</msg3>
+    <msg4>Segundo punto de línea de alineación:</msg4>
+  </mpDimJustif>
+  <mpStamps LocalName="Cuadros de rotulación"
+            Description="Complemento para insertar cuadros de rotulación (en forma de tablas de AutoCAD) en dibujo según documentación normativa, con soporte para campos"
+            FullDescription="Utilización de complemento &quot;Campos&quot; le permite añadir valores adicionales a su documento que pueden ser insertados en cuadro de rotulación en forma de campos. Esto le permite cambiar valores en cuadro de rotulación en todos cuadros de rotulación en todo documento a una vez">
+    <h1>Cuadros de rotulación</h1>
+    <h2>Nombre del cuadro de rotulación</h2>
+    <h3>Documentos reglamentarios para:</h3>
+    <h4>Rusia</h4>
+    <h5>Ucrania</h5>
+    <h6>Bielorrusia</h6>
+    <h7>Filtrar por documento reglamentario:</h7>
+    <h8>Seleccionar un documento reglamentario</h8>
+    <h9>Nombre de tabla</h9>
+    <h10>Documento reglamentario:</h10>
+    <h11>Descripción:</h11>
+    <h12>Breve descripción (enlace al cuadro de rotulación en documento reglamentario)</h12>
+    <h13>Inválido</h13>
+    <h14>Insertar cuadro de rotulación con referencia a Arriba-izquierda</h14>
+    <h15>Insertar cuadro de rotulación con referencia a Arriba-derecha</h15>
+    <h16>Insertar cuadro de rotulación con referencia a Abajo-izquierda</h16>
+    <h17>Insertar cuadro de rotulación con referencia a Abajo-derecha</h17>
+    <h18>Mostrar imagen</h18>
+    <h19>Ocultar imagen</h19>
+    <h21>Escala de cuadro de rotulación:</h21>
+    <h22>Estilo de texto:</h22>
+    <h23>Altura del texto básica:</h23>
+    <h24>Altura del texto adicional:</h24>
+    <h25>Logo</h25>
+    <h26>del bloque:</h26>
+    <h27>del archivo:</h27>
+    <h28>Especificar archivo .dwg como logotipo</h28>
+    <h29>Disponible en versión completa</h29>
+    <h30>Utilizar campos</h30>
+    <h31>Posiciones</h31>
+    <h32>Editar lista de posiciones del usuario</h32>
+    <h33>Añadir posición al cuadro de rotulación</h33>
+    <h34>Eliminar posición del cuadro de rotulación</h34>
+    <h35>Posiciones en cuadro de rotulación</h35>
+    <h36>Cambiar posición una línea hacia arriba</h36>
+    <h37>Cambiar posición una línea hacia abajo</h37>
+    <h38>Iniciar complemento "Campos"</h38>
+    <h39>Altura del texto en todas celdas del cuadro de rotulación. Valor predeterminado es 2,5, que corresponde a ESKD GOST 2.304-81 "Fuentes de dibujo"</h39>
+    <h40>Altura adicional del texto. Instalado en celdas como "Designación del documento", "Etapa", "Hoja. etc., lo que confiere al cuadro de rotulación expresividad y legibilidad. Valor predeterminado es 3,5, que corresponde a ESKD GOST 2.304-81 "Fuentes de dibujo"</h40>
+    <h41>Especificar bloque determinado en este dibujo para insertarlo en cuadro de rotulación como logotipo</h41>
+    <h42>Archivo .dwg especificado se añadirá al dibujo actual como bloque, que se insertará en cuadro de rotulación como logotipo. Nombre del archivo se utilizará como nombre del bloque. Si ya existe bloque con este nombre en dibujo actual, se utilizará bloque del dibujo</h42>
+    <h43>POSICIONES</h43>
+    <h44>Posición</h44>
+    <h45>CAMPOS</h45>
+    <h46>Apellidos</h46>
+    <h47>Estándar</h47>
+    <h48>Personalizado</h48>
+    <h49>POSICIÓN</h49>
+    <h50>Añadir una nueva posición</h50>
+    <h51>Eliminar posición seleccionada</h51>
+    <h52>APELLIDO</h52>
+    <h53>GOST R 21.1101-2013</h53>
+    <h54>Apéndice G</h54>
+    <h55>Columna 1</h55>
+    <h56>Columna 2</h56>
+    <h57>Columna 3</h57>
+    <h58>Columna 6</h58>
+    <h59>Columna 9</h59>
+    <h60>Apéndice L</h60>
+    <h61>Añadir al dibujo</h61>
+    <h62>Añadir campos rellenos al dibujo</h62>
+    <h63>Desde archivo</h63>
+    <h64>Cargar y establecer valores de campo del archivo .dwg especificado</h64>
+    <h65>Guardar</h65>
+    <h66>Guardar campos rellenos como estándar</h66>
+    <h67>Descargar</h67>
+    <h68>Descargar valores de campo guardados</h68>
+    <h69>Añadir campos a cuadro de rotulación</h69>
+    <h70>Establecer valores predeterminados</h70>
+    <h71>Obtener valor del dibujo</h71>
+    <h72>DSTU B A.2.4-4:2009</h72>
+    <h73>STB 2255-2012</h73>
+    <h74>Actualizar en dibujo</h74>
+    <h75>Puede utilizar un salto de línea en columnas 2, 3 y 9. Para añadir un salto de línea, utilice tecla ENTRAR</h75>
+    <h76>Fecha</h76>
+    <h77>Fecha se añade si hay una posición en línea</h77>
+    <h78>Factor de compresión para campo insertado en cuadro de rotulación. Factor de compresión se aplicará directamente al campo insertado, independientemente del factor de compresión establecido en estilo de texto. Valores válidos son de 0,01 a 100,0. Para no cambiar factor de compresión, especifique valor 0</h78>
+    <h79>Líneas finas:</h79>
+    <h80>Líneas gruesas:</h80>
+    <h81>Cambio del grosor de líneas se produce después de crear cuadro de rotulación. Cambio del grosor de líneas finas se realiza procesando grosor de línea del cuadro de rotulación original, que tiene valor de línea fina predeterminado "PorBloque"</h81>
+    <h82>Cambio del grosor de líneas se produce después de crear cuadro de rotulación. Cambio del grosor de líneas gruesas se realiza procesando grosor de línea del cuadro de rotulación original, que tiene valor predeterminado de líneas gruesas de "0,40 mm"</h82>
+    <h83>F.C.</h83>
+    <h84>Factor de compresión</h84>
+    <h85>Firmas</h85>
+    <h86>Seleccionar un bloque de firma</h86>
+    <h87>Activar o desactivar utilización de firma</h87>
+    <h88>Apellido:</h88>
+    <h89>Archivo con bloque de firma:</h89>
+    <h90>Nombre del bloque de firma:</h90>
+    <h91>Bloque de firma:</h91>
+    <h92>¡Archivo especificado no se ha encontrado!</h92>
+    <h93>Especificar archivo y bloque de firma</h93>
+    <h94>Añadir nueva firma</h94>
+    <h95>Eliminar firma seleccionada</h95>
+    <h96>Añadir firmas al cuadro de rotulación</h96>
+    <h97>Insertar firmas</h97>
+    <h98>Iniciar complemento "Firmas"</h98>
+    <h99>Firma se inserta en esquina inferior izquierda de celda, que se encuentra a derecha de celda con apellido. ¡No se tiene en cuenta escala de tablas (cuadros de rotulación)!</h99>
+    <h100>Capa predeterminada</h100>
+    <h101>Copiar nombre de hoja a cuadro de rotulación</h101>
+    <h102>Вы можете масштабировать изображение с помощью колесика мышки, панорамировать с зажатой левой кнопкой мышки и вписать изображение, нажав правую кнопку мышки</h102>
+    <msg1>¡Archivo de configuración está dañado!\nIniciar Configurador ModPlus</msg1>
+    <msg2>¡Se ha producido un error!</msg2>
+    <msg3>Valor</msg3>
+    <msg4>ya esta en lista de valores estándar</msg4>
+    <msg5>¡Lista contiene mismos valores!</msg5>
+    <msg6>Valores rellenos se actualizan en dibujo actual\nNo olvides iniciar a regeneración para actualizar valores en cuadro de rotulación</msg6>
+    <msg7>Valores rellenos añadidos al dibujo</msg7>
+    <msg8>Guardado</msg8>
+    <msg9>Seleccionar cuadro de rotulación:</msg9>
+    <msg10>¡Selección incorrecta! ¡Esto no es un cuadro de rotulación!</msg10>
+    <msg11>Especificar objeto para recuperar texto (texto, directriz, tabla):</msg11>
+    <msg12>Especificar celda:</msg12>
+    <msg13>Añadir campos del archivo</msg13>
+    <msg14>En archivo</msg14>
+    <msg15>campos no se han encontrado</msg15>
+    <msg16>¡Archivo fue creado en versión posterior de AutoCAD!</msg16>
+    <msg17>¡No es posible copiar archivo en disco!\nEs posible que no tenga derechos de administrador</msg17>
+    <msg18>No es posible copiar tabla del archivo de recursos</msg18>
+    <msg19>No puedo añadir más</msg19>
+    <msg20>posiciones</msg20>
+    <msg21>¡Cuadro de rotulación no coincide con el de ModPlus!\nNúmero de celdas incorrecto</msg21>
+    <msg22>Celda "Organización" contiene logo\n¿Reemplazar con campo?</msg22>
+    <msg23>Utilizar archivo .dwg como logotipo</msg23>
+    <msg24>Punto de inserción:</msg24>
+    <msg25>Valores de campo exportados</msg25>
+    <msg26>Región de trabajo seleccionado actualmente tiene etiqueta "{0}" y archivo cargado tiene etiqueta "{1}".\n¿Continuar descarga?</msg26>
+    <msg27>Archivo seleccionado no es archivo de almacenamiento de campos</msg27>
+    <msg28>¡En versión gratuita, hay disponibles un máximo de tres firmas!</msg28>
+    <msg29>¡No hay firmas disponibles para insertar en cuadro de rotulación!</msg29>
+    <msg30>¡No hay firmas en lista!</msg30>
+    <msg31>¡Archivo seleccionado no es archivo de almacenamiento de firmas!</msg31>
+  </mpStamps>
+  <mpSummLength LocalName="Suma de longitudes"
+                Description="Obtiene y muestra número y suma de longitudes de líneas, polilíneas, círculos, arcos y splines seleccionados">
+    <h2>Longitud total:</h2>
+    <h3>Redondeo del resultado</h3>
+    <h4>Cantidad:</h4>
+    <h5>Objetos</h5>
+    <h6>Insertar resultado como texto de una sola línea</h6>
+    <h7>Insertar resultado en celda de tabla</h7>
+    <h8>Exportar resultado a archivo .txt</h8>
+    <h9>Segmento</h9>
+    <h10>Círculo</h10>
+    <h11>Polilínea</h11>
+    <h12>Arco</h12>
+    <h13>Splíne</h13>
+    <h14>Elipse</h14>
+    <h15>Longitud:</h15>
+    <h16>Mostrar objeto</h16>
+    <h17>Media aritmética</h17>
+    <h18>Media aritmética de todos objetos:</h18>
+    <h19>Longitud por objetos</h19>
+  </mpSummLength>
+  <mpSelSim LocalName="Seleccionar por patrón"
+            Description="Complemento le permite seleccionar objetos similares a objetos de patrón de todos objetos del dibujo o de conjunto específico"
+            FullDescription="Antes de utilizar complemento, debe configurar condiciones por las que se buscarán objetos similares: mismo tipo, misma capa, mismo color, etc. Para algunos tipos existen condiciones de coincidencia adicionales. Por ejemplo, misma altura de texto, bloques con mismo nombre, etc.">
+    <h2>Ajustes generales</h2>
+    <h3>Añadir objetos de patrón al conjunto final (seleccionar por patrón de seleccionado)</h3>
+    <h4>Mismos tipos</h4>
+    <h5>En misma capa</h5>
+    <h6>Con mismo color</h6>
+    <h7>Con mismo tipo de línea</h7>
+    <h8>Con misma escala de tipo de línea</h8>
+    <h9>Con mismos grosores de línea</h9>
+    <h10>Bloques</h10>
+    <h11>Con mismo nombre de bloque</h11>
+    <h12>Nombre del bloque contiene:</h12>
+    <h13>Con misma escala de bloque</h13>
+    <h14>Sombreados</h14>
+    <h15>Con mismo patrón de sombreado</h15>
+    <h16>Con misma escala de sombreado</h16>
+    <h17>Imágenes de trama</h17>
+    <h18>Con misma imagen</h18>
+    <h19>Circulos</h19>
+    <h20>Con mismo radio</h20>
+    <h21>Texto de una sola línea</h21>
+    <h22>Con mismo contenido de texto</h22>
+    <h23>Con mismo estilo de texto</h23>
+    <h24>Con misma altura del texto</h24>
+    <h25>Con mismo número de caracteres</h25>
+    <h26>Texto multilínea</h26>
+    <h27>Segmentos</h27>
+    <h28>Con misma longitud del segmento</h28>
+    <h29>Polilíneas</h29>
+    <h30>Con misma longitud de polilínea</h30>
+    <h32>Cotas</h32>
+    <h33>Con mismo valor de cota</h33>
+    <h34>Con misma cadena de texto</h34>
+    <h35>Con misma rotación de texto</h35>
+    <h36>Directrices múltiples</h36>
+    <h37>Con misma anchura global</h37>
+    <h38>Con mismo estilo de cota</h38>
+    <h39>Con mismo valor de cualquier atributo</h39>
+    <h40>Con mismo valor para todos atributos</h40>
+    <msg1>Ajuste</msg1>
+    <msg2>Seleccionar objetos de patrón o</msg2>
+    <msg3>Seleccionar objetos para eliminar del conjunto o</msg3>
+    <msg4>Seleccionar objetos entre los que buscar análogos:</msg4>
+    <msg5>Seleccionar objetos para eliminar del conjunto:</msg5>
+    <mi1>MP: Seleccionar por patrón</mi1>
+    <mi2>Seleccionar por patrón</mi2>
+    <mi3>Seleccionar por patrón de seleccionado</mi3>
+    <mi4>Ajustar selección de patrón</mi4>
+    <mi5>MP: Seleccionar por patrón de seleccionado</mi5>
+    <mi6>MP: Ajustar selección de patrón</mi6>
+  </mpSelSim>
+  <mpHandDim LocalName="Cotas manuales"
+             Description="Resaltar, restaurar o eliminar cotas con un valor reemplazado">
+    <msg1>Seleccionar cotas:</msg1>
+    <msg2>Opciones [Color/Resaltar/Restaurar/Eliminar]</msg2>
+  </mpHandDim>
+  <mpCalc LocalName="Calculadora"
+          Description="Análogo de calculadora estándar, con funciones de obtener datos de dibujo, añadir resultado al dibujo y posibilidad de escribir manualmente una fórmula para cálculo">
+    <!-- todo remove after 1.5.2.0 -->
+    <prefix>Prefijo</prefix>
+    <!-- todo remove after 1.5.2.0 -->
+    <suffix>Sufijo</suffix>
+    <mi1>Valor absoluto del número dado</mi1>
+    <mi2>Ángulo cuyo coseno es igual al número dado</mi2>
+    <mi3>Ángulo cuyo seno es igual al número dado</mi3>
+    <mi4>Ángulo cuya tangente es igual al número dado</mi4>
+    <mi5>Entero más pequeño mayor o igual a número dado</mi5>
+    <mi6>Número e elevado a potencia dada</mi6>
+    <mi7>Mayor entero menor o igual a número dado</mi7>
+    <mi8>Resto al dividir número específico por otro número dado</mi8>
+    <mi9>Logaritmo del número dado</mi9>
+    <mi10>Logaritmo en base 10 de un número dado</mi10>
+    <mi11>Mayor de dos números dados</mi11>
+    <mi12>Menor de dos números dados</mi12>
+    <mi13>Número dado elevado a potencia dada</mi13>
+    <mi14>Redondea un valor al entero más cercano o al número especificado de decimales</mi14>
+    <mi15>Valor que determina signo del número</mi15>
+    <mi16>Parte entera de numero</mi16>
+    <h1>Calculadora</h1>
+    <h2>Interpolación</h2>
+    <h3>Grado, pendiente</h3>
+    <h4>Usar transparencia</h4>
+    <h5>CALCULADORA</h5>
+    <h6>INTERPOLACIÓN</h6>
+    <h7>GRADO, PENDIENTE</h7>
+    <h8>Insertar función</h8>
+    <h9>Redondeo:</h9>
+    <h10>Número de decimales</h10>
+    <h11>Datos del dibujo</h11>
+    <h12>Medir distancia entre dos puntos</h12>
+    <h13>Obtener suma de longitudes de objetos</h13>
+    <h14>Obtener coordinada</h14>
+    <h15>Obtener área</h15>
+    <h16>Obtener valor del texto</h16>
+    <h17>Obtenga valor de directriz</h17>
+    <h18>Obtener valor de celda de tabla</h18>
+    <h19>Obtenga valor de cota</h19>
+    <h20>Varios</h20>
+    <h21>Redondear</h21>
+    <h22>Redondear valor tomado</h22>
+    <!-- todo remove after 1.5.2.0 -->
+    <h23>Delimitador:</h23>
+    <h24>Interpolación lineal</h24>
+    <h25>Extrapolación lineal de menores</h25>
+    <h26>Extrapolación lineal de más</h26>
+    <h27>GRADO</h27>
+    <h28>Grado angular:</h28>
+    <h29>Grado decimal:</h29>
+    <h30>Radián:</h30>
+    <h31>PENDIENTE</h31>
+    <h32>Pendiente (sin unidades):</h32>
+    <h33>Porcentaje (%):</h33>
+    <h34>Permilla (‰):</h34>
+    <h35>Conversión de grados</h35>
+    <h36>Relación:</h36>
+    <h37>Resultado en dibujo:</h37>
+    <h38>Insertar resultado como texto de una sola línea</h38>
+    <h39>Pegue resultado en un texto de una sola línea existente (con reemplazo)</h39>
+    <h40>Insertar resultado en celda de tabla</h40>
+    <h41>Añadir resultado al texto multilínea</h41>
+    <h42>Insertar resultado como directriz</h42>
+    <h43>Registro</h43>
+    <h44>Limpiar registro</h44>
+    <h45>Adicionar</h45>
+    <h46>Sustraer</h46>
+    <h47>Multiplicar</h47>
+    <h48>Dividir</h48>
+    <!-- todo remove after 1.5.2.0 -->
+    <h49>Punto</h49>
+    <!-- todo remove after 1.5.2.0 -->
+    <h50>Coma</h50>
+    <h51>Obtener altura de un cuerpo 3D</h51>
+    <msg1>Se ha producido un error. Fórmula de cálculo puede ser incorrecta</msg1>
+    <msg2>Especificar punto:</msg2>
+    <msg3>Seleccionar coordinada: [X/Y/Z]</msg3>
+    <msg4>Obtener área: [polilínea/sombreado]</msg4>
+    <msg5>Seleccionar polilínea:</msg5>
+    <msg6>Seleccionar varias polilíneas:</msg6>
+    <msg7>Seleccionar sombreado:</msg7>
+    <msg8>Seleccionar varios sombreados:</msg8>
+    <msg9>Seleccionar texto de una sola línea o texto multilínea:</msg9>
+    <msg10>Seleccionar varios textos de una sola línea o textos multilínea:</msg10>
+    <msg11>Seleccionar directriz múltiple:</msg11>
+    <msg12>Seleccionar varios directrices múltiples:</msg12>
+    <msg13>Seleccionar tabla:</msg13>
+    <msg14>Seleccionar celda:</msg14>
+    <msg15>Primera esquina de red de selección:</msg15>
+    <msg16>Segunda esquina de red de selección:</msg16>
+    <msg17>Seleccionar cota:</msg17>
+    <msg18>Seleccionar varias cotas:</msg18>
+    <msg19>Seleccionar texto multilínea:</msg19>
+    <msg20>Seleccionar texto de una sola línea:</msg20>
+    <msg21>x0 es igual a x2</msg21>
+    <msg22>x1 no pertenece \nal intervalo x0-x2</msg22>
+    <msg23>igual</msg23>
+    <msg24>Seleccionar sólido 3D, que tenga propiedad "Altura"</msg24>
+    <msg25>Seleccionar varios cuerpos 3D que tengan propiedad "Altura"</msg25>
+    <err1>¡Selección incorrecta!</err1>
+    <err2>Texto seleccionado no contiene valores numéricos</err2>
+    <err3>¡No golpeé celda!</err3>
+    <err4>Entrada no válida</err4>
+  </mpCalc>
+  <mpArmature LocalName="Armadura"
+              Description="Trabajo con surtidos de armadura: obtener información y cálculos diversos"
+              FullDescription="Se necesitan bases de datos para que complemento funcione. Complemento permite obtener diversas informaciones y datos de cálculo (área, masa, anclaje, etc.) para gran número de surtidos diferentes">
+    <cancel>Cancelar</cancel>
+    <h1>ARMADURA</h1>
+    <h2>Documento reglamentario</h2>
+    <h3>Seleccionar un documento reglamentario</h3>
+    <h4>Diámetro</h4>
+    <h5>Seleccionar por diámetro de armadura</h5>
+    <h6>Escuadría, cm²</h6>
+    <h7>Seleccionar por escuadría de armadura</h7>
+    <h8>Masa 1 metro lineal, kg</h8>
+    <h9>Seleccionar por masa de un metro lineal de armadura</h9>
+    <h10>Clase de armadura</h10>
+    <h11>Seleccionar clase de acero de armadura</h11>
+    <h12>Masa</h12>
+    <h13>Longitud, mm:</h13>
+    <h14>Campo de entrada de longitud (mm) para cálculo del masa</h14>
+    <h15>metro lineal</h15>
+    <h16>En metros lineales</h16>
+    <h17>Medir longitud entre dos puntos</h17>
+    <h18>Obtener suma de longitudes de objetos</h18>
+    <h19>RESULTADO, KG</h19>
+    <h20>Número de decimales</h20>
+    <h21>Resultado en tabla</h21>
+    <h22>Insertar resultado del cálculo en tabla de AutoCAD</h22>
+    <h23>Nombre en tabla</h23>
+    <h24>Insertar nombre de armadura seleccionada en tabla de AutoCAD</h24>
+    <h25>Insertar resultado y nombre</h25>
+    <h26>Insertar resultado del cálculo y nombre de armadura seleccionada en tabla de AutoCAD</h26>
+    <h27>Áreas</h27>
+    <h28>Con número de barras:</h28>
+    <h29>Área, cm²:</h29>
+    <h30>Con espaciado de barras (mm):</h30>
+    <h31>Área, cm²/1 m:</h31>
+    <h32>Anclaje/empalme solapado</h32>
+    <h33>SP 52-101-2003</h33>
+    <h34>Clase de hormigón:</h34>
+    <h35>Clase de hormigón por resistencia a compresión</h35>
+    <h36>Resistencia de diseño a tracción</h36>
+    <h37>Tipo de superficie de armadura</h37>
+    <h38>¡Atención! Tipo de superficie de refuerzo puede depender de clase de armadura, diámetro u otros valores que programa no tiene en cuenta. Leer documentación reglamentaria</h38>
+    <h39>Resistencia de diseño a tracción, MPa</h39>
+    <h40>Longitud de anclaje base (principal), mm:</h40>
+    <h41>Factor α:</h41>
+    <h42>α es un factor que tiene en cuenta influencia del comportamiento esfuerzo del hormigón y de armadura sobre longitud de anclaje y concepto estructural del elemento en zona de anclaje. Al anclar barras corrugadas con extremos rectos (anclaje recto) o barras lisas con bisagras de ganchos sin dispositivos de anclaje adicionales, se toma α = 1,0 para barras de tensión y α = 0,75 para barras de compresión. Según cláusula 10.3.30 del SP 63.13330, factor α se puede aumentar a 2,0</h42>
+    <h43>Armadura requerida y real son iguales</h43>
+    <h44>Armadura instalada real (diámetro)</h44>
+    <h45>Por defecto aceptamos que armadura requerida por cálculo y armadura realmente instalada son iguales. En caso de que armaduras difieran, seleccione armadura realmente instalada. Armadura requerida por cálculo se selecciona en parte izquierda de ventana</h45>
+    <h46>Longitud de anclaje requerida (calculada), mm:</h46>
+    <h47>Generar un informe en MS Word</h47>
+    <h48>Detalles</h48>
+    <h49>Estado del documento: válido</h49>
+    <h50>Estado del documento: inválido</h50>
+    <h51>Estado del documento: falta información o no está definida por ley</h51>
+    <h52>Cálculo del anclaje o longitud de empalme solapado para diámetro actual de armadura se realiza en ventana separada</h52>
+    <h53>Abrir</h53>
+    <h54>Añadir símbolo de diámetro (Ø)</h54>
+    <msg1>¡Disponible en versión completa del complemento!</msg1>
+    <msg2>No hay valor en campo "Longitud"</msg2>
+    <msg3>No se ha seleccionado armadura</msg3>
+    <msg4>Sólo se permiten números y puntos para entrada</msg4>
+    <msg5>No se han ingresado todos datos</msg5>
+    <msg6>Masa 1 ml en tabla</msg6>
+    <msg7>Seleccionar tabla "Especificación"</msg7>
+    <msg8>Seleccionar celda "Nombre"</msg8>
+    <msg9>kg/ml</msg9>
+    <msg10>Seleccionar celda "Masa"</msg10>
+    <err1>¡Selección incorrecta!</err1>
+    <err2>¡No golpeé celda!</err2>
+    <mpa>MPa</mpa>
+    <cb1>Armadura lisa</cb1>
+    <cb2>Deformada en frío (corrugada)</cb2>
+    <cb3>Laminada en caliente (corrugada)</cb3>
+    <cb4>Tratada termomecánicamente (corrugada)</cb4>
+    <p1>Resultado del cálculo en Word</p1>
+    <p2>Creando un nuevo documento</p2>
+    <p3>Completando datos</p3>
+  </mpArmature>
+  <mpTxtCopyPaste LocalName="Copiar rapido del texto"
+                  Description="Copie rápidamente contenido de texto de una línea o texto multilínea, directrices múltiples, cotas y celdas de tablas">
+    <msg1>Seleccionar un objeto de origen (texto, directriz, tabla o cota):</msg1>
+    <msg2>Seleccionar un objeto de origen (texto, directriz, tabla o cota) o [Eliminar]:</msg2>
+    <msg3>¡Selección incorrecta!</msg3>
+    <msg4>Eliminar un objeto de origen (para tablas – contenido de celda)?</msg4>
+    <msg5>Seleccionar objeto (texto, directriz) para reemplazar contenido:</msg5>
+    <msg6>Especificar celda de tabla:</msg6>
+  </mpTxtCopyPaste>
+  <mpRemoveAnnotScale LocalName="Limpiar escalas"
+                      Description="Limpia lista de escalas anotativas en objetos anotativos seleccionados, manteniendo escala actual">
+    <msg1>Seleccionar objetos anotativos:</msg1>
+  </mpRemoveAnnotScale>
+  <mpTotals LocalName="Datos generales"
+            Description="Complemento para crear rápidamente datos generales con posibilidad de obtener valores de dibujo"
+            FullDescription="Complemento recopila datos de tablas insertadas en documento actual. Lista de documentos de referencia se recopila de acuerdo con documentos reglamentarios presentes en base de datos">
+    <insert>Insertar tabla</insert>
+    <accept>Aceptar</accept>
+    <cancel>Cancelar</cancel>
+    <xml>Archivo .xml</xml>
+    <h1>Rusia</h1>
+    <h2>Ucrania</h2>
+    <h3>Bielorrusia</h3>
+    <h4>Ajustes</h4>
+    <h5>Crear archivo automáticamente</h5>
+    <h6>Si este parámetro está activado y se guarda documento actual, archivo de almacenamiento de datos generales (Nombre del dibujo_totals.xml) se creará automáticamente en directorio donde se encuentra dibujo actual al iniciar complemento</h6>
+    <h7>Insertar tablas</h7>
+    <h8>Escala de tabla:</h8>
+    <h9>Altura del texto:</h9>
+    <h10>Altura de fila:</h10>
+    <h11>Estilo de texto:</h11>
+    <h13>¡No guardado!</h13>
+    <h14>Guardar archivo de datos generales</h14>
+    <h15>Descargar archivo de datos generales</h15>
+    <h16>Obtener datos generales de un modelo o de hojas específicas</h16>
+    <h17>Obtener datos generales</h17>
+    <h18>Lista de dibujos</h18>
+    <h19>Hoja</h19>
+    <h20>Nombre</h20>
+    <h21>Nota</h21>
+    <h22>Añadir nueva fila</h22>
+    <h23>Eliminar fila seleccionada</h23>
+    <h24>Mover fila seleccionada hacia arriba</h24>
+    <h25>Mover fila seleccionada hacia abajo</h25>
+    <h26>Insertar tabla en dibujo actual</h26>
+    <h27>Lista de especificaciones</h27>
+    <h28>Lista de documentos de referencia</h28>
+    <h29>Designación</h29>
+    <h30>En modelo</h30>
+    <h31>Utilice siguientes formatos:</h31>
+    <h32>Formatos ModPlus</h32>
+    <h33>Formatos de lista (en forma de bloques):</h33>
+    <h34>En hojas</h34>
+    <h35>¡Búsqueda en hojas se realiza por tablas sin tener en cuenta formatos! Se acepta convencionalmente que una hoja corresponde a un formato</h35>
+    <h36>Recolectar:</h36>
+    <h37>¡Tablas no se guardan en un archivo! Una vez cerrada, ¡se perderán todos datos!\n¿Estás seguro de que desea cerrar ventana?</h37>
+    <h38>¡Se sobrescribirán tablas existentes!\n¿Continuar?</h38>
+    <h39>Elemento seleccionado se eliminará permanentemente.\n¿Continuar?</h39>
+    <h43>¡Disponible en versión completa del complemento!</h43>
+    <h44>¿Sobrescribir tablas existentes?\nSí – sobrescribir, No – añadir</h44>
+    <h45>¡No se ha encontrado bloques en espacio actual!</h45>
+    <h47>Tabla con estilo de tabla no encontrada en archivo de tablas</h47>
+    <h48>Ejecute complemento "Tablas" para sobrescribir archivo de bloques</h48>
+    <h49>¡Archivo de tablas no se ha encontrado!\nEs necesario iniciar complemento "Tablas"</h49>
+    <h50>Buscar datos en una hoja:</h50>
+    <h51>¡Ventana gráfica está recortada por un objeto sin procesar!</h51>
+    <h52>Ventana gráfica No</h52>
+    <h53>Objeto de recorte:</h53>
+    <h54>Punto de inserción:</h54>
+    <h55>¡No se han seleccionado destinos para buscar!</h55>
+    <h56>¡No se han seleccionado opciones para buscar formatos!</h56>
+    <h57>¡No hay hojas seleccionadas para buscar!</h57>
+    <h58>Deseleccionar</h58>
+    <h59>Seleccionar todo</h59>
+    <h60>Buscar sólo en dibujo actual</h60>
+    <h61>Es necesario seleccionar uno o más dibujos de lista de dibujos abiertos o establecer casilla "Buscar sólo en dibujo actual"</h61>
+    <h62>Reescribir</h62>
+    <h63>Guardar datos modificados</h63>
+    <h64>Hay datos modificados que se pueden reescribir</h64>
+  </mpTotals>
+  <mpProductInsert LocalName="Insertar artículo"
+                   Description="Complemento para insertar artículos de base de datos ModPlus en forma de bloques que contienen datos extendidos"
+                   FullDescription="Complemento crea bloques de AutoCAD basados en datos de base de datos de complemento . Se añaden datos extendidos a bloques, lo que permite otros complemento a procesar estos bloques y crear especificación basada en ellos\nComplemento también le permite añadir datos extendidos a los primitivas regulares de AutoCAD\n¡Importante! Bloques deben insertarse con este complemento o copiarse los ya insertados. Al contrario (al insertar con herramientas normales de AutoCAD) datos extendidos no se añadirán">
+    <all>Todo</all>
+    <cb1>Metal</cb1>
+    <cb2>Hormigón armado</cb2>
+    <cb3>Madera/Plásticos</cb3>
+    <cb4>Materiales</cb4>
+    <cb5>Otro</cb5>
+    <h1>Editar lista de documentos utilizados por complemento</h1>
+    <h2>Abrir panel de búsqueda de base de datos</h2>
+    <h4>De 2 símbolos</h4>
+    <h5>INSERTAR ARTÍCULO</h5>
+    <h6>Seleccionar sección:</h6>
+    <h7>Filtrar por grupo:</h7>
+    <h8>Seleccionar documento:</h8>
+    <h9>Abrir imagen</h9>
+    <h10>Válido</h10>
+    <h11>Inválido</h11>
+    <h12>Sin información o no definido por ley</h12>
+    <h13>Longitud, mm</h13>
+    <h14>Medir entre dos puntos</h14>
+    <h15>Diámetro, mm</h15>
+    <h16>Anchura, mm</h16>
+    <h17>Altura (espesor), mm</h17>
+    <h18>Acero:</h18>
+    <h19>Densidad, kg/m³:</h19>
+    <h20>Guardar valores de cotas ingresados</h20>
+    <h21>Posición de artículo</h21>
+    <h22>Opción de inserción</h22>
+    <h23>Enmascarar</h23>
+    <h24>Añadir máscara para ocultar elementos detrás de un bloque</h24>
+    <h25>Insertar</h25>
+    <h26>Insertar un artículo como bloque con geometría simple y con datos extendidos</h26>
+    <h27>Reemplazar bloque</h27>
+    <h28>Reemplazar bloque que representa artículo</h28>
+    <h29>Añadir a primitiva</h29>
+    <h30>Añadir datos extendidos que contengan información del artículo a primitiva especificada</h30>
+    <h31>Mostrar documentos para sección de base de datos:</h31>
+    <h32>Estado del documento:</h32>
+    <h33>Válido</h33>
+    <h34>Inválido</h34>
+    <h35>Sin información o no definido por ley</h35>
+    <h36>DATOS DEL ARTÍCULO</h36>
+    <h37>Por dos puntos</h37>
+    <h38>Como polilínea</h38>
+    <h39>Opciones de inserción "Por dos puntos" y "Como polilínea" sólo están disponibles para artículos lineales (piezas para las que debe especificar longitud). Opción de inserción se utilizará si está activa y seleccionada. Al utilizar cualquiera de dos opciones, no es necesario especificar longitud de artículo en ventana del complemento. Opción "Dos puntos" está disponible si selecciona opción "Vista lateral o "Vista superior". Opción "Polilínea" está disponible si selecciona opción de visualización «Vista frontal (sección)"</h39>
+    <h40>Estado del documento:</h40>
+    <h41>Escala de bloque:</h41>
+    <rb1>Vista lateral</rb1>
+    <rb2>Vista frontal (sección)</rb2>
+    <rb3>Vista superior</rb3>
+    <s1>Lateral</s1>
+    <s2>Frontal (sección)</s2>
+    <err1>¡Error al crear nombre del bloque!</err1>
+    <err2>¡Nombre de bloque incorrecto!</err2>
+    <msg1>Seleccionar bloque a reemplazar:</msg1>
+    <msg2>Bloque seleccionado no contiene datos extendidos de artículo ModPlus\n¿Reemplazar este bloque?</msg2>
+    <msg3>Seleccionar objetos donde desea añadir datos de artículo</msg3>
+    <msg4>Especificar longitud de artículo</msg4>
+    <msg5>Especificar diámetro de artículo</msg5>
+    <msg6>Especificar anchura de artículo</msg6>
+    <msg7>Especificar altura de artículo</msg7>
+    <msg8>Punto de inserción:</msg8>
+    <msg9>MP: Datos de artículo</msg9>
+    <msg10>Primer punto</msg10>
+    <msg11>Segundo punto</msg11>
+  </mpProductInsert>
+  <mpDrawOrderByLayer LocalName="Ordenar por capa"
+                      Description="Complemento se utiliza para cambiar orden del dibujo según capas"
+                      FullDescription="Complemento procesa capas marcadas con casillas en ventana, cambiando orden de dibujo según orden de capas marcadas. Hay modo &quot;Auto&quot;, que cambia automáticamente orden de dibujo de objetos en una de dos capas especificadas al crear o editar.">
+    <!-- todo remove after 1.1.10.0 -->
+    <h1>ORDENAR POR CAPA</h1>
+    <h2>Invertir lista</h2>
+    <!-- todo remove after 1.1.10.0 -->
+    <h3>Seleccionar todo</h3>
+    <!-- todo remove after 1.1.10.0 -->
+    <h4>Deseleccionar</h4>
+    <h5>Inversión de selección</h5>
+    <h6>Modo "Auto"</h6>
+    <h7>Al primer plano</h7>
+    <h8>Al fondo</h8>
+    <h9>Aplicar</h9>
+    <h10>ModPlus: Objeto en capa:</h10>
+    <h11>desplaza al primer plano</h11>
+    <h12>desplaza al fondo</h12>
+    <h13>Guardar posición actual de capas en dibujo</h13>
+    <h14>Descargar y aplicar posiciones de capa guardadas en dibujo actual. Las capas que se añadían después de guardar la posición se desplazarán al final de la lista</h14>
+    <h15>Desplazar capa seleccionada al inicio de lista</h15>
+  </mpDrawOrderByLayer>
+  <mpDocTemplates LocalName="Plantillas. Etapa P"
+                  Description="Complemento le permite crear plantillas para parte de texto de sección de acuerdo con Decreto RF No. 87 con página de título de acuerdo con GOST Р 21.1101-2013">
+    <h1>PLANTILLAS. ETAPA P</h1>
+    <h2>Propiedades generales</h2>
+    <h3>Nombre del proyecto</h3>
+    <h4>Número de proyecto</h4>
+    <h5>Ingeniero jefe</h5>
+    <h6>Ingeniero Jefe de Proyecto</h6>
+    <h7>Hecho</h7>
+    <h8>Control estándar</h8>
+    <h9>Organización</h9>
+    <h10>Certificado de Admisión (CRO)</h10>
+    <h11>Cliente</h11>
+    <h12>Tomar de campos</h12>
+    <h13>Obtener datos de campos (ver complemento "Cuadros de rotulación")</h13>
+    <h14>Plantillas</h14>
+    <h15>Proyectos de construcción fundamental</h15>
+    <h16>Objetos lineales</h16>
+    <h17>Crear</h17>
+    <h18>Cancelar</h18>
+    <h19>No se especifica ninguna plantilla para crear</h19>
+    <h20>Crear plantillas</h20>
+    <h21>Abrir aplicación Word</h21>
+    <h22>Crear una plantilla</h22>
+    <h23>Abrir un archivo de Word</h23>
+  </mpDocTemplates>
+  <mpPrPosition LocalName="Posición de artículo"
+                Description="Complemento añade/elimina una posición a artículos seleccionados y le permite marcar posición">
+    <h1>Seleccionar objetos que sean artículos ModPlus</h1>
+    <h2>Eliminar</h2>
+    <h3>Elemento</h3>
+    <h4>Especificar posición</h4>
+    <h5>Seleccionar objetos que sean artículos ModPlus para eliminar posición</h5>
+    <h6>Seleccionar tipo de marcado para artículo</h6>
+    <h7>Posición</h7>
+    <h8>Nada/Texto/Directriz</h8>
+    <h9>MP: Directriz con marca</h9>
+    <h10>Punto de inserción</h10>
+  </mpPrPosition>
+  <mpPrToTable LocalName="Insertar artículos en tabla"
+               Description="Complemento le permite completar tabla de especificaciones con artículos ModPlus seleccionados"
+               FullDescription="Complemento recopila datos de lista de materiales a partir de datos de artículos extendidos (bloques creados por complemento &quot;Insertar artículo&quot; o primitivas de AutoCAD con datos extendidos añadidos por complemento &quot;Insertar artículo&quot;), así como de bloques que tienen atributos para lista de materiales. Es posible especificar fila a partir de la cual se comenzará a rellenar tabla.">
+    <h1>Seleccionar objetos que sean artículos ModPlus</h1>
+    <h2>Línea</h2>
+    <h3>Signos</h3>
+    <h4>Pedir una fila para empezar a rellenar</h4>
+    <h5>Número de decimales</h5>
+    <h6>Seleccionar tabla</h6>
+    <h7>¡Selección incorrecta! ¡Esto no es una tabla!</h7>
+    <h8>MP: Añadir a especificación</h8>
+    <h9>Buscar artículos</h9>
+  </mpPrToTable>
+  <mpDimBreak LocalName="Dividir cotas"
+              Description="Divide cota seleccionada en dos o más nuevos"
+              FullDescription="Complemento le permite dividir una cota lineal o paralela seleccionada en dos o más cotas especificando dinámicamente un nuevo punto que será común a dos nuevas cotas.">
+    <h1>Seleccionar cota</h1>
+    <h2>¡Selección incorrecta!</h2>
+    <h3>Punto de brecha</h3>
+  </mpDimBreak>
+  <mpBlkReplace LocalName="Reemplazar bloques"
+                Description="Complemento le permite reemplazar rápidamente bloques o primitivas en dibujo con bloque específico"
+                FullDescription="Complemento funciona en tres modos: Reemplazar seleccionados – le permite reemplazar todos bloques seleccionados con un bloque específico; Reemplazar otros similares – le permite reemplazar todas apariciones de un bloque con un bloque específico; Reemplazar primitivas – le permite reemplazar primitivas seleccionadas como Círculo, Elipse y Punto con bloque especificado. Le permite eliminar descripción del bloque reemplazado de base del dibujo. Similar al comando &quot;Purgar&quot; (_PURGE). Varias configuraciones disponibles">
+    <h1>Seleccionar bloque a reemplazar</h1>
+    <wrong>¡Selección incorrecta!</wrong>
+    <h2>Seleccionar bloque de reemplazo</h2>
+    <h3>Seleccionar varios bloques a reemplazar</h3>
+    <h4>Eliminar bloques innecesarios</h4>
+    <h5>¿Eliminar bloques reemplazados de base de dibujo?</h5>
+    <yes>Sí</yes>
+    <no>No</no>
+    <h6>Variante de trabajo de complemento:</h6>
+    <k1>Seleccionado</k1>
+    <k2>Similar</k2>
+    <!-- todo remove after 1.4.3.0 -->
+    <k3>Ajustes</k3>
+    <k4>Reemplazar primitivas</k4>
+    <h7>Repetir para bloques copiados:</h7>
+    <h8>Capa de bloque de reemplazar</h8>
+    <h9>Escala de bloque de reemplazar</h9>
+    <h10>Transformaciones (espejo y rotación) del bloque de reemplazar</h10>
+    <h11>Sólo rotación del bloque de reemplazar</h11>
+    <h12>Eliminar bloques reemplazados de base de datos:</h12>
+    <h13>Preguntar</h13>
+    <h14>Eliminar automáticamente</h14>
+    <h15>No eliminar</h15>
+    <!-- todo remove after 1.4.3.0 -->
+    <h16>Cerrar</h16>
+    <!-- todo remove after 1.4.3.0 -->
+    <h17>Todos ajustes se guardan automáticamente</h17>
+    <h18>Atributos con mismo nombre del bloque de reemplazar</h18>
+    <h19>Seleccionar varios objetos de reemplazar</h19>
+    <h20>Eliminar objetos innecesarios</h20>
+  </mpBlkReplace>
+  <mpPlinesEdit LocalName="Multilínea"
+                Description="Una colección de varios complementos para trabajar con polilíneas">
+    <h1>POLILÍNEAS</h1>
+    <h2>Complemento funciona con polilíneas 3D</h2>
+    <h3>Complemento funciona con polilíneas 2D</h3>
+    <h4>Complemento funciona con polilíneas LW</h4>
+    <h5>Añadir un panel a cinta</h5>
+    <h6>Color de geometría auxiliar:</h6>
+    <h7>Ficha ModPlus no encontrada</h7>
+    <h8>Ficha ModPlus no encontrada para añadir un panel para trabajar con polilíneas</h8>
+    <h9>Polilíneas</h9>
+    <h10>Opción de trabajo:</h10>
+    <h11>Mín. radio de arco procesado:</h11>
+    <h12>Cualquier</h12>
+    <h13>Dividir un arco en un número igual de segmentos especificado\nImagen muestra opción de dividir en 3 segmentos\nR – radio del arco en polilínea</h13>
+    <h14>Dividir arco en segmentos especificando longitud de segmentos de arco resultantes de división\nR – radio del arco en polilínea\nL – longitud del segmento de arco</h14>
+    <h15>Dividir un arco en segmentos especificando desviación de cuerda (altura del segmento)\nR – radio del arco en una polilínea\nH – altura del segmento</h15>
+    <h16>Dividir un arco en segmentos especificando longitud de cuerda\nR – radio del arco en polilíneas\nX – longitud de cuerda</h16>
+    <h17>Eliminar polilíneas seleccionadas</h17>
+    <h18>Excluir puntos extremos</h18>
+    <h19>Copiar bloques:</h19>
+    <h20>Rotar:</h20>
+    <h21>TOLERANCIAS</h21>
+    <h22>P – punto de polilínea en cuestión</h22>
+    <h23>- Complemento funciona verificando ambas condiciones</h23>
+    <h24>Н – desviación máxima de línea recta:</h24>
+    <h25>а – tolerancia angular:</h25>
+    <accept>Aceptar</accept>
+    <cancel>Cancelar</cancel>
+    <cb1>Número de segmentos</cb1>
+    <cb2>Longitud del segmento</cb2>
+    <cb3>Desviación de cuerda</cb3>
+    <cb4>Longitud de cuerda</cb4>
+    <cb5>por punto de inserción de bloque</cb5>
+    <cb6>por centro geométrico</cb6>
+    <cb7>no rotar</cb7>
+    <cb8>rotar a lo largo del segmento anterior</cb8>
+    <cb9>rotar a lo largo del segmento siguiente</cb9>
+    <l1>Convertir polilínea 3D a LW</l1>
+    <d1>Crear copias de polilíneas 3D seleccionadas como polilíneas LW (2D) con desplazamiento al nivel 0,0</d1>
+    <l2>Eliminar vértices coincidentes de una polilínea</l2>
+    <d2>Eliminar vértices cercanos de polilíneas seleccionadas que tienen mismas coordenadas</d2>
+    <l3>Eliminar vértices que se encuentran en misma línea</l3>
+    <d3>Eliminar vértices cercanos de polilíneas seleccionadas que se encuentran en misma línea recta. Es posible establecer una tolerancia para desviación de una línea recta o una tolerancia angular</d3>
+    <l4>Ubicar un objeto en vértices de polilínea</l4>
+    <d4>Ubicación del objeto seleccionado en vértices de polilínea. Es posible rotar un objeto a lo largo de un segmento de polilínea. Bloques se pueden ubicar en centro geométrico o en punto de inserción</d4>
+    <l5>Reemplazar un segmento de arco por uno lineal</l5>
+    <d5>Reemplazar segmento de arco de polilínea especificado por uno lineal (reemplazar arco con segmento)</d5>
+    <l6>Reemplazar un segmento lineal por uno de arco</l6>
+    <d6>Reemplazar un segmento lineal (o de arco) de una polilínea especificada con un segmento de arco (reemplazar un segmento con un arco). Es posible construir un arco a lo largo de una tangente o de un punto del arco</d6>
+    <l7>Añadir dinámicamente un vértice</l7>
+    <d7>Añadir dinámicamente un vértice a una polilínea especificada</d7>
+    <l8>Dibujar un rectángulo por tres puntos</l8>
+    <l9>Eliminar segmentos de arco de una polilínea</l9>
+    <d9>Eliminar segmentos de arco de una polilínea reemplazándolos con segmentos lineales. Hay varias opciones para complemento: número de segmentos, longitud de segmentos, altura de segmentos (desviación de cuerda), longitud de cuerda</d9>
+    <l10>Dibujar línea central</l10>
+    <d10>Dibujar una línea central (como una polilínea) entre dos curvas especificadas (segmentos, polilíneas o splines)</d10>
+    <wrong>¡Selección incorrecta!</wrong>
+    <k1>Seleccionar polilíneas 3D</k1>
+    <k2>Seleccionar polilíneas</k2>
+    <k3>Vértices eliminados</k3>
+    <k4>Polilínea</k4>
+    <k5>no contiene vértices idénticos</k5>
+    <k6>Seleccionar polilíneas o</k6>
+    <k7>Tolerancias</k7>
+    <k8>Desviación máxima de línea recta (N) aceptada</k8>
+    <k9>Tolerancia angular en grados (a) aceptada</k9>
+    <k10>contiene total</k10>
+    <k11>vértices</k11>
+    <k12>no contiene vértices que se encuentran en misma línea o que cumplen con condiciones de tolerancia</k12>
+    <k13>Seleccionar polilínea</k13>
+    <k14>Seleccionar un objeto para ubicar</k14>
+    <k15>Seleccionar un segmento de polilínea de arco</k15>
+    <k16>Seleccionar segmento de polilínea</k16>
+    <k17>Especificar punto en tangente o: [Tangente/punto de Paso]</k17>
+    <k18>Especificar punto en arco o: [Tangente/punto de Paso]</k18>
+    <k19>Especificar un punto (con tecla Ctrl presionada para desplazarse un vértice hacia adelante)</k19>
+    <k20>Especificar primer punto</k20>
+    <k21>Especificar segundo punto</k21>
+    <k22>Especificar tercer punto</k22>
+    <k23>Especificar número de segmentos</k23>
+    <k24>Especificar longitud de segmentos</k24>
+    <k25>Especificar desviación de cuerda (altura del segmento)</k25>
+    <k26>Especificar longitud de cuerda</k26>
+    <k27>Seleccionar primer elemento de referencia (línea, polilínea o spline</k27>
+    <k28>Seleccionar segundo elemento de referencia (línea, polilínea o spline)</k28>
+    <k29>Número de puntos de referencia</k29>
+    <k30>Simplificar polilínea?\nEliminar puntos que se encuentran en misma línea</k30>
+  </mpPlinesEdit>
+  <mpSpecifications LocalName="Especificaciones"
+                    Description="Complemento para generar y completar especificaciones generales de construcción"
+                    FullDescription="Complemento le permite añadir elementos al menú contextual de AutoCAD para mejorar su capacidad de trabajar con especificaciones: Menú contextual para tablas: Añadir artículo de base de datos – permite añadir artículos de base de datos del complemento directamente a tabla de AutoCAD; Menú contextual para bloques: Añadir/Modificar atributos de lista de materiales – permite añadir atributos de lista de materiales a bloques (ver Ayuda para obtener más información)">
+    <h6>MENÚS CONTEXTUALES</h6>
+    <h7>Disponible en versión completa del complemento</h7>
+    <h8>Menú contextual para tablas:</h8>
+    <h9>Añadir un artículo de base de datos</h9>
+    <h10>Menú contextual para bloques:</h10>
+    <h11>Añadir /editar atributos para una especificación</h11>
+    <h12>AJUSTES DE TABLA</h12>
+    <h13>Escala de tabla:</h13>
+    <h14>Altura del texto:</h14>
+    <h15>Altura de fila:</h15>
+    <h16>Estilo de texto:</h16>
+    <h17>Sólo para archivo actual</h17>
+    <h18>Guardar</h18>
+    <h19>Eliminar especificación actual</h19>
+    <h20>Crear una nueva especificación vacía</h20>
+    <h21>Añadir una nueva posición. Posición se añade como una fila debajo de fila actualmente seleccionada en especificación. Si no se selecciona nada en especificación, entonces posición se inserta al final de especificación</h21>
+    <h22>Editar posición seleccionada</h22>
+    <h23>Añadir artículos seleccionados del dibujo a especificación</h23>
+    <h24>Mover posición seleccionada hacia arriba</h24>
+    <h25>Mover posición seleccionada hacia abajo</h25>
+    <h26>Eliminar posición seleccionada</h26>
+    <h27>Completar tabla</h27>
+    <h28>Insertar tabla</h28>
+    <h29>Referencia:</h29>
+    <h30>Seleccionar de lista o escribir</h30>
+    <h31>Mostrar documentos para sección de base de datos:</h31>
+    <h32>Estado del documento:</h32>
+    <h33>Válido</h33>
+    <h34>Inválido</h34>
+    <h35>Sin información o no definido por ley</h35>
+    <h36>NOMBRE DE ESPECIFICACIÓN</h36>
+    <h37>Ingresar nombre de especificación</h37>
+    <h38>¡Ya existe especificación para este dibujo con mismo nombre!</h38>
+    <h39>Buscar artículos</h39>
+    <h40>ENTRADA MANUAL</h40>
+    <h41>Posición</h41>
+    <h42>Designación</h42>
+    <h43>Nombre</h43>
+    <h44>Cantidad</h44>
+    <h45>Masa</h45>
+    <h46>Nota</h46>
+    <h47>Acero</h47>
+    <h48>Editar lista de documentos utilizados por complemento</h48>
+    <h49>Abrir panel de búsqueda de base de datos</h49>
+    <h51>De 2 símbolos</h51>
+    <h52>ARTÍCULO DE BASE</h52>
+    <h53>Seleccionar sección:</h53>
+    <h54>Filtrar por grupo:</h54>
+    <h55>Seleccionar documento:</h55>
+    <h56>Abrir imagen</h56>
+    <h57>Válido</h57>
+    <h58>Inválido</h58>
+    <h59>Sin información o no definido por ley</h59>
+    <h60>Longitud, mm</h60>
+    <h61>Medir longitud entre dos puntos</h61>
+    <h62>Diámetro, mm</h62>
+    <h63>Anchura, mm</h63>
+    <h64>Altura (espesor), mm</h64>
+    <h65>Acero:</h65>
+    <h66>Densidad, kg/m³:</h66>
+    <h67>Guardar valores de cotas ingresados</h67>
+    <h68>No se han ingresado todos datos</h68>
+    <h69>Añadir</h69>
+    <h70>Añadir y cerrar</h70>
+    <h71>Estado del documento:</h71>
+    <cb1>Añadir desde base de datos</cb1>
+    <cb2>Añadir subsección</cb2>
+    <cb3>Entrada manual</cb3>
+    <cb4>Arriba a izquierda</cb4>
+    <cb5>Arriba a derecha</cb5>
+    <k1>¡Especificación actual no se ha guardado! ¡Se perderán datos!\n¿Seguro de salir del complemento?</k1>
+    <k2>Seleccionar artículos que sean artículos ModPlus</k2>
+    <k3>¿Eliminar posición seleccionada?</k3>
+    <k4>Especificación</k4>
+    <k5>Se ha producido un error al generar una clave para dibujo actual</k5>
+    <k6>¡Especificación actual no se guarda y se perderá para siempre!\n¿Continuar?</k6>
+    <k7>¡Especificación se eliminará permanentemente!\n¿Continuar?</k7>
+    <k8>¡Falta archivo de tabla! Es necesario iniciar complemento "Tablas" para crear archivo</k8>
+    <k9>No es posible copiar tabla del archivo de recursos</k9>
+    <k10>Archivo fue creado por complemento "Especificaciones" (mpSpecifications) que es parte de ModPlus.\n¡NO cambie este archivo manualmente, ya que esto puede provocar errores en complemento!</k10>
+    <k11>Punto de inserción</k11>
+    <k12>¡No has ingresado nada!</k12>
+    <k13>MP: Añadir un artículo de base de datos</k13>
+    <k14>Seleccionar fila</k14>
+    <k15>¡No golpeé celda!</k15>
+    <k16>MP: Atributos para especificación</k16>
+    <k17>ATRIBUTOS PARA ESPECIFICACIÓN</k17>
+    <all>Todo</all>
+    <cb6>Metal</cb6>
+    <cb7>Hormigón armado</cb7>
+    <cb8>Madera/Plásticos</cb8>
+    <cb9>Materiales</cb9>
+    <cb10>Otro</cb10>
+    <msg1>Especificar longitud de artículo</msg1>
+    <msg2>Especificar diámetro de artículo</msg2>
+    <msg3>Especificar anchura de artículo</msg3>
+    <msg4>Especificar altura de artículo</msg4>
+    <msg5>Especificar densidad</msg5>
+    <ad1>Posición de artículo</ad1>
+    <ad2>Designación de artículo</ad2>
+    <ad3>Nombre de artículo</ad3>
+    <ad4>Masa de artículo</ad4>
+    <ad5>Nota de artículo</ad5>
+    <s1>Unidades de ensamble</s1>
+    <s2>Piezas</s2>
+    <s3>Artículos estándar</s3>
+    <s4>Materiales</s4>
+    <s5>Estructuras espaciales</s5>
+    <s6>Mallazos</s6>
+    <s7>Artículos empotrados</s7>
+  </mpSpecifications>
+  <mpLayoutManager LocalName="Administrador de hojas"
+                   Description="Administrador de hojas de dibujo que se muestra en paleta">
+    <accept>Aceptar</accept>
+    <cancel>Cancelar</cancel>
+    <close>Cerrar</close>
+    <h1>Nueva hoja</h1>
+    <h2>Nueva hoja basada en plantilla</h2>
+    <h3>Hoja</h3>
+    <h4>¿Estás seguro de que desea eliminar hoja</h4>
+    <h5>¿Estás seguro de que desea eliminar hojas seleccionadas?</h5>
+    <h6>Imposible cambiar nombre de ficha "Modelo"</h6>
+    <h7>Por favor selecciona una hoja</h7>
+    <h8>Administrador de hojas</h8>
+    <h9>CREAR HOJA</h9>
+    <h10>Nombre de hoja:</h10>
+    <h11>Especificar nombre de hoja</h11>
+    <h12>¡Dibujo actual ya contiene hoja con mismo nombre!\nEspecificar nombre diferente</h12>
+    <h13>ADMINISTRADOR DE HOJAS: AJUSTES</h13>
+    <h14>Iniciar automáticamente con AutoCAD</h14>
+    <h15>Conéctar a paleta ModPlus</h15>
+    <h16>Solicitar un nombre al crear una hoja</h16>
+    <h17>Ir a una nueva hoja al crear</h17>
+    <h18>Mostrar en lista "Modelo"</h18>
+    <h19>DESPLAZAR/COPIAR</h19>
+    <h20>Ubicar hojas seleccionadas</h20>
+    <h21>Antes de hoja:</h21>
+    <h22>Crear copia</h22>
+    <h23>Número de copias:</h23>
+    <h24>¡Es necesario seleccionar una hoja de lista!</h24>
+    <h25>mover hasta final</h25>
+    <h26>RENOMBRAR HOJA</h26>
+    <h27>Nombre actual de hoja:</h27>
+    <h28>Nuevo nombre de hoja:</h28>
+    <h29>Siguientes símbolos no están permitidos en nombre de una hoja</h29>
+    <mi1>Abrir</mi1>
+    <mi2>Eliminar</mi2>
+    <mi3>Renombrar</mi3>
+    <mi4>Mover/Copiar</mi4>
+    <mi5>Seleccionar todas hojas</mi5>
+    <mi6>Administrador de parámetros de hojas</mi6>
+    <mi7>Imprimir</mi7>
+    <mi8>Exportar una pestaña de hoja a una ficha de modelo</mi8>
+  </mpLayoutManager>
+  <mpSheetNumbers LocalName="Numerador de hojas"
+                  Description="Complemento para insertar número de hoja en documento y en volumen en formatos y cuadros de rotulación ModPlus"
+                  FullDescription="Complemento funciona en modelo y en hojas. Primero hay que descargar datos, que se ubican en cuadros de rotulación y formatos de complemento ModPlus. Después de especificar nuevos datos, sólo tiene que aplicar cambios">
+    <!-- todo remove after 1.3.10.0 -->
+    <h1>NUMERADOR DE HOJAS</h1>
+    <h2>Obtener datos del dibujo actual</h2>
+    <h3>En modelo</h3>
+    <!-- todo remove after 1.3.10.0 -->
+    <h4>Deseleccionar</h4>
+    <h5>Nombre de hoja</h5>
+    <h6>No. en doc.</h6>
+    <h7>Numeración automática de valor hacia abajo</h7>
+    <h8>Todos valores "Número en documento" se numerarán automáticamente a partir de esta celda. Es necesario introducir un número entero en celda</h8>
+    <h9>No. en volumen</h9>
+    <h10>Todos valores "Número en volumen" se numerarán automáticamente a partir de esta celda. Es necesario introducir un número entero en celda</h10>
+    <h11>En hojas</h11>
+    <h12>Nombre de hoja</h12>
+    <h13>Disponible en versión completa</h13>
+    <h14>Es necesario ir a ficha "Modelo"</h14>
+    <h15>Buscar por formatos ModPlus</h15>
+    <h16>Sin campo numérico</h16>
+    <h17>Sin cuadro de rotulación</h17>
+    <h18>Sin celda para nombre</h18>
+    <h19>Sin formato</h19>
+    <h20>Recibir datos de una hoja</h20>
+    <h21>Ajustar datos para hoja</h21>
+    <h22>Ajustar datos en modelo</h22>
+    <!-- todo remove after 1.3.10.0 -->
+    <h23>Seleccionar todo</h23>
+    <h24>Es necesario ingresar un número entero en celda "Número en documento"</h24>
+    <h25>Es necesario ingresar un número entero en celda "Número en volumen"</h25>
+    <h26>Ordenar:</h26>
+    <h27>Procesar resultados de búsqueda</h27>
+    <d1>Sin ordenar</d1>
+    <d2>De izquierda a derecha y de arriba a abajo</d2>
+    <d3>De izquierda a derecha y de abajo hacia arriba</d3>
+    <d4>De derecha a izquierda y de arriba a abajo</d4>
+    <d5>De derecha a izquierda y de abajo hacia arriba</d5>
+    <!-- todo remove after 1.3.10.0 -->
+    <apply>Aplicar</apply>
+    <!-- todo remove after 1.3.10.0 -->
+    <close>Cerrar</close>
+  </mpSheetNumbers>
+  <mpDwgBase LocalName="Base de datos dwg"
+             Description="Base de datos de varios bloques y dibujos"
+             FullDescription="Base dwg le permite insertar tanto bloques como dibujos ya hechos (por ejemplo, detalles). Base de datos dwg la llenan usuarios. Es necesario tener acceso a Internet para que complemento funcione">
+    <h1>Enviar bloques y dibujos del usuario al servidor modplus.org</h1>
+    <h2>Buscar por base de datos</h2>
+    <h3>Buscar</h3>
+    <h4>Buscar en base de datos a partir de 3 símbolos...</h4>
+    <h5>Ruta:</h5>
+    <h6>Descripción:</h6>
+    <h7>Autor:</h7>
+    <h8>Origen:</h8>
+    <h9>Base de datos dwg</h9>
+    <h10>Añadir un nuevo elemento a base de datos local</h10>
+    <h11>Métodos auxiliares para administrar base de datos del usuario</h11>
+    <h12>Eliminar</h12>
+    <h13>Cambiar nombre de grupo</h13>
+    <h14>Cambiar</h14>
+    <h15>Puede escalar y encuadrar imagen con rueda del ratón</h15>
+    <h16>Alejar imagen</h16>
+    <h17>Acercar imagen</h17>
+    <h18>Este es un bloque 3D</h18>
+    <h19>Capa:</h19>
+    <h20>Cerrar ventana después de pegar</h20>
+    <h21>Rotación</h21>
+    <h22>Añadir un bloque a base de datos</h22>
+    <h23>Añadir un dibujo a base de datos</h23>
+    <h24>Cambiar datos del bloque</h24>
+    <h25>Cambiar datos del dibujo</h25>
+    <h26>Enviar base de datos al servidor</h26>
+    <h27>Especificar uno o más archivos de su base de datos dwg. Complemento archiva estos archivos y crea archivo de puntero con elementos almacenados en estos archivos</h27>
+    <h28>Archivos en base de datos del usuario:</h28>
+    <h29>Elementos almacenados en archivo:</h29>
+    <h30>Ruta del archivo:</h30>
+    <h31>Comentario</h31>
+    <h32>Es posible dejar un comentario en archivo y le prestaremos atención</h32>
+    <h33>Archivar</h33>
+    <h34>Ver archivo de copia de seguridad</h34>
+    <h35>Eliminar archivo</h35>
+    <h36>Enviar archivo al servidor</h36>
+    <h37>Recomendaciones para añadir bloques</h37>
+    <h38>Recomendaciones</h38>
+    <h39>Seleccionar un bloque en dibujo actual</h39>
+    <h40>Descargar últimos datos ingresados</h40>
+    <h41>Archivo .dwg:</h41>
+    <h42>Archivo actual</h42>
+    <h43>Archivo .dwg en que se copiará bloque</h43>
+    <h44>Este es un bloque 3D</h44>
+    <h45>Establecer casilla si bloque especificado es bloque 3D</h45>
+    <h46>Nombre:</h46>
+    <h47>Nombre del bloque que se muestra en ventana del complemento</h47>
+    <h48>Breve descripción del bloque</h48>
+    <h49>Documento reglamentario:</h49>
+    <h50>Documento reglamentario de origen</h50>
+    <h51>Si no existe ningún documento reglamentario, es necesario dejar campo vacío</h51>
+    <h52>Añadido:</h52>
+    <h53>Persona que ha añadido bloque a base de datos dwg</h53>
+    <h54>Añadir atributos para especificaciones</h54>
+    <h55>Nombre del atributo</h55>
+    <h56>Valor predeterminado</h56>
+    <h57>Atributos del bloque:</h57>
+    <h58>Obtener valores de atributos de un bloque</h58>
+    <h59>Nombre</h59>
+    <h60>Consejo</h60>
+    <h61>Valor</h61>
+    <h62>Recomendaciones para añadir dibujos</h62>
+    <h63>Cambiar nombre de grupo</h63>
+    <h64>Nombre de grupo actual:</h64>
+    <h65>Nuevo nombre de grupo:</h65>
+    <h66>Añadir</h66>
+    <h67>¿Qué debo añadir?</h67>
+    <h68>Añadir bloque</h68>
+    <h69>Añadir dibujo</h69>
+    <h70>Propiedad</h70>
+    <h71>Valor</h71>
+    <h72>Instrucciones en video para trabajar con la base de datos</h72>
+    <h73>Comentario</h73>
+    <h74>Deje su dirección de correo electrónico, enlace a su página VK, Facebook, Telegram u otras opciones para contactarlo. Sus contactos pueden ser necesarios para informarle si los bloques (dibujos) que envía necesitan ser corregidos</h74>
+    <h75>No proporcionó información de contacto para recibir comentarios. ¡Si los bloques (dibujos) que ha enviado necesitan ser corregidos, no podremos informarle al respecto!\n¿Archivar de todos modos?</h75>
+    <h76>Ordenar por alfabeto</h76>
+    <h77>Ruta a carpeta donde se encuentra base de datos dwg del usuario</h77>
+    <h78>Especificar ruta a carpeta de almacenamiento de base de datos dwg del usuario</h78>
+    <h79>Restablecer ruta predeterminada a carpeta de almacenamiento de base de datos dwg del usuario</h79>
+    <h80>Представление списком</h80>
+    <h81>Генерация изображений предварительного просмотра...</h81>
+    <bt1>Base ModPlus</bt1>
+    <bt2>Del usuario</bt2>
+    <insert>Insertar</insert>
+    <insertBlock>Insertar como bloque</insertBlock>
+    <msg1>¡Archivo de puntero de base de datos dwg ModPlus no se ha encontrado!\nCierre AutoCAD y ejecute módulo de actualización automática para buscar actualizaciones</msg1>
+    <msg2>Capa actual</msg2>
+    <msg3>Archivo de índice de base del usuario no se creó. ¿Crear?</msg3>
+    <msg4>¡Falta archivo de origen! ¿Descargar?</msg4>
+    <msg5>Descargando archivo de base de datos</msg5>
+    <msg6>¡Falta acceso a Internet o al sitio web modplus.org!\nVuelva a intentarlo más tarde</msg6>
+    <msg7>Se eliminará todo grupo</msg7>
+    <msg8>y todos subgrupos</msg8>
+    <msg9>En este caso, archivos .dwg permanecerán</msg9>
+    <msg10>Eliminar grupo</msg10>
+    <msg11>Elemento seleccionado será eliminado de base de datos</msg11>
+    <msg12>Eliminar elemento</msg12>
+    <msg13>Punto de inserción</msg13>
+    <msg14>Angulo de rotación</msg14>
+    <msg15>¡No has seleccionado ningún archivo para archivar!</msg15>
+    <msg16>Crear una carpeta temporal</msg16>
+    <msg17>Recopilar elementos requeridos de base de datos</msg17>
+    <msg18>No es posible crear archivo de puntero</msg18>
+    <msg19>Archivo listo para enviar</msg19>
+    <msg20>No es posible eliminar carpeta temporal</msg20>
+    <msg21>Es posible que archivo está abierto</msg21>
+    <msg22>No se puede encontrar archivo para enviar. ¿Quizá se ha eliminado?</msg22>
+    <msg23>¡Falta acceso a Internet o al sitio web modplus.org!</msg23>
+    <msg24>Enviar</msg24>
+    <msg25>Cargar un archivo al servidor</msg25>
+    <msg26>Enviar una notificación</msg26>
+    <msg27>Archivo</msg27>
+    <msg28>enviado al servidor modplus.org</msg28>
+    <msg29>Una vez verificado archivo, añadiremos su contenido a base de datos pública</msg29>
+    <msg30>¿Eliminar archivo creado?</msg30>
+    <msg31>¡No es posible eliminar archivo! Puede que esté abierto en este momento</msg31>
+    <msg32>¿Añadir un bloque con estos datos?</msg32>
+    <msg33>No es posible copiar bloque seleccionado al archivo especificado</msg33>
+    <msg34>Seleccionar un bloque para añadir a base de datos</msg34>
+    <msg35>Base dwg del complemento contiene un bloque llamado</msg35>
+    <msg36>¡Error al analizar archivo de puntero de base de datos del complemento!</msg36>
+    <msg37>Base de datos dwg del usuario contiene un bloque llamado</msg37>
+    <msg38>¡Error al analizar archivo de índice de base del usuario!</msg38>
+    <msg39>Especificar nombre de bloque mostrado (Nombre)</msg39>
+    <msg40>Especificar una ruta en directorio</msg40>
+    <msg41>¡Casilla "Archivo actual" para archivo .dwg está marcada, pero archivo actual no se encuentra en directorio de base de datos .dwg!</msg41>
+    <msg42>Directorio de base de datos dwg</msg42>
+    <msg43>Directorio del archivos actual</msg43>
+    <msg44>¡Es posible que archivo actual aún no se haya guardado!</msg44>
+    <msg45>Casilla "Archivo actual" para archivo .dwg está marcada, pero no es posible reconocer directorio de ubicación del archivo actual</msg45>
+    <msg46>Especificar archivo .dwg para copiar bloque</msg46>
+    <msg47>Seleccionar un archivo para añadir un bloque</msg47>
+    <msg49>Archivo seleccionado debe estar en subcarpeta de carpeta</msg49>
+    <msg50>Crear un nuevo archivo de base de datos dwg</msg50>
+    <msg51>No es necesario crear un archivo en raíz de carpeta</msg51>
+    <msg52>¡Crea una subcarpeta!</msg52>
+    <msg53>¡Atención! ¡Bloque seleccionado es dinámico! ¡Atributos de especificación se tienen en cuenta para una instancia del bloque!\nEs decir, si hay varias opciones en un bloque, ¡trabajar con dicho bloque será confuso!</msg53>
+    <msg54>Valores de atributos actuales se completan con valores predeterminados especificados cuando se creó bloque\n¡Si continúa, valores de atributos se completarán con valores del bloque seleccionado!\n¿Tomar valores de atributos del bloque seleccionado?</msg54>
+    <msg55>¡Archivo actual no se encuentra en directorio de base de datos dwg!</msg55>
+    <msg56>No es posible reconocer directorio donde se encuentra archivo actual</msg56>
+    <msg58>¿Guardar datos ingresados como "Últimos datos ingresados"?</msg58>
+    <msg59>Seleccionar un dibujo para añadir a base de datos</msg59>
+    <msg60>¡Archivo seleccionado contiene objetos proxy y no se puede añadir a base de datos!\nElimine todos objetos proxy y vuelva a intentarlo</msg60>
+    <msg61>Especifique carpeta para copiar archivo seleccionado</msg61>
+    <msg62>Ya hay un archivo en carpeta especificada</msg62>
+    <msg63>¿Reemplazar?</msg63>
+    <msg64>No seleccione una carpeta</msg64>
+    <msg65>Carpeta seleccionada debe estar en una subcarpeta de carpeta</msg65>
+    <msg66>¿Añadir un dibujo con estos datos?</msg66>
+    <msg67>Base del complemento contiene un dibujo llamado</msg67>
+    <msg68>Base de datos del usuarios contiene un dibujo llamado</msg68>
+    <msg69>Especificar nombre de dibujo mostrado (Nombre)</msg69>
+    <msg70>Especificar archivo de dibujo .dwg</msg70>
+    <msg71>Especificar nuevo nombre del grupo</msg71>
+    <msg72>Блок "{0}" не найден в файле "{1}"</msg72>
+    <wrong>¡Selección incorrecta!</wrong>
+    <p1>Documento</p1>
+    <p2>Descripción</p2>
+    <p3>Tipo de objeto</p3>
+    <p4>Anotativo</p4>
+    <p5>Dinámica</p5>
+    <p6>Bloque 3D</p6>
+    <p7>Atributos para especificación</p7>
+    <p8>Añadido</p8>
+    <p9>Origen</p9>
+    <yes>Sí</yes>
+    <no>No</no>
+    <block>Bloque</block>
+    <drawing>Dibujo</drawing>
+    <close>Cerrar</close>
+    <select>Seleccionar</select>
+    <create>Crear</create>
+    <accept>Aceptar</accept>
+    <cancel>Cancelar</cancel>
+    <copy>Copiar</copy>
+    <ad1>Posición de artículo</ad1>
+    <ad2>Designación de artículo</ad2>
+    <ad3>Nombre de artículo</ad3>
+    <ad4>Masa de artículo</ad4>
+    <ad5>Nota de artículo</ad5>
+    <a1>Posición</a1>
+    <a2>Designación</a2>
+    <a3>Nombre</a3>
+    <a4>Masa</a4>
+    <a5>Nota</a5>
+    <r1>De forma predeterminada, complemento asume que bloques añadidos a base de datos local (del usuario) se añadirán posteriormente a base de datos global, accesible para todos usuarios.</r1>
+    <r2>Por tanto, intenta seguir recomendaciones:</r2>
+    <r3>Bloque que se añade debería ser útil en su trabajo. No importa qué orientación profesional tendrá</r3>
+    <r4>No utilices una amplia variedad de capas en bloques a menos que sea necesario. La mejor opción es utilizar capas estándar del complemento ModPlus</r4>
+    <r5>Si bloque es dinámico, entonces quizás no debería añadir atributos para especificación</r5>
+    <r6>Proporcione a bloques nombres y descripciones claros para que usuario no tenga que averiguar qué es y por qué</r6>
+    <r7>Si tomó bloque de algún recurso, ¡asegúrese de indicar origen!</r7>
+    <r8>Considere cuidadosamente ruta al bloque en base de datos</r8>
+    <r10>De forma predeterminada, complemento asume que dibujos añadidos a base de datos local (del usuario) se añadirán posteriormente a base de datos global, accesible para todos usuarios.</r10>
+    <r11>Por tanto, se imponen algunas restricciones a dibujos añadidos:</r11>
+    <r13>Dibujo añadido no debe usar primitivas Proxy</r13>
+    <r14>Dibujos realizados en mala calidad (por ejemplo, con directrices de segmentos y texto, etc.) no se aceptarán en base de datos pública</r14>
+    <r15>Intenta también seguir recomendaciones:</r15>
+    <r16>No utilices una amplia variedad de capas en tus dibujos a menos que sea necesario. La mejor opción es utilizar capas estándar del complemento ModPlus</r16>
+    <r17>No utilices muchos estilos de anotación en sus dibujos. Mejor opción es utilizar estilos de anotación del complemento ModPlus</r17>
+    <r18>No utilice tipos de línea que no sean de estándar de AutoCAD en sus dibujos</r18>
+    <r19>No utilice fuentes en sus dibujos que no estén incluidas en conjunto de fuentes estándar de AutoCAD</r19>
+    <r20>Si tomaste dibujo de algún recurso, ¡asegúrate de indicar origen!</r20>
+    <r21>Considere cuidadosamente ruta al dibujo en base de datos</r21>
+    <pp1>Esto supone que ha seleccionado bloque en archivo que aún no se encuentra en directorio ModPlus/Data/DwgBase. Por lo tanto, es necesario especificar un archivo creado previamente en directorio ModPlus/Data/DwgBase para ubicar bloques en él o crear este archivo. Bloque seleccionado se copiará al archivo especificado.</pp1>
+    <pp2>Si está añadiendo varios bloques que tienen una orientación común (por ejemplo, bloques de losas alveolares per una serie), cree un archivo para ellos. ¡No es necesario crear un archivo separado para cada bloque!</pp2>
+    <pp3>¡Imposible crear archivos en raíz de carpeta ModPlus/Data/DwgBase! Cree subcarpetas en la (por ejemplo, ModPlus/Data/DwgBase/RC losas).</pp3>
+    <pp4>Si creó un archivo con bloques, lo colocó en carpeta DwgBase y ahora está añadiendo bloques de este archivo a base de datos, marque casilla "Archivo actual".</pp4>
+    <pp5>Campo se completa al azar</pp5>
+    <pp6>P.S. Nos alegra mucho que tengas un apodo original y hermoso, pero aun así intenta escribir tu apellido y nombre</pp6>
+    <pp7>Si no es el autor del bloque, indique origen de donde se tomó este bloque, para no ofender a su creador</pp7>
+    <pp8>Ruta condicional a un bloque en un directorio, formando una estructura de árbol</pp8>
+    <pp9>Por ejemplo, ruta "Bloques/Directorio1/Directorio2/Directorio3" dará este resultado:</pp9>
+    <pp10>Cada subdirectorio condicional debe estar separado con símbolo "/"</pp10>
+    <pp11>Añadir atributos a un bloque para especificaciones</pp11>
+    <pp12>Atributos se añadirán al bloque cuando este complemento lo inserte.</pp12>
+    <pp13>Todos atributos serán invisibles. Es posible cambiar su valor en propiedades del bloque después de inserción.</pp13>
+    <pp14>Puede completar valores predeterminados.</pp14>
+    <pp15>Atributos de bloque existentes</pp15>
+    <pp16>Especificar valores predeterminados para atributos. Estos valores se añadirán al bloque cuando lo inserte.</pp16>
+    <pp17>De forma predeterminada, valores de atributo que se especificaron como "valor predeterminado" al crear atributo. Puede completar valores de atributos con valores del bloque seleccionado actualmente.</pp17>
+    <pp18>Archivo .dwg de dibujo</pp18>
+    <pp19>¡Para añadirlo a base de datos, archivo debe guardarse en AutoCAD 2013!</pp19>
+    <pp20>Si ya ha ubicado archivo en subcarpeta de carpeta ModPlus/Data/DwgBase, entonces puede "Seleccionar".</pp20>
+    <pp21>Si archivo de dibujo no se encuentra en subcarpeta de carpeta ModPlus/Data/DwgBase, entonces puede "Copiar" allí.</pp21>
+    <pp22>Si está añadiendo dibujo actualmente abierto que ya está ubicado en subcarpeta de carpeta ModPlus/Data/DwgBase, marca casilla "Archivo actual".</pp22>
+    <pp23>nombre del dibujo que se muestra en ventana de complemento</pp23>
+    <pp24>Breve descripción del dibujo</pp24>
+    <pp25>Quién ha añadido dibujo a base de datos dwg</pp25>
+    <pp26>Si no eres autor del dibujo, indica origen de donde fue tomado este dibujo, para no ofender a su creador</pp26>
+    <pp27>Ruta condicional a un dibujo en un directorio, formando una estructura de árbol</pp27>
+    <u1>UTILIDADES PARA BASE DE DATOS DWG DEL USUARIO</u1>
+    <u2>Estadística</u2>
+    <u3>Cambiar "Ruta" para varios elementos</u3>
+    <u4>Cambiar "Origen" y "Añadido"</u4>
+    <u5>Archivos no utilizados</u5>
+    <u6>Elementos sin un archivo de origen</u6>
+    <u7>Reunir estadísticas</u7>
+    <u8>Seleccione varios elementos de lista (marcando casillas) para los cuales desea cambiar "Ruta" en base de datos. Especificar nuevo valor para "Rutas" y haga clic en "Aplicar"</u8>
+    <u9>Ctrl+A – seleccionar todo</u9>
+    <u10>Especificar grupo principal</u10>
+    <u11>Bloques</u11>
+    <u12>Dibujos</u12>
+    <u13>Nueva "Ruta" para elementos de base de datos especificados:</u13>
+    <u14>Seleccione varios elementos de lista (marcando casillas) para los cuales desea cambiar "Origen" y "Añadido" en base de datos. Especificar nuevo valor para "Origen" y "Añadir" y haga clic en "Aplicar" (deje campo vacío si no desea cambiar valor)</u14>
+    <u15>Archivos no utilizados son archivos ubicados en directorio</u15>
+    <u16>, a los que no hace referencia ningún elemento de bases de datos (base de datos del complemento y base de datos del usuario)</u16>
+    <u17>Buscar archivos no utilizados</u17>
+    <u18>Eliminar archivos seleccionados no utilizados</u18>
+    <u19>Imágenes de estos archivos y archivos .bak también se eliminarán</u19>
+    <u20>Elementos sin archivo de origen son elementos en base del usuario que hacen referencia a archivo de origen inexistente</u20>
+    <u21>Buscar elementos sin un archivo de origen</u21>
+    <u22>Archivo de origen específico:</u22>
+    <u23>Eliminar elementos seleccionados</u23>
+    <u24>Procesar elementos de base de datos:</u24>
+    <u25>¡Imposible especificar sólo grupo principal!</u25>
+    <u26>¡No hay nada seleccionado!</u26>
+    <u27>¡Atención! ¡Cambios realizados no se pueden deshacer!\n¿Continuar?</u27>
+    <u28>Procesando elementos de base de datos completado</u28>
+    <u29>Base del usuario contiene</u29>
+    <u30>elementos</u30>
+    <u31>De estos:</u31>
+    <u32>Bloques:</u32>
+    <u33>Dibujos:</u33>
+    <u34>Entre</u34>
+    <u35>bloque(s) disponibles:</u35>
+    <u36>Bloques dinámicos:</u36>
+    <u37>Bloques anotativos:</u37>
+    <u38>Bloques 3D:</u38>
+    <u39>Bloques que tienen atributos para especificación:</u39>
+    <u40>Base del usuario está completa</u40>
+    <u41>por autor(es):</u41>
+    <u42>Archivos .dwg existentes utilizados por base de datos:</u42>
+    <u43>Encontrado entre enlaces a archivos .dwg</u43>
+    <u44>enlaces inválidos. Es decir, ¡no hay archivo de origen!</u44>
+    <u45>¡No se han encontrado archivos no utilizados!</u45>
+    <u46>¡Archivos seleccionados se eliminarán permanentemente!\n¿Continuar?</u46>
+    <u47>Archivos eliminados</u47>
+    <u48>No es posible eliminar archivos:</u48>
+    <u49>No hay acceso a archivos. Quizás estén abiertos</u49>
+    <u50>¡No se han encontrado elementos coincidentes!</u50>
+    <u51>¡Elementos seleccionados se eliminarán permanentemente!\n¿Continuar?</u51>
+    <u52>Elementos eliminados:</u52>
+    <u53>Especificar al menos un valor ("Origen" o "Añadido") para reemplazar</u53>
+    <u54>Cambiar nombre archivo de origen</u54>
+    <u55>Seleccione en la lista uno de los archivos de base de datos, especifique un nuevo nombre del archivo sin extensión y haga clic en "Aplicar"</u55>
+    <u56>Nuevo nombre del archivo sin extensión</u56>
+    <u57>Renombrar</u57>
+    <u58>No se especifica un nuevo nombre del archivo</u58>
+    <u59>Nombre del archivo no debe contener siguientes símbolos:</u59>
+    <u60>Sin acceso al archivo. Quizás esté abierto</u60>
+    <u61>Archivo ya existe:</u61>
+  </mpDwgBase>
+  <mpESKD LocalName="Smart"
+          Description="Creación de objetos inteligentes que amplían capacidades de AutoCAD, además de permitir diseñar según estándares estatales (SPDS, ESKD)">
+    <tab1>Líneas</tab1>
+    <tab2>Ajustes</tab2>
+    <tab3>Ejes</tab3>
+    <tab4>Estilos y ajustes</tab4>
+    <tab5>Trabajar con estilos y ajustes de objetos inteligentes ModPlus</tab5>
+    <tab6>Paleta de propiedades</tab6>
+    <tab7>Paleta de propiedades de objetos inteligentes ModPlus</tab7>
+    <tab8>Vistas, secciones</tab8>
+    <tab9>Utilidades</tab9>
+    <tab10>Buscar</tab10>
+    <tab11>Marcas de nivel</tab11>
+    <!-- todo remove tab12 after 1.28.24.0  -->
+    <tab12>Buscar por valor</tab12>
+    <tab13>Buscar objetos inteligentes por tipo</tab13>
+    <!-- todo remove tab12 after 1.28.24.0  -->
+    <tab14>Buscar objetos inteligentes por valores de propiedad numéricos y de cadena</tab14>
+    <tab15>Directrices</tab15>
+    <tab16>Designaciones</tab16>
+    <tab17>Найти и заменить</tab17>
+    <tab18>Поиск и замена в интеллектуальных объектах по значению строковых и числовых свойств</tab18>
+    <defl>Por defecto</defl>
+    <err1>No se puede encontrar archivo</err1>
+    <err2>No es posible cargar tipo de línea</err2>
+    <err5>¡Error al recuperar datos del registro! Iniciar Configurador para actualizar datos en registro</err5>
+    <msg1>Especificar punto de inserción:</msg1>
+    <msg2>Especificar punto final:</msg2>
+    <msg3>Seleccionar un bloque que represente un objeto inteligente ModPlus</msg3>
+    <msg5>Especificar siguiente punto:</msg5>
+    <msg6>Seleccionar polilínea:</msg6>
+    <msg7>¿Eliminar polilínea original?</msg7>
+    <msg8>¿Copiar capa? [Sí/No]</msg8>
+    <msg9>Primitivas inteligentes procesadas</msg9>
+    <msg10>No se han encontrado primitivas inteligentes de tipos especificados en espacio actual</msg10>
+    <msg11>Especificar punto de referencia:</msg11>
+    <msg12>Especificar punto del nivel:</msg12>
+    <msg13>Especificar una posición desde vista del nivel:</msg13>
+    <msg14>Seleccionar marcas de nivel:</msg14>
+    <msg15>Seleccionar nivel de referencia:</msg15>
+    <msg16>Eliminar objetos de selección:</msg16>
+    <msg17>Especificar punto de red de selección:</msg17>
+    <msg18>Especificar punto de directriz:</msg18>
+    <msg19>Especificar punto de colocación de texto:</msg19>
+    <msg20>Especificar punto de sangría del texto:</msg20>
+    <msg21>Укажите точку положения текста:</msg21>
+    <wrong>Objeto no válido!</wrong>
+    <vc1>VARIOS</vc1>
+    <vc2>NO DEFINIDO</vc2>
+    <h1>Ajustes de paleta</h1>
+    <h2>Iniciar automáticamente con AutoCAD</h2>
+    <h3>Conéctar a paleta ModPlus</h3>
+    <h4>Límite máximo excedido</h4>
+    <h5>objetos seleccionados</h5>
+    <h6>Paleta ha dejado de funcionar</h6>
+    <h7>Límite máximo de objetos seleccionados</h7>
+    <h8>se puede cambiar en</h8>
+    <h9>ajustes</h9>
+    <h10>del complemento</h10>
+    <h11>Propiedades Smart</h11>
+    <h12>Sistema</h12>
+    <h13>Nuevo estilo personalizado</h13>
+    <h14>Editor de estilo</h14>
+    <h15>Ajustes</h15>
+    <h16>Añadir un nuevo estilo personalizado</h16>
+    <h17>Eliminar estilo personalizado seleccionado</h17>
+    <h18>Establecer estilo seleccionado como predeterminado</h18>
+    <h19>Crear un nuevo estilo basado en primitiva inteligente seleccionada</h19>
+    <h20>Descripción de propiedad:</h20>
+    <h21>Ajustes generales</h21>
+    <h22>Al crear un objeto, establecer escala del estilo</h22>
+    <h23>Si casilla está marcada, al crear un objeto inteligente, se le aplicará escala establecida en estilo actual, independientemente de escala anotativa del dibujo. De lo contrario, escala de dibujo anotativa se aplicará a primitiva</h23>
+    <h24>Al crear un objeto, configurar capa del estilo</h24>
+    <h25>Si casilla está marcada, al crear un objeto inteligente, se le aplicará capa establecida en estilo actual, independientemente de capa de dibujo actual. De lo contrario, capa de dibujo actual se aplicará a primitiva</h25>
+    <h26>Si no hay ninguna capa especificada en estilo del documento actual:</h26>
+    <h27>Aplicar capa actual</h27>
+    <h28>Al crear un objeto, se le aplicará capa de dibujo actual</h28>
+    <h29>Crear y aplicar una capa del estilo</h29>
+    <h30>En documento actual, se creará una capa establecida en estilo y se aplicará al objeto inteligente</h30>
+    <h31>Al crear un objeto, establecer estilo texto del estilo</h31>
+    <h32>Si casilla está marcada, al crear un objeto inteligente, se le aplicará estilo de texto establecido en estilo actual, independientemente de estilo de texto de dibujo actual. De lo contrario, estilo de texto de dibujo actual se aplicará a primitiva</h32>
+    <h33>Si no hay ningún estilo de texto especificado en estilo del documento actual:</h33>
+    <h34>Aplicar estilo de texto actual</h34>
+    <h35>Al crear un objeto inteligente, se le aplicará estilo de texto de dibujo actual</h35>
+    <h36>Crear y aplicar un estilo de texto del estilo</h36>
+    <h37>En documento actual, se creará un estilo de texto establecido en estilo y se aplicará a primitiva</h37>
+    <h38>Número máximo de objetos seleccionados en los que paleta de propiedades deja de funcionar. Este ajuste es necesario para acelerar trabajo en entorno de AutoCAD al desactivar lectura de propiedades del objeto. Por ejemplo, si necesita seleccionar 1000 objetos para copiarlos en otro dibujo, entonces no es necesario procesar propiedades de todos estos objetos</h38>
+    <h39>Numero máximo de objetos seleccionados (0 – siempre funcionan):</h39>
+    <h40>Ajustes de objetos inteligentes</h40>
+    <h41>Eje recto</h41>
+    <h42>Cambiar escala del tipo de línea proporcionalmente a escala del objeto</h42>
+    <h43>Escala de tipo de línea establecida para eje cambiará en proporción a escala del eje principal. Por ejemplo, si configuró escala del eje en 1:1 y escala del tipo de línea en 2, al configurar escala del eje en 1:100 se establecerá escala del tipo de línea en 200</h43>
+    <h44>Continuar valores de ejes creados</h44>
+    <h45>Al crear ejes, sistema busca ejes ya creados en dibujo y recopila sus valores del primer marcador de eje, seguido de ordenar ascendiendo valores. Valor del marcador de eje para eje que se está creando se establece en siguiente valor del último valor encontrado</h45>
+    <h46>Mostrar líneas de referencia</h46>
+    <h47>Al seleccionar marca de nivel, se mostrarán líneas de referencia desde punto de referencia hasta punto de nivel y desde punto de nivel hasta marca de nivel</h47>
+    <h48>Línea de ruptura</h48>
+    <h49>General</h49>
+    <h50>Estilo:</h50>
+    <h51>Geometría</h51>
+    <h52>Estilo de objeto inteligente</h52>
+    <h53>Estilo base para línea de ruptura</h53>
+    <h54>Nombre del estilo</h54>
+    <h55>Descripción del estilo</h55>
+    <h56>Creando una línea de ruptura</h56>
+    <h57>Crear un objeto inteligente basado en un bloque anónimo que describe una línea de ruptura especificando dos puntos</h57>
+    <h58>Ruptura curvilínea</h58>
+    <h59>Ruptura cilíndrica</h59>
+    <h60>Creando una ruptura curvilínea</h60>
+    <h61>Creando una ruptura cilíndrica</h61>
+    <h62>Crear un objeto inteligente basado en un bloque anónimo que describe una ruptura curvilínea especificando dos puntos</h62>
+    <h63>Crear un objeto inteligente basado en un bloque anónimo que describe una ruptura cilíndrica especificando dos puntos</h63>
+    <h64>Contenido</h64>
+    <h65>Creando un eje recto</h65>
+    <h66>Crear un objeto inteligente basado en un bloque anónimo que describa un eje recto especificando dos puntos</h66>
+    <h67></h67>
+    <h68>Estilo base para eje recto</h68>
+    <h69>¡Estilo seleccionado se eliminará permanentemente! ¿Continuar?</h69>
+    <h70>Grupo de estilo</h70>
+    <h71>contiene estilos con mismo nombre</h71>
+    <h72>Cambiar nombre de estilos para que no haya nombres duplicados</h72>
+    <h73>Línea de cota cero</h73>
+    <h74>Crear una línea de designación de cota cero</h74>
+    <h75>Crear un objeto inteligente basado en un bloque anónimo que describe una línea de tierra</h75>
+    <h76>Línea de tierra del polilínea</h76>
+    <h77>Convertir una polilínea seleccionada en una línea de designación de tierra</h77>
+    <h78>Estilo base para línea de tierra</h78>
+    <h79>Sección</h79>
+    <h80>Crear un símbolo de sección</h80>
+    <h81>Crear un objeto inteligente basado en un bloque anónimo que describe una sección</h81>
+    <h82>Sección quebrada</h82>
+    <h83>Sección de una polilínea</h83>
+    <h84>Crear designación de sección de polilínea</h84>
+    <h85>Convertir una polilínea seleccionada en designación de sección</h85>
+    <h86>Continuar valores para nuevos secciones</h86>
+    <h87>Al crear nueva sección en espacio actual se buscará última sección creada, cuyo valor se tomará como base para nueva sección</h87>
+    <h88>Mostrar línea de referencia de sección</h88>
+    <h89>Al seleccionar una sección, se muestra una línea de referencia que pasa por todos puntos de sección</h89>
+    <h90>Desplazamiento de texto dependiente</h90>
+    <h93>Restaurar posición del texto</h93>
+    <h94></h94>
+    <h95>MP: Crear un análogo</h95>
+    <h96>Estilo base para sección</h96>
+    <h97>Al desplazar uno de textos de Sección, segundo se desplazará automáticamente misma distancia</h97>
+    <h98>Cómo procesar propiedad "Capa" durante comando "Crear análogo":</h98>
+    <h99>Buscar objetos inteligentes</h99>
+    <h100>Especificar tipos de objetos para buscar</h100>
+    <h101>Seleccionar todo</h101>
+    <h102>Deseleccionar</h102>
+    <h103>Falta estilo en base de datos</h103>
+    <h104>Uno o más objetos están ubicados en una capa bloqueada y no se pueden actualizar</h104>
+    <h105>Marca de nivel</h105>
+    <h106>Crear marca de altura</h106>
+    <h107>Crear un objeto inteligente basado en un bloque anónimo que describa una marca de altura</h107>
+    <h108>Estilo base para marca de nivel</h108>
+    <h109></h109>
+    <h110>Alineación de marcas de nivel</h110>
+    <h111>Alinear posición de marcas verticalmente</h111>
+    <h112>Alineación de puntos de referencia</h112>
+    <h113>Comando le permite alinear marcas de nivel según diversas condiciones</h113>
+    <h114>Impermeabilización</h114>
+    <h115>Crear una línea de designación de impermeabilización</h115>
+    <h116>Crear un objeto inteligente basado en un bloque anónimo que describe una línea de impermeabilización</h116>
+    <h117>Impermeabilización de polilínea</h117>
+    <h118>Convertir una polilínea seleccionada en una línea de designación de impermeabilización</h118>
+    <h119>Para objeto inteligente creado que contiene número mostrado, configure delimitador para partes enteras y fraccionarias:</h119>
+    <h120>Valor de búsqueda</h120>
+    <h121>Buscar</h121>
+    <h122>Palabra entera</h122>
+    <h123>Distingue mayúsculas y minúsculas</h123>
+    <h124>A solicitud "{0}" no se ha encontrado nada</h124>
+    <h125>Añadir todo a selección actual</h125>
+    <h126>Directriz de detalle</h126>
+    <h127>Creando directriz de detalle</h127>
+    <h128>Crear un objeto inteligente basado en un bloque anónimo que describa una directriz de detalle</h128>
+    <h129>Estilo base para impermeabilización</h129>
+    <h130>Estilo base para una directriz de detalle</h130>
+    <h131>Continuar con valores de directrices de detalle creadas</h131>
+    <h132>Al crear directrices de detalle, buscará directrices de detalle ya creadas en dibujo y recopilará sus valores del número de detalle, seguido de ordenar ascendiendo valores. Para directriz de detalle creada, valor del número de detalle se establecerá en valor siguiente al último valor encontrado</h132>
+    <h133>Directriz de detalle secante</h133>
+    <h134>Creando directriz de detalle secante</h134>
+    <h135>Crear un objeto inteligente basado en un bloque anónimo que describe una directriz de detalle secante</h135>
+    <h136>Continuar con valores de directrices de detalle secantes creadas</h136>
+    <h137>Al crear directrices de detalle secantes, buscará directrices de detalle secantes ya creados en dibujo y recopilará sus valores del número de detalle, seguido de ordenar ascendiendo valores. Para directriz de detalle secante creada, valor del número de detalle se establecerá en valor siguiente al último valor encontrado</h137>
+    <h138>Estilo base para directriz de detalle secante</h138>
+    <h139>Soldadura</h139>
+    <h140>Crear designación de soldadura</h140>
+    <h141>Crear un objeto inteligente basado en un bloque anónimo que describe una soldadura</h141>
+    <h142>Estilo base de designación soldadura</h142>
+    <h143>Soldadura de polilínea</h143>
+    <h144>Convertir una polilínea seleccionada en una línea de designación de soldadura</h144>
+    <h145>Designación de fragmento</h145>
+    <h146>Estilo base para designar fragmentos</h146>
+    <h147>Creando una designación de fragmento</h147>
+    <h148>Crear un objeto inteligente basado en un bloque anónimo que describe designación del fragmento especificando dos puntos</h148>
+    <h149>Continuar valores de fragmentos creados</h149>
+    <h150>Al crear fragmentos, sistema busca fragmentos ya creados en dibujo y recopila sus valores del numero, seguido de ordenar ascendiendo valores. Para fragmento creado, valor del número de fragmento se establecerá en valor siguiente al último valor encontrado</h150>
+    <h151>Designación de vista/sección</h151>
+    <h152>Estilo base para designar Vista/Sección</h152>
+    <h153>Designación de vista</h153>
+    <h154>Crear una designación de vista </h154>
+    <h155>Crear un objeto inteligente de designación de vista basado en un bloque anónimo</h155>
+    <h156>Continuar valores para nuevas vistas</h156>
+    <h157>Al crear nueva designación de vista/sección, espacio actual buscará última designación de vista/sección creada, cuyo valor se tomará como base para nueva designación de vista/sección</h157>
+    <h158>Designación de sección</h158>
+    <h159>Crear una designación de sección</h159>
+    <h160>Crear un objeto de designación de sección inteligente basado en un bloque anónimo</h160>
+    <h161>Línea de letras</h161>
+    <h162>Estilo base para línea de letras</h162>
+    <h163>Dibujar una designación de línea de letra</h163>
+    <h164>Crear un objeto inteligente basado en un bloque anónimo que describe una línea de letras</h164>
+    <h165>Línea de letras de polilínea</h165>
+    <h166>Conviertir polilínea seleccionada en una línea de letras</h166>
+    <h167>Vista</h167>
+    <h168>Estilo base para designar vistas</h168>
+    <h169>Crear una designación de vista</h169>
+    <h170>Crear un objeto inteligente basado en un bloque anónimo que describe una designación de vista</h170>
+    <h171>Marca de nivel en plano</h171>
+    <h172>Estilo base para designar marca de nivel en un plano</h172>
+    <h173>Crear una marca de nivel en un plano</h173>
+    <h174>Crear un objeto inteligente basado en bloque anónimo que describe marca de nivel en plano</h174>
+    <h175>Directriz de cadena</h175>
+    <h176>Estilo base para designar directriz de cadena</h176>
+    <h177>Crear directriz de cadena</h177>
+    <h178>Crear un objeto inteligente basado en un bloque anónimo que describa directriz de cadena</h178>
+    <h179>Continuar con valores de directrices de cadena creados</h179>
+    <h180>Al crear directrices de cadena con marcas de dimensión múltiples, sistema busca directrices de cadena con marcas de dimensión múltiples ya creadas en dibujo y recopila sus valores, seguido de ordenar ascendiendo valores. Para directriz creada, valor del número de nodo o de letra se establecerá en valor siguiente al último valor encontrado. Función sólo funciona si todas directrices de cadena creados tienen valores numéricos o alfabéticos</h180>
+    <h181>Tener en cuenta ángulo de rotación del bloque al rotar texto</h181>
+    <h182>Texto del eje recto rotará con bloque del eje cuando se use comando ROTAR</h182>
+    <h183>Directriz en forma de peine</h183>
+    <h184>Estilo base para designar directriz en forma de peine</h184>
+    <h185>Crear directriz en forma de peine</h185>
+    <h186>Crear un objeto inteligente basado en un bloque anónimo que describe una directriz en forma de peine</h186>
+    <h187>Flecha gruesa</h187>
+    <h188>Estilo base para símbolo de flecha gruesa</h188>
+    <h189>Crear una flecha gruesa</h189>
+    <h190>Crear un objeto inteligente basado en un bloque anónimo que describe una flecha gruesa</h190>
+    <h191>Junta de hormigonado</h191>
+    <h192>Creando junta de hormigonado</h192>
+    <h193>Creación de un objeto inteligente a partir de un bloque anónimo que describe una junta de hormigonado</h193>
+    <h194>Junta de hormigonado de polilínea</h194>
+    <h195>Convertir polilínea seleccionada en una línea de designación de junta de hormigonado</h195>
+    <h196>Estilo base para designar junta de hormigonado</h196>
+    <h197>Designación de detalle</h197>
+    <h198>Crear designación de detalle</h198>
+    <h199>Crear un objeto inteligente basado en un bloque anónimo que describe designación de detalle</h199>
+    <h200>Estilo base para designar detalle</h200>
+    <h201>Continuar con valores de designaciones de detalle creados</h201>
+    <h202>Al crear designaciones de detalle, sistema busca designaciones de detalle ya creados en dibujo y recopila sus valores del numero, seguido de ordenar ascendiendo valores. Para designación de detalle creada, valor del número de detalle se establecerá en valor siguiente al último valor encontrado</h202>
+    <h203>Marcador de cambio</h203>
+    <h204>Crear un marcador de cambio</h204>
+    <h205>Cree un objeto inteligente basado en un bloque anónimo que describa un marcador de cambio</h205>
+    <h206>Estilo base para marcador de cambio</h206>
+    <h207>Directriz en forma de peine</h207>
+    <h208>Estilo base para directriz en forma de peine</h208>
+    <h209>Crear directriz en forma de peine</h209>
+    <h210>Cree un objeto inteligente basado en un bloque anónimo que describa directriz en forma de peine</h210>
+    <h211>Marca de pilote</h211>
+    <h212>Estilo base para marca de pilote</h212>
+    <h213>Creando una marca de pilote</h213>
+    <h214>Creación de un objeto inteligente basado en un bloque anónimo que describe marca de pilote</h214>
+    <h215>Отметка уклона</h215>
+    <h216>Создание отметки уклона</h216>
+    <h217>Создание интеллектуального объекта на основе анонимного блока, описывающего отметку уклона</h217>
+    <h218>Базовый стиль для отметки уклона</h218>
+    <h219>Заменить всё</h219>
+    <h220>Заменить выбранное</h220>
+    <h221>Тип объекта</h221>
+    <h224>Свойство без имени</h224>
+    <h225>Найдено интеллектуальных объектов:</h225>
+    <h226>Найдено свойств:</h226>
+    <h227>Искать только заменяемые свойства</h227>
+    <h228>Можно изменить</h228>
+    <h229>Значение для замены</h229>
+    <so0>Actualizar gráficos</so0>
+    <sot0>Se regenerarán gráficos de todos objetos intelectuales encontrados</sot0>
+    <so1>Seleccionar</so1>
+    <sot1>Se seleccionarán todos objetos inteligentes de tipos especificados en espacio actual</sot1>
+    <so2>Eliminar datos</so2>
+    <sot2>A todos objetos inteligentes de tipos especificados en espacio actual se eliminarán datos extendidos, lo que convertirá primitivas en bloques regulares</sot2>
+    <so3>Explotar</so3>
+    <sot3>Todos objetos intelectuales de tipos especificados en espacio actual serán explotados</sot3>
+    <so4>Eliminar</so4>
+    <sot4>Se eliminarán todos objetos inteligentes de tipos especificados en espacio actual</sot4>
+    <la1>Copiar</la1>
+    <la2>No copiar</la2>
+    <la3>Preguntar</la3>
+    <gp1>Estirar</gp1>
+    <gp2>Desplazar</gp2>
+    <gp3>Eliminar vértice</gp3>
+    <gp4>Añadir vértice</gp4>
+    <gp5>Añadir directriz</gp5>
+    <gp6>Eliminar directriz</gp6>
+    <gp7>Tipo de flecha de directriz</gp7>
+    <blt1>Lineal</blt1>
+    <blt2>Curvilineal</blt2>
+    <blt3>Cilíndrico</blt3>
+    <amt1>En ambos lados</amt1>
+    <amt2>Desde arriba</amt2>
+    <amt3>Desde abajo</amt3>
+    <amt4>Primera</amt4>
+    <amt5>Segunda</amt5>
+    <vlt1>Sección</vlt1>
+    <vlt2>Vista</vlt2>
+    <llt1>Estándar</llt1>
+    <llt2>Compuesto</llt2>
+    <type1>Tipo 1</type1>
+    <type2>Tipo 2</type2>
+    <glfst1>Distancia entre líneas de trazos</glfst1>
+    <glfst2>Mitad de distancia entre grupos de trazos</glfst2>
+    <glfst3>Distancia entre grupos de trazos</glfst3>
+    <wpfst1>Mitad de distancia entre trazos</wpfst1>
+    <wpfst2>Sin distancia</wpfst2>
+    <separator1>Desde ajustes de ModPlus</separator1>
+    <separator2>Del estilo</separator2>
+    <separator3>Punto</separator3>
+    <separator4>Coma</separator4>
+    <tha1>Izquierda</tha1>
+    <tha2>Por centro</tha2>
+    <tha3>Derecha</tha3>
+    <tha4>Arriba a derecha</tha4>
+    <tha5>Abajo a derecha</tha5>
+    <tha6>Abajo a izquierda</tha6>
+    <tha7>Arriba a izquierda</tha7>
+    <tha8>Arbitrario</tha8>
+    <ft1>Redondo</ft1>
+    <ft2>Rectangular</ft2>
+    <ft3>Línea</ft3>
+    <ft4>Sin red de selección</ft4>
+    <let0>No</let0>
+    <let1>Media flecha</let1>
+    <let2>Punto</let2>
+    <let3>Doble punta de flecha</let3>
+    <let4>Ángulo recto</let4>
+    <let5>Relleno cerrado</let5>
+    <let6>Abierto</let6>
+    <let7>Cerrado</let7>
+    <let8>Punta de flecha</let8>
+    <wjt1>De fábrica, de tope, continua, desde lado visible</wjt1>
+    <wjt2>De fábrica, de tope, continua, desde lado invisible</wjt2>
+    <wjt3>De montaje, a tope, continua, desde lado visible</wjt3>
+    <wjt4>De montaje, a tope, continua, desde lado invisible</wjt4>
+    <wjt5>De fábrica, de tope, discontinua, desde lado visible</wjt5>
+    <wjt6>De fábrica, de tope, discontinua, desde lado invisible</wjt6>
+    <wjt7>De montaje, a tope, discontinua, desde lado visible</wjt7>
+    <wjt8>De montaje, a tope, discontinua, desde lado invisible</wjt8>
+    <wjt9>De fábrica, de esquina, continua, desde lado visible</wjt9>
+    <wjt10>De fábrica, de esquina, continua, desde lado invisible</wjt10>
+    <wjt11>De montaje, de esquina, continua, desde lado visible</wjt11>
+    <wjt12>De montaje, de esquina, continua, desde lado invisible</wjt12>
+    <wjt13>De fábrica, de esquina, discontinua, desde lado visible</wjt13>
+    <wjt14>De fábrica, de esquina, discontinua, desde lado invisible</wjt14>
+    <wjt15>De montaje, de esquina, discontinua, desde lado visible</wjt15>
+    <wjt16>De montaje, de esquina, discontinua, desde lado invisible</wjt16>
+    <pil0>Tipo 0</pil0>
+    <pil1>Tipo 1</pil1>
+    <pil2>Tipo 2</pil2>
+    <pil3>Tipo 3</pil3>
+    <pil4>Tipo 4</pil4>
+    <pil5>Tipo 5</pil5>
+    <pil6>Tipo 6</pil6>
+    <pil7>Tipo 7</pil7>
+    <pil8>Tipo 8</pil8>
+    <pil9>Tipo 9</pil9>
+    <pil10>Tipo 10</pil10>
+    <pit0>Círculo</pit0>
+    <pit1>Rectángulo</pit1>
+    <dmt0>Промилле</dmt0>
+    <dmt1>Градусы</dmt1>
+    <dmt2>Отношение</dmt2>
+    <dmt3>Число</dmt3>
+    <dmt4>Проценты</dmt4>
+    <dot>Punto</dot>
+    <comma>Coma</comma>
+    <len>Longitud</len>
+    <p1>Tipo de línea de ruptura</p1>
+    <d1>Tipo de línea: lineal, curva o cilíndrica</d1>
+    <p2>Salientes detrás del objeto</p2>
+    <d2>Para ruptura lineal, valor de saliente se especifica en mm. Para ruptura curva, valor de saliente se especifica como un % de longitud entre puntos principales. Para ruptura cilíndrica, no se utiliza valor de saliente</d2>
+    <p3>Anchura de la separación</p3>
+    <d3>Anchura de brecha en mm. Sólo para línea de ruptura de tipo lineal</d3>
+    <p4>Altura de brecha</p4>
+    <d4>Altura de brecha en mm. Sólo para línea de ruptura de tipo lineal</d4>
+    <p5>Escala</p5>
+    <d5>Escala de línea de ruptura</d5>
+    <d5-1>Escala de eje</d5-1>
+    <p6>Escala de tipo de línea</p6>
+    <d6>Escala de tipo de línea para tipo de línea especificado en propiedades del bloque</d6>
+    <p7>Capa</p7>
+    <d7>Capa de primitiva</d7>
+    <p8>Posición del marcador</p8>
+    <d8>Posición del marcador: en ambos lados, arriba o abajo</d8>
+    <p9>Pliegue</p9>
+    <d9>Altura de pliegue de eje</d9>
+    <p10>Diámetro del marcador</p10>
+    <d10>Diámetro del marcador de eje</d10>
+    <p11>Número de marcadores</p11>
+    <d11>Número de marcadores de eje</d11>
+    <p12>Tipo de primer marcador</p12>
+    <d12>Tipo de primer marcador del eje</d12>
+    <p13>Tipo de segundo marcador</p13>
+    <d13>Tipo de segundo marcador del eje</d13>
+    <p14>Tipo de tercer marcador</p14>
+    <d14>Tipo de tercer marcador del eje</d14>
+    <p15>Distancia inferior de pliegue</p15>
+    <d15>Distancia inferior de pliegue de eje</d15>
+    <p16>Distancia superior de pliegue</p16>
+    <d16>Distancia superior de pliegue de eje</d16>
+    <p16-2>Distancia de pliegue</p16-2>
+    <d16-2>Distancia superior o inferior de pliegue de eje</d16-2>
+    <p17>Estilo de texto</p17>
+    <d17>Estilo de texto para elementos de texto de eje</d17>
+    <p18>Altura del texto</p18>
+    <d18>Altura del texto de elementos de texto del eje</d18>
+    <p19>Tipo de línea de eje</p19>
+    <p20>Prefijo del primer valor</p20>
+    <p21>Sufijo de primer valor</p21>
+    <p22>Primer valor</p22>
+    <p23>Prefijo del segundo valor</p23>
+    <p24>Sufijo de segundo valor</p24>
+    <p25>Segundo valor</p25>
+    <p26>Prefijo del tercer valor</p26>
+    <p27>Sufijo de tercer valor</p27>
+    <p28>Tercer valor</p28>
+    <p29>Cota de flecha</p29>
+    <p30>Valor del marcador de referencia inferior</p30>
+    <p31>Valor del marcador de referencia superior</p31>
+    <p32>Marcador de referencia inferior</p32>
+    <d32>Visibilidad del marcador de referencia inferior</d32>
+    <p33>Marcador de referencia superior</p33>
+    <d33>Visibilidad del marcador de referencia superior</d33>
+    <p34>Tipo de marcador de referencia</p34>
+    <d34>Tipo de marcador de referencia del eje</d34>
+    <p35>Tipo de línea</p35>
+    <d35>Tipo de línea de polilínea principal</d35>
+    <d35-1>Tipo de línea estándar o compuesta</d35-1>
+    <p36>Desplazamiento del primer trazo</p36>
+    <d36>Desplazamiento del primer trazo en cada segmento de línea de tierra</d36>
+    <d36-1>Desplazamiento del primer trazo en cada segmento de línea de impermeabilización</d36-1>
+    <p37>Longitud del trazo</p37>
+    <p38>Distancia entre líneas de trazos</p38>
+    <p39>Ángulo de inclinación de trazo</p39>
+    <p40>Desplazamiento de grupo de trazos</p40>
+    <p41>Estilo de texto</p41>
+    <d41>Estilo de texto para elementos de texto</d41>
+    <p42>Longitud de trazo medio</p42>
+    <d42>Longitud del trazo medio hasta punto de ruptura</d42>
+    <p43>Grosor del trazo</p43>
+    <d43>Grosor de todos trazos de sección</d43>
+    <p44>Longitud del trazo</p44>
+    <d44>Longitud de trazos principales de sección</d44>
+    <p45>Desplazamiento del estante</p45>
+    <d45>Desplazamiento del estante a lo largo de longitud del trazo en porcentaje</d45>
+    <p46>Longitud del estante</p46>
+    <p47>Longitud de flecha</p47>
+    <p48>Grosor de flecha</p48>
+    <p49>Altura del texto</p49>
+    <p50>Altura de texto de pequeño formato</p50>
+    <p51>Designación de sección</p51>
+    <p52>Prefijo de designación</p52>
+    <p53>Número de hoja</p53>
+    <p54>Posición del número de hoja</p54>
+    <d54>Opción de ubicación del número de hoja: en ambos lados, abajo, arriba</d54>
+    <p55>Línea de objeto</p55>
+    <d55>Construir línea desde marca de nivel hasta objeto de medición</d55>
+    <p56>Desplazamiento de línea de objeto</p56>
+    <d56>Desplazamiento desde línea del objeto desde objeto de medición</d56>
+    <p57>Longitud del estante inferior</p57>
+    <d57>Longitud del estante inferior desde borde del estante en lado del objeto de medición hasta marca de altura</d57>
+    <p58>Saliente del estante inferior</p58>
+    <d58>Saliente del estante inferior desde flecha de marca de altura hasta borde del estante en lado opuesto del objeto de medición</d58>
+    <p59>Altura de flecha</p59>
+    <p60>Grosor de flecha</p60>
+    <p61>Sangría de texto</p61>
+    <p62>Sangría de texto vertical</p62>
+    <p63>Saliente del estante</p63>
+    <d63>Saliente del estante en relación con texto más largo</d63>
+    <d63-1>Выступ полки относительно текста</d63-1>
+    <p63-1>Altura del estante</p63-1>
+    <p64>Mostrar más</p64>
+    <d64>Mostrar más si valor medido es mayor que cero. Propiedad no se tiene en cuenta si texto está reemplazado</d64>
+    <p65>Valor medido</p65>
+    <p66>Reemplazar de texto</p66>
+    <p67>Precisión</p67>
+    <d67>Precisión del valor medido. Establece número de decimales</d67>
+    <p68>Nota</p68>
+    <p69>Escala de medida</p69>
+    <d69>Especifica valor en rango de 0,000001 a 1000000 por el cual se multiplica distancia medida en dibujo</d69>
+    <p70>Grosor de línea</p70>
+    <p71>Ángulo de rotación del texto</p71>
+    <p72>Separador de números</p72>
+    <d72>Separador fraccionario</d72>
+    <p73>Alinear texto</p73>
+    <d73>Alinear texto horizontalmente</d73>
+    <p74>Alinear notas</p74>
+    <p75>Mostrar asterisco</p75>
+    <d75>Añadir un asterisco al final del valor principal</d75>
+    <p76>Altura de red de selección</p76>
+    <p77>Anchura de cuadro de selección</p77>
+    <p78>Posición del estante</p78>
+    <p79>Número de detalle</p79>
+    <p80>Número de hoja</p80>
+    <p81>Dirección de detalle</p81>
+    <p82>Tipo de red de selección</p82>
+    <p83>Radio de redondeo</p83>
+    <d83>Radio de redondeo de red de selección rectangular</d83>
+    <d83-1>Radio de redondeo de designación del fragmento</d83-1>
+    <p84>Texto siempre horizontal</p84>
+    <d84>Directriz con texto permanecerá horizontal después de rotar objeto usando comando "Rotar"</d84>
+    <p85>Ocultar fondo</p85>
+    <d85>Añadir máscara a lo largo del contorno del texto con una sangría especificada. Visualización de red de selección de máscara está controlada por variables del sistema WIPEOUTFRAME y FRAME</d85>
+    <d85-1>Añadir máscara a lo largo del contorno del texto con una sangría especificada. Visualización de red de selección de máscara está controlada por variables del sistema WIPEOUTFRAME y FRAME. Si se especifica un red de selección rectangular, se crea una máscara a red sin tener en cuenta sangría</d85-1>
+    <p86>Distancia de enmascaramiento</p86>
+    <d86>Distancia de enmascaramiento se tiene en cuenta según tipo de red de selección "Línea" y "Sin red de selección"</d86>
+    <d87>Presencia de flechas: en ambos lados, primera o segunda</d87>
+    <p87>Espesor del elemento seccional</p87>
+    <p88>Longitud del elemento seccional</p88>
+    <p89>tipo de soldadura</p89>
+    <p90>Espaciado de punta de flecha</p90>
+    <p91>Altura media de punta de flecha</p91>
+    <p92>Espaciado de cruz grande</p92>
+    <p93>Espaciado de cruz pequeña</p93>
+    <p94>Altura media de cruz grande</p94>
+    <p95>Altura de cruz pequeña</p95>
+    <p96>Longitud de serie</p96>
+    <p97>Longitud del espacio</p97>
+    <p98>Intervalo entre series</p98>
+    <p99>Altura de punta de flecha menor</p99>
+    <p100>Radio de redondeo</p100>
+    <p101>Texto principal</p101>
+    <p102>Texto de pequeño formato</p102>
+    <p103>Tipo de vista</p103>
+    <d103>tipo de vista: Sección o Vista</d103>
+    <p104>Directriz</p104>
+    <d104>Activar/Desactivar directriz</d104>
+    <p105>Generación de tipo de línea</p105>
+    <d105>Generando tipos de línea a lo largo de toda polilínea</d105>
+    <p106>Distancia entre texto</p106>
+    <p107>Fórmula para línea</p107>
+    <d107>Fórmula de línea está dada por números enteros separados por guiones. Cada número impar (1, 3, 5...) especifica longitud del trazo. Cada número par (2, 4, 6...) especifica longitud del espacio</d107>
+    <p108>Sangría de primer texto</p108>
+    <p109>Designación de vista</p109>
+    <p110>Marca de nivel</p110>
+    <p111>Prefijo</p111>
+    <p112>Sufijo</p112>
+    <p113>Valor</p113>
+    <p114>Grosor de línea</p114>
+    <p115>Presencia de flechas</p115>
+    <p116>Anchura de pliegue</p116>
+    <p117>Longitud de línea en borde izquierdo</p117>
+    <d117>Longitud de línea en borde izquierdo del segmento de línea de junta</d117>
+    <p118>Líneas a lo largo de bordes</p118>
+    <d118>Visibilidad de líneas a lo largo de bordes de segmentos de línea de junta</d118>
+    <p119>Altura del pliegue</p119>
+    <p120>Diámetro del círculo</p120>
+    <p121>Diámetro del círculo exterior</p121>
+    <p122>Sangría vertical de texto de pequeño formato</p122>
+    <d122>Sangría vertical de texto de pequeño formato desde línea</d122>
+    <p123>Círculo exterior</p123>
+    <p124>Sangría de texto del número</p124>
+    <p125>Sangría del texto de nota</p125>
+    <p126>Posición de estante de nota</p126>
+    <p127>Estilo nube de red de selección</p127>
+    <p128>Longitud del arco de nube</p128>
+    <p129>Altura del número</p129>
+    <p130>Altura de nota</p130>
+    <p131>Número</p131>
+    <p132>Texto superior</p132>
+    <p133>Texto inferior</p133>
+    <p134>Altura del texto superior</p134>
+    <p135>Altura del texto inferior</p135>
+    <p136>Ingresar texto</p136>
+    <p137>Anchura de sección</p137>
+    <p138>Altura de sección</p138>
+    <p139>Diámetro de sección</p139>
+    <p140>Desplazamiento de línea central</p140>
+    <p141>Posición del número</p141>
+    <p142>Visibilidad del número</p142>
+    <p143>Visibilidad de ejes</p143>
+    <p144>Visibilidad de directriz</p144>
+    <p145>Sangría del número</p145>
+    <p146>Sangría vertical del número</p146>
+    <p147>Grosor de línea principal</p147>
+    <p148>Tipo de línea central</p148>
+    <p149>Escala de línea central</p149>
+    <p150>Sólo contorno</p150>
+    <p151>Tipo de sección transversal</p151>
+    <p152>Tipo de designación</p152>
+    <p153>Тип отметки</p153>
+    <p154>Размер стрелки</p154>
+    <p155>Как направление</p155>
+    <d155>Отображение уклона как направления</d155>
+    <p156>Символ конусности</p156>
+    <d156>Отображать символ конусности вместо символа уклона</d156>
+    <p157>Отсчет от левой точки</p157>
+    <d157>При расчете уклона за первую точку брать самую левую из двух</d157>
+  </mpESKD>
+  <mpStripMtext LocalName="Limpiar formato"
+                Description="Elimina formato especificado de texto multilínea"
+                FullDescription="Complemento permite eliminar formato de texto multilínea, directrices múltiples, cotas, atributos de bloque y de tabla">
+    <h1>Seleccionar tipo de formato a eliminar</h1>
+    <h2>Seleccionar todo</h2>
+    <h3>Deseleccionar</h3>
+    <h4>Aceptar</h4>
+    <m1>Seleccionar objetos que contengan texto multilínea</m1>
+    <s1>Alineación</s1>
+    <st1>Eliminar alineación vertical. Alineación vertical aparece cuando hay fracciones en texto</st1>
+    <s2>Tabulación</s2>
+    <st2>Eliminar tabulación horizontal</st2>
+    <s3>Color</s3>
+    <st3>Eliminar color del texto</st3>
+    <s4>Campos</s4>
+    <st4>Convertir campos a texto sin formato</st4>
+    <s5>Fuente</s5>
+    <st5>Eliminar reemplazamientos de fuentes en texto</st5>
+    <s6>Altura</s6>
+    <st6>Eliminar reemplazamientos de altura del texto</st6>
+    <s7>Tachado</s7>
+    <st7>Eliminar texto tachado</st7>
+    <s8>Salto de línea</s8>
+    <st8>Eliminar saltos de líneas nuevas</st8>
+    <s9>Máscara</s9>
+    <st9>Eliminar máscara de fondo</st9>
+    <s10>Columnas</s10>
+    <st10>Eliminar columnas del texto</st10>
+    <s11>Sobrelínea</s11>
+    <st11>Eliminar una sobrelínea del texto</st11>
+    <s12>Párrafo</s12>
+    <st12>Eliminar saltos de párrafo</st12>
+    <s13>Itálico</s13>
+    <st13>Eliminar texto itálico</st13>
+    <s14>Fracciones</s14>
+    <st14>Eliminar designación de texto fraccionario</st14>
+    <s15>Espaciado entre caracteres</s15>
+    <st15>Eliminar formato de espaciado de caracteres</st15>
+    <s16>Subrayado</s16>
+    <st16>Eliminar el guión bajo del texto</st16>
+    <s17>Factor de estiramiento</s17>
+    <st17>Restablecer valor del factor de decompresión-extensión</st17>
+    <s18>Espacio indivisible</s18>
+    <st18>Eliminar espacios indivisibles del texto</st18>
+    <s19>Alineación de párrafos</s19>
+    <st19>Eliminar alineación de párrafos del texto</st19>
+  </mpStripMtext>
+  <mpRevitSheetsMerging LocalName="Unir hojas de Revit"
+                        Description="Unión de archivos obtenidos al exportar desde Revit en un solo dibujo. Complemento debe ejecutarse en un dibujo vacío. Complemento procesa archivos descargados con casilla &quot;Exportar vistas de hojas y enlaces como enlaces externos&quot; desactivada">
+    <h1>Procesando archivos...</h1>
+    <h2>Error al importar hojas desde un archivo</h2>
+    <h3>Seleccionar archivos para unir hojas</h3>
+    <h4>Unir capas...</h4>
+    <h5>¿Bloquear ventanas gráficas en hojas importadas?</h5>
+  </mpRevitSheetsMerging>
+  <mpAppendText LocalName="Añadir texto"
+                Description="Añadir texto a una directriz múltiple, texto de una sola línea, texto multilínea, cotas">
+    <ct1>Texto multilínea</ct1>
+    <ct2>Texto de una sola línea</ct2>
+    <ct3>Directriz múltiple</ct3>
+    <ct4>Cotas</ct4>
+    <h1>Seleccionar objetos:</h1>
+  </mpAppendText>
+  <mpSumArea LocalName="Suma de áreas"
+             Description="Obtiene y muestra número y suma de áreas de polilíneas, círculos, arcos, splines y sombreados seleccionados">
+    <h2>Área total:</h2>
+    <h3>Redondeo del resultado</h3>
+    <h4>Cantidad:</h4>
+    <h5>Objetos</h5>
+    <h6>Insertar resultado como texto de una sola línea</h6>
+    <h7>Insertar resultado en celda de tabla</h7>
+    <h8>Exportar resultado a archivo .txt</h8>
+    <h9>Sombreado</h9>
+    <h10>Círculo</h10>
+    <h11>Polilínea</h11>
+    <h12>Arco</h12>
+    <h13>Splíne</h13>
+    <h14>Elipse</h14>
+    <h15>Área:</h15>
+    <h16>Mostrar objeto</h16>
+    <h17>Media aritmética</h17>
+    <h18>Media aritmética de todos objetos:</h18>
+    <h19>Sólo objetos cerrados</h19>
+    <h20>Área por objetos</h20>
+  </mpSumArea>
 </ModPlus>

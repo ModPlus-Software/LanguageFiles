@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModPlus>
+  <mrObjectsFilter LocalName="Filtrar"
+                   Description="Filtrar artículos seleccionados por categoría">
+    <h1>Categoría:</h1>
+    <h2>Número de objetos:</h2>
+    <h5>Total de objetos seleccionados:</h5>
+  </mrObjectsFilter>
+  <mrBatchSheetExport LocalName="Exportar por lotes de hojas"
+                      Description="Complemento le permite exportar todas hojas especificadas a dwg/dxf/pdf/oxps">
+    <t1>Seleccionar todas hojas</t1>
+    <t2>Deseleccionar todas hojas</t2>
+    <t3>Inversión de selección</t3>
+    <t4>Si casilla no está marcada y habrá archivos con mismo nombre en carpeta de destino, entonces sufijo se añadirá al nombre de hoja exportada</t4>
+    <t5>Archivos .pdf se unirán en único archivo PDF en mismo orden en que se exportaron hojas. Archivos .pdf originales serán eliminados</t5>
+    <t6>Guardar lista actual de hojas como un nuevo conjunto</t6>
+    <t7>Guardar cambios en conjunto actual</t7>
+    <t8>Cambiar nombre del conjunto actual</t8>
+    <t9>Eliminar conjunto actual</t9>
+    <t10>Conjuntos le permiten guardar estado (marcado/sin marcar) y posición de hojas. Conjuntos se guardan con forzado de cursor al nombre del proyecto</t10>
+    <h1>Exportar a:</h1>
+    <h2>Versión del archivo AutoCAD:</h2>
+    <h3>Sobrescribir archivos existentes</h3>
+    <h5>Especifique carpeta para guardar archivos exportados</h5>
+    <h7>Exportar a</h7>
+    <h8>Exportar hoja:</h8>
+    <h9>Por hojas</h9>
+    <h10>Por sección</h10>
+    <h11>Unir PDF</h11>
+    <h12>Abrir carpeta después de exportar</h12>
+    <h13>Conjunto:</h13>
+    <h14>Ingresar nombre de nuevo conjunto</h14>
+    <h15>Ingresar un nuevo nombre de conjunto</h15>
+    <h16>Exportar sección</h16>
+    <h17>Sin sección</h17>
+    <!-- todo remove after 1.2.3.0 -->
+    <m1>¡No se ha seleccionado hojas para exportar!</m1>
+    <m2>¡Se recomienda encarecidamente que guarde proyecto antes de exportar hojas!\n¿Guardar proyecto?</m2>
+  </mrBatchSheetExport>
+  <mrSearchBy LocalName="Buscar por condición"
+              Description="Buscar objetos según diversas condiciones"
+              FullDescription="Complemento le permite buscar por propiedades, parámetros y características calculadas entre todos objetos del modelo u objetos de tipo específico. Objetos encontrados se resaltan en modelo. Es posible especificar varios valores para búsqueda en cadena de búsqueda, especificar opción de operación &quot;AND-OR&quot; y también utilizar operadores &quot;no igual&quot;, &quot;menor que&quot;, &quot;mayor que&quot;">
+    <h1>Tipo de objeto:</h1>
+    <h2>Buscar en:</h2>
+    <h3>Propiedades</h3>
+    <h4>Parámetros</h4>
+    <h5>Características calculadas</h5>
+    <h6>Unidades de medida</h6>
+    <h7>Tipo de coincidencia de cadena:</h7>
+    <h8>Buscar:</h8>
+    <h9>Restablecer selección actual si no se ha encontrado nada</h9>
+    <h10>Buscar</h10>
+    <h11>{0} objetos encontrados</h11>
+    <h12>No se ha encontrado nada</h12>
+    <h16>Buscar entre los seleccionados</h16>
+    <m1>Igual</m1>
+    <m2>Contiene</m2>
+    <t1>Especifique en qué unidades de medida se tomarán valores de objetos, así como precisión de comparación de valores numéricos</t1>
+    <t2>Especifique opción de coincidencia para valores de cadena: si cadena que se está verificando debe coincidir exactamente con valor de búsqueda o si cadena que se está verificando puede contener valor de búsqueda</t2>
+    <t3>Puede especificar varios valores de búsqueda delimitándolos con un asterisco. Por ejemplo, "200*300".</t3>
+    <t4>Si se especifican varios valores, funcionará opción de operación "OR". Por ejemplo, al buscar valor "200*300", una coincidencia de "200" o "300" será satisfactoria.</t4>
+    <t5>Para utilizar opción "AND", especifique valor "AND" al principio de solicitud de búsqueda. Por ejemplo, "AND200*300" indica que tanto valor "200" como valor "300" deben coincidir en objeto que se busca.</t5>
+    <t6>Al especificar números fraccionarios, tener en cuenta delimitador decimal configurado en ajuste regional del sistema operativo. Si utiliza coma, valor "1.75" se procesará como cadena.</t6>
+    <t7>Para buscar utilizando parámetros del tipo "Sí/No", debe especificar "TRUE" o "FALSE" en cadena de búsqueda, respectivamente.</t7>
+    <t8>Para valores numéricos, puede especificar operadores de comparación: "!=" – No igual, "&lt;" – Menor, "&gt;" – Mayor. Para valores de cadena, puede especificar un operador de comparación "!=" (no igual), que se procesa sólo si propiedad "Tipo de coincidencia de cadena" está establecida en "Igual".</t8>
+    <t9>Por ejemplo, cadena "ANDhormigón*&gt;1.75" indica es necesario buscar objetos que tengan valor de cadena "Hormigón" y valor numérico mayor que 1,75 entre valores que se están verificando.</t9>
+    <t10>Puede especificar nombre específico de propiedad o parámetro en que desea verificar valor ingresado. Por ejemplo, cadena "Note=Hormigón" con casilla "Buscar en Propiedades" marcada indica que objetos que coinciden con condición de búsqueda deben tener propiedad "Nota" establecida en "Hormigón". Verificación de nombre también se procesa según valor del tipo de coincidencia de cadena.</t10>
+    <t11>Para buscar valores vacíos, es necesario sólo especificar nombre de propiedad o parámetro. Por ejemplo, cadena "Nota=" con casilla "Buscar en propiedades" marcada indica que objetos que coinciden con condición de búsqueda deben tener propiedad "Nota" con valor vacío.</t11>
+    <t12>Verificar todos valores de cadena no distingue entre mayúsculas y minúsculas.</t12>
+    <t13>Mostrar objetos encontrados en escena 3D</t13>
+    <all>Todo</all>
+    <qh1>Longitud:</qh1>
+    <qh2>Área:</qh2>
+    <qh3>Masa:</qh3>
+    <qh4>Volumen:</qh4>
+    <qh5>Precisión:</qh5>
+    <q1>Milímetros</q1>
+    <q2>Centímetros</q2>
+    <q3>Metros</q3>
+    <q4>Pulgadas</q4>
+    <q5>Milímetros cuadrados</q5>
+    <q6>Centímetros cuadrados</q6>
+    <q7>Metros cuadrados</q7>
+    <q8>Gramos</q8>
+    <q9>Kilogramos</q9>
+    <q10>Milímetros cúbicos</q10>
+    <q11>Centímetros cúbicos</q11>
+    <q12>Metros cúbicos</q12>
+  </mrSearchBy>
+  <mrLevelsList LocalName="Niveles"
+                Description="Representar una lista de niveles con posibilidad de controlar su visibilidad">
+    <h1>No disponible en esta vista</h1>
+    <h2>Invertir visibilidad</h2>
+    <h3>Aislar nivel</h3>
+    <h4>Seleccionar nivel</h4>
+    <all>Todos niveles</all>
+  </mrLevelsList>
+  <mrQuickProperties LocalName="Propiedades rápidas"
+                     Description="Ver y editar rápidamente propiedades de elementos seleccionados">
+    <unknown>Desconocido</unknown>
+    <dif>*VARIOS*</dif>
+    <h1>Elementos seleccionados:</h1>
+    <h2>Número de elementos con esta propiedad</h2>
+    <h3>Redondeo de números:</h3>
+    <nothing>Nada</nothing>
+    <several>Varios</several>
+  </mrQuickProperties>
+  <mrLast LocalName="Recientes"
+          Description="Seguir y visualizar de elementos recientemente ocultos o recientemente seleccionados ">
+    <h1>Varios</h1>
+    <h2>Hacer visible</h2>
+    <h3>Seleccionado</h3>
+    <h4>Oculto</h4>
+  </mrLast>
+  <mr3dViewOrientation LocalName="Orientación de vista"
+                       Description="Orientar cámara en una escena 3D">
+    <top>Desde arriba</top>
+    <bottom>Desde abajo</bottom>
+    <front>Al frente</front>
+    <back>Detrás</back>
+    <left>Desde izquierda</left>
+    <right>Desde derecha</right>
+  </mr3dViewOrientation>
+</ModPlus>

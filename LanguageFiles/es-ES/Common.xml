@@ -1,6 +1,1667 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ModPlus>
-  <RevitDlls>
-    <!-- todo remove after 31.0.1 for i4 -->
+  <Common>
+    <abort>Anular</abort>
+    <accept>Aceptar</accept>
+    <add>Añadir</add>
+    <all>Todo</all>
+    <and>Y</and>
+    <auto>Auto</auto>
+    <apply>Aplicar</apply>
+    <availFull>¡Disponible en versión completa del complemento!</availFull>
+    <belarus>Bielorrusia</belarus>
+    <black>Negro</black>
+    <cancel>Cancelar</cancel>
+    <cantEditConfig>¡No el acceso para editar configuraciones!</cantEditConfig>
+    <caseSensitive>Distingue mayúsculas y minúsculas</caseSensitive>
+    <category>Categoría</category>
+    <categories>Categorías</categories>
+    <checkAll>Seleccionar todo</checkAll>
+    <clear>Limpiar</clear>
+    <close>Cerrar</close>
+    <cm>cm</cm>
+    <color>Color</color>
+    <collapse>Minimizar</collapse>
+    <collapseAll>Minimizar todo</collapseAll>
+    <collapseWindow>Minimizar contenido de ventana</collapseWindow>
+    <comma>Coma</comma>
+    <configurationCreate>Создать новую конфигурацию</configurationCreate>
+    <configurationCreateOrImport>Создайте или импортируйте конфигурацию</configurationCreateOrImport>
+    <configurationDuplicate>Дублировать конфигурацию</configurationDuplicate>
+    <configurationExport>Экспортировать конфигурацию</configurationExport>
+    <configurationImport>Импортировать конфигурацию</configurationImport>
+    <configurationRename>Переименовать конфигурацию</configurationRename>
+    <configurationEnterName>Укажите название конфигурации</configurationEnterName>
+    <configurationEnterNewName>Укажите новое название конфигурации</configurationEnterNewName>
+    <configurationRemove>Удалить конфигурацию</configurationRemove>
+    <restrictedMode>Ограниченный режим</restrictedMode>
+    <configLockedBy>Archivo de configuración está ocupado por usuario</configLockedBy>
+    <configuration>Configuración</configuration>
+    <continue>Continuar</continue>
+    <convert>Convertir</convert>
+    <copy>Copiar</copy>
+    <copied>Copiado</copied>
+    <coupler>Conector</coupler>
+    <couplers>Conectores</couplers>
+    <create>Crear</create>
+    <currentGeneralVersion>Versión general actual</currentGeneralVersion>
+    <cut>Recortar</cut>
+    <default>Por defecto</default>
+    <degree>°</degree>
+    <density>Densidad</density>
+    <description>Descripción</description>
+    <diameter>Diámetro</diameter>
+    <document>Documento</document>
+    <dot>Punto</dot>
+    <duplicate>Duplicar</duplicate>
+    <element>Elemento</element>
+    <error>Error</error>
+    <execute>Ejecutar</execute>
+    <expand>Expandir</expand>
+    <expandAll>Expandir todo</expandAll>
+    <expandWindow>Expandir contenido de ventana</expandWindow>
+    <export>Exportar</export>
+    <exportExcel>Exportar a Excel</exportExcel>
+    <file>Archivo</file>
+    <formula>Fórmula</formula>
+    <group>Grupo</group>
+    <height>Altura</height>
+    <hide>Ocultar</hide>
+    <import>Importar</import>
+    <importExcel>Importar desde Excel</importExcel>
+    <insert>Insertar</insert>
+    <instruction>Instrucción</instruction>
+    <isolate>Aislar</isolate>
+    <key>Clave</key>
+    <kg>kg</kg>
+    <kgPerM3>kg/m³</kgPerM3>
+    <launch>Inicio</launch>
+    <layer>Capa</layer>
+    <level>Nivel</level>
+    <levels>Niveles</levels>
+    <licenseIssued>Lugar de trabajo de licencia por volumen está ocupado</licenseIssued>
+    <licenseNotIssued>Lugar de trabajo de licencia por volumen no está disponible o conexión al servidor de licencias se ha interrumpido</licenseNotIssued>
+    <m>m</m>
+    <m2>m²</m2>
+    <mm2>mm²</mm2>
+    <m3>m³</m3>
+    <material>Material</material>
+    <mm>mm</mm>
+    <no>No</no>
+    <notOrganized>!No organizado</notOrganized>
+    <number>Número</number>
+    <ok>Ok</ok>
+    <open>Abrir</open>
+    <or>O</or>
+    <orderUp>Ordenar en orden ascendente</orderUp>
+    <orderDown>Ordenar en orden descendente</orderDown>
+    <parameter>Parámetro</parameter>
+    <parameters>Parámetros</parameters>
+    <paste>Insertar</paste>
+    <pick>Seleccionar</pick>
+    <pin>Adjuntar</pin>
+    <prefix>Prefijo</prefix>
+    <property>Propiedad</property>
+    <radius>Radio</radius>
+    <refresh>Actualizar</refresh>
+    <remoteGeneralVersion>Versión general disponible</remoteGeneralVersion>
+    <remove>Eliminar</remove>
+    <rename>Renombrar</rename>
+    <replace>Reemplazar</replace>
+    <result>Resultado</result>
+    <rewrite>Sobrescribir</rewrite>
+    <room>Habitación</room>
+    <russia>Rusia</russia>
+    <save>Guardar</save>
+    <saved>Guardado</saved>
+    <scale>Escala</scale>
+    <search>Buscar</search>
+    <select>Seleccionar</select>
+    <selectAll>Seleccionar todo</selectAll>
+    <selected>Seleccionado</selected>
+    <setOrg>Definido por ajustes de su organización</setOrg>
+    <setConfigOrg>Archivo de almacenamiento de configuraciones está especificado por ajustes de su organización</setConfigOrg>
+    <settings>Ajustes</settings>
+    <sheet>Hoja</sheet>
+    <show>Mostrar</show>
+    <suffix>Sufijo</suffix>
+    <sum>Suma</sum>
+    <template>Muestra</template>
+    <testPeriod>Período de prueba. Días restantes</testPeriod>
+    <testPeriodEnd>¡Período de prueba de complemento ha terminado! Compre una licencia o suscripción del complemento para continuar usándolo</testPeriodEnd>
+    <thickness>Espesor</thickness>
+    <tolerance>Tolerancia</tolerance>
+    <ton>t</ton>
+    <type>Tipo</type>
+    <ukraine>Ucrania</ukraine>
+    <uncheckAll>Deseleccionar todo</uncheckAll>
+    <unpin>Descolgar</unpin>
+    <unselectAll>Deseleccionar todo</unselectAll>
+    <value>Valor</value>
+    <warning>Advertencia</warning>
+    <white>Blanco</white>
+    <width>Anchura</width>
+    <yes>Sí</yes>
+  </Common>
+  <ModPlusAPI>
+    <msg1>¡No es posible crear objeto de Word! Asegúrese de que Microsoft Office esté instalado</msg1>
+    <msg2>¡No se han encontrado valores numéricos!</msg2>
+    <msg3>¡Hoja "{0}" no se ha encontrado!</msg3>
+    <msg4>¡Hoja "{0}" no contiene datos!</msg4>
+    <close>Cerrar</close>
+    <yes>Sí</yes>
+    <no>No</no>
+    <ok>Ok</ok>
+    <accept>Aceptar</accept>
+    <cancel>Cancelar</cancel>
+    <prefix>Prefijo</prefix>
+    <suffix>Sufijo</suffix>
+    <exportWord>Exportar a Word</exportWord>
+    <result>Resultado</result>
+    <h1>Error inesperado</h1>
+    <h2>Mensaje</h2>
+    <h3>Detalles</h3>
+    <h4>Origen</h4>
+    <h5>Seguimiento de pila</h5>
+    <h6>SELECCIONAR UN NÚMERO DEL TEXTO</h6>
+    <h7>Delimitador decimal:</h7>
+    <h8>Punto</h8>
+    <h9>Coma</h9>
+    <h10>¿Te gustó complemento? ¿Lo encuentras útil?</h10>
+    <h11>¿Pero no te gusta ver esta ventana cada vez?</h11>
+    <h12>¡Cómprate este complemento!</h12>
+    <h13>Y créeme, ¡no es nada caro!</h13>
+    <h15>Cerrar vía:</h15>
+    <h16>Servidor de licencias LAN</h16>
+    <h17>Dirección IP del servidor de licencias:</h17>
+    <h18>Puerto del servidor de licencias:</h18>
+    <h19>Verificar conexión con servidor de licencias</h19>
+    <h20>Servidor de licencias no disponible</h20>
+    <h21>Servidor de licencias disponible</h21>
+    <h22>Verificar conexión a dirección:</h22>
+    <h23>Terminar conexión al servidor de licencias</h23>
+    <h24>Vuelva a conectarse al servidor de licencias</h24>
+    <h25>No se conecte al servidor de licencias en inicios posteriores</h25>
+    <h26>Enviar un informe de error</h26>
+    <h27>Falta conexión a Internet, al sitio web modplus.org ni a servicios web ModPlus</h27>
+    <h28>Falta conexión a Internet ni a servicios web ModPlus</h28>
+    <h29>Licencias</h29>
+    <h30>Copia de seguridad de ajustes</h30>
+    <h31>Cargar todo</h31>
+    <h32>Descargar todo</h32>
+    <h33>Cargar datos de configuración al servidor</h33>
+    <h34>Descargar datos de configuración del servidor</h34>
+    <h35>Identificador único del usuario en base de datos del sitio web</h35>
+    <h36>Servidor web de licencias</h36>
+    <h37>ID del servidor de licencias:</h37>
+    <h38>Correo electrónico para identificación del usuario:</h38>
+    <h39>Servidor de licencias con identificador "{0}" no está disponible (deshabilitado o bloqueado) o imposible conectarse a servicios web</h39>
+    <h40>Verificar acceso del usuario</h40>
+    <h41>Usuario "{0}" tiene acceso al servidor de licencias "{1}"</h41>
+    <h42>El usuario "{0}" no tiene acceso al servidor de licencias "{1}"</h42>
+    <h43>Verificar acceso al servidor de licencias, datos de identificación ingresados y comuníquese con administrador del sistema</h43>
+    <h44>Servidor de licencias</h44>
+    <h49>¡Atención! ¡Contenido de esta ventana se presenta sólo en ruso, ya que cálculo se realiza de acuerdo con documentos reglamentarios rusos!</h49>
+    <h50>Cálculo de longitud de anclaje o empalme solapado</h50>
+    <h51>Calcular longitud del anclaje</h51>
+    <h52>Calcular longitud de empalme solapado</h52>
+    <h53>Al enviar solicitud al servicio web de ModPlus, acceso estaba bloqueado. Comuníquese con su administrador de red local para obtener acceso a servicios en subdominio https://*.modplus.org(https://api.modplus.org, https://update.modplus.org, https://api-lsm.modplus.org)</h53>
+    <h54>Abrir en Bloc de notas</h54>
+    <h55>Ajustes de notificaciones</h55>
+    <h56>Novedades</h56>
+    <h57>Novedades se muestran mediante módulo de actualización automática en ventana emergente especial en esquina inferior derecha de pantalla. Ajustes de notificaciones también están disponible en ventana de ajustes del módulo de actualización automática</h57>
+    <h58>Seleccione archivo de Excel</h58>
+    <h59>Archivos Excel|*.xlsx</h59>
+    <h60>Seleccionar hoja:</h60>
+    <h61>¡Tu versión de ModPlus ha sido pirateada!</h61>
+    <h62>¡En software ModPlus se han detectado archivos modificados por terceos! ¡Complemento ha sido interrumpido!</h62>
+    <h63>Este error indica que su versión de ModPlus sólo ha recibido actualizaciones parciales. Se recomienda actualizar usando</h63>
+    <h64>instalador</h64>
+    <h65>Ocultar elementos de resultados</h65>
+    <h66>Mostrar elementos de resultados</h66>
+    <h67>elemento(s)</h67>
+    <h68>Ir a tienda</h68>
+    <h69>Archivo de configuración:</h69>
+    <h70>Archivo de configuración del usuario</h70>
+    <h71>Guardar ubicación de ventanas</h71>
+    <h72>Cambiar idioma automáticamente</h72>
+    <h73>Localización de ModPlus cambiará automáticamente según localización del producto compatible que se inicie (AutoCAD o Revit)</h73>
+    <h74>Tipo de servidor de licencias:</h74>
+    <h75>Servidor de licencias no se utiliza</h75>
+    <wls1>Servidor de licencias con ID {0} no existe</wls1>
+    <wls2>Estado del servidor de licencias:</wls2>
+    <wls3>Activado</wls3>
+    <wls4>Deshabilitado o bloqueado</wls4>
+    <wls5>Acceso del usuario {0} al servidor de licencias:</wls5>
+    <wls6>Disponible</wls6>
+    <wls7>Falta</wls7>
+    <wls8>Disponibilidad del espacios libres para {0}:</wls8>
+    <wls9>Espacios libres disponibles</wls9>
+    <wls10>Faltan espacios libres disponibles </wls10>
+    <m1>Introduce tu dirección de correo electrónico</m1>
+    <m2>Dirección de correo electrónico se utiliza como clave única para identificar sus datos en servidor.\nSe recomienda utilizar la dirección de correo electrónico especificada al registrarse en sitio web modplus.org</m2>
+    <m3>¡Atención! ¡Uso de redes sociales para autorización sólo es posible después de vincular cuentas de redes sociales a su cuenta personal en sitio web! ¡De lo contrario, cuando intente autorizarte a través de redes sociales, se creará en sitio web una nueva cuenta del usuario y perderá datos sobre sus licencias!</m3>
+    <m4>No volver a mostrar</m4>
+    <m5>¡Ni un sólo complemento está conectado a plataforma ModPlus! Inicie Configurador desde carpeta ModPlus y conecte complementos necesarios en ficha "Configuración", y también cree menú en ficha "Adaptación"</m5>
+    <m6>¡Menú para crear ficha ModPlus no ha sido creado! Inicie Configurador desde carpeta ModPlus y cree menú en ficha "Adaptación"</m6>
+    <m7>Ingresar un valor desde {0} hasta {1}</m7>
+    <em1>Toda información de los errores se envía automáticamente al servidor ModPlus, pero en mayoría de los casos esta información no tenemos suficiente información para resolver el problema. Puede ayudarnos proporcionándonos información adicional. Para ello escríbanos a</em1>
+    <em2>correo</em2>
+    <em3>o chat de soporte en</em3>
+    <em4>Telegram</em4>
+    <em5>Describe en detalle qué acciones llevaron al error</em5>
+    <p1>Resultado del cálculo en Word</p1>
+    <p2>Creando un nuevo documento</p2>
+    <p3>Completando datos</p3>
+    <l1>Licencias del usuario único para complementos</l1>
+    <l2>Suscripciones del usuario único</l2>
+    <l3>Suscripciones multiusuario</l3>
+    <u1>Autorización</u1>
+    <u2>Inicie sesión en su cuenta del usuario modplus.org para sincronizar sus datos de compras con versión actual del programa ModPlus. Después de autorización, podrá utilizar versiones completas de complementos de acuerdo con licencias adquiridas</u2>
+    <u3>No es posible conectar a servicios web de ModPlus. Puede que no haya conexión a Internet o que se esté utilizando proxy no configurado en Configurador ModPlus. Si en este ordenador está destinado a usarse sin acceso a Internet, puede recibir clave de activación con datos de sus licencias. Para hacer esto, es necesario copiar Clave de Registro indicada a continuación y obtener Clave de Activación usando sección especial en su cuenta personal en sitio web modplus.org</u3>
+    <u4>Clave de registro</u4>
+    <u5>Clave de activación</u5>
+    <u6>Datos del usuario</u6>
+    <u7>¡Bloqueado!</u7>
+    <u8>¡Su cuenta está bloqueada debido a que excedió límite de uso del lugares de trabajo! Puede cerrar sesión en todos dispositivos, lo que limpiará lista de ordenadores usados</u8>
+    <u9>Hola, </u9>
+    <u10>Tu login:</u10>
+    <u11>Tu correo electrónico:</u11>
+    <u12>Información de tu cuenta del usuario fue utilizada en</u12>
+    <u13>ordenador(es)</u13>
+    <u14>¡Si los datos de su cuenta del usuario se utilizan en más de 3 ordenadores, su cuenta se bloqueará automáticamente!</u14>
+    <u15>Cierre sesión en su cuenta del usuario en este dispositivo con una disminución del número de lugares de trabajo utilizados</u15>
+    <u16>Complemento:</u16>
+    <u17>Producto:</u17>
+    <u18>Versión:</u18>
+    <u19>Suscripción para:</u19>
+    <u20>Período de validez de suscripción:</u20>
+    <u21>La fecha de inicio de suscripción:</u21>
+    <u22>La fecha de expiración de suscripción:</u22>
+    <u23>Número de lugares de trabajo:</u23>
+    <u24>Clave de activación de suscripción:</u24>
+    <u25>Faltan licencias del usuario único para complementos o suscripciones en su cuenta del usuario. Realizar una compra en sitio web modplus.org</u25>
+    <u26>Volver</u26>
+    <u27>Todos complementos de ModPlus</u27>
+    <u28>Nombre del usuario</u28>
+    <u29>Login del usuario</u29>
+    <u30>Correo electrónico del usuario</u30>
+    <u31>Estado de bloqueo</u31>
+    <u32>Información sobre licencias y suscripciones para usuario único</u32>
+    <u33>Clave de activación ingresada no coincide con datos de clave de registro</u33>
+    <u34>Formato de clave de activación ingresada es incorrecto – no fue posible obtener datos de clave. Asegúrese de haber ingresado clave de activación completa y que no contenga espacios</u34>
+    <u35>Error inesperado al intentar descargar datos de clave de activación ingresada</u35>
+    <u36>Clave de activación no se ha especificado</u36>
+    <u37>no bloqueado</u37>
+    <u38>bloqueado</u38>
+    <u39>Cuenta personal</u39>
+    <u40>Registro</u40>
+    <u41>Cerrar sesión en todos dispositivos</u41>
+    <u42>Todas copias de ModPlus que utilicen sus credenciales estarán necesarios que vuelva a iniciar sesión en su cuenta del usuario</u42>
+    <u46>Mostrar sólo para</u46>
+    <u47>Ocultar suscripciones caducadas</u47>
+    <u48>Su cuenta del usuario ha sido bloqueada por administración de ModPlus. Si crees que bloqueo es erróneo, contacta con soporte</u48>
+    <u49>Autorización a través del Navegador</u49>
+    <u50>Obtener una suscripción gratuita para:</u50>
+    <u51>Una suscripción gratuita le da acceso a todos complementos pagos para producto seleccionado (AutoCAD o Revit) durante un mes.</u51>
+    <u52>Suscripción gratuita es única y está vinculada a su ordenador.</u52>
+    <u53>Suscripción gratuita es independiente de cuenta del usuario.</u53>
+    <u54>Si el botón para solicitar una suscripción gratuita no está disponible, entonces tu ordenador ya tiene una.</u54>
+    <u55>No es posible obtener suscripción gratuita. Error:</u55>
+    <u56>Desconocido</u56>
+    <u57>Cuando se comunique con soporte, proporcione siguiente información:</u57>
+    <u58>Cuando hace clic en botón "Cerrar sesión en todos dispositivos", el contador de ordenadores utilizados se pondrá a cero</u58>
+    <u59>O especifique ajustes para conectarse al servidor de licencias y utilizar suscripción empresarial</u59>
+    <u60>Получить данные</u60>
+    <u61>В случае, если вы приобрели лицензию, но она не отображается в списке ваших лицензий, воспользуйтесь функцией «Получить данные» для принудительной синхронизации данных между сайтом и веб сервисами</u61>
+    <nnAll>Todas novedades</nnAll>
+    <nndAll>Mostrar todas novedades</nndAll>
+    <nn0>Novedades importantes se muestran independientemente de ajustes</nn0>
+    <nn1>Novedades de plataforma</nn1>
+    <nnd1>Actualizaciones del Configurador, módulo de actualización automática, bibliotecas de trabajo, etc.</nnd1>
+    <nn2>Actualizaciones de AutoCAD</nn2>
+    <nnd2>Novedades sobre actualizaciones importantes de complementos existentes para AutoCAD</nnd2>
+    <nn3>Lanzamientos para AutoCAD</nn3>
+    <nnd3>Novedades sobre lanzamiento de nuevos complementos para AutoCAD</nnd3>
+    <nn4>Actualizaciones para Revit</nn4>
+    <nnd4>Novedades sobre actualizaciones importantes de complementos existentes para Revit</nnd4>
+    <nn5>Lanzamientos para Revit</nn5>
+    <nnd5>Novedades sobre lanzamiento de nuevos complementos para Revit</nnd5>
+    <nn6>Actualizaciones para Renga</nn6>
+    <nnd6>Novedades sobre actualizaciones importantes de complementos existentes para Renga</nnd6>
+    <nn7>Lanzamientos para Renga</nn7>
+    <nnd7>Novedades sobre lanzamientos de nuevos complementos para Renga</nnd7>
+    <nn8>Otras novedades</nn8>
+    <nnd8>Otras novedades que no encajan en categorías existentes</nnd8>
+    <f1>Comentario</f1>
+    <f2>Mensaje</f2>
+    <f3>Escríbenos lo que quieras</f3>
+    <f4>Adjuntos</f4>
+    <f5>Adjuntar archivos al mensaje</f5>
+    <f6>Adjunte una imagen del portapapeles al mensaje</f6>
+    <f7>Tu correo electrónico</f7>
+    <f8>Ingresar su dirección de correo electrónico si desea recibir una respuesta:</f8>
+    <f9>mail@domain.com</f9>
+    <f10>Únase a nosotros:</f10>
+    <f11>Recibiendo datos</f11>
+    <f12>Enviar</f12>
+    <f13>Mensaje enviado</f13>
+    <f14>¡Definitivamente lo leeremos y te responderemos si es necesario!</f14>
+    <f15>Archivos Office</f15>
+    <f16>Imágenes</f16>
+    <f17>Dibujos y modelos</f17>
+    <f18>Archivo no se añadía porque se superó tamaño máximo permitido para archivos adjuntos</f18>
+    <f19>Archivo "{0}" ya ha sido añadido</f19>
+    <f20>Enviar un mensaje a desarrolladores</f20>
+    <f21>Comando le permite enviar rápidamente un mensaje a desarrolladores con sus sugerencias, deseos o comentarios</f21>
+    <s1>Activo</s1>
+    <s2>Suscripción no ha comenzado</s2>
+    <s3>Suscripción está a punto de caducar</s3>
+    <s4>Suscripción ha caducado</s4>
+    <b3>Fecha de última copia de seguridad:</b3>
+    <b4>Archivos se enviaron exitosamente al servidor</b4>
+    <b5>Archivos se descargaron exitosamente del servidor</b5>
+    <b6>Enviar al servidor:</b6>
+    <b7>Descargando desde servidor:</b7>
+    <b8>¡Datos guardados ya existen en servidor! ¿Volver a sobrescribir?</b8>
+    <b10>¡Se sobrescribirán datos locales! ¿Continuar?</b10>
+    <b11>Eliminar todos datos</b11>
+    <b12>¡Atención! ¡Todos datos guardados en servidor se eliminarán permanentemente! ¿Estás seguro de que desea continuar?</b12>
+    <b13>Todos archivos del servidor han sido eliminados</b13>
+    <b14>Se sobrescribirán todos archivos existentes en servidor. ¿Continuar?</b14>
+    <bi1>Archivo de configuración</bi1>
+    <bid1>Archivo de configuración contiene ajustes básicos para su versión de ModPlus, como ajustes de adaptación, información sobre complementos conectados e información guardada para muchos complementos (casillas marcadas, elementos de lista seleccionados, etc.)</bid1>
+    <bi1-2>Archivos de almacenamiento de ajustes de complementos</bi1-2>
+    <bid1-2>Archivos con extensión .xml que almacenan ajustes complejas de complementos que no están relacionadas con archivo de configuración</bid1-2>
+    <ru-RU>Ruso (Rusia)</ru-RU>
+    <en-US>Inglés (Estados Unidos)</en-US>
+    <de-DE>Alemán (Alemania)</de-DE>
+    <uk-UA>Украинский (Украина)</uk-UA>
+    <es-ES>Испанский (Испания)</es-ES>
+    <ny>Новогодние декорации</ny>
+  </ModPlusAPI>
+  <Geometry>
+    <g1>Sólo lectura</g1>
+    <g2>Puede elegir</g2>
+    <g3>Primer punto</g3>
+    <g4>X del primer punto</g4>
+    <g5>Y del primer punto</g5>
+    <g6>Segundo punto</g6>
+    <g7>X del segundo punto</g7>
+    <g8>Y del segundo punto</g8>
+    <g9>Punto medio</g9>
+    <g10>X del punto medio</g10>
+    <g11>Y del punto medio</g11>
+    <g12>Tercer punto</g12>
+    <g13>X del tercer punto</g13>
+    <g14>Y del tercer punto</g14>
+    <g15>Radio</g15>
+    <g16>Punto de radio</g16>
+    <g17>Color de relleno</g17>
+    <g18>Primer radio</g18>
+    <g19>Punto del primer radio</g19>
+    <g20>Segundo radio</g20>
+    <g21>Punto del segundo radio</g21>
+    <g22>Punto de partida</g22>
+    <g23>X del punto de partida</g23>
+    <g24>Y del punto de partida</g24>
+    <g25>Contenido</g25>
+    <g26>Tamaño de fuente</g26>
+    <g27>Color</g27>
+    <g28>Rotación</g28>
+    <g29>Alineación horizontal de texto</g29>
+    <g30>Alineación vertical de texto</g30>
+    <g31>Desfase vertical</g31>
+    <g32>Desfase horizontal</g32>
+    <g33>Color del borde</g33>
+    <g34>Grosor del borde</g34>
+    <g35>Matriz de trazos</g35>
+    <g36>Longitud</g36>
+    <g37>Índice Z</g37>
+    <g38>Guardar relación de aspecto</g38>
+    <g39>Punto superior izquierdo</g39>
+    <g40>X del punto superior izquierdo</g40>
+    <g41>Y del punto superior izquierdo</g41>
+    <g42>Punto superior derecho</g42>
+    <g43>Punto inferior derecho</g43>
+    <g44>X del punto inferior derecho</g44>
+    <g45>Y del punto inferior derecho</g45>
+    <g46>Punto inferior izquierdo</g46>
+    <g47>Punto lateral superior</g47>
+    <g48>Punto lateral inferior</g48>
+    <g49>Punto lateral izquierdo</g49>
+    <g50>Punto lateral derecho</g50>
+    <a1>Por centro</a1>
+    <a2>Izquierda</a2>
+    <a3>Derecha</a3>
+    <a4>Arriba</a4>
+    <a5>Abajo</a5>
+    <c1>Crear un segmento</c1>
+    <c2>Crear un círculo</c2>
+    <c3>Crear un arco</c3>
+    <c4>Crear una elipse</c4>
+    <c5>Crear texto</c5>
+    <c6>Crear un rectángulo</c6>
+    <c7>Ubicación de imagen</c7>
+    <c8>Eliminar geometría seleccionada</c8>
+    <c9>Mover geometría seleccionada</c9>
+    <c10>Ingresar</c10>
+    <c11>Aproximación de geometría seleccionada</c11>
+  </Geometry>
+  <Style>
+    <t1>Colores estándar</t1>
+    <t2>Paleta de colores</t2>
+    <t3>Colores primarios</t3>
+    <t4>Transparencia:</t4>
+    <t5>Rojo:</t5>
+    <t6>Verde:</t6>
+    <t7>Azul:</t7>
+  </Style>
+  <CUI>
+    <group1>Anotaciones</group1>
+    <group2>Apariencia</group2>
+    <group3>Utilidades</group3>
+    <group4old>Información/Cálculos</group4old>
+    <group4>Información y Cálculos</group4>
+    <group5>Artículos</group5>
+    <group6>Vistas</group6>
+    <group7>Construcciones</group7>
+    <group8>Insertar</group8>
+    <group9>Mod Plus DIN</group9>
+    <group10>Parámetros</group10>
+    <group11>Familias</group11>
+    <group12>Administrar</group12>
+    <group13>Sistemas</group13>
+    <group14>Arquitectura</group14>
+    <group15>Cambiar</group15>
+    <group16>Acero</group16>
+    <group17>Proyecto</group17>
+    <group18old>Exportar/Importar</group18old>
+    <group18>Exportar e Importar</group18>
+    <group19>Hojas</group19>
+    <group20>Выбор</group20>
+    <general>Creer</general>
+    <acm>Disciplinas</acm>
+    <view>Vista</view>
+    <manage>Administrar</manage>
+    <favorites>Favoritos</favorites>
+    <design>Apariencia</design>
+    <all>Todo</all>
+  </CUI>
+  <Configurator LocalName="Configurador">
+    <title1>Configurador ModPlus</title1>
+    <title2>Verificación de claves</title2>
+    <writableDir>No tiene permiso de escritura en directorio: {0}\.\n¡Se interrumpirá inicio de Configurador!\nColoque carpeta con complemento ModPlus en directorio al que tenga acceso completo y vuelva a iniciar Configurador</writableDir>
+    <runed>Aplicación ya se está ejecutando</runed>
+    <closeCad>Para iniciar configurador ModPlus es necesario cerrar AutoCAD</closeCad>
+    <closeRevit>Para iniciar configurador ModPlus es necesario cerrar Revit</closeRevit>
+    <closeRenga>Para iniciar configurador ModPlus es necesario cerrar Renga</closeRenga>
+    <loading>CARGANDO...</loading>
+    <progress1>Inicie un avisador para verificar ejecución de aplicaciones de AutoCAD o Revit</progress1>
+    <progress2>Verificar ruta del directorio de complementos</progress2>
+    <progress4>Verificar de directorios estándar</progress4>
+    <progress5>Desembalaje del módulo de actualización automática (si es necesario)</progress5>
+    <progress6>Verificar archivo de configuración</progress6>
+    <progress7>Inicializar ventana principal del programa</progress7>
+    <progress8>Inicializar archivo de configuración</progress8>
+    <progress9>Definir e instalar un tema del apariencia</progress9>
+    <progress10>Descargar datos de un archivo de configuración</progress10>
+    <progress11>Descargar ajustes del registro</progress11>
+    <progress12>Completar lista de discos duros</progress12>
+    <progress13>Establecer variante de vinculación del archivo de configuración</progress13>
+    <progress14>Descargar versiones de componentes de complementos</progress14>
+    <progress15>Descargar historial de cambios</progress15>
+    <progress16>Verificar acceso directo en escritorio creado</progress16>
+    <progress17>Buscar productos de Autodesk</progress17>
+    <progress18>Verificar y abrir ventana de bienvenida</progress18>
+    <progress19>Cerrar pantalla de inicio</progress19>
+    <progress20>Recibir datos del usuario</progress20>
+    <tab1>Configuración</tab1>
+    <tab2>Adaptación</tab2>
+    <tab3>Ajustes</tab3>
+    <tab4>Sobre programa</tab4>
+    <adminMsg>Configurador se ejecuta en modo de sólo lectura. En este modo, pueden surgir problemas al editar algunos archivos (por ejemplo, acad.exe.config). Se recomienda ejecutar configurador con derechos de administrador</adminMsg>
+    <adminReload>Reiniciar con derechos de administrador</adminReload>
+    <header1>Autorización</header1>
+    <header2>Productos mantenidos</header2>
+    <header3>Claves de activación</header3>
+    <header4>Complementos</header4>
+    <header5>Menú para:</header5>
+    <header6>Complementos activos</header6>
+    <header7>Mostrar:</header7>
+    <header8>General</header8>
+    <header9>Idioma:</header9>
+    <header10>Tema de los complementos:</header10>
+    <header11>Tema del configurador:</header11>
+    <header12>Bordes de ventanas:</header12>
+    <header16>Registro</header16>
+    <header17>Contactos:</header17>
+    <header18>HISTORIAL DE CAMBIOS</header18>
+    <header19>Complemento</header19>
+    <header20>Producto</header20>
+    <header21>Versión del producto</header21>
+    <header22>Clave de activación</header22>
+    <header23>Resultado</header23>
+    <header24>Clave de registro:</header24>
+    <header25>Opción de la vinculación:</header25>
+    <header26>Asignar a un disco físico:</header26>
+    <header27>Asignar de cuenta del usuario:</header27>
+    <header28>MÁS SOBRE LA VINCULACIÓN</header28>
+    <header29>Versión del configurador:</header29>
+    <header30>Versión del módulo de actualización automática:</header30>
+    <header31>Versión de bibliotecas de trabajo para AutoCAD:</header31>
+    <header32>Versión de bibliotecas de trabajo para Revit:</header32>
+    <header33>Versión de base de datos:</header33>
+    <header34>Versión de base de datos dwg:</header34>
+    <header35>Descargando un archivo</header35>
+    <header36>Especifique dirección de correo electrónico para la cual se creó directorio en Servidor al descargar archivo de configuración:</header36>
+    <header37>Video</header37>
+    <header38>También puede ver vídeo en </header38>
+    <header39>Navegador</header39>
+    <header40>Bienvenido a ModPlus</header40>
+    <header41>Vídeo "Inicio rápido"</header41>
+    <header42>Vídeo "Instalación y compra"</header42>
+    <header43>Ir al sitio web</header43>
+    <header44>Ir al foro</header44>
+    <header45>Enviar una carta</header45>
+    <header46>Mostrar esta ventana al inicio</header46>
+    <header47>Mostrar complementos para:</header47>
+    <header48>versiones:</header48>
+    <header49>Falta conexión hacia modplus.org o hacia servicios web ModPlus. Mostrar sólo lista local</header49>
+    <header50>Pagado</header50>
+    <header51>No instalados</header51>
+    <header53>Gratis</header53>
+    <header55>Complementos cargados:</header55>
+    <header56>Si no hay ningún complemento en lista de complementos activos, mecanismos internos del complemento proporcionan adición de este complemento a cinta y al menú</header56>
+    <header57>Nota: ¡complementos que no estén conectados a ModPlus (ficha Configuración) no se añadirán al crear cinta y menú!</header57>
+    <header58>No se han encontrado versiones instaladas de AutoCAD que sean adecuadas para instalar ModPlus</header58>
+    <header59>No se han encontrado versiones instaladas de Revit que sean adecuadas para instalar ModPlus</header59>
+    <header60>Versión de producto mantenida:</header60>
+    <header61>Versión disponible:</header61>
+    <header62>Detalles</header62>
+    <header63>Versión actual:</header63>
+    <header64>Precio en rublos:</header64>
+    <header65>Autor:</header65>
+    <!-- todo remove after 22.1.0.0 -->
+    <header66>No recordar</header66>
+    <header67>Renombrar</header67>
+    <header68>Falta conexión a https://modplus.org</header68>
+    <header69>No hay acceso a Internet, al sitio web modplus.org o a los servicios web de ModPlus</header69>
+    <header70>Mostrar sólo:</header70>
+    <header71>Mostrar sólo complementos no utilizados</header71>
+    <header72>Ajustes de proxy</header72>
+    <header73>Estado:</header73>
+    <header74>Ajustar un proxy manualmente</header74>
+    <header75>Autenticación del usuario (si es necesario. Puede dejarse en blanco)</header75>
+    <header76>Contraseña</header76>
+    <header77>Verificar</header77>
+    <header78>Dirección</header78>
+    <header79>Puerto</header79>
+    <header80>Suscripción</header80>
+    <header81>Clave de suscripción:</header81>
+    <header82>Inicio del período de suscripción:</header82>
+    <header83>Periodo de suscripción en meses:</header83>
+    <header84>Fin del periodo de suscripción</header84>
+    <header85>Estado de suscripción:</header85>
+    <header86>Suscripción para:</header86>
+    <header87>No se han encontrado versiones instaladas de Renga que sean adecuadas para instalar ModPlus</header87>
+    <header88>Versión de bibliotecas de trabajo para Renga:</header88>
+    <header89>Menú</header89>
+    <header90>Servidor de licencias LAN</header90>
+    <header91>Dirección IP del servidor de licencias:</header91>
+    <header92>Puerto del servidor de licencias:</header92>
+    <header93>Verificar conexión con servidor de licencias</header93>
+    <header94>Servidor de licencias no disponible</header94>
+    <header95>Servidor de licencias disponible</header95>
+    <header96>Verificar conexión a dirección:</header96>
+    <header97>Acuerdo de licencia</header97>
+    <header98>Acepto</header98>
+    <header99>No acepto</header99>
+    <header100>Abrir texto del acuerdo de licencia en Bloc de notas</header100>
+    <header101>Se ha producido un error al abrir texto del acuerdo de licencia. Puede ver acuerdo de licencia en sitio web https://modplus.org/ru/licenseagreement</header101>
+    <header102>Falta conexión a Internet o a los servicios web ModPlus</header102>
+    <header103>Cuenta personal</header103>
+    <header104>Hola, </header104>
+    <header105>Abrir cuenta personal</header105>
+    <h106>¡Tu versión de ModPlus ha sido pirateada!</h106>
+    <h107>¡En software ModPlus se han detectado archivos modificados por terceos! ¡Trabajo de Configurador se verá interrumpido!</h107>
+    <h108>Importar menú de adaptación del archivo .xml</h108>
+    <h109>Exportar menú de adaptación a archivo .xml</h109>
+    <h110>Año:</h110>
+    <h111>Componente:</h111>
+    <h112>Número de actualizaciones:</h112>
+    <h113>Servidor web de licencias</h113>
+    <h114>ID del servidor de licencias:</h114>
+    <h115>Correo electrónico para identificación del usuario:</h115>
+    <h116>Servidor de licencias con identificador "{0}" no está disponible (deshabilitado o bloqueado) o no es posible conectarse a servicios web</h116>
+    <h117>Verificar acceso del usuario</h117>
+    <h118>Usuario "{0}" tiene acceso al servidor de licencias "{1}"</h118>
+    <h119>El usuario "{0}" no tiene acceso al servidor de licencias "{1}"</h119>
+    <h120>Verificar acceso al servidor de licencias, datos de identificación ingresados y comuníquese con administrador del sistema</h120>
+    <h121>Complementos mostrados:</h121>
+    <h122>Ajustes de notificaciones</h122>
+    <h123>No añadido al menú</h123>
+    <h124>Complemento está activado, pero no añadido al menú en ficha "Adaptación". Complemento no se añadirá al cinta</h124>
+    <sks1>Clave de activación de suscripción no válida</sks1>
+    <sks2>Clave de activación de suscripción no se ha especificado</sks2>
+    <sks3>Suscripción está a punto de caducar</sks3>
+    <sks4>Suscripción ha caducado</sks4>
+    <sks5>Periodo de suscripción aún no ha comenzado</sks5>
+    <sks6>Suscripción activa</sks6>
+    <ps1>Conexión a Internet no utiliza un proxy</ps1>
+    <ps2>Al conectarse a Internet, se utiliza un proxy:</ps2>
+    <ps3>Configuración manual del proxy</ps3>
+    <openPath>Abrir carpeta</openPath>
+    <b1>Instalar todo</b1>
+    <b2>Instalar</b2>
+    <b3>Construir estándar</b3>
+    <b4>Vincular</b4>
+    <b5>Desvincular</b5>
+    <b6>Eliminar ajustes</b6>
+    <b7>Eliminar aplicación</b7>
+    <b8>Descargar desde servidor</b8>
+    <b9>Continuar</b9>
+    <b10>Cancelar</b10>
+    <b11>Aceptar</b11>
+    <b12>Verificar</b12>
+    <b13>Eliminar acceso directo del escritorio</b13>
+    <b14>Crear acceso directo del escritorio</b14>
+    <b15>Desactivar todo lo visible</b15>
+    <b16>Activar todo lo visible</b16>
+    <ribbon>Cinta</ribbon>
+    <fMenu>Menú flotante</fMenu>
+    <drawings>Dibujos</drawings>
+    <palette>Paleta</palette>
+    <tt1>Ventana de bienvenida</tt1>
+    <tt2>¡Es necesario indicar su login utilizado al registrarse en sitio web!</tt2>
+    <tt3>¡Atención!</tt3>
+    <tt4>¡Se genera una clave de registro basada en su login!</tt4>
+    <tt5>Por favor ingrese su dirección de correo electrónico.</tt5>
+    <tt6>Necesitará una dirección de correo electrónico si envía sus datos (archivo de configuración y claves) al servidor.</tt6>
+    <tt7>Dirección de correo electrónico es necesaria para identificarte en servidor.</tt7>
+    <tt8>Se recomienda utilizar la dirección de correo electrónico especificada al registrarse en sitio web modplus.org</tt8>
+    <tt9>Seleccionar productos a los que se necesita conectar ModPlus</tt9>
+    <tt17>Actualizar lista de complementos</tt17>
+    <tt18>Sólo se muestran en la lista las versiones del producto especificado que están disponibles en su ordenador</tt18>
+    <tt19>Instalar todos complementos faltantes</tt19>
+    <tt20>Conéctar a ModPlus</tt20>
+    <tt21>Mirar vídeo de complemento</tt21>
+    <tt22>Ir a tienda para comprar versión completa del complemento</tt22>
+    <tt23>Descargar e instalar complemento</tt23>
+    <tt24>Para obtener clave de activación, vaya al sitio web modplus.org y compre complemento</tt24>
+    <tt25>Verificar clave ingresada</tt25>
+    <!-- todo remove after 22.1.0.0 -->
+    <tt26>No recordar este complemento al buscar nuevos complementos</tt26>
+    <tt31>Limpiar menú</tt31>
+    <tt32>Cambiar tamaño</tt32>
+    <tt33>Crear un grupo</tt33>
+    <tt34>Eliminar grupo</tt34>
+    <tt35>Añadir un complemento a un grupo</tt35>
+    <tt36>Eliminar un complemento de un grupo</tt36>
+    <tt37>Mover hacia arriba</tt37>
+    <tt38>Mover hacia abajo</tt38>
+    <tt39>Actualizar lista de complementos</tt39>
+    <tt40>Activar/desactivar cinta</tt40>
+    <tt41>Activar/desactivar menú flotante</tt41>
+    <tt42>Activar/desactivar representación de dibujos abiertos en un menú flotante separado</tt42>
+    <tt43>Activar/desactivar paleta ModPlus</tt43>
+    <tt47>Actualizar lista de discos físicos</tt47>
+    <tt48>Eliminar un archivo de configuración y entradas de registro</tt48>
+    <tt49>Sitio web oficial del programa</tt49>
+    <tt50>Grupo en VK</tt50>
+    <tt51>Grupo en Facebook</tt51>
+    <tt52>Canal de Youtube</tt52>
+    <tt53>Grupo en Telegram</tt53>
+    <tt54>Enviar una carta</tt54>
+    <tt55>Descargar archivo de configuración desde servidor FTP</tt55>
+    <tt56>Copiar al portapapeles</tt56>
+    <tt57>Añadir un panel para botones pequeños</tt57>
+    <tt58>¡Barra sólo debe contener dos o tres complementos!</tt58>
+    <tt59>Desactivar todos complementos actualmente visibles en lista</tt59>
+    <tt60>Eliminar complemento</tt60>
+    <tt61>Eliminar barra</tt61>
+    <tt62>Copiado</tt62>
+    <tt63>Ir a descripción del componente en sitio web</tt63>
+    <tt64>Activar todos complementos actualmente visibles en lista</tt64>
+    <tt65>Minimizar todos grupos</tt65>
+    <tt66>Empresa en LinkedIn</tt66>
+    <tt67>Para actualizar complemento es necesario cerrar todos programas de bloqueo (Configurador, Revit, AutoCAD, Renga) y comenzar a buscar actualizaciones en módulo de actualización automática, que se encuentra en bandeja. También puede instalar actualizaciones usando instalador ModPlus</tt67>
+    <tt68>Abrir novedades relacionadas con esta actualización</tt68>
+    <tt69>Abrir ayuda</tt69>
+    <w1>Login</w1>
+    <w2>Buscar un complemento en lista</w2>
+    <w3>Clave de activación</w3>
+    <w4>¡Necesita ingresar su login!</w4>
+    <w5>Eventos del servidor...</w5>
+    <w6>Clave de activación no es necesario</w6>
+    <cb1>Asignar a un disco físico</cb1>
+    <cb2>Asignar de cuenta del usuario Google</cb2>
+    <border1>Borde por color</border1>
+    <border2>Brillo por color</border2>
+    <border3>Borde + brillo por color</border3>
+    <border4>Sombra</border4>
+    <border5>Sin bordes</border5>
+    <err>Error</err>
+    <err1>Archivo de configuración no se ha encontrado </err1>
+    <err2>Sin acceso de escritura al archivo de configuración </err2>
+    <err3>Error desconocido</err3>
+    <err4>Configurador no pudo encontrar carpeta utilizada por Revit para conectar complementos externos</err4>
+    <err5>¡Falta archivo de configuración!</err5>
+    <err6>¡Módulo no se ha encontrado!</err6>
+    <err16>¡Falta clave de registro en ficha "Registro"!</err16>
+    <err17>¡Lista de claves está vacía!</err17>
+    <err18>¡No se ha especificado login en ficha "Registro"!</err18>
+    <err19>¡Archivo de configuración está dañado! Reiniciar Configurador</err19>
+    <err20>¡Archivo no se ha encontrado!</err20>
+    <err21>Errores de descarga del complemento ModPlus</err21>
+    <err22>Se produjeron uno o más errores al descargar complementos. Todos errores se muestran en este documento. Por favor envíe este documento a modplus@mail.ru. ¡Esto nos ayudará a comprender rápidamente problema y solucionarlo!</err22>
+    <err23>Dirección IP incorrecta</err23>
+    <err24>Valor máximo permitido 65535</err24>
+    <msg1>¡No se ha especificado ninguna dirección de correo electrónico!</msg1>
+    <msg2>¡Dirección de correo electrónico ilegal!</msg2>
+    <msg3>No has ingresado nada</msg3>
+    <msg4>Programa ha detectado que ruta del directorio contiene valores ilegales (Windows/Archivos de programa)\n¡Recomendamos encarecidamente que coloque ModPlus en directorio diferente!</msg4>
+    <msg5>Si guardó archivo de configuración en servidor modplus.org, puede descargarlo. Para hacer esto, clic en SÍ\nSi no guardó archivo de configuración en servidor o es primera vez que inicia programa, clic en NO y se creará nuevo archivo de configuración</msg5>
+    <msg6>¡No ha conectado complemento ModPlus a ninguna versión de AutoCAD!\n¿Seguro de que desea salir?</msg6>
+    <msg7>¡No has creado un menú de adaptación para AutoCAD! ¡Al descargar AutoCAD, cinta, paleta y/o menú flotante de ModPlus estarán vacíos!\n¿Seguro de que desea salir?</msg7>
+    <msg8>¡No ha conectado complemento ModPlus a ninguna versión de Revit!\n¿Seguro de que desea salir?</msg8>
+    <msg9>¡No has creado un menú de adaptación para Revit! ¡Al descargar Revit , cinta estará vacía!\n¿Seguro de que desea salir?</msg9>
+    <msg11>Se ha producido un error al añadir datos necesarios al archivo de configuración de AutoCAD:\n{0}\nReinicie Configurador con derechos de administrador y vuelva a intentarlo.\nPuede encontrar más información sobre cómo cambiar archivo de configuración en sitio web modplus.org en sección "Ayuda"\nConfigurador puede seguir añadiendo una entrada al registro para descargar complemento ModPlus, pero es posible que complemento no funcione\n¿Añadir entrada al registro?</msg11>
+    <msg12>Se ha producido un error al añadir datos necesarios al archivo de configuración de Revit:\n{0}\nReinicie Configurador con derechos de administrador y vuelva a intentarlo.\nPuede encontrar más información sobre cómo cambiar archivo de configuración en sitio web modplus.org en sección "Ayuda"\nConfigurador puede seguir añadiendo una entrada al registro para descargar complemento ModPlus, pero es posible que complemento no funcione\n¿Añadir entrada al registro?</msg12>
+    <msg13>¡Se Eliminarán todas claves! ¿Continuar?</msg13>
+    <msg14>Se han eliminado todas claves</msg14>
+    <msg15>Por favor ingrese su dirección de correo electrónico</msg15>
+    <msg16>Se instalarán todos complementos faltantes\n¿Continuar?</msg16>
+    <msg17>Clave de activación es correcta</msg17>
+    <msg18>Clave de activación es INCORRECTA</msg18>
+    <msg19>¡Atención! ¡Después de descargar archivo de configuración de servidor, Configurador se reiniciará!\n¿Continuar?</msg19>
+    <msg20>¡ATENCIÓN!\nArchivo de configuración, acceso directo del escritorio y todas entradas del registro (incluida inicio automático de complementos ModPlus) se eliminarán, después de lo cual Configurador se cerrará automáticamente\n¿Estás seguro de que desea continuar?</msg20>
+    <msg21>¡Sin acceso al archivo de configuración! Puede estar abierto u ocupado\nDespués de cerrar Configurador, elimine archivo de configuración manualmente:</msg21>
+    <msg22>Proxy está especificado correctamente. Reiniciar Configurador para que ajustes surtan efecto</msg22>
+    <msg23>¡No ha conectado complemento ModPlus a ninguna versión de Renga!\n¿Seguro de que desea salir?</msg23>
+    <msg24>¿Construir un menú de adaptación estándar?</msg24>
+    <msg25>¡Atención! Complemento ModPlus se encuentra en carpeta</msg25>
+    <msg26>Falta acceso de escritura a esta carpeta, por lo que complemento ModPlus no puede funcionar. ¡Configurador se cerrará!</msg26>
+    <msg27>Por favor, instale complemento en carpeta diferente que tenga permisos de escritura. Por ejemplo, D:/ModPlus</msg27>
+    <msg28>¿Intentar nuevamente con registro de solicitud de URL?</msg28>
+    <msg29>Derechos de administrador están necesarios</msg29>
+    <msg30>Claves de activación del complemento descargadas y aplicadas correctamente</msg30>
+    <msg31>¡No es posible obtener lista de complementos del servidor! Sólo se descargarán complementos locales</msg31>
+    <msg32>Archivo de configuración ha sido reemplazado. Configurador se reiniciará</msg32>
+    <msg33>¡Error de acceso al sistema del archivos! ¿Reiniciar Configurador con derechos de administrador?</msg33>
+    <msg34>¡Se sobrescribirá menú actual de AutoCAD!</msg34>
+    <msg35>¡Se sobrescribirá menú actual de Revit!</msg35>
+    <msg36>Su versión de ModPlus no está instalada en directorio recomendado. Le recomendamos encarecidamente que reinstale ModPlus en directorio</msg36>
+    <msg37>Para conectar/desconectar ModPlus a/desde Renga, reinicie Configurador con derechos de administrador y vuelva a intentarlo</msg37>
+    <ftp1>Descargar un archivo de configuración del servidor</ftp1>
+    <ftp2>Recibir datos de autorización</ftp2>
+    <ftp3>Descargar directorios en servidor</ftp3>
+    <ftp4>¡Directorio para dirección de correo electrónico especificada no se ha encontrado en servidor!\nDirectorio se crea cuando archivo de configuración se carga en servidor</ftp4>
+    <ftp5>¡Falta archivo de configuración guardado en servidor!</ftp5>
+    <ftp6>Descargar un archivo del servidor</ftp6>
+    <ftp7>¡Archivo de configuración descargado!</ftp7>
+    <ftp10>Crear una conexión</ftp10>
+    <ftp11>Crear un directorio del usuario</ftp11>
+    <ftp16>¡No es posible obtener datos de autorización!\nInténtalo de nuevo</ftp16>
+    <ftp20>Descargar paquete de instalación</ftp20>
+    <ftp22>Instalación del complemento:</ftp22>
+    <ftp23>Crear una carpeta temporal</ftp23>
+    <ftp24>Descargar un archivo del servidor a una carpeta temporal</ftp24>
+    <ftp25>Descomprimir complemento</ftp25>
+    <ftp26>Eliminar una carpeta temporal</ftp26>
+    <ftp27>Se agotó tiempo fuera de operación: No es posible descargar archivo de servidor\nInténtalo de nuevo</ftp27>
+    <ftp28>¡Complemento {0} no fue instalado! ¡Es posible que dirección se haya ingresado incorrectamente en ajustes de descarga!\nInténtelo de nuevo. Si error persiste, infórmenos en sitio web modplus.org\n¡Puede descargar archivos de instalación de sitio web y realizar instalación manualmente utilizando módulo de actualización automática!</ftp28>
+    <ftp29>Complementos siguientes {0}\nno han sido instalados! ¡Es posible que dirección se haya ingresado incorrectamente en ajustes de descarga!\nInténtelo de nuevo. Si error persiste, infórmenos en sitio web modplus.org\n¡Puede descargar archivos de instalación de sitio web y realizar instalación manualmente utilizando módulo de actualización automática!</ftp29>
+    <ftp30>Enviar un archivo de configuración al servidor</ftp30>
+    <ftp31>¡Ya existe un archivo de configuración guardado en servidor! ¿Sobrescribir?</ftp31>
+    <ftp32>Archivo de configuración se guarda en servidor</ftp32>
+    <ftp33>Eliminar archivo de configuración actual</ftp33>
+    <ftp34>Reiniciar configurador</ftp34>
+    <installed>Instalados</installed>
+    <missing>¡Faltan!</missing>
+    <all>Todo</all>
+    <cui1>Necesitas seleccionar un grupo</cui1>
+    <cui2>¿Estás seguro de que desea eliminar grupo?</cui2>
+    <cui3>Ya existe grupo con mismo nombre</cui3>
+    <cui4>Ingresar nombre del nuevo grupo</cui4>
+    <cui5>Es necesario crear al menos un grupo</cui5>
+    <cui6>Es necesario seleccionar un complemento de lista de complementos activos</cui6>
+    <cui7>¡Complemento activo seleccionado tiene subcomplementos, por lo que sólo se puede añadir al grupo!</cui7>
+    <cui8>¡Imposible elevar más!</cui8>
+    <cui9>¡Imposible bajar más!</cui9>
+    <cui10>¡No hay nada seleccionado!</cui10>
+    <cui11>Ingresar un nuevo nombre de grupo</cui11>
+    <cui12>Menú se creará según esquema estándar\n¡Se Eliminará menú existente!\n¿Continuar?</cui12>
+    <cui13>¿Seguro que quieres Eliminar menú?</cui13>
+  </Configurator>
+  <!-- todo все удаляемые значения после версии 34.0.0.0 -->
+  <AutoUpdater LocalName="Módulo de actualización automática">
+    <close>Cerrar</close>
+    <accept>Aceptar</accept>
+    <cancel>Cancelar</cancel>
+    <version>Versión</version>
+    <product>Producto</product>
+    <productVersion>Versión del producto</productVersion>
+    <function>Complemento</function>
+    <functionVersion>Versión del complemento</functionVersion>
+    <h1>Actualizaciones</h1>
+    <h2>Errores (clic para ver)</h2>
+    <h3>¡Es necesario iniciar configurador!</h3>
+    <h4>¡Es necesario iniciar configurador para actualizar menú de adaptación!</h4>
+    <h5>Iniciar actualización después de cerrar AutoCAD, Revit o Configurador</h5>
+    <h6>Hay una noticia en el sitio web modplus.org</h6>
+    <h7>Se ha publicado nueva entrada en grupo VK "ModPlus for AutoCad and Revit"</h7>
+    <h8>Ir a entrada</h8>
+    <!-- todo remove after 36.2.0.0 -->
+    <h9>¡No te lo pierdas! ¡Esto puede resultar útil!</h9>
+    <!-- todo remove -->
+    <h10>INSTALACIÓN MANUAL / ACTUALIZACIÓN</h10>
+    <!-- todo remove -->
+    <h11>Si no tiene acceso a Internet, puede instalar o actualizar componentes del complemento manualmente. Para hacer esto, debe descargar previamente los archivos de instalación del complemento (con extensión .mpif) del sitio web modplus.org y usar una de siguientes opciones:</h11>
+    <!-- todo remove -->
+    <h12>Instalación o actualización desde un archivo de instalación .mpif específico</h12>
+    <!-- todo remove -->
+    <h13>Instalación o actualización desde carpeta especificada donde se encuentran archivos de instalación .mpif</h13>
+    <h14>ModPlus: nuevos complementos</h14>
+    <h15>¡Nuevos complementos ya están disponibles en ModPlus!</h15>
+    <h16>Seleccionar de lista complementos que desea instalar</h16>
+    <h17>Versión del complemento:</h17>
+    <h18>Versión del producto:</h18>
+    <!-- todo remove after 35.3.0.0 -->
+    <h19>No más</h19>
+    <!-- todo remove after 35.3.0.0 -->
+    <h20>recuerda</h20>
+    <h21>MÓDULO DE ACTUALIZACIÓN AUTOMÁTICA: AJUSTES</h21>
+    <h23>Período de búsqueda de actualización:</h23>
+    <h24>Si hay actualizaciones:</h24>
+    <h25>Al instalar nuevos complementos:</h25>
+    <h26>Doble clic en icono de bandeja:</h26>
+    <!-- todo remove -->
+    <h28>Archivo de instalación ModPlus (*.mpif)|*.mpif</h28>
+    <!-- todo remove -->
+    <h29>Seleccione archivo de instalación ModPlus</h29>
+    <!-- todo remove -->
+    <h30>Especifique carpeta en la que se encuentran archivos de instalación ModPlus</h30>
+    <h31>Versión del módulo de actualización automática:</h31>
+    <h32>Error de ModPlus</h32>
+    <h33>No es posible acceder a archivos del servidor</h33>
+    <h34>Bases de datos</h34>
+    <h35>Base de datos dwg</h35>
+    <h36>No mostrar notificaciones si una actualización contiene cambios sin importancia (correcciones de errores)</h36>
+    <h37>Se ha producido un error al enviar una solicitud al servicio web ModPlus, que fue devuelta como html. Estos errores pueden indicar que su red está bloqueando acceso</h37>
+    <h38>No volver a mostrar esta notificación</h38>
+    <h39>Bibliotecas auxiliares se han actualizado</h39>
+    <h40>Descargar paquete: {0}/{1}</h40>
+    <h41>Ajustes de notificaciones</h41>
+    <h42>Complementos se instalarán automáticamente después de cerrar aplicación de bloqueo (ModPlus Configurador, AutoCAD, Revit o Renga)</h42>
+    <h43>Cargando...</h43>
+    <h44>Falta</h44>
+    <h45>Nombre</h45>
+    <h46>Versión actual</h46>
+    <h47>Versión disponible</h47>
+    <h48>Mostrar una ventana de progreso al descargar e instalar actualizaciones (ventana de progreso se muestra siempre al ejecutar manualmente búsqueda de actualizaciones)</h48>
+    <h49>Instalar automáticamente nuevos complementos (se recomienda activar reconstrucción del menú de adaptación estándar)</h49>
+    <h50>Mostrar ventana con resultados de actualizaciones o instalaciones (ventana con resultados se muestra siempre al ejecutar manualmente búsqueda de actualizaciones)</h50>
+    <h51>Descargar archivo: {0}/{1}</h51>
+    <h52>Instalado</h52>
+    <h53>Esta versión del componente está instalada en su ordenador</h53>
+    <h54>No instalado</h54>
+    <h55>Esta versión del componente no está instalada en su ordenador</h55>
+    <h56>Instalar automáticamente nuevos complementos </h56>
+    <!-- todo remove -->
+    <b1>Instalar del archivo</b1>
+    <!-- todo remove -->
+    <b2>Instalar desde carpeta</b2>
+    <b3>Seleccionar todo</b3>
+    <b4>Deseleccionar</b4>
+    <!-- todo remove after 35.3.0.0 -->
+    <b5>No recordar todo</b5>
+    <b6>Recordar más tarde</b6>
+    <t1>30 minutos</t1>
+    <t2>1 hora</t2>
+    <t3>2 horas</t3>
+    <t4>4 horas</t4>
+    <t5>8 horas</t5>
+    <i1>Instalar automáticamente</i1>
+    <i2>Preguntar</i2>
+    <i3>Reconstruir menú de adaptación estándar</i3>
+    <i4>No reconstruir menú</i4>
+    <i5>Abrir ajustes del módulo de actualización automática</i5>
+    <i6>Abrir Configurador ModPlus</i6>
+    <!-- todo remove after 35.3.0.0 -->
+    <cm1>Módulo de actualización automática</cm1>
+    <cm2>Buscar actualizaciones</cm2>
+    <cm3>Historial de cambios</cm3>
+    <!-- todo remove -->
+    <cm4>Instalación manual / actualización</cm4>
+    <cm5>Abrir Configurador</cm5>
+    <cm6>Ajustes</cm6>
+    <cm7>Salir</cm7>
+    <cm8>Abrir carpeta ModPlus</cm8>
+    <cm9>Abrir carpeta UserData</cm9>
+    <cm10>Componentes</cm10>
+    <tt1>Buscar actualizaciones y nuevos complementos</tt1>
+    <tt2>Abrir historial de cambios en sitio web modplus.org</tt2>
+    <tt3>Abrir Configurador ModPlus</tt3>
+    <tt4>Configuración del módulo de actualización automática ModPlus</tt4>
+    <!-- todo remove after 35.3.0.0 -->
+    <tt6>Si marca esta casilla, módulo de actualización automática ya no le informará sobre posibilidad de instalar este complemento si falta. Para instalar complementos marcados con casilla "No recordar", utilice Configurador ModPlus</tt6>
+    <tt7>Abrir carpeta donde se encuentra versión instalada de ModPlus</tt7>
+    <tt8>Abrir carpeta de almacenamiento de datos del usuario</tt8>
+    <tt9>Ir a descripción del componente en sitio web</tt9>
+    <tt10>Muestra una lista de componentes del ModPlus con información sobre versiones y su relevancia</tt10>
+    <tt11>Abrir novedades relacionadas con esta actualización</tt11>
+    <msg1>¡Es necesario ubicar módulo de actualización automática en carpeta de complemento ModPlus!\nSi carpeta es correcta, entonces es necesario iniciar Configurador para actualizar datos en registro</msg1>
+    <msg2>Módulo de actualización automática se ha actualizado</msg2>
+    <msg3>Funcionamiento del módulo es limitado porque AutoCad, Revit o Renga están abiertos</msg3>
+    <msg4>Funcionamiento del módulo está limitado porque Configurador ModPlus está abierto</msg4>
+    <!-- todo remove -->
+    <msg5>¡Al instalar/actualizar del archivos *.mpif, es necesario iniciar Configurador para actualizar datos en archivo de configuración!\n¿Iniciar Configurador ahora?</msg5>
+    <!-- todo remove -->
+    <msg6>Carpeta especificada contiene archivo de actualización para módulo de actualización automática\nPara instalarlo, utilice la instalación desde el archivo</msg6>
+    <msg7>¡No hay nada seleccionado!</msg7>
+    <msg8>Actualizar menú de adaptación</msg8>
+    <msg9>Actualizaciones de componentes del complemento están disponibles:</msg9>
+    <msg10>Para actualizar es necesario cerrar AutoCAD</msg10>
+    <msg11>Para actualizar es necesario cerrar configurador de ModPlus</msg11>
+    <msg12>Ya están disponibles actualizaciones\n¿Actualizar?</msg12>
+    <msg13>Actualizaciones de componentes del complemento instaladas:</msg13>
+    <msg14>Instalación de actualización:</msg14>
+    <msg15>Ya están disponibles actualizaciones de complementos:</msg15>
+    <msg16>Para actualizar es necesario cerrar Revit</msg16>
+    <msg18>Actualizaciones de complementos instaladas:</msg18>
+    <msg19>Nuevos complementos disponibles:</msg19>
+    <msg20>Para instalar es necesario cerrar AutoCAD</msg20>
+    <msg21>Para instalar es necesario cerrar Revit</msg21>
+    <msg22>Para instalar es necesario cerrar configurador de ModPlus</msg22>
+    <msg23>Nuevos complementos instalados:</msg23>
+    <msg24>Para actualizar es necesario cerrar Revit</msg24>
+    <msg25>Para actualizar es necesario cerrar Renga</msg25>
+    <msg26>Para instalar es necesario cerrar Renga</msg26>
+    <msg27>¡Atención! Complemento ModPlus se encuentra en carpeta</msg27>
+    <msg28>Falta acceso de escritura a esta carpeta, por lo que complemento ModPlus no puede funcionar. ¡Módulo de actualización automática se cerrará!</msg28>
+    <msg29>Por favor, instale complemento en carpeta diferente que tenga permisos de escritura. Por ejemplo, D:/ModPlus</msg29>
+    <msg32>Se produjo un error de acceso al intentar actualizar. ¿Reiniciar módulo de actualización automática con derechos de administrador?</msg32>
+    <msg35>Faltan actualizaciones disponibles</msg35>
+    <msg36>Haga clic para obtener más detalles</msg36>
+    <msg37>Actualizaciones se han descargado y se instalarán después de cerrar Configurador ModPlus</msg37>
+    <msg38>Actualizaciones se han descargado y se instalarán después de cerrar AutoCAD</msg38>
+    <msg39>Actualizaciones se han descargado y se instalarán después de cerrar Revit</msg39>
+    <msg40>Actualizaciones se han descargado y se instalarán después de cerrar Renga</msg40>
+    <msg41>Error de descarga. Tentativa</msg41>
+    <msg42>Suscripción ModPlus finaliza</msg42>
+    <msg43>Periodo de suscripción de "{0}" finaliza en "{1}" {2}</msg43>
+    <msg44>Hay actualizaciones pendientes de instalar</msg44>
+    <d1>días</d1>
+    <d2>días</d2>
+    <d3>día</d3>
+    <err1>Error al descargar archivo en servidor</err1>
+    <err2>Error al descargar componentes</err2>
+    <err3>Error al solicitar datos para componentes</err3>
+    <err4>Error al solicitar datos para complementos</err4>
+    <err8>No se instalaron todas actualizaciones</err8>
+    <err12>Error al actualizar datos en registro</err12>
+    <err13>Error al descomprimir actualizaciones</err13>
+    <err16>No es posible registrar aplicación para Revit</err16>
+    <!-- todo remove -->
+    <err17>No se ha encontrado archivo</err17>
+    <!-- todo remove -->
+    <err18>Archivos de instalación de ModPlus no se han encontrado</err18>
+    <err19>No hay acceso a Internet o al sitio web modplus.org</err19>
+    <err20>¡Configurador ModPlus no se ha encontrado!</err20>
+    <err21>Error al recibir versión general</err21>
+    <p1>Descargando e instalando actualización del módulo...</p1>
+    <p2>Actualización del complemento:</p2>
+    <p3>Instalación del complemento:</p3>
+    <c1>Configurador</c1>
+    <c2>Módulo de actualización automática</c2>
+    <c3>Bibliotecas de trabajo AutoCAD</c3>
+    <c4>Bibliotecas de trabajo Revit</c4>
+    <c5>Bibliotecas de trabajo Renga</c5>
+    <c6>Bases de datos</c6>
+    <c7>Base de datos dwg</c7>
+  </AutoUpdater>
+  <AutocadDlls LocalName="Bibliotecas de trabajo AutoCAD">
+    <close>Cerrar</close>
+    <bb>PorBloque</bb>
+    <bl>PorCapa</bl>
+    <mm>mm</mm>
+    <def>Por defecto</def>
+    <h1>AJUSTES MODPLUS</h1>
+    <h2>GENERAL</h2>
+    <h3>TRABAJANDO CON SERVIDOR</h3>
+    <h4>REGISTRO</h4>
+    <h5>Idioma:</h5>
+    <h6>Sujeto:</h6>
+    <h12>Ajustes</h12>
+    <h13>General</h13>
+    <h14>Menú contextual</h14>
+    <h15>Arranque silencioso</h15>
+    <h16>ADAPTACIÓN</h16>
+    <h17>Cinta</h17>
+    <h18>Paleta</h18>
+    <h19>Complementos</h19>
+    <h20>Dibujos</h20>
+    <h21>Menú flotante</h21>
+    <h22>minimizar a:</h22>
+    <h23>Dibujos (por separado)</h23>
+    <h24>Establecer entradas PorBloque [mpEntByBlock]</h24>
+    <h25>Bloques de uso frecuente</h25>
+    <h26>Bordes de ventana gráfica en espacio del modelo [mpVPtoMS]</h26>
+    <h27>SELECCIÓN DE BLOQUE</h27>
+    <h28>Nombre del bloque mostrado</h28>
+    <h29>BLOQUES DE USO FRECUENTE</h29>
+    <h30>Archivo:</h30>
+    <h31>Nombre del bloque:</h31>
+    <h32>¡ATENCIÓN! ¡No utilice bloques con atributos!</h32>
+    <h33>Número máximo permitido de bloques: 10</h33>
+    <h34>Nuevo dibujo</h34>
+    <h35>Abrir dibujo</h35>
+    <h36>Cerrar dibujo actual</h36>
+    <h37>Activar icono de identificación de artículo</h37>
+    <h38>Cuando ícono de identificación está activado, todas primitivas que tengan datos extendidos con información de artículo mostrarán ícono condicional en forma de doble T azul. Icono se muestra en esquina superior derecha en relación con rectángulo descrito alrededor de primitiva. Tamaño del icono cambia después de regeneración dependiendo del tamaño de parte visible de pantalla</h38>
+    <h39>Desactivar icono de identificación de artículo</h39>
+    <h40>Llamar al complemento "Campos"</h40>
+    <h41>Ajustes ModPlus</h41>
+    <h42>Ajustes principales del complemento ModPlus - temas de apariencia, activar/desactivar menús, ajustes del menú contextual para mini complementos. También le permite conocer su clave de registro sin iniciar Configurador</h42>
+    <h43>Campos</h43>
+    <h44>Editor de campos</h44>
+    <h45>Editor de campos utilizados al rellenar bloques de títulos</h45>
+    <h46>Activar icono de artículos</h46>
+    <h47>Desactivar icono de artículos</h47>
+    <h48>Paleta ModPlus</h48>
+    <h49>MP:Establecer adjuntos PorBloque</h49>
+    <h50>MP: Insertar bloque</h50>
+    <h51>MP: Bordes de ventana gráfica en modelo</h51>
+    <h53>Añadir [mpAddVertexToWipeout] y eliminar [mpRemoveVertexFromWipeout] vértices de máscara</h53>
+    <h54>MP: Añadir vértice</h54>
+    <h55>MP: Eliminar vértice</h55>
+    <h56>Cuenta personal</h56>
+    <h57>Ayuda</h57>
+    <h58>Establecer capa de entrada [mpNestedEntLayer]</h58>
+    <h59>MP:Establecer capa de adjuntos</h59>
+    <h60>Firmas</h60>
+    <h61>Editor de firmas</h61>
+    <h62>Editor de firmas utilizadas al rellenar bloques de títulos</h62>
+    <h63>Llamar al complemento "Firmas"</h63>
+    <cb1>Icono</cb1>
+    <cb2>Nombre</cb2>
+    <tt2>Por favor ingrese su dirección de correo electrónico para trabajar con servidor modplus.org. Dirección de correo electrónico es necesaria para identificarte en servidor. Se recomienda utilizar la dirección de correo electrónico especificada al registrarse en sitio web modplus.org</tt2>
+    <tt3>¡Es necesario ingresar su login en ficha "Registro"! (Configurador ModPlus)</tt3>
+    <tt4>¡Dirección de correo especificada no pasó verificación!\nO ingresaste dirección de correo electrónico incorrectamente o tienes un proveedor de alojamiento de correo electrónico único =)</tt4>
+    <tt5>Descargando un complemento en AutoCAD con detalles mínimos en línea de comando</tt5>
+    <tt6>Activar/desactivar cinta</tt6>
+    <tt7>Activar/desactivar paleta</tt7>
+    <tt8>Activar/desactivar pestaña "Complementos" en paleta</tt8>
+    <tt9>Activar/desactivar pestaña "Dibujos" en paleta</tt9>
+    <tt10>Activar/desactivar menú flotante</tt10>
+    <tt11>Activar/desactivar representación de dibujos abiertos en menú flotante</tt11>
+    <tt12>Activar/desactivar ventana de representación para dibujos abiertos</tt12>
+    <tt13>Activar/desactivar menú contextual del minicomplemento "Establecer adjuntos PorBloque"</tt13>
+    <tt14>Activar/desactivar menú contextual del minicomplemento "Bloques de uso frecuente"</tt14>
+    <tt15>Ajustar una lista de bloques de uso frecuente</tt15>
+    <tt16>Activar/desactivar menú contextual para minicomplemento "Bordes de ventana gráfica en espacio del modelo"</tt16>
+    <tt17>Para cambiar idioma en paleta es necesario reiniciar AutoCAD</tt17>
+    <tt18>Activar/desactivar menú contextual para enmascarar, permitiéndole añadir o eliminar vértices de máscara</tt18>
+    <tt19>Activar/desactivar menú contextual para minicomplemento "Establecer capa de adjuntos"</tt19>
+    <err1>¡Este nombre ya está en uso! Inventa algo más</err1>
+    <err2>¡Es necesario especificar nombre para mostrar del bloque!</err2>
+    <err3>¡Es necesario seleccionar un bloque de lista!</err3>
+    <err4>¡Archivo de configuración no se ha encontrado!</err4>
+    <err5>¿Estás seguro de que desea eliminar este bloque de lista?</err5>
+    <err6>Especificar archivo</err6>
+    <err7>¡Archivo de configuración está dañado! No es posible crear menú</err7>
+    <msg1>Seleccionar segmentos, polilíneas, círculos, arcos, elipses o splines:</msg1>
+    <msg2>Seleccionar bloques:</msg2>
+    <msg3>Seleccionar ventana gráfica:</msg3>
+    <msg4>Objeto especificado no es objeto de recorte de ventana gráfica</msg4>
+    <msg5>¡Ventana gráfica está recortada por un objeto sin procesar!</msg5>
+    <msg6>Ventana gráfica No</msg6>
+    <msg7>Objeto de recorte:</msg7>
+    <msg8>Punto de inserción:</msg8>
+    <msg9>Ángulo de rotación:</msg9>
+    <msg10>Primer punto:</msg10>
+    <msg11>Seleccionar tabla:</msg11>
+    <msg12>Seleccionar celda:</msg12>
+    <msg13>¡Selección incorrecta!</msg13>
+    <msg14>¡No golpeé celda!</msg14>
+    <msg15>Seleccionar línea:</msg15>
+    <msg16>Especificar punto:</msg16>
+    <msg17>¡Tabla tiene número incorrecto de columnas!\n¿Continuar?</msg17>
+    <msg18>¡Tabla no está vacía! ¿Volver a sobrescribir?\nSí – sobrescribir, No – añadir</msg18>
+    <msg19>Tabla no es una tabla ModPlus. ¡Datos pueden introducirse incorrectamente!\n¿Continuar?</msg19>
+    <msg20>Seleccionar máscara</msg20>
+    <msg21>Especificar posición del nuevo vértice</msg21>
+    <msg22>Especificar vértice a eliminar</msg22>
+    <msg23>¡No es posible acceder al editor de AutoCAD! Se está ejecutando otro comando.\nFinalice comando y vuelva a intentarlo</msg23>
+    <msg24>¡Atención! Cambio de idioma en paleta, en ficha de cinta para SUDD y menús contextuales de complementos sólo se realizará después de reiniciar AutoCAD</msg24>
+    <p1>¡ATENCIÓN!</p1>
+    <p2>¡Se intentó descargar un complemento en una versión inapropiada de AutoCAD!</p2>
+    <p3>Descarga está completa</p3>
+    <p4>Descargando complemento ModPlus...</p4>
+    <p5>Descargando bibliotecas de trabajo...</p5>
+    <p6>Descargando bases de datos...</p6>
+    <p7>Inicializar archivo de configuración:</p7>
+    <p8>Descargando complemento...</p8>
+    <p9>Descarga del complemento ModPlus está completa. Tiempo empleado (ms):</p9>
+    <p10>¡Divertirse!</p10>
+    <p11>Descargando biblioteca:</p11>
+    <p12>Descargando archivo de base de datos:</p12>
+    <p13>Archivo de base de datos no se ha encontrado:</p13>
+    <p14>¡Carpeta Data no encontrada!</p14>
+    <p15>Descargando complemento:</p15>
+  </AutocadDlls>
+  <RevitDlls LocalName="Bibliotecas de trabajo Revit">
+    <parameters>Parámetros</parameters>
+    <name>Nombre</name>
+    <rn>Armadura de apoyo ⌀</rn>
+    <h1>Ajustes ModPlus</h1>
+    <h2>General</h2>
+    <h3>Servidor de licencias</h3>
+    <h5>Idioma:</h5>
+    <h6>Sujeto:</h6>
+    <h13>Cuenta personal</h13>
+    <h14>¡Atención! Cambio de idioma en cinta sólo se producirá después de reiniciar Revit</h14>
+    <h15>Visibilidad de pestañas</h15>
+    <h16>Controlar visibilidad de pestañas en cinta</h16>
+    <h17>Fichas mostradas:</h17>
+    <h18>Fichas ocultas:</h18>
+    <h19>Filtrar elementos por categoría:</h19>
+    <h20>Filtrar elementos por parámetros:</h20>
+    <h41>Buscar (ingrese * para mostrar sólo categorías seleccionadas)</h41>
+    <h42>Categorías seleccionadas:</h42>
+    <h43>Identificador de parámetro</h43>
+    <h44>Condición:</h44>
+    <h45>Valores:</h45>
+    <h47>Seleccionar categorías</h47>
+    <h48>Parámetros de igualdad</h48>
+    <h49>Elemento es adecuado si</h49>
+    <h50>todas condiciones coinciden</h50>
+    <h51>al menos una condición coincide</h51>
+    <h52>Condición simple</h52>
+    <h53>Condición de grupo</h53>
+    <!-- todo remove with removing reinforcement utils -->
+    <h77>Tipo de barra de armadura:</h77>
+    <!-- todo remove with removing reinforcement utils -->
+    <h78>Diámetro, mm:</h78>
+    <h80>Añadir comandos de complementos de ModPlus a barra "Favoritos"</h80>
+    <h81>Todos comandos</h81>
+    <h82>Comandos favoritos</h82>
+    <!-- todo remove after 22.1.3 -->
+    <h83>Para añadir un comando a ficha Favoritos, arrástrelo desde lista "Todos comandos" a lista "Comandos favoritos". Mueva comandos en lista "Comandos favoritos" para establecer su orden en barra. Se recomienda colocar comandos que no tienen icono grande (complemento "Utilidades") uno tras otro</h83>
+    <h84>Mostrar sólo categorías seleccionadas</h84>
+    <h100>Crear un tipo de barra de armadura</h100>
+    <h101>Insertar clave de parámetro. Para parámetros generales: GUID del parámetro; para parámetros integrados: nombre del sistema del parámetro</h101>
+    <h102>Abrir vista</h102>
+    <h103>Permite abrir vista seleccionada en una ficha separada</h103>
+    <h104>Seleccionar elementos</h104>
+    <h105>Permite seleccionar elementos incluidos en grupos seleccionados</h105>
+    <h106>Permite seleccionar elementos incluidos en montajes seleccionados</h106>
+    <h107>Permite seleccionar elementos incluidos en sistemas de vigas seleccionados</h107>
+    <h108>Seleccionar componentes</h108>
+    <h109>Permite seleccionar componentes incluidos en familias seleccionadas</h109>
+    <h110>Establecer vista</h110>
+    <h111>Permite establecer plano de trabajo del elemento actual como plano de trabajo de vista 3D actual</h111>
+    <h112>Identificador del elemento</h112>
+    <h113>Identificador de tipo de elemento</h113>
+    <h114>Grupo primario de elementos</h114>
+    <h115>Montaje primario del elemento</h115>
+    <h116>Seleccionar armadura</h116>
+    <h117>Permite seleccionar armadura incluida en refuerzo de área seleccionado de construcción portante o refuerzo por camino de estructura portante</h117>
+    <h119>Seleccionar una base</h119>
+    <h120>Permite seleccionar elementos que son base de elementos seleccionados</h120>
+    <h121>Ocultar texto en botones pequeños</h121>
+    <h122>Para añadir un comando a ficha Favoritos, arrástrelo desde lista "Todos comandos" a lista "Comandos favoritos". Mueva comandos en lista "Comandos favoritos" para establecer su orden en barra. Se recomienda colocar botones más pequeños uno detrás de otro</h122>
+    <h123>Importante: algunos comandos de Revit se ocultan automáticamente en cinta según vista actual, elementos seleccionados actuales u otras condiciones</h123>
+    <h124>Comandos incorporados</h124>
+    <h125>Permite seleccionar elementos del documento actual a los que hacen referencia las dimensiones seleccionadas</h125>
+    <h126>Importante: no añada comandos del menú "Favoritos" a barra de acceso rápido</h126>
+    <h127>Actualizar</h127>
+    <h128>Permite actualizar conexión</h128>
+    <h129>Propiedades que no se pueden modificar se establecen con ajustes de organización</h129>
+    <h130>Permite seleccionar armadura incluida en elementos básicos seleccionados</h130>
+    <h131>Seleccionar grupos</h131>
+    <h132>Seleccionar montajes</h132>
+    <h133>Permite seleccionar grupos primarios que contienen elementos seleccionados</h133>
+    <h134>Permite seleccionar montajes primarios que contienen elementos seleccionados</h134>
+    <h135>Guardar conjunto de categorías seleccionadas</h135>
+    <h136>Descargar un conjunto de categorías (marcar categorías del conjunto seleccionado)</h136>
+    <h137>Guardar para complemento</h137>
+    <h138>Conjunto de categorías guardado estará disponible para descargar sólo en complemento actual</h138>
+    <h139>Guardar globalmente</h139>
+    <h140>Conjunto de categorías guardado estará disponible para descargar en cualquier complemento que utilice diálogo de selección de categoría</h140>
+    <h141>Seleccionar familia primaria</h141>
+    <h142>Permite seleccionar familias primarias que contienen familias anidadas seleccionadas</h142>
+    <h143>Самая нижняя отметка Z, полученная из геометрии элемента</h143>
+    <h144>Самая верхняя отметка Z, полученная из геометрии элемента</h144>
+    <parameters>Parámetros</parameters>
+    <name>Nombre</name>
+    <any>Cualquier</any>
+    <rtw1>Tipo</rtw1>
+    <rtw2>Diámetro, mm</rtw2>
+    <rtw3>Forma</rtw3>
+    <rtw4>Gancho</rtw4>
+    <rtw5>Barras rectas</rtw5>
+    <rtw6>Barras encorvadas longitudinalmente (en forma de "botella")</rtw6>
+    <rtw7>Barras en forma de L</rtw7>
+    <rtw8>Barras en forma de L con gran flexión</rtw8>
+    <rtw9>Barras en forma de U</rtw9>
+    <rtw10>Barras en forma de C. Ganchos en boceto</rtw10>
+    <rtw11>Barras en forma de C</rtw11>
+    <rtw12>Barras en forma de S. Ganchos en boceto</rtw12>
+    <rtw13>Barras en forma de S</rtw13>
+    <rtw14>Barras de sujeción en forma rectangular</rtw14>
+    <rtw15>Barras de sujeción redondas</rtw15>
+    <rtw16>Espiral</rtw16>
+    <rtw17>Barras triangulares</rtw17>
+    <rtw18>Barras de forma tipo "Nudo"</rtw18>
+    <rtw19>Barras de sujeción en forma diamante</rtw19>
+    <r1>Capa protectora de armadura</r1>
+    <r2>No se puede establecer valores de parámetros</r2>
+    <r3>Procesando capa protectora:</r3>
+    <r4>Establecer como nulo</r4>
+    <r5>Establecer según ajuntes de refuerzo</r5>
+    <r6>Descargar ajustes de refuerzo</r6>
+    <r7>Guardar ajustes de refuerzo</r7>
+    <r8>Descargar del archivo</r8>
+    <r9>Guardar en archivo</r9>
+    <r10>Descripción no especificada</r10>
+    <r11>Nombre</r11>
+    <r12>Nombre no debe contener siguientes símbolos:</r12>
+    <r13>Guardar como nuevo</r13>
+    <r14>Sobrescribir existentes</r14>
+    <r15>¡Ajustes se eliminarán permanentemente! ¿Seguro?</r15>
+    <r16>¡Faltan ajustes de refuerzo guardados! Primero guarde ajustes o use descarga del archivo especificado</r16>
+    <r17>Copiar ajustes de refuerzo de grupo actual a todos grupos seleccionados</r17>
+    <r18>Guardar ajustes de refuerzo actual como ajustes de refuerzo predeterminados</r18>
+    <r19>Guardar ajustes de refuerzo para grupo actual</r19>
+    <r20>Descargar ajustes de refuerzo y establecerlos para grupo actual</r20>
+    <r21>Liso</r21>
+    <r22>Periódico</r22>
+    <ri1>1. Esquina</ri1>
+    <ri2>2. Forma de T</ri2>
+    <ri3>3. Forma de cruz</ri3>
+    <ri4>0. No definido</ri4>
+    <ri5>Varios</ri5>
+    <p1>Parámetros de ejemplar</p1>
+    <p2>Parámetros de tipo</p2>
+    <p3>Común a todos</p3>
+    <i1>Puede introducir varios valores válidos en campo "Valores", delimitándolos con coma. Se considera que un parámetro satisface condición si su valor coincide con al menos un valor válido.</i1>
+    <i1-1>Чтобы запятая не воспринималась как символ-разделитель её необходимо экранировать обратным слешем. Например, "значение 1\,5"</i1-1>
+    <i2>Condición "Con parámetro" significa que elemento se procesará si dicho parámetro está presente, independientemente de valor del parámetro.</i2>
+    <i2-1>Condición "Sin parámetro" significa que elemento se procesará en ausencia de dicho parámetro.</i2-1>
+    <i3>Parámetros de cadena sólo se verifican si cumplen condiciones "Igual a", "No igual a", "Contiene", "No contiene".</i3>
+    <!-- todo remove after 31.0.1 -->
+    <i4>Parámetros numéricos se verifican por todas condiciones excepto "Contiene".</i4>
+    <i5>Condición "Contiene" verifica que parámetro del elemento contenga al menos uno de valores válidos. Condición «No contiene», respectivamente, verifica que parámetro no contiene al menos uno de valores.</i5>
+    <i5-1>Para utilizar condición "Comienza con", seleccione condición "Contiene" y añade un "*" al final del valor. Por ejemplo, "Muro*".</i5-1>
+    <i5-2>Para utilizar condición "Termina con", seleccione condición "Contiene" y añade un "*" al comienzo del valor. Por ejemplo, "*Muro".</i5-2>
+    <i5-3>Para utilizar condición "No comienza con", seleccione condición "No contiene" y añade un "*" al final del valor. Por ejemplo, "Muro*".</i5-3>
+    <i5-4>Para utilizar condición "No termina en", seleccione condición "No contiene" y agregue un "*" al comienzo del valor. Por ejemplo, "*Muro".</i5-4>
+    <i6>Verificación de parámetros de cadena distingue entre mayúsculas y minúsculas.</i6>
+    <i7>Parámetros del tipo "on/off" se verifican como un número entero (0 – off, 1 – on).</i7>
+    <i8>Operador "Y" verifica todas subcondiciones simples de condición de grupo, es decir, todas subcondiciones deben coincidir.</i8>
+    <i9>En lugar del nombre del parámetro, puede especificar un GUID para parámetros generales o un nombre del sistema para parámetros integrados.</i9>
+    <i10>Condiciones "Con parámetro" y "Sin parámetro" al verificar grupo primario (palabra clave Grupo) verifican, respectivamente, si elemento está en grupo o no.</i10>
+    <i11>Condiciones "Con parámetro" y "Sin parámetro" al verificar montajes primario (palabra clave Assembly) verifican, respectivamente, si elemento está en montajes o no.</i11>
+    <i12>При использовании ключевых параметров "BottomZ" и "TopZ" проверяется, соответственно, самая нижняя и самая верхняя отметка из геометрии элемента. Ключевые параметры "BottomZ" и "TopZ" считаются числовыми и проверяются соответствующими условиями. Значения отметок берутся в миллиметрах с округлением до трех знаков после запятой. В поле "Значение" можно указывать имена уровней: если указанный уровень будет найден, будет использоваться его отметка в миллиметрах с округлением до 3 знаков после запятой.</i12>
+    <et1>Igual</et1>
+    <et2>Más</et2>
+    <et3>Menos</et3>
+    <et4>Mayor o igual a</et4>
+    <et5>Menor o igual a</et5>
+    <et6>No igual</et6>
+    <et7>Contiene</et7>
+    <et8>Con parámetro</et8>
+    <et9>No contiene</et9>
+    <et10>Sin parámetro</et10>
+    <tt2>Por favor ingrese su dirección de correo electrónico para trabajar con servidor modplus.org. Dirección de correo electrónico es necesaria para identificarte en servidor. Se recomienda utilizar la dirección de correo electrónico especificada al registrarse en sitio web modplus.org</tt2>
+    <tt3>¡Es necesario ingresar su login en ficha "Registro"! (Configurador ModPlus)</tt3>
+    <tt4>¡Dirección de correo especificada no pasó verificación!\nO ingresaste dirección de correo electrónico incorrectamente o tienes un proveedor de alojamiento de correo electrónico único =)</tt4>
+    <tt5>Para cambiar idioma en cinta es necesario reiniciar Revit</tt5>
+    <tt6>Carpeta de almacenamiento de respaldo especificada anteriormente no encontrada. Carpeta ha sido eliminada o cambiada de nombre</tt6>
+    <t13>Desmarcar todas categorías</t13>
+    <t14>Añadir condición</t14>
+    <t15>Eliminar condición</t15>
+    <t16>Marcar categorías cuyos elementos están presentes en vista actual</t16>
+    <t17>Marcar todas categorías</t17>
+    <err1>¡Archivo de configuración está dañado! No es posible construir cinta</err1>
+    <err2>Complemento no está disponible para su uso en familias</err2>
+    <err3>Número permitido de pestañas creadas en cinta se ha excedido. Se permiten un máximo de 20 pestañas adicionales. ¡Ficha "{0}" no se añadirá!</err3>
+    <err4>Categoría "{0}" no encontrada en lista de categorías válidas</err4>
+    <err5>Línea contiene más condiciones de que se pueden crear en filtro por parámetros</err5>
+    <err6>En filtro por parámetros está prohibida creación de condiciones de grupo, pero línea contiene condiciones de grupo</err6>
+    <err7>Filtro por parámetros sólo se puede completar si hay al menos una categoría en filtro por categoría</err7>
+    <err8>No es posible seleccionar elementos en vista actual "{0}"</err8>
+    <err9>Error en orientación del contorno: curvas de contorno no son contiguas porque contorno original tiene interrupciones. Verifique si elementos del modelo que forman contorno a procesar están construidos correctamente y vuelva a intentarlo</err9>
+    <err10>No es posible establecer forma "{0}" de barra de armadura creada. Error:</err10>
+    <c1>Coloración de pestañas</c1>
+    <c2>Combinación de colores:</c2>
+    <c3>Área para colorear:</c3>
+    <c4>Espesor:</c4>
+    <c5>Fichas abiertas que pertenecen al mismo documento tendrán mismo color</c5>
+    <c6>Para utilizar servicio, necesita una versión de Revit no inferior a 2019.2.2</c6>
+    <c7>Bordes de ficha activa:</c7>
+    <c8>Bordes de una ficha inactiva:</c8>
+    <c9>Por nombre del documento</c9>
+    <c10>Si nombre del documento contiene</c10>
+    <c11>Imposible eliminar último color de lista</c11>
+    <c12>Ingresar nombre único para nuevo combinación de colores</c12>
+    <c13>Nombre del combinación de color "{0}" ya está en uso</c13>
+    <c14>Por tipo de vista</c14>
+    <c15>Color del texto:</c15>
+    <cz1>Fondo</cz1>
+    <cz2>Borde izquierdo</cz2>
+    <cz3>Borde inferior</cz3>
+    <cz4>Borde superior</cz4>
+    <cs1>Combinaciones de colores</cs1>
+    <cs2>Crear una nueva combinación de colores</cs2>
+    <cs3>Cambiar nombre de combinación de colores actual</cs3>
+    <cs4>Ingresar nombre de combinación de colores</cs4>
+    <cs5>Eliminar combinación de colores actual</cs5>
+    <cs6>Estándar</cs6>
+    <cs7>Claro</cs7>
+    <cs8>Oscuro</cs8>
+    <cs9>[Costumbre]</cs9>
+    <cs10>Fondo:</cs10>
+    <cs11>Selección:</cs11>
+    <cs12>Translúcido</cs12>
+    <cs13>Selección preliminar:</cs13>
+    <cs14>Advertencia:</cs14>
+    <cs15>Cálculo:</cs15>
+    <cs16>Edición de barras de armadura:</cs16>
+    <cs17>Sujeto:</cs17>
+    <cs18>Combinación de colores del área de trabajo:</cs18>
+    <s1>Estás trabajando en un archivo no guardado. Le recomendamos encarecidamente que guarde para evitar perder datos si Revit falla</s1>
+    <s2>Archivo temporal detectado</s2>
+    <s3>Se detectó un archivo temporal, lo que puede indicar un bloqueo de Revit. Seleccionar siguiente acción:</s3>
+    <s4>Recuperar datos de un archivo temporal</s4>
+    <s5>Continuar abriendo archivo</s5>
+    <s6>Fecha de última modificación:</s6>
+    <s7>Guardando un archivo</s7>
+    <s8>Autoguardado</s8>
+    <s9>Al abrir proyectos, así como al guardarlos por primera vez y "guardarlos como", se crea un archivo de copia de seguridad con extensión os$ (estado abierto). Este archivo le permitirá volver a versión de proyecto en momento de su apertura. Para hacer esto, cambie extensión del archivo a extensión del archivo del proyecto (.rvt, .rfa o .rte). Si no se ha especificado carpeta de almacenamiento de copia de seguridad, archivo se creará en misma carpeta que archivo del proyecto</s9>
+    <s10>Intervalo de guardado automático, min:</s10>
+    <s11>Número de copias de seguridad guardadas:</s11>
+    <s12>Guardar copias de seguridad en carpeta del proyecto</s12>
+    <s13>Carpeta de almacenamiento de respaldo:</s13>
+    <s14>Especificar carpeta</s14>
+    <s15>Abrir una carpeta en Explorador</s15>
+    <s16>¡Carpeta especificada no existe!</s16>
+    <s17>Eliminar carpeta</s17>
+    <s18>Si casilla está desmarcada, al cerrar proyecto, se eliminarán archivos de guardado automático (con extensión .as$)</s18>
+    <s19>Notificar si archivo no se guarda</s19>
+    <s20>Mostrar notificación sobre necesidad de guardar si proyecto actual se crea y nunca se guarda</s20>
+    <s21>Abrir registro de eventos</s21>
+    <!-- todo remove after 26.0.0 -->
+    <s22>Servicio está desarrollado en base a un complemento</s22>
+    <!-- todo remove after 26.0.0 -->
+    <s23>de Bim2B</s23>
+    <s24>Crear copias de seguridad</s24>
+    <s25>Mover archivos de copia de seguridad</s25>
+    <!-- todo remove after 22.1.3 -->
+    <s26>Si se especifica carpeta de almacenamiento de copia de seguridad, archivos de copia de seguridad (archivos con formato nombre_proyecto.nnnn.rvt) y carpetas de copia de seguridad durante trabajo conjunto (carpetas con formato nombre_proyecto_copia de seguridad) se moverán a carpeta especificada</s26>
+    <s27>Especifica número de copias de seguridad de proyecto movidas a carpeta de almacenamiento de copias de seguridad</s27>
+    <s28>Guardar sólo:</s28>
+    <s29>¡Atención! En ajustes del servicio de guardado automático, carpeta de almacenamiento de copia de seguridad se especifica como "{0}". Esta carpeta no encontrada: ¡se eliminó o se le cambió nombre! ¡Especifique carpeta de almacenamiento de respaldo correcta!</s29>
+    <s30>Si se especifica una carpeta de almacenamiento de respaldo, archivos de respaldo (archivos como nombre_proyecto.nnnn.rvt) se moverán a carpeta especificada</s30>
+    <s31>Si se especifica una carpeta de almacenamiento de respaldo, carpetas de respaldo durante trabajo conjunto (carpetas como nombre_proyecto_respaldo) se moverán a carpeta especificada</s31>
+    <s32>Mover carpetas de respaldo</s32>
+    <s33>Mover archivos de copia de seguridad y carpetas de respaldo</s33>
+    <s34>Verificar si es necesario guardar documentos mediante un avisador</s34>
+    <s35>No hay documentos procesados en lista</s35>
+    <s36>Al documento "{0}" se le asigna etiqueta "Necesita guardar"</s36>
+    <s37>Documento activo actual no está en lista de documentos en proceso</s37>
+    <sd1>Proyectos</sd1>
+    <sd2>Familias</sd2>
+    <sd3>Proyectos y Familias</sd3>
+    <sl1>Error al mover copias de seguridad</sl1>
+    <sl2>Copias de seguridad se han movido</sl2>
+    <sl3>Se ha creado archivo de copia de seguridad con estado en momento en que se abrió proyecto o en momento del último guardado manual</sl3>
+    <sl4>Error al crear archivo de copia de seguridad con estado en momento de abrir proyecto o en momento del último guardado manual</sl4>
+    <sl5>Archivo de guardado automático creado</sl5>
+    <sl6>Error al crear archivo de guardado automático</sl6>
+    <sl7>Error de recuperación del archivos temporales</sl7>
+    <sl8>Error al eliminar archivo temporal o archivo de guardado automático</sl8>
+    <sl9>Al llamar al comando "Guardar como", documento no se encontró en lista de procesados</sl9>
+    <sl10>Documento no fue añadido a lista de procesados al abrir</sl10>
+    <sl11>Documento no fue añadido a lista de procesados al abrir</sl11>
+    <sl12>Documento guardado por avisador</sl12>
+    <sl13>Error del procesador de eventos</sl13>
+    <sl14>Al guardar proyecto en procesador de eventos {0} se ha producido un error "{1}". Se añadía 1 minuto para volver a intentar guardar</sl14>
+    <sl15>Proyecto fue restaurado del archivo con estado en momento de apertura o en momento del último guardado manual</sl15>
+    <sl16>No es posible restaurar proyecto del archivo con estado en momento de apertura o en momento del último guardado manual</sl16>
+    <sl17>Documento "{0}" no cumple con condiciones para su procesamiento por parte del servicio de guardado automático</sl17>
+    <sel1>Elementos preseleccionados</sel1>
+    <sel2>Elementos seleccionados</sel2>
+    <sel3>En vista activa</sel3>
+    <sel4>En modelo</sel4>
+    <tcm1>Ordenar por información sobre herramientas</tcm1>
+    <tcm2>Ordenar pestañas por valor de información sobre herramientas. Valor de información sobre herramientas coincide con plantilla "Nombre del documento - Tipo de vista: Nombre de vista"</tcm2>
+    <tcm3>Visibilidad/Gráficos</tcm3>
+    <tcm4>Abrir hoja</tcm4>
+    <tcm5>Abra hoja en la que se encuentra esta vista</tcm5>
+    <tcm6>Abrir carpeta con documento</tcm6>
+    <tcm7>Copiar ruta al documento al portapapeles</tcm7>
+    <tcm8>Copiar ruta al modelo central al portapapeles</tcm8>
+    <tcm9>Cerrar documento</tcm9>
+    <tcm10>Cerrar vista</tcm10>
+    <tcm11>Cerrar otras fichas en documento actual</tcm11>
+    <tcm12>Cerrar todos documentos</tcm12>
+    <tcm13>Cerrar todos documentos excepto el actual</tcm13>
+    <tcm14>Cerrar todos documentos sin guardar</tcm14>
+    <tcm15>Cerrar todos documentos excepto el actual sin guardar</tcm15>
   </RevitDlls>
+  <RengaDlls LocalName="Bibliotecas de trabajo Renga">
+    <h1>AJUSTES MODPLUS</h1>
+    <h2>GENERAL</h2>
+    <h3>TRABAJANDO CON SERVIDOR</h3>
+    <h4>REGISTRO</h4>
+    <h5>Idioma:</h5>
+    <h6>Sujeto:</h6>
+    <h7>Cuenta personal</h7>
+    <h9>Ajustes</h9>
+    <h10>¡Atención! Cambio de idioma en menú principal y menús contextuales se producirá después de reiniciar Renga</h10>
+    <h11>Notificación cuando se elimina un nivel</h11>
+    <h12>Servicio muestra un mensaje si se han eliminado niveles en proyecto. Servicio procesa evento de selección. Si se eliminaron niveles sin seleccionarlos, no se mostrará ningún mensaje</h12>
+    <h13>¡Atención! Nivel ha sido eliminado</h13>
+    <h14>¡Atención! Niveles han sido eliminados</h14>
+    <undef>No definido</undef>
+    <tt2>Por favor ingrese su dirección de correo electrónico para trabajar con servidor modplus.org. Dirección de correo electrónico es necesaria para identificarte en servidor. Se recomienda utilizar la dirección de correo electrónico especificada al registrarse en sitio web modplus.org</tt2>
+    <tt3>¡Es necesario ingresar su login en ficha "Registro"! (Configurador ModPlus)</tt3>
+    <tt4>¡Dirección de correo especificada no pasó verificación!\nO ingresaste dirección de correo electrónico incorrectamente o tienes un proveedor de alojamiento de correo electrónico único =)</tt4>
+    <AirAccessory>Accesorio para conductos de aire</AirAccessory>
+    <AirDuct>Conducto de aire</AirDuct>
+    <AirEquipment>Equipo de aire</AirEquipment>
+    <AirFitting>Detalle del conducto de aire</AirFitting>
+    <AngularDimension>Dimensión angular</AngularDimension>
+    <AssemblyInstance>Montaje</AssemblyInstance>
+    <Axis>Eje</Axis>
+    <Beam>Viga</Beam>
+    <Column>Pilar</Column>
+    <DiametralDimension>Dimensión diametral</DiametralDimension>
+    <Dimension>Dimensión</Dimension>
+    <DistributionBoard>Cuadro de distribución eléctrica</DistributionBoard>
+    <Door>Puerta</Door>
+    <Duct>Conducto de aire</Duct>
+    <DuctAccessory>Accesorio para conductos de aire</DuctAccessory>
+    <DuctFitting>Detalle del conducto de aire</DuctFitting>
+    <ElectricDistributionBoard>Cuadro de distribución eléctrica</ElectricDistributionBoard>
+    <Element>Elemento</Element>
+    <Elevation>Alzado</Elevation>
+    <Equipment>Equipo</Equipment>
+    <Floor>Losa plana</Floor>
+    <Hatch>Sombreado</Hatch>
+    <Hole>Agujero</Hole>
+    <IfcObject>Objeto CFI</IfcObject>
+    <IsolatedFoundation>Fundación columnar</IsolatedFoundation>
+    <Level>Nivel</Level>
+    <LightFixture>Dispositivo de iluminación</LightFixture>
+    <Line3D>Línea de modelo</Line3D>
+    <LinearDimension>Dimensión lineal</LinearDimension>
+    <LineElectricalCircuit>Línea eléctrica</LineElectricalCircuit>
+    <MechanicalEquipment>Equipo mecánico</MechanicalEquipment>
+    <Opening>Hueco</Opening>
+    <Pipe>Tubo</Pipe>
+    <PipeAccessory>Accesorio de tubería</PipeAccessory>
+    <PipeFitting>Detalle de tubería</PipeFitting>
+    <PipelineAccessory>Accesorio de tubería</PipelineAccessory>
+    <Plate>Placa</Plate>
+    <PlumbingFixture>Sanitario</PlumbingFixture>
+    <RadialDimension>Dimensión radial</RadialDimension>
+    <Railing>Cerramiento</Railing>
+    <Ramp>Rampa</Ramp>
+    <Rebar>Barra de armadura</Rebar>
+    <Roof>Techo</Roof>
+    <Room>Habitación</Room>
+    <Route>Ruta</Route>
+    <RoutePoint>Punto de seguimiento</RoutePoint>
+    <Section>Sección</Section>
+    <Stair>Escalera</Stair>
+    <TextShape>Texto de modelo</TextShape>
+    <TextObject>Texto de modelo</TextObject>
+    <Undefined>Desconocido</Undefined>
+    <Wall>Muro</Wall>
+    <WallFoundation>Fundación de tira</WallFoundation>
+    <Window>Ventana</Window>
+    <WiringAccessory>Artículo de instalación eléctrica</WiringAccessory>
+    <PropertyType_Undefined>No definido</PropertyType_Undefined>
+    <PropertyType_Double>Número real</PropertyType_Double>
+    <PropertyType_String>Línea</PropertyType_String>
+    <PropertyType_Angle>Ángulo</PropertyType_Angle>
+    <PropertyType_Area>Área</PropertyType_Area>
+    <PropertyType_Boolean>Booleano</PropertyType_Boolean>
+    <PropertyType_Enumeration>Lista numerada</PropertyType_Enumeration>
+    <PropertyType_Integer>Entero</PropertyType_Integer>
+    <PropertyType_Length>Longitud</PropertyType_Length>
+    <PropertyType_Logical>Lógico</PropertyType_Logical>
+    <PropertyType_Mass>Masa</PropertyType_Mass>
+    <PropertyType_Volume>Volumen</PropertyType_Volume>
+    <Logical_False>No</Logical_False>
+    <Logical_True>Sí</Logical_True>
+    <Logical_Indeterminate>Incierto</Logical_Indeterminate>
+    <QuantityType_Unknown>Desconocido</QuantityType_Unknown>
+    <QuantityType_Count>Cantidad</QuantityType_Count>
+    <QuantityType_Length>Longitud</QuantityType_Length>
+    <QuantityType_Area>Área</QuantityType_Area>
+    <QuantityType_Volume>Volumen</QuantityType_Volume>
+    <QuantityType_Mass>Masa</QuantityType_Mass>
+    <Area>Área</Area>
+    <Count>Cantidad</Count>
+    <CrossSectionArea>Área de sección transversal</CrossSectionArea>
+    <CrossSectionOverallHeight>Altura total de sección transversal</CrossSectionOverallHeight>
+    <CrossSectionOverallWidth>Anchura total de sección transversal</CrossSectionOverallWidth>
+    <GrossCeilingArea>Área total del techo</GrossCeilingArea>
+    <GrossFloorArea>Área total del suelo</GrossFloorArea>
+    <GrossPerimeter>Perímetro completo</GrossPerimeter>
+    <GrossVolume>Volumen completo</GrossVolume>
+    <GrossWallArea>Área total de muros</GrossWallArea>
+    <InnerSurfaceArea>Área de superficie interior</InnerSurfaceArea>
+    <InnerSurfaceExternalArea>Área exterior de superficie interior</InnerSurfaceExternalArea>
+    <InnerSurfaceInternalArea>Área interior de superficie interior</InnerSurfaceInternalArea>
+    <NetArea>Área neta</NetArea>
+    <NetCeilingArea>Área neta del techo</NetCeilingArea>
+    <NetFloorArea>Área neta del suelo</NetFloorArea>
+    <NetFootprintArea>Área neta del base</NetFootprintArea>
+    <NetMass>Masa neta</NetMass>
+    <NetPerimeter>Perímetro neto</NetPerimeter>
+    <NetSideArea>Área neta de sección longitudinal</NetSideArea>
+    <NetVolume>Volumen neto</NetVolume>
+    <NetWallArea>Área neta de muros</NetWallArea>
+    <NominalArea>Área nominal</NominalArea>
+    <NominalHeight>Altura nominal</NominalHeight>
+    <NominalLength>Longitud nominal</NominalLength>
+    <NominalThickness>Espesor nominal</NominalThickness>
+    <NominalWidth>Anchura nominal</NominalWidth>
+    <NumberOfRiser>Número de contrahuellas</NumberOfRiser>
+    <NumberOfTreads>Número de huellas</NumberOfTreads>
+    <OuterSurfaceArea>Área de superficie exterior</OuterSurfaceArea>
+    <OverallDepth>Profundidad total</OverallDepth>
+    <OverallHeight>Altura total</OverallHeight>
+    <OverallLength>Longitud total</OverallLength>
+    <OverallWidth>Anchura total</OverallWidth>
+    <ParentRoomLevel>Nivel de habitación primario</ParentRoomLevel>
+    <ParentRoomNumber>Número de habitación primario</ParentRoomNumber>
+    <Perimeter>Perímetro</Perimeter>
+    <ReinforcementUnitCount>Número de unidades de armadura</ReinforcementUnitCount>
+    <RelativeObjectBaselineBottomElevation>Altura relativa de parte inferior de línea base del objeto</RelativeObjectBaselineBottomElevation>
+    <RelativeObjectBaselineTopElevation>Altura relativa de parte superior de línea base del objeto</RelativeObjectBaselineTopElevation>
+    <RelativeObjectBottomElevation>Altura relativa de parte inferior del objeto</RelativeObjectBottomElevation>
+    <RelativeObjectTopElevation>Altura relativa de parte superior del objeto</RelativeObjectTopElevation>
+    <RiserHeight>Altura de contrahuella</RiserHeight>
+    <SumConductorsLengths>Suma de longitudes de conductores</SumConductorsLengths>
+    <TotalRebarLength>Longitud total de armadura</TotalRebarLength>
+    <TotalRebarMass>Masa total de armadura</TotalRebarMass>
+    <TotalSurfaceArea>Área total del superficie</TotalSurfaceArea>
+    <TreadLength>Anchura de huella</TreadLength>
+    <Volume>Volumen</Volume>
+  </RengaDlls>
+  <NotesCore>
+    <h1>Insertar</h1>
+    <h2>Añadir a existente</h2>
+    <h3>Cambiar nombre de sección seleccionada</h3>
+    <h4>Ingresar nombre de sección</h4>
+    <h15>Notas</h15>
+    <h16>Personalizado</h16>
+    <h17>Archivo de notas del usuario</h17>
+    <h18>Abrir un archivo de notas del usuario existente</h18>
+    <h19>Crear un archivo de notas del usuario</h19>
+    <h20>Secciones</h20>
+    <h21>Eliminar sección seleccionada</h21>
+    <h22>Añadir nueva nota</h22>
+    <h23>Añadir una nota de texto</h23>
+    <h24>Editar nota seleccionada</h24>
+    <h25>Eliminar nota seleccionada</h25>
+    <h27>Estándar</h27>
+    <h32>Nueva nota</h32>
+    <h33>Seleccionar sección:</h33>
+    <h34>O crear uno nuevo:</h34>
+    <h35>Texto de nota:</h35>
+    <h36>Editar nota</h36>
+    <h46>archivo de notas .xml</h46>
+    <h47>¡Archivo seleccionado no es un archivo de almacenamiento de notas!</h47>
+    <h48>¿Eliminar sección seleccionada?</h48>
+    <h51>¿Seguro de eliminar exactamente nota seleccionada?</h51>
+    <h52>Puede utilizar teclas Ctrl y Mayús para seleccionar varias notas</h52>
+  </NotesCore>
+  <ReinforcementBendRules>
+    <d1>SP 63.13330.2018</d1>
+    <d2>EN 1992-1-1</d2>
+    <t1>SP 63.13330.2018 "SNIP 52-01-2003 Estructuras de hormigón y hormigón armado. Disposiciones general", cláusula 10.3.33</t1>
+    <t2>EN 1992-1-1 "Eurocódigo 2: Diseño de estructuras de hormigón armado. Parte 1-1. Reglas generales y reglas para construcción", cláusula 8.3</t2>
+    <r1>Diámetro mínimo del mandril don para armadura se toma en función del diámetro de barra ds, no inferior a:&#x0a;- para barras lisas&#x0a; don=2,5ds - ds&#60; 20 mm;&#x0a;don=4ds - ds ≥ 20 mm;&#x0a;- para barras corrugadas &#x0a; don=5ds - ds &#60; 20 mm;&#x0a;don=8ds - ds ≥ 20 mm;</r1>
+    <r2>Diámetro mínimo del mandril para evitar daños a armadura es:&#x0a;4Ø para un diámetro de barra Ø ≤ 16 mm;&#x0a;7Ø para un diámetro de barra Ø &gt; 16 mm;</r2>
+    <h1>REGLAS DE CURVATURA DE ARMADURA</h1>
+    <h2>Origen de reglas:</h2>
+    <h3>Descripción de reglas:</h3>
+    <h4>Diámetros de flexión correctos para tipos existentes</h4>
+    <h5>Si opción está activada y durante operación se encuentran tipos adecuados de barras de armadura, sus diámetros de flexión se verificarán y corregirán de acuerdo con estándares seleccionados. Si opción está desactivada, tipos de armaduras existentes no se verificarán ni corregirán. Al crear nuevos tipos de barras, si no se han encontrado las adecuadas, siempre se verifican y ajustan diámetros de flexión</h5>
+    <m1>Barras corrugadas</m1>
+    <m2>Barras lisas</m2>
+    <m3>Para barra de armadura</m3>
+    <m4>valor del diámetro de flexión</m4>
+    <m5>no cumple con estándares</m5>
+    <m6>Diámetro mínimo de flexión para armadura</m6>
+    <m7>diámetro</m7>
+    <m8>debe ser igual a:</m8>
+    <m9>Valor de propiedad será reemplazado</m9>
+    <m10>Corrección del radio de flexión de armadura</m10>
+  </ReinforcementBendRules>
+  <ReinforcementCoupler>
+    <rce1>No es posible instalar conector de armadura</rce1>
+    <rce2>Conjuntos de armaduras tienen diferentes números de barras</rce2>
+    <rce3>Extremos de barras seleccionados están demasiado separados</rce3>
+    <rce4>Enganche no se puede instalar en extremo que ya tenga gancho</rce4>
+    <rce5>Imposible instalar un conector en un extremo que ya tiene un conector</rce5>
+    <rce6>Piernas seleccionadas no están alineadas</rce6>
+    <rce7>Piernas seleccionadas no están alineadas</rce7>
+    <rce8>Una de barras seleccionadas tiene forma incorrecta</rce8>
+    <rce9>Tipo de conector seleccionado no se puede aplicar a dimensiones de barra seleccionados</rce9>
+    <rce12>No es posible instalar conectores de armadura en soportes redondos</rce12>
+    <rce13>Pierna seleccionada es más corta que acoplamiento de barra</rce13>
+    <rce14>Todas barras de conjuntos seleccionados que deben conectarse deben estar espaciadas a misma distancia</rce14>
+    <rce15>No es posible colocar conectores de armadura en arcos con diferentes radios</rce15>
+    <rce16>No es posible colocar conectores de armadura en arcos con diferentes centros</rce16>
+    <rce17>No es posible conectar un segmento de línea recta con una línea de arco usando un conector</rce17>
+  </ReinforcementCoupler>
 </ModPlus>

@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ModPlus>
-	<mrObjectsFilter LocalName="Filter"
+  <mrObjectsFilter LocalName="Filter"
 	                 Description="Filter selected objects by category">
-		<h1>Category:</h1>
-		<h2>Objects count:</h2>
-		<h5>Total selected objects:</h5>
-	</mrObjectsFilter>
-	<mrBatchSheetExport LocalName="Batch Sheets Export"
+    <h1>Category:</h1>
+    <h2>Objects count:</h2>
+    <h5>Total selected objects:</h5>
+  </mrObjectsFilter>
+  <mrBatchSheetExport LocalName="Batch Sheets Export"
 	                    Description="Plugin allows you to export all specified sheets to dwg/dxf/pdf/oxps">
-		<t1>Select all sheets</t1>
-		<t2>Deselect all sheets</t2>
-		<t3>Invert selection</t3>
-		<t4>If the check mark is not set and there will be files with the same name in the destination folder, then the suffix will be added to the name of the sheet being exported</t4>
+    <t1>Select all sheets</t1>
+    <t2>Deselect all sheets</t2>
+    <t3>Invert selection</t3>
+    <t4>If the check mark is not set and there will be files with the same name in the destination folder, then the suffix will be added to the name of the sheet being exported</t4>
     <t5>The pdf files will be merged into a single pdf file with the same order in which the sheets were exported. The original pdf files will be deleted</t5>
     <t6>Save the current list of sheets as a new set</t6>
     <t7>Save changes to the current set</t7>
     <t8>Rename the current set</t8>
     <t9>Delete the current set</t9>
     <t10>Sets allow you to save the state (checked/unchecked) and position of sheets. Sets are saved with reference to the project name</t10>
-		<h1>Export to:</h1>
-		<h2>AutoCAD file version:</h2>
-		<h3>Overwrite existing files</h3>
-		<h5>Specify the folder for saving exported files</h5>
-		<h7>Export to</h7>
-		<h8>Sheet export:</h8>
+    <h1>Export to:</h1>
+    <h2>AutoCAD file version:</h2>
+    <h3>Overwrite existing files</h3>
+    <h5>Specify the folder for saving exported files</h5>
+    <h7>Export to</h7>
+    <h8>Sheet export:</h8>
     <h9>By sheets</h9>
     <h10>By sections</h10>
     <h11>Merge PDF</h11>
@@ -34,91 +34,91 @@
     <h16>Exporting a section</h16>
     <h17>No section</h17>
     <!-- todo remove after 1.2.3.0 -->
-		<m1>No sheets selected for export!</m1>
-		<m2>Before exporting sheets, it is strongly recommended to save the project!\nSave the project?</m2>
-	</mrBatchSheetExport>
-	<mrSearchBy LocalName="Search by condition"
+    <m1>No sheets selected for export!</m1>
+    <m2>Before exporting sheets, it is strongly recommended to save the project!\nSave the project?</m2>
+  </mrBatchSheetExport>
+  <mrSearchBy LocalName="Search by condition"
               Description="Search for objects by various conditions"
               FullDescription="Plugin allows you to search by properties, parameters and quantities among all objects of the model or objects of the specified type. Found objects are highlighted in the model. There is an opportunity in the search bar to specify several values for the search, indicate the &quot;AND-OR&quot; operation option, and also use the &quot;not equal&quot;, &quot;less&quot;, &quot;more&quot; operators">
-		<h1>Object type:</h1>
-		<h2>Search in:</h2>
-		<h3>Properties</h3>
-		<h4>Parameters</h4>
-		<h5>Quantities</h5>
-		<h6>Units</h6>
-		<h7>String Match Type:</h7>
-		<h8>Search:</h8>
-		<h9>Reset current selection if nothing is found</h9>
-		<h10>Search</h10>
-		<h11>Found {0} objects</h11>
-		<h12>Nothing found</h12>
+    <h1>Object type:</h1>
+    <h2>Search in:</h2>
+    <h3>Properties</h3>
+    <h4>Parameters</h4>
+    <h5>Quantities</h5>
+    <h6>Units</h6>
+    <h7>String Match Type:</h7>
+    <h8>Search:</h8>
+    <h9>Reset current selection if nothing is found</h9>
+    <h10>Search</h10>
+    <h11>Found {0} objects</h11>
+    <h12>Nothing found</h12>
     <h16>Search in selected</h16>
-		<m1>Equal</m1>
-		<m2>Contain</m2>
-		<t1>Indicate in what units of values from the objects will be taken, and the accuracy of comparing the numerical values</t1>
-		<t2>Specify a match option for string values: whether the string to be checked must match the search value completely or the string to be checked may contain the search value</t2>
-		<t3>You can specify multiple values for the search by separating them with an asterisk. For example, “200*300”.</t3>
-		<t4>If several values are specified, the “OR” option will work. For example, when searching by the value “200*300”, a match of “200” or “300” will be satisfactory.</t4>
-		<t5>To use the “AND” option, specify “AND” at the beginning of the search query. For example, “AND200*300” indicates that the value “200” and the value “300” must match in the searched object.</t5>
-		<t6>When specifying fractional numbers, the separator of the integer and fractional part set in the regional settings of the operating system is taken into account. If you use a comma in the settings, then the value "1.75" will be processed as a string.</t6>
-		<t7>To search by “Yes/No” parameters, “true” or “false” should be indicated in the search bar, respectively.</t7>
-		<t8>For numerical values, you can specify comparison operators: “! =” Is not equal, “&lt;” is less, “&gt;” is more. For string values, you can specify the comparison operator "! =" (Not equal), which is processed only if the value "Equal" is selected in the "Match string type" property.</t8>
-		<t9>For example, the string “ANDConcrete*> 1,75” indicates that you need to find objects that have the string value “Concrete” and a numerical value greater than 1,75 among the values to be checked.</t9>
-		<t10>You can specify the specific name of the property or parameter in which you want to validate the entered value. For example, the string “Note=Concrete” with the “Search in properties” checkbox selected indicates that objects matching the search condition should have the “Note” property with the value “Concrete”. Name validation is also handled based on the “String Match Type”.</t10>
-		<t11>To search by the condition of empty values, you need to specify only the name of the property or parameter. For example, the line “Note=” with the checkbox “Search in properties” checked, indicates that objects satisfying the search condition should have the property “Note” with an empty value.</t11>
-		<t12>Checking all string values is not case sensitive.</t12>
-		<t13>Show found objects on a 3D scene</t13>
-		<all>All</all>
-		<qh1>Length:</qh1>
-		<qh2>Area:</qh2>
-		<qh3>Mass:</qh3>
-		<qh4>Volume:</qh4>
-		<qh5>Tolerance:</qh5>
-		<q1>Millimeters</q1>
-		<q2>Centimeters</q2>
-		<q3>Meters</q3>
-		<q4>Inches</q4>
-		<q5>Square millimeters</q5>
-		<q6>Square centimeters</q6>
-		<q7>Square meters</q7>
-		<q8>Grams</q8>
-		<q9>Kilograms</q9>
-		<q10>Cubic millimeters</q10>
-		<q11>Cubic centimeters</q11>
-		<q12>Cubic meters</q12>
-	</mrSearchBy>
-	<mrLevelsList LocalName="Levels"
+    <m1>Equal</m1>
+    <m2>Contain</m2>
+    <t1>Indicate in what units of values from the objects will be taken, and the accuracy of comparing the numerical values</t1>
+    <t2>Specify a match option for string values: whether the string to be checked must match the search value completely or the string to be checked may contain the search value</t2>
+    <t3>You can specify multiple values for the search by separating them with an asterisk. For example, “200*300”.</t3>
+    <t4>If several values are specified, the “OR” option will work. For example, when searching by the value “200*300”, a match of “200” or “300” will be satisfactory.</t4>
+    <t5>To use the “AND” option, specify “AND” at the beginning of the search query. For example, “AND200*300” indicates that the value “200” and the value “300” must match in the searched object.</t5>
+    <t6>When specifying fractional numbers, the separator of the integer and fractional part set in the regional settings of the operating system is taken into account. If you use a comma in the settings, then the value "1.75" will be processed as a string.</t6>
+    <t7>To search by “Yes/No” parameters, “true” or “false” should be indicated in the search bar, respectively.</t7>
+    <t8>For numerical values, you can specify comparison operators: “! =” Is not equal, “&lt;” is less, “&gt;” is more. For string values, you can specify the comparison operator "! =" (Not equal), which is processed only if the value "Equal" is selected in the "Match string type" property.</t8>
+    <t9>For example, the string “ANDConcrete*> 1,75” indicates that you need to find objects that have the string value “Concrete” and a numerical value greater than 1,75 among the values to be checked.</t9>
+    <t10>You can specify the specific name of the property or parameter in which you want to validate the entered value. For example, the string “Note=Concrete” with the “Search in properties” checkbox selected indicates that objects matching the search condition should have the “Note” property with the value “Concrete”. Name validation is also handled based on the “String Match Type”.</t10>
+    <t11>To search by the condition of empty values, you need to specify only the name of the property or parameter. For example, the line “Note=” with the checkbox “Search in properties” checked, indicates that objects satisfying the search condition should have the property “Note” with an empty value.</t11>
+    <t12>Checking all string values is not case sensitive.</t12>
+    <t13>Show found objects on a 3D scene</t13>
+    <all>All</all>
+    <qh1>Length:</qh1>
+    <qh2>Area:</qh2>
+    <qh3>Mass:</qh3>
+    <qh4>Volume:</qh4>
+    <qh5>Tolerance:</qh5>
+    <q1>Millimeters</q1>
+    <q2>Centimeters</q2>
+    <q3>Meters</q3>
+    <q4>Inches</q4>
+    <q5>Square millimeters</q5>
+    <q6>Square centimeters</q6>
+    <q7>Square meters</q7>
+    <q8>Grams</q8>
+    <q9>Kilograms</q9>
+    <q10>Cubic millimeters</q10>
+    <q11>Cubic centimeters</q11>
+    <q12>Cubic meters</q12>
+  </mrSearchBy>
+  <mrLevelsList LocalName="Levels"
 	              Description="Displaying a list of levels with the ability to control their visibility">
-		<h1>Not available on this view</h1>
-		<h2>Invert visibility</h2>
-		<h3>Isolate level</h3>
-		<h4>Select level</h4>
-		<all>All levels</all>
-	</mrLevelsList>
-	<mrQuickProperties LocalName="Quick properties"
+    <h1>Not available on this view</h1>
+    <h2>Invert visibility</h2>
+    <h3>Isolate level</h3>
+    <h4>Select level</h4>
+    <all>All levels</all>
+  </mrLevelsList>
+  <mrQuickProperties LocalName="Quick properties"
 	                   Description="Quickly view and edit the properties of selected elements">
-		<unknown>Unknown</unknown>
-		<dif>*DIFFERENT*</dif>
-		<h1>Selected items:</h1>
-		<h2>The number of elements with this property</h2>
-		<h3>Number rounding:</h3>
-		<nothing>Nothing</nothing>
-		<several>Several</several>
-	</mrQuickProperties>
-	<mrLast LocalName="Last"
+    <unknown>Unknown</unknown>
+    <dif>*DIFFERENT*</dif>
+    <h1>Selected items:</h1>
+    <h2>The number of elements with this property</h2>
+    <h3>Number rounding:</h3>
+    <nothing>Nothing</nothing>
+    <several>Several</several>
+  </mrQuickProperties>
+  <mrLast LocalName="Last"
 	        Description="Tracking and displaying the last hidden or last selected elements">
-		<h1>Various</h1>
-		<h2>Make Visible</h2>
-		<h3>Selected</h3>
-		<h4>Hidden</h4>
-	</mrLast>
-	<mr3dViewOrientation LocalName="View orientation"
+    <h1>Various</h1>
+    <h2>Make Visible</h2>
+    <h3>Selected</h3>
+    <h4>Hidden</h4>
+  </mrLast>
+  <mr3dViewOrientation LocalName="View orientation"
 	                     Description="Camera orientation in the 3D scene">
-		<top>Top</top>
-		<bottom>Bottom</bottom>
-		<front>Front</front>
-		<back>Back</back>
-		<left>Left</left>
-		<right>Right</right>
-	</mr3dViewOrientation>
+    <top>Top</top>
+    <bottom>Bottom</bottom>
+    <front>Front</front>
+    <back>Back</back>
+    <left>Left</left>
+    <right>Right</right>
+  </mr3dViewOrientation>
 </ModPlus>
