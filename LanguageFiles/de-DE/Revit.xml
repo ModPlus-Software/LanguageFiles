@@ -1947,6 +1947,8 @@
     <pd18>Auszufüllen am Ende des Projekts</pd18>
     <p19>WO_Anzahl der Ebenen</p19>
     <pd19>Anzahl der Ebenen einer Maisonettewohnung</pd19>
+    <p20>RM_Mezzanine</p20>
+    <pd20>Additional parameter that allows to designate the room as Mezzanine room</pd20>
     <pt1>Text</pt1>
     <pt2>Fläche</pt2>
     <pt3>Währungseinheit</pt3>
@@ -2153,6 +2155,8 @@
     <h193>Calculate selected apartments</h193>
     <h194>Delete selected apartments</h194>
     <h195>Apartment total area without factor</h195>
+    <h196>Mandatory parameters</h196>
+    <h197>Additional parameters</h197>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -2210,6 +2214,7 @@
     <msg52>Für die folgenden (id) unter den markierten Wohnungen wurden keine zum Kombinieren gültigen Optionen (die auf benachbarten Ebenen liegenden Wohnungen mit gleicher funktionaler Bestimmung und einem Schnittpunkt in der Hochrichtung) gefunden</msg52>
     <msg53>Among the selected apartments there are apartments with a functional purpose that does not correspond to the current apartment ID specified in the settings. Are you sure you want to calculate these apartments with the current settings?</msg53>
     <msg54>Apartment ID={0} deleted: apartment room parameters cleared (string parameters) or reset to zero (numeric parameters)</msg54>
+    <msg55>Locked apartments have been added to the list on the "Locked" tab</msg55>
     <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
     <tt2>Die Anweisung ausblenden</tt2>
     <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
@@ -2225,7 +2230,9 @@
     <tt12>Der Wert, der als Trennzeichen beim Hinzufügen zur Nummer eines Hauses, eines Blocks und/oder eines Parameterwertes</tt12>
     <tt13>Die markierten Wohnungen auswählen und anzeigen</tt13>
     <tt14>Berechnung der Wohnungsflächen wurde aufgrund von kritischen Fehlern nicht durchgeführt</tt14>
+    <!-- todo remove after 2.11.15.0 -->
     <tt15>Die ausgewählten Wohnungen blockieren. Räume von blockierten Wohnungen werden beim nachfolgenden Kombinieren von Wohnungen nicht verarbeitet</tt15>
+    <tt15_1>Lock the selected apartments. The rooms of locked apartments will not be processed during further collections and calculations of apartments</tt15_1>
     <tt16>Die ausgewählten Wohnungen freischalten</tt16>
     <tt17>Eine Kurve auswählen</tt17>
     <tt18>Wohnung gesperrt</tt18>
@@ -2245,6 +2252,7 @@
     <tt32>All apartment room parameters will be cleared (string parameters) or reset to zero (numeric parameters)</tt32>
     <instruction>Anweisung</instruction>
     <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
+    <instruction1_1>Additional parameters are processed and filled only if the rooms have these parameters. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button</instruction1_1>
     <instruction2>In der Raummatrix werden die Grundeigenschaften für die Auswahl der zu verarbeitenden Räume, die Nummerierung der Räume in der Wohnung und die Werte für die Berechnung der Wohnungsflächen festgelegt. Die Werte aus der Matrix werden anhand der funktionalen Bestimmung (Spalte FB) und des Namens des Raums ausgewählt. In der Spalte "Name des Raums" können Sie ein Sternchen an das Ende des Namens setzen, um anzugeben, dass eine Übereinstimmung am Anfang des Namens des Raums geprüft wird (z. B. "Schlafzimmer*" entspricht den Namen der Räume "Schlafzimmer 1", "Schlafzimmer 2" usw.)</instruction2>
     <!-- todo remove after 2.11.15.0 -->
     <instruction2_1>In dieser Tabelle werden die Daten angegeben, die zur Bestimmung des Wohnungstyps verwendet werden. Die Werte "Enthält Räume" und "Enthält keine Räume" werden mit den Namen der Räume ausgefüllt, die durch ein Semikolon (;) getrennt sind</instruction2_1>
@@ -2256,8 +2264,12 @@
     <instruction6>Die Nummerierung der Wohnungen kann durch Gruppierung der Wohnungen in Häuser und/oder Blöcke erfolgen, indem die entsprechenden Optionen aktiviert und die Namen der Parameter angegeben werden, aus denen der Wert der Häuser und/oder Blöcke entnommen werden soll. Die Blöcke werden als Untergruppen für die Häuser betrachtet. Die Eigenschaft "fortlaufende Nummerierung" bedeutet, dass die Nummerierung in der nächsten Gruppe fortgesetzt wird und nicht mit dem in der Eigenschaft "Startnummer" festgelegten Wert beginnt. Wenn Sie bei der Eigenschaft "Der Beginn der Nummerierung" "angeben" wählen, müssen Sie für jede Gruppe von Wohnungen einen Raum auswählen</instruction6>
     <!-- todo remove after 2.11.15.0 -->
     <instruction7>Erstellen von Ansichten der Wohnungen erfolgt durch Duplizieren der aktuellen Ansicht und mit nachfolgendem Zuschneiden entlang des Umrisses der Wohnung. Zunächst wird versucht, einen Zuschneidebereich auf der Grundlage der Dicke der umschließenden Wände zu erstellen (nur für Revit 2020 und höher). Bei Misserfolg wird versucht, einen Zuschneidebereich unter Berücksichtigung der größten der umschließenden Wanddicken zu erstellen. Wenn kein Zuschneidebereich erstellt wird, wird der von den Raumgrenzen abgeleitete Umriss verwendet. Wenn die Option "Anwendung des Wohnungstyps als Ansichtsname versuchen" aktiviert ist, erhalten die erstellten Ansichten den Ansichtsnamen "NAME_DER EBENE — Wohnung WOHNUNGSTYP"</instruction7>
+    <!-- todo remove after 2.11.15.0 -->
     <instruction8>Wohnung-Editor ermöglicht es Ihnen, manuelle Änderungen an den Werten der Wohnungsflächen vorzunehmen und mehrstöckige Wohnungen zusammenzustellen. Bei der Zusammenstellung von mehrstöckigen Wohnungen werden die Flächen neu berechnet und der Wert des Parameters "WO_Anzahl der Ebenen" wird ausgefüllt WICHTIG! Bei der Neuberechnung der Wohnungsfläche auf einer bestimmten Ebene werden die Parameterwerte von Räumen, die zu einer mehrstöckigen Wohnung gehören, aber auf einer anderen Ebene liegen, nicht neu berechnet</instruction8>
+    <instruction8_1>Apartments are collected regardless of the current value of the apartment identifier specified in the settings. The apartment editor allows you to make changes to the values of apartment areas, as well as to build multilevel apartments. When building multilevel apartments, the areas are recalculated and the value of the "AP_Levels count" parameter is filled in. The apartment editor also allows you to recalculate selected apartments, lock or unlock selected apartments, and delete selected apartments</instruction8_1>
+    <!-- todo remove after 2.11.15.0 -->
     <instruction9>Blockierte Wohnungen sind Wohnungen, deren Räume bei der Zusammenstellung der Wohnungen nicht verarbeitet werden. Die Blockierung von Wohnungen wird auf der Registerkarte "Zusammenstellung der Wohnungen" vorgenommen. Die blockierten Wohnungen werden in der Liste angezeigt, unabhängig vom aktuellen Wert der "Der Identifikator der Wohnungen" (Wert des Parameters "Funktionale Bestimmung")</instruction9>
+    <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume LocalName="Raumvolumen"
                       Description="Farbige Darstellung des Volumens von Räumen und Bereichen mit DirectShape"

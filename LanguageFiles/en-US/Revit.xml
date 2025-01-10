@@ -1947,6 +1947,8 @@
     <pd18>To be completed at the end of the project</pd18>
     <p19>AP_Levels count</p19>
     <pd19>Levels count of a multilevel apartment</pd19>
+    <p20>RM_Mezzanine</p20>
+    <pd20>Additional parameter that allows to designate the room as Mezzanine room</pd20>
     <pt1>Text</pt1>
     <pt2>Area</pt2>
     <pt3>Currency</pt3>
@@ -2153,6 +2155,8 @@
     <h193>Calculate selected apartments</h193>
     <h194>Delete selected apartments</h194>
     <h195>Apartment total area without factor</h195>
+    <h196>Mandatory parameters</h196>
+    <h197>Additional parameters</h197>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -2210,6 +2214,7 @@
     <msg52>For the following apartments (id), no pairing options were found among the marked ones (apartments with the same functional purpose, located on neighboring levels and having a vertical intersection)</msg52>
     <msg53>Among the selected apartments there are apartments with a functional purpose that does not correspond to the current apartment ID specified in the settings. Are you sure you want to calculate these apartments with the current settings?</msg53>
     <msg54>Apartment ID={0} deleted: apartment room parameters cleared (string parameters) or reset to zero (numeric parameters)</msg54>
+    <msg55>Locked apartments have been added to the list on the "Locked" tab</msg55>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -2225,7 +2230,9 @@
     <tt12>Value used as a delimiter when adding a "Housing", "Section" and/or parameter value to the number</tt12>
     <tt13>Select and show the checked apartments</tt13>
     <tt14>The calculation of the apartment areas was not performed due to the presence of critical errors</tt14>
+    <!-- todo remove after 2.11.15.0 -->
     <tt15>Lock selected apartments. The rooms of blocked apartments will not be processed in subsequent apartment collections</tt15>
+    <tt15_1>Lock the selected apartments. The rooms of locked apartments will not be processed during further collections and calculations of apartments</tt15_1>
     <tt16>Unlock selected apartments</tt16>
     <tt17>Select curve</tt17>
     <tt18>Apartment is locked</tt18>
@@ -2245,6 +2252,7 @@
     <tt32>All apartment room parameters will be cleared (string parameters) or reset to zero (numeric parameters)</tt32>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
+    <instruction1_1>Additional parameters are processed and filled only if the rooms have these parameters. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button</instruction1_1>
     <instruction2>In the room matrix the basic properties for the selection of the processed rooms, the numbering of rooms in the apartment, as well as the values for the calculation of the apartment areas are set. The values from the matrix are selected by matching the functional purpose (FN column) and the room name. In the "Room name" column you can specify an asterisk at the end of the name, which will indicate a check for a match at the beginning of the room name (for example, the value "Bedroom*" will match the room names "Bedroom 1", "Bedroom 2", etc.)</instruction2>
     <!-- todo remove after 2.11.15.0 -->
     <instruction2_1>This table specifies the data used to define the apartment type. The values "Contains rooms" and " Not contains rooms" are filled in with the names of rooms, separated by semicolons (;)</instruction2_1>
@@ -2256,8 +2264,12 @@
     <instruction6>Numbering can be done by grouping the apartments by Housings and/or Sections by enabling the corresponding options and by specifying the parameter names from which to take the value of the Housing and/or Sections. In this case, it is considered that the sections are subgroups for the housings. The "End-to-end numbering" property means that the numbering in the next group will continue, not start from the value set in the "Initial number" property. If you select the " Point " option in the "Start of numbering" property, you will need to select a room for each group of apartments</instruction6>
     <!-- todo remove after 2.11.15.0 -->
     <instruction7>Creating apartment views is done by duplicating the current view, followed by cropping along the contour of the apartment. First of all, an attempt is made to create a crop contour considering the thickness of the enclosing walls (only for Revit 2020 and higher). If unsuccessful, an attempt is made to create a crop contour taking into account the thickest of the enclosing walls. If the crop contour is not created, the apartment contour obtained from the room boundaries will be used. If the option "Try to use apartment type as view name" is enabled, the created views will be given a name of the type "LEVEL_NAME – Apartment APARTMENT_TYPE".</instruction7>
+    <!-- todo remove after 2.11.15.0 -->
     <instruction8>The apartment editor allows you to make manual changes to the values of the apartment areas, as well as to merge multilevel apartments. When merging multilevel apartments, the areas are recalculated and the value of the "AP_Levels count" parameter is filled in. IMPORTANT: When recalculating apartments on a particular level, the parameter values of rooms belonging to the multilevel apartment, but located on another level, will not be recalculated</instruction8>
+    <instruction8_1>Apartments are collected regardless of the current value of the apartment identifier specified in the settings. The apartment editor allows you to make changes to the values of apartment areas, as well as to build multilevel apartments. When building multilevel apartments, the areas are recalculated and the value of the "AP_Levels count" parameter is filled in. The apartment editor also allows you to recalculate selected apartments, lock or unlock selected apartments, and delete selected apartments</instruction8_1>
+    <!-- todo remove after 2.11.15.0 -->
     <instruction9>Locked apartments are apartments whose rooms will not be processed when collecting apartments. Apartments are locked on the "Collecting apartments" tab. Locked apartments are displayed in the list regardless of the current value of the "Apartment Identifier" (value of the "Functional purpose" parameter)</instruction9>
+    <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume LocalName="Room volume"
                       Description="Showing the volume of rooms and spaces in color using DirectShape"

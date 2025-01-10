@@ -1947,6 +1947,8 @@
     <pd18>Se completará al final del diseño (antes de enviarlo al Sistema de Reserva Federal)</pd18>
     <p19>AP_Número de niveles</p19>
     <pd19>Número de niveles de un apartamento de varios niveles</pd19>
+    <p20>RM_Mezzanine</p20>
+    <pd20>Additional parameter that allows to designate the room as Mezzanine room</pd20>
     <pt1>Texto</pt1>
     <pt2>Área</pt2>
     <pt3>Unidad monetaria</pt3>
@@ -2153,6 +2155,8 @@
     <h193>Рассчитать выбранные квартиры</h193>
     <h194>Удалить выбранные квартиры</h194>
     <h195>Общую площадь квартиры без коэффициента</h195>
+    <h196>Mandatory parameters</h196>
+    <h197>Additional parameters</h197>
     <msg1>No se ha encontrado parámetro "{0}"</msg1>
     <msg2>Parámetro "{0}" no rellenado</msg2>
     <msg3>Parámetro "{0}" tiene un valor ilegal</msg3>
@@ -2210,6 +2214,7 @@
     <msg52>Para siguientes apartamentos (id) no se han encontrado opciones de unión entre marcadas (apartamentos con mismo propósito funcional ubicados en niveles cercanos y que tienen intersección vertical)</msg52>
     <msg53>Среди выбранных квартир имеются квартиры с функциональным назначением, которое не соответствует текущему идентификатору квартир, указанному в настройках. Вы уверены, что хотите выполнить расчет этих квартир с текущими настройками?</msg53>
     <msg54>Квартира ID={0} удалена: параметры помещений  квартиры очищены (строковые параметры) или обнулены (числовые параметры)</msg54>
+    <msg55>Locked apartments have been added to the list on the "Locked" tab</msg55>
     <tt1>Valor del parámetro "Propósito funcional", que se utiliza para seleccionar habitaciones que se procesan. Si parámetro tiene valor diferente, habitación se omitirá cuando se estén ejecutando todos algoritmos</tt1>
     <tt2>Ocultar instrucción</tt2>
     <tt3>Para cada grupo de lista, seleccione una habitación del proyecto mediante lo cual se determinará apartamento inicial para numeración</tt3>
@@ -2225,7 +2230,9 @@
     <tt12>Valor utilizado como separador al añadir valor de Edificio, División y/o valor del parámetro</tt12>
     <tt13>Seleccionar y mostrar apartamentos marcados</tt13>
     <tt14>Cálculo del área del apartamento no se realizó debido a presencia de errores críticos</tt14>
+    <!-- todo remove after 2.11.15.0 -->
     <tt15>Bloquear apartamentos seleccionados. Habitaciones de apartamentos bloqueados no se procesarán durante recopilaciones posteriores de apartamentos</tt15>
+    <tt15_1>Lock the selected apartments. The rooms of locked apartments will not be processed during further collections and calculations of apartments</tt15_1>
     <tt16>Desbloquear apartamentos seleccionados</tt16>
     <tt17>Seleccionar curva</tt17>
     <tt18>Apartamento está bloqueado</tt18>
@@ -2245,6 +2252,7 @@
     <tt32>Все параметры помещений квартиры будут очищены (строковые параметры) или обнулены (числовые параметры)</tt32>
     <instruction>Instrucción</instruction>
     <instruction1>Todas habitaciones del proyecto deben contar con parámetros generales especificados en esta lista. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes". Todos parámetros numéricos están representados por tipo "Unidad monetaria", que le permite procesar habitaciones en grupos</instruction1>
+    <instruction1_1>Additional parameters are processed and filled only if the rooms have these parameters. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button</instruction1_1>
     <instruction2>En matriz de habitaciones se establecen propiedades generales para selección de habitaciones procesadas, numeración de habitaciones en apartamento, así como valores para calcular áreas del apartamento. Valores de matriz se seleccionan en función de coincidencia del propósito funcional (columna PF) y nombre de habitación. En columna "Nombre de habitación", puede especificar asterisco al final de nombre, lo que indicará una verificación de coincidencia al principio de nombre de habitación (por ejemplo, valor "Dormitorio*" coincidirá con nombres de habitaciones "Dormitorio 1", "Dormitorio 2", etc.)</instruction2>
     <!-- todo remove after 2.11.15.0 -->
     <instruction2_1>Esta tabla especifica datos utilizados para determinar tipo de apartamento. Valores "Contiene habitaciones" y "No contiene habitaciones" se rellenan con nombres de habitaciones separadas por punto y coma (;)</instruction2_1>
@@ -2256,8 +2264,12 @@
     <instruction6>Numeración de apartamentos se puede realizar agrupando apartamentos por Edificio y/o División, activando opciones adecuadas y especificando nombres de parámetros de que tomar valor del Edificio y/o División. En este caso se considera que divisiones son subgrupos de edificios. Propiedad "Numeración continua" significa que numeración en siguiente grupo continuará, en lugar de comenzar desde valor establecido en propiedad "Número inicial". Si selecciona opción “Especificar” en propiedad “Inicio de numeración”, será necesario seleccionar una habitación para cada grupo de apartamentos</instruction6>
     <!-- todo remove after 2.11.15.0 -->
     <instruction7>Vistas de apartamentos se crean duplicando vista actual y luego recortándola a lo largo del contorno del apartamento. En primer lugar, se intenta crear contorno de recorte teniendo en cuenta espesor de muros cortina (sólo para Revit 2020 y versiones posteriores). Si no se consigue, se intenta crear contorno de recorte teniendo en cuenta mayor espesor de muros que rodean. Si no se crea contorno de recorte, se utilizará contorno del apartamento obtenido de delimitación de habitación. Cuando opción "Intentar utilizar tipo de apartamento como nombre de vista" está activada, vistas creadas recibirán nombre de vista "NOMBRE_NIVEL- Apartamento TIPO_APARTAMENTO"</instruction7>
+    <!-- todo remove after 2.11.15.0 -->
     <instruction8>Editor de apartamentos le permite realizar cambios manuales en valores de áreas de apartamentos, así como ensamblar apartamentos de varios niveles. Al ensamblar apartamentos de varios niveles, se recalculan áreas y se completa valor del parámetro "AP_Número de niveles". ¡IMPORTANTE! Al recalcular apartamentos en un nivel específico, valores de parámetros para habitaciones que pertenecen a un apartamento de varios niveles, pero ubicados en un nivel diferente, no se recalcularán</instruction8>
+    <instruction8_1>Сборка квартир производится независимо от текущего значения идентификатора квартир, указанного в настройках. Редактор квартир позволяет внести изменения в значения площадей квартир, а также выполнить сборку многоуровневых квартир. При сборке многоуровневых квартир происходит пересчет площадей, а также заполняется значение параметра "КВ_Количество уровней". Редактор квартир также позволяет пересчитать выбранные квартиры, заблокировать или разблокировать выбранные квартиры, а также удалить выбранные квартиры</instruction8_1>
+    <!-- todo remove after 2.11.15.0 -->
     <instruction9>Apartamentos bloqueados son apartamentos cuyos habitaciones no se procesarán durante ensamblaje de apartamentos. Bloqueo de apartamentos se realiza en ficha "Ensamblar apartamentos". Lista muestra apartamentos bloqueados independientemente de valor actual del "ID del apartamento" (valor del parámetro "Propósito funcional")</instruction9>
+    <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume LocalName="Volumen de habitaciones"
                       Description="Muestre volumen de habitaciones y espacios en color utilizando DirectShape"
