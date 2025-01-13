@@ -1885,6 +1885,7 @@
     <tab8>Vistas de apartamentos</tab8>
     <tab9>Editor de apartamentos</tab9>
     <tab10>Bloqueados</tab10>
+    <tab11>Classification</tab11>
     <rt1>No especificado</rt1>
     <rt2>Residencial</rt2>
     <rt3>No residencial</rt3>
@@ -1907,9 +1908,9 @@
     <totalAreaWithoutFactorS>S total sin factor</totalAreaWithoutFactorS>
     <livingAreaS>S hab.</livingAreaS>
     <number>Número</number>
-    <p1>SW_Propósito funcional</p1>
+    <p1>HA_Propósito funcional</p1>
     <pd1>¡Ingresado manualmente! Utiliza en todos principales algoritmos de apartamentoografía</pd1>
-    <p2>SW_No._Habitación</p2>
+    <p2>HA_No._Habitación</p2>
     <pd2>Reemplaza parámetro del sistema "Número"</pd2>
     <p3>AP_ID de apartamento</p3>
     <pd3>Índice único de apartamentos</pd3>
@@ -1947,7 +1948,7 @@
     <pd18>Se completará al final del diseño (antes de enviarlo al Sistema de Reserva Federal)</pd18>
     <p19>AP_Número de niveles</p19>
     <pd19>Número de niveles de un apartamento de varios niveles</pd19>
-    <p20>RM_Mezzanine</p20>
+    <p20>HA_Entresuelo</p20>
     <pd20>Additional parameter that allows to designate the room as Mezzanine room</pd20>
     <pt1>Texto</pt1>
     <pt2>Área</pt2>
@@ -2157,6 +2158,12 @@
     <h195>Общую площадь квартиры без коэффициента</h195>
     <h196>Mandatory parameters</h196>
     <h197>Additional parameters</h197>
+    <h198>E</h198>
+    <h199>Entresuelo</h199>
+    <h200>Mark the selected rooms as "Mezzanine"</h200>
+    <h201>Unmark "Mezzanine" from the selected rooms</h201>
+    <h202>Conditions</h202>
+    <h203>Current configuration</h203>
     <msg1>No se ha encontrado parámetro "{0}"</msg1>
     <msg2>Parámetro "{0}" no rellenado</msg2>
     <msg3>Parámetro "{0}" tiene un valor ilegal</msg3>
@@ -2215,6 +2222,7 @@
     <msg53>Среди выбранных квартир имеются квартиры с функциональным назначением, которое не соответствует текущему идентификатору квартир, указанному в настройках. Вы уверены, что хотите выполнить расчет этих квартир с текущими настройками?</msg53>
     <msg54>Квартира ID={0} удалена: параметры помещений  квартиры очищены (строковые параметры) или обнулены (числовые параметры)</msg54>
     <msg55>Locked apartments have been added to the list on the "Locked" tab</msg55>
+    <msg56>The parameter "RM_Mezzanine" was not found. Create missing additional parameters on the "Parameters" - "Additional parameters" tab</msg56>
     <tt1>Valor del parámetro "Propósito funcional", que se utiliza para seleccionar habitaciones que se procesan. Si parámetro tiene valor diferente, habitación se omitirá cuando se estén ejecutando todos algoritmos</tt1>
     <tt2>Ocultar instrucción</tt2>
     <tt3>Para cada grupo de lista, seleccione una habitación del proyecto mediante lo cual se determinará apartamento inicial para numeración</tt3>
@@ -2270,6 +2278,7 @@
     <!-- todo remove after 2.11.15.0 -->
     <instruction9>Apartamentos bloqueados son apartamentos cuyos habitaciones no se procesarán durante ensamblaje de apartamentos. Bloqueo de apartamentos se realiza en ficha "Ensamblar apartamentos". Lista muestra apartamentos bloqueados independientemente de valor actual del "ID del apartamento" (valor del parámetro "Propósito funcional")</instruction9>
     <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
+    <instruction10>Classification allows you to fill in certain parameters of apartments based on the characteristics of the apartments. First, you need to create tables with conditions on the "Conditions" tab, after which you can perform classification with the result displayed on the "Classification" tab</instruction10>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume LocalName="Volumen de habitaciones"
                       Description="Muestre volumen de habitaciones y espacios en color utilizando DirectShape"

@@ -1885,6 +1885,7 @@
     <tab8>Views of apartments</tab8>
     <tab9>Apartment Editor</tab9>
     <tab10>Locked apartments</tab10>
+    <tab11>Classification</tab11>
     <rt1>Not set</rt1>
     <rt2>Residential</rt2>
     <rt3>Non-residential</rt3>
@@ -2157,6 +2158,12 @@
     <h195>Apartment total area without factor</h195>
     <h196>Mandatory parameters</h196>
     <h197>Additional parameters</h197>
+    <h198>M</h198>
+    <h199>Mezzanine</h199>
+    <h200>Mark the selected rooms as "Mezzanine"</h200>
+    <h201>Unmark "Mezzanine" from the selected rooms</h201>
+    <h202>Conditions</h202>
+    <h203>Current configuration</h203>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -2215,6 +2222,7 @@
     <msg53>Among the selected apartments there are apartments with a functional purpose that does not correspond to the current apartment ID specified in the settings. Are you sure you want to calculate these apartments with the current settings?</msg53>
     <msg54>Apartment ID={0} deleted: apartment room parameters cleared (string parameters) or reset to zero (numeric parameters)</msg54>
     <msg55>Locked apartments have been added to the list on the "Locked" tab</msg55>
+    <msg56>The parameter "RM_Mezzanine" was not found. Create missing additional parameters on the "Parameters" - "Additional parameters" tab</msg56>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -2270,6 +2278,7 @@
     <!-- todo remove after 2.11.15.0 -->
     <instruction9>Locked apartments are apartments whose rooms will not be processed when collecting apartments. Apartments are locked on the "Collecting apartments" tab. Locked apartments are displayed in the list regardless of the current value of the "Apartment Identifier" (value of the "Functional purpose" parameter)</instruction9>
     <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
+    <instruction10>Classification allows you to fill in certain parameters of apartments based on the characteristics of the apartments. First, you need to create tables with conditions on the "Conditions" tab, after which you can perform classification with the result displayed on the "Classification" tab</instruction10>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume LocalName="Room volume"
                       Description="Showing the volume of rooms and spaces in color using DirectShape"
