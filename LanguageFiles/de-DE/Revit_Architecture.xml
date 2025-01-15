@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModPlus>
+  <mprApartmentBuildingLayout LocalName="Wohnungslayout"
+                              Description="Umfassende Realisierung von Wohnungslayout"
+                              LocalName1="Autom. Berechnung"
+                              Description1="Dienst zur automatischen Neuberechnung der Wohnungsflächen bei Änderung der Raumgröße">
+    <tab1>Parameter</tab1>
+    <tab2>Quellen</tab2>
+    <tab3>Ursprüngliche Überprüfung</tab3>
+    <tab4>Zusammenstellung der Wohnungen</tab4>
+    <tab5>Berechnung der Wohnungsfläche</tab5>
+    <tab6>Nummerierung</tab6>
+    <tab7>Bauteillisten</tab7>
+    <!-- todo remove after 2.11.15.0 -->
+    <tab8>Ansichten der Wohnungen</tab8>
+    <tab9>Wohnung-Editor</tab9>
+    <tab10>Blockierte</tab10>
+    <tab11>Classification</tab11>
+    <rt1>Nicht festgelegt</rt1>
+    <rt2>Bewohnbar</rt2>
+    <rt3>Unbewohnbar</rt3>
+    <rt4>Ungeheizt</rt4>
+    <rtm1>Bewohnbare,bewohnbarer</rtm1>
+    <rtm2>Unbewohnbare,unbewohnbarer</rtm2>
+    <rtm3>Ungeheizte,ungeheizt</rtm3>
+    <sa1>Gerundete Fläche</sa1>
+    <sa2>Fläche gerundet um einen Faktor</sa2>
+    <fc1>SP 12.13130</fc1>
+    <fc2>Euroklasse</fc2>
+    <apartment>Wohnung</apartment>
+    <view>in der aktuellen Ansicht</view>
+    <model>im gesamten Projekt</model>
+    <flatArea>Grundfläche der Wohnung</flatArea>
+    <totalArea>Nutzungsfläche</totalArea>
+    <livingArea>Wohnfläche</livingArea>
+    <flatAreaS>S Nutz.</flatAreaS>
+    <totalAreaS>S allgemein</totalAreaS>
+    <totalAreaWithoutFactorS>S allgemein ohne Faktor</totalAreaWithoutFactorS>
+    <livingAreaS>S Wohn.</livingAreaS>
+    <number>Nummer</number>
+    <p1>RM_Funktionale Bestimmung</p1>
+    <pd1>Manuell eingeben! Beteiligung an allen grundlegenden Algorithmen des Wohnung-Layout</pd1>
+    <p2>RM_Nr._des Raums</p2>
+    <pd2>Ersetzt den Systemparameter "Nummer"</pd2>
+    <p3>WO_Wohnungs-ID</p3>
+    <pd3>Eindeutiger Index der Wohnung</pd3>
+    <p4>WO_Typ der Wohnung</p4>
+    <pd4>Zum Beispiel: 1К, 2С, 3К</pd4>
+    <p5>WO_Typ des Raums</p5>
+    <pd5>Typ des Raums. Zuweisung nach Raummatrix</pd5>
+    <p6>WO_Anzahl der Wohnräume</p6>
+    <pd6>Anzahl der Wohnräume in der Wohnung</pd6>
+    <p7>WO_Gerundete Fläche</p7>
+    <pd7>Raumfläche der Wohnung auf eine bestimmte Nachkommastelle korrekt gerundet</pd7>
+    <p8>WO_Fläche mit Faktor</p8>
+    <pd8>Raumfläche der Wohnung auf eine bestimmte Nachkommastelle korrekt gerundet. Mit Reduktionsfaktor</pd8>
+    <p9>WO_Flächenfaktor</p9>
+    <pd9>Reduktionsfaktor für Balkon, Loggia, Terrasse</pd9>
+    <p10>WO_Dicke der Wände nach den Rohbauarbeiten</p10>
+    <pd10>Dicke der Wände nach den Rohbauarbeiten zur Berechnung der Flächen, in mm</pd10>
+    <p11>WO_Raumindex</p11>
+    <pd11>Die laufende Nummer der gleichnamigen Räume in der Wohnung</pd11>
+    <p12>WO_Wohnfläche</p12>
+    <pd12>Die Summe der Wohnflächen der Wohnung</pd12>
+    <p13>WO_Grundfläche der Wohnung</p13>
+    <pd13>Die Summe der Wohnungsgrundflächen ohne unbeheizte Räume (Gesamt)</pd13>
+    <p14>WO_Nutzungsfläche</p14>
+    <pd14>Die Summe aller Flächen der Räume in der Wohnung. Einschließlich der unbeheizten Räume mit einem Reduktionsfaktor (Faktor angewandt)</pd14>
+    <p14-1>WO_Nutzungsfläche ohne Faktor</p14-1>
+    <pd14-1>Summe aller Flächen der Wohnung ohne Berücksichtigung eines Reduktionsfaktors</pd14-1>
+    <p15>WO_Fläche der unbeheizten Räume</p15>
+    <pd15>Die Summe der Flächen der unbeheizten Räume in der Wohnung. Ohne Reduktionsfaktoren</pd15>
+    <p16>WO_Fläche der unbeheizten Räume mit Faktor</p16>
+    <pd16>Die Summe der Flächen der unbeheizten Räume in der Wohnung. Mit Reduktionsfaktor</pd16>
+    <p17>WO_Bezeichnung der Wohnung</p17>
+    <pd17>Hilfsparameter zum Zählen der Anzahl der Wohnungen in den Bauteillisten</pd17>
+    <p18>WO_Nr. der Wohnung</p18>
+    <pd18>Auszufüllen am Ende des Projekts</pd18>
+    <p19>WO_Anzahl der Ebenen</p19>
+    <pd19>Anzahl der Ebenen einer Maisonettewohnung</pd19>
+    <p20>RM_Mezzanin</p20>
+    <pd20>Additional parameter that allows to designate the room as Mezzanine room</pd20>
+    <pt1>Text</pt1>
+    <pt2>Fläche</pt2>
+    <pt3>Währungseinheit</pt3>
+    <pt4>Ganzzahlige</pt4>
+    <pt5>Ja/Nein</pt5>
+    <pt6>Zahl</pt6>
+    <h1>Wohnungs-ID</h1>
+    <h2>Allgemeine Parameter</h2>
+    <h3>Farbschemata</h3>
+    <h4>FB</h4>
+    <h5>Name des Raums</h5>
+    <h6>Dicke der Wände nach den Rohbauarbeiten</h6>
+    <h7>Typ des Raums</h7>
+    <h8>Flächen-Faktor</h8>
+    <h9>Der Identifikator der Wohnungen:</h9>
+    <h10>Rundung der Fläche:</h10>
+    <h11>Allgemeine</h11>
+    <h12>Flächen der Wohnungen</h12>
+    <h13>Geben Sie an, ob bei der Berechnung der Gesamtfläche der Wohnung die gerundete oder die mit einem Faktor gerundete Grundfläche verwendet werden soll</h13>
+    <h14>Raummatrix</h14>
+    <h15>Wohnungstypen</h15>
+    <h16>Fehlende Parameter erstellen</h16>
+    <h17>Gültige Identifikatoren:</h17>
+    <h18>Löschen von nicht platzierten Familien</h18>
+    <h19>Excel-Dateien|*.xlsx</h19>
+    <h20>Priorität der Nummerierung</h20>
+    <h21>Zusammenstellung der Wohnungen</h21>
+    <h22>Ausfüllen der Raummatrixdaten</h22>
+    <h23>Berechnung der Flächen</h23>
+    <h24>Funktionale Bestimmung</h24>
+    <h25>Wohnungstyp</h25>
+    <h26>Anzahl der Wohnräume</h26>
+    <h27>Anz. der Wohnr.</h27>
+    <h28>Minimale Nutzungsfläche</h28>
+    <h29>Min. Nutzfl.</h29>
+    <h30>Maximale Nutzungsfläche</h30>
+    <h31>Max. Nutzfl.</h31>
+    <h32>Enthält Räume</h32>
+    <h33>Enth. Räu.</h33>
+    <h34>Enthält keine Räume</h34>
+    <h35>Enth. Keine Räu.</h35>
+    <h36>Erstellen von Parametern</h36>
+    <h37>Import aus Excel</h37>
+    <h38>Geben Sie eine Startzeile an, ab der die Daten gelesen werden sollen, und die Spaltennummern, die Werte für die angegebenen Eigenschaften enthalten</h38>
+    <h39>Startzeile:</h39>
+    <h40>Sammeln</h40>
+    <h41>Der Spalte "Name des Raums":</h41>
+    <h42>Der Spalte "Dicke der Wände nach den Rohbauarbeiten":</h42>
+    <h43>Der Spalte "Typ des Raums":</h43>
+    <h44>Der Spalte "Flächenfaktor":</h44>
+    <h45>Der Spalte "Priorität der Nummerierung":</h45>
+    <h46>Der Spalte "Wohnungstyp":</h46>
+    <h47>Der Spalte "Anzahl der Wohnräume":</h47>
+    <h48>Der Spalte "Minimale Nutzungsfläche":</h48>
+    <h49>Der Spalte "Maximale Nutzungsfläche":</h49>
+    <h50>Der Spalte "Enthält Räume":</h50>
+    <h51>Der Spalte "Enthält keine Räume":</h51>
+    <h52>Nummer des Raums</h52>
+    <h53>Probleme</h53>
+    <h54>Keine platzierten Räume im Projekt gefunden</h54>
+    <h55>Ungültige Räume</h55>
+    <h56>Parameter</h56>
+    <h57>Verwenden</h57>
+    <h58>Die Wohnungen zusammensetzen</h58>
+    <h59>Zusammengesetzte Wohnungen:</h59>
+    <h60>Ebene</h60>
+    <h61>Anzahl der Räume in der Wohnung</h61>
+    <h62>Es wurde keine einzige Wohnung zusammengesetzt! Überprüfen Sie, ob die Räume die richtigen Parameter "funktionale Bestimmung" und "Name" haben, die der Raummatrix entsprechen</h62>
+    <h63>Inkorrekte Räume:</h63>
+    <h64>Bei der Zusammenstellung der Wohnungen wurden keine inkorrekten Räume festgestellt</h64>
+    <h65>Anzahl der gezählten Wohnungen:</h65>
+    <h66>Keine Wohnungen zur Abrechnung gefunden! Füllen Sie die Parameter "Funktionale Bestimmung" und "Name" der Räume gemäß der Raummatrix aus und stellen Sie die Wohnungen zusammen</h66>
+    <h67>Nicht platzierte Räume</h67>
+    <h68>Ausgewählte löschen</h68>
+    <h69>Alle löschen</h69>
+    <h70>Verwenden Sie die Shift-Taste und/oder die Strg-Taste, um mehrere Positionen in der Liste auszuwählen</h70>
+    <h71>Berechnen</h71>
+    <h72>oder</h72>
+    <h73>Zusammenstellung nach ausgewählten Räumen</h73>
+    <h74>Berechnen nach ausgewählten Räumen</h74>
+    <h75>Den Inhalt des Fensters minimieren</h75>
+    <h76>Den Inhalt des Fensters vergrößern</h76>
+    <h77>Die Option "Im Vordergrund" aktivieren</h77>
+    <h78>Die Option "Im Vordergrund" deaktivieren</h78>
+    <h79>Alle auswählen</h79>
+    <h80>Versteckte Anweisungen wiederherstellen</h80>
+    <h81>Service für die automatische Neuberechnung von Wohnungsflächen, wenn sich die Raumabmessungen ändern, und ein kompletter Neuberechnungs-Service (Matrix-basierte Parametrisierung, Flächen-Neuberechnung und Bestimmung des Wohnungstyps) bei der Entfernung der Räume. Die Services verarbeiten nur Räume, in denen der Parameter "Wohnungs-ID" ausgefüllt ist</h81>
+    <h82>Suche nach Raumnamen</h82>
+    <h83>Alle Räume im Projekt sind gültig</h83>
+    <h84>Alle Räume der aktuellen Ansicht sind gültig</h84>
+    <h85>Als Standard speichern</h85>
+    <h86>Speichert das aktuelle Verknüpfen von Familienparametern als Standardwerte. Beim Start des Plugins in einem neuen Dokument, in dem das Verknüpfen von Familienparametern nicht eingestellt ist, werden die gespeicherten Standardwerte eingesetzt (falls Parameter im Dokument vorhanden sind)</h86>
+    <h87>Nummerierung durchführen</h87>
+    <h88>Nummerierung für Wohnungen</h88>
+    <h89>Nummerierte Wohnungen:</h89>
+    <h90>Keine Wohnungen zur Nummerierung gefunden</h90>
+    <h91>Gruppierung</h91>
+    <h92>Nummerierungseinstellungen</h92>
+    <h93>Fortlaufende Nummerierung</h93>
+    <h94>Die Richtung der Nummerierung:</h94>
+    <h95>im Uhrzeigersinn</h95>
+    <h96>gegen Uhrzeigersinn</h96>
+    <h97>Der Beginn der Nummerierung:</h97>
+    <h98>linke obere Ecke</h98>
+    <h99>rechte obere Ecke</h99>
+    <h100>linke untere Ecke</h100>
+    <h101>rechte untere Ecke</h101>
+    <h102>angeben</h102>
+    <h103>Startnummer:</h103>
+    <h104>Gruppieren nach Raumumschließungen</h104>
+    <h105>Gruppieren nach Blöcken</h105>
+    <h106>Sortierung:</h106>
+    <h107>aufsteigend</h107>
+    <h108>absteigend</h108>
+    <h109>Die Eingangstür wurde nicht gefunden!</h109>
+    <h110>Haus</h110>
+    <h111>Block</h111>
+    <h112>Haus in Nummer</h112>
+    <h113>Block in Nummer</h113>
+    <h114>Nicht ausgewählt</h114>
+    <!-- todo remove after 2.11.15.0 -->
+    <h115>Keine Wohnungen in der aktuellen Ansicht gefunden</h115>
+    <h116>Parameterwert in Nummer</h116>
+    <!-- todo remove after 2.11.15.0 start -->
+    <h117>Eine Variante der Duplizierung der Ansicht:</h117>
+    <h118>Duplizieren</h118>
+    <h119>Duplizieren mit Hinzufügen von Details</h119>
+    <h120>Ansichtsvorlage anwenden:</h120>
+    <h121>Verschiebung des Zuschneidebereiches:</h121>
+    <h122>Ansichtsmaßstab anwenden:</h122>
+    <h123>Anwendung des Wohnungstyps als Ansichtsname versuchen</h123>
+    <h124>Ansichten der Wohnungen erstellen</h124>
+    <!-- todo remove after 2.11.15.0 end -->
+    <h125>Die Testversion des Plugins ist abgelaufen! Erwerben Sie eine Lizenz für das Plugin oder ein Revit-Abonnement, um das Plugin "Wohnungslayout" nach Ablauf der Testversion zu verwenden</h125>
+    <h126>Testversion. Tage bis zum Ablauf</h126>
+    <h127>Anzahl der Räume. (Wohn.)</h127>
+    <h128>Min. Fl.</h128>
+    <h129>Max. Fl.</h129>
+    <h130>Bei der Bestimmung der Wohnungstypen nach der Tabelle verwenden:</h130>
+    <h131>Grundfläche der Wohnung</h131>
+    <h132>Wohnfläche der Wohnung</h132>
+    <h133>Nutzungsfläche der Wohnung</h133>
+    <h134>Der Service zur automatischen Neuberechnung der Flächen ist nicht geladen! Aktivieren Sie das Plugin erneut mit dem ModPlus Konfigurator</h134>
+    <h135>Aus den Räumen hinzufügen</h135>
+    <h136>Die aktuelle Raummatrix:</h136>
+    <h137>Die aktuelle Tabelle der Wohnungstypen:</h137>
+    <h138>Export von aktuellen Quellen in Excel</h138>
+    <h139>Export von allen Quellen in Excel</h139>
+    <h140>Alle Quellen</h140>
+    <h141>Kombinieren von Wohnungen</h141>
+    <h142>Begrenzungssymbol</h142>
+    <h143>*UNTERSCHIEDLICHE*</h143>
+    <h144>Die Parameterliste im Notepad öffnen</h144>
+    <h145>Die veränderten Werte aufzeichnen</h145>
+    <h146>Wohnungen</h146>
+    <h147>Angaben zu den markierten Wohnungen</h147>
+    <h148>Anzahl der markierten Wohnungen:</h148>
+    <h149>Ändern von Wohnungsdaten</h149>
+    <h150>In mehrstöckigen Wohnungen kombinieren</h150>
+    <!-- todo remove after 2.11.15.0 -->
+    <h151>Kombinieren in mehrstöckigen Wohnungen</h151>
+    <h152>Die Reihenfolge, in der die gleichnamigen Räume in der Wohnung nummeriert sind (Parameter "Raumindex"):</h152>
+    <h153>Aufsteigend nach Fläche</h153>
+    <h154>Absteigend nach Fläche</h154>
+    <h155>Ausfüllen des Parameters "Bezeichnung der Wohnung" für Raum</h155>
+    <h156>mit der größten Fläche</h156>
+    <h157>mit der größten Fläche des Typs</h157>
+    <h158>Der Parameter "Bezeichnung der Wohnung" wird für den Raum mit der größten Fläche des angegebenen Typs ausgefüllt. Falls es in der Wohnung keine Räume des angegebenen Typs gibt, wird der Parameter "Bezeichnung der Wohnung" für den Raum mit der größten Fläche ausgefüllt</h158>
+    <h159>Option, die Parameter der zu verarbeitenden Räume vor dem Zusammenstellung der Wohnungen vorzureinigen:</h159>
+    <h160>Alle bereinigen</h160>
+    <h161>Nur mit dem Identifikator der Wohnung bereinigen</h161>
+    <h162>Nicht bereinigen (nicht empfohlen)</h162>
+    <h163>Den Systemparameter "Nummer" anstelle von "RM_Nr._des Raums" verwenden</h163>
+    <h164>Blockieren von Wohnungen</h164>
+    <h165>Die blockierten Wohnungen zusammensetzen</h165>
+    <h166>Keine blockierten Wohnungen gefunden!</h166>
+    <h167>Aufhebung der Blockierung von Wohnungen</h167>
+    <h168>Die Nummerierung entlang der Kurve</h168>
+    <h169>Wählen Sie eine Kurve für die Nummerierung der Wohnungen</h169>
+    <h170>Parameter "Haus":</h170>
+    <h171>Parameter "Block":</h171>
+    <h172>Ausgewählte Wohnungen blockieren</h172>
+    <h173>Zielparameter</h173>
+    <!-- todo remove after 2.8.6.0 -->
+    <h174>Ausgewählte Räume zur ausgewählten Wohnung hinzufügen</h174>
+    <h175>Typenstockwerke</h175>
+    <h176>Die aktuelle Tabelle der Typenstockwerke:</h176>
+    <h177>Die Spalte "Stockwerk"</h177>
+    <h178>Die Spalte "Typenstockwerk"</h178>
+    <h179>Stockwerk</h179>
+    <h180>Typenstockwerk</h180>
+    <h181>Typenstockwerke berücksichtigen</h181>
+    <h182>Typenstockwerke bei der Zusammenstellung und Berechnung der Wohnungen berücksichtigen</h182>
+    <h183>Kopie der Typenwohnungsparameter</h183>
+    <h184>Redundanter Raum</h184>
+    <h185>Nicht umgeben</h185>
+    <h186>Den Namen für die aktuelle Tabelle anhand des Plannamens aus der importierten Excel-Datei festlegen</h186>
+    <h187>Sie können mehrere Wohnungs-ID-Werte angeben, indem Sie sie durch Semikolons ohne Leerzeichen trennen</h187>
+    <h188>Nummerierung für jede Ebene zurücksetzen (keine fortlaufende Nummerierung)</h188>
+    <h189>Bei der Berechnung mit einem Faktor die folgende Fläche verwenden:</h189>
+    <h190>Gerundete Fläche</h190>
+    <h191>Ursprüngliche Fläche</h191>
+    <h192>Remove room from apartment</h192>
+    <h193>Calculate selected apartments</h193>
+    <h194>Delete selected apartments</h194>
+    <h195>Apartment total area without factor</h195>
+    <h196>Mandatory parameters</h196>
+    <h197>Additional parameters</h197>
+    <h198>M</h198>
+    <h199>Mezzanin</h199>
+    <h200>Mark the selected rooms as "Mezzanine"</h200>
+    <h201>Unmark "Mezzanine" from the selected rooms</h201>
+    <h202>Conditions</h202>
+    <h203>Current configuration</h203>
+    <msg1>Der Parameter "{0}" nicht gefunden</msg1>
+    <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
+    <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
+    <msg4>Die in der Liste angegebenen Parameter sind für die Räume des aktuellen Projekts nicht vorhanden:</msg4>
+    <msg5>Der Name des Raums ist nicht ausgefüllt</msg5>
+    <msg6>Der Name des Raums wurde nicht in der Matrix gefunden</msg6>
+    <msg7>In den Ergebnissen der ursprünglichen Überprüfung gibt es Räume mit fehlenden oder ungültigen Parametern. Sind Sie sicher, dass Sie eine Zusammenstellung der Wohnungen machen wollen?</msg7>
+    <msg8>Es gibt eine Tür, die in einen Bereich ohne einen Raum führt</msg8>
+    <msg9>Der Raum ist von Konstruktionen umgeben, die keine Türen haben</msg9>
+    <msg10>Die Raummatrix ist leer! Nichts zu exportieren</msg10>
+    <msg11>Die Liste der Wohnungstypen ist leer! Nichts zu exportieren</msg11>
+    <msg12>Keine Daten zum Importieren!</msg12>
+    <msg13>Die Anzahl der gefüllten Zeilen ist kleiner als die angegebene Anzahl der ersten Zeile!</msg13>
+    <msg14>Wollen Sie die aktuellen Werte aus der Matrix löschen? Ja — löschen, Nein — ergänzen</msg14>
+    <msg15>Wollen Sie die aktuellen Werte aus der Liste der Raumtypen löschen? Ja — löschen, Nein — ergänzen</msg15>
+    <msg16>Es ist nicht gelungen, einen Hilfs-Vollkörper zu konstruieren und eine Hilfskontur zu erhalten</msg16>
+    <msg17>Es ist nicht gelungen, die Grenzen des Raums zu erhalten. Überprüfen Sie den Umriss des Raums auf kleinere Mängel. Solche Mängel entstehen meist bei einem ungenauen Erstellen der umschließenden Konstruktionen</msg17>
+    <msg18>Der Raum hat eine falsche Umgebung oder gar keine Umgebung</msg18>
+    <msg19>Kein Eintrag in der Matrix für Raum "{0}" gefunden</msg19>
+    <msg20>Der Eintrag in der Matrix für den Raum "{0}" ist nicht gültig</msg20>
+    <msg21>Keine funktionale Bestimmung erhalten</msg21>
+    <msg22>Start des Plugins in dem Familiendokument ist nicht erlaubt!</msg22>
+    <msg23>Diese Anweisung wird bei allen nachfolgenden Starts des Plugins nicht angezeigt. Sind Sie sicher, dass Sie sie schließen wollen?</msg23>
+    <msg24>Beim Erstellen der Ansicht ist ein Fehler aufgetreten</msg24>
+    <!-- todo remove after 2.11.15.0 start -->
+    <msg25>Es ist nicht gelungen, einen Umriss entlang der umschließenden Konstruktionen zu erstellen, die jede Struktur berücksichtigt</msg25>
+    <msg26>Es wurde die Option genutzt, den Umriss entsprechend der größten Dicke der umschließenden Konstruktionen zu erstellen</msg26>
+    <msg27>Es ist nicht gelungen, einen Umriss entlang der umschließenden Konstruktionen zu erstellen, die größte Dicke der umschließenden Konstruktionen berücksichtigt</msg27>
+    <msg28>Es wurde die Option der Erstellung eines Umrisses der Wohnung entsprechend den Umrissen der Räume genutzt</msg28>
+    <msg29>Es ist nicht gelungen, ein Umriss der Wohnung zu erhalten. Fehler:</msg29>
+    <msg30>Die Ansicht der Wohnung ist nicht erstellt</msg30>
+    <!-- todo remove after 2.11.15.0 end -->
+    <msg31>Die Länge des Namens darf nicht mehr als 28 Zeichen betragen</msg31>
+    <msg32>Die folgenden Zeichen - \ / * ? : [ ] - sind für einen Namen inakzeptabel</msg32>
+    <msg33>Die aktuelle Raummatrix wird endgültig gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg33>
+    <msg34>Die aktuelle Tabelle der Wohnungstypen wird endgültig gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg34>
+    <msg35>Die Daten sind aktualisiert</msg35>
+    <!-- todo remove after 2.8.6.0 -->
+    <msg36>Für die folgenden Wohnungen (id) wurde keine Option zur Verbindung unter den markierten Wohnungen gefunden (die Wohnungen, Wohnungen, die auf benachbarten Ebenen liegen und sich vertikal überschneiden)</msg36>
+    <msg37>Die Wohnungen ({0}) werden zu einer mehrstöckigen Wohnung zusammengefasst mit id: {1}</msg37>
+    <msg38>Beim Kombinieren von Wohnungen ist ein Fehler aufgetreten</msg38>
+    <msg39>Für einen oder mehrere Räume der Wohnung ist der Parameter "Typ des Raums" nicht ausgefüllt</msg39>
+    <msg40>Fehler beim Bestimmen eines Wertes im Parameter "{0}" des Raums {1} — der Parameter hat die Eigenschaft "Schreibgeschützt. Möglicherweise befindet sich der Raum in dem Verarbeitungsbereich, der Ihnen nicht zur Verarbeitung verfügbar ist</msg40>
+    <msg41>Der Parameter "{0}" ist im Raum {1} nicht gefunden. Wenn Sie die Nummerierung durchführen, stellen Sie sicher, dass Sie den richtigen Parameter in der Eigenschaft "Zielparameter" ausgewählt haben</msg41>
+    <msg42>Die aktuelle Tabelle der Typenstockwerke wird dauerhaft gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg42>
+    <msg43>Wollen Sie die aktuellen Werte aus der Liste der Typenstockwerke löschen? Ja — löschen, Nein — ergänzen</msg43>
+    <msg44>Kein Stockwerk angegeben</msg44>
+    <msg45>Kein Typenstockwerk angegeben</msg45>
+    <msg46>Dieses Stockwerk ist bereits in einem anderen Eintrag als Typenstockwerk angegeben</msg46>
+    <msg47>Das als typisch angegebene Stockwerk ist in einem anderen Eintrag als nicht typisch angegeben</msg47>
+    <msg48>Dieses Stockwerk ist bereits in einem anderen Eintrag angegeben</msg48>
+    <msg49>Kein entsprechender Raum (kein senkrechter Schnittpunkt) im Typenstockwerk "{0}" gefunden</msg49>
+    <msg50>Die folgenden Räume und die ausgewählte Wohnung befinden sich auf verschiedenen Ebenen</msg50>
+    <msg51>Diese Räume trotzdem zur Wohnung hinzufügen?</msg51>
+    <msg52>Für die folgenden (id) unter den markierten Wohnungen wurden keine zum Kombinieren gültigen Optionen (die auf benachbarten Ebenen liegenden Wohnungen mit gleicher funktionaler Bestimmung und einem Schnittpunkt in der Hochrichtung) gefunden</msg52>
+    <msg53>Among the selected apartments there are apartments with a functional purpose that does not correspond to the current apartment ID specified in the settings. Are you sure you want to calculate these apartments with the current settings?</msg53>
+    <msg54>Apartment ID={0} deleted: apartment room parameters cleared (string parameters) or reset to zero (numeric parameters)</msg54>
+    <msg55>Locked apartments have been added to the list on the "Locked" tab</msg55>
+    <msg56>The parameter "RM_Mezzanine" was not found. Create missing additional parameters on the "Parameters" - "Additional parameters" tab</msg56>
+    <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
+    <tt2>Die Anweisung ausblenden</tt2>
+    <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
+    <tt4>Die Liste der gültigen Werte für den Parameter "Funktionale Bestimmung. Diese Liste wird verwendet, um die Räume von der ursprünglichen Überprüfung auszuschließen, deren Wert "Funktionale Bedeutung" mit dem Identifikator der Wohnungen nicht übereinstimmt und in der Raummatrix nicht enthalten ist</tt4>
+    <tt5>Um die Wohnungen korrekt zusammenzustellen, müssen alle Räume, die zu den Wohnungen gehören sollen, ausgewählt werden</tt5>
+    <tt6>Zur Berechnung der Wohnungsfläche braucht man mindestens einen Raum in der Wohnung auszuwählen. Die Wohnungen werden entsprechend dem Parameterwert "Wohnungs-ID" zusammengestellt</tt6>
+    <tt7>Der Wert "Haus" wird der Wohnungsnummer als Präfix, getrennt durch einen Bindestrich, vorangestellt</tt7>
+    <tt8>Der Wert "Block" wird der Wohnungsnummer als Präfix, getrennt durch einen Bindestrich, vorangestellt</tt8>
+    <tt9>Der Wert des ausgewählten Parameters wird der Wohnungsnummer als Präfix, getrennt durch einen Bindestrich, vorangestellt, sofern der Parameter einen Wert hat und der Wert für alle Räume der Wohnung gleich ist</tt9>
+    <tt10>Hinzufügen zur aktuellen Tabelle neuer Elemente, die aus den Räumen des aktuellen Projekts zusammengestellt wurden. Es werden nur die Elemente hinzugefügt, bei denen der Wert "Name des Raums" ausgefüllt ist</tt10>
+    <!-- todo remove after 2.8.6.0 -->
+    <tt11>Die in der Liste ausgewählten Wohnungen zu einer kombinieren</tt11>
+    <tt12>Der Wert, der als Trennzeichen beim Hinzufügen zur Nummer eines Hauses, eines Blocks und/oder eines Parameterwertes</tt12>
+    <tt13>Die markierten Wohnungen auswählen und anzeigen</tt13>
+    <tt14>Berechnung der Wohnungsflächen wurde aufgrund von kritischen Fehlern nicht durchgeführt</tt14>
+    <!-- todo remove after 2.11.15.0 -->
+    <tt15>Die ausgewählten Wohnungen blockieren. Räume von blockierten Wohnungen werden beim nachfolgenden Kombinieren von Wohnungen nicht verarbeitet</tt15>
+    <tt15_1>Lock the selected apartments. The rooms of locked apartments will not be processed during further collections and calculations of apartments</tt15_1>
+    <tt16>Die ausgewählten Wohnungen freischalten</tt16>
+    <tt17>Eine Kurve auswählen</tt17>
+    <tt18>Wohnung gesperrt</tt18>
+    <tt19>Stockwerk aus dem aktuellen Dokument hinzufügen</tt19>
+    <tt20>Alle fraglichen Räume auswählen und anzeigen</tt20>
+    <tt21>Mehrstöckigen Wohnung</tt21>
+    <tt22>Die in der Liste ausgewählten Wohnungen zu einer Wohnung kombinieren. Kombinierbar sind nur noch Wohnungen mit gleicher funktionaler Bestimmung</tt22>
+    <tt23>Ausgewählte Räume zur ausgewählten Wohnung hinzufügen. Die Wohnung und der Raum sollen die gleiche funktionale Bestimmung haben</tt23>
+    <tt24>Beispielsweise beträgt die ursprüngliche Raumfläche 3.48. Die Flächen werden auf 0.1 gerundet. Der Faktor ist 0.5.</tt24>
+    <tt25>Bei Auswahl der Option "Gerundete Fläche" wird zuerst die gerundete Fläche berechnet, im Beispiel: 3.5. Das Ergebnis wird um den Faktor multipliziert: 3.5 * 0.5 = 1.75; und dann gerundet: 1.8.</tt25>
+    <tt26>Bei Auswahl der Option "Ursprüngliche Fläche" wird die ursprüngliche Fläche um den Faktor multipliziert, im Beispiel: 3.48 * 0.5 = 1.74; und dann gerundet: 1.7.</tt26>
+    <tt27>This apartment is locked: the apartment rooms will not be processed when collecting apartments</tt27>
+    <tt28>Clear the list</tt28>
+    <tt29>The room will be removed from the apartment. All room parameters will be cleared (string parameters) or reset to zero (numeric parameters)</tt29>
+    <tt30>Perform calculation of selected apartments with current settings and sources. The calculated apartments will additionally be displayed on the "Calculate apartments" tab</tt30>
+    <tt31>The number of rooms of the apartment has been changed! It is required to recalculate the apartment</tt31>
+    <tt32>All apartment room parameters will be cleared (string parameters) or reset to zero (numeric parameters)</tt32>
+    <instruction>Anweisung</instruction>
+    <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
+    <instruction1_1>Additional parameters are processed and filled only if the rooms have these parameters. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button</instruction1_1>
+    <instruction2>In der Raummatrix werden die Grundeigenschaften für die Auswahl der zu verarbeitenden Räume, die Nummerierung der Räume in der Wohnung und die Werte für die Berechnung der Wohnungsflächen festgelegt. Die Werte aus der Matrix werden anhand der funktionalen Bestimmung (Spalte FB) und des Namens des Raums ausgewählt. In der Spalte "Name des Raums" können Sie ein Sternchen an das Ende des Namens setzen, um anzugeben, dass eine Übereinstimmung am Anfang des Namens des Raums geprüft wird (z. B. "Schlafzimmer*" entspricht den Namen der Räume "Schlafzimmer 1", "Schlafzimmer 2" usw.)</instruction2>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction2_1>In dieser Tabelle werden die Daten angegeben, die zur Bestimmung des Wohnungstyps verwendet werden. Die Werte "Enthält Räume" und "Enthält keine Räume" werden mit den Namen der Räume ausgefüllt, die durch ein Semikolon (;) getrennt sind</instruction2_1>
+    <instruction2_2>In der Liste wird das Mapping der Stockwerke und der Typenstockwerke festgelegt. Wenn für das Stockwerk ein Typenstockwerk festgelegt ist, werden bei der Zusammenstellung und Berechnung der Wohnungen alle Parameter für die im angegebenen Stockwerk liegenden Räume von den entsprechenden Räumen des Typenstockwerks übernommen. Der Raum eines Typenstockwerks wird mithilfe eines senkrechten Strahls definiert, der durch den Einfügepunkt des zu bearbeitenden Raums gezogen wird. Die Stockwerke können sowohl durch Ebenennamen als auch durch Ebenenmarkierungen festgelegt werden</instruction2_2>
+    <instruction2_3>This table specifies the data used to define the type of apartment. The values "Contains rooms" and "Does not contain rooms" are filled in with room names separated by semicolons (;). Room names can be accompanied by an area check condition - to do this, specify the condition and the area value in brackets after the room name. The available conditions are equal (=), not equal (!=), greater than (&gt;), greater than or equal to (&gt;=), less than (&lt;), less than or equal to (&lt;=). For example, "Kitchen (&gt;10); Bedroom"</instruction2_3>
+    <instruction3>Die Überprüfung umfasst zwei Teile: eine Überprüfung auf nicht platzierte Räume und eine Überprüfung auf Ausfüllung der Parameter "Funktionale Bestimmung" und "Name". Wenn ein Raum eine "Funktionale Bedeutung" hat, die mit dem in den Einstellungen angegebenen Wert "Der Identifikator der Wohnungen" übereinstimmt, wird der Parameter "Name" mit der aktuellen Raummatrix überprüft</instruction3>
+    <instruction4>Die Wohnungen werden durch die geometrischen Merkmale der Räume zusammengestellt, wobei die Verbindung der Räume durch Fenster, Türen und Raumteiler berücksichtigt wird. Allen Räumen in einer Wohnung wird derselbe Parameterwert "Wohnungs-ID" zugewiesen. Es wird empfohlen, eine zusätzliche visuelle Überprüfung durchzuführen, indem ein Farbschema über den Parameter "Wohnungs-ID" erstellt wird</instruction4>
+    <instruction5>Berechnung der Wohnungsfläche umfasst die Berechnung der Wohnungsflächen, der Anzahl der Wohnräume und die Bestimmung des Wohnungstyps anhand der Quelle "Wohnungstypen". Alle ermittelten Werte werden den Parametern der Räume, aus denen die Wohnung besteht, zugeordnet. Alle Wohnungen werden durch den Wert "Wohnungs-ID" bestimmt, der im Schritt "Zusammenstellung der Wohnungen" festgelegt wurde</instruction5>
+    <instruction6>Die Nummerierung der Wohnungen kann durch Gruppierung der Wohnungen in Häuser und/oder Blöcke erfolgen, indem die entsprechenden Optionen aktiviert und die Namen der Parameter angegeben werden, aus denen der Wert der Häuser und/oder Blöcke entnommen werden soll. Die Blöcke werden als Untergruppen für die Häuser betrachtet. Die Eigenschaft "fortlaufende Nummerierung" bedeutet, dass die Nummerierung in der nächsten Gruppe fortgesetzt wird und nicht mit dem in der Eigenschaft "Startnummer" festgelegten Wert beginnt. Wenn Sie bei der Eigenschaft "Der Beginn der Nummerierung" "angeben" wählen, müssen Sie für jede Gruppe von Wohnungen einen Raum auswählen</instruction6>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction7>Erstellen von Ansichten der Wohnungen erfolgt durch Duplizieren der aktuellen Ansicht und mit nachfolgendem Zuschneiden entlang des Umrisses der Wohnung. Zunächst wird versucht, einen Zuschneidebereich auf der Grundlage der Dicke der umschließenden Wände zu erstellen (nur für Revit 2020 und höher). Bei Misserfolg wird versucht, einen Zuschneidebereich unter Berücksichtigung der größten der umschließenden Wanddicken zu erstellen. Wenn kein Zuschneidebereich erstellt wird, wird der von den Raumgrenzen abgeleitete Umriss verwendet. Wenn die Option "Anwendung des Wohnungstyps als Ansichtsname versuchen" aktiviert ist, erhalten die erstellten Ansichten den Ansichtsnamen "NAME_DER EBENE — Wohnung WOHNUNGSTYP"</instruction7>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction8>Wohnung-Editor ermöglicht es Ihnen, manuelle Änderungen an den Werten der Wohnungsflächen vorzunehmen und mehrstöckige Wohnungen zusammenzustellen. Bei der Zusammenstellung von mehrstöckigen Wohnungen werden die Flächen neu berechnet und der Wert des Parameters "WO_Anzahl der Ebenen" wird ausgefüllt WICHTIG! Bei der Neuberechnung der Wohnungsfläche auf einer bestimmten Ebene werden die Parameterwerte von Räumen, die zu einer mehrstöckigen Wohnung gehören, aber auf einer anderen Ebene liegen, nicht neu berechnet</instruction8>
+    <instruction8_1>Apartments are collected regardless of the current value of the apartment identifier specified in the settings. The apartment editor allows you to make changes to the values of apartment areas, as well as to build multilevel apartments. When building multilevel apartments, the areas are recalculated and the value of the "AP_Levels count" parameter is filled in. The apartment editor also allows you to recalculate selected apartments, lock or unlock selected apartments, and delete selected apartments</instruction8_1>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction9>Blockierte Wohnungen sind Wohnungen, deren Räume bei der Zusammenstellung der Wohnungen nicht verarbeitet werden. Die Blockierung von Wohnungen wird auf der Registerkarte "Zusammenstellung der Wohnungen" vorgenommen. Die blockierten Wohnungen werden in der Liste angezeigt, unabhängig vom aktuellen Wert der "Der Identifikator der Wohnungen" (Wert des Parameters "Funktionale Bestimmung")</instruction9>
+    <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
+    <instruction10>Classification allows you to fill in certain parameters of apartments based on the characteristics of the apartments. First, you need to create tables with conditions on the "Conditions" tab, after which you can perform classification with the result displayed on the "Classification" tab</instruction10>
+  </mprApartmentBuildingLayout>
+  <mprRoomColorVolume LocalName="Raumvolumen"
+                      Description="Farbige Darstellung des Volumens von Räumen und Bereichen mit DirectShape"
+                      FullDescription="Mit dem Plugin können Sie DirectShape-Elemente anhand des Volumens von Räumen und Bereichen im Modell erstellen und unterschiedliche Farben den erstellten DirectShape-Elementen zuweisen. Im Plugin-Fenster ist es möglich, erstellte DirectShape-Elemente nach dem Parameterwert des zugehörigen Raums oder Bereichs zu gruppieren sowie eine einzige Farbe für alle DirectShape-Elemente in der Gruppe festzulegen">
+    <h1>Farbwechsel ist in der vollständigen Plugin-Version verfügbar</h1>
+    <h2>Allen Volumendarstellungen von Räumen oder Flächen in der Gruppe zufällige Farben zuweisen</h2>
+    <h3>Für die aktuelle Volumendarstellung wird im Modell kein Quellelement gefunden. Der Raum oder der Bereich ist wahrscheinlich entfernt worden</h3>
+    <h4>Gruppieren nach Parameter:</h4>
+    <h5>Die Ausführung des Plugins in dem Familiendokument ist nicht möglich!</h5>
+    <h6>(Neu-)Erstellung für alle Räume</h6>
+    <h7>Fehlende (Räume) erstellen</h7>
+    <h8>Alle Volumendarstellungen löschen</h8>
+    <h9>Volumendarstellungen ohne den ursprünglichen Raum und Bereich löschen</h9>
+    <h10>Speichern eines Parameters für die Gruppierung</h10>
+    <h11>Der Parameter ist nicht angegeben oder hat keinen Wert</h11>
+    <h12>Nicht vorhanden</h12>
+    <h13>Ohne Raum</h13>
+    <h14>(Neu-)Erstellung für Volumendarstellungen</h14>
+    <h15>Erstellen fehlender Volumendarstellungen</h15>
+    <h16>Löschen fehlender Volumendarstellungen</h16>
+    <h17>Ändern der Farbe von Volumendarstellungen</h17>
+    <h18>Die Geometrie des Raums erfüllt nicht die Bedingungen für die Erstellung einer Volumendarstellung</h18>
+    <h19>Bei der Verarbeitung des Raums ist ein Fehler aufgetreten:</h19>
+    <h20>(Neu-)Erstellung für alle Bereiche</h20>
+    <h21>(Neu-)Erstellung für alle Räume und Bereiche</h21>
+    <h22>Fehlende (Bereiche) erstellen</h22>
+    <h23>Fehlende (Räume und Bereiche) erstellen</h23>
+    <h24>Ohne Bereich</h24>
+    <h25>MEP-Raum</h25>
+    <h26>Bearbeitung der Räume aus den verknüpften Dateien</h26>
+  </mprRoomColorVolume>
+  <mprWallSweep LocalName="Wändeabwicklung"
+                Description="Erstellen von Wändeabwicklungen">
+    <v1>Unter der Oberkante der oberen Geschossdecke zuschneiden</v1>
+    <v2>Unter der unteren Kante der unteren Geschossdecke zuschneiden</v2>
+    <v3>Ansichten</v3>
+    <v4>Schnittansicht</v4>
+    <v5>Ansichtsvorlage anwenden</v5>
+    <v6>Anzahl von Kurvenaufteilungen</v6>
+    <v8>Ansichtstiefe</v8>
+    <v9>Auf den Plan platzieren</v9>
+    <v10>Versatz nach innen</v10>
+    <v11>Suffix/Präfix festlegen</v11>
+    <v12>Suffix</v12>
+    <v13>Präfix</v13>
+    <v14>In dem vorliegenden Dokument</v14>
+    <v15>In dem verknüpften Dokument</v15>
+    <v16>Ein Element auswählen</v16>
+    <v17>Versatz nach oben</v17>
+    <v18>Versatz nach unten</v18>
+    <v19>In der aktuellen Ansicht in dem vorliegenden Dokument</v19>
+    <v20>Plan erstellen</v20>
+    <v21>Seitlicher Abstand</v21>
+    <v22>Sie können einen Parameter des ursprünglichen Raums in geschweiften Klammern angeben. Zum Beispiel: "Abwicklung {Name}"</v22>
+    <v23>Sie können einen Parameter der ursprünglichen Wand in geschweiften Klammern angeben. Zum Beispiel: "Abwicklung {Marke}"</v23>
+    <v24>KEIN PARAMETER</v24>
+    <v25>KEIN WERT</v25>
+    <t2>Wand</t2>
+    <t3>Raum</t3>
+    <t5>Abwicklungsname:</t5>
+    <t6>Optionen</t6>
+    <t7>Erstellen:</t7>
+    <t8>Erstellen nach:</t8>
+    <t9>Bemaßungen</t9>
+    <t10>Anderes</t10>
+    <t11>Umgekehrte Reihenfolge</t11>
+    <t1>Ausgewählter Typ des Elements: </t1>
+    <t4>Kein Element ist ausgewählt</t4>
+    <e1>Abwahl</e1>
+    <e2>Kein passendes Element ist ausgewählt</e2>
+    <e4>Keine abhängigen Wände sind gefunden</e4>
+    <e5>Die zum Punkt nächstgelegene Ebene konnte nicht gefunden werden</e5>
+    <e6>Ein unerwarteter Fehler ist aufgetreten: </e6>
+    <e7>Es gibt keine Ansichten zum Zeichnen</e7>
+    <e8>Das ausgewählte Element ist keine Wand oder kein Raum</e8>
+    <e9>Die Linie zum Zeichnen des Zuschnitts wurde nicht bestimmt</e9>
+    <e10>Ein Raum- oder Wandumbruchobjekt konnte nicht ermittelt werden</e10>
+    <m1>Wählen Sie einen Raum oder eine Wand</m1>
+    <m2>Geben Sie einen Punkt an, der am nächsten zu der Kante liegt, auf der das UV-Koordinaten-System erstellt werden soll. Für eine korrekte Funktion muss die Punktauswahl im Plan erfolgen</m2>
+    <tr1>Ansichten erstellen</tr1>
+  </mprWallSweep>
+  <mprWorldOrientation LocalName="Himmelsrichtung"
+                       Description="Orientierungsanalyse für Räume anhand der Fenster, Türen, Fassaden in umschließenden Wänden">
+    <d1>Die Orientierungsanalyse für Räume wird anhand von Fenstern, Türen und Fassaden durchgeführt. Das Ergebnis der Analyse kann in den Parameter des Raumes oder in den Parameter der Fenster, Türen, Fassaden geschrieben werden</d1>
+    <d2>Die Analyse der Ausrichtung für Elemente. Das Ergebnis der Analyse kann in einen Parameter für die Fenster, Türen, Fassaden eingeschrieben werden</d2>
+    <tab1>Nach Räumen</tab1>
+    <tab2>Nach Elementen</tab2>
+    <v1>Der Parameter:</v1>
+    <v2>Das Ergebnis in den Parameter schreiben:</v2>
+    <v3>Türen</v3>
+    <v4>Fenster</v4>
+    <v5>Fassaden</v5>
+    <v6>Räume filtern:</v6>
+    <v7>Der Räume</v7>
+    <v8>Der Elemente</v8>
+    <v9>Der Räume und der Elemente</v9>
+    <v10>Elemente zur Analyse:</v10>
+    <s1>N</s1>
+    <s2>S</s2>
+    <s3>W</s3>
+    <s4>В</s4>
+    <s5>NW</s5>
+    <s6>SW</s6>
+    <s7>NO</s7>
+    <s8>SO</s8>
+    <h1>Ausgewählte Elemente</h1>
+    <h2>In der aktuellen Ansicht</h2>
+    <h3>Im Projekt</h3>
+    <tr1>Bestimmung der Richtung von Öffnungen</tr1>
+    <t1>Raumelemente haben keinen Parameter "{0}". Daher ist es nicht möglich, die Analyseergebnisse einzugeben</t1>
+    <t2>Parameterwert "{0}" konnte nicht festgelegt werden. Überprüfen Sie den Typ des auszufüllenden Parameters - dieser muss eine Zeichenkette sein</t2>
+    <t3>Gefundene Räume insgesamt: {0}</t3>
+    <t4>Gesamtzahl der Kategorieelemente "{0}", denen nach der Analyse der Wert zugewiesen wird: {1}</t4>
+    <t5>Die Richtung für das Element konnte nicht bestimmt werden</t5>
+    <t6>Für Elemente der Kategorie "{0}" ist kein Zielparameter festgelegt um das Ergebnis zu einzutragen</t6>
+  </mprWorldOrientation>
+  <mprFloorByRoom LocalName="Geschossdecke nach dem Raum"
+                  Description="Erstellen einer Geschossdecke nach der Kontur des Raumes">
+    <t1>Filter der Räume:</t1>
+    <t2>Typ der Geschossdecke:</t2>
+    <t3>Versatz von der Ebene, mm:</t3>
+    <t4>In Türöffnungen hineinführen</t4>
+    <t5>Der Typ der Geschossdecke ist nicht festgelegt! Diese Konfiguration kann nicht verarbeitet werden!</t5>
+    <t6>Nach den Räumen in der Ansicht</t6>
+    <t7>Nach den ausgewählten Räumen</t7>
+    <t8>Nach den vorausgewählten Räumen</t8>
+    <t9>Den Wert für die Dicke des ausgewählten Typs der Geschossdecke festlegen</t9>
+    <t10>Den Parameterwert kopieren (aus dem Raum in die Geschossdecke):</t10>
+    <t11>Aus</t11>
+    <t12>in</t12>
+    <t13>Beim Hineinführen der Böden in Türöffnungen über die gesamte Wandstärke gilt als Hauptraum:</t13>
+    <t14>Bei Ausgangstür</t14>
+    <t15>Bei Eingangstür</t15>
+    <t16>Der Boden des Hauptraumes wird mit dem Hineinführen in die Türöffnung erstellt. Für einen Raum, der nicht als Hauptraum festgelegt ist, wird entsprechend kein Hineinführen in die Türöffnung erstellt. Diese Option ist funktionsfähig nur für die Familien in der Kategorie "Türen", bei denen die internen Eigenschaften FromRoom und ToRoom ausgefüllt sind. Bestimmend für die Bewegungsrichtung in der Türöffnung ist die Richtung der Außenseite der Familie</t16>
+    <t17>Die Formgeometrie der Tür mit einer Volumenkörperform aus dem Bodenumriss schneiden</t17>
+    <l1>Die Kontur der Geschossdecke in Türöffnungen nicht hineinführen</l1>
+    <l2>Die Kontur bis zur Mitte der Wand verlaufen</l2>
+    <l3>Die Kontur auf die gesamte Wandstärke verlaufen</l3>
+    <l4>Die Kontur auf den angegebenen Wert führen, mm</l4>
+    <msg1>Um das Plagin zu starten, gehen Sie zum Grundrissansicht!</msg1>
+    <msg2>Eine Geschossdecke vom Typ "{0}" ist nach der Kontur des Raumes erstellt</msg2>
+    <msg3>Die Geschossdecke konnte nach der Kontur des Raumes nicht erstellt werden</msg3>
+    <msg4>Keine Räume gefunden, die nach Parametern gefiltert wurden "{0}"</msg4>
+    <msg5>In der aktuellen Ansicht gibt es keine Räume!</msg5>
+    <msg6>Die Kontur der Öffnung konnte nicht verarbeitet werden. Fehler "{0}". Die Kontur der Geschossdecke wird in die Öffnung nicht geführt</msg6>
+    <msg7>Parameter "{0}" ist nicht gefunden</msg7>
+    <msg8>Das Kopieren des Parameterwertes "{0}" in den Parameter "{1}" ist fehlgeschlagen </msg8>
+    <msg9>Inkompatible Parametertypen oder unbekannte Ursache</msg9>
+  </mprFloorByRoom>
+  <mprRoomFinishing LocalName="Room finishing"
+                    Description="Creation of finishing elements in the rooms">
+    <t1>Rooms filter:</t1>
+    <t2>Floors</t2>
+    <t3>Floor type:</t3>
+    <t4>Height Offset from Level, mm:</t4>
+    <t5>Set the thickness value of the selected Floor type, taking into account previous Floor type</t5>
+    <t6>Copy parameter value (from room to floor):</t6>
+    <t7>From</t7>
+    <t8>to</t8>
+    <t9>Ceilings</t9>
+    <t10>Walls</t10>
+    <t11>When leading the floor to the doorways to the full wall width consider the main room:</t11>
+    <t12>If door leads to exit</t12>
+    <t13>If door leads to entrance</t13>
+    <t14>The floor of the main room will be created with the lead-in to the doorway. Respectively, for a room that is defined as non-main room, no door leading into the doorway will be created. This option works only for families in the "Doors" category with filled FromRoom and ToRoom internal properties. The direction of movement in the opening is determined by the direction of the family's exterior side</t14>
+    <t15>Cut solid door geometry from the floor contour</t15>
+    <t16>Delete previously created finishing elements</t16>
+    <t17>By picked Rooms</t17>
+    <t18>By Rooms on View</t18>
+    <t19>For all rooms</t19>
+    <t20>For all rooms from linked files</t20>
+    <t21>Update parameters</t21>
+    <t22>Move up</t22>
+    <t23>Move down</t23>
+    <t24>By pre-selected Rooms</t24>
+    <t26>Floor type is not set or the corresponding type is not found in the model. This configuration cannot be processed!</t26>
+    <l1>Do not lead Floor contour into door openings</l1>
+    <l2>Lead the contour to the middle of the wall</l2>
+    <l3>Lead the contour to the full wall width</l3>
+    <l4>Lead the contour to the specified value, mm</l4>
+    <msg1>There are no Rooms on the current view!</msg1>
+    <msg2>No rooms filtered by "{0}" were found</msg2>
+    <msg3>Floor type not specified</msg3>
+    <msg4>Floor type “{0}” not found</msg4>
+    <msg5>Floor with type "{0}" is created by contour of the Room</msg5>
+    <msg6>It was not possible to create a Floor by contour of the Room</msg6>
+    <msg7>The room contour has errors</msg7>
+    <msg8>Failed to process an opening contour. Error "{0}". The floor contour will not be lead into the opening</msg8>
+    <msg9>Parameter "{0}" not found</msg9>
+    <msg10>Failed to copy value of parameter "{0}" to parameter "{1}"</msg10>
+    <msg11>Incompatible parameter types or unknown cause</msg11>
+  </mprRoomFinishing>
+</ModPlus>
