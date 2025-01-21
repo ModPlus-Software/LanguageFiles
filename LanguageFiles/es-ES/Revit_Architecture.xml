@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mprApartmentBuildingLayout LocalName="Apartamentografía"
-                              Description="Implementación integral de apartamentografía"
-                              LocalName1="Cálculo automático"
-                              Description1="Servicio de recalculo automático de superficies de apartamentos cuando cambia tamaños de las habitaciones">
+  <mprApartmentBuildingLayout
+    LocalName="Apartamentografía"
+    Description="Implementación integral de apartamentografía"
+    LocalName1="Cálculo automático"
+    Description1="Servicio de recalculo automático de superficies de apartamentos cuando cambia tamaños de las habitaciones">
     <tab1>Parámetros</tab1>
     <tab2>Orígenes</tab2>
     <tab3>Verificación original</tab3>
@@ -428,9 +429,10 @@
     <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
     <instruction10>Classification allows you to fill in certain parameters of apartments based on the characteristics of the apartments. First, you need to create tables with conditions on the "Conditions" tab, after which you can perform classification with the result displayed on the "Classification" tab</instruction10>
   </mprApartmentBuildingLayout>
-  <mprRoomColorVolume LocalName="Volumen de habitaciones"
-                      Description="Muestre volumen de habitaciones y espacios en color utilizando DirectShape"
-                      FullDescription="Complemento le permite crear elementos DirectShape en función del volumen de habitaciones y espacios del modelo y establecer diferentes colores para elementos DirectShape creados. Ventana de complemento tiene posibilidad de agrupar elementos DirectShape creados por valor del parámetro de habitación o espacio vinculado, así como establecer un solo color para todos elementos DirectShape de grupo">
+  <mprRoomColorVolume
+    LocalName="Volumen de habitaciones"
+    Description="Muestre volumen de habitaciones y espacios en color utilizando DirectShape"
+    FullDescription="Complemento le permite crear elementos DirectShape en función del volumen de habitaciones y espacios del modelo y establecer diferentes colores para elementos DirectShape creados. Ventana de complemento tiene posibilidad de agrupar elementos DirectShape creados por valor del parámetro de habitación o espacio vinculado, así como establecer un solo color para todos elementos DirectShape de grupo">
     <h1>Cambio de colores está disponible en versión completa de complemento</h1>
     <h2>Establecer colores aleatorios para todas representaciones de volumen de habitaciones o espacios en un grupo</h2>
     <h3>No se ha encontrado ningún elemento original en modelo para representación del volumen actual. Probablemente habitación o espacio hayan sido eliminados</h3>
@@ -458,8 +460,9 @@
     <h25>Espacio</h25>
     <h26>Procesar habitaciones a partir del archivos vinculados</h26>
   </mprRoomColorVolume>
-  <mprWallSweep LocalName="Desarrollos de muros"
-                Description="Creando desarrollos de muros">
+  <mprWallSweep
+    LocalName="Desarrollos de muros"
+    Description="Creando desarrollos de muros">
     <v1>Cortar hasta cara superior de forjado superior</v1>
     <v2>Recortar hasta cara inferior de forjado inferior</v2>
     <v3>Alzado</v3>
@@ -508,8 +511,9 @@
     <m2>Especificar punto que estará más cercano a cara a lo largo de la cual se creará desarrollo. Para un correcto funcionamiento es necesario seleccionar punto en plano</m2>
     <tr1>Crear vistas</tr1>
   </mprWallSweep>
-  <mprWorldOrientation LocalName="Lado del mundo"
-                       Description="Análisis de orientación de habitaciones a través de ventanas, puertas, vidrieras en muros cortina">
+  <mprWorldOrientation
+    LocalName="Lado del mundo"
+    Description="Análisis de orientación de habitaciones a través de ventanas, puertas, vidrieras en muros cortina">
     <d1>Análisis de orientación de habitaciones se realiza en ventanas, puertas y vidrieras. Resultado del análisis se puede registrar en parámetro de habitación o en parámetro de ventana, puerta o vidriera</d1>
     <d2>Análisis de orientación de elementos. Resultado del análisis se puede registrar en parámetro de ventanas, puertas o vidrieras.</d2>
     <tab1>Por habitaciones</tab1>
@@ -543,8 +547,9 @@
     <t5>No se puede determinar dirección del elemento</t5>
     <t6>Elementos de categoría "{0}" no tienen parámetro objetivo establecido para guardar resultado</t6>
   </mprWorldOrientation>
-  <mprFloorByRoom LocalName="Suelo por habitación"
-                  Description="Creación de suelos según de contorno de habitación">
+  <mprFloorByRoom
+    LocalName="Suelo por habitación"
+    Description="Creación de suelos según de contorno de habitación">
     <t1>Filtro de habitación:</t1>
     <t2>Tipo de forjado:</t2>
     <t3>Desfase desde nivel, mm:</t3>
@@ -576,8 +581,9 @@
     <msg8>No se puede copiar valor del parámetro "{0}" en parámetro "{1}"</msg8>
     <msg9>Tipos de parámetros incompatibles o motivo desconocido</msg9>
   </mprFloorByRoom>
-  <mprRoomFinishing LocalName="Отделка помещений"
-                    Description="Создание элементов отделки в помещениях">
+  <mprRoomFinishing
+    LocalName="Отделка помещений"
+    Description="Создание элементов отделки в помещениях">
     <t1>Фильтр помещений:</t1>
     <t2>Полы</t2>
     <t3>Тип перекрытия:</t3>

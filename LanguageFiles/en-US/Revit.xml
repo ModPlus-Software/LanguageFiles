@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mprSheetCopy LocalName="Sheet copy"
-	              Description="Plugin allows you to make copies of the specified sheets with different settings"
-	              FullDescription="The selected sheets can be copied without views and with views. You can specify whether to copy legends and schedules. A unique numbering system allows you not to change the number for a copy of the sheet, if you specify a prefix or suffix to obtain a unique number">
+  <mprSheetCopy
+    LocalName="Sheet copy"
+    Description="Plugin allows you to make copies of the specified sheets with different settings"
+    FullDescription="The selected sheets can be copied without views and with views. You can specify whether to copy legends and schedules. A unique numbering system allows you not to change the number for a copy of the sheet, if you specify a prefix or suffix to obtain a unique number">
     <h2>Search by name/number</h2>
     <h3>Number of copies</h3>
     <!-- todo remove after 3.2.1.0 -->
@@ -97,8 +98,9 @@
     <cb2>Duplicate with Detailing</cb2>
     <cb3>Duplicate as a Dependent</cb3>
   </mprSheetCopy>
-  <mprViewCopy LocalName="View copy"
-	             Description="Plugin allows you to make copies of the specified views and schedules with different settings">
+  <mprViewCopy
+    LocalName="View copy"
+    Description="Plugin allows you to make copies of the specified views and schedules with different settings">
     <h1>In the limited version, no more than 3 views are available for duplication</h1>
     <h2>Search by name</h2>
     <h3>Number of copies</h3>
@@ -171,15 +173,17 @@
     <vtf4>Floor, Structural, Area Plans</vtf4>
     <vtf5>Rendering, Drafting Views, Legends</vtf5>
   </mprViewCopy>
-  <ostViewIn3D LocalName="3D section box"
-			   Description="Cuts the selected elements in the view cube, with the possibility of specifying the size of the view cube"
-			   FullDescription="It is possible to dynamically change the dimensions of the view cubes uniformly in all directions relative to the selected elements">
+  <ostViewIn3D
+    LocalName="3D section box"
+    Description="Cuts the selected elements in the view cube, with the possibility of specifying the size of the view cube"
+    FullDescription="It is possible to dynamically change the dimensions of the view cubes uniformly in all directions relative to the selected elements">
     <h1>3D section box</h1>
     <msg1>Select elements for 3D trimming</msg1>
   </ostViewIn3D>
-  <whshScheduleLookup LocalName="Schedule lookup"
-	                    Description="Search for schedules in a project that contain the specified value"
-	                    FullDescription="Searches for specified rows (whole or part), as well as numbers among the project schedules in field names, column headers or in cells, with or without case registration">
+  <whshScheduleLookup
+    LocalName="Schedule lookup"
+    Description="Search for schedules in a project that contain the specified value"
+    FullDescription="Searches for specified rows (whole or part), as well as numbers among the project schedules in field names, column headers or in cells, with or without case registration">
     <h1>Results view</h1>
     <h2>Search results</h2>
     <h3>Double-click on the line opens the details window</h3>
@@ -234,9 +238,10 @@
     <find>Find</find>
     <clean>Clean</clean>
   </whshScheduleLookup>
-  <mprCADmanager LocalName="CAD manager"
-                 Description="Manage all imports of dwg files in the current document"
-                 FullDescription="Plugin displays all types of inserted dwg files – both belonging to the types and not belonging to the views. It is possible to search in the list, copy the identifier of the dwg-insert or view, open the view containing the dwg-insert, and delete the dwg-insertion">
+  <mprCADmanager
+    LocalName="CAD manager"
+    Description="Manage all imports of dwg files in the current document"
+    FullDescription="Plugin displays all types of inserted dwg files – both belonging to the types and not belonging to the views. It is possible to search in the list, copy the identifier of the dwg-insert or view, open the view containing the dwg-insert, and delete the dwg-insertion">
     <h1>CAD manager</h1>
     <h2>Copied!</h2>
     <h3>Belonging to the view:</h3>
@@ -281,11 +286,12 @@
     <msg20>Deletion:</msg20>
     <msg21>Unable to delete elements</msg21>
   </mprCADmanager>
-  <mprExteriorPlanDimensions LocalName="External dimensions on plan"
-                             Description="External dimensions on the floor plan"
-                             FullDescription="Plugin allows you to put in one click the external dimensions on the floor plan. Plugin only processes horizontal and vertical walls and axes. The outer dimensions are set according to the current working configuration, which indicates the sides of dimensioning and setting of dimensional chains"
-                             LocalName1="External dimensions. Settings"
-                             Description1="Working configuration settings for external dimensions in the floor plan">
+  <mprExteriorPlanDimensions
+    LocalName="External dimensions on plan"
+    Description="External dimensions on the floor plan"
+    FullDescription="Plugin allows you to put in one click the external dimensions on the floor plan. Plugin only processes horizontal and vertical walls and axes. The outer dimensions are set according to the current working configuration, which indicates the sides of dimensioning and setting of dimensional chains"
+    LocalName1="External dimensions. Settings"
+    Description1="Working configuration settings for external dimensions in the floor plan">
     <h1>External dimensions settings</h1>
     <h2>Current working configuration of external dimensions on the plan:</h2>
     <h3>Edit the current configuration</h3>
@@ -347,9 +353,10 @@
     <d23>Overall size in current direction is the distance from the extreme edges of the outer walls</d23>
     <d24>This option disables all other options</d24>
   </mprExteriorPlanDimensions>
-  <mprDimByLine LocalName="Dimensions by line"
-                Description="Placing dimensions along the specified line"
-                FullDescription="Plugin allows you to place dimensions on the plan or section view along the conditional line formed by the two indicated points. Elements that will be dimensioned and ways of dimensioning (in the center and/or on the extreme sides) are specified in the working configuration">
+  <mprDimByLine
+    LocalName="Dimensions by line"
+    Description="Placing dimensions along the specified line"
+    FullDescription="Plugin allows you to place dimensions on the plan or section view along the conditional line formed by the two indicated points. Elements that will be dimensioned and ways of dimensioning (in the center and/or on the extreme sides) are specified in the working configuration">
     <h1>Configuration name</h1>
     <h2>Category filter:</h2>
     <h3>Category</h3>
@@ -403,13 +410,14 @@
     <n3>Only in the family editor</n3>
     <n4>Only on Plans</n4>
   </mprDimByLine>
-  <mprDimBias LocalName="Dim offset"
-              Description="Automatic movement of the dimension value that falls on the dimension lines"
-              FullDescription="The application monitors all the created or edited dimensions and in case the dimensional text falls on dimensional lines, it moves the text aside!"
-              LocalName1="Restore"
-              Description1="Restore the text position at selected dimensions"
-              LocalName2="Offset selected"
-              Description2="Offset dimension text of selected dimensions">
+  <mprDimBias
+    LocalName="Dim offset"
+    Description="Automatic movement of the dimension value that falls on the dimension lines"
+    FullDescription="The application monitors all the created or edited dimensions and in case the dimensional text falls on dimensional lines, it moves the text aside!"
+    LocalName1="Restore"
+    Description1="Restore the text position at selected dimensions"
+    LocalName2="Offset selected"
+    Description2="Offset dimension text of selected dimensions">
     <h2>Automatic displacement of dimension text on dimension creation</h2>
     <h3>Automatic displacement of dimension text on dimension modify</h3>
     <h4>Displacement coefficient (from 0.1 to 2.0):</h4>
@@ -429,9 +437,10 @@
     <h20>From the element</h20>
     <h21>To the element</h21>
   </mprDimBias>
-  <mprExcelImport LocalName="Import from Excel"
-                  Description="Plugin allows you to insert a table from Excel into a Revit drafting view"
-                  FullDescription="Plugin supports the conversion of basic properties of cells (size, borders, color) and text (font, size, position, color). Plugin writes information about the imported table to the current project. Plugin allows you to monitor the changed source data in real time">
+  <mprExcelImport
+    LocalName="Import from Excel"
+    Description="Plugin allows you to insert a table from Excel into a Revit drafting view"
+    FullDescription="Plugin supports the conversion of basic properties of cells (size, borders, color) and text (font, size, position, color). Plugin writes information about the imported table to the current project. Plugin allows you to monitor the changed source data in real time">
     <h1>Import from Excel</h1>
     <h2>Table:</h2>
     <h3>Status:</h3>
@@ -490,8 +499,9 @@
     <ts2>The source file is missing!</ts2>
     <ts3>Source sheet is missing or renamed!</ts3>
   </mprExcelImport>
-  <mprInteriorPlanDimensions LocalName="Dimensions on plan"
-                             Description="Plugin allows to perform different variants of element dimensioning on the plan">
+  <mprInteriorPlanDimensions
+    LocalName="Dimensions on plan"
+    Description="Plugin allows to perform different variants of element dimensioning on the plan">
     <h2>Grids dimensioning</h2>
     <h3>Openings dimensioning</h3>
     <h4>Indent of subsequent dimensional chains</h4>
@@ -560,9 +570,10 @@
     <s10>Filtration of working dimensional chains</s10>
     <s11>Creating final dimension chains</s11>
   </mprInteriorPlanDimensions>
-  <mprNestedFamilyParamsTransfer LocalName="Associate parameters"
-                                 Description="Plugin allows you to simplify the work of establishing a associating between the parameters of nested families with the parameters of the parent family"
-                                 FullDescription="Using the plugin, you can create new parameters in the parent family based on one or more parameters of nested families. There is a possibility to set a mask for the name of the created parameter by adding a prefix or suffix. Plugin also allows you to set and delete a link to existing parameters of the parent family">
+  <mprNestedFamilyParamsTransfer
+    LocalName="Associate parameters"
+    Description="Plugin allows you to simplify the work of establishing a associating between the parameters of nested families with the parameters of the parent family"
+    FullDescription="Using the plugin, you can create new parameters in the parent family based on one or more parameters of nested families. There is a possibility to set a mask for the name of the created parameter by adding a prefix or suffix. Plugin also allows you to set and delete a link to existing parameters of the parent family">
     <msg2>Attention! There are no standard types in the current family! Correct operation plugin is not possible!</msg2>
     <msg3>You can choose the option "Continue and create type" – then the plugin will create a type with the name:</msg3>
     <msg4>If you do not want to create a new type, then you need to do the following:</msg4>
@@ -609,8 +620,9 @@
     <ok>Ok</ok>
     <cancel>Cancel</cancel>
   </mprNestedFamilyParamsTransfer>
-  <mprTools LocalName="Tools"
-            Description="A collection of small auxiliary plugins">
+  <mprTools
+    LocalName="Tools"
+    Description="A collection of small auxiliary plugins">
     <ttShow>Show all items of the specified category in the current view</ttShow>
     <ttHide>Hide all items of the specified category in the current view</ttHide>
     <Category>All</Category>
@@ -723,9 +735,10 @@
     <m16>Graphics override for elements is not available on the current view</m16>
     <m17>Unable to switch grids mode on the current view</m17>
   </mprTools>
-  <mmOrderMarking LocalName="Numbering"
-                  Description="Adding numbering to the specified parameter of elements with the possibility of numbering in the schedules"
-                  FullDescription="When working in a non-schedule view, you can specify the direction of numbering based on the arrangement of elements, or add numbering in the order in which elements were created. When working in a schedule, the plugin adds numbering in the order of items in the schedule (taking into account sorting). It is possible to set the prefix and suffix for the number">
+  <mmOrderMarking
+    LocalName="Numbering"
+    Description="Adding numbering to the specified parameter of elements with the possibility of numbering in the schedules"
+    FullDescription="When working in a non-schedule view, you can specify the direction of numbering based on the arrangement of elements, or add numbering in the order in which elements were created. When working in a schedule, the plugin adds numbering in the order of items in the schedule (taking into account sorting). It is possible to set the prefix and suffix for the number">
     <h7>Initial value:</h7>
     <h8>Numbering direction:</h8>
     <h9>Target parameter:</h9>
@@ -809,8 +822,9 @@
     <r5>Letter numbering cannot be performed because the numeric parameter is selected</r5>
     <r6>Parameter for grouping not selected</r6>
   </mmOrderMarking>
-  <mprCleaner LocalName="Model cleaning"
-              Description="Remove objects of certain categories from the model with the ability to remove unused elements">
+  <mprCleaner
+    LocalName="Model cleaning"
+    Description="Remove objects of certain categories from the model with the ability to remove unused elements">
     <h1>Cleaning result</h1>
     <h2>Search...</h2>
     <h3>Check all</h3>
@@ -943,9 +957,10 @@
     <m5>Search in schedules</m5>
     <m6>Among the selected lookup tables there are tables used in the current family! Are you sure you want to delete them?</m6>
   </mprCleaner>
-  <mprSheetRenumber LocalName="Sheet numerator"
-                    Description="Plugin allows to renumber sheets in the project"
-                    FullDescription="Renumbering of sheets is carried out within one group of sheets. You can display all sheets by analogy with the current settings of the project manager or display all sheets in one group. There is an opportunity to change the position of sheets by moving them in the group, while maintaining the initial numbering of sheets in this group">
+  <mprSheetRenumber
+    LocalName="Sheet numerator"
+    Description="Plugin allows to renumber sheets in the project"
+    FullDescription="Renumbering of sheets is carried out within one group of sheets. You can display all sheets by analogy with the current settings of the project manager or display all sheets in one group. There is an opportunity to change the position of sheets by moving them in the group, while maintaining the initial numbering of sheets in this group">
     <m1>To launch plugin go to the project</m1>
     <!-- todo remove after 2.7.10.0 -->
     <m2>Available in the full version of the plugin</m2>
@@ -1018,9 +1033,10 @@
     <p7>number of 3 part</p7>
     <notOrganized>!Not organized</notOrganized>
   </mprSheetRenumber>
-  <mprFamilyDuplicateFixer LocalName="Fix duplicates"
-                           Description="Automate the fix for duplicate families or types"
-                           FullDescription="Plugin allows you to copy types from duplicate families to the main families, copy the values ​​of the parameters of types, update instances of families, and also delete duplicate families. Plugin allows you to replace duplicate types of families and delete the replaced types">
+  <mprFamilyDuplicateFixer
+    LocalName="Fix duplicates"
+    Description="Automate the fix for duplicate families or types"
+    FullDescription="Plugin allows you to copy types from duplicate families to the main families, copy the values ​​of the parameters of types, update instances of families, and also delete duplicate families. Plugin allows you to replace duplicate types of families and delete the replaced types">
     <h1>Copy types</h1>
     <h3>Replace family instances</h3>
     <h4>Delete duplicate families</h4>
@@ -1029,7 +1045,8 @@
     <h7>Select Duplicate Family</h7>
     <h8>Select the main family (into which the types will be copied)</h8>
     <h9>Accept</h9>
-    <h10>No matching families were found in the current category for which the selected family is a duplicate.&#x0a;An additional check is performed by type parameters – a pair of similar families should have the same type parameters</h10>
+    <h10>No matching families were found in the current category for which the selected family is a duplicate.
+An additional check is performed by type parameters – a pair of similar families should have the same type parameters</h10>
     <h11>Copy parameter values of replaced family instance</h11>
     <h12>Set family type from source family</h12>
     <h13>The list of main families displays families of the same category as the selected duplicate family, whose types are interchangeable. At the same time, the number and names of type parameters must be the same.</h13>
@@ -1064,16 +1081,18 @@
     <t10>On the left side there are the types of the family, on the right – drop-down lists for replacing the type. If the type is not selected in the list, then replacement will not be performed</t10>
     <t11>Clear selection</t11>
   </mprFamilyDuplicateFixer>
-  <mprFastViewCut LocalName="Cropping view"
-                  Description="Quickly create a crop view by specifying a rectangular crop area"
-                  LocalName1="Cut plan to 3D"
-                  Description1="Creating a 3D view with the section box by the rectangular area indicated on the plan">
+  <mprFastViewCut
+    LocalName="Cropping view"
+    Description="Quickly create a crop view by specifying a rectangular crop area"
+    LocalName1="Cut plan to 3D"
+    Description1="Creating a 3D view with the section box by the rectangular area indicated on the plan">
     <h5>Specify a rectangular area to create crop borders</h5>
     <h6>Could not get a valid rectangular area. Try again</h6>
   </mprFastViewCut>
-  <mprCopySheetsToOpenDocuments LocalName="Copy sheets to documents"
-                                Description="Batch copy sheets to open documents"
-                                FullDescription="Batch copy selected sheets from the current document to specified open documents with the ability to specify the content to be copied">
+  <mprCopySheetsToOpenDocuments
+    LocalName="Copy sheets to documents"
+    Description="Batch copy sheets to open documents"
+    FullDescription="Batch copy selected sheets from the current document to specified open documents with the ability to specify the content to be copied">
     <h1>Sheets of current document</h1>
     <h2>Destination documents</h2>
     <h3>Settings</h3>
@@ -1117,13 +1136,14 @@
     <m16>Choose one of the options – use an existing Drafting View from the destination document or create and use a copy of the Drafting View from the source document</m16>
     <notOrganized>!Not organized</notOrganized>
   </mprCopySheetsToOpenDocuments>
-  <mprWorksets LocalName="Worksets"
-	             Description="Manage, create, and apply worksets"
-	             FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element"
-	             LocalName1="Update worksets"
-	             Description1="Calling the command &quot;Apply worksets by filters&quot; with the current settings without using the plugin window"
-	             LocalName2="Workset Processing"
-	             Description2="Utilities for worksets – merge, hide, isolate, etc.">
+  <mprWorksets
+    LocalName="Worksets"
+    Description="Manage, create, and apply worksets"
+    FullDescription="The plugin allows you to create workset configurations that you can use to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, you can specify the conditions for applying the workset to an element"
+    LocalName1="Update worksets"
+    Description1="Calling the command &quot;Apply worksets by filters&quot; with the current settings without using the plugin window"
+    LocalName2="Workset Processing"
+    Description2="Utilities for worksets – merge, hide, isolate, etc.">
     <h1>Create worksets</h1>
     <h2>Create worksets and apply them by filters</h2>
     <h3>Apply worksets by filters</h3>
@@ -1241,9 +1261,10 @@
     <rp1>Each row contains a list of worksets</rp1>
     <rp2>Each row contains a workset</rp2>
   </mprWorksets>
-  <zfiFamilyRenameTool LocalName="Batch Rename"
-                       Description="Batch renaming of parameter names, type names, parameter values ​​in the specified families"
-                       FullDescription="Plugin processes selected files or all files in selected folders. You can add a prefix or suffix, you can rename with search and replace. There are several options for setting up search and replace. There is the ability to use regular expressions to search for values">
+  <zfiFamilyRenameTool
+    LocalName="Batch Rename"
+    Description="Batch renaming of parameter names, type names, parameter values ​​in the specified families"
+    FullDescription="Plugin processes selected files or all files in selected folders. You can add a prefix or suffix, you can rename with search and replace. There are several options for setting up search and replace. There is the ability to use regular expressions to search for values">
     <h1>Open families</h1>
     <h2>Accept</h2>
     <h3>Accept and close</h3>
@@ -1293,9 +1314,10 @@
     <msg11>Parameter has no value</msg11>
     <msg12>Unable to change the type of built-in parameter</msg12>
   </zfiFamilyRenameTool>
-  <mprPatterns LocalName="Fill patterns"
-               Description="Fill patterns manager with the ability to import, export, edit and create"
-               FullDescription="It is possible to edit the type of existing fill patterns, to increase or decrease the scale of existing fill patterns. There is batch import from pat files and batch export to pat files. New fill patterns can be created using standard tools with offset and angle, using the conversion of drafting views, and with using a graphical editor">
+  <mprPatterns
+    LocalName="Fill patterns"
+    Description="Fill patterns manager with the ability to import, export, edit and create"
+    FullDescription="It is possible to edit the type of existing fill patterns, to increase or decrease the scale of existing fill patterns. There is batch import from pat files and batch export to pat files. New fill patterns can be created using standard tools with offset and angle, using the conversion of drafting views, and with using a graphical editor">
     <full>Available in the full version of the plugin!</full>
     <mi1>Create</mi1>
     <mi2>New empty pattern</mi2>
@@ -1427,9 +1449,10 @@
     <m33>The selected file is not a geometry file for the pattern editor</m33>
     <m34>The geometry of the selected file cannot be loaded because the pattern type and units of the current editor and the loaded file must match! The current editor has a pattern type "{0}" and a unit of measure "{1}". The loaded file has a pattern type "{2}" and a unit of measure "{3}"</m34>
   </mprPatterns>
-  <mprCopyElementsToOpenDocuments LocalName="Copy elements"
-                                  Description="Batch elements copying to the opened documents"
-                                  FullDescription="Batch copying of the current document's selected elements to the specified opened documents">
+  <mprCopyElementsToOpenDocuments
+    LocalName="Copy elements"
+    Description="Batch elements copying to the opened documents"
+    FullDescription="Batch copying of the current document's selected elements to the specified opened documents">
     <h1>Elements selected:</h1>
     <h2>From:</h2>
     <h3>To:</h3>
@@ -1547,8 +1570,9 @@
     <m78>DWG/DXF export options</m78>
     <m79>DGN export options</m79>
   </mprCopyElementsToOpenDocuments>
-  <mprNotes LocalName="Notes"
-           Description="Plugin for working with frequently-used notes">
+  <mprNotes
+    LocalName="Notes"
+    Description="Plugin for working with frequently-used notes">
     <h1>Settings</h1>
     <h3>Double click on a note</h3>
     <h4>For standard notes:</h4>
@@ -1573,11 +1597,12 @@
     <h74>Specify the insertion point:</h74>
     <h75>For the current view the working plane is not set! No text can be inserted</h75>
   </mprNotes>
-  <mprContextFilter LocalName="Context filter"
-                    Description="Filter elements by parameters, which works as a context menu"
-                    FullDescription="The filter is launched in one of three ways: by left-clicking the mouse while holding down the Ctrl key, by sequential pressing of keys, or by pressing a key combination. The filter has three processing levels – all elements of the model, elements in the current view, or selected elements. There is the ability to use presets for quick filter use"
-                    LocalName1="Filter. Window mode"
-                    Description1="Filter elements by parameters, which works in window mode">
+  <mprContextFilter
+    LocalName="Context filter"
+    Description="Filter elements by parameters, which works as a context menu"
+    FullDescription="The filter is launched in one of three ways: by left-clicking the mouse while holding down the Ctrl key, by sequential pressing of keys, or by pressing a key combination. The filter has three processing levels – all elements of the model, elements in the current view, or selected elements. There is the ability to use presets for quick filter use"
+    LocalName1="Filter. Window mode"
+    Description1="Filter elements by parameters, which works in window mode">
     <h1>Presets</h1>
     <h3>Apply preset to current list</h3>
     <h4>Category search</h4>
@@ -1629,8 +1654,9 @@
     <fo6>Found in model</fo6>
     <fo7>By filter on view</fo7>
   </mprContextFilter>
-  <mprCopyViewTemplateFilters LocalName="View filters"
-                              Description="Managing view filters and view template filters with the ability to copy filters between view templates and/or views while maintaining graphics override settings">
+  <mprCopyViewTemplateFilters
+    LocalName="View filters"
+    Description="Managing view filters and view template filters with the ability to copy filters between view templates and/or views while maintaining graphics override settings">
     <h1>Select filters to copy</h1>
     <h2>Select templates to copy filters to</h2>
     <h3>Search by filter or template name</h3>
@@ -1656,18 +1682,21 @@
     <vtf4>Floor, Structural, Area Plans</vtf4>
     <vtf5>Rendering, Drafting Views, Legends</vtf5>
   </mprCopyViewTemplateFilters>
-  <mprMergeDims LocalName="Merge dimensions"
-                Description="Create a new dimension chain from selected dimensions that lie on one straight line">
+  <mprMergeDims
+    LocalName="Merge dimensions"
+    Description="Create a new dimension chain from selected dimensions that lie on one straight line">
     <h1>Select dimensions</h1>
   </mprMergeDims>
-  <mprSplitDimChain LocalName="Split dimensions"
-                    Description="Create new dimensions from segments of the selected dimension chain">
+  <mprSplitDimChain
+    LocalName="Split dimensions"
+    Description="Create new dimensions from segments of the selected dimension chain">
     <h1>Select dimensions with more than one segment</h1>
     <h2>Some segments of the original dimension could not be recreated. Accept the changes made?</h2>
   </mprSplitDimChain>
-  <mprCopyParameterValues LocalName="Copy values"
-	                        Description="Copy parameter values between elements or within one element"
-	                        FullDescription="The plugin contains various copying options, allowing you to configure which elements to copy to. There is a possibility of copying a composite value (from several parameters to one). There are filters for selecting items by category and parameter values. There is an opportunity to convert values between different types of parameters">
+  <mprCopyParameterValues
+    LocalName="Copy values"
+    Description="Copy parameter values between elements or within one element"
+    FullDescription="The plugin contains various copying options, allowing you to configure which elements to copy to. There is a possibility of copying a composite value (from several parameters to one). There are filters for selecting items by category and parameter values. There is an opportunity to convert values between different types of parameters">
     <saveNew>Save as new</saveNew>
     <full>Available in the full version of the plugin</full>
     <to>to</to>
@@ -1788,10 +1817,11 @@
     <sv3>Custom selection with filter</sv3>
     <sv4>Custom selection without filter </sv4>
   </mprCopyParameterValues>
-  <mprElevations LocalName="Spot dimensions"
-                 Description="Quick creation of spot dimensions on section and elevation views"
-                 LocalName1="Spot dimensions by links"
-                 Description1="Quick creation of spot dimensions on section and elevation views by elements from linked files">
+  <mprElevations
+    LocalName="Spot dimensions"
+    Description="Quick creation of spot dimensions on section and elevation views"
+    LocalName1="Spot dimensions by links"
+    Description1="Quick creation of spot dimensions on section and elevation views by elements from linked files">
     <h2>No elements selected. To continue, you must select elements</h2>
     <h3>Select the end point</h3>
     <h4>Select categories to process:</h4>
@@ -1808,8 +1838,9 @@
     <et2>Below</et2>
     <et3>Above and below</et3>
   </mprElevations>
-  <mprSectionAnnotation LocalName="Section annotation"
-                        Description="Creating annotations – dimensions, spot elevations, tags – on section views">
+  <mprSectionAnnotation
+    LocalName="Section annotation"
+    Description="Creating annotations – dimensions, spot elevations, tags – on section views">
     <t1>Save the current configuration as a new custom configuration</t1>
     <t2>Delete current custom configuration</t2>
     <h1>Process all elements</h1>
@@ -1870,8 +1901,9 @@
     <left>Left</left>
     <right>Right</right>
   </mprSectionAnnotation>
-  <mprJoin LocalName="Elements join"
-           Description="Apply to manage adjoining of walls and beams, and also join and cut elements">
+  <mprJoin
+    LocalName="Elements join"
+    Description="Apply to manage adjoining of walls and beams, and also join and cut elements">
     <e1>Hasn't any elements to execute</e1>
     <e2>Don't select pair for join</e2>
     <t1>Adjoining elements</t1>
@@ -1923,8 +1955,9 @@
     <op8>Not Begin</op8>
     <n1>Standard</n1>
   </mprJoin>
-  <mprColorizer LocalName="Coloring elements"
-	              Description="Coloring elements in the view by conditions, as well as creating a view template with filters or adding filters to existing views">
+  <mprColorizer
+    LocalName="Coloring elements"
+    Description="Coloring elements in the view by conditions, as well as creating a view template with filters or adding filters to existing views">
     <t1>Operating modes</t1>
     <t2>There are no conditions in the configuration</t2>
     <t3>All conditions in the current configuration must have filled filters by category and filters by parameters</t3>
@@ -1972,8 +2005,9 @@
     <cz2>Color only lines</cz2>
     <cz3>Color only surfaces</cz3>
   </mprColorizer>
-  <mprBreakLayers LocalName="Layer breaking"
-	                Description="Breaking multilayer walls and floors into separate elements">
+  <mprBreakLayers
+    LocalName="Layer breaking"
+    Description="Breaking multilayer walls and floors into separate elements">
     <h1>Walls</h1>
     <h2>Floors</h2>
     <h3>Walls of current file:</h3>
@@ -2010,8 +2044,9 @@
     <e7>Part does not contain a solid</e7>
     <e8>Element does not contain a solid</e8>
   </mprBreakLayers>
-  <mprFindAndReplace LocalName="Search and replace"
-	                   Description="Search and replace text in specified search scopes">
+  <mprFindAndReplace
+    LocalName="Search and replace"
+    Description="Search and replace text in specified search scopes">
     <h1>Search scope</h1>
     <h2>Find:</h2>
     <h3>Regular expression</h3>
@@ -2061,16 +2096,18 @@
     <ss23>Material Name</ss23>
     <ss24>Headers in the schedule</ss24>
   </mprFindAndReplace>
-  <mprCopyCropBox LocalName="Copy crop extents"
-	                Description="Copying the crop extents of the current view into the specified views">
+  <mprCopyCropBox
+    LocalName="Copy crop extents"
+    Description="Copying the crop extents of the current view into the specified views">
     <h1>Copy extents visibility settings</h1>
     <h2>Set the same values for "Crop View", "Crop Region Visible", and "Annotation Crop" parameters</h2>
     <h3>Copy 3D View Section Box</h3>
     <h5>No views found that are suitable for copying Crop Extents</h5>
     <notOrganized>!Not organized</notOrganized>
   </mprCopyCropBox>
-  <mprParametrization LocalName="Parametrization"
-	                    Description="Fill element parameters with different strategies">
+  <mprParametrization
+    LocalName="Parametrization"
+    Description="Fill element parameters with different strategies">
     <!-- todo remove after 3.3.6.0 start -->
     <t1>Minimize window contents</t1>
     <t2>Expand window contents</t2>
@@ -2414,8 +2451,9 @@
     <d-count>Returns the number of times the substring occurs in the string. If the substring is not found in the string, returns 0</d-count>
     <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-lstrindex>
   </mprParametrization>
-  <mprBaseLevel LocalName="Base level"
-	              Description="Changing constraints for elements">
+  <mprBaseLevel
+    LocalName="Base level"
+    Description="Changing constraints for elements">
     <t1>Unable to determine old base level to determine offset</t1>
     <t2>Cannot find new base level "{0}" for elements</t2>
     <t3>For elements, it was not possible to determine the strategy for assigning a level</t3>
@@ -2453,8 +2491,9 @@
     <u5>Top level changed for {0} elements</u5>
     <u12>Top level change skipped because element is already located at level "{0}"</u12>
   </mprBaseLevel>
-  <mprViewSync LocalName="View sync"
-	             Description="Synchronize display coordinates of open views">
+  <mprViewSync
+    LocalName="View sync"
+    Description="Synchronize display coordinates of open views">
     <h1>Source view to synchronize:</h1>
     <h2>View not selected</h2>
     <h3>By active view</h3>
@@ -2466,8 +2505,9 @@
     <h9>When activated, 3D view bounds will be synchronized</h9>
     <h10>By view</h10>
   </mprViewSync>
-  <mprSheetExport LocalName="Sheet export"
-	                Description="Export (print) selected sheets to PDF, DWG, etc. with automatic sheet format detection">
+  <mprSheetExport
+    LocalName="Sheet export"
+    Description="Export (print) selected sheets to PDF, DWG, etc. with automatic sheet format detection">
     <h1>The trial period of the plugin is over! Purchase a license or a Revit subscription to continue using the "Sheet export" plugin</h1>
     <h2>Trial period. Days to go</h2>
     <h3>Export directory</h3>
@@ -2680,8 +2720,9 @@
     <err25>Format has no name and will not be processed when added to the printer</err25>
     <err26>Failed to compress file "{0}". Error:</err26>
   </mprSheetExport>
-  <mprHeightSplitter LocalName="Split by height"
-	                   Description="Splitting walls and columns by levels, reference planes, floors, beams or by specified parameters">
+  <mprHeightSplitter
+    LocalName="Split by height"
+    Description="Splitting walls and columns by levels, reference planes, floors, beams or by specified parameters">
     <h1>Split method</h1>
     <!-- todo remove after 1.4.0.0 -->
     <h2>Top offset (down), mm</h2>
@@ -2732,8 +2773,9 @@
     <ro2>Middle</ro2>
     <ro3>Bottom</ro3>
   </mprHeightSplitter>
-  <mprExportToExcel LocalName="Export to Excel"
-	                  Description="Export schedules to Excel">
+  <mprExportToExcel
+    LocalName="Export to Excel"
+    Description="Export schedules to Excel">
     <t1>Schedules</t1>
     <t2>Selected:</t2>
     <t3>Export options</t3>
@@ -2764,10 +2806,11 @@
     <err2>Cannot delete file {0}</err2>
     <err3>Failure to access the file {0}</err3>
   </mprExportToExcel>
-  <mprStructureToParameter LocalName="Structure to parameter"
-                           Description="Transferring the structure of a multilayer type to a multiline parameter"
-                           LocalName1="Volume of layers to parameter"
-                           Description1="Transferring of layer volumes of multilayer elements into a multiline parameter">
+  <mprStructureToParameter
+    LocalName="Structure to parameter"
+    Description="Transferring the structure of a multilayer type to a multiline parameter"
+    LocalName1="Volume of layers to parameter"
+    Description1="Transferring of layer volumes of multilayer elements into a multiline parameter">
     <t1>Search by type or material name:</t1>
     <t2>Show only Types with required parameters</t2>
     <t3>Show only used Types</t3>
@@ -2794,37 +2837,10 @@
     <t24>Selected:</t24>
     <t25>Number of displayed Types selected in the table</t25>
     <t26>Result:</t26>.
-    <t27>Variable thickness:</t27>
-    <t28>Structure wildcard</t28>
-    <t29>Numbering</t29>
-    <t30>Number format:</t30>
-    <t31>String format</t31>
-    <t32>{0} – material name. {1} – layer thickness. {2} – variable thickness</t32>
-    <t33>Standard layer:</t33>
-    <t34>Zero-thickness layer:</t34>
-    <t35>Variable thickness layer:</t35>
-    <t36>Required parameter with the data type "Multiline text". This parameter specifies the template of the result formation. To output the list of structure layers in the template it is necessary to specify the wildcard of the structure</t36>
-    <t37>Required parameter with the data type "Multiline text". In this parameter is written the numbered list of layers of the structure, taking into account the specified line formats and numbering settings</t37>
-    <t38>Optional parameter with data type "Text". This parameter specifies a custom variable thickness value that can be used in string format for a variable thickness layer</t38>
-    <t39>The wildcard specified in the template, which is replaced by a formatted list of structure layers in the result</t39>
-    <t40>By Category</t40>
-    <t41>No parameter</t41>
-    <t42>Take material name from material parameter:</t42>
-    <t43>Reverse result:</t43>
-    <t44>Optional parameter with the data type "Multiline Text". The same result is written to this parameter as to the "Result" parameter, but in reverse order. The parameter is processed if the Type being processed has it</t44>
-    <t45>Example result</t45>
-    <t46>Required parameter of an instance with the data type "Multiline text". In this parameter, a numbered list of volumes of the structure layers is written, taking into account the specified line formats and numbering settings</t46>
-    <t47>{0} – material name. {1} – material volume</t47>
-    <t48>Rounding the volume value</t48>
-    <s1>No change. The Type parameters will not be updated</s1>
-    <s2>The required parameters "Template" and "Result" are missing</s2>
-    <s3>The new result value is different from the current result value. The Type parameters will not be updated, because the "Update" checkbox is not checked</s3>
-    <s4>The new result value is different from the current result value. The Type parameters will be updated</s4>
-    <msg1>Parameter "{0}" not found</msg1>
-    <msg2>The volume of layers is set to the parameter of the instance of the Type "{0}"</msg2>
-  </mprStructureToParameter>
-  <mprSumParameters LocalName="Sum of parameters"
-                    Description="Summarizing the values of numerical parameters of selected elements">
+    <t27>Variable thickness:</t27><t28>Structure wildcard</t28><t29>Numbering</t29><t30>Number format:</t30><t31>String format</t31><t32>{0} – material name. {1} – layer thickness. {2} – variable thickness</t32><t33>Standard layer:</t33><t34>Zero-thickness layer:</t34><t35>Variable thickness layer:</t35><t36>Required parameter with the data type "Multiline text". This parameter specifies the template of the result formation. To output the list of structure layers in the template it is necessary to specify the wildcard of the structure</t36><t37>Required parameter with the data type "Multiline text". In this parameter is written the numbered list of layers of the structure, taking into account the specified line formats and numbering settings</t37><t38>Optional parameter with data type "Text". This parameter specifies a custom variable thickness value that can be used in string format for a variable thickness layer</t38><t39>The wildcard specified in the template, which is replaced by a formatted list of structure layers in the result</t39><t40>By Category</t40><t41>No parameter</t41><t42>Take material name from material parameter:</t42><t43>Reverse result:</t43><t44>Optional parameter with the data type "Multiline Text". The same result is written to this parameter as to the "Result" parameter, but in reverse order. The parameter is processed if the Type being processed has it</t44><t45>Example result</t45><t46>Required parameter of an instance with the data type "Multiline text". In this parameter, a numbered list of volumes of the structure layers is written, taking into account the specified line formats and numbering settings</t46><t47>{0} – material name. {1} – material volume</t47><t48>Rounding the volume value</t48><s1>No change. The Type parameters will not be updated</s1><s2>The required parameters "Template" and "Result" are missing</s2><s3>The new result value is different from the current result value. The Type parameters will not be updated, because the "Update" checkbox is not checked</s3><s4>The new result value is different from the current result value. The Type parameters will be updated</s4><msg1>Parameter "{0}" not found</msg1><msg2>The volume of layers is set to the parameter of the instance of the Type "{0}"</msg2></mprStructureToParameter>
+  <mprSumParameters
+    LocalName="Sum of parameters"
+    Description="Summarizing the values of numerical parameters of selected elements">
     <t1>Take</t1>
     <t2>Round the result up to</t2>
     <t3>digits.</t3>
@@ -2833,9 +2849,10 @@
     <t6>With factor</t6>
     <t7>Factor</t7>
   </mprSumParameters>
-  <mprViewColorOn3D LocalName="Show views on 3D"
-	                  Description="Showing range of visibility of views in color on 3D using DirectShape"
-	                  FullDescription="The plugin allows you to create view visibility ranges in DirectShape color on 3D views, based on the view crop region with the depth of the primary range of plans or depth of trimming of sections, elevation, callout. In the plugin window there is a possibility to switch to views">
+  <mprViewColorOn3D
+    LocalName="Show views on 3D"
+    Description="Showing range of visibility of views in color on 3D using DirectShape"
+    FullDescription="The plugin allows you to create view visibility ranges in DirectShape color on 3D views, based on the view crop region with the depth of the primary range of plans or depth of trimming of sections, elevation, callout. In the plugin window there is a possibility to switch to views">
     <t1>Go to 3D view</t1>
     <t2>In the free version only section processing is available</t2>
     <t3>Show the range of visibility of the view</t3>
@@ -2846,8 +2863,9 @@
     <tr3>Deletion of all ranges of visibility of views</tr3>
     <tr4>Setting 3D crop box by view visibility range</tr4>
   </mprViewColorOn3D>
-  <mprFontReplacer LocalName="Change font"
-                   Description="Changing text properties in specified styles and elements">
+  <mprFontReplacer
+    LocalName="Change font"
+    Description="Changing text properties in specified styles and elements">
     <c1>Dimensional styles</c1>
     <c2>Text styles</c2>
     <c3>Annotation symbol families</c3>
@@ -2883,8 +2901,9 @@
     <msg9>Failed to change style name in category "{0}"</msg9>
     <msg10>Schedule is skipped because a view template is assigned</msg10>
   </mprFontReplacer>
-  <mprTypeManager LocalName="Type manager"
-                  Description="Changing and comparing type parameters">
+  <mprTypeManager
+    LocalName="Type manager"
+    Description="Changing and comparing type parameters">
     <msg1>Column customization is available in the full version of the plugin</msg1>
     <msg2>There are no differences in the parameter values of identical types</msg2>
     <msg3>Close the open type property windows</msg3>
@@ -2934,8 +2953,9 @@
     <t52>Value in document {0}</t52>
     <tr1>Setting parameters</tr1>
   </mprTypeManager>
-  <mprParameters LocalName="Parameters"
-                 Description="Batch editing/adding parameters to projects and families">
+  <mprParameters
+    LocalName="Parameters"
+    Description="Batch editing/adding parameters to projects and families">
     <pcn1>Create parameters in project</pcn1>
     <pcd1>Allows batch creation of parameters in the current project</pcd1>
     <pcn2>Create parameters in families</pcn2>
@@ -3160,14 +3180,16 @@
     <err21>The family is not loaded because the family file has a "Read Only" attribute</err21>
     <err22>Failed to set a formula to a parameter because an uncontrolled error occurred in the Revit API, indicating a bug in the Revit API. To set a formula to this parameter, use the standard parameter editing dialog</err22>
   </mprParameters>
-  <mprOverrideGraphicManager LocalName="Graphics Override manager"
-                             Description="Manage and view graphics overrides in the current view, with the ability to reset an override for an elements">
+  <mprOverrideGraphicManager
+    LocalName="Graphics Override manager"
+    Description="Manage and view graphics overrides in the current view, with the ability to reset an override for an elements">
     <t2>There are no elements with overridden graphics in this view</t2>
     <t3>Resetting an element's graphic override to default</t3>
     <t4>Reset category element graphics overrides to defaults</t4>
   </mprOverrideGraphicManager>
-  <mprWarningViewer LocalName="Warning manager"
-                    Description="View and manage warnings in a document">
+  <mprWarningViewer
+    LocalName="Warning manager"
+    Description="View and manage warnings in a document">
     <t0>Removing element</t0>
     <t1>Coloring an element</t1>
     <t2>Reset graphics override</t2>
@@ -3190,8 +3212,9 @@
     <t20>Refresh warning list</t20>
     <t21>Failed to delete elements</t21>
   </mprWarningViewer>
-  <mprCopyAlongCurve LocalName="Copy along Curve"
-                     Description="Copy elements along curve with a given spacing">
+  <mprCopyAlongCurve
+    LocalName="Copy along Curve"
+    Description="Copy elements along curve with a given spacing">
     <t1>Select elements to copy</t1>
     <t2>Select curves to copy</t2>
     <t3>Curves are not connected</t3>
@@ -3209,8 +3232,9 @@
     <w12>Start from projection</w12>
     <w13>Start copying from the position where the element projection on the curve is located</w13>
   </mprCopyAlongCurve>
-  <mprTagless LocalName="Tagless elements"
-              Description="Tagless elements detection">
+  <mprTagless
+    LocalName="Tagless elements"
+    Description="Tagless elements detection">
     <t1>Restore view</t1>
     <t2>Override element graphic</t2>
     <x1>There are no tagless elements in the view</x1>
@@ -3223,8 +3247,9 @@
     <x8>Decolorize</x8>
     <x9>The plugin does not work in families</x9>
   </mprTagless>
-  <mprMaterialManager LocalName="Material Manager"
-                      Description="Changes in properties and parameters of materials">
+  <mprMaterialManager
+    LocalName="Material Manager"
+    Description="Changes in properties and parameters of materials">
     <msg1>Select materials</msg1>
     <msg2>Do you really want to delete the selected materials?</msg2>
     <msg3>Loading materials...</msg3>
@@ -3273,8 +3298,9 @@
     <t42>Assign color in all modes</t42>
     <t43>Highlight materials</t43>
   </mprMaterialManager>
-  <mprCommands LocalName="Commands"
-               Description="Search and run commands">
+  <mprCommands
+    LocalName="Commands"
+    Description="Search and run commands">
     <t1>Commands. Panel mode</t1>
     <t2>Search and run commands through a floating panel with tracking of recent commands and a list of favorite commands</t2>
     <t3>Command line</t3>
@@ -3289,8 +3315,9 @@
     <t12>Add at the top</t12>
     <t13>Add at the bottom</t13>
   </mprCommands>
-  <mprFilterSelection LocalName="Filter selection"
-                      Description="Quickly select elements using preconfigured filters">
+  <mprFilterSelection
+    LocalName="Filter selection"
+    Description="Quickly select elements using preconfigured filters">
     <t1>In the free version it is allowed to create not more than one configuration</t1>
     <t2>In the free version it is allowed to create no more than three filters</t2>
     <t3>Filter is empty</t3>

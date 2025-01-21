@@ -1,7 +1,6 @@
 ﻿namespace LangFilesEditor;
 
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
@@ -128,10 +127,7 @@ internal class MainContext : ObservableObject
                             xNode.Add(xItem);
                             save = true;
                         }
-
-                        if (item.Values.Count != 5)
-                            Debug.Print("!");
-
+                        
                         if (xItem.Value != item.Values[languageName].Value)
                         {
                             xItem.SetValue(item.Values[languageName].Value);
@@ -141,17 +137,21 @@ internal class MainContext : ObservableObject
                 }
 
                 if (save)
-                    xDoc.Save(file);
+                {
+                    var settings = new XmlWriterSettings
+                    {
+                        Indent = true,
+                        NewLineOnAttributes = true
+                    };
+                    
+                    using (var writer = XmlWriter.Create(file, settings))
+                    {
+                        xDoc.WriteTo(writer);
+                    }
+                }
             }
         }
     });
-
-    private IEnumerable<string> GetLanguageDirectories()
-    {
-        var languageFilesDirectory = Path.Combine(GetSolutionDirectory(), "LanguageFiles");
-
-        return Directory.GetDirectories(languageFilesDirectory, "*", SearchOption.TopDirectoryOnly);
-    }
 
     private void BuildColumns()
     {
@@ -177,6 +177,7 @@ internal class MainContext : ObservableObject
         BorderThickness=""0""
         Margin=""0""
         TextWrapping=""Wrap""
+        AcceptsReturn=""True""
         Foreground=""{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGridRow}, Path=Foreground}""
         Text=""{Binding Path=" + columnName + @", Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"" />
 </DataTemplate>");
@@ -187,6 +188,13 @@ internal class MainContext : ObservableObject
     private static string GetColumnHeader(string languageName)
     {
         return $"{new CultureInfo(languageName).DisplayName}\n{languageName}";
+    }
+
+    private static IEnumerable<string> GetLanguageDirectories()
+    {
+        var languageFilesDirectory = Path.Combine(GetSolutionDirectory(), "LanguageFiles");
+
+        return Directory.GetDirectories(languageFilesDirectory, "*", SearchOption.TopDirectoryOnly);
     }
 
     private static string GetSolutionDirectory()

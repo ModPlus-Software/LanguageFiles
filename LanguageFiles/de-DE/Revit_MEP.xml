@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mprMepElementsBender LocalName="Umgehen von Schnittpunkten"
-                        Description="Umgehen von MEP-Elementen mit Schnittpunkten"
-                        FullDescription="Mit dem Plugin können Sie MEP-Elemente umgehen, ohne diese im Plugin-Fenster ständig auswählen zu müssen. Dazu müssen Sie zunächst die Elemente mit Schnittpunkten auswählen (d. h. die Elemente, die Elemente, die umgangen werden müssen) und dann einfach gewünschte Elemente im Modell auswählen. In diesem Fall werden Elemente automatisch zur Liste von verarbeiteten Elementen im Plugin-Fenster hinzugefügt.">
+  <mprMepElementsBender
+    LocalName="Umgehen von Schnittpunkten"
+    Description="Umgehen von MEP-Elementen mit Schnittpunkten"
+    FullDescription="Mit dem Plugin können Sie MEP-Elemente umgehen, ohne diese im Plugin-Fenster ständig auswählen zu müssen. Dazu müssen Sie zunächst die Elemente mit Schnittpunkten auswählen (d. h. die Elemente, die Elemente, die umgangen werden müssen) und dann einfach gewünschte Elemente im Modell auswählen. In diesem Fall werden Elemente automatisch zur Liste von verarbeiteten Elementen im Plugin-Fenster hinzugefügt.">
     <h1>Einstellungen</h1>
     <h2>Biegerichtung</h2>
     <m1>Abstand, mm</m1>
@@ -67,14 +68,15 @@
     <t2>Nach den Vorlagen</t2>
     <e1>Es ist nicht gelungen, einen Rohrverbinder (Kniestück) zu erstellen. Überprüfen Sie, ob die erforderlichen Familien im Projekt vorhanden sind und ob die Routing-Einstellungen für die zu verarbeitenden Elemente vorhanden sind</e1>
   </mprMepElementsBender>
-  <mprMEPConnect LocalName="MEP-Verbindungen"
-                 Description="Sammlung von Plugins zur Automatisierung der Verbindung von Gebäudetechnik"
-                 LocalName1="Diffusoren anschließen"
-                 Description1="Gruppenanschluss von Diffusoren an Luftkanäle"
-                 LocalName2="Anschlüsse verbinden"
-                 Description2="Verbinden zweier Anschlüsse (oder MEP-Kurven) durch Drehen und Verschieben des ersten ausgewählten Anschlusses"
-                 LocalName3="Gerade Teile verbinden"
-                 Description3="Gruppenverbindung von geraden Rohren, Luftkanälen, Kabel, Kabeltrassen oder -kanälen, die auf derselben geraden Linie liegen">
+  <mprMEPConnect
+    LocalName="MEP-Verbindungen"
+    Description="Sammlung von Plugins zur Automatisierung der Verbindung von Gebäudetechnik"
+    LocalName1="Diffusoren anschließen"
+    Description1="Gruppenanschluss von Diffusoren an Luftkanäle"
+    LocalName2="Anschlüsse verbinden"
+    Description2="Verbinden zweier Anschlüsse (oder MEP-Kurven) durch Drehen und Verschieben des ersten ausgewählten Anschlusses"
+    LocalName3="Gerade Teile verbinden"
+    Description3="Gruppenverbindung von geraden Rohren, Luftkanälen, Kabel, Kabeltrassen oder -kanälen, die auf derselben geraden Linie liegen">
     <msg1>Wählen Sie die Luftkanäle und die daran anzuschließenden Diffusoren aus</msg1>
     <msg2>Keine Luftkanäle ausgewählt!</msg2>
     <msg3>Keine Diffusoren ausgewählt! Es können nur Diffusoren verarbeitet werden, die einen unverbundenen, entlang der Z-Achse ausgerichteten Anschluss haben</msg3>
@@ -103,14 +105,15 @@
     <err11>Die ausgewählten Elemente haben Anschluss mit unterschiedlichen Bemaßungen</err11>
     <err12>Die ausgewählten Elemente haben Anschluss von unterschiedlichen Systemtypen</err12>
   </mprMEPConnect>
-  <mprMEPRotate LocalName="MEP drehen"
-                Description="Sammlung von Plugins zum Drehen von Teilen einer Installation"
-                LocalName1="МЕР-Elemente drehen"
-                Description1="Armaturen oder Teile einer Installation drehen"
-                LocalName2="MEP drehen in Richtung"
-                Description2="Armaturen oder Teile einer Installation in Richtung МЕР-Kurve drehen"
-                LocalName3="Kabeltrasse auf Kante"
-                Description3="Kabeltrasse auf Kante drehen">
+  <mprMEPRotate
+    LocalName="MEP drehen"
+    Description="Sammlung von Plugins zum Drehen von Teilen einer Installation"
+    LocalName1="МЕР-Elemente drehen"
+    Description1="Armaturen oder Teile einer Installation drehen"
+    LocalName2="MEP drehen in Richtung"
+    Description2="Armaturen oder Teile einer Installation in Richtung МЕР-Kurve drehen"
+    LocalName3="Kabeltrasse auf Kante"
+    Description3="Kabeltrasse auf Kante drehen">
     <tr1>Drehen</tr1>
     <t1>Im Uhrzeigersinn</t1>
     <t2>Im Uhrzeigersinn drehen</t2>
@@ -126,16 +129,17 @@
     <msg1>Keine Armatur zum Drehen vorhanden</msg1>
     <msg2>Das Drehen in dieser Richtung ist unmöglich</msg2>
   </mprMEPRotate>
-  <mprMEPAlign LocalName="MEP ausrichten"
-               Description="Sammlung von Plugins zum Ausrichten von MEP-Kurven"
-               LocalName1="Ausrichten"
-               Description1="MEP-Kurven ausrichten"
-               LocalName2="Abstand vorgeben"
-               Description2="Abstand zwischen MEP-Kurven vorgeben"
-               LocalName3="Multiformation"
-               Description3="Multiformation von МЕР-Kurven"
-               LocalName4="Vertikal ausrichten"
-               Description4="Vertikales Ausrichten von МЕР-Kurven">
+  <mprMEPAlign
+    LocalName="MEP ausrichten"
+    Description="Sammlung von Plugins zum Ausrichten von MEP-Kurven"
+    LocalName1="Ausrichten"
+    Description1="MEP-Kurven ausrichten"
+    LocalName2="Abstand vorgeben"
+    Description2="Abstand zwischen MEP-Kurven vorgeben"
+    LocalName3="Multiformation"
+    Description3="Multiformation von МЕР-Kurven"
+    LocalName4="Vertikal ausrichten"
+    Description4="Vertikales Ausrichten von МЕР-Kurven">
     <msg1>Die ausgewählten МЕР-Kurven sind nicht parallel</msg1>
     <msg2>Drehen um Winkel</msg2>
     <msg3>nicht möglich</msg3>
@@ -161,14 +165,15 @@
     <t15>Wählen Sie das auszurichtende MEP-Element aus</t15>
     <t16>Zyklisch ausführen</t16>
   </mprMEPAlign>
-  <mprMEPCopy LocalName="MEP kopieren"
-              Description="Sammlung von Plugins zum Kopieren von MEP-Elementen"
-              LocalName1="Ebenenweise kopieren"
-              Description1="Kopieren von MEP-Elementen mit Ausrichten gemäß der ausgewählten Ebenen"
-              LocalName2="Vertikal kopieren"
-              Description2="Vertikales Kopieren von MEP-Elementen mit Beabstandung"
-              LocalName3="Kopieren in der Richtung"
-              Description3="Kopieren von MEP-Elementen in der Richtung mit Beabstandung">
+  <mprMEPCopy
+    LocalName="MEP kopieren"
+    Description="Sammlung von Plugins zum Kopieren von MEP-Elementen"
+    LocalName1="Ebenenweise kopieren"
+    Description1="Kopieren von MEP-Elementen mit Ausrichten gemäß der ausgewählten Ebenen"
+    LocalName2="Vertikal kopieren"
+    Description2="Vertikales Kopieren von MEP-Elementen mit Beabstandung"
+    LocalName3="Kopieren in der Richtung"
+    Description3="Kopieren von MEP-Elementen in der Richtung mit Beabstandung">
     <msg1>Keine MEP-Elemente ausgewählt</msg1>
     <msg2>Wählen Sie Elemente für das Kopieren aus</msg2>
     <msg3>Die Grundebene der Elemente konnte nicht ermittelt werden</msg3>
@@ -181,8 +186,9 @@
     <t6>Die Anzahl der ausgewählten Ebenen:</t6>
     <err1>Die Elemente konnten nicht verbunden werden</err1>
   </mprMEPCopy>
-  <mprMEPSplit LocalName="MEP-Teilen"
-               Description="Teilen der MEP-Kurven nach Ebenen, Referenzflächen oder vorgegebenen Parametern">
+  <mprMEPSplit
+    LocalName="MEP-Teilen"
+    Description="Teilen der MEP-Kurven nach Ebenen, Referenzflächen oder vorgegebenen Parametern">
     <t1>Versetzen der Verbindungsarmaturen (nach oben oder nach unten)</t1>
     <t2>Referenzflächen ausgewählt</t2>
     <t3>Anzahl der Teilen</t3>

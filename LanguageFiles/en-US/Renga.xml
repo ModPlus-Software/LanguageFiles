@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mrObjectsFilter LocalName="Filter"
-	                 Description="Filter selected objects by category">
+  <mrObjectsFilter
+    LocalName="Filter"
+    Description="Filter selected objects by category">
     <h1>Category:</h1>
     <h2>Objects count:</h2>
     <h5>Total selected objects:</h5>
   </mrObjectsFilter>
-  <mrBatchSheetExport LocalName="Batch Sheets Export"
-	                    Description="Plugin allows you to export all specified sheets to dwg/dxf/pdf/oxps">
+  <mrBatchSheetExport
+    LocalName="Batch Sheets Export"
+    Description="Plugin allows you to export all specified sheets to dwg/dxf/pdf/oxps">
     <t1>Select all sheets</t1>
     <t2>Deselect all sheets</t2>
     <t3>Invert selection</t3>
@@ -35,9 +37,10 @@
     <h17>No section</h17>
     <m2>Before exporting sheets, it is strongly recommended to save the project!\nSave the project?</m2>
   </mrBatchSheetExport>
-  <mrSearchBy LocalName="Search by condition"
-              Description="Search for objects by various conditions"
-              FullDescription="Plugin allows you to search by properties, parameters and quantities among all objects of the model or objects of the specified type. Found objects are highlighted in the model. There is an opportunity in the search bar to specify several values for the search, indicate the &quot;AND-OR&quot; operation option, and also use the &quot;not equal&quot;, &quot;less&quot;, &quot;more&quot; operators">
+  <mrSearchBy
+    LocalName="Search by condition"
+    Description="Search for objects by various conditions"
+    FullDescription="Plugin allows you to search by properties, parameters and quantities among all objects of the model or objects of the specified type. Found objects are highlighted in the model. There is an opportunity in the search bar to specify several values for the search, indicate the &quot;AND-OR&quot; operation option, and also use the &quot;not equal&quot;, &quot;less&quot;, &quot;more&quot; operators">
     <h1>Object type:</h1>
     <h2>Search in:</h2>
     <h3>Properties</h3>
@@ -61,7 +64,7 @@
     <t6>When specifying fractional numbers, the separator of the integer and fractional part set in the regional settings of the operating system is taken into account. If you use a comma in the settings, then the value "1.75" will be processed as a string.</t6>
     <t7>To search by “Yes/No” parameters, “true” or “false” should be indicated in the search bar, respectively.</t7>
     <t8>For numerical values, you can specify comparison operators: “! =” Is not equal, “&lt;” is less, “&gt;” is more. For string values, you can specify the comparison operator "! =" (Not equal), which is processed only if the value "Equal" is selected in the "Match string type" property.</t8>
-    <t9>For example, the string “ANDConcrete*> 1,75” indicates that you need to find objects that have the string value “Concrete” and a numerical value greater than 1,75 among the values to be checked.</t9>
+    <t9>For example, the string “ANDConcrete*&gt; 1,75” indicates that you need to find objects that have the string value “Concrete” and a numerical value greater than 1,75 among the values to be checked.</t9>
     <t10>You can specify the specific name of the property or parameter in which you want to validate the entered value. For example, the string “Note=Concrete” with the “Search in properties” checkbox selected indicates that objects matching the search condition should have the “Note” property with the value “Concrete”. Name validation is also handled based on the “String Match Type”.</t10>
     <t11>To search by the condition of empty values, you need to specify only the name of the property or parameter. For example, the line “Note=” with the checkbox “Search in properties” checked, indicates that objects satisfying the search condition should have the property “Note” with an empty value.</t11>
     <t12>Checking all string values is not case sensitive.</t12>
@@ -85,16 +88,18 @@
     <q11>Cubic centimeters</q11>
     <q12>Cubic meters</q12>
   </mrSearchBy>
-  <mrLevelsList LocalName="Levels"
-	              Description="Displaying a list of levels with the ability to control their visibility">
+  <mrLevelsList
+    LocalName="Levels"
+    Description="Displaying a list of levels with the ability to control their visibility">
     <h1>Not available on this view</h1>
     <h2>Invert visibility</h2>
     <h3>Isolate level</h3>
     <h4>Select level</h4>
     <all>All levels</all>
   </mrLevelsList>
-  <mrQuickProperties LocalName="Quick properties"
-	                   Description="Quickly view and edit the properties of selected elements">
+  <mrQuickProperties
+    LocalName="Quick properties"
+    Description="Quickly view and edit the properties of selected elements">
     <unknown>Unknown</unknown>
     <dif>*DIFFERENT*</dif>
     <h1>Selected items:</h1>
@@ -103,15 +108,17 @@
     <nothing>Nothing</nothing>
     <several>Several</several>
   </mrQuickProperties>
-  <mrLast LocalName="Last"
-	        Description="Tracking and displaying the last hidden or last selected elements">
+  <mrLast
+    LocalName="Last"
+    Description="Tracking and displaying the last hidden or last selected elements">
     <h1>Various</h1>
     <h2>Make Visible</h2>
     <h3>Selected</h3>
     <h4>Hidden</h4>
   </mrLast>
-  <mr3dViewOrientation LocalName="View orientation"
-	                     Description="Camera orientation in the 3D scene">
+  <mr3dViewOrientation
+    LocalName="View orientation"
+    Description="Camera orientation in the 3D scene">
     <top>Top</top>
     <bottom>Bottom</bottom>
     <front>Front</front>

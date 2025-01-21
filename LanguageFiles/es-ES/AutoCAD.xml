@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mpTxtNumCopy LocalName="Copiar con numeración"
-                Description="Copia texto seleccionado o un bloque de atributos que contiene valor numérico, cambiando valor según incrementos numéricos especificados"
-                FullDescription="Copia texto de una o varias líneas, bloque de atributos o directriz múltiple seleccionado que contiene un valor numérico, cambiando valor según incremento numérico especificado. Hay varios ajustes – añadir prefijo/sufijo, suprimir ceros finales, etc.">
+  <mpTxtNumCopy
+    LocalName="Copiar con numeración"
+    Description="Copia texto seleccionado o un bloque de atributos que contiene valor numérico, cambiando valor según incrementos numéricos especificados"
+    FullDescription="Copia texto de una o varias líneas, bloque de atributos o directriz múltiple seleccionado que contiene un valor numérico, cambiando valor según incremento numérico especificado. Hay varios ajustes – añadir prefijo/sufijo, suprimir ceros finales, etc.">
     <!-- todo remove after 3.1.2.0 -->
     <accept>Aceptar</accept>
     <!-- todo remove after 3.1.2.0 -->
@@ -55,9 +56,10 @@
     <cb8>Perpendicular a curva (a izquierda)</cb8>
     <cb9>Perpendicular a curva (a derecha)</cb9>
   </mpTxtNumCopy>
-  <mpMultiCopy LocalName="Multicopiar"
-               Description="Copia múltiple de primitivas seleccionadas con intervalo determinado"
-               FullDescription="Complemento admite dos tipos de copia:\nmarcar – copia primitivas con una distancia determinada entre ellos a lo largo de línea especificada;\ndividir – copia primitivas dividiendo línea especificada en número de segmentos ingresado\nEs posible seleccionar una primitiva (línea, polilínea, splíne) para especificar ruta de copia">
+  <mpMultiCopy
+    LocalName="Multicopiar"
+    Description="Copia múltiple de primitivas seleccionadas con intervalo determinado"
+    FullDescription="Complemento admite dos tipos de copia:\nmarcar – copia primitivas con una distancia determinada entre ellos a lo largo de línea especificada;\ndividir – copia primitivas dividiendo línea especificada en número de segmentos ingresado\nEs posible seleccionar una primitiva (línea, polilínea, splíne) para especificar ruta de copia">
     <msg1>Seleccionar primitivas:</msg1>
     <msg2>Especificar distancia o [Dividir]</msg2>
     <msg3>Ingresar número de segmentos o [Marcar]</msg3>
@@ -68,8 +70,9 @@
     <kw2>Marcar</kw2>
     <kw3>Primitiva</kw3>
   </mpMultiCopy>
-  <mpTxtCenter LocalName="Texto en medio"
-               Description="Complemento le permite crear texto de una sola línea o alinear texto existente al medio entre dos puntos específicos">
+  <mpTxtCenter
+    LocalName="Texto en medio"
+    Description="Complemento le permite crear texto de una sola línea o alinear texto existente al medio entre dos puntos específicos">
     <msg1>Especificar primer punto o [Existente]</msg1>
     <msg2>Existente</msg2>
     <msg3>Ingresar texto:</msg3>
@@ -80,8 +83,9 @@
     <msg8>Especificar primer punto:</msg8>
     <msg9>Especificar segundo punto:</msg9>
   </mpTxtCenter>
-  <mpStandards LocalName="Estándares"
-               Description="Complemento le permite crear, almacenar y añadir conjuntos de capas, estilos de texto, estilos de cota y estilos de directrices múltiples">
+  <mpStandards
+    LocalName="Estándares"
+    Description="Complemento le permite crear, almacenar y añadir conjuntos de capas, estilos de texto, estilos de cota y estilos de directrices múltiples">
     <copy>Copiar</copy>
     <no>No</no>
     <h1>Nombre del conjunto:</h1>
@@ -180,9 +184,10 @@
     <l8>Mp_No imprimible</l8>
     <l9>Mp_Texto</l9>
   </mpStandards>
-  <mpMultiScale LocalName="Multiescala"
-                Description="Complemento le permite escalar cada uno de objetos seleccionados en relación con ellos mismos"
-                FullDescription="Cada objeto seleccionado se escalará en relación con punto especificado: Abajo a izquierda, Abajo a derecha, Arriba a izquierda, Arriba a derecha o Centro. Punto de escala está determinado por rectángulo que describe objeto">
+  <mpMultiScale
+    LocalName="Multiescala"
+    Description="Complemento le permite escalar cada uno de objetos seleccionados en relación con ellos mismos"
+    FullDescription="Cada objeto seleccionado se escalará en relación con punto especificado: Abajo a izquierda, Abajo a derecha, Arriba a izquierda, Arriba a derecha o Centro. Punto de escala está determinado por rectángulo que describe objeto">
     <h1>Crear copias de objetos seleccionados</h1>
     <h2>Punto base:</h2>
     <h3>Seleccionar objetos:</h3>
@@ -198,26 +203,30 @@
     <bp9>Centro a derecha</bp9>
     <bp10>Центр или точка вставки блока</bp10>
   </mpMultiScale>
-  <mpMultiRotate LocalName="Multirotación"
-                 Description="Complemento le permite rotar cada uno de objetos seleccionados alrededor del eje Z con centro de rotación relativo a ellos mismos"
-                 FullDescription="Cada objeto seleccionado rotará alrededor del eje Z, centrado en punto especificado: Abajo-izquierda, Abajo-derecha, Arriba-izquierda, Arriba-derecha o Centro. Centro de rotación está definido por rectángulo que describe objeto">
+  <mpMultiRotate
+    LocalName="Multirotación"
+    Description="Complemento le permite rotar cada uno de objetos seleccionados alrededor del eje Z con centro de rotación relativo a ellos mismos"
+    FullDescription="Cada objeto seleccionado rotará alrededor del eje Z, centrado en punto especificado: Abajo-izquierda, Abajo-derecha, Arriba-izquierda, Arriba-derecha o Centro. Centro de rotación está definido por rectángulo que describe objeto">
     <h1>Ángulo de rotación:</h1>
   </mpMultiRotate>
-  <mpMultiMirror LocalName="Multiespejo"
-                 Description="Complemento le permite reflejar cada uno de objetos seleccionados vertical u horizontalmente con respecto a ellos mismos"
-                 FullDescription="Cada objeto seleccionado se volteará vertical u horizontalmente en relación con línea que pasa por punto especificado: Abajo a izquierda, Abajo a derecha, Arriba a izquierda, Arriba a derecha o Centro. Punto está determinado por rectángulo que describe objeto">
+  <mpMultiMirror
+    LocalName="Multiespejo"
+    Description="Complemento le permite reflejar cada uno de objetos seleccionados vertical u horizontalmente con respecto a ellos mismos"
+    FullDescription="Cada objeto seleccionado se volteará vertical u horizontalmente en relación con línea que pasa por punto especificado: Abajo a izquierda, Abajo a derecha, Arriba a izquierda, Arriba a derecha o Centro. Punto está determinado por rectángulo que describe objeto">
     <o1>Reflejar</o1>
     <o2>verticalmente</o2>
     <o3>horizontalmente</o3>
   </mpMultiMirror>
-  <mpRotAtt LocalName="Ángulo de rotación de atributos"
-            Description="Complemento le permite cambiar ángulo de rotación de atributos en bloques seleccionados">
+  <mpRotAtt
+    LocalName="Ángulo de rotación de atributos"
+    Description="Complemento le permite cambiar ángulo de rotación de atributos en bloques seleccionados">
     <msg1>Seleccionar bloques:</msg1>
     <msg2>Nuevo ángulo de rotación de atributos:</msg2>
   </mpRotAtt>
-  <mpLayerAuto LocalName="Capas automáticas"
-               Description="Complemento se utiliza para añadir automáticamente capa a objetos creados"
-               FullDescription="Complemento procesa eventos de crear, copiar, pegar y otros comandos cuando se trabaja con objetos de AutoCAD (cotas, textos, directrices, sombreados, tablas, ventanas gráficas, segmentos, polilíneas, líneas, rayos, círculos, elipses, splines, arcos, bloques) y establece para ellos capa especificada en ajustes del complemento. Es posible establecer capas especificadas para objetos seleccionados. Es posible establecer capas de bloques por nombre">
+  <mpLayerAuto
+    LocalName="Capas automáticas"
+    Description="Complemento se utiliza para añadir automáticamente capa a objetos creados"
+    FullDescription="Complemento procesa eventos de crear, copiar, pegar y otros comandos cuando se trabaja con objetos de AutoCAD (cotas, textos, directrices, sombreados, tablas, ventanas gráficas, segmentos, polilíneas, líneas, rayos, círculos, elipses, splines, arcos, bloques) y establece para ellos capa especificada en ajustes del complemento. Es posible establecer capas especificadas para objetos seleccionados. Es posible establecer capas de bloques por nombre">
     <h1>Capas para primitivas</h1>
     <h2>Asignar capas</h2>
     <h3>Disponible en versión completa del complemento</h3>
@@ -267,9 +276,10 @@
     <h52>Para nubes de revisión:</h52>
     <h53>Por puntos:</h53>
   </mpLayerAuto>
-  <mpFormats LocalName="Formatos"
-             Description="Complemento para insertar formatos en dibujo según GOST 2.301-68/ISO 216"
-             FullDescription="Formatos se insertan como bloque con etiqueta especial en datos extendidos. Etiqueta en datos extendidos es necesaria para que otros complementos (por ejemplo, Numerador de hojas) definan formatos. Por lo tanto, no debe insertar formatos utilizando herramientas estándar de inserción de bloques de AutoCAD. Complemento permite añadir cuadros de rotulación a formato; para ello, es necesario de instalar complemento &quot;Cuadro de rotulación&quot; y ejecutarlo al menos una vez &quot;">
+  <mpFormats
+    LocalName="Formatos"
+    Description="Complemento para insertar formatos en dibujo según GOST 2.301-68/ISO 216"
+    FullDescription="Formatos se insertan como bloque con etiqueta especial en datos extendidos. Etiqueta en datos extendidos es necesaria para que otros complementos (por ejemplo, Numerador de hojas) definan formatos. Por lo tanto, no debe insertar formatos utilizando herramientas estándar de inserción de bloques de AutoCAD. Complemento permite añadir cuadros de rotulación a formato; para ello, es necesario de instalar complemento &quot;Cuadro de rotulación&quot; y ejecutarlo al menos una vez &quot;">
     <accept>Aceptar</accept>
     <no>No</no>
     <h1>Rusia</h1>
@@ -361,8 +371,9 @@
     <msg11>Punto de inserción:</msg11>
     <msg12>¡No se permite un nombre de hoja vacío!</msg12>
   </mpFormats>
-  <mpNotes LocalName="Notas"
-           Description="Complemento para trabajar con notas de uso frecuente">
+  <mpNotes
+    LocalName="Notas"
+    Description="Complemento para trabajar con notas de uso frecuente">
     <h1>Ajustes</h1>
     <h2>Menú contextual para texto</h2>
     <h3>Doble clic en una nota</h3>
@@ -385,8 +396,9 @@
     <h74>Especificar punto de inserción:</h74>
     <h75>MP:Guardar como nota</h75>
   </mpNotes>
-  <mpMeshes LocalName="Mallazos"
-            Description="Selección y cálculo de masa de mallazo de refuerzo de acuerdo con documentos reglamentarios">
+  <mpMeshes
+    LocalName="Mallazos"
+    Description="Selección y cálculo de masa de mallazo de refuerzo de acuerdo con documentos reglamentarios">
     <kg>kg</kg>
     <mm>mm</mm>
     <insert>Insertar</insert>
@@ -454,8 +466,9 @@
     <h62>Longitud del mallazo no debe ser menor</h62>
     <h63>Longitud del mallazo no debe ser mayor</h63>
   </mpMeshes>
-  <mpTables LocalName="Tablas"
-            Description="Complemento para insertar tablas de AutoCAD en un dibujo de acuerdo con GOST/DSTU/STB o desde un archivo específico">
+  <mpTables
+    LocalName="Tablas"
+    Description="Complemento para insertar tablas de AutoCAD en un dibujo de acuerdo con GOST/DSTU/STB o desde un archivo específico">
     <insert>Insertar</insert>
     <all>Todo</all>
     <favorite>Favoritos</favorite>
@@ -504,8 +517,9 @@
     <msg4>Punto de inserción</msg4>
     <msg5>Especificar segundo punto</msg5>
   </mpTables>
-  <mpDimJustif LocalName="Alinear cotas"
-               Description="Alineación de líneas directriz o de cota a lo largo de una línea recta especificada">
+  <mpDimJustif
+    LocalName="Alinear cotas"
+    Description="Alineación de líneas directriz o de cota a lo largo de una línea recta especificada">
     <h1>ALINEAR COTAS</h1>
     <h2>Alineación de líneas directriz</h2>
     <h3>Alinear líneas de cota</h3>
@@ -514,9 +528,10 @@
     <msg3>Seleccionar cotas para alinear líneas de cota</msg3>
     <msg4>Segundo punto de línea de alineación:</msg4>
   </mpDimJustif>
-  <mpStamps LocalName="Cuadros de rotulación"
-            Description="Complemento para insertar cuadros de rotulación (en forma de tablas de AutoCAD) en dibujo según documentación normativa, con soporte para campos"
-            FullDescription="Utilización de complemento &quot;Campos&quot; le permite añadir valores adicionales a su documento que pueden ser insertados en cuadro de rotulación en forma de campos. Esto le permite cambiar valores en cuadro de rotulación en todos cuadros de rotulación en todo documento a una vez">
+  <mpStamps
+    LocalName="Cuadros de rotulación"
+    Description="Complemento para insertar cuadros de rotulación (en forma de tablas de AutoCAD) en dibujo según documentación normativa, con soporte para campos"
+    FullDescription="Utilización de complemento &quot;Campos&quot; le permite añadir valores adicionales a su documento que pueden ser insertados en cuadro de rotulación en forma de campos. Esto le permite cambiar valores en cuadro de rotulación en todos cuadros de rotulación en todo documento a una vez">
     <h1>Cuadros de rotulación</h1>
     <h2>Nombre del cuadro de rotulación</h2>
     <h3>Documentos reglamentarios para:</h3>
@@ -650,8 +665,9 @@
     <msg30>¡No hay firmas en lista!</msg30>
     <msg31>¡Archivo seleccionado no es archivo de almacenamiento de firmas!</msg31>
   </mpStamps>
-  <mpSummLength LocalName="Suma de longitudes"
-                Description="Obtiene y muestra número y suma de longitudes de líneas, polilíneas, círculos, arcos y splines seleccionados">
+  <mpSummLength
+    LocalName="Suma de longitudes"
+    Description="Obtiene y muestra número y suma de longitudes de líneas, polilíneas, círculos, arcos y splines seleccionados">
     <h2>Longitud total:</h2>
     <h3>Redondeo del resultado</h3>
     <h4>Cantidad:</h4>
@@ -671,9 +687,10 @@
     <h18>Media aritmética de todos objetos:</h18>
     <h19>Longitud por objetos</h19>
   </mpSummLength>
-  <mpSelSim LocalName="Seleccionar por patrón"
-            Description="Complemento le permite seleccionar objetos similares a objetos de patrón de todos objetos del dibujo o de conjunto específico"
-            FullDescription="Antes de utilizar complemento, debe configurar condiciones por las que se buscarán objetos similares: mismo tipo, misma capa, mismo color, etc. Para algunos tipos existen condiciones de coincidencia adicionales. Por ejemplo, misma altura de texto, bloques con mismo nombre, etc.">
+  <mpSelSim
+    LocalName="Seleccionar por patrón"
+    Description="Complemento le permite seleccionar objetos similares a objetos de patrón de todos objetos del dibujo o de conjunto específico"
+    FullDescription="Antes de utilizar complemento, debe configurar condiciones por las que se buscarán objetos similares: mismo tipo, misma capa, mismo color, etc. Para algunos tipos existen condiciones de coincidencia adicionales. Por ejemplo, misma altura de texto, bloques con mismo nombre, etc.">
     <h2>Ajustes generales</h2>
     <h3>Añadir objetos de patrón al conjunto final (seleccionar por patrón de seleccionado)</h3>
     <h4>Mismos tipos</h4>
@@ -724,13 +741,15 @@
     <mi5>MP: Seleccionar por patrón de seleccionado</mi5>
     <mi6>MP: Ajustar selección de patrón</mi6>
   </mpSelSim>
-  <mpHandDim LocalName="Cotas manuales"
-             Description="Resaltar, restaurar o eliminar cotas con un valor reemplazado">
+  <mpHandDim
+    LocalName="Cotas manuales"
+    Description="Resaltar, restaurar o eliminar cotas con un valor reemplazado">
     <msg1>Seleccionar cotas:</msg1>
     <msg2>Opciones [Color/Resaltar/Restaurar/Eliminar]</msg2>
   </mpHandDim>
-  <mpCalc LocalName="Calculadora"
-          Description="Análogo de calculadora estándar, con funciones de obtener datos de dibujo, añadir resultado al dibujo y posibilidad de escribir manualmente una fórmula para cálculo">
+  <mpCalc
+    LocalName="Calculadora"
+    Description="Análogo de calculadora estándar, con funciones de obtener datos de dibujo, añadir resultado al dibujo y posibilidad de escribir manualmente una fórmula para cálculo">
     <!-- todo remove after 1.5.2.0 -->
     <prefix>Prefijo</prefix>
     <!-- todo remove after 1.5.2.0 -->
@@ -835,9 +854,10 @@
     <err3>¡No golpeé celda!</err3>
     <err4>Entrada no válida</err4>
   </mpCalc>
-  <mpArmature LocalName="Armadura"
-              Description="Trabajo con surtidos de armadura: obtener información y cálculos diversos"
-              FullDescription="Se necesitan bases de datos para que complemento funcione. Complemento permite obtener diversas informaciones y datos de cálculo (área, masa, anclaje, etc.) para gran número de surtidos diferentes">
+  <mpArmature
+    LocalName="Armadura"
+    Description="Trabajo con surtidos de armadura: obtener información y cálculos diversos"
+    FullDescription="Se necesitan bases de datos para que complemento funcione. Complemento permite obtener diversas informaciones y datos de cálculo (área, masa, anclaje, etc.) para gran número de surtidos diferentes">
     <cancel>Cancelar</cancel>
     <h1>ARMADURA</h1>
     <h2>Documento reglamentario</h2>
@@ -914,8 +934,9 @@
     <p2>Creando un nuevo documento</p2>
     <p3>Completando datos</p3>
   </mpArmature>
-  <mpTxtCopyPaste LocalName="Copiar rapido del texto"
-                  Description="Copie rápidamente contenido de texto de una línea o texto multilínea, directrices múltiples, cotas y celdas de tablas">
+  <mpTxtCopyPaste
+    LocalName="Copiar rapido del texto"
+    Description="Copie rápidamente contenido de texto de una línea o texto multilínea, directrices múltiples, cotas y celdas de tablas">
     <msg1>Seleccionar un objeto de origen (texto, directriz, tabla o cota):</msg1>
     <msg2>Seleccionar un objeto de origen (texto, directriz, tabla o cota) o [Eliminar]:</msg2>
     <msg3>¡Selección incorrecta!</msg3>
@@ -923,13 +944,15 @@
     <msg5>Seleccionar objeto (texto, directriz) para reemplazar contenido:</msg5>
     <msg6>Especificar celda de tabla:</msg6>
   </mpTxtCopyPaste>
-  <mpRemoveAnnotScale LocalName="Limpiar escalas"
-                      Description="Limpia lista de escalas anotativas en objetos anotativos seleccionados, manteniendo escala actual">
+  <mpRemoveAnnotScale
+    LocalName="Limpiar escalas"
+    Description="Limpia lista de escalas anotativas en objetos anotativos seleccionados, manteniendo escala actual">
     <msg1>Seleccionar objetos anotativos:</msg1>
   </mpRemoveAnnotScale>
-  <mpTotals LocalName="Datos generales"
-            Description="Complemento para crear rápidamente datos generales con posibilidad de obtener valores de dibujo"
-            FullDescription="Complemento recopila datos de tablas insertadas en documento actual. Lista de documentos de referencia se recopila de acuerdo con documentos reglamentarios presentes en base de datos">
+  <mpTotals
+    LocalName="Datos generales"
+    Description="Complemento para crear rápidamente datos generales con posibilidad de obtener valores de dibujo"
+    FullDescription="Complemento recopila datos de tablas insertadas en documento actual. Lista de documentos de referencia se recopila de acuerdo con documentos reglamentarios presentes en base de datos">
     <insert>Insertar tabla</insert>
     <accept>Aceptar</accept>
     <cancel>Cancelar</cancel>
@@ -994,9 +1017,10 @@
     <h63>Guardar datos modificados</h63>
     <h64>Hay datos modificados que se pueden reescribir</h64>
   </mpTotals>
-  <mpProductInsert LocalName="Insertar artículo"
-                   Description="Complemento para insertar artículos de base de datos ModPlus en forma de bloques que contienen datos extendidos"
-                   FullDescription="Complemento crea bloques de AutoCAD basados en datos de base de datos de complemento . Se añaden datos extendidos a bloques, lo que permite otros complemento a procesar estos bloques y crear especificación basada en ellos\nComplemento también le permite añadir datos extendidos a los primitivas regulares de AutoCAD\n¡Importante! Bloques deben insertarse con este complemento o copiarse los ya insertados. Al contrario (al insertar con herramientas normales de AutoCAD) datos extendidos no se añadirán">
+  <mpProductInsert
+    LocalName="Insertar artículo"
+    Description="Complemento para insertar artículos de base de datos ModPlus en forma de bloques que contienen datos extendidos"
+    FullDescription="Complemento crea bloques de AutoCAD basados en datos de base de datos de complemento . Se añaden datos extendidos a bloques, lo que permite otros complemento a procesar estos bloques y crear especificación basada en ellos\nComplemento también le permite añadir datos extendidos a los primitivas regulares de AutoCAD\n¡Importante! Bloques deben insertarse con este complemento o copiarse los ya insertados. Al contrario (al insertar con herramientas normales de AutoCAD) datos extendidos no se añadirán">
     <all>Todo</all>
     <cb1>Metal</cb1>
     <cb2>Hormigón armado</cb2>
@@ -1062,9 +1086,10 @@
     <msg10>Primer punto</msg10>
     <msg11>Segundo punto</msg11>
   </mpProductInsert>
-  <mpDrawOrderByLayer LocalName="Ordenar por capa"
-                      Description="Complemento se utiliza para cambiar orden del dibujo según capas"
-                      FullDescription="Complemento procesa capas marcadas con casillas en ventana, cambiando orden de dibujo según orden de capas marcadas. Hay modo &quot;Auto&quot;, que cambia automáticamente orden de dibujo de objetos en una de dos capas especificadas al crear o editar.">
+  <mpDrawOrderByLayer
+    LocalName="Ordenar por capa"
+    Description="Complemento se utiliza para cambiar orden del dibujo según capas"
+    FullDescription="Complemento procesa capas marcadas con casillas en ventana, cambiando orden de dibujo según orden de capas marcadas. Hay modo &quot;Auto&quot;, que cambia automáticamente orden de dibujo de objetos en una de dos capas especificadas al crear o editar.">
     <h2>Invertir lista</h2>
     <h5>Inversión de selección</h5>
     <h6>Modo "Auto"</h6>
@@ -1078,8 +1103,9 @@
     <h14>Descargar y aplicar posiciones de capa guardadas en dibujo actual. Las capas que se añadían después de guardar la posición se desplazarán al final de la lista</h14>
     <h15>Desplazar capa seleccionada al inicio de lista</h15>
   </mpDrawOrderByLayer>
-  <mpDocTemplates LocalName="Plantillas. Etapa P"
-                  Description="Complemento le permite crear plantillas para parte de texto de sección de acuerdo con Decreto RF No. 87 con página de título de acuerdo con GOST Р 21.1101-2013">
+  <mpDocTemplates
+    LocalName="Plantillas. Etapa P"
+    Description="Complemento le permite crear plantillas para parte de texto de sección de acuerdo con Decreto RF No. 87 con página de título de acuerdo con GOST Р 21.1101-2013">
     <h1>PLANTILLAS. ETAPA P</h1>
     <h2>Propiedades generales</h2>
     <h3>Nombre del proyecto</h3>
@@ -1104,8 +1130,9 @@
     <h22>Crear una plantilla</h22>
     <h23>Abrir un archivo de Word</h23>
   </mpDocTemplates>
-  <mpPrPosition LocalName="Posición de artículo"
-                Description="Complemento añade/elimina una posición a artículos seleccionados y le permite marcar posición">
+  <mpPrPosition
+    LocalName="Posición de artículo"
+    Description="Complemento añade/elimina una posición a artículos seleccionados y le permite marcar posición">
     <h1>Seleccionar objetos que sean artículos ModPlus</h1>
     <h2>Eliminar</h2>
     <h3>Elemento</h3>
@@ -1117,9 +1144,10 @@
     <h9>MP: Directriz con marca</h9>
     <h10>Punto de inserción</h10>
   </mpPrPosition>
-  <mpPrToTable LocalName="Insertar artículos en tabla"
-               Description="Complemento le permite completar tabla de especificaciones con artículos ModPlus seleccionados"
-               FullDescription="Complemento recopila datos de lista de materiales a partir de datos de artículos extendidos (bloques creados por complemento &quot;Insertar artículo&quot; o primitivas de AutoCAD con datos extendidos añadidos por complemento &quot;Insertar artículo&quot;), así como de bloques que tienen atributos para lista de materiales. Es posible especificar fila a partir de la cual se comenzará a rellenar tabla.">
+  <mpPrToTable
+    LocalName="Insertar artículos en tabla"
+    Description="Complemento le permite completar tabla de especificaciones con artículos ModPlus seleccionados"
+    FullDescription="Complemento recopila datos de lista de materiales a partir de datos de artículos extendidos (bloques creados por complemento &quot;Insertar artículo&quot; o primitivas de AutoCAD con datos extendidos añadidos por complemento &quot;Insertar artículo&quot;), así como de bloques que tienen atributos para lista de materiales. Es posible especificar fila a partir de la cual se comenzará a rellenar tabla.">
     <h1>Seleccionar objetos que sean artículos ModPlus</h1>
     <h2>Línea</h2>
     <h3>Signos</h3>
@@ -1130,16 +1158,18 @@
     <h8>MP: Añadir a especificación</h8>
     <h9>Buscar artículos</h9>
   </mpPrToTable>
-  <mpDimBreak LocalName="Dividir cotas"
-              Description="Divide cota seleccionada en dos o más nuevos"
-              FullDescription="Complemento le permite dividir una cota lineal o paralela seleccionada en dos o más cotas especificando dinámicamente un nuevo punto que será común a dos nuevas cotas.">
+  <mpDimBreak
+    LocalName="Dividir cotas"
+    Description="Divide cota seleccionada en dos o más nuevos"
+    FullDescription="Complemento le permite dividir una cota lineal o paralela seleccionada en dos o más cotas especificando dinámicamente un nuevo punto que será común a dos nuevas cotas.">
     <h1>Seleccionar cota</h1>
     <h2>¡Selección incorrecta!</h2>
     <h3>Punto de brecha</h3>
   </mpDimBreak>
-  <mpBlkReplace LocalName="Reemplazar bloques"
-                Description="Complemento le permite reemplazar rápidamente bloques o primitivas en dibujo con bloque específico"
-                FullDescription="Complemento funciona en tres modos: Reemplazar seleccionados – le permite reemplazar todos bloques seleccionados con un bloque específico; Reemplazar otros similares – le permite reemplazar todas apariciones de un bloque con un bloque específico; Reemplazar primitivas – le permite reemplazar primitivas seleccionadas como Círculo, Elipse y Punto con bloque especificado. Le permite eliminar descripción del bloque reemplazado de base del dibujo. Similar al comando &quot;Purgar&quot; (_PURGE). Varias configuraciones disponibles">
+  <mpBlkReplace
+    LocalName="Reemplazar bloques"
+    Description="Complemento le permite reemplazar rápidamente bloques o primitivas en dibujo con bloque específico"
+    FullDescription="Complemento funciona en tres modos: Reemplazar seleccionados – le permite reemplazar todos bloques seleccionados con un bloque específico; Reemplazar otros similares – le permite reemplazar todas apariciones de un bloque con un bloque específico; Reemplazar primitivas – le permite reemplazar primitivas seleccionadas como Círculo, Elipse y Punto con bloque especificado. Le permite eliminar descripción del bloque reemplazado de base del dibujo. Similar al comando &quot;Purgar&quot; (_PURGE). Varias configuraciones disponibles">
     <h1>Seleccionar bloque a reemplazar</h1>
     <wrong>¡Selección incorrecta!</wrong>
     <h2>Seleccionar bloque de reemplazo</h2>
@@ -1171,8 +1201,9 @@
     <h19>Seleccionar varios objetos de reemplazar</h19>
     <h20>Eliminar objetos innecesarios</h20>
   </mpBlkReplace>
-  <mpPlinesEdit LocalName="Multilínea"
-                Description="Una colección de varios complementos para trabajar con polilíneas">
+  <mpPlinesEdit
+    LocalName="Multilínea"
+    Description="Una colección de varios complementos para trabajar con polilíneas">
     <h1>POLILÍNEAS</h1>
     <h2>Complemento funciona con polilíneas 3D</h2>
     <h3>Complemento funciona con polilíneas 2D</h3>
@@ -1260,9 +1291,10 @@
     <k29>Número de puntos de referencia</k29>
     <k30>Simplificar polilínea?\nEliminar puntos que se encuentran en misma línea</k30>
   </mpPlinesEdit>
-  <mpSpecifications LocalName="Especificaciones"
-                    Description="Complemento para generar y completar especificaciones generales de construcción"
-                    FullDescription="Complemento le permite añadir elementos al menú contextual de AutoCAD para mejorar su capacidad de trabajar con especificaciones: Menú contextual para tablas: Añadir artículo de base de datos – permite añadir artículos de base de datos del complemento directamente a tabla de AutoCAD; Menú contextual para bloques: Añadir/Modificar atributos de lista de materiales – permite añadir atributos de lista de materiales a bloques (ver Ayuda para obtener más información)">
+  <mpSpecifications
+    LocalName="Especificaciones"
+    Description="Complemento para generar y completar especificaciones generales de construcción"
+    FullDescription="Complemento le permite añadir elementos al menú contextual de AutoCAD para mejorar su capacidad de trabajar con especificaciones: Menú contextual para tablas: Añadir artículo de base de datos – permite añadir artículos de base de datos del complemento directamente a tabla de AutoCAD; Menú contextual para bloques: Añadir/Modificar atributos de lista de materiales – permite añadir atributos de lista de materiales a bloques (ver Ayuda para obtener más información)">
     <h6>MENÚS CONTEXTUALES</h6>
     <h7>Disponible en versión completa del complemento</h7>
     <h8>Menú contextual para tablas:</h8>
@@ -1374,8 +1406,9 @@
     <s6>Mallazos</s6>
     <s7>Artículos empotrados</s7>
   </mpSpecifications>
-  <mpLayoutManager LocalName="Administrador de hojas"
-                   Description="Administrador de hojas de dibujo que se muestra en paleta">
+  <mpLayoutManager
+    LocalName="Administrador de hojas"
+    Description="Administrador de hojas de dibujo que se muestra en paleta">
     <accept>Aceptar</accept>
     <cancel>Cancelar</cancel>
     <close>Cerrar</close>
@@ -1417,9 +1450,10 @@
     <mi7>Imprimir</mi7>
     <mi8>Exportar una pestaña de hoja a una ficha de modelo</mi8>
   </mpLayoutManager>
-  <mpSheetNumbers LocalName="Numerador de hojas"
-                  Description="Complemento para insertar número de hoja en documento y en volumen en formatos y cuadros de rotulación ModPlus"
-                  FullDescription="Complemento funciona en modelo y en hojas. Primero hay que descargar datos, que se ubican en cuadros de rotulación y formatos de complemento ModPlus. Después de especificar nuevos datos, sólo tiene que aplicar cambios">
+  <mpSheetNumbers
+    LocalName="Numerador de hojas"
+    Description="Complemento para insertar número de hoja en documento y en volumen en formatos y cuadros de rotulación ModPlus"
+    FullDescription="Complemento funciona en modelo y en hojas. Primero hay que descargar datos, que se ubican en cuadros de rotulación y formatos de complemento ModPlus. Después de especificar nuevos datos, sólo tiene que aplicar cambios">
     <h2>Obtener datos del dibujo actual</h2>
     <h3>En modelo</h3>
     <h5>Nombre de hoja</h5>
@@ -1450,9 +1484,10 @@
     <d4>De derecha a izquierda y de arriba a abajo</d4>
     <d5>De derecha a izquierda y de abajo hacia arriba</d5>
   </mpSheetNumbers>
-  <mpDwgBase LocalName="Base de datos dwg"
-             Description="Base de datos de varios bloques y dibujos"
-             FullDescription="Base dwg le permite insertar tanto bloques como dibujos ya hechos (por ejemplo, detalles). Base de datos dwg la llenan usuarios. Es necesario tener acceso a Internet para que complemento funcione">
+  <mpDwgBase
+    LocalName="Base de datos dwg"
+    Description="Base de datos de varios bloques y dibujos"
+    FullDescription="Base dwg le permite insertar tanto bloques como dibujos ya hechos (por ejemplo, detalles). Base de datos dwg la llenan usuarios. Es necesario tener acceso a Internet para que complemento funcione">
     <h1>Enviar bloques y dibujos del usuario al servidor modplus.org</h1>
     <h2>Buscar por base de datos</h2>
     <h3>Buscar</h3>
@@ -1746,8 +1781,9 @@
     <u60>Sin acceso al archivo. Quizás esté abierto</u60>
     <u61>Archivo ya existe:</u61>
   </mpDwgBase>
-  <mpESKD LocalName="Smart"
-          Description="Creación de objetos inteligentes que amplían capacidades de AutoCAD, además de permitir diseñar según estándares estatales (SPDS, ESKD)">
+  <mpESKD
+    LocalName="Smart"
+    Description="Creación de objetos inteligentes que amplían capacidades de AutoCAD, además de permitir diseñar según estándares estatales (SPDS, ESKD)">
     <tab1>Líneas</tab1>
     <tab2>Ajustes</tab2>
     <tab3>Ejes</tab3>
@@ -2345,9 +2381,10 @@
     <p158>Text positioning side</p158>
     <d158>The side on which the horizontal text will be placed</d158>
   </mpESKD>
-  <mpStripMtext LocalName="Limpiar formato"
-                Description="Elimina formato especificado de texto multilínea"
-                FullDescription="Complemento permite eliminar formato de texto multilínea, directrices múltiples, cotas, atributos de bloque y de tabla">
+  <mpStripMtext
+    LocalName="Limpiar formato"
+    Description="Elimina formato especificado de texto multilínea"
+    FullDescription="Complemento permite eliminar formato de texto multilínea, directrices múltiples, cotas, atributos de bloque y de tabla">
     <h1>Seleccionar tipo de formato a eliminar</h1>
     <h2>Seleccionar todo</h2>
     <h3>Deseleccionar</h3>
@@ -2392,24 +2429,27 @@
     <s19>Alineación de párrafos</s19>
     <st19>Eliminar alineación de párrafos del texto</st19>
   </mpStripMtext>
-  <mpRevitSheetsMerging LocalName="Unir hojas de Revit"
-                        Description="Unión de archivos obtenidos al exportar desde Revit en un solo dibujo. Complemento debe ejecutarse en un dibujo vacío. Complemento procesa archivos descargados con casilla &quot;Exportar vistas de hojas y enlaces como enlaces externos&quot; desactivada">
+  <mpRevitSheetsMerging
+    LocalName="Unir hojas de Revit"
+    Description="Unión de archivos obtenidos al exportar desde Revit en un solo dibujo. Complemento debe ejecutarse en un dibujo vacío. Complemento procesa archivos descargados con casilla &quot;Exportar vistas de hojas y enlaces como enlaces externos&quot; desactivada">
     <h1>Procesando archivos...</h1>
     <h2>Error al importar hojas desde un archivo</h2>
     <h3>Seleccionar archivos para unir hojas</h3>
     <h4>Unir capas...</h4>
     <h5>¿Bloquear ventanas gráficas en hojas importadas?</h5>
   </mpRevitSheetsMerging>
-  <mpAppendText LocalName="Añadir texto"
-                Description="Añadir texto a una directriz múltiple, texto de una sola línea, texto multilínea, cotas">
+  <mpAppendText
+    LocalName="Añadir texto"
+    Description="Añadir texto a una directriz múltiple, texto de una sola línea, texto multilínea, cotas">
     <ct1>Texto multilínea</ct1>
     <ct2>Texto de una sola línea</ct2>
     <ct3>Directriz múltiple</ct3>
     <ct4>Cotas</ct4>
     <h1>Seleccionar objetos:</h1>
   </mpAppendText>
-  <mpSumArea LocalName="Suma de áreas"
-             Description="Obtiene y muestra número y suma de áreas de polilíneas, círculos, arcos, splines y sombreados seleccionados">
+  <mpSumArea
+    LocalName="Suma de áreas"
+    Description="Obtiene y muestra número y suma de áreas de polilíneas, círculos, arcos, splines y sombreados seleccionados">
     <h2>Área total:</h2>
     <h3>Redondeo del resultado</h3>
     <h4>Cantidad:</h4>

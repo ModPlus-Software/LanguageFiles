@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mprSheetCopy LocalName="Duplicador de hojas"
-                Description="Complemento le permite hacer copias de hojas específicas con diferentes ajustes"
-                FullDescription="Hojas seleccionadas se pueden copiar sin vistas o con vistas. Puede especificar si se copian leyendas y especificaciones. Un sistema de numeración único le permite no cambiar número de copia de hoja si al especificar prefijo o sufijo se obtendrá número único">
+  <mprSheetCopy
+    LocalName="Duplicador de hojas"
+    Description="Complemento le permite hacer copias de hojas específicas con diferentes ajustes"
+    FullDescription="Hojas seleccionadas se pueden copiar sin vistas o con vistas. Puede especificar si se copian leyendas y especificaciones. Un sistema de numeración único le permite no cambiar número de copia de hoja si al especificar prefijo o sufijo se obtendrá número único">
     <h2>Buscar por nombre/número</h2>
     <h3>Número de copias</h3>
     <!-- todo remove after 3.2.1.0 -->
@@ -97,8 +98,9 @@
     <cb2>Copiar con detalles</cb2>
     <cb3>Crear vista dependiente</cb3>
   </mprSheetCopy>
-  <mprViewCopy LocalName="Duplicador de vistas"
-               Description="Complemento le permite hacer copias de vistas y especificaciones específicas con varios ajustes">
+  <mprViewCopy
+    LocalName="Duplicador de vistas"
+    Description="Complemento le permite hacer copias de vistas y especificaciones específicas con varios ajustes">
     <h1>En versión limitada, no hay más de 3 tipos disponibles para duplicar</h1>
     <h2>Buscar por nombre</h2>
     <h3>Número de copias</h3>
@@ -171,15 +173,17 @@
     <vtf4>Planos de planta, estructuras, zonas</vtf4>
     <vtf5>Representados, vistas de dibujo, leyendas</vtf5>
   </mprViewCopy>
-  <ostViewIn3D LocalName="Recortar en 3D"
-               Description="Recorta elementos seleccionados en VerCubo, con posibilidad de establecer tamaño del ViewCube"
-               FullDescription="Es posible cambiar dinámicamente tamaño del ViewCube de manera uniforme en todas direcciones en relación con elementos seleccionados">
+  <ostViewIn3D
+    LocalName="Recortar en 3D"
+    Description="Recorta elementos seleccionados en VerCubo, con posibilidad de establecer tamaño del ViewCube"
+    FullDescription="Es posible cambiar dinámicamente tamaño del ViewCube de manera uniforme en todas direcciones en relación con elementos seleccionados">
     <h1>Recortar en 3D</h1>
     <msg1>Seleccionar elementos para recortar en 3D</msg1>
   </ostViewIn3D>
-  <whshScheduleLookup LocalName="Buscar en tablas"
-                      Description="Busca tablas en proyecto que contienen valor especificado"
-                      FullDescription="Busca cadenas específicas (completas o parciales) y números entre tablas de proyecto en nombres de campos, encabezados de columnas o celdas, distinguiendo entre mayúsculas y minúsculas">
+  <whshScheduleLookup
+    LocalName="Buscar en tablas"
+    Description="Busca tablas en proyecto que contienen valor especificado"
+    FullDescription="Busca cadenas específicas (completas o parciales) y números entre tablas de proyecto en nombres de campos, encabezados de columnas o celdas, distinguiendo entre mayúsculas y minúsculas">
     <h1>Ver resultados</h1>
     <h2>Resultados de búsqueda</h2>
     <h3>Al hacer doble clic en una fila se abre una ventana de detalles</h3>
@@ -234,9 +238,10 @@
     <find>Buscar</find>
     <clean>Limpiar</clean>
   </whshScheduleLookup>
-  <mprCADmanager LocalName="Administrador de CAD"
-                 Description="Administre todas inserciones del archivos .dwg en documento actual"
-                 FullDescription="Complemento muestra todos tipos del archivos .dwg insertadas, tanto las que pertenecen a vistas como los que no pertenecen a vistas. Es posible buscar en lista, copiar ID de inserción o vista .dwg, abrir vista que contenga inserción .dwg y eliminar la">
+  <mprCADmanager
+    LocalName="Administrador de CAD"
+    Description="Administre todas inserciones del archivos .dwg en documento actual"
+    FullDescription="Complemento muestra todos tipos del archivos .dwg insertadas, tanto las que pertenecen a vistas como los que no pertenecen a vistas. Es posible buscar en lista, copiar ID de inserción o vista .dwg, abrir vista que contenga inserción .dwg y eliminar la">
     <h1>Administrador de CAD</h1>
     <h2>¡Copiado!</h2>
     <h3>Perteneciente a vista:</h3>
@@ -281,11 +286,12 @@
     <msg20>Eliminar:</msg20>
     <msg21>No es posible eliminar elementos</msg21>
   </mprCADmanager>
-  <mprExteriorPlanDimensions LocalName="Cotas exteriores en plano"
-                             Description="Establecer cotas exteriores en plano de planta"
-                             FullDescription="Complemento le permite colocar cotas exteriores en plano de planta con un solo clic. Complemento sólo procesa muros y ejes horizontales y verticales. Cotas exteriores se establecen de acuerdo con configuración de trabajo actual, que indica lados de cotas y ajustes de cotas de varios segmentos."
-                             LocalName1="Cotas exteriores. Ajustes"
-                             Description1="Ajustes de configuraciones de trabajo para cotas exteriores en plano de planta">
+  <mprExteriorPlanDimensions
+    LocalName="Cotas exteriores en plano"
+    Description="Establecer cotas exteriores en plano de planta"
+    FullDescription="Complemento le permite colocar cotas exteriores en plano de planta con un solo clic. Complemento sólo procesa muros y ejes horizontales y verticales. Cotas exteriores se establecen de acuerdo con configuración de trabajo actual, que indica lados de cotas y ajustes de cotas de varios segmentos."
+    LocalName1="Cotas exteriores. Ajustes"
+    Description1="Ajustes de configuraciones de trabajo para cotas exteriores en plano de planta">
     <h1>Ajustar cotas exteriores</h1>
     <h2>Configuración de trabajo actual de cotas exteriores en plano:</h2>
     <h3>Editar configuración actual</h3>
@@ -347,9 +353,10 @@
     <d23>Dimensión exterior en esta dirección es distancia desde caras extremas de muros extremos</d23>
     <d24>Esta opción desactiva todas las demás opciones</d24>
   </mprExteriorPlanDimensions>
-  <mprDimByLine LocalName="Cotas a lo largo de línea"
-                Description="Acotación a lo largo de línea especificada"
-                FullDescription="Complemento le permite acotar en plano, sección o alzado a lo largo de línea condicional formada por dos puntos específicos. Elementos al acotar y métodos de acotar (por centro y/o en lados extremos) se especifican en configuración de trabajo.">
+  <mprDimByLine
+    LocalName="Cotas a lo largo de línea"
+    Description="Acotación a lo largo de línea especificada"
+    FullDescription="Complemento le permite acotar en plano, sección o alzado a lo largo de línea condicional formada por dos puntos específicos. Elementos al acotar y métodos de acotar (por centro y/o en lados extremos) se especifican en configuración de trabajo.">
     <h1>Nombre de configuración</h1>
     <h2>Filtro de categoría:</h2>
     <h3>Categoría</h3>
@@ -403,13 +410,14 @@
     <n3>Sólo en editor familiar</n3>
     <n4>Sólo en planes</n4>
   </mprDimByLine>
-  <mprDimBias LocalName="Desfase de cotas"
-              Description="Movimiento automático de valor de cota que cae sobre líneas de cota"
-              FullDescription="Complemento monitorea todas cotas creadas y, si texto de cota cae sobre líneas de cota, lo desplaza hacia lado"
-              LocalName1="Restaurar"
-              Description1="Restaurar posición texto para cotas seleccionadas"
-              LocalName2="Desplazar seleccionadas"
-              Description2="Desplazar texto de cotas seleccionadas">
+  <mprDimBias
+    LocalName="Desfase de cotas"
+    Description="Movimiento automático de valor de cota que cae sobre líneas de cota"
+    FullDescription="Complemento monitorea todas cotas creadas y, si texto de cota cae sobre líneas de cota, lo desplaza hacia lado"
+    LocalName1="Restaurar"
+    Description1="Restaurar posición texto para cotas seleccionadas"
+    LocalName2="Desplazar seleccionadas"
+    Description2="Desplazar texto de cotas seleccionadas">
     <h2>Desfase automático de valores de cota al crear</h2>
     <h3>Desfase automático de valores de cota al editar</h3>
     <h4>Factor de desfase(de 0,1 a 2,0):</h4>
@@ -429,9 +437,10 @@
     <h20>Del elemento</h20>
     <h21>Al elemento</h21>
   </mprDimBias>
-  <mprExcelImport LocalName="Importar desde Excel"
-                  Description="Complemento le permite insertar una tabla de Excel en una vista de dibujo Revit"
-                  FullDescription="Complemento admite conversión de propiedades básicas de celda (cotas, contornos, color) y texto (fuente, tamaños, posición, color). Complemento le permite monitorear datos de origen modificados en tiempo real">
+  <mprExcelImport
+    LocalName="Importar desde Excel"
+    Description="Complemento le permite insertar una tabla de Excel en una vista de dibujo Revit"
+    FullDescription="Complemento admite conversión de propiedades básicas de celda (cotas, contornos, color) y texto (fuente, tamaños, posición, color). Complemento le permite monitorear datos de origen modificados en tiempo real">
     <h1>Importar desde Excel</h1>
     <h2>Tabla:</h2>
     <h3>Estado:</h3>
@@ -490,8 +499,9 @@
     <ts2>¡Falta archivo de origen!</ts2>
     <ts3>¡Falta hoja de origen o se le ha cambiado nombre!</ts3>
   </mprExcelImport>
-  <mprInteriorPlanDimensions LocalName="Cotas en plano"
-                             Description="Complemento le permite realizar varias opciones para acotar elementos en plano">
+  <mprInteriorPlanDimensions
+    LocalName="Cotas en plano"
+    Description="Complemento le permite realizar varias opciones para acotar elementos en plano">
     <h2>Acotar ejes</h2>
     <h3>Acotar huecos</h3>
     <h4>Separación de cotas de varios segmentos posteriores</h4>
@@ -560,9 +570,10 @@
     <s10>Filtrar cotas de varios segmentos de trabajo</s10>
     <s11>Crear cotas de varios segmentos finales</s11>
   </mprInteriorPlanDimensions>
-  <mprNestedFamilyParamsTransfer LocalName="Relación de parámetros"
-                                 Description="Complemento le permite simplificar trabajo de establecer vínculo entre parámetros de familias anidadas con parámetros de familia primaria"
-                                 FullDescription="Con complemento , puede crear nuevos parámetros en familia primaria basándose en uno o más parámetros en familias anidadas. Es posible establecer máscara para nombre del parámetro que se está creando añadiendo prefijo o sufijo. Complemento también le permite vincular y desvincular parámetros de familia primaria existentes.">
+  <mprNestedFamilyParamsTransfer
+    LocalName="Relación de parámetros"
+    Description="Complemento le permite simplificar trabajo de establecer vínculo entre parámetros de familias anidadas con parámetros de familia primaria"
+    FullDescription="Con complemento , puede crear nuevos parámetros en familia primaria basándose en uno o más parámetros en familias anidadas. Es posible establecer máscara para nombre del parámetro que se está creando añadiendo prefijo o sufijo. Complemento también le permite vincular y desvincular parámetros de familia primaria existentes.">
     <msg2>¡Atención! ¡No hay tipos en familia actual! ¡Funcionamiento correcto de complemento es imposible!</msg2>
     <msg3>Puede seleccionar opción \"Continuar y crear tipo \" - luego complemento creará tipo con nombre:</msg3>
     <msg4>Si no desea crear un nuevo tipo, debe seguir estos pasos:</msg4>
@@ -609,8 +620,9 @@
     <ok>Ok</ok>
     <cancel>Cancelar</cancel>
   </mprNestedFamilyParamsTransfer>
-  <mprTools LocalName="Utilidades"
-            Description="Una colección de pequeños complementos auxiliares">
+  <mprTools
+    LocalName="Utilidades"
+    Description="Una colección de pequeños complementos auxiliares">
     <ttShow>Mostrar todos elementos de categoría específica en vista actual</ttShow>
     <ttHide>Ocultar todos elementos de categoría específica en vista actual</ttHide>
     <Category>Todo</Category>
@@ -723,9 +735,10 @@
     <m16>Redeterminación de gráficos para elementos no está disponible en vista actual</m16>
     <m17>No es posible cambiar modo de eje en vista actual</m17>
   </mprTools>
-  <mmOrderMarking LocalName="Numeración"
-                  Description="Añadir numeración al parámetro especificado de elementos con posibilidad de numeración en especificación"
-                  FullDescription="Cuando trabaje en vista que no sea especificación, puede especificar dirección de numeración según disposición de elementos o añadir numeración en orden en que se crearon elementos. Cuando se trabaja en especificación, complemento añade numeración en orden de elementos de especificación (teniendo en cuenta clasificación). Es posible establecer un prefijo y un sufijo para número">
+  <mmOrderMarking
+    LocalName="Numeración"
+    Description="Añadir numeración al parámetro especificado de elementos con posibilidad de numeración en especificación"
+    FullDescription="Cuando trabaje en vista que no sea especificación, puede especificar dirección de numeración según disposición de elementos o añadir numeración en orden en que se crearon elementos. Cuando se trabaja en especificación, complemento añade numeración en orden de elementos de especificación (teniendo en cuenta clasificación). Es posible establecer un prefijo y un sufijo para número">
     <h7>Valor inicial:</h7>
     <h8>Dirección de numeración:</h8>
     <h9>Parámetro objetivo:</h9>
@@ -809,8 +822,9 @@
     <r5>No es posible realizar numeración alfabética porque opción numérica está seleccionada</r5>
     <r6>Opción de agrupación no seleccionada</r6>
   </mmOrderMarking>
-  <mprCleaner LocalName="Limpiar modelo"
-              Description="Eliminar objetos de determinadas categorías del modelo con posibilidad de eliminar elementos no utilizados">
+  <mprCleaner
+    LocalName="Limpiar modelo"
+    Description="Eliminar objetos de determinadas categorías del modelo con posibilidad de eliminar elementos no utilizados">
     <h1>Resultado de limpieza</h1>
     <h2>Buscar...</h2>
     <h3>Seleccionar todo</h3>
@@ -943,9 +957,10 @@
     <m5>Buscar en especificaciones</m5>
     <m6>¡Tablas de búsqueda seleccionadas incluyen tablas utilizadas en familia actual! ¿Estás seguro de que desea eliminar?</m6>
   </mprCleaner>
-  <mprSheetRenumber LocalName="Numerador de hojas"
-                    Description="Complemento le permite volver a numerar hojas de proyecto"
-                    FullDescription="Renumeración de hojas se realiza dentro de un grupo de hojas. Puede mostrar todas hojas de misma manera que ajustes actuales en Administrador de proyectos, o mostrar todas hojas en un grupo. Es posible cambiar posición de hojas moviéndolas en grupo, manteniendo numeración inicial de hojas en este grupo">
+  <mprSheetRenumber
+    LocalName="Numerador de hojas"
+    Description="Complemento le permite volver a numerar hojas de proyecto"
+    FullDescription="Renumeración de hojas se realiza dentro de un grupo de hojas. Puede mostrar todas hojas de misma manera que ajustes actuales en Administrador de proyectos, o mostrar todas hojas en un grupo. Es posible cambiar posición de hojas moviéndolas en grupo, manteniendo numeración inicial de hojas en este grupo">
     <m1>Para ejecutar complemento , vaya al proyecto</m1>
     <!-- todo remove after 2.7.10.0 -->
     <m2>Disponible en versión completa del complemento</m2>
@@ -1018,9 +1033,10 @@
     <p7>número de 3ra parte</p7>
     <notOrganized>!No organizado</notOrganized>
   </mprSheetRenumber>
-  <mprFamilyDuplicateFixer LocalName="Corrección de duplicados"
-                           Description="Automatizar corrección de duplicados de familias o de tipos"
-                           FullDescription="Complemento le permite copiar tipos de duplicados a familias principales, copiar valores de parámetros de tipo, actualizar ejemplares de familia y eliminar familias duplicadas. Complemento le permite reemplazar tipos de familia duplicados y eliminar tipos reemplazados">
+  <mprFamilyDuplicateFixer
+    LocalName="Corrección de duplicados"
+    Description="Automatizar corrección de duplicados de familias o de tipos"
+    FullDescription="Complemento le permite copiar tipos de duplicados a familias principales, copiar valores de parámetros de tipo, actualizar ejemplares de familia y eliminar familias duplicadas. Complemento le permite reemplazar tipos de familia duplicados y eliminar tipos reemplazados">
     <h1>Copiar tipos</h1>
     <h3>Reemplazar ejemplares de familias</h3>
     <h4>Eliminar familias duplicadas</h4>
@@ -1029,7 +1045,8 @@
     <h7>Seleccionar familia duplicado</h7>
     <h8>Seleccionar familia principal (a la que se copiarán tipos)</h8>
     <h9>Aceptar</h9>
-    <h10>No se han encontrado familias coincidentes en categoría actual para la cual familia seleccionada es un duplicado.&#x0a;Se realiza verificación adicional basada en parámetros de tipo: un par de familias similares deben tener mismos parámetros de tipo</h10>
+    <h10>No se han encontrado familias coincidentes en categoría actual para la cual familia seleccionada es un duplicado.
+Se realiza verificación adicional basada en parámetros de tipo: un par de familias similares deben tener mismos parámetros de tipo</h10>
     <h11>Copiar valores de parámetros de ejemplar de familia reemplazado</h11>
     <h12>Establecer un tipo de familia principal</h12>
     <h13>Lista de familias principales muestra familias de misma categoría que familia duplicada seleccionada, cuyos tipos son intercambiables. En este caso, número y nombres de parámetros de tipo deben ser mismos.</h13>
@@ -1064,16 +1081,18 @@
     <t10>En lado izquierdo hay tipos de familia, en lado derecho hay listas desplegables para reemplazar tipo. Si no se selecciona tipo en lista, no se realizará reemplazo</t10>
     <t11>Limpiar selección</t11>
   </mprFamilyDuplicateFixer>
-  <mprFastViewCut LocalName="Recortar una vista"
-                  Description="Cree rápidamente recorte de vista con área de recorte rectangular especificada"
-                  LocalName1="Recortar plano en 3D"
-                  Description1="Cree vista 3D con contorno de vista basado en área rectangular especificada en plano">
+  <mprFastViewCut
+    LocalName="Recortar una vista"
+    Description="Cree rápidamente recorte de vista con área de recorte rectangular especificada"
+    LocalName1="Recortar plano en 3D"
+    Description1="Cree vista 3D con contorno de vista basado en área rectangular especificada en plano">
     <h5>Especificar área rectangular para crear contorno de recorte</h5>
     <h6>No se puede obtener un área rectangular válida. Inténtalo de nuevo</h6>
   </mprFastViewCut>
-  <mprCopySheetsToOpenDocuments LocalName="Copiar hojas a documentos"
-                                Description="Copia por lotes de hojas en documentos abiertos"
-                                FullDescription="Copia por lotes hojas seleccionadas del documento actual a documentos abiertos específicos con posibilidad de especificar contenido copiado">
+  <mprCopySheetsToOpenDocuments
+    LocalName="Copiar hojas a documentos"
+    Description="Copia por lotes de hojas en documentos abiertos"
+    FullDescription="Copia por lotes hojas seleccionadas del documento actual a documentos abiertos específicos con posibilidad de especificar contenido copiado">
     <h1>Hojas del documento actual</h1>
     <h2>Documentos de destino</h2>
     <h3>Ajustes</h3>
@@ -1117,13 +1136,14 @@
     <m16>Seleccionar una opción: utilizar una vista de dibujo existente del documento objetivo o crear y utilizar una copia de vista de dibujo del documento original</m16>
     <notOrganized>!No organizado</notOrganized>
   </mprCopySheetsToOpenDocuments>
-  <mprWorksets LocalName="Conjuntos de trabajo"
-               Description="Administración, creación y utilización de conjuntos de trabajo"
-               FullDescription="Complemento le permite crear configuraciones de conjuntos de trabajo, a partir de cuales puede crear conjuntos de trabajo en documento. Configuraciones se pueden importar y exportar. Para cada conjunto de trabajo en configuración, puede establecer condiciones para aplicar conjunto de trabajo al elemento"
-               LocalName1="Actualizar conjuntos de trabajo"
-               Description1="Ejecute comando &quot;Establecer conjuntos de trabajo por filtros&quot; con configuración actual sin usar ventana de complemento"
-               LocalName2="Procesando conjuntos"
-               Description2="Utilidades para trabajar con conjuntos de trabajo: combinar, ocultar, aislar, etc.">
+  <mprWorksets
+    LocalName="Conjuntos de trabajo"
+    Description="Administración, creación y utilización de conjuntos de trabajo"
+    FullDescription="Complemento le permite crear configuraciones de conjuntos de trabajo, a partir de cuales puede crear conjuntos de trabajo en documento. Configuraciones se pueden importar y exportar. Para cada conjunto de trabajo en configuración, puede establecer condiciones para aplicar conjunto de trabajo al elemento"
+    LocalName1="Actualizar conjuntos de trabajo"
+    Description1="Ejecute comando &quot;Establecer conjuntos de trabajo por filtros&quot; con configuración actual sin usar ventana de complemento"
+    LocalName2="Procesando conjuntos"
+    Description2="Utilidades para trabajar con conjuntos de trabajo: combinar, ocultar, aislar, etc.">
     <h1>Crear conjuntos de trabajo</h1>
     <h2>Crear conjuntos de trabajo y establecerlos por filtros</h2>
     <h3>Establecer conjuntos de trabajo por filtros</h3>
@@ -1241,9 +1261,10 @@
     <rp1>Cada fila contiene una lista de conjuntos de trabajo</rp1>
     <rp2>Cada fila contiene un conjunto de trabajo</rp2>
   </mprWorksets>
-  <zfiFamilyRenameTool LocalName="Cambiar nombre por lotes"
-                       Description="Cambio de nombre por lotes de nombres de parámetros, nombres de tipos y valores de parámetros en familias específicas"
-                       FullDescription="Complemento funciona en archivos seleccionados en lugar del archivos cargados en carpetas. Es posible añadir un prefijo o sufijo, cambiar nombre con función de búsqueda y reemplazo. Hay varias opciones para ajustar función de búsqueda y reemplazo. Es posible usar expresiones regulares para buscar valores">
+  <zfiFamilyRenameTool
+    LocalName="Cambiar nombre por lotes"
+    Description="Cambio de nombre por lotes de nombres de parámetros, nombres de tipos y valores de parámetros en familias específicas"
+    FullDescription="Complemento funciona en archivos seleccionados en lugar del archivos cargados en carpetas. Es posible añadir un prefijo o sufijo, cambiar nombre con función de búsqueda y reemplazo. Hay varias opciones para ajustar función de búsqueda y reemplazo. Es posible usar expresiones regulares para buscar valores">
     <h1>Seleccionar familias</h1>
     <h2>Aplicar</h2>
     <h3>Aplicar y cerrar</h3>
@@ -1293,9 +1314,10 @@
     <msg11>Parámetro sin valor</msg11>
     <msg12>No es posible cambiar tipo de parámetro integrado</msg12>
   </zfiFamilyRenameTool>
-  <mprPatterns LocalName="Sombreados"
-               Description="Administrador de sombreados con posibilidad de importar, exportar, editar y crear"
-               FullDescription="Permite cambiar tipo de sombreado existente, aumentar o disminuir sombreado existente. Es posible de importar por lotes del archivos .pat y una exportar por lotes a archivos .pat. Se pueden crear nuevos sombreados por medios estándar con indicación de distancia y ángulo, mediante conversión de vistas de dibujo y también utilizando editor gráfico.">
+  <mprPatterns
+    LocalName="Sombreados"
+    Description="Administrador de sombreados con posibilidad de importar, exportar, editar y crear"
+    FullDescription="Permite cambiar tipo de sombreado existente, aumentar o disminuir sombreado existente. Es posible de importar por lotes del archivos .pat y una exportar por lotes a archivos .pat. Se pueden crear nuevos sombreados por medios estándar con indicación de distancia y ángulo, mediante conversión de vistas de dibujo y también utilizando editor gráfico.">
     <full>¡Disponible en versión completa del complemento!</full>
     <mi1>Crear</mi1>
     <mi2>Nuevo sombreado vacío</mi2>
@@ -1427,9 +1449,10 @@
     <m33>Archivo seleccionado no es un archivo de geometría para editor de sombreado</m33>
     <m34>¡No es posible descargar geometría del archivo seleccionado porque tipo de sombreado y unidades de medida del editor actual y archivo descargado deben coincidir! Editor actual tiene tipo de sombreado "{0}" y unidad de medida "{1}". Archivo descargado tiene tipo de sombreado "{2}" y unidades de medida "{3}"</m34>
   </mprPatterns>
-  <mprCopyElementsToOpenDocuments LocalName="Copiar elementos"
-                                  Description="Copia por lotes de elementos en documentos abiertos"
-                                  FullDescription="Copia por lotes elementos seleccionados del documento actual en documentos abiertos específicos">
+  <mprCopyElementsToOpenDocuments
+    LocalName="Copiar elementos"
+    Description="Copia por lotes de elementos en documentos abiertos"
+    FullDescription="Copia por lotes elementos seleccionados del documento actual en documentos abiertos específicos">
     <h1>Elementos seleccionados:</h1>
     <h2>Del proyecto:</h2>
     <h3>Al proyecto:</h3>
@@ -1547,8 +1570,9 @@
     <m78>Parámetros de exportación DWG/DXF</m78>
     <m79>Parámetros de exportación DGN</m79>
   </mprCopyElementsToOpenDocuments>
-  <mprNotes LocalName="Notas"
-            Description="Complemento para trabajar con notas de uso frecuente">
+  <mprNotes
+    LocalName="Notas"
+    Description="Complemento para trabajar con notas de uso frecuente">
     <h1>Ajustes</h1>
     <h3>Doble clic en una nota</h3>
     <h4>Para notas estándar:</h4>
@@ -1573,11 +1597,12 @@
     <h74>Especificar punto de inserción:</h74>
     <h75>¡No hay ningún plano de trabajo especificado para vista actual! Imposible insertar texto</h75>
   </mprNotes>
-  <mprContextFilter LocalName="Filtro contextual"
-                    Description="Filtra elementos por parámetros, funcionando como menú contextual"
-                    FullDescription="Filtro se inicia de una de tres maneras: haciendo clic con botón izquierdo del mouse mientras mantiene presionada tecla Ctrl, presionando teclas secuencialmente o presionando un atajo de teclado. Filtro tiene tres niveles de procesamiento: todos elementos del modelo, elementos de vista actual o elementos seleccionados. Es posible utilizar ajustes preestablecidos para utilizar rápidamente filtro"
-                    LocalName1="Filtro de modo ventana"
-                    Description1="Filtra elementos por parámetros, trabajando en modo ventana">
+  <mprContextFilter
+    LocalName="Filtro contextual"
+    Description="Filtra elementos por parámetros, funcionando como menú contextual"
+    FullDescription="Filtro se inicia de una de tres maneras: haciendo clic con botón izquierdo del mouse mientras mantiene presionada tecla Ctrl, presionando teclas secuencialmente o presionando un atajo de teclado. Filtro tiene tres niveles de procesamiento: todos elementos del modelo, elementos de vista actual o elementos seleccionados. Es posible utilizar ajustes preestablecidos para utilizar rápidamente filtro"
+    LocalName1="Filtro de modo ventana"
+    Description1="Filtra elementos por parámetros, trabajando en modo ventana">
     <h1>Ajustes preestablecidos</h1>
     <h3>Aplicar ajuste preestablecido a lista actual</h3>
     <h4>Buscar categorías</h4>
@@ -1629,8 +1654,9 @@
     <fo6>Encontrados en modelo</fo6>
     <fo7>Por filtro en vista</fo7>
   </mprContextFilter>
-  <mprCopyViewTemplateFilters LocalName="Filtros de vista"
-                              Description="Administre filtros de vista y plantillas de vista con posibilidad de copiar filtros entre plantillas de vista y/o vistas mientras mantiene ajustes de redeterminación de gráficos">
+  <mprCopyViewTemplateFilters
+    LocalName="Filtros de vista"
+    Description="Administre filtros de vista y plantillas de vista con posibilidad de copiar filtros entre plantillas de vista y/o vistas mientras mantiene ajustes de redeterminación de gráficos">
     <h1>Seleccionar filtros para copiar</h1>
     <h2>Seleccionar plantillas para copiar filtros</h2>
     <h3>Buscar por filtro o nombre de plantilla</h3>
@@ -1656,18 +1682,21 @@
     <vtf4>Planos de planta, estructuras, zonas</vtf4>
     <vtf5>Representados, vistas de dibujo, leyendas</vtf5>
   </mprCopyViewTemplateFilters>
-  <mprMergeDims LocalName="Combinar cotas"
-                Description="Crear una nueva cota de varios segmentos a partir de cotas seleccionadas que se encuentran en misma línea recta">
+  <mprMergeDims
+    LocalName="Combinar cotas"
+    Description="Crear una nueva cota de varios segmentos a partir de cotas seleccionadas que se encuentran en misma línea recta">
     <h1>Seleccionar cotas</h1>
   </mprMergeDims>
-  <mprSplitDimChain LocalName="Dividir cotas"
-                    Description="Crear nuevas cotas a partir de cota de varios segmentos seleccionada">
+  <mprSplitDimChain
+    LocalName="Dividir cotas"
+    Description="Crear nuevas cotas a partir de cota de varios segmentos seleccionada">
     <h1>Seleccionar cotas que contengan más de un segmento</h1>
     <h2>No se puede recrear algunos segmentos de cota original. ¿Aceptar cambios realizados?</h2>
   </mprSplitDimChain>
-  <mprCopyParameterValues LocalName="Copiar valores"
-                          Description="Copiar valores de parámetros entre elementos o dentro de un elemento"
-                          FullDescription="Complemento contiene varias opciones de copia que le permiten configurar elementos a los que copiar. Es posible de copiar un valor compuesto (de varios parámetros a uno). Hay filtros para seleccionar elementos por categoría y valores de parámetros. Es posible de convertir valores entre diferentes tipos de parámetros">
+  <mprCopyParameterValues
+    LocalName="Copiar valores"
+    Description="Copiar valores de parámetros entre elementos o dentro de un elemento"
+    FullDescription="Complemento contiene varias opciones de copia que le permiten configurar elementos a los que copiar. Es posible de copiar un valor compuesto (de varios parámetros a uno). Hay filtros para seleccionar elementos por categoría y valores de parámetros. Es posible de convertir valores entre diferentes tipos de parámetros">
     <saveNew>Guardar como nuevo</saveNew>
     <full>Disponible en versión completa del complemento</full>
     <to>en</to>
@@ -1788,10 +1817,11 @@
     <sv3>Selección personalizada basada en filtro</sv3>
     <sv4>Selección personalizada sin filtro</sv4>
   </mprCopyParameterValues>
-  <mprElevations LocalName="Cotas de elevación"
-                 Description="Cree rápidamente cotas de elevación en secciones y alzados"
-                 LocalName1="Cotas de elevación para archivos vinculados"
-                 Description1="Cree rápidamente cotas de elevación en secciones y alzados por elementos del archivos vinculados">
+  <mprElevations
+    LocalName="Cotas de elevación"
+    Description="Cree rápidamente cotas de elevación en secciones y alzados"
+    LocalName1="Cotas de elevación para archivos vinculados"
+    Description1="Cree rápidamente cotas de elevación en secciones y alzados por elementos del archivos vinculados">
     <h2>No hay elementos seleccionados. Para continuar, es necesario seleccionar elementos</h2>
     <h3>Seleccionar punto final</h3>
     <h4>Seleccionar categorías para procesar:</h4>
@@ -1808,8 +1838,9 @@
     <et2>Desde abajo</et2>
     <et3>Arriba y abajo</et3>
   </mprElevations>
-  <mprSectionAnnotation LocalName="Anotar secciones"
-                        Description="anotaciones (cotas, marcas) en secciones">
+  <mprSectionAnnotation
+    LocalName="Anotar secciones"
+    Description="anotaciones (cotas, marcas) en secciones">
     <t1>Guardar configuración actual como nueva configuración personalizada</t1>
     <t2>Eliminar configuración personalizada actual</t2>
     <h1>Procesar todos elementos</h1>
@@ -1870,8 +1901,9 @@
     <left>Izquierda</left>
     <right>Derecha</right>
   </mprSectionAnnotation>
-  <mprJoin LocalName="Conectar elementos"
-           Description="Permite controlar unión de muros y vigas, así como conexión y corte de elementos">
+  <mprJoin
+    LocalName="Conectar elementos"
+    Description="Permite controlar unión de muros y vigas, así como conexión y corte de elementos">
     <e1>Selección no contiene elementos</e1>
     <e2>No se han seleccionado pares para conexión</e2>
     <t1>Unión de elementos</t1>
@@ -1923,8 +1955,9 @@
     <op8>No comienza</op8>
     <n1>Estándar</n1>
   </mprJoin>
-  <mprColorizer LocalName="Coloración de elementos"
-                Description="Colorear elementos en una vista según condiciones, así como crear una plantilla con filtros o añadir filtros a vistas existentes">
+  <mprColorizer
+    LocalName="Coloración de elementos"
+    Description="Colorear elementos en una vista según condiciones, así como crear una plantilla con filtros o añadir filtros a vistas existentes">
     <t1>Modos de trabajo</t1>
     <t2>Faltan condiciones en configuración</t2>
     <t3>Todas condiciones en configuración actual deben tener filtros rellenos por categoría y filtros por parámetros</t3>
@@ -1972,8 +2005,9 @@
     <cz2>Colorear sólo líneas</cz2>
     <cz3>Colorear sólo superficies</cz3>
   </mprColorizer>
-  <mprBreakLayers LocalName="Dividir capas"
-                  Description="Descomposición de muros y losas multicapa en elementos individuales">
+  <mprBreakLayers
+    LocalName="Dividir capas"
+    Description="Descomposición de muros y losas multicapa en elementos individuales">
     <h1>Muros</h1>
     <h2>Forjados</h2>
     <h3>Muros de archivo actual:</h3>
@@ -2010,8 +2044,9 @@
     <e7>Componente no contiene sólido</e7>
     <e8>Elemento no contiene sólido</e8>
   </mprBreakLayers>
-  <mprFindAndReplace LocalName="Buscar y reemplazar"
-                     Description="Busque y reemplace texto en áreas de búsqueda específicas">
+  <mprFindAndReplace
+    LocalName="Buscar y reemplazar"
+    Description="Busque y reemplace texto en áreas de búsqueda específicas">
     <h1>Área de búsqueda</h1>
     <h2>Buscar:</h2>
     <h3>Expresión regular</h3>
@@ -2061,16 +2096,18 @@
     <ss23>Nombre de material</ss23>
     <ss24>Encabezados en especificación</ss24>
   </mprFindAndReplace>
-  <mprCopyCropBox LocalName="Copiar recorte de vista"
-                  Description="Copia contorno de recorte de vista actual en vistas especificadas">
+  <mprCopyCropBox
+    LocalName="Copiar recorte de vista"
+    Description="Copia contorno de recorte de vista actual en vistas especificadas">
     <h1>Copiar ajustes de visibilidad de contorno</h1>
     <h2>Establecer los mismos valores para parámetros "Recorte de vista", "Mostrar región de recorte" y "Recorte de anotación"</h2>
     <h3>Copiar contorno de vista 3D</h3>
     <h5>No se han encontrado vistas adecuadas para copiar contorno de recorte</h5>
     <notOrganized>!No organizado</notOrganized>
   </mprCopyCropBox>
-  <mprParametrization LocalName="Parametrización"
-                      Description="Relleno de parámetros de elementos con varias estrategias">
+  <mprParametrization
+    LocalName="Parametrización"
+    Description="Relleno de parámetros de elementos con varias estrategias">
     <!-- todo remove after 3.3.6.0 start -->
     <t1>Minimizar contenido de ventana</t1>
     <t2>Expandir contenido de ventana</t2>
@@ -2414,8 +2451,9 @@
     <d-count>Возвращает количество раз, сколько подстрока встречается в строке. Если подстрока не найдена в строке, возвращает 0</d-count>
     <d-lstrindex>Возвращает индекс с отсчетом от нуля последнего вхождения подстроки в строке. Возвращает -1, если подстрока не найдена в строке</d-lstrindex>
   </mprParametrization>
-  <mprBaseLevel LocalName="Nivel de referencia"
-                Description="Cambiar restricciones (forzados de cursor) de elementos">
+  <mprBaseLevel
+    LocalName="Nivel de referencia"
+    Description="Cambiar restricciones (forzados de cursor) de elementos">
     <t1>No se puede determinar nivel básico anterior para determinación de desfase</t1>
     <t2>No se puede encontrar un nuevo nivel básico "{0}" para elementos</t2>
     <t3>Para elementos no se puede determinar una estrategia para asignar un nivel</t3>
@@ -2453,8 +2491,9 @@
     <u5>Restricción superior cambiado para {0} elementos</u5>
     <u12>Se omitió cambio al restricción superior porque restricción superior ya está en nivel "{0}"</u12>
   </mprBaseLevel>
-  <mprViewSync LocalName="Sincronizar vistas"
-               Description="Sincronización de coordenadas de representación de vistas abiertas">
+  <mprViewSync
+    LocalName="Sincronizar vistas"
+    Description="Sincronización de coordenadas de representación de vistas abiertas">
     <h1>Vista original para sincronizar:</h1>
     <h2>Vista no seleccionada</h2>
     <h3>Por vista activa</h3>
@@ -2466,8 +2505,9 @@
     <h9>Al activar contorno de vista 3D se sincronizarán</h9>
     <h10>Por vista</h10>
   </mprViewSync>
-  <mprSheetExport LocalName="Exportar hojas"
-                  Description="Exporte (imprima) hojas seleccionadas en formatos PDF, DWG, etc. con detección automática del formato de hoja">
+  <mprSheetExport
+    LocalName="Exportar hojas"
+    Description="Exporte (imprima) hojas seleccionadas en formatos PDF, DWG, etc. con detección automática del formato de hoja">
     <h1>¡Período de prueba de complemento ha terminado! Compre una licencia de complemento o una suscripción a Revit para continuar usando complemento "Exportar hojas"</h1>
     <h2>Período de prueba. Días restantes</h2>
     <h3>Directorio de guardado</h3>
@@ -2680,8 +2720,9 @@
     <err25>Formato no tiene nombre y no se procesará cuando se añade a impresora</err25>
     <err26>No se puede comprimir archivo "{0}". Error:</err26>
   </mprSheetExport>
-  <mprHeightSplitter LocalName="Dividir por altura"
-                     Description="División de muros y pilares por niveles, planos de referencia, losas, vigas o parámetros especificados">
+  <mprHeightSplitter
+    LocalName="Dividir por altura"
+    Description="División de muros y pilares por niveles, planos de referencia, losas, vigas o parámetros especificados">
     <h1>Método de división</h1>
     <!-- todo remove after 1.4.0.0 -->
     <h2>Desfase desde arriba (abajo), mm</h2>
@@ -2732,8 +2773,9 @@
     <ro2>Hacia medio</ro2>
     <ro3>Hacia abajo</ro3>
   </mprHeightSplitter>
-  <mprExportToExcel LocalName="Exportar a Excel"
-                    Description="Exportar especificaciones a Excel">
+  <mprExportToExcel
+    LocalName="Exportar a Excel"
+    Description="Exportar especificaciones a Excel">
     <t1>Especificaciones</t1>
     <t2>Seleccionado:</t2>
     <t3>Opciones de exportación</t3>
@@ -2764,10 +2806,11 @@
     <err2>No es posible eliminar archivo {0}</err2>
     <err3>Error de acceso al archivo {0}</err3>
   </mprExportToExcel>
-  <mprStructureToParameter LocalName="Estructura en parámetro"
-                           Description="Transferir estructura de un tipo multicapa a un parámetro multilínea"
-                           LocalName1="Volumen de capas en parámetro"
-                           Description1="Transferir volúmenes de capas de elementos multicapa a un parámetro multilínea">
+  <mprStructureToParameter
+    LocalName="Estructura en parámetro"
+    Description="Transferir estructura de un tipo multicapa a un parámetro multilínea"
+    LocalName1="Volumen de capas en parámetro"
+    Description1="Transferir volúmenes de capas de elementos multicapa a un parámetro multilínea">
     <t1>Buscar por tipo o nombre de material:</t1>
     <t2>Mostrar sólo tipos con parámetros requeridos</t2>
     <t3>Mostrar sólo tipos utilizados</t3>
@@ -2823,8 +2866,9 @@
     <msg1>Parámetro "{0}" no se ha encontrado</msg1>
     <msg2>Volumen de capas se guarda en parámetro de ejemplar del tipo "{0}"</msg2>
   </mprStructureToParameter>
-  <mprSumParameters LocalName="Suma de parámetros"
-                    Description="Resumiendo valores de parámetros numéricos de elementos seleccionados">
+  <mprSumParameters
+    LocalName="Suma de parámetros"
+    Description="Resumiendo valores de parámetros numéricos de elementos seleccionados">
     <t1>Obtener</t1>
     <t2>Redondear resultado a</t2>
     <t3>signos.</t3>
@@ -2833,9 +2877,10 @@
     <t6>Con factor</t6>
     <t7>Factor</t7>
   </mprSumParameters>
-  <mprViewColorOn3D LocalName="Mostrar vistas en 3D"
-                    Description="Muestre rango de visibilidad de vistas en color en 3D usando DirectShape"
-                    FullDescription="Complemento le permite crear rangos de visibilidad de vistas en color de tipo DirectShape en vistas 3D, según contorno de recorte de vista con profundidad del rango secante principal de planos o profundidad de recorte de secciones, alzados y detalles. En ventana de complemento hay posibilidad de cambiar a vistas">
+  <mprViewColorOn3D
+    LocalName="Mostrar vistas en 3D"
+    Description="Muestre rango de visibilidad de vistas en color en 3D usando DirectShape"
+    FullDescription="Complemento le permite crear rangos de visibilidad de vistas en color de tipo DirectShape en vistas 3D, según contorno de recorte de vista con profundidad del rango secante principal de planos o profundidad de recorte de secciones, alzados y detalles. En ventana de complemento hay posibilidad de cambiar a vistas">
     <t1>Cambiar a vista 3D</t1>
     <t2>En versión gratuita sólo es posible de procesar secciones</t2>
     <t3>Mostrar rango de visibilidad de vista</t3>
@@ -2846,8 +2891,9 @@
     <tr3>Eliminar todos rangos de visibilidad de vista</tr3>
     <tr4>Establecer contorno de recorte 3D según rango de visibilidad de vista</tr4>
   </mprViewColorOn3D>
-  <mprFontReplacer LocalName="Reemplazar fuente"
-                   Description="Reemplaza propiedades de texto en estilos y elementos específicos">
+  <mprFontReplacer
+    LocalName="Reemplazar fuente"
+    Description="Reemplaza propiedades de texto en estilos y elementos específicos">
     <c1>Estilos de cota</c1>
     <c2>Estilos de texto</c2>
     <c3>Familias de anotaciones típicas</c3>
@@ -2883,8 +2929,9 @@
     <msg9>No se puede cambiar nombre del estilo en la categoría "{0}"</msg9>
     <msg10>Se omitió especificación porque está especificada plantilla de vista</msg10>
   </mprFontReplacer>
-  <mprTypeManager LocalName="Administrador de tipos"
-                  Description="Cambiar y comparar parámetros de tipos">
+  <mprTypeManager
+    LocalName="Administrador de tipos"
+    Description="Cambiar y comparar parámetros de tipos">
     <msg1>Ajustar de columnas está disponible en versión completa del complemento</msg1>
     <msg2>No hay diferencias en valores de parámetros de mismos tipos</msg2>
     <msg3>Cerrar ventanas de propiedades de tipo</msg3>
@@ -2934,8 +2981,9 @@
     <t52>Valor en documento {0}</t52>
     <tr1>Establecer parámetros</tr1>
   </mprTypeManager>
-  <mprParameters LocalName="Parámetros"
-                 Description="Edición por lotes/adición de parámetros a un proyecto y familias">
+  <mprParameters
+    LocalName="Parámetros"
+    Description="Edición por lotes/adición de parámetros a un proyecto y familias">
     <pcn1>Crear parámetros en proyecto</pcn1>
     <pcd1>Le permite crear parámetros por lotes en proyecto actual</pcd1>
     <pcn2>Crear parámetros en familias</pcn2>
@@ -3160,14 +3208,16 @@
     <err21>Familia no está descargada porque archivo familiar es de "Sólo lectura"</err21>
     <err22>No se puede establecer fórmula en parámetro, porque se produjo un error incontrolable en API de Revit, lo que indica un problema en API de Revit. Para establecer fórmula para este parámetro, utilice cuadro de diálogo estándar de edición de parámetros</err22>
   </mprParameters>
-  <mprOverrideGraphicManager LocalName="Administrador de redeterminación de gráficos"
-                             Description="Administre y vea redeterminaciones de gráficos en vista actual, con posibilidad de restablecer redeterminaciones de elementos">
+  <mprOverrideGraphicManager
+    LocalName="Administrador de redeterminación de gráficos"
+    Description="Administre y vea redeterminaciones de gráficos en vista actual, con posibilidad de restablecer redeterminaciones de elementos">
     <t2>No hay elementos con gráficos redeterminados en esta vista</t2>
     <t3>Restablecer redeterminación de gráficos de un elemento a su valor predeterminado</t3>
     <t4>Restablecer redeterminación de gráficos de elementos de categoría a valores predeterminados</t4>
   </mprOverrideGraphicManager>
-  <mprWarningViewer LocalName="Administrador de alertas"
-                    Description="Ver y administrar alertas de documentos">
+  <mprWarningViewer
+    LocalName="Administrador de alertas"
+    Description="Ver y administrar alertas de documentos">
     <t0>Eliminar elemento</t0>
     <t1>Colorear elemento</t1>
     <t2>Restablecer redeterminación de gráficos</t2>
@@ -3190,8 +3240,9 @@
     <t20>Actualizar lista de alertas</t20>
     <t21>No se puede eliminar elementos</t21>
   </mprWarningViewer>
-  <mprCopyAlongCurve LocalName="Copiar según curva"
-                     Description="Copiar elementos a lo largo de una curva con una distancia específica">
+  <mprCopyAlongCurve
+    LocalName="Copiar según curva"
+    Description="Copiar elementos a lo largo de una curva con una distancia específica">
     <t1>Seleccionar elementos para copiar</t1>
     <t2>Seleccionar curvas para copiar</t2>
     <t3>Curvas no están vinculadas</t3>
@@ -3209,8 +3260,9 @@
     <w12>Comenzar desde proyección</w12>
     <w13>Comenzar a copiar desde lugar donde se encuentra proyección del elemento sobre curva</w13>
   </mprCopyAlongCurve>
-  <mprTagless LocalName="Elementos sin marcas"
-              Description="Detección de elementos no marcados">
+  <mprTagless
+    LocalName="Elementos sin marcas"
+    Description="Detección de elementos no marcados">
     <t1>Restaurar vista original</t1>
     <t2>Redeterminar gráficos de elemento</t2>
     <x1>No hay elementos sin marcas en vista</x1>
@@ -3223,8 +3275,9 @@
     <x8>Desactivar colorear</x8>
     <x9>Работа плагина в семействах не предусмотрена</x9>
   </mprTagless>
-  <mprMaterialManager LocalName="Administrador de materiales"
-                      Description="Cambiar propiedades y parámetros de materiales">
+  <mprMaterialManager
+    LocalName="Administrador de materiales"
+    Description="Cambiar propiedades y parámetros de materiales">
     <msg1>Seleccionar materiales</msg1>
     <msg2>¿Estás seguro de que desea eliminar contenido seleccionado?</msg2>
     <msg3>Descargando materiales...</msg3>
@@ -3273,8 +3326,9 @@
     <t42>Asignar color en todos modos</t42>
     <t43>Marcar materiales</t43>
   </mprMaterialManager>
-  <mprCommands LocalName="Comandos"
-               Description="Buscar y ejecutar comandos">
+  <mprCommands
+    LocalName="Comandos"
+    Description="Buscar y ejecutar comandos">
     <t1>Comandos. Modo panel</t1>
     <t2>Busque y ejecute comandos a través de un panel flotante con seguimiento de comandos recientes y una lista de comandos favoritos</t2>
     <t3>Línea de comando</t3>
@@ -3289,8 +3343,9 @@
     <t12>Añadir encima</t12>
     <t13>Añadir a continuación</t13>
   </mprCommands>
-  <mprFilterSelection LocalName="Выбор по фильтру"
-                      Description="Быстрый выбор элементов с использованием предварительно настроенных фильтров">
+  <mprFilterSelection
+    LocalName="Выбор по фильтру"
+    Description="Быстрый выбор элементов с использованием предварительно настроенных фильтров">
     <t1>В бесплатной версии допустимо создавать не более одной конфигурации</t1>
     <t2>В бесплатной версии допустимо создавать не более трех фильтров</t2>
     <t3>Фильтр пуст</t3>

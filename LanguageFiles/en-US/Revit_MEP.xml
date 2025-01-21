@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mprMepElementsBender LocalName="MEP clash solver"
-                        Description="Solves MEP elements clashes"
-                        FullDescription="Plugin allows you to create a bypass of MEP elements without constantly selecting them from the plugin window: for this, you first need to select the intersected elements (i.e. those elements that need to be bypassed), and then just select the necessary elements in the model. In this case, the plugin will automatically add items to the list of processed">
+  <mprMepElementsBender
+    LocalName="MEP clash solver"
+    Description="Solves MEP elements clashes"
+    FullDescription="Plugin allows you to create a bypass of MEP elements without constantly selecting them from the plugin window: for this, you first need to select the intersected elements (i.e. those elements that need to be bypassed), and then just select the necessary elements in the model. In this case, the plugin will automatically add items to the list of processed">
     <h1>Settings</h1>
     <h2>Bend directions</h2>
     <m1>Offset, mm</m1>
@@ -67,14 +68,15 @@
     <t2>By templates</t2>
     <e1>Failed to create elbow fitting. Check the existence of the necessary families in the project and the trace settings of the elements to be processed</e1>
   </mprMepElementsBender>
-  <mprMEPConnect LocalName="MEP connect"
-	               Description="Collection of plugins for automation of engineering systems connections"
-	               LocalName1="Connect diffusers"
-	               Description1="Batch connection of diffusers to ducts"
-	               LocalName2="Connect connectors"
-	               Description2="Connect two connectors (or MEP curves) by rotating and moving the first selected one"
-	               LocalName3="Connect straight"
-	               Description3="Batch connection of straight pipes, ducts, wires, cable trays or conduits lying in one straight line">
+  <mprMEPConnect
+    LocalName="MEP connect"
+    Description="Collection of plugins for automation of engineering systems connections"
+    LocalName1="Connect diffusers"
+    Description1="Batch connection of diffusers to ducts"
+    LocalName2="Connect connectors"
+    Description2="Connect two connectors (or MEP curves) by rotating and moving the first selected one"
+    LocalName3="Connect straight"
+    Description3="Batch connection of straight pipes, ducts, wires, cable trays or conduits lying in one straight line">
     <msg1>Select ducts and diffusers to be connected to them</msg1>
     <msg2>No ducts selected</msg2>
     <msg3>No diffusers selected! Only diffusers that have one unconnected connector oriented along the Z axis are allowed for processing</msg3>
@@ -103,14 +105,15 @@
     <err11>The selected elements have a connector of different sizes</err11>
     <err12>The selected elements have a connector of different system types</err12>
   </mprMEPConnect>
-  <mprMEPRotate LocalName="MEP rotate"
-                Description="A collection of plugins for rotating parts of MEP systems"
-                LocalName1="MEP Element Rotation"
-                Description1="Rotation of fittings or parts of MEP systems"
-                LocalName2="MEP Rotation in direction"
-                Description2="Rotation of fittings or parts of MEP systems in the direction of the MEP curve"
-                LocalName3="Edge-mounted Tray"
-                Description3="Turning the cable tray on its edge">
+  <mprMEPRotate
+    LocalName="MEP rotate"
+    Description="A collection of plugins for rotating parts of MEP systems"
+    LocalName1="MEP Element Rotation"
+    Description1="Rotation of fittings or parts of MEP systems"
+    LocalName2="MEP Rotation in direction"
+    Description2="Rotation of fittings or parts of MEP systems in the direction of the MEP curve"
+    LocalName3="Edge-mounted Tray"
+    Description3="Turning the cable tray on its edge">
     <tr1>Rotation</tr1>
     <t1>Clockwise</t1>
     <t2>Perform clockwise rotation</t2>
@@ -126,16 +129,17 @@
     <msg1>Missing fitting for rotation</msg1>
     <msg2>It's impossible to turn in that direction</msg2>
   </mprMEPRotate>
-  <mprMEPAlign LocalName="MEP alignment"
-               Description="A collection of plugins for aligning MEP curves"
-               LocalName1="Align"
-               Description1="Alignment of MEP curves"
-               LocalName2="Set Distance"
-               Description2="Setting the distance between MEP curves"
-               LocalName3="Multibuild"
-               Description3="Multibuild of MEP curves"
-               LocalName4="Align vertical"
-               Description4="Vertical alignment of MEP curves">
+  <mprMEPAlign
+    LocalName="MEP alignment"
+    Description="A collection of plugins for aligning MEP curves"
+    LocalName1="Align"
+    Description1="Alignment of MEP curves"
+    LocalName2="Set Distance"
+    Description2="Setting the distance between MEP curves"
+    LocalName3="Multibuild"
+    Description3="Multibuild of MEP curves"
+    LocalName4="Align vertical"
+    Description4="Vertical alignment of MEP curves">
     <msg1>Selected MEP curves are not parallel</msg1>
     <msg2>Rotation by angle</msg2>
     <msg3>is not possible</msg3>
@@ -161,14 +165,15 @@
     <t15>Select the MEP element to be aligned</t15>
     <t16>Run in cycles</t16>
   </mprMEPAlign>
-  <mprMEPCopy LocalName="MEP Copy"
-              Description="A collection of plugins for copying MEP elements"
-              LocalName1="Copy by Levels"
-              Description1="Copying MEP elements with alignment to selected levels"
-              LocalName2="Copy vertically"
-              Description2="Copying MEP elements vertically by distance"
-              LocalName3="Copy in direction"
-              Description3="Copying MEP elements in direction by distance">
+  <mprMEPCopy
+    LocalName="MEP Copy"
+    Description="A collection of plugins for copying MEP elements"
+    LocalName1="Copy by Levels"
+    Description1="Copying MEP elements with alignment to selected levels"
+    LocalName2="Copy vertically"
+    Description2="Copying MEP elements vertically by distance"
+    LocalName3="Copy in direction"
+    Description3="Copying MEP elements in direction by distance">
     <msg1>MEP elements not selected</msg1>
     <msg2>Select MEP elements to copy</msg2>
     <msg3>Failed to identify a base level of elements</msg3>
@@ -181,8 +186,9 @@
     <t6>Levels selected:</t6>
     <err1>Failed to connect elements</err1>
   </mprMEPCopy>
-  <mprMEPSplit LocalName="MEP split"
-               Description="MEP curve splits by levels, reference planes or defined parameters">
+  <mprMEPSplit
+    LocalName="MEP split"
+    Description="MEP curve splits by levels, reference planes or defined parameters">
     <t1>Displacement of connecting fittings (up or down)</t1>
     <t2>Selected reference planes</t2>
     <t3>Number of parts</t3>

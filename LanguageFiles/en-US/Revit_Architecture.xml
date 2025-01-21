@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mprApartmentBuildingLayout LocalName="Apartment Layout"
-                              Description="Comprehensive implementation of Apartment Layout"
-                              LocalName1="Auto calculation"
-                              Description1="Service for automatic recalculation of apartment areas when the size of the rooms changes">
+  <mprApartmentBuildingLayout
+    LocalName="Apartment Layout"
+    Description="Comprehensive implementation of Apartment Layout"
+    LocalName1="Auto calculation"
+    Description1="Service for automatic recalculation of apartment areas when the size of the rooms changes">
     <tab1>Parameters</tab1>
     <tab2>Sources</tab2>
     <tab3>Initial check</tab3>
@@ -428,9 +429,10 @@
     <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
     <instruction10>Classification allows you to fill in certain parameters of apartments based on the characteristics of the apartments. First, you need to create tables with conditions on the "Conditions" tab, after which you can perform classification with the result displayed on the "Classification" tab</instruction10>
   </mprApartmentBuildingLayout>
-  <mprRoomColorVolume LocalName="Room volume"
-                      Description="Showing the volume of rooms and spaces in color using DirectShape"
-                      FullDescription="The Plugin lets you create DirectShape elements based on the volume of rooms and spaces in the model and assign different colors to the DirectShape elements you create. In the plugin window, you can group the created DirectShape elements by the value of the associated room or space parameter, and you can assign a single color to all DirectShape elements in the group">
+  <mprRoomColorVolume
+    LocalName="Room volume"
+    Description="Showing the volume of rooms and spaces in color using DirectShape"
+    FullDescription="The Plugin lets you create DirectShape elements based on the volume of rooms and spaces in the model and assign different colors to the DirectShape elements you create. In the plugin window, you can group the created DirectShape elements by the value of the associated room or space parameter, and you can assign a single color to all DirectShape elements in the group">
     <h1>Changing colors is available in the full version of the plugin</h1>
     <h2>Set random colors for all Room or Space volume views in the group</h2>
     <h3>No source element was found for the current volume view in the model. The Room or Space has probably been deleted</h3>
@@ -458,8 +460,9 @@
     <h25>Space</h25>
     <h26>Process rooms from linked files</h26>
   </mprRoomColorVolume>
-  <mprWallSweep LocalName="Wall layouts"
-	              Description="Create wall layouts">
+  <mprWallSweep
+    LocalName="Wall layouts"
+    Description="Create wall layouts">
     <v1>Cut to the top edge of the top slab</v1>
     <v2>Cut to the bottom edge of the bottom slab</v2>
     <v3>Elevation</v3>
@@ -508,8 +511,9 @@
     <m2>Specify the point that will be closest to the face along which the flat pattern will be created. For correct operation, the choice of a point must be made in the plan</m2>
     <tr1>Create views</tr1>
   </mprWallSweep>
-  <mprWorldOrientation LocalName="Side of the world"
-	                     Description="Orientation analysis for rooms through windows, doors, curtain walls in the enclosing walls">
+  <mprWorldOrientation
+    LocalName="Side of the world"
+    Description="Orientation analysis for rooms through windows, doors, curtain walls in the enclosing walls">
     <d1>The orientation analysis for rooms is performed for windows, doors, curtain walls. The result of the analysis can be written in the room parameter or in the windows, doors, curtain walls parameter</d1>
     <d2>The orientation analysis for elements. The result of the analysis can be written in the windows, doors and curtain walls parameter</d2>
     <tab1>By rooms</tab1>
@@ -543,8 +547,9 @@
     <t5>Failed to determine direction for element</t5>
     <t6>Elements in category "{0}" do not have a target parameter set to write result</t6>
   </mprWorldOrientation>
-  <mprFloorByRoom LocalName="Floor by Room"
-	                Description="Creating floors by contour of the rooms">
+  <mprFloorByRoom
+    LocalName="Floor by Room"
+    Description="Creating floors by contour of the rooms">
     <t1>Rooms filter:</t1>
     <t2>Floor type:</t2>
     <t3>Height Offset from Level, mm:</t3>
@@ -576,8 +581,9 @@
     <msg8>Failed to copy value of parameter "{0}" to parameter "{1}"</msg8>
     <msg9>Incompatible parameter types or unknown cause</msg9>
   </mprFloorByRoom>
-  <mprRoomFinishing LocalName="Room finishing"
-                    Description="Creation of finishing elements in the rooms">
+  <mprRoomFinishing
+    LocalName="Room finishing"
+    Description="Creation of finishing elements in the rooms">
     <t1>Rooms filter:</t1>
     <t2>Floors</t2>
     <t3>Floor type:</t3>

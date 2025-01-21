@@ -1,12 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mmRebarSolidAndVisible LocalName="Armadura como sólido"
-                          Description="Cambiar estado de visibilidad de armadura (Mostrar sin tapar y Mostrar como sólido)"
-                          FullDescription="Estado de visibilidad &quot;Mostrar sin tapar&quot; se establece en cualquier vista, tanto 2D como 3D. Mostrar como sólido – se establece sólo en vista 3D"
-                          LocalName1="Cancelar visibilidad"
-                          Description1="Cancelar estado de visibilidad de armadura (&quot;Mostrar sin tapar&quot; y &quot;Mostrar como sólido&quot;)"
-                          LocalName2="Ajustes de selección de elementos"
-                          Description2="Ajustes de opciones de selección para elementos que contienen armadura cuando complemento se está ejecutando">
+  <mmRebarSolidAndVisible
+    LocalName="Armadura como sólido"
+    Description="Cambiar estado de visibilidad de armadura (Mostrar sin tapar y Mostrar como sólido)"
+    FullDescription="Estado de visibilidad &quot;Mostrar sin tapar&quot; se establece en cualquier vista, tanto 2D como 3D. Mostrar como sólido – se establece sólo en vista 3D"
+    LocalName1="Cancelar visibilidad"
+    Description1="Cancelar estado de visibilidad de armadura (&quot;Mostrar sin tapar&quot; y &quot;Mostrar como sólido&quot;)"
+    LocalName2="Ajustes de selección de elementos"
+    Description2="Ajustes de opciones de selección para elementos que contienen armadura cuando complemento se está ejecutando">
     <msg1>Seleccionar armadura o elemento con armadura</msg1>
     <msg2>Seleccionar elementos con armadura o armadura</msg2>
     <t1>Cambiar visibilidad de armadura</t1>
@@ -29,9 +30,10 @@
     <!-- todo remove after 3.3.4.0 -->
     <continue>Continuar</continue>
   </mmRebarSolidAndVisible>
-  <mprWallsReinforcement LocalName="Refuerzo de muro"
-                         Description="Análisis, agrupamiento y refuerzo según condiciones especificadas de muros y huecos"
-                         FullDescription="Complemento sólo funciona con muros ubicados en mismo nivel. Complemento analiza muros, lo que le permite encontrar tres tipos de intersecciones (esquina, final y cruz) y huecos. Agrupamiento flexible le permite especificar exactamente qué tipo de refuerzo se debe realizar. Puede realizar refuerzo sólo para grupos específicos: muros, intersecciones o huecos. Complemento puede funcionar incluso en una plantilla vacía">
+  <mprWallsReinforcement
+    LocalName="Refuerzo de muro"
+    Description="Análisis, agrupamiento y refuerzo según condiciones especificadas de muros y huecos"
+    FullDescription="Complemento sólo funciona con muros ubicados en mismo nivel. Complemento analiza muros, lo que le permite encontrar tres tipos de intersecciones (esquina, final y cruz) y huecos. Agrupamiento flexible le permite especificar exactamente qué tipo de refuerzo se debe realizar. Puede realizar refuerzo sólo para grupos específicos: muros, intersecciones o huecos. Complemento puede funcionar incluso en una plantilla vacía">
     <h2>VENTANA DEL COMPLEMENTO:</h2>
     <h4>Encima de ventanas</h4>
     <h5>REPRESENTACIÓN EN MODELO:</h5>
@@ -513,9 +515,10 @@
     <re23>Error al crear barras horizontales en forma de U en muro id={0}:</re23>
     <re24>Error al crear barras verticales adicionales cerca de una intersección en muro id={0}:</re24>
   </mprWallsReinforcement>
-  <mprSlabsReinforcement LocalName="Refuerzo de losa" 
-                         Description="Análisis, agrupamiento y refuerzo de losas según condiciones especificadas"
-                         FullDescription="Complemento le permite procesar tanto losas seleccionadas individualmente como todas losas en una vista o documento. Refuerzo principal de losa se puede realizar bien con barras individuales o bien con refuerzo sobre una zona. Análisis de agujeros se ejecuta de geometría de propia losa y es independiente de familias utilizadas. Complemento puede funcionar incluso en plantilla vacía">
+  <mprSlabsReinforcement
+    LocalName="Refuerzo de losa"
+    Description="Análisis, agrupamiento y refuerzo de losas según condiciones especificadas"
+    FullDescription="Complemento le permite procesar tanto losas seleccionadas individualmente como todas losas en una vista o documento. Refuerzo principal de losa se puede realizar bien con barras individuales o bien con refuerzo sobre una zona. Análisis de agujeros se ejecuta de geometría de propia losa y es independiente de familias utilizadas. Complemento puede funcionar incluso en plantilla vacía">
     <h1>Opciones</h1>
     <h2>Seleccionar losas</h2>
     <h3>Seleccionar todas losas en vista actual</h3>
@@ -743,9 +746,10 @@
     <re18>Error al crear estribos para enmarcar un agujero en losa id={0}</re18>
     <re20>No se puede crear una barra de refuerzo con forma de barra de refuerzo preferida especificada "{0}". Error: {1}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re20>
   </mprSlabsReinforcement>
-  <mprColumnsReinforcement LocalName="Refuerzo del pilar"
-                           Description="Análisis, agrupamiento y refuerzo de pilares según condiciones especificadas"
-                           FullDescription="Complemento le permite procesar tanto pilares seleccionados individualmente como todas pilares en una vista o documento. Refuerzo se realiza teniendo en cuenta posición relativa de pilares una encima de otra. Refuerzo transversal se puede configurar utilizando varias opciones para formas de barras de refuerzo. Complemento puede funcionar incluso en plantilla vacía">
+  <mprColumnsReinforcement
+    LocalName="Refuerzo del pilar"
+    Description="Análisis, agrupamiento y refuerzo de pilares según condiciones especificadas"
+    FullDescription="Complemento le permite procesar tanto pilares seleccionados individualmente como todas pilares en una vista o documento. Refuerzo se realiza teniendo en cuenta posición relativa de pilares una encima de otra. Refuerzo transversal se puede configurar utilizando varias opciones para formas de barras de refuerzo. Complemento puede funcionar incluso en plantilla vacía">
     <h1>Opciones</h1>
     <h2>Seleccionar pilares</h2>
     <h3>Seleccionar todos pilares en vista actual</h3>
@@ -1020,9 +1024,10 @@
     <re18>Error al crear conectores al conectar pilares id={0} y id={1}:</re18>
     <re19>Error al crear conectores al procesar pilar id={0}:</re19>
   </mprColumnsReinforcement>
-  <mprBeamsReinforcement LocalName="Refuerzo de viga"
-                         Description="Análisis, agrupamiento y refuerzo de vigas según condiciones especificadas"
-                         FullDescription="Complemento le permite procesar tanto vigas seleccionadas individualmente como todas vigas en vista o documento. Refuerzo transversal se puede configurar utilizando varias opciones para formas de barras de refuerzo. Complemento puede funcionar incluso en plantilla vacía">
+  <mprBeamsReinforcement
+    LocalName="Refuerzo de viga"
+    Description="Análisis, agrupamiento y refuerzo de vigas según condiciones especificadas"
+    FullDescription="Complemento le permite procesar tanto vigas seleccionadas individualmente como todas vigas en vista o documento. Refuerzo transversal se puede configurar utilizando varias opciones para formas de barras de refuerzo. Complemento puede funcionar incluso en plantilla vacía">
     <h1>Opciones</h1>
     <h2>Seleccionar vigas</h2>
     <h3>Seleccionar todas vigas en vista actual</h3>
@@ -1257,18 +1262,19 @@
     <re11>Error al crear piezas de conexión en cruz en vigas {0}:</re11>
     <re22>¡No es posible mostrar intersección en vista actual! Ir al plano de planta</re22>
   </mprBeamsReinforcement>
-  <mprRebarTools LocalName="Utilidades para trabajar con refuerzo"
-                 Description="Una colección de pequeños complementos auxiliares para trabajar con refuerzo"
-                 LocalName1="Eliminar de base"
-                 Description1="Eliminar todo refuerzo del elemento básico seleccionado"
-                 LocalName2="Copiar a base"
-                 Description2="Copiar barras de refuerzo de elemento básico original a varios elementos básicos objetivos"
-                 LocalName3="Explotar conjunto"
-                 Description3="Convertir conjunto de barras de refuerzo seleccionado en barras de refuerzo individuales"
-                 LocalName4="Dividir conjunto"
-                 Description4="Dividir conjunto de refuerzos en dos nuevos conjuntos de refuerzos"
-                 LocalName5="Cambiar representación"
-                 Description5="Cambiar por lotes de representación de refuerzo">
+  <mprRebarTools
+    LocalName="Utilidades para trabajar con refuerzo"
+    Description="Una colección de pequeños complementos auxiliares para trabajar con refuerzo"
+    LocalName1="Eliminar de base"
+    Description1="Eliminar todo refuerzo del elemento básico seleccionado"
+    LocalName2="Copiar a base"
+    Description2="Copiar barras de refuerzo de elemento básico original a varios elementos básicos objetivos"
+    LocalName3="Explotar conjunto"
+    Description3="Convertir conjunto de barras de refuerzo seleccionado en barras de refuerzo individuales"
+    LocalName4="Dividir conjunto"
+    Description4="Dividir conjunto de refuerzos en dos nuevos conjuntos de refuerzos"
+    LocalName5="Cambiar representación"
+    Description5="Cambiar por lotes de representación de refuerzo">
     <m1>Seleccionar elementos básicos</m1>
     <m2>Seleccionar elemento básico original</m2>
     <m3>Seleccionar elementos básicos objetivos</m3>
@@ -1299,8 +1305,9 @@
     <msg1>Seleccionar armadura o elemento con armadura</msg1>
     <msg2>Seleccionar elementos con armadura o armadura</msg2>
   </mprRebarTools>
-  <mprSplitRebar LocalName="División de refuerzo"
-                 Description="División de armaduras rectas en su longitud con varias opciones de unión">
+  <mprSplitRebar
+    LocalName="División de refuerzo"
+    Description="División de armaduras rectas en su longitud con varias opciones de unión">
     <sv1>Seleccionar barras de refuerzo rectas</sv1>
     <sv2>Barras de refuerzo rectas en vista</sv2>
     <sv3>Barras de refuerzo rectas en base</sv3>
@@ -1346,8 +1353,9 @@
     <m5>Error inesperado al procesar barra de refuerzo</m5>
     <m6>No es posible crear una barra de refuerzo plegada con configuración actual</m6>
   </mprSplitRebar>
-  <mprPlateWeight LocalName="Peso de placa"
-                  Description="Cálculo del peso de placas con registrar resultado en parámetro especificado">
+  <mprPlateWeight
+    LocalName="Peso de placa"
+    Description="Cálculo del peso de placas con registrar resultado en parámetro especificado">
     <h1>Usar densidad del material</h1>
     <h2>Redondear resultado a</h2>
     <h3>signos</h3>

@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mprApartmentBuildingLayout LocalName="Wohnungslayout"
-                              Description="Umfassende Realisierung von Wohnungslayout"
-                              LocalName1="Autom. Berechnung"
-                              Description1="Dienst zur automatischen Neuberechnung der Wohnungsflächen bei Änderung der Raumgröße">
+  <mprApartmentBuildingLayout
+    LocalName="Wohnungslayout"
+    Description="Umfassende Realisierung von Wohnungslayout"
+    LocalName1="Autom. Berechnung"
+    Description1="Dienst zur automatischen Neuberechnung der Wohnungsflächen bei Änderung der Raumgröße">
     <tab1>Parameter</tab1>
     <tab2>Quellen</tab2>
     <tab3>Ursprüngliche Überprüfung</tab3>
@@ -428,9 +429,10 @@
     <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
     <instruction10>Classification allows you to fill in certain parameters of apartments based on the characteristics of the apartments. First, you need to create tables with conditions on the "Conditions" tab, after which you can perform classification with the result displayed on the "Classification" tab</instruction10>
   </mprApartmentBuildingLayout>
-  <mprRoomColorVolume LocalName="Raumvolumen"
-                      Description="Farbige Darstellung des Volumens von Räumen und Bereichen mit DirectShape"
-                      FullDescription="Mit dem Plugin können Sie DirectShape-Elemente anhand des Volumens von Räumen und Bereichen im Modell erstellen und unterschiedliche Farben den erstellten DirectShape-Elementen zuweisen. Im Plugin-Fenster ist es möglich, erstellte DirectShape-Elemente nach dem Parameterwert des zugehörigen Raums oder Bereichs zu gruppieren sowie eine einzige Farbe für alle DirectShape-Elemente in der Gruppe festzulegen">
+  <mprRoomColorVolume
+    LocalName="Raumvolumen"
+    Description="Farbige Darstellung des Volumens von Räumen und Bereichen mit DirectShape"
+    FullDescription="Mit dem Plugin können Sie DirectShape-Elemente anhand des Volumens von Räumen und Bereichen im Modell erstellen und unterschiedliche Farben den erstellten DirectShape-Elementen zuweisen. Im Plugin-Fenster ist es möglich, erstellte DirectShape-Elemente nach dem Parameterwert des zugehörigen Raums oder Bereichs zu gruppieren sowie eine einzige Farbe für alle DirectShape-Elemente in der Gruppe festzulegen">
     <h1>Farbwechsel ist in der vollständigen Plugin-Version verfügbar</h1>
     <h2>Allen Volumendarstellungen von Räumen oder Flächen in der Gruppe zufällige Farben zuweisen</h2>
     <h3>Für die aktuelle Volumendarstellung wird im Modell kein Quellelement gefunden. Der Raum oder der Bereich ist wahrscheinlich entfernt worden</h3>
@@ -458,8 +460,9 @@
     <h25>MEP-Raum</h25>
     <h26>Bearbeitung der Räume aus den verknüpften Dateien</h26>
   </mprRoomColorVolume>
-  <mprWallSweep LocalName="Wändeabwicklung"
-                Description="Erstellen von Wändeabwicklungen">
+  <mprWallSweep
+    LocalName="Wändeabwicklung"
+    Description="Erstellen von Wändeabwicklungen">
     <v1>Unter der Oberkante der oberen Geschossdecke zuschneiden</v1>
     <v2>Unter der unteren Kante der unteren Geschossdecke zuschneiden</v2>
     <v3>Ansichten</v3>
@@ -508,8 +511,9 @@
     <m2>Geben Sie einen Punkt an, der am nächsten zu der Kante liegt, auf der das UV-Koordinaten-System erstellt werden soll. Für eine korrekte Funktion muss die Punktauswahl im Plan erfolgen</m2>
     <tr1>Ansichten erstellen</tr1>
   </mprWallSweep>
-  <mprWorldOrientation LocalName="Himmelsrichtung"
-                       Description="Orientierungsanalyse für Räume anhand der Fenster, Türen, Fassaden in umschließenden Wänden">
+  <mprWorldOrientation
+    LocalName="Himmelsrichtung"
+    Description="Orientierungsanalyse für Räume anhand der Fenster, Türen, Fassaden in umschließenden Wänden">
     <d1>Die Orientierungsanalyse für Räume wird anhand von Fenstern, Türen und Fassaden durchgeführt. Das Ergebnis der Analyse kann in den Parameter des Raumes oder in den Parameter der Fenster, Türen, Fassaden geschrieben werden</d1>
     <d2>Die Analyse der Ausrichtung für Elemente. Das Ergebnis der Analyse kann in einen Parameter für die Fenster, Türen, Fassaden eingeschrieben werden</d2>
     <tab1>Nach Räumen</tab1>
@@ -543,8 +547,9 @@
     <t5>Die Richtung für das Element konnte nicht bestimmt werden</t5>
     <t6>Für Elemente der Kategorie "{0}" ist kein Zielparameter festgelegt um das Ergebnis zu einzutragen</t6>
   </mprWorldOrientation>
-  <mprFloorByRoom LocalName="Geschossdecke nach dem Raum"
-                  Description="Erstellen einer Geschossdecke nach der Kontur des Raumes">
+  <mprFloorByRoom
+    LocalName="Geschossdecke nach dem Raum"
+    Description="Erstellen einer Geschossdecke nach der Kontur des Raumes">
     <t1>Filter der Räume:</t1>
     <t2>Typ der Geschossdecke:</t2>
     <t3>Versatz von der Ebene, mm:</t3>
@@ -576,8 +581,9 @@
     <msg8>Das Kopieren des Parameterwertes "{0}" in den Parameter "{1}" ist fehlgeschlagen </msg8>
     <msg9>Inkompatible Parametertypen oder unbekannte Ursache</msg9>
   </mprFloorByRoom>
-  <mprRoomFinishing LocalName="Raumausstattung"
-                    Description="Erstellung von Raumausstattungselementen">
+  <mprRoomFinishing
+    LocalName="Raumausstattung"
+    Description="Erstellung von Raumausstattungselementen">
     <t1>Filter der Räume:</t1>
     <t2>Geschossdecken</t2>
     <t3>Typ der Geschossdecke:</t3>

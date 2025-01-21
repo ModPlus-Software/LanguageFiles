@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
   <Common>
     <abort>Abort</abort>
@@ -489,7 +489,8 @@
     <design>Design</design>
     <all>All</all>
   </CUI>
-  <Configurator LocalName="Configurator">
+  <Configurator
+    LocalName="Configurator">
     <title1>ModPlus configurator</title1>
     <title2>Checking keys</title2>
     <writableDir>You do not have write access to the directory: {0}\.\nThe Startup of the Configurator will be terminated!\nPut the folder with the ModPlus plugin in the directory to which you have full access and run the Configurator again</writableDir>
@@ -835,7 +836,8 @@
     <cui12>The menu will be built according to the standard scheme\nThe existing menu will be erased!\nContinue?</cui12>
     <cui13>Do you really want to erase the menu?</cui13>
   </Configurator>
-  <AutoUpdater LocalName="Auto Updates Module">
+  <AutoUpdater
+    LocalName="Auto Updates Module">
     <close>Close</close>
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
@@ -981,7 +983,8 @@
     <c6>Databases</c6>
     <c7>Dwg base</c7>
   </AutoUpdater>
-  <AutocadDlls LocalName="Working libraries for AutoCAD">
+  <AutocadDlls
+    LocalName="Working libraries for AutoCAD">
     <close>Close</close>
     <bb>ByBlock</bb>
     <bl>ByLayer</bl>
@@ -1111,7 +1114,8 @@
     <p14>The folder Data is not found!</p14>
     <p15>Loading plugin:</p15>
   </AutocadDlls>
-  <RevitDlls LocalName="Working libraries for Revit">
+  <RevitDlls
+    LocalName="Working libraries for Revit">
     <parameters>Parameters</parameters>
     <name>Name</name>
     <rn>Rebar ⌀</rn>
@@ -1408,7 +1412,8 @@
     <tcm14>Close all documents without saving</tcm14>
     <tcm15>Close all documents except current without saving</tcm15>
   </RevitDlls>
-  <RengaDlls LocalName="Working libraries for Renga">
+  <RengaDlls
+    LocalName="Working libraries for Renga">
     <h1>MODPLUS SETTINGS</h1>
     <h2>GENERAL</h2>
     <h3>WORK WITH THE SERVER</h3>
@@ -1585,8 +1590,16 @@
     <d2>EN 1992-1-1</d2>
     <t1>SP 63.13330.2018 "SNIP 52-01-2003 Concrete and reinforced concrete structures. Basic provisions", clause 10.3.33</t1>
     <t2>EN 1992-1-1 "Eurocode 2: Design of concrete structures – Part 1-1 : General rules and rules for buildings", clause 8.3</t2>
-    <r1>Minimum mandrel diameter dop for reinforcement is taken depending on the diameter of the rod ds, not less than:&#x0a;- for plain rods&#x0a;dop = 2.5ds at ds &#60; 20 mm;&#x0a;dop=4ds at ds ≥ 20 mm;&#x0a;- for deformed rods&#x0a;dop=5ds at ds &#60; 20 mm;&#x0a;dоп=8ds at ds ≥ 20 mm;</r1>
-    <r2>Minimum mandrel diameter to avoid damage to reinforcement is taken:&#x0a;4Ø rod diameter Ø ≤ 16 mm;&#x0a;7Ø at rod diameter Ø &#62; 16 mm;</r2>
+    <r1>Minimum mandrel diameter dop for reinforcement is taken depending on the diameter of the rod ds, not less than:
+- for plain rods
+dop=2.5ds at ds &lt; 20 mm;
+dop=4ds at ds ≥ 20 mm;
+- for deformed rods
+dop=5ds at ds &lt; 20 mm;
+dоп=8ds at ds ≥ 20 mm;</r1>
+    <r2>Minimum mandrel diameter to avoid damage to reinforcement is taken:
+4Ø rod diameter Ø ≤ 16 mm;
+7Ø at rod diameter Ø &gt; 16 mm;</r2>
     <h1>BENDING RULES</h1>
     <h2>Rule Source:</h2>
     <h3>Rules description:</h3>

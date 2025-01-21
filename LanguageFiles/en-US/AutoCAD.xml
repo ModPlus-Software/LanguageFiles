@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
-  <mpTxtNumCopy LocalName="Copy with numbering"
-                Description="Copies the selected text or block with an attribute containing a numeric value, changing the value to a specified numerical step"
-                FullDescription="Copies the selected single line or multiline text, a block with an attribute or a multileader containing a digital value, with a value change to a specified numerical step. There are various settings – adding a prefix/suffix, suppressing tail zeros, etc.">
+  <mpTxtNumCopy
+    LocalName="Copy with numbering"
+    Description="Copies the selected text or block with an attribute containing a numeric value, changing the value to a specified numerical step"
+    FullDescription="Copies the selected single line or multiline text, a block with an attribute or a multileader containing a digital value, with a value change to a specified numerical step. There are various settings – adding a prefix/suffix, suppressing tail zeros, etc.">
     <!-- todo remove after 3.1.2.0 -->
     <accept>Accept</accept>
     <!-- todo remove after 3.1.2.0 -->
@@ -55,9 +56,10 @@
     <cb8>Perpendicular to the curve (left)</cb8>
     <cb9>Perpendicular to the curve (right)</cb9>
   </mpTxtNumCopy>
-  <mpMultiCopy LocalName="Multi copy"
-               Description="Multiple copies of selected primitives with a certain step"
-               FullDescription="Plugin supports two types of copying:\nmarkup – copies primitives with a specified distance between them along the specified line;\ndivide – copies primitives by dividing the specified line by the number of segments entered.\nThere is a possibility to select an entity (line, polyline, spline) to set the copy path.">
+  <mpMultiCopy
+    LocalName="Multi copy"
+    Description="Multiple copies of selected primitives with a certain step"
+    FullDescription="Plugin supports two types of copying:\nmarkup – copies primitives with a specified distance between them along the specified line;\ndivide – copies primitives by dividing the specified line by the number of segments entered.\nThere is a possibility to select an entity (line, polyline, spline) to set the copy path.">
     <msg1>Select entities:</msg1>
     <msg2>Specify distance or [Divide]</msg2>
     <msg3>Enter the number of segments or [Mark]</msg3>
@@ -68,8 +70,9 @@
     <kw2>Mark</kw2>
     <kw3>Entity</kw3>
   </mpMultiCopy>
-  <mpTxtCenter LocalName="Text by center"
-               Description="Plugin allows you to create a single line text or align the existing one in the middle between two specified points">
+  <mpTxtCenter
+    LocalName="Text by center"
+    Description="Plugin allows you to create a single line text or align the existing one in the middle between two specified points">
     <msg1>Specify the first point or [Existing]</msg1>
     <msg2>Existing</msg2>
     <msg3>Enter text:</msg3>
@@ -80,8 +83,9 @@
     <msg8>Specify the first point:</msg8>
     <msg9>Specify the second point:</msg9>
   </mpTxtCenter>
-  <mpStandards LocalName="Standards"
-               Description="Plugin allows you to create, store and add layer sets, text styles, dimensional styles and multileader styles">
+  <mpStandards
+    LocalName="Standards"
+    Description="Plugin allows you to create, store and add layer sets, text styles, dimensional styles and multileader styles">
     <copy>Copy</copy>
     <no>No</no>
     <h1>Set name:</h1>
@@ -180,9 +184,10 @@
     <l8>Mp_Nonprinting</l8>
     <l9>Mp_Text</l9>
   </mpStandards>
-  <mpMultiScale LocalName="Multi scale"
-                Description="Plugin allows you to scale each of the selected objects relative to themselves"
-                FullDescription="Each selected entity will be scaled relative to the specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The scale point is determined by the rectangle describing the entity (Bounding Box)">
+  <mpMultiScale
+    LocalName="Multi scale"
+    Description="Plugin allows you to scale each of the selected objects relative to themselves"
+    FullDescription="Each selected entity will be scaled relative to the specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The scale point is determined by the rectangle describing the entity (Bounding Box)">
     <h1>Create copies of selected entities</h1>
     <h2>Base Point:</h2>
     <h3>Select entities:</h3>
@@ -198,26 +203,30 @@
     <bp9>Middle right</bp9>
     <bp10>Center or block insertion point</bp10>
   </mpMultiScale>
-  <mpMultiRotate LocalName="Multi rotate"
-	              Description="Plugin allows you to rotate each of the selected entities relative to the Z-axis with the center of rotation relative to themselves"
-	              FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
+  <mpMultiRotate
+    LocalName="Multi rotate"
+    Description="Plugin allows you to rotate each of the selected entities relative to the Z-axis with the center of rotation relative to themselves"
+    FullDescription="Each selected entity will be rotated relative to the Z-axis with the center at a specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The center of rotation is determined by the rectangle that describes the entity (Bounding Box)">
     <h1>Rotation angle:</h1>
   </mpMultiRotate>
-  <mpMultiMirror LocalName="Multi mirror"
-	               Description="Plugin allows to mirror each of the selected entities vertically or horizontally in relation to themselves"
-	               FullDescription="Each selected entity will be mirrored vertically or horizontally with respect to a line passing through a specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The point is determined by the rectangle that describes the entity (Bounding Box)">
+  <mpMultiMirror
+    LocalName="Multi mirror"
+    Description="Plugin allows to mirror each of the selected entities vertically or horizontally in relation to themselves"
+    FullDescription="Each selected entity will be mirrored vertically or horizontally with respect to a line passing through a specified point – Left Bottom, Right Bottom, Left Top, Right Top or Center. The point is determined by the rectangle that describes the entity (Bounding Box)">
     <o1>Mirror by</o1>
     <o2>Vertical</o2>
     <o3>Horizontal</o3>
   </mpMultiMirror>
-  <mpRotAtt LocalName="Rotation angle of attributes"
-            Description="Plugin is used to change the rotation angle of attributes in the selected blocks">
+  <mpRotAtt
+    LocalName="Rotation angle of attributes"
+    Description="Plugin is used to change the rotation angle of attributes in the selected blocks">
     <msg1>Select blocks:</msg1>
     <msg2>New angle of rotation attributes:</msg2>
   </mpRotAtt>
-  <mpLayerAuto LocalName="Auto layers"
-               Description="Plugin is used to automatically add a layer to the created objects"
-               FullDescription="Plugin processes the creation, copying, pasting and other commands when working with AutoCAD objects – dimensions, text, multileaders, hatching, tables, viewports, lines, polylines, xLines, rays, circles, ellipses, splines, arcs, blocks – and sets the layer specified in the plugin settings for them. There is an option to specify the specified layers for the selected objects. There is an opportunity to set block layers by name">
+  <mpLayerAuto
+    LocalName="Auto layers"
+    Description="Plugin is used to automatically add a layer to the created objects"
+    FullDescription="Plugin processes the creation, copying, pasting and other commands when working with AutoCAD objects – dimensions, text, multileaders, hatching, tables, viewports, lines, polylines, xLines, rays, circles, ellipses, splines, arcs, blocks – and sets the layer specified in the plugin settings for them. There is an option to specify the specified layers for the selected objects. There is an opportunity to set block layers by name">
     <h1>Layers for entities</h1>
     <h2>Layer assignment</h2>
     <h3>Available in the full version of the plugin</h3>
@@ -267,9 +276,10 @@
     <h52>For revision clouds:</h52>
     <h53>For points:</h53>
   </mpLayerAuto>
-  <mpFormats LocalName="Formats"
-             Description="Plugin of inserting in the drawing formats according to GOST 2.301-68/ISO 216"
-             FullDescription="Formats are inserted in the form of a block with a special label in the extended data. A label in the extended data is required to define the formats with other plugins (for example, &quot;Sheet Numbering&quot;). Therefore, you should not insert the formats with standard means of inserting a block into AutoCAD. Plugin allows you to add title blocks to the format – for this you need to install and at least once started the plugin &quot;Title blocks&quot;">
+  <mpFormats
+    LocalName="Formats"
+    Description="Plugin of inserting in the drawing formats according to GOST 2.301-68/ISO 216"
+    FullDescription="Formats are inserted in the form of a block with a special label in the extended data. A label in the extended data is required to define the formats with other plugins (for example, &quot;Sheet Numbering&quot;). Therefore, you should not insert the formats with standard means of inserting a block into AutoCAD. Plugin allows you to add title blocks to the format – for this you need to install and at least once started the plugin &quot;Title blocks&quot;">
     <accept>Accept</accept>
     <no>No</no>
     <h1>Russia</h1>
@@ -361,8 +371,9 @@
     <msg11>Insertion point:</msg11>
     <msg12>Empty sheet name is not allowed!</msg12>
   </mpFormats>
-  <mpNotes LocalName="Notes"
-           Description="Plugin for working with frequently-used notes">
+  <mpNotes
+    LocalName="Notes"
+    Description="Plugin for working with frequently-used notes">
     <h1>Settings</h1>
     <h2>Context menu for text</h2>
     <h3>Double click on a note</h3>
@@ -385,8 +396,9 @@
     <h74>Specify the insertion point:</h74>
     <h75>MP:Save as a note</h75>
   </mpNotes>
-  <mpMeshes LocalName="Meshes"
-            Description="Selection and calculation of the mass of rebar according to normative documents">
+  <mpMeshes
+    LocalName="Meshes"
+    Description="Selection and calculation of the mass of rebar according to normative documents">
     <kg>kg</kg>
     <mm>mm</mm>
     <insert>Insert</insert>
@@ -454,8 +466,9 @@
     <h62>The length of mesh must be at least</h62>
     <h63>The length of mesh should be no more than</h63>
   </mpMeshes>
-  <mpTables LocalName="Tables"
-            Description="Plugin of inserting AutoCAD tables into the drawing according to GOST/DSTU/STB or from the specified file">
+  <mpTables
+    LocalName="Tables"
+    Description="Plugin of inserting AutoCAD tables into the drawing according to GOST/DSTU/STB or from the specified file">
     <insert>Insert</insert>
     <all>All</all>
     <favorite>Favorite</favorite>
@@ -504,8 +517,9 @@
     <msg4>Insertion point</msg4>
     <msg5>Specify second point</msg5>
   </mpTables>
-  <mpDimJustif LocalName="Aligning Dimensions"
-			   Description="Aligning the extension or dimension lines along the specified straight line">
+  <mpDimJustif
+    LocalName="Aligning Dimensions"
+    Description="Aligning the extension or dimension lines along the specified straight line">
     <h1>ALIGNMENT DIMENSIONS</h1>
     <h2>Align extension lines</h2>
     <h3>Align dimension lines</h3>
@@ -514,9 +528,10 @@
     <msg3>Select dimensions for alignment of dimension lines</msg3>
     <msg4>Second point of the alignment line:</msg4>
   </mpDimJustif>
-  <mpStamps LocalName="Title blocks"
-            Description="Plugin of inserting title blocks in the drawing (as AutoCAD tables) according to normative documentation, with field support"
-            FullDescription="Using the &quot;Field&quot; plugin allows you to add additional values to the document that you can insert into the title block in the form of fields. This allows you to change the values in the title block at once in all the title blocks throughout the document">
+  <mpStamps
+    LocalName="Title blocks"
+    Description="Plugin of inserting title blocks in the drawing (as AutoCAD tables) according to normative documentation, with field support"
+    FullDescription="Using the &quot;Field&quot; plugin allows you to add additional values to the document that you can insert into the title block in the form of fields. This allows you to change the values in the title block at once in all the title blocks throughout the document">
     <h1>Title blocks</h1>
     <h2>Name of title block</h2>
     <h3>Normative documents for:</h3>
@@ -650,8 +665,9 @@
     <msg30>There are no signatures in the list!</msg30>
     <msg31>The selected file is not a signature storage file!</msg31>
   </mpStamps>
-  <mpSummLength LocalName="Sum of lengths"
-                Description="Gets and displays the number and sum of the lengths of selected lines, polylines, circles, arcs and splines">
+  <mpSummLength
+    LocalName="Sum of lengths"
+    Description="Gets and displays the number and sum of the lengths of selected lines, polylines, circles, arcs and splines">
     <h2>Total length:</h2>
     <h3>Rounding Result</h3>
     <h4>Count:</h4>
@@ -671,9 +687,10 @@
     <h18>Arithmetic mean of all objects:</h18>
     <h19>Length by objects</h19>
   </mpSummLength>
-  <mpSelSim LocalName="Select similar"
-            Description="Plugins allow you to select objects that are similar to sample objects from all objects in the drawing, or from a specific set"
-            FullDescription="Before using the plugin, you need to configure the conditions by which similar objects will be searched for – the same type, the same layer, the same color, etc. For some types, there are additional matching conditions. For example, the same text heights, blocks with the same name, etc.">
+  <mpSelSim
+    LocalName="Select similar"
+    Description="Plugins allow you to select objects that are similar to sample objects from all objects in the drawing, or from a specific set"
+    FullDescription="Before using the plugin, you need to configure the conditions by which similar objects will be searched for – the same type, the same layer, the same color, etc. For some types, there are additional matching conditions. For example, the same text heights, blocks with the same name, etc.">
     <h2>General settings</h2>
     <h3>Add sample objects to the final set (select similar from the selected)</h3>
     <h4>Same types</h4>
@@ -724,13 +741,15 @@
     <mi5>MP:Select similar from selected</mi5>
     <mi6>MP:SelSim Settings</mi6>
   </mpSelSim>
-  <mpHandDim LocalName="Hand dims"
-             Description="Color highlight, restore or delete dimensions with an override value">
+  <mpHandDim
+    LocalName="Hand dims"
+    Description="Color highlight, restore or delete dimensions with an override value">
     <msg1>Select dimensions:</msg1>
     <msg2>Options [Color/Select/Restore/Delete]</msg2>
   </mpHandDim>
-  <mpCalc LocalName="Calculator"
-          Description="It is an analog of a standard calculator, with the ability to retrieve data from a drawing, adding a result to a drawing, and the ability to manually write a formula for calculating">
+  <mpCalc
+    LocalName="Calculator"
+    Description="It is an analog of a standard calculator, with the ability to retrieve data from a drawing, adding a result to a drawing, and the ability to manually write a formula for calculating">
     <!-- todo remove after 1.5.2.0 -->
     <prefix>Prefix</prefix>
     <!-- todo remove after 1.5.2.0 -->
@@ -835,9 +854,10 @@
     <err3>Do not hit the cell!</err3>
     <err4>Invalid Input</err4>
   </mpCalc>
-  <mpArmature LocalName="Reinforcement"
-              Description="Working with assortments of reinforcement – obtaining various information and calculations"
-              FullDescription="Plugin requires plug-in databases. Plugin allows you to obtain various information and calculation data (area, weight, anchoring, etc.) for a large number of different assortments">
+  <mpArmature
+    LocalName="Reinforcement"
+    Description="Working with assortments of reinforcement – obtaining various information and calculations"
+    FullDescription="Plugin requires plug-in databases. Plugin allows you to obtain various information and calculation data (area, weight, anchoring, etc.) for a large number of different assortments">
     <cancel>Cancel</cancel>
     <h1>REINFORCEMENT</h1>
     <h2>Norm. document</h2>
@@ -914,8 +934,9 @@
     <p2>Create a new document</p2>
     <p3>Filling data</p3>
   </mpArmature>
-  <mpTxtCopyPaste LocalName="Fast text copy"
-                  Description="Fast copying of single line or multiline text content, mleaders, dimensions or table cells">
+  <mpTxtCopyPaste
+    LocalName="Fast text copy"
+    Description="Fast copying of single line or multiline text content, mleaders, dimensions or table cells">
     <msg1>Select the source entity (text, mleader, table or dimension):</msg1>
     <msg2>Select source entity (text, mleader, table or dimension) or [Delete]:</msg2>
     <msg3>Wrong choice!</msg3>
@@ -923,13 +944,15 @@
     <msg5>Select entity (text, mleader or table) to replace the content</msg5>
     <msg6>Specify a table cell:</msg6>
   </mpTxtCopyPaste>
-  <mpRemoveAnnotScale LocalName="Clear scales"
-                      Description="Clears the list of annotative scales in the selected annotative objects, leaving the current scale">
+  <mpRemoveAnnotScale
+    LocalName="Clear scales"
+    Description="Clears the list of annotative scales in the selected annotative objects, leaving the current scale">
     <msg1>Select annotative entities:</msg1>
   </mpRemoveAnnotScale>
-  <mpTotals LocalName="Totals"
-            Description="Plugin for quickly creating Totals with the possibility of obtaining values from the drawing"
-            FullDescription="Plugin collects data from tables inserted into the current document. The list of reference documents is collected according to the regulatory documents that are present in the plugin database">
+  <mpTotals
+    LocalName="Totals"
+    Description="Plugin for quickly creating Totals with the possibility of obtaining values from the drawing"
+    FullDescription="Plugin collects data from tables inserted into the current document. The list of reference documents is collected according to the regulatory documents that are present in the plugin database">
     <insert>Insert table</insert>
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
@@ -994,9 +1017,10 @@
     <h63>Write back the modified data</h63>
     <h64>There is modified data that can be written back</h64>
   </mpTotals>
-  <mpProductInsert LocalName="Product insert"
-                   Description="Plugin of inserting products from the ModPlus database as blocks containing extended data"
-                   FullDescription="Plugin creates AutoCAD blocks based on data from the database. Extended data is added to the blocks, which allows processing these blocks with other plugins and creating a specification based on them\nPlugin also allows you to add extended data to ordinary AutoCAD entities\nImportant! Blocks must be inserted with this plugin or copy already inserted, otherwise (when inserted by normal means AutoCAD), extended data will not be added!">
+  <mpProductInsert
+    LocalName="Product insert"
+    Description="Plugin of inserting products from the ModPlus database as blocks containing extended data"
+    FullDescription="Plugin creates AutoCAD blocks based on data from the database. Extended data is added to the blocks, which allows processing these blocks with other plugins and creating a specification based on them\nPlugin also allows you to add extended data to ordinary AutoCAD entities\nImportant! Blocks must be inserted with this plugin or copy already inserted, otherwise (when inserted by normal means AutoCAD), extended data will not be added!">
     <all>All</all>
     <cb1>Metal</cb1>
     <cb2>Concrete</cb2>
@@ -1062,9 +1086,10 @@
     <msg10>First point</msg10>
     <msg11>Second point</msg11>
   </mpProductInsert>
-  <mpDrawOrderByLayer LocalName="Draworder by layer"
-                      Description="Plugin serves to change the draworder according to the layers"
-                      FullDescription="Plugin processes the layers marked with check marks in the window, changing the drawing order according to the order of the marked layers. There is a mode &quot;Auto&quot;, which automatically changes the order of drawing objects on one of the two specified layers when creating or editing">
+  <mpDrawOrderByLayer
+    LocalName="Draworder by layer"
+    Description="Plugin serves to change the draworder according to the layers"
+    FullDescription="Plugin processes the layers marked with check marks in the window, changing the drawing order according to the order of the marked layers. There is a mode &quot;Auto&quot;, which automatically changes the order of drawing objects on one of the two specified layers when creating or editing">
     <h2>Reverse list</h2>
     <h5>Inversion selection</h5>
     <h6>Auto mode</h6>
@@ -1078,8 +1103,9 @@
     <h14>Load and apply the layer position stored in the current drawing. Layers that have been added after the position is saved will be moved to the end of the list</h14>
     <h15>Move the selected layer to the beginning of the list</h15>
   </mpDrawOrderByLayer>
-  <mpDocTemplates LocalName="Templates. Stage P"
-                  Description="Plugin allows you to create templates of the text part of the section according to &quot;Resolution of the Russian Federation No.87&quot; with the title page according to GOST R 21.1101-2013">
+  <mpDocTemplates
+    LocalName="Templates. Stage P"
+    Description="Plugin allows you to create templates of the text part of the section according to &quot;Resolution of the Russian Federation No.87&quot; with the title page according to GOST R 21.1101-2013">
     <h1>TEMPLATES. STAGE P</h1>
     <h2>Common Properties</h2>
     <h3>Project Name</h3>
@@ -1104,8 +1130,9 @@
     <h22>Creating a template</h22>
     <h23>Open a Word file</h23>
   </mpDocTemplates>
-  <mpPrPosition LocalName="Product position"
-                Description="Plugin adds/removes a position to the selected products and allows position marking of the item">
+  <mpPrPosition
+    LocalName="Product position"
+    Description="Plugin adds/removes a position to the selected products and allows position marking of the item">
     <h1>Select entities that are ModPlus products</h1>
     <h2>Delete</h2>
     <h3>Element</h3>
@@ -1117,9 +1144,10 @@
     <h9>MP:Multileader with mark</h9>
     <h10>Insertion point</h10>
   </mpPrPosition>
-  <mpPrToTable LocalName="Products to table"
-               Description="Plugin allows you to fill the specification table with the selected ModPlus products"
-               FullDescription="Plugin collects data for the specification from the extended product data (blocks created by the &quot;Insert product&quot; plugin, or AutoCAD primitives with the expanded data added by the &quot;Insert product&quot; plugin), as well as from blocks that have attributes for the specification. It is possible to specify a line from which the table will be populated">
+  <mpPrToTable
+    LocalName="Products to table"
+    Description="Plugin allows you to fill the specification table with the selected ModPlus products"
+    FullDescription="Plugin collects data for the specification from the extended product data (blocks created by the &quot;Insert product&quot; plugin, or AutoCAD primitives with the expanded data added by the &quot;Insert product&quot; plugin), as well as from blocks that have attributes for the specification. It is possible to specify a line from which the table will be populated">
     <h1>Select entities that are ModPlus products</h1>
     <h2>Row</h2>
     <h3>Decimals</h3>
@@ -1130,16 +1158,18 @@
     <h8>MP:Add to specification</h8>
     <h9>Product search</h9>
   </mpPrToTable>
-  <mpDimBreak LocalName="Dim break"
-              Description="Break the selected dimension into two or more new"
-              FullDescription="Plugin allows you to break the selected linear or parallel dimension into two or more dimensions by dynamically specifying a new point that will be common for the two new dimensions">
+  <mpDimBreak
+    LocalName="Dim break"
+    Description="Break the selected dimension into two or more new"
+    FullDescription="Plugin allows you to break the selected linear or parallel dimension into two or more dimensions by dynamically specifying a new point that will be common for the two new dimensions">
     <h1>Select dimension</h1>
     <h2>Wrong choice!</h2>
     <h3>Break point</h3>
   </mpDimBreak>
-  <mpBlkReplace LocalName="Block replace"
-                Description="Plugin allows to quickly replace blocks or entities in a drawing with a specified block"
-                FullDescription="Plugin works in three modes: Replace selected - allows to replace all selected blocks by one specified block; Replace similar - allows to replace all instances of one block by one specified block; Replace entities - allows to replace selected entities of Circle, Ellipse and Point types by one specified block. It allows to delete the description of the replaced block from the drawing base. Similar to the command &quot;PURGE&quot;. Various settings are present">
+  <mpBlkReplace
+    LocalName="Block replace"
+    Description="Plugin allows to quickly replace blocks or entities in a drawing with a specified block"
+    FullDescription="Plugin works in three modes: Replace selected - allows to replace all selected blocks by one specified block; Replace similar - allows to replace all instances of one block by one specified block; Replace entities - allows to replace selected entities of Circle, Ellipse and Point types by one specified block. It allows to delete the description of the replaced block from the drawing base. Similar to the command &quot;PURGE&quot;. Various settings are present">
     <h1>Select replaced block</h1>
     <wrong>Wrong choice!</wrong>
     <h2>Select replacing block</h2>
@@ -1171,8 +1201,9 @@
     <h19>Select multiple objects to replace</h19>
     <h20>Exclude unnecessary objects</h20>
   </mpBlkReplace>
-  <mpPlinesEdit LocalName="Polylines"
-                Description="Collection of various plugins for working with polylines">
+  <mpPlinesEdit
+    LocalName="Polylines"
+    Description="Collection of various plugins for working with polylines">
     <h1>POLYLINES</h1>
     <h2>Plugin works with 3D polylines</h2>
     <h3>Plugin works with 2D polylines</h3>
@@ -1260,9 +1291,10 @@
     <k29>Number of control points</k29>
     <k30>Simplify the polyline?\nThe points on the same straight line will be deleted</k30>
   </mpPlinesEdit>
-  <mpSpecifications LocalName="Specifications"
-                    Description="Plugin for the formation and filling of general specifications"
-                    FullDescription="Plugin allows you to add items to the context menu of AutoCAD, allowing you to expand the ability to work with the specifications: Context menu for tables: Add product from the database – allows you to add products from the plugin database directly into the AutoCAD table; Context menu for blocks: Add/change attributes for the specification – allows you to add attributes to the blocks for the specification (see details in the help)">
+  <mpSpecifications
+    LocalName="Specifications"
+    Description="Plugin for the formation and filling of general specifications"
+    FullDescription="Plugin allows you to add items to the context menu of AutoCAD, allowing you to expand the ability to work with the specifications: Context menu for tables: Add product from the database – allows you to add products from the plugin database directly into the AutoCAD table; Context menu for blocks: Add/change attributes for the specification – allows you to add attributes to the blocks for the specification (see details in the help)">
     <h6>CONTEXTUAL MENUS</h6>
     <h7>Available in the full version of the plugin</h7>
     <h8>Context menu for tables:</h8>
@@ -1374,8 +1406,9 @@
     <s6>Meshes</s6>
     <s7>Mortar products</s7>
   </mpSpecifications>
-  <mpLayoutManager LocalName="Layout manager"
-                   Description="Drawing layout manager displayed in the palette">
+  <mpLayoutManager
+    LocalName="Layout manager"
+    Description="Drawing layout manager displayed in the palette">
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
     <close>Close</close>
@@ -1417,9 +1450,10 @@
     <mi7>Print</mi7>
     <mi8>Export Layout to Model</mi8>
   </mpLayoutManager>
-  <mpSheetNumbers LocalName="Sheet numbering"
-                  Description="Plugin for setting the sheet number in the document and in the volume in ModPlus format and title blocks"
-                  FullDescription="Plugin works in models and in sheets. First you need to get data that is read from the title blocks and formats of the ModPlus plugin. After specifying new data, you just need to apply the changes">
+  <mpSheetNumbers
+    LocalName="Sheet numbering"
+    Description="Plugin for setting the sheet number in the document and in the volume in ModPlus format and title blocks"
+    FullDescription="Plugin works in models and in sheets. First you need to get data that is read from the title blocks and formats of the ModPlus plugin. After specifying new data, you just need to apply the changes">
     <h2>Get data from current drawing</h2>
     <h3>In model</h3>
     <h5>Sheet name</h5>
@@ -1450,9 +1484,10 @@
     <d4>Right to left and top to bottom</d4>
     <d5>Right to left and bottom to top</d5>
   </mpSheetNumbers>
-  <mpDwgBase LocalName="Dwg base"
-             Description="Base of various blocks and drawings"
-             FullDescription="The dwg database allows you to insert both blocks and finished drawings (for example, details view). The dwg database is filled with users. Plugin requires access to the internet">
+  <mpDwgBase
+    LocalName="Dwg base"
+    Description="Base of various blocks and drawings"
+    FullDescription="The dwg database allows you to insert both blocks and finished drawings (for example, details view). The dwg database is filled with users. Plugin requires access to the internet">
     <h1>Sending user blocks and drawings to the modplus.org server</h1>
     <h2>Search by database</h2>
     <h3>Search</h3>
@@ -1746,8 +1781,9 @@
     <u60>Can not access the file. Maybe it's open</u60>
     <u61>Already exists a file:</u61>
   </mpDwgBase>
-  <mpESKD LocalName="Smart"
-          Description="Create smart objects that extend the capabilities of AutoCAD, as well as allow to perform design according to state standards (ISO)">
+  <mpESKD
+    LocalName="Smart"
+    Description="Create smart objects that extend the capabilities of AutoCAD, as well as allow to perform design according to state standards (ISO)">
     <tab1>Lines</tab1>
     <tab2>Settings</tab2>
     <tab3>Axes</tab3>
@@ -2345,9 +2381,10 @@
     <p158>Text positioning side</p158>
     <d158>The side on which the horizontal text will be placed</d158>
   </mpESKD>
-  <mpStripMtext LocalName="Clear formatting"
-	              Description="Remove specified formatting from multiline text"
-	              FullDescription="Plugin allows you to delete the formatting of multiline text, mleaders, dimensions, attributes of blocks and tables">
+  <mpStripMtext
+    LocalName="Clear formatting"
+    Description="Remove specified formatting from multiline text"
+    FullDescription="Plugin allows you to delete the formatting of multiline text, mleaders, dimensions, attributes of blocks and tables">
     <h1>Select type of formatting to remove</h1>
     <h2>Check all</h2>
     <h3>Uncheck all</h3>
@@ -2392,24 +2429,27 @@
     <s19>Paragraph alignment</s19>
     <st19>Remove paragraph alignments from text</st19>
   </mpStripMtext>
-  <mpRevitSheetsMerging LocalName="Merge Revit sheets"
-	                      Description="Merging files from Revit exports into one drawing. The plugin must be run in an empty drawing. The plugin processes files exported with the &quot;Export views on sheets and links as external references&quot; checkbox disabled">
+  <mpRevitSheetsMerging
+    LocalName="Merge Revit sheets"
+    Description="Merging files from Revit exports into one drawing. The plugin must be run in an empty drawing. The plugin processes files exported with the &quot;Export views on sheets and links as external references&quot; checkbox disabled">
     <h1>File Processing...</h1>
     <h2>Error importing sheets from a file</h2>
     <h3>Selecting files to merge sheets</h3>
     <h4>Layers merging...</h4>
     <h5>Lock the viewports on the imported sheets?</h5>
   </mpRevitSheetsMerging>
-  <mpAppendText LocalName="Append text"
-				Description="Appending text to multileader, single-line text, multiline text, dimensions">
-    <ct1>Multiline text</ct1>
+  <mpAppendText
+    LocalName="Append text"
+    Description="Appending text to multileader, single-line text, multiline text, dimensions">
+    <ct1>Multiline text0</ct1>
     <ct2>Single-line text</ct2>
     <ct3>Multileader</ct3>
     <ct4>Dimensions</ct4>
     <h1>Select entities:</h1>
   </mpAppendText>
-  <mpSumArea LocalName="Sum of areas"
-        Description="Gets and displays the number and sum of areas of selected polylines, circles, arcs, splines and hatches">
+  <mpSumArea
+    LocalName="Sum of areas"
+    Description="Gets and displays the number and sum of areas of selected polylines, circles, arcs, splines and hatches">
     <h2>Total area:</h2>
     <h3>Rounding result</h3>
     <h4>Quantity:</h4>
