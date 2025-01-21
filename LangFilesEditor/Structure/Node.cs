@@ -13,4 +13,10 @@ internal class Node(string name)
     /// Items
     /// </summary>
     public ObservableCollection<Item> Items { get; } = [];
+
+    /// <inheritdoc />
+    public override string ToString()
+    {
+        return Name;
+    }
 }

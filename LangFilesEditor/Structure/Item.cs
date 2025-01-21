@@ -23,4 +23,10 @@ internal class Item : ObservableObject
     /// Values
     /// </summary>
     public Dictionary<string, ItemValue> Values { get; } = [];
+
+    /// <inheritdoc />
+    public override string ToString()
+    {
+        return Name;
+    }
 }
