@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1200"
         WindowStartupLocation="CenterScreen"
-        d:DataContext="{d:DesignInstance local:MainContext}">
+        d:DataContext="{d:DesignInstance local:MainContext}"
+        WindowState="Maximized">
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Margin" Value="4"/>
@@ -70,7 +71,11 @@
                       CanUserDeleteRows="False"
                       ItemsSource="{Binding Path=SelectedNode.Items}"
                       HorizontalScrollBarVisibility="Disabled"
-                      Margin="4">
+                      Margin="4"
+                      DataGridCell.Selected="DgItems_OnSelected"
+                      PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
+                      BeginningEdit="DgItems_OnBeginningEdit"
+                      CurrentCellChanged="DgItems_OnCurrentCellChanged">
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="HorizontalContentAlignment" Value="Center"/>

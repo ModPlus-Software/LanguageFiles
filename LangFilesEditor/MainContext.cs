@@ -48,7 +48,7 @@ internal class MainContext : ObservableObject
     /// Close without saving
     /// </summary>
     public bool CloseWithoutSave { get; private set; }
-    
+
     /// <summary>
     /// Close without save
     /// </summary>
@@ -214,7 +214,7 @@ internal class MainContext : ObservableObject
 
     private void BuildColumns()
     {
-        var order = new List<string> { "ru-RU", "en-US", "uk-UA", "de-DE", "es-ES" };
+        var order = new List<string> { "ru-RU", "uk-UA", "en-US", "de-DE", "es-ES" };
 
         foreach (var languageName in _languageNames.OrderBy(order.IndexOf))
         {
