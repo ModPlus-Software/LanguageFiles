@@ -1,15 +1,7 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿namespace LangFilesEditor;
 
-namespace LangFilesEditor;
+using System.ComponentModel;
+using System.Windows;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
@@ -19,5 +11,18 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+
+        Closing += OnClosing;
+    }
+
+    private void OnClosing(object sender, CancelEventArgs e)
+    {
+        if (DataContext is MainContext mainContext &&
+            mainContext.Nodes.Any(n => n.HasIncorrectData) && 
+            !mainContext.CloseWithoutSave)
+        {
+            MessageBox.Show("There is Nodes with errors! Fix them or close without saving");
+            e.Cancel = true;
+        }
     }
 }

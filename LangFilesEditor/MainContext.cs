@@ -17,7 +17,6 @@ internal class MainContext : ObservableObject
     private readonly MainWindow _mainWindow;
     private readonly HashSet<string> _languageNames = [];
     private Node _selectedNode;
-    private bool _closeWithoutSave;
 
     public MainContext(MainWindow mainWindow)
     {
@@ -46,13 +45,53 @@ internal class MainContext : ObservableObject
     }
 
     /// <summary>
+    /// Close without saving
+    /// </summary>
+    public bool CloseWithoutSave { get; private set; }
+    
+    /// <summary>
     /// Close without save
     /// </summary>
     public ICommand CloseWithoutSaveCommand => new RelayCommand(() =>
     {
-        _closeWithoutSave = true;
+        CloseWithoutSave = true;
         _mainWindow.Close();
     });
+
+    /// <summary>
+    /// Add row above
+    /// </summary>
+    public ICommand AddRowAboveCommand => new RelayCommand(() => Utils.SafeExecute(() =>
+    {
+        if (_mainWindow.DgItems.SelectedItems.Count > 0)
+        {
+            var index = _mainWindow.DgItems.Items.IndexOf(_mainWindow.DgItems.SelectedItems[0]!);
+            SelectedNode.Items.Insert(index, GetNewItem());
+        }
+        else
+        {
+            SelectedNode.Items.Add(GetNewItem());
+        }
+    }), _ => SelectedNode != null);
+
+    /// <summary>
+    /// Add row below
+    /// </summary>
+    public ICommand AddRowBelowCommand => new RelayCommand(() => Utils.SafeExecute(() =>
+    {
+        if (_mainWindow.DgItems.SelectedItems.Count > 0)
+        {
+            var index = _mainWindow.DgItems.Items.IndexOf(_mainWindow.DgItems.SelectedItems[0]!) + 1;
+            if (index == SelectedNode.Items.Count)
+                SelectedNode.Items.Add(GetNewItem());
+            else
+                SelectedNode.Items.Insert(index, GetNewItem());
+        }
+        else
+        {
+            SelectedNode.Items.Add(GetNewItem());
+        }
+    }), _ => SelectedNode != null);
 
     public void Load() => Utils.SafeExecute(() =>
     {
@@ -84,7 +123,7 @@ internal class MainContext : ObservableObject
                             node.Items.Add(item);
                         }
 
-                        item.Values[languageName] = new ItemValue { Value = xItem.Value };
+                        item.Add(languageName, new ItemValue { Value = xItem.Value });
                     }
                 }
             }
@@ -100,7 +139,7 @@ internal class MainContext : ObservableObject
 
     public void Save() => Utils.SafeExecute(() =>
     {
-        if (_closeWithoutSave)
+        if (CloseWithoutSave)
             return;
 
         foreach (var languageDirectory in GetLanguageDirectories())
@@ -118,16 +157,25 @@ internal class MainContext : ObservableObject
                     if (xNode == null)
                         continue;
 
+                    XElement previousXItem = null;
                     foreach (var item in node.Items)
                     {
+                        if (item.HasIncorrectData)
+                            continue;
+
                         var xItem = xNode.Element(item.Name);
                         if (xItem == null)
                         {
                             xItem = new XElement(item.Name);
-                            xNode.Add(xItem);
+                            if (previousXItem == null)
+                                xNode.AddFirst(xItem);
+                            else
+                                previousXItem.AddAfterSelf(xItem);
                             save = true;
                         }
-                        
+
+                        previousXItem = xItem;
+
                         if (xItem.Value != item.Values[languageName].Value)
                         {
                             xItem.SetValue(item.Values[languageName].Value);
@@ -143,7 +191,7 @@ internal class MainContext : ObservableObject
                         Indent = true,
                         NewLineOnAttributes = true
                     };
-                    
+
                     using (var writer = XmlWriter.Create(file, settings))
                     {
                         xDoc.WriteTo(writer);
@@ -152,6 +200,17 @@ internal class MainContext : ObservableObject
             }
         }
     });
+
+    private Item GetNewItem()
+    {
+        var item = new Item();
+        foreach (var languageName in _languageNames)
+        {
+            item.Add(languageName, new ItemValue());
+        }
+
+        return item;
+    }
 
     private void BuildColumns()
     {
