@@ -12,6 +12,11 @@ internal class ItemValue : ObservableObject
         get => _value;
         set
         {
+            value = value
+                .Replace("«", "\"")
+                .Replace("»", "\"")
+                .Replace("“", "\"")
+                .Replace("”", "\"");
             if (_value == value)
                 return;
             _value = value;
