@@ -4,12 +4,15 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Markup;
 using System.Xml;
 using System.Xml.Linq;
+using JetBrains.Annotations;
 using Structure;
 
 internal class MainContext : ObservableObject
@@ -66,11 +69,11 @@ internal class MainContext : ObservableObject
         if (_mainWindow.DgItems.SelectedItems.Count > 0)
         {
             var index = _mainWindow.DgItems.Items.IndexOf(_mainWindow.DgItems.SelectedItems[0]!);
-            SelectedNode.Items.Insert(index, GetNewItem());
+            SelectedNode.Items.Insert(index, GetNewItem(string.Empty));
         }
         else
         {
-            SelectedNode.Items.Add(GetNewItem());
+            SelectedNode.Items.Add(GetNewItem(GetNewItemName(SelectedNode.Items.LastOrDefault())));
         }
     }), _ => SelectedNode != null);
 
@@ -81,15 +84,15 @@ internal class MainContext : ObservableObject
     {
         if (_mainWindow.DgItems.SelectedItems.Count > 0)
         {
-            var index = _mainWindow.DgItems.Items.IndexOf(_mainWindow.DgItems.SelectedItems[0]!) + 1;
+            var index = _mainWindow.DgItems.Items.IndexOf(_mainWindow.DgItems.SelectedItems[^1]!) + 1;
             if (index == SelectedNode.Items.Count)
-                SelectedNode.Items.Add(GetNewItem());
+                SelectedNode.Items.Add(GetNewItem(GetNewItemName(SelectedNode.Items.LastOrDefault())));
             else
-                SelectedNode.Items.Insert(index, GetNewItem());
+                SelectedNode.Items.Insert(index, GetNewItem(GetNewItemName(SelectedNode.Items[index - 1])));
         }
         else
         {
-            SelectedNode.Items.Add(GetNewItem());
+            SelectedNode.Items.Add(GetNewItem(GetNewItemName(SelectedNode.Items.LastOrDefault())));
         }
     }), _ => SelectedNode != null);
 
@@ -201,9 +204,13 @@ internal class MainContext : ObservableObject
         }
     });
 
-    private Item GetNewItem()
+    private Item GetNewItem(string name)
     {
-        var item = new Item();
+        var item = new Item
+        {
+            Name = name,
+            HasIncorrectData = true
+        };
         foreach (var languageName in _languageNames)
         {
             item.Add(languageName, new ItemValue());
@@ -227,21 +234,19 @@ internal class MainContext : ObservableObject
         }
     }
 
-    private static DataTemplate GetDataTemplateForStringCell(string columnName)
+    private  DataTemplate GetDataTemplateForStringCell(string bindingPath)
     {
-        var stringReader = new StringReader(
-@"<DataTemplate xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation"">
-    <TextBox 
-        Background=""Transparent""
-        BorderThickness=""0""
-        Margin=""0""
-        TextWrapping=""Wrap""
-        AcceptsReturn=""True""
-        Foreground=""{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=DataGridRow}, Path=Foreground}""
-        Text=""{Binding Path=" + columnName + @", Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"" />
-</DataTemplate>");
+        var dataTemplate = (DataTemplate)_mainWindow.DgItems.Resources["ItemValueCellTemplate"];
+        var xaml = XamlWriter.Save(dataTemplate!);
+        xaml = xaml.Replace(
+            "{DynamicResource PLACEHOLDER}",
+            "{Binding Path=" + bindingPath + ", Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}");
+        
+        var stringReader = new StringReader(xaml);
+        
         var xmlReader = XmlReader.Create(stringReader);
-        return XamlReader.Load(xmlReader) as DataTemplate;
+
+        return (DataTemplate)XamlReader.Load(xmlReader);
     }
 
     private static string GetColumnHeader(string languageName)
@@ -266,5 +271,12 @@ internal class MainContext : ObservableObject
         }
 
         return parent.FullName;
+    }
+
+    private static string GetNewItemName([CanBeNull] Item previousItem)
+    {
+        if (previousItem is null)
+            return string.Empty;
+        return Regex.Replace(previousItem.Name, "\\d+$", match => (int.Parse(match.Value) + 1).ToString());
     }
 }

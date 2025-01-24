@@ -34,7 +34,7 @@ public partial class MainWindow
         if (e.OriginalSource.GetType() == typeof(DataGridCell))
         {
             // Starts the Edit on the row;
-            DataGrid grd = (DataGrid)sender;
+            var grd = (DataGrid)sender;
             grd.BeginEdit(e);
         }
     }
@@ -46,7 +46,7 @@ public partial class MainWindow
         if (cellContent != null)
         {
             // Рекурсивно ищем TextBox внутри шаблона
-            var textBox = FindVisualChild<TextBox>(cellContent);
+            var textBox = Utils.FindVisualChild<TextBox>(cellContent);
             if (textBox != null)
             {
                 textBox.Focus(); // Устанавливаем фокус
@@ -67,24 +67,5 @@ public partial class MainWindow
     private void DgItems_OnCurrentCellChanged(object sender, EventArgs e)
     {
         DgItems.BeginEdit();
-    }
-
-    // Универсальный метод для поиска дочернего элемента в визуальном дереве
-    private T FindVisualChild<T>(DependencyObject obj) where T : DependencyObject
-    {
-        for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
-        {
-            var child = VisualTreeHelper.GetChild(obj, i);
-            if (child is T t)
-            {
-                return t;
-            }
-            var childOfChild = FindVisualChild<T>(child);
-            if (childOfChild != null)
-            {
-                return childOfChild;
-            }
-        }
-        return null;
     }
 }
