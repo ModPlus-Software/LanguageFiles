@@ -208,8 +208,7 @@ internal class MainContext : ObservableObject
     {
         var item = new Item
         {
-            Name = name,
-            HasIncorrectData = true
+            Name = name
         };
         foreach (var languageName in _languageNames)
         {
