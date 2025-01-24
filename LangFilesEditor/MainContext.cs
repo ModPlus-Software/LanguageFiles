@@ -15,7 +15,7 @@ using System.Xml.Linq;
 using JetBrains.Annotations;
 using Structure;
 
-internal class MainContext : ObservableObject
+internal partial class MainContext : ObservableObject
 {
     private readonly MainWindow _mainWindow;
     private readonly HashSet<string> _languageNames = [];
