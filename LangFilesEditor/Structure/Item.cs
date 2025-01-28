@@ -8,7 +8,8 @@ internal class Item : ObservableObject
     private string _name;
     private bool _isVisible = true;
     private bool _hasIncorrectData;
-    private bool _hasDuplicate;
+    private bool _hasDuplicateName;
+    private bool _hasDuplicateValue;
     private readonly Dictionary<string, ItemValue> _values;
 
     public Item()
@@ -66,30 +67,51 @@ internal class Item : ObservableObject
                 return;
             _hasIncorrectData = value;
             OnPropertyChanged();
-            OnPropertyChanged(nameof(IsVisibleWarning));
+            OnPropertyChanged(nameof(IsVisibleError));
         }
     }
 
     /// <summary>
-    /// Has duplicate in parent <see cref="Node"/>
+    /// Has item with same name in parent <see cref="Node"/>
     /// </summary>
-    public bool HasDuplicate
+    public bool HasDuplicateName
     {
-        get => _hasDuplicate;
+        get => _hasDuplicateName;
         set
         {
-            if (_hasDuplicate == value)
+            if (_hasDuplicateName == value)
                 return;
-            _hasDuplicate = value;
+            _hasDuplicateName = value;
+            OnPropertyChanged();
+            OnPropertyChanged(nameof(IsVisibleError));
+        }
+    }
+
+    /// <summary>
+    /// Has item with same value in parent <see cref="Node"/>
+    /// </summary>
+    public bool HasDuplicateValue
+    {
+        get => _hasDuplicateValue;
+        set
+        {
+            if (_hasDuplicateValue == value)
+                return;
+            _hasDuplicateValue = value;
             OnPropertyChanged();
             OnPropertyChanged(nameof(IsVisibleWarning));
         }
     }
 
     /// <summary>
+    /// Is visible error icon
+    /// </summary>
+    public bool IsVisibleError => HasDuplicateName || HasIncorrectData;
+
+    /// <summary>
     /// Is visible warning icon
     /// </summary>
-    public bool IsVisibleWarning => HasDuplicate || HasIncorrectData;
+    public bool IsVisibleWarning => HasDuplicateValue;
 
     /// <summary>
     /// Values

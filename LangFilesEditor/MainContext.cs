@@ -7,7 +7,6 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Markup;
 using System.Xml;
@@ -43,9 +42,16 @@ internal partial class MainContext : ObservableObject
             if (_selectedNode == value)
                 return;
             _selectedNode = value;
+            value?.Validate();
             OnPropertyChanged();
+            OnPropertyChanged(nameof(IsVisibleSelectedNodeContent));
         }
     }
+
+    /// <summary>
+    /// Is visible <see cref="SelectedNode"/> content
+    /// </summary>
+    public bool IsVisibleSelectedNodeContent => SelectedNode != null;
 
     /// <summary>
     /// Close without saving

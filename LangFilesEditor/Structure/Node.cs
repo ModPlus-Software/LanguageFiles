@@ -7,6 +7,7 @@ internal class Node : ObservableObject
 {
     private bool _hasIncorrectData;
     private string _searchString;
+    private bool _hasItemsWithSameValue;
 
     public Node(string name)
     {
@@ -56,6 +57,21 @@ internal class Node : ObservableObject
         }
     }
 
+    /// <summary>
+    /// Has items with same valuew
+    /// </summary>
+    public bool HasItemsWithSameValue
+    {
+        get => _hasItemsWithSameValue;
+        set
+        {
+            if (_hasItemsWithSameValue == value)
+                return;
+            _hasItemsWithSameValue = value;
+            OnPropertyChanged();
+        }
+    }
+
     /// <inheritdoc />
     public override string ToString()
     {
@@ -80,11 +96,11 @@ internal class Node : ObservableObject
         Validate();
     }
 
-    private void Validate()
+    public void Validate()
     {
         foreach (var item in Items)
         {
-            item.HasDuplicate = false;
+            item.HasDuplicateName = false;
         }
 
         foreach (var group in Items
@@ -93,11 +109,22 @@ internal class Node : ObservableObject
         {
             foreach (var item in group)
             {
-                item.HasDuplicate = true;
+                item.HasDuplicateName = true;
             }
         }
 
-        HasIncorrectData = Items.Any(i => i.IsVisibleWarning);
+        HasItemsWithSameValue = false;
+
+        foreach (var group in Items.Where(i => i.Values.ContainsKey("ru-RU")).GroupBy(i => i.Values["ru-RU"].Value).Where(g => g.Count() > 1))
+        {
+            foreach (var item in group)
+            {
+                item.HasDuplicateValue = true;
+                HasItemsWithSameValue = true;
+            }
+        }
+
+        HasIncorrectData = Items.Any(i => i.IsVisibleError);
     }
 
     private void Search()
