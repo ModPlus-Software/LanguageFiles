@@ -37,9 +37,15 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
                     <!-- NODES -->
                     <ListBox Grid.Column="0"
+                             Grid.Row="0"
+                             Grid.RowSpan="2"
                              Margin="4"
                              ItemsSource="{Binding Path=Nodes}"
                              SelectedItem="{Binding Path=SelectedNode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
@@ -68,9 +74,29 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
 
+                    <!-- SEARCH -->
+                    <Grid Grid.Column="1"
+                          Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0"
+                                   Text="Search:"
+                                   VerticalAlignment="Center"
+                                   Margin="4"/>
+                        
+                        <TextBox Grid.Column="1"
+                                 HorizontalAlignment="Stretch"
+                                 Margin="4"
+                                 Text="{Binding Path=SelectedNode.SearchString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Grid>
+
                     <!-- ITEMS -->
                     <DataGrid Name="DgItems"
                               Grid.Column="1"
+                              Grid.Row="1"
                               Margin="4"
                               AutoGenerateColumns="False"
                               BeginningEdit="DgItems_OnBeginningEdit"
@@ -81,6 +107,13 @@
                               HorizontalScrollBarVisibility="Disabled"
                               ItemsSource="{Binding Path=SelectedNode.Items}"
                               PreparingCellForEdit="DgItems_OnPreparingCellForEdit">
+
+                        <DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}">
+                                <Setter Property="Visibility" Value="{Binding Path=IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            </Style>
+                        </DataGrid.RowStyle>
+
                         <DataGrid.Resources>
                             <Style TargetType="{x:Type DataGridColumnHeader}">
                                 <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -152,6 +185,8 @@
 
                     <!-- ITEM CONTROLS -->
                     <StackPanel Grid.Column="2"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
                                 VerticalAlignment="Top"
                                 Orientation="Vertical">
                         <Button Command="{Binding Path=AddRowAboveCommand}"

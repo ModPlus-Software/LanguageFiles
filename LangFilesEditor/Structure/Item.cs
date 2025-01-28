@@ -6,6 +6,7 @@ using System.ComponentModel;
 internal class Item : ObservableObject
 {
     private string _name;
+    private bool _isVisible = true;
     private bool _hasIncorrectData;
     private bool _hasDuplicate;
     private readonly Dictionary<string, ItemValue> _values;
@@ -35,6 +36,21 @@ internal class Item : ObservableObject
             _name = value;
             OnPropertyChanged();
             Validate();
+        }
+    }
+
+    /// <summary>
+    /// Is visible in UI
+    /// </summary>
+    public bool IsVisible
+    {
+        get => _isVisible;
+        set
+        {
+            if (_isVisible == value)
+                return;
+            _isVisible = value;
+            OnPropertyChanged();
         }
     }
 

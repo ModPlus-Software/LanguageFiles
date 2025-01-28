@@ -2,11 +2,11 @@
 
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using System.ComponentModel;
 
 internal class Node : ObservableObject
 {
     private bool _hasIncorrectData;
+    private string _searchString;
 
     public Node(string name)
     {
@@ -24,6 +24,22 @@ internal class Node : ObservableObject
     /// Items
     /// </summary>
     public ObservableCollection<Item> Items { get; }
+
+    /// <summary>
+    /// Search string
+    /// </summary>
+    public string SearchString
+    {
+        get => _searchString;
+        set
+        {
+            if (_searchString == value)
+                return;
+            _searchString = value;
+            OnPropertyChanged();
+            Search();
+        }
+    }
 
     /// <summary>
     /// Has incorrect data
@@ -82,5 +98,33 @@ internal class Node : ObservableObject
         }
 
         HasIncorrectData = Items.Any(i => i.IsVisibleWarning);
+    }
+
+    private void Search()
+    {
+        if (string.IsNullOrEmpty(SearchString))
+        {
+            foreach (var item in Items)
+            {
+                item.IsVisible = true;
+            }
+        }
+        else
+        {
+            foreach (var item in Items)
+            {
+                var isVisible = false;
+                foreach (var pair in item.Values)
+                {
+                    if (pair.Value.Value.IndexOf(SearchString, StringComparison.OrdinalIgnoreCase) > -1)
+                    {
+                        isVisible = true;
+                        break;
+                    }
+                }
+
+                item.IsVisible = isVisible;
+            }
+        }
     }
 }
