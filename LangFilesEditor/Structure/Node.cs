@@ -2,6 +2,7 @@
 
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.Windows.Input;
 
 internal class Node : ObservableObject
 {
@@ -72,6 +73,11 @@ internal class Node : ObservableObject
         }
     }
 
+    /// <summary>
+    /// Search items with duplicate names or values
+    /// </summary>
+    public ICommand SearchWithDuplicateNamesOrValuesCommand => new RelayCommand(() => SearchString = "*");
+
     /// <inheritdoc />
     public override string ToString()
     {
@@ -134,6 +140,13 @@ internal class Node : ObservableObject
             foreach (var item in Items)
             {
                 item.IsVisible = true;
+            }
+        }
+        else if (SearchString == "*")
+        {
+            foreach (var item in Items)
+            {
+                item.IsVisible = item.IsVisibleWarning || item.IsVisibleError;
             }
         }
         else

@@ -82,6 +82,7 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
                         <TextBlock Grid.Column="0"
@@ -101,6 +102,11 @@
                                    FontWeight="SemiBold"
                                    Visibility="{Binding Path=SelectedNode.HasItemsWithSameValue, Converter={StaticResource BooleanToVisibilityConverter}}"
                                    Margin="4"/>
+
+                        <Button Grid.Column="3"
+                                Content="Search them"
+                                Command="{Binding Path=SelectedNode.SearchWithDuplicateNamesOrValuesCommand}"
+                                Visibility="{Binding Path=SelectedNode.HasItemsWithSameValue, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                     </Grid>
 
                     <!-- ITEMS -->
