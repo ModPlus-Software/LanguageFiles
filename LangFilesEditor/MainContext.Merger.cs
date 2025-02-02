@@ -54,13 +54,7 @@ internal partial class MainContext
             {
                 var langName = new DirectoryInfo(directory).Name;
                 WriteToMergeLog($"Process language: {langName}");
-
-                if (langName == "es-ES")
-                {
-                    WriteToMergeLog("Skip");
-                    continue;
-                }
-
+                
                 var resultDoc = new XElement("ModPlus");
                 resultDoc.SetAttributeValue("Name", langName);
                 resultDoc.SetAttributeValue("Version", version);
