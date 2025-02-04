@@ -16,7 +16,7 @@
     <tab8>Vistas de apartamentos</tab8>
     <tab9>Editor de apartamentos</tab9>
     <tab10>Bloqueados</tab10>
-    <tab11>Classification</tab11>
+    <tab11>Clasificación</tab11>
     <rt1>No especificado</rt1>
     <rt2>Residencial</rt2>
     <rt3>No residencial</rt3>
@@ -80,7 +80,7 @@
     <p19>AP_Número de niveles</p19>
     <pd19>Número de niveles de un apartamento de varios niveles</pd19>
     <p20>HA_Entresuelo</p20>
-    <pd20>Additional parameter that allows to designate the room as Mezzanine room</pd20>
+    <pd20>Parámetro adicional que permite designar la habitación como "Entresuelo"</pd20>
     <pt1>Texto</pt1>
     <pt2>Área</pt2>
     <pt3>Unidad monetaria</pt3>
@@ -285,35 +285,36 @@
     <h193>Calcular apartamentos seleccionados</h193>
     <h194>Eliminar apartamentos seleccionados</h194>
     <h195>Área total del apartamento sin factor</h195>
-    <h196>Mandatory parameters</h196>
-    <h197>Additional parameters</h197>
+    <h196>Parámetros requeridos</h196>
+    <h197>Parámetros adicionales</h197>
     <h198>E</h198>
     <h199>Entresuelo</h199>
-    <h200>Mark the selected rooms as "Mezzanine"</h200>
-    <h201>Unmark "Mezzanine" from the selected rooms</h201>
-    <h202>Conditions</h202>
-    <h203>Current configuration</h203>
-    <h204>Specify new table name</h204>
-    <h205>There are errors that occurred during classification</h205>
-    <h206>Edit columns</h206>
-    <h208>Handle locked apartments</h208>
-    <h209>Handle any functional purpose</h209>
-    <h210>Classify</h210>
-    <h211>Classify by selected rooms</h211>
-    <h212>Classified apartments:</h212>
-    <h213>Open log</h213>
-    <h214>No apartments found for classification!</h214>
-    <h215>Specify parameter!</h215>
-    <h216>Parameter value</h216>
-    <h217>Checking that the parameter of all rooms in the apartment has the specified value</h217>
-    <h218>Checking that the apartment does not contain the specified rooms</h218>
-    <h219>Checking that the apartment contains the specified rooms</h219>
-    <h220>Checking the number of living rooms in the apartment</h220>
-    <h221>Check that the apartment has an area not less than the specified area. The area is taken from the parameter of the first available room of the apartment</h221>
-    <h222>Check that the apartment has an area not exceeding the specified area. The area is taken from the parameter of the first available room of the apartment</h222>
-    <h223>Select apartment</h223>
-    <h224>Built-in command "Select apartment"</h224>
-    <h225>Enables you to select all rooms of the apartment that includes the selected room</h225>
+    <h200>Marcar habitaciones seleccionados como "Entresuelo"</h200>
+    <h201>Desmarcar "Entresuelo" de las habitaciones seleccionadas</h201>
+    <h202>Condiciones</h202>
+    <h203>Configuración actual</h203>
+    <h204>Especifique nuevo nombre de tabla</h204>
+    <h205>Se han producido los errores durante la clasificación</h205>
+    <h206>Editar columnas</h206>
+    <h207>Parámetro objetivo:</h207>
+    <h208>Procesar apartamentos bloqueados</h208>
+    <h209>Procesar cualquier propósito funcional</h209>
+    <h210>Clasificar</h210>
+    <h211>Clasificar por habitaciones seleccionadas</h211>
+    <h212>Apartamentos clasificados:</h212>
+    <h213>Abrir registro</h213>
+    <h214>¡No se han encontrado apartamentos para clasificar!</h214>
+    <h215>¡Especifique el parámetro!</h215>
+    <h216>Valor del parámetro</h216>
+    <h217>Verificar que el parámetro de todas las habitaciones del apartamento tenga el valor especificado</h217>
+    <h218>Verificar que el apartamento no contiene las instalaciones especificadas</h218>
+    <h219>Verificar que el apartamento contiene las habitaciones especificadas</h219>
+    <h220>Verificar el número de salas de estar en un apartamento</h220>
+    <h221>Verificar que el apartamento tenga una área al menos a la especificada. El área se toma del parámetro de la primera habitación disponible en el apartamento</h221>
+    <h222>Verificar que el apartamento tenga una área no más de la especificada. El área se toma del parámetro de la primera habitación disponible en el apartamento</h222>
+    <h223>Seleccionar apartamento</h223>
+    <h224>Comando integrado "Seleccionar apartamento"</h224>
+    <h225>Le permite seleccionar todas las habitaciones del apartamento que incluye la habitación seleccionada</h225>
     <msg1>No se ha encontrado parámetro "{0}"</msg1>
     <msg2>Parámetro "{0}" no rellenado</msg2>
     <msg3>Parámetro "{0}" tiene un valor ilegal</msg3>
@@ -371,12 +372,12 @@
     <msg52>Para siguientes apartamentos (id) no se han encontrado opciones de unión entre marcadas (apartamentos con mismo propósito funcional ubicados en niveles cercanos y que tienen intersección vertical)</msg52>
     <msg53>Entre los apartamentos seleccionados hay apartamentos con un propósito funcional que no corresponde al ID de apartamento actual especificado en los ajustes. ¿Estás seguro de que desea calcular estos apartamentos con los ajustes actual?</msg53>
     <msg54>Apartamento ID={0} eliminado: parámetros de la habitación del apartamento limpiados (parámetros de cadena) o restablecidos a cero (parámetros numéricos)</msg54>
-    <msg55>Locked apartments have been added to the list on the "Locked" tab</msg55>
-    <msg56>The parameter "RM_Mezzanine" was not found. Create missing additional parameters on the "Parameters" - "Additional parameters" tab</msg56>
-    <msg57>All tables will be irrevocably removed!</msg57>
-    <msg58>Are you sure?</msg58>
-    <msg59>The rooms of the current project do not have the parameter "{0}"</msg59>
-    <msg60>An error occurred while processing the table</msg60>
+    <msg55>Los apartamentos bloqueados se han añadido a la lista en la ficha "Bloqueados"</msg55>
+    <msg56>No se ha encontrado el parámetro "HA_Entresuelo". Crear parámetros adicionales faltantes en la ficha "Parámetros" - "Parámetros adicionales"</msg56>
+    <msg57>¡Todas las tablas se eliminarán permanentemente!</msg57>
+    <msg58>¿Estás seguro?</msg58>
+    <msg59>Para las habitaciones del proyecto actual falta el parámetro"{0}"</msg59>
+    <msg60>Se produjo un error al procesar la tabla</msg60>
     <tt1>Valor del parámetro "Propósito funcional", que se utiliza para seleccionar habitaciones que se procesan. Si parámetro tiene valor diferente, habitación se omitirá cuando se estén ejecutando todos algoritmos</tt1>
     <tt2>Ocultar instrucción</tt2>
     <tt3>Para cada grupo de lista, seleccione una habitación del proyecto mediante lo cual se determinará apartamento inicial para numeración</tt3>
@@ -412,20 +413,20 @@
     <tt30>Realizar el cálculo de apartamentos seleccionados con los ajustes y orígenes actuales. Los apartamentos calculados se mostrarán adicionalmente en la ficha "Cálculos de apartamento"</tt30>
     <tt31>¡Se ha cambiado el número de habitaciones del apartamento! Es necesario recalcular el apartamento</tt31>
     <tt32>Todos los parámetros de las habitaciones del apartamento se limpiarán (parámetros de cadena) o se restablecerán a cero (parámetros numéricos)</tt32>
-    <tt33>Create a new table of classification conditions</tt33>
-    <tt34>Remove all classification condition tables</tt34>
+    <tt33>Crear una nueva tabla de condiciones de clasificación</tt33>
+    <tt34>Eliminar todas las tablas de condiciones de clasificación</tt34>
     <tt35>Para clasificar apartamentos, basta con seleccionar al menos una habitación del apartamento. Apartamentos se ensamblarán según valor del parámetro "ID de apartamento"</tt35>
-    <tt36>Add a new row</tt36>
-    <tt37>Remove selected rows</tt37>
+    <tt36>Añadir nueva fila</tt36>
+    <tt37>Eliminar filas seleccionadas</tt37>
     <tt38>Incorrect value. Check the conditions in brackets</tt38>
     <instruction>Instrucción</instruction>
     <instruction1>Todas habitaciones del proyecto deben contar con parámetros generales especificados en esta lista. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes". Todos parámetros numéricos están representados por tipo "Unidad monetaria", que le permite procesar habitaciones en grupos</instruction1>
-    <instruction1_1>Additional parameters are processed and filled only if the rooms have these parameters. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button</instruction1_1>
+    <instruction1_1>Los parámetros adicionales se procesan y se rellenan sólo si las habitaciones tienen estos parámetros. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes"</instruction1_1>
     <instruction2>En matriz de habitaciones se establecen propiedades generales para selección de habitaciones procesadas, numeración de habitaciones en apartamento, así como valores para calcular áreas del apartamento. Valores de matriz se seleccionan en función de coincidencia del propósito funcional (columna PF) y nombre de habitación. En columna "Nombre de habitación", puede especificar asterisco al final de nombre, lo que indicará una verificación de coincidencia al principio de nombre de habitación (por ejemplo, valor "Dormitorio*" coincidirá con nombres de habitaciones "Dormitorio 1", "Dormitorio 2", etc.)</instruction2>
     <!-- todo remove after 2.11.15.0 -->
     <instruction2_1>Esta tabla especifica datos utilizados para determinar tipo de apartamento. Valores "Contiene habitaciones" y "No contiene habitaciones" se rellenan con nombres de habitaciones separadas por punto y coma (;)</instruction2_1>
     <instruction2_2>Lista especifica cartografía de plantas y plantas típicas. Si se especifica planta típica para planta, al ensamblar y calcular apartamentos, todos parámetros de habitaciones ubicadas en planta especificada se tomarán de habitaciones correspondientes ubicadas en planta típica. Habitación de una planta típica se determina usando un rayo vertical dibujado a través del punto de inserción de habitación que se está procesando. Plantas se pueden especificar tanto por nombres de niveles como por marcas de nivel</instruction2_2>
-    <instruction2_3>Esta tabla especifica datos utilizados para determinar tipo de apartamento. Los valores "Contiene habitaciones" y "No contiene habitaciones" se rellenan con nombres de habitaciones separados por punto y coma (;). Los nombres de las habitaciones se pueden acompañarse con una condición para verificar área. Para ello, indique la condición y el valor del área entre paréntesis después del nombre de la habitación. Las condiciones disponibles son: igual a (=), no igual a (!=), mayor que (&gt;), mayor o igual a (&gt;=), menor que (&lt;), menor o igual a (&lt;=). Por ejemplo, "Cocina (&gt;10); Dormitorio"</instruction2_3>
+    <instruction2_3>Esta tabla especifica datos utilizados para determinar tipo de apartamento. Las condiciones "Contiene habitaciones" y "No contiene habitaciones" se rellenan con nombres de habitaciones separados por punto y coma (;). Los nombres de las habitaciones se pueden complementar con una condición para verificar el área y/o una condición para verificar que la habitación es un entresuelo. Para ello, después del nombre de la habitación, especifique entre paréntesis la condición y el valor del área y/o la condición para verificar "Entresuelo", separados por una coma, si es necesario. Las condiciones disponibles son: igual a (=), no igual a (!=), mayor que (&gt;), mayor o igual a (&gt;=), menor que (&lt;), menor o igual a (&lt;=). Para verificar "Entresuelo", añade el símbolo "e" separado por comas para establecer la condición "La habitación debe ser un entresuelo" o "ne" para establecer la condición "La habitación no debe ser un entresuelo". Es posible establecer la condición para verificar solo "Entresuelo" sin verificar el área. Por ejemplo, "Cocina (&gt;10); Dormitorio", "Despensa(&lt;5,e)", "Despensa (ne)"</instruction2_3>
     <instruction3>verificar si hay habitaciones no ubicadas y verificar que parámetros "Propósito funcional" y "Nombre" estén rellenos. Si habitación tiene valor de parámetro "Valor funcional" que coincide con valor "ID de apartamento" especificado en ajustes, entonces parámetro "Nombre" se comparará con matriz actual de habitaciones</instruction3>
     <instruction4>Ensamblaje de apartamentos se realiza a través de características geométricas de habitación, teniendo en cuenta vínculo de habitaciones a través de ventanas, puertas y separadores. A todas habitaciones de apartamento se les asigna mismo valor del parámetro "ID de apartamento". Se recomienda realizar verificación visual adicional creando combinación de colores basado en parámetro "ID de apartamento"</instruction4>
     <instruction5>Cálculo de apartamentos incluye cálculo del área del apartamento, número de habitaciones, así como determinación del tipo de apartamento a partir de Origen "Tipos de apartamentos". Todos valores obtenidos se asignan a parámetros de habitación incluido en apartamento. Todos apartamentos están determinados por valor del parámetro "ID de apartamento" especificado en etapa "Ensamblar apartamentos"</instruction5>
@@ -437,10 +438,10 @@
     <instruction8_1>El ensamblaje de apartamentos se realiza independientemente del valor actual del ID de apartamento especificado en los ajustes. El editor de apartamentos le permite realizar cambios en los valores de área de los apartamentos, así como ensamblar apartamentos de varios niveles. Al ensamblar apartamentos de varios niveles, se recalculan las áreas y se rellena el valor del parámetro "AP_Número de niveles". El editor de apartamentos también le permite recalcular apartamentos seleccionados, bloquear o desbloquear apartamentos seleccionados y eliminar apartamentos seleccionados</instruction8_1>
     <!-- todo remove after 2.11.15.0 -->
     <instruction9>Apartamentos bloqueados son apartamentos cuyos habitaciones no se procesarán durante ensamblaje de apartamentos. Bloqueo de apartamentos se realiza en ficha "Ensamblar apartamentos". Lista muestra apartamentos bloqueados independientemente de valor actual del "ID del apartamento" (valor del parámetro "Propósito funcional")</instruction9>
-    <instruction9_1>Locked apartments are apartments whose rooms will not be processed when collecting and calculating apartments. Locked apartments are displayed in the list regardless of the current value of the "Flats Identifier" (value of the "Functional Purpose" parameter)</instruction9_1>
-    <instruction10>Classification allows you to fill in certain parameters of apartments based on the characteristics of the apartments. First, you need to create tables with conditions on the "Conditions" tab, after which you can perform classification with the result displayed on the "Classification" tab</instruction10>
-    <instruction10_1>Specify the target parameter - string parameter to which the classification result will be set. The area is checked by the specified parameter of a random room of the apartment (i.e. all rooms are considered to have the same parameter value). The conditions "Contains rooms" and "Does not contain rooms" are filled with room names separated by semicolon (;). The room names can be completed with a condition to check the area and/or a condition to check that the room is a mezzanine. To do this, enter the condition and the area value in brackets after the room name and/or the condition for checking "Mezzanine" after the comma, if necessary. The available conditions are equal (=), not equal (!=), greater than (&gt;), greater than or equal to (&gt;=), less than (&lt;), less than or equal to (&lt;=). For the "Mezzanine" check, add a comma separated "m" to set the condition "The room must be a mezzanine" or "nm" to set the condition "The room must not be a mezzanine". You can set the condition to only check "Mezzanine" without checking the area. Examples: "Kitchen (&gt;10); Bedroom", "Pantry (&lt;5,m)", "Pantry (nm)"</instruction10_1>
-    <instruction10_2>Classification is performed according to the specified condition tables from the Conditions tab. If the apartment to be checked does not fall under any row of the table conditions, the target parameter will be cleared</instruction10_2>
+    <instruction9_1>Los apartamentos bloqueados son apartamentos cuyas habitaciones no serán procesadas durante el ensamblaje y los cálculos de apartamento. Lista muestra apartamentos bloqueados independientemente de valor actual del "ID del apartamento" (valor del parámetro "Propósito funcional")</instruction9_1>
+    <instruction10>La clasificación le permite rellenar ciertos parámetros de los apartamentos en función de las características de los mismos. Primero, en la ficha "Condiciones" debe crear tablas con condiciones, después de lo cual puede clasificar y mostrar el resultado en la ficha "Clasificación"</instruction10>
+    <instruction10_1>Especifique el parámetro objetivo - un parámetro de cadena en el que se registrará el resultado de la clasificación. El área se verifica por el parámetro especificado de una habitación aleatoria del apartamento (es decir, se supone que el parámetro tiene el mismo valor para todas las habitaciones). Las condiciones "Contiene habitaciones" y "No contiene habitaciones" se rellenan con nombres de habitaciones separados por punto y coma (;). Los nombres de las habitaciones se pueden complementar con una condición para verificar el área y/o una condición para verificar que la habitación es un entresuelo. Para ello, después del nombre de la habitación, especifique entre paréntesis la condición y el valor del área y/o la condición para verificar "Entresuelo", separados por una coma, si es necesario. Las condiciones disponibles son: igual a (=), no igual a (!=), mayor que (&gt;), mayor o igual a (&gt;=), menor que (&lt;), menor o igual a (&lt;=). Para verificar "Entresuelo", añade el símbolo "e" separado por comas para establecer la condición "La habitación debe ser un entresuelo" o "ne" para establecer la condición "La habitación no debe ser un entresuelo". Es posible establecer la condición para verificar solo "Entresuelo" sin verificar el área. Por ejemplo, "Cocina (&gt;10); Dormitorio", "Despensa(&lt;5,e)", "Despensa (ne)"</instruction10_1>
+    <instruction10_2>La clasificación se realiza por las tablas de condiciones marcadas en la ficha "Condiciones". Si el apartamento que se está verificando no cumple ninguna de las condiciones de la tabla, se limpiará el parámetro objetivo</instruction10_2>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume
     LocalName="Volumen de habitaciones"
