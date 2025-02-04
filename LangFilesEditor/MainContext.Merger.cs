@@ -15,6 +15,8 @@ internal partial class MainContext
     /// </summary>
     public ICommand MergeCommand => new RelayCommand(() => Utils.SafeExecute(() =>
     {
+        Save();
+
         _mainWindow.TbMergeLog.Text = string.Empty;
 
         var topDir = Registry.CurrentUser.OpenSubKey("Software\\ModPlus")?.GetValue("TopDir")?.ToString();
