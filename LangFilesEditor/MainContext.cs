@@ -138,6 +138,20 @@ internal partial class MainContext : ObservableObject
             }
         }
 
+        foreach (var node in nodes.Select(p => p.Value))
+        {
+            foreach (var nodeItem in node.Items)
+            {
+                if (nodeItem.Values.Count != _languageNames.Count)
+                {
+                    MessageBox.Show($"Wrong count of values with key {nodeItem.Name} in node {node.Name}. Fix it in files and restart program");
+                    CloseWithoutSave = true;
+                    _mainWindow.Close();
+                    return;
+                }
+            }
+        }
+
         BuildColumns();
 
         foreach (var p in nodes.OrderBy(n => n.Key))
