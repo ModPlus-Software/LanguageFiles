@@ -1883,6 +1883,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <h37>Seleccionar con red de selección</h37>
     <h38>Seleccionar por pieza</h38>
     <h39>Editar nombre y descripción de configuración actual</h39>
+    <!-- todo remove after 1.9.15.0 -->
     <h40>Duplicar configuración actual</h40>
     <h41>copia</h41>
     <h42>Procesar elementos preseleccionados</h42>
@@ -2364,6 +2365,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <sld18>Estrategia procesa componentes de muro cortina (montantes y paneles). Convencionalmente, el elemento original es un muro</sld18>
     <ssd19>Procesamiento de elementos en relación con elementos original especificados</ssd19>
     <sld19>La estrategia procesa elementos con la posibilidad de utilizar cualquier elemento de modelo especificado como elemento original</sld19>
+    <ssd20>Processing Parts</ssd20>
+    <sld20>Strategy processes Parts taking into account the source elements from which the Parts are created. If a part is created from several source elements, the first element will be considered the source element</sld20>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -2408,6 +2411,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <tp7>Insertar parámetro de barra de refuerzo objetiva</tp7>
     <te8>Material</te8>
     <tp8>Insertar parámetro de material</tp8>
+    <te9>Part</te9>
+    <tp10>Insert part parameter</tp10>
     <ft1>Funciones matemáticas</ft1>
     <ft2>Funciones lógicas</ft2>
     <ft3>Funciones de modificación</ft3>
@@ -2452,6 +2457,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <d-cv>Devuelve valor de celda de origen de datos de estrategia especificada</d-cv>
     <d-count>Devuelve el número de veces que aparece una subcadena en una cadena. Si la subcadena no se encuentra en la cadena, devuelve 0</d-count>
     <d-lstrindex>Devuelve el índice basado en cero de la última entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena</d-lstrindex>
+    <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
+    <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
   </mprParametrization>
   <mprBaseLevel
     LocalName="Nivel de referencia"

@@ -1883,6 +1883,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <h37>anhand Fensterauswahl auswählen</h37>
     <h38>Individuell auswählen</h38>
     <h39>Verarbeitung des Namens und der Beschreibung der aktuellen Konfiguration</h39>
+    <!-- todo remove after 1.9.15.0 -->
     <h40>Die aktuelle Konfiguration duplizieren</h40>
     <h41>Kopie</h41>
     <h42>Verarbeiten der vorausgewählten Elemente</h42>
@@ -2364,6 +2365,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <sld18>Die Strategie bearbeitet Bestandteile der Fassade (Pfosten und Platten). Das bedingte Quellelement ist die Wand</sld18>
     <ssd19>Bearbeitung der Elemente im Bezug auf die angegebenen Quellelemente</ssd19>
     <sld19>Die Strategie bearbeitet Elemente mit der Möglichkeit, beliebiges angegebenes Modellelement als Quellelement zu verwenden</sld19>
+    <ssd20>Processing Parts</ssd20>
+    <sld20>Strategy processes Parts taking into account the source elements from which the Parts are created. If a part is created from several source elements, the first element will be considered the source element</sld20>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -2408,6 +2411,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <tp7>Zielbewehrungsparameter einfügen</tp7>
     <te8>Material</te8>
     <tp8>Materialparameter einfügen</tp8>
+    <te9>Part</te9>
+    <tp10>Insert part parameter</tp10>
     <ft1>Mathematische Funktionen</ft1>
     <ft2>Logische Funktionen</ft2>
     <ft3>Modifizierende Funktionen</ft3>
@@ -2452,6 +2457,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <d-cv>Gibt den Wert aus der angegebenen Zelle der Strategiedatenquelle zurück</d-cv>
     <d-count>Gibt die Anzahl der Vorkommen der Teilzeichenfolge in der Zeichenfolge zurück. Gibt 0 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-count>
     <d-lstrindex>Gibt den Index zurück, der auf Null des letzten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-lstrindex>
+    <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
+    <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
   </mprParametrization>
   <mprBaseLevel
     LocalName="Grundebene"

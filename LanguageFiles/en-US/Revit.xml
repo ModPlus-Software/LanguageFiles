@@ -1883,6 +1883,7 @@ An additional check is performed by type parameters – a pair of similar famili
     <h37>Select elements by rectangle</h37>
     <h38>Pick elements</h38>
     <h39>Edit name and description of the current configuration</h39>
+    <!-- todo remove after 1.9.15.0 -->
     <h40>Duplicate current configuration</h40>
     <h41>copy</h41>
     <h42>Process pre-selected elements</h42>
@@ -2364,6 +2365,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <sld18>Strategy processes the components of the Curtain Wall (imposts and panels). Conditional source element is the wall</sld18>
     <ssd19>Processing of elements in relation to specified source elements</ssd19>
     <sld19>Strategy processes elements with the possibility to use any specified element of the model as a source element</sld19>
+    <ssd20>Processing Parts</ssd20>
+    <sld20>Strategy processes Parts taking into account the source elements from which the Parts are created. If a part is created from several source elements, the first element will be considered the source element</sld20>
     <se1>Host</se1>
     <sp1>Insert Host parameter</sp1>
     <se2>Group</se2>
@@ -2408,6 +2411,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <tp7>Insert target rebar parameter</tp7>
     <te8>Material</te8>
     <tp8>Insert material parameter</tp8>
+    <te9>Part</te9>
+    <tp10>Insert part parameter</tp10>
     <ft1>Mathematical functions</ft1>
     <ft2>Logical functions</ft2>
     <ft3>Modifying functions</ft3>
@@ -2452,6 +2457,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <d-cv>Returns the value from the specified cell of the strategy data source</d-cv>
     <d-count>Returns the number of times the substring occurs in the string. If the substring is not found in the string, returns 0</d-count>
     <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-lstrindex>
+    <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
+    <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
   </mprParametrization>
   <mprBaseLevel
     LocalName="Base level"
