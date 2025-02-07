@@ -2319,6 +2319,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <err70>Element is occupied by user "{0}" and is not available for modification</err70>
     <err71>No source element matching the filtering conditions was found on the current view</err71>
     <err72>Unable to write result to parameter of element from linked file</err72>
+    <err73>Function must contain at least two arguments: a condition and a pointer to the result column</err73>
+    <err74>The name of column {0} must be specified by a Latin letter or number</err74>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -2459,6 +2461,7 @@ An additional check is performed by type parameters – a pair of similar famili
     <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-lstrindex>
     <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
     <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
+    <d-cvif>Looks for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
   </mprParametrization>
   <mprBaseLevel
     LocalName="Base level"
