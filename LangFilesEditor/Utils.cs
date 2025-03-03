@@ -1,6 +1,5 @@
 ﻿namespace LangFilesEditor;
 
-using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 

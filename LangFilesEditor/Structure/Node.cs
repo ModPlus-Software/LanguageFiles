@@ -106,6 +106,11 @@ internal class Node : ObservableObject
     {
         foreach (var item in Items)
         {
+            item.Validate();
+        }
+
+        foreach (var item in Items)
+        {
             item.HasDuplicateName = false;
         }
 
