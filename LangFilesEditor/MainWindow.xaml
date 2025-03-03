@@ -123,11 +123,14 @@
                               HorizontalScrollBarVisibility="Disabled"
                               ItemsSource="{Binding Path=SelectedNode.Items}"
                               PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
+                              SelectionMode="Single"
+                              ScrollViewer.CanContentScroll="False"
                               Visibility="{Binding Path=IsVisibleSelectedNodeContent, Converter={StaticResource BooleanToVisibilityConverter}}">
 
                         <DataGrid.RowStyle>
                             <Style TargetType="{x:Type DataGridRow}">
                                 <Setter Property="Visibility" Value="{Binding Path=IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                <Setter Property="Background" Value="{Binding Path=BackgroundColor}"/>
                             </Style>
                         </DataGrid.RowStyle>
 
@@ -224,6 +227,22 @@
                                 Content="Add row above" />
                         <Button Command="{Binding Path=AddRowBelowCommand}"
                                 Content="Add row below" />
+                        <Border HorizontalAlignment="Stretch"
+                                BorderThickness="0 1 0 0"
+                                BorderBrush="Gray"
+                                Margin="0 4"
+                                SnapsToDevicePixels="True"/>
+                        <Button Command="{Binding Path=CopyToClipboardCommand}"
+                                Content="Copy"/>
+                        <Button Command="{Binding Path=PasteFromClipboard}"
+                                Content="Paste"/>
+                        <Border HorizontalAlignment="Stretch"
+                                BorderThickness="0 1 0 0"
+                                BorderBrush="Gray"
+                                Margin="0 4"
+                                SnapsToDevicePixels="True"/>
+                        <Button Command="{Binding Path=RemoveItemCommand}"
+                                Content="Remove"/>
                     </StackPanel>
                 </Grid>
 

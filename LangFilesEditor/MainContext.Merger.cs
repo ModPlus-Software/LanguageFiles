@@ -1,6 +1,7 @@
 ﻿namespace LangFilesEditor;
 
 using System.IO;
+using System.Net.Http;
 using System.Windows.Input;
 using System.Windows.Threading;
 using Microsoft.Win32;
@@ -13,11 +14,11 @@ internal partial class MainContext
     /// <summary>
     /// Merge language files and copy to local ModPlus directory
     /// </summary>
-    public ICommand MergeCommand => new RelayCommand(() => Utils.SafeExecute(() =>
+    public ICommand MergeCommand => new RelayCommand(() => Utils.SafeExecuteAsync(async () =>
     {
         Save();
 
-        _mainWindow.TbMergeLog.Text = string.Empty;
+        mainWindow.TbMergeLog.Text = string.Empty;
 
         var topDir = Registry.CurrentUser.OpenSubKey("Software\\ModPlus")?.GetValue("TopDir")?.ToString();
 
@@ -50,7 +51,8 @@ internal partial class MainContext
 
         try
         {
-            var version = Version.Parse(File.ReadAllText(Path.Combine(sourceLanguagesDirectory, "Version.txt")));
+            var version = await GetVersion(sourceLanguagesDirectory);
+
             var fileNames = new[] { "Common", "AutoCAD", "Revit", "Renga" };
             foreach (var directory in Directory.GetDirectories(sourceLanguagesDirectory))
             {
@@ -95,12 +97,36 @@ internal partial class MainContext
 
     private void WriteToMergeLog(string message)
     {
-        _mainWindow.Dispatcher.Invoke(() =>
+        mainWindow.Dispatcher.Invoke(() =>
         {
-            if (string.IsNullOrEmpty(_mainWindow.TbMergeLog.Text))
-                _mainWindow.TbMergeLog.Text += message;
+            if (string.IsNullOrEmpty(mainWindow.TbMergeLog.Text))
+                mainWindow.TbMergeLog.Text += message;
             else
-                _mainWindow.TbMergeLog.Text += $"{Environment.NewLine}{message}";
+                mainWindow.TbMergeLog.Text += $"{Environment.NewLine}{message}";
         }, DispatcherPriority.Render);
+    }
+
+    private static async Task<Version> GetVersion(string sourceLanguagesDirectory)
+    {
+        var localVersion = Version.Parse(await File.ReadAllTextAsync(Path.Combine(sourceLanguagesDirectory, "Version.txt")));
+        var remoteVersion = await GetRemoteVersion();
+        return localVersion > remoteVersion ? localVersion : remoteVersion;
+    }
+
+    private static async Task<Version> GetRemoteVersion()
+    {
+        try
+        {
+            const string url = "https://storage.modplus.org/Languages/Langs.xml";
+            var str = await new HttpClient().GetStringAsync(url);
+
+            return !string.IsNullOrEmpty(str) 
+                ? Version.Parse(XElement.Parse(str).Elements("lang").First().Attribute("Version")!.Value) 
+                : null;
+        }
+        catch
+        {
+            return null;
+        }
     }
 }

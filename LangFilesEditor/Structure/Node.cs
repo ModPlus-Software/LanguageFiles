@@ -92,9 +92,9 @@ internal class Node : ObservableObject
             {
                 item.ValidateInParent += ItemOnValidateInParent;
             }
-
-            Validate();
         }
+    
+        Validate();
     }
 
     private void ItemOnValidateInParent(object sender, EventArgs e)
@@ -104,6 +104,11 @@ internal class Node : ObservableObject
 
     public void Validate()
     {
+        foreach (var item in Items)
+        {
+            item.Validate();
+        }
+
         foreach (var item in Items)
         {
             item.HasDuplicateName = false;

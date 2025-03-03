@@ -14,22 +14,16 @@ using System.Xml.Linq;
 using JetBrains.Annotations;
 using Structure;
 
-internal partial class MainContext : ObservableObject
+internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 {
-    private readonly MainWindow _mainWindow;
     private readonly HashSet<string> _languageNames = [];
+    private readonly Dictionary<string, List<string>> _itemsToRemove = [];
     private Node _selectedNode;
-
-    public MainContext(MainWindow mainWindow)
-    {
-        _mainWindow = mainWindow;
-        Nodes = [];
-    }
 
     /// <summary>
     /// Sections
     /// </summary>
-    public ObservableCollection<Node> Nodes { get; }
+    public ObservableCollection<Node> Nodes { get; } = [];
 
     /// <summary>
     /// Selected node
@@ -64,7 +58,7 @@ internal partial class MainContext : ObservableObject
     public ICommand CloseWithoutSaveCommand => new RelayCommand(() =>
     {
         CloseWithoutSave = true;
-        _mainWindow.Close();
+        mainWindow.Close();
     });
 
     /// <summary>
@@ -72,9 +66,9 @@ internal partial class MainContext : ObservableObject
     /// </summary>
     public ICommand AddRowAboveCommand => new RelayCommand(() => Utils.SafeExecute(() =>
     {
-        if (_mainWindow.DgItems.SelectedItems.Count > 0)
+        if (mainWindow.DgItems.SelectedItem != null)
         {
-            var index = _mainWindow.DgItems.Items.IndexOf(_mainWindow.DgItems.SelectedItems[0]!);
+            var index = mainWindow.DgItems.Items.IndexOf(mainWindow.DgItems.SelectedItem);
             SelectedNode.Items.Insert(index, GetNewItem(string.Empty));
         }
         else
@@ -88,9 +82,9 @@ internal partial class MainContext : ObservableObject
     /// </summary>
     public ICommand AddRowBelowCommand => new RelayCommand(() => Utils.SafeExecute(() =>
     {
-        if (_mainWindow.DgItems.SelectedItems.Count > 0)
+        if (mainWindow.DgItems.SelectedItem != null)
         {
-            var index = _mainWindow.DgItems.Items.IndexOf(_mainWindow.DgItems.SelectedItems[^1]!) + 1;
+            var index = mainWindow.DgItems.Items.IndexOf(mainWindow.DgItems.SelectedItem) + 1;
             if (index == SelectedNode.Items.Count)
                 SelectedNode.Items.Add(GetNewItem(GetNewItemName(SelectedNode.Items.LastOrDefault())));
             else
@@ -101,6 +95,78 @@ internal partial class MainContext : ObservableObject
             SelectedNode.Items.Add(GetNewItem(GetNewItemName(SelectedNode.Items.LastOrDefault())));
         }
     }), _ => SelectedNode != null);
+
+    /// <summary>
+    /// Copy row to clipboard
+    /// </summary>
+    public ICommand CopyToClipboardCommand => new RelayCommand(() => Utils.SafeExecute(
+        () =>
+        {
+            var item = (Item)mainWindow.DgItems.SelectedItem;
+            var data = $"LANG_{item.Name}|{string.Join("|", item.Values.Select(v => $"{v.Key}${v.Value.Value}"))}";
+            Clipboard.Clear();
+            Utils.CopyToClipboard(data);
+        }), _ => SelectedNode != null && mainWindow.DgItems.SelectedItem != null);
+
+    /// <summary>
+    /// Paste from clipboard
+    /// </summary>
+    public ICommand PasteFromClipboard => new RelayCommand(
+        () =>
+        {
+            Item targetItem;
+            if (mainWindow.DgItems.SelectedItem is Item selectedItem)
+            {
+                targetItem = selectedItem;
+            }
+            else
+            {
+                targetItem = GetNewItem(GetNewItemName(SelectedNode.Items.LastOrDefault()));
+                SelectedNode.Items.Add(targetItem);
+            }
+
+            var data = Utils.GetFromClipboard().Replace("LANG_", string.Empty);
+            var split = data.Split('|');
+            targetItem.Name = split[0];
+            foreach (var s in split.Skip(1))
+            {
+                var value = s.Split('$');
+                targetItem.Values[value[0]].Value = value[1];
+            }
+        },
+        _ => SelectedNode != null && Clipboard.ContainsText() && Utils.GetFromClipboard().StartsWith("LANG_"));
+
+    /// <summary>
+    /// Remove item
+    /// </summary>
+    public ICommand RemoveItemCommand => new RelayCommand(
+        () => Utils.SafeExecute(() =>
+        {
+            var item = (Item)mainWindow.DgItems.SelectedItem;
+            if (!string.IsNullOrEmpty(item.Comment))
+            {
+                MessageBox.Show("Позиции, отмеченные комментарием, удалять нельзя!");
+                return;
+            }
+
+            var result = MessageBox.Show(
+                "Нельзя удалять строки из локализации, если плагин уже в релизе! Такие строки следует отмечать комментарием с todo.\nТочно удалить?",
+                "Внимание!",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question);
+            if (result == MessageBoxResult.No)
+                return;
+
+            if (!_itemsToRemove.TryGetValue(SelectedNode.Name, out var items))
+            {
+                items = [];
+                _itemsToRemove[SelectedNode.Name] = items;
+            }
+            
+            items.Add(item.Name);
+            SelectedNode.Items.Remove(item);
+        }),
+        _=> SelectedNode != null && mainWindow.DgItems.SelectedItem != null);
 
     public void Load() => Utils.SafeExecute(() =>
     {
@@ -129,6 +195,11 @@ internal partial class MainContext : ObservableObject
                         if (item == null)
                         {
                             item = new Item { Name = xItem.Name.LocalName };
+                            if (xItem.PreviousNode is XComment xComment)
+                            {
+                                item.Comment = xComment.Value;
+                            }
+
                             node.Items.Add(item);
                         }
 
@@ -146,7 +217,7 @@ internal partial class MainContext : ObservableObject
                 {
                     MessageBox.Show($"Wrong count of values with key {nodeItem.Name} in node {node.Name}. Fix it in files and restart program");
                     CloseWithoutSave = true;
-                    _mainWindow.Close();
+                    mainWindow.Close();
                     return;
                 }
             }
@@ -179,6 +250,18 @@ internal partial class MainContext : ObservableObject
                     var xNode = xDoc.Element(node.Name);
                     if (xNode == null)
                         continue;
+
+                    if (_itemsToRemove.TryGetValue(node.Name, out var items))
+                    {
+                        foreach (var itemName in items)
+                        {
+                            if (xNode.Element(itemName) is { } xItem)
+                            {
+                                xItem.Remove();
+                                save = true;
+                            }
+                        }
+                    }
 
                     XElement previousXItem = null;
                     foreach (var item in node.Items)
@@ -244,7 +327,7 @@ internal partial class MainContext : ObservableObject
 
         foreach (var languageName in _languageNames.OrderBy(order.IndexOf))
         {
-            _mainWindow.DgItems.Columns.Add(new DataGridTemplateColumn
+            mainWindow.DgItems.Columns.Add(new DataGridTemplateColumn
             {
                 Header = GetColumnHeader(languageName),
                 CellTemplate = GetDataTemplateForStringCell($"Values[{languageName}].Value"),
@@ -255,7 +338,7 @@ internal partial class MainContext : ObservableObject
 
     private  DataTemplate GetDataTemplateForStringCell(string bindingPath)
     {
-        var dataTemplate = (DataTemplate)_mainWindow.DgItems.Resources["ItemValueCellTemplate"];
+        var dataTemplate = (DataTemplate)mainWindow.DgItems.Resources["ItemValueCellTemplate"];
         var xaml = XamlWriter.Save(dataTemplate!);
         xaml = xaml.Replace(
             "{DynamicResource PLACEHOLDER}",

@@ -2,6 +2,7 @@
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Media;
 
 internal class Item : ObservableObject
 {
@@ -39,6 +40,16 @@ internal class Item : ObservableObject
             Validate();
         }
     }
+
+    /// <summary>
+    /// Комментарий к этому элементу
+    /// </summary>
+    public string Comment { get; set; }
+
+    /// <summary>
+    /// Row background color
+    /// </summary>
+    public SolidColorBrush BackgroundColor => !string.IsNullOrEmpty(Comment) ? Brushes.LightSkyBlue : Brushes.White;
 
     /// <summary>
     /// Is visible in UI
@@ -137,15 +148,15 @@ internal class Item : ObservableObject
 
     private void ItemValueOnPropertyChanged(object sender, PropertyChangedEventArgs e)
     {
-        Validate();
+        InvokeValidateInParent();
     }
 
-    private void Validate()
+    public void Validate()
     {
         HasIncorrectData = string.IsNullOrEmpty(Name) ||
                            char.IsDigit(Name[0]) ||
                            _values.Any(v => string.IsNullOrEmpty(v.Value.Value));
-        InvokeValidateInParent();
+        //InvokeValidateInParent();
     }
 
     private void InvokeValidateInParent()
