@@ -130,6 +130,7 @@
                         <DataGrid.RowStyle>
                             <Style TargetType="{x:Type DataGridRow}">
                                 <Setter Property="Visibility" Value="{Binding Path=IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                <Setter Property="Background" Value="{Binding Path=BackgroundColor}"/>
                             </Style>
                         </DataGrid.RowStyle>
 

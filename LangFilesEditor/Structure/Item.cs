@@ -2,6 +2,7 @@
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Media;
 
 internal class Item : ObservableObject
 {
@@ -39,6 +40,16 @@ internal class Item : ObservableObject
             Validate();
         }
     }
+
+    /// <summary>
+    /// Комментарий к этому элементу
+    /// </summary>
+    public string Comment { get; set; }
+
+    /// <summary>
+    /// Row background color
+    /// </summary>
+    public SolidColorBrush BackgroundColor => !string.IsNullOrEmpty(Comment) ? Brushes.LightSkyBlue : Brushes.White;
 
     /// <summary>
     /// Is visible in UI

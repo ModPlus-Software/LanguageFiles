@@ -142,6 +142,13 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     public ICommand RemoveItemCommand => new RelayCommand(
         () => Utils.SafeExecute(() =>
         {
+            var item = (Item)mainWindow.DgItems.SelectedItem;
+            if (!string.IsNullOrEmpty(item.Comment))
+            {
+                MessageBox.Show("Позиции, отмеченные комментарием, удалять нельзя!");
+                return;
+            }
+
             var result = MessageBox.Show(
                 "Нельзя удалять строки из локализации, если плагин уже в релизе! Такие строки следует отмечать комментарием с todo.\nТочно удалить?",
                 "Внимание!",
@@ -155,8 +162,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                 items = [];
                 _itemsToRemove[SelectedNode.Name] = items;
             }
-
-            var item = (Item)mainWindow.DgItems.SelectedItem;
+            
             items.Add(item.Name);
             SelectedNode.Items.Remove(item);
         }),
@@ -189,6 +195,11 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                         if (item == null)
                         {
                             item = new Item { Name = xItem.Name.LocalName };
+                            if (xItem.PreviousNode is XComment xComment)
+                            {
+                                item.Comment = xComment.Value;
+                            }
+
                             node.Items.Add(item);
                         }
 
