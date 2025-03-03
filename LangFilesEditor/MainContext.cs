@@ -102,6 +102,46 @@ internal partial class MainContext : ObservableObject
         }
     }), _ => SelectedNode != null);
 
+    /// <summary>
+    /// Copy row to clipboard
+    /// </summary>
+    public ICommand CopyToClipboardCommand => new RelayCommand(() => Utils.SafeExecute(
+        () =>
+        {
+            var item = (Item)_mainWindow.DgItems.SelectedItem;
+            var data = $"LANG_{item.Name}|{string.Join("|", item.Values.Select(v => $"{v.Key}${v.Value.Value}"))}";
+            Clipboard.Clear();
+            Utils.CopyToClipboard(data);
+        }), _ => SelectedNode != null && _mainWindow.DgItems.SelectedItem != null);
+
+    /// <summary>
+    /// Paste from clipboard
+    /// </summary>
+    public ICommand PasteFromClipboard => new RelayCommand(
+        () =>
+        {
+            Item targetItem;
+            if (_mainWindow.DgItems.SelectedItem is Item selectedItem)
+            {
+                targetItem = selectedItem;
+            }
+            else
+            {
+                targetItem = GetNewItem(GetNewItemName(SelectedNode.Items.LastOrDefault()));
+                SelectedNode.Items.Add(targetItem);
+            }
+
+            var data = Utils.GetFromClipboard().Replace("LANG_", string.Empty);
+            var split = data.Split('|');
+            targetItem.Name = split[0];
+            foreach (var s in split.Skip(1))
+            {
+                var value = s.Split('$');
+                targetItem.Values[value[0]].Value = value[1];
+            }
+        },
+        _ => SelectedNode != null && Clipboard.ContainsText() && Utils.GetFromClipboard().StartsWith("LANG_"));
+
     public void Load() => Utils.SafeExecute(() =>
     {
         var nodes = new Dictionary<string, Node>();

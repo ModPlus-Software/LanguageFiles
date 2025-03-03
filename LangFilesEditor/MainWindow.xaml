@@ -123,6 +123,7 @@
                               HorizontalScrollBarVisibility="Disabled"
                               ItemsSource="{Binding Path=SelectedNode.Items}"
                               PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
+                              SelectionMode="Single"
                               Visibility="{Binding Path=IsVisibleSelectedNodeContent, Converter={StaticResource BooleanToVisibilityConverter}}">
 
                         <DataGrid.RowStyle>
@@ -224,6 +225,10 @@
                                 Content="Add row above" />
                         <Button Command="{Binding Path=AddRowBelowCommand}"
                                 Content="Add row below" />
+                        <Button Command="{Binding Path=CopyToClipboardCommand}"
+                                Content="Copy"/>
+                        <Button Command="{Binding Path=PasteFromClipboard}"
+                                Content="Paste"/>
                     </StackPanel>
                 </Grid>
 
