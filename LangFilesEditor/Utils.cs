@@ -1,5 +1,6 @@
 ﻿namespace LangFilesEditor;
 
+using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 
@@ -10,6 +11,22 @@ internal static class Utils
         try
         {
             action.Invoke();
+        }
+        catch (Exception exception)
+        {
+            MessageBox.Show(exception.ToString());
+        }
+    }
+
+    /// <summary>
+    /// Выполнить асинхронный метод в обертке try{} catch{} без возврата bool значения
+    /// </summary>
+    /// <param name="func">Выполняемый метод</param>
+    public static async void SafeExecuteAsync(Func<Task> func)
+    {
+        try
+        {
+            await func.Invoke();
         }
         catch (Exception exception)
         {
