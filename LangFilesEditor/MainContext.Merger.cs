@@ -18,7 +18,7 @@ internal partial class MainContext
     {
         Save();
 
-        _mainWindow.TbMergeLog.Text = string.Empty;
+        mainWindow.TbMergeLog.Text = string.Empty;
 
         var topDir = Registry.CurrentUser.OpenSubKey("Software\\ModPlus")?.GetValue("TopDir")?.ToString();
 
@@ -97,12 +97,12 @@ internal partial class MainContext
 
     private void WriteToMergeLog(string message)
     {
-        _mainWindow.Dispatcher.Invoke(() =>
+        mainWindow.Dispatcher.Invoke(() =>
         {
-            if (string.IsNullOrEmpty(_mainWindow.TbMergeLog.Text))
-                _mainWindow.TbMergeLog.Text += message;
+            if (string.IsNullOrEmpty(mainWindow.TbMergeLog.Text))
+                mainWindow.TbMergeLog.Text += message;
             else
-                _mainWindow.TbMergeLog.Text += $"{Environment.NewLine}{message}";
+                mainWindow.TbMergeLog.Text += $"{Environment.NewLine}{message}";
         }, DispatcherPriority.Render);
     }
 

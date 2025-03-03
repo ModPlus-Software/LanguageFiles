@@ -226,10 +226,22 @@
                                 Content="Add row above" />
                         <Button Command="{Binding Path=AddRowBelowCommand}"
                                 Content="Add row below" />
+                        <Border HorizontalAlignment="Stretch"
+                                BorderThickness="0 1 0 0"
+                                BorderBrush="Gray"
+                                Margin="0 4"
+                                SnapsToDevicePixels="True"/>
                         <Button Command="{Binding Path=CopyToClipboardCommand}"
                                 Content="Copy"/>
                         <Button Command="{Binding Path=PasteFromClipboard}"
                                 Content="Paste"/>
+                        <Border HorizontalAlignment="Stretch"
+                                BorderThickness="0 1 0 0"
+                                BorderBrush="Gray"
+                                Margin="0 4"
+                                SnapsToDevicePixels="True"/>
+                        <Button Command="{Binding Path=RemoveItemCommand}"
+                                Content="Remove"/>
                     </StackPanel>
                 </Grid>
 
