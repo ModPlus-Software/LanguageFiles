@@ -258,6 +258,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                             if (xNode.Element(itemName) is { } xItem)
                             {
                                 xItem.Remove();
+                                save = true;
                             }
                         }
                     }
