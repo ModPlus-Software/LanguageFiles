@@ -92,9 +92,9 @@ internal class Node : ObservableObject
             {
                 item.ValidateInParent += ItemOnValidateInParent;
             }
-
-            Validate();
         }
+    
+        Validate();
     }
 
     private void ItemOnValidateInParent(object sender, EventArgs e)
