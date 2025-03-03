@@ -124,6 +124,7 @@
                               ItemsSource="{Binding Path=SelectedNode.Items}"
                               PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
                               SelectionMode="Single"
+                              ScrollViewer.CanContentScroll="False"
                               Visibility="{Binding Path=IsVisibleSelectedNodeContent, Converter={StaticResource BooleanToVisibilityConverter}}">
 
                         <DataGrid.RowStyle>
