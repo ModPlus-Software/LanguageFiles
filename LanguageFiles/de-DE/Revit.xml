@@ -2323,8 +2323,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <err70>Das Element wird aktuell vom Benutzer "{0}" verwendet und kann nicht geändert werden</err70>
     <err71>Kein den Filterbedingungen entsprechendes Quellelement in der aktuellen Ansicht gefunden</err71>
     <err72>Das Ergebnis kann nicht aus der verknüpften Datei in den Parameter des Elements geschrieben werden</err72>
-    <err73>Function must contain at least two arguments: a condition and a pointer to the result column</err73>
-    <err74>The name of column {0} must be specified by a Latin letter or number</err74>
+    <err73>Die Funktion muss mindestens zwei Argumente enthalten: die Bedingung und einen Verweis auf die Ergebnisspalte</err73>
+    <err74>Der Spaltenname {0} muss mit lateinischem Buchstaben oder einer Zahl angegeben werden</err74>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -2371,8 +2371,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <sld18>Die Strategie bearbeitet Bestandteile der Fassade (Pfosten und Platten). Das bedingte Quellelement ist die Wand</sld18>
     <ssd19>Bearbeitung der Elemente im Bezug auf die angegebenen Quellelemente</ssd19>
     <sld19>Die Strategie bearbeitet Elemente mit der Möglichkeit, beliebiges angegebenes Modellelement als Quellelement zu verwenden</sld19>
-    <ssd20>Processing Parts</ssd20>
-    <sld20>Strategy processes Parts taking into account the source elements from which the Parts are created. If a part is created from several source elements, the first element will be considered the source element</sld20>
+    <ssd20>Bearbeitung von Teilen</ssd20>
+    <sld20>Die Strategie bearbeitet Teile unter Berücksichtigung der Quellelemente, aus denen die Teile erstellt sind. Ist ein Teil aus mehreren Quellelementen erstellt, gilt das erste Element als Quellelement</sld20>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -2417,8 +2417,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <tp7>Zielbewehrungsparameter einfügen</tp7>
     <te8>Material</te8>
     <tp8>Materialparameter einfügen</tp8>
-    <te9>Part</te9>
-    <tp10>Insert part parameter</tp10>
+    <te9>Teil</te9>
+    <tp10>Parameter des Teiles einfügen</tp10>
     <ft1>Mathematische Funktionen</ft1>
     <ft2>Logische Funktionen</ft2>
     <ft3>Modifizierende Funktionen</ft3>
@@ -2463,9 +2463,9 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <d-cv>Gibt den Wert aus der angegebenen Zelle der Strategiedatenquelle zurück</d-cv>
     <d-count>Gibt die Anzahl der Vorkommen der Teilzeichenfolge in der Zeichenfolge zurück. Gibt 0 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-count>
     <d-lstrindex>Gibt den Index zurück, der auf Null des letzten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-lstrindex>
-    <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
-    <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
-    <d-cvif>Looks for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
+    <d-not>Gibt TRUE zurück, wenn die Bedingung falsch ist. Ansonsten wird FALSE zurückgegeben</d-not>
+    <d-distinct>Gibt die unterscheidenden Werte aus der Liste zurück und lässt dabei die Leerzeichen am Anfang und am Ende unbeachtet</d-distinct>
+    <d-cvif>Sucht nach der ersten Zeile in der Strategiedatenquelle (Excel-Datei), wo alle Bedingungen erfüllt sind, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvif>
   </mprParametrization>
   <mprBaseLevel
     LocalName="Grundebene"
@@ -2544,7 +2544,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <c3>Grautöne</c3>
     <c4>S/W mit Ausnahme</c4>
     <c5>Aus den Einstellungen</c5>
-    <c6>Grayscale with exclusion</c6>
+    <c6>Graustufen mit Ausnahme</c6>
     <h9>Druckart:</h9>
     <pt1>Vektorverarbeitung</pt1>
     <pt2>Rasterverarbeitung</pt2>
@@ -2705,28 +2705,28 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <h144>Pläne aus Baugruppen gruppieren</h144>
     <h145>Wenn diese Option aktiviert ist, werden die in Baugruppen platzierten Pläne getrennt von den Hauptplänen gruppiert</h145>
     <h146>Einstellungen zum Lesen von Plänen</h146>
-    <h147>Open the export folder when the export is complete:</h147>
-    <of1>Open folder</of1>
-    <of2>Do not open folder</of2>
-    <h148>Document location directory:</h148>
-    <h149>Unspecified</h149>
-    <h150>Export to the document location directory</h150>
-    <h151>If the document does not have a location directory defined, the export will be done to the specified Export directory. If the specified Export directory does not exist, the document export will be skipped</h151>
-    <h152>Display the name generated by the mask in the sheet tree</h152>
-    <h153>Name by mask:</h153>
-    <h154>Select by filter</h154>
-    <h155>Only in the current document</h155>
-    <h156>In all the documents</h156>
-    <h157>Set the sheet reading settings and click the "Read Sheets" button</h157>
-    <h158>The File Name Mask is set by your organization's settings, is independent of the selected configuration, and cannot be changed</h158>
-    <h159>The parameter value is taken from the first checked sheet of the exported document!</h159>
-    <h160>Use to output sheets to PDF:</h160>
-    <h161>Print to PDF</h161>
-    <h162>Order:</h162>
-    <h163>Document name</h163>
-    <h164>Date</h164>
-    <h165>Export format</h165>
-    <h166>Group name</h166>
+    <h147>Öffnen des Exportordners nach Abschluss des Exports:</h147>
+    <of1>Ordner öffnen</of1>
+    <of2>Ordner nicht öffnen</of2>
+    <h148>Ablageverzeichnis für Dokument:</h148>
+    <h149>Nicht festgelegt</h149>
+    <h150>Export in das Ablageverzeichnis für das Dokument</h150>
+    <h151>Wenn für das Dokument kein Ablageverzeichnis festgelegt ist, erfolgt der Export in das angegebene Speicherverzeichnis. Wenn das angegebene Speicherverzeichnis nicht existiert, wird der Dokumentenexport übersprungen</h151>
+    <h152>Gemäß Maske den generierten Namen im Baum der Pläne anzeigen</h152>
+    <h153>Name gemäß Maske:</h153>
+    <h154>Nach dem Filter auswählen</h154>
+    <h155>Nur im aktuellen Dokument</h155>
+    <h156>In allen Dokumenten</h156>
+    <h157>Legen Sie die Einstellungen für das Lesen der Pläne fest und klicken Sie auf die Schaltfläche "Pläne lesen"</h157>
+    <h158>Die Dateinamensmaske ist durch die Einstellungen Ihres Unternehmens festgelegt. Sie ist von der ausgewählten Konfiguration unabhängig und kann nicht geändert werden</h158>
+    <h159>Der Parameterwert wird aus dem ersten markierten Plan des exportierten Dokuments übernommen!</h159>
+    <h160>Zum Anzeigen der Pläne als PDF folgendes verwenden:</h160>
+    <h161>PDF-Drucker</h161>
+    <h162>Reihenfolge:</h162>
+    <h163>Dokumentname</h163>
+    <h164>Datum</h164>
+    <h165>Exportformat</h165>
+    <h166>Gruppenname</h166>
     <tvm1>Modus deaktivieren</tvm1>
     <tvm2>Modus aktiviert lassen</tvm2>
     <tvm3>Fragen</tvm3>
@@ -2777,7 +2777,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <err24>In der Formatliste ist bereits ein Format mit dieser Größe vorhanden</err24>
     <err25>Das Format hat keinen Namen und wird beim Hinzufügen zum Drucker nicht bearbeitet</err25>
     <err26>Das Komprimieren der Datei "{0}" ist fehlgeschlagen. Fehler:</err26>
-    <err27>The current sheet is missing Title Blocks. The current sheet cannot be exported!</err27>
+    <err27>Es fehlen Planköpfe auf dem aktuellen Plan. Kein Export des aktuellen Plans ist möglich!</err27>
   </mprSheetExport>
   <mprHeightSplitter
     LocalName="In die Höhe teilen"
@@ -3193,9 +3193,9 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <!-- todo remove after 1.6.2.0 -->
     <t137>Gruppe ändern</t137>
     <t138>Wählen Sie eine neue Gruppe für den Parameter "{0}"</t138>
-    <t139>Select families</t139>
-    <t140>Delete backup files</t140>
-    <t141>After saving the family, all backup files of the form Family_name.nnnn.rfa next to the family file will be deleted</t141>
+    <t139>Wählen Sie Familien aus</t139>
+    <t140>Sicherungsdateien löschen</t140>
+    <t141>Nach dem Speichern der Familie werden alle neben der Familiendatei liegenden Sicherungsdateien vom Typ familienname.nnnn.rfa gelöscht</t141>
     <t142>Due to limitations in Revit API, if you change the group of a non-shared family parameter, the description will be lost!</t142>
     <t143>In the current family type, it is not possible to use the plugin. The family editor is open in Read Only mode</t143>
     <t144>The row corresponding to the parameter is not found in the imported file</t144>
@@ -3221,7 +3221,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <fs1>Aus Datei</fs1>
     <fs2>Aus Projekt</fs2>
     <fs3>Geöffnete Familien</fs3>
-    <fs4>From Project Browser</fs4>
+    <fs4>Aus dem Projektbrowser</fs4>
     <s1>Ausgewählte Elemente</s1>
     <s2>In der aktuellen Ansicht</s2>
     <s3>Im gesamten Projekt</s3>
@@ -3461,43 +3461,41 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <vt10>Schnittansicht</vt10>
     <vt11>Detailansicht</vt11>
   </mprFilterSelection>
-  <mprPhases
-    LocalName="Phases"
-    Description="Set phases by filter">
+  <mprPhases LocalName="Phasen" Description="Einstellung der Phasen gemäß Filter">
     <t1>Failed to assign phases to elements</t1>
-    <t2>Display in the results the id of the elements to which the workset is assigned</t2>
-    <t3>Enter name</t3>
-    <t4>You need to enter a name</t4>
-    <t5>Name "{0}" already used</t5>
-    <t6>Enter new name</t6>
-    <t7>No configuration selected!</t7>
-    <t8>Create new group</t8>
-    <t9>Enter name of group</t9>
-    <t10>Rename the group</t10>
-    <t11>Add a new phase setup rule</t11>
-    <t12>Delete group</t12>
-    <t13>Phase Created</t13>
-    <t14>Phase Demolished</t14>
-    <t15>Invert selection</t15>
+    <t2>In den Ergebnissen der id Elemente anzeigen, denen die Phase zugewiesen ist</t2>
+    <t3>Geben Sie einen Namen ein</t3>
+    <t4>Sie müssen einen Namen eingeben</t4>
+    <t5>Der Name {0} wird bereits verwendet</t5>
+    <t6>Geben Sie einen neuen Namen ein</t6>
+    <t7>Keine Konfiguration ausgewählt!</t7>
+    <t8>Eine neue Gruppe erstellen</t8>
+    <t9>Geben Sie einen Gruppennamen ein</t9>
+    <t10>Die Gruppe umbenennen</t10>
+    <t11>Eine neue Regel für Einstellung der Phase hinzufügen</t11>
+    <t12>Gruppe löschen</t12>
+    <t13>Phase erstellt</t13>
+    <t14>Phase abgebrochen</t14>
+    <t15>Auswahl umkehren</t15>
     <t16>No phase has been selected</t16>
-    <t17>Application of the phases</t17>
+    <t17>Anwendung der Phasen</t17>
     <t18>Delete the phase setup rule</t18>
     <t19>Set phases by filter</t19>
     <t20>None</t20>
     <t21>Don't change</t21>
     <t22>The phase is not present in the current project</t22>
-    <ie1>xml-file</ie1>
-    <ie2>Current Revit document</ie2>
-    <msg1>You are trying to import a phase group storage file</msg1>
-    <msg2>The selected file is not a configuration data storage file and cannot be imported!</msg2>
-    <msg4>The current configuration "{0}" will be permanently deleted!</msg4>
-    <msg5>Group "{0}" will be permanently deleted!</msg5>
-    <msg6>Copy filter settings?</msg6>
-    <msg7>Nothing is selected!</msg7>
-    <msg8>No phase found</msg8>
-    <msg9>No application conditions are set for the phase</msg9>
-    <msg10>An error "{0}" occurred when setting the phase of elements</msg10>
-    <msg11>No phases have been set for the following items because the items are occupied by user "{0}"</msg11>
+    <ie1>xml-Datei</ie1>
+    <ie2>Aktuelles Revit-Dokument</ie2>
+    <msg1>Sie versuchen, eine Phasengruppenspeicherdatei zu importieren</msg1>
+    <msg2>Die ausgewählte Datei ist keine Konfigurationsdatenspeicherdatei und kann nicht importiert werden!</msg2>
+    <msg4>Die aktuelle Konfiguration "{0}" wird unwiderruflich gelöscht!</msg4>
+    <msg5>Die Gruppe "{0}" wird unwiderruflich gelöscht!</msg5>
+    <msg6>Wollen Sie die Filtereinstellungen kopieren?</msg6>
+    <msg7>Es ist nichts ausgewählt!</msg7>
+    <msg8>Keine Phase gefunden</msg8>
+    <msg9>Für die Phase sind keine Anwendungsbedingungen festgelegt</msg9>
+    <msg10>Bei der Einstellung einer Phase für Elemente ist Fehler "{0}" aufgetreten</msg10>
+    <msg11>Für die folgenden Elemente wurden keine Phasen festgelegt, da die Elemente vom Benutzer "{0}" bearbeitet werden</msg11>
     <msg12>Phase Created "{0}" applied to {1} elements</msg12>
     <msg13>Phase Demolished "{0}" is applied to {1} elements</msg13>
     <msg14>Phase Created "{0}" is not applied to {1} elements</msg14>
