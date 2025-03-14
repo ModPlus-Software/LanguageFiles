@@ -3439,7 +3439,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   <mprPhases
     LocalName="Phases"
     Description="Set phases by filter">
-    <t1>The "{0}" phase is not applied to {1} items</t1>
+    <t1>Failed to assign phases to elements</t1>
     <t2>Display in the results the id of the elements to which the workset is assigned</t2>
     <t3>Enter name</t3>
     <t4>You need to enter a name</t4>
@@ -3454,10 +3454,13 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t13>Phase Created</t13>
     <t14>Phase Demolished</t14>
     <t15>Invert selection</t15>
-    <t16>Phase not set or selected phase not added to the project</t16>
+    <t16>No phase has been selected</t16>
     <t17>Application of the phases</t17>
     <t18>Delete the phase setup rule</t18>
     <t19>Set phases by filter</t19>
+    <t20>None</t20>
+    <t21>Don't change</t21>
+    <t22>The phase is not present in the current project</t22>
     <ie1>xml-file</ie1>
     <ie2>Current Revit document</ie2>
     <msg1>You are trying to import a phase group storage file</msg1>
@@ -3470,6 +3473,9 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <msg9>No application conditions are set for the phase</msg9>
     <msg10>An error "{0}" occurred when setting the phase of elements</msg10>
     <msg11>No phases have been set for the following items because the items are occupied by user "{0}"</msg11>
-    <msg12>The "{0}" phase is applied to {1} items</msg12>
+    <msg12>Erection phase "{0}" applied to {1} elements</msg12>
+    <msg13>The demolition phase "{0}" is applied to {1} elements</msg13>
+    <msg14>Erection phase "{0}" is not applied to {1} elements</msg14>
+    <msg15>The demolition phase "{0}" is not applied to {1} elements</msg15>
   </mprPhases>
 </ModPlus>
