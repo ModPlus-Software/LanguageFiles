@@ -2221,6 +2221,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t108>Al establecer un valor en un parámetro, después de establecer cada valor en el parámetro de cada elemento, los cambios se registrarán en el documento. En este caso, en cada declaración posterior de la fórmula, puede utilizar los valores de los parámetros modificados en la declaración anterior de la fórmula. Esta opción puede tardar más tiempo por procesamiento.</t108>
     <t109>Al procesar una regla, los cambios se registrarán en el documento después de que se hayan procesado todas las expresiones de una regla. En este caso, no es posible cambiar y luego reutilizar el mismo parámetro dentro de una regla, ya que el valor modificado del parámetro aún no está registrado en el documento.</t109>
     <t110>Al procesar una estrategia, los cambios se registrarán en el documento después de que se hayan procesado todas las reglas de la estrategia. En este caso, no es posible cambiar y luego reutilizar el mismo parámetro en diferentes reglas de la misma estrategia, ya que el valor modificado del parámetro aún no está registrado en el documento.</t110>
+    <t111>Export the current configuration. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t111>
+    <t112>Export the current strategy. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t112>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -3194,6 +3196,18 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t141>After saving the family, all backup files of the form Family_name.nnnn.rfa next to the family file will be deleted</t141>
     <t142>Due to limitations in Revit API, if you change the group of a non-shared family parameter, the description will be lost!</t142>
     <t143>In the current family type, it is not possible to use the plugin. The family editor is open in Read Only mode</t143>
+    <t144>The row corresponding to the parameter is not found in the imported file</t144>
+    <t145>Failed to recognize the action in "{0}". Make sure that the application language matches the file being loaded</t145>
+    <t146>An action from the value "{0}" is recognized but not added to the parameter "{1}" because the action is not applicable to the parameter or the parameter is already marked as deletable</t146>
+    <t147>Failed to recognize the group specified in "{0}". Some group names may differ between Revit versions</t147>
+    <t148>The storage folder for presets is set by your organization's settings. You do not have access to save presets</t148>
+    <t149>Load preset</t149>
+    <t150>Save preset</t150>
+    <t151>Preset name</t151>
+    <t152>There are no saved presets for the current section in the storage</t152>
+    <t153>Change parameter definition</t153>
+    <t154>Add categories</t154>
+    <t155>Remove categories</t155>
     <ea1>Nada</ea1>
     <ea2>Abrir carpeta de destino</ea2>
     <ea3>Abrir archivo creado</ea3>
@@ -3248,6 +3262,9 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <msg31>Verificar si valores del nombre del parámetro, de tipo, de grupo y lista de categorías están rellenos</msg31>
     <msg32>Valor ingresado no coincide con tipo de parámetro</msg32>
     <msg33>The Revit API does not allow to create or edit parameters in families of some types. Loading such families is skipped</msg33>
+    <msg34>Preset "{0}" will be irrevocably deleted! Continue?</msg34>
+    <msg35>Preset "{0}" has been deleted</msg35>
+    <msg36>Shared parameter replaced by Family parameter</msg36>
     <err1>Error inesperado al inicializar ventana</err1>
     <err2>Error inesperado al cerrar ventana</err2>
     <err3>Se ha producido un error al crear parámetro</err3>
@@ -3270,6 +3287,9 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <err20>No se puede crear parámetro "{0}" en la familia "{1}"</err20>
     <err21>Familia no está descargada porque archivo familiar es de "Sólo lectura"</err21>
     <err22>No se puede establecer fórmula en parámetro, porque se produjo un error incontrolable en API de Revit, lo que indica un problema en API de Revit. Para establecer fórmula para este parámetro, utilice cuadro de diálogo estándar de edición de parámetros</err22>
+    <err23>Specify the name of the preset</err23>
+    <err24>There is already a preset with this name in the storage. The existing preset will be overwritten!</err24>
+    <err25>The preset name must not contain the following characters: \ / : * ? " &lt; &gt; |</err25>
   </mprParameters>
   <mprOverrideGraphicManager
     LocalName="Administrador de redeterminación de gráficos"

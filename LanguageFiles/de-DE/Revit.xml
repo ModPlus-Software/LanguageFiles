@@ -2221,6 +2221,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t108>Beim Setzen eines Wertes im Parameter: Nach dem Setzen jedes Wertes für jeweilige Parameter aller Elemente erfolgt das Festlegen der Änderungen im Dokument. In diesem Fall können Sie in jeder nachfolgenden Formelanweisung die in der vorherigen Formelanweisung geänderten Parameterwerte verwenden. Diese Option kann mehr Verarbeitungszeit erfordern.</t108>
     <t109>Bei der Verarbeitung der Regel: Das Festlegen der Änderungen im Dokument erfolgt nach der Verarbeitung aller Ausdrücke einer Regel. In diesem Fall ist es nicht möglich, denselben Parameter innerhalb einer Regel zu ändern und anschließend wiederzuverwenden, weil der geänderte Parameterwert noch nicht im Dokument festgelegt wurde.</t109>
     <t110>Bei der Verarbeitung der Strategie: Das Festlegen der Änderungen im Dokument erfolgt nach der Verarbeitung aller Regel der jeweiligen Strategie. In diesem Fall ist es nicht möglich, denselben Parameter in verschiedenen Regeln einer Strategie zu ändern und anschließend wiederzuverwenden, weil der geänderte Parameterwert noch nicht im Dokument festgelegt wurde.</t110>
+    <t111>Export the current configuration. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t111>
+    <t112>Export the current strategy. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t112>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -3194,6 +3196,18 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t141>After saving the family, all backup files of the form Family_name.nnnn.rfa next to the family file will be deleted</t141>
     <t142>Due to limitations in Revit API, if you change the group of a non-shared family parameter, the description will be lost!</t142>
     <t143>In the current family type, it is not possible to use the plugin. The family editor is open in Read Only mode</t143>
+    <t144>The row corresponding to the parameter is not found in the imported file</t144>
+    <t145>Failed to recognize the action in "{0}". Make sure that the application language matches the file being loaded</t145>
+    <t146>An action from the value "{0}" is recognized but not added to the parameter "{1}" because the action is not applicable to the parameter or the parameter is already marked as deletable</t146>
+    <t147>Failed to recognize the group specified in "{0}". Some group names may differ between Revit versions</t147>
+    <t148>The storage folder for presets is set by your organization's settings. You do not have access to save presets</t148>
+    <t149>Load preset</t149>
+    <t150>Save preset</t150>
+    <t151>Preset name</t151>
+    <t152>There are no saved presets for the current section in the storage</t152>
+    <t153>Change parameter definition</t153>
+    <t154>Add categories</t154>
+    <t155>Remove categories</t155>
     <ea1>Nichts</ea1>
     <ea2>Zielordner öffnen</ea2>
     <ea3>Erstellte Datei öffnen</ea3>
@@ -3248,6 +3262,9 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <msg31>Überprüfen Sie, ob die Wertfelder für den Parameternamen, den Typ und der Gruppe sowie für die Kategorieliste ausgefüllt sind</msg31>
     <msg32>Festlegen des Parameterwertes ist fehlgeschlagen</msg32>
     <msg33>The Revit API does not allow to create or edit parameters in families of some types. Loading such families is skipped</msg33>
+    <msg34>Preset "{0}" will be irrevocably deleted! Continue?</msg34>
+    <msg35>Preset "{0}" has been deleted</msg35>
+    <msg36>Shared parameter replaced by Family parameter</msg36>
     <err1>Unerwarteter Fehler beim Initialisieren des Fensters aufgetreten</err1>
     <err2>Unerwarteter Fehler beim Schließen des Fensters aufgetreten</err2>
     <err3>Beim Erstellen des Parameters ist ein Fehler aufgetreten</err3>
@@ -3270,6 +3287,9 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <err20>Erstellen des Parameters "{0}" in der Familie "{1}" ist fehlgeschlagen</err20>
     <err21>Die Familie ist nicht geladen, weil die Datei der Familie das Attribut "Nur Lesen" hat</err21>
     <err22>Keine Formel konnte in dem Parameter festgelegt werden, da in der Revit-API ein unkontrollierbarer Fehler aufgetreten ist, der auf einen Fehler in der Revit-API hinweist. Um eine Formel für diesen Parameter festzulegen, verwenden Sie das Standarddialogfeld zur Parameterbearbeitung</err22>
+    <err23>Specify the name of the preset</err23>
+    <err24>There is already a preset with this name in the storage. The existing preset will be overwritten!</err24>
+    <err25>The preset name must not contain the following characters: \ / : * ? " &lt; &gt; |</err25>
   </mprParameters>
   <mprOverrideGraphicManager
     LocalName="Manager zur Grafiküberschreibung"
