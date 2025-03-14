@@ -2221,6 +2221,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <t108>When setting value to parameter - after setting each value to the parameter of each element, the changes in the document will be committed. In this case, in each subsequent formula expression you can use the values of the parameters changed in the previous formula expression. This option may require more time for processing.</t108>
     <t109>When processing rule - committing changes in the document will be performed after all expressions of one rule are processed. In this case it is not possible to change and then reuse the same parameter within one rule, because the changed parameter value is not yet committed in the document.</t109>
     <t110>When processing strategy - committing changes in the document will be performed after all strategy rules have been processed. In this case it is not possible to change and then reuse the same parameter in different rules of the same strategy, because the changed parameter value is not yet committed in the document.</t110>
+    <t111>Export the current configuration. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t111>
+    <t112>Export the current strategy. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t112>
     <msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
     <msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
     <msg3>List of strategies is not empty</msg3>
@@ -3164,6 +3166,20 @@ An additional check is performed by type parameters – a pair of similar famili
     <t139>Select families</t139>
     <t140>Delete backup files</t140>
     <t141>After saving the family, all backup files of the form Family_name.nnnn.rfa next to the family file will be deleted</t141>
+    <t142>Due to limitations in Revit API, if you change the group of a non-shared family parameter, the description will be lost!</t142>
+    <t143>In the current family type, it is not possible to use the plugin. The family editor is open in Read Only mode</t143>
+    <t144>The row corresponding to the parameter is not found in the imported file</t144>
+    <t145>Failed to recognize the action in "{0}". Make sure that the application language matches the file being loaded</t145>
+    <t146>An action from the value "{0}" is recognized but not added to the parameter "{1}" because the action is not applicable to the parameter or the parameter is already marked as deletable</t146>
+    <t147>Failed to recognize the group specified in "{0}". Some group names may differ between Revit versions</t147>
+    <t148>The storage folder for presets is set by your organization's settings. You do not have access to save presets</t148>
+    <t149>Load preset</t149>
+    <t150>Save preset</t150>
+    <t151>Preset name</t151>
+    <t152>There are no saved presets for the current section in the storage</t152>
+    <t153>Change parameter definition</t153>
+    <t154>Add categories</t154>
+    <t155>Remove categories</t155>
     <ea1>Nothing</ea1>
     <ea2>Open target folder</ea2>
     <ea3>Open created file</ea3>
@@ -3217,6 +3233,10 @@ An additional check is performed by type parameters – a pair of similar famili
     <msg30>Check if the parameter name and type values are filled in</msg30>
     <msg31>Check if the parameter name, type, group and category list values are filled in</msg31>
     <msg32>The entered value does not match the parameter type</msg32>
+    <msg33>The Revit API does not allow to create or edit parameters in families of some types. Loading such families is skipped</msg33>
+    <msg34>Preset "{0}" will be irrevocably deleted! Continue?</msg34>
+    <msg35>Preset "{0}" has been deleted</msg35>
+    <msg36>Shared parameter replaced by Family parameter</msg36>
     <err1>An unexpected error occurred during window initialization</err1>
     <err2>An unexpected error occurred when closing the window</err2>
     <err3>An error occurred while creating the parameter</err3>
@@ -3239,6 +3259,9 @@ An additional check is performed by type parameters – a pair of similar famili
     <err20>Failed to create parameter "{0}" in family "{1}"</err20>
     <err21>The family is not loaded because the family file has a "Read Only" attribute</err21>
     <err22>Failed to set a formula to a parameter because an uncontrolled error occurred in the Revit API, indicating a bug in the Revit API. To set a formula to this parameter, use the standard parameter editing dialog</err22>
+    <err23>Specify the name of the preset</err23>
+    <err24>There is already a preset with this name in the storage. The existing preset will be overwritten!</err24>
+    <err25>The preset name must not contain the following characters: \ / : * ? " &lt; &gt; |</err25>
   </mprParameters>
   <mprOverrideGraphicManager
     LocalName="Graphics Override manager"
