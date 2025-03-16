@@ -2221,6 +2221,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t108>Al establecer un valor en un parámetro, después de establecer cada valor en el parámetro de cada elemento, los cambios se registrarán en el documento. En este caso, en cada declaración posterior de la fórmula, puede utilizar los valores de los parámetros modificados en la declaración anterior de la fórmula. Esta opción puede tardar más tiempo por procesamiento.</t108>
     <t109>Al procesar una regla, los cambios se registrarán en el documento después de que se hayan procesado todas las expresiones de una regla. En este caso, no es posible cambiar y luego reutilizar el mismo parámetro dentro de una regla, ya que el valor modificado del parámetro aún no está registrado en el documento.</t109>
     <t110>Al procesar una estrategia, los cambios se registrarán en el documento después de que se hayan procesado todas las reglas de la estrategia. En este caso, no es posible cambiar y luego reutilizar el mismo parámetro en diferentes reglas de la misma estrategia, ya que el valor modificado del parámetro aún no está registrado en el documento.</t110>
+    <t111>Export the current configuration. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t111>
+    <t112>Export the current strategy. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t112>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -2248,6 +2250,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <msg25>No es posible seleccionar elementos en vista actual. Cambiar a otra vista</msg25>
     <msg26>¿Reemplazar filtros de estrategia actuales con filtros de estrategia del archivo importado?</msg26>
     <msg27>¿Reemplazar origen de datos actual de estrategia con origen de datos del archivo importado?</msg27>
+    <msg28>The selected file is not a configuration storage file or a strategy storage file</msg28>
+    <msg29>The selected file is not a strategy storage file</msg29>
     <err1>Cada expresión de una fórmula debe comenzar con parámetro objetivo "$[NombreDelParámetro]="</err1>
     <err2>Número de paréntesis de apertura debe ser igual al número de paréntesis de cierre</err2>
     <err3>Número de llaves de apertura debe ser igual al número de llaves de cierre</err3>
@@ -3194,6 +3198,18 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t141>After saving the family, all backup files of the form Family_name.nnnn.rfa next to the family file will be deleted</t141>
     <t142>Due to limitations in Revit API, if you change the group of a non-shared family parameter, the description will be lost!</t142>
     <t143>In the current family type, it is not possible to use the plugin. The family editor is open in Read Only mode</t143>
+    <t144>The row corresponding to the parameter is not found in the imported file</t144>
+    <t145>Failed to recognize the action in "{0}". Make sure that the application language matches the file being loaded</t145>
+    <t146>An action from the value "{0}" is recognized but not added to the parameter "{1}" because the action is not applicable to the parameter or the parameter is already marked as deletable</t146>
+    <t147>Failed to recognize the group specified in "{0}". Some group names may differ between Revit versions</t147>
+    <t148>The storage folder for presets is set by your organization's settings. You do not have access to save presets</t148>
+    <t149>Load preset</t149>
+    <t150>Save preset</t150>
+    <t151>Preset name</t151>
+    <t152>There are no saved presets for the current section in the storage</t152>
+    <t153>Change parameter definition</t153>
+    <t154>Add categories</t154>
+    <t155>Remove categories</t155>
     <ea1>Nada</ea1>
     <ea2>Abrir carpeta de destino</ea2>
     <ea3>Abrir archivo creado</ea3>
@@ -3248,6 +3264,9 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <msg31>Verificar si valores del nombre del parámetro, de tipo, de grupo y lista de categorías están rellenos</msg31>
     <msg32>Valor ingresado no coincide con tipo de parámetro</msg32>
     <msg33>The Revit API does not allow to create or edit parameters in families of some types. Loading such families is skipped</msg33>
+    <msg34>Preset "{0}" will be irrevocably deleted! Continue?</msg34>
+    <msg35>Preset "{0}" has been deleted</msg35>
+    <msg36>Shared parameter replaced by Family parameter</msg36>
     <err1>Error inesperado al inicializar ventana</err1>
     <err2>Error inesperado al cerrar ventana</err2>
     <err3>Se ha producido un error al crear parámetro</err3>
@@ -3270,6 +3289,9 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <err20>No se puede crear parámetro "{0}" en la familia "{1}"</err20>
     <err21>Familia no está descargada porque archivo familiar es de "Sólo lectura"</err21>
     <err22>No se puede establecer fórmula en parámetro, porque se produjo un error incontrolable en API de Revit, lo que indica un problema en API de Revit. Para establecer fórmula para este parámetro, utilice cuadro de diálogo estándar de edición de parámetros</err22>
+    <err23>Specify the name of the preset</err23>
+    <err24>There is already a preset with this name in the storage. The existing preset will be overwritten!</err24>
+    <err25>The preset name must not contain the following characters: \ / : * ? " &lt; &gt; |</err25>
   </mprParameters>
   <mprOverrideGraphicManager
     LocalName="Administrador de redeterminación de gráficos"
@@ -3442,7 +3464,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
   <mprPhases
     LocalName="Phases"
     Description="Set phases by filter">
-    <t1>The "{0}" phase is not applied to {1} items</t1>
+    <t1>Failed to assign phases to elements</t1>
     <t2>Display in the results the id of the elements to which the workset is assigned</t2>
     <t3>Enter name</t3>
     <t4>You need to enter a name</t4>
@@ -3454,12 +3476,16 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t10>Rename the group</t10>
     <t11>Add a new phase setup rule</t11>
     <t12>Delete group</t12>
-    <t13>Erection phase</t13>
-    <t14>Demolition phase</t14>
+    <t13>Phase Created</t13>
+    <t14>Phase Demolished</t14>
     <t15>Invert selection</t15>
-    <t16>The selected phase is not added to the project</t16>
+    <t16>No phase has been selected</t16>
     <t17>Application of the phases</t17>
     <t18>Delete the phase setup rule</t18>
+    <t19>Set phases by filter</t19>
+    <t20>None</t20>
+    <t21>Don't change</t21>
+    <t22>The phase is not present in the current project</t22>
     <ie1>xml-file</ie1>
     <ie2>Current Revit document</ie2>
     <msg1>You are trying to import a phase group storage file</msg1>
@@ -3472,6 +3498,9 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <msg9>No application conditions are set for the phase</msg9>
     <msg10>An error "{0}" occurred when setting the phase of elements</msg10>
     <msg11>No phases have been set for the following items because the items are occupied by user "{0}"</msg11>
-    <msg12>The "{0}" phase is applied to {1} items</msg12>
+    <msg12>Phase Created "{0}" applied to {1} elements</msg12>
+    <msg13>Phase Demolished "{0}" is applied to {1} elements</msg13>
+    <msg14>Phase Created "{0}" is not applied to {1} elements</msg14>
+    <msg15>Phase Demolished "{0}" is not applied to {1} elements</msg15>
   </mprPhases>
 </ModPlus>

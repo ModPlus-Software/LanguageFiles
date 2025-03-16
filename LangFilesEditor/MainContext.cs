@@ -305,6 +305,8 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                 }
             }
         }
+
+        _itemsToRemove.Clear();
     });
 
     private Item GetNewItem(string name)
