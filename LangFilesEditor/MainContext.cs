@@ -229,6 +229,8 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         {
             Nodes.Add(p.Value);
         }
+
+        LocalVersion = GetLocalVersion()?.ToString();
     });
 
     public void Save() => Utils.SafeExecute(() =>

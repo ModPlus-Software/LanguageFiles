@@ -2,6 +2,7 @@
 
 using System.IO;
 using System.Net.Http;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
 using Microsoft.Win32;
@@ -11,6 +12,47 @@ using Structure;
 
 internal partial class MainContext
 {
+    private string _localVersion;
+
+    /// <summary>
+    /// Local version
+    /// </summary>
+    public string LocalVersion
+    {
+        get => _localVersion;
+        set
+        {
+            if (_localVersion == value)
+                return;
+            _localVersion = value;
+            OnPropertyChanged();
+        }
+    }
+
+    /// <summary>
+    /// Set local version to file
+    /// </summary>
+    public ICommand SetLocalVersionCommand => new RelayCommand(() => Utils.SafeExecuteAsync(async () =>
+    {
+        if (!Version.TryParse(LocalVersion, out var version))
+        {
+            MessageBox.Show("Filed parse version!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+        }
+
+        var remoteVersion = await GetRemoteVersion();
+
+        if (version <= remoteVersion)
+        {
+            MessageBox.Show("The local version is less than or equal to the remote version!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+        }
+
+        SetLocalVersion(version);
+
+        WriteToMergeLog($"Set {version} as local version");
+    }));
+
     /// <summary>
     /// Merge language files and copy to local ModPlus directory
     /// </summary>
@@ -112,6 +154,28 @@ internal partial class MainContext
         var localVersion = Version.Parse(await File.ReadAllTextAsync(Path.Combine(sourceLanguagesDirectory, "Version.txt")));
         var remoteVersion = await GetRemoteVersion();
         return localVersion > remoteVersion ? localVersion : remoteVersion;
+    }
+
+    private static Version GetLocalVersion()
+    {
+        try
+        {
+            var solutionDirectory = GetSolutionDirectory();
+            var sourceLanguagesDirectory = Path.Combine(solutionDirectory, "LanguageFiles");
+            return Version.Parse(File.ReadAllText(Path.Combine(sourceLanguagesDirectory, "Version.txt")));
+        }
+        catch
+        {
+            MessageBox.Show("Failed get local version!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            return null;
+        }
+    }
+
+    private static void SetLocalVersion(Version version)
+    {
+        var solutionDirectory = GetSolutionDirectory();
+        var sourceLanguagesDirectory = Path.Combine(solutionDirectory, "LanguageFiles");
+        File.WriteAllText(Path.Combine(sourceLanguagesDirectory, "Version.txt"), version.ToString());
     }
 
     private static async Task<Version> GetRemoteVersion()

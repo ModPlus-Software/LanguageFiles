@@ -260,11 +260,26 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <!-- START MERGE -->
-                <Button Grid.Row="0"
-                        Content="Merge"
-                        HorizontalAlignment="Left"
-                        Command="{Binding Path=MergeCommand}"/>
+                <!-- CONTROLS -->
+                <StackPanel Grid.Row="0"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Left">
+
+                    <!-- LOCAL VERSION -->
+                    <TextBlock VerticalAlignment="Center"
+                               Text="Local version:"
+                               Margin="4"/>
+                    <TextBox VerticalAlignment="Center"
+                             Text="{Binding Path=LocalVersion, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    
+                    <!-- SET LOCAL VERSION -->
+                    <Button Content="Set"
+                            Command="{Binding Path=SetLocalVersionCommand}"/>
+
+                    <!-- START MERGE -->
+                    <Button Content="Merge"
+                            Command="{Binding Path=MergeCommand}"/>
+                </StackPanel>
 
                 <!-- MERGE LOG -->
                 <TextBox Grid.Row="1"
