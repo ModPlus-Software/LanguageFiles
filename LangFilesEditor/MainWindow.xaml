@@ -223,24 +223,46 @@
                                 VerticalAlignment="Top"
                                 Orientation="Vertical"
                                 Visibility="{Binding Path=IsVisibleSelectedNodeContent, Converter={StaticResource BooleanToVisibilityConverter}}">
+
+                        <!-- ADD ROW ABOVE -->
                         <Button Command="{Binding Path=AddRowAboveCommand}"
                                 Content="Add row above" />
+
+                        <!-- ADD ROW BELOW -->
                         <Button Command="{Binding Path=AddRowBelowCommand}"
                                 Content="Add row below" />
+
                         <Border HorizontalAlignment="Stretch"
                                 BorderThickness="0 1 0 0"
                                 BorderBrush="Gray"
                                 Margin="0 4"
                                 SnapsToDevicePixels="True"/>
+
+                        <!-- COPY -->
                         <Button Command="{Binding Path=CopyToClipboardCommand}"
                                 Content="Copy"/>
+
+                        <!-- PASTE -->
                         <Button Command="{Binding Path=PasteFromClipboard}"
                                 Content="Paste"/>
+
                         <Border HorizontalAlignment="Stretch"
                                 BorderThickness="0 1 0 0"
                                 BorderBrush="Gray"
                                 Margin="0 4"
                                 SnapsToDevicePixels="True"/>
+
+                        <!-- MARK FOR DELETION -->
+                        <Button Command="{Binding Path=MarkForDeletionCommand}"
+                                Content="Mark for deletion"/>
+
+                        <Border HorizontalAlignment="Stretch"
+                                BorderThickness="0 1 0 0"
+                                BorderBrush="Gray"
+                                Margin="0 4"
+                                SnapsToDevicePixels="True"/>
+
+                        <!-- REMOVE -->
                         <Button Command="{Binding Path=RemoveItemCommand}"
                                 Content="Remove"/>
                     </StackPanel>

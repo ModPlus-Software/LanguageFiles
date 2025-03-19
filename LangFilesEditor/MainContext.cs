@@ -162,11 +162,40 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                 items = [];
                 _itemsToRemove[SelectedNode.Name] = items;
             }
-            
+
             items.Add(item.Name);
             SelectedNode.Items.Remove(item);
         }),
-        _=> SelectedNode != null && mainWindow.DgItems.SelectedItem != null);
+        _ => SelectedNode != null && mainWindow.DgItems.SelectedItem != null);
+
+    /// <summary>
+    /// Mark item for deletion with comment
+    /// </summary>
+    public ICommand MarkForDeletionCommand => new RelayCommand(
+        () => Utils.SafeExecute(() =>
+    {
+        var item = (Item)mainWindow.DgItems.SelectedItem;
+        var version = string.Empty;
+
+        var match = Regex.Match(item.Comment ?? string.Empty, "\\b\\d+\\.\\d+\\.\\d+\\.\\d+\\b");
+        if (match.Success)
+            version = match.Value;
+
+        var win = new MarkForDeletionWindow
+        {
+            Owner = mainWindow,
+            TbVersion =
+            {
+                Text = version
+            }
+        };
+
+        if (win.ShowDialog() == false)
+            return;
+
+        item.Comment = $"todo remove after {win.TbVersion.Text}";
+
+    }), _ => SelectedNode != null && mainWindow.DgItems.SelectedItem != null);
 
     public void Load() => Utils.SafeExecute(() =>
     {
@@ -289,6 +318,16 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                             xItem.SetValue(item.Values[languageName].Value);
                             save = true;
                         }
+
+                        if (!string.IsNullOrEmpty(item.Comment))
+                        {
+                            if (xItem.PreviousNode is XComment xComment)
+                                xComment.Value = item.Comment;
+                            else
+                                xItem.AddBeforeSelf(new XComment(item.Comment));
+
+                            save = true;
+                        }
                     }
                 }
 
@@ -340,16 +379,16 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         }
     }
 
-    private  DataTemplate GetDataTemplateForStringCell(string bindingPath)
+    private DataTemplate GetDataTemplateForStringCell(string bindingPath)
     {
         var dataTemplate = (DataTemplate)mainWindow.DgItems.Resources["ItemValueCellTemplate"];
         var xaml = XamlWriter.Save(dataTemplate!);
         xaml = xaml.Replace(
             "{DynamicResource PLACEHOLDER}",
             "{Binding Path=" + bindingPath + ", Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}");
-        
+
         var stringReader = new StringReader(xaml);
-        
+
         var xmlReader = XmlReader.Create(stringReader);
 
         return (DataTemplate)XamlReader.Load(xmlReader);

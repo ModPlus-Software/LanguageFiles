@@ -12,6 +12,7 @@ internal class Item : ObservableObject
     private bool _hasDuplicateName;
     private bool _hasDuplicateValue;
     private readonly Dictionary<string, ItemValue> _values;
+    private string _comment;
 
     public Item()
     {
@@ -44,7 +45,18 @@ internal class Item : ObservableObject
     /// <summary>
     /// Комментарий к этому элементу
     /// </summary>
-    public string Comment { get; set; }
+    public string Comment
+    {
+        get => _comment;
+        set
+        {
+            if (value == _comment) 
+                return;
+            _comment = value;
+            OnPropertyChanged();
+            OnPropertyChanged(nameof(BackgroundColor));
+        }
+    }
 
     /// <summary>
     /// Row background color
