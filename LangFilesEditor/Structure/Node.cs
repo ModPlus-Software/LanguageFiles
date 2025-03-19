@@ -126,7 +126,13 @@ internal class Node : ObservableObject
 
         HasItemsWithSameValue = false;
 
-        foreach (var group in Items.Where(i => i.Values.ContainsKey("ru-RU")).GroupBy(i => i.Values["ru-RU"].Value).Where(g => g.Count() > 1))
+        foreach (var group in Items
+                     .Where(i =>
+                         //// Если узел помечен на удаление, то не учитываем его
+                         string.IsNullOrEmpty(i.Comment) &&
+                         i.Values.ContainsKey("ru-RU"))
+                     .GroupBy(i => i.Values["ru-RU"].Value)
+                     .Where(g => g.Count() > 1))
         {
             foreach (var item in group)
             {
