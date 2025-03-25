@@ -198,14 +198,16 @@
     <h12>Click "Find" to refresh search</h12>
     <h13>No schedules match criteria</h13>
     <h14>Schedules found:</h14>
+    <!--todo remove after 1.2.4.0-->
     <h15>Schedule lookup</h15>
     <h16>that must present in table</h16>
-    <h17>delimiter\n symbol</h17>
+    <h17>Delimiter symbol</h17>
     <h18>Search substring</h18>
+    <!--todo remove after 1.2.4.0-->
     <h19>Ignore case</h19>
     <h20>Search for</h20>
-    <h21>field name</h21>
-    <h22>column name</h22>
+    <h21>Field name</h21>
+    <h22>Column name</h22>
     <h23>cell value</h23>
     <h24>header value</h24>
     <h25>% completed...</h25>
@@ -215,6 +217,8 @@
     <h29>Enter heading names delimited by</h29>
     <h30>Enter cell values delimited by</h30>
     <h31>Open schedule</h31>
+    <h32>Ignore register</h32>
+    <h33>Search in specifications</h33>
     <sr1>Searched string:</sr1>
     <sr2>Found in name/value:</sr2>
     <sr3>Containing schedule name:</sr3>
@@ -235,6 +239,9 @@
     <sr18>Value was found?</sr18>
     <sr19>Substring searched?</sr19>
     <sr20>Case ignored?</sr20>
+    <sr21>Sorting parameter?</sr21>
+    <sr22>Filtering parameter?</sr22>
+    <sr23>United?</sr23>
     <find>Find</find>
     <clean>Clean</clean>
   </whshScheduleLookup>
@@ -3184,7 +3191,7 @@ An additional check is performed by type parameters – a pair of similar famili
     <t145>Failed to recognize the action in "{0}". Make sure that the application language matches the file being loaded</t145>
     <t146>An action from the value "{0}" is recognized but not added to the parameter "{1}" because the action is not applicable to the parameter or the parameter is already marked as deletable</t146>
     <t147>Failed to recognize the group specified in "{0}". Some group names may differ between Revit versions</t147>
-    <t148>You do not have access to save presets to the organization's preset storage</t148>
+    <t148>The storage folder for presets is set by your organization's settings. You do not have access to save presets</t148>
     <t149>Load preset</t149>
     <t150>Save preset</t150>
     <t151>Preset name</t151>
@@ -3210,7 +3217,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
     <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
     <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
-    <ad4>Allows you to add or remove the binding of shared parameters to categories. The action is not available for project parameters. If you delete a binding to categories, all parameter data will be removed from the elements of these categories</ad4>
+    <ad4>Allows new categories to be added to the binding of a shared parameter. Action not available for project parameters</ad4>
+    <ad5>Allows you to remove categories from the shared parameter binding. The action is not available for project parameters. All parameter data will be removed from the elements of these categories</ad5>
     <ad6>Allows you to make a family parameter an instance parameter. The action is not available for system parameters</ad6>
     <ad7>Allows you to make a shared parameter an instance parameter. The action is not available for project parameters</ad7>
     <ad8>Allows you to make a family parameter a type parameter. The action is not available for system parameters</ad8>
