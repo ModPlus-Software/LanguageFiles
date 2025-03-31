@@ -200,24 +200,32 @@
     <h14>schedules found:</h14>
     <!--todo remove after 1.2.4.0-->
     <h15>Buscar en tablas</h15>
+    <!--todo remove after 1.2.4.0-->
     <h16>that must be present in the schedule</h16>
     <h17>Símbolo-delimitador</h17>
     <h18>Subcadena</h18>
     <!--todo remove after 1.2.4.0-->
     <h19>Distingue mayúsculas y minúsculas</h19>
-    <h20>Buscar</h20>
+    <h20>Buscar en</h20>
     <h21>Campo</h21>
-    <h22>Encabezado</h22>
+    <h22>Titular</h22>
+    <!--todo remove after 1.2.4.0-->
     <h23>valor</h23>
     <h24>título</h24>
     <h25>% procesado...</h25>
     <h26>ESTADO:</h26>
     <h27>Presione barra espaciadora dos veces para insertar</h27>
+    <!--todo remove after 1.2.4.0-->
     <h28>Ingresar nombres de parámetros delimitados por símbolo</h28>
+    <!--todo remove after 1.2.4.0-->
     <h29>Ingresar nombres de columnas con</h29>
+    <!--todo remove after 1.2.4.0-->
     <h30>Ingresar valores de celda con</h30>
     <h31>Abrir especificación</h31>
-    <h32>Ignore register</h32>
+    <h32>Ignore case</h32>
+    <h33>Enter the names of the fields or parameters that must be present in the schedule, separating them with a "{0}" character</h33>
+    <h34>Enter the column headings that should be present in the schedule, separating them with a "{0}" character</h34>
+    <h35>Enter the cell values that must be present in the schedule, separating them with a "{0}" character</h35>
     <sr1>Valor buscado:</sr1>
     <sr2>Encontrado dentro:</sr2>
     <sr3>The name of the containing schedule:</sr3>
@@ -237,10 +245,11 @@
     <sr17>¿Búsqueda completada?</sr17>
     <sr18>¿Valor encontrado?</sr18>
     <sr19>¿Subcadena encontrada?</sr19>
+    <!--todo remove after 1.2.4.0-->
     <sr20>¿Distinguir mayúsculas y minúsculas?</sr20>
     <sr21>Sorting parameter?</sr21>
     <sr22>Filtering parameter?</sr22>
-    <sr23>United?</sr23>
+    <sr23>Combined parameter?</sr23>
     <find>Buscar</find>
     <clean>Limpiar</clean>
   </whshScheduleLookup>
@@ -2340,8 +2349,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <err70>Elemento está ocupado por el usuario "{0}" y no está disponible para cambiar</err70>
     <err71>En la vista actual no se encontraron elementos original que coincidan con condiciones de filtración</err71>
     <err72>No se puede guardar el resultado en parámetro de elemento desde el archivo vinculado</err72>
-    <err73>Function must contain at least two arguments: a condition and a pointer to the result column</err73>
-    <err74>The name of column {0} must be specified by a Latin letter or number</err74>
+    <err73>La función debe contener al menos dos argumentos: una condición y un puntero a la columna de resultados</err73>
+    <err74>El nombre de la columna {0}debe especificarse mediante una letra latina o un número</err74>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -2388,8 +2397,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <sld18>Estrategia procesa componentes de muro cortina (montantes y paneles). Convencionalmente, el elemento original es un muro</sld18>
     <ssd19>Procesamiento de elementos en relación con elementos original especificados</ssd19>
     <sld19>La estrategia procesa elementos con la posibilidad de utilizar cualquier elemento de modelo especificado como elemento original</sld19>
-    <ssd20>Processing Parts</ssd20>
-    <sld20>Strategy processes Parts taking into account the source elements from which the Parts are created. If a part is created from several source elements, the first element will be considered the source element</sld20>
+    <ssd20>Procesar piezas</ssd20>
+    <sld20>La estrategia procesa las piezas teniendo en cuenta los elementos originales a partir de los cuales se crean las piezas. Si una pieza se crea a partir de varios elementos originales, el primer elemento se considerará el elemento original</sld20>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -2434,8 +2443,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <tp7>Insertar parámetro de barra de refuerzo objetiva</tp7>
     <te8>Material</te8>
     <tp8>Insertar parámetro de material</tp8>
-    <te9>Part</te9>
-    <tp10>Insert part parameter</tp10>
+    <te9>Pieza</te9>
+    <tp10>Insertar parámetro de pieza</tp10>
     <ft1>Funciones matemáticas</ft1>
     <ft2>Funciones lógicas</ft2>
     <ft3>Funciones de modificación</ft3>
@@ -2480,9 +2489,9 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <d-cv>Devuelve valor de celda de origen de datos de estrategia especificada</d-cv>
     <d-count>Devuelve el número de veces que aparece una subcadena en una cadena. Si la subcadena no se encuentra en la cadena, devuelve 0</d-count>
     <d-lstrindex>Devuelve el índice basado en cero de la última entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena</d-lstrindex>
-    <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
-    <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
-    <d-cvif>Looks for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
+    <d-not>Devuelve TRUE si la condición es falsa. De lo contrario devuelve FALSE</d-not>
+    <d-distinct>Devuelve valores de lista diferentes, ignorando los espacios iniciales y finales al comparar los valores</d-distinct>
+    <d-cvif>Busca la primera fila en el origen de datos de la estrategia (archivo Excel) en la que se cumplen todas las condiciones y devuelve el valor de la columna especificada de esa fila</d-cvif>
   </mprParametrization>
   <mprBaseLevel
     LocalName="Nivel de referencia"
@@ -2561,7 +2570,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <c3>Escala de grises</c3>
     <c4>B/N con excepción</c4>
     <c5>Desde ajustes</c5>
-    <c6>Grayscale with exclusion</c6>
+    <c6>Escala de grises con excepción</c6>
     <h9>Tipo de impresión:</h9>
     <pt1>Procesando gráfico vectorial</pt1>
     <pt2>Procesando imágenes de trama</pt2>
@@ -2722,28 +2731,28 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <h144>Agrupar las hojas de montajes</h144>
     <h145>Cuando esta opción está activada, las hojas colocadas en ensamblajes se agruparán por separado de las hojas principales</h145>
     <h146>Ajustes de lectura de hojas</h146>
-    <h147>Open the export folder when the export is complete:</h147>
-    <of1>Open folder</of1>
-    <of2>Do not open folder</of2>
-    <h148>Document location directory:</h148>
-    <h149>Unspecified</h149>
-    <h150>Export to the document location directory</h150>
-    <h151>If the document does not have a location directory defined, the export will be done to the specified Export directory. If the specified Export directory does not exist, the document export will be skipped</h151>
-    <h152>Display the name generated by the mask in the sheet tree</h152>
-    <h153>Name by mask:</h153>
-    <h154>Select by filter</h154>
-    <h155>Only in the current document</h155>
-    <h156>In all the documents</h156>
-    <h157>Set the sheet reading settings and click the "Read Sheets" button</h157>
-    <h158>The File Name Mask is set by your organization's settings, is independent of the selected configuration, and cannot be changed</h158>
-    <h159>The parameter value is taken from the first checked sheet of the exported document!</h159>
-    <h160>Use to output sheets to PDF:</h160>
-    <h161>Print to PDF</h161>
-    <h162>Order:</h162>
-    <h163>Document name</h163>
-    <h164>Date</h164>
-    <h165>Export format</h165>
-    <h166>Group name</h166>
+    <h147>Abrir la carpeta de exportación cuando se complete la exportación:</h147>
+    <of1>Abrir carpeta</of1>
+    <of2>No abrir carpeta</of2>
+    <h148>Directorio de ubicación de documentos:</h148>
+    <h149>No definido</h149>
+    <h150>Exportar a directorio de ubicación de documento</h150>
+    <h151>Si el documento no tiene un directorio de ubicación definido, la exportación se realizará al directorio de guardado especificado. Si el directorio de guardado especificado no existe, se omitirá la exportación del documento</h151>
+    <h152>Mostrar el nombre generado por la máscara en el árbol de hojas</h152>
+    <h153>Nombre por máscara:</h153>
+    <h154>Seleccionar por filtro</h154>
+    <h155>Sólo en documento actual</h155>
+    <h156>En todos documentos</h156>
+    <h157>Establecer los ajustes para leer hojas y hacer clic en el botón "Leer hojas"</h157>
+    <h158>La máscara del nombre de archivo está establecida por los ajustes de su organización, no depende de la configuración seleccionada y no se puede cambiar</h158>
+    <h159>¡El valor del parámetro se toma de la primera hoja seleccionada del documento exportado!</h159>
+    <h160>Para imprimir hojas a PDF utilice:</h160>
+    <h161>Imprimir a PDF</h161>
+    <h162>Orden:</h162>
+    <h163>Nombre del documento</h163>
+    <h164>Fecha</h164>
+    <h165>Formato de exportación</h165>
+    <h166>Nombre de grupo</h166>
     <h167>Export type:</h167>
     <h168>Image discoloration</h168>
     <tvm1>Desactivar modo</tvm1>
@@ -2796,7 +2805,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <err24>Un formato con estas cotas ya está en lista de formatos</err24>
     <err25>Formato no tiene nombre y no se procesará cuando se añade a impresora</err25>
     <err26>No se puede comprimir archivo "{0}". Error:</err26>
-    <err27>The current sheet is missing Title Blocks. The current sheet cannot be exported!</err27>
+    <err27>En la hoja actual faltan cuadros de rotulación. ¡No es posible exportar la hoja actual!</err27>
   </mprSheetExport>
   <mprHeightSplitter
     LocalName="Dividir por altura"
@@ -3085,7 +3094,9 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t11>Cambiar comportamiento</t11>
     <t12>Valores pueden variar según ejemplares de grupo</t12>
     <t13>Valores están alineados para cada tipo de grupo</t13>
+    <!--todo remove after 1.6.2.0-->
     <t14>Hacer "Por ejemplar"</t14>
+    <!--todo remove after 1.6.2.0-->
     <t15>Hacer "Por tipo"</t15>
     <t16>Renombrar</t16>
     <t17>Parámetro existe en documento actual</t17>
@@ -3212,9 +3223,9 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <!-- todo remove after 1.6.2.0 -->
     <t137>Cambiar grupo</t137>
     <t138>Seleccionar nuevo grupo para parámetro "{0}"</t138>
-    <t139>Select families</t139>
-    <t140>Delete backup files</t140>
-    <t141>After saving the family, all backup files of the form Family_name.nnnn.rfa next to the family file will be deleted</t141>
+    <t139>Seleccionar familias</t139>
+    <t140>Eliminar archivos de copia de seguridad</t140>
+    <t141>Después de guardar la familia, se eliminarán todos los archivos de copia de seguridad del tipo Nombre_de_familia.nnnn.rfa ubicados junto al archivo de familia</t141>
     <t142>Due to limitations in Revit API, if you change the group of a non-shared family parameter, the description will be lost!</t142>
     <t143>In the current family type, it is not possible to use the plugin. The family editor is open in Read Only mode</t143>
     <t144>The row corresponding to the parameter is not found in the imported file</t144>
@@ -3248,10 +3259,16 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t172>Set ToolTip</t172>
     <t173>Revit API does not allow to retrieve an existing parameter ToolTip</t173>
     <t174>Replace the family parameter with a shared parameter</t174>
+    <t175>Select parameter</t175>
+    <t176>Replace the shared parameter with another shared parameter</t176>
+    <t177>Duplicate parameter</t177>
+    <t178>Change the order of parameters</t178>
+    <t179>Drag the parameters in the table to set their new position. It is allowed to drag multiple parameters, as well as to drag parameters to other groups</t179>
+    <t180>Due to limitations in the Revit API, system parameters cannot be moved to other groups</t180>
     <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
     <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
     <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
-    <ad4>Allows you to add or remove the binding of shared parameters to categories. The action is not available for project parameters. If you delete a binding to categories, all parameter data will be removed from the elements of these categories</ad4>
+    <ad4>Allows you to add or remove the binding of shared parameter to categories. The action is not available for project parameters. If you delete a binding to categories, all parameter data will be removed from the elements of these categories</ad4>
     <ad6>Allows you to make a family parameter an instance parameter. The action is not available for system parameters</ad6>
     <ad7>Allows you to make a shared parameter an instance parameter. The action is not available for project parameters</ad7>
     <ad8>Allows you to make a family parameter a type parameter. The action is not available for system parameters</ad8>
@@ -3272,7 +3289,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <fs1>Desde archivo</fs1>
     <fs2>Desde proyecto</fs2>
     <fs3>Familias abiertas</fs3>
-    <fs4>From Project Browser</fs4>
+    <fs4>Desde Navegador de proyectos</fs4>
     <s1>Elementos seleccionados</s1>
     <s2>En vista activa</s2>
     <s3>En todo proyecto</s3>
@@ -3346,6 +3363,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <err24>There is already a preset with this name in the storage. The existing preset will be overwritten!</err24>
     <err25>The preset name must not contain the following characters: \ / : * ? " &lt; &gt; |</err25>
     <err26>Preset storage directory is missing! Make sure you have access to create folders and files in the UserData directory or contact your system administrator</err26>
+    <err27>Failed to execute action</err27>
+    <err28>A parameter named "{0}" has already been defined. Set another name</err28>
   </mprParameters>
   <mprOverrideGraphicManager
     LocalName="Administrador de redeterminación de gráficos"
@@ -3516,42 +3535,42 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <vt11>Vista de detalle</vt11>
   </mprFilterSelection>
   <mprPhases
-    LocalName="Phases"
-    Description="Set phases by filter">
+    LocalName="Fases"
+    Description="Ajustar fases por filtro">
     <t1>Failed to assign phases to elements</t1>
-    <t2>Display in the results the id of the elements to which the workset is assigned</t2>
-    <t3>Enter name</t3>
-    <t4>You need to enter a name</t4>
-    <t5>Name "{0}" already used</t5>
-    <t6>Enter new name</t6>
-    <t7>No configuration selected!</t7>
-    <t8>Create new group</t8>
-    <t9>Enter name of group</t9>
-    <t10>Rename the group</t10>
-    <t11>Add a new phase setup rule</t11>
-    <t12>Delete group</t12>
-    <t13>Phase Created</t13>
-    <t14>Phase Demolished</t14>
-    <t15>Invert selection</t15>
+    <t2>Mostrar en resultados el id de los elementos que tienen una fase asignada</t2>
+    <t3>Ingresar nombre</t3>
+    <t4>Es necesario ingresar un nombre</t4>
+    <t5>Nombre {0} ya está en uso</t5>
+    <t6>Ingresar un nuevo nombre</t6>
+    <t7>¡Configuración no seleccionada!</t7>
+    <t8>Crear nuevo grupo</t8>
+    <t9>Ingresar nombre de grupo</t9>
+    <t10>Cambiar nombre de grupo</t10>
+    <t11>Añadir una regla nueva de ajuste de fase</t11>
+    <t12>Eliminar grupo</t12>
+    <t13>Fase de creación</t13>
+    <t14>Fase de derribo</t14>
+    <t15>Invertir selección</t15>
     <t16>No phase has been selected</t16>
-    <t17>Application of the phases</t17>
+    <t17>Trabajo con fases</t17>
     <t18>Delete the phase setup rule</t18>
     <t19>Set phases by filter</t19>
     <t20>None</t20>
     <t21>Don't change</t21>
     <t22>The phase is not present in the current project</t22>
-    <ie1>xml-file</ie1>
-    <ie2>Current Revit document</ie2>
-    <msg1>You are trying to import a phase group storage file</msg1>
-    <msg2>The selected file is not a configuration data storage file and cannot be imported!</msg2>
-    <msg4>The current configuration "{0}" will be permanently deleted!</msg4>
-    <msg5>Group "{0}" will be permanently deleted!</msg5>
-    <msg6>Copy filter settings?</msg6>
-    <msg7>Nothing is selected!</msg7>
-    <msg8>No phase found</msg8>
-    <msg9>No application conditions are set for the phase</msg9>
-    <msg10>An error "{0}" occurred when setting the phase of elements</msg10>
-    <msg11>No phases have been set for the following items because the items are occupied by user "{0}"</msg11>
+    <ie1>Archivo .xml</ie1>
+    <ie2>Documento Revit actual</ie2>
+    <msg1>Intentando importar un archivo de almacenamiento del grupo de fases</msg1>
+    <msg2>¡Archivo seleccionado no es archivo de almacenamiento de datos de configuración y no se puede importar!</msg2>
+    <msg4>¡Configuración actual "{0}" se eliminará permanentemente!</msg4>
+    <msg5>¡Grupo "{0}" se eliminará permanentemente!</msg5>
+    <msg6>¿Copiar ajustes del filtro?</msg6>
+    <msg7>¡No hay nada seleccionado!</msg7>
+    <msg8>No encontrado la fase</msg8>
+    <msg9>No hay condiciones de aplicación especificadas para fase</msg9>
+    <msg10>Se ha producido un error "{0}" al establecer fase para elementos</msg10>
+    <msg11>Para siguientes elementos no se han ajustado fases porque están ocupados por usuario "{0}"</msg11>
     <msg12>Phase Created "{0}" applied to {1} elements</msg12>
     <msg13>Phase Demolished "{0}" is applied to {1} elements</msg13>
     <msg14>Phase Created "{0}" is not applied to {1} elements</msg14>
