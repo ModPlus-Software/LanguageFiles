@@ -181,8 +181,8 @@
     <msg1>Wählen Sie Elemente für das 3D Zuschneiden</msg1>
   </ostViewIn3D>
   <whshScheduleLookup
-    LocalName="Suche in den Tabellen"
-    Description="Suchen nach Tabellen in einem Projekt, die einen bestimmten Wert enthalten"
+    LocalName="Suche in Bauteillisten"
+    Description="Suche im Projekt nach Bauteillisten, die den angegebenen Wert enthalten"
     FullDescription="Sucht nach bestimmten Zeilen (ganz oder teilweise) sowie nach Zahlen in Projekttabellen: in Feldnamen, Spaltenüberschriften oder Zellen, mit oder ohne Berücksichtigung der Groß-/Kleinschreibung">
     <h1>Ergebnisse anzeigen</h1>
     <h2>Suchergebnisse</h2>
@@ -190,14 +190,14 @@
     <h4>Informationen zu den Suchergebnissen</h4>
     <h5>Eigenschaft</h5>
     <h6>Wert</h6>
-    <h7>This project has no schedules!\nCannot continue.</h7>
+    <h7>In diesem Projekt sind keine Bauteillisten vorhanden!\nKeine Fortsetzung ist möglich.</h7>
     <h8>Achtung!</h8>
     <h9>Die Handlung wurde abgebrochen!</h9>
     <h10>Keine Eingabe für die Suche</h10>
     <h11>Klicken Sie auf "Suchen", um weiterzumachen</h11>
     <h12>Klicken Sie auf "Suchen", um zu aktualisieren!</h12>
-    <h13>No matching schedules found!</h13>
-    <h14>schedules found:</h14>
+    <h13>Keine passenden Bauteillisten gefunden!</h13>
+    <h14>Bauteillisten gefunden:</h14>
     <!--todo remove after 1.2.4.0-->
     <h15>Suche in den Tabellen</h15>
     <!--todo remove after 1.2.4.0-->
@@ -206,9 +206,9 @@
     <h18>Teilzeichenkette</h18>
     <!--todo remove after 1.2.4.0-->
     <h19>Das Register berücksichtigen</h19>
-    <h20>Suche in</h20>
+    <h20>Suchen in</h20>
     <h21>Feld</h21>
-    <h22>Überschrift.</h22>
+    <h22>Titel</h22>
     <!--todo remove after 1.2.4.0-->
     <h23>Wert</h23>
     <h24>Titelzeile</h24>
@@ -222,13 +222,13 @@
     <!--todo remove after 1.2.4.0-->
     <h30>Geben Sie Zellwerte mit</h30>
     <h31>Bauteilliste öffnen</h31>
-    <h32>Ignore case</h32>
-    <h33>Enter the names of the fields or parameters that must be present in the schedule, separating them with a "{0}" character</h33>
-    <h34>Enter the column headings that should be present in the schedule, separating them with a "{0}" character</h34>
-    <h35>Enter the cell values that must be present in the schedule, separating them with a "{0}" character</h35>
+    <h32>Groß- und Kleinschreibung nicht berücksichtigen</h32>
+    <h33>Geben Sie die Namen der Felder oder Parameter ein, die in der Bauteilliste vorhanden sein müssen, und verwenden Sie dabei das Symbol "{0}" als Trennzeichen</h33>
+    <h34>Geben Sie die Spaltentitel ein, die in der Bauteilliste vorhanden sein müssen, und verwenden Sie dabei das Symbol "{0}" als Trennzeichen</h34>
+    <h35>Geben Sie die Zellenwerte ein, die in der Bauteilliste vorhanden sein müssen, und verwenden Sie dabei das Symbol "{0}" als Trennzeichen</h35>
     <sr1>Gesuchter Wert:</sr1>
     <sr2>Drinnen gefunden:</sr2>
-    <sr3>The name of the containing schedule:</sr3>
+    <sr3>Name der enthaltenden Bauteilliste:</sr3>
     <sr4>Schlüsselliste?</sr4>
     <sr5>Bauteilliste ID:</sr5>
     <sr6>Feldname:</sr6>
@@ -239,7 +239,7 @@
     <sr11>Spaltennummer:</sr11>
     <sr12>Ist die Spalte ausgeblendet?</sr12>
     <sr13>Zeilennummer:</sr13>
-    <sr14>Schedule area:</sr14>
+    <sr14>Bereich der Bauteilliste:</sr14>
     <sr15>Zellentyp:</sr15>
     <sr16>In den Titeln gefunden?</sr16>
     <sr17>Ist die Suche abgeschlossen?</sr17>
@@ -247,9 +247,9 @@
     <sr19>Ist die Teilzeichenkette gefunden?</sr19>
     <!--todo remove after 1.2.4.0-->
     <sr20>Unter Berücksichtigung des Registers?</sr20>
-    <sr21>Sorting parameter?</sr21>
-    <sr22>Filtering parameter?</sr22>
-    <sr23>Combined parameter?</sr23>
+    <sr21>Parameter des Sortierens?</sr21>
+    <sr22>Parameter des Filterns?</sr22>
+    <sr23>Kombinierter Parameter?</sr23>
     <find>Suchen</find>
     <clean>Löschen</clean>
   </whshScheduleLookup>
@@ -912,8 +912,8 @@
     <h69>Die Liste aller gefundenen allgemeinen Parameter im Notepad öffnen</h69>
     <h70>Abruftabellen</h70>
     <h71>Löschen der Abruftabellen</h71>
-    <h72>Unplaced areas</h72>
-    <h73>Removing unplaced areas</h73>
+    <h72>Nicht platzierte Flächen</h72>
+    <h73>Löschen von nicht platzierten Flächen</h73>
     <search>Suchen</search>
     <name>Name</name>
     <collect>Sammeln</collect>
@@ -1166,9 +1166,9 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <h2>Bearbeitungsbereiche erstellen und sie nach Filtern setzen</h2>
     <h3>Bearbeitungsbereiche nach Filtern setzen</h3>
     <h4>Sichtbarkeit</h4>
-    <h5>Copy the settings to all work sets in the current group</h5>
-    <h6>Copy the settings to all working sets of all groups</h6>
-    <h7>Filters</h7>
+    <h5>Alle Einstellungen in alle Bearbeitungsbereiche der aktuellen Gruppe kopieren</h5>
+    <h6>Alle Einstellungen in alle Bearbeitungsbereiche aller Gruppen kopieren</h6>
+    <h7>Filter</h7>
     <h10>Öffnen Sie die Datei</h10>
     <h11>Leseeinstellungen</h11>
     <h12>Jede Zeile ist eine Gruppe</h12>
@@ -1224,7 +1224,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <h71>Importexemplar</h71>
     <h72>Importtyp</h72>
     <h73>Importexemplar und -typ</h73>
-    <h74>Select a group or a workset</h74>
+    <h74>Wählen Sie eine Gruppe oder einen Bearbeitungsbereich</h74>
     <!-- todo remove after 3.0.2.0 start -->
     <t1>Umbenennen der Konfiguration</t1>
     <t2>Konfiguration erstellen</t2>
@@ -1277,9 +1277,9 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <msg34>Fehler "{0}" ist beim Festlegen eines Bearbeitungsbereichs für Elemente aufgetreten</msg34>
     <msg35>Für die folgenden Elemente wurde kein Bearbeitungsbereich festgelegt, da die Elemente durch den Benutzer "{0}" bearbeitet werden</msg35>
     <msg36>Keine Verbindungen im Dokument vorhanden</msg36>
-    <msg37>Copy the settings?</msg37>
-    <msg38>The settings will be overwritten for all work sets in the current group. This action cannot be undone!</msg38>
-    <msg39>The settings will be overwritten in all work sets of all groups in the current configuration. This action cannot be undone!</msg39>
+    <msg37>Einstellungen kopieren?</msg37>
+    <msg38>Die Einstellungen werden für alle Bearbeitungsbereiche in der aktuellen Gruppe überschrieben. Diese Aktion kann nicht rückgängig gemacht werden!</msg38>
+    <msg39>Die Einstellungen werden in allen Bearbeitungsbereichen aller Gruppen in der aktuellen Konfiguration überschrieben. Diese Aktion kann nicht rückgängig gemacht werden!</msg39>
     <ie1>Textdatei</ie1>
     <ie2>Excel Datei</ie2>
     <ie3>Xml-Datei</ie3>
@@ -2247,8 +2247,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t108>Beim Setzen eines Wertes im Parameter: Nach dem Setzen jedes Wertes für jeweilige Parameter aller Elemente erfolgt das Festlegen der Änderungen im Dokument. In diesem Fall können Sie in jeder nachfolgenden Formelanweisung die in der vorherigen Formelanweisung geänderten Parameterwerte verwenden. Diese Option kann mehr Verarbeitungszeit erfordern.</t108>
     <t109>Bei der Verarbeitung der Regel: Das Festlegen der Änderungen im Dokument erfolgt nach der Verarbeitung aller Ausdrücke einer Regel. In diesem Fall ist es nicht möglich, denselben Parameter innerhalb einer Regel zu ändern und anschließend wiederzuverwenden, weil der geänderte Parameterwert noch nicht im Dokument festgelegt wurde.</t109>
     <t110>Bei der Verarbeitung der Strategie: Das Festlegen der Änderungen im Dokument erfolgt nach der Verarbeitung aller Regel der jeweiligen Strategie. In diesem Fall ist es nicht möglich, denselben Parameter in verschiedenen Regeln einer Strategie zu ändern und anschließend wiederzuverwenden, weil der geänderte Parameterwert noch nicht im Dokument festgelegt wurde.</t110>
-    <t111>Export the current configuration. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t111>
-    <t112>Export the current strategy. Use XML to store and transfer data. It is recommended to use Excel only for quick editing and subsequent loading back in</t112>
+    <t111>Aktuelle Konfiguration exportieren. Verwenden Sie XML zur Speicherung und Übertragung der Daten. Excel sollte nur zum schnellen Bearbeiten und anschließenden rückläufigen Herunterladen verwendet werden</t111>
+    <t112>Aktuelle Strategie exportieren. Verwenden Sie XML zur Speicherung und Übertragung der Daten. Excel sollte nur zum schnellen Bearbeiten und anschließenden rückläufigen Herunterladen verwendet werden</t112>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -2276,8 +2276,12 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <msg25>Es ist nicht möglich, Elemente in der aktuellen Ansicht auszuwählen. Wechseln Sie zu einer anderen Ansicht</msg25>
     <msg26>Wollen Sie die aktuellen Strategiefilter durch die Strategiefilter aus der importierten Datei ersetzen?</msg26>
     <msg27>Wollen Sie die aktuelle Strategiedatenquelle durch die Datenquelle aus der importierten Datei ersetzen?</msg27>
-    <msg28>The selected file is not a configuration storage file or a strategy storage file</msg28>
-    <msg29>The selected file is not a strategy storage file</msg29>
+    <msg28>Bei der ausgewählten Datei handelt es sich nicht um eine Datei für die Konfigurations- bzw. Strategiespeicherung</msg28>
+    <msg29>Bei der ausgewählten Datei handelt es sich nicht um eine Datei für die Strategiespeicherung</msg29>
+    <msg30>A category added in a later Revit version and not present in the current Revit version has been removed from the "{0}" strategy filter for the source element</msg30>
+    <msg31>A category added in a later Revit version and not present in the current Revit version has been removed from the "{0}" strategy filter for the target element</msg31>
+    <msg32>A category added in a later Revit version and not present in the current Revit version has been removed from the rule "{0}" filter of the "{1}" strategy for the source element</msg32>
+    <msg33>A category added in a later Revit version and not present in the current Revit version has been removed from the rule "{0}" filter of the "{1}" strategy for the target element</msg33>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -2753,8 +2757,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <h164>Datum</h164>
     <h165>Exportformat</h165>
     <h166>Gruppenname</h166>
-    <h167>Export type:</h167>
-    <h168>Image discoloration</h168>
+    <h167>Exporttyp:</h167>
+    <h168>Bildentsättigung</h168>
     <tvm1>Modus deaktivieren</tvm1>
     <tvm2>Modus aktiviert lassen</tvm2>
     <tvm3>Fragen</tvm3>
@@ -3226,58 +3230,58 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t139>Wählen Sie Familien aus</t139>
     <t140>Sicherungsdateien löschen</t140>
     <t141>Nach dem Speichern der Familie werden alle neben der Familiendatei liegenden Sicherungsdateien vom Typ familienname.nnnn.rfa gelöscht</t141>
-    <t142>Due to limitations in Revit API, if you change the group of a non-shared family parameter, the description will be lost!</t142>
-    <t143>In the current family type, it is not possible to use the plugin. The family editor is open in Read Only mode</t143>
-    <t144>The row corresponding to the parameter is not found in the imported file</t144>
-    <t145>Failed to recognize the action in "{0}". Make sure that the application language matches the file being loaded</t145>
-    <t146>An action from the value "{0}" is recognized but not added to the parameter "{1}" because the action is not applicable to the parameter or the parameter is already marked as deletable</t146>
-    <t147>Failed to recognize the group specified in "{0}". Some group names may differ between Revit versions</t147>
-    <t148>You do not have access to save presets to the organization's preset storage</t148>
-    <t149>Load preset</t149>
-    <t150>Save preset</t150>
-    <t151>Preset name</t151>
-    <t152>There are no saved presets for the current section in the storage</t152>
-    <t153>Change parameter definition</t153>
-    <t154>Add categories</t154>
-    <t155>Remove categories</t155>
-    <t156>Add an action to the selected parameters</t156>
-    <t157>Select an action</t157>
-    <t158>Not bound to project categories</t158>
-    <t159>Change the binding to categories</t159>
-    <t160>Save to:</t160>
-    <t161>User storage</t161>
-    <t162>Organization storage</t162>
-    <t163>Remove unused parameters</t163>
-    <t164>Remove checked parameters</t164>
-    <t165>Used</t165>
-    <t166>Built-in parameter cannot be removed</t166>
-    <t167>Used in the "{0}" parameter formula</t167>
-    <t168>Used in dimension (ID={0})</t168>
-    <t169>Used in an array (ID={0})</t169>
-    <t170>Associated with the "{0}" parameter of element ID={1}</t170>
-    <t171>ToolTip</t171>
-    <t172>Set ToolTip</t172>
-    <t173>Revit API does not allow to retrieve an existing parameter ToolTip</t173>
-    <t174>Replace the family parameter with a shared parameter</t174>
-    <t175>Select parameter</t175>
-    <t176>Replace the shared parameter with another shared parameter</t176>
-    <t177>Duplicate parameter</t177>
-    <t178>Change the order of parameters</t178>
-    <t179>Drag the parameters in the table to set their new position. It is allowed to drag multiple parameters, as well as to drag parameters to other groups</t179>
-    <t180>Due to limitations in the Revit API, system parameters cannot be moved to other groups</t180>
-    <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
-    <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
-    <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
-    <ad4>Allows you to add or remove the binding of shared parameter to categories. The action is not available for project parameters. If you delete a binding to categories, all parameter data will be removed from the elements of these categories</ad4>
-    <ad6>Allows you to make a family parameter an instance parameter. The action is not available for system parameters</ad6>
-    <ad7>Allows you to make a shared parameter an instance parameter. The action is not available for project parameters</ad7>
-    <ad8>Allows you to make a family parameter a type parameter. The action is not available for system parameters</ad8>
-    <ad9>Allows you to make a shared parameter a type parameter. The action is not available for project parameters</ad9>
-    <ad10>Allows you to set the "Values can vary by group instance" behavior for parameters</ad10>
-    <ad11>Allows you to set the "Values are aligned per group type" behavior for parameters</ad11>
-    <ad12>Allows you to delete the parameter. Action is not available for system parameters</ad12>
-    <ad13>Allows you to delete the parameter</ad13>
-    <ad14>Allows you to replace a shared parameter with a family parameter while preserving the parameter name</ad14>
+    <t142>Aufgrund der Einschränkungen in der Revit-API verliert der nicht gemeinsam genutzter Familienparameter beim Ändern einer Gruppe seine Beschreibung!</t142>
+    <t143>Das Plugin kann im aktuellen Familientyp nicht verwendet werden. Der Familieneditor ist im schreibgeschützten Modus "Nur Lesen" geöffnet</t143>
+    <t144>Im importierten Datei wurde keine dem Parameter entsprechende Zeichenfolge gefunden</t144>
+    <t145>Im Wert "{0}" konnte keine Aktion erkannt werden. Stellen Sie sicher, dass die Sprache der Anwendung mit der zu herunterladenden Datei übereinstimmt</t145>
+    <t146>Die Aktion aus dem Wert "{0}" ist erkannt, aber nicht zum Parameter "{1}" hinzugefügt, weil die Aktion auf den Parameter nicht anwendbar ist oder der Parameter bereits als löschbar markiert ist</t146>
+    <t147>Die im Wert "{0}" angegebene Gruppe konnte nicht erkannt werden. Die Namen von einigen Gruppen können sich in verschiedenen Revit-Versionen unterscheiden</t147>
+    <t148>Sie sind nicht berechtigt Voreinstellungssätze im Ablageort für die Voreinstellungssätze Ihres Unternehmens zu speichern</t148>
+    <t149>Voreinstellungssatz herunterladen</t149>
+    <t150>Voreinstellungssatz speichern</t150>
+    <t151>Name des Voreinstellungssatzes</t151>
+    <t152>Für die aktuelle Unterteilung sind keine im Ablageort gespeicherte Voreinstellungssätze vorhanden</t152>
+    <t153>Parameterdefinition ändern</t153>
+    <t154>Kategorien hinzufügen</t154>
+    <t155>Kategorien löschen</t155>
+    <t156>Aktion zu den ausgewählten Parametern hinzufügen</t156>
+    <t157>Wählen Sie eine Aktion</t157>
+    <t158>Nicht mit Projektkategorien verknüpft</t158>
+    <t159>Verknüpfung mit Kategorien ändern</t159>
+    <t160>Speichern in:</t160>
+    <t161>Ablageort des Benutzers</t161>
+    <t162>Ablageort des Unternehmens</t162>
+    <t163>Nicht verwendete Parameter löschen</t163>
+    <t164>Markierte Parameter löschen</t164>
+    <t165>Wird verwendet</t165>
+    <t166>Integrierter Parameter kann nicht gelöscht werden</t166>
+    <t167>Wird in der Parameterformel "{0}" verwendet</t167>
+    <t168>Wird im Maß (ID={0}) verwendet</t168>
+    <t169>Wird im Array (ID={0}) verwendet</t169>
+    <t170>Ist mit dem Parameter "{0}" des Elements ID={1} verbunden</t170>
+    <t171>Hilfsinformation</t171>
+    <t172>Hilfsinformation festlegen</t172>
+    <t173>Die Revit-API ermöglicht keinen Abruf der existierenden Hilfsinformation zu dem Parameter</t173>
+    <t174>Familienparameter durch gemeinsam genutzten Parameter ersetzen</t174>
+    <t175>Wählen Sie einen Parameter aus</t175>
+    <t176>Gemeinsam genutzten Parameter durch einen anderen gemeinsam genutzten Parameter ersetzen</t176>
+    <t177>Parameter duplizieren</t177>
+    <t178>Reihenfolge der Parameter ändern</t178>
+    <t179>Ziehen Sie Parameter per Drag &amp; Drop in der Tabelle, um ihre neue Position festzulegen. Es ist möglich, mehrere Parameter per Drag &amp; Drop zu verschieben, sowie Parameter in andere Gruppen zu ziehen</t179>
+    <t180>Aufgrund von Einschränkungen in der Revit-API können Systemparameter in andere Gruppen nicht verschoben werden</t180>
+    <ad1>Ermöglicht die Umbenennung eines Familienparameters. Die Aktion ist für Systemparameter und die gemeinsam genutzten Parameter nicht verfügbar</ad1>
+    <ad2>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Systemparameter nicht verfügbar. Beim Ändern der Gruppe verlieren die nicht gemeinsam genutzten Parameter der Familie ihre Beschreibung</ad2>
+    <ad3>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Projektparameter nicht verfügbar</ad3>
+    <ad4>Ermöglicht das Hinzufügen und das Löschen der Verknüpfung eines gemeinsam genutzten Parameters mit Kategorien. Die Aktion ist für Projektparameter nicht verfügbar. Wenn Sie eine Verknüpfung mit Kategorien löschen, werden alle Parameterdaten aus den Elementen dieser Kategorien entfernt</ad4>
+    <ad6>Ermöglicht die Zuweisung eines Familienparameters als Exemplarparameter. Die Aktion ist für Systemparameter nicht verfügbar</ad6>
+    <ad7>Ermöglicht die Zuweisung eines gemeinsam genutzten Parameters als Exemplarparameter. Die Aktion ist für Projektparameter nicht verfügbar</ad7>
+    <ad8>Ermöglicht die Zuweisung eines Familienparameters als Typparameter. Die Aktion ist für Systemparameter nicht verfügbar</ad8>
+    <ad9>Ermöglicht die Zuweisung eines gemeinsam genutzten Parameters als Typparameter. Die Aktion ist für Projektparameter nicht verfügbar</ad9>
+    <ad10>Ermöglicht das Festlegen des Verhaltens "Unterschiedliche Werte für das Exemplar einer Gruppe" für Parameter</ad10>
+    <ad11>Ermöglicht das Festlegen des Verhaltens "Gleiche Werte für den Typ einer Gruppe" für Parameter</ad11>
+    <ad12>Ermöglicht das Löschen eines Parameters. Die Aktion ist für Systemparameter nicht verfügbar</ad12>
+    <ad13>Ermöglicht das Löschen eines Parameters</ad13>
+    <ad14>Ermöglicht das Ersetzen eines gemeinsam genutzten Parameters durch einen Familienparameter ohne den Parameternamen zu ändern</ad14>
     <ea1>Nichts</ea1>
     <ea2>Zielordner öffnen</ea2>
     <ea3>Erstellte Datei öffnen</ea3>
@@ -3331,12 +3335,12 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <msg30>Überprüfen Sie, ob die Wertfelder für den Parameternamen und den Typ ausgefüllt sind</msg30>
     <msg31>Überprüfen Sie, ob die Wertfelder für den Parameternamen, den Typ und der Gruppe sowie für die Kategorieliste ausgefüllt sind</msg31>
     <msg32>Festlegen des Parameterwertes ist fehlgeschlagen</msg32>
-    <msg33>The Revit API does not allow to create or edit parameters in families of some types. Loading such families is skipped</msg33>
-    <msg34>Preset "{0}" will be irrevocably deleted! Continue?</msg34>
-    <msg35>Preset "{0}" has been deleted</msg35>
-    <msg36>Shared parameter replaced by Family parameter</msg36>
-    <msg37>The parameter is bound to categories:</msg37>
-    <msg38>The parameter is unbound from the categories:</msg38>
+    <msg33>Die Revit-API ermöglicht kein Erstellen oder Ändern von Parametern in den Familien von einigen Typen. Das Herunterladen solcher Familien ist übersprungen</msg33>
+    <msg34>Der Voreinstellungssatz "{0}" wird unwiderruflich gelöscht! Wollen Sie fortsetzen?</msg34>
+    <msg35>Der Voreinstellungssatz "{0}" ist gelöscht</msg35>
+    <msg36>Der gemeinsam genutzte Parameter ist durch einen Familienparameter ersetzt</msg36>
+    <msg37>Der Parameter hat eine Verknüpfung mit Kategorien:</msg37>
+    <msg38>Der Parameter hat keine Verknüpfung mit Kategorien:</msg38>
     <err1>Unerwarteter Fehler beim Initialisieren des Fensters aufgetreten</err1>
     <err2>Unerwarteter Fehler beim Schließen des Fensters aufgetreten</err2>
     <err3>Beim Erstellen des Parameters ist ein Fehler aufgetreten</err3>
@@ -3359,12 +3363,12 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <err20>Erstellen des Parameters "{0}" in der Familie "{1}" ist fehlgeschlagen</err20>
     <err21>Die Familie ist nicht geladen, weil die Datei der Familie das Attribut "Nur Lesen" hat</err21>
     <err22>Keine Formel konnte in dem Parameter festgelegt werden, da in der Revit-API ein unkontrollierbarer Fehler aufgetreten ist, der auf einen Fehler in der Revit-API hinweist. Um eine Formel für diesen Parameter festzulegen, verwenden Sie das Standarddialogfeld zur Parameterbearbeitung</err22>
-    <err23>Specify the name of the preset</err23>
-    <err24>There is already a preset with this name in the storage. The existing preset will be overwritten!</err24>
-    <err25>The preset name must not contain the following characters: \ / : * ? " &lt; &gt; |</err25>
-    <err26>Preset storage directory is missing! Make sure you have access to create folders and files in the UserData directory or contact your system administrator</err26>
-    <err27>Failed to execute action</err27>
-    <err28>A parameter named "{0}" has already been defined. Set another name</err28>
+    <err23>Geben Sie den Namen für den Voreinstellungssatz an</err23>
+    <err24>Der Ablageort enthält bereits einen Voreinstellungssatz mit diesem Namen. Geben Sie einen anderen Namen an</err24>
+    <err25>Der Name des Voreinstellungssatzes darf die folgenden Zeichen nicht enthalten: \ / : * ? " &lt; &gt;</err25>
+    <err26>Kein Verzeichnis für Speicherung von Voreinstellungssätzen ist vorhanden! Stellen Sie sicher, dass Sie berechtigt sind, Ordner und Dateien im UserData-Verzeichnis zu erstellen, oder wenden Sie sich an Ihren Systemadministrator</err26>
+    <err27>Die Aktion ist fehlgeschlagen</err27>
+    <err28>Der Parameter mit dem Namen "{0}" ist bereits definiert. Geben Sie einen anderen Namen an</err28>
   </mprParameters>
   <mprOverrideGraphicManager
     LocalName="Manager zur Grafiküberschreibung"
@@ -3537,7 +3541,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   <mprPhases
     LocalName="Phasen"
     Description="Einstellung der Phasen gemäß Filter">
-    <t1>Failed to assign phases to elements</t1>
+    <t1>Die Zuordnung von Phasen zu Elementen ist fehlgeschlagen</t1>
     <t2>In den Ergebnissen der id Elemente anzeigen, denen die Phase zugewiesen ist</t2>
     <t3>Geben Sie einen Namen ein</t3>
     <t4>Sie müssen einen Namen eingeben</t4>
@@ -3552,13 +3556,13 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t13>Phase erstellt</t13>
     <t14>Phase abgebrochen</t14>
     <t15>Auswahl umkehren</t15>
-    <t16>No phase has been selected</t16>
+    <t16>Keine Phase ausgewählt</t16>
     <t17>Anwendung der Phasen</t17>
-    <t18>Delete the phase setup rule</t18>
-    <t19>Set phases by filter</t19>
-    <t20>None</t20>
-    <t21>Don't change</t21>
-    <t22>The phase is not present in the current project</t22>
+    <t18>Die Regel zum Festlegen der Phase löschen</t18>
+    <t19>Die Phasen gemäß Filter festlegen</t19>
+    <t20>Keine</t20>
+    <t21>Nicht ändern</t21>
+    <t22>Die Phase ist im aktuellen Projekt nicht enthalten</t22>
     <ie1>xml-Datei</ie1>
     <ie2>Aktuelles Revit-Dokument</ie2>
     <msg1>Sie versuchen, eine Phasengruppenspeicherdatei zu importieren</msg1>
@@ -3571,10 +3575,26 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <msg9>Für die Phase sind keine Anwendungsbedingungen festgelegt</msg9>
     <msg10>Bei der Einstellung einer Phase für Elemente ist Fehler "{0}" aufgetreten</msg10>
     <msg11>Für die folgenden Elemente wurden keine Phasen festgelegt, da die Elemente vom Benutzer "{0}" bearbeitet werden</msg11>
-    <msg12>Phase Created "{0}" applied to {1} elements</msg12>
-    <msg13>Phase Demolished "{0}" is applied to {1} elements</msg13>
-    <msg14>Phase Created "{0}" is not applied to {1} elements</msg14>
-    <msg15>Phase Demolished "{0}" is not applied to {1} elements</msg15>
-    <msg16>Phases are not assigned to any element. Check if the filters are filled correctly</msg16>
+    <msg12>Die Phase erstellt "{0}" wurde auf {1} Elemente angewandt</msg12>
+    <msg13>Die Phase abgebrochen "{0}" wurde auf {1} Elemente angewandt</msg13>
+    <msg14>Die Phase erstellt "{0}" wurde auf {1} Elemente nicht angewandt</msg14>
+    <msg15>Die Phase abgebrochen "{0}" wurde auf {1} Elemente nicht angewandt</msg15>
+    <msg16>Alle Elemente haben keine Phasenzuordnung. Überprüfen Sie, ob die Filter richtig ausgefüllt sind</msg16>
   </mprPhases>
+  <mprFlipped
+    LocalName="Flipped families"
+    Description="Finding and fixing flipped families">
+    <t1>Searching for flipped families</t1>
+    <t2>Fix flipped families</t2>
+    <t4>Elemente im Modell markieren und anzeigen</t4>
+    <t5>Number of elements found in a category</t5>
+    <t6>Failed to fix the families</t6>
+    <t7>Corrected copies:</t7>
+    <t8>There are no flipped families</t8>
+    <t9>Flipped on its side</t9>
+    <t10>Flipped on its face</t10>
+    <msg1>Family instances cannot be flipped by face. Add a flip control in the family editor</msg1>
+    <msg2>Family instances cannot be flipped by side. Add a flip control to the family editor</msg2>
+    <msg3>The instance is in the group: "{0}"</msg3>
+  </mprFlipped>
 </ModPlus>
