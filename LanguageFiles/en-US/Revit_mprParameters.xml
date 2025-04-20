@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprParameters
+    LocalName="Parameters"
+    Description="Batch editing/adding parameters to projects and families">
+    <pcn1>Create parameters in project</pcn1>
+    <pcd1>Allows batch creation of parameters in the current project</pcd1>
+    <pcn2>Create parameters in families</pcn2>
+    <pcd2>Allows batch creation of parameters in project families, open families, or families on disk</pcd2>
+    <pcn3>Family Editor</pcn3>
+    <pcd3>Analog of the standard parameter editor of the current family, allowing to use an alternative formula editor</pcd3>
+    <pcn4>Edit parameters in project</pcn4>
+    <pcd4>Allows batch editing of parameters in the current project</pcd4>
+    <pcn5>Edit parameters in families</pcn5>
+    <pcd5>Allows batch editing of parameters in project families, open families, or families on disk</pcd5>
+    <t1>No document</t1>
+    <t2>Family</t2>
+    <t3>Project</t3>
+    <t4>Formula validation is performed by the family {0}</t4>
+    <t5>The formula editor is opened based on the {0} family data. The formula is not validated</t5>
+    <t6>Closing family {0}</t6>
+    <t7>Families with parameter "{0}"</t7>
+    <t8>Select parameters</t8>
+    <t9>Change formula</t9>
+    <t10>Change group</t10>
+    <t11>Change behavior</t11>
+    <t12>Values can vary by group instance</t12>
+    <t13>Values are aligned per group type</t13>
+    <!--todo remove after 1.6.2.0-->
+    <t14>Make "By instance"</t14>
+    <!--todo remove after 1.6.2.0-->
+    <t15>Make "By Type"</t15>
+    <t16>Rename</t16>
+    <t17>Parameter exists in the current document</t17>
+    <t18>New parameter</t18>
+    <t19>By instance</t19>
+    <t20>Shared parameter</t20>
+    <t21>Built-in parameter</t21>
+    <t22>Family parameter</t22>
+    <t23>Families</t23>
+    <t24>*DIFFERENT*</t24>
+    <t25>Data type not defined</t25>
+    <t26>Project parameter</t26>
+    <t27>By type</t27>
+    <t28>Check parameter properties</t28>
+    <t29>Other</t29>
+    <t30>SPF Group</t30>
+    <t31>Data Type</t31>
+    <t32>Group parameter under</t32>
+    <t33>Family processing</t33>
+    <t34>Adding parameter</t34>
+    <t35>Setting parameter values...</t35>
+    <t36>Setting formula values...</t36>
+    <t37>Adding parameters</t37>
+    <t38>Parameter created</t38>
+    <t39>Parameter updated</t39>
+    <t40>Parameter update skipped</t40>
+    <t41>Enter new name</t41>
+    <t42>Select new group</t42>
+    <t43>Enter type name</t43>
+    <t44>Parameter processing</t44>
+    <t45>Family reading</t45>
+    <t46>Obtaining parameter data</t46>
+    <t47>Batch editing of parameters</t47>
+    <t48>Update project parameter</t48>
+    <t49>Create project parameter</t49>
+    <t50>Setting standard values</t50>
+    <t51>Name</t51>
+    <t52>Instance/Type</t52>
+    <t53>Values by groups</t53>
+    <t54>Default value</t54>
+    <t55>Categories</t55>
+    <t56>Project parameters</t56>
+    <t57>Family parameters</t57>
+    <t58>Select the path to save the file</t58>
+    <t59>Change current type</t59>
+    <t60>Create type</t60>
+    <t61>Remove type</t61>
+    <t62>Rename type</t62>
+    <t63>Remove parameter</t63>
+    <t64>Replace parameter</t64>
+    <t65>Set formula</t65>
+    <t66>Set parameter value</t66>
+    <t67>Change parameter lock</t67>
+    <t68>Change "Instance/Type" property</t68>
+    <t69>Create parameter</t69>
+    <t70>Custom parameter</t70>
+    <t71>Shared Parameters File</t71>
+    <t72>Action after exporting to Excel:</t72>
+    <t73>Action when parameter exists:</t73>
+    <t74>Retrieve data</t74>
+    <t75>From files</t75>
+    <t76>From folder</t76>
+    <t77>Processed families</t77>
+    <t78>Remove all families from the list</t78>
+    <t79>Insert parameter</t79>
+    <t80>Insert function</t80>
+    <t81>Select all or deselect</t81>
+    <t82>Select SPF:</t82>
+    <t83>Current SPF</t83>
+    <t84>Selected SPF</t84>
+    <t85>Path to SPF:</t85>
+    <t86>Add from SPF</t86>
+    <t87>Add selected parameters from the SPF to the current parameter list</t87>
+    <t88>Groups</t88>
+    <t89>Parameter definitions</t89>
+    <t90>Total parameters:</t90>
+    <t91>Selected parameters:</t91>
+    <t92>Create family parameter</t92>
+    <t93>Export parameter list to Excel</t93>
+    <t94>Import parameter list from Excel</t94>
+    <t95>Remove selected parameters from the list</t95>
+    <t96>Remove all parameters from the list</t96>
+    <t97>Create</t97>
+    <t98>Instance</t98>
+    <t99>Type</t99>
+    <t100>Formula Editor</t100>
+    <t101>Execute and close</t101>
+    <t102>Edit the list of categories of the selected parameters</t102>
+    <t103>Create a custom parameter. The custom parameter will be a Shared parameter with a random GUID, but with no binding to a specific SPF</t103>
+    <t104>State</t104>
+    <t105>Not supported</t105>
+    <t106>Type name:</t106>
+    <t107>Create new type</t107>
+    <t108>Remove current type</t108>
+    <t109>Replace the shared parameter with a family parameter</t109>
+    <t110>Lock</t110>
+    <t111>Not available</t111>
+    <t112>Make parameter of instance</t112>
+    <t113>Make parameter of type</t113>
+    <t114>Clear the list of actions</t114>
+    <t115>Count</t115>
+    <t116>Count of families with this parameter</t116>
+    <t117>Actions</t117>
+    <t118>Change by group</t118>
+    <t119>Change by instance</t119>
+    <!-- todo remove after 1.6.2.0 -->
+    <t120>Values by group</t120>
+    <t121>Validate</t121>
+    <t122>Accept without validation</t122>
+    <t123>Add the current formula to the favorites list</t123>
+    <t124>Insert a formula from the favorites list</t124>
+    <t125>Section</t125>
+    <t126>Current document type:</t126>
+    <t127>Available sections:</t127>
+    <t128>Unavailable sections:</t128>
+    <t129>{0} categories</t129>
+    <t130>Trial Period. Days left</t130>
+    <t131>The plugin's trial period is over! Purchase a plugin license or Revit subscription to continue using the "Parameters" plugin</t131>
+    <t132>Favorite formulas</t132>
+    <t133>Ignore nested families</t133>
+    <t134>Other</t134>
+    <t135>On plugin startup, open a section in the family document:</t135>
+    <t136>Case sensitive searches in the list of data types, parameter groups, column filters and the dialog box for adding parameters from the SPF</t136>
+    <!-- todo remove after 1.6.2.0 -->
+    <t137>Change group</t137>
+    <t138>Select a new group for the parameter "{0}"</t138>
+    <t139>Select families</t139>
+    <t140>Delete backup files</t140>
+    <t141>After saving the family, all backup files of the form Family_name.nnnn.rfa next to the family file will be deleted</t141>
+    <t142>Due to limitations in Revit API, if you change the group of a non-shared family parameter, the description will be lost!</t142>
+    <t143>In the current family type, it is not possible to use the plugin. The family editor is open in Read Only mode</t143>
+    <t144>The row corresponding to the parameter is not found in the imported file</t144>
+    <t145>Failed to recognize the action in "{0}". Make sure that the application language matches the file being loaded</t145>
+    <t146>An action from the value "{0}" is recognized but not added to the parameter "{1}" because the action is not applicable to the parameter or the parameter is already marked as deletable</t146>
+    <t147>Failed to recognize the group specified in "{0}". Some group names may differ between Revit versions</t147>
+    <t148>You do not have access to save presets to the organization's preset storage</t148>
+    <t149>Load preset</t149>
+    <t150>Save preset</t150>
+    <t151>Preset name</t151>
+    <t152>There are no saved presets for the current section in the storage</t152>
+    <t153>Change parameter definition</t153>
+    <t154>Add categories</t154>
+    <t155>Remove categories</t155>
+    <t156>Add an action to the selected parameters</t156>
+    <t157>Select an action</t157>
+    <t158>Not bound to project categories</t158>
+    <t159>Change the binding to categories</t159>
+    <t160>Save to:</t160>
+    <t161>User storage</t161>
+    <t162>Organization storage</t162>
+    <t163>Remove unused parameters</t163>
+    <t164>Remove checked parameters</t164>
+    <t165>Used</t165>
+    <t166>Built-in parameter cannot be removed</t166>
+    <t167>Used in the "{0}" parameter formula</t167>
+    <t168>Used in dimension (ID={0})</t168>
+    <t169>Used in an array (ID={0})</t169>
+    <t170>Associated with the "{0}" parameter of element ID={1}</t170>
+    <t171>ToolTip</t171>
+    <t172>Set ToolTip</t172>
+    <t173>Revit API does not allow to retrieve an existing parameter ToolTip</t173>
+    <t174>Replace the family parameter with a shared parameter</t174>
+    <t175>Select parameter</t175>
+    <t176>Replace the shared parameter with another shared parameter</t176>
+    <t177>Duplicate parameter</t177>
+    <t178>Change the order of parameters</t178>
+    <t179>Drag the parameters in the table to set their new position. It is allowed to drag multiple parameters, as well as to drag parameters to other groups</t179>
+    <t180>Due to limitations in the Revit API, system parameters cannot be moved to other groups</t180>
+    <t181>Family files</t181>
+    <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
+    <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
+    <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
+    <ad4>Allows you to add or remove the binding of shared parameter to categories. The action is not available for project parameters. If you delete a binding to categories, all parameter data will be removed from the elements of these categories</ad4>
+    <ad6>Allows you to make a family parameter an instance parameter. The action is not available for system parameters</ad6>
+    <ad7>Allows you to make a shared parameter an instance parameter. The action is not available for project parameters</ad7>
+    <ad8>Allows you to make a family parameter a type parameter. The action is not available for system parameters</ad8>
+    <ad9>Allows you to make a shared parameter a type parameter. The action is not available for project parameters</ad9>
+    <ad10>Allows you to set the "Values can vary by group instance" behavior for parameters</ad10>
+    <ad11>Allows you to set the "Values are aligned per group type" behavior for parameters</ad11>
+    <ad12>Allows you to delete the parameter. Action is not available for system parameters</ad12>
+    <ad13>Allows you to delete the parameter</ad13>
+    <ad14>Allows you to replace a shared parameter with a family parameter while preserving the parameter name</ad14>
+    <ea1>Nothing</ea1>
+    <ea2>Open target folder</ea2>
+    <ea3>Open created file</ea3>
+    <ea4>Ask for opening target folder</ea4>
+    <ep1>Skip</ep1>
+    <ep2>Set formula (if possible)</ep2>
+    <ep3>Set value (if possible)</ep3>
+    <ep4>Set formula or value (if possible)</ep4>
+    <fs1>From file</fs1>
+    <fs2>From project</fs2>
+    <fs3>Open families</fs3>
+    <fs4>From Project Browser</fs4>
+    <s1>Selected elements</s1>
+    <s2>On active view</s2>
+    <s3>In project</s3>
+    <d1>Common</d1>
+    <d2>Electrical</d2>
+    <d3>Energy</d3>
+    <d4>HVAC</d4>
+    <d5>Piping</d5>
+    <d6>Structural</d6>
+    <d7>Infrastructure</d7>
+    <msg1>The formula has been added to the favorites list</msg1>
+    <msg2>The current formula is not empty. Are you sure to replace it with a formula from the favorites list?</msg2>
+    <msg3>Shared parameter is already present in the current parameter list</msg3>
+    <msg4>A parameter with this name, data type and grouping is already present in the current parameter list</msg4>
+    <msg5>All selected parameters cannot be renamed</msg5>
+    <msg6>The type named "{0}" already exists</msg6>
+    <msg7>Are you sure you want to remove the type "{0}"?</msg7>
+    <msg8>Remove the "{0}" parameter?</msg8>
+    <msg9>Remove selected parameters ({0})?</msg9>
+    <msg10>The parameter creation is skipped, because the family already has such a parameter</msg10>
+    <msg12>The parameter has not been created</msg12>
+    <msg13>The value of the parameter is set</msg13>
+    <msg14>Failed to set the parameter value</msg14>
+    <msg15>Parameter formula updated</msg15>
+    <msg16>Failed to update the parameter formula</msg16>
+    <msg17>Parameter removed</msg17>
+    <msg18>Parameter renamed</msg18>
+    <msg19>The value "{0}" is set</msg19>
+    <msg20>Unknown action</msg20>
+    <msg21>Parameter "{0}" has been deleted</msg21>
+    <msg22>The formula has been changed</msg22>
+    <msg23>Parameter made "By instance"</msg23>
+    <msg24>Parameter made "By type"</msg24>
+    <msg25>Parameter moved to group "{0}"</msg25>
+    <msg26>Open the export folder?</msg26>
+    <msg27>Process families from nested directories?</msg27>
+    <msg28>The formula editor will be opened without the ability to validate the formula</msg28>
+    <msg29>No Shared Parameter File has been set in the current project</msg29>
+    <msg30>Check if the parameter name and type values are filled in</msg30>
+    <msg31>Check if the parameter name, type, group and category list values are filled in</msg31>
+    <msg32>The entered value does not match the parameter type</msg32>
+    <msg33>The Revit API does not allow to create or edit parameters in families of some types. Loading such families is skipped</msg33>
+    <msg34>Preset "{0}" will be irrevocably deleted! Continue?</msg34>
+    <msg35>Preset "{0}" has been deleted</msg35>
+    <msg36>Shared parameter replaced by Family parameter</msg36>
+    <msg37>The parameter is bound to categories:</msg37>
+    <msg38>The parameter is unbound from the categories:</msg38>
+    <err1>An unexpected error occurred during window initialization</err1>
+    <err2>An unexpected error occurred when closing the window</err2>
+    <err3>An error occurred while creating the parameter</err3>
+    <err4>Failed to add parameter binding</err4>
+    <err5>Failed to get parameter binding</err5>
+    <err6>Failed to update parameter binding</err6>
+    <err7>Failed to execute actions</err7>
+    <err8>Failed to execute action with parameter "{0}"</err8>
+    <err9>Parameter with GUID "{0}" is omitted because no SPF is specified</err9>
+    <err10>Parameter with GUID "{0}" is not found in the current SPF</err10>
+    <err11>Not recognized data type "{0}" for parameter</err11>
+    <err12>Not recognized group "{0}" for parameter</err12>
+    <err13>Not recognized category for parameter "{0}"</err13>
+    <err14>Failed to read row</err14>
+    <err15>The family has been saved in a later version of Revit</err15>
+    <err16>Unable to set the value "{0}" to an integer parameter</err16>
+    <err17>Unsupported data type "{0}"</err17>
+    <err18>Instance Parameters can't be used in Type Parameter formulas</err18>
+    <err19>Failed to set the formula</err19>
+    <err20>Failed to create parameter "{0}" in family "{1}"</err20>
+    <err21>The family is not loaded because the family file has a "Read Only" attribute</err21>
+    <err22>Failed to set a formula to a parameter because an uncontrolled error occurred in the Revit API, indicating a bug in the Revit API. To set a formula to this parameter, use the standard parameter editing dialog</err22>
+    <err23>Specify the name of the preset</err23>
+    <err24>There is already a preset with this name in the storage. The existing preset will be overwritten!</err24>
+    <err25>The preset name must not contain the following characters: \ / : * ? " &lt; &gt; |</err25>
+    <err26>Preset storage directory is missing! Make sure you have access to create folders and files in the UserData directory or contact your system administrator</err26>
+    <err27>Failed to execute action</err27>
+    <err28>A parameter named "{0}" has already been defined. Set another name</err28>
+    <err29>The selected family is the current family. Select another family</err29>
+  </mprParameters>
+</ModPlus>

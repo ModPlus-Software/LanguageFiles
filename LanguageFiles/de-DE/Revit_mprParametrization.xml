@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprParametrization
+    LocalName="Parametrisierung"
+    Description="Ausfüllen von Elementparametern mit verschiedenen Strategien">
+    <!-- todo remove after 3.3.6.0 start -->
+    <t1>Den Inhalt des Fensters minimieren</t1>
+    <t2>Den Inhalt des Fensters vergrößern</t2>
+    <t3>Eine neue Konfiguration erstellen</t3>
+    <t4>Die aktuelle Konfiguration duplizieren</t4>
+    <t5>Die aktuelle Konfiguration löschen</t5>
+    <!-- todo remove after 3.3.6.0 end -->
+    <t6>Geben Sie einen Namen der Konfiguration ein</t6>
+    <t7>Strategien</t7>
+    <t8>Eine Strategie hinzufügen</t8>
+    <t9>Die Strategie duplizieren</t9>
+    <t10>Die Strategie löschen</t10>
+    <t11>Regeln</t11>
+    <t12>Verarbeitung der Elemente aus den verknüpften Dateien</t12>
+    <t13>Aus den verknüpften Dateien werden die übergeordneten Elemente gesammelt. Bei der Strategie InMass sind es beispielsweise die Formelemente, bei der Strategie InSolid die Vollkörperelemente usw. Die Elemente werden nach den Kategorien gesammelt, die in der entsprechenden Spalte der Regel angegeben sind</t13>
+    <t14>Strategien, die mit der Geometrie von Elementen arbeiten (wie z.B. InRoom, InSpace, InSolid, SolidTouch, etc.), sollten in der aktiven Ansicht gestartet werden! Erfolgt der Start im gesamten Dokument, wird die Geometrie von Elementen übernommen, die die Interaktion mit anderen Elementen nicht berücksichtigt, was zu falschen Ergebnissen führen kann.</t14>
+    <t15>Geben Sie einen Namen der Strategie ein</t15>
+    <t16>Neue Regel hinzufügen</t16>
+    <t17>Die ausgewählten Regeln löschen</t17>
+    <t18>Die ausgewählten Regeln duplizieren</t18>
+    <t19>Neunummerierung entsprechend der Position in der Tabelle durchführen</t19>
+    <t20>Export der aktuellen Konfiguration</t20>
+    <t21>Import von Strategien in die aktuelle Konfiguration</t21>
+    <t23>Import von Regeln in die aktuelle Strategie</t23>
+    <t24>Export von Regeln in die aktuelle Strategie</t24>
+    <t25>Ein leeres Ergebnis schreiben</t25>
+    <t26>Das leere Ergebnis der Ausdrucksberechnung in den Zielparameter schreiben. Bei Zeichenkettenparametern ist es eine leere Zeichenkette, bei numerischen Parametern ist es 0</t26>
+    <t27>Berücksichtigung der Groß- und Kleinschreibung beim Vergleich von Zeichenketten in Bedingungen</t27>
+    <t28>Toleranz, die beim Vergleich numerischer Werte in den Bedingungen verwendet wird</t28>
+    <t29>Funktion einfügen</t29>
+    <t30>Vorschau einer Formel</t30>
+    <t31>Formel-Editor</t31>
+    <t32>Berücksichtigung der Groß- und Kleinschreibung</t32>
+    <t33>Aufzeichnung der leeren</t33>
+    <t34>Eindeutiger Identifikator der Strategie (nicht ändern!):</t34>
+    <t35>Benutzerdefinierter Name der Strategie:</t35>
+    <t36>Kopie</t36>
+    <t37>Strategie</t37>
+    <t38>kein Parameter</t38>
+    <t39>Regel</t39>
+    <t40>Ausdruck</t40>
+    <t41>SolidTouch: Abstandstoleranz zwischen den Elementkanten, mm:</t41>
+    <t42>Den Text in eine neue Zeile verschieben</t42>
+    <t43>Wählen Sie eine Konfiguration aus oder erstellen Sie eine</t43>
+    <t44>Algorithmus für die Suche nach dem Vorkommen von volumetrischen Formen:</t44>
+    <t45>Hilfsstrahlen</t45>
+    <t46>Boolesche Operationen</t46>
+    <t47>Legt den Algorithmus für die Suche nach dem Vorkommen von volumetrischen Formen für die Strategien InRoom, InSpace, InMass, InSolid fest. Der Algorithmus "Hilfsstrahlen" arbeitet schnell, ermöglicht aber, dass eine Form nur einer übergeordneten Form zugewiesen wird. Der Algorithmus "Boolesche Operationen" benötigt mehr Zeit, ermöglicht aber, dass eine Form mehreren übergeordneten Form zugewiesen wird. Weitere Informationen finden Sie in der Hilfe</t47>
+    <t48>Felder</t48>
+    <t49>Favoritenfelder</t49>
+    <t50>Ein neues Feld hinzufügen</t50>
+    <t51>Das Feld löschen</t51>
+    <t52>Ein Feld in die Formel einfügen</t52>
+    <t53>Felder aus der Liste der Favoritenfelder hinzufügen</t53>
+    <t54>Ein Feld in die Liste der Favoritenfelder hinzufügen</t54>
+    <t55>Ein Feld aus der Liste der Favoritenfelder entfernen</t55>
+    <t56>Die Liste der Felder enthält bereits ein Feld mit diesem Schlüssel</t56>
+    <t57>Ein Feld duplizieren</t57>
+    <t58>Mapping von Funktionsnamen</t58>
+    <t59>In diesem Fenster können Sie Ihre eigene Namen für die im Formeleditor verwendeten Funktionen festlegen. Die Funktionsnamen dürfen keine Leerzeichen oder Steuerzeichen (Klammern, Kommas, Punkte usw.) enthalten. Klein- bzw. Großschreibung ist ohne Belang</t59>
+    <t60>Suchen und Ersetzen</t60>
+    <t61>Feld erstellen</t61>
+    <t62>Geben Sie einen eindeutigen Schlüssel für das neue Feld ein</t62>
+    <t63>Abbinden</t63>
+    <t64>Die evtl. Verknüpfung des Zielparameters mit dem globalen Projektparameter löschen</t64>
+    <t65>Alle Strategien löschen</t65>
+    <t66>Ausgewählte Regeln in die Zwischenablage kopieren</t66>
+    <t67>Regeln aus der Zwischenablage einfügen</t67>
+    <t68>Feldwert in allen Regeln aktualisieren</t68>
+    <t69>Formel anzeigen</t69>
+    <t70>Formel ausblenden</t70>
+    <t71>Geometrie der Unterfamilien verwenden, wenn die Familie keine Geometrie hat</t71>
+    <t72>Geben Sie die Beschreibung der Strategie ein</t72>
+    <t73>Dezimaltrennzeichen der Zahlenwerte:</t73>
+    <t74>System</t74>
+    <t75>Das Dezimaltrennzeichen der Zahlenwerte wird bei der Konvertierung von Zahlenwerten zu Zeichenfolgenwerten während der Formelberechnung verwendet. Solche Konvertierungen werden beim Ermitteln von Werten aus numerischen Parametern, bei Berechnung mathematischer Ausdrücke sowie bei Berechnung von Funktionen, deren Ergebnisse Zahlen sind, durchgeführt</t75>
+    <t76>Anzahl der Regel: eingesch/gesamt</t76>
+    <t77>Hintergrund der Strategie in der Liste ändern</t77>
+    <t78>Hintergrund der ersten Zelle bei den ausgewählten Regeln ändern</t78>
+    <t79>Ergebnisse der Parametrierung</t79>
+    <t80>Konfiguration: {0}. Gesamtanzahl der Strategien: {1}. Gesamtanzahl der Regeln: {2}. Gesamtzeitanspruch: {3}</t80>
+    <t81>Gesamtanzahl der bearbeiteten Elemente</t81>
+    <t82>Gesamtausführzeit</t82>
+    <t83>Regeln ausgeführt:</t83>
+    <t84>Anzahl der geänderten Elemente</t84>
+    <t85>Anzahl der übersprungenen Elemente</t85>
+    <t86>Anzahl der Elemente, die nicht geändert werden konnten</t86>
+    <t87>Bearbeitete Elemente</t87>
+    <t88>Alle auswählen</t88>
+    <t89>Alle isolieren</t89>
+    <t90>Export in txt</t90>
+    <t91>Inhaltsverzeichnis:</t91>
+    <t93>Wählen Sie das Ergebnis der Ausdrucksverarbeitung aus, um eine Liste mit den IDs der verarbeiteten Elemente anzeigen zu lassen</t93>
+    <t94>Eingeschränkter Modus</t94>
+    <t95>Wenn kein Filter für die Regel angegeben ist, wird der allgemeine Strategiefilter verwendet</t95>
+    <t96>Wählen Sie Ansichten aus</t96>
+    <t97>Datenquelle</t97>
+    <t98>Strategiefilter</t98>
+    <t99>Regelliste maximieren</t99>
+    <t100>Regelliste minimieren</t100>
+    <t101>Quellelement im Modell auswählen</t101>
+    <t102>Anzahl der Ausdrücke:</t102>
+    <t103>Die Speicherung der folgenden Einstellungen erfolgt in der aktuellen Konfiguration</t103>
+    <t104>Festlegen von Änderungen im Dokument:</t104>
+    <t105>Beim Setzen eines Wertes im Parameter</t105>
+    <t106>Bei der Verarbeitung der Regel</t106>
+    <t107>Bei der Verarbeitung der Strategie</t107>
+    <t108>Beim Setzen eines Wertes im Parameter: Nach dem Setzen jedes Wertes für jeweilige Parameter aller Elemente erfolgt das Festlegen der Änderungen im Dokument. In diesem Fall können Sie in jeder nachfolgenden Formelanweisung die in der vorherigen Formelanweisung geänderten Parameterwerte verwenden. Diese Option kann mehr Verarbeitungszeit erfordern.</t108>
+    <t109>Bei der Verarbeitung der Regel: Das Festlegen der Änderungen im Dokument erfolgt nach der Verarbeitung aller Ausdrücke einer Regel. In diesem Fall ist es nicht möglich, denselben Parameter innerhalb einer Regel zu ändern und anschließend wiederzuverwenden, weil der geänderte Parameterwert noch nicht im Dokument festgelegt wurde.</t109>
+    <t110>Bei der Verarbeitung der Strategie: Das Festlegen der Änderungen im Dokument erfolgt nach der Verarbeitung aller Regel der jeweiligen Strategie. In diesem Fall ist es nicht möglich, denselben Parameter in verschiedenen Regeln einer Strategie zu ändern und anschließend wiederzuverwenden, weil der geänderte Parameterwert noch nicht im Dokument festgelegt wurde.</t110>
+    <t111>Aktuelle Konfiguration exportieren. Verwenden Sie XML zur Speicherung und Übertragung der Daten. Excel sollte nur zum schnellen Bearbeiten und anschließenden rückläufigen Herunterladen verwendet werden</t111>
+    <t112>Aktuelle Strategie exportieren. Verwenden Sie XML zur Speicherung und Übertragung der Daten. Excel sollte nur zum schnellen Bearbeiten und anschließenden rückläufigen Herunterladen verwendet werden</t112>
+    <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
+    <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
+    <msg3>Die Liste der Strategien ist nicht leer</msg3>
+    <msg4>Wollen Sie die aktuelle Liste der Strategien ersetzen oder importierte Strategien zur Liste hinzufügen?</msg4>
+    <msg5>Suche nach Zusammenhängen zwischen den Exemplaren von Elementen</msg5>
+    <msg6>Verarbeitung einer Strategie</msg6>
+    <msg7>kein Element wurde verarbeitet</msg7>
+    <msg8>Keine Elemente wurden nach den ausgewählten Regeln der ausgewählten Strategien verarbeitet</msg8>
+    <msg9>Festlegen von Änderungen in einem Dokument...</msg9>
+    <msg10>Die Liste der Regeln ist nicht leer</msg10>
+    <msg11>Wollen Sie die aktuelle Liste der Regeln ersetzen oder importierte Regeln zur Liste hinzufügen?</msg11>
+    <msg12>Die Regel wurde weggelassen, weil keine Formel angegeben ist</msg12>
+    <msg13>Verarbeitung der Regel</msg13>
+    <msg14>Werteinstellungschritt übersprungen, da der Parameter "{0}" den gleichen Wert hat</msg14>
+    <msg15>verarbeitet</msg15>
+    <msg16>nicht verarbeitet mit dem Fehler</msg16>
+    <msg17>In der limitierten Version des Plugins kann nur eine Konfiguration erstellt werden</msg17>
+    <msg18>In der limitierten Version des Plugins können maximal drei Strategien erstellt werden</msg18>
+    <msg19>In der limitierten Version des Plugins können maximal drei Regeln erstellt werden</msg19>
+    <msg20>Die Liste der Favoritenfelder enthält bereits ein Feld mit diesem Schlüssel</msg20>
+    <msg21>Sind Sie sicher, dass Sie alle Strategien in der aktuellen Konfiguration dauerhaft löschen wollen?</msg21>
+    <msg22>Der Wert für dieses Feld wird in allen Regeln aller Konfigurationen bei der Übereinstimmung der Feldschlüssel aktualisiert.\nWollen Sie fortsetzen?</msg22>
+    <msg23>Das Feld "{0}" wurde aktualisiert: die Konfiguration "{1}" – Strategie "{2}" – Regel "{3}"</msg23>
+    <msg24>Das Feld "{0}" wurde in keiner Regel gefunden!</msg24>
+    <msg25>Es ist nicht möglich, Elemente in der aktuellen Ansicht auszuwählen. Wechseln Sie zu einer anderen Ansicht</msg25>
+    <msg26>Wollen Sie die aktuellen Strategiefilter durch die Strategiefilter aus der importierten Datei ersetzen?</msg26>
+    <msg27>Wollen Sie die aktuelle Strategiedatenquelle durch die Datenquelle aus der importierten Datei ersetzen?</msg27>
+    <msg28>Bei der ausgewählten Datei handelt es sich nicht um eine Datei für die Konfigurations- bzw. Strategiespeicherung</msg28>
+    <msg29>Bei der ausgewählten Datei handelt es sich nicht um eine Datei für die Strategiespeicherung</msg29>
+    <msg30>A category added in a later Revit version and not present in the current Revit version has been removed from the "{0}" strategy filter for the source element</msg30>
+    <msg31>A category added in a later Revit version and not present in the current Revit version has been removed from the "{0}" strategy filter for the target element</msg31>
+    <msg32>A category added in a later Revit version and not present in the current Revit version has been removed from the rule "{0}" filter of the "{1}" strategy for the source element</msg32>
+    <msg33>A category added in a later Revit version and not present in the current Revit version has been removed from the rule "{0}" filter of the "{1}" strategy for the target element</msg33>
+    <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
+    <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
+    <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
+    <err4>Berechnung eines arithmetischen Ausdrucks fehlgeschlagen</err4>
+    <err5>Die Bedingung "{0}" muss bedingte Vergleichsoperatoren enthalte ({1})</err5>
+    <!-- todo remove after 3.3.18.0 -->
+    <err6>Die Bedingung "{0}" muss die Werte vor und nach dem Zeichen enthalten "{1}"</err6>
+    <err9>Unerwartete Bedingungsanweisung</err9>
+    <err10>Die Bedingung konnte nicht verarbeitet werden</err10>
+    <err11>Die Funktion muss durch ein Komma getrennte Zahlen enthalten</err11>
+    <err12>Ungültiger Rundungsverfahrenswert "{0}". Es ist zulässig, das Symbol "z" für das Verfahren AwayFromZero oder das Symbol "e" für das Verfahren ToEven zu verwenden</err12>
+    <err13>Die Anzahl der Nachkommastellen muss als ganze Zahl über 0 oder als Bruchzahl zwischen 0 und 1 angegeben werden</err13>
+    <err14>Das zweite Argument muss das Verfahren der Rundung sein (das "z"-Symbol für das Verfahren AwayFromZero oder das "e"-Symbol für das Verfahren ToEven) oder die Anzahl der Nachkommastellen</err14>
+    <err15>Die Funktion muss nicht mehr als drei Argumente enthalten</err15>
+    <err16>Die Funktion muss zwei numerische Argumente enthalten, die durch ein Komma getrennt sind</err16>
+    <err17>Die Funktion muss drei durch Kommata getrennte Argumente enthalten: eine Bedingung, einen Wert, wenn die Bedingung erfüllt ist, und einen Wert, wenn die Bedingung nicht erfüllt ist</err17>
+    <err18>Die Funktion muss mindestens zwei Bedingungen enthalten, die durch ein Komma getrennt sind</err18>
+    <err19>Die Funktion muss zwei durch Komma getrennte Argumente enthalten: die zu prüfende Zahl und einen durch zwei Punkte getrennten Zahlenbereich ".."</err19>
+    <err20>Das Argument "{0}" muss zwei durch zwei Punkte getrennte Zahlen enthalten ".."</err20>
+    <err21>Die Funktion muss mindestens zwei durch Semikolon getrennte Argumente enthalten</err21>
+    <err22>Das Argument "{0}" muss eine Bedingung und einen durch Doppelpunkt getrennten Wert enthalten</err22>
+    <err23>Der Wert "{0}" konnte nicht in eine Zahl umgewandelt werden</err23>
+    <err24>Die Funktion konnte nicht berechnet werden</err24>
+    <err25>Der Plan "{0}" enthält eine falsche Anzahl von Zeilen und Spalten</err25>
+    <err26>Spalte 4 von Zeile 1 im Plan "{0}" muss einen eindeutigen Identifikator der Strategie enthalten (Self, OnlyFamilies, Types, InHost usw.).</err26>
+    <err27>Fehler beim Ablesen der Kategorien</err27>
+    <err28>Fehler beim Ablesen der Parameter</err28>
+    <err29>Ungültige Formel</err29>
+    <err30>Die Verarbeitung der Zeile wurde mit einem Fehler beendet</err30>
+    <err31>Fremder Strategietyp</err31>
+    <err32>Ausdrucksfehler "{0}"</err32>
+    <err33>Parameter "{0}" ist nicht gefunden</err33>
+    <err34>Revit konnte keinen Wert in Parameter setzen</err34>
+    <!-- todo remove after 2.31.10.0 -->
+    <err35>fremder Referenzwerttyp des Parameters</err35>
+    <err36>Referenzwert "{0}" bei Einstellung des Parameters "{1}" nicht gefunden</err36>
+    <err37>Parameter "{0}" kann nicht bearbeitet werden</err37>
+    <err38>Der Parameter "{0}" hat den Datentyp "Integer", aber der angegebene Wert "{1}" ist keine Ganzzahl</err38>
+    <err39>Die übergeordnete Strategie erlaubt keine Parameter von bedingten Quellelementen (@[Parameter])</err39>
+    <err40>Aus dem Wert "{0}" konnte kein Feld abgerufen werden. Der Wert muss mit dem in Winkelklammern eingeschlossenen Feldschlüssel beginnen</err40>
+    <err41>Der Datentyp des Parameters "{0}" ist nicht definiert</err41>
+    <err42>der bei der Formelberechnung ermittelte Leerwert wird nicht in den Parameter geschrieben, da die Option "Aufzeichnung der leeren" in der Formel nicht aktiviert ist</err42>
+    <err43>Die Typeneigenschaft mit dem Namen "{0}" wurde in der Liste der gültigen Typeigenschaften des verarbeiteten Elements nicht gefunden</err43>
+    <err44>Die Typeneigenschaft mit dem Namen "{0}" existiert schon</err44>
+    <err45>Der Identifikator (ID) des Elements kann nicht als Zielparameter verwendet werden</err45>
+    <err46>Das zweite Argument muss eine positive Ganzzahl größer als Null sein</err46>
+    <err48>Das dritte Argument muss eine positive Ganzzahl größer als Null sein</err48>
+    <err49>Die Funktion muss zwei Argumente enthalten</err49>
+    <err50>Die Funktion muss zwei oder drei Argumente enthalten</err50>
+    <err51>Die Liste der Felder für die aktuelle Formel enthält bereits ein Feld mit dem Schlüssel "{0}"</err51>
+    <err52>Der Parameter "{0}" verweist nicht auf ein anderes Modellelement</err52>
+    <err53>Der Zielparameter darf kein Zeichen "|" enthalten</err53>
+    <err54>Die Anweisung darf keine Klammern enthalten, wenn sie keine Funktionsgrenzen sind. Um einer Anweisung Klammern hinzuzufügen, müssen diese mit Escapezeichen "\)" und "\(" versehen werden</err54>
+    <err55>Die Funktion muss als Argument einen Verweis auf einen Parameter (@[] oder $[]) enthalten</err55>
+    <err56>Die Liste enthält Felder mit dem gleichen Schlüssel!</err56>
+    <err57>Kein Bearbeitungsbereich mit dem Namen "{0}" gefunden</err57>
+    <err58>Die Funktion darf keine Argumente haben</err58>
+    <err59>Die Funktion muss drei Argumente haben: Ausgangswert, Suchwert und den Wert zum Ersetzen</err59>
+    <err60>Die eindeutige Strategie-ID "{0}" auf dem Plan "{1}" entspricht der ID der aktuellen Strategie "{2}" nicht</err60>
+    <err61>Die Funktion muss die Zellenadresse vom Typ "A1" enthalten</err61>
+    <err62>Die Excel-Datei der Datenquelle ist nicht angegeben oder nicht gefunden</err62>
+    <err63>Der Isolationstyp "{0}" ist im aktuellen Projekt nicht gefunden</err63>
+    <err64>Die Schlüsselparameter "ToRoom" und "FromRoom" dürfen ausschließlich bei der Bearbeitung von Familien in den Kategorien "Türen", "Fenster" verwendet werden</err64>
+    <err65>Kein den Filterbedingungen entsprechendes Quellelement ist im Modell gefunden</err65>
+    <err66>Keine Daten zur Zuordnung des Ergebnisses der Ausdruckauswertung sind definiert</err66>
+    <err67>Jeder Ausdruck der Formel muss mit dem Zielparameter "$[ParemeterName]=" oder mit der Funktion zum Schreiben der Ergebniskombination in das bedingte Quellelement "JOIN(@[ParameterName],)=", oder mit der Funktion zum Schreiben der Summe der Ergebnisse in das bedingte Quellelement "SUM(@[ParameterName])=" anfangen</err67>
+    <err68>Aus dem Wert "{0}" konnte keine Zahl abgerufen werden</err68>
+    <err69>Das Ergebnis kann nicht aus der verknüpften Datei in das bedingte Quellelement geschrieben werden</err69>
+    <err70>Das Element wird aktuell vom Benutzer "{0}" verwendet und kann nicht geändert werden</err70>
+    <err71>Kein den Filterbedingungen entsprechendes Quellelement in der aktuellen Ansicht gefunden</err71>
+    <err72>Das Ergebnis kann nicht aus der verknüpften Datei in den Parameter des Elements geschrieben werden</err72>
+    <err73>Die Funktion muss mindestens zwei Argumente enthalten: die Bedingung und einen Verweis auf die Ergebnisspalte</err73>
+    <err74>Der Spaltenname {0} muss mit lateinischem Buchstaben oder einer Zahl angegeben werden</err74>
+    <rh1>Nr.</rh1>
+    <rh2>Ein</rh2>
+    <rh3>Formel</rh3>
+    <rh4>Eigenschaften der Formel</rh4>
+    <sm1>Verarbeitung der ausgewählten Elemente</sm1>
+    <sm2>Verarbeitung der Elemente in der aktuellen Ansicht</sm2>
+    <sm3>Verarbeitung der Elemente in dem Dokument</sm3>
+    <sm4>Bearbeitung von Elementen in den ausgewählten Ansichten</sm4>
+    <ssd1>Verarbeitung der Elemente ohne Zusammenhänge</ssd1>
+    <sld1>Die Strategie verarbeitet Elemente ohne Berücksichtigung ihrer Zusammenhänge mit anderen Elementen. Mindestens ein Filter (für Kategorien oder für Parameter) muss ausgefüllt werden</sld1>
+    <ssd2>Verarbeitung der Exemplaren von Familien ohne Zusammenhänge</ssd2>
+    <sld2>Die Strategie verarbeitet Exemplare von Familien ohne Berücksichtigung ihrer Zusammenhänge mit anderen Elementen. Es ist zulässig, weder einen Filter für Kategorien noch einen Filter für Parameter zu verwenden</sld2>
+    <ssd3>Verarbeitung der Typen</ssd3>
+    <sld3>Die Strategie verarbeitet die Typen. Wenn die Option "Verarbeitung der ausgewählten Elemente" ausgewählt ist, werden die Typeigenschaften der ausgewählten Elemente verarbeitet. Wenn die Option "Verarbeitung der Elemente in der aktuellen Ansicht" ausgewählt ist, werden die Typeigenschaften der Elemente in der aktuellen Ansicht verarbeitet. Wenn die Option "Verarbeitung der Elemente in dem Dokument" ausgewählt ist, werden alle Typeigenschaften im Dokument verarbeitet</sld3>
+    <ssd4>Verarbeitung der Elemente in der Basis</ssd4>
+    <sld4>Die Strategie verarbeitet Elemente, die Informationen zur Basis haben. Zu diesen Elementen gehören: Bewehrungsstab, Flächenbewehrung, lineare Bewehrung, Bewehrungsbehälter, Öffnungen, Stapelwände und Familien (einschließlich Elemente der Fassadensysteme)</sld4>
+    <ssd5>Verarbeitung der Elemente in der Gruppe</ssd5>
+    <sld5>Die Strategie verarbeitet Elemente, die in Gruppen angeordnet sind. Beachten Sie bei der Erstellung von Formeln, dass sich der Zielparameter für das Exemplar einer Gruppe geändert werden können muss.</sld5>
+    <ssd6>Verarbeitung der Elemente in dem Raum</ssd6>
+    <sld6>Die Strategie verarbeitet Elemente, die sich innerhalb von Räumen befinden</sld6>
+    <ssd7>Verarbeitung von Elementen im MEP-Raum</ssd7>
+    <sld7>Die Strategie verarbeitet Elemente, die sich innerhalb von MEP-Räumen befinden</sld7>
+    <ssd8>Verarbeitung von Elementen mithilfe von Körpermodellstudien</ssd8>
+    <sld8>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich innerhalb von Körpermodellstudien befinden. Die Körpermodellstudien müssen einen Vollkörper haben</sld8>
+    <ssd9>Verarbeitung von Elementen in einem Vollkörper</ssd9>
+    <sld9>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich innerhalb anderer Elemente befinden, die einen Vollkörper haben</sld9>
+    <ssd10>Verarbeitung von Elementen, die mit den Kanten ihrer Vollkörper in Berührung sind</ssd10>
+    <sld10>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich mit flachen Körperkanten berühren</sld10>
+    <ssd11>Verarbeitung der Begrenzungselemente von Räumen</ssd11>
+    <sld11>Die Strategie verarbeitet Elemente, die Begrenzungselemente von Räumen sind</sld11>
+    <ssd12>Verarbeitung der untergeordneten Elementen in den Verbindungen von Tragwerken</ssd12>
+    <sld12>Die Strategie verarbeitet Elemente, die in den Verbindungen von Tragwerken platziert sind (Platten, Schrauben, etc.). Das Filtern von untergeordneten Elementen nach Parametern sowie die Liste der Parameter von untergeordneten Elementen im Formel-Editor sind nicht vorgesehen. Numerische Parameter werden ohne Konvertierung in interne Einheiten eingestellt</sld12>
+    <ssd13>Verarbeitung von Unterfamilien</ssd13>
+    <sld13>Die Strategie verarbeitet Familien, die in die Hauptfamilie untergeordnet sind</sld13>
+    <ssd14>Bearbeitung von Rohr- und Luftkanalisolierungen</ssd14>
+    <sld14>Die Strategie bearbeitet Rohr- bzw. Luftkanalisolationselemente. Für die Isolierung ist es zulässig keinen Parameterfilter zu verwenden</sld14>
+    <ssd15>Bearbeitung der Bewehrung im Bewehrungssystem</ssd15>
+    <sld15>Die Strategie bearbeitet Bewehrungsstäbe innerhalb der Bewehrungssysteme, und zwar der Flächenbewehrung und der linearen Bewehrung</sld15>
+    <ssd16>Bearbeitung der Materialien</ssd16>
+    <sld16>Die Strategie bearbeitet alle Materialien im aktuellen Dokument, unabhängig von der ausgewählten Elementen</sld16>
+    <ssd17>Bearbeitung der Elemente von MEP-Systemen</ssd17>
+    <sld17>Die Strategie bearbeitet die Elemente, aus denen ein MEP-System (elektrisches System, Rohrleitungs- bzw. Luftkanalsystem) besteht. Als Ausgangselement gilt konventionell das übergeordnete System des Elements</sld17>
+    <ssd18>Bearbeitung von Fassadenbestandteilen</ssd18>
+    <sld18>Die Strategie bearbeitet Bestandteile der Fassade (Pfosten und Platten). Das bedingte Quellelement ist die Wand</sld18>
+    <ssd19>Bearbeitung der Elemente im Bezug auf die angegebenen Quellelemente</ssd19>
+    <sld19>Die Strategie bearbeitet Elemente mit der Möglichkeit, beliebiges angegebenes Modellelement als Quellelement zu verwenden</sld19>
+    <ssd20>Bearbeitung von Teilen</ssd20>
+    <sld20>Die Strategie bearbeitet Teile unter Berücksichtigung der Quellelemente, aus denen die Teile erstellt sind. Ist ein Teil aus mehreren Quellelementen erstellt, gilt das erste Element als Quellelement</sld20>
+    <se1>Basis</se1>
+    <sp1>Basisparameter einfügen</sp1>
+    <se2>Gruppe</se2>
+    <sp2>Gruppenparameter einfügen</sp2>
+    <se3>Raum</se3>
+    <sp3>Raumparameter einfügen</sp3>
+    <se4>MEP-Raum</se4>
+    <sp4>MEP-Raumparameter einfügen</sp4>
+    <se5>Körpermodellstudien</se5>
+    <sp5>Körpermodellstudienparameter einfügen</sp5>
+    <se6>Übergeordnetes Element</se6>
+    <sp6>Parameter des übergeordneten Elementes einfügen</sp6>
+    <se7>Tangierendes Element</se7>
+    <sp7>Parameter des tangierenden Elementes einfügen</sp7>
+    <se8>Verbindung</se8>
+    <sp8>Parameter der Verbindung von Tragwerken einfügen</sp8>
+    <se9>Hauptfamilie</se9>
+    <sp9>Parameter der Hauptfamilie einfügen</sp9>
+    <se10>Rohr bzw. Luftkanal</se10>
+    <sp10>Rohr- oder Luftkanalparameter einfügen</sp10>
+    <se11>System</se11>
+    <sp11>Parameter des übergeordneten Bewehrungssystems einfügen</sp11>
+    <se12>MEP-System</se12>
+    <sp12>Parameter des übergeordneten MEP-Systems einfügen</sp12>
+    <se13>Fassade</se13>
+    <sp13>Fassadenparameter einfügen</sp13>
+    <se14>Quellelement</se14>
+    <sp14>Parameter des Quellelements einfügen</sp14>
+    <te1>Zielelement</te1>
+    <tp1>Parameter des Zielelementes einfügen</tp1>
+    <te2>Exemplar der Familie</te2>
+    <tp2>Parameter des Exemplares der Familie einfügen</tp2>
+    <te3>Baugröße</te3>
+    <tp3>Parameter des Zieltyps einfügen</tp3>
+    <te4>Untergeordnetes Element</te4>
+    <tp4>Parameter des untergeordnetes Zielelementes einfügen</tp4>
+    <te5>Unterfamilie</te5>
+    <tp5>Parameter der Unterfamilie einfügen</tp5>
+    <te6>Isolierung</te6>
+    <tp6>Isolationsparameter einfügen</tp6>
+    <te7>Bewehrung</te7>
+    <tp7>Zielbewehrungsparameter einfügen</tp7>
+    <te8>Material</te8>
+    <tp8>Materialparameter einfügen</tp8>
+    <te9>Teil</te9>
+    <tp10>Parameter des Teiles einfügen</tp10>
+    <ft1>Mathematische Funktionen</ft1>
+    <ft2>Logische Funktionen</ft2>
+    <ft3>Modifizierende Funktionen</ft3>
+    <ft4>Get-Value-Funktionen</ft4>
+    <d-min>Gibt die kleinere der beiden Zahlen zurück</d-min>
+    <d-max>Gibt die größere der beiden Zahlen zurück</d-max>
+    <d-abs>Gibt den absoluten Wert der Zahl zurück</d-abs>
+    <d-round>Rundet den Wert auf die nächste ganze Zahl oder die angegebene Anzahl von Dezimalstellen</d-round>
+    <d-roundup>Gibt die kleinste Ganzzahl zurück, die größer oder gleich der angegebenen Zahl ist</d-roundup>
+    <d-rounddown>Gibt die größte Ganzzahl zurück, die kleiner oder gleich der angegebenen Zahl ist</d-rounddown>
+    <d-sqrt>Gibt die Quadratwurzel der angegebenen Zahl zurück</d-sqrt>
+    <d-pow>Potenziert eine angegebene Zahl mit dem angegebenen Exponenten</d-pow>
+    <d-sin>Gibt den Sinus des angegebenen Winkels zurück</d-sin>
+    <d-cos>Gibt den Kosinus des angegebenen Winkels zurück</d-cos>
+    <d-tan>Gibt den Tangens des angegebenen Winkels zurück</d-tan>
+    <d-asin>Gibt den Winkel zurück, dessen Sinus gleich der angegebenen Zahl ist</d-asin>
+    <d-acos>Gibt den Winkel zurück, dessen Kosinus gleich der angegebenen Zahl ist</d-acos>
+    <d-atan>Gibt den Winkel zurück, dessen Tangens gleich der angegebenen Zahl ist</d-atan>
+    <d-log>Gibt den Logarithmus der angegebenen Zahl mit der angegebenen Basis zurück</d-log>
+    <d-ln>Gibt den natürlichen Logarithmus (mit der Basis e) der angegebenen Zahl zurück</d-ln>
+    <d-exp>Gibt e, auf einen bestimmten Grad angehoben, zurück</d-exp>
+    <d-pi>Gibt das Verhältnis der Kreislänge zum Kreisdurchmesser zurück</d-pi>
+    <d-if>Gibt den ersten Wert &lt;true&gt; zurück, wenn die Bedingung &lt;c&gt; richtig ist. Gibt den zweiten Wert &lt;false&gt; zurück, wenn die Bedingung &lt;c&gt; falsch ist</d-if>
+    <d-and>Gibt TRUE zurück, wenn alle &lt;c&gt; Bedingungen richtig sind. Ansonsten wird FALSE zurückgegeben</d-and>
+    <d-or>Gibt TRUE zurück, wenn mindestens eine &lt;c&gt; Bedingung richtig ist. Ansonsten wird FALSE zurückgegeben</d-or>
+    <d-inrange>Gibt TRUE zurück, wenn die Zahl &lt;x&gt; größer oder gleich &lt;min&gt; und kleiner oder gleich &lt;max&gt; ist. Ansonsten wird FALSE zurückgegeben</d-inrange>
+    <d-has>Gibt TRUE zurück, wenn der Parameter &lt;p&gt; existiert. Ansonsten wird FALSE zurückgegeben</d-has>
+    <d-firsttrue>Gibt den ersten &lt;v&gt; Wert zurück, dessen &lt;c&gt; Bedingung richtig ist. Wenn alle Bedingungen &lt;c&gt; falsch sind, gibt den letzten Wert &lt;v&gt; zurück</d-firsttrue>
+    <d-toupper>Gibt den in Großbuchstaben umgewandelten Wert zurück</d-toupper>
+    <d-tolower>Gibt den in Kleinbuchstaben umgewandelten Wert zurück</d-tolower>
+    <d-lstr>Gibt die angegebene Anzahl von Zeichen ab dem Anfang der Zeile zurück</d-lstr>
+    <d-rstr>Gibt die angegebene Anzahl von Zeichen ab dem Ende der Zeile zurück</d-rstr>
+    <d-sstr>Gibt die Teilzeichenkette zurück</d-sstr>
+    <d-tmirrored>Gibt TRUE zurück, wenn die Zielfamilie gespiegelt ist</d-tmirrored>
+    <d-smirrored>Gibt TRUE zurück, wenn die bedingte Quellfamilie gespiegelt ist</d-smirrored>
+    <d-strlen>Gibt die Länge einer Zeichenfolge zurück</d-strlen>
+    <d-strindex>Gibt den Index zurück, der auf Null des ersten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-strindex>
+    <d-valuestr>Gibt den Parameterwert als Zeichenfolge mit Maßeinheiten zurück</d-valuestr>
+    <d-eindex>Gibt den Index der erfolgreicher Verwendung der aktuellen Formelanweisung zurück</d-eindex>
+    <d-replace>Gibt den Wert zurück, im dem alle Auftreten der Vorgabezeile durch eine andere Vorgabezeile ersetzt sind</d-replace>
+    <d-format>Konvertiert eine Zahl im angegebenen Format in eine Zeichenfolge</d-format>
+    <d-cv>Gibt den Wert aus der angegebenen Zelle der Strategiedatenquelle zurück</d-cv>
+    <d-count>Gibt die Anzahl der Vorkommen der Teilzeichenfolge in der Zeichenfolge zurück. Gibt 0 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-count>
+    <d-lstrindex>Gibt den Index zurück, der auf Null des letzten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-lstrindex>
+    <d-not>Gibt TRUE zurück, wenn die Bedingung falsch ist. Ansonsten wird FALSE zurückgegeben</d-not>
+    <d-distinct>Gibt die unterscheidenden Werte aus der Liste zurück und lässt dabei die Leerzeichen am Anfang und am Ende unbeachtet</d-distinct>
+    <d-cvif>Sucht nach der ersten Zeile in der Strategiedatenquelle (Excel-Datei), wo alle Bedingungen erfüllt sind, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvif>
+  </mprParametrization>
+</ModPlus>
