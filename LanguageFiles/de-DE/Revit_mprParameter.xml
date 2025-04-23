@@ -211,6 +211,9 @@
     <t186>Selected family</t186>
     <t187>Import of parameters is performed by creating parameters in the current family with the characteristics of the selected parameters of the selected family and then setting the values ​​and formulas. When selecting a parameter with a formula, all parameters used in the formula will be added to the list. Import of system parameters is not possible. In the left part of the window, you must select the ratio of the types of the current and selected families, according to which the parameter values ​​will be copied</t187>
     <t188>Due to limitations in the Revit API, parameter imports lose parameter descriptions unless the selected shared parameter is present in the current shared parameter file</t188>
+    <t189>Import formula</t189>
+    <t190>Import a formula from a parameter of the selected family</t190>
+    <t191>There are no parameters with formulas in the selected family</t191>
     <ad1>Ermöglicht die Umbenennung eines Familienparameters. Die Aktion ist für Systemparameter und die gemeinsam genutzten Parameter nicht verfügbar</ad1>
     <ad2>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Systemparameter nicht verfügbar. Beim Ändern der Gruppe verlieren die nicht gemeinsam genutzten Parameter der Familie ihre Beschreibung</ad2>
     <ad3>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Projektparameter nicht verfügbar</ad3>
@@ -274,6 +277,7 @@
     <msg27>Familien aus Unterverzeichnissen bearbeiten?</msg27>
     <msg28>Der Formeleditor wird geöffnet, ohne dass die Formel überprüft werden kann</msg28>
     <msg29>Im aktuellen Projekt ist keine Datei für gemeinsam genutzten Parametern definiert</msg29>
+    <!--todo remove after 1.6.2.0-->
     <msg30>Überprüfen Sie, ob die Wertfelder für den Parameternamen und den Typ ausgefüllt sind</msg30>
     <msg31>Überprüfen Sie, ob die Wertfelder für den Parameternamen, den Typ und der Gruppe sowie für die Kategorieliste ausgefüllt sind</msg31>
     <msg32>Festlegen des Parameterwertes ist fehlgeschlagen</msg32>
@@ -316,5 +320,11 @@
     <err30>Failed to import parameters. Error:</err30>
     <err31>Failed to set the formula. Error:</err31>
     <err32>The parameter value cannot be imported</err32>
+    <err33>Failed to undo the changes made because the current document is not a document of the edited family. Switch to the family document and undo the changes manually</err33>
+    <err34>A parameter with the data type "Image" cannot be an instance parameter</err34>
+    <err35>Parameter name not specified</err35>
+    <err36>Parameter data type not specified</err36>
+    <err37>Parameter binding categories not specified</err37>
+    <err38>Parameter group not specified</err38>
   </mprParameters>
 </ModPlus>
