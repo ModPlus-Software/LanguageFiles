@@ -15,6 +15,16 @@ using Microsoft.Win32;
 public static class LanguageStorage
 {
     /// <summary>
+    /// Путь к директории с файлами локализации. Не может меняться, пока открыта программа, поэтому кэширую
+    /// </summary>
+    private static string _langDir;
+
+    /// <summary>
+    /// Имя языка при прошлом запросе
+    /// </summary>
+    private static string _previousLanguageName;
+
+    /// <summary>
     /// Словарь хранения полных документов локализации с ключом по имени языка
     /// </summary>
     public static readonly Dictionary<string, XmlDocument> FullDocuments = [];
@@ -32,8 +42,7 @@ public static class LanguageStorage
     /// <param name="xPath">Путь к узлу в документе вида ModPlus/Node</param>
     public static XmlDocument GetLanguageDocument(string xPath)
     {
-        var langDir = Path.Combine(GetCurrentPluginDirectory(), "Languages");
-        var currentLanguageName = GetCurrentLanguage(langDir);
+        var currentLanguageName = GetCurrentLanguage();
         
         var nodeName = xPath.Replace("ModPlus/", string.Empty);
 
@@ -75,8 +84,7 @@ public static class LanguageStorage
     /// <param name="key">Ключ искомого значения</param>
     public static string GetItem(string nodeName, string key)
     {
-        var langDir = Path.Combine(GetCurrentPluginDirectory(), "Languages");
-        var currentLanguageName = GetCurrentLanguage(langDir);
+        var currentLanguageName = GetCurrentLanguage();
 
         if (SeparatedDocuments.TryGetValue(currentLanguageName, out var separatedDocuments))
         {
@@ -116,8 +124,7 @@ public static class LanguageStorage
     /// <param name="attributeName">Имя атрибута</param>
     public static string GetAttributeValue(string nodeName, string attributeName)
     {
-        var langDir = Path.Combine(GetCurrentPluginDirectory(), "Languages");
-        var currentLanguageName = GetCurrentLanguage(langDir);
+        var currentLanguageName = GetCurrentLanguage();
 
         if (SeparatedDocuments.TryGetValue(currentLanguageName, out var separatedDocuments))
         {
@@ -170,8 +177,8 @@ public static class LanguageStorage
 
     private static XmlDocument GetFullDocument()
     {
-        var langDir = Path.Combine(GetCurrentPluginDirectory(), "Languages");
-        var currentLanguageName = GetCurrentLanguage(langDir);
+        var langDir = GetLanguagesDirectory();
+        var currentLanguageName = GetCurrentLanguage();
 
         if (!FullDocuments.TryGetValue(currentLanguageName, out var fullDocument))
         {
@@ -199,32 +206,48 @@ public static class LanguageStorage
         return null;
     }
 
-    private static string GetCurrentLanguage(string langDir)
+    private static string GetCurrentLanguage()
     {
         var lang = GetRegistryValue("CurrentLanguage");
+
+        // Вероятность того, что файл локализации внезапно исчезнет хоть и не нулевая, но
+        // все же очень крайне мала. Поэтому, если текущий язык равен языку в прошлом запросе,
+        // считаем, что файл локализации на месте и не проверяем его
+
+        if (lang == _previousLanguageName)
+            return lang;
+
+        var langDir = GetLanguagesDirectory();
 
         // Если в настройках пусто, значит пробуем поставить системный язык
         if (string.IsNullOrEmpty(lang))
         {
             var systemLang = CultureInfo.InstalledUICulture.Name;
-            var langFile = Path.Combine(langDir, systemLang + ".xml");
+            var langFile = Path.Combine(langDir, $"{systemLang}.xml");
 
             // Иначе ставим Русский
             lang = File.Exists(langFile) ? systemLang : "ru-RU";
         }
         else
         {
-            var langFile = Path.Combine(langDir, lang + ".xml");
-            return File.Exists(langFile) ? lang : "ru-RU";
+            var langFile = Path.Combine(langDir, $"{lang}.xml");
+            if (!File.Exists(langFile))
+                lang = "ru-RU";
         }
+
+        _previousLanguageName = lang;
 
         return lang;
     }
 
-    private static string GetCurrentPluginDirectory()
+    private static string GetLanguagesDirectory()
     {
-        // Эта dll будет находиться в папке ModPlus/Extensions!
-        return Directory.GetParent(Path.GetDirectoryName(typeof(LanguageStorage).Assembly.Location)!)!.FullName;
+        if (!string.IsNullOrEmpty(_langDir))
+            return _langDir;
+
+        var modplusDirectory = Directory.GetParent(Path.GetDirectoryName(typeof(LanguageStorage).Assembly.Location)!)!.FullName;
+        _langDir = Path.Combine(modplusDirectory, "Languages");
+        return _langDir;
     }
 
     /// <summary>
