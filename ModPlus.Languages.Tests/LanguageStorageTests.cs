@@ -25,6 +25,18 @@ public class LanguageStorageTests
     [Fact]
     public void GetItem_IncorrectKey_Success()
     {
-        LanguageStorage.GetItem("Common", "accept1").Should().Be(string.Empty);
+        LanguageStorage.GetItem("Common", "accept1").Should().Be("Localization error");
+    }
+
+    [Fact]
+    public void GetAttributeValue_CorrectAttributeName_Success()
+    {
+        LanguageStorage.GetAttributeValue("AutocadDlls", "LocalName").Should().Be("Рабочие библиотеки для AutoCAD");
+    }
+
+    [Fact]
+    public void GetAttributeValue_IncorrectAttributeName_Success()
+    {
+        LanguageStorage.GetAttributeValue("AutocadDlls", "LocalName1").Should().Be("Localization error");
     }
 }

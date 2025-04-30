@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Windows.Input;
 using System.Xml;
 using JetBrains.Annotations;
 using Microsoft.Win32;
@@ -109,13 +110,62 @@ public static class LanguageStorage
         }
     }
 
+    /// <summary>
+    /// Возвращает значение атрибута для узла плагина из текущего документа локализации
+    /// </summary>
+    /// <param name="nodeName">Имя узла</param>
+    /// <param name="attributeName">Имя атрибута</param>
+    public static string GetAttributeValue(string nodeName, string attributeName)
+    {
+        var langDir = Path.Combine(GetCurrentPluginDirectory(), "Languages");
+        var currentLanguageName = GetCurrentLanguage(langDir);
+
+        if (SeparatedDocuments.TryGetValue(currentLanguageName, out var separatedDocuments))
+        {
+            if (separatedDocuments.TryGetValue(nodeName, out var separatedDocument))
+                return GetAttributeValue(separatedDocument, nodeName, attributeName);
+
+            var fullDocument = GetFullDocument();
+            separatedDocument = CreateSeparated(fullDocument, nodeName);
+            if (separatedDocument != null)
+            {
+                separatedDocuments[nodeName] = separatedDocument;
+                return GetAttributeValue(separatedDocument, nodeName, attributeName);
+            }
+
+            return GetAttributeValue(fullDocument, nodeName, attributeName);
+        }
+
+        {
+            var fullDocument = GetFullDocument();
+            var separatedDocument = CreateSeparated(fullDocument, nodeName);
+            if (separatedDocument != null)
+            {
+                SeparatedDocuments[currentLanguageName] =
+                    new Dictionary<string, XmlDocument> { { nodeName, separatedDocument } };
+
+                return GetAttributeValue(separatedDocument, nodeName, attributeName);
+            }
+
+            return GetAttributeValue(fullDocument, nodeName, attributeName);
+        }
+    }
+
     private static string GetItem(XmlDocument document, string nodeName, string key)
     {
         var node = document.SelectSingleNode($"/ModPlus/{nodeName}/{key}");
-        var value = string.Empty;
+        var value = "Localization error";
         if (node != null)
             value = node.InnerText.ReplaceSymbols();
+        return value;
+    }
 
+    private static string GetAttributeValue(XmlDocument document, string nodeName, string attributeName)
+    {
+        var node = document.SelectSingleNode($"/ModPlus/{nodeName}");
+        var value = "Localization error";
+        if (node is { Attributes: { } attributes } && attributes[attributeName] is { } attribute)
+            value = attribute.Value.ReplaceSymbols();
         return value;
     }
 
