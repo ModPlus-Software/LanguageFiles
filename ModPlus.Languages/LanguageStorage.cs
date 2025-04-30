@@ -114,8 +114,7 @@ public static class LanguageStorage
     /// </summary>
     /// <param name="nodeName">Имя узла</param>
     /// <param name="attributeName">Имя атрибута</param>
-    /// <param name="returnNodeNameIfNoAttribute">Вернуть значение аргумента nodeName, если атрибут не найден</param>
-    public static string GetAttributeValue(string nodeName, string attributeName, bool returnNodeNameIfNoAttribute)
+    public static string GetAttributeValue(string nodeName, string attributeName)
     {
         var langDir = Path.Combine(GetCurrentPluginDirectory(), "Languages");
         var currentLanguageName = GetCurrentLanguage(langDir);
@@ -123,17 +122,17 @@ public static class LanguageStorage
         if (SeparatedDocuments.TryGetValue(currentLanguageName, out var separatedDocuments))
         {
             if (separatedDocuments.TryGetValue(nodeName, out var separatedDocument))
-                return GetAttributeValue(separatedDocument, nodeName, attributeName, returnNodeNameIfNoAttribute);
+                return GetAttributeValue(separatedDocument, nodeName, attributeName);
 
             var fullDocument = GetFullDocument();
             separatedDocument = CreateSeparated(fullDocument, nodeName);
             if (separatedDocument != null)
             {
                 separatedDocuments[nodeName] = separatedDocument;
-                return GetAttributeValue(separatedDocument, nodeName, attributeName, returnNodeNameIfNoAttribute);
+                return GetAttributeValue(separatedDocument, nodeName, attributeName);
             }
 
-            return GetAttributeValue(fullDocument, nodeName, attributeName, returnNodeNameIfNoAttribute);
+            return GetAttributeValue(fullDocument, nodeName, attributeName);
         }
 
         {
@@ -144,10 +143,10 @@ public static class LanguageStorage
                 SeparatedDocuments[currentLanguageName] =
                     new Dictionary<string, XmlDocument> { { nodeName, separatedDocument } };
 
-                return GetAttributeValue(separatedDocument, nodeName, attributeName, returnNodeNameIfNoAttribute);
+                return GetAttributeValue(separatedDocument, nodeName, attributeName);
             }
 
-            return GetAttributeValue(fullDocument, nodeName, attributeName, returnNodeNameIfNoAttribute);
+            return GetAttributeValue(fullDocument, nodeName, attributeName);
         }
     }
 
@@ -160,11 +159,10 @@ public static class LanguageStorage
         return value;
     }
 
-    private static string GetAttributeValue(
-        XmlDocument document, string nodeName, string attributeName, bool returnNodeNameIfNoAttribute)
+    private static string GetAttributeValue(XmlDocument document, string nodeName, string attributeName)
     {
         var node = document.SelectSingleNode($"/ModPlus/{nodeName}");
-        var value = returnNodeNameIfNoAttribute ? attributeName : "Localization error";
+        var value = "Localization error";
         if (node is { Attributes: { } attributes } && attributes[attributeName] is { } attribute)
             value = attribute.Value.ReplaceSymbols();
         return value;
