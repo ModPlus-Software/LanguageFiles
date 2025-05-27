@@ -1238,6 +1238,9 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <h175>Green level</h175>
     <h176>Orange level</h176>
     <h177>Red level</h177>
+    <h178>The wall is a curtain</h178>
+    <h179>The family is a nested family</h179>
+    <h180>The family is the parent family</h180>
     <parameters>Parámetros</parameters>
     <name>Nombre</name>
     <any>Cualquier</any>
@@ -1307,9 +1310,12 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <i7>Parámetros del tipo "on/off" se verifican como un número entero (0 – off, 1 – on).</i7>
     <i8>Operador "Y" verifica todas subcondiciones simples de condición de grupo, es decir, todas subcondiciones deben coincidir.</i8>
     <i9>En lugar del nombre del parámetro, puede especificar un GUID para parámetros generales o un nombre del sistema para parámetros integrados.</i9>
-    <i10>Condiciones "Con parámetro" y "Sin parámetro" al verificar grupo primario (palabra clave Grupo) verifican, respectivamente, si elemento está en grupo o no.</i10>
-    <i11>Condiciones "Con parámetro" y "Sin parámetro" al verificar montajes primario (palabra clave Assembly) verifican, respectivamente, si elemento está en montajes o no.</i11>
+    <i10>The "Presence of parameter" and "Absence of parameter" conditions when checking the key parameter "Group" (parent group) check whether the element is in the group or not, respectively. That is, the "Presence of parameter" condition interprets the "Element must be in a group" check, and the "Absence of parameter" condition interprets the "Element must not be in a group" check. Any other condition, if the element is in a group, checks the group name according to the rules for strings.</i10>
+    <i11>The " Presence of parameter" and "Absence of parameter" conditions, when checking the key parameter "Assembly" (parent assembly), check, respectively, whether the element is in the assembly or not. That is, the " Presence of parameter" condition interprets the check "Element must be in the assembly", and the "Absence of parameter" condition interprets the check "Element must not be in the assembly". Any other condition, if the element is in an assembly, checks the assembly name using the rules for strings.</i11>
     <i12>Al utilizar los parámetros clave "BottomZ" y "TopZ", se comprueban respectivamente las marcas más bajas y más altas de la geometría del elemento. Los parámetros clave "BottomZ" y "TopZ" se consideran numéricos y se comprueban mediante las condiciones correspondientes. Los valores de las marcas se toman en milímetros, redondeados a tres decimales. En el campo "Valor" se pueden especificar los nombres de los niveles. Si se encuentra el nivel especificado, se utilizará su marca en milímetros, redondeada a 3 decimales.</i12>
+    <i13>The condition "Presence of parameter" and "Absence of parameter" when checking the key parameter "Curtain" (the wall is a curtain) check, respectively, whether the wall is a curtain or not. That is, the condition "Presence of parameter" interprets the check "Wall must be a curtain", and the condition "Absence of parameter" interprets the check "Wall must not be a curtain". If the element is not a wall, the condition is ignored (the condition always returns "true").</i13>
+    <i14>The "Presence of parameter" and "Absence of parameter" conditions, when checking the key parameter "Nested" (the family is nested), check, respectively, whether the family is nested or not. That is, the condition "Presence of parameter" interprets the check "Family must be nested", and the condition "Absence of parameter" interprets the check "Family must not be nested". If the element is not a family, the condition is ignored (the condition always returns "true").</i14>
+    <i15>The condition "Presence of parameter" and "Absence of parameter" when checking the key parameter "Parent" (the family is parental) check, respectively, whether or not the family is parental (contains nested families). I.e. the condition "Presence of parameter" interprets the check "Family must be a parent", and the condition "Absence of parameter" interprets the check "Family must not be a parent". If the element is not a family, the condition is ignored (the condition always returns "true").</i15>
     <et1>Igual</et1>
     <et2>Más</et2>
     <et3>Menos</et3>
