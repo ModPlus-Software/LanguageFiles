@@ -71,7 +71,7 @@
     <import>Importar</import>
     <importExcel>Importar desde Excel</importExcel>
     <insert>Insertar</insert>
-    <instance>Instance</instance>
+    <instance>Ejemplar</instance>
     <instruction>Instrucción</instruction>
     <isolate>Aislar</isolate>
     <key>Clave</key>
@@ -232,6 +232,7 @@
     <h73>Localización de ModPlus cambiará automáticamente según localización del producto compatible que se inicie (AutoCAD o Revit)</h73>
     <h74>Tipo de servidor de licencias:</h74>
     <h75>Servidor de licencias no se utiliza</h75>
+    <h76>Close windows by pressing the Esc key</h76>
     <wls1>Servidor de licencias con ID {0} no existe</wls1>
     <wls2>Estado del servidor de licencias:</wls2>
     <wls3>Activado</wls3>
@@ -460,7 +461,7 @@
     <t5>Rojo:</t5>
     <t6>Verde:</t6>
     <t7>Azul:</t7>
-    <t8>Recent colors:</t8>
+    <t8>Colores recientes:</t8>
   </Style>
   <CUI>
     <group1>Anotaciones</group1>
@@ -485,7 +486,7 @@
     <group18>Exportar e Importar</group18>
     <group19>Hojas</group19>
     <group20>Elección</group20>
-    <group21>Checking</group21>
+    <group21>Verificación</group21>
     <general>Creación</general>
     <acm>Disciplinas</acm>
     <view>Vista</view>
@@ -819,8 +820,8 @@
     <ftp25>Descomprimir complemento</ftp25>
     <ftp26>Eliminar una carpeta temporal</ftp26>
     <ftp27>Se agotó tiempo fuera de operación: No es posible descargar archivo de servidor\nInténtalo de nuevo</ftp27>
-    <ftp28>Plugin {0} was not installed! There may have been a connection failure during the download process. Please try again. You can download the installer from the site and try to install the plugin using it by selecting the "Update" option in the menu</ftp28>
-    <ftp29>The following plugins: {0}\nwere not installed! There may have been a connection failure during the download process. Please try again. You can download the installer from the website and try to install plugins using it by selecting "Update" in the menu item</ftp29>
+    <ftp28>¡Complemento {0} no fue instalado! Es posible que haya producido un error de conexión durante la descarga. Inténtelo de nuevo. Puede descargar el instalador del sitio e intentar instalar el complemento con él y seleccionando "Actualizar" en el menú</ftp28>
+    <ftp29>¡Complementos siguientes {0}\nno han sido instalados! Es posible que haya producido un error de conexión durante la descarga. Inténtelo de nuevo. Puede descargar el instalador del sitio e intentar instalar el complemento con él y seleccionando "Actualizar" en el menú</ftp29>
     <ftp30>Enviar un archivo de configuración al servidor</ftp30>
     <ftp31>¡Ya existe un archivo de configuración guardado en servidor! ¿Sobrescribir?</ftp31>
     <ftp32>Archivo de configuración se guarda en servidor</ftp32>
@@ -1202,13 +1203,44 @@
     <h142>Permite seleccionar familias primarias que contienen familias anidadas seleccionadas</h142>
     <h143>Marca Z más baja obtenida a partir de geometría del elemento</h143>
     <h144>Marca Z más alta obtenida a partir de geometría del elemento</h144>
-    <h145>Not all parameters are present?</h145>
-    <h146>The list of instance parameters in this dialog box is populated by the first found instance of the element of the specified category in the current model. If no instances of elements of the specified category are found in the model, only the list of type parameters will be displayed for the category.
+    <h145>¿No se presenten todos los parámetros?</h145>
+    <h146>La lista de parámetros de ejemplar en este diálogo se completa según un primero ejemplar del elemento de la categoría especificada en el modelo actual. Si no se encuentran ejemplares de elementos de la categoría especificada en el modelo, sólo se mostrará la lista de parámetros de tipo para la categoría.
 
-Not all parameters may be present in the list of instance parameters, because in some cases instance parameters may be different for different instances of elements of the same category. In this case, you must write the parameter you need manually</h146>
-    <h147>Add buttons:</h147>
-    <h148>at start of panel</h148>
-    <h149>at end of panel</h149>
+Es posible que no todos los parámetros estén presentes en la lista de parámetros de ejemplar, ya que en algunos casos los parámetros de ejemplar pueden diferir para diferentes ejemplares de elementos de la misma categoría. En este caso, el parámetro necesito debe escribirse manualmente</h146>
+    <h147>Agregar botones:</h147>
+    <h148>al principio de barra</h148>
+    <h149>al final de barra</h149>
+    <h150>Subcategory visibility</h150>
+    <h151>Enables you to change the visibility on the current view of the current element's category subcategories</h151>
+    <h152>Create view</h152>
+    <h153>Enables you to create a view (plan) by selected levels</h153>
+    <h154>Enables you to select the elements associated with the selected level</h154>
+    <h155>Select inserts</h155>
+    <h156>Searches for and selects inserts placed in selected Host elements</h156>
+    <h157>Unload</h157>
+    <h158>Enables you to Unload the Link</h158>
+    <h159>Enables you to select the elements included in the selected trusses</h159>
+    <h160>Open folder</h160>
+    <h161>Enables you to open the folder containing the file of the selected Link</h161>
+    <h162>Select boundaries</h162>
+    <h163>Enables you to select the boundary elements that form the contour of the selected rooms or spaces</h163>
+    <h164>View tabs</h164>
+    <h165>Main settings</h165>
+    <h166>Context menu of the active tab</h166>
+    <h167>Right-clicking on the active tab will display a context menu with various functions</h167>
+    <h168>Tabs will be sorted alphabetically by the contents of the tab's tooltip. You cannot drag and drop tabs during sorting</h168>
+    <h169>Multiple rows</h169>
+    <h170>The tabs of all open views will be displayed in several rows</h170>
+    <h171>Alternative coloring conditions</h171>
+    <h172>Sincronización</h172>
+    <h173>Notify if synchronization is required</h173>
+    <h174>The service notifies (changes the color of the Revit window title) if the current file needs to be synchronized. The need for notification and the color depend on the levels selected. There are three notification levels to choose from - Green, Orange, and Red. For each selected level, you must set the interval in minutes at which the notification will occur</h174>
+    <h175>Green level</h175>
+    <h176>Orange level</h176>
+    <h177>Red level</h177>
+    <h178>The wall is a curtain</h178>
+    <h179>The family is a nested family</h179>
+    <h180>The family is the parent family</h180>
     <parameters>Parámetros</parameters>
     <name>Nombre</name>
     <any>Cualquier</any>
@@ -1278,9 +1310,12 @@ Not all parameters may be present in the list of instance parameters, because in
     <i7>Parámetros del tipo "on/off" se verifican como un número entero (0 – off, 1 – on).</i7>
     <i8>Operador "Y" verifica todas subcondiciones simples de condición de grupo, es decir, todas subcondiciones deben coincidir.</i8>
     <i9>En lugar del nombre del parámetro, puede especificar un GUID para parámetros generales o un nombre del sistema para parámetros integrados.</i9>
-    <i10>Condiciones "Con parámetro" y "Sin parámetro" al verificar grupo primario (palabra clave Grupo) verifican, respectivamente, si elemento está en grupo o no.</i10>
-    <i11>Condiciones "Con parámetro" y "Sin parámetro" al verificar montajes primario (palabra clave Assembly) verifican, respectivamente, si elemento está en montajes o no.</i11>
+    <i10>The "Presence of parameter" and "Absence of parameter" conditions when checking the key parameter "Group" (parent group) check whether the element is in the group or not, respectively. That is, the "Presence of parameter" condition interprets the "Element must be in a group" check, and the "Absence of parameter" condition interprets the "Element must not be in a group" check. Any other condition, if the element is in a group, checks the group name according to the rules for strings.</i10>
+    <i11>The " Presence of parameter" and "Absence of parameter" conditions, when checking the key parameter "Assembly" (parent assembly), check, respectively, whether the element is in the assembly or not. That is, the " Presence of parameter" condition interprets the check "Element must be in the assembly", and the "Absence of parameter" condition interprets the check "Element must not be in the assembly". Any other condition, if the element is in an assembly, checks the assembly name using the rules for strings.</i11>
     <i12>Al utilizar los parámetros clave "BottomZ" y "TopZ", se comprueban respectivamente las marcas más bajas y más altas de la geometría del elemento. Los parámetros clave "BottomZ" y "TopZ" se consideran numéricos y se comprueban mediante las condiciones correspondientes. Los valores de las marcas se toman en milímetros, redondeados a tres decimales. En el campo "Valor" se pueden especificar los nombres de los niveles. Si se encuentra el nivel especificado, se utilizará su marca en milímetros, redondeada a 3 decimales.</i12>
+    <i13>The condition "Presence of parameter" and "Absence of parameter" when checking the key parameter "Curtain" (the wall is a curtain) check, respectively, whether the wall is a curtain or not. That is, the condition "Presence of parameter" interprets the check "Wall must be a curtain", and the condition "Absence of parameter" interprets the check "Wall must not be a curtain". If the element is not a wall, the condition is ignored (the condition always returns "true").</i13>
+    <i14>The "Presence of parameter" and "Absence of parameter" conditions, when checking the key parameter "Nested" (the family is nested), check, respectively, whether the family is nested or not. That is, the condition "Presence of parameter" interprets the check "Family must be nested", and the condition "Absence of parameter" interprets the check "Family must not be nested". If the element is not a family, the condition is ignored (the condition always returns "true").</i14>
+    <i15>The condition "Presence of parameter" and "Absence of parameter" when checking the key parameter "Parent" (the family is parental) check, respectively, whether or not the family is parental (contains nested families). I.e. the condition "Presence of parameter" interprets the check "Family must be a parent", and the condition "Absence of parameter" interprets the check "Family must not be a parent". If the element is not a family, the condition is ignored (the condition always returns "true").</i15>
     <et1>Igual</et1>
     <et2>Más</et2>
     <et3>Menos</et3>
@@ -1411,7 +1446,9 @@ Not all parameters may be present in the list of instance parameters, because in
     <sl12>Documento guardado por avisador</sl12>
     <sl13>Error del procesador de eventos</sl13>
     <sl14>Al guardar proyecto en procesador de eventos {0} se ha producido un error "{1}". Se añadía 1 minuto para volver a intentar guardar</sl14>
+    <!--todo remove after 32.2.14-->
     <sl15>Proyecto fue restaurado del archivo con estado en momento de apertura o en momento del último guardado manual</sl15>
+    <!--todo remove after 32.2.14-->
     <sl16>No es posible restaurar proyecto del archivo con estado en momento de apertura o en momento del último guardado manual</sl16>
     <sl17>Documento "{0}" no cumple con condiciones para su procesamiento por parte del servicio de guardado automático</sl17>
     <sel1>Elementos preseleccionados</sel1>

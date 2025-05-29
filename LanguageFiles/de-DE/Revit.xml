@@ -1225,7 +1225,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <h72>Importtyp</h72>
     <h73>Importexemplar und -typ</h73>
     <h74>Wählen Sie eine Gruppe oder einen Bearbeitungsbereich</h74>
-    <h75>Remove worksets</h75>
+    <h75>Bearbeitungsbereiche löschen</h75>
     <!-- todo remove after 3.0.2.0 start -->
     <t1>Umbenennen der Konfiguration</t1>
     <t2>Konfiguration erstellen</t2>
@@ -1249,11 +1249,11 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t19>Die Elemente in den ausgewählten Bearbeitungsbereichen anbringen</t19>
     <t20>Die Elemente in den ausgewählten Bearbeitungsbereichen losmachen</t20>
     <t21>Bearbeitungsbereiche nach Verbindungsnamen hinzufügen</t21>
-    <t22>Elements</t22>
-    <t23>The elements of the worksets will be:</t23>
-    <t24>Removed</t24>
-    <t25>Moved to:</t25>
-    <t26>Sort worksets in a group in alphabetical order</t26>
+    <t22>Anzahl der Elemente</t22>
+    <t23>Die Elemente der Bearbeitungsbereiche werden:</t23>
+    <t24>Gelöscht</t24>
+    <t25>Verschoben in:</t25>
+    <t26>Bearbeitungsbereiche in der Gruppe alphabetisch sortieren</t26>
     <msg1>Löschen?</msg1>
     <msg2>Die Konfiguration "{0}" wird unwiderruflich gelöscht!</msg2>
     <msg3>Die Gruppe "{0}" wird unwiderruflich gelöscht!</msg3>
@@ -1286,8 +1286,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <msg37>Einstellungen kopieren?</msg37>
     <msg38>Die Einstellungen werden für alle Bearbeitungsbereiche in der aktuellen Gruppe überschrieben. Diese Aktion kann nicht rückgängig gemacht werden!</msg38>
     <msg39>Die Einstellungen werden in allen Bearbeitungsbereichen aller Gruppen in der aktuellen Konfiguration überschrieben. Diese Aktion kann nicht rückgängig gemacht werden!</msg39>
-    <msg40>Sorting?</msg40>
-    <msg41>Worksets will be sorted alphabetically in group "{0}". Continue?</msg41>
+    <msg40>Wollen Sie sortieren?</msg40>
+    <msg41>In der Gruppe "{0}" werden Bearbeitungsbereiche alphabetisch sortiert. Wollen Sie fortsetzen?</msg41>
     <ie1>Textdatei</ie1>
     <ie2>Excel Datei</ie2>
     <ie3>Xml-Datei</ie3>
@@ -1999,6 +1999,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t1>Betriebsarten</t1>
     <t2>In der Konfiguration fehlen Bedingungen</t2>
     <t3>Alle Bedingungen in der aktuellen Konfiguration müssen Filter nach Kategorien und Parametern enthalten</t3>
+    <!--todo remove after 3.1.9.0-->
     <t4>Geben Sie einen Namen ein</t4>
     <t5>In der kostenlosen Version sind maximal drei Konfigurationen erhältlich</t5>
     <t6>In der kostenlosen Version sind maximal fünf Bedingungen verfügbar</t6>
@@ -2456,7 +2457,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <err25>Das Format hat keinen Namen und wird beim Hinzufügen zum Drucker nicht bearbeitet</err25>
     <err26>Das Komprimieren der Datei "{0}" ist fehlgeschlagen. Fehler:</err26>
     <err27>Es fehlen Planköpfe auf dem aktuellen Plan. Kein Export des aktuellen Plans ist möglich!</err27>
-    <err28>Failed to copy file {0} to destination folder {1}. Error:</err28>
+    <err28>Das Kopieren der Datei "{0}" in den Zielordner "{1}" ist fehlgeschlagen. Fehler:</err28>
   </mprSheetExport>
   <mprHeightSplitter
     LocalName="In die Höhe teilen"
@@ -2931,19 +2932,19 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <msg16>Alle Elemente haben keine Phasenzuordnung. Überprüfen Sie, ob die Filter richtig ausgefüllt sind</msg16>
   </mprPhases>
   <mprFlipped
-    LocalName="Flipped families"
-    Description="Finding and fixing flipped families">
-    <t1>Searching for flipped families</t1>
-    <t2>Fix flipped families</t2>
+    LocalName="Gespiegelte Familien"
+    Description="Suchen und Korrigieren gespiegelter Familien">
+    <t1>Suchen gespiegelter Familien</t1>
+    <t2>Korrigieren gespiegelter Familien</t2>
     <t4>Elemente im Modell markieren und anzeigen</t4>
-    <t5>Number of elements found in a category</t5>
-    <t6>Failed to fix the families</t6>
+    <t5>Anzahl der in der Kategorie gefundenen Exemplare</t5>
+    <t6>Die Familien konnten nicht korrigiert werden</t6>
     <t7>Corrected copies:</t7>
-    <t8>There are no flipped families</t8>
-    <t9>Flipped on its side</t9>
-    <t10>Flipped on its face</t10>
-    <msg1>Family instances cannot be flipped by face. Add a flip control in the family editor</msg1>
-    <msg2>Family instances cannot be flipped by side. Add a flip control to the family editor</msg2>
-    <msg3>The instance is in the group: "{0}"</msg3>
+    <t8>Gespiegelte Familien sind nicht vorhanden</t8>
+    <t9>Flankenseitig gespiegelt</t9>
+    <t10>Stirnseitig gespiegelt</t10>
+    <msg1>Familienexemplare können nicht stirnseitig gespiegelt werden. Fügen Sie im Familieneditor einen Umdrehpfeil hinzu</msg1>
+    <msg2>Familienexemplare können nicht flankenseitig gespiegelt werden. Fügen Sie im Familieneditor einen Umdrehpfeil hinzu</msg2>
+    <msg3>Exemplar gehört zu der Gruppe: "{0}"</msg3>
   </mprFlipped>
 </ModPlus>

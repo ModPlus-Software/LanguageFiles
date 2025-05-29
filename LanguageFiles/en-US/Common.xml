@@ -232,6 +232,7 @@
     <h73>ModPlus localization will change automatically depending on the localization of the supported product being launched (AutoCAD or Revit)</h73>
     <h74>License Server type:</h74>
     <h75>License server is not used</h75>
+    <h76>Close windows by pressing the Esc key</h76>
     <wls1>The license server with identifier {0} does not exist</wls1>
     <wls2>License Server status:</wls2>
     <wls3>Enabled</wls3>
@@ -1209,6 +1210,37 @@ Not all parameters may be present in the list of instance parameters, because in
     <h147>Add buttons:</h147>
     <h148>at start of panel</h148>
     <h149>at end of panel</h149>
+    <h150>Subcategory visibility</h150>
+    <h151>Enables you to change the visibility on the current view of the current element's category subcategories</h151>
+    <h152>Create view</h152>
+    <h153>Enables you to create a view (plan) by selected levels</h153>
+    <h154>Enables you to select the elements associated with the selected level</h154>
+    <h155>Select inserts</h155>
+    <h156>Searches for and selects inserts placed in selected Host elements</h156>
+    <h157>Unload</h157>
+    <h158>Enables you to Unload the Link</h158>
+    <h159>Enables you to select the elements included in the selected trusses</h159>
+    <h160>Open folder</h160>
+    <h161>Enables you to open the folder containing the file of the selected Link</h161>
+    <h162>Select boundaries</h162>
+    <h163>Enables you to select the boundary elements that form the contour of the selected rooms or spaces</h163>
+    <h164>View tabs</h164>
+    <h165>Main settings</h165>
+    <h166>Context menu of the active tab</h166>
+    <h167>Right-clicking on the active tab will display a context menu with various functions</h167>
+    <h168>Tabs will be sorted alphabetically by the contents of the tab's tooltip. You cannot drag and drop tabs during sorting</h168>
+    <h169>Multiple rows</h169>
+    <h170>The tabs of all open views will be displayed in several rows</h170>
+    <h171>Alternative coloring conditions</h171>
+    <h172>Synchronization</h172>
+    <h173>Notify if synchronization is required</h173>
+    <h174>The service notifies (changes the color of the Revit window title) if the current file needs to be synchronized. The need for notification and the color depend on the levels selected. There are three notification levels to choose from - Green, Orange, and Red. For each selected level, you must set the interval in minutes at which the notification will occur</h174>
+    <h175>Green level</h175>
+    <h176>Orange level</h176>
+    <h177>Red level</h177>
+    <h178>The wall is a curtain</h178>
+    <h179>The family is a nested family</h179>
+    <h180>The family is the parent family</h180>
     <parameters>Parameters</parameters>
     <name>Name</name>
     <any>Any</any>
@@ -1278,9 +1310,12 @@ Not all parameters may be present in the list of instance parameters, because in
     <i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
     <i8>All simple nested conditions of a group condition are checked with the "AND" operator – i.e. all nested conditions must match.</i8>
     <i9>Instead of parameter name it is possible to specify GUID for shared parameters or system name for built-in parameters.</i9>
-    <i10>The conditions "Presence of parameter" and "Absence of parameter" when checking the parent Group (keyword Group) check, respectively, whether the element is in the Group or not.</i10>
-    <i11>The conditions "Presence of parameter" and "Absence of parameter" when checking the parent Assembly (keyword Assembly) check, respectively, whether the element is in the Assembly or not.</i11>
+    <i10>The "Presence of parameter" and "Absence of parameter" conditions when checking the key parameter "Group" (parent group) check whether the element is in the group or not, respectively. That is, the "Presence of parameter" condition interprets the "Element must be in a group" check, and the "Absence of parameter" condition interprets the "Element must not be in a group" check. Any other condition, if the element is in a group, checks the group name according to the rules for strings.</i10>
+    <i11>The " Presence of parameter" and "Absence of parameter" conditions, when checking the key parameter "Assembly" (parent assembly), check, respectively, whether the element is in the assembly or not. That is, the " Presence of parameter" condition interprets the check "Element must be in the assembly", and the "Absence of parameter" condition interprets the check "Element must not be in the assembly". Any other condition, if the element is in an assembly, checks the assembly name using the rules for strings.</i11>
     <i12>When using the key parameters "BottomZ" and "TopZ", the lowest and highest elevation from the element geometry are checked, respectively. The key parameters "BottomZ" and "TopZ" are considered numeric and are checked by the corresponding conditions. The values of the elevations are taken in millimeters rounded to three decimal places. In the "Value" field you can specify level names: if the specified level is found, its elevation in millimeters rounded to 3 decimal places will be used.</i12>
+    <i13>The condition "Presence of parameter" and "Absence of parameter" when checking the key parameter "Curtain" (the wall is a curtain) check, respectively, whether the wall is a curtain or not. That is, the condition "Presence of parameter" interprets the check "Wall must be a curtain", and the condition "Absence of parameter" interprets the check "Wall must not be a curtain". If the element is not a wall, the condition is ignored (the condition always returns "true").</i13>
+    <i14>The "Presence of parameter" and "Absence of parameter" conditions, when checking the key parameter "Nested" (the family is nested), check, respectively, whether the family is nested or not. That is, the condition "Presence of parameter" interprets the check "Family must be nested", and the condition "Absence of parameter" interprets the check "Family must not be nested". If the element is not a family, the condition is ignored (the condition always returns "true").</i14>
+    <i15>The condition "Presence of parameter" and "Absence of parameter" when checking the key parameter "Parent" (the family is parental) check, respectively, whether or not the family is parental (contains nested families). I.e. the condition "Presence of parameter" interprets the check "Family must be a parent", and the condition "Absence of parameter" interprets the check "Family must not be a parent". If the element is not a family, the condition is ignored (the condition always returns "true").</i15>
     <et1>Equal</et1>
     <et2>More</et2>
     <et3>Less</et3>
@@ -1411,7 +1446,9 @@ Not all parameters may be present in the list of instance parameters, because in
     <sl12>The document is saved on a timer</sl12>
     <sl13>Event handler error</sl13>
     <sl14>While saving project an error "{1}" occurred in event handler {0}. Added 1 minute to retry saving</sl14>
+    <!--todo remove after 32.2.14-->
     <sl15>Project restored from the file with the state at the moment of opening or at the moment of the last manual saving</sl15>
+    <!--todo remove after 32.2.14-->
     <sl16>Failed to restore the project from a file with the state at the moment of opening or at the moment of the last manual saving</sl16>
     <sl17>Document "{0}" does not meet the conditions of autosave service processing</sl17>
     <sel1>Pre-selected elements</sel1>

@@ -1225,7 +1225,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <h72>tipo de importación</h72>
     <h73>ejemplar y tipo de importación</h73>
     <h74>Seleccionar un grupo o conjunto de trabajo</h74>
-    <h75>Remove worksets</h75>
+    <h75>Eliminar conjuntos de trabajo</h75>
     <!-- todo remove after 3.0.2.0 start -->
     <t1>Cambiar nombre de configuración</t1>
     <t2>Crear configuración</t2>
@@ -1249,11 +1249,11 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t19>Adjuntar elementos en subproyectos seleccionados</t19>
     <t20>Desanclar elementos en subproyectos seleccionados</t20>
     <t21>Añadir subproyectos por nombres de vínculos</t21>
-    <t22>Elements</t22>
-    <t23>The elements of the worksets will be:</t23>
-    <t24>Removed</t24>
-    <t25>Moved to:</t25>
-    <t26>Sort worksets in a group in alphabetical order</t26>
+    <t22>Elementos</t22>
+    <t23>Los elementos del conjunto de trabajo:</t23>
+    <t24>se eliminarán</t24>
+    <t25>se desplazarán a:</t25>
+    <t26>Ordenar los conjuntos de trabajo de un grupo alfabéticamente</t26>
     <msg1>¿Eliminar?</msg1>
     <msg2>¡Configuración actual "{0}" se eliminará permanentemente!</msg2>
     <msg3>¡Grupo "{0}" se eliminará permanentemente!</msg3>
@@ -1286,8 +1286,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <msg37>¿Copiar ajustes?</msg37>
     <msg38>Los ajustes se sobrescribirán para todos los conjuntos de trabajo en el grupo actual. ¡Esta acción no se puede deshacer!</msg38>
     <msg39>Los ajustes se sobrescribirán para todos conjuntos de trabajo de todos los grupos en configuración actual. ¡Esta acción no se puede deshacer!</msg39>
-    <msg40>Sorting?</msg40>
-    <msg41>Worksets will be sorted alphabetically in group "{0}". Continue?</msg41>
+    <msg40>¿Ordenar?</msg40>
+    <msg41>En el grupo "{0}" los conjuntos de trabajo se ordenarán alfabéticamente. ¿Continuar?</msg41>
     <ie1>Archivo de texto</ie1>
     <ie2>Archivo Excel</ie2>
     <ie3>Archivo .xml</ie3>
@@ -1999,6 +1999,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t1>Modos de trabajo</t1>
     <t2>Faltan condiciones en configuración</t2>
     <t3>Todas condiciones en configuración actual deben tener filtros rellenos por categoría y filtros por parámetros</t3>
+    <!--todo remove after 3.1.9.0-->
     <t4>Ingresar nombre</t4>
     <t5>En versión gratuita, hay disponibles un máximo de tres configuraciones</t5>
     <t6>En versión gratuita, hay disponibles un máximo de cinco condiciones</t6>
@@ -2456,7 +2457,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <err25>Formato no tiene nombre y no se procesará cuando se añade a impresora</err25>
     <err26>No se puede comprimir archivo "{0}". Error:</err26>
     <err27>En la hoja actual faltan cuadros de rotulación. ¡No es posible exportar la hoja actual!</err27>
-    <err28>Failed to copy file {0} to destination folder {1}. Error:</err28>
+    <err28>No se puede copiar el archivo {0} a la carpeta de destino {1}. Error:</err28>
   </mprSheetExport>
   <mprHeightSplitter
     LocalName="Dividir por altura"
@@ -2931,19 +2932,19 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <msg16>Las fases no están asignadas a ningún elemento. Verificar si los filtros se han rellenado correctamente</msg16>
   </mprPhases>
   <mprFlipped
-    LocalName="Flipped families"
-    Description="Finding and fixing flipped families">
-    <t1>Searching for flipped families</t1>
-    <t2>Fix flipped families</t2>
+    LocalName="Familias volteadas"
+    Description="Cómo buscar y reparar las familias volteadas">
+    <t1>Buscar las familias volteadas</t1>
+    <t2>Reparar las familias volteadas</t2>
     <t4>Marcar y mostrar elementos en modelo</t4>
-    <t5>Number of elements found in a category</t5>
-    <t6>Failed to fix the families</t6>
+    <t5>Número de ejemplares encontrados en la categoría</t5>
+    <t6>No se puede reparar las familias</t6>
     <t7>Corrected instances:</t7>
-    <t8>There are no flipped families</t8>
-    <t9>Flipped on its side</t9>
-    <t10>Flipped on its face</t10>
-    <msg1>Family instances cannot be flipped by face. Add a flip control in the family editor</msg1>
-    <msg2>Family instances cannot be flipped by side. Add a flip control to the family editor</msg2>
-    <msg3>The instance is in the group: "{0}"</msg3>
+    <t8>Faltan las familias volteadas</t8>
+    <t9>Volteo lateral</t9>
+    <t10>Volteo frontal</t10>
+    <msg1>No se puede voltear frontalmente los ejemplares de familia. Añadir una flecha de rotación en el editor familiar</msg1>
+    <msg2>No se puede voltear lateralmente los ejemplares de familia. Añadir una flecha de rotación en el editor familiar</msg2>
+    <msg3>El ejemplar está en el grupo: "{0}"</msg3>
   </mprFlipped>
 </ModPlus>
