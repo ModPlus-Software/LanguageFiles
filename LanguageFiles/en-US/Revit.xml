@@ -455,7 +455,9 @@
   <mprExcelImport
     LocalName="Import from Excel"
     Description="Plugin allows you to insert a table from Excel into a Revit drafting view"
-    FullDescription="Plugin supports the conversion of basic properties of cells (size, borders, color) and text (font, size, position, color). Plugin writes information about the imported table to the current project. Plugin allows you to monitor the changed source data in real time">
+    FullDescription="Plugin supports the conversion of basic properties of cells (size, borders, color) and text (font, size, position, color). Plugin writes information about the imported table to the current project. Plugin allows you to monitor the changed source data in real time"
+    LocalName1="Excel to Schedule"
+    Description1="Importing data from Excel file to the current Schedule">
     <h1>Import from Excel</h1>
     <h2>Table:</h2>
     <h3>Status:</h3>
@@ -485,6 +487,8 @@
     <h28>Open</h28>
     <h29>Do not open</h29>
     <h30>No more to ask</h30>
+    <h31>The row from which to start reading data:</h31>
+    <h32>Fill in Schedule</h32>
     <b1>Add</b1>
     <b2>Update</b2>
     <b3>Open view</b3>
@@ -510,6 +514,18 @@
     <m15>Cell read error</m15>
     <m16>Error processing cell</m16>
     <m17>The selected table will be removed from the list. The drafting view will remain. Continue?</m17>
+    <m18>Go to the Schedule to run the plugin!</m18>
+    <m19>Failed to get parameter from field</m19>
+    <m20>The parameter "{0}" is Read Only</m20>
+    <m21>Field "{0}" processing skipped</m21>
+    <m22>Failed to set value of field "{0}"</m22>
+    <m23>Failed to set the value "{0}" to the integer parameter "{1}"</m23>
+    <m24>Unsupported parameter type</m24>
+    <m25>Revit was unable to set the value "{0}" to the parameter "{1}"</m25>
+    <m26>Unsupported field type "0"</m26>
+    <m27>The value of the reference parameter "{0}" can only be changed if the parameter already has a value</m27>
+    <m28>No element found in category "{0}" with name "{1}"</m28>
+    <m29>Workset with the name "{0}" was not found</m29>
     <ts1>Table update required</ts1>
     <ts2>The source file is missing!</ts2>
     <ts3>Source sheet is missing or renamed!</ts3>
