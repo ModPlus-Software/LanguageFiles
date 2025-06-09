@@ -366,7 +366,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
     private void BuildColumns()
     {
-        var order = new List<string> { "ru-RU", "uk-UA", "en-US", "de-DE", "es-ES" };
+        var order = new List<string> { "ru-RU", "uk-UA", "en-US", "de-DE", "es-ES", "zh-CN" };
 
         foreach (var languageName in _languageNames.OrderBy(order.IndexOf))
         {
