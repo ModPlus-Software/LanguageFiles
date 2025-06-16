@@ -2603,7 +2603,35 @@ An additional check is performed by type parameters – a pair of similar famili
     <t24>Selected:</t24>
     <t25>Number of displayed Types selected in the table</t25>
     <t26>Result:</t26>.
-    <t27>Variable thickness:</t27><t28>Structure wildcard</t28><t29>Numbering</t29><t30>Number format:</t30><t31>String format</t31><t32>{0} – material name. {1} – layer thickness. {2} – variable thickness</t32><t33>Standard layer:</t33><t34>Zero-thickness layer:</t34><t35>Variable thickness layer:</t35><t36>Required parameter with the data type "Multiline text". This parameter specifies the template of the result formation. To output the list of structure layers in the template it is necessary to specify the wildcard of the structure</t36><t37>Required parameter with the data type "Multiline text". In this parameter is written the numbered list of layers of the structure, taking into account the specified line formats and numbering settings</t37><t38>Optional parameter with data type "Text". This parameter specifies a custom variable thickness value that can be used in string format for a variable thickness layer</t38><t39>The wildcard specified in the template, which is replaced by a formatted list of structure layers in the result</t39><t40>By Category</t40><t41>No parameter</t41><t42>Take material name from material parameter:</t42><t43>Reverse result:</t43><t44>Optional parameter with the data type "Multiline Text". The same result is written to this parameter as to the "Result" parameter, but in reverse order. The parameter is processed if the Type being processed has it</t44><t45>Example result</t45><t46>Required parameter of an instance with the data type "Multiline text". In this parameter, a numbered list of volumes of the structure layers is written, taking into account the specified line formats and numbering settings</t46><t47>{0} – material name. {1} – material volume</t47><t48>Rounding the volume value</t48><s1>No change. The Type parameters will not be updated</s1><s2>The required parameters "Template" and "Result" are missing</s2><s3>The new result value is different from the current result value. The Type parameters will not be updated, because the "Update" checkbox is not checked</s3><s4>The new result value is different from the current result value. The Type parameters will be updated</s4><msg1>Parameter "{0}" not found</msg1><msg2>The volume of layers is set to the parameter of the instance of the Type "{0}"</msg2></mprStructureToParameter>
+    <t27>Variable thickness:</t27>
+    <t28>Structure wildcard</t28>
+    <t29>Numbering</t29>
+    <t30>Number format:</t30>
+    <t31>String format</t31>
+    <t32>{0} – material name. {1} – layer thickness. {2} – variable thickness</t32>
+    <t33>Standard layer:</t33>
+    <t34>Zero-thickness layer:</t34>
+    <t35>Variable thickness layer:</t35>
+    <t36>Required parameter with the data type "Multiline text". This parameter specifies the template of the result formation. To output the list of structure layers in the template it is necessary to specify the wildcard of the structure</t36>
+    <t37>Required parameter with the data type "Multiline text". In this parameter is written the numbered list of layers of the structure, taking into account the specified line formats and numbering settings</t37>
+    <t38>Optional parameter with data type "Text". This parameter specifies a custom variable thickness value that can be used in string format for a variable thickness layer</t38>
+    <t39>The wildcard specified in the template, which is replaced by a formatted list of structure layers in the result</t39>
+    <t40>By Category</t40>
+    <t41>No parameter</t41>
+    <t42>Take material name from material parameter:</t42>
+    <t43>Reverse result:</t43>
+    <t44>Optional parameter with the data type "Multiline Text". The same result is written to this parameter as to the "Result" parameter, but in reverse order. The parameter is processed if the Type being processed has it</t44>
+    <t45>Example result</t45>
+    <t46>Required parameter of an instance with the data type "Multiline text". In this parameter, a numbered list of volumes of the structure layers is written, taking into account the specified line formats and numbering settings</t46>
+    <t47>{0} – material name. {1} – material volume</t47>
+    <t48>Rounding the volume value</t48>
+    <s1>No change. The Type parameters will not be updated</s1>
+    <s2>The required parameters "Template" and "Result" are missing</s2>
+    <s3>The new result value is different from the current result value. The Type parameters will not be updated, because the "Update" checkbox is not checked</s3>
+    <s4>The new result value is different from the current result value. The Type parameters will be updated</s4>
+    <msg1>Parameter "{0}" not found</msg1>
+    <msg2>The volume of layers is set to the parameter of the instance of the Type "{0}"</msg2>
+  </mprStructureToParameter>
   <mprSumParameters
     LocalName="Sum of parameters"
     Description="Summarizing the values of numerical parameters of selected elements">
