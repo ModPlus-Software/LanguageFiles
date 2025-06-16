@@ -455,12 +455,16 @@
   <mprExcelImport
     LocalName="Importar desde Excel"
     Description="Complemento le permite insertar una tabla de Excel en una vista de dibujo Revit"
-    FullDescription="Complemento admite conversión de propiedades básicas de celda (cotas, contornos, color) y texto (fuente, tamaños, posición, color). Complemento le permite monitorear datos de origen modificados en tiempo real">
+    FullDescription="Complemento admite conversión de propiedades básicas de celda (cotas, contornos, color) y texto (fuente, tamaños, posición, color). Complemento le permite monitorear datos de origen modificados en tiempo real"
+    LocalName1="Excel a Tabla"
+    Description1="Importar datos desde un archivo Excel a la Tabla actual">
+    <!--todo remove after 1.7.2.0-->
     <h1>Importar desde Excel</h1>
     <h2>Tabla:</h2>
     <h3>Estado:</h3>
     <h4>Archivo de origen:</h4>
     <h5>Hoja de origen:</h5>
+    <!--todo remove after 1.7.2.0-->
     <h6>Buscar tablas...</h6>
     <h7>Añadir nueva tabla</h7>
     <h8>Archivo Excel</h8>
@@ -485,15 +489,25 @@
     <h28>Abrir</h28>
     <h29>No abrir</h29>
     <h30>No vuelva a preguntar</h30>
+    <h31>Fila desde la que comenzar a leer datos:</h31>
+    <h32>Rellenar tabla de planificación</h32>
+    <h33>El complemento no está diseñado para funcionar en familias</h33>
     <b1>Añadir</b1>
     <b2>Actualizar</b2>
     <b3>Abrir vista</b3>
     <b4>Abrir archivo de origen</b4>
     <b5>Eliminar</b5>
+    <!--todo remove after 1.7.2.0-->
     <b6>Anular actualización</b6>
     <b7>Eliminar enlace</b7>
     <b9>Reemplazar origen</b9>
+    <b10>Open the folder with the source file</b10>
+    <b11>Update the selected table</b11>
+    <b12>Update all irrelevant tables</b12>
+    <b13>Update all tables</b13>
+    <!--todo remove after 1.7.2.0-->
     <w1>En versión limitada del complemento, es imposible añadir más de 3 tablas</w1>
+    <!--todo remove after 1.7.2.0-->
     <w2>En versión limitada del complemento, sólo están disponibles tres primeras hojas del archivo Excel seleccionado</w2>
     <m1>Archivo leído exitosamente</m1>
     <m2>No se puede leer archivo</m2>
@@ -510,6 +524,19 @@
     <m15>Error de lectura de celda</m15>
     <m16>Error al procesar celda</m16>
     <m17>Tabla seleccionada será eliminada de lista. Vista del dibujo permanecerá. ¿Continuar?</m17>
+    <m18>Go to the Schedule to run the plugin!</m18>
+    <m19>Failed to get parameter from field</m19>
+    <m20>The parameter "{0}" is Read Only</m20>
+    <m21>Field "{0}" processing skipped</m21>
+    <m22>Failed to set value of field "{0}"</m22>
+    <m23>Failed to set the value "{0}" to the integer parameter "{1}"</m23>
+    <m24>Unsupported parameter type</m24>
+    <m25>Revit was unable to set the value "{0}" to the parameter "{1}"</m25>
+    <m26>Unsupported field type "0"</m26>
+    <m27>The value of the reference parameter "{0}" can only be changed if the parameter already has a value</m27>
+    <m28>No element found in category "{0}" with name "{1}"</m28>
+    <m29>Workset with the name "{0}" was not found</m29>
+    <m30>Drawing of sheet</m30>
     <ts1>Se requiere actualización de tabla</ts1>
     <ts2>¡Falta archivo de origen!</ts2>
     <ts3>¡Falta hoja de origen o se le ha cambiado nombre!</ts3>
@@ -2939,7 +2966,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <t4>Marcar y mostrar elementos en modelo</t4>
     <t5>Número de ejemplares encontrados en la categoría</t5>
     <t6>No se puede reparar las familias</t6>
-    <t7>Corrected instances:</t7>
+    <t7>Ejemplares corregidos:</t7>
     <t8>Faltan las familias volteadas</t8>
     <t9>Volteo lateral</t9>
     <t10>Volteo frontal</t10>

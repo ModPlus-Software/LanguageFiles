@@ -455,12 +455,16 @@
   <mprExcelImport
     LocalName="Import aus Excel"
     Description="Mit dem Plugin können Sie Tabellen aus Excel in eine Revit-Zeichnungsansicht einfügen"
-    FullDescription="Das Plugin unterstützt die Umwandlung von Haupteigenschaften der Zellen (Größen, Ränder, Farbe) und des Textes (Schriftart, Größen, Position, Farbe). Das Plugin schreibt Informationen über die importierte Tabelle in das aktuelle Projekt. Mit dem Plugin können Sie die geänderten Quelldaten in Echtzeit überwachen">
+    FullDescription="Das Plugin unterstützt die Umwandlung von Haupteigenschaften der Zellen (Größen, Ränder, Farbe) und des Textes (Schriftart, Größen, Position, Farbe). Das Plugin schreibt Informationen über die importierte Tabelle in das aktuelle Projekt. Mit dem Plugin können Sie die geänderten Quelldaten in Echtzeit überwachen"
+    LocalName1="Excel in Bauteilliste"
+    Description1="Import von Daten aus einer Excel-Datei in die aktuelle Bauteilliste">
+    <!--todo remove after 1.7.2.0-->
     <h1>Import aus Excel</h1>
     <h2>Tabelle:</h2>
     <h3>Status:</h3>
     <h4>Quelldatei:</h4>
     <h5>Quellplan:</h5>
+    <!--todo remove after 1.7.2.0-->
     <h6>Suche nach Tabellen...</h6>
     <h7>Eine neue Tabelle hinzufügen</h7>
     <h8>Excel -Datei</h8>
@@ -485,15 +489,25 @@
     <h28>Öffnen</h28>
     <h29>Nicht öffnen</h29>
     <h30>nicht mehr fragen</h30>
+    <h31>Zeile, ab der Daten gelesen werden sollen:</h31>
+    <h32>Bauteilliste ausfüllen</h32>
+    <h33>Die Ausführung des Plugins in Familien ist nicht vorgesehen</h33>
     <b1>Hinzufügen</b1>
     <b2>Aktualisieren</b2>
     <b3>Ansicht öffnen</b3>
     <b4>Quelldatei öffnen</b4>
     <b5>Löschen</b5>
+    <!--todo remove after 1.7.2.0-->
     <b6>Aktualisierung unterbrechen</b6>
     <b7>Verbindung aufheben</b7>
     <b9>Quelle ersetzen</b9>
+    <b10>Open the folder with the source file</b10>
+    <b11>Update the selected table</b11>
+    <b12>Update all irrelevant tables</b12>
+    <b13>Update all tables</b13>
+    <!--todo remove after 1.7.2.0-->
     <w1>In der limitierten Version des Plagins können maximal 3 Tabellen hinzugefügt werden</w1>
+    <!--todo remove after 1.7.2.0-->
     <w2>In der limitierten Version des Plagins sind nur die ersten drei Blätter der ausgewählten Excel-Datei verfügbar</w2>
     <m1>Datei wurde erfolgreich abgelesen</m1>
     <m2>Die Datei konnte nicht abgelesen werden</m2>
@@ -510,6 +524,19 @@
     <m15>Fehler beim Ablesen von der Zelle</m15>
     <m16>Fehler bei der Zellenverarbeitung</m16>
     <m17>Die ausgewählte Tabelle wird aus der Liste gelöscht. Die Zeichenansicht bleibt bestehen. Wollen Sie fortsetzen?</m17>
+    <m18>Go to the Schedule to run the plugin!</m18>
+    <m19>Failed to get parameter from field</m19>
+    <m20>The parameter "{0}" is Read Only</m20>
+    <m21>Field "{0}" processing skipped</m21>
+    <m22>Failed to set value of field "{0}"</m22>
+    <m23>Failed to set the value "{0}" to the integer parameter "{1}"</m23>
+    <m24>Unsupported parameter type</m24>
+    <m25>Revit was unable to set the value "{0}" to the parameter "{1}"</m25>
+    <m26>Unsupported field type "0"</m26>
+    <m27>The value of the reference parameter "{0}" can only be changed if the parameter already has a value</m27>
+    <m28>No element found in category "{0}" with name "{1}"</m28>
+    <m29>Workset with the name "{0}" was not found</m29>
+    <m30>Drawing of sheet</m30>
     <ts1>Aktualisierung der Tabelle erforderlich</ts1>
     <ts2>Die Quelldatei ist nicht vorhanden!</ts2>
     <ts3>Quellplan fehlt oder wurde umbenannt!</ts3>
@@ -2939,7 +2966,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t4>Elemente im Modell markieren und anzeigen</t4>
     <t5>Anzahl der in der Kategorie gefundenen Exemplare</t5>
     <t6>Die Familien konnten nicht korrigiert werden</t6>
-    <t7>Corrected copies:</t7>
+    <t7>Korrigierte Exemplare:</t7>
     <t8>Gespiegelte Familien sind nicht vorhanden</t8>
     <t9>Flankenseitig gespiegelt</t9>
     <t10>Stirnseitig gespiegelt</t10>

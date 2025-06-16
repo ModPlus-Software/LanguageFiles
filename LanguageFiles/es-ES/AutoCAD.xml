@@ -1811,6 +1811,7 @@
     <tab16>Designaciones</tab16>
     <tab17>Buscar y reemplazar</tab17>
     <tab18>Buscar y reemplazar en objetos inteligentes por el valor de la cadena y las propiedades numéricas</tab18>
+    <tab19>Soldadura</tab19>
     <defl>Por defecto</defl>
     <err1>No se puede encontrar archivo</err1>
     <err2>No es posible cargar tipo de línea</err2>
@@ -1836,6 +1837,8 @@
     <msg20>Especificar punto de sangría del texto:</msg20>
     <msg21>Especificar punto de posición del texto:</msg21>
     <msg22>Precise punto siguiente o</msg22>
+    <msg23>Seleccionar la primera arista</msg23>
+    <msg24>Seleccionar la segunda arista</msg24>
     <wrong>Objeto no válido!</wrong>
     <vc1>VARIOS</vc1>
     <vc2>NO DEFINIDO</vc2>
@@ -2069,6 +2072,23 @@
     <h235>Mostrar pinzamientos adicionales en los objetos inteligentes lineales</h235>
     <h236>Estilo básico para aislamiento</h236>
     <h237>Mostrar pinzamientos funcionales adicionales en los objetos inteligentes lineales</h237>
+    <h238>Símbolo de soldadura</h238>
+    <h239>Crear un símbolo de soldadura</h239>
+    <h240>Crear un objeto inteligente basado en un bloque anónimo que describe un símbolo de soldadura</h240>
+    <h241>Estilo básico para el símbolo de soldadura</h241>
+    <h242>Lado</h242>
+    <h243>Cateto de soldadura</h243>
+    <h244>Crear un cateto de soldadura</h244>
+    <h245>Crear un objeto inteligente basado en un bloque anónimo que describe un cateto de soldadura</h245>
+    <h246>Crear un cateto de soldadura de tres puntos</h246>
+    <h247>Crear un objeto inteligente basado en un bloque anónimo que describe un cateto de soldadura de tres puntos</h247>
+    <h248>Estilo básico para el cateto de soldadura</h248>
+    <h249>Relleno de agujeros</h249>
+    <h250>Crear un relleno de agujeros</h250>
+    <h251>Crear un objeto inteligente basado en un bloque anónimo que describe un relleno de agujeros</h251>
+    <h252>Estilo base para el relleno de agujeros</h252>
+    <h253>Сateto de soldadura de tres puntos</h253>
+    <h254>There are no smart entities in the document</h254>
     <so0>Actualizar gráficos</so0>
     <sot0>Se regenerarán gráficos de todos objetos intelectuales encontrados</sot0>
     <so1>Seleccionar</so1>
@@ -2089,6 +2109,7 @@
     <gp5>Añadir directriz</gp5>
     <gp6>Eliminar directriz</gp6>
     <gp7>Tipo de flecha de directriz</gp7>
+    <gp8>Relleno</gp8>
     <blt1>Lineal</blt1>
     <blt2>Curvilineal</blt2>
     <blt3>Cilíndrico</blt3>
@@ -2400,6 +2421,42 @@
     <p163>Anchura del tipo de aislamiento</p163>
     <p164>Altura del tipo de aislamiento</p164>
     <p165>Dibujar el contorno exterior</p165>
+    <p166>Número de soldadura</p166>
+    <p167>Número total de soldaduras</p167>
+    <p168>Categoría de control</p168>
+    <p169>GOST</p169>
+    <p170>Designación</p170>
+    <p171>Método de soldadura</p171>
+    <p172>Tamaño de cateto</p172>
+    <p173>Tamaño de soldadura</p173>
+    <p174>Tamaño del espaciado de soldadura</p174>
+    <p175>Lado</p175>
+    <p176>Soldadura sobre todo el contorno</p176>
+    <p177>Soldadura de campo</p177>
+    <p178>Subtipo de soldadura</p178>
+    <p179>Símbolo de tamaño</p179>
+    <p180>Símbolo frontal auxiliar</p180>
+    <p181>Símbolo posterior auxiliar</p181>
+    <p182>Símbolo frontal de superficie</p182>
+    <p183>Símbolo posterior de superficie</p183>
+    <p184>Texto de símbolo frontal de superficie</p184>
+    <p185>Texto de símbolo posterior de superficie</p185>
+    <p186>Longitud de cateto</p186>
+    <p187>Convexidad/Concavidad</p187>
+    <d187>Convexidad (0 a 1) o concavidad (-1 a 1)</d187>
+    <p191>Display axes</p191>
+    <p192>External length of axes</p192>
+    <p193>Mostrar rosca</p193>
+    <p194>Distancia de rosca</p194>
+    <p195>Rosca interna</p195>
+    <p196>Girar relleno</p196>
+    <p197>Tipo de agujero</p197>
+    <p198>Display symbols</p198>
+    <p199>Size of symbols</p199>
+    <d199>Conditional size value from 0.1 to 1.</d199>
+    <p200>Fill symbols</p200>
+    <p201>Truncate instead of rounding</p201>
+    <p202>Suprimir cero final</p202>
     <jigM1>Arco</jigM1>
     <grpM1>Estirar vértice</grpM1>
     <grpM2>Añadir vértice</grpM2>
@@ -2417,6 +2474,26 @@
     <ilt6>Tipo 6</ilt6>
     <ilt7>Tipo 7</ilt7>
     <ilt8>Tipo 8</ilt8>
+    <none>Falta</none>
+    <djauxs1>Retirar refuerzo de soldadura</djauxs1>
+    <djauxs2>Soldadura sobre la línea abierta</djauxs2>
+    <djauxs3>Transición suavizada</djauxs3>
+    <djsrs1>Superficie no ajustable</djsrs1>
+    <djsrs2>Con eliminación de la capa superficial</djsrs2>
+    <djsrs3>Sin eliminación de la capa superficial</djsrs3>
+    <djwstt1>Soldadura de cadena</djwstt1>
+    <djwstt2>Soldadura de domero</djwstt2>
+    <djwsub1>Conexión por soldeo</djwsub1>
+    <djwsub2>Conexión por costura</djwsub2>
+    <djwsub3>Conexión por grapado</djwsub3>
+    <djwsub4>Conexión por esquinas</djwsub4>
+    <djwsub5>Conexión adhesiva</djwsub5>
+    <djwsd0>Interna</djwsd0>
+    <djwsd1>Externa</djwsd1>
+    <hfqt1>Cuadrante 1</hfqt1>
+    <hfqt2>Cuadrante 2</hfqt2>
+    <hfqt3>Cuadrante 3</hfqt3>
+    <hfqt4>Cuadrante 4</hfqt4>
   </mpESKD>
   <mpStripMtext
     LocalName="Limpiar formato"

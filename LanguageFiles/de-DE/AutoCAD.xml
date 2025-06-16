@@ -1811,6 +1811,7 @@
     <tab16>Darstellungsweisen</tab16>
     <tab17>Suchen und ersetzen</tab17>
     <tab18>Suche und Ersetzen in intelligenten Objekten auf der Grundlage der Werte von Zeichenketten- und numerischen Eigenschaften</tab18>
+    <tab19>Schweißen</tab19>
     <defl>Standardmäßig</defl>
     <err1>Die Datei konnte nicht gefunden werden</err1>
     <err2>Linientyp konnte nicht heruntergeladen werden</err2>
@@ -1836,6 +1837,8 @@
     <msg20>Geben Sie einen Punkt für den Textversatz an:</msg20>
     <msg21>Geben Sie einen Punkt für die Textposition an:</msg21>
     <msg22>Nächsten Punkt angeben oder</msg22>
+    <msg23>Wählen Sie die erste Kante aus</msg23>
+    <msg24>Wählen Sie die zweite Kante aus</msg24>
     <wrong>Ungültiges Objekt!</wrong>
     <vc1>UNTERSCHIEDLICHE</vc1>
     <vc2>NICHT BESTIMMT</vc2>
@@ -2069,6 +2072,23 @@
     <h235>Zusätzliche Handles bei den linearen intelligenten Objekten anzeigen</h235>
     <h236>Grundstil für Isolation</h236>
     <h237>Zusätzliche funktionale Handles bei Auswahl von linearen intelligenten Objekten anzeigen</h237>
+    <h238>Schweißnahtbezeichnung</h238>
+    <h239>Schweißnahtbezeichnung erstellen</h239>
+    <h240>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Schweißnahtbezeichnung beschreibt</h240>
+    <h241>Grundstil für die Darstellung der Schweißnahtbezeichnung</h241>
+    <h242>Seite</h242>
+    <h243>Schweißnahtkathete</h243>
+    <h244>Schweißnahtkathete erstellen</h244>
+    <h245>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Schweißnahtkathete beschreibt</h245>
+    <h246>Schweißnahtkathete anhand drei Punkte erstellen</h246>
+    <h247>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Schweißnahtkathete beschreibt</h247>
+    <h248>Grundstil für die Darstellung der Schweißnahtkathete</h248>
+    <h249>Füllung von Bohrungen</h249>
+    <h250>Erstellen der Füllung von Bohrungen</h250>
+    <h251>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Füllung von Bohrungen beschreibt</h251>
+    <h252>Grundstil für die Darstellung der Füllung von Bohrungen</h252>
+    <h253>Schweißnahtkathete anhand drei Punkte</h253>
+    <h254>There are no smart entities in the document</h254>
     <so0>Grafiken aktualisieren</so0>
     <sot0>Die Grafiken aller gefundenen intelligenten Objekte werden regeneriert</sot0>
     <so1>Auswählen</so1>
@@ -2089,6 +2109,7 @@
     <gp5>Multi-Führungslinie hinzufügen</gp5>
     <gp6>Multi-Führungslinie entfernen</gp6>
     <gp7>Pfeilspitzentyp</gp7>
+    <gp8>Füllung</gp8>
     <blt1>Linear</blt1>
     <blt2>Gekrümmt</blt2>
     <blt3>Zylindrisch</blt3>
@@ -2400,6 +2421,42 @@
     <p163>Breite des Isolationstyps</p163>
     <p164>Höhe des Isolationstyps</p164>
     <p165>Zeichnen der äußeren Grenze</p165>
+    <p166>Nahtnummer</p166>
+    <p167>Gesamtanzahl der Nähte</p167>
+    <p168>Kategorie der Kontrolle</p168>
+    <p169>GOST</p169>
+    <p170>Bezeichnung</p170>
+    <p171>Schweißverfahren</p171>
+    <p172>Kathetenmaß</p172>
+    <p173>Nahtmaß</p173>
+    <p174>Nahtabstandsmaß</p174>
+    <p175>Seite</p175>
+    <p176>Geschlossene Naht</p176>
+    <p177>Montagenaht</p177>
+    <p178>Nahtuntertyp</p178>
+    <p179>Maßzeichen</p179>
+    <p180>Frontseitige Hilfszeichen</p180>
+    <p181>Rückseitige Hilfszeichen</p181>
+    <p182>Frontseitige Oberflächenzeichen</p182>
+    <p183>Rückseitige Oberflächenzeichen</p183>
+    <p184>Text für frontseitige Oberflächenzeichen</p184>
+    <p185>Text für rückseitige Oberflächenzeichen</p185>
+    <p186>Kathetenlänge</p186>
+    <p187>Konvexität/Konkavität</p187>
+    <d187>Konvexität (0 bis 1) oder Konkavität (-1 bis 1)</d187>
+    <p191>Display axes</p191>
+    <p192>External length of axes</p192>
+    <p193>Gewinde anzeigen</p193>
+    <p194>Gewindeabstand</p194>
+    <p195>Innengewinde</p195>
+    <p196>Füllung drehen</p196>
+    <p197>Typ der Bohrung</p197>
+    <p198>Display symbols</p198>
+    <p199>Size of symbols</p199>
+    <d199>Conditional size value from 0.1 to 1.</d199>
+    <p200>Fill symbols</p200>
+    <p201>Truncate instead of rounding</p201>
+    <p202>Unterdrückung von Nullen am Ende</p202>
     <jigM1>Kreisbogen</jigM1>
     <grpM1>Scheitelpunkt strecken</grpM1>
     <grpM2>Scheitelpunkt hinzufügen</grpM2>
@@ -2417,6 +2474,26 @@
     <ilt6>Typ 6</ilt6>
     <ilt7>Typ 7</ilt7>
     <ilt8>Typ 8</ilt8>
+    <none>Nicht vorhanden</none>
+    <djauxs1>Nahtverstärkung entfernen</djauxs1>
+    <djauxs2>Naht entlang einer nicht geschlossenen Linie</djauxs2>
+    <djauxs3>Fließender Übergang</djauxs3>
+    <djsrs1>Die Oberfläche ist nicht regelbar</djsrs1>
+    <djsrs2>Mit Entfernung der Oberflächenschicht</djsrs2>
+    <djsrs3>Ohne Entfernung der Oberflächenschicht</djsrs3>
+    <djwstt1>Kettennaht</djwstt1>
+    <djwstt2>Versetzte Naht</djwstt2>
+    <djwsub1>Lötverbindung</djwsub1>
+    <djwsub2>Nähverbindung</djwsub2>
+    <djwsub3>Klammerverbindung</djwsub3>
+    <djwsub4>Winkelverbindung</djwsub4>
+    <djwsub5>Klebeverbindung</djwsub5>
+    <djwsd0>Äußeres</djwsd0>
+    <djwsd1>Inneres</djwsd1>
+    <hfqt1>Viertel 1</hfqt1>
+    <hfqt2>Viertel 2</hfqt2>
+    <hfqt3>Viertel 3</hfqt3>
+    <hfqt4>Viertel 4</hfqt4>
   </mpESKD>
   <mpStripMtext
     LocalName="Entfernen der Formattierung"
