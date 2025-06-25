@@ -491,16 +491,16 @@
     <h28>Öffnen</h28>
     <h29>Nicht öffnen</h29>
     <h30>nicht mehr fragen</h30>
-    <h31>Zeile, ab der Daten gelesen werden sollen:</h31>
-    <h32>Bauteilliste ausfüllen</h32>
+    <h31>Die Zeichenfolge, ab der das Lesen der Daten beginnt:</h31>
+    <h32>Bauteilliste einfüllen</h32>
     <h33>Die Ausführung des Plugins in Familien ist nicht vorgesehen</h33>
-    <h34>The Schedule row from which data filling begins:</h34>
-    <h35>The title and headings of the specification are not counted. The counting starting from 1 goes by the rows in which the parameters of the elements are presented</h35>
-    <h36>Write empty values</h36>
-    <h37>Create view</h37>
-    <h38>Insert table into existing view</h38>
-    <h39>Consider the scale of the view</h39>
-    <h40>Name of the new view</h40>
+    <h34>Die Zeichenfolge der Bauteilliste, ab der das Einfüllen mit Daten beginnt:</h34>
+    <h35>Der Name und die Titel der Bauteilliste werden nicht berücksichtigt. Gezählt, beginnend bei 1, werden die Zeichenfolgen, die Parameter der Elemente enthalten</h35>
+    <h36>Leere Werte schreiben</h36>
+    <h37>Ansicht erstellen</h37>
+    <h38>Die Tabelle in die existierende Ansicht einfügen</h38>
+    <h39>Ansichtsmaßstab berücksichtigen</h39>
+    <h40>Der Name der neuen Ansicht</h40>
     <h41>Ansichtstyp:</h41>
     <h42>Importbereich:</h42>
     <b1>Hinzufügen</b1>
@@ -512,10 +512,10 @@
     <b6>Aktualisierung unterbrechen</b6>
     <b7>Verbindung aufheben</b7>
     <b9>Quelle ersetzen</b9>
-    <b10>Open the folder with the source file</b10>
-    <b11>Update the selected table</b11>
-    <b12>Update all irrelevant tables</b12>
-    <b13>Update all tables</b13>
+    <b10>Das Verzeichnis mit der Ausgangsdatei öffnen</b10>
+    <b11>Die ausgewählte Tabelle aktualisieren</b11>
+    <b12>Alle nicht mehr aktuellen Tabellen aktualisieren</b12>
+    <b13>Alle Tabellen aktualisieren</b13>
     <!--todo remove after 1.7.2.0-->
     <w1>In der limitierten Version des Plagins können maximal 3 Tabellen hinzugefügt werden</w1>
     <!--todo remove after 1.7.2.0-->
@@ -541,25 +541,28 @@
     <m15>Fehler beim Ablesen von der Zelle</m15>
     <m16>Fehler bei der Zellenverarbeitung</m16>
     <m17>Die ausgewählte Tabelle wird aus der Liste gelöscht. Die Ansicht bleibt bestehen. Wollen Sie fortsetzen?</m17>
-    <m18>Go to the Schedule to run the plugin!</m18>
-    <m19>Failed to get parameter from field</m19>
-    <m20>The parameter "{0}" is Read Only</m20>
-    <m21>Field "{0}" processing skipped</m21>
-    <m22>Failed to set value of field "{0}"</m22>
-    <m23>Failed to set the value "{0}" to the integer parameter "{1}"</m23>
-    <m24>Unsupported parameter type</m24>
-    <m25>Revit was unable to set the value "{0}" to the parameter "{1}"</m25>
-    <m26>Unsupported field type "0"</m26>
-    <m27>The value of the reference parameter "{0}" can only be changed if the parameter already has a value</m27>
-    <m28>No element found in category "{0}" with name "{1}"</m28>
-    <m29>Workset with the name "{0}" was not found</m29>
-    <m30>Drawing of sheet</m30>
-    <m31>The row number {0} specified as the start of data filling in the current Schedule does not fall within the range of valid values! Values from 1 to {1} are allowed</m31>
-    <m32>Sie müssen einen Namen für die neue Ansicht angeben</m32>
-    <m33>Eine Ansicht vom Typ '{0}' mit dem Namen '{1}' ist bereits im aktuellen Dokument vorhanden</m33>
-    <m34>Wählen Sie eine vorhandene Ansicht zum Einfügen einer Tabelle aus</m34>
-    <m35>Die ausgewählte Ansicht wird gelöscht! Fortfahren?</m35>
+    <m18>Wechseln Sie in die Bauteilliste, um Plugin zu starten!</m18>
+    <m19>Kein Parameter konnte aus dem Feld abgerufen werden</m19>
+    <m20>Der Parameter "{0}" hat die Eigenschaft "Schreibgeschützt"</m20>
+    <m21>Die Bearbeitung des Feldes "{0}" ist übersprungen</m21>
+    <m22>Das Festlegen des Feldwerts "{0}" ist fehlgeschlagen</m22>
+    <m23>Das Festlegen des Werts "{0}" für den ganzzahligen Parameter "{1}" ist fehlgeschlagen</m23>
+    <m24>Dieser Parametertyp wird nicht unterstürzt</m24>
+    <m25>Revit konnte keinen Wert "{0}" in den Parameter "{1}" setzen</m25>
+    <m26>Der Feldtyp "{0}" wird nicht unterstürzt</m26>
+    <m27>Der Wert des Referenzparameters "{0}" kann nur geändert werden, wenn der Parameter bereits einen Wert hat</m27>
+    <m28>Kein Element in der Kategorie "{0}" mit dem Namen "{1}" gefunden</m28>
+    <m29>Kein Bearbeitungsbereich mit dem Namen "{0}" gefunden</m29>
+    <m30>Zeichnen des Plans</m30>
+    <m31>Die Nummer der Zeichenfolge {0}, die als Anfang für das Füllen mit Daten in der aktuellen Bauteilliste angegeben ist, liegt außerhalb des Bereichs der zulässigen Werte! Zulässig sind die Werte von 1 bis {1}</m31>
+    <m32>Für die neue Ansicht muß ein Name angegeben werden</m32>
+    <m33>Die Ansicht vom Typ "{0}" mit dem Namen "{1}" ist im aktuellen Dokument schon vorhanden</m33>
+    <m34>Wählen Sie eine existierende Ansicht für die Einfügung der Tabelle</m34>
+    <m35>Die ausgewählte Ansicht wird gelöscht! Wollen Sie fortsetzen?</m35>
     <m36>Um eine neue Legende im aktuellen Projekt zu erstellen, muss mindestens eine kopierbare Legende vorhanden sein</m36>
+    <m37>Isolierung mit dem Namen "{0}" wurde im Projekt nicht gefunden</m37>
+    <m38>Die angegebene Datei enthält keine Daten in den Tabellenblättern</m38>
+    <m39>Geben Sie einen gültigen Zellbereich im Format A1:B2 an</m39>
     <ts1>Aktualisierung der Tabelle erforderlich</ts1>
     <ts2>Die Quelldatei ist nicht vorhanden!</ts2>
     <ts3>Quellplan fehlt oder wurde umbenannt!</ts3>
@@ -2190,6 +2193,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <ss22>Typenparameter im Projekt</ss22>
     <ss23>Materialname</ss23>
     <ss24>Titel in der Bauteilliste</ss24>
+    <ss25>Titel der Bauteilliste</ss25>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Kopieren zugeschnittener Ansicht"
@@ -3004,17 +3008,17 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <msg3>Exemplar gehört zu der Gruppe: "{0}"</msg3>
   </mprFlipped>
   <mprFavoriteViews
-    LocalName="Favorite views"
-    Description="Selecting your favorite views to open">
-    <h1>Search by name</h1>
-    <h2>Views</h2>
-    <h3>Schedules</h3>
-    <h4>Sheets</h4>
-    <h5>Assemblies</h5>
+    LocalName="Favoritenansichten"
+    Description="Auswahl der Favoritenansichten für das Öffnen">
+    <h1>Suche nach Namen</h1>
+    <h2>Ansichten</h2>
+    <h3>Listen/Bauteillisten</h3>
+    <h4>Pläne</h4>
+    <h5>Baugruppen</h5>
     <h6>Ausgewählte Ansichten</h6>
-    <h7>The list of selected views for the document</h7>
-    <h8>Add views to favorites</h8>
-    <h9>Open favorite views</h9>
+    <h7>Die Liste der Favoritenansichten für das Dokument</h7>
+    <h8>Ansichten in Favoriten hinzufügen</h8>
+    <h9>Favoritenansichten öffnen</h9>
     <h10>Offene Ansichten</h10>
     <h11>Ansichten im Projekt</h11>
   </mprFavoriteViews>

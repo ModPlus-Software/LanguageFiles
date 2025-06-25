@@ -491,16 +491,16 @@
     <h28>Abrir</h28>
     <h29>No abrir</h29>
     <h30>No vuelva a preguntar</h30>
-    <h31>Fila desde la que comenzar a leer datos:</h31>
-    <h32>Rellenar tabla de planificación</h32>
+    <h31>Fila desde la que se inicia la lectura de datos:</h31>
+    <h32>Rellenar la tabla de planificación</h32>
     <h33>El complemento no está diseñado para funcionar en familias</h33>
-    <h34>The Schedule row from which data filling begins:</h34>
-    <h35>The title and headings of the specification are not counted. The counting starting from 1 goes by the rows in which the parameters of the elements are presented</h35>
-    <h36>Write empty values</h36>
-    <h37>Create view</h37>
-    <h38>Insert table into existing view</h38>
-    <h39>Consider the scale of the view</h39>
-    <h40>Name of the new view</h40>
+    <h34>Fila de la tabla de planificación desde la que se inicia el relleno de datos:</h34>
+    <h35>Ignorar el nombre y títulos de la tabla de planificación. El recuento, a partir de 1, se realiza por las filas con los parámetros de los elementos</h35>
+    <h36>Guardar los valores vacíos</h36>
+    <h37>Crear vista</h37>
+    <h38>Insertar tabla en la vista existente</h38>
+    <h39>Tener en cuenta la escala de la vista</h39>
+    <h40>Nombre de la nueva vista</h40>
     <h41>Tipo de vista:</h41>
     <h42>Rango de importación:</h42>
     <b1>Añadir</b1>
@@ -512,10 +512,10 @@
     <b6>Anular actualización</b6>
     <b7>Eliminar enlace</b7>
     <b9>Reemplazar origen</b9>
-    <b10>Open the folder with the source file</b10>
-    <b11>Update the selected table</b11>
-    <b12>Update all irrelevant tables</b12>
-    <b13>Update all tables</b13>
+    <b10>Abrir la carpeta con el archivo de origen</b10>
+    <b11>Actualizar la tabla seleccionada</b11>
+    <b12>Actualizar todas las tablas obsoletas</b12>
+    <b13>Actualizar todas las tablas</b13>
     <!--todo remove after 1.7.2.0-->
     <w1>En versión limitada del complemento, es imposible añadir más de 3 tablas</w1>
     <!--todo remove after 1.7.2.0-->
@@ -541,25 +541,28 @@
     <m15>Error de lectura de celda</m15>
     <m16>Error al procesar celda</m16>
     <m17>Tabla seleccionada será eliminada de lista. Vista permanecerá. ¿Continuar?</m17>
-    <m18>Go to the Schedule to run the plugin!</m18>
-    <m19>Failed to get parameter from field</m19>
-    <m20>The parameter "{0}" is Read Only</m20>
-    <m21>Field "{0}" processing skipped</m21>
-    <m22>Failed to set value of field "{0}"</m22>
-    <m23>Failed to set the value "{0}" to the integer parameter "{1}"</m23>
-    <m24>Unsupported parameter type</m24>
-    <m25>Revit was unable to set the value "{0}" to the parameter "{1}"</m25>
-    <m26>Unsupported field type "0"</m26>
-    <m27>The value of the reference parameter "{0}" can only be changed if the parameter already has a value</m27>
-    <m28>No element found in category "{0}" with name "{1}"</m28>
-    <m29>Workset with the name "{0}" was not found</m29>
-    <m30>Drawing of sheet</m30>
-    <m31>The row number {0} specified as the start of data filling in the current Schedule does not fall within the range of valid values! Values from 1 to {1} are allowed</m31>
-    <m32>Debes especificar un nombre para la nueva vista</m32>
-    <m33>Ya existe una vista de tipo '{0}' con el nombre '{1}' en el documento actual</m33>
-    <m34>Seleccione una vista existente para insertar una tabla</m34>
-    <m35>¡La vista seleccionada se borrará! ¿Continuar?</m35>
+    <m18>¡Para ejecutar complemento, vaya a la tabla de planificación!</m18>
+    <m19>No se puede obtener parámetro del campo</m19>
+    <m20>Parámetro "{0}" tiene propiedad "Solo lectura"</m20>
+    <m21>Se omite el procesamiento del campo "{0}"</m21>
+    <m22>No se puede establecer el valor de campo "{0}"</m22>
+    <m23>No se puede establecer el valor "{0}" al parámetro entero "{1}"</m23>
+    <m24>Tipo de parámetro no admitido</m24>
+    <m25>Revit no pudo establecer un valor "{0}" al parámetro "{1}"</m25>
+    <m26>Tipo de campo "{0}" no admitido</m26>
+    <m27>El valor del parámetro de referencia "{0}" sólo se puede cambiar si ya tiene un valor</m27>
+    <m28>En la categoría "{0}" no se han encontrado ningún elemento con el nombre "{1}"</m28>
+    <m29>Conjunto de trabajo con nombre "{0}" no se ha encontrado</m29>
+    <m30>Dibujar la hoja</m30>
+    <m31>¡El número de fila {0} especificado como inicio de datos en la tabla de planificación actual no está dentro del rango de valores válidos! Los valores válidos van del 1 al {1}</m31>
+    <m32>Es necesario especificar un nombre para la nueva vista</m32>
+    <m33>La vista de tipo "{0}" con el nombre "{1}" ya existe en el documento actual</m33>
+    <m34>Seleccionar una vista existente para insertar una tabla</m34>
+    <m35>¡La vista seleccionada se limpiará! ¿Continuar?</m35>
     <m36>Para crear una nueva leyenda en el proyecto actual, debe existir al menos una leyenda disponible para copiar</m36>
+    <m37>No se ha encontrado el aislamiento con el nombre "{0}" en el proyecto</m37>
+    <m38>El archivo especificado no contiene datos en las hojas</m38>
+    <m39>Especifique un rango de celdas válido en formato A1:B2</m39>
     <ts1>Se requiere actualización de tabla</ts1>
     <ts2>¡Falta archivo de origen!</ts2>
     <ts3>¡Falta hoja de origen o se le ha cambiado nombre!</ts3>
@@ -2190,6 +2193,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <ss22>Parámetro de tipo en proyecto</ss22>
     <ss23>Nombre de material</ss23>
     <ss24>Encabezados en especificación</ss24>
+    <ss25>Título de la tabla de planificación</ss25>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Copiar recorte de vista"
@@ -3004,17 +3008,17 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <msg3>El ejemplar está en el grupo: "{0}"</msg3>
   </mprFlipped>
   <mprFavoriteViews
-    LocalName="Favorite views"
-    Description="Selecting your favorite views to open">
-    <h1>Search by name</h1>
-    <h2>Views</h2>
-    <h3>Schedules</h3>
-    <h4>Sheets</h4>
-    <h5>Assemblies</h5>
+    LocalName="Vistas favoritas"
+    Description="Seleccionar vistas favoritas para abrir">
+    <h1>Buscar por nombre</h1>
+    <h2>Vistas</h2>
+    <h3>Tablas de planificación/Cantidades</h3>
+    <h4>Hojas</h4>
+    <h5>Ensamblajes</h5>
     <h6>Vistas seleccionadas</h6>
-    <h7>The list of selected views for the document</h7>
-    <h8>Add views to favorites</h8>
-    <h9>Open favorite views</h9>
+    <h7>Lista de vistas favoritas de un documento</h7>
+    <h8>Añadir vistas a favoritos</h8>
+    <h9>Abrir vistas favoritas</h9>
     <h10>Vistas abiertas</h10>
     <h11>Vistas en el proyecto</h11>
   </mprFavoriteViews>
