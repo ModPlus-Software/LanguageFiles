@@ -195,6 +195,8 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
         item.Comment = $"todo remove after {win.TbVersion.Text}";
 
+        SelectedNode.Validate();
+
     }), _ => SelectedNode != null && mainWindow.DgItems.SelectedItem != null);
 
     public void Load() => Utils.SafeExecute(() =>

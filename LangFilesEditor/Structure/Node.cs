@@ -126,6 +126,11 @@ internal class Node : ObservableObject
 
         HasItemsWithSameValue = false;
 
+        foreach (var item in Items)
+        {
+            item.HasDuplicateValue = false;
+        }
+
         foreach (var group in Items
                      .Where(i =>
                          //// Если узел помечен на удаление, то не учитываем его
