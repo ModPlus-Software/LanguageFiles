@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprExcelImport
+    LocalName="Import aus Excel"
+    Description="Excel-Datenvisualisierung"
+    LocalName1="Excel in Bauteilliste"
+    Description1="Import von Daten aus einer Excel-Datei in die aktuelle Bauteilliste">
+    <!--todo remove after 1.7.2.0-->
+    <h1>Import aus Excel</h1>
+    <h2>Tabelle:</h2>
+    <h3>Status:</h3>
+    <h4>Quelldatei:</h4>
+    <h5>Quellplan:</h5>
+    <!--todo remove after 1.7.2.0-->
+    <h6>Suche nach Tabellen...</h6>
+    <h7>Eine neue Tabelle hinzufügen</h7>
+    <h8>Excel -Datei</h8>
+    <h10>Man muss eine Excel -Datei auswählen</h10>
+    <h11>Wählen Sie einen Plan</h11>
+    <!--todo remove after 1.7.2.0-->
+    <h12>Eine neue Zeichenansicht erstellen</h12>
+    <!--todo remove after 1.7.2.0-->
+    <h13>In die existierende Zeichenansicht dieTabelle einfügen</h13>
+    <h14>Liniendicken</h14>
+    <h15>Zuordnung von Liniendicken aus Excel zu Revit-Linienstärken</h15>
+    <h16>Sehr dünne:</h16>
+    <h17>Dünne:</h17>
+    <h18>Durchschnittliche:</h18>
+    <h19>Dicke:</h19>
+    <h20>Zeichnen der Tabelle</h20>
+    <h21>Zeichnen einer Tabelle aus Excel</h21>
+    <h22>Bereinigung der Ansicht mit der Tabelle aus Excel</h22>
+    <h23>Löschen der Ansicht mit der Tabelle aus Excel</h23>
+    <h24>Aktualisieren von Daten für Tabellen aus Excel</h24>
+    <h25>Interoperabilität</h25>
+    <h26>Öffnen der Ansicht nach dem Import:</h26>
+    <h27>Fragen</h27>
+    <h28>Öffnen</h28>
+    <h29>Nicht öffnen</h29>
+    <h30>nicht mehr fragen</h30>
+    <h31>Die Zeichenfolge, ab der das Lesen der Daten beginnt:</h31>
+    <h32>Bauteilliste einfüllen</h32>
+    <h33>Die Ausführung des Plugins in Familien ist nicht vorgesehen</h33>
+    <h34>Die Zeichenfolge der Bauteilliste, ab der das Einfüllen mit Daten beginnt:</h34>
+    <h35>Der Name und die Titel der Bauteilliste werden nicht berücksichtigt. Gezählt, beginnend bei 1, werden die Zeichenfolgen, die Parameter der Elemente enthalten</h35>
+    <h36>Leere Werte schreiben</h36>
+    <h37>Ansicht erstellen</h37>
+    <h38>Die Tabelle in die existierende Ansicht einfügen</h38>
+    <h39>Ansichtsmaßstab berücksichtigen</h39>
+    <h40>Der Name der neuen Ansicht</h40>
+    <h41>Ansichtstyp:</h41>
+    <h42>Importbereich:</h42>
+    <b1>Hinzufügen</b1>
+    <b2>Aktualisieren</b2>
+    <b3>Ansicht öffnen</b3>
+    <b4>Quelldatei öffnen</b4>
+    <b5>Löschen</b5>
+    <!--todo remove after 1.7.2.0-->
+    <b6>Aktualisierung unterbrechen</b6>
+    <b7>Verbindung aufheben</b7>
+    <b9>Quelle ersetzen</b9>
+    <b10>Das Verzeichnis mit der Ausgangsdatei öffnen</b10>
+    <b11>Die ausgewählte Tabelle aktualisieren</b11>
+    <b12>Alle nicht mehr aktuellen Tabellen aktualisieren</b12>
+    <b13>Alle Tabellen aktualisieren</b13>
+    <!--todo remove after 1.7.2.0-->
+    <w1>In der limitierten Version des Plagins können maximal 3 Tabellen hinzugefügt werden</w1>
+    <!--todo remove after 1.7.2.0-->
+    <w2>In der limitierten Version des Plagins sind nur die ersten drei Blätter der ausgewählten Excel-Datei verfügbar</w2>
+    <!--todo remove after 1.7.2.0-->
+    <m1>Datei wurde erfolgreich abgelesen</m1>
+    <!--todo remove after 1.7.2.0-->
+    <m2>Die Datei konnte nicht abgelesen werden</m2>
+    <m3>Umwandlung von Plan</m3>
+    <m5>erfolgreich umgewandelt</m5>
+    <m6>Umwandlung des Plans ist fehlgeschlagen</m6>
+    <!--todo remove after 1.7.2.0-->
+    <m7>Keine Zeichenansicht in der Liste ausgewählt</m7>
+    <!--todo remove after 1.7.2.0-->
+    <m8>Alle Daten der ausgewählten Zeichenansicht werden gelöscht! Wollen Sie fortsetzen?</m8>
+    <!--todo remove after 1.7.2.0-->
+    <m9>Sie brauchen einen Namen für die neue Zeichenansicht anzugeben</m9>
+    <!--todo remove after 1.7.2.0-->
+    <m10>Eine Zeichenansicht mit diesem Namen ist bereits im Dokument vorhanden</m10>
+    <m12>Wollen Sie die erstellte Ansicht öffnen?</m12>
+    <m13>Keine Quelldatei gefunden!</m13>
+    <m14>Die ausgewählte Tabelle und die zugehörige Ansicht werden unwiederbringlich gelöscht! Wollen Sie fortsetzen?</m14>
+    <m15>Fehler beim Ablesen von der Zelle</m15>
+    <m16>Fehler bei der Zellenverarbeitung</m16>
+    <m17>Die ausgewählte Tabelle wird aus der Liste gelöscht. Die Ansicht bleibt bestehen. Wollen Sie fortsetzen?</m17>
+    <m18>Wechseln Sie in die Bauteilliste, um Plugin zu starten!</m18>
+    <m19>Kein Parameter konnte aus dem Feld abgerufen werden</m19>
+    <m20>Der Parameter "{0}" hat die Eigenschaft "Schreibgeschützt"</m20>
+    <m21>Die Bearbeitung des Feldes "{0}" ist übersprungen</m21>
+    <m22>Das Festlegen des Feldwerts "{0}" ist fehlgeschlagen</m22>
+    <m23>Das Festlegen des Werts "{0}" für den ganzzahligen Parameter "{1}" ist fehlgeschlagen</m23>
+    <m24>Dieser Parametertyp wird nicht unterstürzt</m24>
+    <m25>Revit konnte keinen Wert "{0}" in den Parameter "{1}" setzen</m25>
+    <m26>Der Feldtyp "{0}" wird nicht unterstürzt</m26>
+    <m27>Der Wert des Referenzparameters "{0}" kann nur geändert werden, wenn der Parameter bereits einen Wert hat</m27>
+    <m28>Kein Element in der Kategorie "{0}" mit dem Namen "{1}" gefunden</m28>
+    <m29>Kein Bearbeitungsbereich mit dem Namen "{0}" gefunden</m29>
+    <m30>Zeichnen des Plans</m30>
+    <m31>Die Nummer der Zeichenfolge {0}, die als Anfang für das Füllen mit Daten in der aktuellen Bauteilliste angegeben ist, liegt außerhalb des Bereichs der zulässigen Werte! Zulässig sind die Werte von 1 bis {1}</m31>
+    <m32>Für die neue Ansicht muß ein Name angegeben werden</m32>
+    <m33>Die Ansicht vom Typ "{0}" mit dem Namen "{1}" ist im aktuellen Dokument schon vorhanden</m33>
+    <m34>Wählen Sie eine existierende Ansicht für die Einfügung der Tabelle</m34>
+    <m35>Die ausgewählte Ansicht wird gelöscht! Wollen Sie fortsetzen?</m35>
+    <m36>Um eine neue Legende im aktuellen Projekt zu erstellen, muss mindestens eine kopierbare Legende vorhanden sein</m36>
+    <m37>Isolierung mit dem Namen "{0}" wurde im Projekt nicht gefunden</m37>
+    <m38>Die angegebene Datei enthält keine Daten in den Tabellenblättern</m38>
+    <m39>Geben Sie einen gültigen Zellbereich im Format A1:B2 an</m39>
+    <ts1>Aktualisierung der Tabelle erforderlich</ts1>
+    <ts2>Die Quelldatei ist nicht vorhanden!</ts2>
+    <ts3>Quellplan fehlt oder wurde umbenannt!</ts3>
+    <vt1>Zeichnungsansicht</vt1>
+    <vt2>Legende</vt2>
+    <vt3>Baubeschreibung</vt3>
+    <ia1>Verwendete Zellen</ia1>
+    <ia2>Druckbereich</ia2>
+    <ia3>Benutzerdefinierter Bereich</ia3>
+  </mprExcelImport>
+  <mprSheetExport
+    LocalName="Export von Plänen"
+    Description="Export (Druck) von ausgewählten Plänen in die Formate PDF, DWG usw. mit automatischer Planformaterkennung">
+    <h1>Die Testversion des Plugins ist abgelaufen! Erwerben Sie eine Lizenz für das Plugin oder ein Revit-Abonnement, um das Plugin "Export von Plänen" nach Ablauf der Testversion zu verwenden</h1>
+    <h2>Testversion. Tage bis zum Ablauf</h2>
+    <h3>Verzeichnis zum Speichern</h3>
+    <h4>Einstellungen für den PDF-Export</h4>
+    <h5>Druckername</h5>
+    <h6>Der Drucker wird unterstützt</h6>
+    <h7>Der Drucker wird nicht unterstützt</h7>
+    <h8>Farben</h8>
+    <c1>Farbe</c1>
+    <c2>Schwarze Linien</c2>
+    <c3>Grautöne</c3>
+    <c4>S/W mit Ausnahme</c4>
+    <c5>Aus den Einstellungen</c5>
+    <c6>Graustufen mit Ausnahme</c6>
+    <h9>Druckart:</h9>
+    <pt1>Vektorverarbeitung</pt1>
+    <pt2>Rasterverarbeitung</pt2>
+    <h10>Einstellungen für den DWG/DXF-Export</h10>
+    <h11>Exporteinstellungen:</h11>
+    <h12>Generierung von Dateinamen</h12>
+    <h13>Parameter des Plans:</h13>
+    <h14>Die Anzahl der Zeichen begrenzen:</h14>
+    <h15>Planname</h15>
+    <h17>Nummer des Plans</h17>
+    <h18>Plankopf</h18>
+    <h19>Höhe, mm</h19>
+    <h20>Breite, mm</h20>
+    <h21>Ausrichtung</h21>
+    <h22>Größe im Drucker</h22>
+    <h23>Die ausgewählten markieren</h23>
+    <h24>Die ausgewählten deaktivieren</h24>
+    <h25>Alle abwählen</h25>
+    <h26>Exportieren in das PDF-Format</h26>
+    <h27>Exportieren in das DWG-Format</h27>
+    <h28>Exportieren in das DXF-Format</h28>
+    <h29>Pläne:</h29>
+    <h30>Gesamtzahl der Pläne im Dokument</h30>
+    <h31>Ausgewählt:</h31>
+    <h32>Anzahl der für den Export ausgewählten Pläne</h32>
+    <h33>Kein Format:</h33>
+    <!-- todo remove after 4.14.4.0 -->
+    <h34>Anzahl von Plänen, deren Format nicht ermittelt werden konnte</h34>
+    <!-- todo remove after 4.14.4.0 -->
+    <h35>Format angepasst:</h35>
+    <h36>Anzahl von Plänen, für die das nächstliegende Format ausgewählt wird</h36>
+    <h37>Export aufheben</h37>
+    <h38>Verzeichnis zum Speichern enthält bereits Dateien mit denselben Namen wie die exportierten Pläne. Wählen Sie einen Vorgang:</h38>
+    <h39>Ausschluss von der Verarbeitung von Hauptbeschriftungen. Geben Sie hier durch Komma getrennt und ohne Leerzeichen die Werte an, die in den Namen der Hauptbeschriftungen (Familienname oder Typenname), die keine Verarbeitung durch Plugin erfordern, enthalten sein sollen:</h39>
+    <h40>Wählen Sie ein Verzeichnis zum Speichern</h40>
+    <h41>Wollen Sie ein Verzeichnis zum Speichern öffnen?</h41>
+    <o1>Querformat</o1>
+    <o2>Hochformat</o2>
+    <h42>Alle Pläne</h42>
+    <notOrganized>!Nicht organisiert</notOrganized>
+    <h43>Es wurden Formate der Pläne hinzugefügt. Revit muss erneut gestartet werden.</h43>
+    <h44>Speichern Sie die Datei vor dem Exportieren</h44>
+    <h45>Wollen Sie es noch einmal versuchen oder den Export abbrechen?</h45>
+    <h46>Plansatz zum Drucken</h46>
+    <h47>Plansätze zum Drucken fehlen</h47>
+    <h48>*.pcp Dateien löschen</h48>
+    <h49>Ein Unterverzeichnis nach Dokumentname erstellen</h49>
+    <h50>Unterverzeichnisse nach Exportformattyp erstellen</h50>
+    <h51>Unterverzeichnisse nach Plangruppennamen erstellen</h51>
+    <h52>Exportierte PDF-Dateien zusammenführen</h52>
+    <h53>Das Planformat passt in keines der unterstützten Druckformate</h53>
+    <!-- todo remove after 4.14.4.0 -->
+    <h54>Das nächstgrößere Druckformat wird für das Planformat ausgewählt</h54>
+    <h55>Die Liste der Farben verarbeiten, die nicht in das Schwarz-Weiß-Format umgewandelt werden sollen</h55>
+    <h56>Starteinstellung</h56>
+    <h57>Alle geöffneten Dateien verarbeiten</h57>
+    <h58>Verknüpfte Dateien verarbeiten</h58>
+    <!-- todo remove after 4.14.4.0 -->
+    <h59>Algorithmus zur Bestimmung von Formaten</h59>
+    <!-- todo remove after 4.14.4.0 -->
+    <h60>Nach dem Inhalt des Plans</h60>
+    <!-- todo remove after 4.14.4.0 -->
+    <h61>Nach dem Plankopf</h61>
+    <!-- todo remove after 4.14.4.0 -->
+    <h62>Das Druckformat wird nach dem gesamten Inhalt des Plans festgelegt. Nachdem der Plan im PDF-Format gedruckt wurde, wird er auf die Maße des Plankopfs zugeschnitten. Dieser Algorithmus kann dazu führen, dass alle Blätter neu generiert werden, was dazu führen kann, dass das Plugin eine lange Zeit zum Laden benötigt</h62>
+    <!-- todo remove after 4.14.4.0 -->
+    <h63>Das Druckformat wird durch die Größe der Planköpfe auf den Plänen bestimmt. Wenn es auf dem Plan Elemente gibt, die über den Rand des Plankopfes hinausgehen, wird der Plan in dem PDF-Format nicht korrekt gedruckt. Dieser Algorithmus führt nicht dazu, dass die Pläne neu generiert werden</h63>
+    <h64>Grundlegende</h64>
+    <h65>Pläne in einer DWF-Datei kombinieren</h65>
+    <h66>Bei Fehler abbrechen</h66>
+    <h67>Wenn die Option deaktiviert ist, wird der Export fortgesetzt, bis alle Pläne bearbeitet sind</h67>
+    <h68>Exportieren von Objektdaten:</h68>
+    <h69>Elementeigenschaften</h69>
+    <h70>Räume, MEP-Räume und Zonen in einem separaten Grenzenlayer</h70>
+    <h71>Texturparameter für Materialdarstellungen</h71>
+    <h72>Grafikdarstellungsparameter:</h72>
+    <h73>Standardformat verwenden</h73>
+    <h74>Komprimiertes Rasterformat verwenden</h74>
+    <h75>Bildqualität:</h75>
+    <h76>Einstellungen für den DWF/DWFx-Export</h76>
+    <h77>Pläne lesen</h77>
+    <!-- todo remove 4.11.0.0 -->
+    <h78>Beim Starten</h78>
+    <h79>Die Pläne mit gespeicherten Einstellungen beim Starten des Plugins lesen</h79>
+    <h80>Geben Sie einen Namen für die neue Konfiguration ein</h80>
+    <h81>Geben Sie einen neuen Konfigurationsnamen ein</h81>
+    <h82>Kopie</h82>
+    <h83>Sind Sie sicher, dass Sie das Konfiguration "{0}" löschen wollen?</h83>
+    <h84>In DWF exportieren</h84>
+    <h85>In DWFx exportieren</h85>
+    <h86>Unterverzeichnis nach Datum erstellen</h86>
+    <h87>Beispiel für einen vollständigen Speicherverzeichnispfad:</h87>
+    <h88>Entwurf</h88>
+    <h89>АР</h89>
+    <!-- todo remove after 4.14.4.0 -->
+    <h90>Es ist nicht möglich, ein Speicherverzeichnis zu erstellen, weil der angegebene Pfad falsch ist!</h90>
+    <!-- todo remove 4.11.0.0 -->
+    <h91>Bitte die zu bearbeitenden Dokumente (wenn vorhanden) markieren, den Algorithmus zur Formatbestimmung auswählen und die Taste "Pläne lesen" drücken</h91>
+    <h92>Die ausgewählten Optionen als Datensatz zum Ausdrucken speichern</h92>
+    <h93>Dis markierten Optionen als Datensatz zum Ausdrucken speichern</h93>
+    <h94>Geben Sie einen Namen für den Datensatz zum Ausdrucken ein</h94>
+    <h95>Datensatz zum Ausdrucken erstellen</h95>
+    <h96>Der eingegebene Name für den Datensatz zum Ausdrucken wird bereits verwendet</h96>
+    <h98>Die Dateinamenmaske enthält keine Planparameter, was dazu führen kann, dass derselbe Dateiname für alle exportierten Pläne generiert wird. Stellen Sie beim Erstellen einer Dateinamenmaske sicher, dass die Dateinamen eindeutig sind</h98>
+    <h99>Projektparameter:</h99>
+    <h100>Variable:</h100>
+    <h101>Sie können der Maske eine beliebige Systemvariable hinzufügen, indem Sie sie in die %-Symbole einschließen. Z.B. %OS%</h101>
+    <h102>Dateinamenmaske</h102>
+    <h103>Namen für kombinierte Datei bilden</h103>
+    <h104>Bei Aktivierung der Option "Anzahl der Zeichen begrenzen" kann es zu gleichen Dateinamen kommen, wenn der Anfangsteil in den Namen verschiedener Pläne den gleichen Wert innerhalb der Längengrenzen aufweist. In diesem Fall ist das Exportergebnis eine Datei mit dem Inhalt des zuletzt bearbeiteten Plans. Stellen Sie bei der Aktivierung der Option "Anzahl der Zeichen begrenzen" sicher, dass die eindeutigen Dateinamen gebildet werden</h104>
+    <h105>Benutzerdefinierte Formate</h105>
+    <h106>Benennung</h106>
+    <h107>Stellen Sie beim Erstellen eines benutzerdefinierten Formats sicher, dass die eingegebene Seitengröße mit dem ausgewählten PDF-Drucker kompatibel ist</h107>
+    <!-- todo remove after 4.12.2.0 -->
+    <h108>Neue Konfiguration erstellen</h108>
+    <!-- todo remove after 4.12.2.0 -->
+    <h109>Aktuelle Konfiguration umbenennen</h109>
+    <!-- todo remove after 4.12.2.0 -->
+    <h110>Aktuelle Konfiguration duplizieren</h110>
+    <!-- todo remove after 4.12.2.0 -->
+    <h111>Aktuelle Konfiguration löschen</h111>
+    <h112>Neuen benutzerdefinierten Format hinzufügen</h112>
+    <h113>Ausgewählte benutzerdefinierte Formate löschen</h113>
+    <!-- todo remove after 4.12.2.0 -->
+    <h114>Neue Konfiguration aus xml-Datei importieren</h114>
+    <!-- todo remove after 4.12.2.0 -->
+    <h115>Aktuelle Konfiguration in xml-Datei exportieren</h115>
+    <h116>Benutzerdefinierte Formate aus xml-Datei importieren</h116>
+    <h117>Benutzerdefinierte Formate in xml-Datei exportieren</h117>
+    <h118>Planansichten und Links als externe Verknüpfungen exportieren</h118>
+    <h119>Export-Dateiformat:</h119>
+    <h120>Export abgeschlossen</h120>
+    <h121>Ausgewählte Aktion fortan anwenden</h121>
+    <h122>Inkorrekter Gruppenname</h122>
+    <h123>Allgemeine Exporteinstellungen</h123>
+    <h124>Bearbeitung des temporären Modus (Ausblenden/Isolieren oder Anzeigen ausgeblendeter Elemente) von Ansichten</h124>
+    <h125>Verknüpfungen blau anzeigen (nur Farbdruck)</h125>
+    <h126>Referenz-/Arbeitsebenen ausblenden</h126>
+    <h127>Die in der Ansicht verfügbaren Marken drucken</h127>
+    <h128>Bereichskanten maskieren zusammenfallende Linien</h128>
+    <h129>Bildausschnitte ausblenden</h129>
+    <h130>Zuschneidegrenzen ausblenden</h130>
+    <h131>Halbton durch dünne Linien ersetzen</h131>
+    <h132>Druckereinrichtung</h132>
+    <h133>Kombinierte PDF</h133>
+    <!-- todo remove after 4.14.4.0 -->
+    <h134>Nach Inhalt</h134>
+    <!-- todo remove after 4.14.4.0 -->
+    <h135>Druckformat dieses Plans nach dem gesamten Inhalt des Revit-Plans definieren. Diese Funktion sollte verwendet werden, wenn der Plan Elemente enthält, die über den Rahmen des Plankopfs hinausragen. Bewirkt eine Planregeneration</h135>
+    <h136>Aktuellen exportieren</h136>
+    <h137>Die markierten Exportformate werden beim Export des aktuellen Plans vom aktuellen Dokument in PDF ignoriert</h137>
+    <h138>Den Index des zusammengesetzten Plans (d.h. ein Plan mit mehreren Planköpfen) zum Dateinamen nicht hinzufügen, wenn nur ein einzelner zusammengesetzter Plan exportiert wird</h138>
+    <h139>Wollen Sie erneut versuchen eine kombinierte PDF-Datei zu erstellen?</h139>
+    <h140>PDF komprimieren</h140>
+    <h141>Bildqualität:</h141>
+    <h142>Ordner im Datei-Explorer öffnen</h142>
+    <h143>Aktuelle Konfiguration der Einstellungen</h143>
+    <h144>Pläne aus Baugruppen gruppieren</h144>
+    <h145>Wenn diese Option aktiviert ist, werden die in Baugruppen platzierten Pläne getrennt von den Hauptplänen gruppiert</h145>
+    <h146>Einstellungen zum Lesen von Plänen</h146>
+    <h147>Öffnen des Exportordners nach Abschluss des Exports:</h147>
+    <of1>Ordner öffnen</of1>
+    <of2>Ordner nicht öffnen</of2>
+    <h148>Ablageverzeichnis für Dokument:</h148>
+    <h149>Nicht festgelegt</h149>
+    <h150>Export in das Ablageverzeichnis für das Dokument</h150>
+    <h151>Wenn für das Dokument kein Ablageverzeichnis festgelegt ist, erfolgt der Export in das angegebene Speicherverzeichnis. Wenn das angegebene Speicherverzeichnis nicht existiert, wird der Dokumentenexport übersprungen</h151>
+    <h152>Gemäß Maske den generierten Namen im Baum der Pläne anzeigen</h152>
+    <h153>Name gemäß Maske:</h153>
+    <h154>Nach dem Filter auswählen</h154>
+    <h155>Nur im aktuellen Dokument</h155>
+    <h156>In allen Dokumenten</h156>
+    <h157>Legen Sie die Einstellungen für das Lesen der Pläne fest und klicken Sie auf die Schaltfläche "Pläne lesen"</h157>
+    <h158>Die Dateinamensmaske ist durch die Einstellungen Ihres Unternehmens festgelegt. Sie ist von der ausgewählten Konfiguration unabhängig und kann nicht geändert werden</h158>
+    <h159>Der Parameterwert wird aus dem ersten markierten Plan des exportierten Dokuments übernommen!</h159>
+    <h160>Zum Anzeigen der Pläne als PDF folgendes verwenden:</h160>
+    <h161>PDF-Drucker</h161>
+    <h162>Reihenfolge:</h162>
+    <h163>Dokumentname</h163>
+    <h164>Datum</h164>
+    <h165>Exportformat</h165>
+    <h166>Gruppenname</h166>
+    <h167>Exporttyp:</h167>
+    <h168>Bildentsättigung</h168>
+    <tvm1>Modus deaktivieren</tvm1>
+    <tvm2>Modus aktiviert lassen</tvm2>
+    <tvm3>Fragen</tvm3>
+    <iq1>Niedrig</iq1>
+    <iq2>Mäßig</iq2>
+    <iq3>Hoch</iq3>
+    <dt1>Datum (TT-MM-JJJJ) und Zeit</dt1>
+    <dt2>Datum (TT-MM-JJJJ)</dt2>
+    <dt3>Zeit</dt3>
+    <dt4>Datum (JJJJ-MM-TT) und Zeit</dt4>
+    <dt5>Datum (JJJJ-MM-TT)</dt5>
+    <sv0>%UserName% – Benutzername</sv0>
+    <sv1>%yyyy% – Jahr als vierstellige Zahl</sv1>
+    <sv2>%MM% – Monat von 01 bis 12</sv2>
+    <sv3>%dd% – Tag von 01 bis 31</sv3>
+    <sv4>%HH% – Stunde im 24-Stunden-Format von 00 bis 23</sv4>
+    <sv5>%mm% – Minuten von 00 bis 59</sv5>
+    <sv6>%ss% – Sekunden von 00 bis 59</sv6>
+    <sv7>%ParentGroup% – Übergeordnete Plangruppe</sv7>
+    <sv8>%DocName% – Dokumentname</sv8>
+    <ff0>Format AutoCAD 2007</ff0>
+    <ff1>Format AutoCAD 2010</ff1>
+    <ff2>Format AutoCAD 2013</ff2>
+    <ff3>Format AutoCAD 2018</ff3>
+    <err1>Exporteinstellungen für den DWG/DXF-Export sind nicht festgelegt</err1>
+    <err2>Dienstprogramm zur Druckerkonfiguration von Bullzip nicht gefunden</err2>
+    <err3>Druckereinstellungen {0} sind im Register nicht gefunden</err3>
+    <err4>Das Format {0} für den Drucker {1} kann nicht hinzugefügt werden</err4>
+    <err5>Die Einstellungen für den Drucker {0} können nicht abgerufen werden. Überprüfen Sie, ob der Drucker installiert ist und unterstützt wird</err5>
+    <err6>Ausnahmedatei für Wasserzeichen nicht gefunden</err6>
+    <err7>Es wurde kein Wasserzeichentext eingestellt</err7>
+    <err8>Datei nicht gefunden</err8>
+    <err9>Es ist kein Drucker in den Einstellungen ausgewählt. Gehen Sie zu Einstellungen, um den Drucker auszuwählen.</err9>
+    <err10>Es wurde kein Verzeichnis zum Speichern ausgewählt oder es existiert nicht. Gehen Sie zu Einstellungen und geben Sie an, wo die Dateien gespeichert werden sollen.</err10>
+    <err11>Der Drucker "{0}" ist nicht installiert. Gehen Sie zu Einstellungen, um einen anderen Drucker auszuwählen, oder stellen Sie den erforderlichen Drucker ein.</err11>
+    <err12>Der Drucker "{0}" wird nicht unterstützt. Exportieren in das PDF-Format wird unmöglich sein. Wenn Sie diesen Drucker verwenden müssen, wenden Sie sich bitte an den Kundendienst. Oder wählen Sie einen unterstützten Drucker ({1}) in den Einstellungen aus.</err12>
+    <err13>Das Format "{0}" ist nicht gefunden. Starten Sie das Plugin neu, um die für den Druck erforderlichen Formate zu überprüfen und hinzuzufügen.</err13>
+    <err14>Der Dateipfad "{0}" ist nicht festgestellt</err14>
+    <err15>Der Dateipfad hat keine Länge oder enthält ungültige Zeichen</err15>
+    <err16>Kein Verzeichnis gefunden</err16>
+    <err17>Der Dateipfad überschreitet die zulässige Länge von 255 Zeichen</err17>
+    <err18>Die Datei wird von einem anderen Programm verwendet</err18>
+    <err19>Keine Berechtigung zum Löschen von Datei</err19>
+    <err20>Format des Verzeichnisses nicht bestimmt</err20>
+    <err21>Fehler bei der Initialisierung des Druckers</err21>
+    <err22>Verknüpfte Dateien werden nur in den gespeicherten Projekten bearbeitet! Speichern Sie bitte das Projekt "{0}" und wiederholen Sie bitte den Versuch Pläne der verknüpften Dateien zu lesen</err22>
+    <err23>In der Formatliste ist bereits ein Format mit diesem Namen vorhanden</err23>
+    <err24>In der Formatliste ist bereits ein Format mit dieser Größe vorhanden</err24>
+    <err25>Das Format hat keinen Namen und wird beim Hinzufügen zum Drucker nicht bearbeitet</err25>
+    <err26>Das Komprimieren der Datei "{0}" ist fehlgeschlagen. Fehler:</err26>
+    <err27>Es fehlen Planköpfe auf dem aktuellen Plan. Kein Export des aktuellen Plans ist möglich!</err27>
+    <err28>Das Kopieren der Datei "{0}" in den Zielordner "{1}" ist fehlgeschlagen. Fehler:</err28>
+  </mprSheetExport>
+  <mprExportToExcel
+    LocalName="Export in Excel"
+    Description="Export der Bauteillisten in Excel">
+    <t1>Bauteillisten</t1>
+    <t2>Ausgewählt:</t2>
+    <t3>Optionen für Export</t3>
+    <t4>Exportverzeichnis:</t4>
+    <t5>Text in Zahlen umwandeln (empfohlen)</t5>
+    <t6>Komma als Trennzeichen verwenden</t6>
+    <t7>Jede einzelne Bauteilliste in eine separate Datei</t7>
+    <t8>Präfix des Dateinamens:</t8>
+    <t9>Export abbrechen</t9>
+    <t10>Im Exportverzeichnis sind bereits Dateien mit denselben Namen wie bei den exportierten Bauteillisten enthalten. Wählen Sie einen Vorgang:</t10>
+    <t11>Export abbrechen?</t11>
+    <t12>Bitte Exportverzeichnis auswählen</t12>
+    <t13>Export von Bauteillisten in Excel</t13>
+    <t14>Exprotverzeichnis öffnen?</t14>
+    <t15>Alle sichtbare auswählen</t15>
+    <t16>Alle sichtbare abwählen</t16>
+    <t17>Dateiname:</t17>
+    <t18>Konvertierung</t18>
+    <t19>Export von Bauteillisten ({0}) in eine gemeinsame Datei</t19>
+    <t20>Geben Sie einen neuen Namen ein</t20>
+    <t21>Titel exportieren</t21>
+    <t22>Formatierung speichern</t22>
+    <t23>Wenn nicht angegeben, wird der Name des aktuellen Dokuments verwendet</t23>
+    <t24>Optional</t24>
+    <t25>Datensatz:</t25>
+    <t26>Aktuelles exportieren</t26>
+    <err1>Fehler beim Bilden des Dateinamens</err1>
+    <err2>Löschen der Datei {0} unmöglich</err2>
+    <err3>Zugriffsfehler auf die Datei {0}</err3>
+  </mprExportToExcel>
+</ModPlus>
