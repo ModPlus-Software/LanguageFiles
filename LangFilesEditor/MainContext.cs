@@ -256,7 +256,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
         BuildColumns();
 
-        foreach (var p in nodes.OrderBy(n => n.Key))
+        foreach (var p in nodes.OrderBy(n => !char.IsUpper(n.Key[0])).ThenBy(n => n.Key))
         {
             Nodes.Add(p.Value);
         }
