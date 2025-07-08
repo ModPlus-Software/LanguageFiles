@@ -1268,6 +1268,7 @@ Not all parameters may be present in the list of instance parameters, because in
     <h178>The wall is a curtain</h178>
     <h179>The family is a nested family</h179>
     <h180>The family is the parent family</h180>
+    <h181>Area Scheme (for Areas only)</h181>
     <parameters>Parameters</parameters>
     <name>Name</name>
     <any>Any</any>
@@ -1343,6 +1344,7 @@ Not all parameters may be present in the list of instance parameters, because in
     <i13>The condition "Presence of parameter" and "Absence of parameter" when checking the key parameter "Curtain" (the wall is a curtain) check, respectively, whether the wall is a curtain or not. That is, the condition "Presence of parameter" interprets the check "Wall must be a curtain", and the condition "Absence of parameter" interprets the check "Wall must not be a curtain". If the element is not a wall, the condition is ignored (the condition always returns "true").</i13>
     <i14>The "Presence of parameter" and "Absence of parameter" conditions, when checking the key parameter "Nested" (the family is nested), check, respectively, whether the family is nested or not. That is, the condition "Presence of parameter" interprets the check "Family must be nested", and the condition "Absence of parameter" interprets the check "Family must not be nested". If the element is not a family, the condition is ignored (the condition always returns "true").</i14>
     <i15>The condition "Presence of parameter" and "Absence of parameter" when checking the key parameter "Parent" (the family is parental) check, respectively, whether or not the family is parental (contains nested families). I.e. the condition "Presence of parameter" interprets the check "Family must be a parent", and the condition "Absence of parameter" interprets the check "Family must not be a parent". If the element is not a family, the condition is ignored (the condition always returns "true").</i15>
+    <i16>The AreaScheme key parameter returns the name of the area scheme to which the Area belongs. The value of the AreaScheme key parameter is checked according to string rules. If the element is not an Area, the condition is ignored (the condition always returns "true").</i16>
     <et1>Equal</et1>
     <et2>More</et2>
     <et3>Less</et3>
