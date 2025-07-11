@@ -906,12 +906,12 @@
     <h221>Barras plegadas longitudinalmente (forma "botella")</h221>
     <h226>Eliminar armadura creada anteriormente:</h226>
     <h227>Forzado de cursor de armadura de trabajo al borde del pilar en centro de armadura. Forzado de cursor se calcula en función del diámetro de barra del modelo</h227>
-    <h228>Instalar conectores</h228>
+    <h228>Instalar acopladores de armadura</h228>
     <h229>Primera armadura</h229>
     <h230>Segunda armadura</h230>
-    <h231>Conectores sólo se instalarán si pilares a procesar tienen misma sección, así como tipo de conector está presente en documento. Buscar tipos de conectores en documento según reglas especificadas en ventana </h231>
-    <h232>. En pilares en los que se fijan conectores, refuerzo longitudinal se realiza mediante barras de refuerzo individuales sin composición.</h232>
-    <h233>Especificar reglas de instalación de conectores para tipos específicos de barras de refuerzo. Puede especificar nombre completo del tipo de armadura o un nombre parcial. Por ejemplo, especificar valor "10". Entonces, tipo de barra de refuerzo se considerará adecuado si su nombre contiene "10".</h233>
+    <h231>Los acopladores de armadura se instalarán solo si las columnas procesadas tienen la misma sección transversal y el tipo de acoplador está presente en el documento. Los tipos de acopladores se buscan en el documento según las reglas especificadas en la ventana </h231>
+    <h232>. En las columnas donde se instalarán los acopladores, el refuerzo longitudinal se realizará con barras de armadura individuales sin composición.</h232>
+    <h233>Especifique las reglas de instalación de acopladores para tipos específicos de barras de armadura. Puede especificar tanto el nombre completo del tipo de barra de armadura como uno parcial. Por ejemplo, especifique el valor "10". Entonces, el tipo de barra de armadura se considerará adecuado si su nombre contiene "10".</h233>
     <h234>Plegar parte inferior de barras rectas</h234>
     <h235>Distancia de plegado (O), mm:</h235>
     <h236>Longitud de plegado (L), mm:</h236>
@@ -977,7 +977,7 @@
     <p9>Calcular y modelar reforzamiento de refuerzo longitudinal</p9>
     <p10>Calcular y modelar reforzamiento de refuerzo transversal</p10>
     <p14>Calcular y modelar salientes de losa</p14>
-    <p15>Instalación de conectores</p15>
+    <p15>Instalación de acopladores de armadura</p15>
     <e1>Errores de análisis de pilares</e1>
     <e2>No se puede inicializar pilar</e2>
     <e3>No se puede obtener cuerpos sólidos</e3>
@@ -1023,8 +1023,8 @@
     <re4>No se puede crear una barra de refuerzo recta con forma de barra preferida especificada "{0}". Error: {1}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re4>
     <re5>No se puede crear una barra de refuerzo con forma "{0}" con forma de barra preferida especificada "{1}". Error: {2}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re5>
     <re17>Error al crear salientes desde losa id={0} en pilar id={1}:</re17>
-    <re18>Error al crear conectores al conectar pilares id={0} y id={1}:</re18>
-    <re19>Error al crear conectores al procesar pilar id={0}:</re19>
+    <re18>Error al crear acopladores al conectar columnas id={0} e id={1}:</re18>
+    <re19>Error al crear acopladores al procesar la columna id={0}:</re19>
   </mprColumnsReinforcement>
   <mprBeamsReinforcement
     LocalName="Refuerzo de viga"
