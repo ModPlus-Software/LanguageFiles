@@ -316,6 +316,10 @@
     <h225>Enables you to select all rooms of the apartment that includes the selected room</h225>
     <h226>Calculate areas of locked apartments</h226>
     <h227>Considering the filter:</h227>
+    <h228>Original area</h228>
+    <h229>Calculate apartments</h229>
+    <h230>Calculate area</h230>
+    <h231>Exclude rooms with a Functional purpose matching the current apartment identifier</h231>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -379,6 +383,7 @@
     <msg58>Are you sure?</msg58>
     <msg59>The rooms of the current project do not have the parameter "{0}"</msg59>
     <msg60>An error occurred while processing the table</msg60>
+    <msg61>No suitable rooms were found! Check the filter conditions and try again</msg61>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -420,6 +425,7 @@
     <tt36>Add a new row</tt36>
     <tt37>Remove selected rows</tt37>
     <tt38>Incorrect value. Check the conditions in brackets</tt38>
+    <tt39>Show selected rooms</tt39>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
     <instruction1_1>Additional parameters are processed and filled only if the rooms have these parameters. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button</instruction1_1>
@@ -431,6 +437,7 @@
     <instruction3>The initial check includes two parts: a check for unplaced rooms and a check for the occupancy of the parameters "Functional purpose" and "Name". If the value of the "Functional purpose" parameter corresponds to the value of the "Apartment Identifier" specified in the settings, then the "Name" parameter will be checked against the current room matrix</instruction3>
     <instruction4>The apartments are collected through the geometric characteristics of the rooms, taking into account the connection of the rooms through windows, doors and room separators. All rooms of the same apartment are assigned the same value of the "Apartment ID" parameter. It is recommended to perform an additional visual check by creating a color scheme according to the "Apartment ID" parameter</instruction4>
     <instruction5>Apartment calculation includes calculating the areas of the apartment, the number of living rooms, as well as determining the type of apartment using the "Apartment types" source. All obtained values are assigned to the parameters of the rooms included in the apartment. All apartments are defined according to the value of the "Apartment ID" parameter set at the "Collect apartments" step</instruction5>
+    <instruction5_1>This tab is not part of the main Apartment Typology algorithm! It is intended solely for filling the "AP_Rounded area" parameter (or the corresponding one in use) in selected rooms based on rounding settings. Use this feature only for rooms that do not match the current Functional purpose</instruction5_1>
     <instruction6>Numbering can be done by grouping the apartments by Housings and/or Sections by enabling the corresponding options and by specifying the parameter names from which to take the value of the Housing and/or Sections. In this case, it is considered that the sections are subgroups for the housings. The "End-to-end numbering" property means that the numbering in the next group will continue, not start from the value set in the "Initial number" property. If you select the " Point " option in the "Start of numbering" property, you will need to select a room for each group of apartments</instruction6>
     <!-- todo remove after 2.11.15.0 -->
     <instruction7>Creating apartment views is done by duplicating the current view, followed by cropping along the contour of the apartment. First of all, an attempt is made to create a crop contour considering the thickness of the enclosing walls (only for Revit 2020 and higher). If unsuccessful, an attempt is made to create a crop contour taking into account the thickest of the enclosing walls. If the crop contour is not created, the apartment contour obtained from the room boundaries will be used. If the option "Try to use apartment type as view name" is enabled, the created views will be given a name of the type "LEVEL_NAME – Apartment APARTMENT_TYPE".</instruction7>

@@ -316,6 +316,10 @@
     <h225>Ermöglicht die Auswahl aller Räume der Wohnung, die den ausgewählten Raum enthält</h225>
     <h226>Flächen gesperrter Wohnungen berechnen</h226>
     <h227>Unter Berücksichtigung des Filters:</h227>
+    <h228>Ursprüngliche Fläche</h228>
+    <h229>Wohnungen berechnen</h229>
+    <h230>Fläche berechnen</h230>
+    <h231>Räume mit einer Funktionalen Bestimmung ausschließen, die der aktuellen Wohnungskennung entspricht</h231>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -379,6 +383,7 @@
     <msg58>Sind Sie sicher?</msg58>
     <msg59>Die Räume des aktuellen Projekts vermissen den Parameter "{0}"</msg59>
     <msg60>Bei der Verarbeitung der Tabelle ist ein Fehler aufgetreten</msg60>
+    <msg61>Es wurde kein geeignetes Raum gesammelt! Überprüfen Sie die Filterbedingungen und versuchen Sie es erneut</msg61>
     <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
     <tt2>Die Anweisung ausblenden</tt2>
     <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
@@ -420,6 +425,7 @@
     <tt36>Neue Zeile hinzufügen</tt36>
     <tt37>Die ausgewählten Zeilen löschen</tt37>
     <tt38>Inkorrekter Wert. Überprüfen Sie die in Klammern angegebenen Bedingungen</tt38>
+    <tt39>Ausgewählte Räume anzeigen</tt39>
     <instruction>Anweisung</instruction>
     <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
     <instruction1_1>Die zusätzlichen Parameter werden nur beim Vorhandensein dieser Parameter bei den Räumen verarbeitet und ausgefüllt. Sie können Ihre eigenen gemeinsam genutzten Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen gemeinsam genutzten Parameter in der Liste an oder klicken Sie auf Schaltfläche "Fehlende Parameter erstellen"</instruction1_1>
@@ -431,6 +437,7 @@
     <instruction3>Die Überprüfung umfasst zwei Teile: eine Überprüfung auf nicht platzierte Räume und eine Überprüfung auf Ausfüllung der Parameter "Funktionale Bestimmung" und "Name". Wenn ein Raum eine "Funktionale Bedeutung" hat, die mit dem in den Einstellungen angegebenen Wert "Der Identifikator der Wohnungen" übereinstimmt, wird der Parameter "Name" mit der aktuellen Raummatrix überprüft</instruction3>
     <instruction4>Die Wohnungen werden durch die geometrischen Merkmale der Räume zusammengestellt, wobei die Verbindung der Räume durch Fenster, Türen und Raumteiler berücksichtigt wird. Allen Räumen in einer Wohnung wird derselbe Parameterwert "Wohnungs-ID" zugewiesen. Es wird empfohlen, eine zusätzliche visuelle Überprüfung durchzuführen, indem ein Farbschema über den Parameter "Wohnungs-ID" erstellt wird</instruction4>
     <instruction5>Berechnung der Wohnungsfläche umfasst die Berechnung der Wohnungsflächen, der Anzahl der Wohnräume und die Bestimmung des Wohnungstyps anhand der Quelle "Wohnungstypen". Alle ermittelten Werte werden den Parametern der Räume, aus denen die Wohnung besteht, zugeordnet. Alle Wohnungen werden durch den Wert "Wohnungs-ID" bestimmt, der im Schritt "Zusammenstellung der Wohnungen" festgelegt wurde</instruction5>
+    <instruction5_1>Diese Registerkarte ist nicht Teil des Hauptalgorithmus der Wohnungstypologie! Sie dient ausschließlich zum Ausfüllen des Parameters „WO_Gerundete Fläche" (oder des entsprechenden verwendeten Parameters) in ausgewählten Räumen unter Berücksichtigung der Rundungseinstellungen. Verwenden Sie diese Funktion nur für Räume, die nicht der aktuellen Funktionalen Bestimmung entsprechen</instruction5_1>
     <instruction6>Die Nummerierung der Wohnungen kann durch Gruppierung der Wohnungen in Häuser und/oder Blöcke erfolgen, indem die entsprechenden Optionen aktiviert und die Namen der Parameter angegeben werden, aus denen der Wert der Häuser und/oder Blöcke entnommen werden soll. Die Blöcke werden als Untergruppen für die Häuser betrachtet. Die Eigenschaft "fortlaufende Nummerierung" bedeutet, dass die Nummerierung in der nächsten Gruppe fortgesetzt wird und nicht mit dem in der Eigenschaft "Startnummer" festgelegten Wert beginnt. Wenn Sie bei der Eigenschaft "Der Beginn der Nummerierung" "angeben" wählen, müssen Sie für jede Gruppe von Wohnungen einen Raum auswählen</instruction6>
     <!-- todo remove after 2.11.15.0 -->
     <instruction7>Erstellen von Ansichten der Wohnungen erfolgt durch Duplizieren der aktuellen Ansicht und mit nachfolgendem Zuschneiden entlang des Umrisses der Wohnung. Zunächst wird versucht, einen Zuschneidebereich auf der Grundlage der Dicke der umschließenden Wände zu erstellen (nur für Revit 2020 und höher). Bei Misserfolg wird versucht, einen Zuschneidebereich unter Berücksichtigung der größten der umschließenden Wanddicken zu erstellen. Wenn kein Zuschneidebereich erstellt wird, wird der von den Raumgrenzen abgeleitete Umriss verwendet. Wenn die Option "Anwendung des Wohnungstyps als Ansichtsname versuchen" aktiviert ist, erhalten die erstellten Ansichten den Ansichtsnamen "NAME_DER EBENE — Wohnung WOHNUNGSTYP"</instruction7>

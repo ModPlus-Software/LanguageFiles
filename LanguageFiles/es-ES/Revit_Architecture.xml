@@ -316,6 +316,10 @@
     <h225>Le permite seleccionar todas las habitaciones del apartamento que incluye la habitación seleccionada</h225>
     <h226>Calcular el área de apartamentos bloqueados</h226>
     <h227>Teniendo en cuenta el filtro:</h227>
+    <h228>Área original</h228>
+    <h229>Calcular apartamentos</h229>
+    <h230>Calcular área</h230>
+    <h231>Excluir los espacios con un Propósito funcional que coincida con el identificador de apartamento actual</h231>
     <msg1>No se ha encontrado parámetro "{0}"</msg1>
     <msg2>Parámetro "{0}" no rellenado</msg2>
     <msg3>Parámetro "{0}" tiene un valor ilegal</msg3>
@@ -379,6 +383,7 @@
     <msg58>¿Estás seguro?</msg58>
     <msg59>Para las habitaciones del proyecto actual falta el parámetro"{0}"</msg59>
     <msg60>Se produjo un error al procesar la tabla</msg60>
+    <msg61>¡No se encontró ningún espacio adecuado! Revise las condiciones de filtrado y vuelva a intentarlo</msg61>
     <tt1>Valor del parámetro "Propósito funcional", que se utiliza para seleccionar habitaciones que se procesan. Si parámetro tiene valor diferente, habitación se omitirá cuando se estén ejecutando todos algoritmos</tt1>
     <tt2>Ocultar instrucción</tt2>
     <tt3>Para cada grupo de lista, seleccione una habitación del proyecto mediante lo cual se determinará apartamento inicial para numeración</tt3>
@@ -420,6 +425,7 @@
     <tt36>Añadir nueva fila</tt36>
     <tt37>Eliminar filas seleccionadas</tt37>
     <tt38>Valor incorrecto. Compruebe las condiciones indicadas entre paréntesis</tt38>
+    <tt39>Mostrar los espacios seleccionados</tt39>
     <instruction>Instrucción</instruction>
     <instruction1>Todas habitaciones del proyecto deben contar con parámetros generales especificados en esta lista. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes". Todos parámetros numéricos están representados por tipo "Unidad monetaria", que le permite procesar habitaciones en grupos</instruction1>
     <instruction1_1>Los parámetros adicionales se procesan y se rellenan sólo si las habitaciones tienen estos parámetros. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes"</instruction1_1>
@@ -431,6 +437,7 @@
     <instruction3>verificar si hay habitaciones no ubicadas y verificar que parámetros "Propósito funcional" y "Nombre" estén rellenos. Si habitación tiene valor de parámetro "Valor funcional" que coincide con valor "ID de apartamento" especificado en ajustes, entonces parámetro "Nombre" se comparará con matriz actual de habitaciones</instruction3>
     <instruction4>Ensamblaje de apartamentos se realiza a través de características geométricas de habitación, teniendo en cuenta vínculo de habitaciones a través de ventanas, puertas y separadores. A todas habitaciones de apartamento se les asigna mismo valor del parámetro "ID de apartamento". Se recomienda realizar verificación visual adicional creando combinación de colores basado en parámetro "ID de apartamento"</instruction4>
     <instruction5>Cálculo de apartamentos incluye cálculo del área del apartamento, número de habitaciones, así como determinación del tipo de apartamento a partir de Origen "Tipos de apartamentos". Todos valores obtenidos se asignan a parámetros de habitación incluido en apartamento. Todos apartamentos están determinados por valor del parámetro "ID de apartamento" especificado en etapa "Ensamblar apartamentos"</instruction5>
+    <instruction5_1>¡Esta pestaña no forma parte del algoritmo principal de la Tipología de apartamentos! Está destinada exclusivamente a rellenar el parámetro "AP_Área redondeada" (o el correspondiente que se esté utilizando) en los espacios seleccionados según la configuración de redondeo. Utilice esta función solo para los espacios que no coincidan con el Propósito funcional actual</instruction5_1>
     <instruction6>Numeración de apartamentos se puede realizar agrupando apartamentos por Edificio y/o División, activando opciones adecuadas y especificando nombres de parámetros de que tomar valor del Edificio y/o División. En este caso se considera que divisiones son subgrupos de edificios. Propiedad "Numeración continua" significa que numeración en siguiente grupo continuará, en lugar de comenzar desde valor establecido en propiedad "Número inicial". Si selecciona opción "Especificar" en propiedad "Inicio de numeración", será necesario seleccionar una habitación para cada grupo de apartamentos</instruction6>
     <!-- todo remove after 2.11.15.0 -->
     <instruction7>Vistas de apartamentos se crean duplicando vista actual y luego recortándola a lo largo del contorno del apartamento. En primer lugar, se intenta crear contorno de recorte teniendo en cuenta espesor de muros cortina (sólo para Revit 2020 y versiones posteriores). Si no se consigue, se intenta crear contorno de recorte teniendo en cuenta mayor espesor de muros que rodean. Si no se crea contorno de recorte, se utilizará contorno del apartamento obtenido de delimitación de habitación. Cuando opción "Intentar utilizar tipo de apartamento como nombre de vista" está activada, vistas creadas recibirán nombre de vista "NOMBRE_NIVEL- Apartamento TIPO_APARTAMENTO"</instruction7>
