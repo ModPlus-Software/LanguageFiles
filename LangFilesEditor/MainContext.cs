@@ -11,14 +11,20 @@ using System.Windows.Input;
 using System.Windows.Markup;
 using System.Xml;
 using System.Xml.Linq;
+using Windows;
 using JetBrains.Annotations;
 using Structure;
 
 internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 {
-    private readonly HashSet<string> _languageNames = [];
     private readonly Dictionary<string, List<string>> _itemsToRemove = [];
     private Node _selectedNode;
+
+    /// <summary>
+    /// Порядок языков
+    /// </summary>
+    public static List<string> LanguageOrder = ["ru-RU", "uk-UA", "en-US", "de-DE", "es-ES", "zh-CN"];
+
 
     /// <summary>
     /// Sections
@@ -94,6 +100,90 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         {
             SelectedNode.Items.Add(GetNewItem(GetNewItemName(SelectedNode.Items.LastOrDefault())));
         }
+    }), _ => SelectedNode != null);
+
+    /// <summary>
+    /// Import rows below
+    /// </summary>
+    public ICommand ImportRowsBelowCommand => new RelayCommand(() => Utils.SafeExecute(() =>
+    {
+        var win = new ImportWindow()
+        {
+            Owner = mainWindow
+        };
+        if (win.ShowDialog() != true)
+            return;
+
+        var resultRows = new List<List<string>>();
+
+        var rows = win.TbText.Text.Split(["\r\n", "\n"], StringSplitOptions.TrimEntries);
+
+        var index = 0;
+        var resultRow = new List<string>();
+        foreach (var row in rows)
+        {
+            if (string.IsNullOrEmpty(row))
+                continue;
+
+            if (index == LanguageOrder.Count)
+                index = 0;
+
+            if (index == 0)
+            {
+                if (resultRow.Count == LanguageOrder.Count)
+                {
+                    resultRows.Add(resultRow);
+                }
+
+                resultRow = [];
+            }
+
+            resultRow.Add(row);
+
+            index++;
+        }
+
+        if (resultRow.Count == LanguageOrder.Count)
+        {
+            resultRows.Add(resultRow);
+        }
+
+        if (resultRows.Count == 0)
+            return;
+
+        if (mainWindow.DgItems.SelectedItem != null)
+        {
+            index = mainWindow.DgItems.Items.IndexOf(mainWindow.DgItems.SelectedItem) + 1;
+            if (index == SelectedNode.Items.Count)
+            {
+                var previousName = SelectedNode.Items.LastOrDefault()?.Name ?? string.Empty;
+                foreach (var row in resultRows)
+                {
+                    previousName = GetNewItemName(previousName);
+                    SelectedNode.Items.Add(GetNewItem(previousName, row));
+                }
+            }
+            else
+            {
+                var previousName = SelectedNode.Items[index - 1].Name;
+                foreach (var row in resultRows)
+                {
+                    previousName = GetNewItemName(previousName);
+                    SelectedNode.Items.Insert(index, GetNewItem(previousName, row));
+                    index++;
+                }
+            }
+        }
+        else
+        {
+            var previousName = SelectedNode.Items.LastOrDefault()?.Name ?? string.Empty;
+            foreach (var row in resultRows)
+            {
+                previousName = GetNewItemName(previousName);
+                SelectedNode.Items.Add(GetNewItem(previousName, row));
+            }
+        }
+
     }), _ => SelectedNode != null);
 
     /// <summary>
@@ -203,10 +293,9 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     {
         var nodes = new Dictionary<string, Node>();
 
-        foreach (var languageDirectory in GetLanguageDirectories())
+        foreach (var languageName in LanguageOrder)
         {
-            var languageName = new DirectoryInfo(languageDirectory).Name;
-            _languageNames.Add(languageName);
+            var languageDirectory = GetLanguageDirectory(languageName);
 
             foreach (var file in Directory.GetFiles(languageDirectory, "*.xml"))
             {
@@ -244,7 +333,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         {
             foreach (var nodeItem in node.Items)
             {
-                if (nodeItem.Values.Count != _languageNames.Count)
+                if (nodeItem.Values.Count != LanguageOrder.Count)
                 {
                     MessageBox.Show($"Wrong count of values with key {nodeItem.Name} in node {node.Name}. Fix it in files and restart program");
                     CloseWithoutSave = true;
@@ -269,9 +358,9 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         if (CloseWithoutSave)
             return;
 
-        foreach (var languageDirectory in GetLanguageDirectories())
+        foreach (var languageName in LanguageOrder)
         {
-            var languageName = new DirectoryInfo(languageDirectory).Name;
+            var languageDirectory = GetLanguageDirectory(languageName);
 
             foreach (var file in Directory.GetFiles(languageDirectory, "*.xml"))
             {
@@ -352,15 +441,26 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         _itemsToRemove.Clear();
     });
 
-    private Item GetNewItem(string name)
+    private Item GetNewItem(string name, List<string> valuesInOrder = null)
     {
         var item = new Item
         {
             Name = name
         };
-        foreach (var languageName in _languageNames)
+
+        if (valuesInOrder != null)
         {
-            item.Add(languageName, new ItemValue());
+            for (var i = 0; i < valuesInOrder.Count; i++)
+            {
+                item.Add(LanguageOrder[i], new ItemValue { Value = valuesInOrder[i] });
+            }
+        }
+        else
+        {
+            foreach (var languageName in LanguageOrder)
+            {
+                item.Add(languageName, new ItemValue());
+            }
         }
 
         return item;
@@ -368,9 +468,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
     private void BuildColumns()
     {
-        var order = new List<string> { "ru-RU", "uk-UA", "en-US", "de-DE", "es-ES", "zh-CN" };
-
-        foreach (var languageName in _languageNames.OrderBy(order.IndexOf))
+        foreach (var languageName in LanguageOrder)
         {
             mainWindow.DgItems.Columns.Add(new DataGridTemplateColumn
             {
@@ -401,11 +499,9 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         return $"{new CultureInfo(languageName).DisplayName}\n{languageName}";
     }
 
-    private static IEnumerable<string> GetLanguageDirectories()
+    private static string GetLanguageDirectory(string language)
     {
-        var languageFilesDirectory = Path.Combine(GetSolutionDirectory(), "LanguageFiles");
-
-        return Directory.GetDirectories(languageFilesDirectory, "*", SearchOption.TopDirectoryOnly);
+        return Path.Combine(GetSolutionDirectory(), "LanguageFiles", language);
     }
 
     private static string GetSolutionDirectory()
@@ -422,8 +518,16 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
     private static string GetNewItemName([CanBeNull] Item previousItem)
     {
+
         if (previousItem is null)
             return string.Empty;
-        return Regex.Replace(previousItem.Name, "\\d+$", match => (int.Parse(match.Value) + 1).ToString());
+        return GetNewItemName(previousItem.Name);
+    }
+
+    private static string GetNewItemName([CanBeNull] string previousItemName)
+    {
+        if (string.IsNullOrEmpty(previousItemName))
+            return string.Empty;
+        return Regex.Replace(previousItemName, "\\d+$", match => (int.Parse(match.Value) + 1).ToString());
     }
 }
