@@ -2085,8 +2085,10 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <ss26>Modo de comparación:</ss26>
     <ss27>Máscara</ss27>
     <ss28>Normal</ss28>
+    <ss29>Nombre del filtro</ss29>
     <maskHint>Sugerencia sobre máscaras: * — cualquier número de caracteres; ? — un carácter; # — un dígito. Si la máscara de búsqueda no contiene * ? #, entonces * en la sustitución significa todo el fragmento encontrado</maskHint>
     <regexHint>Sugerencia de expresiones regulares: . — cualquier carácter; .* — secuencia de caracteres; \d — dígito; \w — letra/dígito/guion bajo</regexHint>
+    <systemName>Nombre del sistema</systemName>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Copiar recorte de vista"
@@ -2318,15 +2320,15 @@ Seleccione otra vista de origen</h9>
     <t3>Cambiar factor de anchura</t3>
     <t4>Cambiar propiedad "Negrita"</t4>
     <t5>Negrita</t5>
-    <t6>Cambiar propiedad "Itálico"</t6>
-    <t7>Itálico</t7>
+    <t6>Cambiar propiedad "Cursiva"</t6>
+    <t7>Cursiva</t7>
     <t8>Cambiar propiedad "Subrayado"</t8>
     <t9>Subrayado</t9>
     <t10>Ignorar por fuente</t10>
-    <t11>Cambiar nombre del estilo del texto</t11>
-    <t12>Cambiar nombre del estilo de cota</t12>
+    <t11>Renombrar estilo de texto</t11>
+    <t12>Renombrar estilo de cota</t12>
     <t13>Formato de nombre</t13>
-    <t14>{0} - fuente, {1} - tamaño, {2} - factor de anchura, {3} - negrita, {4}- itálico, {5} - subrayado</t14>
+    <t14>{0} - fuente, {1} - tamaño, {2} - factor de anchura, {3} - negrita, {4}- cursiva, {5} - subrayado</t14>
     <t14def>{1} mm {0}</t14def>
     <t15>No procesar especificaciones que especifiquen una plantilla de vista</t15>
     <t16>Cambiar propiedad "Color"</t16>
@@ -2351,7 +2353,9 @@ Seleccione otra vista de origen</h9>
     <msg7>No se puede reemplazar propiedades del texto en elementos de subfamilia. Error:</msg7>
     <msg8>No se puede reemplazar propiedades del texto de elementos de familia. Error:</msg8>
     <msg9>No se puede cambiar nombre del estilo en la categoría "{0}"</msg9>
-    <msg10>Se omitió especificación porque está especificada plantilla de vista</msg10>
+    <msg10>Se omitió tablas de planificacion porque está especificada plantilla de vista</msg10>
+    <msg11>Propiedades de texto en tablas de planificacion"{0}" reemplazadas correctamente</msg11>
+    <msg12>No se puede reemplazar propiedades del texto en tablas de planificacion"{0}". Error:</msg12>
   </mprFontReplacer>
   <mprTypeManager
     LocalName="Administrador de tipos"
@@ -2447,7 +2451,7 @@ Seleccione otra vista de origen</h9>
     <t5>Operación no está permitida en familia de este tipo</t5>
     <w1>Número de copias: </w1>
     <w2>Parámetros de copia</w2>
-    <w3>Distancia, mm</w3>
+    <w3>Paso, mm</w3>
     <w6>Copia en punto final</w6>
     <w7>Ubicar copia en punto final de curva</w7>
     <w8>Eliminar elementos originales</w8>
@@ -2467,7 +2471,7 @@ Seleccione otra vista de origen</h9>
     <x3>Colorear superficies</x3>
     <x4>Restablecer redeterminaciones de gráficos al cerrar</x4>
     <x5>Ignorar</x5>
-    <x6>Imprimir informe</x6>
+    <x6>Generar informe</x6>
     <x7>Colorear</x7>
     <x8>Desactivar colorear</x8>
     <x9>El complemento no está diseñado para funcionar en familias</x9>
