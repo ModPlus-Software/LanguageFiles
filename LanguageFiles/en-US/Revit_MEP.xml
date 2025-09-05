@@ -76,7 +76,9 @@
     LocalName2="Connect connectors"
     Description2="Connect two connectors (or MEP curves) by rotating and moving the first selected one"
     LocalName3="Connect straight"
-    Description3="Batch connection of straight pipes, ducts, wires, cable trays or conduits lying in one straight line">
+    Description3="Batch connection of straight pipes, ducts, wires, cable trays or conduits lying in one straight line"
+    LocalName4="Disconnect connectors"
+    Description4="Breaks the connection between the nearest connected connector of the selected MEP element and the adjacent element">
     <msg1>Select ducts and diffusers to be connected to them</msg1>
     <msg2>No ducts selected</msg2>
     <msg3>No diffusers selected! Only diffusers that have one unconnected connector oriented along the Z axis are allowed for processing</msg3>
@@ -84,6 +86,7 @@
     <msg5>Select the element to connect to</msg5>
     <msg6>Select straight pipes, ducts, wires, cable trays or conduits</msg6>
     <msg7>Make the connection?</msg7>
+    <msg8>Select the element to disconnect</msg8>
     <t1>Type of branch to be created:</t1>
     <t2>Create a flexible connection between diffuser and branch</t2>
     <t3>Flexible duct type:</t3>
@@ -104,6 +107,7 @@
     <err10>The selected elements have a connector of different shapes</err10>
     <err11>The selected elements have a connector of different sizes</err11>
     <err12>The selected elements have a connector of different system types</err12>
+    <err13>The selected element has no connected connectors</err13>
   </mprMEPConnect>
   <mprMEPRotate
     LocalName="MEP rotate"
