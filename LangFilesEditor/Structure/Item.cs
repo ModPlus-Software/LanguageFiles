@@ -152,6 +152,19 @@ internal class Item : ObservableObject
         _values[languageName] = itemValue;
     }
 
+    /// <summary>
+    /// Совпадают ли все значения с другим экземпляром <see cref="Item"/>
+    /// </summary>
+    /// <param name="otherItem"><see cref="Item"/></param>
+    public bool MatchValues(Item otherItem)
+    {
+        if (otherItem == this)
+            return false;
+        var s1 = Values.Select(v => v.Value.Value).ToHashSet();
+        var s2 = otherItem.Values.Select(v => v.Value.Value).ToHashSet();
+        return s1.SetEquals(s2);
+    }
+
     /// <inheritdoc />
     public override string ToString()
     {

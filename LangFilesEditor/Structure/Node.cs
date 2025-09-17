@@ -130,24 +130,35 @@ internal class Node : ObservableObject
         {
             item.HasDuplicateValue = false;
         }
+        
+        var filtered = Items.Where(i => string.IsNullOrEmpty(i.Comment)).ToList();
 
-        foreach (var group in Items
-                     .Where(i =>
-                         //// Если узел помечен на удаление, то не учитываем его
-                         string.IsNullOrEmpty(i.Comment) &&
-                         i.Values.ContainsKey("ru-RU"))
-                     .GroupBy(i => i.Values["ru-RU"].Value)
-                     .Where(g => g.Count() > 1))
+        var groups = filtered.GroupBy(i => BuildValuesMultisetSignature(i, ignoreCase: false),
+            StringComparer.Ordinal);
+
+        foreach (var grp in groups.Where(g => g.Skip(1).Any()))
         {
-            foreach (var item in group)
-            {
-                item.HasDuplicateValue = true;
-                HasItemsWithSameValue = true;
-            }
+            foreach (var it in grp)
+                it.HasDuplicateValue = true;
+            HasItemsWithSameValue = true;
         }
+
 
         HasIncorrectData = Items.Any(i => i.IsVisibleError);
     }
+
+    private static string BuildValuesMultisetSignature(Item item, bool ignoreCase = false)
+    {
+        var cmp = ignoreCase ? StringComparer.OrdinalIgnoreCase : StringComparer.Ordinal;
+        var vals = item.Values.Values
+            .Select(v => v?.Value ?? string.Empty)
+            .OrderBy(s => s, cmp); // сортируем, чтобы одинаковые наборы давали одинаковую сигнатуру
+
+        // Разделители берём «редкие»:
+        const char sep = '\u001F';
+        return string.Join(sep, vals);
+    }
+
 
     private void Search()
     {
