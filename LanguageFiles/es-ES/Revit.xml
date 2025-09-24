@@ -433,8 +433,8 @@
     Description1="Restaurar posición texto para cotas seleccionadas"
     LocalName2="Desplazar seleccionadas"
     Description2="Desplazar texto de cotas seleccionadas">
-    <h2>Desfase automático de valores de cota al crear</h2>
-    <h3>Desfase automático de valores de cota al editar</h3>
+    <h2>Desplazamiento automático de los valores de las cotas al crearlas</h2>
+    <h3>Desplazamiento automático de los valores de las cotas al editarlas</h3>
     <h4>Factor de desfase(de 0,1 a 2,0):</h4>
     <h5>Es necesario especificar un número entre 0,1 y 2,0 para factor de desfase</h5>
     <h6>¡Atención! Activar este elemento sólo si esto es necesario. Desplazar texto de cota al editar funcionará en gran cantidad de casos. Por ejemplo, al mover o cambiar escala de una vista. Además, no podrá mover manualmente posición del texto de cota</h6>
@@ -445,7 +445,7 @@
     <h11>Si es posible, desplazar texto de cota verticalmente, no lateralmente</h11>
     <h12>Si texto de segmento de cota de varios segmentos requiere un desfase y desfase se puede realizar hacia segmento cercano, entonces texto se desplazará no sólo hacia lado, sino también hacia abajo</h12>
     <h13>¡Atención! ¡Antes de ejecutar comando "Actualizar a última versión" en ficha "Trabajo en grupo", es necesario desactivar complemento, ya que desfase texto de cota se aplicará a cotas obtenidas de cambios descargados!</h13>
-    <h14>Dirección de desfase con respecto a línea de cota:</h14>
+    <h14>Dirección del desplazamiento respecto a la línea de cota:</h14>
     <h17>Factor de anchura del texto (de 0,1 a 2,0):</h17>
     <h18>Cálculo de anchura de texto depende de fuente. Con algunas fuentes, anchura calculada por software puede ser mayor que anchura de texto representado por Revit. En este caso, puede utilizar factor de anchura, que se tendrá en cuenta al calcular anchura de texto mediante software</h18>
     <h19>Es necesario especificar un número en rango de 0,1 a 2,0 para factor de anchura de texto</h19>
@@ -799,13 +799,13 @@
     <h19>Plantillas faltantes -</h19>
     <h20>Plantillas eliminadas -</h20>
     <h21>Enlaces eliminados para plantillas de vista -</h21>
-    <h22>Parámetros generales no utilizados</h22>
-    <h23>Buscar parámetros generales no utilizados puede llevar algún tiempo, ya que será necesario abrir todas familias del proyecto</h23>
+    <h22>Parámetros compartidos no utilizados</h22>
+    <h23>Buscar parámetros compartidos no utilizados puede llevar algún tiempo, ya que será necesario abrir todas familias del proyecto</h23>
     <h24>Nombre del parámetro</h24>
     <h25>Número de parámetros:</h25>
     <h26>Eliminar seleccionado</h26>
-    <h27>Eliminar parámetros generales no utilizadas</h27>
-    <h28>{0} parámetros generales eliminados</h28>
+    <h27>Eliminar parámetros compartidos no utilizadas</h27>
+    <h28>{0} parámetros compartidos eliminados</h28>
     <h29>Filtros de vista</h29>
     <h30>Eliminar filtros de vista</h30>
     <h31>Utilizado en plantillas</h31>
@@ -813,15 +813,15 @@
     <h33>Tabla de planificacións</h33>
     <h34>Eliminar tabla de planificacións</h34>
     <h35>Ubicado en una hoja</h35>
-    <h36>Parámetros generales</h36>
-    <h37>Eliminar parámetros generales</h37>
-    <h38>Habitaciones no ubicadas</h38>
+    <h36>Parámetros compartidos</h36>
+    <h37>Eliminar parámetros compartidos</h37>
+    <h38>Habitaciones no colocados</h38>
     <h39>Eliminar habitaciones no ubicadas</h39>
     <h40>Eliminar todo</h40>
     <h41>Número</h41>
     <h42>Nombre</h42>
-    <h43>Espacios no ubicados</h43>
-    <h44>Eliminar espacios no ubicados</h44>
+    <h43>Espacios no colocados</h43>
+    <h44>Eliminar espacios no colocados</h44>
     <h45>Abrir en Bloc de notas</h45>
     <h46>No se puede procesar familia. Error</h46>
     <h47>No se puede eliminar parámetro general. Error</h47>
@@ -847,14 +847,14 @@
     <h66>Vistas</h66>
     <h67>Ubicado en hoja</h67>
     <h68>Eliminar vistas</h68>
-    <h69>Abrir lista de todos parámetros generales encontrados en Bloc de notas</h69>
-    <h70>Tablas de selección</h70>
-    <h71>Eliminar tablas de selección</h71>
-    <h72>Áreas no colocadas</h72>
+    <h69>Abrir lista de todos parámetros compartidos encontrados en Bloc de notas</h69>
+    <h70>Tablas de consulta</h70>
+    <h71>Eliminar tablas de consulta</h71>
+    <h72>Zonas no colocadas</h72>
     <h73>Eliminar áreas no colocadas</h73>
     <search>Buscar</search>
     <name>Nombre</name>
-    <collect>Ensamblar</collect>
+    <collect>Recopilar</collect>
     <w1>Eliminar todas vistas (sólo planes de zonificación)</w1>
     <w2>Eliminar todas zonas</w2>
     <w3>Eliminar todas líneas de contornos de zonas</w3>
@@ -912,7 +912,7 @@
     <m3>Recibir datos de mapa de vinculación de documentos</m3>
     <m4>Leer familia</m4>
     <m5>Buscar en tabla de planificacións</m5>
-    <m6>¡Tablas de búsqueda seleccionadas incluyen tablas utilizadas en familia actual! ¿Estás seguro de que desea eliminar?</m6>
+    <m6>¡Tablas de búsqueda consulta incluyen tablas utilizadas en familia actual! ¿Estás seguro de que desea eliminar?</m6>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Numerador de hojas"
