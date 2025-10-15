@@ -488,6 +488,11 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         foreach (var row in rows)
         {
             var tag = Utils.GetXmlRowTagContents(row);
+            if (string.IsNullOrWhiteSpace(tag))
+            {
+                continue;
+            }
+
             var content = Utils.StripXmlRowOfTag(row);
             if (result.ContainsKey(tag))
             {
