@@ -13,7 +13,7 @@ public partial class ImportWindowWithCheckbox
     {
         InitializeComponent();
 
-        TbNote.Text = $"Вставьте текст, содержащий перевод фраз в порядке: {PrintLanguageOrder()}. Перевод для каждого языка должен быть на новой строке. Можно добавлять перевод сразу для нескольких новых строк. Пустые строки игнорируются";
+        TbNote.Text = $"Вставьте текст (вместе с тегами), содержащий перевод фраз в порядке: {PrintLanguageOrder()}. Перевод для каждого языка должен быть на новой строке. Можно добавлять перевод сразу для нескольких новых строк. Пустые строки игнорируются";
     }
 
     private void Accept_OnClick(object sender, RoutedEventArgs e)
