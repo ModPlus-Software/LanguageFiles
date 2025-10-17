@@ -1,5 +1,6 @@
 ﻿namespace LangFilesEditor;
 
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Media;
 
@@ -87,5 +88,42 @@ internal static class Utils
         }
 
         return string.Empty;
+    }
+
+    public static string StripXmlRowOfTag(string row)
+    {
+        var result = Regex.Replace(row.Trim(), "^<[^>]+>", string.Empty);
+        result = Regex.Replace(result, "<[^>]+>$", string.Empty);
+        return result;
+    }
+
+    public static string GetXmlRowTagContents(string row)
+    {
+        var result = string.Empty;
+        var match = Regex.Match(row.Trim(), "^<[^>]+>");
+        if (match.Success)
+        {
+            result = match.Value;
+            result = result.Substring(1, result.Length - 2);
+        }
+
+        return result;
+    }
+
+    public static void GetTagValueAndNumber(string tag, out string value, out int number)
+    {
+        value = string.Empty;
+        number = 1;
+
+        var match = Regex.Match(tag, "\\d+$");
+        if (match.Success)
+        {
+            int.TryParse(match.Value, out number);
+            value = tag.Replace(match.Value, string.Empty);
+        }
+        else
+        {
+            value = tag;
+        }
     }
 }
