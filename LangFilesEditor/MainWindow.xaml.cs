@@ -3,7 +3,6 @@
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
@@ -19,9 +18,7 @@ public partial class MainWindow
 
     private void OnClosing(object sender, CancelEventArgs e)
     {
-        if (DataContext is MainContext mainContext &&
-            mainContext.Nodes.Any(n => n.HasIncorrectData) && 
-            !mainContext.CloseWithoutSave)
+        if (DataContext is MainContext { IsSaveNotPossible: true })
         {
             MessageBox.Show("There is Nodes with errors! Fix them or close without saving");
             e.Cancel = true;

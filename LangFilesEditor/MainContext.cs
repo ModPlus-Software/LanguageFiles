@@ -58,6 +58,11 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     public bool CloseWithoutSave { get; private set; }
 
     /// <summary>
+    /// Есть ли ошибки, не позволяющие вызвать сохранение.
+    /// </summary>
+    public bool IsSaveNotPossible => !CloseWithoutSave && Nodes.Any(n => n.HasIncorrectData);
+
+    /// <summary>
     /// Close without save
     /// </summary>
     public ICommand CloseWithoutSaveCommand => new RelayCommand(() =>
@@ -394,7 +399,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
     public void Save() => Utils.SafeExecute(() =>
     {
-        if (CloseWithoutSave)
+        if (IsSaveNotPossible || CloseWithoutSave)
             return;
 
         foreach (var languageName in LanguageOrder)
