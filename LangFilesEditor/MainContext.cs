@@ -25,7 +25,6 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     /// </summary>
     public static List<string> LanguageOrder = ["ru-RU", "uk-UA", "en-US", "de-DE", "es-ES", "zh-CN"];
 
-
     /// <summary>
     /// Sections
     /// </summary>
@@ -183,7 +182,47 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                 SelectedNode.Items.Add(GetNewItem(previousName, row));
             }
         }
+    }), _ => SelectedNode != null);
 
+    /// <summary>
+    /// Import rows below
+    /// </summary>
+    public ICommand ImportRowsAutoCommand => new RelayCommand(() => Utils.SafeExecute(() =>
+    {
+        var win = new ImportWindowWithCheckbox()
+        {
+            Owner = mainWindow
+        };
+        if (win.ShowDialog() != true)
+            return;
+
+        var sortedRows = GetRowsFromCopyPaste(win.TbText.Text);
+        if (sortedRows.Count == 0)
+            return;
+
+        foreach (var key in sortedRows.Keys)
+        {
+            Utils.GetTagValueAndNumber(key, out string value, out var rowNumber);
+            var number = SearchLastRowWithTagValue(value, out int index);
+            if (index == -1)
+            {
+                index = mainWindow.DgItems.Items.Count - 1;
+                number = 0;
+            }
+
+            string startName;
+            if (win.CbAutoNumbering.IsChecked.HasValue && win.CbAutoNumbering.IsChecked.Value)
+            {
+                startName = $"{value}{number}";
+                startName = GetNewItemName(startName);
+            }
+            else
+            {
+                startName = $"{value}{rowNumber}";
+            }
+
+            SelectedNode.Items.Insert(index + 1, GetNewItem(startName, sortedRows[key]));
+        }
     }), _ => SelectedNode != null);
 
     /// <summary>
@@ -440,6 +479,66 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
         _itemsToRemove.Clear();
     });
+
+    private Dictionary<string, List<string>> GetRowsFromCopyPaste(string rawCopyPaste)
+    {
+        Dictionary<string, List<string>> result = [];
+        var rows = rawCopyPaste.Split(["\r\n", "\n"], StringSplitOptions.TrimEntries);
+
+        foreach (var row in rows)
+        {
+            var tag = Utils.GetXmlRowTagContents(row);
+            if (string.IsNullOrWhiteSpace(tag))
+            {
+                continue;
+            }
+
+            var content = Utils.StripXmlRowOfTag(row);
+            if (result.ContainsKey(tag))
+            {
+                result[tag].Add(content);
+            }
+            else
+            {
+                result.Add(tag, [content]);
+            }
+        }
+
+        foreach (var key in result.Keys)
+        {
+            if (result[key].Count != LanguageOrder.Count)
+            {
+                result.Remove(key);
+            }
+        }
+
+        return result;
+    }
+
+    private int SearchLastRowWithTagValue(string tagValue, out int index)
+    {
+        index = -1;
+        var biggestValue = -1;
+
+        if (SelectedNode == null || string.IsNullOrWhiteSpace(tagValue))
+        {
+            return -1;
+        }
+
+        foreach (var item in SelectedNode.Items)
+        {
+            var name = item.Name;
+            Utils.GetTagValueAndNumber(name, out string value, out int number);
+
+            if (value.Equals(tagValue) && SelectedNode.Items.IndexOf(item) > index)
+            {
+                biggestValue = number;
+                index = SelectedNode.Items.IndexOf(item);
+            }
+        }
+
+        return biggestValue;
+    }
 
     private Item GetNewItem(string name, List<string> valuesInOrder = null)
     {
