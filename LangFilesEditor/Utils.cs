@@ -43,12 +43,14 @@ internal static class Utils
             {
                 return t;
             }
+
             var childOfChild = FindVisualChild<T>(child);
             if (childOfChild != null)
             {
                 return childOfChild;
             }
         }
+
         return null;
     }
 
