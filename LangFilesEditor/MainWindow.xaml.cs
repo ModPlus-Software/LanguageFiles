@@ -13,9 +13,13 @@ using System.Xml;
 /// </summary>
 public partial class MainWindow
 {
+    private HashSet<DataGrid> _buildedDataGrids;
+
     public MainWindow()
     {
         InitializeComponent();
+
+        _buildedDataGrids = [];
 
         Closing += OnClosing;
     }
@@ -77,6 +81,8 @@ public partial class MainWindow
 
     private void BuildColumns(DataGrid dataGrid)
     {
+        if (!_buildedDataGrids.Add(dataGrid))
+            return;
         foreach (var languageName in MainContext.LanguageOrder)
         {
             dataGrid.Columns.Add(new DataGridTemplateColumn
