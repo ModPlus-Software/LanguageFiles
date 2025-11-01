@@ -1,8 +1,12 @@
 ﻿namespace LangFilesEditor;
 
 using System.ComponentModel;
+using System.Globalization;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Markup;
+using System.Xml;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
@@ -63,6 +67,44 @@ public partial class MainWindow
 
     private void DgItems_OnCurrentCellChanged(object sender, EventArgs e)
     {
-        DgItems.BeginEdit();
+        ((DataGrid)sender).BeginEdit();
+    }
+
+    private void DgItems_OnLoaded(object sender, RoutedEventArgs e)
+    {
+        BuildColumns((DataGrid)sender);
+    }
+
+    private void BuildColumns(DataGrid dataGrid)
+    {
+        foreach (var languageName in MainContext.LanguageOrder)
+        {
+            dataGrid.Columns.Add(new DataGridTemplateColumn
+            {
+                Header = GetColumnHeader(languageName),
+                CellTemplate = GetDataTemplateForStringCell(dataGrid, $"Values[{languageName}].Value"),
+                Width = new DataGridLength(1, DataGridLengthUnitType.Star)
+            });
+        }
+    }
+
+    private DataTemplate GetDataTemplateForStringCell(DataGrid dataGrid, string bindingPath)
+    {
+        var dataTemplate = (DataTemplate)dataGrid.Resources["ItemValueCellTemplate"];
+        var xaml = XamlWriter.Save(dataTemplate!);
+        xaml = xaml.Replace(
+            "{DynamicResource PLACEHOLDER}",
+            "{Binding Path=" + bindingPath + ", Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}");
+
+        var stringReader = new StringReader(xaml);
+
+        var xmlReader = XmlReader.Create(stringReader);
+
+        return (DataTemplate)XamlReader.Load(xmlReader);
+    }
+
+    private static string GetColumnHeader(string languageName)
+    {
+        return $"{new CultureInfo(languageName).DisplayName}\n{languageName}";
     }
 }

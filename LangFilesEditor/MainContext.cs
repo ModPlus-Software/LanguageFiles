@@ -1,19 +1,18 @@
 ﻿namespace LangFilesEditor;
 
+using JetBrains.Annotations;
+using Structure;
 using System.Collections.ObjectModel;
-using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Markup;
+using System.Windows.Media;
 using System.Xml;
 using System.Xml.Linq;
 using Windows;
-using JetBrains.Annotations;
-using Structure;
 
 internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 {
@@ -26,9 +25,14 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     public static List<string> LanguageOrder = ["ru-RU", "uk-UA", "en-US", "de-DE", "es-ES", "zh-CN"];
 
     /// <summary>
-    /// Sections
+    /// Nodes
     /// </summary>
     public ObservableCollection<Node> Nodes { get; } = [];
+
+    /// <summary>
+    /// Edit nodes
+    /// </summary>
+    public ObservableCollection<Node> EditNodes { get; } = [];
 
     /// <summary>
     /// Selected node
@@ -44,6 +48,12 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
             value?.Validate();
             OnPropertyChanged();
             OnPropertyChanged(nameof(IsVisibleSelectedNodeContent));
+
+            if (value != null)
+            {
+                if (!EditNodes.Contains(value))
+                    EditNodes.Add(value);
+            }
         }
     }
 
@@ -72,13 +82,22 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     });
 
     /// <summary>
+    /// Close active editor tab
+    /// </summary>
+    public ICommand CloseEditorTabCommand => new RelayCommand(() => Utils.SafeExecute(() =>
+    {
+        EditNodes.Remove(SelectedNode);
+    }));
+
+    /// <summary>
     /// Add row above
     /// </summary>
     public ICommand AddRowAboveCommand => new RelayCommand(() => Utils.SafeExecute(() =>
     {
-        if (mainWindow.DgItems.SelectedItem != null)
+        var dataGrid = GetSelectedTabDataGrid();
+        if (dataGrid.SelectedItem != null)
         {
-            var index = mainWindow.DgItems.Items.IndexOf(mainWindow.DgItems.SelectedItem);
+            var index = dataGrid.Items.IndexOf(dataGrid.SelectedItem);
             SelectedNode.Items.Insert(index, GetNewItem(string.Empty));
         }
         else
@@ -92,9 +111,10 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     /// </summary>
     public ICommand AddRowBelowCommand => new RelayCommand(() => Utils.SafeExecute(() =>
     {
-        if (mainWindow.DgItems.SelectedItem != null)
+        var dataGrid = GetSelectedTabDataGrid();
+        if (dataGrid.SelectedItem != null)
         {
-            var index = mainWindow.DgItems.Items.IndexOf(mainWindow.DgItems.SelectedItem) + 1;
+            var index = dataGrid.Items.IndexOf(dataGrid.SelectedItem) + 1;
             if (index == SelectedNode.Items.Count)
                 SelectedNode.Items.Add(GetNewItem(GetNewItemName(SelectedNode.Items.LastOrDefault())));
             else
@@ -155,9 +175,11 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         if (resultRows.Count == 0)
             return;
 
-        if (mainWindow.DgItems.SelectedItem != null)
+        var dataGrid = GetSelectedTabDataGrid();
+
+        if (dataGrid.SelectedItem != null)
         {
-            index = mainWindow.DgItems.Items.IndexOf(mainWindow.DgItems.SelectedItem) + 1;
+            index = dataGrid.Items.IndexOf(dataGrid.SelectedItem) + 1;
             if (index == SelectedNode.Items.Count)
             {
                 var previousName = SelectedNode.Items.LastOrDefault()?.Name ?? string.Empty;
@@ -205,13 +227,15 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         if (sortedRows.Count == 0)
             return;
 
+        var dataGrid = GetSelectedTabDataGrid();
+
         foreach (var key in sortedRows.Keys)
         {
             Utils.GetTagValueAndNumber(key, out string value, out var rowNumber);
             var number = SearchLastRowWithTagValue(value, out int index);
             if (index == -1)
             {
-                index = mainWindow.DgItems.Items.Count - 1;
+                index = dataGrid.Items.Count - 1;
                 number = 0;
             }
 
@@ -236,11 +260,11 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     public ICommand CopyToClipboardCommand => new RelayCommand(() => Utils.SafeExecute(
         () =>
         {
-            var item = (Item)mainWindow.DgItems.SelectedItem;
+            var item = (Item)GetSelectedTabDataGrid().SelectedItem;
             var data = $"LANG_{item.Name}|{string.Join("|", item.Values.Select(v => $"{v.Key}${v.Value.Value}"))}";
             Clipboard.Clear();
             Utils.CopyToClipboard(data);
-        }), _ => SelectedNode != null && mainWindow.DgItems.SelectedItem != null);
+        }), _ => SelectedNode != null && GetSelectedTabDataGrid().SelectedItem != null);
 
     /// <summary>
     /// Paste from clipboard
@@ -249,7 +273,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         () =>
         {
             Item targetItem;
-            if (mainWindow.DgItems.SelectedItem is Item selectedItem)
+            if (GetSelectedTabDataGrid().SelectedItem is Item selectedItem)
             {
                 targetItem = selectedItem;
             }
@@ -276,7 +300,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     public ICommand RemoveItemCommand => new RelayCommand(
         () => Utils.SafeExecute(() =>
         {
-            var item = (Item)mainWindow.DgItems.SelectedItem;
+            var item = (Item)GetSelectedTabDataGrid().SelectedItem;
             if (!string.IsNullOrEmpty(item.Comment))
             {
                 MessageBox.Show("Позиции, отмеченные комментарием, удалять нельзя!");
@@ -300,7 +324,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
             items.Add(item.Name);
             SelectedNode.Items.Remove(item);
         }),
-        _ => SelectedNode != null && mainWindow.DgItems.SelectedItem != null);
+        _ => SelectedNode != null && GetSelectedTabDataGrid().SelectedItem != null);
 
     /// <summary>
     /// Mark item for deletion with comment
@@ -308,7 +332,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     public ICommand MarkForDeletionCommand => new RelayCommand(
         () => Utils.SafeExecute(() =>
     {
-        var item = (Item)mainWindow.DgItems.SelectedItem;
+        var item = (Item)GetSelectedTabDataGrid().SelectedItem;
         var version = string.Empty;
 
         var match = Regex.Match(item.Comment ?? string.Empty, "\\b\\d+\\.\\d+\\.\\d+\\.\\d+\\b");
@@ -331,7 +355,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
         SelectedNode.Validate();
 
-    }), _ => SelectedNode != null && mainWindow.DgItems.SelectedItem != null);
+    }), _ => SelectedNode != null && GetSelectedTabDataGrid().SelectedItem != null);
 
     public void Load() => Utils.SafeExecute(() =>
     {
@@ -386,9 +410,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                 }
             }
         }
-
-        BuildColumns();
-
+        
         foreach (var p in nodes.OrderBy(n => !char.IsUpper(n.Key[0])).ThenBy(n => n.Key))
         {
             Nodes.Add(p.Value);
@@ -570,39 +592,6 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         return item;
     }
 
-    private void BuildColumns()
-    {
-        foreach (var languageName in LanguageOrder)
-        {
-            mainWindow.DgItems.Columns.Add(new DataGridTemplateColumn
-            {
-                Header = GetColumnHeader(languageName),
-                CellTemplate = GetDataTemplateForStringCell($"Values[{languageName}].Value"),
-                Width = new DataGridLength(1, DataGridLengthUnitType.Star)
-            });
-        }
-    }
-
-    private DataTemplate GetDataTemplateForStringCell(string bindingPath)
-    {
-        var dataTemplate = (DataTemplate)mainWindow.DgItems.Resources["ItemValueCellTemplate"];
-        var xaml = XamlWriter.Save(dataTemplate!);
-        xaml = xaml.Replace(
-            "{DynamicResource PLACEHOLDER}",
-            "{Binding Path=" + bindingPath + ", Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}");
-
-        var stringReader = new StringReader(xaml);
-
-        var xmlReader = XmlReader.Create(stringReader);
-
-        return (DataTemplate)XamlReader.Load(xmlReader);
-    }
-
-    private static string GetColumnHeader(string languageName)
-    {
-        return $"{new CultureInfo(languageName).DisplayName}\n{languageName}";
-    }
-
     private static string GetLanguageDirectory(string language)
     {
         return Path.Combine(GetSolutionDirectory(), "LanguageFiles", language);
@@ -634,4 +623,43 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
             return string.Empty;
         return Regex.Replace(previousItemName, "\\d+$", match => (int.Parse(match.Value) + 1).ToString());
     }
+
+    private static T FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
+    {
+        if (parent == null)
+            return null;
+
+        for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+        {
+            var child = VisualTreeHelper.GetChild(parent, i);
+            if (child is T tChild)
+                return tChild;
+
+            var result = FindVisualChild<T>(child);
+            if (result != null)
+                return result;
+        }
+
+        return null;
+    }
+
+    private DataGrid GetSelectedTabDataGrid()
+    {
+        if (mainWindow.TcEditors.SelectedItem == null)
+            return null;
+
+        // Находим ContentPresenter, который отображает контент выбранной вкладки
+        var contentPresenter = FindVisualChild<ContentPresenter>(mainWindow.TcEditors);
+        if (contentPresenter == null)
+            return null;
+
+        // Попробуем получить DataGrid по имени, если оно задано
+        if (contentPresenter.ContentTemplate != null &&
+            contentPresenter.ContentTemplate.FindName("PART_DataGrid", contentPresenter) is DataGrid namedGrid)
+            return namedGrid;
+
+        // Если имени нет — ищем DataGrid визуально
+        return FindVisualChild<DataGrid>(contentPresenter);
+    }
+
 }
