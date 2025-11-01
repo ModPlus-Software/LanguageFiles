@@ -1511,6 +1511,7 @@
     <tcm14>关闭所有文档不保存</tcm14>
     <tcm15>关闭除当前外所有文档不保存</tcm15>
   </RevitDlls>
+  <!-- todo после версии 9.3.0 имена типов, параметров и расчетных характеристик вынесены в отдельные узлы -->
   <RengaDlls
     LocalName="Renga的工作库">
     <h1>MODPLUS设置</h1>
@@ -1761,4 +1762,412 @@ dоп=8ds，当ds ≥ 20 mm；</r1>
     <rce16>无法在中心不同的弧上安装钢筋连接器</rce16>
     <rce17>无法使用连接器连接直线段和弧线段</rce17>
   </ReinforcementCoupler>
+  <RengaEntityTypes>
+    <AirAccessory>风管附件</AirAccessory>
+    <AirAccessoryStyle>风管附件样式</AirAccessoryStyle>
+    <AirDuct>风管</AirDuct>
+    <AirDuctStyle>风管样式</AirDuctStyle>
+    <AirFitting>风管配件</AirFitting>
+    <AirFittingStyle>风管配件样式</AirFittingStyle>
+    <AngularDimension>角度标注</AngularDimension>
+    <Assembly>装配样式</Assembly>
+    <AssemblyInstance>装配</AssemblyInstance>
+    <Beam>梁</Beam>
+    <BeamStyle>梁样式</BeamStyle>
+    <Column>柱</Column>
+    <ColumnStyle>柱样式</ColumnStyle>
+    <DiametralDimension>直径标注</DiametralDimension>
+    <Door>门</Door>
+    <DoorStyle>门样式</DoorStyle>
+    <ElectricCircuitLineStyle>电气线路样式</ElectricCircuitLineStyle>
+    <ElectricDistributionBoard>配电箱</ElectricDistributionBoard>
+    <ElectricDistributionBoardStyle>配电箱样式</ElectricDistributionBoardStyle>
+    <ElectricalCircuitLine>电气线路</ElectricalCircuitLine>
+    <ElectricalConductorStyle>导线样式</ElectricalConductorStyle>
+    <Element>构件</Element>
+    <ElementStyle>构件样式</ElementStyle>
+    <Equipment>设备</Equipment>
+    <EquipmentStyle>设备样式</EquipmentStyle>
+    <Elevation>立面</Elevation>
+    <Floor>楼板</Floor>
+    <Hatch>模型填充图案</Hatch>
+    <Hole>孔洞</Hole>
+    <HoleStyle>孔洞样式</HoleStyle>
+    <IsolatedFoundation>独立基础</IsolatedFoundation>
+    <Level>标高</Level>
+    <LightingFixture>照明灯具</LightingFixture>
+    <LightingFixtureStyle>照明灯具样式</LightingFixtureStyle>
+    <Line3D>模型线</Line3D>
+    <LinearDimension>线性标注</LinearDimension>
+    <LinkedModel>三维模型</LinkedModel>
+    <MechanicalEquipment>通风设备</MechanicalEquipment>
+    <MechanicalEquipmentStyle>通风设备样式</MechanicalEquipmentStyle>
+    <ModelText>模型文字</ModelText>
+    <Opening>开口</Opening>
+    <Pipe>管道</Pipe>
+    <PipeAccessory>管道附件</PipeAccessory>
+    <PipeAccessoryStyle>管道附件样式</PipeAccessoryStyle>
+    <PipeFitting>管道配件</PipeFitting>
+    <PipeFittingStyle>管道配件样式</PipeFittingStyle>
+    <PipeStyle>管道样式</PipeStyle>
+    <Plate>板</Plate>
+    <PlateStyle>板样式</PlateStyle>
+    <PlumbingFixture>卫生设备</PlumbingFixture>
+    <PlumbingFixtureStyle>卫生设备样式</PlumbingFixtureStyle>
+    <RadialDimension>半径标注</RadialDimension>
+    <Railing>栏杆</Railing>
+    <Ramp>坡道</Ramp>
+    <Rebar>钢筋</Rebar>
+    <RebarStyle>钢筋样式</RebarStyle>
+    <Roof>屋顶</Roof>
+    <Room>房间</Room>
+    <RoutePoint>布线路点</RoutePoint>
+    <Section>剖面</Section>
+    <Stair>楼梯</Stair>
+    <Wall>墙</Wall>
+    <Window>窗</Window>
+    <WindowStyle>窗样式</WindowStyle>
+    <WiringAccessory>电气装置</WiringAccessory>
+    <WiringAccessoryStyle>电气装置样式</WiringAccessoryStyle>
+  </RengaEntityTypes>
+  <RengaParameters>
+    <AssemblyHorizontalOffset>装配水平偏移</AssemblyHorizontalOffset>
+    <AssemblyId>装配样式 ID</AssemblyId>
+    <AssemblyNutationAngle>装配章动角</AssemblyNutationAngle>
+    <AssemblyPositionRelativeToAxis>装配相对于轴的位置</AssemblyPositionRelativeToAxis>
+    <AssemblyPrecessionAngle>装配进动角</AssemblyPrecessionAngle>
+    <AssemblySpinAngle>装配旋转角</AssemblySpinAngle>
+    <AssemblyVerticalOffset>装配垂直偏移</AssemblyVerticalOffset>
+    <BeamEnd>梁端</BeamEnd>
+    <BeamHorizontalOffset>梁剖面水平偏移</BeamHorizontalOffset>
+    <BeamPositionRelativeToAxis>梁剖面相对于轴的位置</BeamPositionRelativeToAxis>
+    <BeamRotationAngle>梁旋转角</BeamRotationAngle>
+    <BeamStart>梁起点</BeamStart>
+    <BeamStyleId>梁样式 ID</BeamStyleId>
+    <BeamVerticalOffset>梁剖面垂直偏移</BeamVerticalOffset>
+    <Building>建筑</Building>
+    <BuildingAddress>建筑地址</BuildingAddress>
+    <BuildingDescription>建筑描述</BuildingDescription>
+    <BuildingLongName>建筑全称</BuildingLongName>
+    <BuildingName>建筑编号</BuildingName>
+    <Casing>门套</Casing>
+    <CasingDepth>门套深度</CasingDepth>
+    <CasingWidth>门套宽度</CasingWidth>
+    <Category>类别</Category>
+    <CategoryId>类别唯一 ID</CategoryId>
+    <Color>材料颜色</Color>
+    <ColumnHeight>柱高度</ColumnHeight>
+    <ColumnHorizontalOffset>柱剖面水平偏移</ColumnHorizontalOffset>
+    <ColumnPositionRelativeToAxis>柱剖面相对于轴的位置</ColumnPositionRelativeToAxis>
+    <ColumnRotationAngle>柱旋转角</ColumnRotationAngle>
+    <ColumnStyleId>柱样式 ID</ColumnStyleId>
+    <ColumnVerticalOffset>柱剖面垂直偏移</ColumnVerticalOffset>
+    <ConductorCoreMaterial>导线芯材质</ConductorCoreMaterial>
+    <ConductorCrossSectionArea>导线截面积</ConductorCrossSectionArea>
+    <ConductorInsulationMaterial>导线绝缘材料</ConductorInsulationMaterial>
+    <ConductorNumberCores>导线芯数</ConductorNumberCores>
+    <ConductorOutsideDiameter>导线外径</ConductorOutsideDiameter>
+    <ConductorRatedVoltage>导线额定电压</ConductorRatedVoltage>
+    <ConductorStyleId>导线样式 ID</ConductorStyleId>
+    <ConductorTemperatureRating>导线最高工作温度</ConductorTemperatureRating>
+    <Count>数量</Count>
+    <DimensionLandingLineOrientation>—</DimensionLandingLineOrientation>
+    <DimensionTextStyleId>—</DimensionTextStyleId>
+    <DimensionValue>—</DimensionValue>
+    <DimensionValueType>—</DimensionValueType>
+    <DistributionBoardHorizontalOffset>配电箱水平偏移</DistributionBoardHorizontalOffset>
+    <DistributionBoardPositionRelativeToAxis>配电箱相对于轴的位置</DistributionBoardPositionRelativeToAxis>
+    <DistributionBoardRotationAngle>配电箱旋转角</DistributionBoardRotationAngle>
+    <DistributionBoardStyleId>配电箱样式 ID</DistributionBoardStyleId>
+    <DistributionBoardVerticalOffset>配电箱垂直偏移</DistributionBoardVerticalOffset>
+    <DoorApertureShape>门洞形状</DoorApertureShape>
+    <DoorArcHeight>门拱高</DoorArcHeight>
+    <DoorDepth>门厚度</DoorDepth>
+    <DoorHeight>门高度</DoorHeight>
+    <DoorLiningDepth>门框深度</DoorLiningDepth>
+    <DoorLiningThickness>门框厚度</DoorLiningThickness>
+    <DoorOrientation>门方向</DoorOrientation>
+    <DoorPosition>门洞位置</DoorPosition>
+    <DoorStyleId>门样式 ID</DoorStyleId>
+    <DoorTrapeziumHeight>门梯形高度</DoorTrapeziumHeight>
+    <DoorWidth>门宽度</DoorWidth>
+    <DuctAccessoryAngle>风管附件旋转角</DuctAccessoryAngle>
+    <DuctAccessoryStyleId>风管附件样式 ID</DuctAccessoryStyleId>
+    <DuctAngle>风管剖面旋转角</DuctAngle>
+    <DuctBendingRadius>风管弯曲半径</DuctBendingRadius>
+    <DuctFittingRotationAngle>风管配件旋转角</DuctFittingRotationAngle>
+    <DuctFittingStyleId>风管配件样式 ID</DuctFittingStyleId>
+    <DuctHeight>风管高度</DuctHeight>
+    <DuctStyleId>风管样式 ID</DuctStyleId>
+    <DuctWallThickness>风管壁厚</DuctWallThickness>
+    <DuctWidth>风管宽度</DuctWidth>
+    <ElectricalCircuitLineStyleId>电路线样式 ID</ElectricalCircuitLineStyleId>
+    <ElectricalConductorNumber>导体数量</ElectricalConductorNumber>
+    <ElementDepth>元素深度</ElementDepth>
+    <ElementHeight>元素高度</ElementHeight>
+    <ElementHorizontalOffset>元素水平偏移</ElementHorizontalOffset>
+    <ElementPositionRelativeToAxis>元素相对于轴的位置</ElementPositionRelativeToAxis>
+    <ElementStyleId>元素样式 ID</ElementStyleId>
+    <ElementVerticalOffset>元素垂直偏移</ElementVerticalOffset>
+    <ElementWidth>元素宽度</ElementWidth>
+    <ElevationName>立面名称</ElevationName>
+    <EntityName>实体名称</EntityName>
+    <EquipmentHorizontalOffset>设备水平偏移</EquipmentHorizontalOffset>
+    <EquipmentPositionRelativeToAxis>设备相对于轴的位置</EquipmentPositionRelativeToAxis>
+    <EquipmentStyleId>设备样式 ID</EquipmentStyleId>
+    <EquipmentVerticalOffset>设备垂直偏移</EquipmentVerticalOffset>
+    <FloorAngleOfReinforcement>楼板钢筋角度</FloorAngleOfReinforcement>
+    <FloorThickness>楼板厚度</FloorThickness>
+    <FrameDepth>框架深度</FrameDepth>
+    <FrameThickness>框架厚度</FrameThickness>
+    <GridLineExtension>轴线延伸</GridLineExtension>
+    <GridLineName>轴线名称</GridLineName>
+    <HatchAngle>—</HatchAngle>
+    <HatchScale>—</HatchScale>
+    <HatchStyleId>—</HatchStyleId>
+    <HoleDepth>孔深度</HoleDepth>
+    <HoleExtent>—</HoleExtent>
+    <HoleHorizontalOffset>孔水平偏移</HoleHorizontalOffset>
+    <HolePositionRelativeToAxis>孔相对于轴的位置</HolePositionRelativeToAxis>
+    <HoleRotationAngle>孔旋转角</HoleRotationAngle>
+    <HoleStyleId>孔样式 ID</HoleStyleId>
+    <HoleVerticalOffset>孔垂直偏移</HoleVerticalOffset>
+    <HorizontalMullionThickness>横竖框厚度</HorizontalMullionThickness>
+    <ImageHeight>图像高度</ImageHeight>
+    <ImageHorizontalOffset>图像水平偏移</ImageHorizontalOffset>
+    <ImageLinkId>图像链接 ID</ImageLinkId>
+    <ImagePositionRelativeToAxis>图像相对于轴的位置</ImagePositionRelativeToAxis>
+    <ImageVerticalOffset>图像垂直偏移</ImageVerticalOffset>
+    <ImageWidth>图像宽度</ImageWidth>
+    <InsulationMaterialStyleID>绝缘材料样式 ID</InsulationMaterialStyleID>
+    <IsolatedFoundationDepth>独立基础深度</IsolatedFoundationDepth>
+    <IsolatedFoundationDepthTop>独立基础顶部深度</IsolatedFoundationDepthTop>
+    <IsolatedFoundationHeight>独立基础高度</IsolatedFoundationHeight>
+    <IsolatedFoundationRotationAngle>独立基础旋转角</IsolatedFoundationRotationAngle>
+    <IsolatedFoundationShape>基础形状</IsolatedFoundationShape>
+    <IsolatedFoundationWidth>独立基础宽度</IsolatedFoundationWidth>
+    <IsolatedFoundationWidthTop>独立基础顶部宽度</IsolatedFoundationWidthTop>
+    <LayeredMaterialId>多层材料 ID</LayeredMaterialId>
+    <LayerThickness>层厚度</LayerThickness>
+    <LayoutStyleId>图纸样式 ID</LayoutStyleId>
+    <LevelElevation>楼层标高</LevelElevation>
+    <LevelId>楼层 ID</LevelId>
+    <LevelName>楼层名称</LevelName>
+    <LightingFixtureHorizontalOffset>灯具水平偏移</LightingFixtureHorizontalOffset>
+    <LightingFixturePositionRelativeToAxis>灯具相对于轴的位置</LightingFixturePositionRelativeToAxis>
+    <LightingFixtureRotationAngle>灯具旋转角</LightingFixtureRotationAngle>
+    <LightingFixtureStyleId>灯具样式 ID</LightingFixtureStyleId>
+    <LightingFixtureVerticalOffset>灯具垂直偏移</LightingFixtureVerticalOffset>
+    <Line3DStyle>三维线样式 ID</Line3DStyle>
+    <LineThickness>线厚度</LineThickness>
+    <Lining>门框</Lining>
+    <LinkFileType>链接文件类型</LinkFileType>
+    <LoadType>链接加载类型</LoadType>
+    <Mark>标记</Mark>
+    <MassDensity>材料密度</MassDensity>
+    <MaterialId>材料 ID</MaterialId>
+    <MaterialsList>材料列表</MaterialsList>
+    <MaximumDuctLength>最大风管长度</MaximumDuctLength>
+    <MaximumPipeLength>最大管道长度</MaximumPipeLength>
+    <MechanicalEquipmentHorizontalOffset>机电设备水平偏移</MechanicalEquipmentHorizontalOffset>
+    <MechanicalEquipmentPositionRelativeToAxis>机电设备相对于轴的位置</MechanicalEquipmentPositionRelativeToAxis>
+    <MechanicalEquipmentStyleId>机电设备样式 ID</MechanicalEquipmentStyleId>
+    <MechanicalEquipmentVerticalOffset>机电设备垂直偏移</MechanicalEquipmentVerticalOffset>
+    <MepRouteSlope>系统坡度</MepRouteSlope>
+    <MepSystemDesignation>系统标识</MepSystemDesignation>
+    <MinimumDuctLength>最小风管长度</MinimumDuctLength>
+    <MinimumPipeLength>最小管道长度</MinimumPipeLength>
+    <ModelHorizontalOffset>三维模型水平偏移</ModelHorizontalOffset>
+    <ModelLinkId>模型链接 ID</ModelLinkId>
+    <ModelOrientation>三维模型方向</ModelOrientation>
+    <ModelPositionRelativeToAxis>三维模型相对于轴的位置</ModelPositionRelativeToAxis>
+    <ModelVerticalOffset>三维模型垂直偏移</ModelVerticalOffset>
+    <MullionThickness>竖框厚度</MullionThickness>
+    <MultipleOfCableBendingRadius>电缆弯曲半径倍数</MultipleOfCableBendingRadius>
+    <NominalDuctDiameter>风管公称直径</NominalDuctDiameter>
+    <NumberOfSteps>台阶数</NumberOfSteps>
+    <NumberOfStepsOnBalusters>每根栏杆的台阶数</NumberOfStepsOnBalusters>
+    <NutationAngle>章动角</NutationAngle>
+    <ObjectName>对象名称</ObjectName>
+    <ObjectType>对象类型</ObjectType>
+    <Offset>偏移</Offset>
+    <OpeningDepth>开口深度</OpeningDepth>
+    <OutwardSill>外窗台</OutwardSill>
+    <PageFormatHeight>页面格式高度</PageFormatHeight>
+    <PageFormatId>页面格式 ID</PageFormatId>
+    <PageFormatReferenceName>页面格式名称</PageFormatReferenceName>
+    <PageFormatWidth>页面格式宽度</PageFormatWidth>
+    <PageOrientation>页面方向</PageOrientation>
+    <PanelDepth>面板厚度</PanelDepth>
+    <PanelOffset>面板偏移</PanelOffset>
+    <ParentObjectMark>父对象标记</ParentObjectMark>
+    <ParentObjectName>父对象名称</ParentObjectName>
+    <ParentObjectType>父对象类型</ParentObjectType>
+    <ParentObjectUniqueId>父对象唯一 ID</ParentObjectUniqueId>
+    <ParentObjectVerticalOffset>父对象垂直偏移</ParentObjectVerticalOffset>
+    <PathType>链接路径类型</PathType>
+    <PipeAccessoryAngle>管件旋转角</PipeAccessoryAngle>
+    <PipeAccessoryStyleId>管件样式 ID</PipeAccessoryStyleId>
+    <PipeBendingRadius>管道弯曲半径</PipeBendingRadius>
+    <PipeFittingRotationAngle>管道配件旋转角</PipeFittingRotationAngle>
+    <PipeFittingStyleId>管道配件样式 ID</PipeFittingStyleId>
+    <PipeInsideDiameter>管道内径</PipeInsideDiameter>
+    <PipeOutsideDiameter>管道外径</PipeOutsideDiameter>
+    <PipeStyleId>管道样式 ID</PipeStyleId>
+    <PipeWallThickness>管壁厚度</PipeWallThickness>
+    <PlateHorizontalOffset>板水平偏移</PlateHorizontalOffset>
+    <PlatePositionRelativeToInsertPoint>板相对于轴的位置</PlatePositionRelativeToInsertPoint>
+    <PlateStyleId>板样式 ID</PlateStyleId>
+    <PlateThickness>板厚度</PlateThickness>
+    <PlateVerticalOffset>板垂直偏移</PlateVerticalOffset>
+    <PlumbingFixtureHorizontalOffset>管道装置水平偏移</PlumbingFixtureHorizontalOffset>
+    <PlumbingFixturePositionRelativeToAxis>管道装置相对于轴的位置</PlumbingFixturePositionRelativeToAxis>
+    <PlumbingFixtureStyleId>管道装置样式 ID</PlumbingFixtureStyleId>
+    <PlumbingFixtureVerticalOffset>管道装置垂直偏移</PlumbingFixtureVerticalOffset>
+    <PrecessionAngle>进动角</PrecessionAngle>
+    <ProfileId>轮廓 ID</ProfileId>
+    <ProfileType>轮廓类型</ProfileType>
+    <Project>项目</Project>
+    <ProjectDescription>项目描述</ProjectDescription>
+    <ProjectLongName>项目全称</ProjectLongName>
+    <ProjectName>项目名称</ProjectName>
+    <ProjectPhase>项目阶段</ProjectPhase>
+    <RailingHeight>栏杆高度</RailingHeight>
+    <RailingOffset>栏杆偏移</RailingOffset>
+    <RampHeight>坡道高度</RampHeight>
+    <RampHorizontalOffset>坡道水平偏移</RampHorizontalOffset>
+    <RampPositionRelativeToBaseline>坡道相对于基线的位置</RampPositionRelativeToBaseline>
+    <RampShape>坡道形状</RampShape>
+    <RampSlope>坡道坡度</RampSlope>
+    <RampThickness>坡道厚度</RampThickness>
+    <RampWidth>坡道宽度</RampWidth>
+    <RebarDiameter>钢筋直径</RebarDiameter>
+    <RebarStyleId>钢筋样式 ID</RebarStyleId>
+    <ReinforcementGradeId>钢筋等级 ID</ReinforcementGradeId>
+    <ReinforcementGradeTensileStrength>钢筋等级抗拉强度</ReinforcementGradeTensileStrength>
+    <ReinforcementStyleId>钢筋样式 ID</ReinforcementStyleId>
+    <ReinforcementUnitStyleId>钢筋单元样式 ID</ReinforcementUnitStyleId>
+    <RiserHeight>踏步高度</RiserHeight>
+    <RoofThickness>屋顶厚度</RoofThickness>
+    <RoomHeight>房间高度</RoomHeight>
+    <RoomName>房间名称</RoomName>
+    <RoomNumber>房间编号</RoomNumber>
+    <RoutePointName>路径点名称</RoutePointName>
+    <SavedPath>已保存的链接路径</SavedPath>
+    <Scale>比例</Scale>
+    <SectionLineExtension>剖面线延伸</SectionLineExtension>
+    <SectionName>剖面名称</SectionName>
+    <Sill>窗台</Sill>
+    <Site>场地</Site>
+    <SiteAddress>场地地址</SiteAddress>
+    <SiteDescription>场地描述</SiteDescription>
+    <SiteLongName>场地全称</SiteLongName>
+    <SiteName>场地名称</SiteName>
+    <SpaceBetweenBalusters>栏杆间距</SpaceBetweenBalusters>
+    <SpinAngle>旋转角</SpinAngle>
+    <StairHeight>楼梯高度</StairHeight>
+    <StairHorizontalOffset>楼梯水平偏移</StairHorizontalOffset>
+    <StairPositionRelativeToBaseline>楼梯相对于基线的位置</StairPositionRelativeToBaseline>
+    <StairShape>楼梯形状</StairShape>
+    <StairSlope>楼梯坡度</StairSlope>
+    <StairThickness>楼梯厚度</StairThickness>
+    <StairWidth>楼梯宽度</StairWidth>
+    <SystemCategory>系统类别</SystemCategory>
+    <SystemGroup>系统组</SystemGroup>
+    <SystemsList>系统列表</SystemsList>
+    <SystemStyleId>系统样式 ID</SystemStyleId>
+    <ThermalConductivity>导热系数</ThermalConductivity>
+    <Threshold>门槛</Threshold>
+    <ThresholdThickness>门槛厚度</ThresholdThickness>
+    <TopicId>主题 ID</TopicId>
+    <TransomConstruction>横梁结构</TransomConstruction>
+    <TransomHeight>横梁高度</TransomHeight>
+    <TreadDepth>踏步深度</TreadDepth>
+    <UniformScaling>均匀缩放</UniformScaling>
+    <UniqueId>唯一 ID</UniqueId>
+    <VerticalMullionThickness>竖框厚度</VerticalMullionThickness>
+    <WallFoundationHeight>条形基础高度</WallFoundationHeight>
+    <WallFoundationHorizontalOffset>条形基础水平偏移</WallFoundationHorizontalOffset>
+    <WallFoundationPositionRelativeToBaseline>条形基础相对于基线的位置</WallFoundationPositionRelativeToBaseline>
+    <WallFoundationShape>基础形状</WallFoundationShape>
+    <WallFoundationThickness>条形基础厚度</WallFoundationThickness>
+    <WallFoundationThicknessTop>条形基础顶部厚度</WallFoundationThicknessTop>
+    <WallHeight>墙高度</WallHeight>
+    <WallHorizontalOffset>墙水平偏移</WallHorizontalOffset>
+    <WallPositionRelativeToBaseline>墙相对于基线的位置</WallPositionRelativeToBaseline>
+    <WallThickness>墙厚度</WallThickness>
+    <WindowApertureShape>窗洞形状</WindowApertureShape>
+    <WindowArcHeight>窗拱高</WindowArcHeight>
+    <WindowDepth>窗深度</WindowDepth>
+    <WindowHeight>窗高度</WindowHeight>
+    <WindowLiningDepth>窗框深度</WindowLiningDepth>
+    <WindowLiningThickness>窗框厚度</WindowLiningThickness>
+    <WindowOrientation>窗方向</WindowOrientation>
+    <WindowPosition>窗洞位置</WindowPosition>
+    <WindowStyleId>窗样式 ID</WindowStyleId>
+    <WindowTrapeziumHeight>窗梯形高度</WindowTrapeziumHeight>
+    <WindowWidth>窗宽度</WindowWidth>
+    <WiringAccessoryHorizontalOffset>电气附件水平偏移</WiringAccessoryHorizontalOffset>
+    <WiringAccessoryPositionRelativeToAxis>电气附件相对于轴的位置</WiringAccessoryPositionRelativeToAxis>
+    <WiringAccessoryRotationAngle>电气附件旋转角</WiringAccessoryRotationAngle>
+    <WiringAccessoryStyleId>电气附件样式 ID</WiringAccessoryStyleId>
+    <WiringAccessoryVerticalOffset>电气附件垂直偏移</WiringAccessoryVerticalOffset>
+  </RengaParameters>
+  <RengaQuantities>
+    <Area>面积</Area>
+    <Count>数量</Count>
+    <CrossSectionOverallHeight>横截面总高度</CrossSectionOverallHeight>
+    <CrossSectionOverallWidth>横截面总宽度</CrossSectionOverallWidth>
+    <GlazingArea>玻璃面积</GlazingArea>
+    <GrossArea>总面积</GrossArea>
+    <GrossCeilingArea>天花板总面积</GrossCeilingArea>
+    <GrossCrossSectionArea>横截面总面积</GrossCrossSectionArea>
+    <GrossFloorArea>地板总面积</GrossFloorArea>
+    <GrossMass>总质量</GrossMass>
+    <GrossPerimeter>总周长</GrossPerimeter>
+    <GrossSideArea>纵向剖面总面积</GrossSideArea>
+    <GrossSideAreaLeft>左侧面总面积</GrossSideAreaLeft>
+    <GrossSideAreaRight>右侧面总面积</GrossSideAreaRight>
+    <GrossVolume>总体积</GrossVolume>
+    <GrossWallArea>墙体总面积</GrossWallArea>
+    <InnerSurfaceArea>内表面积</InnerSurfaceArea>
+    <InnerSurfaceExternalArea>内表面外侧面积</InnerSurfaceExternalArea>
+    <InnerSurfaceInternalArea>内表面内侧面积</InnerSurfaceInternalArea>
+    <NetArea>净面积</NetArea>
+    <NetCeilingArea>天花板净面积</NetCeilingArea>
+    <NetCrossSectionArea>横截面净面积</NetCrossSectionArea>
+    <NetFloorArea>地板净面积</NetFloorArea>
+    <NetFootprintArea>底面净面积</NetFootprintArea>
+    <NetMass>净质量</NetMass>
+    <NetPerimeter>净周长</NetPerimeter>
+    <NetSideArea>纵向剖面净面积</NetSideArea>
+    <NetSideAreaLeft>左侧面净面积</NetSideAreaLeft>
+    <NetSideAreaRight>右侧面净面积</NetSideAreaRight>
+    <NetVolume>净体积</NetVolume>
+    <NetWallArea>墙体净面积</NetWallArea>
+    <NominalArea>标称面积</NominalArea>
+    <NominalHeight>标称高度</NominalHeight>
+    <NominalLength>标称长度</NominalLength>
+    <NominalThickness>标称厚度</NominalThickness>
+    <NominalWidth>标称宽度</NominalWidth>
+    <NumberOfRiser>踏步数</NumberOfRiser>
+    <NumberOfTreads>踏面数</NumberOfTreads>
+    <OuterSurfaceArea>外表面积</OuterSurfaceArea>
+    <OverallDepth>总深度</OverallDepth>
+    <OverallHeight>总高度</OverallHeight>
+    <OverallLength>总长度</OverallLength>
+    <OverallWidth>总宽度</OverallWidth>
+    <Perimeter>周长</Perimeter>
+    <RelativeObjectBaselineBottomElevation>对象基线底部相对标高</RelativeObjectBaselineBottomElevation>
+    <RelativeObjectBaselineTopElevation>对象基线上部相对标高</RelativeObjectBaselineTopElevation>
+    <RelativeObjectBottomElevation>对象底部相对标高</RelativeObjectBottomElevation>
+    <RelativeObjectTopElevation>对象顶部相对标高</RelativeObjectTopElevation>
+    <RiserHeight>踏步高度</RiserHeight>
+    <SlopeAngle>坡度角</SlopeAngle>
+    <TotalRebarLength>钢筋总长度</TotalRebarLength>
+    <TotalRebarMass>钢筋总质量</TotalRebarMass>
+    <TotalSurfaceArea>总表面积</TotalSurfaceArea>
+    <TreadLength>踏面宽度</TreadLength>
+    <Volume>体积</Volume>
+  </RengaQuantities>
 </ModPlus>
