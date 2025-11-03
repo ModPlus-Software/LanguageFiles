@@ -105,6 +105,10 @@
                                    Text="Has duplicate values!"
                                    Visibility="{Binding Path=SelectedNode.HasItemsWithSameValue, Converter={StaticResource BooleanToVisibilityConverter}}" />
 
+                        <Button Grid.Column="1"
+                                Visibility="Hidden"
+                                Content="Height holder"/>
+
                         <Button Grid.Column="3"
                                 Command="{Binding Path=SelectedNode.SearchWithDuplicateNamesOrValuesCommand}"
                                 Content="Search them"

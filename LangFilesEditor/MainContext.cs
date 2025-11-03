@@ -3,7 +3,6 @@
 using JetBrains.Annotations;
 using Structure;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -19,6 +18,9 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 {
     private readonly Dictionary<string, List<string>> _itemsToRemove = [];
     private Node _selectedNode;
+
+    // Кэш найденных DataGrid'ов: ключ — Node, значение — DataGrid
+    private readonly Dictionary<Node, WeakReference<DataGrid>> _gridCache = new();
 
     /// <summary>
     /// Порядок языков
@@ -643,13 +645,25 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         if (selectedNode == null)
             return null;
 
-        // Ищем ContentPresenter для выбранного Node
+        // 1️⃣ Попробуем взять из кэша
+        if (_gridCache.TryGetValue(selectedNode, out var weakRef) &&
+            weakRef.TryGetTarget(out var cachedGrid))
+            return cachedGrid;
+
+        // 2️⃣ Иначе — ищем в визуальном дереве
         var presenter = FindContentPresenterByDataContext(mainWindow.TcEditors, selectedNode);
         if (presenter == null)
             return null;
 
-        // Находим DataGrid внутри этого ContentPresenter
-        return FindVisualChild<DataGrid>(presenter);
+        var grid = FindVisualChild<DataGrid>(presenter);
+        if (grid != null)
+        {
+            _gridCache[selectedNode] = new WeakReference<DataGrid>(grid);
+            // подписываемся, чтобы удалить из кэша при выгрузке
+            grid.Unloaded += (s, _) => _gridCache.Remove(selectedNode);
+        }
+
+        return grid;
     }
 
     private static ContentPresenter FindContentPresenterByDataContext(DependencyObject parent, object dataContext)
@@ -665,7 +679,6 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
             if (child is ContentPresenter cp && ReferenceEquals(cp.DataContext, dataContext))
                 return cp;
 
-            // рекурсивный поиск, потому что ContentPresenter лежит глубже
             var result = FindContentPresenterByDataContext(child, dataContext);
             if (result != null)
                 return result;
@@ -694,5 +707,4 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
         return null;
     }
-
 }
