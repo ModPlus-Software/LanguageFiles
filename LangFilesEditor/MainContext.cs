@@ -58,6 +58,11 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     }
 
     /// <summary>
+    /// Команда для выбора узла из UI
+    /// </summary>
+    public ICommand SelectNodeCommand => new RelayCommand<Node>(node => SelectedNode = node);
+
+    /// <summary>
     /// Is visible <see cref="SelectedNode"/> content
     /// </summary>
     public bool IsVisibleSelectedNodeContent => SelectedNode != null;
@@ -86,7 +91,14 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     /// </summary>
     public ICommand CloseEditorTabCommand => new RelayCommand(() => Utils.SafeExecute(() =>
     {
+        var index = EditNodes.IndexOf(SelectedNode);
         EditNodes.Remove(SelectedNode);
+        if (index - 1 > -1)
+            SelectedNode = EditNodes[index - 1];
+        else if (index < EditNodes.Count)
+            SelectedNode = EditNodes[index];
+        else
+            SelectedNode = null;
     }));
 
     /// <summary>
@@ -645,9 +657,6 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
     private DataGrid GetSelectedTabDataGrid()
     {
-        if (mainWindow.TcEditors.SelectedItem == null)
-            return null;
-
         // Находим ContentPresenter, который отображает контент выбранной вкладки
         var contentPresenter = FindVisualChild<ContentPresenter>(mainWindow.TcEditors);
         if (contentPresenter == null)
