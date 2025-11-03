@@ -3,6 +3,7 @@
 using JetBrains.Annotations;
 using Structure;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -636,14 +637,53 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         return Regex.Replace(previousItemName, "\\d+$", match => (int.Parse(match.Value) + 1).ToString());
     }
 
+    private DataGrid GetSelectedTabDataGrid()
+    {
+        var selectedNode = SelectedNode;
+        if (selectedNode == null)
+            return null;
+
+        // Ищем ContentPresenter для выбранного Node
+        var presenter = FindContentPresenterByDataContext(mainWindow.TcEditors, selectedNode);
+        if (presenter == null)
+            return null;
+
+        // Находим DataGrid внутри этого ContentPresenter
+        return FindVisualChild<DataGrid>(presenter);
+    }
+
+    private static ContentPresenter FindContentPresenterByDataContext(DependencyObject parent, object dataContext)
+    {
+        if (parent == null)
+            return null;
+
+        int count = VisualTreeHelper.GetChildrenCount(parent);
+        for (int i = 0; i < count; i++)
+        {
+            var child = VisualTreeHelper.GetChild(parent, i);
+
+            if (child is ContentPresenter cp && ReferenceEquals(cp.DataContext, dataContext))
+                return cp;
+
+            // рекурсивный поиск, потому что ContentPresenter лежит глубже
+            var result = FindContentPresenterByDataContext(child, dataContext);
+            if (result != null)
+                return result;
+        }
+
+        return null;
+    }
+
     private static T FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
     {
         if (parent == null)
             return null;
 
-        for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+        int count = VisualTreeHelper.GetChildrenCount(parent);
+        for (int i = 0; i < count; i++)
         {
             var child = VisualTreeHelper.GetChild(parent, i);
+
             if (child is T tChild)
                 return tChild;
 
@@ -653,22 +693,6 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         }
 
         return null;
-    }
-
-    private DataGrid GetSelectedTabDataGrid()
-    {
-        // Находим ContentPresenter, который отображает контент выбранной вкладки
-        var contentPresenter = FindVisualChild<ContentPresenter>(mainWindow.TcEditors);
-        if (contentPresenter == null)
-            return null;
-
-        // Попробуем получить DataGrid по имени, если оно задано
-        if (contentPresenter.ContentTemplate != null &&
-            contentPresenter.ContentTemplate.FindName("PART_DataGrid", contentPresenter) is DataGrid namedGrid)
-            return namedGrid;
-
-        // Если имени нет — ищем DataGrid визуально
-        return FindVisualChild<DataGrid>(contentPresenter);
     }
 
 }
