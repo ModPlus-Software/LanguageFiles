@@ -231,10 +231,7 @@
                                               ItemsSource="{Binding Path=.Items}"
                                               Loaded="DgItems_OnLoaded"
                                               PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
-                                              ScrollViewer.CanContentScroll="True"
-                                              SelectionMode="Single"
-                                              VirtualizingPanel.IsVirtualizing="True"
-                                              VirtualizingPanel.VirtualizationMode="Recycling">
+                                              ScrollViewer.CanContentScroll="False">
 
                                         <DataGrid.RowStyle>
                                             <Style TargetType="{x:Type DataGridRow}">
