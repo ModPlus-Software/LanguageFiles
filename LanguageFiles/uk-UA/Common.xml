@@ -65,6 +65,7 @@
     <family>Сімейство</family>
     <file>Файл</file>
     <formula>Формула</formula>
+    <g>г</g>
     <group>Група</group>
     <height>Висота</height>
     <hide>Приховати</hide>
@@ -1511,7 +1512,7 @@
     <tcm14>Закрити всі документи без збереження</tcm14>
     <tcm15>Закрити всі документи, крім поточного, без збереження</tcm15>
   </RevitDlls>
-  <!-- todo после версии 9.3.0 имена типов, параметров и расчетных характеристик вынесены в отдельные узлы -->
+  <!-- todo после версии 9.3.0 имена типов и расчетных характеристик вынесены в отдельные узлы -->
   <RengaDlls
     LocalName="Робочі бібліотеки для Renga">
     <h1>НАЛАШТУВАННЯ MODPLUS</h1>
@@ -1552,6 +1553,25 @@
     <ef18>Властивості</ef18>
     <ef19>Параметри</ef19>
     <ef20>Розрахункові характеристики</ef20>
+    <ef21>Ідентифікатор атрибуту</ef21>
+    <ef22>Значення:</ef22>
+    <ef23>Видалити умову</ef23>
+    <ef24>Додати умову</ef24>
+    <ef25>Проста умова</ef25>
+    <ef26>Групова умова</ef26>
+    <ef27>Об’єкт підходить, якщо</ef27>
+    <ef28>збігаються всі умови</ef28>
+    <ef29>збігається хоч одна умова</ef29>
+    <et1>Равно</et1>
+    <et2>Більше</et2>
+    <et3>Меньше</et3>
+    <et4>Більше або дорівнює</et4>
+    <et5>Меньше або дорівнює</et5>
+    <et6>Не дорівнює</et6>
+    <et7>Містить</et7>
+    <et8>Наявність атрибуту</et8>
+    <et9>Не містить</et9>
+    <et10>Відсутність атрибуту</et10>
     <name>Назва</name>
     <AirAccessory>Аксесуар повітропроводу</AirAccessory>
     <AirDuct>Провод повітропроводу</AirDuct>
@@ -1628,7 +1648,7 @@
     <PropertyType_Volume>Об'єм</PropertyType_Volume>
     <Logical_False>Ні</Logical_False>
     <Logical_True>Так</Logical_True>
-    <Logical_Indeterminate>Невизначений</Logical_Indeterminate>
+    <Logical_Indeterminate>Невідомо</Logical_Indeterminate>
     <QuantityType_Unknown>Невідомий</QuantityType_Unknown>
     <QuantityType_Count>Кількість</QuantityType_Count>
     <QuantityType_Length>Довжина</QuantityType_Length>
@@ -1763,22 +1783,30 @@ dоп=8ds при ds ≥ 20 мм;</r1>
     <rce17>Неможливо з'єднати за допомогою з'єднувача прямий відрізок з дуговим відрізком</rce17>
   </ReinforcementCoupler>
   <RengaEntityTypes>
-    <AirAccessory>Аксесуар повітроводу</AirAccessory>
-    <AirAccessoryStyle>Стиль аксесуара повітроводу</AirAccessoryStyle>
-    <AirDuct>Повітровід</AirDuct>
-    <AirDuctStyle>Стиль повітроводу</AirDuctStyle>
-    <AirFitting>Деталь повітроводу</AirFitting>
-    <AirFittingStyle>Стиль деталі повітроводу</AirFittingStyle>
+    <AirAccessory>Аксесуар повітропроводу</AirAccessory>
+    <AirAccessoryStyle>Стиль аксесуара повітропроводу</AirAccessoryStyle>
+    <AirDuct>Повітропровід</AirDuct>
+    <AirDuctStyle>Стиль повітропроводу</AirDuctStyle>
+    <AirEquipment>Повітряне обладнання</AirEquipment>
+    <AirFitting>Деталь повітропроводу</AirFitting>
+    <AirFittingStyle>Стиль деталі повітропроводу</AirFittingStyle>
     <AngularDimension>Кутовий розмір</AngularDimension>
     <Assembly>Стиль збірки</Assembly>
     <AssemblyInstance>Збірка</AssemblyInstance>
+    <Axis>Вісь</Axis>
     <Beam>Балка</Beam>
     <BeamStyle>Стиль балки</BeamStyle>
     <Column>Колона</Column>
     <ColumnStyle>Стиль колони</ColumnStyle>
     <DiametralDimension>Діаметральний розмір</DiametralDimension>
+    <Dimension>Розмір</Dimension>
+    <DistributionBoard>Електричний розподільний щит</DistributionBoard>
     <Door>Двері</Door>
     <DoorStyle>Стиль дверей</DoorStyle>
+    <DrawingText>Текст</DrawingText>
+    <Duct>Повітропровід</Duct>
+    <DuctAccessory>Аксесуар повітропроводу</DuctAccessory>
+    <DuctFitting>Деталь повітропроводу</DuctFitting>
     <ElectricCircuitLineStyle>Стиль електричної лінії</ElectricCircuitLineStyle>
     <ElectricDistributionBoard>Електричний розподільний щит</ElectricDistributionBoard>
     <ElectricDistributionBoardStyle>Стиль електричного розподільного щита</ElectricDistributionBoardStyle>
@@ -1786,34 +1814,40 @@ dоп=8ds при ds ≥ 20 мм;</r1>
     <ElectricalConductorStyle>Стиль провідника</ElectricalConductorStyle>
     <Element>Елемент</Element>
     <ElementStyle>Стиль елемента</ElementStyle>
+    <Elevation>Фасад</Elevation>
     <Equipment>Обладнання</Equipment>
     <EquipmentStyle>Стиль обладнання</EquipmentStyle>
-    <Elevation>Фасад</Elevation>
     <Floor>Перекриття</Floor>
     <Hatch>Штрихування моделі</Hatch>
     <Hole>Отвір</Hole>
     <HoleStyle>Стиль отвору</HoleStyle>
+    <IfcObject>IFC-об’єкт</IfcObject>
     <IsolatedFoundation>Стовпчастий фундамент</IsolatedFoundation>
     <Level>Рівень</Level>
+    <LightFixture>Світильник</LightFixture>
     <LightingFixture>Світильник</LightingFixture>
     <LightingFixtureStyle>Стиль світильника</LightingFixtureStyle>
     <Line3D>Лінія моделі</Line3D>
     <LinearDimension>Лінійний розмір</LinearDimension>
+    <LineElectricalCircuit>Електрична лінія</LineElectricalCircuit>
+    <LinkedDrawing>Пов’язане креслення</LinkedDrawing>
+    <LinkedImage>Пов’язане зображення</LinkedImage>
     <LinkedModel>3D-модель</LinkedModel>
-    <MechanicalEquipment>Вентиляційне обладнання</MechanicalEquipment>
-    <MechanicalEquipmentStyle>Стиль вентиляційного обладнання</MechanicalEquipmentStyle>
+    <MechanicalEquipment>Механічне обладнання</MechanicalEquipment>
+    <MechanicalEquipmentStyle>Стиль механічного обладнання</MechanicalEquipmentStyle>
     <ModelText>Текст моделі</ModelText>
-    <Opening>Проріз</Opening>
+    <Opening>Отвір</Opening>
     <Pipe>Труба</Pipe>
     <PipeAccessory>Аксесуар трубопроводу</PipeAccessory>
     <PipeAccessoryStyle>Стиль аксесуара трубопроводу</PipeAccessoryStyle>
     <PipeFitting>Деталь трубопроводу</PipeFitting>
     <PipeFittingStyle>Стиль деталі трубопроводу</PipeFittingStyle>
+    <PipelineAccessory>Аксесуар трубопроводу</PipelineAccessory>
     <PipeStyle>Стиль труби</PipeStyle>
     <Plate>Пластина</Plate>
     <PlateStyle>Стиль пластини</PlateStyle>
-    <PlumbingFixture>Санітарно-технічне обладнання</PlumbingFixture>
-    <PlumbingFixtureStyle>Стиль санітарно-технічного обладнання</PlumbingFixtureStyle>
+    <PlumbingFixture>Сантехнічний прилад</PlumbingFixture>
+    <PlumbingFixtureStyle>Стиль сантехнічного приладу</PlumbingFixtureStyle>
     <RadialDimension>Радіальний розмір</RadialDimension>
     <Railing>Огорожа</Railing>
     <Ramp>Пандус</Ramp>
@@ -1821,298 +1855,20 @@ dоп=8ds при ds ≥ 20 мм;</r1>
     <RebarStyle>Стиль арматурного стрижня</RebarStyle>
     <Roof>Дах</Roof>
     <Room>Приміщення</Room>
+    <Route>Траса</Route>
     <RoutePoint>Точка трасування</RoutePoint>
     <Section>Розріз</Section>
     <Stair>Сходи</Stair>
+    <TextObject>Текст моделі</TextObject>
+    <TextShape>Текст моделі</TextShape>
+    <Undefined>Невідомий</Undefined>
     <Wall>Стіна</Wall>
+    <WallFoundation>Стрічковий фундамент</WallFoundation>
     <Window>Вікно</Window>
     <WindowStyle>Стиль вікна</WindowStyle>
-    <WiringAccessory>Електровстановлювальний виріб</WiringAccessory>
-    <WiringAccessoryStyle>Стиль електровстановлювального виробу</WiringAccessoryStyle>
+    <WiringAccessory>Електроустановочний виріб</WiringAccessory>
+    <WiringAccessoryStyle>Стиль електроустановочного виробу</WiringAccessoryStyle>
   </RengaEntityTypes>
-  <RengaParameters>
-    <AssemblyHorizontalOffset>Горизонтальне зміщення збірки</AssemblyHorizontalOffset>
-    <AssemblyId>Ідентифікатор стилю збірки</AssemblyId>
-    <AssemblyNutationAngle>Кут нутації збірки</AssemblyNutationAngle>
-    <AssemblyPositionRelativeToAxis>Положення збірки відносно осі</AssemblyPositionRelativeToAxis>
-    <AssemblyPrecessionAngle>Кут прецесії збірки</AssemblyPrecessionAngle>
-    <AssemblySpinAngle>Кут власного обертання збірки</AssemblySpinAngle>
-    <AssemblyVerticalOffset>Вертикальне зміщення збірки</AssemblyVerticalOffset>
-    <BeamEnd>Кінець балки</BeamEnd>
-    <BeamHorizontalOffset>Горизонтальне зміщення профілю балки</BeamHorizontalOffset>
-    <BeamPositionRelativeToAxis>Положення профілю балки відносно осі</BeamPositionRelativeToAxis>
-    <BeamRotationAngle>Кут повороту балки</BeamRotationAngle>
-    <BeamStart>Початок балки</BeamStart>
-    <BeamStyleId>Ідентифікатор стилю балки</BeamStyleId>
-    <BeamVerticalOffset>Вертикальне зміщення профілю балки</BeamVerticalOffset>
-    <Building>Будівля</Building>
-    <BuildingAddress>Адреса будівлі</BuildingAddress>
-    <BuildingDescription>Опис будівлі</BuildingDescription>
-    <BuildingLongName>Повна назва будівлі</BuildingLongName>
-    <BuildingName>Номер будівлі</BuildingName>
-    <Casing>Наличники дверей</Casing>
-    <CasingDepth>Глибина наличника дверей</CasingDepth>
-    <CasingWidth>Ширина наличника дверей</CasingWidth>
-    <Category>Категорія</Category>
-    <CategoryId>Унікальний ідентифікатор категорії</CategoryId>
-    <Color>Колір матеріалу</Color>
-    <ColumnHeight>Висота колони</ColumnHeight>
-    <ColumnHorizontalOffset>Горизонтальне зміщення профілю колони</ColumnHorizontalOffset>
-    <ColumnPositionRelativeToAxis>Положення профілю колони відносно осі</ColumnPositionRelativeToAxis>
-    <ColumnRotationAngle>Кут повороту колони</ColumnRotationAngle>
-    <ColumnStyleId>Ідентифікатор стилю колони</ColumnStyleId>
-    <ColumnVerticalOffset>Вертикальне зміщення профілю колони</ColumnVerticalOffset>
-    <ConductorCoreMaterial>Матеріал жили провідника</ConductorCoreMaterial>
-    <ConductorCrossSectionArea>Площа перерізу жили провідника</ConductorCrossSectionArea>
-    <ConductorInsulationMaterial>Матеріал ізоляції провідника</ConductorInsulationMaterial>
-    <ConductorNumberCores>Кількість жил провідника</ConductorNumberCores>
-    <ConductorOutsideDiameter>Зовнішній діаметр провідника</ConductorOutsideDiameter>
-    <ConductorRatedVoltage>Номінальна напруга провідника</ConductorRatedVoltage>
-    <ConductorStyleId>Ідентифікатор стилю провідника</ConductorStyleId>
-    <ConductorTemperatureRating>Максимальна робоча температура жили</ConductorTemperatureRating>
-    <Count>Кількість</Count>
-    <DimensionLandingLineOrientation>—</DimensionLandingLineOrientation>
-    <DimensionTextStyleId>—</DimensionTextStyleId>
-    <DimensionValue>—</DimensionValue>
-    <DimensionValueType>—</DimensionValueType>
-    <DistributionBoardHorizontalOffset>Горизонтальне зміщення електричного щита</DistributionBoardHorizontalOffset>
-    <DistributionBoardPositionRelativeToAxis>Положення електричного щита відносно осі</DistributionBoardPositionRelativeToAxis>
-    <DistributionBoardRotationAngle>Кут повороту електричного щита</DistributionBoardRotationAngle>
-    <DistributionBoardStyleId>Ідентифікатор стилю електричного щита</DistributionBoardStyleId>
-    <DistributionBoardVerticalOffset>Вертикальне зміщення електричного щита</DistributionBoardVerticalOffset>
-    <DoorApertureShape>Форма прорізу дверей</DoorApertureShape>
-    <DoorArcHeight>Висота арки дверей</DoorArcHeight>
-    <DoorDepth>Глибина дверей</DoorDepth>
-    <DoorHeight>Висота дверей</DoorHeight>
-    <DoorLiningDepth>Глибина коробки дверей</DoorLiningDepth>
-    <DoorLiningThickness>Товщина коробки дверей</DoorLiningThickness>
-    <DoorOrientation>Орієнтація дверей</DoorOrientation>
-    <DoorPosition>Положення прорізу дверей</DoorPosition>
-    <DoorStyleId>Ідентифікатор стилю дверей</DoorStyleId>
-    <DoorTrapeziumHeight>Висота трапеції дверей</DoorTrapeziumHeight>
-    <DoorWidth>Ширина дверей</DoorWidth>
-    <DuctAccessoryAngle>Кут повороту аксесуара повітроводу</DuctAccessoryAngle>
-    <DuctAccessoryStyleId>Ідентифікатор стилю аксесуара повітроводу</DuctAccessoryStyleId>
-    <DuctAngle>Кут повороту профілю повітроводу</DuctAngle>
-    <DuctBendingRadius>Радіус вигину повітроводу</DuctBendingRadius>
-    <DuctFittingRotationAngle>Кут повороту деталі повітроводу</DuctFittingRotationAngle>
-    <DuctFittingStyleId>Ідентифікатор стилю деталі повітроводу</DuctFittingStyleId>
-    <DuctHeight>Висота повітроводу</DuctHeight>
-    <DuctStyleId>Ідентифікатор стилю повітроводу</DuctStyleId>
-    <DuctWallThickness>Товщина стінки повітроводу</DuctWallThickness>
-    <DuctWidth>Ширина повітроводу</DuctWidth>
-    <ElectricalCircuitLineStyleId>Ідентифікатор стилю електричної лінії</ElectricalCircuitLineStyleId>
-    <ElectricalConductorNumber>Кількість провідників</ElectricalConductorNumber>
-    <ElementDepth>Глибина елемента</ElementDepth>
-    <ElementHeight>Висота елемента</ElementHeight>
-    <ElementHorizontalOffset>Горизонтальне зміщення елемента</ElementHorizontalOffset>
-    <ElementPositionRelativeToAxis>Положення елемента відносно осі</ElementPositionRelativeToAxis>
-    <ElementStyleId>Ідентифікатор стилю елемента</ElementStyleId>
-    <ElementVerticalOffset>Вертикальне зміщення елемента</ElementVerticalOffset>
-    <ElementWidth>Ширина елемента</ElementWidth>
-    <ElevationName>Назва фасаду</ElevationName>
-    <EntityName>Назва сутності</EntityName>
-    <EquipmentHorizontalOffset>Горизонтальне зміщення обладнання</EquipmentHorizontalOffset>
-    <EquipmentPositionRelativeToAxis>Положення обладнання відносно осі</EquipmentPositionRelativeToAxis>
-    <EquipmentStyleId>Ідентифікатор стилю обладнання</EquipmentStyleId>
-    <EquipmentVerticalOffset>Вертикальне зміщення обладнання</EquipmentVerticalOffset>
-    <FloorAngleOfReinforcement>Кут армування перекриття</FloorAngleOfReinforcement>
-    <FloorThickness>Товщина перекриття</FloorThickness>
-    <FrameDepth>Глибина рами</FrameDepth>
-    <FrameThickness>Товщина рами</FrameThickness>
-    <GridLineExtension>Випуск осі</GridLineExtension>
-    <GridLineName>Позначення осі</GridLineName>
-    <HatchAngle>—</HatchAngle>
-    <HatchScale>—</HatchScale>
-    <HatchStyleId>—</HatchStyleId>
-    <HoleDepth>Глибина отвору</HoleDepth>
-    <HoleExtent>—</HoleExtent>
-    <HoleHorizontalOffset>Горизонтальне зміщення отвору</HoleHorizontalOffset>
-    <HolePositionRelativeToAxis>Положення отвору відносно осі</HolePositionRelativeToAxis>
-    <HoleRotationAngle>Кут повороту отвору</HoleRotationAngle>
-    <HoleStyleId>Ідентифікатор стилю отвору</HoleStyleId>
-    <HoleVerticalOffset>Вертикальне зміщення отвору</HoleVerticalOffset>
-    <HorizontalMullionThickness>Товщина горизонтального імпоста</HorizontalMullionThickness>
-    <ImageHeight>Висота зображення</ImageHeight>
-    <ImageHorizontalOffset>Горизонтальне зміщення зображення</ImageHorizontalOffset>
-    <ImageLinkId>Ідентифікатор посилання на зображення</ImageLinkId>
-    <ImagePositionRelativeToAxis>Положення зображення відносно осі</ImagePositionRelativeToAxis>
-    <ImageVerticalOffset>Вертикальне зміщення зображення</ImageVerticalOffset>
-    <ImageWidth>Ширина зображення</ImageWidth>
-    <InsulationMaterialStyleID>Ідентифікатор стилю ізоляційного матеріалу</InsulationMaterialStyleID>
-    <IsolatedFoundationDepth>Глибина стовпчастого фундаменту</IsolatedFoundationDepth>
-    <IsolatedFoundationDepthTop>Глибина верху стовпчастого фундаменту</IsolatedFoundationDepthTop>
-    <IsolatedFoundationHeight>Висота стовпчастого фундаменту</IsolatedFoundationHeight>
-    <IsolatedFoundationRotationAngle>Кут повороту стовпчастого фундаменту</IsolatedFoundationRotationAngle>
-    <IsolatedFoundationShape>Форма фундаменту</IsolatedFoundationShape>
-    <IsolatedFoundationWidth>Ширина стовпчастого фундаменту</IsolatedFoundationWidth>
-    <IsolatedFoundationWidthTop>Ширина верху стовпчастого фундаменту</IsolatedFoundationWidthTop>
-    <LayeredMaterialId>Ідентифікатор багатошарового матеріалу</LayeredMaterialId>
-    <LayerThickness>Товщина шару</LayerThickness>
-    <LayoutStyleId>Ідентифікатор стилю креслення</LayoutStyleId>
-    <LevelElevation>Відмітка рівня</LevelElevation>
-    <LevelId>Ідентифікатор рівня</LevelId>
-    <LevelName>Назва рівня</LevelName>
-    <LightingFixtureHorizontalOffset>Горизонтальне зміщення світильника</LightingFixtureHorizontalOffset>
-    <LightingFixturePositionRelativeToAxis>Положення світильника відносно осі</LightingFixturePositionRelativeToAxis>
-    <LightingFixtureRotationAngle>Кут повороту світильника</LightingFixtureRotationAngle>
-    <LightingFixtureStyleId>Ідентифікатор стилю світильника</LightingFixtureStyleId>
-    <LightingFixtureVerticalOffset>Вертикальне зміщення світильника</LightingFixtureVerticalOffset>
-    <Line3DStyle>Ідентифікатор стилю 3D-лінії</Line3DStyle>
-    <LineThickness>Товщина лінії</LineThickness>
-    <Lining>Коробка дверей</Lining>
-    <LinkFileType>Тип пов’язаного файлу</LinkFileType>
-    <LoadType>Тип зв’язку завантаження</LoadType>
-    <Mark>Марка</Mark>
-    <MassDensity>Густина матеріалу</MassDensity>
-    <MaterialId>Ідентифікатор матеріалу</MaterialId>
-    <MaterialsList>Список матеріалів</MaterialsList>
-    <MaximumDuctLength>Максимальна довжина повітроводу</MaximumDuctLength>
-    <MaximumPipeLength>Максимальна довжина труби</MaximumPipeLength>
-    <MechanicalEquipmentHorizontalOffset>Горизонтальне зміщення вентиляційного обладнання</MechanicalEquipmentHorizontalOffset>
-    <MechanicalEquipmentPositionRelativeToAxis>Положення вентиляційного обладнання відносно осі</MechanicalEquipmentPositionRelativeToAxis>
-    <MechanicalEquipmentStyleId>Ідентифікатор стилю вентиляційного обладнання</MechanicalEquipmentStyleId>
-    <MechanicalEquipmentVerticalOffset>Вертикальне зміщення вентиляційного обладнання</MechanicalEquipmentVerticalOffset>
-    <MepRouteSlope>Ухил траси</MepRouteSlope>
-    <MepSystemDesignation>Позначення системи</MepSystemDesignation>
-    <MinimumDuctLength>Мінімальна довжина повітроводу</MinimumDuctLength>
-    <MinimumPipeLength>Мінімальна довжина труби</MinimumPipeLength>
-    <ModelHorizontalOffset>Горизонтальне зміщення 3D-моделі</ModelHorizontalOffset>
-    <ModelLinkId>Ідентифікатор зв’язаної моделі</ModelLinkId>
-    <ModelOrientation>Орієнтація 3D-моделі</ModelOrientation>
-    <ModelPositionRelativeToAxis>Положення 3D-моделі відносно осі</ModelPositionRelativeToAxis>
-    <ModelVerticalOffset>Вертикальне зміщення 3D-моделі</ModelVerticalOffset>
-    <MullionThickness>Товщина імпоста</MullionThickness>
-    <MultipleOfCableBendingRadius>Кратність радіуса вигину кабелю</MultipleOfCableBendingRadius>
-    <NominalDuctDiameter>Номінальний діаметр повітроводу</NominalDuctDiameter>
-    <NumberOfSteps>Кількість сходинок</NumberOfSteps>
-    <NumberOfStepsOnBalusters>Кількість сходинок на балясину</NumberOfStepsOnBalusters>
-    <NutationAngle>Кут нутації</NutationAngle>
-    <ObjectName>Назва об’єкта</ObjectName>
-    <ObjectType>Тип об’єкта</ObjectType>
-    <Offset>Зміщення</Offset>
-    <OpeningDepth>Глибина прорізу</OpeningDepth>
-    <OutwardSill>Відлив</OutwardSill>
-    <PageFormatHeight>Висота формату сторінки</PageFormatHeight>
-    <PageFormatId>Ідентифікатор формату сторінки</PageFormatId>
-    <PageFormatReferenceName>Назва формату сторінки</PageFormatReferenceName>
-    <PageFormatWidth>Ширина формату сторінки</PageFormatWidth>
-    <PageOrientation>Орієнтація сторінки</PageOrientation>
-    <PanelDepth>Глибина полотна</PanelDepth>
-    <PanelOffset>Зміщення полотна</PanelOffset>
-    <ParentObjectMark>Марка батьківського об’єкта</ParentObjectMark>
-    <ParentObjectName>Назва батьківського об’єкта</ParentObjectName>
-    <ParentObjectType>Тип батьківського об’єкта</ParentObjectType>
-    <ParentObjectUniqueId>Унікальний ідентифікатор батьківського об’єкта</ParentObjectUniqueId>
-    <ParentObjectVerticalOffset>Вертикальне зміщення батьківського об’єкта</ParentObjectVerticalOffset>
-    <PathType>Тип шляху зв’язку</PathType>
-    <PipeAccessoryAngle>Кут повороту аксесуара трубопроводу</PipeAccessoryAngle>
-    <PipeAccessoryStyleId>Ідентифікатор стилю аксесуара трубопроводу</PipeAccessoryStyleId>
-    <PipeBendingRadius>Радіус вигину труби</PipeBendingRadius>
-    <PipeFittingRotationAngle>Кут повороту деталі трубопроводу</PipeFittingRotationAngle>
-    <PipeFittingStyleId>Ідентифікатор стилю деталі трубопроводу</PipeFittingStyleId>
-    <PipeInsideDiameter>Внутрішній діаметр труби</PipeInsideDiameter>
-    <PipeOutsideDiameter>Зовнішній діаметр труби</PipeOutsideDiameter>
-    <PipeStyleId>Ідентифікатор стилю труби</PipeStyleId>
-    <PipeWallThickness>Товщина стінки труби</PipeWallThickness>
-    <PlateHorizontalOffset>Горизонтальне зміщення пластини</PlateHorizontalOffset>
-    <PlatePositionRelativeToInsertPoint>Положення пластини відносно осі</PlatePositionRelativeToInsertPoint>
-    <PlateStyleId>Ідентифікатор стилю пластини</PlateStyleId>
-    <PlateThickness>Товщина пластини</PlateThickness>
-    <PlateVerticalOffset>Вертикальне зміщення пластини</PlateVerticalOffset>
-    <PlumbingFixtureHorizontalOffset>Горизонтальне зміщення сантехнічного обладнання</PlumbingFixtureHorizontalOffset>
-    <PlumbingFixturePositionRelativeToAxis>Положення сантехнічного обладнання відносно осі</PlumbingFixturePositionRelativeToAxis>
-    <PlumbingFixtureStyleId>Ідентифікатор стилю сантехнічного обладнання</PlumbingFixtureStyleId>
-    <PlumbingFixtureVerticalOffset>Вертикальне зміщення сантехнічного обладнання</PlumbingFixtureVerticalOffset>
-    <PrecessionAngle>Кут прецесії</PrecessionAngle>
-    <ProfileId>Ідентифікатор профілю</ProfileId>
-    <ProfileType>Тип профілю</ProfileType>
-    <Project>Проєкт</Project>
-    <ProjectDescription>Опис проєкту</ProjectDescription>
-    <ProjectLongName>Повна назва проєкту</ProjectLongName>
-    <ProjectName>Назва проєкту</ProjectName>
-    <ProjectPhase>Стадія проєкту</ProjectPhase>
-    <RailingHeight>Висота огорожі</RailingHeight>
-    <RailingOffset>Відступ огорожі</RailingOffset>
-    <RampHeight>Висота пандуса</RampHeight>
-    <RampHorizontalOffset>Горизонтальне зміщення пандуса</RampHorizontalOffset>
-    <RampPositionRelativeToBaseline>Положення пандуса відносно базової лінії</RampPositionRelativeToBaseline>
-    <RampShape>Форма пандуса</RampShape>
-    <RampSlope>Ухил пандуса</RampSlope>
-    <RampThickness>Товщина пандуса</RampThickness>
-    <RampWidth>Ширина пандуса</RampWidth>
-    <RebarDiameter>Діаметр арматури</RebarDiameter>
-    <RebarStyleId>Ідентифікатор стилю арматурного стрижня</RebarStyleId>
-    <ReinforcementGradeId>Ідентифікатор класу арматури</ReinforcementGradeId>
-    <ReinforcementGradeTensileStrength>Межа міцності класу арматури</ReinforcementGradeTensileStrength>
-    <ReinforcementStyleId>Ідентифікатор стилю армування</ReinforcementStyleId>
-    <ReinforcementUnitStyleId>Ідентифікатор стилю арматурного виробу</ReinforcementUnitStyleId>
-    <RiserHeight>Висота підсхідника</RiserHeight>
-    <RoofThickness>Товщина даху</RoofThickness>
-    <RoomHeight>Висота приміщення</RoomHeight>
-    <RoomName>Назва приміщення</RoomName>
-    <RoomNumber>Номер приміщення</RoomNumber>
-    <RoutePointName>Назва точки траси</RoutePointName>
-    <SavedPath>Збережений шлях зв’язку</SavedPath>
-    <Scale>Масштаб</Scale>
-    <SectionLineExtension>Подовження лінії розрізу</SectionLineExtension>
-    <SectionName>Назва розрізу</SectionName>
-    <Sill>Підвіконня</Sill>
-    <Site>Ділянка</Site>
-    <SiteAddress>Адреса ділянки</SiteAddress>
-    <SiteDescription>Опис ділянки</SiteDescription>
-    <SiteLongName>Повна назва ділянки</SiteLongName>
-    <SiteName>Назва ділянки</SiteName>
-    <SpaceBetweenBalusters>Відстань між балясинами</SpaceBetweenBalusters>
-    <SpinAngle>Кут власного обертання</SpinAngle>
-    <StairHeight>Висота сходів</StairHeight>
-    <StairHorizontalOffset>Горизонтальне зміщення сходів</StairHorizontalOffset>
-    <StairPositionRelativeToBaseline>Положення сходів відносно базової лінії</StairPositionRelativeToBaseline>
-    <StairShape>Форма сходів</StairShape>
-    <StairSlope>Ухил сходів</StairSlope>
-    <StairThickness>Товщина сходів</StairThickness>
-    <StairWidth>Ширина сходів</StairWidth>
-    <SystemCategory>Категорія системи</SystemCategory>
-    <SystemGroup>Група систем</SystemGroup>
-    <SystemsList>Список систем</SystemsList>
-    <SystemStyleId>Ідентифікатор стилю системи</SystemStyleId>
-    <ThermalConductivity>Теплопровідність</ThermalConductivity>
-    <Threshold>Поріг дверей</Threshold>
-    <ThresholdThickness>Товщина порогу</ThresholdThickness>
-    <TopicId>Ідентифікатор розділу</TopicId>
-    <TransomConstruction>Тип фрамуги</TransomConstruction>
-    <TransomHeight>Висота фрамуги</TransomHeight>
-    <TreadDepth>Глибина проступу</TreadDepth>
-    <UniformScaling>Рівномірне масштабування</UniformScaling>
-    <UniqueId>Унікальний ідентифікатор</UniqueId>
-    <VerticalMullionThickness>Товщина вертикального імпоста</VerticalMullionThickness>
-    <WallFoundationHeight>Висота стрічкового фундаменту</WallFoundationHeight>
-    <WallFoundationHorizontalOffset>Горизонтальне зміщення стрічкового фундаменту</WallFoundationHorizontalOffset>
-    <WallFoundationPositionRelativeToBaseline>Положення стрічкового фундаменту відносно базової лінії</WallFoundationPositionRelativeToBaseline>
-    <WallFoundationShape>Форма фундаменту</WallFoundationShape>
-    <WallFoundationThickness>Товщина стрічкового фундаменту</WallFoundationThickness>
-    <WallFoundationThicknessTop>Товщина верху стрічкового фундаменту</WallFoundationThicknessTop>
-    <WallHeight>Висота стіни</WallHeight>
-    <WallHorizontalOffset>Горизонтальне зміщення стіни</WallHorizontalOffset>
-    <WallPositionRelativeToBaseline>Положення стіни відносно базової лінії</WallPositionRelativeToBaseline>
-    <WallThickness>Товщина стіни</WallThickness>
-    <WindowApertureShape>Форма прорізу вікна</WindowApertureShape>
-    <WindowArcHeight>Висота арки вікна</WindowArcHeight>
-    <WindowDepth>Глибина вікна</WindowDepth>
-    <WindowHeight>Висота вікна</WindowHeight>
-    <WindowLiningDepth>Глибина рами вікна</WindowLiningDepth>
-    <WindowLiningThickness>Товщина рами вікна</WindowLiningThickness>
-    <WindowOrientation>Орієнтація вікна</WindowOrientation>
-    <WindowPosition>Положення прорізу вікна</WindowPosition>
-    <WindowStyleId>Ідентифікатор стилю вікна</WindowStyleId>
-    <WindowTrapeziumHeight>Висота трапеції вікна</WindowTrapeziumHeight>
-    <WindowWidth>Ширина вікна</WindowWidth>
-    <WiringAccessoryHorizontalOffset>Горизонтальне зміщення електровстановлювального виробу</WiringAccessoryHorizontalOffset>
-    <WiringAccessoryPositionRelativeToAxis>Положення електровстановлювального виробу відносно осі</WiringAccessoryPositionRelativeToAxis>
-    <WiringAccessoryRotationAngle>Кут повороту електровстановлювального виробу</WiringAccessoryRotationAngle>
-    <WiringAccessoryStyleId>Ідентифікатор стилю електровстановлювального виробу</WiringAccessoryStyleId>
-    <WiringAccessoryVerticalOffset>Вертикальне зміщення електровстановлювального виробу</WiringAccessoryVerticalOffset>
-  </RengaParameters>
   <RengaQuantities>
     <Area>Площа</Area>
     <Count>Кількість</Count>

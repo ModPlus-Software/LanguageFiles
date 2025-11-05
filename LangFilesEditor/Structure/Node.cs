@@ -26,7 +26,7 @@ internal class Node : ObservableObject
     /// Items
     /// </summary>
     public ObservableCollection<Item> Items { get; }
-
+    
     /// <summary>
     /// Search string
     /// </summary>

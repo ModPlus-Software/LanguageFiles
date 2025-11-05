@@ -19,6 +19,9 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     private readonly Dictionary<string, List<string>> _itemsToRemove = [];
     private Node _selectedNode;
 
+    // Кэш найденных DataGrid'ов: ключ — Node, значение — DataGrid
+    private readonly Dictionary<Node, WeakReference<DataGrid>> _gridCache = new();
+
     /// <summary>
     /// Порядок языков
     /// </summary>
@@ -58,6 +61,11 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     }
 
     /// <summary>
+    /// Команда для выбора узла из UI
+    /// </summary>
+    public ICommand SelectNodeCommand => new RelayCommand<Node>(node => SelectedNode = node);
+
+    /// <summary>
     /// Is visible <see cref="SelectedNode"/> content
     /// </summary>
     public bool IsVisibleSelectedNodeContent => SelectedNode != null;
@@ -86,7 +94,14 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     /// </summary>
     public ICommand CloseEditorTabCommand => new RelayCommand(() => Utils.SafeExecute(() =>
     {
+        var index = EditNodes.IndexOf(SelectedNode);
         EditNodes.Remove(SelectedNode);
+        if (index - 1 > -1)
+            SelectedNode = EditNodes[index - 1];
+        else if (index < EditNodes.Count)
+            SelectedNode = EditNodes[index];
+        else
+            SelectedNode = null;
     }));
 
     /// <summary>
@@ -624,14 +639,64 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         return Regex.Replace(previousItemName, "\\d+$", match => (int.Parse(match.Value) + 1).ToString());
     }
 
+    private DataGrid GetSelectedTabDataGrid()
+    {
+        var selectedNode = SelectedNode;
+        if (selectedNode == null)
+            return null;
+
+        // 1️⃣ Попробуем взять из кэша
+        if (_gridCache.TryGetValue(selectedNode, out var weakRef) &&
+            weakRef.TryGetTarget(out var cachedGrid))
+            return cachedGrid;
+
+        // 2️⃣ Иначе — ищем в визуальном дереве
+        var presenter = FindContentPresenterByDataContext(mainWindow.TcEditors, selectedNode);
+        if (presenter == null)
+            return null;
+
+        var grid = FindVisualChild<DataGrid>(presenter);
+        if (grid != null)
+        {
+            _gridCache[selectedNode] = new WeakReference<DataGrid>(grid);
+            // подписываемся, чтобы удалить из кэша при выгрузке
+            grid.Unloaded += (s, _) => _gridCache.Remove(selectedNode);
+        }
+
+        return grid;
+    }
+
+    private static ContentPresenter FindContentPresenterByDataContext(DependencyObject parent, object dataContext)
+    {
+        if (parent == null)
+            return null;
+
+        int count = VisualTreeHelper.GetChildrenCount(parent);
+        for (int i = 0; i < count; i++)
+        {
+            var child = VisualTreeHelper.GetChild(parent, i);
+
+            if (child is ContentPresenter cp && ReferenceEquals(cp.DataContext, dataContext))
+                return cp;
+
+            var result = FindContentPresenterByDataContext(child, dataContext);
+            if (result != null)
+                return result;
+        }
+
+        return null;
+    }
+
     private static T FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
     {
         if (parent == null)
             return null;
 
-        for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+        int count = VisualTreeHelper.GetChildrenCount(parent);
+        for (int i = 0; i < count; i++)
         {
             var child = VisualTreeHelper.GetChild(parent, i);
+
             if (child is T tChild)
                 return tChild;
 
@@ -642,24 +707,4 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
         return null;
     }
-
-    private DataGrid GetSelectedTabDataGrid()
-    {
-        if (mainWindow.TcEditors.SelectedItem == null)
-            return null;
-
-        // Находим ContentPresenter, который отображает контент выбранной вкладки
-        var contentPresenter = FindVisualChild<ContentPresenter>(mainWindow.TcEditors);
-        if (contentPresenter == null)
-            return null;
-
-        // Попробуем получить DataGrid по имени, если оно задано
-        if (contentPresenter.ContentTemplate != null &&
-            contentPresenter.ContentTemplate.FindName("PART_DataGrid", contentPresenter) is DataGrid namedGrid)
-            return namedGrid;
-
-        // Если имени нет — ищем DataGrid визуально
-        return FindVisualChild<DataGrid>(contentPresenter);
-    }
-
 }

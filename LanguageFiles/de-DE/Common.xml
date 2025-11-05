@@ -65,6 +65,7 @@
     <family>Familie</family>
     <file>Die Datei</file>
     <formula>Formel</formula>
+    <g>g</g>
     <group>Gruppe</group>
     <height>Höhe</height>
     <hide>Ausblenden</hide>
@@ -1511,7 +1512,7 @@ In der Parameterliste des Exemplars dürften nicht alle Parameter vorhanden sein
     <tcm14>Alle Dokumente ohne Speichern schließen</tcm14>
     <tcm15>Alle Dokumente außer dem aktuellen ohne Speichern schließen</tcm15>
   </RevitDlls>
-  <!-- todo после версии 9.3.0 имена типов, параметров и расчетных характеристик вынесены в отдельные узлы -->
+  <!-- todo после версии 9.3.0 имена типов и расчетных характеристик вынесены в отдельные узлы -->
   <RengaDlls
     LocalName="Bibliotheken ausführbarer Programme für Renga">
     <h1>MODPLUS EINSTELLUNGEN</h1>
@@ -1552,6 +1553,25 @@ In der Parameterliste des Exemplars dürften nicht alle Parameter vorhanden sein
     <ef18>Eigenschaften</ef18>
     <ef19>Parameter</ef19>
     <ef20>Berechnete Eigenschaften</ef20>
+    <ef21>Attribut-ID</ef21>
+    <ef22>Werte:</ef22>
+    <ef23>Bedingung löschen</ef23>
+    <ef24>Bedingung hinzufügen</ef24>
+    <ef25>Einfache Bedingung</ef25>
+    <ef26>Gruppenbedingung</ef26>
+    <ef27>Das Objekt passt, wenn</ef27>
+    <ef28>alle Bedingungen erfüllt sind</ef28>
+    <ef29>mindestens eine Bedingung erfüllt ist</ef29>
+    <et1>Gleich</et1>
+    <et2>Mehr</et2>
+    <et3>Weniger</et3>
+    <et4>Mehr oder gleich</et4>
+    <et5>Weniger oder gleich</et5>
+    <et6>Nicht gleich</et6>
+    <et7>Enthält</et7>
+    <et8>Vorhandensein des Attributs</et8>
+    <et9>Enthält nicht</et9>
+    <et10>Fehlen des Attributs</et10>
     <name>Benennung</name>
     <AirAccessory>Luftkanal/-rohr-Zubehör</AirAccessory>
     <AirDuct>Luftkanal/-rohr</AirDuct>
@@ -1628,7 +1648,7 @@ In der Parameterliste des Exemplars dürften nicht alle Parameter vorhanden sein
     <PropertyType_Volume>Volumen</PropertyType_Volume>
     <Logical_False>Nein</Logical_False>
     <Logical_True>Ja</Logical_True>
-    <Logical_Indeterminate>Unbestimmt</Logical_Indeterminate>
+    <Logical_Indeterminate>Unbekannt</Logical_Indeterminate>
     <QuantityType_Unknown>Unbekannt</QuantityType_Unknown>
     <QuantityType_Count>Anzahl</QuantityType_Count>
     <QuantityType_Length>Länge</QuantityType_Length>
@@ -1763,356 +1783,92 @@ dop=8ds bei ds ≥ 20 mm;</r1>
     <rce17>Es ist unmöglich, eine gerade Linie mit einer Bogenlinie über ein Verbindungsmittel zu verbinden</rce17>
   </ReinforcementCoupler>
   <RengaEntityTypes>
-    <AirAccessory>Luftzubehör</AirAccessory>
-    <AirAccessoryStyle>Stil des Luftzubehörs</AirAccessoryStyle>
+    <AirAccessory>Luftkanalzubehör</AirAccessory>
+    <AirAccessoryStyle>Stil des Luftkanalzubehörs</AirAccessoryStyle>
     <AirDuct>Luftkanal</AirDuct>
     <AirDuctStyle>Stil des Luftkanals</AirDuctStyle>
+    <AirEquipment>Luftausrüstung</AirEquipment>
     <AirFitting>Luftkanalformteil</AirFitting>
     <AirFittingStyle>Stil des Luftkanalformteils</AirFittingStyle>
     <AngularDimension>Winkelbemaßung</AngularDimension>
     <Assembly>Stil der Baugruppe</Assembly>
     <AssemblyInstance>Baugruppe</AssemblyInstance>
+    <Axis>Achse</Axis>
     <Beam>Träger</Beam>
     <BeamStyle>Stil des Trägers</BeamStyle>
     <Column>Stütze</Column>
     <ColumnStyle>Stil der Stütze</ColumnStyle>
     <DiametralDimension>Durchmesserbemaßung</DiametralDimension>
+    <Dimension>Bemaßung</Dimension>
+    <DistributionBoard>Elektrische Verteilungstafel</DistributionBoard>
     <Door>Tür</Door>
     <DoorStyle>Stil der Tür</DoorStyle>
+    <DrawingText>Text</DrawingText>
+    <Duct>Kanal</Duct>
+    <DuctAccessory>Kanalzubehör</DuctAccessory>
+    <DuctFitting>Kanalformteil</DuctFitting>
     <ElectricCircuitLineStyle>Stil der elektrischen Leitung</ElectricCircuitLineStyle>
-    <ElectricDistributionBoard>Elektroverteilungsschrank</ElectricDistributionBoard>
-    <ElectricDistributionBoardStyle>Stil des Elektroverteilungsschranks</ElectricDistributionBoardStyle>
+    <ElectricDistributionBoard>Elektrische Verteilungstafel</ElectricDistributionBoard>
+    <ElectricDistributionBoardStyle>Stil der elektrischen Verteilungstafel</ElectricDistributionBoardStyle>
     <ElectricalCircuitLine>Elektrische Leitung</ElectricalCircuitLine>
-    <ElectricalConductorStyle>Leiterstil</ElectricalConductorStyle>
+    <ElectricalConductorStyle>Stil des Leiters</ElectricalConductorStyle>
     <Element>Element</Element>
     <ElementStyle>Stil des Elements</ElementStyle>
+    <Elevation>Ansicht</Elevation>
     <Equipment>Ausrüstung</Equipment>
     <EquipmentStyle>Stil der Ausrüstung</EquipmentStyle>
-    <Elevation>Ansicht</Elevation>
     <Floor>Decke</Floor>
     <Hatch>Modellschraffur</Hatch>
     <Hole>Öffnung</Hole>
     <HoleStyle>Stil der Öffnung</HoleStyle>
+    <IfcObject>IFC-Objekt</IfcObject>
     <IsolatedFoundation>Einzelfundament</IsolatedFoundation>
     <Level>Ebene</Level>
+    <LightFixture>Leuchte</LightFixture>
     <LightingFixture>Leuchte</LightingFixture>
     <LightingFixtureStyle>Stil der Leuchte</LightingFixtureStyle>
     <Line3D>Modelllinie</Line3D>
-    <LinearDimension>Linearbemaßung</LinearDimension>
+    <LinearDimension>Lineare Bemaßung</LinearDimension>
+    <LineElectricalCircuit>Elektrische Leitung</LineElectricalCircuit>
+    <LinkedDrawing>Verknüpfte Zeichnung</LinkedDrawing>
+    <LinkedImage>Verknüpftes Bild</LinkedImage>
     <LinkedModel>3D-Modell</LinkedModel>
-    <MechanicalEquipment>Lüftungsgerät</MechanicalEquipment>
-    <MechanicalEquipmentStyle>Stil des Lüftungsgeräts</MechanicalEquipmentStyle>
+    <MechanicalEquipment>Mechanische Ausrüstung</MechanicalEquipment>
+    <MechanicalEquipmentStyle>Stil der mechanischen Ausrüstung</MechanicalEquipmentStyle>
     <ModelText>Modelltext</ModelText>
-    <Opening>Durchbruch</Opening>
+    <Opening>Öffnung</Opening>
     <Pipe>Rohr</Pipe>
     <PipeAccessory>Rohrzubehör</PipeAccessory>
     <PipeAccessoryStyle>Stil des Rohrzubehörs</PipeAccessoryStyle>
     <PipeFitting>Rohrformteil</PipeFitting>
     <PipeFittingStyle>Stil des Rohrformteils</PipeFittingStyle>
+    <PipelineAccessory>Rohrzubehör</PipelineAccessory>
     <PipeStyle>Stil des Rohrs</PipeStyle>
     <Plate>Platte</Plate>
     <PlateStyle>Stil der Platte</PlateStyle>
-    <PlumbingFixture>Sanitärobjekt</PlumbingFixture>
-    <PlumbingFixtureStyle>Stil des Sanitärobjekts</PlumbingFixtureStyle>
-    <RadialDimension>Radialbemaßung</RadialDimension>
+    <PlumbingFixture>Sanitärgerät</PlumbingFixture>
+    <PlumbingFixtureStyle>Stil des Sanitärgeräts</PlumbingFixtureStyle>
+    <RadialDimension>Radiale Bemaßung</RadialDimension>
     <Railing>Geländer</Railing>
     <Ramp>Rampe</Ramp>
     <Rebar>Bewehrungsstab</Rebar>
     <RebarStyle>Stil des Bewehrungsstabs</RebarStyle>
     <Roof>Dach</Roof>
     <Room>Raum</Room>
+    <Route>Trasse</Route>
     <RoutePoint>Trassenpunkt</RoutePoint>
     <Section>Schnitt</Section>
     <Stair>Treppe</Stair>
+    <TextObject>Modelltext</TextObject>
+    <TextShape>Modelltext</TextShape>
+    <Undefined>Unbekannt</Undefined>
     <Wall>Wand</Wall>
+    <WallFoundation>Streifenfundament</WallFoundation>
     <Window>Fenster</Window>
     <WindowStyle>Stil des Fensters</WindowStyle>
     <WiringAccessory>Elektroinstallationsgerät</WiringAccessory>
     <WiringAccessoryStyle>Stil des Elektroinstallationsgeräts</WiringAccessoryStyle>
   </RengaEntityTypes>
-  <RengaParameters>
-    <AssemblyHorizontalOffset>Horizontale Verschiebung der Baugruppe</AssemblyHorizontalOffset>
-    <AssemblyId>Stil-ID der Baugruppe</AssemblyId>
-    <AssemblyNutationAngle>Neigungswinkel der Baugruppe</AssemblyNutationAngle>
-    <AssemblyPositionRelativeToAxis>Position der Baugruppe relativ zur Achse</AssemblyPositionRelativeToAxis>
-    <AssemblyPrecessionAngle>Präzessionswinkel der Baugruppe</AssemblyPrecessionAngle>
-    <AssemblySpinAngle>Drehwinkel der Baugruppe</AssemblySpinAngle>
-    <AssemblyVerticalOffset>Vertikale Verschiebung der Baugruppe</AssemblyVerticalOffset>
-    <BeamEnd>Balkenende</BeamEnd>
-    <BeamHorizontalOffset>Horizontale Verschiebung des Balkenprofils</BeamHorizontalOffset>
-    <BeamPositionRelativeToAxis>Position des Balkenprofils relativ zur Achse</BeamPositionRelativeToAxis>
-    <BeamRotationAngle>Drehwinkel des Balkens</BeamRotationAngle>
-    <BeamStart>Balkenanfang</BeamStart>
-    <BeamStyleId>Stil-ID des Balkens</BeamStyleId>
-    <BeamVerticalOffset>Vertikale Verschiebung des Balkenprofils</BeamVerticalOffset>
-    <Building>Gebäude</Building>
-    <BuildingAddress>Gebäudeadresse</BuildingAddress>
-    <BuildingDescription>Gebäudebeschreibung</BuildingDescription>
-    <BuildingLongName>Vollständiger Name des Gebäudes</BuildingLongName>
-    <BuildingName>Gebäudenummer</BuildingName>
-    <Casing>Türverkleidung</Casing>
-    <CasingDepth>Tiefe der Türverkleidung</CasingDepth>
-    <CasingWidth>Breite der Türverkleidung</CasingWidth>
-    <Category>Kategorie</Category>
-    <CategoryId>Eindeutige Kategorie-ID</CategoryId>
-    <Color>Materialfarbe</Color>
-    <ColumnHeight>Säulenhöhe</ColumnHeight>
-    <ColumnHorizontalOffset>Horizontale Verschiebung des Säulenprofils</ColumnHorizontalOffset>
-    <ColumnPositionRelativeToAxis>Position des Säulenprofils relativ zur Achse</ColumnPositionRelativeToAxis>
-    <ColumnRotationAngle>Drehwinkel der Säule</ColumnRotationAngle>
-    <ColumnStyleId>Stil-ID der Säule</ColumnStyleId>
-    <ColumnVerticalOffset>Vertikale Verschiebung des Säulenprofils</ColumnVerticalOffset>
-    <ConductorCoreMaterial>Leitermaterial des Kerns</ConductorCoreMaterial>
-    <ConductorCrossSectionArea>Querschnittsfläche des Leiters</ConductorCrossSectionArea>
-    <ConductorInsulationMaterial>Isolationsmaterial des Leiters</ConductorInsulationMaterial>
-    <ConductorNumberCores>Anzahl der Leiteradern</ConductorNumberCores>
-    <ConductorOutsideDiameter>Außendurchmesser des Leiters</ConductorOutsideDiameter>
-    <ConductorRatedVoltage>Nennspannung des Leiters</ConductorRatedVoltage>
-    <ConductorStyleId>Stil-ID des Leiters</ConductorStyleId>
-    <ConductorTemperatureRating>Maximale Betriebstemperatur der Ader</ConductorTemperatureRating>
-    <Count>Anzahl</Count>
-    <DimensionLandingLineOrientation>—</DimensionLandingLineOrientation>
-    <DimensionTextStyleId>—</DimensionTextStyleId>
-    <DimensionValue>—</DimensionValue>
-    <DimensionValueType>—</DimensionValueType>
-    <DistributionBoardHorizontalOffset>Horizontale Verschiebung der Verteilung</DistributionBoardHorizontalOffset>
-    <DistributionBoardPositionRelativeToAxis>Position der Verteilung relativ zur Achse</DistributionBoardPositionRelativeToAxis>
-    <DistributionBoardRotationAngle>Drehwinkel der Verteilung</DistributionBoardRotationAngle>
-    <DistributionBoardStyleId>Stil-ID der Verteilung</DistributionBoardStyleId>
-    <DistributionBoardVerticalOffset>Vertikale Verschiebung der Verteilung</DistributionBoardVerticalOffset>
-    <DoorApertureShape>Türöffnungsform</DoorApertureShape>
-    <DoorArcHeight>Bogenhöhe der Tür</DoorArcHeight>
-    <DoorDepth>Türtiefe</DoorDepth>
-    <DoorHeight>Türhöhe</DoorHeight>
-    <DoorLiningDepth>Rahmentiefe der Tür</DoorLiningDepth>
-    <DoorLiningThickness>Rahmenstärke der Tür</DoorLiningThickness>
-    <DoorOrientation>Ausrichtung der Tür</DoorOrientation>
-    <DoorPosition>Position der Türöffnung</DoorPosition>
-    <DoorStyleId>Stil-ID der Tür</DoorStyleId>
-    <DoorTrapeziumHeight>Trapezhöhe der Tür</DoorTrapeziumHeight>
-    <DoorWidth>Türbreite</DoorWidth>
-    <DuctAccessoryAngle>Drehwinkel des Lüftungszubehörs</DuctAccessoryAngle>
-    <DuctAccessoryStyleId>Stil-ID des Lüftungszubehörs</DuctAccessoryStyleId>
-    <DuctAngle>Drehwinkel des Lüftungskanals</DuctAngle>
-    <DuctBendingRadius>Biegeradius des Lüftungskanals</DuctBendingRadius>
-    <DuctFittingRotationAngle>Drehwinkel des Lüftungsformteils</DuctFittingRotationAngle>
-    <DuctFittingStyleId>Stil-ID des Lüftungsformteils</DuctFittingStyleId>
-    <DuctHeight>Höhe des Lüftungskanals</DuctHeight>
-    <DuctStyleId>Stil-ID des Lüftungskanals</DuctStyleId>
-    <DuctWallThickness>Wandstärke des Lüftungskanals</DuctWallThickness>
-    <DuctWidth>Breite des Lüftungskanals</DuctWidth>
-    <ElectricalCircuitLineStyleId>Stil-ID der Stromkreislinie</ElectricalCircuitLineStyleId>
-    <ElectricalConductorNumber>Anzahl der Leiter</ElectricalConductorNumber>
-    <ElementDepth>Elementtiefe</ElementDepth>
-    <ElementHeight>Elementhöhe</ElementHeight>
-    <ElementHorizontalOffset>Horizontale Verschiebung des Elements</ElementHorizontalOffset>
-    <ElementPositionRelativeToAxis>Position des Elements relativ zur Achse</ElementPositionRelativeToAxis>
-    <ElementStyleId>Stil-ID des Elements</ElementStyleId>
-    <ElementVerticalOffset>Vertikale Verschiebung des Elements</ElementVerticalOffset>
-    <ElementWidth>Elementbreite</ElementWidth>
-    <ElevationName>Ansichtsname</ElevationName>
-    <EntityName>Entitätsname</EntityName>
-    <EquipmentHorizontalOffset>Horizontale Verschiebung der Ausrüstung</EquipmentHorizontalOffset>
-    <EquipmentPositionRelativeToAxis>Position der Ausrüstung relativ zur Achse</EquipmentPositionRelativeToAxis>
-    <EquipmentStyleId>Stil-ID der Ausrüstung</EquipmentStyleId>
-    <EquipmentVerticalOffset>Vertikale Verschiebung der Ausrüstung</EquipmentVerticalOffset>
-    <FloorAngleOfReinforcement>Bewehrungswinkel der Decke</FloorAngleOfReinforcement>
-    <FloorThickness>Deckenstärke</FloorThickness>
-    <FrameDepth>Rahmentiefe</FrameDepth>
-    <FrameThickness>Rahmenstärke</FrameThickness>
-    <GridLineExtension>Achsenverlängerung</GridLineExtension>
-    <GridLineName>Achsenbezeichnung</GridLineName>
-    <HatchAngle>—</HatchAngle>
-    <HatchScale>—</HatchScale>
-    <HatchStyleId>—</HatchStyleId>
-    <HoleDepth>Öffnungstiefe</HoleDepth>
-    <HoleExtent>—</HoleExtent>
-    <HoleHorizontalOffset>Horizontale Verschiebung der Öffnung</HoleHorizontalOffset>
-    <HolePositionRelativeToAxis>Position der Öffnung relativ zur Achse</HolePositionRelativeToAxis>
-    <HoleRotationAngle>Drehwinkel der Öffnung</HoleRotationAngle>
-    <HoleStyleId>Stil-ID der Öffnung</HoleStyleId>
-    <HoleVerticalOffset>Vertikale Verschiebung der Öffnung</HoleVerticalOffset>
-    <HorizontalMullionThickness>Stärke des horizontalen Pfostens</HorizontalMullionThickness>
-    <ImageHeight>Bildhöhe</ImageHeight>
-    <ImageHorizontalOffset>Horizontale Bildverschiebung</ImageHorizontalOffset>
-    <ImageLinkId>Bild-Link-ID</ImageLinkId>
-    <ImagePositionRelativeToAxis>Bildposition relativ zur Achse</ImagePositionRelativeToAxis>
-    <ImageVerticalOffset>Vertikale Bildverschiebung</ImageVerticalOffset>
-    <ImageWidth>Bildbreite</ImageWidth>
-    <InsulationMaterialStyleID>Isoliermaterial-Stil-ID</InsulationMaterialStyleID>
-    <IsolatedFoundationDepth>Tiefe des Einzelfundaments</IsolatedFoundationDepth>
-    <IsolatedFoundationDepthTop>Obere Tiefe des Einzelfundaments</IsolatedFoundationDepthTop>
-    <IsolatedFoundationHeight>Höhe des Einzelfundaments</IsolatedFoundationHeight>
-    <IsolatedFoundationRotationAngle>Drehwinkel des Einzelfundaments</IsolatedFoundationRotationAngle>
-    <IsolatedFoundationShape>Form des Fundaments</IsolatedFoundationShape>
-    <IsolatedFoundationWidth>Breite des Einzelfundaments</IsolatedFoundationWidth>
-    <IsolatedFoundationWidthTop>Obere Breite des Einzelfundaments</IsolatedFoundationWidthTop>
-    <LayeredMaterialId>Schichtmaterial-ID</LayeredMaterialId>
-    <LayerThickness>Schichtdicke</LayerThickness>
-    <LayoutStyleId>Layout-Stil-ID</LayoutStyleId>
-    <LevelElevation>Höhenkote der Ebene</LevelElevation>
-    <LevelId>Ebenen-ID</LevelId>
-    <LevelName>Ebenenname</LevelName>
-    <LightingFixtureHorizontalOffset>Horizontale Verschiebung der Leuchte</LightingFixtureHorizontalOffset>
-    <LightingFixturePositionRelativeToAxis>Position der Leuchte relativ zur Achse</LightingFixturePositionRelativeToAxis>
-    <LightingFixtureRotationAngle>Drehwinkel der Leuchte</LightingFixtureRotationAngle>
-    <LightingFixtureStyleId>Stil-ID der Leuchte</LightingFixtureStyleId>
-    <LightingFixtureVerticalOffset>Vertikale Verschiebung der Leuchte</LightingFixtureVerticalOffset>
-    <Line3DStyle>3D-Linienstil-ID</Line3DStyle>
-    <LineThickness>Linienstärke</LineThickness>
-    <Lining>Türzarge</Lining>
-    <LinkFileType>Dateityp der Verknüpfung</LinkFileType>
-    <LoadType>Ladeverknüpfungstyp</LoadType>
-    <Mark>Markierung</Mark>
-    <MassDensity>Dichte des Materials</MassDensity>
-    <MaterialId>Material-ID</MaterialId>
-    <MaterialsList>Materialliste</MaterialsList>
-    <MaximumDuctLength>Maximale Lüftungskanallänge</MaximumDuctLength>
-    <MaximumPipeLength>Maximale Rohrlänge</MaximumPipeLength>
-    <MechanicalEquipmentHorizontalOffset>Horizontale Verschiebung der Lüftungsanlage</MechanicalEquipmentHorizontalOffset>
-    <MechanicalEquipmentPositionRelativeToAxis>Position der Lüftungsanlage relativ zur Achse</MechanicalEquipmentPositionRelativeToAxis>
-    <MechanicalEquipmentStyleId>Stil-ID der Lüftungsanlage</MechanicalEquipmentStyleId>
-    <MechanicalEquipmentVerticalOffset>Vertikale Verschiebung der Lüftungsanlage</MechanicalEquipmentVerticalOffset>
-    <MepRouteSlope>Gefälle der Leitung</MepRouteSlope>
-    <MepSystemDesignation>Systembezeichnung</MepSystemDesignation>
-    <MinimumDuctLength>Minimale Lüftungskanallänge</MinimumDuctLength>
-    <MinimumPipeLength>Minimale Rohrlänge</MinimumPipeLength>
-    <ModelHorizontalOffset>Horizontale Verschiebung des 3D-Modells</ModelHorizontalOffset>
-    <ModelLinkId>Modell-Verknüpfungs-ID</ModelLinkId>
-    <ModelOrientation>Ausrichtung des 3D-Modells</ModelOrientation>
-    <ModelPositionRelativeToAxis>Position des 3D-Modells relativ zur Achse</ModelPositionRelativeToAxis>
-    <ModelVerticalOffset>Vertikale Verschiebung des 3D-Modells</ModelVerticalOffset>
-    <MullionThickness>Pfostenstärke</MullionThickness>
-    <MultipleOfCableBendingRadius>Vielfaches des Kabelbiegeradius</MultipleOfCableBendingRadius>
-    <NominalDuctDiameter>Nenndurchmesser des Lüftungskanals</NominalDuctDiameter>
-    <NumberOfSteps>Stufenanzahl</NumberOfSteps>
-    <NumberOfStepsOnBalusters>Stufen pro Baluster</NumberOfStepsOnBalusters>
-    <NutationAngle>Neigungswinkel</NutationAngle>
-    <ObjectName>Objektname</ObjectName>
-    <ObjectType>Objekttyp</ObjectType>
-    <Offset>Versatz</Offset>
-    <OpeningDepth>Öffnungstiefe</OpeningDepth>
-    <OutwardSill>Außenfensterbrett</OutwardSill>
-    <PageFormatHeight>Seitenformathöhe</PageFormatHeight>
-    <PageFormatId>Seitenformat-ID</PageFormatId>
-    <PageFormatReferenceName>Seitenformatname</PageFormatReferenceName>
-    <PageFormatWidth>Seitenformatbreite</PageFormatWidth>
-    <PageOrientation>Seitenausrichtung</PageOrientation>
-    <PanelDepth>Flügeldicke</PanelDepth>
-    <PanelOffset>Flügelversatz</PanelOffset>
-    <ParentObjectMark>Markierung des übergeordneten Objekts</ParentObjectMark>
-    <ParentObjectName>Name des übergeordneten Objekts</ParentObjectName>
-    <ParentObjectType>Typ des übergeordneten Objekts</ParentObjectType>
-    <ParentObjectUniqueId>Eindeutige ID des übergeordneten Objekts</ParentObjectUniqueId>
-    <ParentObjectVerticalOffset>Vertikaler Versatz des übergeordneten Objekts</ParentObjectVerticalOffset>
-    <PathType>Pfadtyp der Verknüpfung</PathType>
-    <PipeAccessoryAngle>Drehwinkel des Rohrzubehörs</PipeAccessoryAngle>
-    <PipeAccessoryStyleId>Stil-ID des Rohrzubehörs</PipeAccessoryStyleId>
-    <PipeBendingRadius>Biegeradius des Rohrs</PipeBendingRadius>
-    <PipeFittingRotationAngle>Drehwinkel des Rohrformteils</PipeFittingRotationAngle>
-    <PipeFittingStyleId>Stil-ID des Rohrformteils</PipeFittingStyleId>
-    <PipeInsideDiameter>Innendurchmesser des Rohrs</PipeInsideDiameter>
-    <PipeOutsideDiameter>Außendurchmesser des Rohrs</PipeOutsideDiameter>
-    <PipeStyleId>Stil-ID des Rohrs</PipeStyleId>
-    <PipeWallThickness>Wandstärke des Rohrs</PipeWallThickness>
-    <PlateHorizontalOffset>Horizontale Verschiebung der Platte</PlateHorizontalOffset>
-    <PlatePositionRelativeToInsertPoint>Position der Platte relativ zur Achse</PlatePositionRelativeToInsertPoint>
-    <PlateStyleId>Stil-ID der Platte</PlateStyleId>
-    <PlateThickness>Plattendicke</PlateThickness>
-    <PlateVerticalOffset>Vertikale Verschiebung der Platte</PlateVerticalOffset>
-    <PlumbingFixtureHorizontalOffset>Horizontale Verschiebung des Sanitärgeräts</PlumbingFixtureHorizontalOffset>
-    <PlumbingFixturePositionRelativeToAxis>Position des Sanitärgeräts relativ zur Achse</PlumbingFixturePositionRelativeToAxis>
-    <PlumbingFixtureStyleId>Stil-ID des Sanitärgeräts</PlumbingFixtureStyleId>
-    <PlumbingFixtureVerticalOffset>Vertikale Verschiebung des Sanitärgeräts</PlumbingFixtureVerticalOffset>
-    <PrecessionAngle>Präzessionswinkel</PrecessionAngle>
-    <ProfileId>Profil-ID</ProfileId>
-    <ProfileType>Profiltyp</ProfileType>
-    <Project>Projekt</Project>
-    <ProjectDescription>Projektbeschreibung</ProjectDescription>
-    <ProjectLongName>Vollständiger Projektname</ProjectLongName>
-    <ProjectName>Projektname</ProjectName>
-    <ProjectPhase>Projektphase</ProjectPhase>
-    <RailingHeight>Geländerhöhe</RailingHeight>
-    <RailingOffset>Geländerversatz</RailingOffset>
-    <RampHeight>Rampenhöhe</RampHeight>
-    <RampHorizontalOffset>Horizontale Rampenverschiebung</RampHorizontalOffset>
-    <RampPositionRelativeToBaseline>Rampenposition relativ zur Basislinie</RampPositionRelativeToBaseline>
-    <RampShape>Rampenform</RampShape>
-    <RampSlope>Rampensteigung</RampSlope>
-    <RampThickness>Rampendicke</RampThickness>
-    <RampWidth>Rampenbreite</RampWidth>
-    <RebarDiameter>Bewehrungsdurchmesser</RebarDiameter>
-    <RebarStyleId>Stil-ID der Bewehrungsstange</RebarStyleId>
-    <ReinforcementGradeId>Bewehrungsklassen-ID</ReinforcementGradeId>
-    <ReinforcementGradeTensileStrength>Zugfestigkeit der Bewehrungsklasse</ReinforcementGradeTensileStrength>
-    <ReinforcementStyleId>Bewehrungsstil-ID</ReinforcementStyleId>
-    <ReinforcementUnitStyleId>Stil-ID der Bewehrungseinheit</ReinforcementUnitStyleId>
-    <RiserHeight>Setzstufenhöhe</RiserHeight>
-    <RoofThickness>Dachdicke</RoofThickness>
-    <RoomHeight>Raumhöhe</RoomHeight>
-    <RoomName>Raumname</RoomName>
-    <RoomNumber>Raumnummer</RoomNumber>
-    <RoutePointName>Streckenpunktname</RoutePointName>
-    <SavedPath>Gespeicherter Verknüpfungspfad</SavedPath>
-    <Scale>Maßstab</Scale>
-    <SectionLineExtension>Schnittlinienverlängerung</SectionLineExtension>
-    <SectionName>Schnittname</SectionName>
-    <Sill>Fensterbank</Sill>
-    <Site>Grundstück</Site>
-    <SiteAddress>Grundstücksadresse</SiteAddress>
-    <SiteDescription>Grundstücksbeschreibung</SiteDescription>
-    <SiteLongName>Vollständiger Grundstücksname</SiteLongName>
-    <SiteName>Grundstücksname</SiteName>
-    <SpaceBetweenBalusters>Abstand zwischen Balustern</SpaceBetweenBalusters>
-    <SpinAngle>Drehwinkel</SpinAngle>
-    <StairHeight>Treppenhöhe</StairHeight>
-    <StairHorizontalOffset>Horizontale Treppenverschiebung</StairHorizontalOffset>
-    <StairPositionRelativeToBaseline>Treppenposition relativ zur Basislinie</StairPositionRelativeToBaseline>
-    <StairShape>Treppenform</StairShape>
-    <StairSlope>Treppensteigung</StairSlope>
-    <StairThickness>Treppendicke</StairThickness>
-    <StairWidth>Treppenbreite</StairWidth>
-    <SystemCategory>Systemkategorie</SystemCategory>
-    <SystemGroup>Systemgruppe</SystemGroup>
-    <SystemsList>Systemliste</SystemsList>
-    <SystemStyleId>System-Stil-ID</SystemStyleId>
-    <ThermalConductivity>Wärmeleitfähigkeit</ThermalConductivity>
-    <Threshold>Türschwelle</Threshold>
-    <ThresholdThickness>Schwellenstärke</ThresholdThickness>
-    <TopicId>Abschnitts-ID</TopicId>
-    <TransomConstruction>Oberlichttyp</TransomConstruction>
-    <TransomHeight>Oberlichthöhe</TransomHeight>
-    <TreadDepth>Auftrittstiefe</TreadDepth>
-    <UniformScaling>Einheitliche Skalierung</UniformScaling>
-    <UniqueId>Eindeutige ID</UniqueId>
-    <VerticalMullionThickness>Stärke des vertikalen Pfostens</VerticalMullionThickness>
-    <WallFoundationHeight>Höhe des Streifenfundaments</WallFoundationHeight>
-    <WallFoundationHorizontalOffset>Horizontale Verschiebung des Streifenfundaments</WallFoundationHorizontalOffset>
-    <WallFoundationPositionRelativeToBaseline>Position des Streifenfundaments relativ zur Basislinie</WallFoundationPositionRelativeToBaseline>
-    <WallFoundationShape>Fundamentform</WallFoundationShape>
-    <WallFoundationThickness>Stärke des Streifenfundaments</WallFoundationThickness>
-    <WallFoundationThicknessTop>Obere Stärke des Streifenfundaments</WallFoundationThicknessTop>
-    <WallHeight>Wandhöhe</WallHeight>
-    <WallHorizontalOffset>Horizontale Wandverschiebung</WallHorizontalOffset>
-    <WallPositionRelativeToBaseline>Wandposition relativ zur Basislinie</WallPositionRelativeToBaseline>
-    <WallThickness>Wandstärke</WallThickness>
-    <WindowApertureShape>Fensteröffnungsform</WindowApertureShape>
-    <WindowArcHeight>Bogenhöhe des Fensters</WindowArcHeight>
-    <WindowDepth>Fenstertiefe</WindowDepth>
-    <WindowHeight>Fensterhöhe</WindowHeight>
-    <WindowLiningDepth>Rahmentiefe des Fensters</WindowLiningDepth>
-    <WindowLiningThickness>Rahmenstärke des Fensters</WindowLiningThickness>
-    <WindowOrientation>Fensterausrichtung</WindowOrientation>
-    <WindowPosition>Position der Fensteröffnung</WindowPosition>
-    <WindowStyleId>Stil-ID des Fensters</WindowStyleId>
-    <WindowTrapeziumHeight>Trapezhöhe des Fensters</WindowTrapeziumHeight>
-    <WindowWidth>Fensterbreite</WindowWidth>
-    <WiringAccessoryHorizontalOffset>Horizontale Verschiebung des Elektroinstallationsgeräts</WiringAccessoryHorizontalOffset>
-    <WiringAccessoryPositionRelativeToAxis>Position des Elektroinstallationsgeräts relativ zur Achse</WiringAccessoryPositionRelativeToAxis>
-    <WiringAccessoryRotationAngle>Drehwinkel des Elektroinstallationsgeräts</WiringAccessoryRotationAngle>
-    <WiringAccessoryStyleId>Stil-ID des Elektroinstallationsgeräts</WiringAccessoryStyleId>
-    <WiringAccessoryVerticalOffset>Vertikale Verschiebung des Elektroinstallationsgeräts</WiringAccessoryVerticalOffset>
-  </RengaParameters>
   <RengaQuantities>
     <Area>Fläche</Area>
     <Count>Anzahl</Count>

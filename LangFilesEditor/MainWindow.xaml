@@ -19,6 +19,8 @@
         </Style>
 
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <local:ObjectReferenceEqualityConverter x:Key="ObjectReferenceEqualityConverter"/>
+        <local:NodeVisibilityConverter x:Key="NodeVisibilityConverter"/>
 
     </Window.Resources>
     <TabControl>
@@ -103,6 +105,10 @@
                                    Text="Has duplicate values!"
                                    Visibility="{Binding Path=SelectedNode.HasItemsWithSameValue, Converter={StaticResource BooleanToVisibilityConverter}}" />
 
+                        <Button Grid.Column="1"
+                                Visibility="Hidden"
+                                Content="Height holder"/>
+
                         <Button Grid.Column="3"
                                 Command="{Binding Path=SelectedNode.SearchWithDuplicateNamesOrValuesCommand}"
                                 Content="Search them"
@@ -110,171 +116,220 @@
                     </Grid>
 
                     <!-- EDITORS -->
-                    <TabControl Name="TcEditors"
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                local:TabControlExtensions.EnableContentCaching="True"
-                                ItemsSource="{Binding Path=EditNodes}"
-                                SelectedItem="{Binding Path=SelectedNode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-                        <TabControl.ItemTemplate>
-                            <DataTemplate DataType="{x:Type structure:Node}">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="1"
+                          Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
 
-                                    <TextBlock Grid.Column="0"
-                                               VerticalAlignment="Center"
-                                               Text="{Binding Path=Name}" />
+                        <!-- Заголовки вкладок -->
+                        <ItemsControl Grid.Row="0"
+                                      ItemsSource="{Binding EditNodes}"
+                                      Margin="4 0">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
 
-                                    <Button Grid.Column="1"
-                                            MinWidth="0"
-                                            MinHeight="0"
-                                            Margin="4 0 0 0"
-                                            Padding="0"
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            Background="Transparent"
-                                            BorderThickness="0"
-                                            Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}, Path=DataContext.CloseEditorTabCommand}">
-                                        <Button.Style>
-                                            <Style TargetType="Button">
-                                                <Setter Property="Visibility" Value="Collapsed" />
-                                                <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TabItem}, Path=IsSelected}"
-                                                                 Value="True">
-                                                        <Setter Property="Visibility" Value="Visible" />
-                                                    </DataTrigger>
-                                                </Style.Triggers>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type structure:Node}">
+                                    <ToggleButton Margin="0"
+                                                  Padding="8 4"
+                                                  Style="{StaticResource {x:Static ToolBar.ToggleButtonStyleKey}}"
+                                                  Command="{Binding DataContext.SelectNodeCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                  CommandParameter="{Binding}">
+                                        <ToggleButton.IsChecked>
+                                            <MultiBinding Converter="{StaticResource ObjectReferenceEqualityConverter}" Mode="TwoWay">
+                                                <!-- Первый биндинг — SelectedNode из контекста окна -->
+                                                <Binding Path="DataContext.SelectedNode"
+                                                         RelativeSource="{RelativeSource AncestorType=Window}" />
+                                                <!-- Второй биндинг — текущий Node (this) -->
+                                                <Binding Path="."/>
+                                            </MultiBinding>
+                                        </ToggleButton.IsChecked>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0"
+                                                       VerticalAlignment="Center"
+                                                       Text="{Binding Path=Name}" />
+                                            <Button Grid.Column="1"
+                                                    MinWidth="0"
+                                                    MinHeight="0"
+                                                    Margin="4 0 0 0"
+                                                    Padding="0"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Background="Transparent"
+                                                    BorderThickness="0"
+                                                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}, Path=DataContext.CloseEditorTabCommand}">
+                                                <Button.Style>
+                                                    <Style TargetType="Button">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=IsChecked}"
+                                                                         Value="True">
+                                                                <Setter Property="Visibility" Value="Visible" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                                <Viewbox Width="16"
+                                                         Height="16">
+                                                    <Canvas Width="24"
+                                                            Height="24">
+                                                        <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                                                              Fill="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Button}, Path=Foreground}" />
+                                                    </Canvas>
+                                                </Viewbox>
+                                            </Button>
+                                        </Grid>
+                                    </ToggleButton>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <!-- Контент вкладок -->
+                        <ItemsControl Name="TcEditors"
+                                      Grid.Row="1"
+                                      ItemsSource="{Binding EditNodes}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <Grid />
+                                    <!-- все контенты будут накладываться друг на друга -->
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+
+                            <ItemsControl.ItemContainerStyle>
+                                <Style TargetType="ContentPresenter">
+                                    <Setter Property="Visibility">
+                                        <Setter.Value>
+                                            <MultiBinding Converter="{StaticResource NodeVisibilityConverter}">
+                                                <Binding Path="DataContext.SelectedNode"
+                                                         RelativeSource="{RelativeSource AncestorType=Window}"/>
+                                                <Binding/>
+                                            </MultiBinding>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </ItemsControl.ItemContainerStyle>
+
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type structure:Node}">
+                                    <DataGrid x:Name="PART_DataGrid"
+                                              Margin="4"
+                                              AutoGenerateColumns="False"
+                                              BeginningEdit="DgItems_OnBeginningEdit"
+                                              CanUserAddRows="False"
+                                              CanUserDeleteRows="False"
+                                              CurrentCellChanged="DgItems_OnCurrentCellChanged"
+                                              DataGridCell.Selected="DgItems_OnSelected"
+                                              EnableColumnVirtualization="True"
+                                              EnableRowVirtualization="True"
+                                              HorizontalScrollBarVisibility="Disabled"
+                                              ItemsSource="{Binding Path=.Items}"
+                                              Loaded="DgItems_OnLoaded"
+                                              PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
+                                              ScrollViewer.CanContentScroll="False">
+
+                                        <DataGrid.RowStyle>
+                                            <Style TargetType="{x:Type DataGridRow}">
+                                                <Setter Property="Visibility" Value="{Binding Path=IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                                <Setter Property="Background" Value="{Binding Path=BackgroundColor}" />
                                             </Style>
-                                        </Button.Style>
-                                        <Viewbox Width="16"
-                                                 Height="16">
-                                            <Canvas Width="24"
-                                                    Height="24">
-                                                <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-                                                      Fill="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Button}, Path=Foreground}" />
-                                            </Canvas>
-                                        </Viewbox>
-                                    </Button>
-                                </Grid>
-                            </DataTemplate>
-                        </TabControl.ItemTemplate>
+                                        </DataGrid.RowStyle>
 
-                        <TabControl.ContentTemplate>
-                            <DataTemplate DataType="{x:Type structure:Node}">
-                                <DataGrid x:Name="PART_DataGrid"
-                                          Margin="4"
-                                          AutoGenerateColumns="False"
-                                          BeginningEdit="DgItems_OnBeginningEdit"
-                                          CanUserAddRows="False"
-                                          CanUserDeleteRows="False"
-                                          CurrentCellChanged="DgItems_OnCurrentCellChanged"
-                                          DataGridCell.Selected="DgItems_OnSelected"
-                                          EnableColumnVirtualization="True"
-                                          EnableRowVirtualization="True"
-                                          HorizontalScrollBarVisibility="Disabled"
-                                          ItemsSource="{Binding Path=.Items}"
-                                          Loaded="DgItems_OnLoaded"
-                                          PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
-                                          ScrollViewer.CanContentScroll="True"
-                                          SelectionMode="Single"
-                                          VirtualizingPanel.IsVirtualizing="True"
-                                          VirtualizingPanel.VirtualizationMode="Recycling">
+                                        <DataGrid.Resources>
+                                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                                <Setter Property="ContentTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding}"
+                                                                       TextAlignment="Center"
+                                                                       TextWrapping="Wrap" />
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+                                                             Color="#C9E9FF" />
+                                            <DataTemplate x:Key="ItemNameCellTemplate"
+                                                          DataType="{x:Type structure:Item}">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto" />
+                                                        <ColumnDefinition Width="Auto" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Viewbox Grid.Column="0"
+                                                             Width="16"
+                                                             Height="16"
+                                                             Margin="0 0 4 0"
+                                                             Visibility="{Binding Path=IsVisibleError, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                        <Canvas Width="24"
+                                                                Height="24">
+                                                            <Path Data="M11,15H13V17H11V15M11,7H13V13H11V7M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20Z"
+                                                                  Fill="Red" />
+                                                        </Canvas>
+                                                    </Viewbox>
+                                                    <Viewbox Grid.Column="1"
+                                                             Width="16"
+                                                             Height="16"
+                                                             Margin="0 0 4 0"
+                                                             Visibility="{Binding Path=IsVisibleWarning, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                                        <Canvas Width="24"
+                                                                Height="24">
+                                                            <Path Data="M11,15H13V17H11V15M11,7H13V13H11V7M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20Z"
+                                                                  Fill="DarkOrange" />
+                                                        </Canvas>
+                                                    </Viewbox>
+                                                    <TextBox Grid.Column="2"
+                                                             MinWidth="20"
+                                                             Margin="0"
+                                                             Background="Transparent"
+                                                             BorderThickness="0"
+                                                             Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                                </Grid>
+                                            </DataTemplate>
+                                            <DataTemplate x:Key="ItemValueCellTemplate"
+                                                          DataType="{x:Type structure:Item}">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="Auto" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <TextBox Grid.Column="0"
+                                                             Margin="0"
+                                                             AcceptsReturn="True"
+                                                             Background="Transparent"
+                                                             BorderThickness="0"
+                                                             Text="{DynamicResource PLACEHOLDER}"
+                                                             TextWrapping="Wrap" />
 
-                                    <DataGrid.RowStyle>
-                                        <Style TargetType="{x:Type DataGridRow}">
-                                            <Setter Property="Visibility" Value="{Binding Path=IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                                            <Setter Property="Background" Value="{Binding Path=BackgroundColor}" />
-                                        </Style>
-                                    </DataGrid.RowStyle>
+                                                    <!--
+                                                        ТУТ МОЖНО ДОБАВИТЬ ПОЛЕЗНЫЕ КНОПКИ, НО
+                                                        ПОКА Я НЕ ПРИДУМАЛ КАКИЕ
+                                                    -->
 
-                                    <DataGrid.Resources>
-                                        <Style TargetType="{x:Type DataGridColumnHeader}">
-                                            <Setter Property="HorizontalContentAlignment" Value="Center" />
-                                            <Setter Property="ContentTemplate">
-                                                <Setter.Value>
-                                                    <DataTemplate>
-                                                        <TextBlock Text="{Binding}"
-                                                                   TextAlignment="Center"
-                                                                   TextWrapping="Wrap" />
-                                                    </DataTemplate>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </Style>
-                                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
-                                                         Color="#C9E9FF" />
-                                        <DataTemplate x:Key="ItemNameCellTemplate"
-                                                      DataType="{x:Type structure:Item}">
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto" />
-                                                    <ColumnDefinition Width="Auto" />
-                                                    <ColumnDefinition Width="*" />
-                                                </Grid.ColumnDefinitions>
-                                                <Viewbox Grid.Column="0"
-                                                         Width="16"
-                                                         Height="16"
-                                                         Margin="0 0 4 0"
-                                                         Visibility="{Binding Path=IsVisibleError, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                    <Canvas Width="24"
-                                                            Height="24">
-                                                        <Path Data="M11,15H13V17H11V15M11,7H13V13H11V7M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20Z"
-                                                              Fill="Red" />
-                                                    </Canvas>
-                                                </Viewbox>
-                                                <Viewbox Grid.Column="1"
-                                                         Width="16"
-                                                         Height="16"
-                                                         Margin="0 0 4 0"
-                                                         Visibility="{Binding Path=IsVisibleWarning, Converter={StaticResource BooleanToVisibilityConverter}}">
-                                                    <Canvas Width="24"
-                                                            Height="24">
-                                                        <Path Data="M11,15H13V17H11V15M11,7H13V13H11V7M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20Z"
-                                                              Fill="DarkOrange" />
-                                                    </Canvas>
-                                                </Viewbox>
-                                                <TextBox Grid.Column="2"
-                                                         MinWidth="20"
-                                                         Margin="0"
-                                                         Background="Transparent"
-                                                         BorderThickness="0"
-                                                         Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                                            </Grid>
-                                        </DataTemplate>
-                                        <DataTemplate x:Key="ItemValueCellTemplate"
-                                                      DataType="{x:Type structure:Item}">
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="*" />
-                                                    <ColumnDefinition Width="Auto" />
-                                                </Grid.ColumnDefinitions>
-                                                <TextBox Grid.Column="0"
-                                                         Margin="0"
-                                                         AcceptsReturn="True"
-                                                         Background="Transparent"
-                                                         BorderThickness="0"
-                                                         Text="{DynamicResource PLACEHOLDER}"
-                                                         TextWrapping="Wrap" />
-
-                                                <!--
-                                                    ТУТ МОЖНО ДОБАВИТЬ ПОЛЕЗНЫЕ КНОПКИ, НО
-                                                    ПОКА Я НЕ ПРИДУМАЛ КАКИЕ
-                                                -->
-
-                                            </Grid>
-                                        </DataTemplate>
-                                    </DataGrid.Resources>
-                                    <DataGrid.Columns>
-                                        <!-- TAG -->
-                                        <DataGridTemplateColumn Width="Auto"
-                                                                CellTemplate="{StaticResource ItemNameCellTemplate}" />
-                                    </DataGrid.Columns>
-                                </DataGrid>
-                            </DataTemplate>
-                        </TabControl.ContentTemplate>
-                    </TabControl>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </DataGrid.Resources>
+                                        <DataGrid.Columns>
+                                            <!-- TAG -->
+                                            <DataGridTemplateColumn Width="Auto"
+                                                                    CellTemplate="{StaticResource ItemNameCellTemplate}" />
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
 
                     <!-- ITEM CONTROLS -->
                     <StackPanel Grid.Row="0"
