@@ -1335,7 +1335,7 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <p2>Parámetros de tipo</p2>
     <p3>Común a todos</p3>
     <i1>Puede introducir varios valores válidos en campo "Valores", delimitándolos con coma. Se considera que un parámetro satisface condición si su valor coincide con al menos un valor válido.</i1>
-    <i1-1>Para evitar que una coma se perciba como un símbolo delimitador, se debe escapar con una barra diagonal inversa. Por ejemplo, "valor 1\,5"</i1-1>
+    <i1-1>Para evitar que una coma se perciba como un símbolo delimitador, se debe escapar con una barra diagonal inversa. Por ejemplo, "valor 1\,5".</i1-1>
     <i2>Condición "Con parámetro" significa que elemento se procesará si dicho parámetro está presente, independientemente de valor del parámetro.</i2>
     <i2-1>Condición "Sin parámetro" significa que elemento se procesará en ausencia de dicho parámetro.</i2-1>
     <i3>Parámetros de cadena sólo se verifican si cumplen condiciones "Igual a", "No igual a", "Contiene", "No contiene".</i3>
@@ -1573,6 +1573,25 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <et9>No contiene</et9>
     <et10>Ausencia del atributo</et10>
     <name>Nombre</name>
+    <i1>Un atributo es un concepto condicional que combina Propiedades, Parámetros y Características calculadas de los objetos.</i1>
+    <i2>En el campo "Valores" puede ingresar varios valores permitidos separados por comas. El atributo cumple la condición si su valor coincide con al menos uno de los valores permitidos.</i2>
+    <i3>Para que la coma no se interprete como separador, debe escaparse con una barra invertida. Por ejemplo, "valor 1,5".</i3>
+    <i4>La condición "Presencia del atributo" significa que el objeto se procesará si existe dicho atributo, independientemente de su valor.</i4>
+    <i5>La condición "Ausencia del atributo" significa que el objeto se procesará si no existe dicho atributo.</i5>
+    <i6>Los atributos de texto se verifican solo con las condiciones "Igual", "No igual", "Contiene" y "No contiene".</i6>
+    <i7>Los atributos numéricos se verifican con todas las condiciones excepto "Contiene".</i7>
+    <i8>La condición "Contiene" comprueba que el atributo del objeto contiene al menos uno de los valores permitidos. La condición "No contiene" comprueba que el atributo no contiene al menos uno de los valores.</i8>
+    <i9>Para usar la condición "Empieza con", seleccione "Contiene" y agregue un "" al final del valor. Por ejemplo, "Hormigón".</i9>
+    <i10>Para usar la condición "Termina con", seleccione "Contiene" y agregue "" al comienzo del valor. Por ejemplo, "hormigón".</i10>
+    <i11>Para usar la condición "No empieza con", seleccione "No contiene" y agregue "" al final del valor. Por ejemplo, "Hormigón".</i11>
+    <i12>Para usar la condición "No termina con", seleccione "No contiene" y agregue "" al comienzo del valor. Por ejemplo, "hormigón".</i12>
+    <i13>La verificación de valores de texto distingue entre mayúsculas y minúsculas.</i13>
+    <i14>Para comprobar atributos booleanos, puede usar los valores "Sí/No", "true/false" o 0 (no) y 1 (sí).</i14>
+    <i15>Si el atributo devuelve una longitud, el valor predeterminado está en milímetros. Para usar otras unidades, especifíquelas en la condición con un espacio: "1 m" en metros, "10 cm" en centímetros, "100 mm" en milímetros.</i15>
+    <i16>Si el atributo devuelve un área, el valor predeterminado está en metros cuadrados. Para usar otras unidades, especifíquelas en la condición con un espacio: "1 m2" para metros cuadrados, "10 cm2" para centímetros cuadrados, "100 mm2" para milímetros cuadrados.</i16>
+    <i17>Si el atributo devuelve un volumen, el valor predeterminado está en metros cúbicos. Para usar otras unidades, especifíquelas en la condición con un espacio: "1 m3" para metros cúbicos, "10 cm3" para centímetros cúbicos, "100 mm3" para milímetros cúbicos.</i17>
+    <i18>Si el atributo devuelve una masa, el valor predeterminado está en kilogramos. Para usar otras unidades, especifíquelas en la condición con un espacio: "1 t" para toneladas, "10 kg" para kilogramos, "100 g" para gramos.</i18>
+    <i19>Todas las condiciones simples anidadas de una condición de grupo se verifican con el operador "Y", es decir, todas deben coincidir.</i19>
     <AirAccessory>Accesorio para conductos de aire</AirAccessory>
     <AirDuct>Conducto de aire</AirDuct>
     <AirEquipment>Equipo de aire</AirEquipment>

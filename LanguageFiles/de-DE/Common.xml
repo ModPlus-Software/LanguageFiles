@@ -1335,7 +1335,7 @@ In der Parameterliste des Exemplars dürften nicht alle Parameter vorhanden sein
     <p2>Parameter des Typs</p2>
     <p3>Gemeinsam für alle</p3>
     <i1>In das Feld "Werte" können Sie mehrere gültige Werte eingeben, die durch ein Komma getrennt sind. Ein Parameter erfüllt eine Bedingung, wenn sein Wert mit mindestens einem gültigen Wert übereinstimmt.</i1>
-    <i1-1>Damit ein Komma nicht als Trennzeichen wahrgenommen wird, muss es mit einem als Escapezeichen fungierenden Backslash versehen werden. Z.B. "Wert 1\,5"</i1-1>
+    <i1-1>Damit ein Komma nicht als Trennzeichen wahrgenommen wird, muss es mit einem als Escapezeichen fungierenden Backslash versehen werden. Z.B. "Wert 1\,5".</i1-1>
     <i2>Die Bedingung "Vorhandensein eines Parameters" bedeutet, dass das Element verarbeitet wird, wenn ein solcher Parameter vorhanden ist, unabhängig vom Wert des Parameters.</i2>
     <i2-1>Die Bedingung "Fehlender Parameter" bedeutet, dass das Element bearbeitet wird, wenn solcher Parameter fehlt.</i2-1>
     <i3>Zeichenfolgeparameter werden nur durch die Bedingungen "Gleich", "Nicht gleich", "Enthält", "Enthält nicht" geprüft.</i3>
@@ -1573,6 +1573,25 @@ In der Parameterliste des Exemplars dürften nicht alle Parameter vorhanden sein
     <et9>Enthält nicht</et9>
     <et10>Fehlen des Attributs</et10>
     <name>Benennung</name>
+    <i1>Ein Attribut ist ein bedingter Begriff, der Eigenschaften, Parameter und berechnete Eigenschaften von Objekten zusammenfasst.</i1>
+    <i2>Im Feld „Werte" können mehrere zulässige Werte durch Kommas getrennt eingegeben werden. Das Attribut erfüllt die Bedingung, wenn sein Wert mindestens einem der zulässigen Werte entspricht.</i2>
+    <i3>Damit das Komma nicht als Trennzeichen interpretiert wird, muss es mit einem Backslash maskiert werden. Zum Beispiel „Wert 1,5".</i3>
+    <i4>Die Bedingung „Vorhandensein des Attributs" bedeutet, dass das Objekt verarbeitet wird, wenn dieses Attribut vorhanden ist, unabhängig von seinem Wert.</i4>
+    <i5>Die Bedingung „Fehlen des Attributs" bedeutet, dass das Objekt verarbeitet wird, wenn dieses Attribut nicht vorhanden ist.</i5>
+    <i6>Zeichenfolgenattribute werden nur mit den Bedingungen „Gleich", „Ungleich", „Enthält" und „Enthält nicht" überprüft.</i6>
+    <i7>Numerische Attribute werden mit allen Bedingungen überprüft, außer „Enthält".</i7>
+    <i8>Die Bedingung „Enthält" prüft, ob das Attribut des Objekts mindestens einen der zulässigen Werte enthält. Die Bedingung „Enthält nicht" prüft entsprechend, ob das Attribut mindestens einen der Werte nicht enthält.</i8>
+    <i9>Um die Bedingung „Beginnt mit" zu verwenden, wählen Sie „Enthält" und fügen Sie am Ende des Wertes ein „" hinzu. Zum Beispiel „Beton".</i9>
+    <i10>Um die Bedingung „Endet mit" zu verwenden, wählen Sie „Enthält" und fügen Sie am Anfang des Wertes ein „" hinzu. Zum Beispiel „Beton".</i10>
+    <i11>Um die Bedingung „Beginnt nicht mit" zu verwenden, wählen Sie „Enthält nicht" und fügen Sie am Ende des Wertes ein „" hinzu. Zum Beispiel „Beton".</i11>
+    <i12>Um die Bedingung „Endet nicht mit" zu verwenden, wählen Sie „Enthält nicht" und fügen Sie am Anfang des Wertes ein „" hinzu. Zum Beispiel „Beton".</i12>
+    <i13>Die Überprüfung von Zeichenfolgenwerten erfolgt unter Berücksichtigung der Groß- und Kleinschreibung.</i13>
+    <i14>Zur Überprüfung boolescher Attribute können die Werte „Ja/Nein", „true/false" sowie 0 (nein) und 1 (ja) verwendet werden.</i14>
+    <i15>Wenn das Attribut eine Länge zurückgibt, wird standardmäßig der Wert in Millimetern verwendet. Um andere Einheiten zu verwenden, geben Sie sie in der Bedingung mit einem Leerzeichen an: „1 m" für Meter, „10 cm" für Zentimeter, „100 mm" für Millimeter.</i15>
+    <i16>Wenn das Attribut eine Fläche zurückgibt, wird standardmäßig der Wert in Quadratmetern verwendet. Um andere Einheiten zu verwenden, geben Sie sie mit einem Leerzeichen an: „1 m2" für Quadratmeter, „10 cm2" für Quadratzentimeter, „100 mm2" für Quadratmillimeter.</i16>
+    <i17>Wenn das Attribut ein Volumen zurückgibt, wird standardmäßig der Wert in Kubikmetern verwendet. Um andere Einheiten zu verwenden, geben Sie sie in der Bedingung mit einem Leerzeichen an: „1 m3" für Kubikmeter, „10 cm3" für Kubikzentimeter, „100 mm3" für Kubikmillimeter.</i17>
+    <i18>Wenn das Attribut eine Masse zurückgibt, wird standardmäßig der Wert in Kilogramm verwendet. Um andere Einheiten zu verwenden, geben Sie sie mit einem Leerzeichen an: „1 t" für Tonnen, „10 kg" für Kilogramm, „100 g" für Gramm.</i18>
+    <i19>Alle einfachen verschachtelten Bedingungen einer Gruppenbedingung werden mit dem Operator „UND" überprüft, d. h. alle Bedingungen müssen zutreffen.</i19>
     <AirAccessory>Luftkanal/-rohr-Zubehör</AirAccessory>
     <AirDuct>Luftkanal/-rohr</AirDuct>
     <AirEquipment>Luftausrüstung</AirEquipment>
