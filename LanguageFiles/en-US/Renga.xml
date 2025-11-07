@@ -39,8 +39,8 @@
   </mrBatchSheetExport>
   <mrSearchBy
     LocalName="Search by condition"
-    Description="Search for objects by various conditions"
-    FullDescription="Plugin allows you to search by properties, parameters and quantities among all objects of the model or objects of the specified type. Found objects are highlighted in the model. There is an opportunity in the search bar to specify several values for the search, indicate the &quot;AND-OR&quot; operation option, and also use the &quot;not equal&quot;, &quot;less&quot;, &quot;more&quot; operators">
+    Description="Search for objects by various conditions">
+    <!-- todo remove after 3.1.0.0 start -->
     <h1>Object type:</h1>
     <h2>Search in:</h2>
     <h3>Properties</h3>
@@ -49,11 +49,13 @@
     <h6>Units</h6>
     <h7>String Match Type:</h7>
     <h8>Search:</h8>
+    <!-- todo remove after 3.1.0.0 end -->
     <h9>Reset current selection if nothing is found</h9>
     <h10>Search</h10>
     <h11>Found {0} objects</h11>
     <h12>Nothing found</h12>
     <h16>Search in selected</h16>
+    <!-- todo remove after 3.1.0.0 start -->
     <m1>Equal</m1>
     <m2>Contain</m2>
     <t1>Indicate in what units of values from the objects will be taken, and the accuracy of comparing the numerical values</t1>
@@ -68,7 +70,9 @@
     <t10>You can specify the specific name of the property or parameter in which you want to validate the entered value. For example, the string "Note=Concrete" with the "Search in properties" checkbox selected indicates that objects matching the search condition should have the "Note" property with the value "Concrete". Name validation is also handled based on the "String Match Type".</t10>
     <t11>To search by the condition of empty values, you need to specify only the name of the property or parameter. For example, the line "Note=" with the checkbox "Search in properties" checked, indicates that objects satisfying the search condition should have the property "Note" with an empty value.</t11>
     <t12>Checking all string values is not case sensitive.</t12>
+    <!-- todo remove after 3.1.0.0 end -->
     <t13>Show found objects on a 3D scene</t13>
+    <!-- todo remove after 3.1.0.0 start -->
     <all>All</all>
     <qh1>Length:</qh1>
     <qh2>Area:</qh2>
@@ -87,6 +91,7 @@
     <q10>Cubic millimeters</q10>
     <q11>Cubic centimeters</q11>
     <q12>Cubic meters</q12>
+    <!-- todo remove after 3.1.0.0 end -->
   </mrSearchBy>
   <mrLevelsList
     LocalName="Levels"
