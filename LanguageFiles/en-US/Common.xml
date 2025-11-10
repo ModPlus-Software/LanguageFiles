@@ -1575,16 +1575,16 @@ Not all parameters may be present in the list of instance parameters, because in
     <name>Name</name>
     <i1>An attribute is a conditional concept that combines Properties, Parameters, and Quantities of objects.</i1>
     <i2>In the "Values" field, you can enter multiple acceptable values separated by commas. The attribute meets the condition if its value matches at least one of the acceptable values.</i2>
-    <i3>To prevent a comma from being interpreted as a separator, escape it with a backslash. For example, "value 1,5".</i3>
+    <i3>To prevent a comma from being interpreted as a separator, escape it with a backslash. For example, "value 1\,5".</i3>
     <i4>The "Attribute presence" condition means that the object will be processed if such an attribute exists, regardless of its value.</i4>
     <i5>The "Attribute absence" condition means that the object will be processed if such an attribute does not exist.</i5>
     <i6>String attributes are checked only with the conditions "Equal", "Not equal", "Contains", and "Does not contain".</i6>
     <i7>Numeric attributes are checked with all conditions except "Contains".</i7>
     <i8>The "Contains" condition checks that the object's attribute contains at least one of the allowed values. The "Does not contain" condition checks that the attribute does not contain at least one of the values.</i8>
-    <i9>To use the "Starts with" condition, select "Contains" and add "" to the end of the value. For example, "Concrete".</i9>
-    <i10>To use the "Ends with" condition, select "Contains" and add "" at the beginning of the value. For example, "concrete".</i10>
-    <i11>To use the "Does not start with" condition, select "Does not contain" and add "" to the end of the value. For example, "Concrete".</i11>
-    <i12>To use the "Does not end with" condition, select "Does not contain" and add "" at the beginning of the value. For example, "concrete".</i12>
+    <i9>To use the "Starts with" condition, select "Contains" and add "*" to the end of the value. For example, "Concrete*".</i9>
+    <i10>To use the "Ends with" condition, select "Contains" and add "*" at the beginning of the value. For example, "*concrete".</i10>
+    <i11>To use the "Does not start with" condition, select "Does not contain" and add "*" to the end of the value. For example, "Concrete*".</i11>
+    <i12>To use the "Does not end with" condition, select "Does not contain" and add "*" at the beginning of the value. For example, "*concrete".</i12>
     <i13>String value checking is case-sensitive.</i13>
     <i14>To check boolean attributes, you can use the values "Yes/No", "true/false", or 0 (no) and 1 (yes).</i14>
     <i15>If the attribute returns a length, the default value is in millimeters. To use other units, specify them in the condition with a space: "1 m" for meters, "10 cm" for centimeters, "100 mm" for millimeters.</i15>
