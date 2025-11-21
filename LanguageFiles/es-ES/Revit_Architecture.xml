@@ -553,9 +553,13 @@
   </mprWallSweep>
   <mprWorldOrientation
     LocalName="Lado del mundo"
-    Description="Análisis de orientación de habitaciones a través de ventanas, puertas, vidrieras en muros cortina">
+    Description="Análisis de la orientación de los elementos según los puntos cardinales en relación con la habitación o su ubicación en el sitio">
+    <!--todo remove after 2.2.1.0-->
     <d1>Análisis de orientación de habitaciones se realiza en ventanas, puertas y vidrieras. Resultado del análisis se puede registrar en parámetro de habitación o en parámetro de ventana, puerta o vidriera</d1>
+    <!--todo remove after 2.2.1.0-->
     <d2>Análisis de orientación de elementos. Resultado del análisis se puede registrar en parámetro de ventanas, puertas o vidrieras.</d2>
+    <d3>Para los elementos de las categorías seleccionadas se determina el punto cardinal (teniendo en cuenta la orientación hacia el norte verdadero) en relación con la habitación seleccionada, independientemente de la orientación propia del elemento en el sitio. El resultado del análisis puede registrarse en el parámetro del espacio y/o en el parámetro de los elementos seleccionados</d3>
+    <d4>Para los elementos de las categorías seleccionadas se determina la orientación de la cara frontal en relación con el norte verdadero. Los resultados del análisis pueden registrarse en el parámetro de los elementos seleccionados</d4>
     <tab1>Por habitaciones</tab1>
     <tab2>Por elementos</tab2>
     <!-- todo remove after 2.0.0.0 -->
