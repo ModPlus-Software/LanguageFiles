@@ -186,6 +186,9 @@
     <msg2>Seleccione un elemento para orientar la vista</msg2>
     <ResizeSectionBox>Modificar los límites de la vista 3D</ResizeSectionBox>
     <createbounds>Crear límites</createbounds>
+    <create3D>Crear vista 3D</create3D>
+    <selectElements>Seleccionar elementos</selectElements>
+    <nullSectionBoxMsg>No se puede realizar el recorte para los elementos seleccionados</nullSectionBoxMsg>
   </ostViewIn3D>
   <whshScheduleLookup
     LocalName="Buscar en tablas de planificación"
@@ -1032,6 +1035,7 @@
     <h56>Disminuye o aumenta números de planos existentes en un grupo en una cantidad específica</h56>
     <h57>Decrementar en</h57>
     <h58>Incrementar en</h58>
+    <h59>Ordenar por nombre de plano</h59>
     <p1>número del plano completo</p1>
     <p2>1ra parte</p2>
     <p3>numero de 1ra parte</p3>
@@ -1600,6 +1604,9 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <familyProcessError>{0} - ¡ERROR! Se produjo un error al procesar la familia "{1}" (id: {2}): "{3}"</familyProcessError>
     <familyExists>El documento de destino ya contiene la familia "{0}".{1}¿Desea realizar la copia?</familyExists>
     <duplicateCreated>{0} - Se ha creado un duplicado de la familia {3}</duplicateCreated>
+    <elementTab>Elementos</elementTab>
+    <modelElementTab>Modellelemente</modelElementTab>
+    <selectedInModel>Seleccionados en el modelo</selectedInModel>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notas"
@@ -2373,25 +2380,33 @@ Seleccione otra vista de origen</h9>
     <t50>capa</t50>
     <t51>capas</t51>
     <t52>capas</t52>
-    <t53>Marcadores de posición de la estructura especificados en la plantilla:</t53>
+    <t53>Marcadores de posición de la estructura especificados en la plantilla</t53>
     <t54>@ - se utiliza para sustituir una lista formateada de capas de la estructura en el resultado</t54>
     <t55>&amp; - se utiliza para sustituir una lista formateada de capas combinadas de la estructura en el resultado</t55>
     <t56>[n] - se utiliza para especificar los índices de las capas que se utilizarán para sustituir una lista formateada de capas de la estructura en el resultado</t56>
     <t57>^ - se utiliza para definir un subtítulo de las capas. No participará en la numeración de las capas de la estructura en el resultado</t57>
-    <t58>Resultado para el tipo</t58>
-    <t59>Resultado para los ejemplares</t59>
+    <t58>Resultado para el tipo:</t58>
+    <t59>Resultado para los ejemplares:</t59>
     <t60>Parámetro de tipo requerido con tipo de datos "Texto multilínea". Este parámetro registra una lista numerada de los volúmenes totales de las capas de la estructura, teniendo en cuenta los formatos de línea especificados y los ajustes de numeración</t60>
+    <t61>Usar numeración</t61>
+    <t62>Mostrar solo tipos con cambios</t62>
     <s1>Sin cambios. Parámetros de tipo no se actualizarán</s1>
     <s2>Faltan parámetros requeridos "Plantilla" y "Resultado"</s2>
     <s3>Nuevo valor del resultado es diferente de valor del resultado actual. Parámetros de tipo no se actualizarán porque casilla "Actualizar" no está seleccionada</s3>
     <s4>Nuevo valor del resultado es diferente de valor del resultado actual. Parámetros de tipo se actualizarán</s4>
-    <msg1>Parámetro "{0}" no se ha encontrado</msg1>
+    <msg1>Parámetro de ejemplar "{0}" no se ha encontrado</msg1>
     <!--todo remove after 2.0.2.0-->
     <msg2>Volumen de capas se guarda en parámetro de ejemplar del tipo "{0}"</msg2>
     <msg3>Volumen de las capas se ha registrado en parámetro de ejemplar "{0}" para el tipo "{1}"</msg3>
     <msg4>No hay ejemplares colocados para los tipos. El volumen no puede calcularse</msg4>
     <msg5>El volumen total de las capas se ha registrado en el parámetro de tipo "{0}"</msg5>
     <msg6>La estructura de las capas está registrada en el parámetro de tipo</msg6>
+    <msg7>Parámetro de tipo "{0}" no se ha encontrado</msg7>
+    <msg8>Falta el material</msg8>
+    <msg9>No se ha asignado material a la capa {0}</msg9>
+    <msg10>Introduzca el valor del parámetro</msg10>
+    <msg11>{0}\para el material {1}</msg11>
+    <msg12>El parámetro {0} no se ha encontrado o es de solo lectura</msg12>
     <str1>Estructura [1]</str1>
     <str2>Substrato [2]</str2>
     <str3>Capa térmica/de aire [3]</str3>
@@ -2905,4 +2920,28 @@ Seleccione otra vista de origen</h9>
     <t109>Color de la primera banda de fila</t109>
     <t110>Color de la segunda banda de fila</t110>
   </mprModelCompare>
+  <mprEqualCurtainWalls
+    LocalName="Muros cortina iguales"
+    Description="Buscar muros cortina iguales en el modelo de Revit">
+    <h1>Parámetro faltante:\n</h1>
+    <h2>Parámetro compartido - </h2>
+    <h3>Parámetro de proyecto - </h3>
+    <h4>Seleccionar muro cortina</h4>
+    <h5>Relleno de parámetros</h5>
+    <h6>Muros cortina encontrados:</h6>
+    <h7>Escribir en los valores del parámetro: </h7>
+    <h8>Muestra</h8>
+    <h9>Ajustes de búsqueda</h9>
+    <h10>Criterios de comparación</h10>
+    <h11>Cotas general</h11>
+    <h12>Rejilla de muro cortina</h12>
+    <h13>Montantes</h13>
+    <h14>Tipos de paneles</h14>
+    <h15>Rellenar parámetros</h15>
+    <h16>Nuevo valor</h16>
+    <h17>Valor de la muestra</h17>
+    <h19>Parámetros rellenados:</h19>
+    <h20>Parámetro ausente en el proyecto:</h20>
+    <copyError>Se ha producido un error al copiar al portapapeles. Inténtalo de nuevo</copyError>
+  </mprEqualCurtainWalls>
 </ModPlus>

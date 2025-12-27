@@ -186,6 +186,9 @@
     <msg2>选择用于定向视图的元素</msg2>
     <ResizeSectionBox>修改 3D 视图边界</ResizeSectionBox>
     <createbounds>创建边界</createbounds>
+    <create3D>创建 3D 视图</create3D>
+    <selectElements>选择元素</selectElements>
+    <nullSectionBoxMsg>无法对所选元素执行裁剪</nullSectionBoxMsg>
   </ostViewIn3D>
   <whshScheduleLookup
     LocalName="明细表搜索"
@@ -1032,6 +1035,7 @@
     <h56>按指定值增加或减少组内现有图纸编号</h56>
     <h57>减少</h57>
     <h58>增加</h58>
+    <h59>按图纸名称排序</h59>
     <p1>整个图纸编号</p1>
     <p2>第1部分</p2>
     <p3>第1部分编号</p3>
@@ -1600,6 +1604,9 @@
     <familyProcessError>{0} - 错误！处理族 "{1}"（ID: {2}）时发生错误："{3}"</familyProcessError>
     <familyExists>目标文档中已存在族 "{0}"。{1}要执行复制吗？</familyExists>
     <duplicateCreated>{0} - 已创建族 {3} 的副本</duplicateCreated>
+    <elementTab>元素</elementTab>
+    <modelElementTab>模型元素</modelElementTab>
+    <selectedInModel>在模型中选定的</selectedInModel>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="注释"
@@ -2378,20 +2385,28 @@
     <t55>&amp; 用于替换为合并结构层的格式化列表结果</t55>
     <t56>[n] 用于指定将用于替换为结构层格式化列表结果的层索引</t56>
     <t57>^ 用于设置层的子标题 在结果中不会参与结构层的编号</t57>
-    <t58>类型的结果</t58>
-    <t59>实例的结果</t59>
+    <t58>类型的结果:</t58>
+    <t59>实例的结果:</t59>
     <t60>必需的类型多行文本参数。此参数将写入带编号的结构层总（合计）体积列表，考虑行格式和编号设置。</t60>
+    <t61>使用编号</t61>
+    <t62>仅显示有变化的类型</t62>
     <s1>无更改。类型参数不会被更新</s1>
     <s2>缺少必需的"模板"和"结果"参数</s2>
     <s3>新结果值与当前结果值不同。由于未勾选"更新"，类型参数不会被更新</s3>
     <s4>新结果值与当前结果值不同。类型参数将被更新</s4>
-    <msg1>未找到参数"{0}"</msg1>
+    <msg1>未找到实例参数"{0}"</msg1>
     <!--todo remove after 2.0.2.0-->
     <msg2>层体积已写入类型"{0}"的实例参数</msg2>
     <msg3>结构层体积已写入实例参数"{0}"，对应类型为"{1}"</msg3>
     <msg4>类型没有已放置的实例，无法计算体积。</msg4>
     <msg5>结构层的总（合计）体积已写入类型参数"{0}"</msg5>
     <msg6>层结构被写入类型参数</msg6>
+    <msg7>未找到类型参数"{0}"</msg7>
+    <msg8>缺少材料</msg8>
+    <msg9>未为层{0}分配材料</msg9>
+    <msg10>请输入参数值</msg10>
+    <msg11>{0}\n用于材料{1}</msg11>
+    <msg12>未找到参数{0}或仅可读</msg12>
     <str1>结构 [1]</str1>
     <str2>衬底 [2]</str2>
     <str3>保温层/空气层 [3]</str3>
@@ -2905,4 +2920,28 @@
     <t109>第一列條紋顏色</t109>
     <t110>第二列條紋顏色</t110>
   </mprModelCompare>
+  <mprEqualCurtainWalls
+    LocalName="相等的幕墙"
+    Description="在Revit模型中搜索相等的幕墙">
+    <h1>缺少的参数:\n</h1>
+    <h2>共享参数 - </h2>
+    <h3>项目参数 - </h3>
+    <h4>选择幕墙</h4>
+    <h5>参数填充</h5>
+    <h6>找到的幕墙数量:</h6>
+    <h7>写入参数值: </h7>
+    <h8>样本</h8>
+    <h9>搜索设置</h9>
+    <h10>比较条件</h10>
+    <h11>总体尺寸</h11>
+    <h12>幕墙网格</h12>
+    <h13>竖梃</h13>
+    <h14>嵌板类型</h14>
+    <h15>填充参数</h15>
+    <h16>新值</h16>
+    <h17>来自样本的值</h17>
+    <h19>参数已填充:</h19>
+    <h20>项目中缺少参数:</h20>
+    <copyError>复制到剪贴板时出错。请重试</copyError>
+  </mprEqualCurtainWalls>
 </ModPlus>

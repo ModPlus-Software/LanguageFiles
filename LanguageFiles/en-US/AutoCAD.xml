@@ -354,10 +354,10 @@
     <h82>The line thickness changes after the stamp is created. Changing the thickness of thick lines is done by processing the thickness of the lines of the original stamp, in which the default value of thick lines is "0.40 mm"</h82>
     <h83>Insert signatures</h83>
     <h84>Launch "Signatures" plugin</h84>
-    <h85>Insert layout name into title block</h85>
+    <h85>Copy layout name to title block</h85>
     <h86>Number in title block:</h86>
     <h87>Number in volume:</h87>
-    <h88>Insert layout name into selected cell</h88>
+    <h88>Copy layout name to selected cell</h88>
     <h89>Do not number</h89>
     <h90>Number automatically</h90>
     <h91>Enter value</h91>
@@ -556,7 +556,7 @@
     <h4>Russia</h4>
     <h5>Ukraine</h5>
     <h6>Belarus</h6>
-    <h7>Weed of normative document:</h7>
+    <h7>Regulatory document:</h7>
     <h8>Selecting the normative document</h8>
     <h9>Table name</h9>
     <h10>Normative document:</h10>
@@ -601,6 +601,7 @@
     <h50>Add new post</h50>
     <h51>Remove selected post</h51>
     <h52>SURNAME</h52>
+    <!--todo remove after 3.0.0.0-->
     <h53>GOST R 21.1101-2013</h53>
     <h54>Appendix Z</h54>
     <h55>Box 1</h55>
@@ -620,7 +621,9 @@
     <h69>Add fields to title block</h69>
     <h70>Set Default Values</h70>
     <h71>Get the value from the drawing</h71>
+    <!--todo remove after 3.0.0.0-->
     <h72>DSTU B A.2.4-4: 2009</h72>
+    <!--todo remove after 3.0.0.0-->
     <h73>STB 2255-2012</h73>
     <h74>Update in drawing</h74>
     <h75>You can use line breaks in boxes 2,3 and 9. To add line breaks use Enter</h75>
@@ -1385,12 +1388,12 @@
     <h38>For this drawing there is already a specification with this name!</h38>
     <h39>Product search</h39>
     <h40>MANUAL INPUT</h40>
-    <h41>Pos.</h41>
-    <h42>Designation</h42>
-    <h43>Name</h43>
-    <h44>Count</h44>
-    <h45>Mass</h45>
-    <h46>Note</h46>
+    <h41>Позиция</h41>
+    <h42>Обозначение</h42>
+    <h43>Наименование</h43>
+    <h44>Количество</h44>
+    <h45>Масса</h45>
+    <h46>Примечание</h46>
     <h47>Steel</h47>
     <h48>Edit the list of documents used by the plugin</h48>
     <h49>Open the database search bar</h49>
@@ -1504,6 +1507,7 @@
     <mi6>Layout settings manager</mi6>
     <mi7>Print</mi7>
     <mi8>Export Layout to Model</mi8>
+    <err1>Operation cancelled, maximum number of layouts (256) would be exceeded</err1>
   </mpLayoutManager>
   <mpSheetNumbers
     LocalName="Sheet numbering"
@@ -2519,6 +2523,7 @@
     <p201>Truncate instead of rounding</p201>
     <p202>Suppression of tail zeros</p202>
     <jigM1>Arc</jigM1>
+    <jigM2>Line</jigM2>
     <grpM1>Stretch Vertex</grpM1>
     <grpM2>Add Vertex</grpM2>
     <grpM3>Remove Vertex</grpM3>
@@ -2644,6 +2649,8 @@
     <h18>Arithmetic mean of all objects:</h18>
     <h19>Closed objects only</h19>
     <h20>Area by objects</h20>
+    <msg1>This hatch is not supported for area calculation. The boundaries forming the hatch intersect, overlap, or duplicate each other</msg1>
+    <msg2>This hatch is not supported for area calculation. The boundaries forming the hatch contain an open polyline</msg2>
   </mpSumArea>
   <mpSelectIntersected
     LocalName="Select intersected"

@@ -311,7 +311,7 @@
     <h156>In allen Dokumenten</h156>
     <h157>Legen Sie die Einstellungen für das Lesen der Pläne fest und klicken Sie auf die Schaltfläche "Pläne lesen"</h157>
     <h158>Die Dateinamensmaske ist durch die Einstellungen Ihres Unternehmens festgelegt. Sie ist von der ausgewählten Konfiguration unabhängig und kann nicht geändert werden</h158>
-    <h159>Der Parameterwert wird aus dem ersten markierten Plan des exportierten Dokuments übernommen!</h159>
+    <h159>Der Parameterwert wird vom ersten Blatt der zusammengeführten Blattgruppe übernommen!</h159>
     <h160>Zum Erstellen von PDF-Plänen verwenden:</h160>
     <h161>Drucken in PDF</h161>
     <h162>Reihenfolge:</h162>
@@ -322,6 +322,8 @@
     <h167>Exporttyp:</h167>
     <h168>Bildentsättigung</h168>
     <h169>Unicode-Steuerzeichen aus dem Dateinamen entfernen</h169>
+    <h170>Wartezeit für die PDF-Erstellung, min:</h170>
+    <h171>Dieser Parameter legt die Wartezeit fest, bis die PDF-Datei nach Ausführung der Revit-Standardbefehle „Drucken" oder „Exportieren" erscheint, da die Datei selbst mit einer kleinen Verzögerung erstellt werden kann. Wenn die Datei aus irgendeinem Grund nicht erscheint, beendet das Plugin das Warten nach der angegebenen Zeit. Legen Sie einen Wert fest, der zu Ihrer Umgebung und der Geschwindigkeit Ihres Druckers oder PDF-Treibers passt: Ein zu kleiner Wert kann zu Fehlalarmen führen, ein zu großer zu langen Wartezeiten in unvorhergesehenen Situationen</h171>
     <tvm1>Modus deaktivieren</tvm1>
     <tvm2>Modus beibehalten</tvm2>
     <tvm3>Fragen</tvm3>
@@ -375,6 +377,7 @@
     <err27>Es fehlen Planköpfe auf dem aktuellen Plan. Kein Export des aktuellen Plans ist möglich!</err27>
     <err28>Das Kopieren der Datei "{0}" in den Zielordner "{1}" ist fehlgeschlagen. Fehler:</err28>
     <err29>Die Datei "{0}" wurde erwartet, ist jedoch innerhalb der vorgegebenen Zeit nicht erschienen. Überprüfen Sie, ob die Datei tatsächlich erstellt wurde und sich am erwarteten Pfad befindet</err29>
+    <err30>Beim Versuch, Pläne aus der verknüpften Datei "{0}" zu lesen, ist der Fehler „{1}" aufgetreten. Die Datei wurde übersprungen</err30>
   </mprSheetExport>
   <mprExportToExcel
     LocalName="Export in Excel"
