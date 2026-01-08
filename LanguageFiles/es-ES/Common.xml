@@ -4,6 +4,7 @@
     <abort>Anular</abort>
     <accept>Aceptar</accept>
     <add>Añadir</add>
+    <address>Dirección</address>
     <all>Todo</all>
     <and>Y</and>
     <attribute>Atributo</attribute>
@@ -89,6 +90,7 @@
     <levels>Niveles</levels>
     <licenseIssued>Lugar de trabajo de licencia por volumen está ocupado</licenseIssued>
     <licenseNotIssued>Lugar de trabajo de licencia por volumen no está disponible o conexión al servidor de licencias se ha interrumpido</licenseNotIssued>
+    <login>Login</login>
     <m>m</m>
     <m2>m²</m2>
     <mm2>mm²</mm2>
@@ -112,11 +114,13 @@
     <parameters>Parámetros</parameters>
     <path>Camino</path>
     <paste>Pegar</paste>
+    <password>Contraseña</password>
     <pick>Seleccionar</pick>
     <pin>Adjuntar</pin>
     <prefix>Prefijo</prefix>
     <project>Proyecto</project>
     <property>Propiedad</property>
+    <port>Puerto</port>
     <radius>Radio</radius>
     <refresh>Actualizar</refresh>
     <remoteGeneralVersion>Versión general disponible</remoteGeneralVersion>
@@ -163,6 +167,7 @@
     <width>Anchura</width>
     <yes>Sí</yes>
   </Common>
+  <!-- todo remove after updater 46.5.0.0 and after remove Configurator -->
   <Core>
     <errNoRengaSdk>El paquete de ModPlus no contiene el archivo SDK para la versión requerida de Renga. Actualice ModPlus e inténtelo de nuevo. Si el error persiste, póngase en contacto con el soporte en support@modplus.org</errNoRengaSdk>
     <errNoRengaModule>El paquete de ModPlus no contiene el módulo principal para la versión requerida de Renga. Actualice ModPlus e inténtelo de nuevo. Si el error persiste, póngase en contacto con el soporte en support@modplus.org</errNoRengaModule>
@@ -943,6 +948,7 @@
     <h55>Esta versión del componente no está instalada en su ordenador</h55>
     <h56>Instalar automáticamente nuevos complementos </h56>
     <h57>Los siguientes complementos se instalarán en su computadora:</h57>
+    <!--todo remove after 46.5.0.0-->
     <h58>Puede desactivar los complementos no deseados en el Configurador una vez finalizada la actualización</h58>
     <h59>Ir a la página del complemento</h59>
     <h60>Actualizaciones desactivadas</h60>
@@ -955,6 +961,34 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <h65>Componente:</h65>
     <h66>Número de actualizaciones:</h66>
     <h67>Versión disponible:</h67>
+    <h68>Puede desactivar los complementos innecesarios en el menú "Complementos" después de que finalice la actualización</h68>
+    <h69>No se pudieron cargar los datos de los complementos. Puede que no haya conexión a Internet. En la lista solo se muestran los complementos locales</h69>
+    <h70>Instalar los visibles</h70>
+    <h71>Instalar todos los complementos visibles no instalados o desactualizados</h71>
+    <h72>Habilitar los visibles</h72>
+    <h73>Habilitar todos los complementos visibles</h73>
+    <h74>Deshabilitar los visibles</h74>
+    <h75>Deshabilitar todos los complementos visibles</h75>
+    <h76>Mostrar de pago</h76>
+    <h77>Mostrar gratuitos</h77>
+    <h78>Mostrar no instalados</h78>
+    <h79>Buscar por nombre o descripción</h79>
+    <h80>No agregado al menú</h80>
+    <h81>El complemento está habilitado pero no agregado al menú. El complemento no se añadirá a la cinta</h81>
+    <h82>Complemento de pago. Para utilizar el complemento, compre una licencia o suscripción</h82>
+    <h83>Descargar e instalar el complemento</h83>
+    <h84>Abrir la ayuda</h84>
+    <h85>Habilitar complemento</h85>
+    <h86>Deshabilitar complemento</h86>
+    <h87>Cantidad de complementos mostrados/totales</h87>
+    <h88>Complemento de pago. Usted tiene una licencia o suscripción</h88>
+    <h89>Módulo de actualización automática</h89>
+    <h90>General</h90>
+    <h91>Notificaciones</h91>
+    <h92>Proxy</h92>
+    <h93>Usar proxy</h93>
+    <h94>Autenticación del usuario (si es necesario. Puede dejarse vacío)</h94>
+    <h95>Verificar</h95>
     <!--todo remove after 43.3.0.0-->
     <b3>Seleccionar todo</b3>
     <!--todo remove after 43.3.0.0-->
@@ -971,9 +1005,11 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <i3>Reconstruir menú de adaptación estándar</i3>
     <i4>No reconstruir menú</i4>
     <i5>Abrir ajustes del módulo de actualización automática</i5>
+    <!--todo remove after 46.5.0.0-->
     <i6>Abrir Configurador ModPlus</i6>
     <cm2>Buscar actualizaciones</cm2>
     <cm3>Historial de cambios</cm3>
+    <!--todo remove after 46.5.0.0-->
     <cm5>Abrir Configurador</cm5>
     <cm6>Ajustes</cm6>
     <cm7>Salir</cm7>
@@ -982,6 +1018,7 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <cm10>Componentes</cm10>
     <cm11>Conexiones</cm11>
     <cm12>Complementos</cm12>
+    <cm13>Área personal</cm13>
     <tt1>Buscar actualizaciones y nuevos complementos</tt1>
     <tt2>Abrir historial de cambios en sitio web modplus.org</tt2>
     <!--todo remove after 43.3.0.0-->
@@ -994,6 +1031,7 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <tt11>Abrir novedades relacionadas con esta actualización</tt11>
     <tt12>Gestión de la conexión de ModPlus con los productos compatibles</tt12>
     <tt13>Gestión de complementos (instalación, activación/desactivación)</tt13>
+    <tt14>Abrir el área personal del usuario</tt14>
     <msg1>¡Es necesario ubicar módulo de actualización automática en carpeta de complemento ModPlus!\nSi carpeta es correcta, entonces es necesario iniciar Configurador para actualizar datos en registro</msg1>
     <msg2>Módulo de actualización automática se ha actualizado</msg2>
     <msg3>Funcionamiento del módulo es limitado porque AutoCad, Revit o Renga están abiertos</msg3>
@@ -1037,6 +1075,14 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <msg43>Periodo de suscripción de "{0}" finaliza en "{1}" {2}</msg43>
     <msg44>Hay actualizaciones pendientes de instalar</msg44>
     <msg45>The adaptation menu has been updated for:</msg45>
+    <msg46>Descarga</msg46>
+    <msg47>Instalación</msg47>
+    <msg48>Actualización del menú</msg48>
+    <msg49>Si no utiliza un menú personalizado, se recomienda reconstruir el menú estándar. Puede habilitar en la configuración la reconstrucción automática del menú al instalar nuevos complementos. ¿Reconstruir el menú?</msg49>
+    <msg50>No se pudo instalar el/los complemento(s). Es posible que se haya producido un error de conexión durante la descarga o que existan restricciones de acceso a la carpeta ModPlus. Inténtelo de nuevo. Puede descargar el instalador desde el sitio web e intentar instalar el/los complemento(s) con su ayuda seleccionando la opción "Actualizar" en el menú</msg50>
+    <msg51>Se instalarán todos los complementos mostrados que no estén instalados o estén desactualizados. ¿Continuar?</msg51>
+    <msg52>La conexión a los servicios de ModPlus fue exitosa</msg52>
+    <msg53>No se pudo conectar a los servicios de ModPlus. Verifique la configuración del proxy e inténtelo de nuevo</msg53>
     <d1>días</d1>
     <d2>días</d2>
     <d3>día</d3>
@@ -1049,8 +1095,10 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <err13>Error al descomprimir actualizaciones</err13>
     <err16>No es posible registrar aplicación para Revit</err16>
     <err19>No hay acceso a Internet o al sitio web modplus.org</err19>
+    <!--todo remove after 46.5.0.0-->
     <err20>¡Configurador ModPlus no se ha encontrado!</err20>
     <err21>Error al recibir versión general</err21>
+    <err22>No se encontró la aplicación auxiliar para iniciar el Área Personal. Probablemente, el módulo de actualización automática no tiene permisos suficientes para descomprimir la aplicación en la carpeta ModPlus. Realice la actualización utilizando el instalador y repita el intento</err22>
     <p1>Descargando e instalando actualización del módulo...</p1>
     <p2>Actualización del complemento:</p2>
     <p3>Instalación del complemento:</p3>
@@ -1063,6 +1111,12 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <c6>Bases de datos</c6>
     <!--todo remove after 43.3.0.0-->
     <c7>Base de datos dwg</c7>
+    <errNoRengaSdk>El paquete de ModPlus no contiene el archivo SDK para la versión requerida de Renga. Actualice ModPlus e inténtelo de nuevo. Si el error persiste, póngase en contacto con el soporte en support@modplus.org</errNoRengaSdk>
+    <errNoRengaModule>El paquete de ModPlus no contiene el módulo principal para la versión requerida de Renga. Actualice ModPlus e inténtelo de nuevo. Si el error persiste, póngase en contacto con el soporte en support@modplus.org</errNoRengaModule>
+    <errNoRengaConnector>Al paquete de ModPlus le falta la aplicación conectora ModPlus-Renga. Actualice ModPlus e inténtelo de nuevo. Si el error persiste, póngase en contacto con el soporte en support@modplus.org</errNoRengaConnector>
+    <noAutocad>No se han encontrado versiones instaladas de AutoCAD que sean adecuadas para instalar ModPlus</noAutocad>
+    <noRevit>No se han encontrado versiones instaladas de Revit que sean adecuadas para instalar ModPlus</noRevit>
+    <noRenga>No se han encontrado versiones instaladas de Renga que sean adecuadas para instalar ModPlus</noRenga>
   </AutoUpdater>
   <AutocadDlls
     LocalName="Bibliotecas de trabajo AutoCAD">
@@ -1072,9 +1126,7 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <mm>mm</mm>
     <def>Por defecto</def>
     <h1>AJUSTES MODPLUS</h1>
-    <h2>GENERAL</h2>
-    <h3>TRABAJANDO CON SERVIDOR</h3>
-    <h4>REGISTRO</h4>
+    <h2>General</h2>
     <h5>Idioma:</h5>
     <h6>Sujeto:</h6>
     <h12>Ajustes</h12>
@@ -1550,9 +1602,7 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
   <RengaDlls
     LocalName="Bibliotecas de trabajo Renga">
     <h1>AJUSTES MODPLUS</h1>
-    <h2>GENERAL</h2>
-    <h3>TRABAJANDO CON SERVIDOR</h3>
-    <h4>REGISTRO</h4>
+    <h2>General</h2>
     <h5>Idioma:</h5>
     <h6>Sujeto:</h6>
     <h7>Área personal</h7>
