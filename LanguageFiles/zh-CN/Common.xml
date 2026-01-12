@@ -4,6 +4,7 @@
     <abort>中止</abort>
     <accept>接受</accept>
     <add>添加</add>
+    <address>地址</address>
     <all>全部</all>
     <and>和</and>
     <attribute>属性</attribute>
@@ -67,6 +68,7 @@
     <exportExcel>导出到Excel</exportExcel>
     <family>族</family>
     <file>文件</file>
+    <find>查找</find>
     <formula>公式</formula>
     <g>克</g>
     <group>组</group>
@@ -81,12 +83,14 @@
     <key>键</key>
     <kg>千克</kg>
     <kgPerM3>千克/立方米</kgPerM3>
+    <language>语言</language>
     <launch>启动</launch>
     <layer>图层</layer>
     <level>级别</level>
     <levels>层级</levels>
     <licenseIssued>企业许可证工作站已占用</licenseIssued>
     <licenseNotIssued>无可用企业许可证工作站或与许可证服务器断开连接</licenseNotIssued>
+    <login>用户名</login>
     <m>米</m>
     <m2>平方米</m2>
     <mm2>平方毫米</mm2>
@@ -110,10 +114,13 @@
     <parameters>参数</parameters>
     <path>小路</path>
     <paste>粘贴</paste>
+    <password>密码</password>
     <pick>选择</pick>
     <pin>固定</pin>
     <prefix>前缀</prefix>
+    <project>项目</project>
     <property>属性</property>
+    <port>端口</port>
     <radius>半径</radius>
     <refresh>刷新</refresh>
     <remoteGeneralVersion>可用通用版本</remoteGeneralVersion>
@@ -146,6 +153,7 @@
     <template>模板</template>
     <testPeriod>试用期剩余天数</testPeriod>
     <testPeriodEnd>插件试用期已结束！请购买许可证或订阅以继续使用</testPeriodEnd>
+    <theme>主题</theme>
     <thickness>厚度</thickness>
     <tolerance>公差</tolerance>
     <ton>吨</ton>
@@ -161,6 +169,7 @@
     <width>宽度</width>
     <yes>是</yes>
   </Common>
+  <!-- todo remove after updater 46.5.0.0 and after remove Configurator -->
   <Core>
     <errNoRengaSdk>在 ModPlus 组件中缺少所需版本的 Renga SDK 文件。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaSdk>
     <errNoRengaModule>在 ModPlus 组件中缺少所需版本的 Renga 主模块。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaModule>
@@ -941,6 +950,7 @@
     <h55>此版本组件未安装在您的计算机上</h55>
     <h56>自动安装新插件</h56>
     <h57>以下插件将安装到您的计算机上：</h57>
+    <!--todo remove after 46.5.0.0-->
     <h58>更新完成后，您可以在 配置器 中禁用不需要的插件</h58>
     <h59>转到插件页面</h59>
     <h60>更新已禁用</h60>
@@ -952,6 +962,38 @@
     <h64>年份:</h64>
     <h65>组件:</h65>
     <h66>更新次数:</h66>
+    <h67>可用版本:</h67>
+    <h68>更新完成后，您可以在"插件"菜单中禁用不需要的插件</h68>
+    <h69>无法加载插件数据。可能没有连接到互联网。列表中仅显示本地插件</h69>
+    <h70>安装可见插件</h70>
+    <h71>安装所有显示的未安装或已过期插件</h71>
+    <h72>启用可见插件</h72>
+    <h73>启用所有显示的插件</h73>
+    <h74>禁用可见插件</h74>
+    <h75>禁用所有显示的插件</h75>
+    <h76>显示付费插件</h76>
+    <h77>显示免费插件</h77>
+    <h78>显示未安装插件</h78>
+    <h79>按名称或描述搜索</h79>
+    <h80>未添加到菜单</h80>
+    <h81>插件已启用，但未添加到菜单。插件不会添加到功能区</h81>
+    <h82>付费插件。要使用此插件，请购买许可证或订阅</h82>
+    <h83>下载并安装插件</h83>
+    <h84>打开帮助</h84>
+    <h85>启用插件</h85>
+    <h86>禁用插件</h86>
+    <h87>显示/所有插件数量</h87>
+    <h88>付费插件。您拥有许可证或订阅</h88>
+    <h89>自动更新模块</h89>
+    <h90>常规</h90>
+    <h91>通知</h91>
+    <h92>代理</h92>
+    <h93>使用代理</h93>
+    <h94>用户认证（如有必要，可以不填写）</h94>
+    <h95>测试</h95>
+    <h96>自动切换语言</h96>
+    <h97>记住窗口位置</h97>
+    <h98>按下 Esc 键关闭窗口</h98>
     <!--todo remove after 43.3.0.0-->
     <b3>全选</b3>
     <!--todo remove after 43.3.0.0-->
@@ -968,9 +1010,11 @@
     <i3>重建标准适配菜单</i3>
     <i4>不重建菜单</i4>
     <i5>打开自动更新模块设置</i5>
+    <!--todo remove after 46.5.0.0-->
     <i6>打开ModPlus配置器</i6>
     <cm2>检查更新</cm2>
     <cm3>更新历史</cm3>
+    <!--todo remove after 46.5.0.0-->
     <cm5>打开配置器</cm5>
     <cm6>设置</cm6>
     <cm7>退出</cm7>
@@ -978,17 +1022,31 @@
     <cm9>打开UserData文件夹</cm9>
     <cm10>组件</cm10>
     <cm11>连接</cm11>
+    <cm12>插件</cm12>
+    <cm13>个人中心</cm13>
+    <cm14>菜单</cm14>
+    <!--todo remove after 46.5.0.0-->
     <tt1>检查更新和新插件</tt1>
+    <!--todo remove after 46.5.0.0-->
     <tt2>在modplus.org查看更新历史</tt2>
     <!--todo remove after 43.3.0.0-->
     <tt3>打开ModPlus配置器</tt3>
+    <!--todo remove after 46.5.0.0-->
     <tt4>ModPlus自动更新模块设置</tt4>
+    <!--todo remove after 46.5.0.0-->
     <tt7>打开ModPlus安装目录</tt7>
+    <!--todo remove after 46.5.0.0-->
     <tt8>打开用户数据存储目录</tt8>
     <tt9>跳转至网站组件描述</tt9>
+    <!--todo remove after 46.5.0.0-->
     <tt10>显示ModPlus软件组件列表及版本信息</tt10>
     <tt11>打开与此更新相关的新闻</tt11>
+    <!--todo remove after 46.5.0.0-->
     <tt12>管理 ModPlus 与受支持产品的连接</tt12>
+    <!--todo remove after 46.5.0.0-->
+    <tt13>插件管理（安装、启用/禁用）</tt13>
+    <!--todo remove after 46.5.0.0-->
+    <tt14>打开用户个人中心</tt14>
     <msg1>自动更新模块必须位于ModPlus插件文件夹中！\n如果路径正确，请运行配置器更新注册表数据</msg1>
     <msg2>自动更新模块已更新</msg2>
     <msg3>功能受限，因AutoCad、Revit或Renga正在运行</msg3>
@@ -1032,6 +1090,14 @@
     <msg43>"{0}"的订阅将在"{1}"{2}后到期</msg43>
     <msg44>有待安装的更新</msg44>
     <msg45>已更新适配菜单:</msg45>
+    <msg46>下载</msg46>
+    <msg47>安装</msg47>
+    <msg48>菜单更新</msg48>
+    <msg49>如果您未使用自定义菜单，建议重新生成标准菜单。您可以在设置中启用在安装新插件时自动重新生成菜单。是否重新生成菜单？</msg49>
+    <msg50>法安装插件。可能是在下载过程中发生了连接错误，或者对 ModPlus 文件夹存在访问权限限制。请再试一次。您可以从网站下载安装程序，并在菜单中选择"更新"，尝试使用该安装程序安装插件</msg50>
+    <msg51>将安装所有显示的未安装或已过期的插件。是否继续？</msg51>
+    <msg52>成功连接到ModPlus服务</msg52>
+    <msg53>无法连接到ModPlus服务。请检查您的代理设置并重试</msg53>
     <d1>天</d1>
     <d2>天</d2>
     <d3>天</d3>
@@ -1044,8 +1110,10 @@
     <err13>解压更新错误</err13>
     <err16>注册Revit应用失败</err16>
     <err19>无网络连接或无法访问modplus.org</err19>
+    <!--todo remove after 46.5.0.0-->
     <err20>未找到ModPlus配置器！</err20>
     <err21>获取通用版本错误</err21>
+    <err22>未找到启动个人中心的辅助应用程序。可能是自动更新模块没有足够的权限将应用程序解压到 ModPlus 文件夹中。请使用安装程序执行更新并重试</err22>
     <p1>下载并安装更新模块...</p1>
     <p2>更新插件:</p2>
     <p3>安装插件:</p3>
@@ -1058,6 +1126,12 @@
     <c6>数据库</c6>
     <!--todo remove after 43.3.0.0-->
     <c7>DWG数据库</c7>
+    <errNoRengaSdk>在 ModPlus 组件中缺少所需版本的 Renga SDK 文件。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaSdk>
+    <errNoRengaModule>在 ModPlus 组件中缺少所需版本的 Renga 主模块。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaModule>
+    <errNoRengaConnector>在 ModPlus 组件中缺少 ModPlus-Renga 连接器应用程序。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaConnector>
+    <noAutocad>未找到适合安装ModPlus的AutoCAD版本</noAutocad>
+    <noRevit>未找到适合安装ModPlus的Revit版本</noRevit>
+    <noRenga>未找到适合安装ModPlus的Renga版本</noRenga>
   </AutoUpdater>
   <AutocadDlls
     LocalName="AutoCAD工作库">
@@ -1067,9 +1141,7 @@
     <mm>毫米</mm>
     <def>默认</def>
     <h1>MODPLUS设置</h1>
-    <h2>基本</h2>
-    <h3>服务器连接</h3>
-    <h4>注册</h4>
+    <h2>常规</h2>
     <h5>语言：</h5>
     <h6>主题：</h6>
     <h12>设置</h12>
@@ -1197,7 +1269,7 @@
     <name>名称</name>
     <rn>受力钢筋 ⌀</rn>
     <h1>ModPlus设置</h1>
-    <h2>基本</h2>
+    <h2>常规</h2>
     <h3>许可证服务器</h3>
     <h5>语言：</h5>
     <h6>主题：</h6>
@@ -1545,9 +1617,7 @@
   <RengaDlls
     LocalName="Renga的工作库">
     <h1>MODPLUS设置</h1>
-    <h2>基本</h2>
-    <h3>服务器工作</h3>
-    <h4>注册</h4>
+    <h2>常规</h2>
     <h5>语言：</h5>
     <h6>主题：</h6>
     <h7>个人中心</h7>

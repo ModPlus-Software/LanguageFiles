@@ -4,6 +4,7 @@
     <abort>Abort</abort>
     <accept>Accept</accept>
     <add>Add</add>
+    <address>Address</address>
     <all>All</all>
     <and>And</and>
     <attribute>Attribute</attribute>
@@ -67,6 +68,7 @@
     <exportExcel>Export to Excel</exportExcel>
     <family>Family</family>
     <file>File</file>
+    <find>Find</find>
     <formula>Formula</formula>
     <g>g</g>
     <group>Group</group>
@@ -81,12 +83,14 @@
     <key>Key</key>
     <kg>kg</kg>
     <kgPerM3>kg/m³</kgPerM3>
+    <language>Language</language>
     <launch>Launch</launch>
     <layer>Layer</layer>
     <level>Level</level>
     <levels>Levels</levels>
     <licenseIssued>Corporate license workplace taken</licenseIssued>
     <licenseNotIssued>Corporate license workplace not available or connection to the license server is disabled</licenseNotIssued>
+    <login>Login</login>
     <m>m</m>
     <m2>m²</m2>
     <mm2>mm²</mm2>
@@ -110,10 +114,13 @@
     <parameters>Parameters</parameters>
     <path>Path</path>
     <paste>Paste</paste>
+    <password>Password</password>
     <pick>Pick</pick>
     <pin>Pin</pin>
     <prefix>Prefix</prefix>
+    <project>Project</project>
     <property>Property</property>
+    <port>Port</port>
     <radius>Radius</radius>
     <refresh>Refresh</refresh>
     <remoteGeneralVersion>Available general version</remoteGeneralVersion>
@@ -146,6 +153,7 @@
     <template>Template</template>
     <testPeriod>Trial Period. Days left</testPeriod>
     <testPeriodEnd>The plugin's trial period is over! Purchase a plugin license or subscription to continue using the plugin</testPeriodEnd>
+    <theme>Theme</theme>
     <thickness>Thickness</thickness>
     <tolerance>Tolerance</tolerance>
     <ton>ton</ton>
@@ -161,6 +169,7 @@
     <width>Width</width>
     <yes>Yes</yes>
   </Common>
+  <!-- todo remove after updater 46.5.0.0 and after remove Configurator -->
   <Core>
     <errNoRengaSdk>The ModPlus package does not contain the SDK file for the required Renga version. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaSdk>
     <errNoRengaModule>The ModPlus package does not contain the core module for the required Renga version. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaModule>
@@ -941,6 +950,7 @@
     <h55>This version of the component is not installed on your computer</h55>
     <h56>Automatically install new plugins</h56>
     <h57>The following plugins will be installed on your computer:</h57>
+    <!--todo remove after 46.5.0.0-->
     <h58>You can disable unwanted plugins in the Configurator after the update is complete</h58>
     <h59>Go to plugin page</h59>
     <h60>Updates disabled</h60>
@@ -952,6 +962,38 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <h64>Year:</h64>
     <h65>Component:</h65>
     <h66>Number of updates:</h66>
+    <h67>Available version:</h67>
+    <h68>You can disable unnecessary plugins in the "Plugins" menu after the update is completed</h68>
+    <h69>Failed to load plugin data. There may be no internet connection. Only local plugins are displayed in the list</h69>
+    <h70>Install visible</h70>
+    <h71>Installing all displayed uninstalled or outdated plugins</h71>
+    <h72>Enable visible</h72>
+    <h73>Enabling all displayed plugins</h73>
+    <h74>Disable visible</h74>
+    <h75>Disabling all displayed plugins</h75>
+    <h76>Show paid</h76>
+    <h77>Show free</h77>
+    <h78>Show uninstalled</h78>
+    <h79>Search by name or description</h79>
+    <h80>Not added to the menu</h80>
+    <h81>The plugin is enabled but not added to the menu. The plugin will not be added to the ribbon</h81>
+    <h82>Paid plugin. To use the plugin, purchase a license or subscription</h82>
+    <h83>Download and install the plugin</h83>
+    <h84>Open the help</h84>
+    <h85>Enable plugin</h85>
+    <h86>Disable plugin</h86>
+    <h87>Number of displayed/total plugins</h87>
+    <h88>Paid plugin. You have a license or subscription</h88>
+    <h89>Auto Updates Module</h89>
+    <h90>General</h90>
+    <h91>Notifications</h91>
+    <h92>Proxy</h92>
+    <h93>Use proxy</h93>
+    <h94>User authentication (if necessary. Can be left empty)</h94>
+    <h95>Check</h95>
+    <h96>Automatically change language</h96>
+    <h97>Remember window positions</h97>
+    <h98>Close windows by pressing the Esc key</h98>
     <!--todo remove after 43.3.0.0-->
     <b3>Check all</b3>
     <!--todo remove after 43.3.0.0-->
@@ -968,9 +1010,11 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <i3>Rebuild the standard adaptation menu</i3>
     <i4>Do not rebuild the menu</i4>
     <i5>Open auto-update module settings</i5>
+    <!--todo remove after 46.5.0.0-->
     <i6>Open Modplus Configurator</i6>
     <cm2>Check for updates</cm2>
     <cm3>Change story</cm3>
+    <!--todo remove after 46.5.0.0-->
     <cm5>Open Configurator</cm5>
     <cm6>Settings</cm6>
     <cm7>Close</cm7>
@@ -978,17 +1022,31 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <cm9>Open UserData folder</cm9>
     <cm10>Components</cm10>
     <cm11>Connections</cm11>
+    <cm12>Plugins</cm12>
+    <cm13>Personal account</cm13>
+    <cm14>Menu</cm14>
+    <!--todo remove after 46.5.0.0-->
     <tt1>Check for updates and new plugins</tt1>
+    <!--todo remove after 46.5.0.0-->
     <tt2>View change history on modplus.org</tt2>
     <!--todo remove after 43.3.0.0-->
     <tt3>Open Modplus Configurator</tt3>
+    <!--todo remove after 46.5.0.0-->
     <tt4>Modplus Auto Update Module Settings</tt4>
+    <!--todo remove after 46.5.0.0-->
     <tt7>Open the location folder of the installed version of ModPlus</tt7>
+    <!--todo remove after 46.5.0.0-->
     <tt8>Open user data storage folder</tt8>
     <tt9>Go to the description of the component on the site</tt9>
+    <!--todo remove after 46.5.0.0-->
     <tt10>Displays a list of ModPlus software components with version information and their current status</tt10>
     <tt11>Open News related to this update</tt11>
+    <!--todo remove after 46.5.0.0-->
     <tt12>Managing the ModPlus connection with supported products</tt12>
+    <!--todo remove after 46.5.0.0-->
+    <tt13>Plugin management (installation, enable/disable)</tt13>
+    <!--todo remove after 46.5.0.0-->
+    <tt14>Open the user’s personal account</tt14>
     <msg1>The auto-update module should be located in the ModPlus plugin folder!\nIf the folder is correct, you should run the Configurator to update the data in the registry</msg1>
     <msg2>The auto update module has been updated</msg2>
     <msg3>The operation of the module is limited, because AutoCad, Revit or Renga is open</msg3>
@@ -1032,6 +1090,14 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg43>The subscription for "{0}" expires in "{1}" {2} </msg43>
     <msg44>There are updates pending installation</msg44>
     <msg45>The adaptation menu has been updated for:</msg45>
+    <msg46>Downloading</msg46>
+    <msg47>Installation</msg47>
+    <msg48>Menu update</msg48>
+    <msg49>If you are not using a custom menu, it is recommended to rebuild the standard menu. You can enable automatic menu rebuilding in the settings when installing new plugins. Rebuild the menu?</msg49>
+    <msg50>Failed to install the plugin(s). A connection error may have occurred during the download, or there may be access restrictions to the ModPlus folder. Please try again. You can download the installer from the website and try installing the plugin(s) using it by selecting "Update" in the menu</msg50>
+    <msg51>All displayed uninstalled or outdated plugins will be installed. Continue?</msg51>
+    <msg52>The connection to ModPlus services was successful</msg52>
+    <msg53>Failed to connect to ModPlus services. Check your proxy settings and try again</msg53>
     <d1>days</d1>
     <d2>days</d2>
     <d3>day</d3>
@@ -1044,8 +1110,10 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <err13>Error while unpacking updates</err13>
     <err16>Unable to register application for Revit</err16>
     <err19>There is no access to the internet or modplus.org site</err19>
+    <!--todo remove after 46.5.0.0-->
     <err20>Not found Modplus Configurator!</err20>
     <err21>Error receiving general version</err21>
+    <err22>No auxiliary application found to launch the Personal Account. The auto-update module probably doesn't have sufficient permissions to unpack the application into the ModPlus folder. Please update using the installer and try again</err22>
     <p1>Downloading and installing the module update...</p1>
     <p2>Update plugin:</p2>
     <p3>Plugin installation:</p3>
@@ -1058,6 +1126,12 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <c6>Databases</c6>
     <!--todo remove after 43.3.0.0-->
     <c7>Dwg base</c7>
+    <errNoRengaSdk>The ModPlus package does not contain the SDK file for the required Renga version. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaSdk>
+    <errNoRengaModule>The ModPlus package does not contain the core module for the required Renga version. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaModule>
+    <errNoRengaConnector>The ModPlus package does not contain the ModPlus-Renga connector application. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaConnector>
+    <noAutocad>No installed versions of AutoCAD, suitable for installing ModPlus</noAutocad>
+    <noRevit>No installed versions of Revit, suitable for installing ModPlus</noRevit>
+    <noRenga>No installed versions of Renga, suitable for installing ModPlus</noRenga>
   </AutoUpdater>
   <AutocadDlls
     LocalName="Working libraries for AutoCAD">
@@ -1067,9 +1141,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <mm>mm</mm>
     <def>By default</def>
     <h1>MODPLUS SETTINGS</h1>
-    <h2>GENERAL</h2>
-    <h3>WORK WITH THE SERVER</h3>
-    <h4>REGISTRATION</h4>
+    <h2>General</h2>
     <h5>Language:</h5>
     <h6>Theme:</h6>
     <h12>Settings</h12>
@@ -1545,9 +1617,7 @@ Not all parameters may be present in the list of instance parameters, because in
   <RengaDlls
     LocalName="Working libraries for Renga">
     <h1>MODPLUS SETTINGS</h1>
-    <h2>GENERAL</h2>
-    <h3>WORK WITH THE SERVER</h3>
-    <h4>REGISTRATION</h4>
+    <h2>General</h2>
     <h5>Language:</h5>
     <h6>Theme:</h6>
     <h7>Personal account</h7>
