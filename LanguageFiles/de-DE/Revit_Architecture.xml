@@ -166,6 +166,7 @@
     <h79>Alle auswählen</h79>
     <h80>Versteckte Anweisungen wiederherstellen</h80>
     <h81>Service für die automatische Neuberechnung von Wohnungsflächen, wenn sich die Raumabmessungen ändern, und ein kompletter Neuberechnungs-Service (Matrix-basierte Parametrisierung, Flächen-Neuberechnung und Bestimmung des Wohnungstyps) bei der Entfernung der Räume. Die Services verarbeiten nur Räume, in denen der Parameter "Wohnungs-ID" ausgefüllt ist</h81>
+    <h81-1>Bei der Arbeit des Dienstes werden die im Abschnitt "Wohnungsflächen" festgelegten Einstellungen berücksichtigt</h81-1>
     <h82>Suche nach Raumnamen</h82>
     <h83>Alle Räume im Projekt sind gültig</h83>
     <h84>Alle Räume der aktuellen Ansicht sind gültig</h84>
@@ -221,7 +222,9 @@
     <h131>Grundfläche der Wohnung</h131>
     <h132>Wohnfläche der Wohnung</h132>
     <h133>Nutzungsfläche der Wohnung</h133>
+    <!--todo remove after 3.8.8.0-->
     <h134>Der Service zur automatischen Neuberechnung der Flächen ist nicht geladen! Aktivieren Sie das Plugin erneut mit dem ModPlus Konfigurator</h134>
+    <h134-1>Der Dienst zur automatischen Neuberechnung der Flächen wurde nicht geladen! Aktivieren Sie das Plugin erneut mithilfe des ModPlus Auto-Update-Moduls (Menü "Плагины")</h134-1>
     <h135>Aus den Räumen hinzufügen</h135>
     <h136>Die aktuelle Raummatrix:</h136>
     <h137>Die aktuelle Tabelle der Wohnungstypen:</h137>
@@ -322,6 +325,11 @@
     <h231>Räume mit einer Funktionalen Bestimmung ausschließen, die der aktuellen Wohnungskennung entspricht</h231>
     <h232>Funktionale Bestimmung ausfüllen</h232>
     <h233>Den Parameter "Funktionale Bestimmung" für Räume ausfüllen, deren Namen in der aktuellen Raummatrix vorhanden sind</h233>
+    <h234>Wohnungstypisierung durchführen</h234>
+    <h235>Format der Raumnummer</h235>
+    <h236>Aus Parameter</h236>
+    <h237>Einstellungen für die Raumnummerierung</h237>
+    <h238>Nummerierung für jede Ebene in mehrgeschossigen Wohnungen zurücksetzen</h238>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -431,6 +439,7 @@
     <tt37>Die ausgewählten Zeilen löschen</tt37>
     <tt38>Inkorrekter Wert. Überprüfen Sie die in Klammern angegebenen Bedingungen</tt38>
     <tt39>Ausgewählte Räume anzeigen</tt39>
+    <tt40>Raumnamen aus der Liste der Raumnamen des aktuellen Dokuments festlegen</tt40>
     <instruction>Anweisung</instruction>
     <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
     <instruction1_1>Die zusätzlichen Parameter werden nur beim Vorhandensein dieser Parameter bei den Räumen verarbeitet und ausgefüllt. Sie können Ihre eigenen gemeinsam genutzten Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen gemeinsam genutzten Parameter in der Liste an oder klicken Sie auf Schaltfläche "Fehlende Parameter erstellen"</instruction1_1>

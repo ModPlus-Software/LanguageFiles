@@ -166,6 +166,7 @@
     <h79>Select all</h79>
     <h80>Restore hiding instructions</h80>
     <h81>Service for automatic recalculation of apartment areas when the size of the rooms changes and a service for complete recalculation (parameterization by matrix, area recalculation and apartment type determination) when the rooms are deleted. The services process only rooms with filled "Apartment ID" parameter</h81>
+    <h81-1>During service operation, the settings specified in the "Apartment areas" section are taken into account</h81-1>
     <h82>Search by room name</h82>
     <h83>All rooms in the project are valid</h83>
     <h84>All rooms on the current view are valid</h84>
@@ -221,7 +222,9 @@
     <h131>Apartment area</h131>
     <h132>Apartment living area</h132>
     <h133>Apartment total area</h133>
+    <!--todo remove after 3.8.8.0-->
     <h134>The automatic area recalculation service is not loaded! Re-enable the plugin using the ModPlus Configurator</h134>
+    <h134-1>The automatic area recalculation service is not loaded! Re-enable the plugin using the ModPlus auto-update module (menu "Плагины")</h134-1>
     <h135>Add from rooms</h135>
     <h136>Current room matrix:</h136>
     <h137>Current table of apartment types:</h137>
@@ -322,6 +325,11 @@
     <h231>Exclude rooms with a Functional purpose matching the current apartment identifier</h231>
     <h232>Fill functional purpose</h232>
     <h233>Fill the "Functional purpose" parameter for rooms whose names are present in the current room matrix</h233>
+    <h234>Perform apartment typification</h234>
+    <h235>Room number format</h235>
+    <h236>From parameter</h236>
+    <h237>Room numbering settings</h237>
+    <h238>Reset numbering for each level in multi-level apartments</h238>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -431,6 +439,7 @@
     <tt37>Remove selected rows</tt37>
     <tt38>Incorrect value. Check the conditions in brackets</tt38>
     <tt39>Show selected rooms</tt39>
+    <tt40>Set the room name from the list of room names in the current document</tt40>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
     <instruction1_1>Additional parameters are processed and filled only if the rooms have these parameters. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button</instruction1_1>

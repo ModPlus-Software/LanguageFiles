@@ -166,6 +166,7 @@
     <h79>Seleccionar todo</h79>
     <h80>Restaurar instrucciones ocultas</h80>
     <h81>Un servicio de recalculo automático de áreas de apartamento al cambiar cotas de habitaciones y un servicio de recalculo completo (parametrización por matriz, recalculo de áreas y determinación del tipo de apartamento) al eliminar habitaciones. Servicios procesan sólo habitaciones con parámetro "ID de apartamento" relleno</h81>
+    <h81-1>Durante el funcionamiento del servicio se tienen en cuenta los ajustes especificados en la sección "Áreas de apartamentos"</h81-1>
     <h82>Buscar por nombre de habitación</h82>
     <h83>Todas habitaciones del proyecto son válidos</h83>
     <h84>Todas habitaciones en vista actual son válidos</h84>
@@ -221,7 +222,9 @@
     <h131>Área de apartamento</h131>
     <h132>Área de vivienda del apartamento</h132>
     <h133>Área total del apartamento</h133>
+    <!--todo remove after 3.8.8.0-->
     <h134>¡Servicio de recalculo automático de áreas no está descargado! Vuelva a iniciar complemento usando Configurador ModPlus</h134>
+    <h134-1>El servicio de recálculo automático de áreas no se ha cargado! Vuelva a habilitar el complemento utilizando el módulo de autoactualización de ModPlus (menú "Плагины")</h134-1>
     <h135>Añadir desde habitaciones</h135>
     <h136>Matriz de habitaciones actual:</h136>
     <h137>Tabla actual de tipos de apartamentos:</h137>
@@ -322,6 +325,11 @@
     <h231>Excluir los espacios con un Propósito funcional que coincida con el identificador de apartamento actual</h231>
     <h232>Rellenar propósito funcional</h232>
     <h233>Rellenar el parámetro "Propósito funcional" para los espacios cuyos nombres están presentes en la matriz actual de espacios</h233>
+    <h234>Realizar la tipificación de apartamentos</h234>
+    <h235>Formato del número de la habitación</h235>
+    <h236>Desde el parámetro</h236>
+    <h237>Configuración de la numeración de habitaciones</h237>
+    <h238>Restablecer la numeración para cada nivel en apartamentos de varios niveles</h238>
     <msg1>No se ha encontrado parámetro "{0}"</msg1>
     <msg2>Parámetro "{0}" no rellenado</msg2>
     <msg3>Parámetro "{0}" tiene un valor ilegal</msg3>
@@ -431,6 +439,7 @@
     <tt37>Eliminar filas seleccionadas</tt37>
     <tt38>Valor incorrecto. Compruebe las condiciones indicadas entre paréntesis</tt38>
     <tt39>Mostrar los espacios seleccionados</tt39>
+    <tt40>Establecer el nombre de la habitación a partir de la lista de nombres de habitaciones del documento actual</tt40>
     <instruction>Instrucción</instruction>
     <instruction1>Todas habitaciones del proyecto deben contar con parámetros generales especificados en esta lista. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes". Todos parámetros numéricos están representados por tipo "Unidad monetaria", que le permite procesar habitaciones en grupos</instruction1>
     <instruction1_1>Los parámetros adicionales se procesan y se rellenan sólo si las habitaciones tienen estos parámetros. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes"</instruction1_1>
