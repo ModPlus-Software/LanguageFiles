@@ -128,4 +128,16 @@ internal static class Utils
             value = tag;
         }
     }
+
+    public static Color DrawingColorToMediaColor(System.Drawing.Color color)
+    {
+        try
+        {
+            return Color.FromRgb(color.R, color.G, color.B);
+        }
+        catch
+        {
+            return Colors.Chartreuse;
+        }
+    }
 }

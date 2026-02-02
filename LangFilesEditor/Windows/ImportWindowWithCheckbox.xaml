@@ -16,6 +16,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <TextBlock Name="TbNote"
@@ -36,7 +37,11 @@
                   Name="CbAutoNumbering"
                   Content="Автоматически нумеровать теги"/>
 
-        <StackPanel Grid.Row="3"
+        <CheckBox Grid.Row="3" 
+                  Name="CbReplaceExisting"
+                  Content="Заменить при совпадении тегов"/>
+
+        <StackPanel Grid.Row="4"
                     HorizontalAlignment="Center"
                     Orientation="Horizontal">
             <Button Name="BtAccept"

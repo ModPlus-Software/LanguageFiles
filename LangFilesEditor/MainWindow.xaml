@@ -5,6 +5,7 @@
         xmlns:local="clr-namespace:LangFilesEditor"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:structure="clr-namespace:LangFilesEditor.Structure"
+        xmlns:handy="https://handyorg.github.io/handycontrol"
         Title="MainWindow"
         Width="1200"
         Height="800"
@@ -13,15 +14,20 @@
         WindowState="Maximized"
         mc:Ignorable="d">
     <Window.Resources>
-        <Style TargetType="{x:Type Button}">
-            <Setter Property="Margin" Value="4" />
-            <Setter Property="Padding" Value="8 4" />
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <handy:Theme Skin="Default"/>
+            </ResourceDictionary.MergedDictionaries>
 
-        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-        <local:ObjectReferenceEqualityConverter x:Key="ObjectReferenceEqualityConverter"/>
-        <local:NodeVisibilityConverter x:Key="NodeVisibilityConverter"/>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="4" />
+                <Setter Property="Padding" Value="8 4" />
+            </Style>
 
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <local:ObjectReferenceEqualityConverter x:Key="ObjectReferenceEqualityConverter"/>
+            <local:NodeVisibilityConverter x:Key="NodeVisibilityConverter"/>
+        </ResourceDictionary>
     </Window.Resources>
     <TabControl>
         <TabItem Header="Editor">
@@ -222,6 +228,7 @@
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate DataType="{x:Type structure:Node}">
                                     <DataGrid x:Name="PART_DataGrid"
+                                              Style="{x:Null}"
                                               Margin="4"
                                               AutoGenerateColumns="False"
                                               BeginningEdit="DgItems_OnBeginningEdit"
@@ -229,13 +236,14 @@
                                               CanUserDeleteRows="False"
                                               CurrentCellChanged="DgItems_OnCurrentCellChanged"
                                               DataGridCell.Selected="DgItems_OnSelected"
+                                              PreviewKeyDown="DataGrid_OnPreviewKeyDown"
                                               EnableColumnVirtualization="True"
                                               EnableRowVirtualization="True"
                                               HorizontalScrollBarVisibility="Disabled"
                                               ItemsSource="{Binding Path=.Items}"
                                               Loaded="DgItems_OnLoaded"
                                               PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
-                                              ScrollViewer.CanContentScroll="False">
+                                              ScrollViewer.CanContentScroll="True">
 
                                         <DataGrid.RowStyle>
                                             <Style TargetType="{x:Type DataGridRow}">
@@ -355,6 +363,10 @@
                         <Button Command="{Binding Path=ImportRowsAutoCommand}"
                                 Content="Import rows auto" />
 
+                        <!-- GET UNEDITED ROWS -->
+                        <Button Command="{Binding Path=GetUneditedCommand}"
+                                Content="Get unedited rows" />
+
                         <Border Margin="0 4"
                                 HorizontalAlignment="Stretch"
                                 BorderBrush="Gray"
@@ -435,7 +447,16 @@
                          IsReadOnly="True" />
             </Grid>
         </TabItem>
-        <TabItem Header="Settings" />
+        <TabItem Header="Settings" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions >
+                <GroupBox Header="Цвет строки после авто-вставки" Style="{x:Null}" HorizontalAlignment="Left" Margin="4" Grid.Row="0" BorderBrush="Black" >
+                <handy:ColorPicker  Name="ColorPicker" Confirmed="ColorPicker_OnConfirmed" SelectedBrush="{Binding Path=AutoRowColors, Mode=TwoWay}"/>
+                </GroupBox> 
+            </Grid>
+        </TabItem>
     </TabControl>
-
 </Window>

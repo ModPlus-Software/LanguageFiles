@@ -23,6 +23,12 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     private readonly Dictionary<Node, WeakReference<DataGrid>> _gridCache = new();
 
     /// <summary>
+    /// Свойство нужное чтобы сохраненный цвет сразу выставлялся в ColorPicker при запуске
+    /// </summary>
+    public SolidColorBrush AutoRowColors { get; set; } =
+        new(Utils.DrawingColorToMediaColor(Properties.Settings.Default.AutoRowColor));
+
+    /// <summary>
     /// Порядок языков
     /// </summary>
     public static List<string> LanguageOrder = ["ru-RU", "uk-UA", "en-US", "de-DE", "es-ES", "zh-CN"];
@@ -233,8 +239,9 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     {
         var win = new ImportWindowWithCheckbox()
         {
-            Owner = mainWindow
+            Owner = mainWindow,
         };
+        win.CbReplaceExisting.IsChecked = true;
         if (win.ShowDialog() != true)
             return;
 
@@ -243,7 +250,8 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
             return;
 
         var dataGrid = GetSelectedTabDataGrid();
-
+        var savedColor = Properties.Settings.Default.AutoRowColor;
+        var brush = new SolidColorBrush(Utils.DrawingColorToMediaColor(savedColor));
         foreach (var key in sortedRows.Keys)
         {
             Utils.GetTagValueAndNumber(key, out string value, out var rowNumber);
@@ -253,9 +261,22 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                 index = dataGrid.Items.Count - 1;
                 number = 0;
             }
+            else if (win.CbReplaceExisting.IsChecked is true 
+                     && SelectedNode.Items.FirstOrDefault(i => i.Name.Equals(key)) is { } oldItem)
+            {
+                var sortedStrings = sortedRows[key];
+                for (int i = 0; i < LanguageOrder.Count; i++)
+                {
+                    var language = LanguageOrder[i];
+                    oldItem.Values[language].Value = sortedStrings[i];
+                }
+
+                oldItem.BackgroundColor = brush;
+                continue;
+            }
 
             string startName;
-            if (win.CbAutoNumbering.IsChecked.HasValue && win.CbAutoNumbering.IsChecked.Value)
+            if (win.CbAutoNumbering.IsChecked is true)
             {
                 startName = $"{value}{number}";
                 startName = GetNewItemName(startName);
@@ -265,8 +286,38 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                 startName = $"{value}{rowNumber}";
             }
 
-            SelectedNode.Items.Insert(index + 1, GetNewItem(startName, sortedRows[key]));
+            var item = GetNewItem(startName, sortedRows[key]);
+            item.BackgroundColor = brush;
+            SelectedNode.Items.Insert(index + 1, item);
         }
+    }), _ => SelectedNode != null);
+
+    /// <summary>
+    /// Import rows below
+    /// </summary>
+    public ICommand GetUneditedCommand => new RelayCommand(() => Utils.SafeExecute(() =>
+    {
+        var win = new ImportWindow()
+        {
+            Owner = mainWindow
+        };
+        var dataGrid = GetSelectedTabDataGrid();
+        var selected = dataGrid.SelectedItems;
+        var stringToShow = string.Empty;
+        foreach (var selectedItem in selected)
+        {
+            if (selectedItem is not Item item)
+            {
+                continue;
+            }
+
+            var rows = item.GetUnformattedStrings();
+            stringToShow += string.Join('\n', rows);
+            stringToShow += "\n";
+        }
+
+        win.TbText.Text = stringToShow;
+        win.ShowDialog();
     }), _ => SelectedNode != null);
 
     /// <summary>
@@ -626,7 +677,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
     private static string GetNewItemName([CanBeNull] Item previousItem)
     {
-
+        
         if (previousItem is null)
             return string.Empty;
         return GetNewItemName(previousItem.Name);

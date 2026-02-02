@@ -13,6 +13,7 @@ internal class Item : ObservableObject
     private bool _hasDuplicateValue;
     private readonly Dictionary<string, ItemValue> _values;
     private string _comment;
+    private SolidColorBrush _backgroundColor = Brushes.White;
 
     public Item()
     {
@@ -61,7 +62,23 @@ internal class Item : ObservableObject
     /// <summary>
     /// Row background color
     /// </summary>
-    public SolidColorBrush BackgroundColor => !string.IsNullOrEmpty(Comment) ? Brushes.LightSkyBlue : Brushes.White;
+    public SolidColorBrush BackgroundColor
+    {
+        get
+        {
+            if (!string.IsNullOrEmpty(Comment))
+            {
+                return Brushes.LightSkyBlue;
+            }
+
+            return _backgroundColor;
+        }
+        set
+        {
+            _backgroundColor = value;
+            OnPropertyChanged();
+        }
+    }
 
     /// <summary>
     /// Is visible in UI
@@ -182,6 +199,24 @@ internal class Item : ObservableObject
                            char.IsDigit(Name[0]) ||
                            _values.Any(v => string.IsNullOrEmpty(v.Value.Value));
         //InvokeValidateInParent();
+    }
+
+    public List<string> GetUnformattedStrings()
+    {
+        var start = $"<{Name}>";
+        var end = $"</{Name}>";
+        var result = new List<string>();
+        foreach (var itemValue in _values.Values)
+        {
+            if (string.IsNullOrWhiteSpace(itemValue.Value))
+            {
+                continue;
+            }
+
+            result.Add($"{start}{itemValue.Value}{end}");
+        }
+
+        return result;
     }
 
     private void InvokeValidateInParent()
