@@ -328,8 +328,9 @@
     <h234>Perform apartment typification</h234>
     <h235>Room number format</h235>
     <h236>From parameter</h236>
-    <h237>Room numbering settings</h237>
+    <h237>Room numbering</h237>
     <h238>Reset numbering for each level in multi-level apartments</h238>
+    <h239>Apartment level parameters</h239>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -397,6 +398,9 @@
     <msg62>Functional purpose has been filled for {0} rooms</msg62>
     <msg63>The room has the name "{0}", which is not present in the current room matrix. Filling the functional purpose has been skipped</msg63>
     <msg64>The "Functional purpose" parameter has not been created or is not bound. Go to the "Parameters" tab and create/bind the parameters</msg64>
+    <msg65>Parameter "{0}" was not found</msg65>
+    <msg66>Parameter "{0}" has an unsupported data type (string and numeric parameters are supported)</msg66>
+    <msg67>Failed to set the value to parameter "{0}". The parameter may be read-only or located in an unavailable workset</msg67>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -464,6 +468,7 @@
     <instruction10>Classification allows you to fill in certain parameters of apartments based on the characteristics of the apartments. First, you need to create tables with conditions on the "Conditions" tab, after which you can perform classification with the result displayed on the "Classification" tab</instruction10>
     <instruction10_1>Specify the target parameter - string parameter to which the classification result will be set. The area is checked by the specified parameter of a random room of the apartment (i.e. all rooms are considered to have the same parameter value). The conditions "Contains rooms" and "Does not contain rooms" are filled with room names separated by semicolon (;). The room names can be completed with a condition to check the area and/or a condition to check that the room is a mezzanine. To do this, enter the condition and the area value in brackets after the room name and/or the condition for checking "Mezzanine" after the comma, if necessary. The available conditions are equal (=), not equal (!=), greater than (&gt;), greater than or equal to (&gt;=), less than (&lt;), less than or equal to (&lt;=). For the "Mezzanine" check, add a comma separated "m" to set the condition "The room must be a mezzanine" or "nm" to set the condition "The room must not be a mezzanine". You can set the condition to only check "Mezzanine" without checking the area. Examples: "Kitchen (&gt;10); Bedroom", "Pantry (&lt;5,m)", "Pantry (nm)"</instruction10_1>
     <instruction10_2>Classification is performed according to the specified condition tables from the Conditions tab. If the apartment to be checked does not fall under any row of the table conditions, the target parameter will be cleared</instruction10_2>
+    <instruction11>Specify the parameters into which the plugin will write the corresponding values for each level of a multi-level apartment. It is recommended to use parameters with the same data type as the main parameters. Values will be filled in for all apartments. For single-level apartments, the values will repeat the values of the main parameters</instruction11>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume
     LocalName="Room volume"

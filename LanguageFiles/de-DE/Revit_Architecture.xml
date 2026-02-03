@@ -328,8 +328,9 @@
     <h234>Wohnungstypisierung durchführen</h234>
     <h235>Format der Raumnummer</h235>
     <h236>Aus Parameter</h236>
-    <h237>Einstellungen für die Raumnummerierung</h237>
+    <h237>Raumnummerierung</h237>
     <h238>Nummerierung für jede Ebene in mehrgeschossigen Wohnungen zurücksetzen</h238>
+    <h239>Parameter nach Wohnungsebenen</h239>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -397,6 +398,9 @@
     <msg62>Die Funktionale Bestimmung wurde für {0} Räume ausgefüllt</msg62>
     <msg63>Der Raum hat den Namen "{0}", der in der aktuellen Raummatrix nicht vorhanden ist. Das Ausfüllen der Funktionalen Bestimmung wurde übersprungen</msg63>
     <msg64>Der Parameter "Funktionale Bestimmung" wurde nicht erstellt oder nicht zugewiesen. Wechseln Sie zur Registerkarte "Parameter" und erstellen/zuweisen Sie die Parameter</msg64>
+    <msg65>Parameter "{0}" wurde nicht gefunden</msg65>
+    <msg66>Parameter "{0}" hat einen nicht unterstützten Datentyp (unterstützt werden Zeichenfolgen- und Zahlenparameter)</msg66>
+    <msg67>Der Wert konnte nicht in den Parameter "{0}" geschrieben werden. Möglicherweise ist der Parameter schreibgeschützt oder befindet sich in einem nicht verfügbaren Arbeitsset</msg67>
     <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
     <tt2>Die Anweisung ausblenden</tt2>
     <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
@@ -464,6 +468,7 @@
     <instruction10>Die Klassifizierung ermöglicht die Ausfüllung bestimmter Parameter der Wohnungen aufgrund der Eigenschaften der Wohnungen. Zuerst müssen Sie auf der Registerkarte "Bedingungen" Tabellen mit Bedingungen erstellen. Anschließend können Sie eine Klassifizierung durchführen und das Ergebnis auf der Registerkarte "Klassifizierung" anzeigen lassen</instruction10>
     <instruction10_1>Geben Sie den Zielparameter an, d.h. einen Textparameter, in den das Klassifizierungsergebnis geschrieben wird. Die Flächenüberprüfung erfolgt gemäß dem angegebenen Parameter eines beliebigen Raumes in der Wohnung (d. h. es wird davon ausgegangen, dass der Parameter für alle Räume den gleichen Wert hat). Die Bedingungen "Enthält Räume" und "Enthält keine Räume" werden mit den Namen der Räume ausgefüllt, die durch ein Semikolon (;) getrennt sind. Die Namen der Räume können um eine Bedingung zur Flächenüberprüfung bzw. zur Überprüfung, ob es sich bei dem Raum um ein Zwischengeschoss handelt, ergänzt werden. Hierzu geben Sie nach dem Raumnamen die Bedingung und Flächenwert in Klammern bzw. (durch Komma getrennt) die Prüfbedingung "Zwischengeschoss" an. Verfügbar sind die folgenden Bedingungen: ist gleich (=), ist nicht gleich (!=), ist größer (&gt;), ist größer gleich (&gt;=), ist kleiner (&lt;), ist kleiner gleich (&lt;=). Für die Überprüfung "Zwischengeschoss" fügen Sie (durch Komma getrennt) das Zeichen "z" hinzu, um die Bedingung "Der Raum muss ein Zwischengeschoss sein" oder die Zeichen "kz", um die Bedingung "Der Raum muss kein Zwischengeschoss sein" festzulegen. Es ist möglich, nur die Bedingung für die Überprüfung "Zwischengeschoss" ohne Flächenüberprüfung festzulegen. Z.B.: "Küche (&gt;10); Schlafzimmer", "Lagerraum (&lt;5,z)", "Lagerraum (kz)"</instruction10_1>
     <instruction10_2>Die Klassifizierung erfolgt gemäß den markierten Bedingungstabellen aus der Registerkarte "Bedingungen". Wenn die zu überprüfende Wohnung keine der Tabellenbedingungen erfüllt, wird der Zielparameter gelöscht</instruction10_2>
+    <instruction11>Geben Sie die Parameter an, in die das Plugin die entsprechenden Werte für jede Ebene einer mehrstöckigen Wohnung schreibt. Es wird empfohlen, Parameter mit demselben Datentyp wie die Hauptparameter zu verwenden. Die Werte werden für alle Wohnungen ausgefüllt. Bei einstöckigen Wohnungen entsprechen die Werte den Werten der Hauptparameter</instruction11>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume
     LocalName="Raumvolumen"

@@ -328,8 +328,9 @@
     <h234>Realizar la tipificación de apartamentos</h234>
     <h235>Formato del número de la habitación</h235>
     <h236>Desde el parámetro</h236>
-    <h237>Configuración de la numeración de habitaciones</h237>
+    <h237>Numeración de habitaciones</h237>
     <h238>Restablecer la numeración para cada nivel en apartamentos de varios niveles</h238>
+    <h239>Parámetros por niveles de la vivienda</h239>
     <msg1>No se ha encontrado parámetro "{0}"</msg1>
     <msg2>Parámetro "{0}" no rellenado</msg2>
     <msg3>Parámetro "{0}" tiene un valor ilegal</msg3>
@@ -397,6 +398,9 @@
     <msg62>El propósito funcional se ha rellenado para {0} espacios</msg62>
     <msg63>El espacio tiene el nombre "{0}", que no está presente en la matriz actual de espacios. Se omitió el rellenado del propósito funcional</msg63>
     <msg64>El parámetro "Propósito funcional" no ha sido creado o no está vinculado. Vaya a la pestaña "Parámetros" y cree/vincule los parámetros</msg64>
+    <msg65>No se encontró el parámetro "{0}"</msg65>
+    <msg66>El parámetro "{0}" tiene un tipo de datos no compatible (se admiten parámetros de texto y numéricos)</msg66>
+    <msg67>No se pudo establecer el valor en el parámetro "{0}". Es posible que el parámetro sea de solo lectura o se encuentre en un conjunto de trabajo no disponible</msg67>
     <tt1>Valor del parámetro "Propósito funcional", que se utiliza para seleccionar habitaciones que se procesan. Si parámetro tiene valor diferente, habitación se omitirá cuando se estén ejecutando todos algoritmos</tt1>
     <tt2>Ocultar instrucción</tt2>
     <tt3>Para cada grupo de lista, seleccione una habitación del proyecto mediante lo cual se determinará apartamento inicial para numeración</tt3>
@@ -464,6 +468,7 @@
     <instruction10>La clasificación le permite rellenar ciertos parámetros de los apartamentos en función de las características de los mismos. Primero, en la ficha "Condiciones" debe crear tablas con condiciones, después de lo cual puede clasificar y mostrar el resultado en la ficha "Clasificación"</instruction10>
     <instruction10_1>Especifique el parámetro objetivo - un parámetro de cadena en el que se registrará el resultado de la clasificación. El área se verifica por el parámetro especificado de una habitación aleatoria del apartamento (es decir, se supone que el parámetro tiene el mismo valor para todas las habitaciones). Las condiciones "Contiene habitaciones" y "No contiene habitaciones" se rellenan con nombres de habitaciones separados por punto y coma (;). Los nombres de las habitaciones se pueden complementar con una condición para verificar el área y/o una condición para verificar que la habitación es un entresuelo. Para ello, después del nombre de la habitación, especifique entre paréntesis la condición y el valor del área y/o la condición para verificar "Entresuelo", separados por una coma, si es necesario. Las condiciones disponibles son: igual a (=), no igual a (!=), mayor que (&gt;), mayor o igual a (&gt;=), menor que (&lt;), menor o igual a (&lt;=). Para verificar "Entresuelo", añade el símbolo "e" separado por comas para establecer la condición "La habitación debe ser un entresuelo" o "ne" para establecer la condición "La habitación no debe ser un entresuelo". Es posible establecer la condición para verificar solo "Entresuelo" sin verificar el área. Por ejemplo, "Cocina (&gt;10); Dormitorio", "Despensa(&lt;5,e)", "Despensa (ne)"</instruction10_1>
     <instruction10_2>La clasificación se realiza por las tablas de condiciones marcadas en la ficha "Condiciones". Si el apartamento que se está verificando no cumple ninguna de las condiciones de la tabla, se limpiará el parámetro objetivo</instruction10_2>
+    <instruction11>Indique los parámetros en los que el complemento escribirá los valores correspondientes para cada nivel de una vivienda de varios niveles. Se recomienda utilizar parámetros con el mismo tipo de datos que los parámetros principales. Los valores se rellenarán para todas las viviendas. En las viviendas de un solo nivel, los valores repetirán los valores de los parámetros principales</instruction11>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume
     LocalName="Volumen de habitaciones"
