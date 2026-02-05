@@ -586,7 +586,7 @@
     <h4>Russia</h4>
     <h5>Ukraine</h5>
     <h6>Belarus</h6>
-    <h7>Weed of normative document:</h7>
+    <h7>Regulatory document:</h7>
     <h8>Selecting the normative document</h8>
     <h9>Table name</h9>
     <h10>Normative document:</h10>
@@ -631,6 +631,7 @@
     <h50>Add new post</h50>
     <h51>Remove selected post</h51>
     <h52>SURNAME</h52>
+    <!--todo remove after 3.0.0.0-->
     <h53>GOST R 21.1101-2013</h53>
     <h54>Appendix Z</h54>
     <h55>Box 1</h55>
@@ -650,7 +651,9 @@
     <h69>Add fields to title block</h69>
     <h70>Set Default Values</h70>
     <h71>Get the value from the drawing</h71>
+    <!--todo remove after 3.0.0.0-->
     <h72>DSTU B A.2.4-4: 2009</h72>
+    <!--todo remove after 3.0.0.0-->
     <h73>STB 2255-2012</h73>
     <h74>Update in drawing</h74>
     <h75>You can use line breaks in boxes 2,3 and 9. To add line breaks use Enter</h75>
@@ -775,8 +778,18 @@
     <h36>Multileaders</h36>
     <h37>With the same global width</h37>
     <h38>With the same dim style</h38>
+    <!--todo remove after 1.9.2-->
     <h39>With the same value of any attribute</h39>
+    <!--todo remove after 1.9.2-->
     <h40>With the same value of all attributes</h40>
+    <h41>All list parameters of dynamic blocks</h41>
+    <h42>All angular parameters of dynamic blocks</h42>
+    <h43>All distance parameters of dynamic blocks</h43>
+    <h44>All area parameters of dynamic blocks</h44>
+    <h45>With the same global scale of the dimension style</h45>
+    <h46>With the same value:</h46>
+    <h47>Any attribute</h47>
+    <h48>All attributes</h48>
     <msg1>Settings</msg1>
     <msg1ln>S</msg1ln>
     <msg2>Select sample objects or</msg2>
@@ -1301,6 +1314,10 @@
     <h23>- Plugin works by checking both conditions</h23>
     <h24>H is the maximum deviation from the straight line:</h24>
     <h25>a – angle tolerance:</h25>
+    <h26>Object type:</h26>
+    <h27>Circle radius:</h27>
+    <h28>Block type:</h28>
+    <err1>There are no blocks available for insertion in the document</err1>
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
     <cb1>Number of segments</cb1>
@@ -1335,6 +1352,10 @@
     <d11>Fast moving of vertices of the specified polyline</d11>
     <l12>Split curve at intersection points</l12>
     <d12>Split curve (segment, polyline or spline) at intersection points with other drawing objects</d12>
+    <l13>Quadrilateral by points</l13>
+    <d13>Creates a quadrilateral from two or more points. The sides of the quadrilateral are oriented according to the current coordinate system. An angular tolerance setting is available allowing the sides to capture a greater number of points.</d13>
+    <l14>Create objects at intersection points</l14>
+    <d14>Creates objects at intersection points of curves with specified objects</d14>
     <wrong>Wrong choice!</wrong>
     <undividable>An error occurred while dividing the curve. Try reducing the curve length</undividable>
     <k1>Select 3D polylines</k1>
@@ -1367,6 +1388,7 @@
     <k27>Select first support element (line, polyline or spline)</k27>
     <k28>Select second support element (line, polyline or spline)</k28>
     <k29>Number of control points</k29>
+    <!--todo remove after 1.4.16-->
     <k30>Simplify the polyline?\nThe points on the same straight line will be deleted</k30>
     <k31>Select a curve (segment, polyline or spline)</k31>
     <k32>Specify a point on the tangent or:</k32>
@@ -1375,6 +1397,14 @@
     <k34>traverse Point</k34>
     <k34ln>P</k34ln>
     <k35>Specify a point on the arc or:</k35>
+    <k36>Select points or</k36>
+    <k37>Exclude unnecessary objects</k37>
+    <k38>Select one or more curves (line, polyline, arc, spline or circle)</k38>
+    <k39>Select objects for intersection calculation or leave the selection empty to calculate for all objects</k39>
+    <k40>Enter angular tolerance from 0 to 30</k40>
+    <k41>TOLerance</k41>
+    <k41ln>TOL</k41ln>
+    <k42>Simplify the polyline?</k42>
   </mpPlinesEdit>
   <mpSpecifications
     LocalName="Specifications"
@@ -1415,12 +1445,12 @@
     <h38>For this drawing there is already a specification with this name!</h38>
     <h39>Product search</h39>
     <h40>MANUAL INPUT</h40>
-    <h41>Pos.</h41>
-    <h42>Designation</h42>
-    <h43>Name</h43>
-    <h44>Count</h44>
-    <h45>Mass</h45>
-    <h46>Note</h46>
+    <h41>Позиция</h41>
+    <h42>Обозначение</h42>
+    <h43>Наименование</h43>
+    <h44>Количество</h44>
+    <h45>Масса</h45>
+    <h46>Примечание</h46>
     <h47>Steel</h47>
     <h48>Edit the list of documents used by the plugin</h48>
     <h49>Open the database search bar</h49>
@@ -2778,6 +2808,7 @@
     <h4>Apply table style</h4>
     <h5>Recognition of text position in cell</h5>
     <h6>Delete objects after table creation</h6>
+    <h7>Cell boundary tolerance</h7>
     <msg1>Select objects for table</msg1>
     <msg2>Exclude unnecessary objects</msg2>
   </mpTableFromEntities>

@@ -61,7 +61,7 @@
     <h2>Teg:</h2>
     <h3>Wert:</h3>
     <h4>Einstellungen</h4>
-    <h5>Wachstumsrate:</h5>
+    <h5>Erhöhungsschritt:</h5>
     <h6>Text VOR und Text NACH speichern</h6>
     <h7>Nullen einfügen</h7>
     <h8>Nullen an den Anfang einer Zahl anfügen</h8>
@@ -69,7 +69,7 @@
     <h10>Entfernen aller Nullen am Ende aus der Zahl</h10>
     <h11>Ergebnis:</h11>
     <h12>Entlang der Kurve kopieren</h12>
-    <h13>Abstand:</h13>
+    <h13>Schritt:</h13>
     <h14>Anzahl:</h14>
     <h15>Verschiebung:</h15>
     <h16>Kopien auf die Kurve einfügen</h16>
@@ -430,7 +430,7 @@
     <h6>Zu Mtext hinzufügen</h6>
     <h7>Für Benutzerhinweise:</h7>
     <h8>Ändern</h8>
-    <h15>Notiz</h15>
+    <h15>Notizen</h15>
     <h26>Texthöhe:</h26>
     <h28>Textbreite:</h28>
     <h29>Textstil:</h29>
@@ -586,7 +586,7 @@
     <h4>Russland</h4>
     <h5>Ukraine</h5>
     <h6>Belarus</h6>
-    <h7>Entnahme in Übereinstimmung mit dem vorschriftsmäßigem Dokument:</h7>
+    <h7>Normatives Dokument:</h7>
     <h8>Auswahl des vorschriftsmäßiges Dokument</h8>
     <h9>Tabellenname</h9>
     <h10>Vorschriftsmäßiges Dokument:</h10>
@@ -631,6 +631,7 @@
     <h50>Eine neue Stelle hinzufügen</h50>
     <h51>Ausgewählte Stelle löschen</h51>
     <h52>FAMILIENNAME</h52>
+    <!--todo remove after 3.0.0.0-->
     <h53>GOST R 21.1101-2013</h53>
     <h54>Anlage ZH</h54>
     <h55>Spalte 1</h55>
@@ -650,7 +651,9 @@
     <h69>Felder zum Schriftfeld hinzufügen</h69>
     <h70>Standardwerte einstellen</h70>
     <h71>Wert aus der Zeichnung abrufen</h71>
+    <!--todo remove after 3.0.0.0-->
     <h72>DSTU B A.2.4-4:2009</h72>
+    <!--todo remove after 3.0.0.0-->
     <h73>STB 2255-2012</h73>
     <h74>In der Zeichnung aktualisieren</h74>
     <h75>Sie können in den Feldern 2, 3 und 9 Zeilenumbrüche verwenden. Verwenden Sie die Eingabetaste, um einen Zeilenumbruch einzufügen</h75>
@@ -775,8 +778,18 @@
     <h36>Multi-Führungslinien</h36>
     <h37>Mit der gleichen Globalbreite</h37>
     <h38>Mit dem gleichen Bemaßungsstil</h38>
+    <!--todo remove after 1.9.2-->
     <h39>Mit dem gleichen Wert für jedes Attribut</h39>
+    <!--todo remove after 1.9.2-->
     <h40>Mit dem gleichen Wert für alle Attribute</h40>
+    <h41>Alle Listenparameter der dynamischen Blöcke</h41>
+    <h42>Alle Winkelparameter der dynamischen Blöcke</h42>
+    <h43>Alle Distanzparameter der dynamischen Blöcke</h43>
+    <h44>Alle Flächenparameter der dynamischen Blöcke</h44>
+    <h45>Mit gleichem globalen Maßstab des Bemaßungsstils</h45>
+    <h46>Mit gleichem Wert:</h46>
+    <h47>Beliebiges Attribut</h47>
+    <h48>Alle Attribute</h48>
     <msg1>Einstellung</msg1>
     <msg1ln>E</msg1ln>
     <msg2>Wählen Sie Beispielobjekte aus oder</msg2>
@@ -1029,10 +1042,10 @@
     <h13>Nicht gespeichert!</h13>
     <h14>Allgemeine Datendatei speichern</h14>
     <h15>Allgemeine Datendatei herunterladen</h15>
-    <h16>Allgemeine Daten aus dem Modell oder den angegebenen Plänen abrufen</h16>
+    <h16>Allgemeine Daten aus dem Modell oder den angegebenen Layouts abrufen</h16>
     <h17>Allgemeine Daten ermitteln</h17>
     <h18>Zeichnungsliste</h18>
-    <h19>Plan</h19>
+    <h19>Layout</h19>
     <h20>Benennung</h20>
     <h21>Notiz</h21>
     <h22>Eine neue Zeile hinzufügen</h22>
@@ -1047,8 +1060,8 @@
     <h31>Als Formate verwenden:</h31>
     <h32>ModPlus Formate</h32>
     <h33>Formate aus der Liste (blockweise):</h33>
-    <h34>In Plänen</h34>
-    <h35>Die Pläne werden nach Tabellen ohne Berücksichtigung der Formate durchsucht! Es wird davon ausgegangen, dass ein Plan einem Format entspricht</h35>
+    <h34>In Layouts</h34>
+    <h35>Die Layouts werden nach Tabellen ohne Berücksichtigung der Formate durchsucht! Es wird davon ausgegangen, dass ein Layout einem Format entspricht</h35>
     <h36>Sammeln:</h36>
     <h37>Die Tabellen sind nicht in einer Datei gespeichert! Wenn das Fenster geschlossen wird, gehen alle Daten verloren!\nSind Sie sicher, dass Sie das Fenster schließen wollen?</h37>
     <h38>Bestehende Tabellen werden überschrieben!\nWollen Sie fortsetzen?</h38>
@@ -1059,14 +1072,14 @@
     <h47>Tabellenstil-Tabelle wurde in der Tabellendatei nicht gefunden</h47>
     <h48>Starten Sie das Plugin "Tabellen", um die Tabellendatei zu überschreiben</h48>
     <h49>Keine Tabellendatei gefunden!\nMan muß das Plugin "Tabellen" starten</h49>
-    <h50>Suche nach Daten im Plan:</h50>
+    <h50>Suche nach Daten im Layout:</h50>
     <h51>Das Ansichtsfenster wird von einem Objekt zugeschnitten, das nicht verarbeitet wird!</h51>
     <h52>Das Ansichtsfenster Nr.</h52>
     <h53>Objekt zum Zuschneiden:</h53>
     <h54>Einfügepunkt:</h54>
     <h55>Keine Endpunkte für die Suche ausgewählt!</h55>
     <h56>Keine Optionen für die Formatsuche ausgewählt!</h56>
-    <h57>Keine Blätter zum Suchen!</h57>
+    <h57>Keine Layouts zum Suchen!</h57>
     <h58>Alle abwählen</h58>
     <h59>Alle auswählen</h59>
     <h60>Nur in der aktuellen Zeichnung suchen</h60>
@@ -1301,6 +1314,10 @@
     <h23>– Das Plugin arbeitet mit einer Prüfung für beide Bedingungen</h23>
     <h24>H ist die maximale Abweichung von der Geraden:</h24>
     <h25>a – Winkeltoleranz:</h25>
+    <h26>Objekttyp:</h26>
+    <h27>Kreisradius:</h27>
+    <h28>Blocktyp:</h28>
+    <err1>Im Dokument sind keine Blöcke zum Einfügen vorhanden</err1>
     <accept>Akzeptieren</accept>
     <cancel>Abbrechen</cancel>
     <cb1>Anzahl der Segmente</cb1>
@@ -1335,6 +1352,10 @@
     <d11>Schnelle Verschiebung von Scheitelpunkten der angegebenen Polylinie</d11>
     <l12>Teilen der Kurve in Schnittpunkten</l12>
     <d12>Teilen der Kurve (Linie, Polylinie oder Spline) in den Schnittpunkten mit anderen Objekten der Zeichnung</d12>
+    <l13>Viereck nach Punkten</l13>
+    <d13>Erstellt ein Viereck aus zwei oder mehr Punkten. Die Seiten des Vierecks werden entsprechend dem aktuellen Koordinatensystem ausgerichtet. Eine Einstellung für den Winkeltoleranzwert ist verfügbar die es den Seiten ermöglicht eine größere Anzahl von Punkten zu erfassen.</d13>
+    <l14>Objekte an Schnittpunkten erstellen</l14>
+    <d14>Erstellt Objekte an den Schnittpunkten von Kurven mit angegebenen Objekten</d14>
     <wrong>Ungültige Wahl!</wrong>
     <undividable>Beim Teilen der Kurve ist ein Fehler aufgetreten. Versuchen Sie, die Länge der Kurve zu reduzieren</undividable>
     <k1>Wählen Sie 3D-Polylinien aus</k1>
@@ -1367,6 +1388,7 @@
     <k27>Wählen Sie das erste Referenzelement (Linie, Polylinie oder Spline)</k27>
     <k28>Wählen Sie das zweite Referenzelement (Linie, Polylinie oder Spline)</k28>
     <k29>Die Anzahl der Referenzpunkte</k29>
+    <!--todo remove after 1.4.16-->
     <k30>Wollen Sie die Polylinie vereinfachen?\nDie Punkte auf derselben Linie werden gelöscht</k30>
     <k31>Wählen Sie eine Kurve (Linie, Polylinie oder Spline) aus</k31>
     <k32>Geben Sie einen Punkt auf der Tangente an oder:</k32>
@@ -1375,6 +1397,14 @@
     <k34>Durchgangspunkt</k34>
     <k34ln>D</k34ln>
     <k35>Geben Sie einen Punkt auf dem Bogen an oder:</k35>
+    <k36>Punkte auswählen oder</k36>
+    <k37>Nicht benötigte Objekte ausschließen</k37>
+    <k38>Wählen Sie eine oder mehrere Kurven (Linie, Polylinie, Bogen, Spline oder Kreis)</k38>
+    <k39>Objekte für die Schnittberechnung auswählen oder die Auswahl leer lassen um für alle Objekte zu berechnen</k39>
+    <k40>Winkeltoleranz von 0 bis 30 eingeben</k40>
+    <k41>TOLeranz</k41>
+    <k41ln>TOL</k41ln>
+    <k42>Wollen Sie die Polylinie vereinfachen?</k42>
   </mpPlinesEdit>
   <mpSpecifications
     LocalName="Bauteillisten"
@@ -1415,12 +1445,12 @@
     <h38>Für diese Zeichnung gibt es bereits eine Bauteilliste mit diesem Namen!</h38>
     <h39>Suche nach Produkten</h39>
     <h40>MANUELLE EINGABE</h40>
-    <h41>Position</h41>
-    <h42>Bezeichnung</h42>
-    <h43>Benennung</h43>
-    <h44>Anzahl</h44>
-    <h45>Masse</h45>
-    <h46>Notiz</h46>
+    <h41>Позиция</h41>
+    <h42>Обозначение</h42>
+    <h43>Наименование</h43>
+    <h44>Количество</h44>
+    <h45>Масса</h45>
+    <h46>Примечание</h46>
     <h47>Stahl</h47>
     <h48>Die Liste der vom Plugin verwendeten Dokumente ändern</h48>
     <h49>Die Suchleiste der Datenbank öffnen</h49>
@@ -2638,7 +2668,7 @@
   </mpStripMtext>
   <mpRevitSheetsMerging
     LocalName="Zusammenführen von Plänen in Revit"
-    Description="Zusammenführen von aus Revit exportierten Dateien in eine einzige Zeichnung. Das Plugin muss an einer leeren Zeichnung gestartet werden. Das Plugin verarbeitet Dateien, die mit deaktiviertem Kontrollkästchen &quot;Planansichten und Links als externe Verknüpfungen exportieren&quot; hochgeladen wurden.">
+    Description="Zusammenführen von aus Revit exportierten Dateien in eine einzige Zeichnung. Das Plugin muss an einer leeren Zeichnung gestartet werden. Das Plugin verarbeitet Dateien, die mit deaktiviertem Kontrollkästchen &quot;Ansichten in Plänen und Verknüpfungen als externe Referenzen exportieren&quot; hochgeladen wurden">
     <h1>Dateibearbeitung...</h1>
     <h2>Fehler beim Importieren von Plänen aus der Datei</h2>
     <h3>Auswählen von Dateien zum Zusammenführen von Plänen</h3>
@@ -2778,6 +2808,7 @@
     <h4>Tabellenstil anwenden</h4>
     <h5>Erkennung der Textposition in der Zelle</h5>
     <h6>Objekte nach der Tabellenerstellung löschen</h6>
+    <h7>Toleranz der Zellgrenzen</h7>
     <msg1>Objekte für Tabelle auswählen</msg1>
     <msg2>Beseitigen Sie die unnötigen Objekte</msg2>
   </mpTableFromEntities>

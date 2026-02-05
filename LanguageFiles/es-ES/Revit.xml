@@ -91,6 +91,8 @@
     <h84>Ajustes de duplicación de texto</h84>
     <h85>Buscar y reemplazar en texto</h85>
     <h86>Buscar y reemplazar en parámetro</h86>
+    <h87>Intentar encontrar la numeración existente</h87>
+    <h88>Usar configuración común de numeración</h88>
     <start>Al principio</start>
     <notOrganized>!No organizado</notOrganized>
     <end>Al final</end>
@@ -161,6 +163,15 @@
     <h82>Separar la numeración con símbolo:</h82>
     <h83>Espacio</h83>
     <h86>Buscar y reemplazar en parámetro</h86>
+    <h87>Incrementar valor en filtros</h87>
+    <h88>(si existe)</h88>
+    <h89>Especifique el prefijo y sufijo del valor del filtro que se incrementará. Ejemplo: valor = "KN1", prefijo = "KN", resultado: "KN2", KN3, "KN4", etc.</h89>
+    <h90>Abrir vistas duplicadas</h90>
+    <h91>Borrar valores del parámetro</h91>
+    <h92>Crear copias de planos para niveles superiores</h92>
+    <h93>Contador</h93>
+    <h94>La cantidad de niveles superiores para la vista "{0}" es menor que la cantidad de copias de vista a crear. Copias de vista creadas: {1}</h94>
+    <h95>Intentar encontrar la numeración existente</h95>
     <notOrganized>!No organizado</notOrganized>
     <start>Al principio</start>
     <end>Al final</end>
@@ -174,18 +185,21 @@
     <vtf5>Representados, vistas de dibujo, leyendas</vtf5>
   </mprViewCopy>
   <ostViewIn3D
-    LocalName="Recortar en 3D"
-    Description="Recorta elementos seleccionados en VerCubo, con posibilidad de establecer tamaño del ViewCube"
-    FullDescription="Es posible cambiar dinámicamente tamaño del ViewCube de manera uniforme en todas direcciones en relación con elementos seleccionados">
-    <h1>Recortar en 3D</h1>
-    <msg1>Seleccionar elementos para recortar en 3D</msg1>
-    <orient>Orientar por elemento</orient>
+    LocalName="3D Caja de sección"
+    Description="Aislamiento de los elementos seleccionados en una Vista 3D con la posibilidad de definir el tamaño de la Caja de sección">
+    <h1>3D Caja de sección</h1>
+    <msg1>Seleccionar elementos para 3D Caja de sección</msg1>
     <inlink>En el vínculo</inlink>
     <inmodel>En el modelo</inmodel>
-    <remove3D>Desactivar los límites</remove3D>
     <msg2>Seleccione un elemento para orientar la vista</msg2>
     <ResizeSectionBox>Modificar los límites de la vista 3D</ResizeSectionBox>
     <createbounds>Crear límites</createbounds>
+    <create3D>Crear vista 3D</create3D>
+    <selectElements>Seleccionar elementos</selectElements>
+    <manualOrientation>Orientación manual</manualOrientation>
+    <nullSectionBoxMsg1>El modo seleccionado no admite la preselección de elementos</nullSectionBoxMsg1>
+    <nullSectionBoxMsg2>No se puede realizar el recorte para los elementos seleccionados</nullSectionBoxMsg2>
+    <tooltip1>Permite definir un elemento para orientar el recorte 3D</tooltip1>
   </ostViewIn3D>
   <whshScheduleLookup
     LocalName="Buscar en tablas de planificación"
@@ -860,6 +874,47 @@
     <h72>Zonas no colocadas</h72>
     <h73>Eliminar áreas no colocadas</h73>
     <h74>Vista dependiente colocada en plano</h74>
+    <dav1>Antes de eliminar, Revit cambiará a otra vista disponible</dav1>
+    <dav2>No se permite eliminar todas las vistas disponibles para el cambio</dav2>
+    <pattern>Patrón</pattern>
+    <patternName>Nombre del patrón</patternName>
+    <patternsNumber>Cantidad de patrones</patternsNumber>
+    <linePatterns>Patrones de líneas</linePatterns>
+    <lp1>Búsqueda del patrón en estilos de objetos y sobrescrituras de visibilidad/gráficos</lp1>
+    <lp2>Tener en cuenta la sobrescritura gráfica del elemento</lp2>
+    <lp3>Eliminación de patrones de línea</lp3>
+    <lp4>Eliminación del patrón de línea</lp4>
+    <lp5>No se pudo eliminar el patrón de línea. Error</lp5>
+    <lp6>Patrones de línea eliminados</lp6>
+    <lp7>El patrón no se utiliza en los estilos de objetos ni en las sobrescrituras de visibilidad/gráficos</lp7>
+    <lpm1>Se utiliza en el estilo de subcategoría de línea: {0}</lpm1>
+    <lpm2>Se utiliza en los estilos de objetos del modelo: {0}</lpm2>
+    <lpm3>Se utiliza en los estilos de objetos de anotación: {0}</lpm3>
+    <lpm4>Se utiliza en los estilos de objetos del modelo analítico: {0}</lpm4>
+    <lpm5>Se utiliza en el estilo de subcategoría de los objetos del modelo {0}: {1}</lpm5>
+    <lpm6>Se utiliza en el estilo de subcategoría de los objetos de anotación {0}: {1}</lpm6>
+    <lpm7>Se utiliza en el estilo de subcategoría de los objetos del modelo analítico {0}: {1}</lpm7>
+    <lpm8>Se utiliza en el estilo de subcategoría de los objetos importados en la familia: {0}</lpm8>
+    <lpm9>Se utiliza en el estilo de subcategoría del objeto importado en el modelo {0}: {1}</lpm9>
+    <lpm10>Se utiliza en la sobrescritura gráfica de la vista {0}, en la categoría del modelo: {1}</lpm10>
+    <lpm11>Se utiliza en la sobrescritura gráfica de la vista {0}, en la categoría de anotación: {1}</lpm11>
+    <lpm12>Se utiliza en la sobrescritura gráfica de la vista {0}, en la categoría del modelo analítico: {1}</lpm12>
+    <lpm13>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la categoría del modelo: {1}</lpm13>
+    <lpm14>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la categoría de anotación: {1}</lpm14>
+    <lpm15>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la categoría del modelo analítico: {1}</lpm15>
+    <lpm16>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría del modelo {1}: {2}</lpm16>
+    <lpm17>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría de anotación {1}: {2}</lpm17>
+    <lpm18>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría del modelo analítico {1}: {2}</lpm18>
+    <lpm19>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría de los objetos importados en la familia: {1}</lpm19>
+    <lpm20>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría del objeto importado en el modelo {1}: {2}</lpm20>
+    <lpm21>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría del modelo {1}: {2}</lpm21>
+    <lpm22>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría de anotación {1}: {2}</lpm22>
+    <lpm23>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría del modelo analítico {1}: {2}</lpm23>
+    <lpm24>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría de los objetos importados en la familia: {1}</lpm24>
+    <lpm25>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría del objeto importado en el modelo {1}: {2}</lpm25>
+    <lpm26>Se utiliza en el filtro de vista {0}: {1}</lpm26>
+    <lpm27>Se utiliza en el filtro de la plantilla de vista {0}: {1}</lpm27>
+    <lpm28>Se utiliza en la sobrescritura gráfica en la vista {0}, para el elemento: {1}</lpm28>
     <search>Buscar</search>
     <name>Nombre</name>
     <collect>Recopilar</collect>
@@ -989,6 +1044,7 @@
     <h56>Disminuye o aumenta números de planos existentes en un grupo en una cantidad específica</h56>
     <h57>Decrementar en</h57>
     <h58>Incrementar en</h58>
+    <h59>Ordenar por nombre de plano</h59>
     <p1>número del plano completo</p1>
     <p2>1ra parte</p2>
     <p3>numero de 1ra parte</p3>
@@ -1438,6 +1494,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <h2>Del proyecto:</h2>
     <h3>Al proyecto:</h3>
     <h4>Opciones de copiar</h4>
+    <!--todo remove after 2.4.4.0-->
     <h5>Registro de trabajo</h5>
     <h6>Copiar</h6>
     <h7>Abrir en Bloc de notas</h7>
@@ -1543,8 +1600,11 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <m70>Parámetros de proyecto</m70>
     <m71>Documento objetivo ya tiene filtro "{0}".{1} ¿Copiar y reemplazar?</m71>
     <m72>Documento objetivo ya tiene vista "{0}".{1} ¿Copiar y reemplazar?</m72>
+    <!--todo remove after 2.4.4.0-->
     <m73>Elementos copiados:</m73>
+    <!--todo remove after 2.4.4.0-->
     <m74>Elementos omitidos:</m74>
+    <!--todo remove after 2.4.4.0-->
     <m75>Número de errores:</m75>
     <m76>Detalles en registro de trabajo</m76>
     <m77>Parámetros de exportación</m77>
@@ -1557,6 +1617,15 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <familyProcessError>{0} - ¡ERROR! Se produjo un error al procesar la familia "{1}" (id: {2}): "{3}"</familyProcessError>
     <familyExists>El documento de destino ya contiene la familia "{0}".{1}¿Desea realizar la copia?</familyExists>
     <duplicateCreated>{0} - Se ha creado un duplicado de la familia {3}</duplicateCreated>
+    <elementTab>Elementos</elementTab>
+    <modelElementTab>Elementos del modelo</modelElementTab>
+    <selectedInModel>Seleccionados en el modelo</selectedInModel>
+    <selectFromLink>Seleccionar desde el vínculo</selectFromLink>
+    <selectElementsFrom>Seleccione elementos de {0}</selectElementsFrom>
+    <copyResultMessage>{0} - Copia completada. Copiados: {1}, Omitidos: {2}, Con errores: {3}</copyResultMessage>
+    <messageInvalidActiveDocument>El documento activo no coincide con la fuente seleccionada</messageInvalidActiveDocument>
+    <notSelectedElements>No hay ningún elemento seleccionado en el modelo</notSelectedElements>
+    <selectElementsFromLink>Seleccione elementos del archivo vinculado</selectElementsFromLink>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notas"
@@ -2308,7 +2377,7 @@ Seleccione otra vista de origen</h9>
     <t29>Numeración</t29>
     <t30>Formato del número:</t30>
     <t31>Formato de cadena</t31>
-    <t32>{0} – nombre del material. {1} – espesor de capa. {2} – espesor variable</t32>
+    <t32>{0} – nombre del material. {1} – espesor de capa. {2} – espesor variable. {3} - número de capas</t32>
     <t33>Capa estándar:</t33>
     <t34>Capa de espesor cero:</t34>
     <t35>Capa de espesor variable:</t35>
@@ -2331,15 +2400,17 @@ Seleccione otra vista de origen</h9>
     <t51>capas</t51>
     <t52>capas</t52>
     <t53>Marcadores de posición de la estructura especificados en la plantilla</t53>
-    <t54>@ - se utiliza para sustituir una lista formateada de capas de la estructura en el resultado</t54>
-    <t55>&amp; - se utiliza para sustituir una lista formateada de capas combinadas de la estructura en el resultado</t55>
-    <t56>[n] - se utiliza para especificar los índices de las capas que se utilizarán para sustituir una lista formateada de capas de la estructura en el resultado</t56>
-    <t57>^ - se utiliza para definir un subtítulo de las capas. No participará en la numeración de las capas de la estructura en el resultado</t57>
+    <t54>@ - requerido, se utiliza para sustituir una lista formateada de capas de la estructura en el resultado</t54>
+    <t55>&amp; - opcional, se utiliza para sustituir una lista formateada de capas combinadas de la estructura en el resultado</t55>
+    <t56>[n] - opcional, se utiliza para especificar los índices de las capas que se utilizarán para sustituir una lista formateada de capas de la estructura en el resultado</t56>
+    <t57>^ - opcional, se utiliza para definir un subtítulo de capas. Se indica antes de @. La cadena escrita después de ^ no se incluirá en la numeración de las capas de la estructura en el resultado</t57>
     <t58>Resultado para el tipo:</t58>
     <t59>Resultado para los ejemplares:</t59>
     <t60>Parámetro de tipo requerido con tipo de datos "Texto multilínea". Este parámetro registra una lista numerada de los volúmenes totales de las capas de la estructura, teniendo en cuenta los formatos de línea especificados y los ajustes de numeración</t60>
     <t61>Usar numeración</t61>
-    <t62>Mostrar solo tipos con cambios</t62>
+    <t62>Mostrar solo tipos сambiado</t62>
+    <t63>{0} en {3} capas - {3}х{1}</t63>
+    <t64>Cambiar el valor del parámetro de material especificado Para habilitar la posibilidad de cambiar el valor active la opción "Tomar nombre del material del parámetro del material" en la configuración del formato de cadena</t64>
     <s1>Sin cambios. Parámetros de tipo no se actualizarán</s1>
     <s2>Faltan parámetros requeridos "Plantilla" y "Resultado"</s2>
     <s3>Nuevo valor del resultado es diferente de valor del resultado actual. Parámetros de tipo no se actualizarán porque casilla "Actualizar" no está seleccionada</s3>
@@ -2870,4 +2941,28 @@ Seleccione otra vista de origen</h9>
     <t109>Color de la primera banda de fila</t109>
     <t110>Color de la segunda banda de fila</t110>
   </mprModelCompare>
+  <mprEqualCurtainWalls
+    LocalName="Muros cortina iguales"
+    Description="Buscar muros cortina iguales en el modelo de Revit">
+    <h1>Parámetro faltante:\n</h1>
+    <h2>Parámetro compartido - </h2>
+    <h3>Parámetro de proyecto - </h3>
+    <h4>Seleccionar muro cortina</h4>
+    <h5>Relleno de parámetros</h5>
+    <h6>Muros cortina encontrados:</h6>
+    <h7>Escribir en los valores del parámetro: </h7>
+    <h8>Muestra</h8>
+    <h9>Ajustes de búsqueda</h9>
+    <h10>Criterios de comparación</h10>
+    <h11>Cotas general</h11>
+    <h12>Rejilla de muro cortina</h12>
+    <h13>Montantes</h13>
+    <h14>Tipos de paneles</h14>
+    <h15>Rellenar parámetros</h15>
+    <h16>Nuevo valor</h16>
+    <h17>Valor de la muestra</h17>
+    <h19>Parámetros rellenados:</h19>
+    <h20>Parámetro ausente en el proyecto:</h20>
+    <copyError>Se ha producido un error al copiar al portapapeles. Inténtalo de nuevo</copyError>
+  </mprEqualCurtainWalls>
 </ModPlus>

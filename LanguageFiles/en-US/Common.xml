@@ -4,6 +4,7 @@
     <abort>Abort</abort>
     <accept>Accept</accept>
     <add>Add</add>
+    <address>Address</address>
     <all>All</all>
     <and>And</and>
     <attribute>Attribute</attribute>
@@ -12,6 +13,7 @@
     <availFull>Available in the full version of the plugin!</availFull>
     <belarus>Belarus</belarus>
     <black>Black</black>
+    <block>Block</block>
     <brightness>Brightness</brightness>
     <cancel>Cancel</cancel>
     <cantEditConfig>You do not have access to edit configurations!</cantEditConfig>
@@ -19,6 +21,7 @@
     <category>Category</category>
     <categories>Categories</categories>
     <checkAll>Check all</checkAll>
+    <circle>Circle</circle>
     <clear>Clear</clear>
     <close>Close</close>
     <cm>cm</cm>
@@ -67,6 +70,7 @@
     <exportExcel>Export to Excel</exportExcel>
     <family>Family</family>
     <file>File</file>
+    <find>Find</find>
     <formula>Formula</formula>
     <g>g</g>
     <group>Group</group>
@@ -81,12 +85,14 @@
     <key>Key</key>
     <kg>kg</kg>
     <kgPerM3>kg/m³</kgPerM3>
+    <language>Language</language>
     <launch>Launch</launch>
     <layer>Layer</layer>
     <level>Level</level>
     <levels>Levels</levels>
     <licenseIssued>Corporate license workplace taken</licenseIssued>
     <licenseNotIssued>Corporate license workplace not available or connection to the license server is disabled</licenseNotIssued>
+    <login>Login</login>
     <m>m</m>
     <m2>m²</m2>
     <mm2>mm²</mm2>
@@ -110,10 +116,14 @@
     <parameters>Parameters</parameters>
     <path>Path</path>
     <paste>Paste</paste>
+    <password>Password</password>
     <pick>Pick</pick>
     <pin>Pin</pin>
     <prefix>Prefix</prefix>
+    <project>Project</project>
     <property>Property</property>
+    <point>Point</point>
+    <port>Port</port>
     <radius>Radius</radius>
     <refresh>Refresh</refresh>
     <remoteGeneralVersion>Available general version</remoteGeneralVersion>
@@ -146,6 +156,7 @@
     <template>Template</template>
     <testPeriod>Trial Period. Days left</testPeriod>
     <testPeriodEnd>The plugin's trial period is over! Purchase a plugin license or subscription to continue using the plugin</testPeriodEnd>
+    <theme>Theme</theme>
     <thickness>Thickness</thickness>
     <tolerance>Tolerance</tolerance>
     <ton>ton</ton>
@@ -161,6 +172,7 @@
     <width>Width</width>
     <yes>Yes</yes>
   </Common>
+  <!-- todo remove after updater 46.5.0.0 and after remove Configurator -->
   <Core>
     <errNoRengaSdk>The ModPlus package does not contain the SDK file for the required Renga version. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaSdk>
     <errNoRengaModule>The ModPlus package does not contain the core module for the required Renga version. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaModule>
@@ -272,8 +284,9 @@
     <m2>The email address is used as a unique key to identify your data on the server.\nIt is recommended to use the email address you provided when registering on modplus.org</m2>
     <m3>Attention! The use of social networks for authorization is possible only after linking social network accounts to a personal account on the site! Otherwise, when you try to log in through social networks, a new account will be created on the site, and you will lose your license data!</m3>
     <m4>Don't show again</m4>
-    <m5>No plugins are connected to the ModPlus platform! Start the Configurator from the ModPlus folder and connect the necessary plugins on the "Configuration" tab, and create a menu on the "Customize" tab</m5>
-    <m6>No menu has been created to build the ModPlus tab! Start the Configurator from the ModPlus folder and create a menu on the "Customize" tab</m6>
+    <m5>No plugins are connected to the ModPlus platform! Connect the required plugins using the "Plugins" item in the context menu of the Auto-Update Module, and also create a menu using the "Menu" item. You can also perform an update using the Installer, during which the plugins will be installed and connected, and the menu will be built</m5>
+    <m5renga>No plugins are connected to the ModPlus platform! Connect the required plugins using the "Plugins" item in the context menu of the Auto-Update Module. You can also perform an update using the Installer, during which the plugins will be installed and connected</m5renga>
+    <m6>No menu has been created to build the ModPlus tab! Create a menu using the "Menu" item in the context menu of the Auto-Update Module. You can also perform an update using the Installer, during which the menu will be built</m6>
     <m7>Enter a value from {0} to {1}</m7>
     <em1>All error information is automatically sent to the ModPlus server, but in most cases we do not have enough information to solve the problem. You can help us by providing additional information. To do this, send us an</em1>
     <em2>email</em2>
@@ -288,7 +301,7 @@
     <l3>Multi-user subscriptions</l3>
     <u1>Authorization</u1>
     <u2>Log in to your modplus.org account to synchronize h166 purchases with the current version of ModPlus. After authorization, you will be able to use the full versions of the plugins according to your purchased licenses</u2>
-    <u3>Failed to connect to ModPlus web services. There may be no internet connection or a proxy is used that is not configured in the ModPlus Configurator. If this computer is supposed to work without access to the internet, you can get an Activation key with data on your licenses. To do this, copy the Registration key listed below and get the Activation key using a special section in your personal account on the website modplus.org</u3>
+    <u3>Failed to connect to ModPlus web services. The internet connection may be unavailable or a proxy not configured in ModPlus may be used. If this computer is intended to work without internet access, you can obtain an Activation key with your license data. To do this, copy the Registration key shown below and obtain the Activation key using the dedicated section in your Personal area on the modplus.org website</u3>
     <u4>Registration key</u4>
     <u5>Activation key</u5>
     <u6>User data</u6>
@@ -351,7 +364,7 @@
     <nndAll>Show all news</nndAll>
     <nn0>Important news is shown regardless of the settings</nn0>
     <nn1>Platform news</nn1>
-    <nnd1>Updates of the Configurator, auto-update module, working libraries, etc.</nnd1>
+    <nnd1>News about updates to the ModPlus platform not related to plugins</nnd1>
     <nn2>Updates for AutoCAD</nn2>
     <nnd2>News about major updates to existing plugins for AutoCAD</nnd2>
     <nn3>Releases for AutoCAD</nn3>
@@ -399,8 +412,14 @@
     <b13>All files on server deleted</b13>
     <b14>All existing files on the server will be overwritten. Continue?</b14>
     <bi1>Configuration file</bi1>
+    <!--todo remove after 37.1.0.0-->
     <bid1>The configuration file contains the basic settings for your version of ModPlus, such as the adaptation, information about the connection plugins and retain information a lot of plugins (marked checkboxes, selected items in lists, etc.)</bid1>
+    <bi1d>The configuration file contains the main settings of your ModPlus version, including information about connected plugins, as well as settings for some plugins that do not have a separate settings file</bi1d>
+    <bi2>Settings storage files</bi2>
+    <bi2d>Files with the .xml extension that store complex plugin settings, service settings, etc., which are not related to the configuration file</bi2d>
+    <!--todo remove after 37.1.0.0-->
     <bi1-2>Plugin settings storage files</bi1-2>
+    <!--todo remove after 37.1.0.0-->
     <bid1-2>Files with an .xml extension storing complex plugin settings, not related to the configuration file</bid1-2>
     <s1>Active</s1>
     <s2>Subscription has not started</s2>
@@ -897,8 +916,11 @@
     <functionVersion>Plugin version</functionVersion>
     <h1>Updates</h1>
     <h2>Errors (click to view)</h2>
+    <!--todo remove after 46.5.0.0-->
     <h3>The configurator needs to be started!</h3>
+    <!--todo remove after 46.5.0.0-->
     <h4>You need to start the configurator to update the adaptation menu!</h4>
+    <!--todo remove after 46.5.0.0-->
     <h5>Run the update after you close AutoCAD, Revit, or Configurator</h5>
     <h6>On the site modplus.org published news</h6>
     <h7>In VK group "ModPlus for AutoCad and Revit" a new record was published</h7>
@@ -909,10 +931,12 @@
     <h16>Check the plugins in the list that you wish to install</h16>
     <h17>Plugin version:</h17>
     <h18>Product version:</h18>
+    <!--todo remove after 46.5.0.0-->
     <h21>AUTO UPDATE MODULE: SETTINGS</h21>
     <h23>Update check period:</h23>
     <h24>If updates are available:</h24>
     <h25>When installing new plugins:</h25>
+    <!--todo remove after 46.5.0.0-->
     <h26>Double-click on the tray icon:</h26>
     <h31>The version of the auto-update module:</h31>
     <h32>ModPlus Error</h32>
@@ -925,6 +949,7 @@
     <h39>Support libraries have been updated</h39>
     <h40>Downloading package: {0}/{1}</h40>
     <h41>Notification settings</h41>
+    <!--todo remove after 46.5.0.0-->
     <h42>Plugins will be automatically installed after closing the blocking application (ModPlus Configurator, AutoCAD, Revit or Renga)</h42>
     <h43>Loading...</h43>
     <h44>Missing</h44>
@@ -941,6 +966,7 @@
     <h55>This version of the component is not installed on your computer</h55>
     <h56>Automatically install new plugins</h56>
     <h57>The following plugins will be installed on your computer:</h57>
+    <!--todo remove after 46.5.0.0-->
     <h58>You can disable unwanted plugins in the Configurator after the update is complete</h58>
     <h59>Go to plugin page</h59>
     <h60>Updates disabled</h60>
@@ -952,6 +978,62 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <h64>Year:</h64>
     <h65>Component:</h65>
     <h66>Number of updates:</h66>
+    <h67>Available version:</h67>
+    <h68>You can disable unnecessary plugins in the "Plugins" menu after the update is completed</h68>
+    <h69>Failed to load plugin data. There may be no internet connection. Only local plugins are displayed in the list</h69>
+    <h70>Install visible</h70>
+    <h71>Installing all displayed uninstalled or outdated plugins</h71>
+    <h72>Enable visible</h72>
+    <h73>Enabling all displayed plugins</h73>
+    <h74>Disable visible</h74>
+    <h75>Disabling all displayed plugins</h75>
+    <h76>Show paid</h76>
+    <h77>Show free</h77>
+    <h78>Show uninstalled</h78>
+    <h79>Search by name or description</h79>
+    <h80>Not added to the menu</h80>
+    <h81>The plugin is enabled but not added to the menu. The plugin will not be added to the ribbon</h81>
+    <h82>Paid plugin. To use the plugin, purchase a license or subscription</h82>
+    <h83>Download and install the plugin</h83>
+    <h84>Open the help</h84>
+    <h85>Enable plugin</h85>
+    <h86>Disable plugin</h86>
+    <h87>Number of displayed/total plugins</h87>
+    <h88>Paid plugin. You have a license or subscription</h88>
+    <h89>Auto Updates Module</h89>
+    <h90>General</h90>
+    <h91>Notifications</h91>
+    <h92>Proxy</h92>
+    <h93>Use proxy</h93>
+    <h94>User authentication (if necessary. Can be left empty)</h94>
+    <h95>Check</h95>
+    <h96>Automatically change language</h96>
+    <h97>Remember window positions</h97>
+    <h98>Close windows by pressing the Esc key</h98>
+    <h99>Build standard</h99>
+    <h100>Build the standard (recommended) menu for the current product</h100>
+    <h101>Select a product to view and edit the adaptation menu</h101>
+    <h102>Change size</h102>
+    <h103>Ribbon</h103>
+    <h104>Enable/disable the ModPlus ribbon</h104>
+    <h105>Floating menu</h105>
+    <h106>Enable/disable the ModPlus floating menu</h106>
+    <h107>Drawings</h107>
+    <h108>Enable/disable displaying open drawings in a separate floating menu</h108>
+    <h109>Palette</h109>
+    <h110>Enable/disable the ModPlus palette</h110>
+    <h111>If a installed plugin is missing from the list, it means that adding this plugin to the menu is handled by the plugin’s internal mechanisms</h111>
+    <h112>The plugin is disabled in product versions: {0}. When building the menu in these versions, the plugin will be ignored</h112>
+    <h113>Nested plugins will also not be added to the menu</h113>
+    <h114>Plugins not added to the menu</h114>
+    <h115>Create a group</h115>
+    <h116>Create a panel for small buttons</h116>
+    <h117>Select a product and product version to manage available plugins</h117>
+    <h118>Enter the group name</h118>
+    <h119>Not specified</h119>
+    <h120>The menu for {0} is empty! When loading {1}, the menu will not be created!</h120>
+    <h121>Checking the connection to the local license server is available from the Personal account or from the settings window in a supported product</h121>
+    <h122>New plugins have been installed, but menu rebuilding is disabled in the settings. Use the "Menu" section to add new plugins to the menu</h122>
     <!--todo remove after 43.3.0.0-->
     <b3>Check all</b3>
     <!--todo remove after 43.3.0.0-->
@@ -967,10 +1049,13 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <i2>Ask</i2>
     <i3>Rebuild the standard adaptation menu</i3>
     <i4>Do not rebuild the menu</i4>
+    <!--todo remove after 46.5.0.0-->
     <i5>Open auto-update module settings</i5>
+    <!--todo remove after 46.5.0.0-->
     <i6>Open Modplus Configurator</i6>
     <cm2>Check for updates</cm2>
     <cm3>Change story</cm3>
+    <!--todo remove after 46.5.0.0-->
     <cm5>Open Configurator</cm5>
     <cm6>Settings</cm6>
     <cm7>Close</cm7>
@@ -978,26 +1063,43 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <cm9>Open UserData folder</cm9>
     <cm10>Components</cm10>
     <cm11>Connections</cm11>
+    <cm12>Plugins</cm12>
+    <cm13>Personal account</cm13>
+    <cm14>Menu</cm14>
+    <!--todo remove after 46.5.0.0-->
     <tt1>Check for updates and new plugins</tt1>
+    <!--todo remove after 46.5.0.0-->
     <tt2>View change history on modplus.org</tt2>
     <!--todo remove after 43.3.0.0-->
     <tt3>Open Modplus Configurator</tt3>
+    <!--todo remove after 46.5.0.0-->
     <tt4>Modplus Auto Update Module Settings</tt4>
+    <!--todo remove after 46.5.0.0-->
     <tt7>Open the location folder of the installed version of ModPlus</tt7>
+    <!--todo remove after 46.5.0.0-->
     <tt8>Open user data storage folder</tt8>
     <tt9>Go to the description of the component on the site</tt9>
+    <!--todo remove after 46.5.0.0-->
     <tt10>Displays a list of ModPlus software components with version information and their current status</tt10>
     <tt11>Open News related to this update</tt11>
+    <!--todo remove after 46.5.0.0-->
     <tt12>Managing the ModPlus connection with supported products</tt12>
+    <!--todo remove after 46.5.0.0-->
+    <tt13>Plugin management (installation, enable/disable)</tt13>
+    <!--todo remove after 46.5.0.0-->
+    <tt14>Open the user’s personal account</tt14>
+    <!--todo remove after 46.5.0.0-->
     <msg1>The auto-update module should be located in the ModPlus plugin folder!\nIf the folder is correct, you should run the Configurator to update the data in the registry</msg1>
     <msg2>The auto update module has been updated</msg2>
     <msg3>The operation of the module is limited, because AutoCad, Revit or Renga is open</msg3>
+    <!--todo remove after 46.5.0.0-->
     <msg4>The operation of the module is limited, because Modplus Configurator is open</msg4>
     <!--todo remove after 43.3.0.0-->
     <msg7>You did not choose anything!</msg7>
     <msg8>Updating the adaptation menu</msg8>
     <msg9>Updates are available for components:</msg9>
     <msg10>To update, you need to close AutoCAD</msg10>
+    <!--todo remove after 46.5.0.0-->
     <msg11>To update, you need to close the ModPlus configurator</msg11>
     <msg12>Updates available\nUpdate?</msg12>
     <msg13>Updates of components are installed:</msg13>
@@ -1009,6 +1111,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg19>New plugins are available:</msg19>
     <msg20>To install, you need to close AutoCAD</msg20>
     <msg21>To install, you need to close Revit</msg21>
+    <!--todo remove after 46.5.0.0-->
     <msg22>To install, you need to close the ModPlus configurator</msg22>
     <msg23>New plugins are installed:</msg23>
     <msg24>To update, you need to close Revit</msg24>
@@ -1023,6 +1126,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg32>An access error occurred while attempting to update. Restart the auto-update module with administrator rights?</msg32>
     <msg35>No updates available</msg35>
     <msg36>Click for details</msg36>
+    <!--todo remove after 46.5.0.0-->
     <msg37>Updates downloaded and will be installed after closing the ModPlus Configurator</msg37>
     <msg38>Updates downloaded and will be installed after closing the AutoCAD</msg38>
     <msg39>Updates downloaded and will be installed after closing the Revit</msg39>
@@ -1032,6 +1136,14 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg43>The subscription for "{0}" expires in "{1}" {2} </msg43>
     <msg44>There are updates pending installation</msg44>
     <msg45>The adaptation menu has been updated for:</msg45>
+    <msg46>Downloading</msg46>
+    <msg47>Installation</msg47>
+    <msg48>Menu update</msg48>
+    <msg49>If you are not using a custom menu, it is recommended to rebuild the standard menu. You can enable automatic menu rebuilding in the settings when installing new plugins. Rebuild the menu?</msg49>
+    <msg50>Failed to install the plugin(s). A connection error may have occurred during the download, or there may be access restrictions to the ModPlus folder. Please try again. You can download the installer from the website and try installing the plugin(s) using it by selecting "Update" in the menu</msg50>
+    <msg51>All displayed uninstalled or outdated plugins will be installed. Continue?</msg51>
+    <msg52>The connection to ModPlus services was successful</msg52>
+    <msg53>Failed to connect to ModPlus services. Check your proxy settings and try again</msg53>
     <d1>days</d1>
     <d2>days</d2>
     <d3>day</d3>
@@ -1044,11 +1156,15 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <err13>Error while unpacking updates</err13>
     <err16>Unable to register application for Revit</err16>
     <err19>There is no access to the internet or modplus.org site</err19>
+    <!--todo remove after 46.5.0.0-->
     <err20>Not found Modplus Configurator!</err20>
     <err21>Error receiving general version</err21>
+    <err22>No auxiliary application found to launch the Personal Account. The auto-update module probably doesn't have sufficient permissions to unpack the application into the ModPlus folder. Please update using the installer and try again</err22>
+    <err23>The selected file is not a menu file for {0}</err23>
     <p1>Downloading and installing the module update...</p1>
     <p2>Update plugin:</p2>
     <p3>Plugin installation:</p3>
+    <!--todo remove after 46.5.0.0-->
     <c1>Configurator</c1>
     <c2>Auto update module</c2>
     <c3>AutoCAD work libraries</c3>
@@ -1058,6 +1174,12 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <c6>Databases</c6>
     <!--todo remove after 43.3.0.0-->
     <c7>Dwg base</c7>
+    <errNoRengaSdk>The ModPlus package does not contain the SDK file for the required Renga version. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaSdk>
+    <errNoRengaModule>The ModPlus package does not contain the core module for the required Renga version. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaModule>
+    <errNoRengaConnector>The ModPlus package does not contain the ModPlus-Renga connector application. Please update ModPlus and try again. If the error persists, contact support at support@modplus.org</errNoRengaConnector>
+    <noAutocad>No installed versions of AutoCAD, suitable for installing ModPlus</noAutocad>
+    <noRevit>No installed versions of Revit, suitable for installing ModPlus</noRevit>
+    <noRenga>No installed versions of Renga, suitable for installing ModPlus</noRenga>
   </AutoUpdater>
   <AutocadDlls
     LocalName="Working libraries for AutoCAD">
@@ -1067,9 +1189,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <mm>mm</mm>
     <def>By default</def>
     <h1>MODPLUS SETTINGS</h1>
-    <h2>GENERAL</h2>
-    <h3>WORK WITH THE SERVER</h3>
-    <h4>REGISTRATION</h4>
+    <h2>General</h2>
     <h5>Language:</h5>
     <h6>Theme:</h6>
     <h12>Settings</h12>
@@ -1545,9 +1665,7 @@ Not all parameters may be present in the list of instance parameters, because in
   <RengaDlls
     LocalName="Working libraries for Renga">
     <h1>MODPLUS SETTINGS</h1>
-    <h2>GENERAL</h2>
-    <h3>WORK WITH THE SERVER</h3>
-    <h4>REGISTRATION</h4>
+    <h2>General</h2>
     <h5>Language:</h5>
     <h6>Theme:</h6>
     <h7>Personal account</h7>

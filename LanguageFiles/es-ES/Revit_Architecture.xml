@@ -166,6 +166,7 @@
     <h79>Seleccionar todo</h79>
     <h80>Restaurar instrucciones ocultas</h80>
     <h81>Un servicio de recalculo automático de áreas de apartamento al cambiar cotas de habitaciones y un servicio de recalculo completo (parametrización por matriz, recalculo de áreas y determinación del tipo de apartamento) al eliminar habitaciones. Servicios procesan sólo habitaciones con parámetro "ID de apartamento" relleno</h81>
+    <h81-1>Durante el funcionamiento del servicio se tienen en cuenta los ajustes especificados en la sección "Áreas de apartamentos"</h81-1>
     <h82>Buscar por nombre de habitación</h82>
     <h83>Todas habitaciones del proyecto son válidos</h83>
     <h84>Todas habitaciones en vista actual son válidos</h84>
@@ -221,7 +222,9 @@
     <h131>Área de apartamento</h131>
     <h132>Área de vivienda del apartamento</h132>
     <h133>Área total del apartamento</h133>
+    <!--todo remove after 3.8.8.0-->
     <h134>¡Servicio de recalculo automático de áreas no está descargado! Vuelva a iniciar complemento usando Configurador ModPlus</h134>
+    <h134-1>El servicio de recálculo automático de áreas no se ha cargado! Vuelva a habilitar el complemento utilizando el módulo de autoactualización de ModPlus (menú "Плагины")</h134-1>
     <h135>Añadir desde habitaciones</h135>
     <h136>Matriz de habitaciones actual:</h136>
     <h137>Tabla actual de tipos de apartamentos:</h137>
@@ -320,6 +323,14 @@
     <h229>Calcular apartamentos</h229>
     <h230>Calcular área</h230>
     <h231>Excluir los espacios con un Propósito funcional que coincida con el identificador de apartamento actual</h231>
+    <h232>Rellenar el propósito funcional</h232>
+    <h233>Rellenar el parámetro "Propósito funcional" para los espacios cuyos nombres están presentes en la matriz actual de espacios</h233>
+    <h234>Realizar la tipificación de apartamentos</h234>
+    <h235>Formato del número de la habitación</h235>
+    <h236>Desde el parámetro</h236>
+    <h237>Numeración de habitaciones</h237>
+    <h238>Restablecer la numeración para cada nivel en apartamentos de varios niveles</h238>
+    <h239>Parámetros por niveles de la vivienda</h239>
     <msg1>No se ha encontrado parámetro "{0}"</msg1>
     <msg2>Parámetro "{0}" no rellenado</msg2>
     <msg3>Parámetro "{0}" tiene un valor ilegal</msg3>
@@ -384,6 +395,12 @@
     <msg59>Para las habitaciones del proyecto actual falta el parámetro"{0}"</msg59>
     <msg60>Se produjo un error al procesar la tabla</msg60>
     <msg61>¡No se encontró ningún espacio adecuado! Revise las condiciones de filtrado y vuelva a intentarlo</msg61>
+    <msg62>El propósito funcional se ha rellenado para {0} espacios</msg62>
+    <msg63>El espacio tiene el nombre "{0}", que no está presente en la matriz actual de espacios. Se omitió el rellenado del propósito funcional</msg63>
+    <msg64>El parámetro "Propósito funcional" no ha sido creado o no está vinculado. Vaya a la pestaña "Parámetros" y cree/vincule los parámetros</msg64>
+    <msg65>No se encontró el parámetro "{0}"</msg65>
+    <msg66>El parámetro "{0}" tiene un tipo de datos no compatible (se admiten parámetros de texto y numéricos)</msg66>
+    <msg67>No se pudo establecer el valor en el parámetro "{0}". Es posible que el parámetro sea de solo lectura o se encuentre en un conjunto de trabajo no disponible</msg67>
     <tt1>Valor del parámetro "Propósito funcional", que se utiliza para seleccionar habitaciones que se procesan. Si parámetro tiene valor diferente, habitación se omitirá cuando se estén ejecutando todos algoritmos</tt1>
     <tt2>Ocultar instrucción</tt2>
     <tt3>Para cada grupo de lista, seleccione una habitación del proyecto mediante lo cual se determinará apartamento inicial para numeración</tt3>
@@ -426,6 +443,7 @@
     <tt37>Eliminar filas seleccionadas</tt37>
     <tt38>Valor incorrecto. Compruebe las condiciones indicadas entre paréntesis</tt38>
     <tt39>Mostrar los espacios seleccionados</tt39>
+    <tt40>Establecer el nombre de la habitación a partir de la lista de nombres de habitaciones del documento actual</tt40>
     <instruction>Instrucción</instruction>
     <instruction1>Todas habitaciones del proyecto deben contar con parámetros generales especificados en esta lista. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes". Todos parámetros numéricos están representados por tipo "Unidad monetaria", que le permite procesar habitaciones en grupos</instruction1>
     <instruction1_1>Los parámetros adicionales se procesan y se rellenan sólo si las habitaciones tienen estos parámetros. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes"</instruction1_1>
@@ -450,6 +468,7 @@
     <instruction10>La clasificación le permite rellenar ciertos parámetros de los apartamentos en función de las características de los mismos. Primero, en la ficha "Condiciones" debe crear tablas con condiciones, después de lo cual puede clasificar y mostrar el resultado en la ficha "Clasificación"</instruction10>
     <instruction10_1>Especifique el parámetro objetivo - un parámetro de cadena en el que se registrará el resultado de la clasificación. El área se verifica por el parámetro especificado de una habitación aleatoria del apartamento (es decir, se supone que el parámetro tiene el mismo valor para todas las habitaciones). Las condiciones "Contiene habitaciones" y "No contiene habitaciones" se rellenan con nombres de habitaciones separados por punto y coma (;). Los nombres de las habitaciones se pueden complementar con una condición para verificar el área y/o una condición para verificar que la habitación es un entresuelo. Para ello, después del nombre de la habitación, especifique entre paréntesis la condición y el valor del área y/o la condición para verificar "Entresuelo", separados por una coma, si es necesario. Las condiciones disponibles son: igual a (=), no igual a (!=), mayor que (&gt;), mayor o igual a (&gt;=), menor que (&lt;), menor o igual a (&lt;=). Para verificar "Entresuelo", añade el símbolo "e" separado por comas para establecer la condición "La habitación debe ser un entresuelo" o "ne" para establecer la condición "La habitación no debe ser un entresuelo". Es posible establecer la condición para verificar solo "Entresuelo" sin verificar el área. Por ejemplo, "Cocina (&gt;10); Dormitorio", "Despensa(&lt;5,e)", "Despensa (ne)"</instruction10_1>
     <instruction10_2>La clasificación se realiza por las tablas de condiciones marcadas en la ficha "Condiciones". Si el apartamento que se está verificando no cumple ninguna de las condiciones de la tabla, se limpiará el parámetro objetivo</instruction10_2>
+    <instruction11>Indique los parámetros en los que el complemento escribirá los valores correspondientes para cada nivel de una vivienda de varios niveles. Se recomienda utilizar parámetros con el mismo tipo de datos que los parámetros principales. Los valores se rellenarán para todas las viviendas. En las viviendas de un solo nivel, los valores repetirán los valores de los parámetros principales</instruction11>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume
     LocalName="Volumen de habitaciones"
@@ -630,9 +649,12 @@
   </mprFloorByRoom>
   <mprRoomFinishing
     LocalName="Acabado de habitación"
-    Description="Creación de elementos de acabado en habitaciones.">
+    Description="Creación de elementos de acabado en habitaciones."
+    LocalName1="Actualización del acabado de habitaciones"
+    Description1="Actualización de los elementos de acabado en habitaciones">
     <t1>Filtro de habitación:</t1>
     <t2>Suelos</t2>
+    <!--todo remove after 2.0.0-->
     <t3>Tipo de forjado:</t3>
     <t4>Desfase desde nivel, mm:</t4>
     <t5>Establecer valor de espesor del tipo seleccionado del forjado teniendo en cuenta forjados anteriores</t5>
@@ -647,9 +669,10 @@
     <t14>Suelo de habitación principal se creará insertando en hueco de puerta. En consecuencia, para habitación definida como no principal, no se creará un hueco de puerta. Esta opción sólo funciona para familias en categoría "Puertas" que tienen propiedades internas FromRoom y ToRoom rellenas. Dirección del movimiento en hueco está determinada por dirección del lado exterior de familia</t14>
     <t15>Recortar geometría sólida de puerta del contorno del suelo</t15>
     <t16>Eliminar elementos de acabado creados previamente</t16>
-    <t17>Según habitaciones seleccionadas</t17>
-    <t18>Según habitaciones a vista</t18>
+    <t17>Por habitaciones seleccionadas</t17>
+    <t18>Por habitaciones a vista</t18>
     <t19>Por todas habitaciones</t19>
+    <!--todo remove after 2.0.0-->
     <t20>Por todas habitaciones de archivos vinculados</t20>
     <t21>Actualizar parámetros</t21>
     <t22>Mover hacia arriba</t22>
@@ -663,8 +686,8 @@
     <t31>Seleccionar el tipo de muro de acabado</t31>
     <t32>Desde arriba, mm:</t32>
     <t33>Desfase desde la parte superior de la habitación, mm</t33>
-    <t34>Contorno</t34>
-    <t35>Delimitadores de habitación</t35>
+    <t34>Delimitación</t34>
+    <t35>Delimitación de habitación</t35>
     <t36>Añadir una capa</t36>
     <t37>Añadir base</t37>
     <t38>Copiar valor del parámetro (de habitación al muros de acabado):</t38>
@@ -673,6 +696,7 @@
     <t41>Muros de acabado se construyen sobre este suelo</t41>
     <t42>Capa:</t42>
     <t43>Para todos tipos de muros</t43>
+    <!--todo remove after 2.0.0-->
     <t44>Tipo del techo:</t44>
     <t45>Establecer valor de espesor del tipo seleccionado del techo teniendo en cuenta techos anteriores</t45>
     <t46>Copiar valor del parámetro (de habitación al techo):</t46>
@@ -681,10 +705,31 @@
     <t49>Select the type of floor</t49>
     <t50>Select ceiling type</t50>
     <t51>Specify in the model the wall whose type will be the base for creating finishing walls</t51>
-    <l1>No insertar contorno del suelo en hueco de puerta</l1>
-    <l2>Lead the contour to the middle of the opening</l2>
-    <l3>Lead the contour to the full opening width</l3>
-    <l4>Insertar contorno al valor especificado, mm</l4>
+    <t52>Modo de selección de la base:</t52>
+    <t53>Filtro no especificado</t53>
+    <t54>Rodapiés</t54>
+    <t55>Seleccione el tipo de rodapié</t55>
+    <t56>Altura del rodapié, mm:</t56>
+    <t57>Copiar el valor del parámetro (de la habitación al rodapié)</t57>
+    <t58>Otros ajustes</t58>
+    <t59>Procesar ventanas hasta el suelo</t59>
+    <t60>Si la opción está activada el suelo se extenderá en los huecos realizados por elementos de la categoría "Ventanas" a todo el espesor del hueco. Si la opción está desactivada dichos huecos se procesarán según las reglas generales</t60>
+    <t61>Uniones de muros:</t61>
+    <t62>Seleccione el tipo de muros y columnas</t62>
+    <t63>No se encontró el tipo correspondiente en el modelo. ¡Procesamiento de configuración actual no es posible!</t63>
+    <t64>Seleccionar habitaciones</t64>
+    <l1>No extender el contorno del suelo en huecos de puertas</l1>
+    <l2>Extender el contorno hasta la mitad del hueco</l2>
+    <l3>Extender el contorno a todo el espesor del hueco</l3>
+    <l4>Extender el contorno al valor especificado, mm</l4>
+    <l5>Extender el contorno hasta la mitad de la hoja de la puerta</l5>
+    <l6>Para todos los tipos de muros y columnas</l6>
+    <l7>Selección de tipos de muros y columnas</l7>
+    <l8>Filtro de muros y columnas</l8>
+    <l9>Tope </l9>
+    <l10>Inglete</l10>
+    <l11>Cuadrar</l11>
+    <l12>Sin unión</l12>
     <msg1>No processing rooms available!</msg1>
     <msg2>No se han encontrado habitaciones que satisfacen al filtro por parámetros "{0}"</msg2>
     <msg3>Tipo de suelo no se ha especificado</msg3>
@@ -703,5 +748,12 @@
     <msg16>Techo con tipo "{0}" se crea según contorno de la habitación</msg16>
     <msg17>Failed to edit wall profile</msg17>
     <msg18>La altura del muro de acabado no puede ser inferior a 0</msg18>
+    <msg19>Los rodapiés con el tipo "{0}" se han creado según el contorno de la habitación</msg19>
+    <msg20>No se pudo obtener la cota del forjado, el rodapié con el tipo "{0}" se creará en la cota del nivel de la habitación</msg20>
+    <msg21>No se pudo crear el rodapié según el contorno de la habitación</msg21>
+    <msg22>No se pudo editar el croquis</msg22>
+    <msg23>El suelo con el tipo "{0}" se ha actualizado según el contorno de la habitación</msg23>
+    <msg24>No se pudo actualizar el suelo según el contorno de la habitación</msg24>
+    <msg25>El techo con el tipo "{0}" se ha actualizado según el contorno de la habitación</msg25>
   </mprRoomFinishing>
 </ModPlus>

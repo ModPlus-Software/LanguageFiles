@@ -4,6 +4,7 @@
     <abort>中止</abort>
     <accept>接受</accept>
     <add>添加</add>
+    <address>地址</address>
     <all>全部</all>
     <and>和</and>
     <attribute>属性</attribute>
@@ -12,6 +13,7 @@
     <availFull>完整版插件中可用！</availFull>
     <belarus>白俄罗斯</belarus>
     <black>黑色</black>
+    <block>块</block>
     <brightness>亮度</brightness>
     <cancel>取消</cancel>
     <cantEditConfig>您没有编辑配置的权限！</cantEditConfig>
@@ -19,6 +21,7 @@
     <category>类别</category>
     <categories>分类</categories>
     <checkAll>全选</checkAll>
+    <circle>圆</circle>
     <clear>清除</clear>
     <close>关闭</close>
     <cm>厘米</cm>
@@ -67,6 +70,7 @@
     <exportExcel>导出到Excel</exportExcel>
     <family>族</family>
     <file>文件</file>
+    <find>查找</find>
     <formula>公式</formula>
     <g>克</g>
     <group>组</group>
@@ -81,12 +85,14 @@
     <key>键</key>
     <kg>千克</kg>
     <kgPerM3>千克/立方米</kgPerM3>
+    <language>语言</language>
     <launch>启动</launch>
     <layer>图层</layer>
     <level>级别</level>
     <levels>层级</levels>
     <licenseIssued>企业许可证工作站已占用</licenseIssued>
     <licenseNotIssued>无可用企业许可证工作站或与许可证服务器断开连接</licenseNotIssued>
+    <login>用户名</login>
     <m>米</m>
     <m2>平方米</m2>
     <mm2>平方毫米</mm2>
@@ -110,10 +116,14 @@
     <parameters>参数</parameters>
     <path>小路</path>
     <paste>粘贴</paste>
+    <password>密码</password>
     <pick>选择</pick>
     <pin>固定</pin>
     <prefix>前缀</prefix>
+    <project>项目</project>
     <property>属性</property>
+    <point>点</point>
+    <port>端口</port>
     <radius>半径</radius>
     <refresh>刷新</refresh>
     <remoteGeneralVersion>可用通用版本</remoteGeneralVersion>
@@ -146,6 +156,7 @@
     <template>模板</template>
     <testPeriod>试用期剩余天数</testPeriod>
     <testPeriodEnd>插件试用期已结束！请购买许可证或订阅以继续使用</testPeriodEnd>
+    <theme>主题</theme>
     <thickness>厚度</thickness>
     <tolerance>公差</tolerance>
     <ton>吨</ton>
@@ -161,6 +172,7 @@
     <width>宽度</width>
     <yes>是</yes>
   </Common>
+  <!-- todo remove after updater 46.5.0.0 and after remove Configurator -->
   <Core>
     <errNoRengaSdk>在 ModPlus 组件中缺少所需版本的 Renga SDK 文件。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaSdk>
     <errNoRengaModule>在 ModPlus 组件中缺少所需版本的 Renga 主模块。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaModule>
@@ -272,8 +284,9 @@
     <m2>邮箱地址用作识别服务器数据的唯一密钥。\n建议使用在modplus.org注册时填写的邮箱</m2>
     <m3>注意！通过社交网络登录仅在绑定社交账号到网站个人账户后可用！否则会创建新账户导致许可证数据丢失！</m3>
     <m4>不再显示</m4>
-    <m5>没有插件连接到ModPlus平台！请运行ModPlus文件夹中的配置器，在"配置"选项卡中连接所需插件，并在"适配"选项卡中创建菜单</m5>
-    <m6>未创建ModPlus选项卡菜单！请运行ModPlus文件夹中的配置器，在"适配"选项卡中创建菜单</m6>
+    <m5>没有任何插件连接到 ModPlus 平台！请使用自动更新模块的上下文菜单中的"插件"项连接所需插件，并使用"菜单"项创建菜单。您还可以通过安装程序执行更新，在此过程中将完成插件的安装与连接以及菜单的生成</m5>
+    <m5renga>没有任何插件连接到 ModPlus 平台！请使用自动更新模块的上下文菜单中的"插件"项连接所需插件。您还可以通过安装程序执行更新，在此过程中将完成插件的安装与连接</m5renga>
+    <m6>尚未创建用于生成 ModPlus 选项卡的菜单！请使用自动更新模块的上下文菜单中的"菜单"项创建菜单。您还可以通过安装程序执行更新，在此过程中将生成菜单</m6>
     <m7>请输入{0}到{1}之间的值</m7>
     <em1>错误信息已自动发送至ModPlus服务器，但通常我们需要更多信息解决问题。您可以通过以下方式提供额外信息：</em1>
     <em2>邮件</em2>
@@ -288,7 +301,7 @@
     <l3>多用户订阅</l3>
     <u1>授权</u1>
     <u2>登录您的modplus.org账户以同步购买数据。授权后可根据许可证使用完整版插件</u2>
-    <u3>无法连接ModPlus网络服务。可能无网络连接或未在配置器中设置代理。如需离线工作，可获取包含许可证数据的激活密钥</u3>
+    <u3>无法连接到 ModPlus 的 web 服务。可能没有互联网连接，或使用了未在 ModPlus 中配置的代理。如果此计算机需要在无互联网访问的情况下工作，您可以获取包含您许可证数据的激活密钥。为此，请复制下方所示的注册密钥，并通过 modplus.org 网站中您个人中心的专用部分获取激活密钥</u3>
     <u4>注册密钥</u4>
     <u5>激活密钥</u5>
     <u6>用户数据</u6>
@@ -351,7 +364,7 @@
     <nndAll>显示所有新闻</nndAll>
     <nn0>重要新闻不受设置影响</nn0>
     <nn1>平台新闻</nn1>
-    <nnd1>配置器、自动更新模块、工作库等更新</nnd1>
+    <nnd1>有关 ModPlus 平台更新的新闻，与插件无关</nnd1>
     <nn2>AutoCAD更新</nn2>
     <nnd2>AutoCAD插件重大更新新闻</nnd2>
     <nn3>AutoCAD新版本</nn3>
@@ -403,8 +416,14 @@
     <b13>服务器上所有文件已删除</b13>
     <b14>服务器上所有现有文件将被覆盖。继续？</b14>
     <bi1>配置文件</bi1>
+    <!--todo remove after 37.1.0.0-->
     <bid1>包含ModPlus主要设置，如适配设置、插件信息及插件保存数据</bid1>
+    <bi1d>配置文件包含您的 ModPlus 版本的主要设置，包括已连接插件的信息，以及一些没有单独设置文件的插件设置</bi1d>
+    <bi2>设置存储文件</bi2>
+    <bi2d>扩展名为 .xml 的文件，用于存储插件的复杂设置、服务设置等，与配置文件无关</bi2d>
+    <!--todo remove after 37.1.0.0-->
     <bi1-2>插件设置存储文件</bi1-2>
+    <!--todo remove after 37.1.0.0-->
     <bid1-2>存储插件复杂设置的.xml文件</bid1-2>
     <ru-RU>Русский (Россия)</ru-RU>
     <en-US>English (USA)</en-US>
@@ -897,8 +916,11 @@
     <functionVersion>插件版本</functionVersion>
     <h1>更新</h1>
     <h2>错误（点击查看）</h2>
+    <!--todo remove after 46.5.0.0-->
     <h3>需要运行配置器！</h3>
+    <!--todo remove after 46.5.0.0-->
     <h4>需要运行配置器更新适配菜单！</h4>
+    <!--todo remove after 46.5.0.0-->
     <h5>关闭AutoCAD、Revit或配置器后启动更新</h5>
     <h6>modplus.org已发布新闻</h6>
     <h7>VK群组"ModPlus for AutoCad and Revit"发布新内容</h7>
@@ -909,10 +931,12 @@
     <h16>请在列表中勾选要安装的插件</h16>
     <h17>插件版本:</h17>
     <h18>产品版本:</h18>
+    <!--todo remove after 46.5.0.0-->
     <h21>自动更新模块：设置</h21>
     <h23>检查更新周期:</h23>
     <h24>有可用更新时:</h24>
     <h25>安装新插件时:</h25>
+    <!--todo remove after 46.5.0.0-->
     <h26>双击托盘图标:</h26>
     <h31>自动更新模块版本:</h31>
     <h32>ModPlus错误</h32>
@@ -925,6 +949,7 @@
     <h39>辅助库已更新</h39>
     <h40>下载包: {0}/{1}</h40>
     <h41>通知设置</h41>
+    <!--todo remove after 46.5.0.0-->
     <h42>插件将在关闭阻止程序（ModPlus配置器、AutoCAD、Revit或Renga）后自动安装</h42>
     <h43>加载中...</h43>
     <h44>缺失</h44>
@@ -941,6 +966,7 @@
     <h55>此版本组件未安装在您的计算机上</h55>
     <h56>自动安装新插件</h56>
     <h57>以下插件将安装到您的计算机上：</h57>
+    <!--todo remove after 46.5.0.0-->
     <h58>更新完成后，您可以在 配置器 中禁用不需要的插件</h58>
     <h59>转到插件页面</h59>
     <h60>更新已禁用</h60>
@@ -952,6 +978,62 @@
     <h64>年份:</h64>
     <h65>组件:</h65>
     <h66>更新次数:</h66>
+    <h67>可用版本:</h67>
+    <h68>更新完成后，您可以在"插件"菜单中禁用不需要的插件</h68>
+    <h69>无法加载插件数据。可能没有连接到互联网。列表中仅显示本地插件</h69>
+    <h70>安装可见插件</h70>
+    <h71>安装所有显示的未安装或已过期插件</h71>
+    <h72>启用可见插件</h72>
+    <h73>启用所有显示的插件</h73>
+    <h74>禁用可见插件</h74>
+    <h75>禁用所有显示的插件</h75>
+    <h76>显示付费插件</h76>
+    <h77>显示免费插件</h77>
+    <h78>显示未安装插件</h78>
+    <h79>按名称或描述搜索</h79>
+    <h80>未添加到菜单</h80>
+    <h81>插件已启用，但未添加到菜单。插件不会添加到功能区</h81>
+    <h82>付费插件。要使用此插件，请购买许可证或订阅</h82>
+    <h83>下载并安装插件</h83>
+    <h84>打开帮助</h84>
+    <h85>启用插件</h85>
+    <h86>禁用插件</h86>
+    <h87>显示/所有插件数量</h87>
+    <h88>付费插件。您拥有许可证或订阅</h88>
+    <h89>自动更新模块</h89>
+    <h90>常规</h90>
+    <h91>通知</h91>
+    <h92>代理</h92>
+    <h93>使用代理</h93>
+    <h94>用户认证（如有必要，可以不填写）</h94>
+    <h95>测试</h95>
+    <h96>自动切换语言</h96>
+    <h97>记住窗口位置</h97>
+    <h98>按下 Esc 键关闭窗口</h98>
+    <h99>按标准方式构建</h99>
+    <h100>为当前产品构建标准（推荐）的菜单</h100>
+    <h101>选择一个产品以查看和编辑适配菜单</h101>
+    <h102>调整大小</h102>
+    <h103>功能区</h103>
+    <h104>启用/禁用 ModPlus 功能区</h104>
+    <h105>浮动菜单</h105>
+    <h106>启用/禁用 ModPlus 浮动菜单</h106>
+    <h107>图纸</h107>
+    <h108>启用/禁用在单独的浮动菜单中显示已打开的图纸</h108>
+    <h109>面板</h109>
+    <h110>启用/禁用 ModPlus 面板</h110>
+    <h111>如果列表中缺少某个已安装的插件，则表示该插件的添加由其内部机制处理</h111>
+    <h112>插件在以下产品版本中被禁用：{0}。在这些版本中构建菜单时，该插件将被忽略</h112>
+    <h113>嵌套插件也不会添加到菜单中</h113>
+    <h114>未添加到菜单的插件</h114>
+    <h115>创建组</h115>
+    <h116>创建用于小按钮的面板</h116>
+    <h117>选择产品及其版本以管理可用插件</h117>
+    <h118>输入组名称</h118>
+    <h119>未指定</h119>
+    <h120>{0} 的菜单为空！在加载 {1} 时将不会创建菜单！</h120>
+    <h121>可以通过个人中心或受支持产品中的设置窗口检查与本地许可证服务器的连接</h121>
+    <h122>已安装新的插件，但菜单重建在设置中已禁用。请使用"菜单"部分将新插件添加到菜单中</h122>
     <!--todo remove after 43.3.0.0-->
     <b3>全选</b3>
     <!--todo remove after 43.3.0.0-->
@@ -967,10 +1049,13 @@
     <i2>询问</i2>
     <i3>重建标准适配菜单</i3>
     <i4>不重建菜单</i4>
+    <!--todo remove after 46.5.0.0-->
     <i5>打开自动更新模块设置</i5>
+    <!--todo remove after 46.5.0.0-->
     <i6>打开ModPlus配置器</i6>
     <cm2>检查更新</cm2>
     <cm3>更新历史</cm3>
+    <!--todo remove after 46.5.0.0-->
     <cm5>打开配置器</cm5>
     <cm6>设置</cm6>
     <cm7>退出</cm7>
@@ -978,26 +1063,43 @@
     <cm9>打开UserData文件夹</cm9>
     <cm10>组件</cm10>
     <cm11>连接</cm11>
+    <cm12>插件</cm12>
+    <cm13>个人中心</cm13>
+    <cm14>菜单</cm14>
+    <!--todo remove after 46.5.0.0-->
     <tt1>检查更新和新插件</tt1>
+    <!--todo remove after 46.5.0.0-->
     <tt2>在modplus.org查看更新历史</tt2>
     <!--todo remove after 43.3.0.0-->
     <tt3>打开ModPlus配置器</tt3>
+    <!--todo remove after 46.5.0.0-->
     <tt4>ModPlus自动更新模块设置</tt4>
+    <!--todo remove after 46.5.0.0-->
     <tt7>打开ModPlus安装目录</tt7>
+    <!--todo remove after 46.5.0.0-->
     <tt8>打开用户数据存储目录</tt8>
     <tt9>跳转至网站组件描述</tt9>
+    <!--todo remove after 46.5.0.0-->
     <tt10>显示ModPlus软件组件列表及版本信息</tt10>
     <tt11>打开与此更新相关的新闻</tt11>
+    <!--todo remove after 46.5.0.0-->
     <tt12>管理 ModPlus 与受支持产品的连接</tt12>
+    <!--todo remove after 46.5.0.0-->
+    <tt13>插件管理（安装、启用/禁用）</tt13>
+    <!--todo remove after 46.5.0.0-->
+    <tt14>打开用户个人中心</tt14>
+    <!--todo remove after 46.5.0.0-->
     <msg1>自动更新模块必须位于ModPlus插件文件夹中！\n如果路径正确，请运行配置器更新注册表数据</msg1>
     <msg2>自动更新模块已更新</msg2>
     <msg3>功能受限，因AutoCad、Revit或Renga正在运行</msg3>
+    <!--todo remove after 46.5.0.0-->
     <msg4>功能受限，因ModPlus配置器正在运行</msg4>
     <!--todo remove after 43.3.0.0-->
     <msg7>未选择任何项！</msg7>
     <msg8>更新适配菜单</msg8>
     <msg9>有可用组件更新:</msg9>
     <msg10>更新需要关闭AutoCAD</msg10>
+    <!--todo remove after 46.5.0.0-->
     <msg11>更新需要关闭ModPlus配置器</msg11>
     <msg12>有可用更新\n是否更新？</msg12>
     <msg13>已安装组件更新:</msg13>
@@ -1009,6 +1111,7 @@
     <msg19>有新插件可用:</msg19>
     <msg20>安装需要关闭AutoCAD</msg20>
     <msg21>安装需要关闭Revit</msg21>
+    <!--todo remove after 46.5.0.0-->
     <msg22>安装需要关闭ModPlus配置器</msg22>
     <msg23>已安装新插件:</msg23>
     <msg24>更新需要关闭Revit</msg24>
@@ -1023,6 +1126,7 @@
     <msg32>尝试更新时发生访问错误。是否以管理员权限重启自动更新模块？</msg32>
     <msg35>无可用更新</msg35>
     <msg36>点击查看详情</msg36>
+    <!--todo remove after 46.5.0.0-->
     <msg37>更新已下载，将在关闭ModPlus配置器后安装</msg37>
     <msg38>更新已下载，将在关闭AutoCAD后安装</msg38>
     <msg39>更新已下载，将在关闭Revit后安装</msg39>
@@ -1032,6 +1136,14 @@
     <msg43>"{0}"的订阅将在"{1}"{2}后到期</msg43>
     <msg44>有待安装的更新</msg44>
     <msg45>已更新适配菜单:</msg45>
+    <msg46>下载</msg46>
+    <msg47>安装</msg47>
+    <msg48>菜单更新</msg48>
+    <msg49>如果您未使用自定义菜单，建议重新生成标准菜单。您可以在设置中启用在安装新插件时自动重新生成菜单。是否重新生成菜单？</msg49>
+    <msg50>法安装插件。可能是在下载过程中发生了连接错误，或者对 ModPlus 文件夹存在访问权限限制。请再试一次。您可以从网站下载安装程序，并在菜单中选择"更新"，尝试使用该安装程序安装插件</msg50>
+    <msg51>将安装所有显示的未安装或已过期的插件。是否继续？</msg51>
+    <msg52>成功连接到ModPlus服务</msg52>
+    <msg53>无法连接到ModPlus服务。请检查您的代理设置并重试</msg53>
     <d1>天</d1>
     <d2>天</d2>
     <d3>天</d3>
@@ -1044,11 +1156,15 @@
     <err13>解压更新错误</err13>
     <err16>注册Revit应用失败</err16>
     <err19>无网络连接或无法访问modplus.org</err19>
+    <!--todo remove after 46.5.0.0-->
     <err20>未找到ModPlus配置器！</err20>
     <err21>获取通用版本错误</err21>
+    <err22>未找到启动个人中心的辅助应用程序。可能是自动更新模块没有足够的权限将应用程序解压到 ModPlus 文件夹中。请使用安装程序执行更新并重试</err22>
+    <err23>所选文件不是 {0} 的菜单文件</err23>
     <p1>下载并安装更新模块...</p1>
     <p2>更新插件:</p2>
     <p3>安装插件:</p3>
+    <!--todo remove after 46.5.0.0-->
     <c1>配置器</c1>
     <c2>自动更新模块</c2>
     <c3>AutoCAD工作库</c3>
@@ -1058,6 +1174,12 @@
     <c6>数据库</c6>
     <!--todo remove after 43.3.0.0-->
     <c7>DWG数据库</c7>
+    <errNoRengaSdk>在 ModPlus 组件中缺少所需版本的 Renga SDK 文件。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaSdk>
+    <errNoRengaModule>在 ModPlus 组件中缺少所需版本的 Renga 主模块。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaModule>
+    <errNoRengaConnector>在 ModPlus 组件中缺少 ModPlus-Renga 连接器应用程序。请更新 ModPlus 后重试。如果错误仍然存在，请联系技术支持 support@modplus.org</errNoRengaConnector>
+    <noAutocad>未找到适合安装ModPlus的AutoCAD版本</noAutocad>
+    <noRevit>未找到适合安装ModPlus的Revit版本</noRevit>
+    <noRenga>未找到适合安装ModPlus的Renga版本</noRenga>
   </AutoUpdater>
   <AutocadDlls
     LocalName="AutoCAD工作库">
@@ -1067,9 +1189,7 @@
     <mm>毫米</mm>
     <def>默认</def>
     <h1>MODPLUS设置</h1>
-    <h2>基本</h2>
-    <h3>服务器连接</h3>
-    <h4>注册</h4>
+    <h2>常规</h2>
     <h5>语言：</h5>
     <h6>主题：</h6>
     <h12>设置</h12>
@@ -1197,7 +1317,7 @@
     <name>名称</name>
     <rn>受力钢筋 ⌀</rn>
     <h1>ModPlus设置</h1>
-    <h2>基本</h2>
+    <h2>常规</h2>
     <h3>许可证服务器</h3>
     <h5>语言：</h5>
     <h6>主题：</h6>
@@ -1545,9 +1665,7 @@
   <RengaDlls
     LocalName="Renga的工作库">
     <h1>MODPLUS设置</h1>
-    <h2>基本</h2>
-    <h3>服务器工作</h3>
-    <h4>注册</h4>
+    <h2>常规</h2>
     <h5>语言：</h5>
     <h6>主题：</h6>
     <h7>个人中心</h7>

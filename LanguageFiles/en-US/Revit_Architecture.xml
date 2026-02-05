@@ -166,6 +166,7 @@
     <h79>Select all</h79>
     <h80>Restore hiding instructions</h80>
     <h81>Service for automatic recalculation of apartment areas when the size of the rooms changes and a service for complete recalculation (parameterization by matrix, area recalculation and apartment type determination) when the rooms are deleted. The services process only rooms with filled "Apartment ID" parameter</h81>
+    <h81-1>During service operation, the settings specified in the "Apartment areas" section are taken into account</h81-1>
     <h82>Search by room name</h82>
     <h83>All rooms in the project are valid</h83>
     <h84>All rooms on the current view are valid</h84>
@@ -221,7 +222,9 @@
     <h131>Apartment area</h131>
     <h132>Apartment living area</h132>
     <h133>Apartment total area</h133>
+    <!--todo remove after 3.8.8.0-->
     <h134>The automatic area recalculation service is not loaded! Re-enable the plugin using the ModPlus Configurator</h134>
+    <h134-1>The automatic area recalculation service is not loaded! Re-enable the plugin using the ModPlus auto-update module (menu "Плагины")</h134-1>
     <h135>Add from rooms</h135>
     <h136>Current room matrix:</h136>
     <h137>Current table of apartment types:</h137>
@@ -320,6 +323,14 @@
     <h229>Calculate apartments</h229>
     <h230>Calculate area</h230>
     <h231>Exclude rooms with a Functional purpose matching the current apartment identifier</h231>
+    <h232>Fill functional purpose</h232>
+    <h233>Fill the "Functional purpose" parameter for rooms whose names are present in the current room matrix</h233>
+    <h234>Perform apartment typification</h234>
+    <h235>Room number format</h235>
+    <h236>From parameter</h236>
+    <h237>Room numbering</h237>
+    <h238>Reset numbering for each level in multi-level apartments</h238>
+    <h239>Apartment level parameters</h239>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -384,6 +395,12 @@
     <msg59>The rooms of the current project do not have the parameter "{0}"</msg59>
     <msg60>An error occurred while processing the table</msg60>
     <msg61>No suitable rooms were found! Check the filter conditions and try again</msg61>
+    <msg62>Functional purpose has been filled for {0} rooms</msg62>
+    <msg63>The room has the name "{0}", which is not present in the current room matrix. Filling the functional purpose has been skipped</msg63>
+    <msg64>The "Functional purpose" parameter has not been created or is not bound. Go to the "Parameters" tab and create/bind the parameters</msg64>
+    <msg65>Parameter "{0}" was not found</msg65>
+    <msg66>Parameter "{0}" has an unsupported data type (string and numeric parameters are supported)</msg66>
+    <msg67>Failed to set the value to parameter "{0}". The parameter may be read-only or located in an unavailable workset</msg67>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -426,6 +443,7 @@
     <tt37>Remove selected rows</tt37>
     <tt38>Incorrect value. Check the conditions in brackets</tt38>
     <tt39>Show selected rooms</tt39>
+    <tt40>Set the room name from the list of room names in the current document</tt40>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
     <instruction1_1>Additional parameters are processed and filled only if the rooms have these parameters. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button</instruction1_1>
@@ -450,6 +468,7 @@
     <instruction10>Classification allows you to fill in certain parameters of apartments based on the characteristics of the apartments. First, you need to create tables with conditions on the "Conditions" tab, after which you can perform classification with the result displayed on the "Classification" tab</instruction10>
     <instruction10_1>Specify the target parameter - string parameter to which the classification result will be set. The area is checked by the specified parameter of a random room of the apartment (i.e. all rooms are considered to have the same parameter value). The conditions "Contains rooms" and "Does not contain rooms" are filled with room names separated by semicolon (;). The room names can be completed with a condition to check the area and/or a condition to check that the room is a mezzanine. To do this, enter the condition and the area value in brackets after the room name and/or the condition for checking "Mezzanine" after the comma, if necessary. The available conditions are equal (=), not equal (!=), greater than (&gt;), greater than or equal to (&gt;=), less than (&lt;), less than or equal to (&lt;=). For the "Mezzanine" check, add a comma separated "m" to set the condition "The room must be a mezzanine" or "nm" to set the condition "The room must not be a mezzanine". You can set the condition to only check "Mezzanine" without checking the area. Examples: "Kitchen (&gt;10); Bedroom", "Pantry (&lt;5,m)", "Pantry (nm)"</instruction10_1>
     <instruction10_2>Classification is performed according to the specified condition tables from the Conditions tab. If the apartment to be checked does not fall under any row of the table conditions, the target parameter will be cleared</instruction10_2>
+    <instruction11>Specify the parameters into which the plugin will write the corresponding values for each level of a multi-level apartment. It is recommended to use parameters with the same data type as the main parameters. Values will be filled in for all apartments. For single-level apartments, the values will repeat the values of the main parameters</instruction11>
   </mprApartmentBuildingLayout>
   <mprRoomColorVolume
     LocalName="Room volume"
@@ -630,9 +649,12 @@
   </mprFloorByRoom>
   <mprRoomFinishing
     LocalName="Room finishing"
-    Description="Creation of finishing elements in the rooms">
+    Description="Creation of finishing elements in the rooms"
+    LocalName1="Room finishing update"
+    Description1="Update of finishing elements in rooms">
     <t1>Rooms filter:</t1>
     <t2>Floors</t2>
+    <!--todo remove after 2.0.0-->
     <t3>Floor type:</t3>
     <t4>Height Offset from Level, mm:</t4>
     <t5>Set the thickness value of the selected Floor type, taking into account previous Floor type</t5>
@@ -645,11 +667,12 @@
     <t12>If door leads to exit</t12>
     <t13>If door leads to entrance</t13>
     <t14>The floor of the main room will be created with the lead-in to the doorway. Respectively, for a room that is defined as non-main room, no door leading into the doorway will be created. This option works only for families in the "Doors" category with filled FromRoom and ToRoom internal properties. The direction of movement in the opening is determined by the direction of the family's exterior side</t14>
-    <t15>Cut solid door geometry from the floor contour</t15>
+    <t15>Cut door solid geometry out of the floor boundary</t15>
     <t16>Delete previously created finishing elements</t16>
     <t17>By picked Rooms</t17>
     <t18>By Rooms on View</t18>
-    <t19>For all rooms</t19>
+    <t19>By all rooms</t19>
+    <!--todo remove after 2.0.0-->
     <t20>For all rooms from linked files</t20>
     <t21>Update parameters</t21>
     <t22>Move up</t22>
@@ -672,7 +695,8 @@
     <t40>Bottom of walls</t40>
     <t41>Finishing walls are built on top of this floor</t41>
     <t42>Layer:</t42>
-    <t43>For all types of walls</t43>
+    <t43>For all walls types</t43>
+    <!--todo remove after 2.0.0-->
     <t44>Ceiling type:</t44>
     <t45>Set the thickness value of the selected Ceiling type, taking into account previous Ceiling type</t45>
     <t46>Copy the parameter value (from room to ceiling):</t46>
@@ -681,10 +705,31 @@
     <t49>Select the type of floor</t49>
     <t50>Select ceiling type</t50>
     <t51>Specify in the model the wall whose type will be the base for creating finishing walls</t51>
-    <l1>Do not lead Floor contour into door openings</l1>
-    <l2>Lead the contour to the middle of the opening</l2>
-    <l3>Lead the contour to the full opening width</l3>
-    <l4>Lead the contour to the specified value, mm</l4>
+    <t52>Base selection mode:</t52>
+    <t53>Filter is not specified</t53>
+    <t54>Baseboards</t54>
+    <t55>Select baseboard type</t55>
+    <t56>Baseboard height, mm:</t56>
+    <t57>Copy parameter value (from room to baseboard)</t57>
+    <t58>Other settings</t58>
+    <t59>Process floor-level windows</t59>
+    <t60>If the option is enabled the floor will extend into openings created by elements of the "Windows" category for the full opening depth. If the option is disabled such openings will be processed according to the general rules</t60>
+    <t61>Wall Joins:</t61>
+    <t62>Select wall and column type</t62>
+    <t63>Corresponding type is not found in the model. This configuration cannot be processed!</t63>
+    <t64>Select rooms</t64>
+    <l1>Do not extend the floor boundary into door openings</l1>
+    <l2>Extend the boundary to the middle of the opening</l2>
+    <l3>Extend the boundary to the full opening width</l3>
+    <l4>Extend the boundary to the specified value, mm</l4>
+    <l5>Extend the boundary to the middle of the door leaf</l5>
+    <l6>For all wall and column types</l6>
+    <l7>Select wall and column types</l7>
+    <l8>Wall and column filter</l8>
+    <l9>Butt </l9>
+    <l10>Miter</l10>
+    <l11>Square off</l11>
+    <l12>No join</l12>
     <msg1>No processing rooms available!</msg1>
     <msg2>No rooms filtered by "{0}" were found</msg2>
     <msg3>Floor type not specified</msg3>
@@ -703,5 +748,12 @@
     <msg16>Ceiling with type "{0}" is created by contour of the Room</msg16>
     <msg17>Failed to edit wall profile</msg17>
     <msg18>The height of the finishing wall cannot be less than 0</msg18>
+    <msg19>Baseboards with type "{0}" have been created along the room boundary</msg19>
+    <msg20>Failed to get floor elevation, baseboard with type "{0}" will be created at the room level elevation</msg20>
+    <msg21>Failed to create baseboard along the room boundary</msg21>
+    <msg22>Failed to edit sketch</msg22>
+    <msg23>Floor with type "{0}" has been updated along the room boundary</msg23>
+    <msg24>Failed to update floor along the room boundary</msg24>
+    <msg25>Ceiling with type "{0}" has been updated along the room boundary</msg25>
   </mprRoomFinishing>
 </ModPlus>

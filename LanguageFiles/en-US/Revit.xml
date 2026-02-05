@@ -91,6 +91,8 @@
     <h84>Text notes duplication settings</h84>
     <h85>In the Text notes find and replace</h85>
     <h86>In the parameter find and replace</h86>
+    <h87>Try to find existing numbering</h87>
+    <h88>Use common numbering settings</h88>
     <start>Start</start>
     <notOrganized>!Not organized</notOrganized>
     <end>End</end>
@@ -161,6 +163,15 @@
     <h82>Separate the numbering with a symbol:</h82>
     <h83>Space</h83>
     <h86>In the parameter find and replace</h86>
+    <h87>In filters increment value</h87>
+    <h88>(if any)</h88>
+    <h89>Specify the prefix and suffix of the filter value to be incremented. Example: value = "KN1", prefix = "KN", result: "KN2", KN3, "KN4", etc.</h89>
+    <h90>Open duplicated views</h90>
+    <h91>Clear parameter values</h91>
+    <h92>Create plan copies for upper levels</h92>
+    <h93>Counter</h93>
+    <h94>Number of upper levels for view "{0}" is less than the number of view copies to create. Number of view copies created: {1}</h94>
+    <h95>Try to find existing numbering</h95>
     <notOrganized>!Not organized</notOrganized>
     <start>Start</start>
     <end>End</end>
@@ -175,17 +186,20 @@
   </mprViewCopy>
   <ostViewIn3D
     LocalName="3D section box"
-    Description="Cuts the selected elements in the view cube, with the possibility of specifying the size of the view cube"
-    FullDescription="It is possible to dynamically change the dimensions of the view cubes uniformly in all directions relative to the selected elements">
+    Description="Isolation of selected elements in a 3D view with the ability to set the Section Box size">
     <h1>3D section box</h1>
     <msg1>Select elements for 3D trimming</msg1>
-    <orient>Orient by element</orient>
-    <inlink>In the link</inlink>
-    <inmodel>In the model</inmodel>
-    <remove3D>Disable boundaries</remove3D>
+    <inlink>In link</inlink>
+    <inmodel>In model</inmodel>
     <msg2>Select an element to orient the view</msg2>
     <ResizeSectionBox>Modify 3D view boundaries</ResizeSectionBox>
     <createbounds>Create boundaries</createbounds>
+    <create3D>Create 3D view</create3D>
+    <selectElements>Select elements</selectElements>
+    <manualOrientation>Manual orientation</manualOrientation>
+    <nullSectionBoxMsg1>The selected mode does not support preselection of elements</nullSectionBoxMsg1>
+    <nullSectionBoxMsg2>Trimming cannot be performed for the selected elements</nullSectionBoxMsg2>
+    <tooltip1>Allows specifying an element to orient the 3D section box</tooltip1>
   </ostViewIn3D>
   <whshScheduleLookup
     LocalName="Schedule lookup"
@@ -860,6 +874,47 @@
     <h72>Unplaced areas</h72>
     <h73>Removing unplaced areas</h73>
     <h74>Dependent view placed on sheet</h74>
+    <dav1>Before deletion, Revit will switch to another available view</dav1>
+    <dav2>Deleting all views available for switching is not allowed!</dav2>
+    <pattern>Pattern</pattern>
+    <patternName>Pattern name</patternName>
+    <patternsNumber>Number of patterns</patternsNumber>
+    <linePatterns>Line patterns</linePatterns>
+    <lp1>Searching for the pattern in object styles and visibility/graphics overrides</lp1>
+    <lp2>Consider element graphic overrides</lp2>
+    <lp3>Deleting line patterns</lp3>
+    <lp4>Deleting line pattern</lp4>
+    <lp5>Failed to delete the line pattern. Error</lp5>
+    <lp6>Removed line patterns</lp6>
+    <lp7>The pattern is not used in object styles or visibility/graphics overrides</lp7>
+    <lpm1>Used in line subcategory style: {0}</lpm1>
+    <lpm2>Used in model object styles: {0}</lpm2>
+    <lpm3>Used in annotation object styles: {0}</lpm3>
+    <lpm4>Used in analytical model object styles: {0}</lpm4>
+    <lpm5>Used in model object subcategory style {0}: {1}</lpm5>
+    <lpm6>Used in annotation object subcategory style {0}: {1}</lpm6>
+    <lpm7>Used in analytical model object subcategory style {0}: {1}</lpm7>
+    <lpm8>Used in the subcategory style of objects imported into the family: {0}</lpm8>
+    <lpm9>Used in the subcategory style of an object imported into the model {0}: {1}</lpm9>
+    <lpm10>Used in view graphic override {0}, in model category: {1}</lpm10>
+    <lpm11>Used in view graphic override {0}, in annotation category: {1}</lpm11>
+    <lpm12>Used in view graphic override {0}, in analytical model category: {1}</lpm12>
+    <lpm13>Used in view template graphic override {0}, in model category: {1}</lpm13>
+    <lpm14>Used in view template graphic override {0}, in annotation category: {1}</lpm14>
+    <lpm15>Used in view template graphic override {0}, in analytical model category: {1}</lpm15>
+    <lpm16>Used in view graphic override {0}, in model subcategory {1}: {2}</lpm16>
+    <lpm17>Used in view graphic override {0}, in annotation subcategory {1}: {2}</lpm17>
+    <lpm18>Used in view graphic override {0}, in analytical model subcategory {1}: {2}</lpm18>
+    <lpm19>Used in view graphic override {0}, in the subcategory of objects imported into the family: {1}</lpm19>
+    <lpm20>Used in view graphic override {0}, in the subcategory of an object imported into the model {1}: {2}</lpm20>
+    <lpm21>Used in view template graphic override {0}, in model subcategory {1}: {2}</lpm21>
+    <lpm22>Used in view template graphic override {0}, in annotation subcategory {1}: {2}</lpm22>
+    <lpm23>Used in view template graphic override {0}, in analytical model subcategory {1}: {2}</lpm23>
+    <lpm24>Used in view template graphic override {0}, in the subcategory of objects imported into the family: {1}</lpm24>
+    <lpm25>Used in view template graphic override {0}, in the subcategory of an object imported into the model {1}: {2}</lpm25>
+    <lpm26>Used in view filter {0}: {1}</lpm26>
+    <lpm27>Used in view template filter {0}: {1}</lpm27>
+    <lpm28>Used in graphic override on view {0}, for element: {1}</lpm28>
     <search>Search</search>
     <name>Name</name>
     <collect>Collect</collect>
@@ -989,6 +1044,7 @@
     <h56>Decrease or increase existing sheet numbers in the group by the specified value</h56>
     <h57>Decrease by</h57>
     <h58>Increase by</h58>
+    <h59>Sort by sheet name</h59>
     <p1>whole sheet number</p1>
     <p2>1 part</p2>
     <p3>number of 1 part</p3>
@@ -1438,6 +1494,7 @@ An additional check is performed by type parameters – a pair of similar famili
     <h2>From:</h2>
     <h3>To:</h3>
     <h4>Copying options</h4>
+    <!--todo remove after 2.4.4.0-->
     <h5>Work Log</h5>
     <h6>Transfer elements</h6>
     <h7>Open in Notepad</h7>
@@ -1543,8 +1600,11 @@ An additional check is performed by type parameters – a pair of similar famili
     <m70>Project parameters</m70>
     <m71>The target document already has a filter with name "{0}".{1}Do a copy with replace?</m71>
     <m72>The target document already has a view with name "{0}".{1}Do a copy with replace?</m72>
+    <!--todo remove after 2.4.4.0-->
     <m73>Elements copied:</m73>
+    <!--todo remove after 2.4.4.0-->
     <m74>Elements skipped:</m74>
+    <!--todo remove after 2.4.4.0-->
     <m75>Error count:</m75>
     <m76>Details in the work log</m76>
     <m77>Export Options</m77>
@@ -1557,6 +1617,15 @@ An additional check is performed by type parameters – a pair of similar famili
     <familyProcessError>{0} - ERROR! An error occurred while processing the family "{1}" (id: {2}): "{3}"</familyProcessError>
     <familyExists>The target document already contains the family "{0}".{1}Proceed with copying?</familyExists>
     <duplicateCreated>{0} - A duplicate of the family {3} has been created</duplicateCreated>
+    <elementTab>Elements</elementTab>
+    <modelElementTab>Model elements</modelElementTab>
+    <selectedInModel>Selected in Model</selectedInModel>
+    <selectFromLink>Select from Link</selectFromLink>
+    <selectElementsFrom>Select elements from {0}</selectElementsFrom>
+    <copyResultMessage>{0} - Copying completed. Copied: {1}, Skipped: {2}, Errors: {3}</copyResultMessage>
+    <messageInvalidActiveDocument>The active document does not match the selected source</messageInvalidActiveDocument>
+    <notSelectedElements>No elements are selected in the model</notSelectedElements>
+    <selectElementsFromLink>Select elements from the linked file</selectElementsFromLink>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notes"
@@ -2308,7 +2377,7 @@ Unpin?</h13>
     <t29>Numbering</t29>
     <t30>Number format:</t30>
     <t31>String format</t31>
-    <t32>{0} – material name. {1} – layer thickness. {2} – variable thickness</t32>
+    <t32>{0} – material name. {1} – layer thickness. {2} – variable thickness. {3} - number of layers</t32>
     <t33>Standard layer:</t33>
     <t34>Zero-thickness layer:</t34>
     <t35>Variable thickness layer:</t35>
@@ -2331,15 +2400,17 @@ Unpin?</h13>
     <t51>layers</t51>
     <t52>layers</t52>
     <t53>Structure placeholders specified in the template</t53>
-    <t54>@ - used to substitute a formatted list of structure layers in the result</t54>
-    <t55>&amp; - used to substitute a formatted list of merged structure layers in the result</t55>
-    <t56>[n] - used to specify the indices of layers that will be used to substitute a formatted list of structure layers in the result</t56>
-    <t57>^ - used to specify a subheading for the layers. Will not participate in the numbering of structure layers in the result</t57>
+    <t54>@ - required, used to substitute a formatted list of structure layers in the result</t54>
+    <t55>&amp; - optional, used to substitute a formatted list of merged structure layers in the result</t55>
+    <t56>[n] - optional, used to specify the indices of layers that will be used to substitute a formatted list of structure layers in the result</t56>
+    <t57>^ - optional, used to define a subtitle for layers. Specified before @. A string written after ^ will not be included in the numbering of structure layers in the result</t57>
     <t58>Result for type:</t58>
     <t59>Result for instances:</t59>
     <t60>Required type parameter with the data type "Multiline text". This parameter contains a numbered list of the total volumes of the structure layers, taking into account the specified line formats and numbering settings</t60>
     <t61>Use numbering</t61>
-    <t62>Show only types with changes</t62>
+    <t62>Show only changed Types</t62>
+    <t63>{0} in {3} layers - {3}х{1}</t63>
+    <t64>Change the value of the specified material parameter To enable the possibility to change the value activate the "Take material name from material parameter" option in the string format settings</t64>
     <s1>No change. The Type parameters will not be updated</s1>
     <s2>The required parameters "Template" and "Result" are missing</s2>
     <s3>The new result value is different from the current result value. The Type parameters will not be updated, because the "Update" checkbox is not checked</s3>
@@ -2870,4 +2941,28 @@ Unpin?</h13>
     <t109>First Row Stripe Color</t109>
     <t110>Second Row Stripe Color</t110>
   </mprModelCompare>
+  <mprEqualCurtainWalls
+    LocalName="Equal curtain walls"
+    Description="Search for equal curtain walls in the Revit model">
+    <h1>Missing parameter:\n</h1>
+    <h2>Shared parameter - </h2>
+    <h3>Project parameter - </h3>
+    <h4>Select a curtain wall</h4>
+    <h5>Parameters filling</h5>
+    <h6>Curtain walls found:</h6>
+    <h7>Write to parameter values: </h7>
+    <h8>Sample</h8>
+    <h9>Search settings</h9>
+    <h10>Comparison criteria</h10>
+    <h11>Overall dimensions</h11>
+    <h12>Curtain grid</h12>
+    <h13>Mullions</h13>
+    <h14>Panel types</h14>
+    <h15>Fill parameters</h15>
+    <h16>New value</h16>
+    <h17>Value from sample</h17>
+    <h19>Parameters filled:</h19>
+    <h20>Parameter missing in project:</h20>
+    <copyError>Copy to buffer failed. Try again</copyError>
+  </mprEqualCurtainWalls>
 </ModPlus>
