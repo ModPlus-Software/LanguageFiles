@@ -1536,14 +1536,30 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <b3>Standardmäßiges Verhalten</b3>
     <b4>Ersetzen</b4>
     <b5>Fragen</b5>
-    <m1>FEHLER! Beim Abrufen eines Elements ist ein Fehler aufgetreten. Id: "{0}". Fehler: "{1}".</m1>
-    <m2>Beginn des Vorgangs zu dem Zusammenbau von Modellelementen ({0}).</m2>
-    <m3>Ende des Vorgangs zu dem Zusammenbau von Modellelementen ({0}).</m3>
-    <m4>FEHLER! Kritischer Fehler bei dem Zusammenbau von Modellelementen ({0}).</m4>
-    <m5>Beginn des Kopierens von Elementen aus Dokument "{0}" in Dokumente "{1}".</m5>
-    <m6>Ende des Kopierens von Elementen aus Dokument "{0}" in Dokumente "{1}".</m6>
-    <m7>FEHLER! Beim Kopieren des Elements "{0} (id: {1})" der Kategorie "{2}" ist ein Fehler aufgetreten: "{3}".</m7>
-    <m9>WARNUNG! In diesem Dokument ({0}) ist die gemeinsame Nutzung deaktiviert. Es gibt kein Kopieren der Bearbeitungsbereiche.</m9>
+    <elementGetError>FEHLER! Beim Abrufen eines Elements ist ein Fehler aufgetreten. Id: "{0}". Fehler: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
+    <m1>{0} - FEHLER! Beim Abrufen eines Elements ist ein Fehler aufgetreten. Id: "{1}". Fehler: "{2}".</m1>
+    <startCollectingElements>Beginn des Vorgangs zu dem Zusammenbau von Modellelementen ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m2>{0} - Beginn des Vorgangs zu dem Zusammenbau von Modellelementen ({1}).</m2>
+    <completionCollectingElements>Ende des Vorgangs zu dem Zusammenbau von Modellelementen ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m3>{0} - Ende des Vorgangs zu dem Zusammenbau von Modellelementen ({1}).</m3>
+    <collectingElementsCriticalError>FEHLER! Kritischer Fehler bei dem Zusammenbau von Modellelementen ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
+    <m4>{0} - FEHLER! Kritischer Fehler bei dem Zusammenbau von Modellelementen ({1}).</m4>
+    <startCopyingElements>Beginn des Kopierens von Elementen aus Dokument "{0}" in Dokumente "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m5>{0} - Beginn des Kopierens von Elementen aus Dokument "{1}" in Dokumente "{2}".</m5>
+    <completionCopyingElements>Ende des Kopierens von Elementen aus Dokument "{0}" in Dokumente "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m6>{0} - Ende des Kopierens von Elementen aus Dokument "{1}" in Dokumente "{2}".</m6>
+    <elementCopyError>FEHLER! Beim Kopieren des Elements "{0} (id: {1})" der Kategorie "{2}" ist ein Fehler aufgetreten: "{3}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
+    <m7>{0} - FEHLER! Beim Kopieren des Elements "{1} (id: {2})" der Kategorie "{3}" ist ein Fehler aufgetreten: "{4}".</m7>
+    <worksharingDisabledWarning>WARNUNG! In diesem Dokument ({0}) ist die gemeinsame Nutzung deaktiviert. Es gibt kein Kopieren der Bearbeitungsbereiche.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
+    <m9>{0} - WARNUNG! In diesem Dokument ({1}) ist die gemeinsame Nutzung deaktiviert. Es gibt kein Kopieren der Bearbeitungsbereiche.</m9>
     <m10>Bearbeitungsbereiche</m10>
     <m11> (Typ)</m11>
     <m12>Browser</m12>
@@ -1594,12 +1610,18 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <m57>Typ</m57>
     <m58>Unbestimmt</m58>
     <m59>Kategorien</m59>
-    <m60>Beginn des Sammelvorganges der Typeneigenschaften des Modells ({0}).</m60>
-    <m61>Ende des Sammelvorganges der Typeneigenschaften des Modells ({0}).</m61>
+    <startCollectingTypes>Beginn des Sammelvorganges der Typeneigenschaften des Modells ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m60>{0} - Beginn des Sammelvorganges der Typeneigenschaften des Modells ({1}).</m60>
+    <completionCollectingTypes>Ende des Sammelvorganges der Typeneigenschaften des Modells ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m61>{0} - Ende des Sammelvorganges der Typeneigenschaften des Modells ({1}).</m61>
     <m62>es gab eine kritische Revit-Warnung, die eine Bestätigung durch den Benutzer erforderte. Deaktivieren Sie die Warnunterdrückung und kopieren Sie erneut</m62>
     <m63>Gemeinsam genutzte Parameter</m63>
     <m64>Keine Kategorie</m64>
-    <m65>das Kopieren des Elements "{0} (id {1})" der Kategorie "{2}" fehlt.</m65>
+    <elementCopySkipped>das Kopieren des Elements "{0} (id {1})" der Kategorie "{2}" fehlt.</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
+    <m65>{0} - das Kopieren des Elements "{1} (id {2})" der Kategorie "{3}" fehlt.</m65>
     <m66>Das Zieldokument enthält bereits die Familie "{0}" mit dem Typ "{1}".{2}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m66>
     <m67>Globale Parameter</m67>
     <m68>Linienmuster</m68>
@@ -1623,7 +1645,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <families>Familien</families>
     <familyProcessError>FEHLER! Beim Verarbeiten der Familie "{0}" (ID: {1}) ist ein Fehler aufgetreten: "{2}"</familyProcessError>
     <familyExists>Im Zieldokument ist die Familie "{0}" bereits vorhanden.{1}Kopie ausführen?</familyExists>
-    <duplicateCreated>Es wurde ein Duplikat der Familie {0} erstellt</duplicateCreated>
+    <duplicateCreated>Es wurde ein Duplikat der Familie {2} erstellt</duplicateCreated>
     <elementTab>Elemente</elementTab>
     <modelElementTab>Modellelemente</modelElementTab>
     <selectedInModel>Im Modell ausgewählt</selectedInModel>
