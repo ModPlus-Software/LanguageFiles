@@ -1536,13 +1536,29 @@ An additional check is performed by type parameters – a pair of similar famili
     <b3>Default behavior</b3>
     <b4>Replace</b4>
     <b5>Ask</b5>
+    <elementGetError>The error occurred during an element retrieving process. Id: "{0}". Message: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
     <m1>{0} – Error! The error occurred during an element retrieving process. Id: "{1}". Message: "{2}".</m1>
+    <startCollectingElements>The element collecting process has been started ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m2>{0} – The element collecting process has been started ({1}).</m2>
+    <completionCollectingElements>The element collecting process has been finished ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m3>{0} – The element collecting process has been finished ({1}).</m3>
+    <collectingElementsCriticalError>The element collecting process has stopped with a critical error ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
     <m4>{0} – Error! The element collecting process has stopped with a critical error ({1}).</m4>
+    <startCopyingElements>Start elements copying from "{0}" to "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m5>{0} – Start elements copying from "{1}" to "{2}".</m5>
+    <completionCopyingElements>Finish elements copying from "{0}" to "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m6>{0} – Finish elements copying from "{1}" to "{2}".</m6>
+    <elementCopyError>The error (message: "{3}") occured during the copying process of an element "{0} (id: {1})" of category "{2}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
     <m7>{0} – Error! The error (message: "{4}") occured during the copying process of an element "{1} (id: {2})" of category "{3}".</m7>
+    <worksharingDisabledWarning>The document ({0}) is not workshared one. The worksets will not be copied.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
     <m9>{0} – Warning! The document ({1}) is not workshared one. The worksets will not be copied.</m9>
     <m10>Worksets</m10>
     <m11> (Type)</m11>
@@ -1594,11 +1610,17 @@ An additional check is performed by type parameters – a pair of similar famili
     <m57>Walkthrough</m57>
     <m58>Undefined</m58>
     <m59>Categories</m59>
+    <startCollectingTypes>The types collecting process has been started ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m60>{0} – The types collecting process has been started ({1}).</m60>
+    <completionCollectingTypes>The types collecting process has been finished ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m61>{0} – The types collecting process has been finished ({1}).</m61>
     <m62>there was a critical Revit warning that required confirmation from the user. Disable warning suppression and try copying again</m62>
     <m63>Shared parameters</m63>
     <m64>No category</m64>
+    <elementCopySkipped>Copying element "{0} (id {1})" of category "{2}" skipped.</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
     <m65>{0} – Copying element "{1} (id {2})" of category "{3}" skipped.</m65>
     <m66>The target document already has the "{0}" family with the type "{1}".{2}Do a copy with replace?</m66>
     <m67>Global parameters</m67>
@@ -1618,18 +1640,18 @@ An additional check is performed by type parameters – a pair of similar famili
     <m78>DWG/DXF export options</m78>
     <m79>DGN export options</m79>
     <fillPatterns>Fill Patterns</fillPatterns>
-    <startCollectingFamilies>{0} – Start of model family collection operation ({1})</startCollectingFamilies>
-    <completionCollectingFamilies>{0} – Completion of model family collection operation ({1})</completionCollectingFamilies>
+    <startCollectingFamilies>Start of model family collection operation ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Completion of model family collection operation ({0})</completionCollectingFamilies>
     <families>Families</families>
-    <familyProcessError>{0} - ERROR! An error occurred while processing the family "{1}" (id: {2}): "{3}"</familyProcessError>
+    <familyProcessError>An error occurred while processing the family "{0}" (id: {1}): "{2}"</familyProcessError>
     <familyExists>The target document already contains the family "{0}".{1}Proceed with copying?</familyExists>
-    <duplicateCreated>{0} - A duplicate of the family {3} has been created</duplicateCreated>
+    <duplicateCreated>A duplicate of the family {0} has been created</duplicateCreated>
     <elementTab>Elements</elementTab>
     <modelElementTab>Model elements</modelElementTab>
     <selectedInModel>Selected in Model</selectedInModel>
     <selectFromLink>Select from Link</selectFromLink>
     <selectElementsFrom>Select elements from {0}</selectElementsFrom>
-    <copyResultMessage>{0} - Copying completed. Copied: {1}, Skipped: {2}, Errors: {3}</copyResultMessage>
+    <copyResultMessage>Copying completed. Copied: {0}, Skipped: {1}, Errors: {2}</copyResultMessage>
     <messageInvalidActiveDocument>The active document does not match the selected source</messageInvalidActiveDocument>
     <notSelectedElements>No elements are selected in the model</notSelectedElements>
     <selectElementsFromLink>Select elements from the linked file</selectElementsFromLink>
