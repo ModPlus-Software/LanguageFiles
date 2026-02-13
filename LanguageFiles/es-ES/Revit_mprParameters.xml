@@ -5,15 +5,15 @@
     Description="Edición por lotes/adición de parámetros a un proyecto y familias"
     LocalName1="Editor familiar"
     Description1="Un análogo del editor de parámetros estándar para familia actual, que le permite utilizar un editor de fórmulas alternativo">
-    <pcn1>Crear parámetros en proyecto</pcn1>
+    <pcn1>Creación de parámetros en proyecto</pcn1>
     <pcd1>Le permite crear parámetros por lotes en proyecto actual</pcd1>
-    <pcn2>Crear parámetros en familias</pcn2>
+    <pcn2>Creación de parámetros en familias</pcn2>
     <pcd2>Le permite crear parámetros por lotes en familias de proyectos, familias abiertas o familias en disco</pcd2>
     <!-- todo remove after 1.6.2.0 -->
     <pcn3>Editor familiar</pcn3>
     <!-- todo remove after 1.6.2.0 -->
     <pcd3>Un análogo del editor de parámetros estándar para familia actual, que le permite utilizar un editor de fórmulas alternativo</pcd3>
-    <pcn4>Editar parámetros en proyecto</pcn4>
+    <pcn4>Edición de parámetros en proyecto</pcn4>
     <pcd4>Le permite editar por lotes parámetros en proyecto actual</pcd4>
     <pcn5>Edición de parámetros en familias</pcn5>
     <pcd5>Le permite editar por lotes parámetros en familias de proyectos, familias abiertas o familias en disco</pcd5>
@@ -38,7 +38,7 @@
     <t17>Parámetro existe en documento actual</t17>
     <t18>Nuevo parámetro</t18>
     <t19>Por ejemplar</t19>
-    <t20>Parámetro general</t20>
+    <t20>Parámetro compartidos</t20>
     <t21>Parámetro integrado</t21>
     <t22>Parámetro familiar</t22>
     <t23>Familias</t23>
@@ -48,7 +48,7 @@
     <t27>Por tipo</t27>
     <t28>Verificar propiedades de parámetros</t28>
     <t29>Otro</t29>
-    <t30>Grupo por APG</t30>
+    <t30>Grupo por APC</t30>
     <t31>Tipo de datos</t31>
     <t32>Agrupar parámetros</t32>
     <t33>Procesando familia</t33>
@@ -100,13 +100,13 @@
     <t79>Insertar parámetro</t79>
     <t80>Insertar función</t80>
     <t81>Seleccionar todo o deseleccionar</t81>
-    <t82>Seleccionar APG:</t82>
-    <t83>APG actual</t83>
-    <t84>APG seleccionado</t84>
-    <t85>Ruta a APG:</t85>
+    <t82>Seleccionar APC:</t82>
+    <t83>APC actual</t83>
+    <t84>APC seleccionado</t84>
+    <t85>Ruta a APC:</t85>
     <!--todo remove after 1.6.2.0-->
-    <t86>Añadir desde APG</t86>
-    <t87>Añadir parámetros seleccionados del APG a lista actual de parámetros</t87>
+    <t86>Añadir desde APC</t86>
+    <t87>Añadir parámetros seleccionados del APC a lista actual de parámetros</t87>
     <t88>Grupos</t88>
     <t89>Definiciones de parámetros</t89>
     <t90>Parámetros totales:</t90>
@@ -130,7 +130,7 @@
     <t106>Nombre del tipo:</t106>
     <t107>Crear nuevo tipo</t107>
     <t108>Eliminar tipo actual</t108>
-    <t109>Reemplazar un parámetro general con un parámetro familiar</t109>
+    <t109>Reemplazar un parámetro compartidos con un parámetro familiar</t109>
     <t110>Bloquear</t110>
     <t111>No disponible</t111>
     <t112>Conviertir en parámetro de ejemplar</t112>
@@ -158,7 +158,7 @@
     <t133>Ignorar familias anidadas</t133>
     <t134>Otro</t134>
     <t135>Al ejecutar complemento en un documento familiar, abrir capítulo:</t135>
-    <t136>Distinguir mayúsculas y minúsculas al buscar en lista de tipos de datos, grupos de parámetros, filtros de columnas y cuadro de diálogo para añadir parámetros desde APG</t136>
+    <t136>Distinguir mayúsculas y minúsculas al buscar en lista de tipos de datos, grupos de parámetros, filtros de columnas y cuadro de diálogo para añadir parámetros desde APC</t136>
     <!-- todo remove after 1.6.2.0 -->
     <t137>Cambiar grupo</t137>
     <t138>Seleccionar nuevo grupo para parámetro "{0}"</t138>
@@ -274,7 +274,7 @@
     <spf5>No se puede buscar el parámetro en el archivo de parámetros compartidos porque el archivo de parámetros compartidos no está definido</spf5>
     <msg1>Fórmula añadida a lista de favoritos</msg1>
     <msg2>Fórmula actual no está vacía. ¿Seguro de reemplazarla con fórmula de lista de favoritos?</msg2>
-    <msg3>Parámetro general ya está presente en lista de parámetros actual</msg3>
+    <msg3>Parámetro compartidos ya está presente en lista de parámetros actual</msg3>
     <msg4>Un parámetro con mismo nombre, tipo de datos y agrupación ya está presente en lista actual de parámetros</msg4>
     <msg5>Imposible cambiar nombre de todas opciones seleccionadas</msg5>
     <msg6>Ya existe un tipo con nombre "{0}"</msg6>
@@ -325,8 +325,8 @@
     <err6>No se puede actualizar forzado de cursor de parámetro</err6>
     <err7>No se puede ejecutar acciones</err7>
     <err8>No se puede ejecutar acciones con parámetro "{0}"</err8>
-    <err9>Se omitió parámetro con GUID "{0}" porque está especificado APG</err9>
-    <err10>Parámetro con GUID "{0}" no se ha encontrado en APG actual</err10>
+    <err9>Se omitió parámetro con GUID "{0}" porque está especificado APC</err9>
+    <err10>Parámetro con GUID "{0}" no se ha encontrado en APC actual</err10>
     <err11>Tipo de datos "{0}" para parámetro no reconocido</err11>
     <err12>Grupo "{0}" para parámetro no reconocido</err12>
     <err13>Categoría para parámetro "{0}" no reconocida</err13>
