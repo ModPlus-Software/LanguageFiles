@@ -6,6 +6,7 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
+using System.Windows.Media;
 using System.Xml;
 
 /// <summary>
@@ -79,6 +80,11 @@ public partial class MainWindow
         BuildColumns((DataGrid)sender);
     }
 
+    private void DgAttributes_OnLoaded(object sender, RoutedEventArgs e)
+    {
+        BuildColumns((DataGrid)sender);
+    }
+
     private void BuildColumns(DataGrid dataGrid)
     {
         if (!_buildedDataGrids.Add(dataGrid))
@@ -96,7 +102,7 @@ public partial class MainWindow
 
     private DataTemplate GetDataTemplateForStringCell(DataGrid dataGrid, string bindingPath)
     {
-        var dataTemplate = (DataTemplate)dataGrid.Resources["ItemValueCellTemplate"];
+        var dataTemplate = (DataTemplate)GetParentGrid(dataGrid).Resources["ItemValueCellTemplate"];
         var xaml = XamlWriter.Save(dataTemplate!);
         xaml = xaml.Replace(
             "{DynamicResource PLACEHOLDER}",
@@ -112,5 +118,18 @@ public partial class MainWindow
     private static string GetColumnHeader(string languageName)
     {
         return $"{new CultureInfo(languageName).DisplayName}\n{languageName}";
+    }
+
+    private static Grid GetParentGrid(DependencyObject child)
+    {
+        var parentObject = ((FrameworkElement) child).Parent;
+
+        if (parentObject == null)
+            return null;
+
+        if (parentObject is Grid parent && parent.Name == "GridNodeContent")
+            return parent;
+        
+        return GetParentGrid(parentObject);
     }
 }

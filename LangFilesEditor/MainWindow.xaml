@@ -19,8 +19,8 @@
         </Style>
 
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-        <local:ObjectReferenceEqualityConverter x:Key="ObjectReferenceEqualityConverter"/>
-        <local:NodeVisibilityConverter x:Key="NodeVisibilityConverter"/>
+        <local:ObjectReferenceEqualityConverter x:Key="ObjectReferenceEqualityConverter" />
+        <local:NodeVisibilityConverter x:Key="NodeVisibilityConverter" />
 
     </Window.Resources>
     <TabControl>
@@ -106,8 +106,8 @@
                                    Visibility="{Binding Path=SelectedNode.HasItemsWithSameValue, Converter={StaticResource BooleanToVisibilityConverter}}" />
 
                         <Button Grid.Column="1"
-                                Visibility="Hidden"
-                                Content="Height holder"/>
+                                Content="Height holder"
+                                Visibility="Hidden" />
 
                         <Button Grid.Column="3"
                                 Command="{Binding Path=SelectedNode.SearchWithDuplicateNamesOrValuesCommand}"
@@ -125,8 +125,8 @@
 
                         <!-- Заголовки вкладок -->
                         <ItemsControl Grid.Row="0"
-                                      ItemsSource="{Binding EditNodes}"
-                                      Margin="4 0">
+                                      Margin="4 0"
+                                      ItemsSource="{Binding EditNodes}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <StackPanel Orientation="Horizontal" />
@@ -137,16 +137,17 @@
                                 <DataTemplate DataType="{x:Type structure:Node}">
                                     <ToggleButton Margin="0"
                                                   Padding="8 4"
-                                                  Style="{StaticResource {x:Static ToolBar.ToggleButtonStyleKey}}"
                                                   Command="{Binding DataContext.SelectNodeCommand, RelativeSource={RelativeSource AncestorType=Window}}"
-                                                  CommandParameter="{Binding}">
+                                                  CommandParameter="{Binding}"
+                                                  Style="{StaticResource {x:Static ToolBar.ToggleButtonStyleKey}}">
                                         <ToggleButton.IsChecked>
-                                            <MultiBinding Converter="{StaticResource ObjectReferenceEqualityConverter}" Mode="TwoWay">
+                                            <MultiBinding Converter="{StaticResource ObjectReferenceEqualityConverter}"
+                                                          Mode="TwoWay">
                                                 <!-- Первый биндинг — SelectedNode из контекста окна -->
                                                 <Binding Path="DataContext.SelectedNode"
                                                          RelativeSource="{RelativeSource AncestorType=Window}" />
                                                 <!-- Второй биндинг — текущий Node (this) -->
-                                                <Binding Path="."/>
+                                                <Binding Path="." />
                                             </MultiBinding>
                                         </ToggleButton.IsChecked>
 
@@ -211,8 +212,8 @@
                                         <Setter.Value>
                                             <MultiBinding Converter="{StaticResource NodeVisibilityConverter}">
                                                 <Binding Path="DataContext.SelectedNode"
-                                                         RelativeSource="{RelativeSource AncestorType=Window}"/>
-                                                <Binding/>
+                                                         RelativeSource="{RelativeSource AncestorType=Window}" />
+                                                <Binding />
                                             </MultiBinding>
                                         </Setter.Value>
                                     </Setter>
@@ -221,30 +222,12 @@
 
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate DataType="{x:Type structure:Node}">
-                                    <DataGrid x:Name="PART_DataGrid"
-                                              Margin="4"
-                                              AutoGenerateColumns="False"
-                                              BeginningEdit="DgItems_OnBeginningEdit"
-                                              CanUserAddRows="False"
-                                              CanUserDeleteRows="False"
-                                              CurrentCellChanged="DgItems_OnCurrentCellChanged"
-                                              DataGridCell.Selected="DgItems_OnSelected"
-                                              EnableColumnVirtualization="True"
-                                              EnableRowVirtualization="True"
-                                              HorizontalScrollBarVisibility="Disabled"
-                                              ItemsSource="{Binding Path=.Items}"
-                                              Loaded="DgItems_OnLoaded"
-                                              PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
-                                              ScrollViewer.CanContentScroll="False">
-
-                                        <DataGrid.RowStyle>
-                                            <Style TargetType="{x:Type DataGridRow}">
-                                                <Setter Property="Visibility" Value="{Binding Path=IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                                                <Setter Property="Background" Value="{Binding Path=BackgroundColor}" />
-                                            </Style>
-                                        </DataGrid.RowStyle>
-
-                                        <DataGrid.Resources>
+                                    <Grid x:Name="GridNodeContent">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.Resources>
                                             <Style TargetType="{x:Type DataGridColumnHeader}">
                                                 <Setter Property="HorizontalContentAlignment" Value="Center" />
                                                 <Setter Property="ContentTemplate">
@@ -319,13 +302,84 @@
 
                                                 </Grid>
                                             </DataTemplate>
-                                        </DataGrid.Resources>
-                                        <DataGrid.Columns>
-                                            <!-- TAG -->
-                                            <DataGridTemplateColumn Width="Auto"
-                                                                    CellTemplate="{StaticResource ItemNameCellTemplate}" />
-                                        </DataGrid.Columns>
-                                    </DataGrid>
+                                        </Grid.Resources>
+
+                                        <!-- ATTRIBUTES -->
+                                        <Border Grid.Row="0"
+                                                Margin="4 4 4 0"
+                                                BorderBrush="Gray"
+                                                BorderThickness="1">
+                                            <Expander Header="Атрибуты узла">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+
+                                                    <TextBlock Grid.Row="0"
+                                                               Margin="4"
+                                                               TextWrapping="Wrap">
+                                                        Атрибуты добавлены с ограничениями! Во-первых - не меняйте имя атрибута, так как проверки по именам при сохранении нет. Если поменяете имя, то в файле получите новый атрибут. Во-вторых - для атрибутов нет никаких элементов управления. Менять можно только сами локализованные значения. Добавлять или удалять атрибуты следует по-прежнему через редактирование xml файлов. Если кому-то захочется переделать эти ограничения, не забудьте внести правки в данное примечание
+                                                    </TextBlock>
+
+                                                    <DataGrid x:Name="DataGridAttributes"
+                                                              Grid.Row="1"
+                                                              AutoGenerateColumns="False"
+                                                              BeginningEdit="DgItems_OnBeginningEdit"
+                                                              CanUserAddRows="False"
+                                                              CanUserDeleteRows="False"
+                                                              CurrentCellChanged="DgItems_OnCurrentCellChanged"
+                                                              DataGridCell.Selected="DgItems_OnSelected"
+                                                              EnableColumnVirtualization="True"
+                                                              EnableRowVirtualization="True"
+                                                              HorizontalScrollBarVisibility="Disabled"
+                                                              ItemsSource="{Binding Path=.Attributes}"
+                                                              Loaded="DgAttributes_OnLoaded"
+                                                              PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
+                                                              ScrollViewer.CanContentScroll="False">
+
+                                                    <DataGrid.Columns>
+                                                        <!-- TAG -->
+                                                        <DataGridTemplateColumn Width="Auto"
+                                                                                CellTemplate="{StaticResource ItemNameCellTemplate}" />
+                                                    </DataGrid.Columns>
+                                                </DataGrid>
+                                                </Grid>
+                                            </Expander>
+                                        </Border>
+
+                                        <!-- NODES -->
+                                        <DataGrid x:Name="DataGridItems"
+                                                  Grid.Row="1"
+                                                  Margin="4"
+                                                  AutoGenerateColumns="False"
+                                                  BeginningEdit="DgItems_OnBeginningEdit"
+                                                  CanUserAddRows="False"
+                                                  CanUserDeleteRows="False"
+                                                  CurrentCellChanged="DgItems_OnCurrentCellChanged"
+                                                  DataGridCell.Selected="DgItems_OnSelected"
+                                                  EnableColumnVirtualization="True"
+                                                  EnableRowVirtualization="True"
+                                                  HorizontalScrollBarVisibility="Disabled"
+                                                  ItemsSource="{Binding Path=.Items}"
+                                                  Loaded="DgItems_OnLoaded"
+                                                  PreparingCellForEdit="DgItems_OnPreparingCellForEdit"
+                                                  ScrollViewer.CanContentScroll="False">
+
+                                            <DataGrid.RowStyle>
+                                                <Style TargetType="{x:Type DataGridRow}">
+                                                    <Setter Property="Visibility" Value="{Binding Path=IsVisible, Converter={StaticResource BooleanToVisibilityConverter}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                                                    <Setter Property="Background" Value="{Binding Path=BackgroundColor}" />
+                                                </Style>
+                                            </DataGrid.RowStyle>
+
+                                            <DataGrid.Columns>
+                                                <!-- TAG -->
+                                                <DataGridTemplateColumn Width="Auto"
+                                                                        CellTemplate="{StaticResource ItemNameCellTemplate}" />
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </Grid>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>

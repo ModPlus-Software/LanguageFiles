@@ -15,12 +15,20 @@ internal class Node : ObservableObject
         Name = name;
         Items = [];
         Items.CollectionChanged += ItemsOnCollectionChanged;
-    }
 
+        Attributes = [];
+        Attributes.CollectionChanged += AttributesOnCollectionChanged;
+    }
+    
     /// <summary>
     /// Name
     /// </summary>
     public string Name { get; }
+
+    /// <summary>
+    /// Attributes
+    /// </summary>
+    public ObservableCollection<Item> Attributes { get; }
 
     /// <summary>
     /// Items
@@ -59,7 +67,7 @@ internal class Node : ObservableObject
     }
 
     /// <summary>
-    /// Has items with same valuew
+    /// Has items with same values
     /// </summary>
     public bool HasItemsWithSameValue
     {
@@ -90,31 +98,53 @@ internal class Node : ObservableObject
         {
             foreach (var item in e.NewItems.OfType<Item>())
             {
-                item.ValidateInParent += ItemOnValidateInParent;
+                item.ValidateInParent += (_, _) => ValidateItems();
             }
         }
     
-        Validate();
+        ValidateItems();
     }
 
-    private void ItemOnValidateInParent(object sender, EventArgs e)
+    private void AttributesOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
     {
-        Validate();
+        if (e.Action == NotifyCollectionChangedAction.Add && e.NewItems != null)
+        {
+            foreach (var item in e.NewItems.OfType<Item>())
+            {
+                item.ValidateInParent += (_, _) => ValidateAttributes();
+            }
+        }
+
+        ValidateAttributes();
+    }
+    
+    public void ValidateItems()
+    {
+        ValidateItems(Items, out var hasItemsWithSameValue, out var hasIncorrectData);
+        HasItemsWithSameValue = hasItemsWithSameValue;
+        HasIncorrectData = hasIncorrectData;
     }
 
-    public void Validate()
+    public void ValidateAttributes()
     {
-        foreach (var item in Items)
+        ValidateItems(Attributes, out var hasItemsWithSameValue, out var hasIncorrectData);
+        HasItemsWithSameValue = hasItemsWithSameValue;
+        HasIncorrectData = hasIncorrectData;
+    }
+
+    private static void ValidateItems(ICollection<Item> items, out bool hasItemsWithSameValue, out bool hasIncorrectData)
+    {
+        foreach (var item in items)
         {
             item.Validate();
         }
 
-        foreach (var item in Items)
+        foreach (var item in items)
         {
             item.HasDuplicateName = false;
         }
 
-        foreach (var group in Items
+        foreach (var group in items
                      .GroupBy(i => i.Name)
                      .Where(g => g.Count() > 1))
         {
@@ -124,14 +154,14 @@ internal class Node : ObservableObject
             }
         }
 
-        HasItemsWithSameValue = false;
+        hasItemsWithSameValue = false;
 
-        foreach (var item in Items)
+        foreach (var item in items)
         {
             item.HasDuplicateValue = false;
         }
-        
-        var filtered = Items.Where(i => string.IsNullOrEmpty(i.Comment)).ToList();
+
+        var filtered = items.Where(i => string.IsNullOrEmpty(i.Comment)).ToList();
 
         var groups = filtered.GroupBy(i => BuildValuesMultisetSignature(i, ignoreCase: false),
             StringComparer.Ordinal);
@@ -140,11 +170,11 @@ internal class Node : ObservableObject
         {
             foreach (var it in grp)
                 it.HasDuplicateValue = true;
-            HasItemsWithSameValue = true;
+            hasItemsWithSameValue = true;
         }
 
 
-        HasIncorrectData = Items.Any(i => i.IsVisibleError);
+        hasIncorrectData = items.Any(i => i.IsVisibleError);
     }
 
     private static string BuildValuesMultisetSignature(Item item, bool ignoreCase = false)
