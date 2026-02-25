@@ -138,7 +138,7 @@
     <h51>Columna "No contiene habitaciones":</h51>
     <h52>Número de habitación</h52>
     <h53>Problemas</h53>
-    <h54>No se han encontrado habitaciones no ubicadas en proyecto</h54>
+    <h54>No se han encontrado habitaciones no colocadas en proyecto</h54>
     <h55>Habitaciones inválidas</h55>
     <h56>Parámetro</h56>
     <h57>Utilizar</h57>
@@ -151,7 +151,7 @@
     <h64>Al recopilar apartamentos no se identificaron habitaciones incorrectas</h64>
     <h65>Número de apartamentos calculados:</h65>
     <h66>¡No se han encontrado apartamentos para cálculo! Rellene parámetros de local "Propósito funcional" y "Nombre" de acuerdo con matriz de habitaciones y luego ensamble apartamentos</h66>
-    <h67>Habitaciones no ubicadas</h67>
+    <h67>Habitaciones no colocadas</h67>
     <h68>Eliminar seleccionado</h68>
     <h69>Eliminar todo</h69>
     <h70>Para seleccionar varios elementos de lista, presionar tecla Mayús y/o tecla Ctrl</h70>
@@ -189,16 +189,16 @@
     <h101>esquina inferior derecha</h101>
     <h102>especificar</h102>
     <h103>Número inicial:</h103>
-    <h104>Agrupar por Edificio</h104>
-    <h105>Agrupar por División</h105>
+    <h104>Agrupar por Bloque</h104>
+    <h105>Agrupar por Sección</h105>
     <h106>Ordenar:</h106>
     <h107>Ascendente</h107>
     <h108>Descendente</h108>
     <h109>¡No se puede encontrar puerta de entrada!</h109>
-    <h110>Edificio</h110>
-    <h111>División</h111>
-    <h112>Edificio a número</h112>
-    <h113>División a número</h113>
+    <h110>Bloque</h110>
+    <h111>Sección</h111>
+    <h112>Bloque a número</h112>
+    <h113>Sección a número</h113>
     <h114>No seleccionado</h114>
     <!-- todo remove after 2.11.15.0 -->
     <h115>No se han encontrado apartamentos en vista actual</h115>
@@ -254,15 +254,15 @@
     <h160>Limpiar todo</h160>
     <h161>Limpiar sólo con ID de apartamento</h161>
     <h162>No limpiar (no recomendado)</h162>
-    <h163>Utilizar parámetro del sistema "Número" en lugar del parámetro "SW_No._Habitación"</h163>
+    <h163>Utilizar parámetro del sistema "Número" en lugar del parámetro "HA_No._Habitación"</h163>
     <h164>Bloqueo de apartamentos</h164>
     <h165>Ensamblar apartamentos bloqueados</h165>
     <h166>¡No se han encontrado apartamentos bloqueados!</h166>
     <h167>Desbloquear apartamentos</h167>
     <h168>Numeración por curva</h168>
     <h169>Seleccionar curva para numeración de apartamentos</h169>
-    <h170>Parámetro "Edificio":</h170>
-    <h171>Parámetro "División":</h171>
+    <h170>Parámetro "Bloque":</h170>
+    <h171>Parámetro "Sección":</h171>
     <h172>Bloquear apartamentos seleccionados</h172>
     <h173>Parámetro objetivo</h173>
     <!-- todo remove after 2.8.6.0 -->
@@ -330,7 +330,7 @@
     <h236>Desde el parámetro</h236>
     <h237>Numeración de habitaciones</h237>
     <h238>Restablecer la numeración para cada nivel en apartamentos de varios niveles</h238>
-    <h239>Parámetros por niveles de la vivienda</h239>
+    <h239>Parámetros por niveles del apartamento</h239>
     <msg1>No se ha encontrado parámetro "{0}"</msg1>
     <msg2>Parámetro "{0}" no rellenado</msg2>
     <msg3>Parámetro "{0}" tiene un valor ilegal</msg3>
@@ -407,13 +407,13 @@
     <tt4>Lista de valores aceptables para parámetro "Propósito funcional". Esta lista se utiliza para excluir del verificación inicial habitaciones para los cuales valor del parámetro "Propósito funcional" no corresponde al ID de apartamento y no está contenido en matriz de habitaciones</tt4>
     <tt5>Para recopilar correctamente apartamentos, es necesario seleccionar todas habitaciones que deben incluirse en apartamentos</tt5>
     <tt6>Para calcular apartamentos, basta con seleccionar al menos una habitación del apartamento. Apartamentos se ensamblarán según valor del parámetro "ID de apartamento"</tt6>
-    <tt7>Valor del parámetro "Edificio" se añadirá al número de apartamento como prefijo separado por guión</tt7>
-    <tt8>Valor del parámetro "División" se añadirá al número de apartamento como prefijo separado por guión</tt8>
+    <tt7>Valor del parámetro "Bloque" se añadirá al número de apartamento como prefijo separado por guión</tt7>
+    <tt8>Valor del parámetro "Sección" se añadirá al número de apartamento como prefijo separado por guión</tt8>
     <tt9>Valor del parámetro seleccionado se añadirá al número de apartamento como prefijo separado por guión, siempre que parámetro tenga valor y valor sea mismo para todas habitaciones del apartamento</tt9>
     <tt10>Añadir nuevas posiciones obtenidas de habitaciones del proyecto actual a tabla actual. Posiciones se añaden sólo con valor "Nombre de habitación" relleno</tt10>
     <!-- todo remove after 2.8.6.0 -->
     <tt11>Combinar apartamentos seleccionados en lista en un solo</tt11>
-    <tt12>Valor utilizado como separador al añadir valor de Edificio, División y/o valor del parámetro</tt12>
+    <tt12>Valor utilizado como separador al añadir valor de Bloque, Sección y/o valor del parámetro</tt12>
     <tt13>Seleccionar y mostrar apartamentos marcados</tt13>
     <tt14>Cálculo del área del apartamento no se realizó debido a presencia de errores críticos</tt14>
     <!-- todo remove after 2.11.15.0 -->
@@ -456,7 +456,7 @@
     <instruction4>Ensamblaje de apartamentos se realiza a través de características geométricas de habitación, teniendo en cuenta vínculo de habitaciones a través de ventanas, puertas y separadores. A todas habitaciones de apartamento se les asigna mismo valor del parámetro "ID de apartamento". Se recomienda realizar verificación visual adicional creando combinación de colores basado en parámetro "ID de apartamento"</instruction4>
     <instruction5>Cálculo de apartamentos incluye cálculo del área del apartamento, número de habitaciones, así como determinación del tipo de apartamento a partir de Origen "Tipos de apartamentos". Todos valores obtenidos se asignan a parámetros de habitación incluido en apartamento. Todos apartamentos están determinados por valor del parámetro "ID de apartamento" especificado en etapa "Ensamblar apartamentos"</instruction5>
     <instruction5_1>¡Esta pestaña no forma parte del algoritmo principal de la Tipología de apartamentos! Está destinada exclusivamente a rellenar el parámetro "AP_Área redondeada" (o el correspondiente que se esté utilizando) en los espacios seleccionados según la configuración de redondeo. Utilice esta función solo para los espacios que no coincidan con el Propósito funcional actual</instruction5_1>
-    <instruction6>Numeración de apartamentos se puede realizar agrupando apartamentos por Edificio y/o División, activando opciones adecuadas y especificando nombres de parámetros de que tomar valor del Edificio y/o División. En este caso se considera que divisiones son subgrupos de edificios. Propiedad "Numeración continua" significa que numeración en siguiente grupo continuará, en lugar de comenzar desde valor establecido en propiedad "Número inicial". Si selecciona opción "Especificar" en propiedad "Inicio de numeración", será necesario seleccionar una habitación para cada grupo de apartamentos</instruction6>
+    <instruction6>Numeración de apartamentos se puede realizar agrupando apartamentos por Bloque y/o Sección, activando opciones adecuadas y especificando nombres de parámetros de que tomar valor del Bloque y/o Sección. En este caso se considera que divisiones son subgrupos de edificios. Propiedad "Numeración continua" significa que numeración en siguiente grupo continuará, en lugar de comenzar desde valor establecido en propiedad "Número inicial". Si selecciona opción "Especificar" en propiedad "Inicio de numeración", será necesario seleccionar una habitación para cada grupo de apartamentos</instruction6>
     <!-- todo remove after 2.11.15.0 -->
     <instruction7>Vistas de apartamentos se crean duplicando vista actual y luego recortándola a lo largo del contorno del apartamento. En primer lugar, se intenta crear contorno de recorte teniendo en cuenta espesor de muros cortina (sólo para Revit 2020 y versiones posteriores). Si no se consigue, se intenta crear contorno de recorte teniendo en cuenta mayor espesor de muros que rodean. Si no se crea contorno de recorte, se utilizará contorno del apartamento obtenido de delimitación de habitación. Cuando opción "Intentar utilizar tipo de apartamento como nombre de vista" está activada, vistas creadas recibirán nombre de vista "NOMBRE_NIVEL- Apartamento TIPO_APARTAMENTO"</instruction7>
     <!-- todo remove after 2.11.15.0 -->
@@ -755,5 +755,6 @@
     <msg23>El suelo con el tipo "{0}" se ha actualizado según el contorno de la habitación</msg23>
     <msg24>No se pudo actualizar el suelo según el contorno de la habitación</msg24>
     <msg25>El techo con el tipo "{0}" se ha actualizado según el contorno de la habitación</msg25>
+    <msg26>No se pudo conectar el muro de acabado {0} con la base {1}</msg26>
   </mprRoomFinishing>
 </ModPlus>

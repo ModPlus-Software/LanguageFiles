@@ -1235,16 +1235,16 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <h46>Activar icono de artículos</h46>
     <h47>Desactivar icono de artículos</h47>
     <h48>Paleta ModPlus</h48>
-    <h49>MP:Establecer adjuntos PorBloque</h49>
-    <h50>MP:Insertar bloque</h50>
-    <h51>MP:Bordes de ventana gráfica en modelo</h51>
+    <h49>MP: Establecer adjuntos PorBloque</h49>
+    <h50>MP: Insertar bloque</h50>
+    <h51>MP: Bordes de ventana gráfica en modelo</h51>
     <h53>[mpAddVertexToWipeout] para agregar y [mpRemoveVertexFromWipeout] para eliminar vértices de la cobertura</h53>
     <h54>MP: Añadir vértice</h54>
     <h55>MP: Eliminar vértice</h55>
     <h56>Área personal</h56>
     <h57>Ayuda</h57>
     <h58>Establecer capa de entrada [mpNestedEntLayer]</h58>
-    <h59>MP:Establecer capa de adjuntos</h59>
+    <h59>MP: Establecer capa de adjuntos</h59>
     <h60>Firmas</h60>
     <h61>Editor de firmas</h61>
     <h62>Editor de firmas utilizadas al rellenar bloques de títulos</h62>
@@ -1436,8 +1436,23 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <h179>Es una familia anidada</h179>
     <h180>Es una familia primaria</h180>
     <h181>Esquema de áreas (solo para Áreas)</h181>
-    <h182>Elemento bajo monitoreo</h182>
-    <h183>El elemento se encuentra en el sistema</h183>
+    <h182>La armadura se encuentra en un sistema de armaduras</h182>
+    <h183>El elemento forma parte de un sistema de ingeniería</h183>
+    <h184>Título del documento</h184>
+    <h185>Cada documento en una nueva fila</h185>
+    <h186>Si una pestaña pertenece a otro documento, se moverá a una nueva fila independientemente del espacio disponible en la fila actual. El traslado solo es posible con la ordenación por información sobre herramientas activada</h186>
+    <h187>Guardar</h187>
+    <h188>Notificar sobre la necesidad de guardar</h188>
+    <h189>El servicio notifica (cambia el color del título de la ventana de Revit) si es necesario guardar el archivo actual. La necesidad de notificación y el color dependen de los niveles seleccionados. Hay tres niveles de notificación a seleccionar – verde, naranja y rojo. Para cada nivel seleccionado, debe especificar el intervalo en minutos tras el cual se emitirá la notificación</h189>
+    <h190>Seleccionar sistema</h190>
+    <h191>Permite seleccionar el sistema (Armadura por área o Armadura por trayectoria) al que pertenece la armadura seleccionada</h191>
+    <h192>La búsqueda de valores del parámetro "{0}" se realiza en todos los elementos y tipos de elementos de las categorías especificadas en el proyecto actual</h192>
+    <h193>No se ha especificado ningún parámetro para la búsqueda de valores</h193>
+    <h194>No se han especificado categorías de elementos</h194>
+    <h195>No se encontraron valores del parámetro "{0}" en los elementos y tipos de elementos de la categoría "{1}". Es posible que el parámetro especificado no exista</h195>
+    <h196>Búsqueda de valores del parámetro en el modelo actual</h196>
+    <h197>Aplicar a vista</h197>
+    <h198>Permite aplicar la Caja de referencia seleccionada a la vista actual</h198>
     <parameters>Parámetros</parameters>
     <name>Nombre</name>
     <any>Cualquier</any>
@@ -1510,10 +1525,22 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <i10>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Group" (grupo primario) respectivamente verifican si elemento está en grupo o no. Es decir, la condición "Con parámetro" interpreta la verificación "El elemento debe estar en el grupo", y la condición "Sin parámetro" interpreta la verificación "El elemento no debe estar en el grupo". Cualquier otra condición, si el elemento está en un grupo, verifica el nombre del grupo según las reglas para cadenas.</i10>
     <i11>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Assembly" (ensamblaje primario) respectivamente verifican si elemento está en ensamblaje o no. Es decir, la condición "Con parámetro" interpreta la verificación "El elemento debe estar en el ensamblaje", y la condición "Sin parámetro" interpreta la verificación "El elemento no debe estar en el ensamblaje". Cualquier otra condición, si el elemento está en un grupo, verifica el nombre del ensamblaje según las reglas para cadenas.</i11>
     <i12>Al utilizar los parámetros clave "BottomZ" y "TopZ", se comprueban respectivamente las marcas más bajas y más altas de la geometría del elemento. Los parámetros clave "BottomZ" y "TopZ" se consideran numéricos y se comprueban mediante las condiciones correspondientes. Los valores de las marcas se toman en milímetros, redondeados a tres decimales. En el campo "Valor" se pueden especificar los nombres de los niveles. Si se encuentra el nivel especificado, se utilizará su marca en milímetros, redondeada a 3 decimales.</i12>
+    <!--todo remove after 34.2.4-->
     <i13>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Curtain" (es un muro cortina) respectivamente verifican si el muro esté un muro cortina o no. Es decir, la condición "Con parámetro" interpreta la verificación "El muro debe estar un muro cortina", y la condición "Sin parámetro" interpreta la verificación "El muro no debe estar un muro cortina". Si el elemento no es un muro, la condición se ignora (siempre devuelve "verdadero").</i13>
+    <i13-1>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Curtain" (es un muro cortina) respectivamente verifican si el muro esté un muro cortina o no. Es decir, la condición "Con parámetro" interpreta la verificación "El muro debe estar un muro cortina", y la condición "Sin parámetro" interpreta la verificación "El muro no debe estar un muro cortina".</i13-1>
+    <!--todo remove after 34.2.4-->
     <i14>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Nested" (familia es anidada) respectivamente verifican si la familia está anidada o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar anidada", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar anidada". Si el elemento no es una familia, la condición se ignora (siempre devuelve "verdadero").</i14>
+    <i14-1>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Nested" (familia es anidada) respectivamente verifican si la familia está anidada o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar anidada", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar anidada".</i14-1>
+    <!--todo remove after 34.2.4-->
     <i15>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Parent" (familia es primaria) respectivamente verifican si la familia está primaria (contiene familias anidadas) o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar primaria", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar primaria". Si el elemento no es una familia, la condición se ignora (siempre devuelve "verdadero").</i15>
+    <i15-1>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Parent" (familia es primaria) respectivamente verifican si la familia está primaria (contiene familias anidadas) o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar primaria", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar primaria".</i15-1>
+    <!--todo remove after 34.2.4-->
     <i16>El parámetro clave AreaScheme devuelve el nombre del esquema de áreas al que pertenece el Área. El valor del parámetro clave AreaScheme se comprueba según las reglas de cadena. Si el elemento no es un Área, la condición se ignora (la condición siempre devuelve "verdadero").</i16>
+    <i16-1>El parámetro clave AreaScheme devuelve el nombre del esquema de áreas al que pertenece el Área. El valor del parámetro clave AreaScheme se comprueba según las reglas de cadena.</i16-1>
+    <i17>Condiciones "Con parámetro" y "Sin parámetro" al verificar el parámetro clave "InMEPSystem" (el elemento forma parte de un sistema de ingeniería) respectivamente verifican si el elemento forma parte de un sistema de ingeniería o no. Es decir, la condición "Con parámetro" interpreta la verificación "El elemento forma parte de un sistema de ingeniería", y la condición "Sin parámetro" interpreta la verificación "El elemento no forma parte de un sistema de ingeniería".</i17>
+    <i18>Condiciones "Con parámetro" y "Sin parámetro" al verificar el parámetro clave "InRebarSystem" (la armadura se encuentra en un sistema de armaduras) respectivamente verifican si la armadura forma parte de un sistema de armaduras o no. Es decir, la condición "Con parámetro" interpreta la verificación "La armadura forma parte de un sistema de ingeniería", y la condición "Sin parámetro" interpreta la verificación "La armadura no forma parte de un sistema de ingeniería".</i18>
+    <i19>El parámetro clave DocumentTitle devuelve el nombre del documento actual. El valor del parámetro clave DocumentTitle se comprueba según las reglas para cadenas. Si el documento no está guardado o está desvinculado, se devolverá el valor predeterminado o una cadena vacía.</i19>
+    <i20>La condición "Solo lectura" con el valor "No" significa que el elemento se procesará si el parámetro está disponible para su edición. La condición "Solo lectura" con el valor "Sí" significa que el elemento se procesará si el parámetro no está disponible para su edición. Un parámetro puede no estar disponible para su edición si es un parámetro de sistema no editable (por ejemplo, el parámetro "Volumen"), el elemento se encuentra en un conjunto de trabajo no accesible o en otras condiciones.</i20>
     <et1>Igual</et1>
     <et2>Más</et2>
     <et3>Menos</et3>
@@ -1524,6 +1551,7 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <et8>Con parámetro</et8>
     <et9>No contiene</et9>
     <et10>Sin parámetro</et10>
+    <et11>Solo lectura</et11>
     <tt2>Por favor ingrese su dirección de correo electrónico para trabajar con servidor modplus.org. Dirección de correo electrónico es necesaria para identificarte en servidor. Se recomienda utilizar la dirección de correo electrónico especificada al registrarse en sitio web modplus.org</tt2>
     <tt3>¡Es necesario ingresar su login en ficha "Registro"! (Configurador ModPlus)</tt3>
     <tt4>¡Dirección de correo especificada no pasó verificación!\nO ingresaste dirección de correo electrónico incorrectamente o tienes un proveedor de alojamiento de correo electrónico único =)</tt4>
@@ -1544,6 +1572,7 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <err8>No es posible seleccionar elementos en vista actual "{0}"</err8>
     <err9>Error en orientación del contorno: curvas de contorno no son contiguas porque contorno original tiene interrupciones. Verifique si elementos del modelo que forman contorno a procesar están construidos correctamente y vuelva a intentarlo</err9>
     <err10>No es posible establecer forma "{0}" de barra de armadura creada. Error:</err10>
+    <err11>El vínculo no se puede volver a cargar porque está cargado en otro documento abierto</err11>
     <c1>Colorear pestañas</c1>
     <c2>Combinación de colores:</c2>
     <c3>Área de coloración:</c3>

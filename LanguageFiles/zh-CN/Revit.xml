@@ -91,8 +91,22 @@
     <h84>文本复制设置</h84>
     <h85>在文本中查找替换</h85>
     <h86>在参数中查找替换</h86>
-    <h87>尝试查找现有编号</h87>
+    <h87>尝试继续现有编号</h87>
     <h88>使用通用编号设置</h88>
+    <h89>为上层创建平面图副本</h89>
+    <h90>尝试复制视图时未找到上层标高</h90>
+    <h91>更改重复项的集合</h91>
+    <h92>分配到集合中</h92>
+    <h93>放入一个集合中</h93>
+    <h94>在集合名称中查找并替换</h94>
+    <h95>集合名称</h95>
+    <h96>新图纸集</h96>
+    <h97>清除参数值</h97>
+    <h98>打开复制的图纸</h98>
+    <h99>在过滤器中递增数值</h99>
+    <h100>如有</h100>
+    <h101>指定要递增的过滤器值的前缀和后缀。示例：值 = "KN1"，前缀 = "KN"，结果："KN2"、KN3、"KN4"等。</h101>
+    <h102>计数器</h102>
     <start>开头</start>
     <notOrganized>!未组织</notOrganized>
     <end>结尾</end>
@@ -171,7 +185,7 @@
     <h92>为上层创建平面图副本</h92>
     <h93>计数器</h93>
     <h94>视图 "{0}" 的上层楼层数量少于需要创建的视图副本数量。已创建视图副本数：{1}</h94>
-    <h95>尝试查找现有编号</h95>
+    <h95>尝试继续现有编号</h95>
     <notOrganized>!未组织</notOrganized>
     <start>开头</start>
     <end>结尾</end>
@@ -789,6 +803,10 @@
     <d7>从上到下，从右到左</d7>
     <d8>从下到上，从左到右</d8>
     <d9>从下到上，从右到左</d9>
+    <d10>从左到右</d10>
+    <d11>从右到左</d11>
+    <d12>从上到下</d12>
+    <d13>从下到上</d13>
     <r1>未设置初始值</r1>
     <r2>未选择处理元素</r2>
     <r3>自定义字母表为空</r3>
@@ -976,6 +994,35 @@
     <m4>读取族</m4>
     <m5>在明细表中搜索</m5>
     <m6>选定的搜索表中有当前族正在使用的表! 确认删除?</m6>
+    <wipeOptionResultSuccess>{0}：已成功删除 {1}</wipeOptionResultSuccess>
+    <wipeOptionResultPartialSummary>{0}：成功删除 {1}，未能删除 {2}</wipeOptionResultPartialSummary>
+    <wipeOptionResultPartialDetails>清理过程中未删除的元素 ID</wipeOptionResultPartialDetails>
+    <wipeOptionResultEmpty>{0}：未找到可清理的元素</wipeOptionResultEmpty>
+    <defaultTypeMessage>已指定默认类型：{0}</defaultTypeMessage>
+    <reassignedInstancesMessage>已将实例重新指定为默认类型：{0}</reassignedInstancesMessage>
+    <reassignedTypeParametersMessage>类型参数中的引用已重新指定：{0}</reassignedTypeParametersMessage>
+    <RemoveAllScheduleTypes>删除所有明细表类型</RemoveAllScheduleTypes>
+    <RemoveAllLegendViewTypes>删除所有图例视图类型</RemoveAllLegendViewTypes>
+    <RemoveAllDraftingViewTypes>删除所有详图视图类型</RemoveAllDraftingViewTypes>
+    <RemoveAllElevationViewTypes>删除所有立面视图类型</RemoveAllElevationViewTypes>
+    <RemoveAllFloorPlanTypes>删除所有楼层平面视图类型</RemoveAllFloorPlanTypes>
+    <RemoveAllSectionViewTypes>删除所有剖面视图类型</RemoveAllSectionViewTypes>
+    <RemoveAll3DViewTypes>删除所有三维视图类型</RemoveAll3DViewTypes>
+    <RemoveAllSpotSlopeTypes>删除所有点坡度类型</RemoveAllSpotSlopeTypes>
+    <RemoveAllSpotCoordinateTypes>删除所有点坐标类型</RemoveAllSpotCoordinateTypes>
+    <RemoveAllSpotElevationTypes>删除所有标高点类型</RemoveAllSpotElevationTypes>
+    <RemoveAllDiameterDimensionTypes>删除所有直径尺寸类型</RemoveAllDiameterDimensionTypes>
+    <RemoveAllRadialDimensionTypes>删除所有径向尺寸类型</RemoveAllRadialDimensionTypes>
+    <RemoveAllAngularDimensionTypes>删除所有角度尺寸类型</RemoveAllAngularDimensionTypes>
+    <RemoveAllLinearDimensionTypes>删除所有线性尺寸类型</RemoveAllLinearDimensionTypes>
+    <RemoveAllModelTextTypes>删除所有模型文字类型</RemoveAllModelTextTypes>
+    <RemoveAllTextNoteTypes>删除所有文字注释类型</RemoveAllTextNoteTypes>
+    <RemoveAllColorFillRegions>删除所有颜色填充区域</RemoveAllColorFillRegions>
+    <RemoveAllColorSchemes>删除所有配色方案</RemoveAllColorSchemes>
+    <RemoveAllSectionMarkTypes>删除所有剖面标记类型</RemoveAllSectionMarkTypes>
+    <RemoveAllElevationMarkTypes>删除所有立面标记类型</RemoveAllElevationMarkTypes>
+    <RemoveAllCalloutTagTypes>删除所有详图标记类型</RemoveAllCalloutTagTypes>
+    <RemoveAllTickMarkTypes>删除所有刻度标记类型</RemoveAllTickMarkTypes>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="图纸编号工具"
@@ -1162,7 +1209,7 @@
     Description="管理工作集，包括创建和应用"
     FullDescription="插件允许创建工作集配置，根据这些配置可以在文档中创建工作集。配置可以导入和导出。可以为配置中的每个工作集设置应用于元素的条件"
     LocalName1="更新工作集"
-    Description1="在不使用插件窗口的情况下，使用当前设置调用“按过滤器设置工作集”命令"
+    Description1="在不使用插件窗口的情况下，使用当前设置调用&quot;按过滤器设置工作集&quot;命令"
     LocalName2="工作集处理"
     Description2="工作集实用工具 - 合并、隐藏、隔离等">
     <h1>创建工作集</h1>
@@ -1530,13 +1577,29 @@
     <b3>默认行为</b3>
     <b4>替换</b4>
     <b5>询问</b5>
+    <elementGetError>获取元素时出错。Id："{0}"。错误："{1}"。</elementGetError>
+    <!--todo remove after 2.4.4.0-->
     <m1>{0} – 错误！获取元素时出错。Id："{1}"。错误："{2}"。</m1>
+    <startCollectingElements>开始收集模型元素操作（{0}）。</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m2>{0} – 开始收集模型元素操作（{1}）。</m2>
+    <completionCollectingElements>完成收集模型元素操作（{0}）。</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m3>{0} – 完成收集模型元素操作（{1}）。</m3>
+    <collectingElementsCriticalError>收集模型元素操作中发生严重错误（{0}）。</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
     <m4>{0} – 错误！收集模型元素操作中发生严重错误（{1}）。</m4>
+    <startCopyingElements>开始从文档"{0}"复制元素到文档"{1}"。</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m5>{0} – 开始从文档"{1}"复制元素到文档"{2}"。</m5>
+    <completionCopyingElements>完成从文档"{0}"复制元素到文档"{1}"。</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m6>{0} – 完成从文档"{1}"复制元素到文档"{2}"。</m6>
+    <elementCopyError>复制元素"{0}（id：{1}）"类别"{2}"时出错："{3}"。</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
     <m7>{0} – 错误！复制元素"{1}（id：{2}）"类别"{3}"时出错："{4}"。</m7>
+    <worksharingDisabledWarning>此文档（{0}）已禁用共享。不复制工作集。</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
     <m9>{0} – 警告！此文档（{1}）已禁用共享。不复制工作集。</m9>
     <m10>工作集</m10>
     <m11>（类型）</m11>
@@ -1559,6 +1622,7 @@
     <m28>所有组</m28>
     <m29>视图（模板）</m29>
     <m30>复制完成</m30>
+    <!--todo remove after 2.4.4.0-->
     <m32>取消</m32>
     <m33>搜索</m33>
     <m34>面积平面</m34>
@@ -1587,11 +1651,17 @@
     <m57>漫游</m57>
     <m58>未定义</m58>
     <m59>类别</m59>
+    <startCollectingTypes>开始收集模型类型操作（{0}）。</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m60>{0} – 开始收集模型类型操作（{1}）。</m60>
+    <completionCollectingTypes>完成收集模型类型操作（{0}）。</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m61>{0} – 完成收集模型类型操作（{1}）。</m61>
     <m62>出现需要用户确认的关键Revit警告。请禁用警告抑制并重试复制</m62>
     <m63>共享参数</m63>
     <m64>无类别</m64>
+    <elementCopySkipped>跳过复制元素"{0}（id {1}）"类别"{2}"。</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
     <m65>{0} – 跳过复制元素"{1}（id {2}）"类别"{3}"。</m65>
     <m66>目标文档中已存在族"{0}"类型"{1}"。{2}是否复制并替换？</m66>
     <m67>全局参数</m67>
@@ -1600,6 +1670,7 @@
     <m70>项目参数</m70>
     <m71>目标文档中已存在过滤器"{0}"。{1}是否复制并替换？</m71>
     <m72>目标文档中已存在视图"{0}"。{1}是否复制并替换？</m72>
+    <copyConduitStandardWithReplace>目标文档中已存在风管标准 "{0}"。{1}是否执行复制并替换？</copyConduitStandardWithReplace>
     <!--todo remove after 2.4.4.0-->
     <m73>已复制元素：</m73>
     <!--todo remove after 2.4.4.0-->
@@ -1611,18 +1682,18 @@
     <m78>DWG/DXF导出设置</m78>
     <m79>DGN导出设置</m79>
     <fillPatterns>填充图案</fillPatterns>
-    <startCollectingFamilies>{0} – 开始模型族收集操作 ({1})</startCollectingFamilies>
-    <completionCollectingFamilies>{0} – 完成模型族收集操作 ({1})</completionCollectingFamilies>
+    <startCollectingFamilies>开始模型族收集操作 ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>完成模型族收集操作 ({0})</completionCollectingFamilies>
     <families>族</families>
-    <familyProcessError>{0} - 错误！处理族 "{1}"（ID: {2}）时发生错误："{3}"</familyProcessError>
+    <familyProcessError>处理族 "{0}"（ID: {1}）时发生错误："{2}"</familyProcessError>
     <familyExists>目标文档中已存在族 "{0}"。{1}要执行复制吗？</familyExists>
-    <duplicateCreated>{0} - 已创建族 {3} 的副本</duplicateCreated>
+    <duplicateCreated>已创建族 {0} 的副本</duplicateCreated>
     <elementTab>元素</elementTab>
     <modelElementTab>模型元素</modelElementTab>
     <selectedInModel>在模型中选定的</selectedInModel>
     <selectFromLink>从链接中选择</selectFromLink>
     <selectElementsFrom>请选择来自 {0} 的元素</selectElementsFrom>
-    <copyResultMessage>{0} - 复制完成。已复制：{1}，已跳过：{2}，有错误：{3}</copyResultMessage>
+    <copyResultMessage>复制完成。已复制：{0}，已跳过：{1}，有错误：{2}</copyResultMessage>
     <messageInvalidActiveDocument>活动文档与所选来源不一致</messageInvalidActiveDocument>
     <notSelectedElements>模型中未选择任何元素</notSelectedElements>
     <selectElementsFromLink>请选择来自链接文件的元素</selectElementsFromLink>
@@ -2225,6 +2296,8 @@
 取消固定？</h12>
     <h13>已固定 {0} 个视图。
 取消固定？</h13>
+    <h14>仅复制高度</h14>
+    <h15>复制视图裁剪时 仅复制裁剪高度 宽度将保持不变</h15>
   </mprCopyCropBox>
   <mprBaseLevel
     LocalName="基准标高"

@@ -91,8 +91,22 @@
     <h84>Einstellungen für Textduplizierung</h84>
     <h85>In den Textnotizen suchen und ersetzen</h85>
     <h86>Im Parameter suchen und ersetzen</h86>
-    <h87>Versuchen, vorhandene Nummerierung zu finden</h87>
+    <h87>Versuchen, bestehende Nummerierung fortzusetzen</h87>
     <h88>Gemeinsame Nummerierungseinstellungen verwenden</h88>
+    <h89>Plankopien für obere Ebenen erstellen</h89>
+    <h90>Beim Versuch, Ansichten zu kopieren, wurden keine oberen Ebenen gefunden</h90>
+    <h91>Sammlung für Duplikate ändern</h91>
+    <h92>Auf Sammlungen verteilen</h92>
+    <h93>In einer Sammlung platzieren</h93>
+    <h94>Suchen und Ersetzen im Sammlungsnamen</h94>
+    <h95>Sammlungsname</h95>
+    <h96>Neue Zeichensammlung</h96>
+    <h97>Parameterwerte löschen</h97>
+    <h98>Doppelte Zeichnungen öffnen</h98>
+    <h99>Wert in Filtern inkrementieren</h99>
+    <h100>(falls vorhanden)</h100>
+    <h101>Geben Sie Präfix und Suffix des Filterwerts an, der erhöht werden soll. Beispiel: Wert = „KN1", Präfix = „KN", Ergebnis: „KN2", KN3, „KN4" usw.</h101>
+    <h102>Zähler</h102>
     <start>Anfang</start>
     <notOrganized>!Nicht organisiert</notOrganized>
     <end>Ende</end>
@@ -171,7 +185,7 @@
     <h92>Plankopien für obere Ebenen erstellen</h92>
     <h93>Zähler</h93>
     <h94>Anzahl der oberen Ebenen für die Ansicht "{0}" ist geringer als die Anzahl zu erstellender Ansichtskopien. Erstellte Ansichtskopien: {1}</h94>
-    <h95>Versuchen, vorhandene Nummerierung zu finden</h95>
+    <h95>Versuchen, bestehende Nummerierung fortzusetzen</h95>
     <notOrganized>!Nicht organisiert</notOrganized>
     <start>Anfang</start>
     <end>Ende</end>
@@ -789,6 +803,10 @@
     <d7>Von oben nach unten und von rechts nach links</d7>
     <d8>Von unten nach oben und von links nach rechts</d8>
     <d9>Von unten nach oben und von rechts nach links</d9>
+    <d10>Von links nach rechts</d10>
+    <d11>Von rechts nach links</d11>
+    <d12>Von oben nach unten</d12>
+    <d13>Von unten nach oben</d13>
     <r1>Kein Anfangswert angegeben</r1>
     <r2>Keine Elemente zur Bearbeitung ausgewählt</r2>
     <r3>Das benutzerdefinierte Alphabet ist leer</r3>
@@ -976,6 +994,35 @@
     <m4>Das Lesen der Familie</m4>
     <m5>Suche in den Bauteillisten</m5>
     <m6>Unter den ausgewählten Suchtabellen befinden sich Tabellen, die in der aktuellen Familie verwendet werden! Sind Sie sicher, dass sie trotzdem gelöscht werden müssen?</m6>
+    <wipeOptionResultSuccess>{0}: {1} erfolgreich gelöscht</wipeOptionResultSuccess>
+    <wipeOptionResultPartialSummary>{0}: {1} erfolgreich gelöscht, {2} konnten nicht gelöscht werden</wipeOptionResultPartialSummary>
+    <wipeOptionResultPartialDetails>IDs der Elemente, die während der Bereinigung nicht gelöscht wurden</wipeOptionResultPartialDetails>
+    <wipeOptionResultEmpty>{0}: Keine Elemente zum Bereinigen gefunden</wipeOptionResultEmpty>
+    <defaultTypeMessage>Standardtyp festgelegt: {0}</defaultTypeMessage>
+    <reassignedInstancesMessage>Exemplare wurden dem Standardtyp zugewiesen: {0}</reassignedInstancesMessage>
+    <reassignedTypeParametersMessage>Verweise in Typenparametern wurden neu zugewiesen: {0}</reassignedTypeParametersMessage>
+    <RemoveAllScheduleTypes>Alle Bauteillistentypen löschen</RemoveAllScheduleTypes>
+    <RemoveAllLegendViewTypes>Alle Legendenansichtstypen löschen</RemoveAllLegendViewTypes>
+    <RemoveAllDraftingViewTypes>Alle Detailansichtstypen löschen</RemoveAllDraftingViewTypes>
+    <RemoveAllElevationViewTypes>Alle Ansichts-Typen löschen</RemoveAllElevationViewTypes>
+    <RemoveAllFloorPlanTypes>Alle Grundrisstypen löschen</RemoveAllFloorPlanTypes>
+    <RemoveAllSectionViewTypes>Alle Schnittansichtstypen löschen</RemoveAllSectionViewTypes>
+    <RemoveAll3DViewTypes>Alle 3D-Ansichtstypen löschen</RemoveAll3DViewTypes>
+    <RemoveAllSpotSlopeTypes>Alle Punktgefälle-Typen löschen</RemoveAllSpotSlopeTypes>
+    <RemoveAllSpotCoordinateTypes>Alle Punktkoordinaten-Typen löschen</RemoveAllSpotCoordinateTypes>
+    <RemoveAllSpotElevationTypes>Alle Höhenkoten-Typen löschen</RemoveAllSpotElevationTypes>
+    <RemoveAllDiameterDimensionTypes>Alle Durchmesserbemaßungstypen löschen</RemoveAllDiameterDimensionTypes>
+    <RemoveAllRadialDimensionTypes>Alle Radialbemaßungstypen löschen</RemoveAllRadialDimensionTypes>
+    <RemoveAllAngularDimensionTypes>Alle Winkelbemaßungstypen löschen</RemoveAllAngularDimensionTypes>
+    <RemoveAllLinearDimensionTypes>Alle Linienbemaßungstypen löschen</RemoveAllLinearDimensionTypes>
+    <RemoveAllModelTextTypes>Alle Modelltexttypen löschen</RemoveAllModelTextTypes>
+    <RemoveAllTextNoteTypes>Alle Textnotiztypen löschen</RemoveAllTextNoteTypes>
+    <RemoveAllColorFillRegions>Alle Farbfüllbereiche löschen</RemoveAllColorFillRegions>
+    <RemoveAllColorSchemes>Alle Farbschemata löschen</RemoveAllColorSchemes>
+    <RemoveAllSectionMarkTypes>Alle Schnittmarkentypen löschen</RemoveAllSectionMarkTypes>
+    <RemoveAllElevationMarkTypes>Alle Ansichtsmarkentypen löschen</RemoveAllElevationMarkTypes>
+    <RemoveAllCalloutTagTypes>Alle Typen von Ausschnittsmarken löschen</RemoveAllCalloutTagTypes>
+    <RemoveAllTickMarkTypes>Alle Markierungstypen löschen</RemoveAllTickMarkTypes>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Plannummerierung"
@@ -1530,13 +1577,29 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <b3>Standardmäßiges Verhalten</b3>
     <b4>Ersetzen</b4>
     <b5>Fragen</b5>
+    <elementGetError>Beim Abrufen eines Elements ist ein Fehler aufgetreten. Id: "{0}". Fehler: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
     <m1>{0} - FEHLER! Beim Abrufen eines Elements ist ein Fehler aufgetreten. Id: "{1}". Fehler: "{2}".</m1>
+    <startCollectingElements>Beginn des Vorgangs zu dem Zusammenbau von Modellelementen ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m2>{0} - Beginn des Vorgangs zu dem Zusammenbau von Modellelementen ({1}).</m2>
+    <completionCollectingElements>Ende des Vorgangs zu dem Zusammenbau von Modellelementen ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m3>{0} - Ende des Vorgangs zu dem Zusammenbau von Modellelementen ({1}).</m3>
+    <collectingElementsCriticalError>Kritischer Fehler bei dem Zusammenbau von Modellelementen ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
     <m4>{0} - FEHLER! Kritischer Fehler bei dem Zusammenbau von Modellelementen ({1}).</m4>
+    <startCopyingElements>Beginn des Kopierens von Elementen aus Dokument "{0}" in Dokumente "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m5>{0} - Beginn des Kopierens von Elementen aus Dokument "{1}" in Dokumente "{2}".</m5>
+    <completionCopyingElements>Ende des Kopierens von Elementen aus Dokument "{0}" in Dokumente "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m6>{0} - Ende des Kopierens von Elementen aus Dokument "{1}" in Dokumente "{2}".</m6>
+    <elementCopyError>Beim Kopieren des Elements "{0} (id: {1})" der Kategorie "{2}" ist ein Fehler aufgetreten: "{3}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
     <m7>{0} - FEHLER! Beim Kopieren des Elements "{1} (id: {2})" der Kategorie "{3}" ist ein Fehler aufgetreten: "{4}".</m7>
+    <worksharingDisabledWarning>In diesem Dokument ({0}) ist die gemeinsame Nutzung deaktiviert. Es gibt kein Kopieren der Bearbeitungsbereiche.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
     <m9>{0} - WARNUNG! In diesem Dokument ({1}) ist die gemeinsame Nutzung deaktiviert. Es gibt kein Kopieren der Bearbeitungsbereiche.</m9>
     <m10>Bearbeitungsbereiche</m10>
     <m11> (Typ)</m11>
@@ -1559,6 +1622,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <m28>Alle Gruppen</m28>
     <m29>Ansichten (Vorlagen)</m29>
     <m30>Das Kopieren ist abgeschlossen</m30>
+    <!--todo remove after 2.4.4.0-->
     <m32>Abbrechen</m32>
     <m33>Suchen</m33>
     <m34>Raumpläne</m34>
@@ -1587,11 +1651,17 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <m57>Typ</m57>
     <m58>Unbestimmt</m58>
     <m59>Kategorien</m59>
+    <startCollectingTypes>Beginn des Sammelvorganges der Typeneigenschaften des Modells ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m60>{0} - Beginn des Sammelvorganges der Typeneigenschaften des Modells ({1}).</m60>
+    <completionCollectingTypes>Ende des Sammelvorganges der Typeneigenschaften des Modells ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m61>{0} - Ende des Sammelvorganges der Typeneigenschaften des Modells ({1}).</m61>
     <m62>es gab eine kritische Revit-Warnung, die eine Bestätigung durch den Benutzer erforderte. Deaktivieren Sie die Warnunterdrückung und kopieren Sie erneut</m62>
     <m63>Gemeinsam genutzte Parameter</m63>
     <m64>Keine Kategorie</m64>
+    <elementCopySkipped>das Kopieren des Elements "{0} (id {1})" der Kategorie "{2}" fehlt.</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
     <m65>{0} - das Kopieren des Elements "{1} (id {2})" der Kategorie "{3}" fehlt.</m65>
     <m66>Das Zieldokument enthält bereits die Familie "{0}" mit dem Typ "{1}".{2}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m66>
     <m67>Globale Parameter</m67>
@@ -1600,6 +1670,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <m70>Projektparameter</m70>
     <m71>Das Zieldokument enthält bereits den Filter "{0}".{1}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m71>
     <m72>Das Zieldokument enthält bereits die Ansicht "{0}".{1}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m72>
+    <copyConduitStandardWithReplace>Im Zieldokument ist der Kanalstandard "{0}" bereits vorhanden.{1}Kopie mit Ersetzung ausführen?</copyConduitStandardWithReplace>
     <!--todo remove after 2.4.4.0-->
     <m73>Elemente kopiert:</m73>
     <!--todo remove after 2.4.4.0-->
@@ -1611,18 +1682,18 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <m78>Einstellungen für DWG/DXF-Export</m78>
     <m79>Einstellungen für DGN-Export</m79>
     <fillPatterns>Füllmuster</fillPatterns>
-    <startCollectingFamilies>{0} – Beginn des Vorgangs zum Sammeln von Modellfamilien ({1})</startCollectingFamilies>
-    <completionCollectingFamilies>{0} – Abschluss des Vorgangs zum Sammeln von Modellfamilien ({1})</completionCollectingFamilies>
+    <startCollectingFamilies>Beginn des Vorgangs zum Sammeln von Modellfamilien ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Abschluss des Vorgangs zum Sammeln von Modellfamilien ({0})</completionCollectingFamilies>
     <families>Familien</families>
-    <familyProcessError>{0} - FEHLER! Beim Verarbeiten der Familie "{1}" (ID: {2}) ist ein Fehler aufgetreten: "{3}"</familyProcessError>
+    <familyProcessError>Beim Verarbeiten der Familie "{0}" (ID: {1}) ist ein Fehler aufgetreten: "{2}"</familyProcessError>
     <familyExists>Im Zieldokument ist die Familie "{0}" bereits vorhanden.{1}Kopie ausführen?</familyExists>
-    <duplicateCreated>{0} - Es wurde ein Duplikat der Familie {3} erstellt</duplicateCreated>
+    <duplicateCreated>Es wurde ein Duplikat der Familie {0} erstellt</duplicateCreated>
     <elementTab>Elemente</elementTab>
     <modelElementTab>Modellelemente</modelElementTab>
     <selectedInModel>Im Modell ausgewählt</selectedInModel>
     <selectFromLink>Aus Verknüpfung auswählen</selectFromLink>
     <selectElementsFrom>Wählen Sie Elemente aus {0}</selectElementsFrom>
-    <copyResultMessage>{0} - Kopieren abgeschlossen. Kopiert: {1}, Übersprungen: {2}, Mit Fehlern: {3}</copyResultMessage>
+    <copyResultMessage>Kopieren abgeschlossen. Kopiert: {0}, Übersprungen: {1}, Mit Fehlern: {2}</copyResultMessage>
     <messageInvalidActiveDocument>Das aktive Dokument stimmt nicht mit der ausgewählten Quelle überein</messageInvalidActiveDocument>
     <notSelectedElements>Im Modell ist kein Element ausgewählt</notSelectedElements>
     <selectElementsFromLink>Wählen Sie Elemente aus der verknüpften Datei</selectElementsFromLink>
@@ -2225,6 +2296,8 @@ Wählen Sie eine andere Ausgangsansicht</h9>
 Sperre aufhebben?</h12>
     <h13>{0} Ansichten sind gesperrt.
 Sperre aufhebben?</h13>
+    <h14>Nur Höhe kopieren</h14>
+    <h15>Beim Kopieren eines Ansichtsausschnitts wird nur die Ausschnitthöhe kopiert die Breite bleibt unverändert</h15>
   </mprCopyCropBox>
   <mprBaseLevel
     LocalName="Grundebene"

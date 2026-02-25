@@ -48,7 +48,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
             if (_selectedNode == value)
                 return;
             _selectedNode = value;
-            value?.Validate();
+            value?.ValidateItems();
             OnPropertyChanged();
             OnPropertyChanged(nameof(IsVisibleSelectedNodeContent));
 
@@ -109,7 +109,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     /// </summary>
     public ICommand AddRowAboveCommand => new RelayCommand(() => Utils.SafeExecute(() =>
     {
-        var dataGrid = GetSelectedTabDataGrid();
+        var dataGrid = GetSelectedTabDataGridWithItems();
         if (dataGrid.SelectedItem != null)
         {
             var index = dataGrid.Items.IndexOf(dataGrid.SelectedItem);
@@ -126,7 +126,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     /// </summary>
     public ICommand AddRowBelowCommand => new RelayCommand(() => Utils.SafeExecute(() =>
     {
-        var dataGrid = GetSelectedTabDataGrid();
+        var dataGrid = GetSelectedTabDataGridWithItems();
         if (dataGrid.SelectedItem != null)
         {
             var index = dataGrid.Items.IndexOf(dataGrid.SelectedItem) + 1;
@@ -190,7 +190,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         if (resultRows.Count == 0)
             return;
 
-        var dataGrid = GetSelectedTabDataGrid();
+        var dataGrid = GetSelectedTabDataGridWithItems();
 
         if (dataGrid.SelectedItem != null)
         {
@@ -242,7 +242,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         if (sortedRows.Count == 0)
             return;
 
-        var dataGrid = GetSelectedTabDataGrid();
+        var dataGrid = GetSelectedTabDataGridWithItems();
 
         foreach (var key in sortedRows.Keys)
         {
@@ -275,11 +275,11 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     public ICommand CopyToClipboardCommand => new RelayCommand(() => Utils.SafeExecute(
         () =>
         {
-            var item = (Item)GetSelectedTabDataGrid().SelectedItem;
+            var item = (Item)GetSelectedTabDataGridWithItems().SelectedItem;
             var data = $"LANG_{item.Name}|{string.Join("|", item.Values.Select(v => $"{v.Key}${v.Value.Value}"))}";
             Clipboard.Clear();
             Utils.CopyToClipboard(data);
-        }), _ => SelectedNode != null && GetSelectedTabDataGrid().SelectedItem != null);
+        }), _ => SelectedNode != null && GetSelectedTabDataGridWithItems().SelectedItem != null);
 
     /// <summary>
     /// Paste from clipboard
@@ -288,7 +288,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         () =>
         {
             Item targetItem;
-            if (GetSelectedTabDataGrid().SelectedItem is Item selectedItem)
+            if (GetSelectedTabDataGridWithItems().SelectedItem is Item selectedItem)
             {
                 targetItem = selectedItem;
             }
@@ -315,7 +315,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     public ICommand RemoveItemCommand => new RelayCommand(
         () => Utils.SafeExecute(() =>
         {
-            var item = (Item)GetSelectedTabDataGrid().SelectedItem;
+            var item = (Item)GetSelectedTabDataGridWithItems().SelectedItem;
             if (!string.IsNullOrEmpty(item.Comment))
             {
                 MessageBox.Show("Позиции, отмеченные комментарием, удалять нельзя!");
@@ -339,7 +339,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
             items.Add(item.Name);
             SelectedNode.Items.Remove(item);
         }),
-        _ => SelectedNode != null && GetSelectedTabDataGrid().SelectedItem != null);
+        _ => SelectedNode != null && GetSelectedTabDataGridWithItems().SelectedItem != null);
 
     /// <summary>
     /// Mark item for deletion with comment
@@ -347,7 +347,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
     public ICommand MarkForDeletionCommand => new RelayCommand(
         () => Utils.SafeExecute(() =>
     {
-        var item = (Item)GetSelectedTabDataGrid().SelectedItem;
+        var item = (Item)GetSelectedTabDataGridWithItems().SelectedItem;
         var version = string.Empty;
 
         var match = Regex.Match(item.Comment ?? string.Empty, "\\b\\d+\\.\\d+\\.\\d+\\.\\d+\\b");
@@ -368,9 +368,9 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
         item.Comment = $"todo remove after {win.TbVersion.Text}";
 
-        SelectedNode.Validate();
+        SelectedNode.ValidateItems();
 
-    }), _ => SelectedNode != null && GetSelectedTabDataGrid().SelectedItem != null);
+    }), _ => SelectedNode != null && GetSelectedTabDataGridWithItems().SelectedItem != null);
 
     public void Load() => Utils.SafeExecute(() =>
     {
@@ -392,13 +392,25 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                         nodes[xNode.Name.LocalName] = node;
                     }
 
-                    foreach (var xItem in xNode.Elements())
+                    foreach (var xAttribute in xNode.Attributes())
                     {
-                        var item = node.Items.FirstOrDefault(i => i.Name == xItem.Name.LocalName);
+                        var item = node.Attributes.FirstOrDefault(i => i.Name == xAttribute.Name.LocalName);
                         if (item == null)
                         {
-                            item = new Item { Name = xItem.Name.LocalName };
-                            if (xItem.PreviousNode is XComment xComment)
+                            item = new Item { Name = xAttribute.Name.LocalName };
+                            node.Attributes.Add(item);
+                        }
+
+                        item.Add(languageName, new ItemValue { Value = xAttribute.Value });
+                    }
+
+                    foreach (var xElement in xNode.Elements())
+                    {
+                        var item = node.Items.FirstOrDefault(i => i.Name == xElement.Name.LocalName);
+                        if (item == null)
+                        {
+                            item = new Item { Name = xElement.Name.LocalName };
+                            if (xElement.PreviousNode is XComment xComment)
                             {
                                 item.Comment = xComment.Value;
                             }
@@ -406,7 +418,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                             node.Items.Add(item);
                         }
 
-                        item.Add(languageName, new ItemValue { Value = xItem.Value });
+                        item.Add(languageName, new ItemValue { Value = xElement.Value });
                     }
                 }
             }
@@ -414,11 +426,22 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
         foreach (var node in nodes.Select(p => p.Value))
         {
+            foreach (var nodeAttribute in node.Attributes)
+            {
+                if (nodeAttribute.Values.Count != LanguageOrder.Count)
+                {
+                    MessageBox.Show($"Wrong count of attributes with key {nodeAttribute.Name} in node {node.Name}. Fix it in files and restart program");
+                    CloseWithoutSave = true;
+                    mainWindow.Close();
+                    return;
+                }
+            }
+
             foreach (var nodeItem in node.Items)
             {
                 if (nodeItem.Values.Count != LanguageOrder.Count)
                 {
-                    MessageBox.Show($"Wrong count of values with key {nodeItem.Name} in node {node.Name}. Fix it in files and restart program");
+                    MessageBox.Show($"Wrong count of items with key {nodeItem.Name} in node {node.Name}. Fix it in files and restart program");
                     CloseWithoutSave = true;
                     mainWindow.Close();
                     return;
@@ -466,37 +489,45 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
                         }
                     }
 
+                    foreach (var item in node.Attributes)
+                    {
+                        if (item.HasIncorrectData)
+                            continue;
+
+                        xNode.SetAttributeValue(item.Name, item.Values[languageName].Value);
+                    }
+
                     XElement previousXItem = null;
                     foreach (var item in node.Items)
                     {
                         if (item.HasIncorrectData)
                             continue;
 
-                        var xItem = xNode.Element(item.Name);
-                        if (xItem == null)
+                        var xElement = xNode.Element(item.Name);
+                        if (xElement == null)
                         {
-                            xItem = new XElement(item.Name);
+                            xElement = new XElement(item.Name);
                             if (previousXItem == null)
-                                xNode.AddFirst(xItem);
+                                xNode.AddFirst(xElement);
                             else
-                                previousXItem.AddAfterSelf(xItem);
+                                previousXItem.AddAfterSelf(xElement);
                             save = true;
                         }
 
-                        previousXItem = xItem;
+                        previousXItem = xElement;
 
-                        if (xItem.Value != item.Values[languageName].Value)
+                        if (xElement.Value != item.Values[languageName].Value)
                         {
-                            xItem.SetValue(item.Values[languageName].Value);
+                            xElement.SetValue(item.Values[languageName].Value);
                             save = true;
                         }
 
                         if (!string.IsNullOrEmpty(item.Comment))
                         {
-                            if (xItem.PreviousNode is XComment xComment)
+                            if (xElement.PreviousNode is XComment xComment)
                                 xComment.Value = item.Comment;
                             else
-                                xItem.AddBeforeSelf(new XComment(item.Comment));
+                                xElement.AddBeforeSelf(new XComment(item.Comment));
 
                             save = true;
                         }
@@ -626,7 +657,6 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
 
     private static string GetNewItemName([CanBeNull] Item previousItem)
     {
-
         if (previousItem is null)
             return string.Empty;
         return GetNewItemName(previousItem.Name);
@@ -639,7 +669,7 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         return Regex.Replace(previousItemName, "\\d+$", match => (int.Parse(match.Value) + 1).ToString());
     }
 
-    private DataGrid GetSelectedTabDataGrid()
+    private DataGrid GetSelectedTabDataGridWithItems()
     {
         var selectedNode = SelectedNode;
         if (selectedNode == null)
@@ -655,10 +685,11 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         if (presenter == null)
             return null;
 
-        var grid = FindVisualChild<DataGrid>(presenter);
+        var grid = FindVisualChildren<DataGrid>(presenter).FirstOrDefault(dg => dg.Name == "DataGridItems");
         if (grid != null)
         {
             _gridCache[selectedNode] = new WeakReference<DataGrid>(grid);
+            
             // подписываемся, чтобы удалить из кэша при выгрузке
             grid.Unloaded += (s, _) => _gridCache.Remove(selectedNode);
         }
@@ -687,10 +718,10 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
         return null;
     }
 
-    private static T FindVisualChild<T>(DependencyObject parent) where T : DependencyObject
+    private static IEnumerable<T> FindVisualChildren<T>(DependencyObject parent) where T : DependencyObject
     {
         if (parent == null)
-            return null;
+            yield break;
 
         int count = VisualTreeHelper.GetChildrenCount(parent);
         for (int i = 0; i < count; i++)
@@ -698,13 +729,12 @@ internal partial class MainContext(MainWindow mainWindow) : ObservableObject
             var child = VisualTreeHelper.GetChild(parent, i);
 
             if (child is T tChild)
-                return tChild;
+                yield return tChild;
 
-            var result = FindVisualChild<T>(child);
-            if (result != null)
-                return result;
+            foreach (var visualChild in FindVisualChildren<T>(child))
+            {
+                yield return visualChild;
+            }
         }
-
-        return null;
     }
 }

@@ -91,8 +91,22 @@
     <h84>Ajustes de duplicación de texto</h84>
     <h85>Buscar y reemplazar en texto</h85>
     <h86>Buscar y reemplazar en parámetro</h86>
-    <h87>Intentar encontrar la numeración existente</h87>
+    <h87>Intentar continuar la numeración existente</h87>
     <h88>Usar configuración común de numeración</h88>
+    <h89>Crear copias de planos para niveles superiores</h89>
+    <h90>No se encontraron niveles superiores al intentar copiar vistas</h90>
+    <h91>Cambiar colección para duplicados</h91>
+    <h92>Distribuir en colecciones</h92>
+    <h93>Colocar en una colección</h93>
+    <h94>Buscar y reemplazar en el nombre de la colección</h94>
+    <h95>Nombre de la colección</h95>
+    <h96>Nueva colección de hojas</h96>
+    <h97>Borrar valores del parámetro</h97>
+    <h98>Abrir hojas duplicadas</h98>
+    <h99>Incrementar valor en filtros</h99>
+    <h100>(si existe)</h100>
+    <h101>Especifique el prefijo y sufijo del valor del filtro que se incrementará. Ejemplo: valor = "KN1", prefijo = "KN", resultado: "KN2", KN3, "KN4", etc.</h101>
+    <h102>Contador</h102>
     <start>Al principio</start>
     <notOrganized>!No organizado</notOrganized>
     <end>Al final</end>
@@ -171,7 +185,7 @@
     <h92>Crear copias de planos para niveles superiores</h92>
     <h93>Contador</h93>
     <h94>La cantidad de niveles superiores para la vista "{0}" es menor que la cantidad de copias de vista a crear. Copias de vista creadas: {1}</h94>
-    <h95>Intentar encontrar la numeración existente</h95>
+    <h95>Intentar continuar la numeración existente</h95>
     <notOrganized>!No organizado</notOrganized>
     <start>Al principio</start>
     <end>Al final</end>
@@ -789,6 +803,10 @@
     <d7>De arriba a abajo y de derecha a izquierda</d7>
     <d8>De abajo hacia arriba y de izquierda a derecha</d8>
     <d9>De abajo hacia arriba y de derecha a izquierda</d9>
+    <d10>De izquierda a derecha</d10>
+    <d11>De derecha a izquierda</d11>
+    <d12>De arriba hacia abajo</d12>
+    <d13>De abajo hacia arriba</d13>
     <r1>No se especifica ningún valor inicial</r1>
     <r2>No se han seleccionado elementos para su procesamiento</r2>
     <r3>Alfabeto personalizado vacío</r3>
@@ -976,6 +994,35 @@
     <m4>Leer familia</m4>
     <m5>Buscar en tabla de planificacións</m5>
     <m6>¡Tablas de búsqueda consulta incluyen tablas utilizadas en familia actual! ¿Estás seguro de que desea eliminar?</m6>
+    <wipeOptionResultSuccess>{0}: eliminado correctamente {1}</wipeOptionResultSuccess>
+    <wipeOptionResultPartialSummary>{0}: se eliminó correctamente {1}, no se pudo eliminar {2}</wipeOptionResultPartialSummary>
+    <wipeOptionResultPartialDetails>IDs de los elementos no eliminados durante la limpieza</wipeOptionResultPartialDetails>
+    <wipeOptionResultEmpty>{0}: no se encontraron elementos para limpiar</wipeOptionResultEmpty>
+    <defaultTypeMessage>Tipo predeterminado asignado: {0}</defaultTypeMessage>
+    <reassignedInstancesMessage>Ejemplares reasignados al tipo predeterminado: {0}</reassignedInstancesMessage>
+    <reassignedTypeParametersMessage>Referencias en los parámetros de tipo reasignadas: {0}</reassignedTypeParametersMessage>
+    <RemoveAllScheduleTypes>Eliminar todos los tipos de planificación</RemoveAllScheduleTypes>
+    <RemoveAllLegendViewTypes>Eliminar todos los tipos de vista de leyenda</RemoveAllLegendViewTypes>
+    <RemoveAllDraftingViewTypes>Eliminar todos los tipos de vista de detalle</RemoveAllDraftingViewTypes>
+    <RemoveAllElevationViewTypes>Eliminar todos los tipos de vista de alzado</RemoveAllElevationViewTypes>
+    <RemoveAllFloorPlanTypes>Eliminar todos los tipos de plano de planta</RemoveAllFloorPlanTypes>
+    <RemoveAllSectionViewTypes>Eliminar todos los tipos de vista de sección</RemoveAllSectionViewTypes>
+    <RemoveAll3DViewTypes>Eliminar todos los tipos de vista 3D</RemoveAll3DViewTypes>
+    <RemoveAllSpotSlopeTypes>Eliminar todos los tipos de pendiente puntual</RemoveAllSpotSlopeTypes>
+    <RemoveAllSpotCoordinateTypes>Eliminar todos los tipos de coordenadas puntuales</RemoveAllSpotCoordinateTypes>
+    <RemoveAllSpotElevationTypes>Eliminar todos los tipos de cota de elevación puntual</RemoveAllSpotElevationTypes>
+    <RemoveAllDiameterDimensionTypes>Eliminar todos los tipos de cotas de diámetro</RemoveAllDiameterDimensionTypes>
+    <RemoveAllRadialDimensionTypes>Eliminar todos los tipos de cotas radiales</RemoveAllRadialDimensionTypes>
+    <RemoveAllAngularDimensionTypes>Eliminar todos los tipos de cotas angulares</RemoveAllAngularDimensionTypes>
+    <RemoveAllLinearDimensionTypes>Eliminar todos los tipos de cotas lineales</RemoveAllLinearDimensionTypes>
+    <RemoveAllModelTextTypes>Eliminar todos los tipos de texto de modelo</RemoveAllModelTextTypes>
+    <RemoveAllTextNoteTypes>Eliminar todos los tipos de notas de texto</RemoveAllTextNoteTypes>
+    <RemoveAllColorFillRegions>Eliminar todas las regiones de relleno de color</RemoveAllColorFillRegions>
+    <RemoveAllColorSchemes>Eliminar todos los esquemas de color</RemoveAllColorSchemes>
+    <RemoveAllSectionMarkTypes>Eliminar todos los tipos de marcas de sección</RemoveAllSectionMarkTypes>
+    <RemoveAllElevationMarkTypes>Eliminar todos los tipos de marcas de alzado</RemoveAllElevationMarkTypes>
+    <RemoveAllCalloutTagTypes>Eliminar todos los tipos de etiquetas de detalle</RemoveAllCalloutTagTypes>
+    <RemoveAllTickMarkTypes>Eliminar todos los tipos de marcas</RemoveAllTickMarkTypes>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Numerador de planos"
@@ -1530,13 +1577,29 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <b3>Comportamiento predeterminado</b3>
     <b4>Reemplazar</b4>
     <b5>Preguntar</b5>
+    <elementGetError>¡ERROR! Se ha producido un error al recibir artículo. Id: "{0}". Error: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
     <m1>{0} – ¡ERROR! Se ha producido un error al recibir artículo. Id: "{1}". Error: "{2}".</m1>
+    <startCollectingElements>Iniciar ensamblaje de elementos del modelo ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m2>{0} – Iniciar ensamblaje de elementos del modelo ({1}).</m2>
+    <completionCollectingElements>Finalizar ensamblaje de elementos del modelo ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m3>{0} – Finalizar ensamblaje de elementos del modelo ({1}).</m3>
+    <collectingElementsCriticalError>¡ERROR! Error crítico durante ensamblaje de elementos del modelo ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
     <m4>{0} – ¡ERROR! Error crítico durante ensamblaje de elementos del modelo ({1}).</m4>
+    <startCopyingElements>Inicio de copiar elementos de documento "{0}" a documentos "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m5>{0} – Inicio de copiar elementos de documento "{1}" a documentos "{2}".</m5>
+    <completionCopyingElements>Finalización de copiar elementos de documento "{0}" a documentos "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m6>{0} – Finalización de copiar elementos de documento "{1}" a documentos "{2}".</m6>
+    <elementCopyError>¡ERROR! Se ha producido un error al copiar elemento "{0} (id: {1})" de categoría "{2}": "{3}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
     <m7>{0} – ¡ERROR! Se ha producido un error al copiar elemento "{1} (id: {2})" de categoría "{3}": "{4}".</m7>
+    <worksharingDisabledWarning>¡ADVERTENCIA! Este documento ({0}) ha sido desactivado para acceso público. Conjuntos de trabajo no se copian.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
     <m9>{0} – ¡ADVERTENCIA! Este documento ({1}) ha sido desactivado para acceso público. Conjuntos de trabajo no se copian.</m9>
     <m10>Conjuntos de trabajo</m10>
     <m11> (Tipo)</m11>
@@ -1559,6 +1622,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <m28>Todos grupos</m28>
     <m29>Vistas (plantillas)</m29>
     <m30>Copia completa</m30>
+    <!--todo remove after 2.4.4.0-->
     <m32>Cancelar</m32>
     <m33>Buscar</m33>
     <m34>Planos de área</m34>
@@ -1587,11 +1651,17 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <m57>Recorrido</m57>
     <m58>Incierto</m58>
     <m59>Categorías</m59>
+    <startCollectingTypes>Iniciar ensamblaje de tipos de modelo ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m60>{0} – Iniciar ensamblaje de tipos de modelo ({1}).</m60>
+    <completionCollectingTypes>Finalizar ensamblaje de tipos de modelo ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m61>{0} – Finalizar ensamblaje de tipos de modelo ({1}).</m61>
     <m62>Se produjo una alerta crítica de Revit que requirió confirmación por parte del usuario. Desactive supresión de advertencias e intente copiar nuevamente</m62>
     <m63>Parámetros compartidos</m63>
     <m64>Sin categoría</m64>
+    <elementCopySkipped>Se omitió copiar elemento "{0} (id {1})" de categoría "{2}".</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
     <m65>{0} – Se omitió copiar elemento "{1} (id {2})" de categoría "{3}".</m65>
     <m66>Documento objetivo ya tiene familia "{0}" con tipo "{1}".{2} ¿Copiar y reemplazar?</m66>
     <m67>Parámetros globales</m67>
@@ -1600,6 +1670,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <m70>Parámetros de proyecto</m70>
     <m71>Documento objetivo ya tiene filtro "{0}".{1} ¿Copiar y reemplazar?</m71>
     <m72>Documento objetivo ya tiene vista "{0}".{1} ¿Copiar y reemplazar?</m72>
+    <copyConduitStandardWithReplace>El documento de destino ya contiene el estándar de conductos "{0}".{1}¿Desea realizar la copia con reemplazo?</copyConduitStandardWithReplace>
     <!--todo remove after 2.4.4.0-->
     <m73>Elementos copiados:</m73>
     <!--todo remove after 2.4.4.0-->
@@ -1611,18 +1682,18 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <m78>Parámetros de exportación DWG/DXF</m78>
     <m79>Parámetros de exportación DGN</m79>
     <fillPatterns>Patrones de relleno</fillPatterns>
-    <startCollectingFamilies>{0} – Inicio de la operación de recopilación de familias del modelo ({1})</startCollectingFamilies>
-    <completionCollectingFamilies>{0} – Finalización de la operación de recopilación de familias del modelo ({1})</completionCollectingFamilies>
+    <startCollectingFamilies>Inicio de la operación de recopilación de familias del modelo ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Finalización de la operación de recopilación de familias del modelo ({0})</completionCollectingFamilies>
     <families>Familias</families>
-    <familyProcessError>{0} - ¡ERROR! Se produjo un error al procesar la familia "{1}" (id: {2}): "{3}"</familyProcessError>
+    <familyProcessError>Se produjo un error al procesar la familia "{0}" (id: {1}): "{2}"</familyProcessError>
     <familyExists>El documento de destino ya contiene la familia "{0}".{1}¿Desea realizar la copia?</familyExists>
-    <duplicateCreated>{0} - Se ha creado un duplicado de la familia {3}</duplicateCreated>
+    <duplicateCreated>Se ha creado un duplicado de la familia {0}</duplicateCreated>
     <elementTab>Elementos</elementTab>
     <modelElementTab>Elementos del modelo</modelElementTab>
     <selectedInModel>Seleccionados en el modelo</selectedInModel>
     <selectFromLink>Seleccionar desde el vínculo</selectFromLink>
     <selectElementsFrom>Seleccione elementos de {0}</selectElementsFrom>
-    <copyResultMessage>{0} - Copia completada. Copiados: {1}, Omitidos: {2}, Con errores: {3}</copyResultMessage>
+    <copyResultMessage>Copia completada. Copiados: {0}, Omitidos: {1}, Con errores: {2}</copyResultMessage>
     <messageInvalidActiveDocument>El documento activo no coincide con la fuente seleccionada</messageInvalidActiveDocument>
     <notSelectedElements>No hay ningún elemento seleccionado en el modelo</notSelectedElements>
     <selectElementsFromLink>Seleccione elementos del archivo vinculado</selectElementsFromLink>
@@ -2225,6 +2296,8 @@ Seleccione otra vista de origen</h9>
 ¿Desbloquear?</h12>
     <h13>{0} vistas están bloqueadas  
 ¿Desbloquear?</h13>
+    <h14>Copiar solo la altura</h14>
+    <h15>Al copiar el recorte de una vista solo se copiará la altura del recorte el ancho permanecerá sin cambios</h15>
   </mprCopyCropBox>
   <mprBaseLevel
     LocalName="Nivel de referencia"

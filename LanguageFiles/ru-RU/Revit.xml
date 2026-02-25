@@ -91,8 +91,22 @@
     <h84>Настройки дублирования текста</h84>
     <h85>В тексте найти и заменить</h85>
     <h86>В параметре найти и заменить</h86>
-    <h87>Попробовать найти существующую нумерацию</h87>
+    <h87>Попробовать продолжить существующую нумерацию</h87>
     <h88>Использовать общие настройки нумерации</h88>
+    <h89>Создавать копии планов для вышележащих уровней</h89>
+    <h90>При попытке копирования видов не найдено вышележащих уровней</h90>
+    <h91>Изменить коллекцию для дубликатов</h91>
+    <h92>Распределить по коллекциям</h92>
+    <h93>Поместить в одну коллекцию</h93>
+    <h94>В имени коллекции найти и заменить</h94>
+    <h95>Имя коллекции</h95>
+    <h96>Новая коллекция листов</h96>
+    <h97>Очистить значения параметра</h97>
+    <h98>Открыть дублированные листы</h98>
+    <h99>В фильтрах инкрементировать значение</h99>
+    <h100>(при наличии)</h100>
+    <h101>Задайте префикс и суффикс значения фильтра, которое требуется увеличивать. Пример: значение = "КН1", префикс = "КН", результат: "КН2", КН3, "КН4" и т.д.</h101>
+    <h102>Счетчик</h102>
     <start>Начале</start>
     <notOrganized>!Не организованы</notOrganized>
     <end>Конце</end>
@@ -171,7 +185,7 @@
     <h92>Создавать копии планов для вышележащих уровней</h92>
     <h93>Счетчик</h93>
     <h94>Количество вышележащих уровней для вида "{0}" меньше, чем требуется создать копий вида. Копий вида создано: {1}</h94>
-    <h95>Попробовать найти существующую нумерацию</h95>
+    <h95>Попробовать продолжить существующую нумерацию</h95>
     <notOrganized>!Не организованы</notOrganized>
     <start>Начале</start>
     <end>Конце</end>
@@ -789,6 +803,10 @@
     <d7>Сверху вниз и справа налево</d7>
     <d8>Снизу вверх и слева направо</d8>
     <d9>Снизу вверх и справа налево</d9>
+    <d10>Слева направо</d10>
+    <d11>Справа налево</d11>
+    <d12>Сверху вниз</d12>
+    <d13>Снизу вверх</d13>
     <r1>Не задано начальное значение</r1>
     <r2>Не выбраны элементы для обработки</r2>
     <r3>Пустой пользовательский алфавит</r3>
@@ -976,6 +994,35 @@
     <m4>Чтение семейства</m4>
     <m5>Поиск в спецификациях</m5>
     <m6>Среди выбранных таблиц поиска имеются таблицы, используемые в текущем семействе! Вы уверены, что хотите их удалить?</m6>
+    <wipeOptionResultSuccess>{0} : успешно удалено {1}</wipeOptionResultSuccess>
+    <wipeOptionResultPartialSummary>{0} : успешно удалено {1}, не удалось удалить {2}</wipeOptionResultPartialSummary>
+    <wipeOptionResultPartialDetails>ID элементов, не удалённых в ходе очистки</wipeOptionResultPartialDetails>
+    <wipeOptionResultEmpty>{0} : элементы для очистки не найдены</wipeOptionResultEmpty>
+    <defaultTypeMessage>Определён тип по умолчанию: {0}</defaultTypeMessage>
+    <reassignedInstancesMessage>Экземпляров переведено на тип по умолчанию: {0}</reassignedInstancesMessage>
+    <reassignedTypeParametersMessage>Переназначены ссылки в параметрах типов: {0}</reassignedTypeParametersMessage>
+    <RemoveAllScheduleTypes>Удалить все типы спецификаций</RemoveAllScheduleTypes>
+    <RemoveAllLegendViewTypes>Удалить все типы легенд</RemoveAllLegendViewTypes>
+    <RemoveAllDraftingViewTypes>Удалить все типы чертёжных видов</RemoveAllDraftingViewTypes>
+    <RemoveAllElevationViewTypes>Удалить все типы фасадов</RemoveAllElevationViewTypes>
+    <RemoveAllFloorPlanTypes>Удалить все типы планов этажа</RemoveAllFloorPlanTypes>
+    <RemoveAllSectionViewTypes>Удалить все типы разрезов</RemoveAllSectionViewTypes>
+    <RemoveAll3DViewTypes>Удалить все типы 3D видов</RemoveAll3DViewTypes>
+    <RemoveAllSpotSlopeTypes>Удалить все типы уклонов в точках</RemoveAllSpotSlopeTypes>
+    <RemoveAllSpotCoordinateTypes>Удалить все типы координат точек</RemoveAllSpotCoordinateTypes>
+    <RemoveAllSpotElevationTypes>Удалить все типы высотных отметок</RemoveAllSpotElevationTypes>
+    <RemoveAllDiameterDimensionTypes>Удалить все типы диаметра</RemoveAllDiameterDimensionTypes>
+    <RemoveAllRadialDimensionTypes>Удалить все типы радиальных размеров</RemoveAllRadialDimensionTypes>
+    <RemoveAllAngularDimensionTypes>Удалить все типы угловых размеров</RemoveAllAngularDimensionTypes>
+    <RemoveAllLinearDimensionTypes>Удалить все типы линейных размеров</RemoveAllLinearDimensionTypes>
+    <RemoveAllModelTextTypes>Удалить все типы текста модели</RemoveAllModelTextTypes>
+    <RemoveAllTextNoteTypes>Удалить все типы текстовых примечаний</RemoveAllTextNoteTypes>
+    <RemoveAllColorFillRegions>Удалить все цветовые области</RemoveAllColorFillRegions>
+    <RemoveAllColorSchemes>Удалить все цветовые схемы</RemoveAllColorSchemes>
+    <RemoveAllSectionMarkTypes>Удалить все типы марок разрезов</RemoveAllSectionMarkTypes>
+    <RemoveAllElevationMarkTypes>Удалить все типы марок фасадов</RemoveAllElevationMarkTypes>
+    <RemoveAllCalloutTagTypes>Удалить все типы марок фрагментов</RemoveAllCalloutTagTypes>
+    <RemoveAllTickMarkTypes>Удалить все типы засечек</RemoveAllTickMarkTypes>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Нумератор листов"
@@ -1103,11 +1150,11 @@
     <t11>Очистить выбор</t11>
   </mprFamilyDuplicateFixer>
   <mprFastViewCut
-    LocalName="Подрезка вида"
-    Description="Быстрое создание подрезки вида указанием прямоугольной области подрезки"
+    LocalName="Обрезка вида"
+    Description="Быстрое создание обрезки вида указанием прямоугольной области обрезки"
     LocalName1="Подрезка плана в 3D"
     Description1="Создание 3D вида с границей вида по прямоугольной области, указанной на плане">
-    <h5>Укажите прямоугольную область для создания границ подрезки</h5>
+    <h5>Укажите прямоугольную область для создания границ обрезки</h5>
     <h6>Не удалось получить валидную прямоугольную область. Попробуйте еще раз</h6>
   </mprFastViewCut>
   <mprCopySheetsToOpenDocuments
@@ -1530,13 +1577,29 @@
     <b3>Поведение по умолчанию</b3>
     <b4>Заменить</b4>
     <b5>Спросить</b5>
+    <elementGetError>В процессе получения элемента произошла ошибка. Id: "{0}". Ошибка: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
     <m1>{0} – ОШИБКА! В процессе получения элемента произошла ошибка. Id: "{1}". Ошибка: "{2}".</m1>
+    <startCollectingElements>Начало операции сбора элементов модели ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m2>{0} – Начало операции сбора элементов модели ({1}).</m2>
+    <completionCollectingElements>Завершение операции сбора элементов модели ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
     <m3>{0} – Завершение операции сбора элементов модели ({1}).</m3>
+    <collectingElementsCriticalError>Критическая ошибка в процессе операции сбора элементов модели ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
     <m4>{0} – ОШИБКА! Критическая ошибка в процессе операции сбора элементов модели ({1}).</m4>
+    <startCopyingElements>Начало копирования элементов из документа "{0}" в документы "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m5>{0} – Начало копирования элементов из документа "{1}" в документы "{2}".</m5>
+    <completionCopyingElements>Завершение копирования элементов из документа "{0}" в документы "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
     <m6>{0} – Завершение копирования элементов из документа "{1}" в документы "{2}".</m6>
+    <elementCopyError>В процессе копирования элемента "{0} (id: {1})" категории "{2}" произошла ошибка: "{3}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
     <m7>{0} – ОШИБКА! В процессе копирования элемента "{1} (id: {2})" категории "{3}" произошла ошибка: "{4}".</m7>
+    <worksharingDisabledWarning>В данном документе ({0}) отключен общий доступ. Копирование рабочих наборов не производится.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
     <m9>{0} – ПРЕДУПРЕЖДЕНИЕ! В данном документе ({1}) отключен общий доступ. Копирование рабочих наборов не производится.</m9>
     <m10>Рабочие наборы</m10>
     <m11> (Тип)</m11>
@@ -1559,6 +1622,7 @@
     <m28>Все группы</m28>
     <m29>Виды (шаблоны)</m29>
     <m30>Копирование завершено</m30>
+    <!--todo remove after 2.4.4.0-->
     <m32>Отмена</m32>
     <m33>Поиск</m33>
     <m34>Планы площадей</m34>
@@ -1587,11 +1651,17 @@
     <m57>Тур</m57>
     <m58>Неопределенный</m58>
     <m59>Категории</m59>
+    <startCollectingTypes>Начало операции сбора типоразмеров модели ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m60>{0} – Начало операции сбора типоразмеров модели ({1}).</m60>
+    <completionCollectingTypes>Завершение операции сбора типоразмеров модели ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
     <m61>{0} – Завершение операции сбора типоразмеров модели ({1}).</m61>
     <m62>имелось критическое предупреждение Revit, которое требовало подтверждения от пользователя. Отключите подавление предупреждений и повторите копирование</m62>
     <m63>Общие параметры</m63>
     <m64>Без категории</m64>
+    <elementCopySkipped>Копирование элемента "{0} (id {1})" категории "{2}" пропущено.</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
     <m65>{0} – Копирование элемента "{1} (id {2})" категории "{3}" пропущено.</m65>
     <m66>В целевом документе уже имеется семейство "{0}" с типоразмером "{1}".{2}Выполнить копирование с заменой?</m66>
     <m67>Глобальные параметры</m67>
@@ -1600,6 +1670,7 @@
     <m70>Параметры проекта</m70>
     <m71>В целевом документе уже имеется фильтр "{0}".{1}Выполнить копирование с заменой?</m71>
     <m72>В целевом документе уже имеется вид "{0}".{1}Выполнить копирование с заменой?</m72>
+    <copyConduitStandardWithReplace>В целевом документе уже имеется стандарт коробов"{0}".{1}Выполнить копирование с заменой?</copyConduitStandardWithReplace>
     <!--todo remove after 2.4.4.0-->
     <m73>Элементов скопировано:</m73>
     <!--todo remove after 2.4.4.0-->
@@ -1611,18 +1682,18 @@
     <m78>Параметры экспорта DWG/DXF</m78>
     <m79>Параметры экспорта DGN</m79>
     <fillPatterns>Штриховки</fillPatterns>
-    <startCollectingFamilies>{0} - Начало операции сбора семейств модели ({1})</startCollectingFamilies>
-    <completionCollectingFamilies>{0} – Завершение операции сбора семейств модели ({1})</completionCollectingFamilies>
+    <startCollectingFamilies>Начало операции сбора семейств модели ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Завершение операции сбора семейств модели ({0})</completionCollectingFamilies>
     <families>Семейства</families>
-    <familyProcessError>{0} - ОШИБКА! В процессе обработки семейства "{1}" (id: {2}) произошла ошибка: "{3}"</familyProcessError>
+    <familyProcessError>В процессе обработки семейства "{0}" (id: {1}) произошла ошибка: "{2}"</familyProcessError>
     <familyExists>В целевом документе уже имеется семейство "{0}".{1}Выполнить копирование?</familyExists>
-    <duplicateCreated>{0} - Был создан дубликат семейства {3}</duplicateCreated>
+    <duplicateCreated>Был создан дубликат семейства {0}</duplicateCreated>
     <elementTab>Элементы</elementTab>
     <modelElementTab>Элементы модели</modelElementTab>
     <selectedInModel>Выбранные в модели</selectedInModel>
     <selectFromLink>Выбрать из связи</selectFromLink>
     <selectElementsFrom>Выберите элементы из {0}</selectElementsFrom>
-    <copyResultMessage>{0} - Копирование завершено. Скопировано: {1}, Пропущено: {2}, С ошибками: {3}"</copyResultMessage>
+    <copyResultMessage>Копирование завершено. Скопировано: {0}, Пропущено: {1}, С ошибками: {2}"</copyResultMessage>
     <messageInvalidActiveDocument>Активный документ не совпадает с выбранным источником</messageInvalidActiveDocument>
     <notSelectedElements>В модели не выбрано ни одного элемента</notSelectedElements>
     <selectElementsFromLink>Выберите элементы из связанного файла</selectElementsFromLink>
@@ -2215,16 +2286,18 @@
     <notOrganized>!Не организованы</notOrganized>
     <h6>Виды в проекте</h6>
     <h7>Открытые виды</h7>
-    <h8>Копировать подрезку осей</h8>
+    <h8>Копировать обрезку осей</h8>
     <h9>К исходному виду применена область видимости. 
 Выберите другой исходный вид</h9>
-    <h10>При копировании подрезки осей область обрезки вида будет отключена, и все разрывы видов удалены</h10>
+    <h10>При копировании обрезки осей область обрезки вида будет отключена, и все разрывы видов удалены</h10>
     <h11>Выберите виды, в которые будет скопирована обрезка текущего вида</h11>
     <h12>Виды закреплены.
 {0}
 Открепить?</h12>
     <h13>{0} видов закреплены.
 Открепить?</h13>
+    <h14>Копировать только высоту</h14>
+    <h15>При копировании обрезки вида будет скопирована только высота подрезки, ширина останется без изменений</h15>
   </mprCopyCropBox>
   <mprBaseLevel
     LocalName="Базовый уровень"
