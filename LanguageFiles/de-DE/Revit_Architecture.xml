@@ -651,7 +651,9 @@
     LocalName="Raumausstattung"
     Description="Erstellung von Raumausstattungselementen"
     LocalName1="Raumoberflächen aktualisieren"
-    Description1="Aktualisierung der Ausbauelemente in Räumen">
+    Description1="Aktualisierung der Ausbauelemente in Räumen"
+    LocalName2="Verwaltung der Oberflächen"
+    Description2="Verwaltung von Ausbauelementen in Räumen">
     <t1>Filter der Räume:</t1>
     <t2>Geschossdecken</t2>
     <!--todo remove after 2.0.0-->
@@ -718,6 +720,24 @@
     <t62>Wählen Sie den Wand und Stützentyp</t62>
     <t63>Der entsprechende Typ wurde im Modell nicht gefunden. Diese Konfiguration kann nicht verarbeitet werden!</t63>
     <t64>Wählen Sie Räume aus</t64>
+    <t65>Wählen Sie Ausbauelemente aus um eine Zuordnung zum Raum zu erstellen</t65>
+    <t66>Wählen Sie Ausbauelemente aus um die Zuordnung zu entfernen</t66>
+    <t67>Der Wert des Quellparameters wird aus den Räumen ermittelt die mit Ausbauelementen verknüpft sind nach Typ gruppiert sortiert und durch Kommas getrennt in den Zielparameter jedes Ausbauelements des Raums geschrieben. Wenn beispielsweise Ausbauelemente desselben Typs zu Räumen mit den Quellparameterwerten "3" "1" und "5" gehören wird "1, 3, 5" in den angegebenen Zielparameter dieser Elemente geschrieben. Die Option "Bereiche bilden" fasst Zahlenfolgen mit einem Bindestrich zusammen zum Beispiel "3-5"</t67>
+    <t68>Wählen Sie einen Raumparameter</t68>
+    <t69>Wählen Sie einen Bodenparameter</t69>
+    <t70>Bereiche bilden</t70>
+    <t71>Wählen Sie einen Wandparameter</t71>
+    <t72>Wählen Sie einen Deckenparameter</t72>
+    <t73>Parameter sind nicht ausgefüllt</t73>
+    <t74>Parameter ausfüllen</t74>
+    <t76>Raumausbau auswählen</t76>
+    <t77>Wählt Ausbauelemente im Modell aus die dem Raum zugeordnet sind</t77>
+    <t78>Ausbau einem Raum zuordnen</t78>
+    <t79>Stellt eine Zuordnung zwischen Ausbauelementen und dem Raum her damit anschließend Parameter mit der Funktion "Parameter ausfüllen" gefüllt werden können und außerdem die Funktion "Raumausbau auswählen" verwendet werden kann</t79>
+    <t80>Zuordnung des Ausbaus zum Raum entfernen</t80>
+    <t81>Entfernt die Zuordnung zwischen Ausbauelementen und dem Raum damit das Ausbauelement nicht mehr dem ausgewählten Raum zugeordnet ist</t81>
+    <t82>Parameterfüllung</t82>
+    <t83>Raumausbau erstellen</t83>
     <l1>Kontur der Geschossdecke in Türöffnungen nicht hineinführen</l1>
     <l2>Kontur bis zur Mitte der Öffnung verlaufen</l2>
     <l3>Kontur auf die gesamte Stärke der Öffnung verlaufen</l3>
@@ -756,5 +776,9 @@
     <msg24>Geschossdecke entlang der Raumkontur konnte nicht aktualisiert werden</msg24>
     <msg25>Decke mit dem Typ "{0}" wurde entlang der Raumkontur aktualisiert</msg25>
     <msg26>Verbindung der Ausbauwand {0} mit der Basis {1} fehlgeschlagen</msg26>
+    <msg27>Der Zielparameter "{0}" ist kein Zeichenfolgenparameter</msg27>
+    <msg28>Parameter in den Elementen wurden erfolgreich ausgefüllt</msg28>
+    <msg29>Die Parameter enthalten bereits den erforderlichen Wert</msg29>
+    <msg30>Der Zielparameter "{0}" ist schreibgeschützt</msg30>
   </mprRoomFinishing>
 </ModPlus>

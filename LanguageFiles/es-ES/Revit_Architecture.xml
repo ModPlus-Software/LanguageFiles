@@ -651,7 +651,9 @@
     LocalName="Acabado de habitación"
     Description="Creación de elementos de acabado en habitaciones."
     LocalName1="Actualizar acabados de habitaciones"
-    Description1="Actualización de los elementos de acabado en habitaciones">
+    Description1="Actualización de los elementos de acabado en habitaciones"
+    LocalName2="Gestión de acabados"
+    Description2="Gestión de elementos de acabado en habitaciones">
     <t1>Filtro de habitación:</t1>
     <t2>Suelos</t2>
     <!--todo remove after 2.0.0-->
@@ -718,6 +720,24 @@
     <t62>Seleccione el tipo de muros y columnas</t62>
     <t63>No se encontró el tipo correspondiente en el modelo. ¡Procesamiento de configuración actual no es posible!</t63>
     <t64>Seleccionar habitaciones</t64>
+    <t65>Seleccione los elementos de acabado para crear un vínculo con la habitación</t65>
+    <t66>Seleccione los elementos de acabado para eliminar el vínculo</t66>
+    <t67>El valor del parámetro-origen se recopila de las habitaciones vinculadas con los elementos de acabado se agrupa por tipo se ordena y se escribe separado por comas en el parámetro de destino de cada elemento de acabado de la habitación. Por ejemplo si los elementos de acabado del mismo tipo pertenecen a habitaciones con valores del parámetro-origen "3" "1" y "5" entonces se escribirá "1, 3, 5" en el parámetro de destino indicado de esos elementos. La opción "Formar rangos" combina secuencias de números con un guion por ejemplo "3-5"</t67>
+    <t68>Seleccione un parámetro de habitación</t68>
+    <t69>Seleccione un parámetro de suelos</t69>
+    <t70>Formar rangos</t70>
+    <t71>Seleccione un parámetro de muros</t71>
+    <t72>Seleccione un parámetro de techos</t72>
+    <t73>Los parámetros no están rellenados</t73>
+    <t74>Rellenar parámetros</t74>
+    <t76>Seleccionar acabados de habitaciones</t76>
+    <t77>Selecciona los elementos de acabado del modelo vinculados con la habitación</t77>
+    <t78>Vincular acabados con una habitación</t78>
+    <t79>Establece un vínculo entre los elementos de acabado y la habitación para que posteriormente se puedan rellenar los parámetros mediante la función "Rellenar parámetros" y también se pueda utilizar la función "Seleccionar acabados de habitaciones"</t79>
+    <t80>Eliminar el vínculo entre los acabados y una habitación</t80>
+    <t81>Elimina el vínculo entre los elementos de acabado y la habitación para que el elemento de acabado ya no esté vinculado a la habitación seleccionada</t81>
+    <t82>Relleno de parámetros</t82>
+    <t83>Creación de acabados de habitaciones</t83>
     <l1>No extender el contorno del suelo en huecos de puertas</l1>
     <l2>Extender el contorno hasta la mitad del hueco</l2>
     <l3>Extender el contorno a todo el espesor del hueco</l3>
@@ -756,5 +776,9 @@
     <msg24>No se pudo actualizar el suelo según el contorno de la habitación</msg24>
     <msg25>El techo con el tipo "{0}" se ha actualizado según el contorno de la habitación</msg25>
     <msg26>No se pudo conectar el muro de acabado {0} con la base {1}</msg26>
+    <msg27>El parámetro de destino "{0}" no es un parámetro de texto</msg27>
+    <msg28>Los parámetros se han rellenado correctamente en los elementos</msg28>
+    <msg29>Los parámetros ya contienen el valor requerido</msg29>
+    <msg30>El parámetro de destino "{0}" es de solo lectura</msg30>
   </mprRoomFinishing>
 </ModPlus>
