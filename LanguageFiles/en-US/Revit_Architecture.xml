@@ -651,7 +651,9 @@
     LocalName="Room finishing"
     Description="Creation of finishing elements in the rooms"
     LocalName1="Update Room Finishes"
-    Description1="Update of finishing elements in rooms">
+    Description1="Update of finishing elements in rooms"
+    LocalName2="Finishing management"
+    Description2="Management of finishing elements in rooms">
     <t1>Rooms filter:</t1>
     <t2>Floors</t2>
     <!--todo remove after 2.0.0-->
@@ -718,6 +720,25 @@
     <t62>Select wall and column type</t62>
     <t63>Corresponding type is not found in the model. This configuration cannot be processed!</t63>
     <t64>Select rooms</t64>
+    <t65>Select finishing elements to link them to the room</t65>
+    <t66>Select finishing elements to remove their link to the room</t66>
+    <t67>The value of the source-parameter is collected from rooms linked to finishing elements grouped by type sorted and written comma-separated to the target parameter of each room finishing element. For example if finishing elements of the same type belong to rooms with source-parameter values "3" "1" and "5" then "1, 3, 5" will be written to the specified target parameter of these elements. The "Create ranges" option merges sequences of numbers with a hyphen for example "3-5"</t67>
+    <t68>Select a room parameter</t68>
+    <t69>Select a floor parameter</t69>
+    <t70>Create ranges</t70>
+    <t71>Select a wall parameter</t71>
+    <t72>Select a ceiling parameter</t72>
+    <t73>Parameters are not filled in</t73>
+    <t74>Fill parameters</t74>
+    <t75>Finishing management</t75>
+    <t76>Select room finishes</t76>
+    <t77>Selects finishing elements in the model linked to a room</t77>
+    <t78>Link finishes to a room</t78>
+    <t79>Establishes a link between finishing elements and the room so that parameters can later be filled using the "Fill parameters" function and the "Select finishes" function can also be used</t79>
+    <t80>Remove the link between finishes and a room</t80>
+    <t81>Removes the link between finishing elements and the room so that the finishing element is no longer associated with the selected room</t81>
+    <t82>Parameter filling</t82>
+    <t83>Room finish creation</t83>
     <l1>Do not extend the floor boundary into door openings</l1>
     <l2>Extend the boundary to the middle of the opening</l2>
     <l3>Extend the boundary to the full opening width</l3>
@@ -756,5 +777,9 @@
     <msg24>Failed to update floor along the room boundary</msg24>
     <msg25>Ceiling with type "{0}" has been updated along the room boundary</msg25>
     <msg26>Failed to connect finishing wall {0} with base {1}</msg26>
+    <msg27>The target parameter {0} is not a string</msg27>
+    <msg28>Parameters have been successfully filled in the elements</msg28>
+    <msg29>The parameters already contain the required value</msg29>
+    <msg30>The target parameter {0} is read-only</msg30>
   </mprRoomFinishing>
 </ModPlus>
