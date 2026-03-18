@@ -1210,6 +1210,7 @@
     <m2>Потрібно вибрати аркуші для копіювання!</m2>
     <m3>Потрібно вибрати цільові документи!</m3>
     <m4>Для копіювання легенд у цільовому документі "{0}" потрібно створити хоча б одну легенду</m4>
+    <m5>Продовжити копіювання аркушів для цього документу?</m5>
     <m6>Копіювання аркуша "{0}" у документ "{1}"</m6>
     <m7>Копіювання легенд з аркуша "{0}" у документ "{1}"</m7>
     <m8>Копіювання сіток напрямних з аркуша "{0}" в документ "{1}"</m8>
@@ -1229,20 +1230,15 @@
     FullDescription="Плагін дає змогу переглядати, фільтрувати, додавати, завантажувати, вивантажувати, перезавантажувати, видаляти зв'язки та переписувати шляхи до них у поточному документі Revit">
     <windowTitle>Менеджер зв'язків</windowTitle>
     <filtersGroupHeader>Фільтри</filtersGroupHeader>
-    <searchLabel>Пошук:</searchLabel>
-    <typeLabel>Тип:</typeLabel>
     <statusLabel>Стан:</statusLabel>
     <linksListGroupHeader>Список зв'язків</linksListGroupHeader>
     <columnSelectHeader>Вибір</columnSelectHeader>
-    <columnTypeHeader>Тип</columnTypeHeader>
     <columnNameHeader>Ім'я</columnNameHeader>
     <columnStatusHeader>Стан</columnStatusHeader>
-    <columnPathHeader>Шлях</columnPathHeader>
     <loadSettingsGroupHeader>Налаштування завантаження</loadSettingsGroupHeader>
     <positioningLabel>Позиціювання</positioningLabel>
     <onAddBehaviorLabel>Під час додавання</onAddBehaviorLabel>
     <commandsGroupHeader>Команди</commandsGroupHeader>
-    <addButton>Додати</addButton>
     <deleteSelectedButton>Видалити вибрані</deleteSelectedButton>
     <loadButton>Завантажити</loadButton>
     <unloadButton>Вивантажити</unloadButton>
@@ -1258,8 +1254,6 @@
     <originalPathColumnHeader>Початковий шлях</originalPathColumnHeader>
     <newPathColumnHeader>Новий шлях</newPathColumnHeader>
     <fileNotFoundTooltip>Файл не знайдено</fileNotFoundTooltip>
-    <okButton>ОК</okButton>
-    <cancelButton>Скасувати</cancelButton>
     <selectionSummaryFormat>Вибрано: {0} із {1}</selectionSummaryFormat>
     <tableHintText>Позначте зв'язки для виконання операцій</tableHintText>
     <readyStatusText>Готово до роботи</readyStatusText>
@@ -1298,12 +1292,6 @@
     <rewriteCompletedStatusFormat>Переписано: {0}, помилок: {1}</rewriteCompletedStatusFormat>
     <rewriteErrorLogFormat>Загальна помилка під час переписування шляхів: {0}</rewriteErrorLogFormat>
     <rewriteErrorStatusText>Помилка під час переписування шляхів</rewriteErrorStatusText>
-    <messageDialogTitle>Повідомлення</messageDialogTitle>
-    <questionDialogTitle>Питання</questionDialogTitle>
-    <linkTypeAll>Усі</linkTypeAll>
-    <linkTypeRevit>RVT</linkTypeRevit>
-    <linkTypeCad>DWG</linkTypeCad>
-    <linkStatusAll>Усі</linkStatusAll>
     <linkStatusLoaded>Завантажено</linkStatusLoaded>
     <linkStatusUnloaded>Вивантажено</linkStatusUnloaded>
     <linkStatusNotFound>Не знайдено</linkStatusNotFound>
@@ -1313,8 +1301,8 @@
     <onAddLoadImmediately>Одразу завантажити</onAddLoadImmediately>
     <onAddAddUnloaded>Додати вивантаженим</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Файл зв'язку не знайдено: {0}</handlerLinkFileNotFoundFormat>
-    <handlerUnsupportedLinkTypeFormat>Тип зв'язку '{0}' не підтримується</handlerUnsupportedLinkTypeFormat>
-    <handlerUnsupportedExtensionFormat>Розширення файлу '{0}' не підтримується</handlerUnsupportedExtensionFormat>
+    <handlerUnsupportedLinkTypeFormat>Тип зв'язку "{0}" не підтримується</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>Розширення файлу "{0}" не підтримується</handlerUnsupportedExtensionFormat>
   </mprLinksManager>
   <mprWorksets
     LocalName="Робочі набори"
