@@ -1228,7 +1228,6 @@
     LocalName="Менеджер связей"
     Description="Управление внешними связями Revit и CAD в текущем документе"
     FullDescription="Плагин позволяет просматривать, фильтровать, добавлять, загружать, выгружать, перезагружать, удалять связи и переписывать пути к ним в текущем документе Revit">
-    <windowTitle>Менеджер связей</windowTitle>
     <filtersGroupHeader>Фильтры</filtersGroupHeader>
     <statusLabel>Состояние:</statusLabel>
     <linksListGroupHeader>Список связей</linksListGroupHeader>
@@ -1254,44 +1253,30 @@
     <originalPathColumnHeader>Исходный путь</originalPathColumnHeader>
     <newPathColumnHeader>Новый путь</newPathColumnHeader>
     <fileNotFoundTooltip>Файл не найден</fileNotFoundTooltip>
-    <selectionSummaryFormat>Выбрано: {0} из {1}</selectionSummaryFormat>
     <tableHintText>Отметьте связи для выполнения операций</tableHintText>
-    <readyStatusText>Готов к работе</readyStatusText>
     <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Менеджер связей запущен</managerStartedLogFormat>
-    <openFilesFilter>Файлы Revit и CAD (*.rvt;*.dwg)|*.rvt;*.dwg|Файлы Revit (*.rvt)|*.rvt|Файлы DWG (*.dwg)|*.dwg|Все файлы (*.*)|*.*</openFilesFilter>
+    <openFilesFilter>Файлы Revit и DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Файлы Revit (*.rvt)|*.rvt|Файлы DWG (*.dwg)|*.dwg</openFilesFilter>
     <existingLinksSkippedLogFormat>Пропущено уже существующих связей: {0}</existingLinksSkippedLogFormat>
-    <addSkippedStatusFormat>Пропущено: {0} (уже существуют)</addSkippedStatusFormat>
     <addStartedLogFormat>Добавление {0} связей</addStartedLogFormat>
     <addCompletedLogFormat>Добавлено связей: {0}, пропущено: {1}</addCompletedLogFormat>
-    <addCompletedStatusFormat>Добавлено: {0}, пропущено: {1}</addCompletedStatusFormat>
     <generalErrorLogFormat>Общая ошибка: {0}</generalErrorLogFormat>
-    <addErrorStatusText>Ошибка при добавлении связей</addErrorStatusText>
     <operationDeleteGenitive>удаления</operationDeleteGenitive>
     <operationLoadGenitive>загрузки</operationLoadGenitive>
     <operationUnloadGenitive>выгрузки</operationUnloadGenitive>
     <operationReloadGenitive>перезагрузки</operationReloadGenitive>
     <deleteConfirmationMessageFormat>Вы уверены, что хотите удалить {0} связей из проекта?</deleteConfirmationMessageFormat>
     <deleteConfirmationTitle>Удаление</deleteConfirmationTitle>
-    <noLinksSelectedLogFormat>Не выбрано ни одной связи для {0}</noLinksSelectedLogFormat>
-    <noLinksSelectedStatusFormat>Не выбрано связей для {0}</noLinksSelectedStatusFormat>
     <operationCanceledLogFormat>Операция {0} отменена пользователем</operationCanceledLogFormat>
     <operationStartedLogFormat>Начало {0} {1} связей</operationStartedLogFormat>
     <bulkOperationSummaryFormat>Успешно: {0}, пропущено: {1}, ошибок: {2}</bulkOperationSummaryFormat>
     <operationResultLogFormat>Результат {0}: {1}</operationResultLogFormat>
-    <operationErrorLogFormat>Общая ошибка при {0}: {1}</operationErrorLogFormat>
-    <operationErrorStatusFormat>Ошибка при {0}</operationErrorStatusFormat>
-    <folderSelectionCanceledLogText>Выбор папки отменён пользователем</folderSelectionCanceledLogText>
-    <rewriteNoLinksSelectedLogText>Не выбрано ни одной связи для переписывания путей</rewriteNoLinksSelectedLogText>
-    <rewriteNoLinksSelectedStatusText>Не выбрано связей для переписывания</rewriteNoLinksSelectedStatusText>
-    <rewriteNoLinksSelectedMessageText>Не выбрано ни одной связи для переписывания путей</rewriteNoLinksSelectedMessageText>
-    <rewriteCanceledLogText>Переписывание путей отменено пользователем</rewriteCanceledLogText>
-    <rewriteNoChangesLogText>Нет изменений для переписывания путей</rewriteNoChangesLogText>
-    <rewriteNoChangesStatusText>Нет изменений для переписывания</rewriteNoChangesStatusText>
-    <rewriteStartedLogFormat>Начало переписывания путей для {0} связей</rewriteStartedLogFormat>
-    <rewriteCompletedLogFormat>Переписано путей: {0}, ошибок: {1}</rewriteCompletedLogFormat>
-    <rewriteCompletedStatusFormat>Переписано: {0}, ошибок: {1}</rewriteCompletedStatusFormat>
-    <rewriteErrorLogFormat>Общая ошибка при переписывании путей: {0}</rewriteErrorLogFormat>
-    <rewriteErrorStatusText>Ошибка при переписывании путей</rewriteErrorStatusText>
+    <operationErrorLogFormat>Общая ошибка во время {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Выбор папки отменен пользователем</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Перезапись путей отменена пользователем</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Нет изменений для перезаписи путей</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Начало перезаписи путей для {0} связей</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Перезаписано путей: {0}, ошибок: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>Общая ошибка при перезаписи путей: {0}</rewriteErrorLogFormat>
     <linkStatusLoaded>Загружена</linkStatusLoaded>
     <linkStatusUnloaded>Выгружена</linkStatusUnloaded>
     <linkStatusNotFound>Не найдено</linkStatusNotFound>
