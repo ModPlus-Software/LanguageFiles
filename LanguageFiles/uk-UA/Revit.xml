@@ -1228,7 +1228,6 @@
     LocalName="Менеджер зв'язків"
     Description="Керування зовнішніми зв'язками Revit і CAD у поточному документі"
     FullDescription="Плагін дає змогу переглядати, фільтрувати, додавати, завантажувати, вивантажувати, перезавантажувати, видаляти зв'язки та переписувати шляхи до них у поточному документі Revit">
-    <windowTitle>Менеджер зв'язків</windowTitle>
     <filtersGroupHeader>Фільтри</filtersGroupHeader>
     <statusLabel>Стан:</statusLabel>
     <linksListGroupHeader>Список зв'язків</linksListGroupHeader>
@@ -1238,7 +1237,7 @@
     <loadSettingsGroupHeader>Налаштування завантаження</loadSettingsGroupHeader>
     <positioningLabel>Позиціювання</positioningLabel>
     <onAddBehaviorLabel>Під час додавання</onAddBehaviorLabel>
-    <commandsGroupHeader>Команди</commandsGroupHeader>
+    <operationsGroupHeader>Операції</operationsGroupHeader>
     <deleteSelectedButton>Видалити вибрані</deleteSelectedButton>
     <loadButton>Завантажити</loadButton>
     <unloadButton>Вивантажити</unloadButton>
@@ -1254,44 +1253,30 @@
     <originalPathColumnHeader>Початковий шлях</originalPathColumnHeader>
     <newPathColumnHeader>Новий шлях</newPathColumnHeader>
     <fileNotFoundTooltip>Файл не знайдено</fileNotFoundTooltip>
-    <selectionSummaryFormat>Вибрано: {0} із {1}</selectionSummaryFormat>
     <tableHintText>Позначте зв'язки для виконання операцій</tableHintText>
-    <readyStatusText>Готово до роботи</readyStatusText>
     <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Менеджер зв'язків запущено</managerStartedLogFormat>
-    <openFilesFilter>Файли Revit і CAD (*.rvt;*.dwg)|*.rvt;*.dwg|Файли Revit (*.rvt)|*.rvt|Файли DWG (*.dwg)|*.dwg|Усі файли (*.*)|*.*</openFilesFilter>
+    <openFilesFilter>Файли Revit і DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Файли Revit (*.rvt)|*.rvt|Файли DWG (*.dwg)|*.dwg</openFilesFilter>
     <existingLinksSkippedLogFormat>Пропущено вже наявних зв'язків: {0}</existingLinksSkippedLogFormat>
-    <addSkippedStatusFormat>Пропущено: {0} (вже існують)</addSkippedStatusFormat>
     <addStartedLogFormat>Додавання {0} зв'язків</addStartedLogFormat>
     <addCompletedLogFormat>Додано зв'язків: {0}, пропущено: {1}</addCompletedLogFormat>
-    <addCompletedStatusFormat>Додано: {0}, пропущено: {1}</addCompletedStatusFormat>
     <generalErrorLogFormat>Загальна помилка: {0}</generalErrorLogFormat>
-    <addErrorStatusText>Помилка під час додавання зв'язків</addErrorStatusText>
     <operationDeleteGenitive>видалення</operationDeleteGenitive>
     <operationLoadGenitive>завантаження</operationLoadGenitive>
     <operationUnloadGenitive>вивантаження</operationUnloadGenitive>
     <operationReloadGenitive>перезавантаження</operationReloadGenitive>
     <deleteConfirmationMessageFormat>Ви впевнені, що хочете видалити {0} зв'язків із проєкту?</deleteConfirmationMessageFormat>
     <deleteConfirmationTitle>Видалення</deleteConfirmationTitle>
-    <noLinksSelectedLogFormat>Не вибрано жодного зв'язку для {0}</noLinksSelectedLogFormat>
-    <noLinksSelectedStatusFormat>Не вибрано зв'язків для {0}</noLinksSelectedStatusFormat>
     <operationCanceledLogFormat>Операцію {0} скасовано користувачем</operationCanceledLogFormat>
     <operationStartedLogFormat>Початок {0} {1} зв'язків</operationStartedLogFormat>
     <bulkOperationSummaryFormat>Успішно: {0}, пропущено: {1}, помилок: {2}</bulkOperationSummaryFormat>
     <operationResultLogFormat>Результат {0}: {1}</operationResultLogFormat>
     <operationErrorLogFormat>Загальна помилка під час {0}: {1}</operationErrorLogFormat>
-    <operationErrorStatusFormat>Помилка під час {0}</operationErrorStatusFormat>
     <folderSelectionCanceledLogText>Вибір папки скасовано користувачем</folderSelectionCanceledLogText>
-    <rewriteNoLinksSelectedLogText>Не вибрано жодного зв'язку для переписування шляхів</rewriteNoLinksSelectedLogText>
-    <rewriteNoLinksSelectedStatusText>Не вибрано зв'язків для переписування</rewriteNoLinksSelectedStatusText>
-    <rewriteNoLinksSelectedMessageText>Не вибрано жодного зв'язку для переписування шляхів</rewriteNoLinksSelectedMessageText>
     <rewriteCanceledLogText>Переписування шляхів скасовано користувачем</rewriteCanceledLogText>
     <rewriteNoChangesLogText>Немає змін для переписування шляхів</rewriteNoChangesLogText>
-    <rewriteNoChangesStatusText>Немає змін для переписування</rewriteNoChangesStatusText>
     <rewriteStartedLogFormat>Початок переписування шляхів для {0} зв'язків</rewriteStartedLogFormat>
     <rewriteCompletedLogFormat>Переписано шляхів: {0}, помилок: {1}</rewriteCompletedLogFormat>
-    <rewriteCompletedStatusFormat>Переписано: {0}, помилок: {1}</rewriteCompletedStatusFormat>
     <rewriteErrorLogFormat>Загальна помилка під час переписування шляхів: {0}</rewriteErrorLogFormat>
-    <rewriteErrorStatusText>Помилка під час переписування шляхів</rewriteErrorStatusText>
     <linkStatusLoaded>Завантажено</linkStatusLoaded>
     <linkStatusUnloaded>Вивантажено</linkStatusUnloaded>
     <linkStatusNotFound>Не знайдено</linkStatusNotFound>
@@ -1303,6 +1288,12 @@
     <handlerLinkFileNotFoundFormat>Файл зв'язку не знайдено: {0}</handlerLinkFileNotFoundFormat>
     <handlerUnsupportedLinkTypeFormat>Тип зв'язку "{0}" не підтримується</handlerUnsupportedLinkTypeFormat>
     <handlerUnsupportedExtensionFormat>Розширення файлу "{0}" не підтримується</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Додавання зв'язків</addLinksTransaction>
+    <deleteLinksTransaction>Видалення зв'язків</deleteLinksTransaction>
+    <loadLinksTransaction>Завантаження зв'язків</loadLinksTransaction>
+    <unloadLinksTransaction>Вивантаження зв'язків</unloadLinksTransaction>
+    <reloadLinksTransaction>Перезавантаження зв'язків</reloadLinksTransaction>
+    <updatePathTransaction>Переписати шляхи</updatePathTransaction>
   </mprLinksManager>
   <mprWorksets
     LocalName="Робочі набори"

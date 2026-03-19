@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
   <mprSheetCopy
     LocalName="Duplicador de planos"
@@ -1228,7 +1228,6 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     LocalName="Gestor de vínculos"
     Description="Gestionar vínculos externos de Revit y CAD en el documento actual"
     FullDescription="El complemento permite ver, filtrar, añadir, cargar, descargar, recargar, eliminar vínculos y reescribir sus rutas en el documento actual de Revit">
-    <windowTitle>Gestor de vínculos</windowTitle>
     <filtersGroupHeader>Filtros</filtersGroupHeader>
     <statusLabel>Estado:</statusLabel>
     <linksListGroupHeader>Lista de vínculos</linksListGroupHeader>
@@ -1238,7 +1237,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <loadSettingsGroupHeader>Ajustes de carga</loadSettingsGroupHeader>
     <positioningLabel>Posicionamiento</positioningLabel>
     <onAddBehaviorLabel>Al añadir</onAddBehaviorLabel>
-    <commandsGroupHeader>Comandos</commandsGroupHeader>
+    <operationsGroupHeader>Operaciones</operationsGroupHeader>
     <deleteSelectedButton>Eliminar seleccionados</deleteSelectedButton>
     <loadButton>Cargar</loadButton>
     <unloadButton>Descargar</unloadButton>
@@ -1254,44 +1253,30 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <originalPathColumnHeader>Ruta original</originalPathColumnHeader>
     <newPathColumnHeader>Nueva ruta</newPathColumnHeader>
     <fileNotFoundTooltip>Archivo no encontrado</fileNotFoundTooltip>
-    <selectionSummaryFormat>Seleccionado: {0} de {1}</selectionSummaryFormat>
     <tableHintText>Marque vínculos para ejecutar operaciones</tableHintText>
-    <readyStatusText>Listo para trabajar</readyStatusText>
     <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Gestor de vínculos iniciado</managerStartedLogFormat>
-    <openFilesFilter>Archivos Revit y CAD (*.rvt;*.dwg)|*.rvt;*.dwg|Archivos Revit (*.rvt)|*.rvt|Archivos DWG (*.dwg)|*.dwg|Todos los archivos (*.*)|*.*</openFilesFilter>
+    <openFilesFilter>Archivos Revit y DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Archivos Revit (*.rvt)|*.rvt|Archivos DWG (*.dwg)|*.dwg</openFilesFilter>
     <existingLinksSkippedLogFormat>Vínculos ya existentes omitidos: {0}</existingLinksSkippedLogFormat>
-    <addSkippedStatusFormat>Omitidos: {0} (ya existen)</addSkippedStatusFormat>
     <addStartedLogFormat>Añadiendo {0} vínculos</addStartedLogFormat>
     <addCompletedLogFormat>Vínculos añadidos: {0}, omitidos: {1}</addCompletedLogFormat>
-    <addCompletedStatusFormat>Añadidos: {0}, omitidos: {1}</addCompletedStatusFormat>
     <generalErrorLogFormat>Error general: {0}</generalErrorLogFormat>
-    <addErrorStatusText>Error al añadir vínculos</addErrorStatusText>
     <operationDeleteGenitive>eliminación</operationDeleteGenitive>
     <operationLoadGenitive>carga</operationLoadGenitive>
     <operationUnloadGenitive>descarga</operationUnloadGenitive>
     <operationReloadGenitive>recarga</operationReloadGenitive>
     <deleteConfirmationMessageFormat>¿Está seguro de que desea eliminar {0} vínculos del proyecto?</deleteConfirmationMessageFormat>
     <deleteConfirmationTitle>Eliminar</deleteConfirmationTitle>
-    <noLinksSelectedLogFormat>No se seleccionó ningún vínculo para {0}</noLinksSelectedLogFormat>
-    <noLinksSelectedStatusFormat>No se seleccionaron vínculos para {0}</noLinksSelectedStatusFormat>
     <operationCanceledLogFormat>La operación {0} fue cancelada por el usuario</operationCanceledLogFormat>
     <operationStartedLogFormat>Inicio de {0} de {1} vínculos</operationStartedLogFormat>
     <bulkOperationSummaryFormat>Correctos: {0}, omitidos: {1}, errores: {2}</bulkOperationSummaryFormat>
     <operationResultLogFormat>Resultado de {0}: {1}</operationResultLogFormat>
     <operationErrorLogFormat>Error general durante {0}: {1}</operationErrorLogFormat>
-    <operationErrorStatusFormat>Error durante {0}</operationErrorStatusFormat>
     <folderSelectionCanceledLogText>La selección de carpeta fue cancelada por el usuario</folderSelectionCanceledLogText>
-    <rewriteNoLinksSelectedLogText>No se seleccionaron vínculos para reescribir rutas</rewriteNoLinksSelectedLogText>
-    <rewriteNoLinksSelectedStatusText>No se seleccionaron vínculos para reescribir</rewriteNoLinksSelectedStatusText>
-    <rewriteNoLinksSelectedMessageText>No se seleccionaron vínculos para reescribir rutas</rewriteNoLinksSelectedMessageText>
     <rewriteCanceledLogText>La reescritura de rutas fue cancelada por el usuario</rewriteCanceledLogText>
     <rewriteNoChangesLogText>No hay cambios para reescribir rutas</rewriteNoChangesLogText>
-    <rewriteNoChangesStatusText>No hay cambios para reescribir</rewriteNoChangesStatusText>
     <rewriteStartedLogFormat>Inicio de reescritura de rutas para {0} vínculos</rewriteStartedLogFormat>
     <rewriteCompletedLogFormat>Rutas reescritas: {0}, errores: {1}</rewriteCompletedLogFormat>
-    <rewriteCompletedStatusFormat>Reescritas: {0}, errores: {1}</rewriteCompletedStatusFormat>
     <rewriteErrorLogFormat>Error general al reescribir rutas: {0}</rewriteErrorLogFormat>
-    <rewriteErrorStatusText>Error al reescribir rutas</rewriteErrorStatusText>
     <linkStatusLoaded>Cargado</linkStatusLoaded>
     <linkStatusUnloaded>Descargado</linkStatusUnloaded>
     <linkStatusNotFound>No encontrado</linkStatusNotFound>
@@ -1299,10 +1284,16 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <positioningOriginToOrigin>Origen a origen</positioningOriginToOrigin>
     <positioningCenterToCenter>Centro a centro</positioningCenterToCenter>
     <onAddLoadImmediately>Cargar inmediatamente</onAddLoadImmediately>
-    <onAddAddUnloaded>Añadir descargado</onAddAddUnloaded>
+    <onAddAddUnloaded>Agregar descargado</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Archivo de vínculo no encontrado: {0}</handlerLinkFileNotFoundFormat>
     <handlerUnsupportedLinkTypeFormat>El tipo de vínculo "{0}" no es compatible</handlerUnsupportedLinkTypeFormat>
     <handlerUnsupportedExtensionFormat>La extensión de archivo "{0}" no es compatible</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Agregar vínculos</addLinksTransaction>
+    <deleteLinksTransaction>Eliminar vínculos</deleteLinksTransaction>
+    <loadLinksTransaction>Cargar vínculos</loadLinksTransaction>
+    <unloadLinksTransaction>Descargar vínculos</unloadLinksTransaction>
+    <reloadLinksTransaction>Recargar vínculos</reloadLinksTransaction>
+    <updatePathTransaction>Reescribir rutas</updatePathTransaction>
   </mprLinksManager>
   <mprWorksets
     LocalName="Subproyectos"

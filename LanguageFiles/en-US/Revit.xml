@@ -1228,7 +1228,6 @@ An additional check is performed by type parameters – a pair of similar famili
     LocalName="Links manager"
     Description="Manage Revit and CAD external links in the current document"
     FullDescription="The plugin allows you to view, filter, add, load, unload, reload, delete links, and rewrite their paths in the current Revit document">
-    <windowTitle>Links manager</windowTitle>
     <filtersGroupHeader>Filters</filtersGroupHeader>
     <statusLabel>Status:</statusLabel>
     <linksListGroupHeader>Links list</linksListGroupHeader>
@@ -1238,7 +1237,7 @@ An additional check is performed by type parameters – a pair of similar famili
     <loadSettingsGroupHeader>Load settings</loadSettingsGroupHeader>
     <positioningLabel>Positioning</positioningLabel>
     <onAddBehaviorLabel>On add</onAddBehaviorLabel>
-    <commandsGroupHeader>Commands</commandsGroupHeader>
+    <operationsGroupHeader>Operations</operationsGroupHeader>
     <deleteSelectedButton>Delete selected</deleteSelectedButton>
     <loadButton>Load</loadButton>
     <unloadButton>Unload</unloadButton>
@@ -1254,44 +1253,30 @@ An additional check is performed by type parameters – a pair of similar famili
     <originalPathColumnHeader>Original path</originalPathColumnHeader>
     <newPathColumnHeader>New path</newPathColumnHeader>
     <fileNotFoundTooltip>File not found</fileNotFoundTooltip>
-    <selectionSummaryFormat>Selected: {0} of {1}</selectionSummaryFormat>
     <tableHintText>Mark links to perform operations</tableHintText>
-    <readyStatusText>Ready to work</readyStatusText>
     <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Links manager started</managerStartedLogFormat>
-    <openFilesFilter>Revit and CAD files (*.rvt;*.dwg)|*.rvt;*.dwg|Revit files (*.rvt)|*.rvt|DWG files (*.dwg)|*.dwg|All files (*.*)|*.*</openFilesFilter>
-    <existingLinksSkippedLogFormat>Skipped already existing links: {0}</existingLinksSkippedLogFormat>
-    <addSkippedStatusFormat>Skipped: {0} (already exist)</addSkippedStatusFormat>
+    <openFilesFilter>Revit and DWG files (*.rvt;*.dwg)|*.rvt;*.dwg|Revit files (*.rvt)|*.rvt|DWG files (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Skipped existing links: {0}</existingLinksSkippedLogFormat>
     <addStartedLogFormat>Adding {0} links</addStartedLogFormat>
-    <addCompletedLogFormat>Links added: {0}, skipped: {1}</addCompletedLogFormat>
-    <addCompletedStatusFormat>Added: {0}, skipped: {1}</addCompletedStatusFormat>
+    <addCompletedLogFormat>Added links: {0}, skipped: {1}</addCompletedLogFormat>
     <generalErrorLogFormat>General error: {0}</generalErrorLogFormat>
-    <addErrorStatusText>Error while adding links</addErrorStatusText>
     <operationDeleteGenitive>deletion</operationDeleteGenitive>
     <operationLoadGenitive>loading</operationLoadGenitive>
     <operationUnloadGenitive>unloading</operationUnloadGenitive>
     <operationReloadGenitive>reloading</operationReloadGenitive>
     <deleteConfirmationMessageFormat>Are you sure you want to delete {0} links from the project?</deleteConfirmationMessageFormat>
     <deleteConfirmationTitle>Delete</deleteConfirmationTitle>
-    <noLinksSelectedLogFormat>No links selected for {0}</noLinksSelectedLogFormat>
-    <noLinksSelectedStatusFormat>No links selected for {0}</noLinksSelectedStatusFormat>
     <operationCanceledLogFormat>Operation {0} was canceled by the user</operationCanceledLogFormat>
     <operationStartedLogFormat>Started {0} of {1} links</operationStartedLogFormat>
     <bulkOperationSummaryFormat>Successful: {0}, skipped: {1}, errors: {2}</bulkOperationSummaryFormat>
     <operationResultLogFormat>Result of {0}: {1}</operationResultLogFormat>
     <operationErrorLogFormat>General error during {0}: {1}</operationErrorLogFormat>
-    <operationErrorStatusFormat>Error during {0}</operationErrorStatusFormat>
-    <folderSelectionCanceledLogText>Folder selection was canceled by the user</folderSelectionCanceledLogText>
-    <rewriteNoLinksSelectedLogText>No links selected for path rewrite</rewriteNoLinksSelectedLogText>
-    <rewriteNoLinksSelectedStatusText>No links selected for rewrite</rewriteNoLinksSelectedStatusText>
-    <rewriteNoLinksSelectedMessageText>No links selected for path rewrite</rewriteNoLinksSelectedMessageText>
-    <rewriteCanceledLogText>Path rewrite was canceled by the user</rewriteCanceledLogText>
+    <folderSelectionCanceledLogText>Folder selection canceled by user</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Path rewrite canceled by user</rewriteCanceledLogText>
     <rewriteNoChangesLogText>No changes to rewrite paths</rewriteNoChangesLogText>
-    <rewriteNoChangesStatusText>No changes to rewrite</rewriteNoChangesStatusText>
-    <rewriteStartedLogFormat>Started rewriting paths for {0} links</rewriteStartedLogFormat>
-    <rewriteCompletedLogFormat>Paths rewritten: {0}, errors: {1}</rewriteCompletedLogFormat>
-    <rewriteCompletedStatusFormat>Rewritten: {0}, errors: {1}</rewriteCompletedStatusFormat>
+    <rewriteStartedLogFormat>Starting path rewrite for {0} links</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Rewritten paths: {0}, errors: {1}</rewriteCompletedLogFormat>
     <rewriteErrorLogFormat>General error while rewriting paths: {0}</rewriteErrorLogFormat>
-    <rewriteErrorStatusText>Error while rewriting paths</rewriteErrorStatusText>
     <linkStatusLoaded>Loaded</linkStatusLoaded>
     <linkStatusUnloaded>Unloaded</linkStatusUnloaded>
     <linkStatusNotFound>Not found</linkStatusNotFound>
@@ -1303,6 +1288,12 @@ An additional check is performed by type parameters – a pair of similar famili
     <handlerLinkFileNotFoundFormat>Link file not found: {0}</handlerLinkFileNotFoundFormat>
     <handlerUnsupportedLinkTypeFormat>Link type "{0}" is not supported</handlerUnsupportedLinkTypeFormat>
     <handlerUnsupportedExtensionFormat>File extension "{0}" is not supported</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Add links</addLinksTransaction>
+    <deleteLinksTransaction>Delete links</deleteLinksTransaction>
+    <loadLinksTransaction>Load links</loadLinksTransaction>
+    <unloadLinksTransaction>Unload links</unloadLinksTransaction>
+    <reloadLinksTransaction>Reload links</reloadLinksTransaction>
+    <updatePathTransaction>Rewrite paths</updatePathTransaction>
   </mprLinksManager>
   <mprWorksets
     LocalName="Worksets"
