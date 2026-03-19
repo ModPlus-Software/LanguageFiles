@@ -1224,6 +1224,86 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <m16>Wählen Sie bitte, ob Sie eine vorhandene Zeichenansicht aus dem Zieldokument verwenden oder eine Kopie der Zeichenansicht aus dem Quelldokument erstellen und verwenden möchten</m16>
     <notOrganized>!Nicht organisiert</notOrganized>
   </mprCopySheetsToOpenDocuments>
+  <mprLinksManager
+    LocalName="Verknüpfungsmanager"
+    Description="Verwaltung externer Revit- und CAD-Verknüpfungen im aktuellen Dokument"
+    FullDescription="Das Plugin ermöglicht das Anzeigen, Filtern, Hinzufügen, Laden, Entladen, Neuladen, Löschen von Verknüpfungen sowie das Umschreiben ihrer Pfade im aktuellen Revit-Dokument">
+    <windowTitle>Verknüpfungsmanager</windowTitle>
+    <filtersGroupHeader>Filter</filtersGroupHeader>
+    <statusLabel>Status:</statusLabel>
+    <linksListGroupHeader>Liste der Verknüpfungen</linksListGroupHeader>
+    <columnSelectHeader>Auswahl</columnSelectHeader>
+    <columnNameHeader>Name</columnNameHeader>
+    <columnStatusHeader>Status</columnStatusHeader>
+    <loadSettingsGroupHeader>Ladeeinstellungen</loadSettingsGroupHeader>
+    <positioningLabel>Positionierung</positioningLabel>
+    <onAddBehaviorLabel>Beim Hinzufügen</onAddBehaviorLabel>
+    <commandsGroupHeader>Befehle</commandsGroupHeader>
+    <deleteSelectedButton>Ausgewählte löschen</deleteSelectedButton>
+    <loadButton>Laden</loadButton>
+    <unloadButton>Entladen</unloadButton>
+    <reloadButton>Neu laden</reloadButton>
+    <rewritePathsButton>Pfade umschreiben</rewritePathsButton>
+    <rewritePathsByFolderButton>Pfade umschreiben (Ordner)</rewritePathsByFolderButton>
+    <showLogButton>Protokoll anzeigen</showLogButton>
+    <rewriteDialogTitle>Pfade umschreiben</rewriteDialogTitle>
+    <rewriteHintText>Platzhalter: * — beliebige Folge, ? — ein Zeichen, # — Ziffer. Escaping: \* \? \# \\. Wenn der Modus „Nur Pfad ändern" aktiviert ist, wird die Maske nur auf das Verzeichnis angewendet.</rewriteHintText>
+    <findMaskLabel>Suchmaske:</findMaskLabel>
+    <pathOnlyModeLabel>Nur Pfad ändern</pathOnlyModeLabel>
+    <replaceMaskLabel>Ersetzungsmaske:</replaceMaskLabel>
+    <originalPathColumnHeader>Ursprünglicher Pfad</originalPathColumnHeader>
+    <newPathColumnHeader>Neuer Pfad</newPathColumnHeader>
+    <fileNotFoundTooltip>Datei nicht gefunden</fileNotFoundTooltip>
+    <selectionSummaryFormat>Ausgewählt: {0} von {1}</selectionSummaryFormat>
+    <tableHintText>Markieren Sie Verknüpfungen für die Ausführung von Operationen</tableHintText>
+    <readyStatusText>Bereit</readyStatusText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Verknüpfungsmanager gestartet</managerStartedLogFormat>
+    <openFilesFilter>Revit- und CAD-Dateien (*.rvt;*.dwg)|*.rvt;*.dwg|Revit-Dateien (*.rvt)|*.rvt|DWG-Dateien (*.dwg)|*.dwg|Alle Dateien (*.*)|*.*</openFilesFilter>
+    <existingLinksSkippedLogFormat>Bereits vorhandene Verknüpfungen übersprungen: {0}</existingLinksSkippedLogFormat>
+    <addSkippedStatusFormat>Übersprungen: {0} (bereits vorhanden)</addSkippedStatusFormat>
+    <addStartedLogFormat>{0} Verknüpfungen werden hinzugefügt</addStartedLogFormat>
+    <addCompletedLogFormat>Verknüpfungen hinzugefügt: {0}, übersprungen: {1}</addCompletedLogFormat>
+    <addCompletedStatusFormat>Hinzugefügt: {0}, übersprungen: {1}</addCompletedStatusFormat>
+    <generalErrorLogFormat>Allgemeiner Fehler: {0}</generalErrorLogFormat>
+    <addErrorStatusText>Fehler beim Hinzufügen von Verknüpfungen</addErrorStatusText>
+    <operationDeleteGenitive>Löschen</operationDeleteGenitive>
+    <operationLoadGenitive>Laden</operationLoadGenitive>
+    <operationUnloadGenitive>Entladen</operationUnloadGenitive>
+    <operationReloadGenitive>Neuladen</operationReloadGenitive>
+    <deleteConfirmationMessageFormat>Möchten Sie wirklich {0} Verknüpfungen aus dem Projekt löschen?</deleteConfirmationMessageFormat>
+    <deleteConfirmationTitle>Löschen</deleteConfirmationTitle>
+    <noLinksSelectedLogFormat>Keine Verknüpfungen für {0} ausgewählt</noLinksSelectedLogFormat>
+    <noLinksSelectedStatusFormat>Keine Verknüpfungen für {0} ausgewählt</noLinksSelectedStatusFormat>
+    <operationCanceledLogFormat>Vorgang {0} wurde vom Benutzer abgebrochen</operationCanceledLogFormat>
+    <operationStartedLogFormat>Beginn von {0} für {1} Verknüpfungen</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Erfolgreich: {0}, übersprungen: {1}, Fehler: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Ergebnis von {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>Allgemeiner Fehler bei {0}: {1}</operationErrorLogFormat>
+    <operationErrorStatusFormat>Fehler bei {0}</operationErrorStatusFormat>
+    <folderSelectionCanceledLogText>Ordnerauswahl wurde vom Benutzer abgebrochen</folderSelectionCanceledLogText>
+    <rewriteNoLinksSelectedLogText>Keine Verknüpfungen zum Umschreiben der Pfade ausgewählt</rewriteNoLinksSelectedLogText>
+    <rewriteNoLinksSelectedStatusText>Keine Verknüpfungen zum Umschreiben ausgewählt</rewriteNoLinksSelectedStatusText>
+    <rewriteNoLinksSelectedMessageText>Keine Verknüpfungen zum Umschreiben der Pfade ausgewählt</rewriteNoLinksSelectedMessageText>
+    <rewriteCanceledLogText>Umschreiben der Pfade wurde vom Benutzer abgebrochen</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Keine Änderungen zum Umschreiben der Pfade</rewriteNoChangesLogText>
+    <rewriteNoChangesStatusText>Keine Änderungen zum Umschreiben</rewriteNoChangesStatusText>
+    <rewriteStartedLogFormat>Beginn des Umschreibens der Pfade für {0} Verknüpfungen</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Pfade umgeschrieben: {0}, Fehler: {1}</rewriteCompletedLogFormat>
+    <rewriteCompletedStatusFormat>Umgeschrieben: {0}, Fehler: {1}</rewriteCompletedStatusFormat>
+    <rewriteErrorLogFormat>Allgemeiner Fehler beim Umschreiben der Pfade: {0}</rewriteErrorLogFormat>
+    <rewriteErrorStatusText>Fehler beim Umschreiben der Pfade</rewriteErrorStatusText>
+    <linkStatusLoaded>Geladen</linkStatusLoaded>
+    <linkStatusUnloaded>Entladen</linkStatusUnloaded>
+    <linkStatusNotFound>Nicht gefunden</linkStatusNotFound>
+    <positioningSharedCoordinates>Gemeinsame Koordinaten</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Ursprung zu Ursprung</positioningOriginToOrigin>
+    <positioningCenterToCenter>Zentrum zu Zentrum</positioningCenterToCenter>
+    <onAddLoadImmediately>Sofort laden</onAddLoadImmediately>
+    <onAddAddUnloaded>Entladen hinzufügen</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Datei der Verknüpfung nicht gefunden: {0}</handlerLinkFileNotFoundFormat>
+    <handlerUnsupportedLinkTypeFormat>Verknüpfungstyp "{0}" wird nicht unterstützt</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>Dateierweiterung "{0}" wird nicht unterstützt</handlerUnsupportedExtensionFormat>
+  </mprLinksManager>
   <mprWorksets
     LocalName="Bearbeitungsbereiche"
     Description="Verwalten, Erstellen und Verwenden von Bearbeitungsbereichen"

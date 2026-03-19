@@ -1210,7 +1210,7 @@
     <m2>Потрібно вибрати аркуші для копіювання!</m2>
     <m3>Потрібно вибрати цільові документи!</m3>
     <m4>Для копіювання легенд у цільовому документі "{0}" потрібно створити хоча б одну легенду</m4>
-    <m5>Продовжити копіювання аркушів для цього документа?</m5>
+    <m5>Продовжити копіювання аркушів для цього документу?</m5>
     <m6>Копіювання аркуша "{0}" у документ "{1}"</m6>
     <m7>Копіювання легенд з аркуша "{0}" у документ "{1}"</m7>
     <m8>Копіювання сіток напрямних з аркуша "{0}" в документ "{1}"</m8>
@@ -1224,6 +1224,86 @@
     <m16>Виберіть один із варіантів: використати наявний креслярський вигляд із цільового документа або створити й використати копію креслярського вигляду з документа-джерела</m16>
     <notOrganized>!Не організовані</notOrganized>
   </mprCopySheetsToOpenDocuments>
+  <mprLinksManager
+    LocalName="Менеджер зв'язків"
+    Description="Керування зовнішніми зв'язками Revit і CAD у поточному документі"
+    FullDescription="Плагін дає змогу переглядати, фільтрувати, додавати, завантажувати, вивантажувати, перезавантажувати, видаляти зв'язки та переписувати шляхи до них у поточному документі Revit">
+    <windowTitle>Менеджер зв'язків</windowTitle>
+    <filtersGroupHeader>Фільтри</filtersGroupHeader>
+    <statusLabel>Стан:</statusLabel>
+    <linksListGroupHeader>Список зв'язків</linksListGroupHeader>
+    <columnSelectHeader>Вибір</columnSelectHeader>
+    <columnNameHeader>Ім'я</columnNameHeader>
+    <columnStatusHeader>Стан</columnStatusHeader>
+    <loadSettingsGroupHeader>Налаштування завантаження</loadSettingsGroupHeader>
+    <positioningLabel>Позиціювання</positioningLabel>
+    <onAddBehaviorLabel>Під час додавання</onAddBehaviorLabel>
+    <commandsGroupHeader>Команди</commandsGroupHeader>
+    <deleteSelectedButton>Видалити вибрані</deleteSelectedButton>
+    <loadButton>Завантажити</loadButton>
+    <unloadButton>Вивантажити</unloadButton>
+    <reloadButton>Перезавантажити</reloadButton>
+    <rewritePathsButton>Переписати шляхи</rewritePathsButton>
+    <rewritePathsByFolderButton>Переписати шляхи (папка)</rewritePathsByFolderButton>
+    <showLogButton>Показати журнал</showLogButton>
+    <rewriteDialogTitle>Переписати шляхи</rewriteDialogTitle>
+    <rewriteHintText>Підстановки: * — будь-яка послідовність, ? — один символ, # — цифра. Екранування: \* \? \# \\. Якщо ввімкнено режим "Змінювати лише шлях", маска застосовується тільки до каталогу.</rewriteHintText>
+    <findMaskLabel>Маска пошуку:</findMaskLabel>
+    <pathOnlyModeLabel>Змінювати лише шлях</pathOnlyModeLabel>
+    <replaceMaskLabel>Маска заміни:</replaceMaskLabel>
+    <originalPathColumnHeader>Початковий шлях</originalPathColumnHeader>
+    <newPathColumnHeader>Новий шлях</newPathColumnHeader>
+    <fileNotFoundTooltip>Файл не знайдено</fileNotFoundTooltip>
+    <selectionSummaryFormat>Вибрано: {0} із {1}</selectionSummaryFormat>
+    <tableHintText>Позначте зв'язки для виконання операцій</tableHintText>
+    <readyStatusText>Готово до роботи</readyStatusText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Менеджер зв'язків запущено</managerStartedLogFormat>
+    <openFilesFilter>Файли Revit і CAD (*.rvt;*.dwg)|*.rvt;*.dwg|Файли Revit (*.rvt)|*.rvt|Файли DWG (*.dwg)|*.dwg|Усі файли (*.*)|*.*</openFilesFilter>
+    <existingLinksSkippedLogFormat>Пропущено вже наявних зв'язків: {0}</existingLinksSkippedLogFormat>
+    <addSkippedStatusFormat>Пропущено: {0} (вже існують)</addSkippedStatusFormat>
+    <addStartedLogFormat>Додавання {0} зв'язків</addStartedLogFormat>
+    <addCompletedLogFormat>Додано зв'язків: {0}, пропущено: {1}</addCompletedLogFormat>
+    <addCompletedStatusFormat>Додано: {0}, пропущено: {1}</addCompletedStatusFormat>
+    <generalErrorLogFormat>Загальна помилка: {0}</generalErrorLogFormat>
+    <addErrorStatusText>Помилка під час додавання зв'язків</addErrorStatusText>
+    <operationDeleteGenitive>видалення</operationDeleteGenitive>
+    <operationLoadGenitive>завантаження</operationLoadGenitive>
+    <operationUnloadGenitive>вивантаження</operationUnloadGenitive>
+    <operationReloadGenitive>перезавантаження</operationReloadGenitive>
+    <deleteConfirmationMessageFormat>Ви впевнені, що хочете видалити {0} зв'язків із проєкту?</deleteConfirmationMessageFormat>
+    <deleteConfirmationTitle>Видалення</deleteConfirmationTitle>
+    <noLinksSelectedLogFormat>Не вибрано жодного зв'язку для {0}</noLinksSelectedLogFormat>
+    <noLinksSelectedStatusFormat>Не вибрано зв'язків для {0}</noLinksSelectedStatusFormat>
+    <operationCanceledLogFormat>Операцію {0} скасовано користувачем</operationCanceledLogFormat>
+    <operationStartedLogFormat>Початок {0} {1} зв'язків</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Успішно: {0}, пропущено: {1}, помилок: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Результат {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>Загальна помилка під час {0}: {1}</operationErrorLogFormat>
+    <operationErrorStatusFormat>Помилка під час {0}</operationErrorStatusFormat>
+    <folderSelectionCanceledLogText>Вибір папки скасовано користувачем</folderSelectionCanceledLogText>
+    <rewriteNoLinksSelectedLogText>Не вибрано жодного зв'язку для переписування шляхів</rewriteNoLinksSelectedLogText>
+    <rewriteNoLinksSelectedStatusText>Не вибрано зв'язків для переписування</rewriteNoLinksSelectedStatusText>
+    <rewriteNoLinksSelectedMessageText>Не вибрано жодного зв'язку для переписування шляхів</rewriteNoLinksSelectedMessageText>
+    <rewriteCanceledLogText>Переписування шляхів скасовано користувачем</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Немає змін для переписування шляхів</rewriteNoChangesLogText>
+    <rewriteNoChangesStatusText>Немає змін для переписування</rewriteNoChangesStatusText>
+    <rewriteStartedLogFormat>Початок переписування шляхів для {0} зв'язків</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Переписано шляхів: {0}, помилок: {1}</rewriteCompletedLogFormat>
+    <rewriteCompletedStatusFormat>Переписано: {0}, помилок: {1}</rewriteCompletedStatusFormat>
+    <rewriteErrorLogFormat>Загальна помилка під час переписування шляхів: {0}</rewriteErrorLogFormat>
+    <rewriteErrorStatusText>Помилка під час переписування шляхів</rewriteErrorStatusText>
+    <linkStatusLoaded>Завантажено</linkStatusLoaded>
+    <linkStatusUnloaded>Вивантажено</linkStatusUnloaded>
+    <linkStatusNotFound>Не знайдено</linkStatusNotFound>
+    <positioningSharedCoordinates>Спільні координати</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Початок до початку</positioningOriginToOrigin>
+    <positioningCenterToCenter>Центр до центру</positioningCenterToCenter>
+    <onAddLoadImmediately>Одразу завантажити</onAddLoadImmediately>
+    <onAddAddUnloaded>Додати вивантаженим</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Файл зв'язку не знайдено: {0}</handlerLinkFileNotFoundFormat>
+    <handlerUnsupportedLinkTypeFormat>Тип зв'язку "{0}" не підтримується</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>Розширення файлу "{0}" не підтримується</handlerUnsupportedExtensionFormat>
+  </mprLinksManager>
   <mprWorksets
     LocalName="Робочі набори"
     Description="Керування робочими наборами, їх створення та застосування"

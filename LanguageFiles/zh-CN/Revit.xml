@@ -1224,6 +1224,85 @@
     <m16>选择：使用目标文档中的现有绘图视图，或创建并使用源文档绘图视图的副本</m16>
     <notOrganized>!未组织</notOrganized>
   </mprCopySheetsToOpenDocuments>
+  <mprLinksManager
+    Description="管理当前文档中的 Revit 和 CAD 外部链接"
+    FullDescription="该插件允许在当前 Revit 文档中查看、筛选、添加、加载、卸载、重新加载、删除链接，并重写其路径">
+    <windowTitle>链接管理器</windowTitle>
+    <filtersGroupHeader>筛选器</filtersGroupHeader>
+    <statusLabel>状态：</statusLabel>
+    <linksListGroupHeader>链接列表</linksListGroupHeader>
+    <columnSelectHeader>选择</columnSelectHeader>
+    <columnNameHeader>名称</columnNameHeader>
+    <columnStatusHeader>状态</columnStatusHeader>
+    <loadSettingsGroupHeader>加载设置</loadSettingsGroupHeader>
+    <positioningLabel>定位</positioningLabel>
+    <onAddBehaviorLabel>添加时</onAddBehaviorLabel>
+    <commandsGroupHeader>命令</commandsGroupHeader>
+    <deleteSelectedButton>删除所选</deleteSelectedButton>
+    <loadButton>加载</loadButton>
+    <unloadButton>卸载</unloadButton>
+    <reloadButton>重新加载</reloadButton>
+    <rewritePathsButton>重写路径</rewritePathsButton>
+    <rewritePathsByFolderButton>重写路径（文件夹）</rewritePathsByFolderButton>
+    <showLogButton>显示日志</showLogButton>
+    <rewriteDialogTitle>重写路径</rewriteDialogTitle>
+    <rewriteHintText>通配符：* — 任意序列，? — 单个字符，# — 数字。转义：\* \? \# \\. 启用"仅更改路径"模式时，掩码仅应用于目录。</rewriteHintText>
+    <findMaskLabel>查找掩码：</findMaskLabel>
+    <pathOnlyModeLabel>仅更改路径</pathOnlyModeLabel>
+    <replaceMaskLabel>替换掩码：</replaceMaskLabel>
+    <originalPathColumnHeader>原始路径</originalPathColumnHeader>
+    <newPathColumnHeader>新路径</newPathColumnHeader>
+    <fileNotFoundTooltip>未找到文件</fileNotFoundTooltip>
+    <selectionSummaryFormat>已选择：{0} / {1}</selectionSummaryFormat>
+    <tableHintText>标记要执行操作的链接</tableHintText>
+    <readyStatusText>准备就绪</readyStatusText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — 链接管理器已启动</managerStartedLogFormat>
+    <openFilesFilter>Revit 和 CAD 文件 (*.rvt;*.dwg)|*.rvt;*.dwg|Revit 文件 (*.rvt)|*.rvt|DWG 文件 (*.dwg)|*.dwg|所有文件 (*.*)|*.*</openFilesFilter>
+    <existingLinksSkippedLogFormat>已跳过已存在的链接：{0}</existingLinksSkippedLogFormat>
+    <addSkippedStatusFormat>已跳过：{0}（已存在）</addSkippedStatusFormat>
+    <addStartedLogFormat>正在添加 {0} 个链接</addStartedLogFormat>
+    <addCompletedLogFormat>已添加链接：{0}，已跳过：{1}</addCompletedLogFormat>
+    <addCompletedStatusFormat>已添加：{0}，已跳过：{1}</addCompletedStatusFormat>
+    <generalErrorLogFormat>常规错误：{0}</generalErrorLogFormat>
+    <addErrorStatusText>添加链接时出错</addErrorStatusText>
+    <operationDeleteGenitive>删除</operationDeleteGenitive>
+    <operationLoadGenitive>加载</operationLoadGenitive>
+    <operationUnloadGenitive>卸载</operationUnloadGenitive>
+    <operationReloadGenitive>重新加载</operationReloadGenitive>
+    <deleteConfirmationMessageFormat>是否确认从项目中删除 {0} 个链接？</deleteConfirmationMessageFormat>
+    <deleteConfirmationTitle>删除</deleteConfirmationTitle>
+    <noLinksSelectedLogFormat>未选择用于{0}的链接</noLinksSelectedLogFormat>
+    <noLinksSelectedStatusFormat>未选择用于{0}的链接</noLinksSelectedStatusFormat>
+    <operationCanceledLogFormat>操作 {0} 已被用户取消</operationCanceledLogFormat>
+    <operationStartedLogFormat>开始对 {1} 个链接执行{0}</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>成功：{0}，跳过：{1}，错误：{2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>{0} 的结果：{1}</operationResultLogFormat>
+    <operationErrorLogFormat>{0} 时发生常规错误：{1}</operationErrorLogFormat>
+    <operationErrorStatusFormat>{0} 时出错</operationErrorStatusFormat>
+    <folderSelectionCanceledLogText>用户已取消文件夹选择</folderSelectionCanceledLogText>
+    <rewriteNoLinksSelectedLogText>未选择用于重写路径的链接</rewriteNoLinksSelectedLogText>
+    <rewriteNoLinksSelectedStatusText>未选择用于重写的链接</rewriteNoLinksSelectedStatusText>
+    <rewriteNoLinksSelectedMessageText>未选择用于重写路径的链接</rewriteNoLinksSelectedMessageText>
+    <rewriteCanceledLogText>路径重写已被用户取消</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>没有可重写路径的更改</rewriteNoChangesLogText>
+    <rewriteNoChangesStatusText>没有可重写的更改</rewriteNoChangesStatusText>
+    <rewriteStartedLogFormat>开始为 {0} 个链接重写路径</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>已重写路径：{0}，错误：{1}</rewriteCompletedLogFormat>
+    <rewriteCompletedStatusFormat>已重写：{0}，错误：{1}</rewriteCompletedStatusFormat>
+    <rewriteErrorLogFormat>重写路径时发生常规错误：{0}</rewriteErrorLogFormat>
+    <rewriteErrorStatusText>重写路径时出错</rewriteErrorStatusText>
+    <linkStatusLoaded>已加载</linkStatusLoaded>
+    <linkStatusUnloaded>已卸载</linkStatusUnloaded>
+    <linkStatusNotFound>未找到</linkStatusNotFound>
+    <positioningSharedCoordinates>共享坐标</positioningSharedCoordinates>
+    <positioningOriginToOrigin>原点对原点</positioningOriginToOrigin>
+    <positioningCenterToCenter>中心对中心</positioningCenterToCenter>
+    <onAddLoadImmediately>立即加载</onAddLoadImmediately>
+    <onAddAddUnloaded>以卸载状态添加</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>未找到链接文件：{0}</handlerLinkFileNotFoundFormat>
+    <handlerUnsupportedLinkTypeFormat>不支持链接类型"{0}"</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>不支持文件扩展名"{0}"</handlerUnsupportedExtensionFormat>
+  </mprLinksManager>
   <mprWorksets
     LocalName="工作集"
     Description="管理工作集，包括创建和应用"
