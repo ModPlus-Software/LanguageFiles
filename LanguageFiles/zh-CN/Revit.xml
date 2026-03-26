@@ -1231,21 +1231,20 @@
     <filtersGroupHeader>筛选器</filtersGroupHeader>
     <statusLabel>状态：</statusLabel>
     <linksListGroupHeader>链接列表</linksListGroupHeader>
-    <columnSelectHeader>选择</columnSelectHeader>
     <columnNameHeader>名称</columnNameHeader>
     <columnStatusHeader>状态</columnStatusHeader>
     <loadSettingsGroupHeader>加载设置</loadSettingsGroupHeader>
     <positioningLabel>定位</positioningLabel>
     <onAddBehaviorLabel>添加时</onAddBehaviorLabel>
     <operationsGroupHeader>操作</operationsGroupHeader>
-    <deleteSelectedButton>删除所选</deleteSelectedButton>
+    <deleteSelectedButton>删除</deleteSelectedButton>
     <loadButton>加载</loadButton>
     <unloadButton>卸载</unloadButton>
-    <reloadButton>重新加载</reloadButton>
-    <rewritePathsButton>重写路径</rewritePathsButton>
+    <reloadButton>重新载入</reloadButton>
+    <rewritePathText>重写路径</rewritePathText>
     <rewritePathsByFolderButton>重写路径（文件夹）</rewritePathsByFolderButton>
     <showLogButton>显示日志</showLogButton>
-    <rewriteDialogTitle>重写路径</rewriteDialogTitle>
+    <addLinkSettingsDialogTitle>添加设置</addLinkSettingsDialogTitle>
     <rewriteHintText>通配符：* — 任意序列，? — 单个字符，# — 数字。转义：\* \? \# \\. 启用"仅更改路径"模式时，掩码仅应用于目录。</rewriteHintText>
     <findMaskLabel>查找掩码：</findMaskLabel>
     <pathOnlyModeLabel>仅更改路径</pathOnlyModeLabel>
@@ -1258,13 +1257,14 @@
     <openFilesFilter>Revit 和 DWG 文件 (*.rvt;*.dwg)|*.rvt;*.dwg|Revit 文件 (*.rvt)|*.rvt|DWG 文件 (*.dwg)|*.dwg</openFilesFilter>
     <existingLinksSkippedLogFormat>已跳过已存在的链接：{0}</existingLinksSkippedLogFormat>
     <addStartedLogFormat>正在添加 {0} 个链接</addStartedLogFormat>
-    <addCompletedLogFormat>已添加链接：{0}，已跳过：{1}</addCompletedLogFormat>
+    <addCompletedLogFormat>已添加链接：{0}，错误：{1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>添加文件"{0}"时出错：{1}</addFileErrorLogFormat>
     <generalErrorLogFormat>常规错误：{0}</generalErrorLogFormat>
     <operationDeleteGenitive>删除</operationDeleteGenitive>
     <operationLoadGenitive>加载</operationLoadGenitive>
     <operationUnloadGenitive>卸载</operationUnloadGenitive>
     <operationReloadGenitive>重新加载</operationReloadGenitive>
-    <deleteConfirmationMessageFormat>是否确认从项目中删除 {0} 个链接？</deleteConfirmationMessageFormat>
+    <deleteConfirmationMessage>是否确认删除所选链接？</deleteConfirmationMessage>
     <deleteConfirmationTitle>删除</deleteConfirmationTitle>
     <operationCanceledLogFormat>操作 {0} 已被用户取消</operationCanceledLogFormat>
     <operationStartedLogFormat>开始对 {1} 个链接执行{0}</operationStartedLogFormat>
@@ -1280,9 +1280,9 @@
     <linkStatusLoaded>已加载</linkStatusLoaded>
     <linkStatusUnloaded>已卸载</linkStatusUnloaded>
     <linkStatusNotFound>未找到</linkStatusNotFound>
-    <positioningSharedCoordinates>共享坐标</positioningSharedCoordinates>
-    <positioningOriginToOrigin>原点对原点</positioningOriginToOrigin>
-    <positioningCenterToCenter>中心对中心</positioningCenterToCenter>
+    <positioningSharedCoordinates>通过共享坐标</positioningSharedCoordinates>
+    <positioningOriginToOrigin>原点到原点</positioningOriginToOrigin>
+    <positioningCenterToCenter>中心到中心</positioningCenterToCenter>
     <onAddLoadImmediately>立即加载</onAddLoadImmediately>
     <onAddAddUnloaded>以卸载状态添加</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>未找到链接文件：{0}</handlerLinkFileNotFoundFormat>
@@ -1293,7 +1293,11 @@
     <loadLinksTransaction>加载链接</loadLinksTransaction>
     <unloadLinksTransaction>卸载链接</unloadLinksTransaction>
     <reloadLinksTransaction>重新加载链接</reloadLinksTransaction>
-    <updatePathTransaction>重写路径</updatePathTransaction>
+    <unloadForSelfMenuItem>仅自己</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>所有人</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>本地卸载</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>本地卸载链接</unloadLocallyLinksTransaction>
+    <searchHint>输入搜索文本</searchHint>
   </mprLinksManager>
   <mprWorksets
     LocalName="工作集"

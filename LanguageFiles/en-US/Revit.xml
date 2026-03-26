@@ -1231,21 +1231,20 @@ An additional check is performed by type parameters – a pair of similar famili
     <filtersGroupHeader>Filters</filtersGroupHeader>
     <statusLabel>Status:</statusLabel>
     <linksListGroupHeader>Links list</linksListGroupHeader>
-    <columnSelectHeader>Select</columnSelectHeader>
     <columnNameHeader>Name</columnNameHeader>
     <columnStatusHeader>Status</columnStatusHeader>
     <loadSettingsGroupHeader>Load settings</loadSettingsGroupHeader>
     <positioningLabel>Positioning</positioningLabel>
     <onAddBehaviorLabel>On add</onAddBehaviorLabel>
     <operationsGroupHeader>Operations</operationsGroupHeader>
-    <deleteSelectedButton>Delete selected</deleteSelectedButton>
+    <deleteSelectedButton>Delete</deleteSelectedButton>
     <loadButton>Load</loadButton>
     <unloadButton>Unload</unloadButton>
     <reloadButton>Reload</reloadButton>
-    <rewritePathsButton>Rewrite paths</rewritePathsButton>
+    <rewritePathText>Rewrite paths</rewritePathText>
     <rewritePathsByFolderButton>Rewrite paths (folder)</rewritePathsByFolderButton>
     <showLogButton>Show log</showLogButton>
-    <rewriteDialogTitle>Rewrite paths</rewriteDialogTitle>
+    <addLinkSettingsDialogTitle>Add link settings</addLinkSettingsDialogTitle>
     <rewriteHintText>Wildcards: * — any sequence, ? — one character, # — digit. Escaping: \* \? \# \\. When "Path only" mode is enabled, the mask is applied only to the directory.</rewriteHintText>
     <findMaskLabel>Find mask:</findMaskLabel>
     <pathOnlyModeLabel>Change path only</pathOnlyModeLabel>
@@ -1258,13 +1257,14 @@ An additional check is performed by type parameters – a pair of similar famili
     <openFilesFilter>Revit and DWG files (*.rvt;*.dwg)|*.rvt;*.dwg|Revit files (*.rvt)|*.rvt|DWG files (*.dwg)|*.dwg</openFilesFilter>
     <existingLinksSkippedLogFormat>Skipped existing links: {0}</existingLinksSkippedLogFormat>
     <addStartedLogFormat>Adding {0} links</addStartedLogFormat>
-    <addCompletedLogFormat>Added links: {0}, skipped: {1}</addCompletedLogFormat>
+    <addCompletedLogFormat>Added links: {0}, failed: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Error adding file "{0}": {1}</addFileErrorLogFormat>
     <generalErrorLogFormat>General error: {0}</generalErrorLogFormat>
     <operationDeleteGenitive>deletion</operationDeleteGenitive>
     <operationLoadGenitive>loading</operationLoadGenitive>
     <operationUnloadGenitive>unloading</operationUnloadGenitive>
     <operationReloadGenitive>reloading</operationReloadGenitive>
-    <deleteConfirmationMessageFormat>Are you sure you want to delete {0} links from the project?</deleteConfirmationMessageFormat>
+    <deleteConfirmationMessage>Are you sure you want to delete the selected links?</deleteConfirmationMessage>
     <deleteConfirmationTitle>Delete</deleteConfirmationTitle>
     <operationCanceledLogFormat>Operation {0} was canceled by the user</operationCanceledLogFormat>
     <operationStartedLogFormat>Started {0} of {1} links</operationStartedLogFormat>
@@ -1280,9 +1280,9 @@ An additional check is performed by type parameters – a pair of similar famili
     <linkStatusLoaded>Loaded</linkStatusLoaded>
     <linkStatusUnloaded>Unloaded</linkStatusUnloaded>
     <linkStatusNotFound>Not found</linkStatusNotFound>
-    <positioningSharedCoordinates>Shared coordinates</positioningSharedCoordinates>
-    <positioningOriginToOrigin>Origin to origin</positioningOriginToOrigin>
-    <positioningCenterToCenter>Center to center</positioningCenterToCenter>
+    <positioningSharedCoordinates>By Shared Coordinates</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Origin to Origin</positioningOriginToOrigin>
+    <positioningCenterToCenter>Center to Center</positioningCenterToCenter>
     <onAddLoadImmediately>Load immediately</onAddLoadImmediately>
     <onAddAddUnloaded>Add unloaded</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Link file not found: {0}</handlerLinkFileNotFoundFormat>
@@ -1293,7 +1293,11 @@ An additional check is performed by type parameters – a pair of similar famili
     <loadLinksTransaction>Load links</loadLinksTransaction>
     <unloadLinksTransaction>Unload links</unloadLinksTransaction>
     <reloadLinksTransaction>Reload links</reloadLinksTransaction>
-    <updatePathTransaction>Rewrite paths</updatePathTransaction>
+    <searchHint>Enter text to search</searchHint>
+    <unloadForSelfMenuItem>For me</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>For all</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>local unloading</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Local unload links</unloadLocallyLinksTransaction>
   </mprLinksManager>
   <mprWorksets
     LocalName="Worksets"
