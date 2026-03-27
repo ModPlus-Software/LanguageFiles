@@ -1232,22 +1232,26 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <filtersGroupHeader>Filter</filtersGroupHeader>
     <statusLabel>Status:</statusLabel>
     <linksListGroupHeader>Liste der Verknüpfungen</linksListGroupHeader>
-    <columnSelectHeader>Auswahl</columnSelectHeader>
     <columnNameHeader>Name</columnNameHeader>
     <columnStatusHeader>Status</columnStatusHeader>
     <loadSettingsGroupHeader>Ladeeinstellungen</loadSettingsGroupHeader>
     <positioningLabel>Positionierung</positioningLabel>
     <onAddBehaviorLabel>Beim Hinzufügen</onAddBehaviorLabel>
     <operationsGroupHeader>Operationen</operationsGroupHeader>
-    <deleteSelectedButton>Ausgewählte löschen</deleteSelectedButton>
+    <deleteSelectedButton>Löschen</deleteSelectedButton>
     <loadButton>Laden</loadButton>
-    <unloadButton>Entladen</unloadButton>
+    <unloadButton>Lösen</unloadButton>
     <reloadButton>Neu laden</reloadButton>
-    <rewritePathsButton>Pfade umschreiben</rewritePathsButton>
+    <rewritePathText>Pfade umschreiben</rewritePathText>
     <rewritePathsByFolderButton>Pfade umschreiben (Ordner)</rewritePathsByFolderButton>
     <showLogButton>Protokoll anzeigen</showLogButton>
-    <rewriteDialogTitle>Pfade umschreiben</rewriteDialogTitle>
+    <addLinkSettingsDialogTitle>Einstellungen zum Hinzufügen</addLinkSettingsDialogTitle>
     <rewriteHintText>Platzhalter: * — beliebige Folge, ? — ein Zeichen, # — Ziffer. Escaping: \* \? \# \\. Wenn der Modus „Nur Pfad ändern" aktiviert ist, wird die Maske nur auf das Verzeichnis angewendet.</rewriteHintText>
+    <rewriteModeLabel>Ersetzungsmodus:</rewriteModeLabel>
+    <rewriteModeNormal>Normaler Modus</rewriteModeNormal>
+    <rewriteModeMask>Maskenmodus</rewriteModeMask>
+    <findTextLabel>Suchen</findTextLabel>
+    <replaceTextLabel>Ersetzen durch</replaceTextLabel>
     <findMaskLabel>Suchmaske:</findMaskLabel>
     <pathOnlyModeLabel>Nur Pfad ändern</pathOnlyModeLabel>
     <replaceMaskLabel>Ersetzungsmaske:</replaceMaskLabel>
@@ -1259,13 +1263,14 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <openFilesFilter>Revit- und DWG-Dateien (*.rvt;*.dwg)|*.rvt;*.dwg|Revit-Dateien (*.rvt)|*.rvt|DWG-Dateien (*.dwg)|*.dwg</openFilesFilter>
     <existingLinksSkippedLogFormat>Bereits vorhandene Verknüpfungen übersprungen: {0}</existingLinksSkippedLogFormat>
     <addStartedLogFormat>Hinzufügen von {0} Verknüpfungen</addStartedLogFormat>
-    <addCompletedLogFormat>Verknüpfungen hinzugefügt: {0}, übersprungen: {1}</addCompletedLogFormat>
+    <addCompletedLogFormat>Verknüpfungen hinzugefügt: {0}, Fehler: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Fehler beim Hinzufügen der Datei "{0}": {1}</addFileErrorLogFormat>
     <generalErrorLogFormat>Allgemeiner Fehler: {0}</generalErrorLogFormat>
     <operationDeleteGenitive>Löschens</operationDeleteGenitive>
     <operationLoadGenitive>Ladens</operationLoadGenitive>
     <operationUnloadGenitive>Entladens</operationUnloadGenitive>
     <operationReloadGenitive>Neuladen</operationReloadGenitive>
-    <deleteConfirmationMessageFormat>Möchten Sie wirklich {0} Verknüpfungen aus dem Projekt löschen?</deleteConfirmationMessageFormat>
+    <deleteConfirmationMessage>Möchten Sie wirklich die ausgewählten Verknüpfungen löschen?</deleteConfirmationMessage>
     <deleteConfirmationTitle>Löschen</deleteConfirmationTitle>
     <operationCanceledLogFormat>Vorgang {0} wurde vom Benutzer abgebrochen</operationCanceledLogFormat>
     <operationStartedLogFormat>Beginn von {0} für {1} Verknüpfungen</operationStartedLogFormat>
@@ -1281,9 +1286,9 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <linkStatusLoaded>Geladen</linkStatusLoaded>
     <linkStatusUnloaded>Entladen</linkStatusUnloaded>
     <linkStatusNotFound>Nicht gefunden</linkStatusNotFound>
-    <positioningSharedCoordinates>Gemeinsame Koordinaten</positioningSharedCoordinates>
+    <positioningSharedCoordinates>Nach gemeinsamen Koordinaten</positioningSharedCoordinates>
     <positioningOriginToOrigin>Ursprung zu Ursprung</positioningOriginToOrigin>
-    <positioningCenterToCenter>Zentrum zu Zentrum</positioningCenterToCenter>
+    <positioningCenterToCenter>Mitte zu Mitte</positioningCenterToCenter>
     <onAddLoadImmediately>Sofort laden</onAddLoadImmediately>
     <onAddAddUnloaded>Entladen hinzufügen</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Datei der Verknüpfung nicht gefunden: {0}</handlerLinkFileNotFoundFormat>
@@ -1294,7 +1299,11 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <loadLinksTransaction>Verknüpfungen laden</loadLinksTransaction>
     <unloadLinksTransaction>Verknüpfungen entladen</unloadLinksTransaction>
     <reloadLinksTransaction>Verknüpfungen neu laden</reloadLinksTransaction>
-    <updatePathTransaction>Pfade umschreiben</updatePathTransaction>
+    <searchHint>Suchtext eingeben</searchHint>
+    <unloadForSelfMenuItem>Für mich</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Für alle</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>lokales Entladen</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Verknüpfungen lokal entladen</unloadLocallyLinksTransaction>
   </mprLinksManager>
   <mprWorksets
     LocalName="Bearbeitungsbereiche"

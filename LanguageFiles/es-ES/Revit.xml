@@ -1232,22 +1232,26 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <filtersGroupHeader>Filtros</filtersGroupHeader>
     <statusLabel>Estado:</statusLabel>
     <linksListGroupHeader>Lista de vínculos</linksListGroupHeader>
-    <columnSelectHeader>Selección</columnSelectHeader>
     <columnNameHeader>Nombre</columnNameHeader>
     <columnStatusHeader>Estado</columnStatusHeader>
     <loadSettingsGroupHeader>Ajustes de carga</loadSettingsGroupHeader>
     <positioningLabel>Posicionamiento</positioningLabel>
     <onAddBehaviorLabel>Al añadir</onAddBehaviorLabel>
     <operationsGroupHeader>Operaciones</operationsGroupHeader>
-    <deleteSelectedButton>Eliminar seleccionados</deleteSelectedButton>
+    <deleteSelectedButton>Eliminar</deleteSelectedButton>
     <loadButton>Cargar</loadButton>
     <unloadButton>Descargar</unloadButton>
-    <reloadButton>Recargar</reloadButton>
-    <rewritePathsButton>Reescribir rutas</rewritePathsButton>
+    <reloadButton>Volver a cargar</reloadButton>
+    <rewritePathText>Reescribir rutas</rewritePathText>
     <rewritePathsByFolderButton>Reescribir rutas (carpeta)</rewritePathsByFolderButton>
     <showLogButton>Mostrar registro</showLogButton>
-    <rewriteDialogTitle>Reescribir rutas</rewriteDialogTitle>
+    <addLinkSettingsDialogTitle>Configuración de adición</addLinkSettingsDialogTitle>
     <rewriteHintText>Comodines: * — cualquier secuencia, ? — un carácter, # — dígito. Escape: \* \? \# \\. Cuando está activado el modo "Cambiar solo ruta", la máscara se aplica solo al directorio.</rewriteHintText>
+    <rewriteModeLabel>Modo de reemplazo:</rewriteModeLabel>
+    <rewriteModeNormal>Modo normal</rewriteModeNormal>
+    <rewriteModeMask>Modo de máscara</rewriteModeMask>
+    <findTextLabel>Buscar</findTextLabel>
+    <replaceTextLabel>Reemplazar por</replaceTextLabel>
     <findMaskLabel>Máscara de búsqueda:</findMaskLabel>
     <pathOnlyModeLabel>Cambiar solo ruta</pathOnlyModeLabel>
     <replaceMaskLabel>Máscara de reemplazo:</replaceMaskLabel>
@@ -1259,13 +1263,14 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <openFilesFilter>Archivos Revit y DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Archivos Revit (*.rvt)|*.rvt|Archivos DWG (*.dwg)|*.dwg</openFilesFilter>
     <existingLinksSkippedLogFormat>Vínculos ya existentes omitidos: {0}</existingLinksSkippedLogFormat>
     <addStartedLogFormat>Añadiendo {0} vínculos</addStartedLogFormat>
-    <addCompletedLogFormat>Vínculos añadidos: {0}, omitidos: {1}</addCompletedLogFormat>
+    <addCompletedLogFormat>Vínculos añadidos: {0}, errores: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Error al añadir el archivo "{0}": {1}</addFileErrorLogFormat>
     <generalErrorLogFormat>Error general: {0}</generalErrorLogFormat>
     <operationDeleteGenitive>eliminación</operationDeleteGenitive>
     <operationLoadGenitive>carga</operationLoadGenitive>
     <operationUnloadGenitive>descarga</operationUnloadGenitive>
     <operationReloadGenitive>recarga</operationReloadGenitive>
-    <deleteConfirmationMessageFormat>¿Está seguro de que desea eliminar {0} vínculos del proyecto?</deleteConfirmationMessageFormat>
+    <deleteConfirmationMessage>¿Está seguro de que desea eliminar los vínculos seleccionados?</deleteConfirmationMessage>
     <deleteConfirmationTitle>Eliminar</deleteConfirmationTitle>
     <operationCanceledLogFormat>La operación {0} fue cancelada por el usuario</operationCanceledLogFormat>
     <operationStartedLogFormat>Inicio de {0} de {1} vínculos</operationStartedLogFormat>
@@ -1281,7 +1286,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <linkStatusLoaded>Cargado</linkStatusLoaded>
     <linkStatusUnloaded>Descargado</linkStatusUnloaded>
     <linkStatusNotFound>No encontrado</linkStatusNotFound>
-    <positioningSharedCoordinates>Coordenadas compartidas</positioningSharedCoordinates>
+    <positioningSharedCoordinates>Por coordenadas compartidas</positioningSharedCoordinates>
     <positioningOriginToOrigin>Origen a origen</positioningOriginToOrigin>
     <positioningCenterToCenter>Centro a centro</positioningCenterToCenter>
     <onAddLoadImmediately>Cargar inmediatamente</onAddLoadImmediately>
@@ -1294,7 +1299,11 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <loadLinksTransaction>Cargar vínculos</loadLinksTransaction>
     <unloadLinksTransaction>Descargar vínculos</unloadLinksTransaction>
     <reloadLinksTransaction>Recargar vínculos</reloadLinksTransaction>
-    <updatePathTransaction>Reescribir rutas</updatePathTransaction>
+    <searchHint>Introduzca texto para buscar</searchHint>
+    <unloadForSelfMenuItem>Para mí</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Para todos</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>descarga local</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Descarga local de vínculos</unloadLocallyLinksTransaction>
   </mprLinksManager>
   <mprWorksets
     LocalName="Subproyectos"

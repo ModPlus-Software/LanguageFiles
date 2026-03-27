@@ -1232,22 +1232,26 @@
     <filtersGroupHeader>Фільтри</filtersGroupHeader>
     <statusLabel>Стан:</statusLabel>
     <linksListGroupHeader>Список зв'язків</linksListGroupHeader>
-    <columnSelectHeader>Вибір</columnSelectHeader>
     <columnNameHeader>Ім'я</columnNameHeader>
     <columnStatusHeader>Стан</columnStatusHeader>
     <loadSettingsGroupHeader>Налаштування завантаження</loadSettingsGroupHeader>
     <positioningLabel>Позиціювання</positioningLabel>
     <onAddBehaviorLabel>Під час додавання</onAddBehaviorLabel>
     <operationsGroupHeader>Операції</operationsGroupHeader>
-    <deleteSelectedButton>Видалити вибрані</deleteSelectedButton>
+    <deleteSelectedButton>Видалити</deleteSelectedButton>
     <loadButton>Завантажити</loadButton>
     <unloadButton>Вивантажити</unloadButton>
     <reloadButton>Перезавантажити</reloadButton>
-    <rewritePathsButton>Переписати шляхи</rewritePathsButton>
+    <rewritePathText>Переписати шляхи</rewritePathText>
     <rewritePathsByFolderButton>Переписати шляхи (папка)</rewritePathsByFolderButton>
     <showLogButton>Показати журнал</showLogButton>
-    <rewriteDialogTitle>Переписати шляхи</rewriteDialogTitle>
+    <addLinkSettingsDialogTitle>Налаштування додавання</addLinkSettingsDialogTitle>
     <rewriteHintText>Підстановки: * — будь-яка послідовність, ? — один символ, # — цифра. Екранування: \* \? \# \\. Якщо ввімкнено режим "Змінювати лише шлях", маска застосовується тільки до каталогу.</rewriteHintText>
+    <rewriteModeLabel>Режим заміни:</rewriteModeLabel>
+    <rewriteModeNormal>Звичайний режим</rewriteModeNormal>
+    <rewriteModeMask>Режим маски</rewriteModeMask>
+    <findTextLabel>Знайти</findTextLabel>
+    <replaceTextLabel>Замінити на</replaceTextLabel>
     <findMaskLabel>Маска пошуку:</findMaskLabel>
     <pathOnlyModeLabel>Змінювати лише шлях</pathOnlyModeLabel>
     <replaceMaskLabel>Маска заміни:</replaceMaskLabel>
@@ -1259,13 +1263,14 @@
     <openFilesFilter>Файли Revit і DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Файли Revit (*.rvt)|*.rvt|Файли DWG (*.dwg)|*.dwg</openFilesFilter>
     <existingLinksSkippedLogFormat>Пропущено вже наявних зв'язків: {0}</existingLinksSkippedLogFormat>
     <addStartedLogFormat>Додавання {0} зв'язків</addStartedLogFormat>
-    <addCompletedLogFormat>Додано зв'язків: {0}, пропущено: {1}</addCompletedLogFormat>
+    <addCompletedLogFormat>Додано зв'язків: {0}, помилок: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Помилка додавання файлу "{0}": {1}</addFileErrorLogFormat>
     <generalErrorLogFormat>Загальна помилка: {0}</generalErrorLogFormat>
     <operationDeleteGenitive>видалення</operationDeleteGenitive>
     <operationLoadGenitive>завантаження</operationLoadGenitive>
     <operationUnloadGenitive>вивантаження</operationUnloadGenitive>
     <operationReloadGenitive>перезавантаження</operationReloadGenitive>
-    <deleteConfirmationMessageFormat>Ви впевнені, що хочете видалити {0} зв'язків із проєкту?</deleteConfirmationMessageFormat>
+    <deleteConfirmationMessage>Ви впевнені, що хочете видалити вибрані зв'язки?</deleteConfirmationMessage>
     <deleteConfirmationTitle>Видалення</deleteConfirmationTitle>
     <operationCanceledLogFormat>Операцію {0} скасовано користувачем</operationCanceledLogFormat>
     <operationStartedLogFormat>Початок {0} {1} зв'язків</operationStartedLogFormat>
@@ -1281,9 +1286,9 @@
     <linkStatusLoaded>Завантажено</linkStatusLoaded>
     <linkStatusUnloaded>Вивантажено</linkStatusUnloaded>
     <linkStatusNotFound>Не знайдено</linkStatusNotFound>
-    <positioningSharedCoordinates>Спільні координати</positioningSharedCoordinates>
-    <positioningOriginToOrigin>Початок до початку</positioningOriginToOrigin>
-    <positioningCenterToCenter>Центр до центру</positioningCenterToCenter>
+    <positioningSharedCoordinates>За спільними координатами</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Суміщення внутрішніх початків</positioningOriginToOrigin>
+    <positioningCenterToCenter>Суміщення центрів</positioningCenterToCenter>
     <onAddLoadImmediately>Одразу завантажити</onAddLoadImmediately>
     <onAddAddUnloaded>Додати вивантаженим</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Файл зв'язку не знайдено: {0}</handlerLinkFileNotFoundFormat>
@@ -1294,7 +1299,11 @@
     <loadLinksTransaction>Завантаження зв'язків</loadLinksTransaction>
     <unloadLinksTransaction>Вивантаження зв'язків</unloadLinksTransaction>
     <reloadLinksTransaction>Перезавантаження зв'язків</reloadLinksTransaction>
-    <updatePathTransaction>Переписати шляхи</updatePathTransaction>
+    <searchHint>Введіть текст для пошуку</searchHint>
+    <unloadForSelfMenuItem>Для себе</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Для всіх</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>локального вивантаження</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Локальне вивантаження зв'язків</unloadLocallyLinksTransaction>
   </mprLinksManager>
   <mprWorksets
     LocalName="Робочі набори"

@@ -1232,22 +1232,26 @@
     <filtersGroupHeader>Фильтры</filtersGroupHeader>
     <statusLabel>Состояние:</statusLabel>
     <linksListGroupHeader>Список связей</linksListGroupHeader>
-    <columnSelectHeader>Выбор</columnSelectHeader>
     <columnNameHeader>Имя</columnNameHeader>
     <columnStatusHeader>Состояние</columnStatusHeader>
     <loadSettingsGroupHeader>Настройки загрузки</loadSettingsGroupHeader>
     <positioningLabel>Позиционирование</positioningLabel>
     <onAddBehaviorLabel>При добавлении</onAddBehaviorLabel>
     <operationsGroupHeader>Операции</operationsGroupHeader>
-    <deleteSelectedButton>Удалить выбранные</deleteSelectedButton>
+    <deleteSelectedButton>Удалить</deleteSelectedButton>
     <loadButton>Загрузить</loadButton>
     <unloadButton>Выгрузить</unloadButton>
-    <reloadButton>Перезагрузить</reloadButton>
-    <rewritePathsButton>Переписать пути</rewritePathsButton>
+    <reloadButton>Обновить</reloadButton>
+    <rewritePathText>Переписать пути</rewritePathText>
     <rewritePathsByFolderButton>Переписать пути (папка)</rewritePathsByFolderButton>
     <showLogButton>Показать журнал</showLogButton>
-    <rewriteDialogTitle>Переписать пути</rewriteDialogTitle>
+    <addLinkSettingsDialogTitle>Настройки добавления</addLinkSettingsDialogTitle>
     <rewriteHintText>Подстановки: * — любая последовательность, ? — один символ, # — цифра. Экранирование: \* \? \# \\. При включённом режиме "Менять только путь" маска применяется только к директории.</rewriteHintText>
+    <rewriteModeLabel>Режим замены:</rewriteModeLabel>
+    <rewriteModeNormal>Обычный режим</rewriteModeNormal>
+    <rewriteModeMask>Режим маски</rewriteModeMask>
+    <findTextLabel>Найти</findTextLabel>
+    <replaceTextLabel>Заменить на</replaceTextLabel>
     <findMaskLabel>Маска поиска:</findMaskLabel>
     <pathOnlyModeLabel>Менять только путь</pathOnlyModeLabel>
     <replaceMaskLabel>Маска замены:</replaceMaskLabel>
@@ -1259,13 +1263,14 @@
     <openFilesFilter>Файлы Revit и DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Файлы Revit (*.rvt)|*.rvt|Файлы DWG (*.dwg)|*.dwg</openFilesFilter>
     <existingLinksSkippedLogFormat>Пропущено уже существующих связей: {0}</existingLinksSkippedLogFormat>
     <addStartedLogFormat>Добавление {0} связей</addStartedLogFormat>
-    <addCompletedLogFormat>Добавлено связей: {0}, пропущено: {1}</addCompletedLogFormat>
+    <addCompletedLogFormat>Добавлено связей: {0}, ошибок: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Ошибка добавления файла "{0}": {1}</addFileErrorLogFormat>
     <generalErrorLogFormat>Общая ошибка: {0}</generalErrorLogFormat>
     <operationDeleteGenitive>удаления</operationDeleteGenitive>
     <operationLoadGenitive>загрузки</operationLoadGenitive>
     <operationUnloadGenitive>выгрузки</operationUnloadGenitive>
     <operationReloadGenitive>перезагрузки</operationReloadGenitive>
-    <deleteConfirmationMessageFormat>Вы уверены, что хотите удалить {0} связей из проекта?</deleteConfirmationMessageFormat>
+    <deleteConfirmationMessage>Вы уверены, что хотите удалить выбранные связи?</deleteConfirmationMessage>
     <deleteConfirmationTitle>Удаление</deleteConfirmationTitle>
     <operationCanceledLogFormat>Операция {0} отменена пользователем</operationCanceledLogFormat>
     <operationStartedLogFormat>Начало {0} {1} связей</operationStartedLogFormat>
@@ -1280,10 +1285,10 @@
     <rewriteErrorLogFormat>Общая ошибка при перезаписи путей: {0}</rewriteErrorLogFormat>
     <linkStatusLoaded>Загружена</linkStatusLoaded>
     <linkStatusUnloaded>Выгружена</linkStatusUnloaded>
-    <linkStatusNotFound>Не найдено</linkStatusNotFound>
-    <positioningSharedCoordinates>Общие координаты</positioningSharedCoordinates>
-    <positioningOriginToOrigin>Начало-к-началу</positioningOriginToOrigin>
-    <positioningCenterToCenter>Центр-к-центру</positioningCenterToCenter>
+    <linkStatusNotFound>Не найдена</linkStatusNotFound>
+    <positioningSharedCoordinates>По общим координатам</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Совмещение внутренних начал</positioningOriginToOrigin>
+    <positioningCenterToCenter>Совмещение центров</positioningCenterToCenter>
     <onAddLoadImmediately>Сразу загрузить</onAddLoadImmediately>
     <onAddAddUnloaded>Добавить выгруженной</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Файл связи не найден: {0}</handlerLinkFileNotFoundFormat>
@@ -1294,7 +1299,11 @@
     <loadLinksTransaction>Загрузка связей</loadLinksTransaction>
     <unloadLinksTransaction>Выгрузка связей</unloadLinksTransaction>
     <reloadLinksTransaction>Перезагрузка связей</reloadLinksTransaction>
-    <updatePathTransaction>Переписать пути</updatePathTransaction>
+    <unloadForSelfMenuItem>Для себя</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Для всех</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>локальной выгрузки</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Локальная выгрузка связей</unloadLocallyLinksTransaction>
+    <searchHint>Введите текст для поиска</searchHint>
   </mprLinksManager>
   <mprWorksets
     LocalName="Рабочие наборы"
