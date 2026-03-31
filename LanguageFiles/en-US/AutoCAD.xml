@@ -26,15 +26,17 @@
     <e9>Unknown validation mode</e9>
   </mpTableSort>
   <mpMultiOffset
-    LocalName="Multi-Offset"
-    Description="A tool for applying multiple offsets at once"
-    FullDescription="A tool for applying multiple offsets at once to one or more objects">
+    LocalName="MultiOffset"
+    Description="A plugin for performing multiple offsets at once">
     <h1>Enter the offsets:</h1>
+    <hint1>Permitted characters:
+ numbers, -, =
+Example:
+ values:
+  -25  -14  =-6  7  =3  25 -4
+ will create offsets at following distances:
+  -25  -39  -6  7  3  32  -43</hint1>
     <hint1.1>Permitted characters</hint1.1>
-    <hint1.2>numbers</hint1.2>
-    <hint1.4>values</hint1.4>
-    <hint1.5>will create offsets at following distances</hint1.5>
-    <h2>Enter the offsets:</h2>
     <msg1>Select objects to offset:</msg1>
     <e1>Input error</e1>
   </mpMultiOffset>
