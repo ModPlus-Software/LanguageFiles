@@ -95,12 +95,12 @@
     <h88>使用通用编号设置</h88>
     <h89>为上层创建平面图副本</h89>
     <h90>尝试复制视图时未找到上层标高</h90>
-    <h91>更改重复项的集合</h91>
-    <h92>分配到集合中</h92>
-    <h93>放入一个集合中</h93>
-    <h94>在集合名称中查找并替换</h94>
-    <h95>集合名称</h95>
-    <h96>新图纸集</h96>
+    <h91>更改副本的图纸集</h91>
+    <h92>按图纸集分配</h92>
+    <h93>放入一个图纸集</h93>
+    <h94>在图纸集名称中查找并替换</h94>
+    <h95>图纸集名称</h95>
+    <h96>新的图纸集</h96>
     <h97>清除参数值</h97>
     <h98>打开复制的图纸</h98>
     <h99>在过滤器中递增数值</h99>
@@ -108,6 +108,9 @@
     <h101>指定要递增的值的前缀和后缀。示例：值 = "KN1"，前缀 = "KN"，结果："KN2"、KN3、"KN4"等。</h101>
     <h102>计数器</h102>
     <h103>在参数中递增数值</h103>
+    <h104>复制后不关闭窗口</h104>
+    <h105>在图纸名称中递增数值</h105>
+    <h106>生成新的图纸编号时，将编号添加到</h106>
     <start>开头</start>
     <notOrganized>!未组织</notOrganized>
     <end>结尾</end>
@@ -187,6 +190,7 @@
     <h93>计数器</h93>
     <h94>视图 "{0}" 的上层楼层数量少于需要创建的视图副本数量。已创建视图副本数：{1}</h94>
     <h95>尝试继续现有编号</h95>
+    <h96>复制后不关闭窗口</h96>
     <notOrganized>!未组织</notOrganized>
     <start>开头</start>
     <end>结尾</end>
@@ -215,6 +219,7 @@
     <nullSectionBoxMsg1>所选模式不支持元素的预先选择</nullSectionBoxMsg1>
     <nullSectionBoxMsg2>无法对所选元素执行剖面框</nullSectionBoxMsg2>
     <tooltip1>允许指定元素以确定 3D剖面框的方向</tooltip1>
+    <InViewScheduleMsg>在明细表中仅支持从模型中预先选择元素</InViewScheduleMsg>
   </ostViewIn3D>
   <whshScheduleLookup
     LocalName="明细表搜索"
@@ -884,6 +889,7 @@
     <h63>在过滤器中使用</h63>
     <h64>在族实例中使用</h64>
     <h65>已选选项</h65>
+    <!--todo remove after 3.0.0.0-->
     <h66>视图</h66>
     <h67>放置在图纸上</h67>
     <h68>删除视图</h68>
@@ -1056,6 +1062,20 @@
     <ExpandAll>全部展开</ExpandAll>
     <CollapseAll>全部折叠</CollapseAll>
     <SelectAllElementsInCategory>选择类别中的所有元素</SelectAllElementsInCategory>
+    <DetailItemTypes>详图构件类型</DetailItemTypes>
+    <DetailItems>详图构件</DetailItems>
+    <DimensionTypes>标注类型</DimensionTypes>
+    <ElementTypes>元素类型</ElementTypes>
+    <Groups>组群</Groups>
+    <ModelElements>模型元素</ModelElements>
+    <RevitLinks>Revit 链接文件</RevitLinks>
+    <Sheets>图纸</Sheets>
+    <TagTypes>标记类型</TagTypes>
+    <TextTypes>文字类型</TextTypes>
+    <UnusedElements>未使用的元素</UnusedElements>
+    <ViewTypes>视图类型</ViewTypes>
+    <Views>视图</Views>
+    <Worksets>工作集</Worksets>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="图纸编号工具"
@@ -1237,6 +1257,86 @@
     <m16>选择：使用目标文档中的现有绘图视图，或创建并使用源文档绘图视图的副本</m16>
     <notOrganized>!未组织</notOrganized>
   </mprCopySheetsToOpenDocuments>
+  <mprLinksManager
+    LocalName="链接管理器"
+    Description="管理当前文档中的 Revit 和 CAD 外部链接"
+    FullDescription="该插件允许在当前 Revit 文档中查看、筛选、添加、加载、卸载、重新加载、删除链接，并重写其路径">
+    <filtersGroupHeader>筛选器</filtersGroupHeader>
+    <statusLabel>状态：</statusLabel>
+    <linksListGroupHeader>链接列表</linksListGroupHeader>
+    <columnNameHeader>名称</columnNameHeader>
+    <columnStatusHeader>状态</columnStatusHeader>
+    <loadSettingsGroupHeader>加载设置</loadSettingsGroupHeader>
+    <positioningLabel>定位</positioningLabel>
+    <onAddBehaviorLabel>添加时</onAddBehaviorLabel>
+    <operationsGroupHeader>操作</operationsGroupHeader>
+    <deleteSelectedButton>删除</deleteSelectedButton>
+    <loadButton>加载</loadButton>
+    <unloadButton>卸载</unloadButton>
+    <reloadButton>重新载入</reloadButton>
+    <rewritePathText>重写路径</rewritePathText>
+    <rewritePathsByFolderButton>重写路径（文件夹）</rewritePathsByFolderButton>
+    <showLogButton>显示日志</showLogButton>
+    <addLinkSettingsDialogTitle>添加设置</addLinkSettingsDialogTitle>
+    <rewriteHintText>通配符：* — 任意序列，? — 单个字符，# — 数字。转义：\* \? \# \\. 启用"仅更改路径"模式时，掩码仅应用于目录。</rewriteHintText>
+    <rewriteModeLabel>替换模式：</rewriteModeLabel>
+    <rewriteModeNormal>普通模式</rewriteModeNormal>
+    <rewriteModeMask>掩码模式</rewriteModeMask>
+    <findTextLabel>查找</findTextLabel>
+    <replaceTextLabel>替换为</replaceTextLabel>
+    <findMaskLabel>查找掩码：</findMaskLabel>
+    <pathOnlyModeLabel>仅更改路径</pathOnlyModeLabel>
+    <replaceMaskLabel>替换掩码：</replaceMaskLabel>
+    <originalPathColumnHeader>原始路径</originalPathColumnHeader>
+    <newPathColumnHeader>新路径</newPathColumnHeader>
+    <fileNotFoundTooltip>未找到文件</fileNotFoundTooltip>
+    <tableHintText>标记要执行操作的链接</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — 链接管理器已启动</managerStartedLogFormat>
+    <openFilesFilter>Revit 和 DWG 文件 (*.rvt;*.dwg)|*.rvt;*.dwg|Revit 文件 (*.rvt)|*.rvt|DWG 文件 (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>已跳过已存在的链接：{0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>正在添加 {0} 个链接</addStartedLogFormat>
+    <addCompletedLogFormat>已添加链接：{0}，错误：{1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>添加文件"{0}"时出错：{1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>常规错误：{0}</generalErrorLogFormat>
+    <operationDeleteGenitive>删除</operationDeleteGenitive>
+    <operationLoadGenitive>加载</operationLoadGenitive>
+    <operationUnloadGenitive>卸载</operationUnloadGenitive>
+    <operationReloadGenitive>重新加载</operationReloadGenitive>
+    <deleteConfirmationMessage>是否确认删除所选链接？</deleteConfirmationMessage>
+    <deleteConfirmationTitle>删除</deleteConfirmationTitle>
+    <operationCanceledLogFormat>操作 {0} 已被用户取消</operationCanceledLogFormat>
+    <operationStartedLogFormat>开始对 {1} 个链接执行{0}</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>成功：{0}，跳过：{1}，错误：{2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>{0} 的结果：{1}</operationResultLogFormat>
+    <operationErrorLogFormat>{0} 时发生常规错误：{1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>用户已取消文件夹选择</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>路径重写已被用户取消</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>没有可重写路径的更改</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>开始为 {0} 个链接重写路径</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>已重写路径：{0}，错误：{1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>重写路径时发生常规错误：{0}</rewriteErrorLogFormat>
+    <linkStatusLoaded>已加载</linkStatusLoaded>
+    <linkStatusUnloaded>已卸载</linkStatusUnloaded>
+    <linkStatusNotFound>未找到</linkStatusNotFound>
+    <positioningSharedCoordinates>通过共享坐标</positioningSharedCoordinates>
+    <positioningOriginToOrigin>原点到原点</positioningOriginToOrigin>
+    <positioningCenterToCenter>中心到中心</positioningCenterToCenter>
+    <onAddLoadImmediately>立即加载</onAddLoadImmediately>
+    <onAddAddUnloaded>以卸载状态添加</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>未找到链接文件：{0}</handlerLinkFileNotFoundFormat>
+    <handlerUnsupportedLinkTypeFormat>不支持链接类型"{0}"</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>不支持文件扩展名"{0}"</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>添加链接</addLinksTransaction>
+    <deleteLinksTransaction>删除链接</deleteLinksTransaction>
+    <loadLinksTransaction>加载链接</loadLinksTransaction>
+    <unloadLinksTransaction>卸载链接</unloadLinksTransaction>
+    <reloadLinksTransaction>重新加载链接</reloadLinksTransaction>
+    <unloadForSelfMenuItem>仅自己</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>所有人</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>本地卸载</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>本地卸载链接</unloadLocallyLinksTransaction>
+    <searchHint>输入搜索文本</searchHint>
+  </mprLinksManager>
   <mprWorksets
     LocalName="工作集"
     Description="管理工作集，包括创建和应用"
@@ -1730,6 +1830,8 @@
     <messageInvalidActiveDocument>活动文档与所选来源不一致</messageInvalidActiveDocument>
     <notSelectedElements>模型中未选择任何元素</notSelectedElements>
     <selectElementsFromLink>请选择来自链接文件的元素</selectElementsFromLink>
+    <groupTypeExists>目标文档中已存在组 "{0}"。\n是否执行复制并替换？</groupTypeExists>
+    <groups>组</groups>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="注释"
@@ -2934,6 +3036,7 @@
     <h10>打开的视图</h10>
     <h11>项目中的视图</h11>
     <h12>已添加视图</h12>
+    <h13>选择已勾选的视图</h13>
   </mprFavoriteViews>
   <mprModelCompare
     LocalName="模型比較"
@@ -3071,4 +3174,9 @@
     <h20>项目中缺少参数:</h20>
     <copyError>复制到剪贴板时出错。请重试</copyError>
   </mprEqualCurtainWalls>
+  <mprToposolidFloorConverter
+    LocalName="地形实体-楼板"
+    Description="将地形实体元素直接和反向转换为楼板">
+    <h1>选择地形实体和/或楼板</h1>
+  </mprToposolidFloorConverter>
 </ModPlus>

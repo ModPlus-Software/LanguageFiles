@@ -14,6 +14,7 @@
     <msg1>Specify the insertion position</msg1>
     <msg2>Insertion into a merged cell is not possible</msg2>
     <msg3>Moving the title is not possible</msg3>
+    <msg4>Select another row for sorting. Sorting with header highlighting is not supported.</msg4>
     <e1>Unknown movement mode</e1>
     <e2>Failed to determine the smallest unit of the selected fragment</e2>
     <e3>The selected range is too small to sort</e3>
@@ -1928,6 +1929,7 @@
     <tab17>Find and replace</tab17>
     <tab18>Find and replace in smart objects by value of string and numeric properties</tab18>
     <tab19>Welding</tab19>
+    <!--todo remove after 2.5.18.0-->
     <defl>Default</defl>
     <err1>Could not find file</err1>
     <err2>Failed to load linetype</err2>
@@ -2214,6 +2216,23 @@
     <h257>Create an intelligent object based on an anonymous block defining the polar axis symbol</h257>
     <h258>Default style for the polar axis</h258>
     <h259>Initial value</h259>
+    <h260>Multiline leader</h260>
+    <h261>Create multiline leader</h261>
+    <h262>Create an intelligent object based on an anonymous block describing the multiline leader</h262>
+    <h263>Edit saved values</h263>
+    <h264>Edit saved multiline leader values</h264>
+    <h265>Default style for multiline leader</h265>
+    <h266>New line</h266>
+    <h267>Maximum number of items:</h267>
+    <h268>Values in current object</h268>
+    <h269>Saved values</h269>
+    <h270>Arrow line</h270>
+    <h271>Create arrow line</h271>
+    <h272>Create an intelligent object based on an anonymous block describing the arrow line</h272>
+    <h273>Arrow line from polyline</h273>
+    <h274>Convert selected polyline to arrow line</h274>
+    <h275>Base style for arrow line</h275>
+    <h276>Common Properties</h276>
     <so0>Refresh graphics</so0>
     <sot0>All found smart entities will have graphics regeneration</sot0>
     <so1>Select</so1>
@@ -2224,6 +2243,7 @@
     <sot3>All smart entities of the specified types in the current space will be explode</sot3>
     <so4>Delete</so4>
     <sot4>All smart entities of the specified types in the current space will be delete</sot4>
+    <mtleadavailfull>Use of saved values is available in the full version of the plugin!</mtleadavailfull>
     <la1>Copy</la1>
     <la2>Do not copy</la2>
     <la3>To ask</la3>
@@ -2273,12 +2293,13 @@
     <let0>None</let0>
     <let1>Half Arrow</let1>
     <let2>Point</let2>
-    <let3>Resection</let3>
+    <let3>Double oblique stroke</let3>
     <let4>Angle</let4>
     <let5>Arrow</let5>
     <let6>Open Arrow</let6>
     <let7>Closed Arrow</let7>
-    <let8>Section</let8>
+    <let8>Oblique stroke</let8>
+    <let9>Section</let9>
     <wjt1>Butt factory solid on the visible side</wjt1>
     <wjt2>Butt factory solid on the invisible side</wjt2>
     <wjt3>Butt mounting solid from the visible side</wjt3>
@@ -2592,6 +2613,17 @@
     <d207>Align the break line with the center of the first marker or to the grip</d207>
     <p208>Align additional markers with the base vector</p208>
     <d208>Display additional markers along the break vector or along the original vector</d208>
+    <p209>Arrow start point</p209>
+    <p210>Offset to next shelf</p210>
+    <p211>Side of side line</p211>
+    <p212>Line length</p212>
+    <p213>Curve arrows on arc segments</p213>
+    <p214>Display trimmed arrows</p214>
+    <p215>Arrow type</p215>
+    <p216>Fill gaps with additional strokes</p216>
+    <p217>Color of main strokes</p217>
+    <p218>Color of additional strokes</p218>
+    <p219>Offset</p219>
     <jigM1>Arc</jigM1>
     <jigM2>Line</jigM2>
     <grpM1>Stretch Vertex</grpM1>
@@ -2630,6 +2662,16 @@
     <hfqt2>quarter 2</hfqt2>
     <hfqt3>quarter 3</hfqt3>
     <hfqt4>quarter 4</hfqt4>
+    <mtArrowPos1>Automatic</mtArrowPos1>
+    <mtArrowPos2>Bottom left</mtArrowPos2>
+    <mtArrowPos3>Bottom right</mtArrowPos3>
+    <mtArrowPos4>Top right</mtArrowPos4>
+    <mtArrowPos5>Top left</mtArrowPos5>
+    <mtLedSide1>Automatic</mtLedSide1>
+    <mtLedSide2>Left</mtLedSide2>
+    <mtLedSide3>Right</mtLedSide3>
+    <arrLineType1>Simple arrow</arrLineType1>
+    <arrLineType2>Thick arrow</arrLineType2>
   </mpESKD>
   <mpStripMtext
     LocalName="Clear formatting"

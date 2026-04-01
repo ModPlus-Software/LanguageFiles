@@ -108,6 +108,9 @@
     <h101>Specify the prefix and suffix of the value to be incremented. Example: value = "KN1", prefix = "KN", result: "KN2", KN3, "KN4", etc.</h101>
     <h102>Counter</h102>
     <h103>In the parameter increment value</h103>
+    <h104>Do not close the window after duplication</h104>
+    <h105>In sheet name increment value</h105>
+    <h106>When creating a new sheet number, add the numbering in</h106>
     <start>Start</start>
     <notOrganized>!Not organized</notOrganized>
     <end>End</end>
@@ -187,6 +190,7 @@
     <h93>Counter</h93>
     <h94>Number of upper levels for view "{0}" is less than the number of view copies to create. Number of view copies created: {1}</h94>
     <h95>Try to continue existing numbering</h95>
+    <h96>Do not close the window after duplication</h96>
     <notOrganized>!Not organized</notOrganized>
     <start>Start</start>
     <end>End</end>
@@ -215,6 +219,7 @@
     <nullSectionBoxMsg1>The selected mode does not support preselection of elements</nullSectionBoxMsg1>
     <nullSectionBoxMsg2>Trimming cannot be performed for the selected elements</nullSectionBoxMsg2>
     <tooltip1>Allows specifying an element to orient the 3D section box</tooltip1>
+    <InViewScheduleMsg>Only preselection of elements from the model is available in the schedule</InViewScheduleMsg>
   </ostViewIn3D>
   <whshScheduleLookup
     LocalName="Schedule lookup"
@@ -884,6 +889,7 @@
     <h63>Used in filter</h63>
     <h64>Used in family instance</h64>
     <h65>Options checked</h65>
+    <!--todo remove after 3.0.0.0-->
     <h66>Views</h66>
     <h67>Placed on a sheet</h67>
     <h68>Removing Views</h68>
@@ -1056,6 +1062,20 @@
     <ExpandAll>Expand All</ExpandAll>
     <CollapseAll>Collapse All</CollapseAll>
     <SelectAllElementsInCategory>Select all elements in category</SelectAllElementsInCategory>
+    <DetailItemTypes>Detail Item Types</DetailItemTypes>
+    <DetailItems>Detail Items</DetailItems>
+    <DimensionTypes>Dimension Types</DimensionTypes>
+    <ElementTypes>Element Types</ElementTypes>
+    <Groups>Groups</Groups>
+    <ModelElements>Model Elements</ModelElements>
+    <RevitLinks>Revit Links</RevitLinks>
+    <Sheets>Sheets</Sheets>
+    <TagTypes>Tag Types</TagTypes>
+    <TextTypes>Text Types</TextTypes>
+    <UnusedElements>Unused Elements</UnusedElements>
+    <ViewTypes>View Types</ViewTypes>
+    <Views>Views</Views>
+    <Worksets>Worksets</Worksets>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Sheet numerator"
@@ -1237,6 +1257,86 @@ An additional check is performed by type parameters – a pair of similar famili
     <m16>Choose one of the options – use an existing Drafting View from the destination document or create and use a copy of the Drafting View from the source document</m16>
     <notOrganized>!Not organized</notOrganized>
   </mprCopySheetsToOpenDocuments>
+  <mprLinksManager
+    LocalName="Links manager"
+    Description="Manage Revit and CAD external links in the current document"
+    FullDescription="The plugin allows you to view, filter, add, load, unload, reload, delete links, and rewrite their paths in the current Revit document">
+    <filtersGroupHeader>Filters</filtersGroupHeader>
+    <statusLabel>Status:</statusLabel>
+    <linksListGroupHeader>Links list</linksListGroupHeader>
+    <columnNameHeader>Name</columnNameHeader>
+    <columnStatusHeader>Status</columnStatusHeader>
+    <loadSettingsGroupHeader>Load settings</loadSettingsGroupHeader>
+    <positioningLabel>Positioning</positioningLabel>
+    <onAddBehaviorLabel>On add</onAddBehaviorLabel>
+    <operationsGroupHeader>Operations</operationsGroupHeader>
+    <deleteSelectedButton>Delete</deleteSelectedButton>
+    <loadButton>Load</loadButton>
+    <unloadButton>Unload</unloadButton>
+    <reloadButton>Reload</reloadButton>
+    <rewritePathText>Rewrite paths</rewritePathText>
+    <rewritePathsByFolderButton>Rewrite paths (folder)</rewritePathsByFolderButton>
+    <showLogButton>Show log</showLogButton>
+    <addLinkSettingsDialogTitle>Add link settings</addLinkSettingsDialogTitle>
+    <rewriteHintText>Wildcards: * — any sequence, ? — one character, # — digit. Escaping: \* \? \# \\. When "Path only" mode is enabled, the mask is applied only to the directory.</rewriteHintText>
+    <rewriteModeLabel>Rewrite mode:</rewriteModeLabel>
+    <rewriteModeNormal>Normal mode</rewriteModeNormal>
+    <rewriteModeMask>Mask mode</rewriteModeMask>
+    <findTextLabel>Find</findTextLabel>
+    <replaceTextLabel>Replace with</replaceTextLabel>
+    <findMaskLabel>Find mask:</findMaskLabel>
+    <pathOnlyModeLabel>Change path only</pathOnlyModeLabel>
+    <replaceMaskLabel>Replace mask:</replaceMaskLabel>
+    <originalPathColumnHeader>Original path</originalPathColumnHeader>
+    <newPathColumnHeader>New path</newPathColumnHeader>
+    <fileNotFoundTooltip>File not found</fileNotFoundTooltip>
+    <tableHintText>Mark links to perform operations</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Links manager started</managerStartedLogFormat>
+    <openFilesFilter>Revit and DWG files (*.rvt;*.dwg)|*.rvt;*.dwg|Revit files (*.rvt)|*.rvt|DWG files (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Skipped existing links: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>Adding {0} links</addStartedLogFormat>
+    <addCompletedLogFormat>Added links: {0}, failed: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Error adding file "{0}": {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>General error: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>deletion</operationDeleteGenitive>
+    <operationLoadGenitive>loading</operationLoadGenitive>
+    <operationUnloadGenitive>unloading</operationUnloadGenitive>
+    <operationReloadGenitive>reloading</operationReloadGenitive>
+    <deleteConfirmationMessage>Are you sure you want to delete the selected links?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Delete</deleteConfirmationTitle>
+    <operationCanceledLogFormat>Operation {0} was canceled by the user</operationCanceledLogFormat>
+    <operationStartedLogFormat>Started {0} of {1} links</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Successful: {0}, skipped: {1}, errors: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Result of {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>General error during {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Folder selection canceled by user</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Path rewrite canceled by user</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>No changes to rewrite paths</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Starting path rewrite for {0} links</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Rewritten paths: {0}, errors: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>General error while rewriting paths: {0}</rewriteErrorLogFormat>
+    <linkStatusLoaded>Loaded</linkStatusLoaded>
+    <linkStatusUnloaded>Unloaded</linkStatusUnloaded>
+    <linkStatusNotFound>Not found</linkStatusNotFound>
+    <positioningSharedCoordinates>By Shared Coordinates</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Origin to Origin</positioningOriginToOrigin>
+    <positioningCenterToCenter>Center to Center</positioningCenterToCenter>
+    <onAddLoadImmediately>Load immediately</onAddLoadImmediately>
+    <onAddAddUnloaded>Add unloaded</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Link file not found: {0}</handlerLinkFileNotFoundFormat>
+    <handlerUnsupportedLinkTypeFormat>Link type "{0}" is not supported</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>File extension "{0}" is not supported</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Add links</addLinksTransaction>
+    <deleteLinksTransaction>Delete links</deleteLinksTransaction>
+    <loadLinksTransaction>Load links</loadLinksTransaction>
+    <unloadLinksTransaction>Unload links</unloadLinksTransaction>
+    <reloadLinksTransaction>Reload links</reloadLinksTransaction>
+    <searchHint>Enter text to search</searchHint>
+    <unloadForSelfMenuItem>For me</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>For all</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>local unloading</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Local unload links</unloadLocallyLinksTransaction>
+  </mprLinksManager>
   <mprWorksets
     LocalName="Worksets"
     Description="Manage, create, and apply worksets"
@@ -1730,6 +1830,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <messageInvalidActiveDocument>The active document does not match the selected source</messageInvalidActiveDocument>
     <notSelectedElements>No elements are selected in the model</notSelectedElements>
     <selectElementsFromLink>Select elements from the linked file</selectElementsFromLink>
+    <groupTypeExists>The target document already contains the group "{0}".\nProceed with copying and replacing it?</groupTypeExists>
+    <groups>Groups</groups>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notes"
@@ -2934,6 +3036,7 @@ Unpin?</h13>
     <h10>Open views</h10>
     <h11>Views in project</h11>
     <h12>Views added</h12>
+    <h13>Select сhecked views</h13>
   </mprFavoriteViews>
   <mprModelCompare
     LocalName="Model comparison"
@@ -3071,4 +3174,9 @@ Unpin?</h13>
     <h20>Parameter missing in project:</h20>
     <copyError>Copy to buffer failed. Try again</copyError>
   </mprEqualCurtainWalls>
+  <mprToposolidFloorConverter
+    LocalName="Toposolid-floor"
+    Description="Direct and reverse conversion of toposolid elements into floor">
+    <h1>Select toposolids or/and floors</h1>
+  </mprToposolidFloorConverter>
 </ModPlus>

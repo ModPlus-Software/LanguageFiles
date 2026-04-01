@@ -98,8 +98,8 @@
     <h91>Змінити колекцію для дублікатів</h91>
     <h92>Розподілити по колекціях</h92>
     <h93>Помістити в одну колекцію</h93>
-    <h94>У назві колекції знайти та замінити</h94>
-    <h95>Назва колекції</h95>
+    <h94>В імені колекції знайти та замінити</h94>
+    <h95>Ім'я колекції</h95>
     <h96>Нова колекція аркушів</h96>
     <h97>Очистити значення параметра</h97>
     <h98>Відкрити дубльовані аркуші</h98>
@@ -108,6 +108,9 @@
     <h101>Вкажіть префікс і суфікс значення, яке потрібно збільшувати. Приклад: значення = "КН1", префікс = "КН", результат: "КН2", КН3, "КН4" і т.д.</h101>
     <h102>Лічильник</h102>
     <h103>У параметрі інкрементувати значення</h103>
+    <h104>Не закривати вікно після дублювання</h104>
+    <h105>В імені аркуша інкрементувати значення</h105>
+    <h106>При формуванні нового номера аркуша додавати нумерацію в</h106>
     <start>На початку</start>
     <notOrganized>!Не організовані</notOrganized>
     <end>На кінці</end>
@@ -187,6 +190,7 @@
     <h93>Лічильник</h93>
     <h94>Кількість вищерозташованих рівнів для виду "{0}" менше, ніж потрібно створити копій виду. Копій виду створено: {1}</h94>
     <h95>Спробувати продовжити існуючу нумерацію</h95>
+    <h96>Не закривати вікно після дублювання</h96>
     <notOrganized>!Не організовані</notOrganized>
     <start>на початку</start>
     <end>в кінці</end>
@@ -215,6 +219,7 @@
     <nullSectionBoxMsg1>Обраний режим не підтримує попередній вибір елементів</nullSectionBoxMsg1>
     <nullSectionBoxMsg2>Для вибраних елементів неможливо виконати підрізку</nullSectionBoxMsg2>
     <tooltip1>Дозволяє задати елемент для орієнтації 3D-підрізки</tooltip1>
+    <InViewScheduleMsg>У специфікації доступний лише попередній вибір елементів з моделі</InViewScheduleMsg>
   </ostViewIn3D>
   <whshScheduleLookup
     LocalName="Пошук у специфікаціях"
@@ -884,6 +889,7 @@
     <h63>Використовується у фільтрі</h63>
     <h64>Використовується в екземплярі сімейства</h64>
     <h65>Обрано опцій</h65>
+    <!--todo remove after 3.0.0.0-->
     <h66>Види</h66>
     <h67>Розміщений на аркуші</h67>
     <h68>Видалення видів</h68>
@@ -1056,6 +1062,20 @@
     <ExpandAll>Розгорнути все</ExpandAll>
     <CollapseAll>Згорнути все</CollapseAll>
     <SelectAllElementsInCategory>Вибрати всі елементи в категорії</SelectAllElementsInCategory>
+    <DetailItemTypes>Типи елементів деталізації</DetailItemTypes>
+    <DetailItems>Елементи деталізації</DetailItems>
+    <DimensionTypes>Типи розмірів</DimensionTypes>
+    <ElementTypes>Типи елементів</ElementTypes>
+    <Groups>Групи</Groups>
+    <ModelElements>Елементи моделі</ModelElements>
+    <RevitLinks>Зв’язки Revit</RevitLinks>
+    <Sheets>Аркуші</Sheets>
+    <TagTypes>Типи марок</TagTypes>
+    <TextTypes>Типи тексту</TextTypes>
+    <UnusedElements>Невикористовувані елементи</UnusedElements>
+    <ViewTypes>Типи видів</ViewTypes>
+    <Views>Види</Views>
+    <Worksets>Робочі набори</Worksets>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Нумератор аркушів"
@@ -1223,7 +1243,7 @@
     <m2>Потрібно вибрати аркуші для копіювання!</m2>
     <m3>Потрібно вибрати цільові документи!</m3>
     <m4>Для копіювання легенд у цільовому документі "{0}" потрібно створити хоча б одну легенду</m4>
-    <m5>Продовжити копіювання аркушів для цього документа?</m5>
+    <m5>Продовжити копіювання аркушів для цього документу?</m5>
     <m6>Копіювання аркуша "{0}" у документ "{1}"</m6>
     <m7>Копіювання легенд з аркуша "{0}" у документ "{1}"</m7>
     <m8>Копіювання сіток напрямних з аркуша "{0}" в документ "{1}"</m8>
@@ -1237,6 +1257,86 @@
     <m16>Виберіть один із варіантів: використати наявний креслярський вигляд із цільового документа або створити й використати копію креслярського вигляду з документа-джерела</m16>
     <notOrganized>!Не організовані</notOrganized>
   </mprCopySheetsToOpenDocuments>
+  <mprLinksManager
+    LocalName="Менеджер зв'язків"
+    Description="Керування зовнішніми зв'язками Revit і CAD у поточному документі"
+    FullDescription="Плагін дає змогу переглядати, фільтрувати, додавати, завантажувати, вивантажувати, перезавантажувати, видаляти зв'язки та переписувати шляхи до них у поточному документі Revit">
+    <filtersGroupHeader>Фільтри</filtersGroupHeader>
+    <statusLabel>Стан:</statusLabel>
+    <linksListGroupHeader>Список зв'язків</linksListGroupHeader>
+    <columnNameHeader>Ім'я</columnNameHeader>
+    <columnStatusHeader>Стан</columnStatusHeader>
+    <loadSettingsGroupHeader>Налаштування завантаження</loadSettingsGroupHeader>
+    <positioningLabel>Позиціювання</positioningLabel>
+    <onAddBehaviorLabel>Під час додавання</onAddBehaviorLabel>
+    <operationsGroupHeader>Операції</operationsGroupHeader>
+    <deleteSelectedButton>Видалити</deleteSelectedButton>
+    <loadButton>Завантажити</loadButton>
+    <unloadButton>Вивантажити</unloadButton>
+    <reloadButton>Перезавантажити</reloadButton>
+    <rewritePathText>Переписати шляхи</rewritePathText>
+    <rewritePathsByFolderButton>Переписати шляхи (папка)</rewritePathsByFolderButton>
+    <showLogButton>Показати журнал</showLogButton>
+    <addLinkSettingsDialogTitle>Налаштування додавання</addLinkSettingsDialogTitle>
+    <rewriteHintText>Підстановки: * — будь-яка послідовність, ? — один символ, # — цифра. Екранування: \* \? \# \\. Якщо ввімкнено режим "Змінювати лише шлях", маска застосовується тільки до каталогу.</rewriteHintText>
+    <rewriteModeLabel>Режим заміни:</rewriteModeLabel>
+    <rewriteModeNormal>Звичайний режим</rewriteModeNormal>
+    <rewriteModeMask>Режим маски</rewriteModeMask>
+    <findTextLabel>Знайти</findTextLabel>
+    <replaceTextLabel>Замінити на</replaceTextLabel>
+    <findMaskLabel>Маска пошуку:</findMaskLabel>
+    <pathOnlyModeLabel>Змінювати лише шлях</pathOnlyModeLabel>
+    <replaceMaskLabel>Маска заміни:</replaceMaskLabel>
+    <originalPathColumnHeader>Початковий шлях</originalPathColumnHeader>
+    <newPathColumnHeader>Новий шлях</newPathColumnHeader>
+    <fileNotFoundTooltip>Файл не знайдено</fileNotFoundTooltip>
+    <tableHintText>Позначте зв'язки для виконання операцій</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Менеджер зв'язків запущено</managerStartedLogFormat>
+    <openFilesFilter>Файли Revit і DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Файли Revit (*.rvt)|*.rvt|Файли DWG (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Пропущено вже наявних зв'язків: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>Додавання {0} зв'язків</addStartedLogFormat>
+    <addCompletedLogFormat>Додано зв'язків: {0}, помилок: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Помилка додавання файлу "{0}": {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>Загальна помилка: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>видалення</operationDeleteGenitive>
+    <operationLoadGenitive>завантаження</operationLoadGenitive>
+    <operationUnloadGenitive>вивантаження</operationUnloadGenitive>
+    <operationReloadGenitive>перезавантаження</operationReloadGenitive>
+    <deleteConfirmationMessage>Ви впевнені, що хочете видалити вибрані зв'язки?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Видалення</deleteConfirmationTitle>
+    <operationCanceledLogFormat>Операцію {0} скасовано користувачем</operationCanceledLogFormat>
+    <operationStartedLogFormat>Початок {0} {1} зв'язків</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Успішно: {0}, пропущено: {1}, помилок: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Результат {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>Загальна помилка під час {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Вибір папки скасовано користувачем</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Переписування шляхів скасовано користувачем</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Немає змін для переписування шляхів</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Початок переписування шляхів для {0} зв'язків</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Переписано шляхів: {0}, помилок: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>Загальна помилка під час переписування шляхів: {0}</rewriteErrorLogFormat>
+    <linkStatusLoaded>Завантажено</linkStatusLoaded>
+    <linkStatusUnloaded>Вивантажено</linkStatusUnloaded>
+    <linkStatusNotFound>Не знайдено</linkStatusNotFound>
+    <positioningSharedCoordinates>За спільними координатами</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Суміщення внутрішніх початків</positioningOriginToOrigin>
+    <positioningCenterToCenter>Суміщення центрів</positioningCenterToCenter>
+    <onAddLoadImmediately>Одразу завантажити</onAddLoadImmediately>
+    <onAddAddUnloaded>Додати вивантаженим</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Файл зв'язку не знайдено: {0}</handlerLinkFileNotFoundFormat>
+    <handlerUnsupportedLinkTypeFormat>Тип зв'язку "{0}" не підтримується</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>Розширення файлу "{0}" не підтримується</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Додавання зв'язків</addLinksTransaction>
+    <deleteLinksTransaction>Видалення зв'язків</deleteLinksTransaction>
+    <loadLinksTransaction>Завантаження зв'язків</loadLinksTransaction>
+    <unloadLinksTransaction>Вивантаження зв'язків</unloadLinksTransaction>
+    <reloadLinksTransaction>Перезавантаження зв'язків</reloadLinksTransaction>
+    <searchHint>Введіть текст для пошуку</searchHint>
+    <unloadForSelfMenuItem>Для себе</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Для всіх</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>локального вивантаження</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Локальне вивантаження зв'язків</unloadLocallyLinksTransaction>
+  </mprLinksManager>
   <mprWorksets
     LocalName="Робочі набори"
     Description="Керування робочими наборами, їх створення та застосування"
@@ -1730,6 +1830,8 @@
     <messageInvalidActiveDocument>Активний документ не збігається з вибраним джерелом</messageInvalidActiveDocument>
     <notSelectedElements>У моделі не вибрано жодного елемента</notSelectedElements>
     <selectElementsFromLink>Виберіть елементи зі зв’язаного файлу</selectElementsFromLink>
+    <groupTypeExists>У цільовому документі вже є група "{0}".\nВиконати копіювання із заміною?</groupTypeExists>
+    <groups>Групи</groups>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Примітки"
@@ -2934,6 +3036,7 @@
     <h10>Відкриті види</h10>
     <h11>Види в проєкті</h11>
     <h12>Додано видів</h12>
+    <h13>Виділити відзначені види</h13>
   </mprFavoriteViews>
   <mprModelCompare
     LocalName="Порівняння моделей"
@@ -3071,4 +3174,9 @@
     <h20>Параметр відсутній у проекті:</h20>
     <copyError>Сталася помилка під час копіювання в буфер. Спробуйте ще раз</copyError>
   </mprEqualCurtainWalls>
+  <mprToposolidFloorConverter
+    LocalName="Топотіло-покриття"
+    Description="Пряма та зворотна конвертація елементів топотіла в покриття">
+    <h1>Виберіть топотіла та/або покриття</h1>
+  </mprToposolidFloorConverter>
 </ModPlus>

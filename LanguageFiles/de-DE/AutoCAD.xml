@@ -14,6 +14,7 @@
     <msg1>Geben Sie die Einfügeposition an</msg1>
     <msg2>Einfügen in eine verbundene Zelle ist nicht möglich</msg2>
     <msg3>Das Verschieben des Titels ist nicht möglich.</msg3>
+    <msg4>Wählen Sie eine andere Zeile zum Sortieren aus. Das Sortieren mit Hervorhebung der Überschrift wird nicht unterstützt.</msg4>
     <e1>Unbekannter Bewegungsmodus</e1>
     <e2>Die kleinste Einheit des ausgewählten Fragments konnte nicht bestimmt werden</e2>
     <e3>Der ausgewählte Bereich ist zum Sortieren zu klein</e3>
@@ -1403,7 +1404,7 @@
   <mpSpecifications
     LocalName="Bauteillisten"
     Description="Ein Plugin zur Erstellung und Ausfüllung allgemeiner Bauteillisten"
-    FullDescription="Mit dem Plugin können Sie Einträge zum AutoCAD-Kontextmenü hinzufügen und damit die Möglichkeiten der Verarbeitung von Bauteillisten erweitern: Kontextmenü für Tabellen: &quot;Produkt aus der Datenbank hinzufügen&quot; – ermöglicht das direkte Hinzufügen von Produkten aus der Plugin-Datenbank zur AutoCad-Tabelle, Kontextmenü für Blöcke: Attribute für Bauteilliste hinzufügen/ändern – ermöglicht das Hinzufügen von Attributen für die Bauteilliste zu Blöcken (weitere Informationen finden Sie im Menü &quot;Hilfe&quot;).">
+    FullDescription="Mit dem Plugin können Sie Einträge zum AutoCAD-Kontextmenü hinzufügen und damit die Möglichkeiten der Verarbeitung von Bauteillisten erweitern: Kontextmenü für Tabellen: &quot;Produkt aus der Datenbank hinzufügen&quot; – ermöglicht das direkte Hinzufügen von Produkten aus der Plugin-Datenbank zur AutoCAD-Tabelle, Kontextmenü für Blöcke: Attribute für Bauteilliste hinzufügen/ändern – ermöglicht das Hinzufügen von Attributen für die Bauteilliste zu Blöcken (weitere Informationen finden Sie im Menü &quot;Hilfe&quot;).">
     <h6>KONTEXTMENÜ</h6>
     <h7>Erhältlich in der vollständigen Plugin-Version</h7>
     <h8>Kontextmenü für Tabellen:</h8>
@@ -1928,6 +1929,7 @@
     <tab17>Suchen und ersetzen</tab17>
     <tab18>Suche und Ersetzen in intelligenten Objekten auf der Grundlage der Werte von Zeichenketten- und numerischen Eigenschaften</tab18>
     <tab19>Schweißen</tab19>
+    <!--todo remove after 2.5.18.0-->
     <defl>Standardmäßig</defl>
     <err1>Die Datei konnte nicht gefunden werden</err1>
     <err2>Linientyp konnte nicht heruntergeladen werden</err2>
@@ -2214,6 +2216,23 @@
     <h257>Erstellung eines intelligenten Objekts auf Basis eines anonymen Blocks, der die Kennzeichnung der polaren Achse beschreibt</h257>
     <h258>Grundstil für die polare Achse</h258>
     <h259>Anfangswert</h259>
+    <h260>Mehrzeilige Führungslinie</h260>
+    <h261>Mehrzeilige Führungslinie erstellen</h261>
+    <h262>Intelligentes Objekt basierend auf einem anonymen Block erstellen, der die mehrzeilige Führungslinie beschreibt</h262>
+    <h263>Gespeicherte Werte bearbeiten</h263>
+    <h264>Gespeicherte Werte der mehrzeiligen Führungslinie bearbeiten</h264>
+    <h265>Basisstil für die mehrzeilige Führungslinie</h265>
+    <h266>Neue Zeile</h266>
+    <h267>Maximale Anzahl der Elemente:</h267>
+    <h268>Werte im aktuellen Objekt</h268>
+    <h269>Gespeicherte Werte</h269>
+    <h270>Pfeillinie</h270>
+    <h271>Pfeillinie erstellen</h271>
+    <h272>Intelligentes Objekt basierend auf einem anonymen Block erstellen, der die Pfeillinie beschreibt</h272>
+    <h273>Pfeillinie aus Polylinie</h273>
+    <h274>Ausgewählte Polylinie in Pfeillinie konvertieren</h274>
+    <h275>Basisstil für Pfeillinie</h275>
+    <h276>Allgemeine Eigenschaften</h276>
     <so0>Grafiken aktualisieren</so0>
     <sot0>Die Grafiken aller gefundenen intelligenten Objekte werden regeneriert</sot0>
     <so1>Auswählen</so1>
@@ -2224,6 +2243,7 @@
     <sot3>Alle intelligenten Objekte der angegebenen Typen im aktuellen Bereich werden explodiert</sot3>
     <so4>Löschen</so4>
     <sot4>Alle intelligenten Objekte der angegebenen Typen im aktuellen Bereich werden gelöscht</sot4>
+    <mtleadavailfull>Die Verwendung gespeicherter Werte ist in der Vollversion des Plugins verfügbar!</mtleadavailfull>
     <la1>Kopieren</la1>
     <la2>Nicht kopieren</la2>
     <la3>Fragen</la3>
@@ -2279,6 +2299,7 @@
     <let6>Geöffnete</let6>
     <let7>Geschlossene</let7>
     <let8>Pfeilspitze</let8>
+    <let9>Schnitt</let9>
     <wjt1>Stumpfnaht, werkseitig hergestellte, durchgehende, auf der sichtbaren Seite</wjt1>
     <wjt2>Stumpfnaht, werkseitig hergestellte, durchgehende, auf der unsichtbaren Seite</wjt2>
     <wjt3>Stumpfnaht mit Montagestoß, durchgehende, auf der sichtbaren Seite</wjt3>
@@ -2592,6 +2613,17 @@
     <d207>Knicklinie am Mittelpunkt der ersten Markierung oder bis zum Griff ausrichten</d207>
     <p208>Zusätzliche Markierungen entlang des Basisvektors ausrichten</p208>
     <d208>Zusätzliche Markierungen entlang des Knickvektors oder des ursprünglichen Vektors anzeigen</d208>
+    <p209>Startpunkt des Pfeils</p209>
+    <p210>Abstand zur nächsten Linie</p210>
+    <p211>Seite der Seitenlinie</p211>
+    <p212>Länge der Linie</p212>
+    <p213>Pfeile auf Bogensegmenten krümmen</p213>
+    <p214>Gekürzte Pfeile anzeigen</p214>
+    <p215>Pfeiltyp</p215>
+    <p216>Lücken mit zusätzlichen Strichen füllen</p216>
+    <p217>Farbe der Hauptstriche</p217>
+    <p218>Farbe der zusätzlichen Striche</p218>
+    <p219>Abstand</p219>
     <jigM1>Kreisbogen</jigM1>
     <jigM2>LInie</jigM2>
     <grpM1>Scheitelpunkt strecken</grpM1>
@@ -2630,6 +2662,16 @@
     <hfqt2>Viertel 2</hfqt2>
     <hfqt3>Viertel 3</hfqt3>
     <hfqt4>Viertel 4</hfqt4>
+    <mtArrowPos1>Automatisch</mtArrowPos1>
+    <mtArrowPos2>Unten links</mtArrowPos2>
+    <mtArrowPos3>Unten rechts</mtArrowPos3>
+    <mtArrowPos4>Oben rechts</mtArrowPos4>
+    <mtArrowPos5>Oben links</mtArrowPos5>
+    <mtLedSide1>Automatisch</mtLedSide1>
+    <mtLedSide2>Links</mtLedSide2>
+    <mtLedSide3>Rechts</mtLedSide3>
+    <arrLineType1>Einfacher Pfeil</arrLineType1>
+    <arrLineType2>Dicker Pfeil</arrLineType2>
   </mpESKD>
   <mpStripMtext
     LocalName="Entfernen der Formattierung"

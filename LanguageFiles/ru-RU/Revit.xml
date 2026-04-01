@@ -108,6 +108,9 @@
     <h101>Задайте префикс и суффикс значения, которое требуется увеличивать. Пример: значение = "КН1", префикс = "КН", результат: "КН2", КН3, "КН4" и т.д.</h101>
     <h102>Счетчик</h102>
     <h103>В параметре инкрементировать значение</h103>
+    <h104>Не закрывать окно после дублирования</h104>
+    <h105>В имени листа инкрементировать значение</h105>
+    <h106>При формировании нового номера листа добавлять нумерацию в</h106>
     <start>Начале</start>
     <notOrganized>!Не организованы</notOrganized>
     <end>Конце</end>
@@ -187,6 +190,7 @@
     <h93>Счетчик</h93>
     <h94>Количество вышележащих уровней для вида "{0}" меньше, чем требуется создать копий вида. Копий вида создано: {1}</h94>
     <h95>Попробовать продолжить существующую нумерацию</h95>
+    <h96>Не закрывать окно после дублирования</h96>
     <notOrganized>!Не организованы</notOrganized>
     <start>Начале</start>
     <end>Конце</end>
@@ -215,6 +219,7 @@
     <nullSectionBoxMsg1>Выбранный режим не поддерживает предварительный выбор элементов</nullSectionBoxMsg1>
     <nullSectionBoxMsg2>Для выбранных элементов невозможно выполнить подрезку</nullSectionBoxMsg2>
     <tooltip1>Позволяет задать элемент для ориентации 3D-подрезки</tooltip1>
+    <InViewScheduleMsg>В спецификации доступен только предварительный выбор элементов из модели</InViewScheduleMsg>
   </ostViewIn3D>
   <whshScheduleLookup
     LocalName="Поиск в спецификациях"
@@ -884,6 +889,7 @@
     <h63>Используется в фильтре</h63>
     <h64>Используется в экземпляре семейства</h64>
     <h65>Выбрано опций</h65>
+    <!--todo remove after 3.0.0.0-->
     <h66>Виды</h66>
     <h67>Размещен на листе</h67>
     <h68>Удаление видов</h68>
@@ -1056,6 +1062,20 @@
     <ExpandAll>Развернуть все</ExpandAll>
     <CollapseAll>Свернуть все</CollapseAll>
     <SelectAllElementsInCategory>Выбрать все элементы в категории</SelectAllElementsInCategory>
+    <DetailItemTypes>Типы элементов детализации</DetailItemTypes>
+    <DetailItems>Элементы детализации</DetailItems>
+    <DimensionTypes>Типы размеров</DimensionTypes>
+    <ElementTypes>Типы элементов</ElementTypes>
+    <Groups>Группы</Groups>
+    <ModelElements>Элементы модели</ModelElements>
+    <RevitLinks>Связи Revit</RevitLinks>
+    <Sheets>Листы</Sheets>
+    <TagTypes>Типы марок</TagTypes>
+    <TextTypes>Типы текста</TextTypes>
+    <UnusedElements>Неиспользуемые элементы</UnusedElements>
+    <ViewTypes>Типы видов</ViewTypes>
+    <Views>Виды</Views>
+    <Worksets>Рабочие наборы</Worksets>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Нумератор листов"
@@ -1237,6 +1257,86 @@
     <m16>Выберите один из вариантов: использовать существующий чертежный вид из целевого документа или создать и использовать копию чертежного вида из документа-источника</m16>
     <notOrganized>!Не организованы</notOrganized>
   </mprCopySheetsToOpenDocuments>
+  <mprLinksManager
+    LocalName="Менеджер связей"
+    Description="Управление внешними связями Revit и CAD в текущем документе"
+    FullDescription="Плагин позволяет просматривать, фильтровать, добавлять, загружать, выгружать, перезагружать, удалять связи и переписывать пути к ним в текущем документе Revit">
+    <filtersGroupHeader>Фильтры</filtersGroupHeader>
+    <statusLabel>Состояние:</statusLabel>
+    <linksListGroupHeader>Список связей</linksListGroupHeader>
+    <columnNameHeader>Имя</columnNameHeader>
+    <columnStatusHeader>Состояние</columnStatusHeader>
+    <loadSettingsGroupHeader>Настройки загрузки</loadSettingsGroupHeader>
+    <positioningLabel>Позиционирование</positioningLabel>
+    <onAddBehaviorLabel>При добавлении</onAddBehaviorLabel>
+    <operationsGroupHeader>Операции</operationsGroupHeader>
+    <deleteSelectedButton>Удалить</deleteSelectedButton>
+    <loadButton>Загрузить</loadButton>
+    <unloadButton>Выгрузить</unloadButton>
+    <reloadButton>Обновить</reloadButton>
+    <rewritePathText>Переписать пути</rewritePathText>
+    <rewritePathsByFolderButton>Переписать пути (папка)</rewritePathsByFolderButton>
+    <showLogButton>Показать журнал</showLogButton>
+    <addLinkSettingsDialogTitle>Настройки добавления</addLinkSettingsDialogTitle>
+    <rewriteHintText>Подстановки: * — любая последовательность, ? — один символ, # — цифра. Экранирование: \* \? \# \\. При включённом режиме "Менять только путь" маска применяется только к директории.</rewriteHintText>
+    <rewriteModeLabel>Режим замены:</rewriteModeLabel>
+    <rewriteModeNormal>Обычный режим</rewriteModeNormal>
+    <rewriteModeMask>Режим маски</rewriteModeMask>
+    <findTextLabel>Найти</findTextLabel>
+    <replaceTextLabel>Заменить на</replaceTextLabel>
+    <findMaskLabel>Маска поиска:</findMaskLabel>
+    <pathOnlyModeLabel>Менять только путь</pathOnlyModeLabel>
+    <replaceMaskLabel>Маска замены:</replaceMaskLabel>
+    <originalPathColumnHeader>Исходный путь</originalPathColumnHeader>
+    <newPathColumnHeader>Новый путь</newPathColumnHeader>
+    <fileNotFoundTooltip>Файл не найден</fileNotFoundTooltip>
+    <tableHintText>Отметьте связи для выполнения операций</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Менеджер связей запущен</managerStartedLogFormat>
+    <openFilesFilter>Файлы Revit и DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Файлы Revit (*.rvt)|*.rvt|Файлы DWG (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Пропущено уже существующих связей: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>Добавление {0} связей</addStartedLogFormat>
+    <addCompletedLogFormat>Добавлено связей: {0}, ошибок: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Ошибка добавления файла "{0}": {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>Общая ошибка: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>удаления</operationDeleteGenitive>
+    <operationLoadGenitive>загрузки</operationLoadGenitive>
+    <operationUnloadGenitive>выгрузки</operationUnloadGenitive>
+    <operationReloadGenitive>перезагрузки</operationReloadGenitive>
+    <deleteConfirmationMessage>Вы уверены, что хотите удалить выбранные связи?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Удаление</deleteConfirmationTitle>
+    <operationCanceledLogFormat>Операция {0} отменена пользователем</operationCanceledLogFormat>
+    <operationStartedLogFormat>Начало {0} {1} связей</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Успешно: {0}, пропущено: {1}, ошибок: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Результат {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>Общая ошибка во время {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Выбор папки отменен пользователем</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Перезапись путей отменена пользователем</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Нет изменений для перезаписи путей</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Начало перезаписи путей для {0} связей</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Перезаписано путей: {0}, ошибок: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>Общая ошибка при перезаписи путей: {0}</rewriteErrorLogFormat>
+    <linkStatusLoaded>Загружена</linkStatusLoaded>
+    <linkStatusUnloaded>Выгружена</linkStatusUnloaded>
+    <linkStatusNotFound>Не найдена</linkStatusNotFound>
+    <positioningSharedCoordinates>По общим координатам</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Совмещение внутренних начал</positioningOriginToOrigin>
+    <positioningCenterToCenter>Совмещение центров</positioningCenterToCenter>
+    <onAddLoadImmediately>Сразу загрузить</onAddLoadImmediately>
+    <onAddAddUnloaded>Добавить выгруженной</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Файл связи не найден: {0}</handlerLinkFileNotFoundFormat>
+    <handlerUnsupportedLinkTypeFormat>Тип связи "{0}" не поддерживается</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>Расширение файла "{0}" не поддерживается</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Добавление связей</addLinksTransaction>
+    <deleteLinksTransaction>Удаление связей</deleteLinksTransaction>
+    <loadLinksTransaction>Загрузка связей</loadLinksTransaction>
+    <unloadLinksTransaction>Выгрузка связей</unloadLinksTransaction>
+    <reloadLinksTransaction>Перезагрузка связей</reloadLinksTransaction>
+    <unloadForSelfMenuItem>Для себя</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Для всех</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>локальной выгрузки</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Локальная выгрузка связей</unloadLocallyLinksTransaction>
+    <searchHint>Введите текст для поиска</searchHint>
+  </mprLinksManager>
   <mprWorksets
     LocalName="Рабочие наборы"
     Description="Управление рабочими наборами, их создание и применение"
@@ -1636,7 +1736,7 @@
     <m9>{0} – ПРЕДУПРЕЖДЕНИЕ! В данном документе ({1}) отключен общий доступ. Копирование рабочих наборов не производится.</m9>
     <m10>Рабочие наборы</m10>
     <m11> (Тип)</m11>
-    <m12>Обозреватель</m12>
+    <m12>Организация диспетчера проекта</m12>
     <m13>Размеры</m13>
     <m14>Штриховки</m14>
     <m15>Фильтры параметров</m15>
@@ -1730,6 +1830,8 @@
     <messageInvalidActiveDocument>Активный документ не совпадает с выбранным источником</messageInvalidActiveDocument>
     <notSelectedElements>В модели не выбрано ни одного элемента</notSelectedElements>
     <selectElementsFromLink>Выберите элементы из связанного файла</selectElementsFromLink>
+    <groupTypeExists>В целевом документе уже имеется группа "{0}".\nВыполнить копирование с заменой?</groupTypeExists>
+    <groups>Группы</groups>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Примечания"
@@ -2934,6 +3036,7 @@
     <h10>Открытые виды</h10>
     <h11>Виды в проекте</h11>
     <h12>Добавлено видов</h12>
+    <h13>Выделить отмеченные виды</h13>
   </mprFavoriteViews>
   <mprModelCompare
     LocalName="Сравнение моделей"
@@ -3071,4 +3174,9 @@
     <h20>Параметр отсутствует в проекте:</h20>
     <copyError>Произошла ошибка при копировании в буфер. Попробуйте еще раз</copyError>
   </mprEqualCurtainWalls>
+  <mprToposolidFloorConverter
+    LocalName="Топотело-перекрытие"
+    Description="Прямая и обратная конвертация элементов топотела в перекрытие">
+    <h1>Выберите топотела и/или перекрытия</h1>
+  </mprToposolidFloorConverter>
 </ModPlus>

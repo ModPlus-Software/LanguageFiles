@@ -95,19 +95,22 @@
     <h88>Gemeinsame Nummerierungseinstellungen verwenden</h88>
     <h89>Plankopien für obere Ebenen erstellen</h89>
     <h90>Beim Versuch, Ansichten zu kopieren, wurden keine oberen Ebenen gefunden</h90>
-    <h91>Sammlung für Duplikate ändern</h91>
-    <h92>Auf Sammlungen verteilen</h92>
-    <h93>In einer Sammlung platzieren</h93>
-    <h94>Suchen und Ersetzen im Sammlungsnamen</h94>
-    <h95>Sammlungsname</h95>
-    <h96>Neue Zeichensammlung</h96>
-    <h97>Parameterwerte löschen</h97>
+    <h91>Plansammlung für Duplikate ändern</h91>
+    <h92>Auf Plansammlungen verteilen</h92>
+    <h93>In einer Plansammlung platzieren</h93>
+    <h94>Suchen und Ersetzen im Plansammlungsnamen</h94>
+    <h95>Plansammlungsname</h95>
+    <h96>Neue Plansammlung</h96>
+    <h97>Doppelte Pläne öffnen</h97>
     <h98>Doppelte Zeichnungen öffnen</h98>
     <h99>Wert in Filtern inkrementieren</h99>
     <h100>(falls vorhanden)</h100>
     <h101>Geben Sie Präfix und Suffix des Werts an, der erhöht werden soll. Beispiel: Wert = „KN1", Präfix = „KN", Ergebnis: „KN2", KN3, „KN4" usw.</h101>
     <h102>Zähler</h102>
     <h103>Wert im Parameter inkrementieren</h103>
+    <h104>Fenster nach Duplizieren nicht schließen</h104>
+    <h105>Wert im Plannamen inkrementieren</h105>
+    <h106>Beim Erstellen einer neuen Plannummer die Nummerierung hinzufügen zu</h106>
     <start>Anfang</start>
     <notOrganized>!Nicht organisiert</notOrganized>
     <end>Ende</end>
@@ -187,6 +190,7 @@
     <h93>Zähler</h93>
     <h94>Anzahl der oberen Ebenen für die Ansicht "{0}" ist geringer als die Anzahl zu erstellender Ansichtskopien. Erstellte Ansichtskopien: {1}</h94>
     <h95>Versuchen, bestehende Nummerierung fortzusetzen</h95>
+    <h96>Fenster nach Duplizieren nicht schließen</h96>
     <notOrganized>!Nicht organisiert</notOrganized>
     <start>Anfang</start>
     <end>Ende</end>
@@ -215,6 +219,7 @@
     <nullSectionBoxMsg1>Der ausgewählte Modus unterstützt keine Vorauswahl von Elementen</nullSectionBoxMsg1>
     <nullSectionBoxMsg2>Für die ausgewählten Elemente kann keine Zuschneidung durchgeführt werden</nullSectionBoxMsg2>
     <tooltip1>Ermöglicht das Festlegen eines Elements zur Ausrichtung des 3D-Schnittbereichs</tooltip1>
+    <InViewScheduleMsg>In der Bauteilliste ist nur die Vorauswahl von Elementen aus dem Modell verfügbar</InViewScheduleMsg>
   </ostViewIn3D>
   <whshScheduleLookup
     LocalName="Suche in Bauteillisten"
@@ -884,6 +889,7 @@
     <h63>Wird in einem Filter verwendet</h63>
     <h64>Wird in einem Familienexemplar verwendet</h64>
     <h65>Optionen ausgewählt</h65>
+    <!--todo remove after 3.0.0.0-->
     <h66>Ansichten</h66>
     <h67>Im Plan platziert</h67>
     <h68>Löschen von Ansichten</h68>
@@ -1056,6 +1062,20 @@
     <ExpandAll>Alle erweitern</ExpandAll>
     <CollapseAll>Alle reduzieren</CollapseAll>
     <SelectAllElementsInCategory>Alle Elemente in der Kategorie auswählen</SelectAllElementsInCategory>
+    <DetailItemTypes>Detailkomponententypen</DetailItemTypes>
+    <DetailItems>Detailkomponenten</DetailItems>
+    <DimensionTypes>Bemaßungstypen</DimensionTypes>
+    <ElementTypes>Elementtypen</ElementTypes>
+    <Groups>Gruppen</Groups>
+    <ModelElements>Modellelemente</ModelElements>
+    <RevitLinks>Revit-Verknüpfungen</RevitLinks>
+    <Sheets>Pläne</Sheets>
+    <TagTypes>Beschriftungstypen</TagTypes>
+    <TextTypes>Texttypen</TextTypes>
+    <UnusedElements>Nicht verwendete Elemente</UnusedElements>
+    <ViewTypes>Ansichtstypen</ViewTypes>
+    <Views>Ansichten</Views>
+    <Worksets>Arbeitssätze</Worksets>
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Plannummerierung"
@@ -1237,6 +1257,86 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <m16>Wählen Sie bitte, ob Sie eine vorhandene Zeichenansicht aus dem Zieldokument verwenden oder eine Kopie der Zeichenansicht aus dem Quelldokument erstellen und verwenden möchten</m16>
     <notOrganized>!Nicht organisiert</notOrganized>
   </mprCopySheetsToOpenDocuments>
+  <mprLinksManager
+    LocalName="Verknüpfungsmanager"
+    Description="Verwaltung externer Revit- und CAD-Verknüpfungen im aktuellen Dokument"
+    FullDescription="Das Plugin ermöglicht das Anzeigen, Filtern, Hinzufügen, Laden, Entladen, Neuladen, Löschen von Verknüpfungen sowie das Umschreiben ihrer Pfade im aktuellen Revit-Dokument">
+    <filtersGroupHeader>Filter</filtersGroupHeader>
+    <statusLabel>Status:</statusLabel>
+    <linksListGroupHeader>Liste der Verknüpfungen</linksListGroupHeader>
+    <columnNameHeader>Name</columnNameHeader>
+    <columnStatusHeader>Status</columnStatusHeader>
+    <loadSettingsGroupHeader>Ladeeinstellungen</loadSettingsGroupHeader>
+    <positioningLabel>Positionierung</positioningLabel>
+    <onAddBehaviorLabel>Beim Hinzufügen</onAddBehaviorLabel>
+    <operationsGroupHeader>Operationen</operationsGroupHeader>
+    <deleteSelectedButton>Löschen</deleteSelectedButton>
+    <loadButton>Laden</loadButton>
+    <unloadButton>Lösen</unloadButton>
+    <reloadButton>Neu laden</reloadButton>
+    <rewritePathText>Pfade umschreiben</rewritePathText>
+    <rewritePathsByFolderButton>Pfade umschreiben (Ordner)</rewritePathsByFolderButton>
+    <showLogButton>Protokoll anzeigen</showLogButton>
+    <addLinkSettingsDialogTitle>Einstellungen zum Hinzufügen</addLinkSettingsDialogTitle>
+    <rewriteHintText>Platzhalter: * — beliebige Folge, ? — ein Zeichen, # — Ziffer. Escaping: \* \? \# \\. Wenn der Modus „Nur Pfad ändern" aktiviert ist, wird die Maske nur auf das Verzeichnis angewendet.</rewriteHintText>
+    <rewriteModeLabel>Ersetzungsmodus:</rewriteModeLabel>
+    <rewriteModeNormal>Normaler Modus</rewriteModeNormal>
+    <rewriteModeMask>Maskenmodus</rewriteModeMask>
+    <findTextLabel>Suchen</findTextLabel>
+    <replaceTextLabel>Ersetzen durch</replaceTextLabel>
+    <findMaskLabel>Suchmaske:</findMaskLabel>
+    <pathOnlyModeLabel>Nur Pfad ändern</pathOnlyModeLabel>
+    <replaceMaskLabel>Ersetzungsmaske:</replaceMaskLabel>
+    <originalPathColumnHeader>Ursprünglicher Pfad</originalPathColumnHeader>
+    <newPathColumnHeader>Neuer Pfad</newPathColumnHeader>
+    <fileNotFoundTooltip>Datei nicht gefunden</fileNotFoundTooltip>
+    <tableHintText>Markieren Sie Verknüpfungen für die Ausführung von Operationen</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Verknüpfungsmanager gestartet</managerStartedLogFormat>
+    <openFilesFilter>Revit- und DWG-Dateien (*.rvt;*.dwg)|*.rvt;*.dwg|Revit-Dateien (*.rvt)|*.rvt|DWG-Dateien (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Bereits vorhandene Verknüpfungen übersprungen: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>Hinzufügen von {0} Verknüpfungen</addStartedLogFormat>
+    <addCompletedLogFormat>Verknüpfungen hinzugefügt: {0}, Fehler: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Fehler beim Hinzufügen der Datei "{0}": {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>Allgemeiner Fehler: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>Löschens</operationDeleteGenitive>
+    <operationLoadGenitive>Ladens</operationLoadGenitive>
+    <operationUnloadGenitive>Entladens</operationUnloadGenitive>
+    <operationReloadGenitive>Neuladen</operationReloadGenitive>
+    <deleteConfirmationMessage>Möchten Sie wirklich die ausgewählten Verknüpfungen löschen?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Löschen</deleteConfirmationTitle>
+    <operationCanceledLogFormat>Vorgang {0} wurde vom Benutzer abgebrochen</operationCanceledLogFormat>
+    <operationStartedLogFormat>Beginn von {0} für {1} Verknüpfungen</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Erfolgreich: {0}, übersprungen: {1}, Fehler: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Ergebnis von {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>Allgemeiner Fehler während {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Ordnerauswahl wurde vom Benutzer abgebrochen</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Pfadumschreibung wurde vom Benutzer abgebrochen</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Keine Änderungen zum Umschreiben der Pfade</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Beginn der Pfadumschreibung für {0} Verknüpfungen</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Pfade umgeschrieben: {0}, Fehler: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>Allgemeiner Fehler beim Umschreiben der Pfade: {0}</rewriteErrorLogFormat>
+    <linkStatusLoaded>Geladen</linkStatusLoaded>
+    <linkStatusUnloaded>Entladen</linkStatusUnloaded>
+    <linkStatusNotFound>Nicht gefunden</linkStatusNotFound>
+    <positioningSharedCoordinates>Nach gemeinsamen Koordinaten</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Ursprung zu Ursprung</positioningOriginToOrigin>
+    <positioningCenterToCenter>Mitte zu Mitte</positioningCenterToCenter>
+    <onAddLoadImmediately>Sofort laden</onAddLoadImmediately>
+    <onAddAddUnloaded>Entladen hinzufügen</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Datei der Verknüpfung nicht gefunden: {0}</handlerLinkFileNotFoundFormat>
+    <handlerUnsupportedLinkTypeFormat>Verknüpfungstyp "{0}" wird nicht unterstützt</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>Dateierweiterung "{0}" wird nicht unterstützt</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Verknüpfungen hinzufügen</addLinksTransaction>
+    <deleteLinksTransaction>Verknüpfungen löschen</deleteLinksTransaction>
+    <loadLinksTransaction>Verknüpfungen laden</loadLinksTransaction>
+    <unloadLinksTransaction>Verknüpfungen entladen</unloadLinksTransaction>
+    <reloadLinksTransaction>Verknüpfungen neu laden</reloadLinksTransaction>
+    <searchHint>Suchtext eingeben</searchHint>
+    <unloadForSelfMenuItem>Für mich</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Für alle</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>lokales Entladen</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Verknüpfungen lokal entladen</unloadLocallyLinksTransaction>
+  </mprLinksManager>
   <mprWorksets
     LocalName="Bearbeitungsbereiche"
     Description="Verwalten, Erstellen und Verwenden von Bearbeitungsbereichen"
@@ -1730,6 +1830,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <messageInvalidActiveDocument>Das aktive Dokument stimmt nicht mit der ausgewählten Quelle überein</messageInvalidActiveDocument>
     <notSelectedElements>Im Modell ist kein Element ausgewählt</notSelectedElements>
     <selectElementsFromLink>Wählen Sie Elemente aus der verknüpften Datei</selectElementsFromLink>
+    <groupTypeExists>Im Zieldokument ist die Gruppe "{0}" bereits vorhanden.\nKopie mit Ersetzung ausführen?</groupTypeExists>
+    <groups>Gruppen</groups>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notizen"
@@ -2934,6 +3036,7 @@ Sperre aufhebben?</h13>
     <h10>Offene Ansichten</h10>
     <h11>Ansichten im Projekt</h11>
     <h12>Ansichten hinzugefügt</h12>
+    <h13>Ausgewählte Ansichten markieren</h13>
   </mprFavoriteViews>
   <mprModelCompare
     LocalName="Modellvergleich"
@@ -3071,4 +3174,9 @@ Sperre aufhebben?</h13>
     <h20>Parameter fehlt im Projekt:</h20>
     <copyError>Beim Kopieren in die Zwischenablage ist ein Fehler aufgetreten. Versuchen Sie es noch einmal</copyError>
   </mprEqualCurtainWalls>
+  <mprToposolidFloorConverter
+    LocalName="Geländevolumenkörper-Geschossdecke"
+    Description="Direkte und umgekehrte Konvertierung von Geländevolumenkörper-Elementen in Geschossdecke">
+    <h1>Wählen Sie Geländevolumenkörper und/oder Geschossdecken</h1>
+  </mprToposolidFloorConverter>
 </ModPlus>
