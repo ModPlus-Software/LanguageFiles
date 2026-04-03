@@ -24,6 +24,20 @@
     <e8>No cell range selected</e8>
     <e9>Unknown validation mode</e9>
   </mpTableSort>
+  <mpMultiOffset
+    LocalName="MultiOffset"
+    Description="A plugin for performing multiple offsets at once">
+    <h1>Enter the offsets:</h1>
+    <hint1>Permitted characters:
+ numbers, -, =
+Example:
+ values:
+  -25  -14  =-6  7  =3  25 -4
+ will create offsets at following distances:
+  -25  -39  -6  7  3  32  -43</hint1>
+    <msg1>Select objects to offset:</msg1>
+    <e1>Input error</e1>
+  </mpMultiOffset>
   <mpTxtNumCopy
     LocalName="Copy with numbering"
     Description="Copies the selected text or block with an attribute containing a numeric value, changing the value to a specified numerical step"
