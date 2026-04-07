@@ -2,7 +2,7 @@
 <ModPlus>
   <mprSheetCopy
     LocalName="Duplizieren von Plänen"
-    Description="Mit dem Plugin können Sie Kopien der angegebenen Pläne mit unterschiedlichen Einstellungen erstellen"
+    Description="Kopieren angegebener Pläne mit verschiedenen Einstellungen"
     FullDescription="Ausgewählte Pläne können sowohl ohne Ansichten, als auch mit Ansichten kopiert werden. Sie können auch angeben, ob Legenden und Bauteillisten kopiert werden sollen. Das eindeutige Nummerierungssystem ermöglicht es Ihnen, die Nummer für eine Kopie des Plans nicht zu ändern, wenn Sie ein Präfix oder Suffix hinzufügen, das die Eindeutigkeit der Nummer gewährleistet">
     <h2>Suche nach Namen/Nummer</h2>
     <h3>Anzahl der Kopien</h3>
@@ -120,7 +120,7 @@
   </mprSheetCopy>
   <mprViewCopy
     LocalName="Duplizieren von Ansichten"
-    Description="Mit dem Plugin können Sie Kopien der angegebenen Ansichten und Bauteillisten mit unterschiedlichen Einstellungen erstellen">
+    Description="Kopieren angegebener Ansichten und Bauteillisten mit verschiedenen Einstellungen">
     <h1>In der limitierten Version sind nicht mehr als 3 Ansichten zum Duplizieren verfügbar</h1>
     <h2>Suche nach Namen</h2>
     <h3>Anzahl der Kopien</h3>
@@ -345,7 +345,7 @@
   <mprExteriorPlanDimensions
     LocalName="Äußere Bemaßungen im Grundriß"
     Description="Festlegen von äußeren Bemaßungen im Stockwerkgrundriß"
-    FullDescription="Mit dem Plugin können Sie mit einem Klick äußere Bemaßungen im Grundriß festlegen. Das Plugin verarbeitet nur horizontale und vertikale Wände und Achsen. Das Festlegen von äußeren Bemaßungen erfolgt entsprechend der aktuellen Arbeitskonfiguration, in der die Seiten für das Festlegen von äußeren Bemaßungen und die Einstellungen der Bemaßungsketten angegeben sind."
+    FullDescription="Festlegen äußerer Bemaßungen im Grundriss mit einem Klick. Nur horizontale und vertikale Wände und Achsen werden verarbeitet. Das Festlegen erfolgt entsprechend der aktuellen Arbeitskonfiguration, in der die Seiten für das Festlegen von äußeren Bemaßungen und die Einstellungen der Bemaßungsketten angegeben sind."
     LocalName1="Äußere Bemaßungen. Einstellungen"
     Description1="Einstellung von Arbeitskonfigurationen  für äußere Bemaßungen im Stockwerkgrundriß">
     <h1>Einstellungen der äußeren Bemaßungen</h1>
@@ -412,7 +412,7 @@
   <mprDimByLine
     LocalName="Bemaßungen entlang der Linie"
     Description="Festlegen von Bemaßungen entlang der angegebenen Linie"
-    FullDescription="Mit dem Plugin können Sie Bemaßungen im Grundriß, der Schnittansicht oder der Ansicht entlang einer angenommenen Linie festlegen, die durch zwei angegebene Punkte gebildet wird. In der Arbeitskonfiguration werden die zu bemessenden Elemente und die Methoden für das Festlegen von Bemaßungen (in der Mitte und/oder an den äußersten Seiten) definiert">
+    FullDescription="Festlegen von Bemaßungen im Grundriss, der Schnittansicht oder der Ansicht entlang einer angenommenen Linie, die durch zwei angegebene Punkte gebildet wird. Die zu bemessenden Elemente und Bemaßungsmethoden (in der Mitte und/oder an den äußersten Seiten) werden in der Arbeitskonfiguration definiert">
     <h1>Name der Konfiguration</h1>
     <h2>Kategoriefilter:</h2>
     <h3>Kategorie</h3>
@@ -469,7 +469,7 @@
   <mprDimBias
     LocalName="Verschieben von Bemaßungen"
     Description="Automatisches Verschieben des Bemaßungswertes, der auf Bemaßungslinien liegt"
-    FullDescription="Das Plugin überwacht alle erstellten Bemaßungen und verschiebt den Bemaßungstext zur Seite, wenn er auf die Bemaßungslinien liegt."
+    FullDescription="Automatische Überwachung aller erstellten Bemaßungen: wenn der Bemaßungstext auf Bemaßungslinien liegt, wird er zur Seite verschoben"
     LocalName1="Wiederherstellen"
     Description1="Wiederherstellen der Textposition für ausgewählte  Bemaßungen"
     LocalName2="Ausgewähltes verschieben"
@@ -495,7 +495,7 @@
   </mprDimBias>
   <mprInteriorPlanDimensions
     LocalName="Bemaßungen im Grundriß"
-    Description="Mit dem Plugin können Sie die Bemaßung von Elementen im Grundriß mit verschiedenen Methoden ausführen">
+    Description="Verschiedene Varianten der Elementbemaßung im Grundriss">
     <h2>Bemaßung von Achsen</h2>
     <h3>Bemaßung von Öffnungen</h3>
     <h4>Abstand der nachfolgenden Bemaßungsketten</h4>
@@ -567,8 +567,8 @@
   </mprInteriorPlanDimensions>
   <mprNestedFamilyParamsTransfer
     LocalName="Verknüpfen von Parametern"
-    Description="Das Plugin erleichtert Ihnen das Festlegen einer Verknüpfung zwischen den Parametern von Unterfamilien und den Parametern der Hauptfamilie"
-    FullDescription="Mit dem Plugin können Sie neue Parameter in der Hauptfamilie anhand eines oder mehrerer Parameter von Unterfamilien erstellen. Es ist möglich, durch Hinzufügen eines Präfixes oder Suffixes eine Maske für den Namen des erstellten Parameters festzulegen. Außerdem können Sie Verknüpfungen mit Parametern der Hauptfamilie festlegen oder aufheben">
+    Description="Vereinfachung der Verknüpfung zwischen Parametern von Unterfamilien und Parametern der Hauptfamilie"
+    FullDescription="Erstellen neuer Parameter in der Hauptfamilie anhand eines oder mehrerer Parameter von Unterfamilien. Eine Namensmaske kann durch Hinzufügen eines Präfixes oder Suffixes festgelegt werden. Verknüpfungen mit bestehenden Parametern der Hauptfamilie können festgelegt oder aufgehoben werden">
     <msg2>Achtung! Es gibt keine Typeneigenschaften in der aktuellen Familie! Eine korrekte Funktion des Plugins ist nicht möglich!</msg2>
     <msg3>Sie können die Option "Fortfahren und eine Typeneigenschaft erstellen" wählen. In diesem Fall wird das Plugin eine Typeneigenschaft mit einem Namen erstellen:</msg3>
     <msg4>Wenn Sie keine neue Typeneigenschaft erstellen möchten, sind folgende Schritte erforderlich:</msg4>
@@ -617,7 +617,7 @@
   </mprNestedFamilyParamsTransfer>
   <mprTools
     LocalName="Dienstprogramme"
-    Description="Eine Sammlung von kleinen Hilfs-Plugins">
+    Description="Sammlung von Hilfswerkzeugen">
     <ttShow>Alle Elemente der angegebenen Kategorie in der aktuellen Ansicht anzeigen</ttShow>
     <ttHide>Alle Elemente der angegebenen Kategorie in der aktuellen Ansicht ausblenden</ttHide>
     <Category>Alle</Category>
@@ -1076,8 +1076,8 @@
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Plannummerierung"
-    Description="Mit dem Plugin können Sie Pläne in einem Projekt umnummerieren"
-    FullDescription="Die Umnummerierung der Pläne erfolgt innerhalb einer Plangruppe. Sie können alle Pläne als eine Gruppe anzeigen oder so, wie es in den aktuellen Projektmanagereinstellungen ist. Es ist auch möglich, die Position der Pläne durch Verschieben innerhalb einer Gruppe zu ändern und dabei die ursprüngliche Nummerierung der Pläne in dieser Gruppe beizubehalten">
+    Description="Umnummerierung von Plänen im Projekt"
+    FullDescription="Umnummerierung erfolgt innerhalb einer Plangruppe. Alle Pläne können als eine Gruppe oder gemäß den aktuellen Projektmanagereinstellungen angezeigt werden. Planpositionen können durch Verschieben innerhalb einer Gruppe geändert werden, wobei die ursprüngliche Nummerierung beibehalten wird">
     <m1>Um das Plugin zu starten, wählen Sie das Projekt</m1>
     <!-- todo remove after 2.7.10.0 -->
     <m2>Erhältlich in der vollständigen Plugin-Version</m2>
@@ -1154,7 +1154,7 @@
   <mprFamilyDuplicateFixer
     LocalName="Richtigstellung von Duplikaten"
     Description="Automatische Richtigstellung von Familien- oder Typeneigenschaftduplikaten"
-    FullDescription="Mit dem Plugin können Sie Typeneigenschaften aus Familienduplikaten in die Hauptfamilien kopieren, Parameterwerte der Typeneigenschaften kopieren, Familienexemplare aktualisieren und Familienduplikate löschen. Außerdem können Sie damit Duplikate von Familientypeigenschaften ersetzen und ersetzte Typeneigenschaften löschen">
+    FullDescription="Kopieren von Typeneigenschaften aus Familienduplikaten in die Hauptfamilien, Parameterwerte der Typeneigenschaften kopieren, Familienexemplare aktualisieren und Familienduplikate löschen. Ersetzen von Duplikaten der Familientypeneigenschaften und Löschen ersetzter Typeneigenschaften ist ebenfalls verfügbar">
     <h1>Typeneigenschaften kopieren</h1>
     <h3>Exemplare der Familien ersetzen</h3>
     <h4>Duplikate der Familien löschen</h4>
@@ -1257,7 +1257,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   <mprLinksManager
     LocalName="Verknüpfungsmanager"
     Description="Verwaltung externer Revit- und CAD-Verknüpfungen im aktuellen Dokument"
-    FullDescription="Das Plugin ermöglicht das Anzeigen, Filtern, Hinzufügen, Laden, Entladen, Neuladen, Löschen von Verknüpfungen sowie das Umschreiben ihrer Pfade im aktuellen Revit-Dokument">
+    FullDescription="Anzeigen, Filtern, Hinzufügen, Laden, Entladen, Neuladen, Löschen von Verknüpfungen sowie Umschreiben ihrer Pfade im aktuellen Revit-Dokument">
     <filtersGroupHeader>Filter</filtersGroupHeader>
     <statusLabel>Status:</statusLabel>
     <linksListGroupHeader>Liste der Verknüpfungen</linksListGroupHeader>
@@ -1338,7 +1338,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   <mprWorksets
     LocalName="Bearbeitungsbereiche"
     Description="Verwalten, Erstellen und Verwenden von Bearbeitungsbereichen"
-    FullDescription="Mit dem Plugin können Sie Bearbeitungsbereich-Konfigurationen erstellen, aus denen Sie Bearbeitungsbereiche in einem Dokument erstellen können. Konfigurationen können importiert und exportiert werden. Für jeden Bearbeitungsbereich in der Konfiguration können Sie Bedingungen für die Anwendung des Bearbeitungsbereichs auf das Element festlegen"
+    FullDescription="Erstellen von Bearbeitungsbereich-Konfigurationen zum Anlegen von Bearbeitungsbereichen in einem Dokument. Konfigurationen können importiert und exportiert werden. Für jeden Bearbeitungsbereich können Bedingungen für die Anwendung auf Elemente festgelegt werden"
     LocalName1="Bearbeitungsbereiche aktualisieren"
     Description1="Befehlsabruf &quot;Bearbeitungsbereiche nach Filtern festlegen&quot; mit aktuellen Einstellungen ohne das Plugin-Fenster zu verwenden"
     LocalName2="Bearbeitungsbereiche verarbeiten"
@@ -1479,7 +1479,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   <zfiFamilyRenameTool
     LocalName="Gruppenumbenennen"
     Description="Gruppenumbenennen von Parameternamen, Typnamen und Parameterwerten in angegebenen Familien"
-    FullDescription="Das Plugin verarbeitet ausgewählte Dateien oder alle Dateien in den ausgewählten Ordnern. Sie können ein Präfixe oder Suffixe hinzufügen oder Such- und Ersetzungsfunktionen für das Umbenennen verwenden. Es gibt mehrere Optionen zur Einstellung von Such- und Ersetzungkriterien. Es ist auch möglich, reguläre Ausdrücke zur Suche nach Werten zu verwenden">
+    FullDescription="Verarbeitung ausgewählter Dateien oder aller Dateien in ausgewählten Ordnern. Präfix- oder Suffix-Ergänzung sowie Such- und Ersetzungsfunktionen sind verfügbar. Mehrere Optionen für Such- und Ersetzungskriterien stehen zur Verfügung, einschließlich Unterstützung regulärer Ausdrücke">
     <h1>Familien auswählen</h1>
     <h2>Verwenden</h2>
     <h3>Verwenden und abschließen</h3>
@@ -1531,8 +1531,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   </zfiFamilyRenameTool>
   <mprPatterns
     LocalName="Füllmuster"
-    Description="Füllmuster-Manager mit den Optionen für das Importieren, Exportieren, Bearbeiten und Erstellen"
-    FullDescription="Sie können den Typ vorhandener Füllmuster ändern und vorhandene Füllmuster vergrößern oder verkleinern. Es ist auch möglich den Gruppenimport aus pat-Dateien und einen Gruppenexport in pat-Dateien durchzuführen. Neue Füllmuster können mit Standardmitteln durch Angabe von Schritt und Winkel, durch Konvertierung von Zeichnungsansichten und auch durch Verwenden des Grafikeditors">
+    Description="Verwaltung von Füllmustern mit Import-, Export-, Bearbeitungs- und Erstellungsfunktionen"
+    FullDescription="Änderung des Typs vorhandener Füllmuster sowie Vergrößerung oder Verkleinerung sind verfügbar. Stapelimport aus pat-Dateien und Stapelexport in pat-Dateien werden unterstützt. Neue Füllmuster können mit Standardmitteln durch Angabe von Schritt und Winkel, durch Konvertierung von Zeichnungsansichten und auch durch Verwenden des Grafikeditors">
     <full>Erhältlich in der vollständigen Plugin-Version!</full>
     <mi1>Erstellen</mi1>
     <mi2>Ein neues leeres Füllmuster</mi2>
@@ -1833,7 +1833,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notizen"
-    Description="Das Plugin dient zur Verarbeitung von oft verwendeten Notizen">
+    Description="Arbeit mit häufig verwendeten Notizen">
     <h1>Einstellungen</h1>
     <h3>Doppelklick auf eine Notiz</h3>
     <h4>Für Standardnotizen:</h4>
@@ -1860,10 +1860,10 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   </mprNotes>
   <mprContextFilter
     LocalName="Kontextbezogener Filter"
-    Description="Filter, um Elemente nach Parametern zu filtern, der als Kontextmenü funktioniert"
-    FullDescription="Der Filter kann auf drei Arten gestartet werden: durch Klicken mit der linken Maustaste bei gedrückter Strg-Taste, durch Drücken bestimmter Tasten der Reihe nach oder durch Drücken einer Tastenkombination. Der Filter verfügt über drei Verarbeitungsebenen: alle Elemente des Modells, Elemente in der aktuellen Ansicht oder ausgewählte Elemente. Es ist auch möglich, Voreinstellungen anzuwenden, um schnell auf den Filter zuzugreifen."
+    Description="Filterung von Elementen nach Parametern über das Kontextmenü"
+    FullDescription="Start auf drei Arten: Linksklick bei gedrückter Strg-Taste, sequenzielles Drücken bestimmter Tasten oder Tastenkombination. Drei Verarbeitungsebenen: alle Modellelemente, Elemente in der aktuellen Ansicht oder ausgewählte Elemente. Voreinstellungen für schnellen Zugriff sind verfügbar"
     LocalName1="Filter Fenstermodus"
-    Description1="Ein im Fenstermodus funktionierender Filter, der die Elemente nach Parameter filtert">
+    Description1="Filterung von Elementen nach Parametern im Fenstermodus">
     <h1>Voreinstellungen</h1>
     <h3>Eine Voreinstellung auf die aktuelle Liste anwenden</h3>
     <h4>Suche nach Kategorien</h4>
@@ -1959,7 +1959,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   <mprCopyParameterValues
     LocalName="Kopieren von Werten"
     Description="Kopieren von Parameterwerten zwischen Elementen oder innerhalb eines Elements"
-    FullDescription="Das Plugin enthält verschiedene Kopieroptionen, mit denen Sie festlegen können, welche Elemente und wohin kopiert werden sollen. Es ist auch möglich, einen zusammengesetzten Wert (aus mehreren Parametern in einen) zu kopieren und Filter zum Auswählen von Elementen nach Kategorie und Parameterwerten anzuwenden. Außerdem können Sie Werte zwischen verschiedenen Parametertypen umzuwandeln">
+    FullDescription="Verschiedene Kopieroptionen zur Konfiguration von Quell- und Zielelementen. Kopieren zusammengesetzter Werte (aus mehreren Parametern in einen) ist verfügbar. Elementauswahlfilter nach Kategorien und Parameterwerten sowie Wertkonvertierung zwischen verschiedenen Parametertypen stehen zur Verfügung">
     <saveNew>Als neue speichern</saveNew>
     <full>Erhältlich in der vollständigen Plugin-Version</full>
     <to>in</to>
@@ -2185,7 +2185,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
   </mprSectionAnnotation>
   <mprJoin
     LocalName="Elementenverbindung"
-    Description="Ermöglicht das Verwalten des Anschlusses von Wänden und Träger sowie der Verbindung und des Schneidens von Elementen">
+    Description="Verwaltung des Anschlusses von Wänden und Trägern sowie der Verbindung und des Schneidens von Elementen">
     <e1>Die Auswahl enthält keine Elemente</e1>
     <e2>Keine Paaren zur Verbindung ausgewählt</e2>
     <t1>Anschluss von Elementen</t1>
@@ -2655,8 +2655,8 @@ Sperre aufhebben?</h13>
   </mprSumParameters>
   <mprViewColorOn3D
     LocalName="Ansichten in 3D anzeigen"
-    Description="Der Sichtbarkeitsbereich von Ansichten wird mit DirectShape farbig in 3D angezeigt"
-    FullDescription="Das Plugin ermöglicht das Erstellen von Sichtbarkeitsbereiche der Ansichten in Farbe DirectShape in 3D-Ansichten auf der Basis der Zuschneidegrenze der Ansicht mit der Tiefe des Hauptsekantenbereichs von Draufsichten oder der Zuschneidetiefe von Schnittansichten, Ansichten und Detailansichten. Im Plugin-Fenster gibt es eine Möglichkeit, zu Ansichten zu wechseln">
+    Description="Anzeige des Sichtbarkeitsbereichs von Ansichten in Farbe auf 3D mit DirectShape"
+    FullDescription="Erstellung von Sichtbarkeitsbereichen der Ansichten als DirectShape-Elemente in Farbe auf 3D-Ansichten, basierend auf der Zuschneidegrenze mit der Tiefe des Hauptsekantenbereichs von Draufsichten oder der Zuschneidetiefe von Schnittansichten und Detailansichten. Ansichtsnavigation ist aus dem Plugin-Fenster verfügbar">
     <t1>Zur 3D-Ansicht wechseln</t1>
     <t2>In der freien Version ist nur die Bearbeitung von Schnittansichten verfügbar</t2>
     <t3>Sichtbarkeitsbereich der Ansicht anzeigen</t3>
@@ -2857,7 +2857,7 @@ Sperre aufhebben?</h13>
   </mprTagless>
   <mprMaterialManager
     LocalName="Materialien-Manager"
-    Description="Ändern der Eigenschaften und Parameter von Materialien">
+    Description="Verwaltung von Eigenschaften und Parametern der Materialien">
     <msg1>Wählen Sie Materialien aus</msg1>
     <msg2>Wollen Sie die ausgewählten Materialien wirklich löschen?</msg2>
     <msg3>Materialien werden geladen...</msg3>
@@ -3020,7 +3020,7 @@ Sperre aufhebben?</h13>
   </mprFlipped>
   <mprFavoriteViews
     LocalName="Favoritenansichten"
-    Description="Auswahl der Favoritenansichten für das Öffnen">
+    Description="Schnelles Öffnen von Favoritenansichten">
     <!--todo remove after 1.0.1.0-->
     <h1>Suche nach Namen</h1>
     <h2>Ansichten</h2>

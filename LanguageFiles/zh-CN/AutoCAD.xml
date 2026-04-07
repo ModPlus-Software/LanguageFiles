@@ -2,7 +2,7 @@
 <ModPlus>
   <mpTableSort
     LocalName="表格排序"
-    Description="表格排序工具組">
+    Description="表格行列排序">
     <h2>MP: 分類</h2>
     <h3>MP: 移動行/列</h3>
     <h4>列</h4>
@@ -26,7 +26,7 @@
   </mpTableSort>
   <mpMultiOffset
     LocalName="多重偏移"
-    Description="可同時執行多個偏移的插件">
+    Description="一次操作执行多个偏移">
     <h1>請輸入偏移量：</h1>
     <hint1>允許的字元:
  數字, -, =
@@ -113,7 +113,7 @@
   </mpMultiCopy>
   <mpTxtCenter
     LocalName="居中文字"
-    Description="插件可创建单行文字或将现有文字在两点之间居中">
+    Description="在两点之间创建或居中对齐单行文字">
     <msg1>指定第一点或[现有文字]</msg1>
     <msg2>现有文字(E)</msg2>
     <msg2ln>E</msg2ln>
@@ -130,7 +130,7 @@
   </mpTxtCenter>
   <mpStandards
     LocalName="标准"
-    Description="插件可创建、存储和添加图层集、文字样式、标注样式和多重引线样式">
+    Description="创建、存储和添加图层集、文字样式、标注样式和多重引线样式">
     <copy>复制</copy>
     <no>否</no>
     <h1>集合名称：</h1>
@@ -231,7 +231,7 @@
   </mpStandards>
   <mpMultiScale
     LocalName="多比例缩放"
-    Description="插件可将选定对象各自按指定基点缩放"
+    Description="按指定基点缩放每个选定对象"
     FullDescription="每个选定对象将以指定基点（左下、右下、左上、右上或中心）进行缩放。缩放基点由对象边界框确定">
     <h1>创建选定对象的副本</h1>
     <h2>基点：</h2>
@@ -250,13 +250,13 @@
   </mpMultiScale>
   <mpMultiRotate
     LocalName="多旋转"
-    Description="插件可使选定对象各自绕Z轴旋转"
+    Description="使每个选定对象绕Z轴相对自身旋转"
     FullDescription="每个选定对象将以指定基点（左下、右下、左上、右上或中心）绕Z轴旋转。旋转中心由对象边界框确定">
     <h1>旋转角度：</h1>
   </mpMultiRotate>
   <mpMultiMirror
     LocalName="多镜像"
-    Description="插件可垂直或水平镜像选定对象"
+    Description="将每个选定对象相对自身进行垂直或水平镜像"
     FullDescription="每个选定对象将以指定基点（左下、右下、左上、右上或中心）进行垂直或水平镜像。镜像线由基点确定">
     <o1>镜像方向</o1>
     <o2>垂直</o2>
@@ -271,7 +271,7 @@
   <mpLayerAuto
     LocalName="自动图层"
     Description="自动为新建对象分配图层"
-    FullDescription="插件处理AutoCAD对象创建事件，自动为尺寸、文字、引线、填充等对象设置预设图层。可批量修改选定对象图层，支持按块名设置图层">
+    FullDescription="处理AutoCAD对象创建事件，自动为尺寸、文字、引线、填充等对象设置预设图层。可批量修改选定对象图层，支持按块名设置图层">
     <h1>基本对象图层</h1>
     <h2>图层分配</h2>
     <!--todo remove after 3.5.7.0-->
@@ -429,7 +429,7 @@
   </mpFormats>
   <mpNotes
     LocalName="注释"
-    Description="常用注释管理插件">
+    Description="常用注释的使用和管理">
     <h1>设置</h1>
     <h2>文字右键菜单</h2>
     <h3>双击注释</h3>
@@ -586,7 +586,7 @@
   </mpDimJustif>
   <mpStamps
     LocalName="图章"
-    Description="用于在图纸中插入标准化图章（以AutoCAD表格形式）的插件，支持字段功能"
+    Description="在图纸中插入标准化图章（AutoCAD表格形式），支持字段功能"
     FullDescription="使用&quot;字段&quot;插件可以在图章中添加动态值，这些值会随文档中所有图章的更新而自动变化">
     <h1>图章</h1>
     <h2>图章名称</h2>
@@ -748,7 +748,7 @@
   </mpSummLength>
   <mpSelSim
     LocalName="按样本选择"
-    Description="可从图纸所有对象或指定集合中选择与样本对象相似的对象"
+    Description="从图纸所有对象或指定集合中选择与样本相似的对象"
     FullDescription="使用前需设置匹配条件：相同类型、图层、颜色等。某些类型有额外条件，如文字高度相同、块名相同等">
     <h2>常规设置</h2>
     <h3>将样本对象包含在结果集中（从已选对象中再选择）</h3>
@@ -828,7 +828,7 @@
   </mpHandDim>
   <mpCalc
     LocalName="计算器"
-    Description="标准计算器的替代工具，具有从图纸获取数据、将结果添加到图纸以及手动编写计算公式的功能">
+    Description="计算器，支持从图纸获取数据、插入结果和手动编写计算公式">
     <!-- todo remove after 1.5.2.0 -->
     <prefix>前缀</prefix>
     <!-- todo remove after 1.5.2.0 -->
@@ -935,8 +935,8 @@
   </mpCalc>
   <mpArmature
     LocalName="钢筋"
-    Description="钢筋规格数据处理工具 - 提供各类信息查询和计算"
-    FullDescription="需要数据库支持。可查询大量钢筋规格的计算数据（截面积、重量、锚固长度等）">
+    Description="钢筋规格信息查询和计算"
+    FullDescription="需要数据库。提供大量钢筋规格的计算数据（截面积、重量、锚固长度等）">
     <cancel>取消</cancel>
     <h1>钢筋</h1>
     <h2>规范文件</h2>
@@ -1030,8 +1030,8 @@
   </mpRemoveAnnotScale>
   <mpTotals
     LocalName="总数据"
-    Description="快速创建总数据的插件，可从图纸中获取值"
-    FullDescription="插件从当前文档中的表格收集数据。参考文档清单根据数据库中存在的规范文档进行收集">
+    Description="快速创建总数据，可从图纸中获取值"
+    FullDescription="从当前文档的表格中收集数据。参考文档清单根据数据库中存在的规范文档进行收集">
     <insert>插入表格</insert>
     <accept>接受</accept>
     <cancel>取消</cancel>
@@ -1098,8 +1098,8 @@
   </mpTotals>
   <mpProductInsert
     LocalName="插入产品"
-    Description="从ModPlus数据库插入产品的插件，以包含扩展数据的块形式"
-    FullDescription="插件基于插件数据库中的数据创建AutoCAD块。块中添加了扩展数据，允许其他插件处理这些块并基于它们创建规格\n插件还可以向普通AutoCAD图元添加扩展数据\n重要！必须使用此插件插入块或复制已插入的块，否则（使用AutoCAD普通方式插入）不会添加扩展数据！">
+    Description="从ModPlus数据库插入产品，以包含扩展数据的块形式"
+    FullDescription="基于数据库中的数据创建AutoCAD块。块中添加了扩展数据，允许其他插件处理这些块并基于它们创建规格\n也可向普通AutoCAD图元添加扩展数据\n重要！必须使用此插件插入块或复制已插入的块，否则（使用AutoCAD普通方式插入）不会添加扩展数据！">
     <all>全部</all>
     <cb1>金属</cb1>
     <cb2>钢筋混凝土</cb2>
@@ -1167,8 +1167,8 @@
   </mpProductInsert>
   <mpDrawOrderByLayer
     LocalName="按图层排序"
-    Description="用于根据图层更改绘制顺序的插件"
-    FullDescription="插件会处理窗口中用复选框标记的图层，并根据标记图层的顺序更改绘图顺序。 还有一种&quot;自动&quot;模式，在创建或编辑两个指定图层中的一个图层上的对象时，会自动更改其绘制顺序。">
+    Description="根据图层更改对象的绘制顺序"
+    FullDescription="处理窗口中复选框标记的图层，根据标记顺序更改绘图顺序。提供&quot;自动&quot;模式，在创建或编辑两个指定图层中的一个图层上的对象时，会自动更改其绘制顺序。">
     <h2>反转列表</h2>
     <h5>反选</h5>
     <h6>"自动"模式</h6>
@@ -1184,7 +1184,7 @@
   </mpDrawOrderByLayer>
   <mpDocTemplates
     LocalName="模板。阶段P"
-    Description="根据俄罗斯联邦第87号决议创建文本部分模板的插件，标题页符合GOST R 21.1101-2013">
+    Description="根据俄罗斯联邦第87号决议创建文本部分模板，标题页符合GOST R 21.1101-2013">
     <h1>模板。阶段P</h1>
     <h2>通用属性</h2>
     <h3>项目名称</h3>
@@ -1211,7 +1211,7 @@
   </mpDocTemplates>
   <mpPrPosition
     LocalName="产品位置"
-    Description="向选定产品添加/删除位置并允许标记位置的插件">
+    Description="在选定产品中添加、删除和标记位置">
     <h1>选择作为ModPlus产品的对象</h1>
     <h2>删除(D)</h2>
     <h2ln>D</h2ln>
@@ -1232,8 +1232,8 @@
   </mpPrPosition>
   <mpPrToTable
     LocalName="产品到表格"
-    Description="用选定的ModPlus产品填充规格表格的插件"
-    FullDescription="该插件从产品扩展数据（由&quot;插入产品&quot;插件创建的块，或由&quot;插入产品&quot;插件添加了扩展数据的AutoCAD图元）以及具有规格属性的块中收集规格数据。可以指定表格填充的起始行。">
+    Description="用选定的ModPlus产品填充规格表格"
+    FullDescription="从产品扩展数据（由&quot;插入产品&quot;插件创建的块，或由&quot;插入产品&quot;插件添加了扩展数据的AutoCAD图元）以及具有规格属性的块中收集规格数据。可以指定表格填充的起始行。">
     <h1>选择作为ModPlus产品的对象</h1>
     <h2>行(R)</h2>
     <h2ln>R</h2ln>
@@ -1249,15 +1249,15 @@
   <mpDimBreak
     LocalName="尺寸拆分"
     Description="将选定尺寸拆分为两个或多个新尺寸"
-    FullDescription="插件允许通过动态指定新点将选定尺寸拆分为两个或多个尺寸，该点将成为两个新尺寸的公共点">
+    FullDescription="通过动态指定新点将选定尺寸拆分为两个或多个尺寸，该点将成为两个新尺寸的公共点">
     <h1>选择尺寸</h1>
     <h2>选择无效！</h2>
     <h3>拆分点</h3>
   </mpDimBreak>
   <mpBlkReplace
     LocalName="块替换"
-    Description="快速替换图纸中的块或图元为指定块的插件"
-    FullDescription="该插件有三种工作模式：替换选定的块--允许用一个指定的块替换所有选定的块；替换类似的块--允许用一个指定的块替换一个块的所有出现；替换基元--允许用一个指定的块替换选定的圆、椭圆和点基元。 它允许从图形库中删除被替换图块的描述。 类似于 &quot;Clear&quot; (_PURGE)命令。 有多种设置">
+    Description="快速替换图纸中的块或图元为指定块"
+    FullDescription="三种工作模式：替换选定的块--允许用一个指定的块替换所有选定的块；替换类似的块--允许用一个指定的块替换一个块的所有出现；替换基元--允许用一个指定的块替换选定的圆、椭圆和点基元。 它允许从图形库中删除被替换图块的描述。 类似于 &quot;Clear&quot; (_PURGE)命令。 有多种设置">
     <h1>选择要替换的块</h1>
     <wrong>选择无效！</wrong>
     <h2>选择替换块</h2>
@@ -1295,7 +1295,7 @@
   </mpBlkReplace>
   <mpPlinesEdit
     LocalName="多段线"
-    Description="用于处理多段线的各种插件集合">
+    Description="多段线工具集">
     <h1>多段线</h1>
     <h2>插件处理3D多段线</h2>
     <h3>插件处理2D多段线</h3>
@@ -1416,8 +1416,8 @@
   </mpPlinesEdit>
   <mpSpecifications
     LocalName="规格"
-    Description="用于创建和填写通用施工规格的插件"
-    FullDescription="该插件可在AutoCAD的右键菜单中添加功能，扩展规格处理能力：表格右键菜单：从数据库添加产品 - 可直接将插件数据库中的产品添加到AutoCAD表格；图块右键菜单：添加/修改规格属性 - 可为图块添加规格属性（详见帮助文档）">
+    Description="通用施工规格的创建和填写"
+    FullDescription="可在AutoCAD右键菜单中添加功能，扩展规格处理能力：表格右键菜单：从数据库添加产品 - 可直接将插件数据库中的产品添加到AutoCAD表格；图块右键菜单：添加/修改规格属性 - 可为图块添加规格属性（详见帮助文档）">
     <h6>右键菜单</h6>
     <h7>完整版插件功能</h7>
     <h8>表格右键菜单：</h8>
@@ -1531,7 +1531,7 @@
   </mpSpecifications>
   <mpLayoutManager
     LocalName="布局管理器"
-    Description="显示在ModPlus面板中的图纸布局管理器">
+    Description="在面板中管理图纸布局">
     <accept>接受</accept>
     <cancel>取消</cancel>
     <close>关闭</close>
@@ -1576,7 +1576,7 @@
   </mpLayoutManager>
   <mpSheetNumbers
     LocalName="布局编号器"
-    Description="用于在 ModPlus 标题栏和格式中设置布局编号（文档编号和卷册编号）的插件"
+    Description="在ModPlus标题栏和格式中设置布局编号（文档编号和卷册编号）"
     FullDescription="可在模型空间和布局空间工作。首先需要从ModPlus图框和标题栏中读取数据。指定新数据后应用更改即可">
     <h2>从当前图纸获取数据</h2>
     <h3>在模型空间</h3>
@@ -1610,8 +1610,8 @@
   </mpSheetNumbers>
   <mpDwgBase
     LocalName="DWG数据库"
-    Description="包含各种图块和图纸的数据库"
-    FullDescription="DWG数据库可插入图块或完整图纸（如节点详图）。数据库内容由用户贡献。需要联网使用">
+    Description="各种图块和图纸的图库"
+    FullDescription="插入图块或完整图纸（如节点详图）。DWG数据库内容由用户贡献。需要联网使用">
     <h1>将用户图块和图纸上传至modplus.org服务器</h1>
     <h2>数据库搜索</h2>
     <!--todo remove after 2.1.2.0-->
@@ -2689,7 +2689,7 @@
   <mpStripMtext
     LocalName="清除格式"
     Description="删除多行文字中指定的格式"
-    FullDescription="本插件可删除多行文字、多重引线、标注、块属性和表格中的格式">
+    FullDescription="删除多行文字、多重引线、标注、块属性和表格中的格式">
     <h1>选择要删除的格式类型</h1>
     <h2>全选</h2>
     <h3>取消选择</h3>
@@ -2736,7 +2736,7 @@
   </mpStripMtext>
   <mpRevitSheetsMerging
     LocalName="合并Revit图纸"
-    Description="将Revit导出的文件合并为一个图纸。需在空白图纸中运行此插件。插件处理导出时未勾选'将图纸上的视图和链接作为外部参照导出'的文件">
+    Description="将Revit导出的文件合并为一个图纸。需在空白图纸中运行。处理导出时未勾选'将图纸上的视图和链接作为外部参照导出'的文件">
     <h1>正在处理文件...</h1>
     <h2>从文件导入图纸时出错</h2>
     <h3>选择要合并的图纸文件</h3>

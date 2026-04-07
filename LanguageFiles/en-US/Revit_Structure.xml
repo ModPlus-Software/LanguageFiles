@@ -3,11 +3,11 @@
   <mmRebarSolidAndVisible
     LocalName="Rebar solid and visible"
     Description="Change the state of the visibility of the rebar (view unobscured and view as solid)"
-    FullDescription="The visibility state of &quot;View unobscured&quot; is set to any view, whether 2D or 3D. View as solid – set only in 3D view"
+    FullDescription="The &quot;View unobscured&quot; visibility state is applied on any view – both 2D and 3D. &quot;View as solid&quot; is applied only on 3D views"
     LocalName1="Disable visibility"
     Description1="Disable the state of the visibility of the rebar (view unobscured and view as solid)"
     LocalName2="Elements selection settings"
-    Description2="Settings options for the selection of elements containing reinforcement for plugins">
+    Description2="Settings for element selection options containing reinforcement">
     <msg1>Select an element with rebar or reinforcement</msg1>
     <msg2>Select an elements with rebar or reinforcement</msg2>
     <t1>Process:</t1>
@@ -33,7 +33,7 @@
   <mprWallsReinforcement
     LocalName="Walls reinforcement"
     Description="Analysis, grouping and reinforcement according to given conditions of walls and openings"
-    FullDescription="Plugin works only with walls located in one level. Plugin analyzes the walls, allowing you to find three types of intersections (corner, end and cross) and openings. Flexible grouping allows you to specify exactly what type of reinforcement should be made. You can perform reinforcement only for the specified groups – walls, intersections or openings. Plugin can work even on an empty template">
+    FullDescription="Works only with walls located on a single level. Analyzes walls, allowing you to find three types of intersections (corner, end and cross) and openings. Flexible grouping allows you to specify exactly what type of reinforcement should be made. You can perform reinforcement only for the specified groups – walls, intersections or openings. Can work even on an empty template">
     <h2>PLUGIN WINDOW:</h2>
     <h4>Over the windows</h4>
     <h5>DISPLAY IN THE MODEL:</h5>
@@ -518,7 +518,7 @@
   <mprSlabsReinforcement
     LocalName="Slabs reinforcement"
     Description="Analysis, grouping and reinforcement of slabs for specified conditions"
-    FullDescription="Plugin allows you to process both individually selected slabs, and all slabs in the view or in the document. The main reinforcement of the slab can be performed as separate rebars, or area reinforcement. The analysis of holes is made from the geometry of the slab itself and does not depend on the used families. Plugin can work even on an empty template">
+    FullDescription="Processing both individually selected slabs and all slabs in the view or document. The main reinforcement of the slab can be performed as separate rebars, or area reinforcement. Hole analysis is performed from the slab geometry itself and does not depend on used families. Can work even on an empty template">
     <h1>Selection variants</h1>
     <h2>Pick slabs</h2>
     <h3>Select all slabs on current view</h3>
@@ -751,7 +751,7 @@
   <mprColumnsReinforcement
     LocalName="Columns reinforcement"
     Description="Analysis, grouping and reinforcement of columns for specified conditions"
-    FullDescription="Plugin allows you to process both individually selected columns and all columns in a view or in a document. Reinforcement is carried out taking into account the relative position of the columns above each other. Transverse reinforcement can be assembled using a variety of rebar shape options. Plugin can work even on an empty template">
+    FullDescription="Processing both individually selected columns and all columns in a view or document. Reinforcement is carried out taking into account the relative position of the columns above each other. Transverse reinforcement can be assembled using various rebar shape options. Can work even on an empty template">
     <h1>Selection variants</h1>
     <h2>Pick columns</h2>
     <h3>Select all columns on current view</h3>
@@ -1029,7 +1029,7 @@
   <mprBeamsReinforcement
     LocalName="Beams reinforcement"
     Description="Analysis, grouping and reinforcement of beams for specified conditions"
-    FullDescription="Plugin allows you to process both individually selected beams and all beams in a view or in a document. Transverse reinforcement can be assembled using a variety of rebar shape options. Plugin can work even on an empty template">
+    FullDescription="Processing both individually selected beams and all beams in a view or document. Transverse reinforcement can be assembled using a variety of rebar shape options. Plugin can work even on an empty template">
     <h1>Selection variants</h1>
     <h2>Pick beams</h2>
     <h3>Select all beams on current view</h3>
@@ -1267,15 +1267,15 @@
   </mprBeamsReinforcement>
   <mprRebarTools
     LocalName="Utilities for working with rebar"
-    Description="A collection of small auxiliary plugins for working with rebar"
+    Description="A set of auxiliary tools for working with rebar"
     LocalName1="Remove from host"
-    Description1="Remove all reinforcement from the selected host element"
+    Description1="Removing all reinforcement from the selected host element"
     LocalName2="Copy to host"
-    Description2="Copy rebars from the original host element into multiple target host elements"
+    Description2="Copying rebars from the original host element into multiple target host elements"
     LocalName3="Break set"
-    Description3="Turn the selected rebar set into individual rebar bars"
+    Description3="Converting the selected rebar set into individual rebar bars"
     LocalName4="Split set"
-    Description4="Split a rebar set into two new rebar sets"
+    Description4="Splitting a rebar set into two new rebar sets"
     LocalName5="Change Presentation"
     Description5="Batch change of rebar representation">
     <m1>Select the host elements</m1>

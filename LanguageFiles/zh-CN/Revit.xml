@@ -2,7 +2,7 @@
 <ModPlus>
   <mprSheetCopy
     LocalName="图纸复制器"
-    Description="插件可复制指定图纸并进行多种设置"
+    Description="按多种设置复制指定图纸"
     FullDescription="所选图纸可带视图或不带视图复制。可指定是否复制图例和明细表。独特的编号系统可在添加前缀或后缀获得唯一编号时保持图纸编号不变">
     <h2>按名称/编号搜索</h2>
     <h3>复制数量</h3>
@@ -120,7 +120,7 @@
   </mprSheetCopy>
   <mprViewCopy
     LocalName="视图复制器"
-    Description="插件可复制指定视图和明细表并进行多种设置">
+    Description="按多种设置复制指定视图和明细表">
     <h1>受限版本中最多可复制3个视图</h1>
     <h2>按名称搜索</h2>
     <h3>复制数量</h3>
@@ -297,7 +297,7 @@
   <mprCADmanager
     LocalName="CAD管理器"
     Description="管理当前文档中所有DWG文件的插入"
-    FullDescription="插件显示所有插入的DWG文件视图 - 包括属于视图和不属于视图的。提供列表搜索、复制DWG插入ID或视图ID、打开包含DWG插入的视图以及删除DWG插入的功能">
+    FullDescription="显示所有插入的DWG文件视图——包括属于视图和不属于视图的。提供列表搜索、ID复制、视图打开和DWG插入删除功能">
     <h1>CAD管理器</h1>
     <h2>已复制!</h2>
     <h3>视图关联:</h3>
@@ -345,7 +345,7 @@
   <mprExteriorPlanDimensions
     LocalName="外部平面尺寸"
     Description="在楼层平面上标注外部尺寸"
-    FullDescription="该插件可一键在楼层平面上标注外部尺寸。插件仅处理水平和垂直的墙及轴线。外部尺寸的标注根据当前工作配置进行，其中可指定尺寸标注的边和尺寸链的设置。"
+    FullDescription="一键在楼层平面上标注外部尺寸。仅处理水平和垂直的墙及轴线。外部尺寸的标注根据当前工作配置进行，其中可指定尺寸标注的边和尺寸链的设置。"
     LocalName1="外部尺寸设置"
     Description1="楼层平面外部尺寸的工作配置设置">
     <h1>外部尺寸设置</h1>
@@ -412,7 +412,7 @@
   <mprDimByLine
     LocalName="沿线标注"
     Description="沿指定线标注尺寸"
-    FullDescription="插件允许在平面、立面或剖面图中沿由两点定义的假想线标注尺寸。将被标注的元素和标注方式（中心标注和/或边界标注）在工作配置中指定">
+    FullDescription="在平面、立面或剖面图中沿由两点定义的假想线标注尺寸。标注元素和标注方式（中心标注和/或边界标注）在工作配置中指定">
     <h1>配置名称</h1>
     <h2>类别过滤:</h2>
     <h3>类别</h3>
@@ -469,7 +469,7 @@
   <mprDimBias
     LocalName="尺寸偏移"
     Description="自动移动与尺寸线重叠的尺寸值"
-    FullDescription="该插件会监测所有新创建的尺寸，如果尺寸文字与尺寸线重叠，则自动将文字偏移到一侧"
+    FullDescription="自动监测所有新创建的尺寸：当尺寸文字与尺寸线重叠时，自动将文字偏移到一侧"
     LocalName1="恢复"
     Description1="恢复所选尺寸文字的原始位置"
     LocalName2="偏移所选"
@@ -495,7 +495,7 @@
   </mprDimBias>
   <mprInteriorPlanDimensions
     LocalName="平面尺寸标注"
-    Description="插件提供多种平面元素尺寸标注方案">
+    Description="平面元素的多种尺寸标注方案">
     <h2>标注轴网</h2>
     <h3>标注洞口</h3>
     <h4>后续尺寸链偏移量</h4>
@@ -617,7 +617,7 @@
   </mprNestedFamilyParamsTransfer>
   <mprTools
     LocalName="实用工具"
-    Description="小型辅助插件集合">
+    Description="辅助工具集">
     <ttShow>显示当前视图中指定类别的所有元素</ttShow>
     <ttHide>隐藏当前视图中指定类别的所有元素</ttHide>
     <Category>全部</Category>
@@ -1076,7 +1076,7 @@
   </mprCleaner>
   <mprSheetRenumber
     LocalName="图纸编号工具"
-    Description="该插件可用于对项目中的图纸进行重新编号"
+    Description="项目中图纸的重新编号"
     FullDescription="图纸重新编号在同一图纸组内进行。可以按项目管理器的当前设置显示所有图纸，或将所有图纸显示为一组。支持通过移动图纸在组内的位置来调整顺序，同时保持该组内图纸的初始编号">
     <m1>要启动插件，请进入项目</m1>
     <!-- todo remove after 2.7.10.0 -->
@@ -1154,7 +1154,7 @@
   <mprFamilyDuplicateFixer
     LocalName="修复重复族"
     Description="自动修复重复族或类型的工具"
-    FullDescription="该插件允许将类型从重复族复制到主族，复制类型参数值，更新族实例，以及删除重复族。插件还支持替换族的重复类型并删除已替换的类型">
+    FullDescription="将类型从重复族复制到主族，复制类型参数值，更新族实例和删除重复族。也支持替换族的重复类型并删除已替换的类型">
     <h1>复制类型</h1>
     <h3>替换族实例</h3>
     <h4>删除重复族</h4>
@@ -1257,7 +1257,7 @@
   <mprLinksManager
     LocalName="链接管理器"
     Description="管理当前文档中的 Revit 和 CAD 外部链接"
-    FullDescription="该插件允许在当前 Revit 文档中查看、筛选、添加、加载、卸载、重新加载、删除链接，并重写其路径">
+    FullDescription="在当前Revit文档中查看、筛选、添加、加载、卸载、重新加载、删除链接以及重写路径">
     <filtersGroupHeader>筛选器</filtersGroupHeader>
     <statusLabel>状态：</statusLabel>
     <linksListGroupHeader>链接列表</linksListGroupHeader>
@@ -1338,7 +1338,7 @@
   <mprWorksets
     LocalName="工作集"
     Description="管理工作集，包括创建和应用"
-    FullDescription="插件允许创建工作集配置，根据这些配置可以在文档中创建工作集。配置可以导入和导出。可以为配置中的每个工作集设置应用于元素的条件"
+    FullDescription="创建工作集配置，根据配置可在文档中创建工作集。配置可导入和导出。可为每个工作集设置应用于元素的条件"
     LocalName1="更新工作集"
     Description1="在不使用插件窗口的情况下，使用当前设置调用&quot;按过滤器设置工作集&quot;命令"
     LocalName2="工作集处理"
@@ -1479,7 +1479,7 @@
   <zfiFamilyRenameTool
     LocalName="批量重命名"
     Description="批量重命名指定族中的参数名称、类型名称、参数值"
-    FullDescription="插件处理选定的文件或选定文件夹中的所有文件。可以添加前缀或后缀，可以使用查找和替换进行重命名。提供多个查找和替换的配置选项。可以使用正则表达式查找值">
+    FullDescription="处理选定文件或选定文件夹中的所有文件。可添加前缀或后缀，支持查找和替换重命名。提供多种查找和替换配置选项，支持正则表达式">
     <h1>选择族</h1>
     <h2>应用</h2>
     <h3>应用并关闭</h3>
@@ -1833,7 +1833,7 @@
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="注释"
-    Description="常用注释管理插件">
+    Description="常用注释的使用和管理">
     <h1>设置</h1>
     <h3>双击注释</h3>
     <h4>标准注释：</h4>
@@ -1959,7 +1959,7 @@
   <mprCopyParameterValues
     LocalName="复制参数值"
     Description="在元素之间或单个元素内复制参数值"
-    FullDescription="插件提供多种复制选项，可配置从哪些元素复制到哪些元素。支持将多个参数值组合复制到一个参数中。可按类别和参数值筛选元素。支持在不同类型参数之间进行值转换">
+    FullDescription="多种复制选项，可配置源元素和目标元素。支持组合值复制（多个参数到一个）。可按类别和参数值筛选元素，支持不同类型参数之间的值转换">
     <saveNew>另存为新配置</saveNew>
     <full>完整版插件功能</full>
     <to>到</to>
@@ -2656,7 +2656,7 @@
   <mprViewColorOn3D
     LocalName="在3D上显示视图"
     Description="使用DirectShape在3D上彩色显示视图的可见范围"
-    FullDescription="插件允许基于视图裁剪边界的平面主要剖切范围深度或剖面、立面、详图的裁剪深度，在3D视图上创建DirectShape类型的彩色视图可见范围。插件窗口提供跳转到视图的功能">
+    FullDescription="基于视图裁剪边界的平面主要剖切范围深度或剖面、立面、详图的裁剪深度，在3D视图上创建DirectShape类型的彩色视图可见范围。提供视图导航功能">
     <t1>请切换到3D视图</t1>
     <t2>免费版仅支持处理剖面</t2>
     <t3>显示视图的可见范围</t3>
@@ -2857,7 +2857,7 @@
   </mprTagless>
   <mprMaterialManager
     LocalName="材质管理器"
-    Description="修改材质的属性和参数">
+    Description="材质属性和参数管理">
     <msg1>选择材质</msg1>
     <msg2>确认删除选定材质？</msg2>
     <msg3>正在加载材质...</msg3>
@@ -3020,7 +3020,7 @@
   </mprFlipped>
   <mprFavoriteViews
     LocalName="精选视图"
-    Description="选择要打开的精选视图">
+    Description="快速打开收藏视图">
     <!--todo remove after 1.0.1.0-->
     <h1>按名称搜索</h1>
     <h2>视图</h2>
@@ -3038,7 +3038,7 @@
   </mprFavoriteViews>
   <mprModelCompare
     LocalName="模型比較"
-    Description="尋找模型之間的差異">
+    Description="查找模型之间的差异">
     <t1>比較</t1>
     <t2>选择文档</t2>
     <t3>被比較對象的值不存在差異</t3>

@@ -2,7 +2,7 @@
 <ModPlus>
   <mpTableSort
     LocalName="Sortierung von Tabellen"
-    Description="Toolkit zum Sortieren von Tabellen">
+    Description="Sortierung von Zeilen und Spalten in Tabellen">
     <h2>MP: Sortierung</h2>
     <h3>MP: Verschieben</h3>
     <h4>Spalten</h4>
@@ -26,7 +26,7 @@
   </mpTableSort>
   <mpMultiOffset
     LocalName="MultiOffset"
-    Description="Ein Plugin zur Durchführung mehrerer Verschiebungen gleichzeitig">
+    Description="Durchführung mehrerer Verschiebungen in einem Vorgang">
     <h1>Geben Sie die Offsets ein:</h1>
     <hint1>Zulässige Zeichen:
  ziffern, -, =
@@ -40,8 +40,8 @@ Beispiel:
   </mpMultiOffset>
   <mpTxtNumCopy
     LocalName="Kopieren mit Nummerierung"
-    Description="Kopiert den ausgewählten Text oder einen Block mit dem Attribut, das einen numerischen Wert enthält, und ändert den Wert um den angegebenen numerischen Schritt"
-    FullDescription="Kopiert den ausgewählten einzeiligen oder mehrzeiligen Text, einen Block mit dem Attribut oder eine Multi-Führungslinie, der einen numerischen Wert enthält, und ändert den Wert um den angegebenen numerischen Schritt. Es gibt verschiedene Einstellungen: Hinzufügen eines Präfixes/Suffixes, Unterdrücken des nachgestellten Nulls usw.">
+    Description="Kopieren von Text oder Block mit Attribut mit Änderung des numerischen Wertes um den angegebenen Schritt"
+    FullDescription="Kopieren von einzeiligem oder mehrzeiligem Text, einem Block mit Attribut oder einer Multi-Führungslinie mit numerischem Wert und Änderung des Wertes um den angegebenen Schritt. Verschiedene Einstellungen sind verfügbar: Hinzufügen eines Präfixes/Suffixes, Unterdrücken nachgestellter Nullen usw.">
     <!-- todo remove after 3.1.2.0 -->
     <accept>Akzeptieren</accept>
     <!-- todo remove after 3.1.2.0 -->
@@ -96,8 +96,8 @@ Beispiel:
   </mpTxtNumCopy>
   <mpMultiCopy
     LocalName="Multi-Kopieren"
-    Description="Mehrfaches Kopieren ausgewählter Objekte mit einem bestimmten Schritt"
-    FullDescription="Das Plugin unterstützt zwei Arten des Kopierens:\nMarkieren: Kopiert Objekte mit den angegebenen Abständen dazwischen entlang der genannten Linie;\nTeilen: Kopiert Objekte durch Teilen der angegebenen Zeile durch die eingegebene Anzahl von Segmenten\nEs gibt die Möglichkeit, ein Objekt (Linie, Polylinie, Spline) auszuwählen, um den Kopierpfad festzulegen">
+    Description="Mehrfaches Kopieren ausgewählter Objekte mit einem vorgegebenen Schritt"
+    FullDescription="Zwei Kopierarten werden unterstützt:\nMarkieren: Kopiert Objekte mit den angegebenen Abständen dazwischen entlang der genannten Linie;\nTeilen: Kopiert Objekte durch Teilen der angegebenen Zeile durch die eingegebene Anzahl von Segmenten\nEin Objekt (Linie, Polylinie, Spline) kann zur Festlegung des Kopierpfads ausgewählt werden">
     <msg1>Wählen Sie die Objekte aus:</msg1>
     <msg2>Entfernung angeben oder [Teilen]</msg2>
     <msg3>Anzahl der Segmente eingeben oder [Markieren]</msg3>
@@ -113,7 +113,7 @@ Beispiel:
   </mpMultiCopy>
   <mpTxtCenter
     LocalName="Text in der Mitte"
-    Description="Mit dem Plugin können Sie einen einzeiligen Text erstellen oder den vorhandenen Text in der Mitte zwischen zwei angegebenen Punkten ausrichten">
+    Description="Erstellen oder Ausrichten von einzeiligem Text in der Mitte zwischen zwei angegebenen Punkten">
     <msg1>Geben Sie den ersten Punkt an oder [Bestehend]</msg1>
     <msg2>Bestehend</msg2>
     <msg2ln>B</msg2ln>
@@ -130,7 +130,7 @@ Beispiel:
   </mpTxtCenter>
   <mpStandards
     LocalName="Standarte"
-    Description="Mit dem Plugin können Sie Layer-Sets, Textstile, Bemaßungsstile und Multi-Führungslinienstile erstellen, speichern und hinzufügen">
+    Description="Erstellen, Speichern und Hinzufügen von Layer-Sets, Textstilen, Bemaßungsstilen und Multi-Führungslinienstilen">
     <copy>Kopieren</copy>
     <no>Nein</no>
     <h1>Name des Sets:</h1>
@@ -231,7 +231,7 @@ Beispiel:
   </mpStandards>
   <mpMultiScale
     LocalName="Multi-Skalieren"
-    Description="Mit dem Plugin können Sie jedes der ausgewählten Objekte in Bezug auf sich selbst skalieren"
+    Description="Skalierung jedes ausgewählten Objekts relativ zu sich selbst"
     FullDescription="Jedes ausgewählte Objekt wird in Bezug auf den angegebenen Punkt skaliert – unten links, unten rechts, oben links, oben rechts oder in der Mitte. Der Skalierpunkt wird durch das Rechteck bestimmt, das das Objekt beschreibt">
     <h1>Kopien von den ausgewählten Objekten erstellen</h1>
     <h2>Basispunkt:</h2>
@@ -250,13 +250,13 @@ Beispiel:
   </mpMultiScale>
   <mpMultiRotate
     LocalName="Multi-Drehen"
-    Description="Mit dem Plugin können Sie jedes der ausgewählten Objekte um die Z-Achse drehen, wobei der Drehpunkt in Bezug auf die Objekte selbst bestimmt wird"
+    Description="Drehung jedes ausgewählten Objekts um die Z-Achse mit dem Drehpunkt relativ zu sich selbst"
     FullDescription="Jedes ausgewählte Objekt wird um die Z-Achse gedreht und auf den angegebenen Punkt zentriert: unten links, unten rechts, oben links, oben rechts oder in der Mitte. Der Drehpunkt wird durch das Rechteck bestimmt, das das Objekt beschreibt">
     <h1>Drehwinkel:</h1>
   </mpMultiRotate>
   <mpMultiMirror
     LocalName="Multi-Spiegelung"
-    Description="Mit dem Plugin können Sie jedes der ausgewählten Objekte vertikal oder horizontal in Bezug auf sich selbst spiegeln"
+    Description="Spiegelung jedes ausgewählten Objekts vertikal oder horizontal relativ zu sich selbst"
     FullDescription="Jedes ausgewählte Objekt wird vertikal oder horizontal in Bezug auf die Linie gespiegelt, die durch den angegebenen Punkt verläuft – unten links, unten rechts, oben links, oben rechts oder in der Mitte. Dieser Punkt wird durch ein Rechteck bestimmt, das das Objekt beschreibt">
     <o1>Spiegeln</o1>
     <o2>Vertikal</o2>
@@ -264,14 +264,14 @@ Beispiel:
   </mpMultiMirror>
   <mpRotAtt
     LocalName="Drehwinkel der Attribute"
-    Description="Mit dem Plugin können Sie den Drehwinkel der Attribute in den ausgewählten Blöcken ändern">
+    Description="Änderung des Drehwinkels der Attribute in ausgewählten Blöcken">
     <msg1>Wählen Sie die Blöcke aus:</msg1>
     <msg2>Neue Drehwinkel der Attribute:</msg2>
   </mpRotAtt>
   <mpLayerAuto
     LocalName="Auto-Layers"
-    Description="Mit dem Plugin können Sie einen Layer zu den erstellten Objekten hinzuzufügen"
-    FullDescription="Das Plugin lässt die Ereignisse des Erstellens, Kopierens, Einfügens und anderer Befehle beim Arbeiten mit AutoCAD-Objekten – Bemaßungen, Text, Führungslinien, Füllmuster, Tabellen, Ansichtsfenstern, Linien, Polylinien, Linien, Strahlen, Kreisen, Ellipsen, Splines, Bögen, Blöcken – verarbeiten und legt den in den Plugin-Einstellungen angegebene Layer für sie fest. Es gibt die Möglichkeit, bestimmte Layer für ausgewählte Objekte festzulegen. Es gibt auch die Möglichkeit, Layer für Blöcke nach Namen festzulegen.">
+    Description="Automatische Layerzuweisung für erstellte Objekte"
+    FullDescription="Verarbeitung von Erstellungs-, Kopier-, Einfüge- und anderen Befehlen beim Arbeiten mit AutoCAD-Objekten – Bemaßungen, Text, Führungslinien, Füllmuster, Tabellen, Ansichtsfenstern, Linien, Polylinien, Linien, Strahlen, Kreisen, Ellipsen, Splines, Bögen, Blöcken – verarbeiten und legt den in den Plugin-Einstellungen angegebene Layer für sie fest. Layerzuweisung für ausgewählte Objekte und Festlegung von Block-Layern nach Namen sind ebenfalls verfügbar">
     <h1>Layer für die Objekte</h1>
     <h2>Layer-Zuordnung</h2>
     <!--todo remove after 3.5.7.0-->
@@ -326,7 +326,7 @@ Beispiel:
   </mpLayerAuto>
   <mpFormats
     LocalName="Formate"
-    Description="Das Plugin ermöglicht das Einfügen von Formaten in die Zeichnung gemäß GOST 2.301-68/ISO 216"
+    Description="Einfügen von Zeichnungsformaten gemäß GOST 2.301-68/ISO 216"
     FullDescription="Die Formate werden als Block mit einem besonderen Label in der erweiterten Daten eingefügt. Das Label in den erweiterten Daten dient zur Identifizierung der Formate durch andere Plugins (z. B. &quot;Plannummerierung&quot;). Daher müssen Formate mit den Standardwerkzeugen zum Einfügen der Blöcke in AutoCAD nicht eingefügt werden. Das Plugin ermöglicht das Hinzufügen von Schriftfeldern zum Format. Dazu muss das Plugin &quot;Schriftfelder&quot; installiert und mindestens einmal gestartet werden.&quot;">
     <accept>Akzeptieren</accept>
     <no>Nein</no>
@@ -429,7 +429,7 @@ Beispiel:
   </mpFormats>
   <mpNotes
     LocalName="Notizen"
-    Description="Das Plugin dient zur Verarbeitung von oft verwendeten Notizen">
+    Description="Arbeit mit häufig verwendeten Notizen">
     <h1>Einstellungen</h1>
     <h2>Kontextmenü für Text</h2>
     <h3>Doppelklick auf eine Notiz</h3>
@@ -524,7 +524,7 @@ Beispiel:
   </mpMeshes>
   <mpTables
     LocalName="Tabellen"
-    Description="Das Plugin ermöglicht das Einfügen von AutoCAD-Tabellen in eine Zeichnung gemäß GOST/DSTU/STB oder aus einer angegebenen Datei">
+    Description="Einfügen von AutoCAD-Tabellen in die Zeichnung gemäß GOST/DSTU/STB oder aus einer angegebenen Datei">
     <insert>Einfügen</insert>
     <all>Alle</all>
     <favorite>Favorit</favorite>
@@ -586,8 +586,8 @@ Beispiel:
   </mpDimJustif>
   <mpStamps
     LocalName="Schriftfelder"
-    Description="Das Plugin ermöglicht das Einfügen von Schriftfeldern (als AutoCAD-Tabellen) in eine Zeichnung gemäß den normativen Dokumenten, mit Unterstützung für Felder"
-    FullDescription="Mit Hilfe des Plugins ''Felder'' können Sie zusätzliche Werte zum Dokument hinzufügen, die als Felder ins Schriftfeld eingefügt werden können. Dadurch können Sie die Werte in allen Schriftfeldern des gesamten Dokuments gleichzeitig ändern.">
+    Description="Einfügen von Schriftfeldern als AutoCAD-Tabellen in die Zeichnung gemäß normativer Dokumentation, mit Feldunterstützung"
+    FullDescription="Mit dem Plugin &quot;Felder&quot; können zusätzliche Werte zum Dokument hinzugefügt werden, die als Felder ins Schriftfeld eingefügt werden. Dadurch lassen sich die Werte in allen Schriftfeldern des gesamten Dokuments gleichzeitig ändern">
     <h1>Schriftfelder</h1>
     <h2>Schriftfeldname</h2>
     <h3>Vorschriftsmäßige Dokumente für:</h3>
@@ -726,7 +726,7 @@ Beispiel:
   </mpStamps>
   <mpSummLength
     LocalName="Längensumme"
-    Description="Abrufen und Anzeigen der Anzahl und Summe der Längen von ausgewählten Linien, Polylinien, Kreise, Bögen und Splines">
+    Description="Berechnung der Anzahl und Gesamtlänge ausgewählter Linien, Polylinien, Kreise, Bögen und Splines">
     <h2>Gesamtlänge:</h2>
     <h3>Rundung des Ergebnisses</h3>
     <h4>Anzahl:</h4>
@@ -748,8 +748,8 @@ Beispiel:
   </mpSummLength>
   <mpSelSim
     LocalName="Auswahl nach Beispiel"
-    Description="Mit dem Plugin können Sie Objekte auswählen, die Beispielobjekten ähnlich sind, sowohl aus allen Objekten in der Zeichnung als auch aus einem bestimmten Satz"
-    FullDescription="Bevor Sie das Plugin verwenden, müssen Sie die Kriterien festlegen, nach denen nach ähnlichen Objekten gesucht wird – der gleiche Typ, die gleiche Layer, die gleiche Farbe usw. Für einige Typen gelten zusätzliche Übereinstimmungskriterien, zum Beispiel, gleiche Texthöhe, gleicher Name der Blöcke usw.">
+    Description="Auswahl von Objekten, die Musterobjekten ähnlich sind, aus allen Objekten in der Zeichnung oder aus einem bestimmten Satz"
+    FullDescription="Vor der Verwendung müssen die Suchkriterien für ähnliche Objekte festgelegt werden – der gleiche Typ, die gleiche Layer, die gleiche Farbe usw. Für einige Typen gelten zusätzliche Übereinstimmungskriterien, zum Beispiel, gleiche Texthöhe, gleicher Name der Blöcke usw.">
     <h2>Allgemeine Einstellungen</h2>
     <h3>Beispielobjekte zur endgültigen Menge hinzufügen (Auswahl von ähnlichen aus der ausgewählten Objekten)</h3>
     <h4>Gleiche Typen</h4>
@@ -828,7 +828,7 @@ Beispiel:
   </mpHandDim>
   <mpCalc
     LocalName="Berechnungsfunktion"
-    Description="Ähnlich einem Standardrechners, gibt die Möglichkeit, Daten aus einer Zeichnung abzurufen, das Ergebnis zur Zeichnung hinzuzufügen und eine Formel für die Berechnung manuell zu schreiben">
+    Description="Rechner mit Funktionen zum Abrufen von Daten aus der Zeichnung, Einfügen von Ergebnissen und manuellem Schreiben von Formeln">
     <!-- todo remove after 1.5.2.0 -->
     <prefix>Präfix</prefix>
     <!-- todo remove after 1.5.2.0 -->
@@ -935,8 +935,8 @@ Beispiel:
   </mpCalc>
   <mpArmature
     LocalName="Bewehrung"
-    Description="Verarbeitung von Bewehrungssortimenten – Abrufen verschiedener Informationen und Berechnungen"
-    FullDescription="Um das Plugin zu verwenden, benötigt man verschiedene Datenbanken. Über das Plugin erhalten Sie verschiedene Informationen und Berechnungsdaten (Fläche, Gewicht, Verankerung etc.) für eine Vielzahl unterschiedlicher Sortimente">
+    Description="Informationen und Berechnungen zu Bewehrungssortimenten"
+    FullDescription="Datenbanken sind erforderlich. Bereitstellung verschiedener Informations- und Berechnungsdaten (Fläche, Gewicht, Verankerung etc.) für eine Vielzahl unterschiedlicher Sortimente">
     <cancel>Abbrechen</cancel>
     <h1>BEWEHRUNG</h1>
     <h2>Vorschriftsmäßiges Dokument</h2>
@@ -1025,13 +1025,13 @@ Beispiel:
   </mpTxtCopyPaste>
   <mpRemoveAnnotScale
     LocalName="Maßstäbe löschen"
-    Description="Löscht die Liste der Beschriftungsmaßstäbe in den ausgewählten Beschriftungsobjekten und belässt den aktuellen Maßstab">
+    Description="Bereinigung der Beschriftungsmaßstabliste in ausgewählten Beschriftungsobjekten unter Beibehaltung des aktuellen Maßstabs">
     <msg1>Wählen Sie Beschriftungsobjekte aus:</msg1>
   </mpRemoveAnnotScale>
   <mpTotals
     LocalName="Allgemeine Daten"
-    Description="Mit dem Plugin können Sie allgemeine Daten schnell erstellen, mit der Möglichkeit, Werte aus einer Zeichnung abzurufen"
-    FullDescription="Das Plugin sammelt Daten aus den Tabellen, die in das aktuelle Dokument eingefügt sind. Die Liste der Referenzdokumente wird anhand der in der Datenbank vorhandenen normativen Dokumenten zusammengestellt">
+    Description="Schnelle Erstellung allgemeiner Daten mit der Möglichkeit, Werte aus der Zeichnung abzurufen"
+    FullDescription="Sammlung von Daten aus den in das aktuelle Dokument eingefügten Tabellen. Die Liste der Referenzdokumente wird anhand der in der Datenbank vorhandenen normativen Dokumenten zusammengestellt">
     <insert>Tabelle einfügen</insert>
     <accept>Akzeptieren</accept>
     <cancel>Abbrechen</cancel>
@@ -1098,8 +1098,8 @@ Beispiel:
   </mpTotals>
   <mpProductInsert
     LocalName="Produkt einfügen"
-    Description="Mit dem Plugin können Sie Produkte aus der ModPlus-Datenbank in Form von Blöcken mit erweiterten Daten einfügen"
-    FullDescription="Das Plugin erstellt AutoCAD-Blöcke anhand der Daten aus der Plugin-Datenbank. Den Blöcken werden erweiterte Daten hinzugefügt, die es anderen Plugins ermöglichen, diese Blöcke zu verarbeiten und damit eine Bauteilliste zu erstellen\nMit dem Plugin können Sie die erweiterten Daten in gewöhnliche AutoCAD-Objekte hinzufügen\nWichtig: Sie müssen Blöcke mit diesem Plugin einfügen oder bereits eingefügte Blöcke kopieren, sonst werden keine erweiterten Daten beim Einfügen mit den üblichen AutoCAD-Werkzeuge hinzugefügt!">
+    Description="Einfügen von Produkten aus der ModPlus-Datenbank als Blöcke mit erweiterten Daten"
+    FullDescription="Erstellung von AutoCAD-Blöcken anhand der Daten aus der Datenbank. Den Blöcken werden erweiterte Daten hinzugefügt, die es anderen Plugins ermöglichen, diese Blöcke zu verarbeiten und damit eine Bauteilliste zu erstellen\nErweiterte Daten können auch gewöhnlichen AutoCAD-Objekten hinzugefügt werden\nWichtig: Sie müssen Blöcke mit diesem Plugin einfügen oder bereits eingefügte Blöcke kopieren, sonst werden keine erweiterten Daten beim Einfügen mit den üblichen AutoCAD-Werkzeuge hinzugefügt!">
     <all>Alle</all>
     <cb1>Metall</cb1>
     <cb2>Stahlbeton</cb2>
@@ -1167,8 +1167,8 @@ Beispiel:
   </mpProductInsert>
   <mpDrawOrderByLayer
     LocalName="Zeichnungsreihenfolge nach Layer"
-    Description="Das Plugin wird verwendet, um die Zeichnungsreihenfolge entsprechend den Layern zu ändern"
-    FullDescription="Das Plugin verarbeitet die im Fenster mit Häkchen markierten Layer und ändert die Zeichenreihenfolge entsprechend der Reihenfolge der markierten Layer. Es gibt auch ein Auto-Modus, der dazu dient, die Zeichenreihenfolge von Objekten in einem der beiden angegebenen Layer beim Erstellen oder Bearbeiten automatisch zu ändern">
+    Description="Änderung der Zeichnungsreihenfolge von Objekten entsprechend den Layern"
+    FullDescription="Verarbeitung der im Fenster mit Häkchen markierten Layer und ändert die Zeichenreihenfolge entsprechend der Reihenfolge der markierten Layer. Ein &quot;Auto&quot;-Modus ist verfügbar, der die Zeichenreihenfolge von Objekten in einem der beiden angegebenen Layer beim Erstellen oder Bearbeiten automatisch zu ändern">
     <h2>Umgekehrte Liste</h2>
     <h5>Umkehrung der Wahlmöglichkeit</h5>
     <h6>Auto-Modus</h6>
@@ -1184,7 +1184,7 @@ Beispiel:
   </mpDrawOrderByLayer>
   <mpDocTemplates
     LocalName="Vorlagen. Stufung P"
-    Description="Mit dem Plugin können Sie Vorlagen für den Textteil des Abschnitts gemäß dem &quot;Verordung der Russischen Föderation Nr. 87&quot; mit einer Titelseite gemäß GOST R 21.1101-2013 erstellen">
+    Description="Erstellen von Vorlagen für den Textteil des Abschnitts gemäß &quot;Verordnung der Russischen Föderation Nr. 87&quot; mit Titelseite gemäß GOST R 21.1101-2013">
     <h1>VORLAGEN. STUFUNG P</h1>
     <h2>Allgemeine Eigenschaften</h2>
     <h3>Name des Projektes</h3>
@@ -1211,7 +1211,7 @@ Beispiel:
   </mpDocTemplates>
   <mpPrPosition
     LocalName="Position der Produkte"
-    Description="Das Plugin fügt eine Position den ausgewählten Produkten hinzu bzw. entfernt die Position und ermöglicht Ihnen, die Position zu markieren">
+    Description="Hinzufügen, Entfernen und Markierung von Positionen in ausgewählten Produkten">
     <h1>Wählen Sie Objekte aus, die ModPlus-Produkte sind</h1>
     <h2>Löschen</h2>
     <h2ln>L</h2ln>
@@ -1232,8 +1232,8 @@ Beispiel:
   </mpPrPosition>
   <mpPrToTable
     LocalName="Einfügen von Produkten in die Tabelle"
-    Description="Mit dem Plugin können Sie die Tabelle der Bauteilliste mit ausgewählten ModPlus-Produkten ausfüllen"
-    FullDescription="Das Plugin sammelt Daten für die Bauteilliste aus erweiterten Produktdaten (Blöcke, die durch das Plugin ''Produkt einfügen'' erstellt wurden, oder AutoCAD-Objekte mit erweiterten Daten, die durch das Plugin ''Produkt einfügen'' hinzugefügt wurden) sowie aus Blöcken, die Attribute für die Bauteilliste haben. Es gibt eine Möglichkeit, eine Zeile anzugeben, wovon man mit dem Füllen der Tabelle begonnen werden soll">
+    Description="Ausfüllen der Bauteilliste mit ausgewählten ModPlus-Produkten"
+    FullDescription="Sammlung von Daten für die Bauteilliste aus erweiterten Produktdaten (Blöcke, die durch das Plugin ''Produkt einfügen'' erstellt wurden, oder AutoCAD-Objekte mit erweiterten Daten, die durch das Plugin ''Produkt einfügen'' hinzugefügt wurden) sowie aus Blöcken, die Attribute für die Bauteilliste haben. Es gibt eine Möglichkeit, eine Zeile anzugeben, wovon man mit dem Füllen der Tabelle begonnen werden soll">
     <h1>Wählen Sie Objekte aus, die ModPlus-Produkte sind</h1>
     <h2>ZEichenfolge</h2>
     <h2ln>ZE</h2ln>
@@ -1249,15 +1249,15 @@ Beispiel:
   <mpDimBreak
     LocalName="Aufteilen von Bemaßungen"
     Description="Aufteilen der ausgewählten Bemaßung in zwei oder mehr neue Varianten"
-    FullDescription="Mit dem Plugin können Sie die ausgewählte Bemaßung in zwei oder mehr Bemaßungen aufteilen, indem Sie dynamisch einen neuen Punkt angeben, der für zwei neuen Bemaßungen gemeinsam ist">
+    FullDescription="Aufteilen der ausgewählten Bemaßung in zwei oder mehr Bemaßungen, indem Sie dynamisch einen neuen Punkt angeben, der für zwei neuen Bemaßungen gemeinsam ist">
     <h1>Wählen Sie Bemaßung aus</h1>
     <h2>Ungültige Wahl!</h2>
     <h3>Bruchpunkt</h3>
   </mpDimBreak>
   <mpBlkReplace
     LocalName="Ersetzen von Blöcken"
-    Description="Mit dem Plugin können Sie Blöcke bzw. Objekte in einer Zeichnung schnell durch den angegebenen Block ersetzen"
-    FullDescription="Das Plugin funktioniert in drei Modi: &quot;Ausgewähltes ersetzen&quot; – ermöglicht es Ihnen, alle ausgewählten Blöcke durch einen angegebenen Block zu ersetzen; &quot;Ähnliches ersetzen&quot; – ermöglicht es Ihnen, alle Auftreten eines Blocks durch einen angegebenen Block zu ersetzen. &quot;Objekte ersetzen&quot; – ermöglicht es Ihnen, die ausgewählten Objekte, wie Kreis, Ellipse oder Punkt, durch den angegebenen Block zu ersetzen. Außerdem können Sie die Beschreibung des ersetzten Blocks aus der Zeichnungsdatenbank entfernen, wie mit dem Befehl &quot;Löschen&quot; (_PURGE). Es gibt verschiedene Einstellungen">
+    Description="Schnelles Ersetzen von Blöcken oder Objekten in einer Zeichnung durch einen angegebenen Block"
+    FullDescription="Drei Modi sind verfügbar: &quot;Ausgewähltes ersetzen&quot; – ermöglicht es Ihnen, alle ausgewählten Blöcke durch einen angegebenen Block zu ersetzen; &quot;Ähnliches ersetzen&quot; – ermöglicht es Ihnen, alle Auftreten eines Blocks durch einen angegebenen Block zu ersetzen. &quot;Objekte ersetzen&quot; – ermöglicht es Ihnen, die ausgewählten Objekte, wie Kreis, Ellipse oder Punkt, durch den angegebenen Block zu ersetzen. Außerdem können Sie die Beschreibung des ersetzten Blocks aus der Zeichnungsdatenbank entfernen, wie mit dem Befehl &quot;Löschen&quot; (_PURGE). Verschiedene Einstellungen sind verfügbar">
     <h1>Wählen Sie den zu ersetzenden Block aus</h1>
     <wrong>Ungültige Wahl!</wrong>
     <h2>Wählen Sie ein Ersatzblock aus</h2>
@@ -1295,7 +1295,7 @@ Beispiel:
   </mpBlkReplace>
   <mpPlinesEdit
     LocalName="Polylinien"
-    Description="Eine Sammlung verschiedener Plugins für die Arbeit mit Polylinien">
+    Description="Werkzeugsammlung für die Arbeit mit Polylinien">
     <h1>POLYLINIEN</h1>
     <h2>Das Plugin arbeitet mit 3D-Polylinien</h2>
     <h3>Das Plugin arbeitet mit 2D-Polylinien</h3>
@@ -1416,8 +1416,8 @@ Beispiel:
   </mpPlinesEdit>
   <mpSpecifications
     LocalName="Bauteillisten"
-    Description="Ein Plugin zur Erstellung und Ausfüllung allgemeiner Bauteillisten"
-    FullDescription="Mit dem Plugin können Sie Einträge zum AutoCAD-Kontextmenü hinzufügen und damit die Möglichkeiten der Verarbeitung von Bauteillisten erweitern: Kontextmenü für Tabellen: &quot;Produkt aus der Datenbank hinzufügen&quot; – ermöglicht das direkte Hinzufügen von Produkten aus der Plugin-Datenbank zur AutoCAD-Tabelle, Kontextmenü für Blöcke: Attribute für Bauteilliste hinzufügen/ändern – ermöglicht das Hinzufügen von Attributen für die Bauteilliste zu Blöcken (weitere Informationen finden Sie im Menü &quot;Hilfe&quot;).">
+    Description="Erstellung und Ausfüllung allgemeiner Bauteillisten"
+    FullDescription="Kontextmenüeinträge können zu AutoCAD hinzugefügt werden und damit die Möglichkeiten der Verarbeitung von Bauteillisten erweitern: Kontextmenü für Tabellen: &quot;Produkt aus der Datenbank hinzufügen&quot; – ermöglicht das direkte Hinzufügen von Produkten aus der Plugin-Datenbank zur AutoCAD-Tabelle, Kontextmenü für Blöcke: Attribute für Bauteilliste hinzufügen/ändern – ermöglicht das Hinzufügen von Attributen für die Bauteilliste zu Blöcken (weitere Informationen finden Sie im Menü &quot;Hilfe&quot;).">
     <h6>KONTEXTMENÜ</h6>
     <h7>Erhältlich in der vollständigen Plugin-Version</h7>
     <h8>Kontextmenü für Tabellen:</h8>
@@ -1531,7 +1531,7 @@ Beispiel:
   </mpSpecifications>
   <mpLayoutManager
     LocalName="Layout-Manager"
-    Description="Layout-Manager der Zeichnung, der in der Palette angezeigt wird">
+    Description="Verwaltung der Zeichnungslayouts in der Palette">
     <accept>Akzeptieren</accept>
     <cancel>Abbrechen</cancel>
     <close>Schließen</close>
@@ -1576,8 +1576,8 @@ Beispiel:
   </mpLayoutManager>
   <mpSheetNumbers
     LocalName="Layoutnummerierung"
-    Description="Plugin zum Einfügen der Layoutnummer im Dokument und im Band in ModPlus-Rahmen und Schriftfeldern"
-    FullDescription="Das Plugin funktioniert sowohl im Modell als auch in den Layouts. Zuerst müssen die Daten abgerufen werden, die aus den Schriftfeldern und Rahmen des ModPlus-Plugins gelesen werden. Nach der Eingabe neuer Daten müssen die Änderungen einfach angewendet werden">
+    Description="Einfügen der Layoutnummer im Dokument und im Band in ModPlus-Rahmen und Schriftfeldern"
+    FullDescription="Arbeitet sowohl im Modell als auch in den Layouts. Zuerst müssen die Daten abgerufen werden, die aus den Schriftfeldern und Rahmen des ModPlus-Plugins gelesen werden. Nach der Eingabe neuer Daten müssen die Änderungen einfach angewendet werden">
     <h2>Daten aus der aktuellen Zeichnung abrufen</h2>
     <h3>Im Modell</h3>
     <h5>Layoutname</h5>
@@ -1610,8 +1610,8 @@ Beispiel:
   </mpSheetNumbers>
   <mpDwgBase
     LocalName="dwg-Datenbank"
-    Description="Eine Datenbank mit verschiedenen Blöcken und Zeichnungen"
-    FullDescription="Die dwg-Datenbank kann zum Einfügen von Blöcken und vorgefertigten Zeichnungen (z. B. Knoten) verwendet werden. Die dwg-Datenbank wird von Benutzern geführt. Das Plugin erfordert einen Internetzugang">
+    Description="Bibliothek verschiedener Blöcke und Zeichnungen"
+    FullDescription="Einfügen von Blöcken und vorgefertigten Zeichnungen (z. B. Knoten). Die dwg-Datenbank wird von Benutzern geführt. Internetzugang ist erforderlich">
     <h1>Senden Sie benutzerdefinierte Blöcke und Zeichnungen an den modplus.org Server</h1>
     <h2>Suche in der Datenbank</h2>
     <!--todo remove after 2.1.2.0-->
@@ -2688,8 +2688,8 @@ Beispiel:
   </mpESKD>
   <mpStripMtext
     LocalName="Entfernen der Formattierung"
-    Description="Entfernen der angegebenen Formatierung aus dem mehrzeiligen Text"
-    FullDescription="Mit dem Plugin können Sie Formatierung eines mehrzeiligen Textes, Multi-Führungslinien, Bemaßungen, Blockattributen und Tabellen entfernen">
+    Description="Entfernen angegebener Formatierungen aus mehrzeiligem Text"
+    FullDescription="Entfernen von Formatierungen aus mehrzeiligem Text, Multi-Führungslinien, Bemaßungen, Blockattributen und Tabellen">
     <h1>Wählen Sie den Typ der zu löschenden Formatierung</h1>
     <h2>Alle auswählen</h2>
     <h3>Alle abwählen</h3>
@@ -2736,7 +2736,7 @@ Beispiel:
   </mpStripMtext>
   <mpRevitSheetsMerging
     LocalName="Zusammenführen von Plänen in Revit"
-    Description="Zusammenführen von aus Revit exportierten Dateien in eine einzige Zeichnung. Das Plugin muss an einer leeren Zeichnung gestartet werden. Das Plugin verarbeitet Dateien, die mit deaktiviertem Kontrollkästchen &quot;Ansichten in Plänen und Verknüpfungen als externe Referenzen exportieren&quot; hochgeladen wurden">
+    Description="Zusammenführen von aus Revit exportierten Dateien in eine einzige Zeichnung. Muss in einer leeren Zeichnung gestartet werden. Verarbeitet Dateien, die mit deaktiviertem Kontrollkästchen &quot;Ansichten in Plänen und Verknüpfungen als externe Referenzen exportieren&quot; hochgeladen wurden">
     <h1>Dateibearbeitung...</h1>
     <h2>Fehler beim Importieren von Plänen aus der Datei</h2>
     <h3>Auswählen von Dateien zum Zusammenführen von Plänen</h3>
@@ -2756,7 +2756,7 @@ Beispiel:
   </mpAppendText>
   <mpSumArea
     LocalName="Flächensumme"
-    Description="Abrufen und Anzeigen der Anzahl und Summe der Flächen von ausgewählten Polylinien, Kreisen, Bögen, Splines und Füllmustern">
+    Description="Berechnung der Anzahl und Gesamtfläche ausgewählter Polylinien, Kreise, Bögen, Splines und Füllmuster">
     <h2>Gesamtfläche:</h2>
     <h3>Rundung des Ergebnisses</h3>
     <h4>Anzahl:</h4>
@@ -2781,7 +2781,7 @@ Beispiel:
   </mpSumArea>
   <mpSelectIntersected
     LocalName="Geschnittene Objekte auswählen"
-    Description="Wählen Sie Objekte aus, die durch die Kurve (Linie, Polylinie, Bogen, Spline, Kreis) geschnitten werden)">
+    Description="Auswahl von Objekten, die von einer angegebenen Kurve geschnitten werden">
     <m1>Wählen Sie eine oder mehrere Kurven (Linie, Polylinie, Bogen, Spline oder Kreis)</m1>
     <m2>Schließen Sie die unnötigen Kurven aus</m2>
     <m3>Keine Schnittpunkte gefunden</m3>

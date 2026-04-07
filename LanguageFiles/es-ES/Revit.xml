@@ -2,7 +2,7 @@
 <ModPlus>
   <mprSheetCopy
     LocalName="Duplicador de planos"
-    Description="Complemento le permite hacer copias de planos específicas con diferentes ajustes"
+    Description="Copia de planos especificados con varios ajustes"
     FullDescription="Planos seleccionadas se pueden copiar sin vistas o con vistas. Puede especificar si se copian leyendas y tabla de planificacións. Un sistema de numeración único le permite no cambiar número de copia de plano si al especificar prefijo o sufijo se obtendrá número único">
     <h2>Buscar por nombre/número</h2>
     <h3>Número de copias</h3>
@@ -120,7 +120,7 @@
   </mprSheetCopy>
   <mprViewCopy
     LocalName="Duplicador de vistas"
-    Description="Complemento le permite hacer copias de vistas y tablas de planificación específicas con varios ajustes">
+    Description="Copia de vistas y tablas de planificación especificadas con varios ajustes">
     <h1>En versión limitada, no hay más de 3 tipos disponibles para duplicar</h1>
     <h2>Buscar por nombre</h2>
     <h3>Número de copias</h3>
@@ -297,7 +297,7 @@
   <mprCADmanager
     LocalName="Administrador de CAD"
     Description="Administre todas inserciones del archivos .dwg en documento actual"
-    FullDescription="Complemento muestra todos tipos del archivos .dwg insertadas, tanto las que pertenecen a vistas como los que no pertenecen a vistas. Es posible buscar en lista, copiar ID de inserción o vista .dwg, abrir vista que contenga inserción .dwg y eliminar la">
+    FullDescription="Visualización de todos los tipos de archivos .dwg insertados, tanto los que pertenecen a vistas como los que no. Búsqueda en la lista, copia de ID de inserción o vista .dwg, apertura de vista con inserción .dwg y eliminación están disponibles">
     <h1>Administrador de CAD</h1>
     <h2>¡Copiado!</h2>
     <h3>Perteneciente a vista:</h3>
@@ -345,7 +345,7 @@
   <mprExteriorPlanDimensions
     LocalName="Cotas exteriores en plano"
     Description="Establecer cotas exteriores en plano de planta"
-    FullDescription="Complemento le permite colocar cotas exteriores en plano de planta con un solo clic. Complemento sólo procesa muros y ejes horizontales y verticales. Cotas exteriores se establecen de acuerdo con configuración de trabajo actual, que indica lados de cotas y ajustes de cotas de varios segmentos."
+    FullDescription="Colocación de cotas exteriores en el plano de planta con un solo clic. Solo se procesan muros y ejes horizontales y verticales. Cotas exteriores se establecen de acuerdo con configuración de trabajo actual, que indica lados de cotas y ajustes de cotas de varios segmentos."
     LocalName1="Cotas exteriores. Ajustes"
     Description1="Ajustes de configuraciones de trabajo para cotas exteriores en plano de planta">
     <h1>Ajustar cotas exteriores</h1>
@@ -412,7 +412,7 @@
   <mprDimByLine
     LocalName="Cotas a lo largo de línea"
     Description="Acotación a lo largo de línea especificada"
-    FullDescription="Complemento le permite acotar en plano, sección o alzado a lo largo de línea condicional formada por dos puntos específicos. Elementos al acotar y métodos de acotar (por centro y/o en lados extremos) se especifican en configuración de trabajo.">
+    FullDescription="Acotación en plano, sección o alzado a lo largo de una línea condicional formada por dos puntos especificados. Los elementos a acotar y los métodos de acotación (por centro y/o en lados extremos) se especifican en la configuración de trabajo">
     <h1>Nombre de configuración</h1>
     <h2>Filtro de categoría:</h2>
     <h3>Categoría</h3>
@@ -469,7 +469,7 @@
   <mprDimBias
     LocalName="Desfase de cotas"
     Description="Movimiento automático de valor de cota que cae sobre líneas de cota"
-    FullDescription="Complemento monitorea todas cotas creadas y, si texto de cota cae sobre líneas de cota, lo desplaza hacia lado"
+    FullDescription="Monitoreo automático de todas las cotas creadas: si el texto de cota cae sobre las líneas de cota, se desplaza hacia un lado"
     LocalName1="Restaurar"
     Description1="Restaurar posición texto para cotas seleccionadas"
     LocalName2="Desplazar seleccionadas"
@@ -495,7 +495,7 @@
   </mprDimBias>
   <mprInteriorPlanDimensions
     LocalName="Cotas en plano"
-    Description="Complemento le permite realizar varias opciones para acotar elementos en plano">
+    Description="Varias variantes de acotación de elementos en el plano">
     <h2>Acotar ejes</h2>
     <h3>Acotar huecos</h3>
     <h4>Separación de cotas de varios segmentos posteriores</h4>
@@ -567,8 +567,8 @@
   </mprInteriorPlanDimensions>
   <mprNestedFamilyParamsTransfer
     LocalName="Relación de parámetros"
-    Description="Complemento le permite simplificar trabajo de establecer vínculo entre parámetros de familias anidadas con parámetros de familia primaria"
-    FullDescription="Con complemento , puede crear nuevos parámetros en familia primaria basándose en uno o más parámetros en familias anidadas. Es posible establecer máscara para nombre del parámetro que se está creando añadiendo prefijo o sufijo. Complemento también le permite vincular y desvincular parámetros de familia primaria existentes.">
+    Description="Simplificación del trabajo de vinculación entre parámetros de familias anidadas y parámetros de la familia principal"
+    FullDescription="Creación de nuevos parámetros en la familia principal basándose en uno o más parámetros de familias anidadas. Se puede establecer una máscara para el nombre del parámetro añadiendo prefijo o sufijo. También permite vincular y desvincular parámetros existentes de la familia principal">
     <msg2>¡Atención! ¡No hay tipos en familia actual! ¡Funcionamiento correcto de complemento es imposible!</msg2>
     <msg3>Puede seleccionar opción \"Continuar y crear tipo \" - luego complemento creará tipo con nombre:</msg3>
     <msg4>Si no desea crear un nuevo tipo, debe seguir estos pasos:</msg4>
@@ -617,7 +617,7 @@
   </mprNestedFamilyParamsTransfer>
   <mprTools
     LocalName="Utilidades"
-    Description="Una colección de pequeños complementos auxiliares">
+    Description="Conjunto de utilidades auxiliares">
     <ttShow>Mostrar todos elementos de categoría específica en vista actual</ttShow>
     <ttHide>Ocultar todos elementos de categoría específica en vista actual</ttHide>
     <Category>Todo</Category>
@@ -1076,8 +1076,8 @@
   </mprCleaner>
   <mprSheetRenumber
     LocalName="Numerador de planos"
-    Description="Complemento le permite volver a numerar planos de proyecto"
-    FullDescription="Renumeración de planos se realiza dentro de un grupo de planos. Puede mostrar todas planos de misma manera que ajustes actuales en Administrador de proyectos, o mostrar todas planos en un grupo. Es posible cambiar posición de planos moviéndolas en grupo, manteniendo numeración inicial de planos en este grupo">
+    Description="Renumeración de planos en el proyecto"
+    FullDescription="La renumeración se realiza dentro de un grupo de planos. Todos los planos se pueden mostrar según los ajustes actuales del Administrador de proyectos o como un solo grupo. Las posiciones de los planos se pueden cambiar moviéndolos dentro del grupo conservando la numeración inicial">
     <m1>Para ejecutar complemento, vaya al proyecto</m1>
     <!-- todo remove after 2.7.10.0 -->
     <m2>Disponible en versión completa del complemento</m2>
@@ -1154,7 +1154,7 @@
   <mprFamilyDuplicateFixer
     LocalName="Corrección de duplicados"
     Description="Automatizar corrección de duplicados de familias o de tipos"
-    FullDescription="Complemento le permite copiar tipos de duplicados a familias principales, copiar valores de parámetros de tipo, actualizar ejemplares de familia y eliminar familias duplicadas. Complemento le permite reemplazar tipos de familia duplicados y eliminar tipos reemplazados">
+    FullDescription="Copia de tipos desde familias duplicadas a familias principales, copia de valores de parámetros de tipo, actualización de ejemplares de familia y eliminación de familias duplicadas. También permite reemplazar tipos de familia duplicados y eliminar tipos reemplazados">
     <h1>Copiar tipos</h1>
     <h3>Reemplazar ejemplares de familias</h3>
     <h4>Eliminar familias duplicadas</h4>
@@ -1257,7 +1257,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
   <mprLinksManager
     LocalName="Gestor de vínculos"
     Description="Gestionar vínculos externos de Revit y CAD en el documento actual"
-    FullDescription="El complemento permite ver, filtrar, añadir, cargar, descargar, recargar, eliminar vínculos y reescribir sus rutas en el documento actual de Revit">
+    FullDescription="Visualización, filtrado, adición, carga, descarga, recarga, eliminación de vínculos y reescritura de sus rutas en el documento actual de Revit">
     <filtersGroupHeader>Filtros</filtersGroupHeader>
     <statusLabel>Estado:</statusLabel>
     <linksListGroupHeader>Lista de vínculos</linksListGroupHeader>
@@ -1338,7 +1338,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
   <mprWorksets
     LocalName="Subproyectos"
     Description="Administración, creación y utilización de subproyectos"
-    FullDescription="Complemento le permite crear configuraciones de subproyectos, a partir de cuales puede crear subproyectos en documento. Configuraciones se pueden importar y exportar. Para cada subproyecto en configuración, puede establecer condiciones para aplicar subproyecto al elemento"
+    FullDescription="Creación de configuraciones de subproyectos para crear subproyectos en un documento. Las configuraciones se pueden importar y exportar. Para cada subproyecto se pueden establecer condiciones de aplicación a elementos"
     LocalName1="Actualizar subproyectos"
     Description1="Ejecute comando &quot;Establecer subproyectos por filtros&quot; con configuración actual sin usar ventana de complemento"
     LocalName2="Procesamiento de subproyectos"
@@ -1479,7 +1479,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
   <zfiFamilyRenameTool
     LocalName="Cambiar nombre por lotes"
     Description="Cambio de nombre por lotes de nombres de parámetros, nombres de tipos y valores de parámetros en familias específicas"
-    FullDescription="Complemento funciona en archivos seleccionados en lugar del archivos cargados en carpetas. Es posible añadir un prefijo o sufijo, cambiar nombre con función de búsqueda y reemplazo. Hay varias opciones para ajustar función de búsqueda y reemplazo. Es posible usar expresiones regulares para buscar valores">
+    FullDescription="Procesamiento de archivos seleccionados o todos los archivos en carpetas seleccionadas. Se puede añadir prefijo o sufijo y renombrar con búsqueda y reemplazo. Hay varias opciones de configuración de búsqueda y reemplazo, incluyendo soporte de expresiones regulares">
     <h1>Seleccionar familias</h1>
     <h2>Aplicar</h2>
     <h3>Aplicar y cerrar</h3>
@@ -1531,8 +1531,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
   </zfiFamilyRenameTool>
   <mprPatterns
     LocalName="Patrones"
-    Description="Administrador de patrones con posibilidad de importar, exportar, editar y crear"
-    FullDescription="Permite cambiar tipo de patrón existente, aumentar o disminuir patrón existente. Es posible de importar por lotes del archivos .pat y una exportar por lotes a archivos .pat. Se pueden crear nuevos sombreados por medios estándar con indicación de distancia y ángulo, mediante conversión de vistas de dibujo y también utilizando editor gráfico">
+    Description="Gestión de patrones con funciones de importación, exportación, edición y creación"
+    FullDescription="Cambio de tipo de patrones existentes, aumento o disminución de patrones disponibles. Importación por lotes desde archivos .pat y exportación por lotes a archivos .pat son compatibles. Se pueden crear nuevos sombreados por medios estándar con indicación de distancia y ángulo, mediante conversión de vistas de dibujo y también utilizando editor gráfico">
     <full>¡Disponible en versión completa del complemento!</full>
     <mi1>Crear</mi1>
     <mi2>Nuevo patrón vacío</mi2>
@@ -1833,7 +1833,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notas"
-    Description="Complemento para trabajar con notas de uso frecuente">
+    Description="Trabajo con notas de uso frecuente">
     <h1>Ajustes</h1>
     <h3>Doble clic en una nota</h3>
     <h4>Para notas estándar:</h4>
@@ -1860,10 +1860,10 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
   </mprNotes>
   <mprContextFilter
     LocalName="Filtro contextual"
-    Description="Filtra elementos por parámetros, funcionando como menú contextual"
-    FullDescription="Filtro se inicia de una de tres maneras: haciendo clic con botón izquierdo del mouse mientras mantiene presionada tecla Ctrl, presionando teclas secuencialmente o presionando un atajo de teclado. Filtro tiene tres niveles de procesamiento: todos elementos del modelo, elementos de vista actual o elementos seleccionados. Es posible utilizar ajustes preestablecidos para utilizar rápidamente filtro"
+    Description="Filtrado de elementos por parámetros a través del menú contextual"
+    FullDescription="Inicio de tres maneras: clic izquierdo con Ctrl presionado, pulsación secuencial de teclas o atajo de teclado. Tres niveles de procesamiento: todos los elementos del modelo, elementos de la vista actual o elementos seleccionados. Ajustes preestablecidos disponibles para uso rápido"
     LocalName1="Filtro de modo ventana"
-    Description1="Filtra elementos por parámetros, trabajando en modo ventana">
+    Description1="Filtrado de elementos por parámetros en modo ventana">
     <h1>Ajustes preestablecidos</h1>
     <h3>Aplicar ajuste preestablecido a lista actual</h3>
     <h4>Buscar categorías</h4>
@@ -1959,7 +1959,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
   <mprCopyParameterValues
     LocalName="Copiar valores"
     Description="Copiar valores de parámetros entre elementos o dentro de un elemento"
-    FullDescription="Complemento contiene varias opciones de copia que le permiten configurar elementos a los que copiar. Es posible de copiar un valor compuesto (de varios parámetros a uno). Hay filtros para seleccionar elementos por categoría y valores de parámetros. Es posible de convertir valores entre diferentes tipos de parámetros">
+    FullDescription="Varias opciones de copia para configurar elementos de origen y destino. Copia de valores compuestos (de varios parámetros a uno) disponible. Filtros de selección de elementos por categoría y valores de parámetros, así como conversión de valores entre diferentes tipos de parámetros">
     <saveNew>Guardar como nuevo</saveNew>
     <full>Disponible en versión completa del complemento</full>
     <to>en</to>
@@ -2185,7 +2185,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
   </mprSectionAnnotation>
   <mprJoin
     LocalName="Unir elementos"
-    Description="Permite controlar unión de muros y vigas, así como conexión y corte de elementos">
+    Description="Gestión de la unión de muros y vigas, así como de la conexión y corte de elementos">
     <e1>Selección no contiene elementos</e1>
     <e2>No se han seleccionado pares para conexión</e2>
     <t1>Unión de elementos</t1>
@@ -2655,8 +2655,8 @@ Seleccione otra vista de origen</h9>
   </mprSumParameters>
   <mprViewColorOn3D
     LocalName="Mostrar vistas en 3D"
-    Description="Muestre rango de visibilidad de vistas en color en 3D usando DirectShape"
-    FullDescription="Complemento le permite crear rangos de visibilidad de vistas en color de tipo DirectShape en vistas 3D, según contorno de recorte de vista con profundidad del rango secante principal de planos o profundidad de recorte de secciones, alzados y detalles. En ventana de complemento hay posibilidad de cambiar a vistas">
+    Description="Visualización del rango de visibilidad de vistas en color en 3D usando DirectShape"
+    FullDescription="Creación de rangos de visibilidad de vistas como elementos DirectShape en color en vistas 3D, según el contorno de recorte con profundidad del rango secante principal de planos o profundidad de recorte de secciones, alzados y detalles. Navegación entre vistas disponible desde la ventana">
     <t1>Cambiar a vista 3D</t1>
     <t2>En versión gratuita sólo es posible de procesar secciones</t2>
     <t3>Mostrar rango de visibilidad de vista</t3>
@@ -2857,7 +2857,7 @@ Seleccione otra vista de origen</h9>
   </mprTagless>
   <mprMaterialManager
     LocalName="Administrador de materiales"
-    Description="Cambiar propiedades y parámetros de materiales">
+    Description="Gestión de propiedades y parámetros de materiales">
     <msg1>Seleccionar materiales</msg1>
     <msg2>¿Estás seguro de que desea eliminar contenido seleccionado?</msg2>
     <msg3>Descargando materiales...</msg3>
@@ -3020,7 +3020,7 @@ Seleccione otra vista de origen</h9>
   </mprFlipped>
   <mprFavoriteViews
     LocalName="Vistas favoritas"
-    Description="Seleccionar vistas favoritas para abrir">
+    Description="Apertura rápida de vistas favoritas">
     <!--todo remove after 1.0.1.0-->
     <h1>Buscar por nombre</h1>
     <h2>Vistas</h2>

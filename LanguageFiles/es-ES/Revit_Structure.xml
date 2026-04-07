@@ -3,11 +3,11 @@
   <mmRebarSolidAndVisible
     LocalName="Armadura como sólido"
     Description="Cambiar estado de visibilidad de armadura (Ver elementos sin topar y Ver como sólido)"
-    FullDescription="El estado de visibilidad &quot;Ver elementos sin topar&quot; se establece en cualquier vista, tanto 2D como 3D. &quot;Ver como sólido&quot; se establece solo en la vista 3D"
+    FullDescription="El estado de visibilidad &quot;Ver elementos sin topar&quot; se aplica en cualquier vista, tanto 2D como 3D. &quot;Ver como sólido&quot; se aplica solo en la vista 3D"
     LocalName1="Cancelar visibilidad"
     Description1="Cancelar estado de visibilidad de armadura (&quot;Ver elementos sin topar&quot; y &quot;Ver como sólido&quot;)"
     LocalName2="Ajustes de selección de elementos"
-    Description2="Ajustes de opciones de selección para elementos que contienen armadura cuando complemento se está ejecutando">
+    Description2="Configuración de opciones de selección de elementos con armadura">
     <msg1>Seleccionar armadura o elemento con armadura</msg1>
     <msg2>Seleccionar elementos con armadura o armadura</msg2>
     <t1>Cambiar visibilidad de armadura</t1>
@@ -33,7 +33,7 @@
   <mprWallsReinforcement
     LocalName="Refuerzo de muro"
     Description="Análisis, agrupamiento y refuerzo según condiciones especificadas de muros y huecos"
-    FullDescription="Complemento sólo funciona con muros ubicados en mismo nivel. Complemento analiza muros, lo que le permite encontrar tres tipos de intersecciones (esquina, final y cruz) y huecos. Agrupamiento flexible le permite especificar exactamente qué tipo de refuerzo se debe realizar. Puede realizar refuerzo sólo para grupos específicos: muros, intersecciones o huecos. Complemento puede funcionar incluso en una plantilla vacía">
+    FullDescription="Funciona solo con muros ubicados en el mismo nivel. Analiza muros, lo que le permite encontrar tres tipos de intersecciones (esquina, final y cruz) y huecos. Agrupamiento flexible le permite especificar exactamente qué tipo de refuerzo se debe realizar. Puede realizar refuerzo sólo para grupos específicos: muros, intersecciones o huecos. Funciona incluso en una plantilla vacía">
     <h2>VENTANA DEL COMPLEMENTO:</h2>
     <h4>Encima de ventanas</h4>
     <h5>REPRESENTACIÓN EN MODELO:</h5>
@@ -518,7 +518,7 @@
   <mprSlabsReinforcement
     LocalName="Refuerzo de losa"
     Description="Análisis, agrupamiento y refuerzo de losas según condiciones especificadas"
-    FullDescription="Complemento le permite procesar tanto losas seleccionadas individualmente como todas losas en una vista o documento. Refuerzo principal de losa se puede realizar bien con barras individuales o bien con refuerzo sobre una zona. Análisis de huecos se ejecuta de geometría de propia losa y es independiente de familias utilizadas. Complemento puede funcionar incluso en plantilla vacía">
+    FullDescription="Procesamiento tanto de losas seleccionadas individualmente como de todas las losas en una vista o documento. Refuerzo principal de losa se puede realizar bien con barras individuales o bien con refuerzo sobre una zona. El análisis de huecos se ejecuta a partir de la geometría de la propia losa y es independiente de las familias utilizadas. Funciona incluso en una plantilla vacía">
     <h1>Opciones</h1>
     <h2>Seleccionar losas</h2>
     <h3>Seleccionar todas losas en vista actual</h3>
@@ -751,7 +751,7 @@
   <mprColumnsReinforcement
     LocalName="Refuerzo del pilar"
     Description="Análisis, agrupamiento y refuerzo de pilares según condiciones especificadas"
-    FullDescription="Complemento le permite procesar tanto pilares seleccionados individualmente como todas pilares en una vista o documento. Refuerzo se realiza teniendo en cuenta posición relativa de pilares una encima de otra. Refuerzo transversal se puede configurar utilizando varias opciones para formas de barras de refuerzo. Complemento puede funcionar incluso en plantilla vacía">
+    FullDescription="Procesamiento tanto de pilares seleccionados individualmente como de todos los pilares en una vista o documento. Refuerzo se realiza teniendo en cuenta posición relativa de pilares una encima de otra. El refuerzo transversal se puede configurar utilizando varias opciones de formas de barras. Funciona incluso en una plantilla vacía">
     <h1>Opciones</h1>
     <h2>Seleccionar pilares</h2>
     <h3>Seleccionar todos pilares en vista actual</h3>
@@ -1029,7 +1029,7 @@
   <mprBeamsReinforcement
     LocalName="Refuerzo de viga"
     Description="Análisis, agrupamiento y refuerzo de vigas según condiciones especificadas"
-    FullDescription="Complemento le permite procesar tanto vigas seleccionadas individualmente como todas vigas en vista o documento. Refuerzo transversal se puede configurar utilizando varias opciones para formas de barras de refuerzo. Complemento puede funcionar incluso en plantilla vacía">
+    FullDescription="Procesamiento tanto de vigas seleccionadas individualmente como de todas las vigas en vista o documento. El refuerzo transversal se puede configurar utilizando varias opciones de formas de barras. Funciona incluso en una plantilla vacía">
     <h1>Opciones</h1>
     <h2>Seleccionar vigas</h2>
     <h3>Seleccionar todas vigas en vista actual</h3>
@@ -1267,15 +1267,15 @@
   </mprBeamsReinforcement>
   <mprRebarTools
     LocalName="Utilidades para trabajar con refuerzo"
-    Description="Una colección de pequeños complementos auxiliares para trabajar con refuerzo"
+    Description="Conjunto de herramientas auxiliares para trabajar con refuerzo"
     LocalName1="Eliminar de base"
-    Description1="Eliminar todo refuerzo del elemento básico seleccionado"
+    Description1="Eliminación de todo el refuerzo del elemento básico seleccionado"
     LocalName2="Copiar a base"
-    Description2="Copiar barras de refuerzo de elemento básico original a varios elementos básicos objetivos"
+    Description2="Copia de barras de refuerzo del elemento básico original a varios elementos básicos objetivo"
     LocalName3="Explotar conjunto"
-    Description3="Convertir conjunto de barras de refuerzo seleccionado en barras de refuerzo individuales"
+    Description3="Conversión del conjunto de barras de refuerzo seleccionado en barras individuales"
     LocalName4="Dividir conjunto"
-    Description4="Dividir conjunto de refuerzos en dos nuevos conjuntos de refuerzos"
+    Description4="División del conjunto de refuerzos en dos nuevos conjuntos"
     LocalName5="Cambiar representación"
     Description5="Cambiar por lotes de representación de refuerzo">
     <m1>Seleccionar elementos básicos</m1>

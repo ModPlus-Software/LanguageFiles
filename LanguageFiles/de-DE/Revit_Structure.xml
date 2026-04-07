@@ -3,11 +3,11 @@
   <mmRebarSolidAndVisible
     LocalName="Bewehrung als Volumenkörper"
     Description="Ändern des Sichtbarkeitszustand der Bewehrung (&quot;Ansicht nicht verdeckt&quot; und &quot;Als Volumenkörper anzeigen&quot;)"
-    FullDescription="Der Sichtbarkeitszustand &quot;Ansicht nicht verdeckt&quot; können Sie in jeder Ansicht (sowohl in der 2D- als auch in der 3D-Ansicht), &quot;Als Volumenkörper anzeigen&quot; – nur in der 3D-Ansicht"
+    FullDescription="Der Sichtbarkeitszustand &quot;Ansicht nicht verdeckt&quot; wird in jeder Ansicht angewendet – sowohl 2D als auch 3D. &quot;Als Volumenkörper anzeigen&quot; wird nur in der 3D-Ansicht angewendet"
     LocalName1="Sichtbarkeit aufheben"
     Description1="Sichtbarkeitszustandes der Bewehrung aufheben (&quot;Ansicht nicht verdeckt&quot; und &quot;Als Volumenkörper anzeigen&quot;)"
     LocalName2="Einstellungen für die Elementauswahl"
-    Description2="Einstellungen der Auswahlmöglichkeiten für Elemente mit Bewehrung während der Ausführung des Plugins">
+    Description2="Einstellungen der Auswahlmöglichkeiten für Elemente mit Bewehrung">
     <msg1>Wählen Sie ein Bewehrungselement oder Bewehrung</msg1>
     <msg2>Wählen Sie Bewährungselemente oder Bewehrung</msg2>
     <t1>Das Ändern des Sichtbarkeitszustandes der Bewehrung</t1>
@@ -33,7 +33,7 @@
   <mprWallsReinforcement
     LocalName="Wandbewehrung"
     Description="Analyse, Gruppierung und Bewehrung von Wänden und Öffnungen entsprechend den festgelegten Bedingungen"
-    FullDescription="Das Plugin kann nur an Wänden, die auf gleicher Höhe liegen, angewendet werden. Das Plugin analysiert Wände und ermöglicht es Ihnen, drei Arten von Schnittpunkten (Ecke, Ende und Kreuz) und Öffnungen zu finden. Durch die flexible Gruppierung können Sie genau festlegen, welche Bewehrungsart gewählt werden soll. Sie können die Bewehrung nur für bestimmte Gruppen durchführen – Wände, Schnittpunkte oder Öffnungen. Das Plugin kann sogar mit einer leeren Vorlage funktionieren">
+    FullDescription="Arbeitet nur mit Wänden auf gleicher Höhe. Analysiert Wände und ermöglicht es Ihnen, drei Arten von Schnittpunkten (Ecke, Ende und Kreuz) und Öffnungen zu finden. Durch die flexible Gruppierung können Sie genau festlegen, welche Bewehrungsart gewählt werden soll. Sie können die Bewehrung nur für bestimmte Gruppen durchführen – Wände, Schnittpunkte oder Öffnungen. Funktioniert sogar mit einer leeren Vorlage">
     <h2>PLUGIN-FENSTER:</h2>
     <h4>Im Vordergrund</h4>
     <h5>IM MODELL ANZEIGEN:</h5>
@@ -518,7 +518,7 @@
   <mprSlabsReinforcement
     LocalName="Plattenbewehrung"
     Description="Analyse, Gruppierung und Bewehrung von Platten entsprechend den festgelegten Bedingungen "
-    FullDescription="Mit dem Plugin können Sie sowohl einzelne ausgewählte Platten als auch alle Platten in einer Ansicht oder einem Dokument verarbeiten. Es ist möglich, die Grundbewehrung der Platte sowohl mit einzelnen Stäben als auch in Form der Flächenbewehrung durchzuführen. Die Analyse von Bohrungen erfolgt anhand der Geometrie der Platte unabhängig von den verwendeten Familien. Das Plugin kann sogar mit einer leeren Vorlage funktionieren">
+    FullDescription="Verarbeitung sowohl einzelner ausgewählter Platten als auch aller Platten in einer Ansicht oder einem Dokument. Es ist möglich, die Grundbewehrung der Platte sowohl mit einzelnen Stäben als auch in Form der Flächenbewehrung durchzuführen. Die Analyse von Bohrungen erfolgt anhand der Plattengeometrie unabhängig von den verwendeten Familien. Funktioniert sogar mit einer leeren Vorlage">
     <h1>Auswahlmöglichkeiten</h1>
     <h2>Platten auswählen</h2>
     <h3>Alle Platten in der aktuellen Ansicht auswählen</h3>
@@ -751,7 +751,7 @@
   <mprColumnsReinforcement
     LocalName="Stützenbewehrung"
     Description="Analyse, Gruppierung und Bewehrung von Stützen entsprechend den festgelegten Bedingungen"
-    FullDescription="Mit dem Plugin können Sie sowohl einzelne ausgewählte Stützen als auch alle Stützen in einer Ansicht oder einem Dokument verarbeiten. Die Bewehrung erfolgt unter Berücksichtigung der gegenseitigen Lage der Stützen übereinander. Die Querbewehrung kann aus verschiedenen Bewehrungsstabformen zusammengestellt werden. Das Plugin kann sogar mit einer leeren Vorlage funktionieren">
+    FullDescription="Verarbeitung sowohl einzelner ausgewählter Stützen als auch aller Stützen in einer Ansicht oder einem Dokument. Die Bewehrung erfolgt unter Berücksichtigung der gegenseitigen Lage der Stützen übereinander. Die Querbewehrung kann aus verschiedenen Bewehrungsstabformen zusammengestellt werden. Funktioniert sogar mit einer leeren Vorlage">
     <h1>Auswahlmöglichkeiten</h1>
     <h2>Stützen auswählen</h2>
     <h3>Alle Stützen in der aktuellen Ansicht auswählen</h3>
@@ -1029,7 +1029,7 @@
   <mprBeamsReinforcement
     LocalName="Trägerbewehrung"
     Description="Analyse, Gruppierung und Bewehrung von Trägern nach festgelegten Bedingungen"
-    FullDescription="Das Plugin ermöglicht die Verarbeitung sowohl einzelner ausgewählter Träger als auch aller Träger in der Ansicht oder im Dokument. Die Querbewehrung kann mithilfe verschiedener Formen von Bewehrungsstäben angeordnet werden. Das Plugin kann sogar mit einer leeren Vorlage arbeiten.">
+    FullDescription="Verarbeitung sowohl einzelner ausgewählter Träger als auch aller Träger in der Ansicht oder im Dokument. Die Querbewehrung kann mithilfe verschiedener Formen von Bewehrungsstäben angeordnet werden. Funktioniert sogar mit einer leeren Vorlage">
     <h1>Auswahlmöglichkeiten</h1>
     <h2>Träger auswählen</h2>
     <h3>Alle Träger in der aktuellen Ansicht auswählen</h3>
@@ -1267,15 +1267,15 @@
   </mprBeamsReinforcement>
   <mprRebarTools
     LocalName="Dienstprogramme zur Verarbeitung von Bewehrung"
-    Description="Eine Sammlung von kleinen Hilfs-Plugins zur Verarbeitung von Bewehrung"
+    Description="Sammlung von Hilfswerkzeugen für die Arbeit mit Bewehrung"
     LocalName1="Aus der Basis entfernen"
-    Description1="Alle Bewehrungen aus dem ausgewählten Basiselement entfernen"
+    Description1="Entfernen aller Bewehrungen aus dem ausgewählten Basiselement"
     LocalName2="In die Basis kopieren"
-    Description2="Bewehrungsstäbe aus einem Quellbasiselement in mehrere Zielbasiselemente"
+    Description2="Kopieren von Bewehrungsstäben aus einem Quellbasiselement in mehrere Zielbasiselemente"
     LocalName3="Die Gruppe explodieren"
-    Description3="Die ausgewählte Bewehrungsgruppe in einzelne Bewehrungsstäbe umwandeln"
+    Description3="Umwandlung der ausgewählten Bewehrungsgruppe in einzelne Bewehrungsstäbe"
     LocalName4="Die Gruppe teilen"
-    Description4="Die Bewehrungsgruppe in zwei neue Bewehrungsgruppen teilen"
+    Description4="Teilung der Bewehrungsgruppe in zwei neue Bewehrungsgruppen"
     LocalName5="Die Darstellung ändern"
     Description5="Gruppenänderung der Bewehrungsdarstellung">
     <m1>Wählen Sie Basiselemente</m1>

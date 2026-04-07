@@ -2,8 +2,8 @@
 <ModPlus>
   <mprMepElementsBender
     LocalName="Paseo a través de interferencias"
-    Description="Realizar un paseo de elementos MEP que intersecan"
-    FullDescription="Complemento le permite crear un paseo a través de elementos MEP sin tener que seleccionarlos constantemente desde ventana de complemento: para ello, primero es necesario seleccionar elementos intersectados (es decir, aquel elementos que deben ser ignorados) y luego simplemente seleccionar elementos deseados en modelo. En este caso, ventana de complemento añadirá automáticamente elementos a lista de elementos procesados">
+    Description="Adición de curvas en elementos MEP para evitar elementos que se cruzan"
+    FullDescription="Primero se seleccionan los elementos a evitar, luego simplemente se seleccionan los elementos MEP en el modelo — las curvas se crean automáticamente. La ventana añade automáticamente elementos a la lista de procesamiento">
     <h1>Ajustes</h1>
     <h2>Direcciones de plegado</h2>
     <m1>Desfase, mm</m1>
@@ -70,7 +70,7 @@
   </mprMepElementsBender>
   <mprMEPConnect
     LocalName="Conectores MEP"
-    Description="Colección de complementos para automatizar conectores de sistemas de ingeniería"
+    Description="Conjunto de herramientas para automatizar conexiones de sistemas de ingeniería"
     LocalName1="Conectar difusores"
     Description1="Conectar por lotes difusores a conductos de aire"
     LocalName2="Conectar conectores"
@@ -111,7 +111,7 @@
   </mprMEPConnect>
   <mprMEPRotate
     LocalName="Revolución MEP"
-    Description="Colección de complementos para girar partes del sistema de ingeniería"
+    Description="Conjunto de herramientas para girar partes del sistema de ingeniería"
     LocalName1="Revolución de elementos MEP"
     Description1="Rotación de accesorios o parte del sistema de ingeniería"
     LocalName2="Revolución MEP en dirección"
@@ -135,7 +135,7 @@
   </mprMEPRotate>
   <mprMEPAlign
     LocalName="Justificación MEP"
-    Description="Colección de complementos para justificar curvas MEP"
+    Description="Conjunto de herramientas para justificar curvas MEP"
     LocalName1="Justificar"
     Description1="Justificación de curvas MEP"
     LocalName2="Establecer desfase"
@@ -174,7 +174,7 @@
   </mprMEPAlign>
   <mprMEPCopy
     LocalName="Copia MEP"
-    Description="Colección de complementos para copiar elementos MEP"
+    Description="Conjunto de herramientas para copiar elementos MEP"
     LocalName1="Copiar por nivel"
     Description1="Copiar elementos MEP justificados a niveles seleccionados"
     LocalName2="Copiar verticalmente"
