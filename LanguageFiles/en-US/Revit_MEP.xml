@@ -78,7 +78,9 @@
     LocalName3="Connect straight"
     Description3="Batch connection of straight pipes, ducts, wires, cable trays or conduits lying in one straight line"
     LocalName4="Disconnect connectors"
-    Description4="Disconnection between the nearest connected connector of the selected MEP element and the adjacent element">
+    Description4="Disconnection between the nearest connected connector of the selected MEP element and the adjacent element"
+    LocalName5="Disconnect from system"
+    Description5="Disconnects the related branch of MEP elements from the system. If the selected element has several systems, the branch to disconnect is determined by the connector nearest to the click point">
     <msg1>Select ducts and diffusers to be connected to them</msg1>
     <msg2>No ducts selected</msg2>
     <msg3>No diffusers selected! Only diffusers that have one unconnected connector oriented along the Z axis are allowed for processing</msg3>
@@ -87,6 +89,11 @@
     <msg6>Select straight pipes, ducts, wires, cable trays or conduits</msg6>
     <msg7>Make the connection?</msg7>
     <msg8>Select the element to disconnect</msg8>
+    <msg9>Select a system element to disconnect. If the element has several systems, click closer to the connector of the required system</msg9>
+    <msg10>System not found</msg10>
+    <msg11>After disconnecting from the "{0}" system, the "{1}" system was automatically assigned to the elements</msg11>
+    <msg12>The "{0}" system has been successfully disconnected from the elements</msg12>
+    <msg13>Failed to disconnect the "{0}" system from the elements</msg13>
     <t1>Type of branch to be created:</t1>
     <t2>Create a flexible connection between diffuser and branch</t2>
     <t3>Flexible duct type:</t3>
