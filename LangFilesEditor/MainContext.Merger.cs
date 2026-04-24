@@ -83,7 +83,7 @@ internal partial class MainContext
             }
             catch (Exception exception)
             {
-                WriteToMergeLog($"Failed delete file {file}.\nException: {exception.Message}.\nDelete it manualy and try again");
+                WriteToMergeLog($"Failed delete file {file}.\nException: {exception.Message}.\nDelete it manually and try again");
                 return;
             }
         }
