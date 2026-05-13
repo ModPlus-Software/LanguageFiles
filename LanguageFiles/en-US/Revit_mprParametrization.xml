@@ -232,7 +232,7 @@
     <err52>Parameter "{0}" is not a reference to another model element</err52>
     <err53>The target parameter must not contain the character "|"</err53>
     <err54>An expression must not contain parentheses that are not function boundaries. To add parentheses to an expression, they must be escaped – "\)" and "\("</err54>
-    <err55>Function must contain a pointer to a parameter (@[] or $[]) as an argument</err55>
+    <err55>Function must contain a pointer to a parameter (@[], $[], #[] or %[]) as an argument</err55>
     <err56>The list contains fields with the same key!</err56>
     <err57>A workset named "{0}" was not found</err57>
     <err58>Function must not have any arguments</err58>
@@ -253,6 +253,11 @@
     <err73>Function must contain at least two arguments: a condition and a pointer to the result column</err73>
     <err74>The name of column {0} must be specified by a Latin letter or number</err74>
     <err75>The parameter "{0}" is a reference parameter but does not refer to a model element</err75>
+    <err76>Setting values to a global parameter is not supported</err76>
+    <err77>Setting values to the pseudo parameter ID is not supported</err77>
+    <err78>Global parameters do not have the "HasValue" property</err78>
+    <err79>Parameters of structural connection sub-elements do not have the "HasValue" property</err79>
+    <err80>The pseudo parameter ID does not have the "HasValue" property</err80>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -374,6 +379,7 @@
     <d-or>Returns TRUE if at least one condition &lt;c&gt; is true. Otherwise returns FALSE</d-or>
     <d-inrange>Returns TRUE if the number &lt;x&gt; is greater than or equal to &lt;min&gt; and less than or equal to &lt;max&gt;. Otherwise returns FALSE</d-inrange>
     <d-has>Returns TRUE if parameter &lt;p&gt; exists. Otherwise returns FALSE</d-has>
+    <d-hasvalue>Returns TRUE if a value has been assigned to the parameter &lt;p&gt; at least once. Otherwise returns FALSE</d-hasvalue>
     <d-firsttrue>Returns the first value of &lt;v&gt; whose &lt;c&gt; condition is true. If all conditions &lt;c&gt; are not true, returns last &lt;v&gt; value</d-firsttrue>
     <d-toupper>Returns value converted to uppercase</d-toupper>
     <d-tolower>Returns value converted to lowercase</d-tolower>
@@ -393,6 +399,7 @@
     <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-lstrindex>
     <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
     <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
-    <d-cvif>Looks for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
+    <d-cvif>Searches for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
+    <d-cvor>Searches for the first row in the strategy data source (Excel file) where at least one condition is met and returns the value from the specified column of that row</d-cvor>
   </mprParametrization>
 </ModPlus>

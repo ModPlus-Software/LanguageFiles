@@ -232,7 +232,7 @@
     <err52>参数"{0}"不是引用模型中的其他元素</err52>
     <err53>目标参数不能包含"|"字符</err53>
     <err54>表达式中不能包含不作为函数边界的圆括号。要在表达式中添加括号，必须转义 - "\)"和"\("</err54>
-    <err55>函数必须包含指向参数(@[]或$[])作为参数</err55>
+    <err55>函数必须包含指向参数(@[]、$[]、#[]或%[])作为参数</err55>
     <err56>列表中存在具有相同键的字段！</err56>
     <err57>未找到名为"{0}"的工作集</err57>
     <err58>函数不应有参数</err58>
@@ -253,6 +253,11 @@
     <err73>函数必须至少包含两个参数：条件和结果列指针</err73>
     <err74>列名{0}必须使用拉丁字母或数字</err74>
     <err75>参数"{0}"是引用参数，但未引用模型元素</err75>
+    <err76>不支持向全局参数设置值</err76>
+    <err77>不支持向伪参数 ID 设置值</err77>
+    <err78>全局参数没有 "HasValue" 属性</err78>
+    <err79>结构连接子元素的参数没有 "HasValue" 属性</err79>
+    <err80>伪参数 ID 没有 "HasValue" 属性</err80>
     <rh1>№</rh1>
     <rh2>启用</rh2>
     <rh3>公式</rh3>
@@ -374,6 +379,7 @@
     <d-or>如果至少一个条件&lt;c&gt;为真，返回TRUE。否则返回FALSE</d-or>
     <d-inrange>如果数字&lt;x&gt;大于等于&lt;min&gt;且小于等于&lt;max&gt;，返回TRUE。否则返回FALSE</d-inrange>
     <d-has>如果参数&lt;p&gt;存在，返回TRUE。否则返回FALSE</d-has>
+    <d-hasvalue>如果参数 &lt;p&gt; 至少被赋过一次值，则返回 TRUE。否则返回 FALSE</d-hasvalue>
     <d-firsttrue>返回第一个条件&lt;c&gt;为真的值&lt;v&gt;。如果所有条件&lt;c&gt;为假，返回最后一个值&lt;v&gt;</d-firsttrue>
     <d-toupper>返回转换为大写的值</d-toupper>
     <d-tolower>返回转换为小写的值</d-tolower>
@@ -393,6 +399,7 @@
     <d-lstrindex>返回子字符串在字符串中最后一次出现的从零开始的索引。如果子字符串未找到，返回-1</d-lstrindex>
     <d-not>如果条件为假，返回TRUE。否则返回FALSE</d-not>
     <d-distinct>返回忽略前后空格的列表中的不同值</d-distinct>
-    <d-cvif>在策略数据源(Excel文件)中查找满足所有条件的第一行，并返回该行指定列的值</d-cvif>
+    <d-cvif>在策略数据源（Excel 文件）中查找满足所有条件的第一行，并返回该行中指定列的值</d-cvif>
+    <d-cvor>在策略数据源（Excel 文件）中查找满足至少一个条件的第一行，并返回该行中指定列的值</d-cvor>
   </mprParametrization>
 </ModPlus>

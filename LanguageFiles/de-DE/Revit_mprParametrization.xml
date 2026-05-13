@@ -232,7 +232,7 @@
     <err52>Der Parameter "{0}" verweist nicht auf ein anderes Modellelement</err52>
     <err53>Der Zielparameter darf kein Zeichen "|" enthalten</err53>
     <err54>Die Anweisung darf keine Klammern enthalten, wenn sie keine Funktionsgrenzen sind. Um einer Anweisung Klammern hinzuzufügen, müssen diese mit Escapezeichen "\)" und "\(" versehen werden</err54>
-    <err55>Die Funktion muss als Argument einen Verweis auf einen Parameter (@[] oder $[]) enthalten</err55>
+    <err55>Die Funktion muss als Argument einen Verweis auf einen Parameter (@[], $[], #[] oder %[]) enthalten</err55>
     <err56>Die Liste enthält Felder mit dem gleichen Schlüssel!</err56>
     <err57>Kein Bearbeitungsbereich mit dem Namen "{0}" gefunden</err57>
     <err58>Die Funktion darf keine Argumente haben</err58>
@@ -253,6 +253,11 @@
     <err73>Die Funktion muss mindestens zwei Argumente enthalten: die Bedingung und einen Verweis auf die Ergebnisspalte</err73>
     <err74>Der Spaltenname {0} muss mit lateinischem Buchstaben oder einer Zahl angegeben werden</err74>
     <err75>Der Parameter "{0}" ist ein Referenzparameter, verweist jedoch nicht auf ein Modellelement</err75>
+    <err76>Das Setzen von Werten für einen globalen Parameter wird nicht unterstützt</err76>
+    <err77>Das Setzen von Werten für den Pseudo-Parameter ID wird nicht unterstützt</err77>
+    <err78>Globale Parameter haben keine Eigenschaft "HasValue"</err78>
+    <err79>Parameter von Unterelementen der Tragwerksverbindungen haben keine Eigenschaft "HasValue"</err79>
+    <err80>Der Pseudo-Parameter ID hat keine Eigenschaft "HasValue"</err80>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -374,6 +379,7 @@
     <d-or>Gibt TRUE zurück, wenn mindestens eine &lt;c&gt; Bedingung richtig ist. Ansonsten wird FALSE zurückgegeben</d-or>
     <d-inrange>Gibt TRUE zurück, wenn die Zahl &lt;x&gt; größer oder gleich &lt;min&gt; und kleiner oder gleich &lt;max&gt; ist. Ansonsten wird FALSE zurückgegeben</d-inrange>
     <d-has>Gibt TRUE zurück, wenn der Parameter &lt;p&gt; existiert. Ansonsten wird FALSE zurückgegeben</d-has>
+    <d-hasvalue>Gibt TRUE zurück, wenn dem Parameter &lt;p&gt; mindestens einmal ein Wert zugewiesen wurde. Andernfalls wird FALSE zurückgegeben</d-hasvalue>
     <d-firsttrue>Gibt den ersten &lt;v&gt; Wert zurück, dessen &lt;c&gt; Bedingung richtig ist. Wenn alle Bedingungen &lt;c&gt; falsch sind, gibt den letzten Wert &lt;v&gt; zurück</d-firsttrue>
     <d-toupper>Gibt den in Großbuchstaben umgewandelten Wert zurück</d-toupper>
     <d-tolower>Gibt den in Kleinbuchstaben umgewandelten Wert zurück</d-tolower>
@@ -393,6 +399,7 @@
     <d-lstrindex>Gibt den Index zurück, der auf Null des letzten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-lstrindex>
     <d-not>Gibt TRUE zurück, wenn die Bedingung falsch ist. Ansonsten wird FALSE zurückgegeben</d-not>
     <d-distinct>Gibt die unterscheidenden Werte aus der Liste zurück und lässt dabei die Leerzeichen am Anfang und am Ende unbeachtet</d-distinct>
-    <d-cvif>Sucht nach der ersten Zeile in der Strategiedatenquelle (Excel-Datei), wo alle Bedingungen erfüllt sind, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvif>
+    <d-cvif>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der alle Bedingungen erfüllt sind, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvif>
+    <d-cvor>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der mindestens eine Bedingung erfüllt ist, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvor>
   </mprParametrization>
 </ModPlus>
