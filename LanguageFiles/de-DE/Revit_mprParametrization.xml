@@ -142,6 +142,9 @@
     <t137>Parameter aus Projektinformationen einfügen</t137>
     <t138>Globalen Parameter einfügen</t138>
     <t139>Im aktuellen Dokument sind keine globalen Parameter vorhanden</t139>
+    <t140>STRATEGIE-EINSTELLUNGEN</t140>
+    <t141>RoomBoundaries: Geschossdecken, die den Raumkörper berühren, als Raumbegrenzungselemente betrachten</t141>
+    <t142>Standardmäßig werden nur vertikale Elemente wie Wände, Stützen usw. als Raumbegrenzungselemente betrachtet. Wenn diese Option aktiviert ist, wird die Geometrie von Räumen und Geschossdecken mithilfe eines Algorithmus analysiert, der die Berührung zwischen Elementflächen erkennt (Strategie SolidTouch). Geschossdecken, deren ebene Flächen die ebenen Flächen des Raumkörpers berühren, werden als Raumbegrenzungselemente betrachtet. Die Aktivierung dieser Option kann die Verarbeitungszeit verlängern</t142>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -179,6 +182,7 @@
     <msg35>Die angegebene Datei ist belegt! Schließen Sie die Datei und versuchen Sie erneut zu exportieren oder geben Sie eine andere Datei an</msg35>
     <msg36>Der Wert "{0}" des Parameters "{1}" stimmt mit dem berechneten Wert des Ausdrucks überein</msg36>
     <msg37>Der Wert "{0}" des Parameters "{1}" stimmt nicht mit dem berechneten Wert "{2}" des Ausdrucks überein</msg37>
+    <msg38>Die Verarbeitung des Elements wurde übersprungen, da das Ergebnis der Ausdrucksberechnung das Schlüsselwort SKIP_ELEMENT ist</msg38>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -287,7 +291,9 @@
     <ssd10>Verarbeitung von Elementen, die mit den Kanten ihrer Vollkörper in Berührung sind</ssd10>
     <sld10>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich mit flachen Körperkanten berühren</sld10>
     <ssd11>Verarbeitung der Begrenzungselemente von Räumen</ssd11>
+    <!--todo remove after 4.1.29.0-->
     <sld11>Die Strategie verarbeitet Elemente, die Begrenzungselemente von Räumen sind</sld11>
+    <sld11-2>Die Strategie verarbeitet Elemente, die Raumbegrenzungselemente sind (Wände, Stützen usw.). Es besteht die Möglichkeit, Geschossdecken als Raumbegrenzungselemente zu verarbeiten, wenn die entsprechende Option in den Einstellungen aktiviert ist</sld11-2>
     <ssd12>Verarbeitung der untergeordneten Elementen in den Verbindungen von Tragwerken</ssd12>
     <sld12>Die Strategie verarbeitet Elemente, die in den Verbindungen von Tragwerken platziert sind (Platten, Schrauben, etc.). Das Filtern von untergeordneten Elementen nach Parametern sowie die Liste der Parameter von untergeordneten Elementen im Formel-Editor sind nicht vorgesehen. Numerische Parameter werden ohne Konvertierung in interne Einheiten eingestellt</sld12>
     <ssd13>Verarbeitung von Unterfamilien</ssd13>
@@ -306,6 +312,8 @@
     <sld19>Die Strategie bearbeitet Elemente mit der Möglichkeit, beliebiges angegebenes Modellelement als Quellelement zu verwenden</sld19>
     <ssd20>Bearbeitung von Teilen</ssd20>
     <sld20>Die Strategie bearbeitet Teile unter Berücksichtigung der Quellelemente, aus denen die Teile erstellt sind. Ist ein Teil aus mehreren Quellelementen erstellt, gilt das erste Element als Quellelement</sld20>
+    <ssd21>Verarbeitung von Elementen in Baugruppen</ssd21>
+    <sld21>Die Strategie verarbeitet Elemente, die sich in Baugruppen befinden</sld21>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -334,6 +342,8 @@
     <sp13>Fassadenparameter einfügen</sp13>
     <se14>Quellelement</se14>
     <sp14>Parameter des Quellelements einfügen</sp14>
+    <se15>Baugruppe</se15>
+    <sp15>Baugruppenparameter einfügen</sp15>
     <te1>Zielelement</te1>
     <tp1>Parameter des Zielelementes einfügen</tp1>
     <te2>Exemplar der Familie</te2>
@@ -401,5 +411,6 @@
     <d-distinct>Gibt die unterscheidenden Werte aus der Liste zurück und lässt dabei die Leerzeichen am Anfang und am Ende unbeachtet</d-distinct>
     <d-cvif>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der alle Bedingungen erfüllt sind, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvif>
     <d-cvor>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der mindestens eine Bedingung erfüllt ist, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvor>
+    <d-doctitle>Gibt den Titel des aktuellen Dokuments zurück</d-doctitle>
   </mprParametrization>
 </ModPlus>
