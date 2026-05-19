@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprNumbering
+    LocalName="Numeración"
+    Description="Añadir numeración al parámetro especificado de elementos con posibilidad de numeración en tabla de planificación"
+    FullDescription="Cuando trabaje en vista que no sea tabla de planificación, puede especificar dirección de numeración según disposición de elementos o añadir numeración en orden en que se crearon elementos. Cuando se trabaja en tabla de planificación, complemento añade numeración en orden de elementos de tabla de planificación (teniendo en cuenta clasificación). Es posible establecer un prefijo y un sufijo para número">
+    <h7>Valor inicial:</h7>
+    <h8>Dirección de numeración:</h8>
+    <h9>Parámetro objetivo:</h9>
+    <h12>Parámetro de ejemplar</h12>
+    <h13>Parámetro de tipo</h13>
+    <h14>Parámetro</h14>
+    <h15>tiene propiedad de "Sólo lectura" para siguientes elementos</h15>
+    <h16>No es posible cambiar parámetro de ejemplar de elemento ubicado en grupo a menos que parámetro tenga activada propiedad "Valores pueden variar entre ejemplares de grupo" o no sea parámetro del sistema de "Marca"</h16>
+    <h17>Errores al cambiar valores de parámetros de elementos enumerados</h17>
+    <h18>¡Atención! Parámetro se limpia para todos elementos de tabla de planificación dada, independientemente de ajustes del filtro. Esto significa que si, por ejemplo, tabla de planificación contiene 10 columnas y ajuste del filtro sólo muestra 5 columnas, entonces parámetro se limpiará para 10 columnas! ¿Limpiar parámetro?</h18>
+    <h20>Modo de selección:</h20>
+    <h21>Número de elementos seleccionados:</h21>
+    <h24>Numerar sólo filas seleccionadas</h24>
+    <h25>Seleccionar elementos</h25>
+    <h26>Ajustar numeración</h26>
+    <h27>Paso:</h27>
+    <h28>Parámetro "{0}" tiene propiedad "Solo lectura". Verificar que elementos que están procesando no estén en un espacio de trabajo que es imposible de editar</h28>
+    <h29>Prefijo y sufijo de</h29>
+    <h30>cadena</h30>
+    <h31>parámetro</h31>
+    <h32>Crear nueva configuración</h32>
+    <h33>Cambiar nombre de configuración</h33>
+    <h34>Ingresar nuevo nombre de configuración</h34>
+    <h35>Eliminar configuración</h35>
+    <h36>Parámetro numérico</h36>
+    <h37>Parámetro de cadena</h37>
+    <h38>Alfabeto:</h38>
+    <h39>Personalizado</h39>
+    <h40>Ruso</h40>
+    <h41>Inglés</h41>
+    <h42>Ucranio</h42>
+    <h43>Ingresar letras del alfabeto sin espacios sin distinguir mayúsculas/minúsculas. También puede</h43>
+    <h44>insertar</h44>
+    <h45>y editar</h45>
+    <h46>alfabeto</h46>
+    <h47>Alfabeto personalizado</h47>
+    <h48>Agrupar por parámetro:</h48>
+    <h49>Comportamiento en grupo:</h49>
+    <sv1>Selección estándar con marco</sv1>
+    <sv2>Selección ordinal</sv2>
+    <sv3>Intersección con curva</sv3>
+    <!-- todo remove after 6.1.2.0 -->
+    <select>Seleccionar</select>
+    <t1>Complemento sólo puede funcionar en una tabla de planificación cuyo ajuste de ordenación tenga activada propiedad "Detallar cada ejemplar"</t1>
+    <t2>Desmarcar todas categorías</t2>
+    <t3>Selección estándar con marco – seleccionar elementos en vista actual con red y confirmar selección haciendo clic en botón "Listo". Con esta opción, orden de numeración tiene nueve opciones: según orden de creación y según posición de elementos.</t3>
+    <t4>Selección ordinal – seleccionar cada elemento para numeración en orden en que se realizará numeración. Con esta opción orden de numeración puede ser ascendente o descendente. Selección se completa presionando tecla Esc.</t4>
+    <t5>Intersección con curva: seleccione una curva (línea de modelo o línea de detalle). Elementos para numeración se seleccionarán encontrando intersección de curva con geometría de elementos en vista actual con proyección en plano de vista. Con esta opción orden de numeración puede ser ascendente o descendente.</t5>
+    <t6>Todas selecciones de elementos se pueden filtrar por categoría y/o parámetros.</t6>
+    <t7>Lista de parámetros se completa después de seleccionar elementos para numeración.</t7>
+    <t12>Valor inicial puede ser fraccionario. Es posible utilizar un punto o una coma para separar partes enteras y fraccionarias. Separador especificado se utilizará al configurar valores en parámetro de texto. Si parámetro de objetivo tiene tipo de datos "Número", separador especificado no afectará resultado mostrado. Si parámetro de objetivo tiene tipo de datos "Entero", entonces resultado de numeración se convertirá en número entero descartando parte fraccionaria.</t12>
+    <t13>Se pueden añadir ceros a izquierda al valor inicial. Por ejemplo, si valor inicial es "01" y incremento es "5", entonces resultado de numeración será "01, 05, 10, 15...". Ceros a izquierda sólo se tienen en cuenta si parámetro objetivo es tipo de datos de cadena.</t13>
+    <!-- todo remove after 5.2.16.0 -->
+    <t14>Orden geométrica de numeración se calcula en función de valores absolutos de X e Y de puntos de ubicación de elementos. Para objetos lineales, se toma punto medio</t14>
+    <t15>Al ordenar objetos lineal, se utiliza punto medio. Al ordenar ventanas gráficas, se utiliza centro de ventana gráfica. Al ordenar marcas, se utiliza punto de ubicación del encabezado. En otros casos, se utiliza punto de inserción del elemento</t15>
+    <t16>Puede utilizar numeración alfabética. Para ello especifique como valor inicial letra del alfabeto con la que comenzará numeración alfabética. Numeración alfabética se realizará en mismo registro que valor inicial.</t16>
+    <m1>Seleccionar elementos para etiquetado numerado</m1>
+    <m2>No hay elementos en vista actual de tabla de planificación</m2>
+    <m3>¿Filtrar elementos seleccionados por lista actual de categorías?</m3>
+    <m4>Seleccionar una curva (línea de modelo o línea de detalle)</m4>
+    <o1>Ascendente</o1>
+    <o2>Descendente</o2>
+    <b1>Numeración en cada grupo</b1>
+    <b2>Un número por grupo</b2>
+    <b3>Numeración continua con ordenación por parámetro (Ascendente)</b3>
+    <b4>Numeración continua con ordenación por parámetro (Descendente)</b4>
+    <d1>En orden ascendente de creación</d1>
+    <d1-1>En orden descendente de creación</d1-1>
+    <d2>De izquierda a derecha y de arriba a abajo</d2>
+    <d3>De izquierda a derecha y de abajo hacia arriba</d3>
+    <d4>De derecha a izquierda y de arriba a abajo</d4>
+    <d5>De derecha a izquierda y de abajo hacia arriba</d5>
+    <d6>De arriba a abajo y de izquierda a derecha</d6>
+    <d7>De arriba a abajo y de derecha a izquierda</d7>
+    <d8>De abajo hacia arriba y de izquierda a derecha</d8>
+    <d9>De abajo hacia arriba y de derecha a izquierda</d9>
+    <d10>De izquierda a derecha</d10>
+    <d11>De derecha a izquierda</d11>
+    <d12>De arriba hacia abajo</d12>
+    <d13>De abajo hacia arriba</d13>
+    <r1>No se especifica ningún valor inicial</r1>
+    <r2>No se han seleccionado elementos para su procesamiento</r2>
+    <r3>Alfabeto personalizado vacío</r3>
+    <r4>Falta letra "{0}" en alfabeto seleccionado</r4>
+    <r5>No es posible realizar numeración alfabética porque opción numérica está seleccionada</r5>
+    <r6>Opción de agrupación no seleccionada</r6>
+  </mprNumbering>
+</ModPlus>
