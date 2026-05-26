@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprInteriorPlanDimensions
+    LocalName="Cotas en plano"
+    Description="Varias variantes de acotación de elementos en el plano">
+    <h2>Acotar ejes</h2>
+    <h3>Acotar huecos</h3>
+    <h4>Separación de cotas de varios segmentos posteriores</h4>
+    <h5>Procesar muros con un grosor a partir de</h5>
+    <h6>Excluir del procesamiento muros cuyo nombre de tipo contenga:</h6>
+    <h7>Excluir del procesamiento cuyo nombre del material para "Estructura" contenga:</h7>
+    <h8>Distancia:</h8>
+    <h9>Plano de planta</h9>
+    <h10>Pilares</h10>
+    <h11>Asociar a ejes más cercanos</h11>
+    <h12>Desfase de la cadena de cotas</h12>
+    <h13>Posición de cotas horizontales</h13>
+    <h14>Posición de cotas verticales</h14>
+    <h15>Acotar varios segmentos a lo largo de muros en plano de toda planta. Para su correcto funcionamiento es necesario seleccionar en planta todos muros que forman planta del edificio. Sólo se procesan elementos rectos. Para un funcionamiento correcto, elementos procesados deben ubicarse ortogonales entre sí</h15>
+    <h16>Agregar un pilote a un grupo si la distancia desde el punto de inserción del pilote al punto de inserción</h16>
+    <h17>del grupo no supera</h17>
+    <h18>Pilotes</h18>
+    <h19>Acotar longitud global de pilares. Sólo se procesan columnas rectangulares</h19>
+    <h20>Acotar coordenadas de pilares. Cotas se ubican con forzado de cursor a ejes más cercanos, si se han seleccionado ejes, directamente sobre pilotes. Pilotes se procesan en grupos. Un grupo de pilotes son pilotes ubicados uno cerca del otro. Se procesan familias de categorías "Pilares estructural" y "Cimentación estructural"</h20>
+    <h21>Acotar longitud global en intersección de ejes</h21>
+    <h22>Suelos</h22>
+    <h23>Acotar a lo largo de caras exteriores de intermedio y a lo largo de agujeros en forjado. Acotar a lo largo de caras exteriores se colocan para todas caras de forjado. Acotar a lo largo de agujeros se colocan en dirección indicada (izquierda/derecha y arriba/abajo)</h23>
+    <h24>Acotar caras exteriores</h24>
+    <h25>Asociar bordes exteriores a ejes</h25>
+    <h26>Muros</h26>
+    <h27>Acotar longitudinalmente y transversalmente (espesor) de muros rectilíneos sin tener en cuenta su relación con otros muros</h27>
+    <!--todo remove after 3.4.5.0-->
+    <h28>Cota transversal por centro de muro</h28>
+    <!--todo remove after 3.4.5.0-->
+    <h29>Asociar la cota transversal en el centro del muro al eje más cercano</h29>
+    <h30>Cota longitudinal de muro</h30>
+    <h31>Asociar la cota longitudinal del muro al eje más cercano</h31>
+    <h32>Procesar caras intermedias (huecos)</h32>
+    <h33>Acotar huecos</h33>
+    <h34>Asociar huecos a ejes más cercanos</h34>
+    <h35>Posición de cotas horizontales para huecos</h35>
+    <h36>Posición de cotas verticales para huecos</h36>
+    <h37>Trabajar cíclicamente</h37>
+    <h38>Dimensión transversal</h38>
+    <h39>Asociar la cota del muro al eje más cercano</h39>
+    <h40>Si no hay un extremo libre, colocar la cota en el centro</h40>
+    <h41>Considerar el rango de vista</h41>
+    <h42>Desplazamiento</h42>
+    <h43>al intersecarse</h43>
+    <h44>Procesamiento de elementos en archivos vinculados</h44>
+    <wcb1>en el centro de la pared</wcb1>
+    <wcb2>en el extremo de la pared</wcb2>
+    <wcb3>por un lado</wcb3>
+    <wcb4>por ambos lados</wcb4>
+    <pgc1>cado pilote</pgc1>
+    <pgc2>cualquiero de pilotas</pgc2>
+    <top>Arriba</top>
+    <bottom>Abajo</bottom>
+    <left>Izquierda</left>
+    <right>Derecha</right>
+    <tt1>Especificar, delimitados por comas, valores que puede contener nombre del tipo de muro</tt1>
+    <tt2>No distingue mayúsculas y minúsculas</tt2>
+    <tt3>Por ejemplo:</tt3>
+    <tt4>_Ut,Acabado,Cerámica</tt4>
+    <tt5>Especificar, delimitados por comas, valores que puede contener nombre del material de capa "Estructura" de muro</tt5>
+    <tt6>hormigón armado, ladrillo</tt6>
+    <tt7>Si esta opción está activada, los elementos situados por debajo del nivel "Plano de corte" no se procesarán</tt7>
+    <msg2>Seleccionar elementos a procesar</msg2>
+    <err2>¡No hay muros en conjunto especificado que son intersecados por plano secante del rango secante de vista!</err2>
+    <err3>¡Se produjo un bucle durante ejecución! ¡Si ve este mensaje, comuníquese con desarrollador!</err3>
+    <err4>¡Es necesario seleccionar más de un elemento!</err4>
+    <err5>¡No hay muros entre elementos seleccionados!</err5>
+    <err8>Pilotes seleccionados no cumplen las condiciones de procesamiento: no se puede obtener un sólido o pilotes no tienen un punto de inserción</err8>
+    <err9>Pilares seleccionados no cumplen las condiciones de procesamiento: no se puede obtener un sólido, no se puede obtener caras, no tienen un punto de inserción o tienen caras curves</err9>
+    <err10>Suelos seleccionados no cumplen las condiciones de procesamiento: no se puede obtener sólido o no se puede obtener caras</err10>
+    <err11>Muros seleccionadas no cumplen con condiciones de procesamiento: no se puede obtener sólido o no se puede obtener caras</err11>
+    <s1>Filtrar lista inicial de muros</s1>
+    <s2>Buscar muros interiores y exteriores</s2>
+    <s3>Crear cotas analíticas</s3>
+    <s4>Filtrar cotas analíticas</s4>
+    <s5>Crear comparaciones cotas – muros</s5>
+    <s6>Filtrar comparaciones cotas - muros</s6>
+    <s7>Obtener comparaciones finales cotas – muros</s7>
+    <s8>Filtrar enlaces a elementos</s8>
+    <s9>Crear cotas de varios segmentos de trabajo</s9>
+    <s10>Filtrar cotas de varios segmentos de trabajo</s10>
+    <s11>Crear cotas de varios segmentos finales</s11>
+  </mprInteriorPlanDimensions>
+</ModPlus>

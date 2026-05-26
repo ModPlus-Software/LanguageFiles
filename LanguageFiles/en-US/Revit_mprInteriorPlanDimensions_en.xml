@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprInteriorPlanDimensions
+    LocalName="Dimensions on plan"
+    Description="Various variants of element dimensioning on the plan">
+    <h2>Grids dimensioning</h2>
+    <h3>Openings dimensioning</h3>
+    <h4>Indent of subsequent dimensional chains</h4>
+    <h5>Handle walls with a thickness of</h5>
+    <h6>Exclude from the work walls in the name of the type which contains:</h6>
+    <h7>Exclude from the work of the wall in the material name of the layer "Structure" which contains:</h7>
+    <h8>Step:</h8>
+    <h9>Floor plan</h9>
+    <h10>Columns</h10>
+    <h11>Bind to nearest Grid</h11>
+    <h12>Dimension chain offset</h12>
+    <h13>Position of horizontal dimensions</h13>
+    <h14>Position of vertical dimensions</h14>
+    <h15>Creating dimensional chains along walls on the whole floor plan. For correct work it is necessary to select all walls on the plan that form the floor of a building. Only linear elements are processed. For correct work the elements to be processed must be placed orthogonal to each other</h15>
+    <h16>Add a pile to the group if the distance from the pile insertion point to the insertion point of</h16>
+    <h17>in the group does not exceed</h17>
+    <h18>Piles</h18>
+    <h19>Creating the overall dimensions of the columns. Only rectangular columns are processed</h19>
+    <h20>Creating the positional dimensions of the piles. The dimensions are placed in the middle of the piles with bind to the nearest Grids, if the Grids have been selected. The piles are processed in groups. Pile groups are piles that are close to each other. Families are processed in the category "Structural columns" and "Structural foundation"</h20>
+    <h21>Create outline dimension when intersecting Grids</h21>
+    <h22>Floors</h22>
+    <h23>Creation of dimensions on the outer faces of the Floor and on the holes in the Floor. The dimensions on the outer faces are set for all Floor faces. The dimensions for the holes are set in the specified direction (left/right and up/down)</h23>
+    <h24>Outer faces dimensioning</h24>
+    <h25>Binding outer faces to Grids</h25>
+    <h26>Walls</h26>
+    <h27>Creation longitudinal and transverse (thickness) dimensions of straight walls without taking into account their relationship to other walls</h27>
+    <!--todo remove after 3.4.5.0-->
+    <h28>Transverse dimension at center of wall</h28>
+    <!--todo remove after 3.4.5.0-->
+    <h29>Bind transverse dimension at center of wall to the nearest Grid</h29>
+    <h30>Longitudinal dimension of wall</h30>
+    <h31>Bind longitudinal dimension of wall to the nearest Grid</h31>
+    <h32>Processing of middle faces (openings)</h32>
+    <h33>Dimension openings</h33>
+    <h34>Bind openings to the nearest Grids</h34>
+    <h35>Position of horizontal dimensions for openings</h35>
+    <h36>Position of vertical dimensions for openings</h36>
+    <h37>Work Cycle</h37>
+    <h38>Transverse dimension</h38>
+    <h39>Binding the transverse dimension to the nearest grid</h39>
+    <h40>If no free end is available, place the dimension at the center</h40>
+    <h41>Consider view range</h41>
+    <h42>Offset</h42>
+    <h43>when intersecting</h43>
+    <h44>Processing elements from linked files</h44>
+    <wcb1>at center of wall</wcb1>
+    <wcb2>at end of the wall</wcb2>
+    <wcb3>on one side</wcb3>
+    <wcb4>on both sides</wcb4>
+    <pgc1>each pile</pgc1>
+    <pgc2>any pile</pgc2>
+    <top>Top</top>
+    <bottom>Bottom</bottom>
+    <left>Left</left>
+    <right>Right</right>
+    <tt1>Specify a comma-separated value that can be contained in the name of the type of the wall</tt1>
+    <tt2>Not case-sensitive</tt2>
+    <tt3>For example:</tt3>
+    <tt4>_Insul,Finishing,Ceramic</tt4>
+    <tt5>Specify, by comma, the values that can be contained in the material name of the "Structure" layer of the wall</tt5>
+    <tt6>concrete,brick</tt6>
+    <tt7>If this option is enabled, elements located below the level "Cut Plane" will not be processed</tt7>
+    <msg2>Select elements to process</msg2>
+    <err2>In this set there are no walls intersected by Primary range Cut plane!</err2>
+    <err3>At runtime, the program went into an endless loop! If you see this message, please contact the developer!</err3>
+    <err4>It is necessary to choose more than one element!</err4>
+    <err5>Among the selected elements there are no walls!</err5>
+    <err8>The selected piles do not satisfy the processing conditions: failed to obtain a solid or do not have an insertion point</err8>
+    <err9>Selected columns do not satisfy machining conditions: failed solid, failed faces, have no insertion point or have curved faces</err9>
+    <err10>Selected floors do not satisfy the processing conditions: failed solid or failed faces</err10>
+    <err11>Selected walls do not satisfy the processing conditions: failed solid or failed faces</err11>
+    <s1>Filtering the initial list of walls</s1>
+    <s2>Search internal and external walls</s2>
+    <s3>Creating analytical dimensions</s3>
+    <s4>Filtering analytical dimensions</s4>
+    <s5>Creating dimension-wall mappings</s5>
+    <s6>Filtering dimension-wall mappings</s6>
+    <s7>Preparation of the final dimension-wall mappings</s7>
+    <s8>Filter element references</s8>
+    <s9>Creating worker dimension chains</s9>
+    <s10>Filtration of working dimensional chains</s10>
+    <s11>Creating final dimension chains</s11>
+  </mprInteriorPlanDimensions>
+</ModPlus>
