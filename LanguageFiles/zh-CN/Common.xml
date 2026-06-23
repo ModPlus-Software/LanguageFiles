@@ -10,6 +10,7 @@
     <attribute>属性</attribute>
     <auto>自动</auto>
     <apply>应用</apply>
+    <arc>圆弧</arc>
     <ascending>按升序排列</ascending>
     <availFull>完整版插件中可用！</availFull>
     <belarus>白俄罗斯</belarus>
@@ -64,6 +65,7 @@
     <dot>点</dot>
     <duplicate>复制</duplicate>
     <element>元素</element>
+    <ellipse>椭圆</ellipse>
     <error>错误</error>
     <errors>错误</errors>
     <execute>执行</execute>
@@ -78,6 +80,7 @@
     <formula>公式</formula>
     <g>克</g>
     <group>组</group>
+    <hatch>填充</hatch>
     <height>高度</height>
     <hide>隐藏</hide>
     <import>导入</import>
@@ -126,6 +129,9 @@
     <password>密码</password>
     <pick>选择</pick>
     <pin>固定</pin>
+    <polyline>多段线</polyline>
+    <polyline2D>二维多段线</polyline2D>
+    <polyline3D>三维多段线</polyline3D>
     <prefix>前缀</prefix>
     <project>项目</project>
     <property>属性</property>
@@ -133,6 +139,7 @@
     <port>端口</port>
     <question>问题</question>
     <radius>半径</radius>
+    <region>面域</region>
     <refresh>刷新</refresh>
     <remoteGeneralVersion>可用通用版本</remoteGeneralVersion>
     <remove>删除</remove>
@@ -161,6 +168,7 @@
     <source>来源</source>
     <suffix>后缀</suffix>
     <sort>排序</sort>
+    <spline>样条曲线</spline>
     <sum>总和</sum>
     <styles>風格</styles>
     <table>表格</table>
@@ -184,6 +192,7 @@
     <width>宽度</width>
     <yes>是</yes>
     <example>範例</example>
+    <server>服务器</server>
   </Common>
   <!-- todo remove after updater 46.5.0.0 and after remove Configurator -->
   <Core>
@@ -1050,6 +1059,7 @@
     <h120>{0} 的菜单为空！在加载 {1} 时将不会创建菜单！</h120>
     <h121>可以通过个人中心或受支持产品中的设置窗口检查与本地许可证服务器的连接</h121>
     <h122>已安装新的插件，但菜单重建在设置中已禁用。请使用"菜单"部分将新插件添加到菜单中</h122>
+    <h123>组织设置禁止使用该插件</h123>
     <!--todo remove after 43.3.0.0-->
     <b3>全选</b3>
     <!--todo remove after 43.3.0.0-->
@@ -1588,6 +1598,11 @@
     <err9>轮廓定向失败：原始轮廓存在间隙导致曲线不相邻。请检查模型元素构建正确性后重试</err9>
     <err10>无法为创建的钢筋设置形状"{0}"。错误：</err10>
     <err11>由于该链接已加载到另一个打开的文档中，无法重新加载</err11>
+    <err12>未找到"功能区"组件</err12>
+    <err13>未找到 ModPlus 选项卡。请在自动更新模块的"连接"部分中确认 ModPlus 已连接到 Revit</err13>
+    <err14>未在功能区中找到所需插件。请在自动更新模块的"插件"部分中确认插件已安装并启用，同时在自动更新模块的"菜单"部分中确认插件已添加到菜单</err14>
+    <err15>无法初始化所需插件的图形表示</err15>
+    <err16>无法获取图形表示图层</err16>
     <c1>选项卡着色</c1>
     <c2>配色方案：</c2>
     <c3>着色区域：</c3>
@@ -1681,6 +1696,7 @@
     <s40>部分或全部设置由组织策略锁定</s40>
     <s41>文档"{0}"已加入定时处理列表</s41>
     <s42>文档"{0}"已移出定时处理列表</s42>
+    <s43>文档"{0}"的自动保存因反复出现保存错误已暂停。请手动保存文档——成功保存后自动保存将恢复</s43>
     <sd1>项目</sd1>
     <sd2>族</sd2>
     <sd3>项目与族</sd3>
@@ -1708,6 +1724,7 @@
     <sl20>链接文件</sl20>
     <sl21>只读</sl21>
     <sl22>文档类型与自动保存设置不匹配</sl22>
+    <sl23>文档"{0}"存储在云端——不执行本地备份。版本历史可通过 Autodesk Docs (Manage Cloud Models) 查看</sl23>
     <sel1>预选元素</sel1>
     <sel2>选中元素</sel2>
     <sel3>当前视图可见</sel3>

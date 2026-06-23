@@ -205,6 +205,7 @@
     <vtf4>楼层平面、结构平面、区域平面</vtf4>
     <vtf5>渲染视图、绘图视图、图例</vtf5>
   </mprViewCopy>
+  <!-- todo remove when used mprViewIn3D -->
   <ostViewIn3D
     LocalName="3D剖面框"
     Description="在三维视图中隔离所选元素，并可设置剖面框的大小">
@@ -223,6 +224,7 @@
     <tooltip1>允许指定元素以确定 3D剖面框的方向</tooltip1>
     <InViewScheduleMsg>在明细表中仅支持从模型中预先选择元素</InViewScheduleMsg>
   </ostViewIn3D>
+  <!-- todo remove when used mprScheduleLookup -->
   <whshScheduleLookup
     LocalName="明细表搜索"
     Description="搜索项目中包含指定值的明细表"
@@ -241,29 +243,15 @@
     <h12>点击"查找"更新!</h12>
     <h13>未找到匹配的明细表!</h13>
     <h14>找到明细表:</h14>
-    <!--todo remove after 1.2.4.0-->
-    <h15>表格搜索</h15>
-    <!--todo remove after 1.2.4.0-->
-    <h16>必须存在于明细表中</h16>
     <h17>分隔符</h17>
     <h18>子字符串</h18>
-    <!--todo remove after 1.2.4.0-->
-    <h19>区分大小写</h19>
     <h20>搜索范围</h20>
     <h21>字段</h21>
     <h22>标题</h22>
-    <!--todo remove after 1.2.4.0-->
-    <h23>值</h23>
     <h24>表头</h24>
     <h25>% 处理中...</h25>
     <h26>状态:</h26>
     <h27>按空格键两次插入</h27>
-    <!--todo remove after 1.2.4.0-->
-    <h28>输入参数名称，用符号分隔</h28>
-    <!--todo remove after 1.2.4.0-->
-    <h29>输入列标题，用符号分隔</h29>
-    <!--todo remove after 1.2.4.0-->
-    <h30>输入单元格值，用符号分隔</h30>
     <h31>打开明细表</h31>
     <h32>忽略大小写</h32>
     <h33>输入必须存在于明细表中的字段或参数名称，用符号"{0}"分隔</h33>
@@ -288,8 +276,6 @@
     <sr17>搜索完成?</sr17>
     <sr18>找到值?</sr18>
     <sr19>找到子字符串?</sr19>
-    <!--todo remove after 1.2.4.0-->
-    <sr20>区分大小写?</sr20>
     <sr21>排序参数?</sr21>
     <sr22>过滤参数?</sr22>
     <sr23>合并参数?</sr23>
@@ -300,7 +286,9 @@
     LocalName="CAD管理器"
     Description="管理当前文档中所有DWG文件的插入"
     FullDescription="显示所有插入的DWG文件视图——包括属于视图和不属于视图的。提供列表搜索、ID复制、视图打开和DWG插入删除功能">
+    <!--todo remove after 2.0.4.0-->
     <h1>CAD管理器</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>已复制!</h2>
     <h3>视图关联:</h3>
     <h4>按导入ID或视图的名称和ID搜索...</h4>
@@ -317,6 +305,9 @@
     <h17>删除多个插入</h17>
     <h18>打开导入文件所在文件夹</h18>
     <h19>数量(可见/总计):</h19>
+    <h20>在项目中选择</h20>
+    <h21>重新加载链接</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>全部</all>
     <sv1>未定义</sv1>
     <sv2>属于视图</sv2>
@@ -746,6 +737,7 @@
     <m16>当前视图不支持元素图形替代</m16>
     <m17>无法切换当前视图的轴网模式</m17>
   </mprTools>
+  <!-- todo remove when used mprNumbering -->
   <mmOrderMarking
     LocalName="编号"
     Description="为可编号元素的指定参数添加编号，可在明细表中进行编号"
@@ -1018,9 +1010,13 @@
     <m4>读取族</m4>
     <m5>在明细表中搜索</m5>
     <m6>选定的搜索表中有当前族正在使用的表! 确认删除?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0}：已成功删除 {1}</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0}：成功删除 {1}，未能删除 {2}</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>清理过程中未删除的元素 ID</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0}：未找到可清理的元素</wipeOptionResultEmpty>
     <defaultTypeMessage>已指定默认类型：{0}</defaultTypeMessage>
     <reassignedInstancesMessage>已将实例重新指定为默认类型：{0}</reassignedInstancesMessage>
@@ -1248,6 +1244,7 @@
     <co11>复制详图线</co11>
     <co12>复制标题栏参数值</co12>
     <co13>复制图纸参数值</co13>
+    <co14>复制模型视图</co14>
     <copy>创建副本</copy>
     <copyAll>创建副本（所有情况）</copyAll>
     <exist>使用现有</exist>
@@ -1268,6 +1265,7 @@
     <m14>选择：使用目标文档中的现有图例，或创建并使用源文档图例的副本</m14>
     <m15>目标文档"{0}"中已有绘图视图"{1}"</m15>
     <m16>选择：使用目标文档中的现有绘图视图，或创建并使用源文档绘图视图的副本</m16>
+    <m17>正在从图纸 "{0}" 复制模型视图到文档 "{1}"</m17>
     <notOrganized>!未组织</notOrganized>
   </mprCopySheetsToOpenDocuments>
   <mprLinksManager
@@ -1350,6 +1348,17 @@
     <operationUnloadLocallyGenitive>本地卸载</operationUnloadLocallyGenitive>
     <unloadLocallyLinksTransaction>本地卸载链接</unloadLocallyLinksTransaction>
     <searchHint>输入搜索文本</searchHint>
+    <typeWorksetColumnHeader>类型工作集</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>实例工作集</instanceWorksetColumnHeader>
+    <placeInWorkset>放置到工作集中</placeInWorkset>
+    <disableWorksetContains>禁用包含以下内容的工作集：</disableWorksetContains>
+    <disableWorksetTooltip>请输入以逗号分隔的子字符串。加载链接时，关联模型中名称包含至少一个指定子字符串的工作集将被关闭，其余工作集将被打开。</disableWorksetTooltip>
+    <fromRevitServer>来自 Revit Server</fromRevitServer>
+    <revitServerWindowTitle>从 Revit Server 添加</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>更改类型工作集时发生错误：{0}，错误：{1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>更改实例工作集时发生错误：{0}，错误：{1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>从 Revit Server 添加链接时发生错误</addFromServerErrorFormat>
+    <diffWorkset>*不同*</diffWorkset>
   </mprLinksManager>
   <mprWorksets
     LocalName="工作集"
@@ -1492,6 +1501,7 @@
     <rp1>每行包含工作集列表</rp1>
     <rp2>每行包含一个工作集</rp2>
   </mprWorksets>
+  <!-- todo remove when used mprRenameInFamily -->
   <zfiFamilyRenameTool
     LocalName="批量重命名"
     Description="批量重命名指定族中的参数名称、类型名称、参数值"
@@ -1846,6 +1856,13 @@
     <selectElementsFromLink>请选择来自链接文件的元素</selectElementsFromLink>
     <groupTypeExists>目标文档中已存在组 "{0}"。\n是否执行复制并替换？</groupTypeExists>
     <groups>组</groups>
+    <materialExists>目标文档中已存在材质 "{0}"。\n是否执行复制并替换？</materialExists>
+    <materialDuplicateActionSettings>材质名称冲突时的行为</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>当材质名称冲突并选择"替换"选项时，插件将执行以下算法：目标文档中的旧材质将被更新，并获得新材质的所有属性。材质名称将保持不变。所有使用该材质的元素都会自动获得更新后的属性。</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>关闭已打开的明细表</closeOpenedSchedule>
+    <searchModeLabel>比较模式：</searchModeLabel>
+    <searchModeNormal>普通</searchModeNormal>
+    <searchModeRegex>正则表达式</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="注释"
@@ -2409,6 +2426,8 @@
     <ss27>通配符</ss27>
     <ss28>标准</ss28>
     <ss29>过滤器名称</ss29>
+    <searchEmptyValues>搜索空值</searchEmptyValues>
+    <emptyValue>(空)</emptyValue>
     <maskHint>通配符提示：* — 任意数量的字符；? — 一个字符；# — 数字。如果搜索通配符不包含 * ? #，则替换中的 * 表示整个找到的片段</maskHint>
     <regexHint>正则表达式提示: . — 任意字符; .* — 一串字符; \d — 数字; \w — 字母/数字/下划线</regexHint>
     <systemName>系统名称</systemName>
@@ -2424,6 +2443,8 @@
     <replaceErrorMessage>在文档中未找到名称为 "{0}" 的元素。无法替换。</replaceErrorMessage>
     <fillPatternName>填充图案名称</fillPatternName>
     <systemElementError>该元素是内置的实心填充图案，无法修改</systemElementError>
+    <invalidNameMessage>名称包含无效字符: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>不在图纸上</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="复制视图裁剪"
@@ -3036,24 +3057,6 @@
     <msg2>无法沿侧面镜像族实例。请在族编辑器中添加翻转箭头</msg2>
     <msg3>实例属于组："{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="精选视图"
-    Description="快速打开收藏视图">
-    <!--todo remove after 1.0.1.0-->
-    <h1>按名称搜索</h1>
-    <h2>视图</h2>
-    <h3>明细表/规格说明</h3>
-    <h4>图纸</h4>
-    <h5>组合</h5>
-    <h6>已选视图</h6>
-    <h7>文档的精选视图列表</h7>
-    <h8>添加视图到精选</h8>
-    <h9>打开精选视图</h9>
-    <h10>打开的视图</h10>
-    <h11>项目中的视图</h11>
-    <h12>已添加视图</h12>
-    <h13>选择已勾选的视图</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="模型比較"
     Description="查找模型之间的差异">
@@ -3215,6 +3218,7 @@
     <h7>剖面平面位于上边界之上</h7>
     <h8>输入的值或公式错误。是否保留文本进行修正？</h8>
     <h9>当前视图已应用视图样板。视图范围的修改将在视图样板中进行</h9>
+    <h10>上边界位于视图深度平面之上</h10>
     <offset>偏移:</offset>
   </mprViewRange>
 </ModPlus>

@@ -205,6 +205,7 @@
     <vtf4>Planos de planta, estructuras, zonas</vtf4>
     <vtf5>Representados, vistas de dibujo, leyendas</vtf5>
   </mprViewCopy>
+  <!-- todo remove when used mprViewIn3D -->
   <ostViewIn3D
     LocalName="3D Caja de sección"
     Description="Aislamiento de los elementos seleccionados en una Vista 3D con la posibilidad de definir el tamaño de la Caja de sección">
@@ -223,6 +224,7 @@
     <tooltip1>Permite definir un elemento para orientar el recorte 3D</tooltip1>
     <InViewScheduleMsg>En la tabla de planificación solo está disponible la preselección de elementos del modelo</InViewScheduleMsg>
   </ostViewIn3D>
+  <!-- todo remove when used mprScheduleLookup -->
   <whshScheduleLookup
     LocalName="Buscar en tablas de planificación"
     Description="Buscar en el proyecto tablas de planificación que contengan el valor especificado"
@@ -241,29 +243,15 @@
     <h12>¡Haga clic en "Buscar" para actualizar!</h12>
     <h13>¡No se han encontrado las tablas de planificación coincidentes!</h13>
     <h14>tablas de planificación no encontradas:</h14>
-    <!--todo remove after 1.2.4.0-->
-    <h15>Buscar en tablas</h15>
-    <!--todo remove after 1.2.4.0-->
-    <h16>that must be present in the schedule</h16>
     <h17>Símbolo-delimitador</h17>
     <h18>Subcadena</h18>
-    <!--todo remove after 1.2.4.0-->
-    <h19>Distingue mayúsculas y minúsculas</h19>
     <h20>Buscar en</h20>
     <h21>Campo</h21>
     <h22>Encabezado</h22>
-    <!--todo remove after 1.2.4.0-->
-    <h23>valor</h23>
     <h24>título</h24>
     <h25>% procesado...</h25>
     <h26>ESTADO:</h26>
     <h27>Presione barra espaciadora dos veces para insertar</h27>
-    <!--todo remove after 1.2.4.0-->
-    <h28>Ingresar nombres de parámetros delimitados por símbolo</h28>
-    <!--todo remove after 1.2.4.0-->
-    <h29>Ingresar nombres de columnas con</h29>
-    <!--todo remove after 1.2.4.0-->
-    <h30>Ingresar valores de celda con</h30>
     <h31>Abrir tabla de planificación</h31>
     <h32>Ignorar mayúsculas y minúsculas</h32>
     <h33>Ingresar los nombres de los campos o parámetros que deben estar en la tabla de planificación, separados por símbolo "{0}"</h33>
@@ -288,8 +276,6 @@
     <sr17>¿Búsqueda completada?</sr17>
     <sr18>¿Valor encontrado?</sr18>
     <sr19>¿Subcadena encontrada?</sr19>
-    <!--todo remove after 1.2.4.0-->
-    <sr20>¿Distinguir mayúsculas y minúsculas?</sr20>
     <sr21>¿Es un parámetro de ordenación?</sr21>
     <sr22>¿Es un parámetro de filtración?</sr22>
     <sr23>¿Es un parámetro combinado?</sr23>
@@ -300,7 +286,9 @@
     LocalName="Administrador de CAD"
     Description="Administre todas inserciones del archivos .dwg en documento actual"
     FullDescription="Visualización de todos los tipos de archivos .dwg insertados, tanto los que pertenecen a vistas como los que no. Búsqueda en la lista, copia de ID de inserción o vista .dwg, apertura de vista con inserción .dwg y eliminación están disponibles">
+    <!--todo remove after 2.0.4.0-->
     <h1>Administrador de CAD</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>¡Copiado!</h2>
     <h3>Perteneciente a vista:</h3>
     <h4>Buscar por nombre e ID de importación o por nombre e ID de vista...</h4>
@@ -317,6 +305,9 @@
     <h17>Eliminar inserciones</h17>
     <h18>Abrir carpeta donde se encuentra archivo de importación</h18>
     <h19>Número (visible/total):</h19>
+    <h20>Seleccionar en el proyecto</h20>
+    <h21>Actualizar vínculo</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>Todo</all>
     <sv1>Indefinido</sv1>
     <sv2>Perteneciente a vista</sv2>
@@ -746,6 +737,7 @@
     <m16>Redeterminación de gráficos para elementos no está disponible en vista actual</m16>
     <m17>No es posible cambiar modo de eje en vista actual</m17>
   </mprTools>
+  <!-- todo remove when used mprNumbering -->
   <mmOrderMarking
     LocalName="Numeración"
     Description="Añadir numeración al parámetro especificado de elementos con posibilidad de numeración en tabla de planificación"
@@ -1018,9 +1010,13 @@
     <m4>Leer familia</m4>
     <m5>Buscar en tabla de planificacións</m5>
     <m6>¡Tablas de búsqueda consulta incluyen tablas utilizadas en familia actual! ¿Estás seguro de que desea eliminar?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0}: eliminado correctamente {1}</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0}: se eliminó correctamente {1}, no se pudo eliminar {2}</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>IDs de los elementos no eliminados durante la limpieza</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0}: no se encontraron elementos para limpiar</wipeOptionResultEmpty>
     <defaultTypeMessage>Tipo predeterminado asignado: {0}</defaultTypeMessage>
     <reassignedInstancesMessage>Ejemplares reasignados al tipo predeterminado: {0}</reassignedInstancesMessage>
@@ -1248,6 +1244,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <co11>Copiar líneas de detalle</co11>
     <co12>Copiar valores de parámetros de cuadro de rotulación</co12>
     <co13>Copiar valores de parámetros de hoja</co13>
+    <co14>Copiar vistas del modelo</co14>
     <copy>Crear copia</copy>
     <copyAll>Crear copia (para todos casos)</copyAll>
     <exist>Utilizar existente</exist>
@@ -1268,6 +1265,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <m14>Seleccionar una opción: utilizar una leyenda existente del documento objetivo o crear y utilizar una copia de leyenda del documento original</m14>
     <m15>Documento objetivo "{0}" tiene una vista de dibujo "{1}"</m15>
     <m16>Seleccionar una opción: utilizar una vista de dibujo existente del documento objetivo o crear y utilizar una copia de vista de dibujo del documento original</m16>
+    <m17>Copiar vistas de modelo de hoja "{0}" al documento "{1}"</m17>
     <notOrganized>!No organizado</notOrganized>
   </mprCopySheetsToOpenDocuments>
   <mprLinksManager
@@ -1346,6 +1344,17 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <unloadLinksTransaction>Descargar vínculos</unloadLinksTransaction>
     <reloadLinksTransaction>Recargar vínculos</reloadLinksTransaction>
     <searchHint>Introduzca texto para buscar</searchHint>
+    <typeWorksetColumnHeader>Subproyecto de tipo</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Subproyecto de ejemplares</instanceWorksetColumnHeader>
+    <placeInWorkset>Colocar en el subproyecto</placeInWorkset>
+    <disableWorksetContains>Desactivar subproyectos que contengan:</disableWorksetContains>
+    <disableWorksetTooltip>Introduzca subcadenas separadas por comas. Al cargar el vínculo, los subproyectos del modelo vinculado cuyos nombres contengan al menos una de las subcadenas especificadas se cerrarán. Los demás subproyectos se abrirán.</disableWorksetTooltip>
+    <fromRevitServer>Desde Revit Server</fromRevitServer>
+    <revitServerWindowTitle>Agregar desde Revit Server</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>Se produjo un error al cambiar el subproyecto de tipo: {0}, error: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>Se produjo un error al cambiar el subproyecto de ejemplar: {0}, error: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Error al agregar vínculo desde Revit Server</addFromServerErrorFormat>
+    <diffWorkset>*VARÍA*</diffWorkset>
     <unloadForSelfMenuItem>Para mí</unloadForSelfMenuItem>
     <unloadForAllMenuItem>Para todos los usuarios</unloadForAllMenuItem>
     <operationUnloadLocallyGenitive>descarga local</operationUnloadLocallyGenitive>
@@ -1492,6 +1501,7 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <rp1>Cada fila contiene una lista de subproyectos</rp1>
     <rp2>Cada fila contiene un subproyecto</rp2>
   </mprWorksets>
+  <!-- todo remove when used mprRenameInFamily -->
   <zfiFamilyRenameTool
     LocalName="Cambiar nombre por lotes"
     Description="Cambio de nombre por lotes de nombres de parámetros, nombres de tipos y valores de parámetros en familias específicas"
@@ -1846,6 +1856,13 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <selectElementsFromLink>Seleccione elementos del archivo vinculado</selectElementsFromLink>
     <groupTypeExists>El documento de destino ya contiene el grupo "{0}".\n¿Desea realizar la copia con reemplazo?</groupTypeExists>
     <groups>Grupos</groups>
+    <materialExists>El documento de destino ya contiene el material "{0}".\n¿Desea realizar la copia con reemplazo?</materialExists>
+    <materialDuplicateActionSettings>Comportamiento cuando los nombres de los materiales coinciden</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>Cuando los nombres de los materiales coincidan y se seleccione la opción "Reemplazar", el complemento aplicará el siguiente algoritmo: el material existente en el documento de destino se actualizará con todas las propiedades del nuevo material. El nombre del material permanecerá sin cambios. Todos los elementos que utilicen este material recibirán automáticamente las propiedades actualizadas.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Cerrar tablas de planificación abiertas</closeOpenedSchedule>
+    <searchModeLabel>Modo de comparación:</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Expresión regular</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notas"
@@ -2409,6 +2426,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <ss27>Máscara</ss27>
     <ss28>Normal</ss28>
     <ss29>Nombre de filtro</ss29>
+    <searchEmptyValues>Buscar valores vacíos</searchEmptyValues>
+    <emptyValue>(vacío)</emptyValue>
     <maskHint>Sugerencia de máscaras: * - cualquier número de caracteres; ? - un carácter; # - un dígito. Si la máscara de búsqueda no contiene * ? #, entonces * en la sustitución indica todo el fragmento encontrado</maskHint>
     <regexHint>Sugerencia de expresiones regulares: . — cualquier carácter; .* — secuencia de caracteres; \d — dígito; \w — letra/dígito/guion bajo</regexHint>
     <systemName>Nombre de sistema</systemName>
@@ -2424,6 +2443,8 @@ Se realiza verificación adicional basada en parámetros de tipo: un par de fami
     <replaceErrorMessage>No se encontró en el documento el elemento con el nombre "{0}". No es posible realizar la sustitución.</replaceErrorMessage>
     <fillPatternName>Nombre del patrón de relleno</fillPatternName>
     <systemElementError>El elemento es el patrón de relleno sólido integrado y no se puede modificar</systemElementError>
+    <invalidNameMessage>El nombre contiene caracteres no válidos: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>No en lámina</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Copiar recorte de vista"
@@ -3036,24 +3057,6 @@ Seleccione otra vista de origen</h9>
     <msg2>No se pueden reflejar lateralmente los ejemplares de familia. Añada un control de volteo en el editor de familias</msg2>
     <msg3>El ejemplar está en el grupo: "{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="Vistas favoritas"
-    Description="Apertura rápida de vistas favoritas">
-    <!--todo remove after 1.0.1.0-->
-    <h1>Buscar por nombre</h1>
-    <h2>Vistas</h2>
-    <h3>Tablas de planificación/Cantidades</h3>
-    <h4>Hojas</h4>
-    <h5>Ensamblajes</h5>
-    <h6>Vistas seleccionadas</h6>
-    <h7>Lista de vistas favoritas de un documento</h7>
-    <h8>Añadir vistas a favoritos</h8>
-    <h9>Abrir vistas favoritas</h9>
-    <h10>Vistas abiertas</h10>
-    <h11>Vistas en el proyecto</h11>
-    <h12>Vistas añadidas</h12>
-    <h13>Seleccionar vistas marcadas</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="Comparación de modelos"
     Description="Búsqueda de diferencias entre modelos">
@@ -3215,6 +3218,7 @@ Seleccione otra vista de origen</h9>
     <h7>El plano de sección se encuentra por encima del límite superior</h7>
     <h8>Valor o fórmula incorrecta ingresada. ¿Dejar texto para corrección?</h8>
     <h9>Se ha aplicado una plantilla de vista actual. Los cambios en el rango de vista se realizarán en la plantilla</h9>
+    <h10>El límite superior se encuentra por encima del plano de profundidad de vista</h10>
     <offset>Desfase:</offset>
   </mprViewRange>
 </ModPlus>

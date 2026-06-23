@@ -205,6 +205,7 @@
     <vtf4>Плани поверхів, несучих конструкцій, зон</vtf4>
     <vtf5>Візуалізовані, креслярські види, легенди</vtf5>
   </mprViewCopy>
+  <!-- todo remove when used mprViewIn3D -->
   <ostViewIn3D
     LocalName="3D підрізування"
     Description="Ізолювання вибраних елементів на 3D-виді з можливістю задати розмір меж 3D-виду">
@@ -223,6 +224,7 @@
     <tooltip1>Дозволяє задати елемент для орієнтації 3D-підрізки</tooltip1>
     <InViewScheduleMsg>У специфікації доступний лише попередній вибір елементів з моделі</InViewScheduleMsg>
   </ostViewIn3D>
+  <!-- todo remove when used mprScheduleLookup -->
   <whshScheduleLookup
     LocalName="Пошук у специфікаціях"
     Description="Пошук специфікацій у проєкті, що містять зазначене значення"
@@ -241,29 +243,15 @@
     <h12>Натисніть "Знайти" для актуалізації!</h12>
     <h13>Не знайдено відповідних специфікацій!</h13>
     <h14>специфікацій знайдено:</h14>
-    <!--todo remove after 1.2.4.0-->
-    <h15>Пошук у таблицях</h15>
-    <!--todo remove after 1.2.4.0-->
-    <h16>які повинні бути присутніми в специфікації</h16>
     <h17>Символ-роздільник</h17>
     <h18>Підрядок</h18>
-    <!--todo remove after 1.2.4.0-->
-    <h19>Враховувати регістр</h19>
     <h20>Шукати в</h20>
     <h21>Поле</h21>
     <h22>Заголовке</h22>
-    <!--todo remove after 1.2.4.0-->
-    <h23>значення</h23>
     <h24>шапка</h24>
     <h25>% оброблено...</h25>
     <h26>СТАТУС:</h26>
     <h27>Натисніть пробіл двічі, щоб вставити</h27>
-    <!--todo remove after 1.2.4.0-->
-    <h28>Введіть назви параметрів через символ</h28>
-    <!--todo remove after 1.2.4.0-->
-    <h29>Введіть назви стовпців через</h29>
-    <!--todo remove after 1.2.4.0-->
-    <h30>Введіть значення комірок через</h30>
     <h31>Відкрити специфікацію</h31>
     <h32>Ігнорувати регістр</h32>
     <h33>Введіть імена полів або параметрів, які повинні бути присутніми в специфікації, розділяючи їх символом "{0}"</h33>
@@ -288,8 +276,6 @@
     <sr17>Пошук виконано?</sr17>
     <sr18>Значення знайдено?</sr18>
     <sr19>Знайдено підрядок?</sr19>
-    <!--todo remove after 1.2.4.0-->
-    <sr20>З урахуванням регістру?</sr20>
     <sr21>Параметр сортування?</sr21>
     <sr22>Параметр фільтрації?</sr22>
     <sr23>Об'єднаний параметр?</sr23>
@@ -300,7 +286,9 @@
     LocalName="CAD менеджер"
     Description="Керування всіма вставками dwg-файлів у поточному документі"
     FullDescription="Плагін відображає всі види вставлених dwg-файлів – як ті, що належать видам, так і ті, що не належать видам. Є можливість пошуку в списку, копіювання ідентифікатора dwg-вставки або виду, відкриття виду, що містить dwg-вставку, а також видалення dwg-вставки">
+    <!--todo remove after 2.0.4.0-->
     <h1>CAD менеджер</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>Скопійовано!</h2>
     <h3>Належність виду:</h3>
     <h4>Пошук за ім'ям та id імпорту або за ім'ям та id виду...</h4>
@@ -317,6 +305,9 @@
     <h17>Видалити вставки</h17>
     <h18>Відкрити папку розташування файлу імпорту</h18>
     <h19>Кількість (видимих/всього):</h19>
+    <h20>Вибрати в проєкті</h20>
+    <h21>Оновити зв'язок</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>Все</all>
     <sv1>Невизначені</sv1>
     <sv2>Належні видам</sv2>
@@ -746,6 +737,7 @@
     <m16>Перевизначення графіки для елементів недоступне на поточному вигляді</m16>
     <m17>Неможливо переключити режим осей на поточному вигляді</m17>
   </mprTools>
+  <!-- todo remove when used mprNumbering -->
   <mmOrderMarking
     LocalName="Нумерація"
     Description="Додавання нумерації до зазначеного параметра елементів з можливістю нумерації в специфікації"
@@ -1018,9 +1010,13 @@
     <m4>Читання сімейства</m4>
     <m5>Пошук у специфікаціях</m5>
     <m6>Серед обраних таблиць пошуку є таблиці, що використовуються в поточному сімействі! Ви впевнені, що хочете їх видалити?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0} : успішно видалено {1}</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0} : успішно видалено {1}, не вдалося видалити {2}</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>ID елементів, не видалених у процесі очищення</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0} : елементи для очищення не знайдені</wipeOptionResultEmpty>
     <defaultTypeMessage>Визначено тип за замовчуванням: {0}</defaultTypeMessage>
     <reassignedInstancesMessage>Екземплярів переведено на тип за замовчуванням: {0}</reassignedInstancesMessage>
@@ -1248,6 +1244,7 @@
     <co11>Копіювати лінії деталізації</co11>
     <co12>Копіювати значення параметрів основного напису</co12>
     <co13>Копіювати значення параметрів аркуша</co13>
+    <co14>Копіювати види моделі</co14>
     <copy>Створити копію</copy>
     <copyAll>Створити копію (для всіх випадків)</copyAll>
     <exist>Використовувати існуючу</exist>
@@ -1268,6 +1265,7 @@
     <m14>Виберіть один із варіантів: використати наявну легенду з цільового документа або створити та використати копію легенди з документа-джерела</m14>
     <m15>У цільовому документі "{0}" є креслярський вигляд "{1}"</m15>
     <m16>Виберіть один із варіантів: використати наявний креслярський вигляд із цільового документа або створити й використати копію креслярського вигляду з документа-джерела</m16>
+    <m17>Копіювання видів моделі з аркуша "{0}" в документ "{1}"</m17>
     <notOrganized>!Не організовані</notOrganized>
   </mprCopySheetsToOpenDocuments>
   <mprLinksManager
@@ -1346,6 +1344,17 @@
     <unloadLinksTransaction>Вивантаження зв'язків</unloadLinksTransaction>
     <reloadLinksTransaction>Перезавантаження зв'язків</reloadLinksTransaction>
     <searchHint>Введіть текст для пошуку</searchHint>
+    <typeWorksetColumnHeader>Робочий набір типу</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Робочий набір екземплярів</instanceWorksetColumnHeader>
+    <placeInWorkset>Розмістити в робочому наборі</placeInWorkset>
+    <disableWorksetContains>Вимкнути робочі набори, що містять:</disableWorksetContains>
+    <disableWorksetTooltip>Введіть підрядки через кому. Під час завантаження зв’язку робочі набори пов’язаної моделі, імена яких містять хоча б один із зазначених підрядків, будуть закриті. Решта робочих наборів буде відкрито.</disableWorksetTooltip>
+    <fromRevitServer>З Revit Server</fromRevitServer>
+    <revitServerWindowTitle>Додати з Revit Server</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>Під час зміни робочого набору типу: {0}, сталася помилка: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>Під час зміни робочого набору екземпляра: {0}, сталася помилка: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Помилка при додаванні зв’язку з Revit Server</addFromServerErrorFormat>
+    <diffWorkset>*РІЗНІ*</diffWorkset>
     <unloadForSelfMenuItem>Для мене</unloadForSelfMenuItem>
     <unloadForAllMenuItem>Для всіх користувачів</unloadForAllMenuItem>
     <operationUnloadLocallyGenitive>локального вивантаження</operationUnloadLocallyGenitive>
@@ -1492,6 +1501,7 @@
     <rp1>Кожен рядок містить список робочих наборів</rp1>
     <rp2>Кожен рядок містить робочий набір</rp2>
   </mprWorksets>
+  <!-- todo remove when used mprRenameInFamily -->
   <zfiFamilyRenameTool
     LocalName="Пакетне перейменування"
     Description="Пакетне перейменування імен параметрів, імен типів, значень параметрів у зазначених сімействах"
@@ -1846,6 +1856,13 @@
     <selectElementsFromLink>Виберіть елементи зі зв’язаного файлу</selectElementsFromLink>
     <groupTypeExists>У цільовому документі вже є група "{0}".\nВиконати копіювання із заміною?</groupTypeExists>
     <groups>Групи</groups>
+    <materialExists>У цільовому документі вже є матеріал "{0}".\nВиконати копіювання із заміною?</materialExists>
+    <materialDuplicateActionSettings>Поведінка при збігу назв матеріалів</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>При збігу назв матеріалів і виборі опції "Замінити" плагін виконає такий алгоритм: старий матеріал у цільовому документі буде оновлено — йому буде присвоєно всі властивості нового матеріалу. Назва матеріалу залишиться незмінною. Усі елементи, що використовують цей матеріал, автоматично отримають оновлені властивості.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Закривати відкриті специфікації</closeOpenedSchedule>
+    <searchModeLabel>Режим порівняння:</searchModeLabel>
+    <searchModeNormal>Звичайний</searchModeNormal>
+    <searchModeRegex>Регулярний вираз</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Примітки"
@@ -2409,6 +2426,8 @@
     <ss27>Маска</ss27>
     <ss28>Звичайний</ss28>
     <ss29>Ім’я фільтра</ss29>
+    <searchEmptyValues>Шукати порожні значення</searchEmptyValues>
+    <emptyValue>(порожньо)</emptyValue>
     <maskHint>Підказка щодо масок: * - будь-яка кількість символів; ? - один символ; # - цифра. Якщо маска пошуку не містить * ? #, то * у заміні позначає весь знайдений фрагмент</maskHint>
     <regexHint>Підказка щодо регулярних виразів: . — будь-який символ; .* — послідовність символів; \d — цифра; \w — літера/цифра/підкреслення</regexHint>
     <systemName>Ім’я системи</systemName>
@@ -2424,6 +2443,8 @@
     <replaceErrorMessage>Елемент з іменем "{0}" не знайдено в документі. Заміна неможлива.</replaceErrorMessage>
     <fillPatternName>Ім’я штрихування</fillPatternName>
     <systemElementError>Елемент є вбудованим елементом суцільного штрихування і не може бути змінений</systemElementError>
+    <invalidNameMessage>Ім'я містить неприпустимі символи: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>Не на аркуші</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Копіювати обрізку виду"
@@ -3036,24 +3057,6 @@
     <msg2>Примірники сімейства не можна віддзеркалити по бічній стороні. Додайте стрілку розвороту в редакторі сімейства</msg2>
     <msg3>Примірник перебуває в групі: "{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="Вибрані види"
-    Description="Вибір обраних видів для відкриття">
-    <!--todo remove after 1.0.1.0-->
-    <h1>Пошук за ім'ям</h1>
-    <h2>Види</h2>
-    <h3>Відомості/Специфікації</h3>
-    <h4>Листи</h4>
-    <h5>Збірки</h5>
-    <h6>Вибрано видів</h6>
-    <h7>Список обраних видів для документа</h7>
-    <h8>Додати види в обране</h8>
-    <h9>Відкрити обрані види</h9>
-    <h10>Відкриті види</h10>
-    <h11>Види в проєкті</h11>
-    <h12>Додано видів</h12>
-    <h13>Виділити відзначені види</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="Порівняння моделей"
     Description="Пошук відмінностей між моделями">
@@ -3215,6 +3218,7 @@
     <h7>Січна площина розташована вище верхньої межі</h7>
     <h8>Невірно введено значення або формулу. Залишити текст для корекції?</h8>
     <h9>До поточного виду застосовано шаблон. Зміна січного діапазону буде виконуватися в шаблоні</h9>
+    <h10>Верхня межа розташована вище площини глибини проектування</h10>
     <offset>Зміщення:</offset>
   </mprViewRange>
 </ModPlus>

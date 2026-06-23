@@ -205,6 +205,7 @@
     <vtf4>Grundrissansichten, Tragwerksplanansichten, Flächenansichten</vtf4>
     <vtf5>Visualisierte, Zeichenansichten, Legenden</vtf5>
   </mprViewCopy>
+  <!-- todo remove when used mprViewIn3D -->
   <ostViewIn3D
     LocalName="3D-Schnittbereichs"
     Description="Isolieren ausgewählter Elemente in der 3D-Ansicht mit der Möglichkeit, die Größe des 3D-Schnittbereichs festzulegen">
@@ -223,6 +224,7 @@
     <tooltip1>Ermöglicht das Festlegen eines Elements zur Ausrichtung des 3D-Schnittbereichs</tooltip1>
     <InViewScheduleMsg>In der Bauteilliste ist nur die Vorauswahl von Elementen aus dem Modell verfügbar</InViewScheduleMsg>
   </ostViewIn3D>
+  <!-- todo remove when used mprScheduleLookup -->
   <whshScheduleLookup
     LocalName="Suche in Bauteillisten"
     Description="Suche im Projekt nach Bauteillisten, die den angegebenen Wert enthalten"
@@ -241,29 +243,15 @@
     <h12>Klicken Sie auf "Suchen", um zu aktualisieren!</h12>
     <h13>Keine passenden Bauteillisten gefunden!</h13>
     <h14>Bauteillisten gefunden:</h14>
-    <!--todo remove after 1.2.4.0-->
-    <h15>Suche in den Tabellen</h15>
-    <!--todo remove after 1.2.4.0-->
-    <h16>that must be present in the schedule</h16>
     <h17>Symbol-Trennzeichen</h17>
     <h18>Teilzeichenfolge</h18>
-    <!--todo remove after 1.2.4.0-->
-    <h19>Das Register berücksichtigen</h19>
     <h20>Suchen in</h20>
     <h21>Feld</h21>
     <h22>Titel</h22>
-    <!--todo remove after 1.2.4.0-->
-    <h23>Wert</h23>
     <h24>Titelzeile</h24>
     <h25>% verarbeitet...</h25>
     <h26>STATUS:</h26>
     <h27>Drücken Sie zweimal die Leertaste zum Einfügen</h27>
-    <!--todo remove after 1.2.4.0-->
-    <h28>Geben Sie Namen der Parameter mit dem Symbol ein</h28>
-    <!--todo remove after 1.2.4.0-->
-    <h29>Geben Sie Spaltennamen mit</h29>
-    <!--todo remove after 1.2.4.0-->
-    <h30>Geben Sie Zellwerte mit</h30>
     <h31>Bauteilliste öffnen</h31>
     <h32>Groß-/Kleinschreibung ignorieren</h32>
     <h33>Geben Sie die Namen der Felder oder Parameter ein, die in der Bauteilliste vorhanden sein müssen, und verwenden Sie dabei das Symbol "{0}" als Trennzeichen</h33>
@@ -288,8 +276,6 @@
     <sr17>Ist die Suche abgeschlossen?</sr17>
     <sr18>Ist der Wert gefunden?</sr18>
     <sr19>Ist die Teilzeichenkette gefunden?</sr19>
-    <!--todo remove after 1.2.4.0-->
-    <sr20>Unter Berücksichtigung des Registers?</sr20>
     <sr21>Parameter des Sortierens?</sr21>
     <sr22>Parameter des Filterns?</sr22>
     <sr23>Kombinierter Parameter?</sr23>
@@ -300,7 +286,9 @@
     LocalName="CAD-Manager"
     Description="Verwalten aller Einfügungen von dwg-Dateien im aktuellen Dokument"
     FullDescription="Im Plugin werden alle Ansichten der eingefügten dwg-Dateien dargestellt, die zu den Ansichten gehören oder nicht gehören. Es ist auch möglich, in der Liste zu suchen, die ID der dwg-Einfügung oder Ansicht zu kopieren, die Ansicht mit der dwg-Einfügung zu öffnen und die dwg-Einfügung zu löschen">
+    <!--todo remove after 2.0.4.0-->
     <h1>CAD-Manager</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>Kopiert!</h2>
     <h3>Zugehörigkeit zur Ansicht:</h3>
     <h4>Suche nach Namen und Import-ID oder nach Namen und Ansichts-ID...</h4>
@@ -317,6 +305,9 @@
     <h17>Einfügungen löschen</h17>
     <h18>Verzeichnis mit Importdatei öffnen</h18>
     <h19>Anzahl (sichtbar/gesamt):</h19>
+    <h20>Im Projekt auswählen</h20>
+    <h21>Verknüpfung aktualisieren</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>Alle</all>
     <sv1>Unbestimmte</sv1>
     <sv2>Zugehörigkeit zu einer Ansicht</sv2>
@@ -746,6 +737,7 @@
     <m16>Grafiküberschreibung für Elemente ist in der aktuellen Ansicht nicht verfügbar</m16>
     <m17>Es ist unmöglich, Achsen-Modus in der aktuellen Ansicht zu wechseln</m17>
   </mprTools>
+  <!-- todo remove when used mprNumbering -->
   <mmOrderMarking
     LocalName="Nummerierung"
     Description="Hinzufügen einer Nummerierung zum angegebenen Elementenparameter mit der Möglichkeit der Nummerierung in der Bauteilliste"
@@ -1018,9 +1010,13 @@
     <m4>Das Lesen der Familie</m4>
     <m5>Suche in den Bauteillisten</m5>
     <m6>Unter den ausgewählten Suchtabellen befinden sich Tabellen, die in der aktuellen Familie verwendet werden! Sind Sie sicher, dass sie trotzdem gelöscht werden müssen?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0}: {1} erfolgreich gelöscht</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0}: {1} erfolgreich gelöscht, {2} konnten nicht gelöscht werden</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>IDs der Elemente, die während der Bereinigung nicht gelöscht wurden</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0}: Keine Elemente zum Bereinigen gefunden</wipeOptionResultEmpty>
     <defaultTypeMessage>Standardtyp festgelegt: {0}</defaultTypeMessage>
     <reassignedInstancesMessage>Exemplare wurden dem Standardtyp zugewiesen: {0}</reassignedInstancesMessage>
@@ -1248,6 +1244,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <co11>Detaillinien kopieren</co11>
     <co12>Parameterwerte des Plankopfes kopieren</co12>
     <co13>Parameterwerte des Plans kopieren</co13>
+    <co14>Modelldarstellungen kopieren</co14>
     <copy>Eine Kopie erstellen</copy>
     <copyAll>Eine Kopie erstellen (für alle Fälle)</copyAll>
     <exist>Eine vorhandene verwenden</exist>
@@ -1268,6 +1265,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <m14>Wählen Sie bitte, ob Sie eine vorhandene Legende aus dem Zieldokument verwenden oder eine Kopie der Legende aus dem Quelldokument erstellen und verwenden möchten</m14>
     <m15>Das Zieldokument "{0}" enthält die Zeichenansicht "{1}"</m15>
     <m16>Wählen Sie bitte, ob Sie eine vorhandene Zeichenansicht aus dem Zieldokument verwenden oder eine Kopie der Zeichenansicht aus dem Quelldokument erstellen und verwenden möchten</m16>
+    <m17>Kopieren von Modelldarstellungen des Plans "{0}" in das Dokument "{1}"</m17>
     <notOrganized>!Nicht organisiert</notOrganized>
   </mprCopySheetsToOpenDocuments>
   <mprLinksManager
@@ -1297,6 +1295,17 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <unloadLinksTransaction>Verknüpfungen entladen</unloadLinksTransaction>
     <reloadLinksTransaction>Verknüpfungen neu laden</reloadLinksTransaction>
     <searchHint>Suchtext eingeben</searchHint>
+    <typeWorksetColumnHeader>Typ-Bearbeitungsbereich</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Exemplar-Bearbeitungsbereich</instanceWorksetColumnHeader>
+    <placeInWorkset>Im Bearbeitungsbereich platzieren</placeInWorkset>
+    <disableWorksetContains>Bearbeitungsbereiche deaktivieren, die Folgendes enthalten:</disableWorksetContains>
+    <disableWorksetTooltip>Geben Sie Teilzeichenfolgen durch Kommas getrennt ein. Beim Laden der Verknüpfung werden Bearbeitungsbereiche des verknüpften Modells geschlossen, deren Namen mindestens eine der angegebenen Teilzeichenfolgen enthalten. Alle anderen Bearbeitungsbereiche werden geöffnet.</disableWorksetTooltip>
+    <fromRevitServer>Aus Revit Server</fromRevitServer>
+    <revitServerWindowTitle>Vom Revit Server hinzufügen</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>Beim Ändern des Typ-Bearbeitungsbereichs: {0} ist ein Fehler aufgetreten: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>Beim Ändern des Bearbeitungsbereichs der Instanz: {0}, ist ein Fehler aufgetreten: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Fehler beim Hinzufügen einer Verknüpfung aus Revit Server</addFromServerErrorFormat>
+    <diffWorkset>*VARIIERT*</diffWorkset>
     <operationUnloadLocallyGenitive>lokales Entladen</operationUnloadLocallyGenitive>
     <unloadLocallyLinksTransaction>Verknüpfungen lokal entladen</unloadLocallyLinksTransaction>
     <addLinkSettingsDialogTitle>Einstellungen zum Hinzufügen</addLinkSettingsDialogTitle>
@@ -1492,6 +1501,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <rp1>Jede Zeile enthält eine Liste von Bearbeitungsbereichen</rp1>
     <rp2>Jede Zeile enthält einen Bearbeitungsbereich</rp2>
   </mprWorksets>
+  <!-- todo remove when used mprRenameInFamily -->
   <zfiFamilyRenameTool
     LocalName="Gruppenumbenennen"
     Description="Gruppenumbenennen von Parameternamen, Typnamen und Parameterwerten in angegebenen Familien"
@@ -1846,6 +1856,13 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <selectElementsFromLink>Wählen Sie Elemente aus der verknüpften Datei</selectElementsFromLink>
     <groupTypeExists>Im Zieldokument ist die Gruppe "{0}" bereits vorhanden.\nKopie mit Ersetzung ausführen?</groupTypeExists>
     <groups>Gruppen</groups>
+    <materialExists>Im Zieldokument ist das Material "{0}" bereits vorhanden.\nKopie mit Ersetzung ausführen?</materialExists>
+    <materialDuplicateActionSettings>Verhalten bei übereinstimmenden Materialnamen</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>Wenn Materialnamen übereinstimmen und die Option „Ersetzen" ausgewählt wird, führt das Plugin folgenden Algorithmus aus: Das vorhandene Material im Zieldokument wird aktualisiert und erhält alle Eigenschaften des neuen Materials. Der Materialname bleibt unverändert. Alle Elemente, die dieses Material verwenden, erhalten automatisch die aktualisierten Eigenschaften.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Geöffnete Bauteillisten schließen</closeOpenedSchedule>
+    <searchModeLabel>Vergleichsmodus:</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Regulärer Ausdruck</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notizen"
@@ -2409,6 +2426,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <ss27>Maske</ss27>
     <ss28>Normal</ss28>
     <ss29>Filtername</ss29>
+    <searchEmptyValues>Leere Werte suchen</searchEmptyValues>
+    <emptyValue>(leer)</emptyValue>
     <maskHint>Masken-Hinweis: * - beliebige Anzahl von Zeichen; ? - ein Zeichen; # - eine Ziffer. Wenn die Suchmaske kein * ? # enthält, dann bezeichnet * in der Ersetzung das gesamte gefundene Fragment</maskHint>
     <regexHint>Regulärer-Ausdruck-Hinweis: . — beliebiges Zeichen; .* — Zeichenfolge; \d — Ziffer; \w — Buchstabe/Ziffer/Unterstrich</regexHint>
     <systemName>Systemname</systemName>
@@ -2424,6 +2443,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <replaceErrorMessage>Element mit dem Namen "{0}" wurde im Dokument nicht gefunden. Ersetzung ist nicht möglich.</replaceErrorMessage>
     <fillPatternName>Füllmustername</fillPatternName>
     <systemElementError>Das Element ist das integrierte Vollflächen-Füllmuster und kann nicht geändert werden</systemElementError>
+    <invalidNameMessage>Name enthält ungültige Zeichen: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>Nicht auf Blatt</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Kopieren zugeschnittener Ansicht"
@@ -3036,24 +3057,6 @@ Sperre aufhebben?</h13>
     <msg2>Familienexemplare können nicht links/rechts gespiegelt werden. Fügen Sie im Familieneditor ein Steuerelement für Spiegelung hinzu</msg2>
     <msg3>Exemplar gehört zu der Gruppe: "{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="Favoritenansichten"
-    Description="Schnelles Öffnen von Favoritenansichten">
-    <!--todo remove after 1.0.1.0-->
-    <h1>Suche nach Namen</h1>
-    <h2>Ansichten</h2>
-    <h3>Listen/Bauteillisten</h3>
-    <h4>Pläne</h4>
-    <h5>Baugruppen</h5>
-    <h6>Ausgewählte Ansichten</h6>
-    <h7>Die Liste der Favoritenansichten für das Dokument</h7>
-    <h8>Ansichten in Favoriten hinzufügen</h8>
-    <h9>Favoritenansichten öffnen</h9>
-    <h10>Offene Ansichten</h10>
-    <h11>Ansichten im Projekt</h11>
-    <h12>Ansichten hinzugefügt</h12>
-    <h13>Ausgewählte Ansichten markieren</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="Modellvergleich"
     Description="Unterschiede zwischen Modellen finden">
@@ -3215,6 +3218,7 @@ Sperre aufhebben?</h13>
     <h7>Die Schnittebene befindet sich oberhalb der oberen Grenze</h7>
     <h8>Falscher Wert oder Formel eingegeben. Text zur Korrektur belassen?</h8>
     <h9>Auf die aktuelle Ansichtsvorlage angewendet. Änderungen am Ansichtsbereich erfolgen in der Vorlage</h9>
+    <h10>Die obere Grenze befindet sich oberhalb der Ansichtstiefe-Ebene</h10>
     <offset>Versatz:</offset>
   </mprViewRange>
 </ModPlus>

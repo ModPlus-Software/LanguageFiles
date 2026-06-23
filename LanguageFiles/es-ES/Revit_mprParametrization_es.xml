@@ -136,6 +136,15 @@
     <t131>Especifique los archivos vinculados en los que se realizará la búsqueda de elementos</t131>
     <t132>Archivos vinculados seleccionados:</t132>
     <t133>Funciones de escritura inversa</t133>
+    <t134>Contraer bloque</t134>
+    <t135>Contraer todos los bloques</t135>
+    <t136>Expandir todos los bloques</t136>
+    <t137>Insertar parámetro de la información del proyecto</t137>
+    <t138>Insertar parámetro global</t138>
+    <t139>No hay parámetros globales en el documento actual</t139>
+    <t140>CONFIGURACIÓN DE ESTRATEGIAS</t140>
+    <t141>RoomBoundaries: considerar como delimitadores los suelos que tocan el sólido de la habitación</t141>
+    <t142>De forma predeterminada, solo se consideran delimitadores de habitaciones los elementos verticales, como muros, pilares, etc. Al activar esta opción, se analizará la geometría de las habitaciones y los suelos mediante un algoritmo que detecta el contacto entre las caras de los elementos (estrategia SolidTouch). Los suelos cuyas caras planas estén en contacto con las caras planas del sólido de la habitación se considerarán delimitadores. La activación de esta opción puede aumentar el tiempo de procesamiento</t142>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -173,6 +182,7 @@
     <msg35>¡El archivo especificado está en uso! Cierre el archivo e intente exportar nuevamente, o especifique otro archivo</msg35>
     <msg36>El valor "{0}" del parámetro "{1}" coincide con el valor calculado de la expresión</msg36>
     <msg37>El valor "{0}" del parámetro "{1}" no coincide con el valor calculado "{2}" de la expresión</msg37>
+    <msg38>Se omitió el procesamiento del elemento porque el resultado de la evaluación de la expresión es la palabra clave SKIP_ELEMENT</msg38>
     <err1>Cada expresión de una fórmula debe comenzar con parámetro objetivo "$[NombreDelParámetro]="</err1>
     <err2>Número de paréntesis de apertura debe ser igual al número de paréntesis de cierre</err2>
     <err3>Número de llaves de apertura debe ser igual al número de llaves de cierre</err3>
@@ -226,7 +236,7 @@
     <err52>Parámetro "{0}" no es enlace a otro elemento del modelo</err52>
     <err53>Parámetro objetivo no debe contener símbolo "|"</err53>
     <err54>Expresión no debe contener paréntesis que no sean límites de función. Para añadir paréntesis a una expresión, es necesario de escaparlos con "\)" y "\("</err54>
-    <err55>Función debe contener un puntero a un parámetro (@[] o $[]) como argumento</err55>
+    <err55>Función debe contener un puntero a un parámetro (@[], $[], #[] o %[]) como argumento</err55>
     <err56>¡Lista contiene campos con misma clave!</err56>
     <err57>Subproyecto con nombre "{0}" no se ha encontrado</err57>
     <err58>Función no debe tener argumentos</err58>
@@ -247,6 +257,11 @@
     <err73>La función debe contener al menos dos argumentos: una condición y un puntero a la columna de resultados</err73>
     <err74>El nombre de la columna {0}debe especificarse mediante una letra latina o un número</err74>
     <err75>El parámetro "{0}" es de referencia, pero no hace referencia a un elemento del modelo</err75>
+    <err76>No se permite establecer valores en un parámetro global</err76>
+    <err77>No se permite establecer valores en el pseudoparámetro ID</err77>
+    <err78>Los parámetros globales no tienen la propiedad "HasValue"</err78>
+    <err79>Los parámetros de los subelementos de las conexiones estructurales no tienen la propiedad "HasValue"</err79>
+    <err80>El pseudoparámetro ID no tiene la propiedad "HasValue"</err80>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -276,7 +291,9 @@
     <ssd10>Procesando elementos que tocan bordes de formas 3D</ssd10>
     <sld10>Estrategia procesa elementos que tienen una forma 3D y se tocan entre sí con bordes planos de forma. Elementos tocados pueden estar en archivos vinculados</sld10>
     <ssd11>Procesando cerramientos de habitaciones</ssd11>
+    <!--todo remove after 4.1.29.0-->
     <sld11>Estrategia procesa elementos que son estructuras cerramientos de habitaciones</sld11>
+    <sld11-2>La estrategia procesa los elementos que son delimitadores de habitaciones (muros, pilares, etc.). Existe la posibilidad de procesar los suelos como delimitadores de habitaciones cuando se activa la opción correspondiente en la configuración</sld11-2>
     <ssd12>Procesando elementos anidados de conexiones estructurales</ssd12>
     <sld12>Estrategia procesa elementos ubicados en conexiones estructurales (placas, pernos, etc.). No se proporciona filtrado de elementos anidados por parámetros, así como una lista de parámetros de elementos anidados en editor de fórmulas. Parámetros numéricos se especifican sin conversión a unidades internas</sld12>
     <ssd13>Procesando familias anidadas</ssd13>
@@ -295,6 +312,8 @@
     <sld19>La estrategia procesa elementos con la posibilidad de utilizar cualquier elemento de modelo especificado como elemento original</sld19>
     <ssd20>Procesar piezas</ssd20>
     <sld20>La estrategia procesa las piezas teniendo en cuenta los elementos originales a partir de los cuales se crean las piezas. Si una pieza se crea a partir de varios elementos originales, el primer elemento se considerará el elemento original</sld20>
+    <ssd21>Procesamiento de elementos en conjuntos</ssd21>
+    <sld21>La estrategia procesa los elementos ubicados en conjuntos</sld21>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -323,6 +342,8 @@
     <sp13>Insertar parámetro de muro cortina</sp13>
     <se14>Elemento original</se14>
     <sp14>Insertar parámetro de elemento original</sp14>
+    <se15>Conjunto</se15>
+    <sp15>Insertar parámetro de conjunto</sp15>
     <te1>Elemento objetivo</te1>
     <tp1>Insertar parámetro de elemento objetivo</tp1>
     <te2>Ejemplar de familia</te2>
@@ -368,6 +389,7 @@
     <d-or>Devuelve TRUE si al menos una condición &lt;c&gt; es verdadera. De lo contrario devuelve FALSO</d-or>
     <d-inrange>Devuelve TRUE si número &lt;x&gt; es mayor o igual a &lt;min&gt; y menor o igual a &lt;max&gt;. De lo contrario devuelve FALSO</d-inrange>
     <d-has>Devuelve TRUE si parámetro &lt;p&gt; existe. De lo contrario devuelve FALSO</d-has>
+    <d-hasvalue>Devuelve TRUE si al parámetro &lt;p&gt; se le ha asignado un valor al menos una vez. De lo contrario, devuelve FALSE</d-hasvalue>
     <d-firsttrue>Devuelve el primer valor &lt;v&gt; si condición &lt;c&gt; es verdadera. Si todas condiciones &lt;c&gt; son falsas, devuelve último valor de &lt;v&gt;</d-firsttrue>
     <d-toupper>Devuelve valor convertido a mayúsculas</d-toupper>
     <d-tolower>Devuelve valor convertido a minúsculas</d-tolower>
@@ -387,6 +409,8 @@
     <d-lstrindex>Devuelve el índice basado en cero de la última entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena</d-lstrindex>
     <d-not>Devuelve TRUE si la condición es falsa. De lo contrario devuelve FALSE</d-not>
     <d-distinct>Devuelve valores de lista diferentes, ignorando los espacios iniciales y finales al comparar los valores</d-distinct>
-    <d-cvif>Busca la primera fila en el origen de datos de la estrategia (archivo Excel) en la que se cumplen todas las condiciones y devuelve el valor de la columna especificada de esa fila</d-cvif>
+    <d-cvif>Busca la primera fila en la fuente de datos de la estrategia (archivo Excel) donde se cumplen todas las condiciones y devuelve el valor de la columna especificada de esa fila</d-cvif>
+    <d-cvor>Busca la primera fila en la fuente de datos de la estrategia (archivo Excel) donde se cumple al menos una condición y devuelve el valor de la columna especificada de esa fila</d-cvor>
+    <d-doctitle>Devuelve el título del documento actual</d-doctitle>
   </mprParametrization>
 </ModPlus>
