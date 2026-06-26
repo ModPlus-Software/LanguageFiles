@@ -143,8 +143,6 @@
     <t138>Insert global parameter</t138>
     <t139>There are no global parameters in the current document</t139>
     <t140>STRATEGY SETTINGS</t140>
-    <t141>RoomBoundaries: treat floors that touch the room solid as bounding elements</t141>
-    <t142>By default, only vertical elements such as walls, columns, etc. are considered room bounding elements. When this option is enabled, the geometry of rooms and floors will be analyzed using an algorithm that detects contact between element faces (the SolidTouch strategy). Floors whose planar faces touch the planar faces of the room solid will be treated as bounding elements. Enabling this option may increase processing time</t142>
     <msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
     <msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
     <msg3>List of strategies is not empty</msg3>
@@ -291,9 +289,7 @@
     <ssd10>Processing elements that touch their solids</ssd10>
     <sld10>Strategy processes elements that Solid geometry and have flat solid faces that touch each other</sld10>
     <ssd11>Processing room boundaries</ssd11>
-    <!--todo remove after 4.1.29.0-->
     <sld11>Strategy processes elements that are room boundaries</sld11>
-    <sld11-2>The strategy processes elements that are room bounding elements (walls, columns, etc.). There is also an option to process floors as bounding elements when the corresponding option is enabled in the settings</sld11-2>
     <ssd12>Processing sub-elements of Structure Connections</ssd12>
     <sld12>Strategy processes elements placed in Structure Connections (Plates, bolts, etc.). Filtering of sub-elements by parameters, as well as the list of parameters of sub-elements in the formula editor, are not provided. Numerical parameters are set without conversion to internal units</sld12>
     <ssd13>Processing nested families</ssd13>
