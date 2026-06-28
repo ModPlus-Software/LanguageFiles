@@ -286,7 +286,9 @@
     LocalName="CAD менеджер"
     Description="Керування всіма вставками dwg-файлів у поточному документі"
     FullDescription="Плагін відображає всі види вставлених dwg-файлів – як ті, що належать видам, так і ті, що не належать видам. Є можливість пошуку в списку, копіювання ідентифікатора dwg-вставки або виду, відкриття виду, що містить dwg-вставку, а також видалення dwg-вставки">
+    <!--todo remove after 2.0.4.0-->
     <h1>CAD менеджер</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>Скопійовано!</h2>
     <h3>Належність виду:</h3>
     <h4>Пошук за ім'ям та id імпорту або за ім'ям та id виду...</h4>
@@ -303,6 +305,9 @@
     <h17>Видалити вставки</h17>
     <h18>Відкрити папку розташування файлу імпорту</h18>
     <h19>Кількість (видимих/всього):</h19>
+    <h20>Вибрати в проєкті</h20>
+    <h21>Оновити зв'язок</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>Все</all>
     <sv1>Невизначені</sv1>
     <sv2>Належні видам</sv2>
@@ -919,9 +924,13 @@
     <m4>Читання сімейства</m4>
     <m5>Пошук у специфікаціях</m5>
     <m6>Серед обраних таблиць пошуку є таблиці, що використовуються в поточному сімействі! Ви впевнені, що хочете їх видалити?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0} : успішно видалено {1}</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0} : успішно видалено {1}, не вдалося видалити {2}</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>ID елементів, не видалених у процесі очищення</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0} : елементи для очищення не знайдені</wipeOptionResultEmpty>
     <defaultTypeMessage>Визначено тип за замовчуванням: {0}</defaultTypeMessage>
     <reassignedInstancesMessage>Екземплярів переведено на тип за замовчуванням: {0}</reassignedInstancesMessage>
@@ -1230,6 +1239,8 @@
     <rewriteStartedLogFormat>Початок переписування шляхів для {0} зв'язків</rewriteStartedLogFormat>
     <rewriteCompletedLogFormat>Переписано шляхів: {0}, помилок: {1}</rewriteCompletedLogFormat>
     <rewriteErrorLogFormat>Загальна помилка під час переписування шляхів: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Помилка перезапису шляху: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>зв'язок знаходиться на закритому робочому наборі</rewritePathClosedWorksetError>
     <linkStatusLoaded>Завантажено</linkStatusLoaded>
     <linkStatusUnloaded>Вивантажено</linkStatusUnloaded>
     <linkStatusNotFound>Не знайдено</linkStatusNotFound>
@@ -1255,7 +1266,7 @@
     <disableWorksetContains>Вимкнути робочі набори, що містять:</disableWorksetContains>
     <disableWorksetTooltip>Введіть підрядки через кому. Під час завантаження зв’язку робочі набори пов’язаної моделі, імена яких містять хоча б один із зазначених підрядків, будуть закриті. Решта робочих наборів буде відкрито.</disableWorksetTooltip>
     <fromRevitServer>З Revit Server</fromRevitServer>
-    <revitServerWindowTitle>Завантаження з Revit Server</revitServerWindowTitle>
+    <revitServerWindowTitle>Додати з Revit Server</revitServerWindowTitle>
     <changeTypeWorksetErrorFormat>Під час зміни робочого набору типу: {0}, сталася помилка: {1}</changeTypeWorksetErrorFormat>
     <changeInstanceWorksetErrorFormat>Під час зміни робочого набору екземпляра: {0}, сталася помилка: {1}</changeInstanceWorksetErrorFormat>
     <addFromServerErrorFormat>Помилка при додаванні зв’язку з Revit Server</addFromServerErrorFormat>
@@ -1765,6 +1776,9 @@
     <materialDuplicateActionSettings>Поведінка при збігу назв матеріалів</materialDuplicateActionSettings>
     <materialDuplicateActionTooltip>При збігу назв матеріалів і виборі опції "Замінити" плагін виконає такий алгоритм: старий матеріал у цільовому документі буде оновлено — йому буде присвоєно всі властивості нового матеріалу. Назва матеріалу залишиться незмінною. Усі елементи, що використовують цей матеріал, автоматично отримають оновлені властивості.</materialDuplicateActionTooltip>
     <closeOpenedSchedule>Закривати відкриті специфікації</closeOpenedSchedule>
+    <searchModeLabel>Режим порівняння:</searchModeLabel>
+    <searchModeNormal>Звичайний</searchModeNormal>
+    <searchModeRegex>Регулярний вираз</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Примітки"
@@ -2214,9 +2228,11 @@
     <t34>Замінювати фільтри за збігу імен</t34>
     <t35>З усієї моделі та пов’язаних файлів</t35>
     <t36>Призначити всім позиціям</t36>
+    <!--todo remove after 3.7.15.0-->
     <t37>Виберіть види</t37>
     <t38>Обробка елементів на поточному вигляді</t38>
     <t39>Обробка елементів на обраних видах</t39>
+    <!--todo remove after 3.7.15.0-->
     <t40>Обрано видів:</t40>
     <c1>Перевизначення для елементів</c1>
     <c2>Повернути перевизначення для елементів</c2>
@@ -2328,6 +2344,8 @@
     <ss27>Маска</ss27>
     <ss28>Звичайний</ss28>
     <ss29>Ім’я фільтра</ss29>
+    <searchEmptyValues>Шукати порожні значення</searchEmptyValues>
+    <emptyValue>(порожньо)</emptyValue>
     <maskHint>Підказка щодо масок: * - будь-яка кількість символів; ? - один символ; # - цифра. Якщо маска пошуку не містить * ? #, то * у заміні позначає весь знайдений фрагмент</maskHint>
     <regexHint>Підказка щодо регулярних виразів: . — будь-який символ; .* — послідовність символів; \d — цифра; \w — літера/цифра/підкреслення</regexHint>
     <systemName>Ім’я системи</systemName>
@@ -2343,6 +2361,8 @@
     <replaceErrorMessage>Елемент з іменем "{0}" не знайдено в документі. Заміна неможлива.</replaceErrorMessage>
     <fillPatternName>Ім’я штрихування</fillPatternName>
     <systemElementError>Елемент є вбудованим елементом суцільного штрихування і не може бути змінений</systemElementError>
+    <invalidNameMessage>Ім'я містить неприпустимі символи: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>Не на аркуші</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Копіювати обрізку виду"
@@ -2955,24 +2975,6 @@
     <msg2>Примірники сімейства не можна віддзеркалити по бічній стороні. Додайте стрілку розвороту в редакторі сімейства</msg2>
     <msg3>Примірник перебуває в групі: "{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="Вибрані види"
-    Description="Вибір обраних видів для відкриття">
-    <!--todo remove after 1.0.1.0-->
-    <h1>Пошук за ім'ям</h1>
-    <h2>Види</h2>
-    <h3>Відомості/Специфікації</h3>
-    <h4>Листи</h4>
-    <h5>Збірки</h5>
-    <h6>Вибрано видів</h6>
-    <h7>Список обраних видів для документа</h7>
-    <h8>Додати види в обране</h8>
-    <h9>Відкрити обрані види</h9>
-    <h10>Відкриті види</h10>
-    <h11>Види в проєкті</h11>
-    <h12>Додано видів</h12>
-    <h13>Виділити відзначені види</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="Порівняння моделей"
     Description="Пошук відмінностей між моделями">

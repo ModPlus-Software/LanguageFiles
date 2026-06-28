@@ -286,7 +286,9 @@
     LocalName="CAD-Manager"
     Description="Verwalten aller Einfügungen von dwg-Dateien im aktuellen Dokument"
     FullDescription="Im Plugin werden alle Ansichten der eingefügten dwg-Dateien dargestellt, die zu den Ansichten gehören oder nicht gehören. Es ist auch möglich, in der Liste zu suchen, die ID der dwg-Einfügung oder Ansicht zu kopieren, die Ansicht mit der dwg-Einfügung zu öffnen und die dwg-Einfügung zu löschen">
+    <!--todo remove after 2.0.4.0-->
     <h1>CAD-Manager</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>Kopiert!</h2>
     <h3>Zugehörigkeit zur Ansicht:</h3>
     <h4>Suche nach Namen und Import-ID oder nach Namen und Ansichts-ID...</h4>
@@ -303,6 +305,9 @@
     <h17>Einfügungen löschen</h17>
     <h18>Verzeichnis mit Importdatei öffnen</h18>
     <h19>Anzahl (sichtbar/gesamt):</h19>
+    <h20>Im Projekt auswählen</h20>
+    <h21>Verknüpfung aktualisieren</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>Alle</all>
     <sv1>Unbestimmte</sv1>
     <sv2>Zugehörigkeit zu einer Ansicht</sv2>
@@ -919,9 +924,13 @@
     <m4>Das Lesen der Familie</m4>
     <m5>Suche in den Bauteillisten</m5>
     <m6>Unter den ausgewählten Suchtabellen befinden sich Tabellen, die in der aktuellen Familie verwendet werden! Sind Sie sicher, dass sie trotzdem gelöscht werden müssen?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0}: {1} erfolgreich gelöscht</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0}: {1} erfolgreich gelöscht, {2} konnten nicht gelöscht werden</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>IDs der Elemente, die während der Bereinigung nicht gelöscht wurden</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0}: Keine Elemente zum Bereinigen gefunden</wipeOptionResultEmpty>
     <defaultTypeMessage>Standardtyp festgelegt: {0}</defaultTypeMessage>
     <reassignedInstancesMessage>Exemplare wurden dem Standardtyp zugewiesen: {0}</reassignedInstancesMessage>
@@ -1206,7 +1215,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <disableWorksetContains>Bearbeitungsbereiche deaktivieren, die Folgendes enthalten:</disableWorksetContains>
     <disableWorksetTooltip>Geben Sie Teilzeichenfolgen durch Kommas getrennt ein. Beim Laden der Verknüpfung werden Bearbeitungsbereiche des verknüpften Modells geschlossen, deren Namen mindestens eine der angegebenen Teilzeichenfolgen enthalten. Alle anderen Bearbeitungsbereiche werden geöffnet.</disableWorksetTooltip>
     <fromRevitServer>Aus Revit Server</fromRevitServer>
-    <revitServerWindowTitle>Laden aus Revit Server</revitServerWindowTitle>
+    <revitServerWindowTitle>Vom Revit Server hinzufügen</revitServerWindowTitle>
     <changeTypeWorksetErrorFormat>Beim Ändern des Typ-Bearbeitungsbereichs: {0} ist ein Fehler aufgetreten: {1}</changeTypeWorksetErrorFormat>
     <changeInstanceWorksetErrorFormat>Beim Ändern des Bearbeitungsbereichs der Instanz: {0}, ist ein Fehler aufgetreten: {1}</changeInstanceWorksetErrorFormat>
     <addFromServerErrorFormat>Fehler beim Hinzufügen einer Verknüpfung aus Revit Server</addFromServerErrorFormat>
@@ -1249,6 +1258,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <rewriteStartedLogFormat>Beginn der Pfadumschreibung für {0} Verknüpfungen</rewriteStartedLogFormat>
     <rewriteCompletedLogFormat>Pfade umgeschrieben: {0}, Fehler: {1}</rewriteCompletedLogFormat>
     <rewriteErrorLogFormat>Allgemeiner Fehler beim Umschreiben der Pfade: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Fehler beim Pfad-Umschreiben: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>Verknüpfung befindet sich in einem geschlossenen Arbeitssatz</rewritePathClosedWorksetError>
     <linkStatusLoaded>Geladen</linkStatusLoaded>
     <linkStatusUnloaded>Entladen</linkStatusUnloaded>
     <linkStatusNotFound>Nicht gefunden</linkStatusNotFound>
@@ -1765,6 +1776,9 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <materialDuplicateActionSettings>Verhalten bei übereinstimmenden Materialnamen</materialDuplicateActionSettings>
     <materialDuplicateActionTooltip>Wenn Materialnamen übereinstimmen und die Option „Ersetzen" ausgewählt wird, führt das Plugin folgenden Algorithmus aus: Das vorhandene Material im Zieldokument wird aktualisiert und erhält alle Eigenschaften des neuen Materials. Der Materialname bleibt unverändert. Alle Elemente, die dieses Material verwenden, erhalten automatisch die aktualisierten Eigenschaften.</materialDuplicateActionTooltip>
     <closeOpenedSchedule>Geöffnete Bauteillisten schließen</closeOpenedSchedule>
+    <searchModeLabel>Vergleichsmodus:</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Regulärer Ausdruck</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notizen"
@@ -2214,9 +2228,11 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t34>Filter bei Namensübereinstimmung ersetzen</t34>
     <t35>Aus dem gesamten Modell und verknüpften Dateien</t35>
     <t36>Allen Positionen zuweisen</t36>
+    <!--todo remove after 3.7.15.0-->
     <t37>Wählen Sie Ansichten aus</t37>
     <t38>Verarbeitung der Elemente in der aktuellen Ansicht</t38>
     <t39>Bearbeitung von Elementen in den ausgewählten Ansichten</t39>
+    <!--todo remove after 3.7.15.0-->
     <t40>Ansichten ausgewählt:</t40>
     <c1>Überschreiben für Elemente</c1>
     <c2>Überschreiben für Elemente zurückgeben</c2>
@@ -2328,6 +2344,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <ss27>Maske</ss27>
     <ss28>Normal</ss28>
     <ss29>Filtername</ss29>
+    <searchEmptyValues>Leere Werte suchen</searchEmptyValues>
+    <emptyValue>(leer)</emptyValue>
     <maskHint>Masken-Hinweis: * - beliebige Anzahl von Zeichen; ? - ein Zeichen; # - eine Ziffer. Wenn die Suchmaske kein * ? # enthält, dann bezeichnet * in der Ersetzung das gesamte gefundene Fragment</maskHint>
     <regexHint>Regulärer-Ausdruck-Hinweis: . — beliebiges Zeichen; .* — Zeichenfolge; \d — Ziffer; \w — Buchstabe/Ziffer/Unterstrich</regexHint>
     <systemName>Systemname</systemName>
@@ -2343,6 +2361,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <replaceErrorMessage>Element mit dem Namen "{0}" wurde im Dokument nicht gefunden. Ersetzung ist nicht möglich.</replaceErrorMessage>
     <fillPatternName>Füllmustername</fillPatternName>
     <systemElementError>Das Element ist das integrierte Vollflächen-Füllmuster und kann nicht geändert werden</systemElementError>
+    <invalidNameMessage>Name enthält ungültige Zeichen: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>Nicht auf Blatt</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Kopieren zugeschnittener Ansicht"
@@ -2955,24 +2975,6 @@ Sperre aufhebben?</h13>
     <msg2>Familienexemplare können nicht links/rechts gespiegelt werden. Fügen Sie im Familieneditor ein Steuerelement für Spiegelung hinzu</msg2>
     <msg3>Exemplar gehört zu der Gruppe: "{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="Favoritenansichten"
-    Description="Schnelles Öffnen von Favoritenansichten">
-    <!--todo remove after 1.0.1.0-->
-    <h1>Suche nach Namen</h1>
-    <h2>Ansichten</h2>
-    <h3>Listen/Bauteillisten</h3>
-    <h4>Pläne</h4>
-    <h5>Baugruppen</h5>
-    <h6>Ausgewählte Ansichten</h6>
-    <h7>Die Liste der Favoritenansichten für das Dokument</h7>
-    <h8>Ansichten in Favoriten hinzufügen</h8>
-    <h9>Favoritenansichten öffnen</h9>
-    <h10>Offene Ansichten</h10>
-    <h11>Ansichten im Projekt</h11>
-    <h12>Ansichten hinzugefügt</h12>
-    <h13>Ausgewählte Ansichten markieren</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="Modellvergleich"
     Description="Unterschiede zwischen Modellen finden">

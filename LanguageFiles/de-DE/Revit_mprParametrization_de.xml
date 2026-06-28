@@ -143,8 +143,6 @@
     <t138>Globalen Parameter einfügen</t138>
     <t139>Im aktuellen Dokument sind keine globalen Parameter vorhanden</t139>
     <t140>STRATEGIE-EINSTELLUNGEN</t140>
-    <t141>RoomBoundaries: Geschossdecken, die den Raumkörper berühren, als Raumbegrenzungselemente betrachten</t141>
-    <t142>Standardmäßig werden nur vertikale Elemente wie Wände, Stützen usw. als Raumbegrenzungselemente betrachtet. Wenn diese Option aktiviert ist, wird die Geometrie von Räumen und Geschossdecken mithilfe eines Algorithmus analysiert, der die Berührung zwischen Elementflächen erkennt (Strategie SolidTouch). Geschossdecken, deren ebene Flächen die ebenen Flächen des Raumkörpers berühren, werden als Raumbegrenzungselemente betrachtet. Die Aktivierung dieser Option kann die Verarbeitungszeit verlängern</t142>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -262,6 +260,7 @@
     <err78>Globale Parameter haben keine Eigenschaft "HasValue"</err78>
     <err79>Parameter von Unterelementen der Tragwerksverbindungen haben keine Eigenschaft "HasValue"</err79>
     <err80>Der Pseudo-Parameter ID hat keine Eigenschaft "HasValue"</err80>
+    <err81>Das Element hat mehrere Parameter mit dem Namen "{0}". Entfernen Sie den überflüssigen Parameter oder verwenden Sie den Schlüsselnamen des Parameters (GUID für gemeinsam genutzte Parameter, Systemname für integrierte Parameter)</err81>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -291,9 +290,7 @@
     <ssd10>Verarbeitung von Elementen, die mit den Kanten ihrer Vollkörper in Berührung sind</ssd10>
     <sld10>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich mit flachen Körperkanten berühren</sld10>
     <ssd11>Verarbeitung der Begrenzungselemente von Räumen</ssd11>
-    <!--todo remove after 4.1.29.0-->
     <sld11>Die Strategie verarbeitet Elemente, die Begrenzungselemente von Räumen sind</sld11>
-    <sld11-2>Die Strategie verarbeitet Elemente, die Raumbegrenzungselemente sind (Wände, Stützen usw.). Es besteht die Möglichkeit, Geschossdecken als Raumbegrenzungselemente zu verarbeiten, wenn die entsprechende Option in den Einstellungen aktiviert ist</sld11-2>
     <ssd12>Verarbeitung der untergeordneten Elementen in den Verbindungen von Tragwerken</ssd12>
     <sld12>Die Strategie verarbeitet Elemente, die in den Verbindungen von Tragwerken platziert sind (Platten, Schrauben, etc.). Das Filtern von untergeordneten Elementen nach Parametern sowie die Liste der Parameter von untergeordneten Elementen im Formel-Editor sind nicht vorgesehen. Numerische Parameter werden ohne Konvertierung in interne Einheiten eingestellt</sld12>
     <ssd13>Verarbeitung von Unterfamilien</ssd13>

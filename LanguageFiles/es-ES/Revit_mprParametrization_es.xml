@@ -143,8 +143,6 @@
     <t138>Insertar parámetro global</t138>
     <t139>No hay parámetros globales en el documento actual</t139>
     <t140>CONFIGURACIÓN DE ESTRATEGIAS</t140>
-    <t141>RoomBoundaries: considerar como delimitadores los suelos que tocan el sólido de la habitación</t141>
-    <t142>De forma predeterminada, solo se consideran delimitadores de habitaciones los elementos verticales, como muros, pilares, etc. Al activar esta opción, se analizará la geometría de las habitaciones y los suelos mediante un algoritmo que detecta el contacto entre las caras de los elementos (estrategia SolidTouch). Los suelos cuyas caras planas estén en contacto con las caras planas del sólido de la habitación se considerarán delimitadores. La activación de esta opción puede aumentar el tiempo de procesamiento</t142>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -262,6 +260,7 @@
     <err78>Los parámetros globales no tienen la propiedad "HasValue"</err78>
     <err79>Los parámetros de los subelementos de las conexiones estructurales no tienen la propiedad "HasValue"</err79>
     <err80>El pseudoparámetro ID no tiene la propiedad "HasValue"</err80>
+    <err81>El elemento tiene varios parámetros con el nombre "{0}". Elimine el parámetro sobrante o utilice el nombre clave del parámetro (GUID para los parámetros compartidos, nombre del sistema para los parámetros incorporados)</err81>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -291,9 +290,7 @@
     <ssd10>Procesando elementos que tocan bordes de formas 3D</ssd10>
     <sld10>Estrategia procesa elementos que tienen una forma 3D y se tocan entre sí con bordes planos de forma. Elementos tocados pueden estar en archivos vinculados</sld10>
     <ssd11>Procesando cerramientos de habitaciones</ssd11>
-    <!--todo remove after 4.1.29.0-->
     <sld11>Estrategia procesa elementos que son estructuras cerramientos de habitaciones</sld11>
-    <sld11-2>La estrategia procesa los elementos que son delimitadores de habitaciones (muros, pilares, etc.). Existe la posibilidad de procesar los suelos como delimitadores de habitaciones cuando se activa la opción correspondiente en la configuración</sld11-2>
     <ssd12>Procesando elementos anidados de conexiones estructurales</ssd12>
     <sld12>Estrategia procesa elementos ubicados en conexiones estructurales (placas, pernos, etc.). No se proporciona filtrado de elementos anidados por parámetros, así como una lista de parámetros de elementos anidados en editor de fórmulas. Parámetros numéricos se especifican sin conversión a unidades internas</sld12>
     <ssd13>Procesando familias anidadas</ssd13>

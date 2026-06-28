@@ -286,7 +286,9 @@
     LocalName="CAD manager"
     Description="Manage all imports of dwg files in the current document"
     FullDescription="Displaying all types of inserted dwg files – both belonging to views and not belonging to views. Search, identifier copying, view opening, and dwg insertion deletion are available">
+    <!--todo remove after 2.0.4.0-->
     <h1>CAD manager</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>Copied!</h2>
     <h3>Belonging to the view:</h3>
     <h4>Search by name and id of Import or by name and id of view...</h4>
@@ -303,6 +305,9 @@
     <h17>Remove Imports</h17>
     <h18>Open the folder where the Import file is located</h18>
     <h19>Number (visible/total):</h19>
+    <h20>Select in project</h20>
+    <h21>Reload link</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>All</all>
     <sv1>Unidentified</sv1>
     <sv2>View specific imports</sv2>
@@ -919,9 +924,13 @@
     <m4>Reading a family</m4>
     <m5>Search in schedules</m5>
     <m6>Among the selected lookup tables there are tables used in the current family! Are you sure you want to delete them?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0}: successfully deleted {1}</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0}: successfully deleted {1}, failed to delete {2}</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>IDs of elements not deleted during cleanup</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0}: no elements found for cleanup</wipeOptionResultEmpty>
     <defaultTypeMessage>Default type assigned: {0}</defaultTypeMessage>
     <reassignedInstancesMessage>Instances reassigned to the default type: {0}</reassignedInstancesMessage>
@@ -1230,6 +1239,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <rewriteStartedLogFormat>Starting path rewrite for {0} links</rewriteStartedLogFormat>
     <rewriteCompletedLogFormat>Rewritten paths: {0}, errors: {1}</rewriteCompletedLogFormat>
     <rewriteErrorLogFormat>General error while rewriting paths: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Path rewrite error: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>link is in a closed workset</rewritePathClosedWorksetError>
     <linkStatusLoaded>Loaded</linkStatusLoaded>
     <linkStatusUnloaded>Unloaded</linkStatusUnloaded>
     <linkStatusNotFound>Not found</linkStatusNotFound>
@@ -1255,7 +1266,7 @@ An additional check is performed by type parameters – a pair of similar famili
     <disableWorksetContains>Disable worksets containing:</disableWorksetContains>
     <disableWorksetTooltip>Enter substrings separated by commas. When loading the link, worksets of the linked model whose names contain at least one of the specified substrings will be closed. All other worksets will be opened.</disableWorksetTooltip>
     <fromRevitServer>From Revit Server</fromRevitServer>
-    <revitServerWindowTitle>Loading from Revit Server</revitServerWindowTitle>
+    <revitServerWindowTitle>Add from Revit Server</revitServerWindowTitle>
     <changeTypeWorksetErrorFormat>An error occurred while changing the type workset: {0}, error: {1}</changeTypeWorksetErrorFormat>
     <changeInstanceWorksetErrorFormat>An error occurred while changing the instance workset: {0}, error: {1}</changeInstanceWorksetErrorFormat>
     <addFromServerErrorFormat>Error while adding link from Revit Server</addFromServerErrorFormat>
@@ -1765,6 +1776,9 @@ An additional check is performed by type parameters – a pair of similar famili
     <materialDuplicateActionSettings>Behavior when material names match</materialDuplicateActionSettings>
     <materialDuplicateActionTooltip>When material names match and the "Replace" option is selected, the plugin will apply the following algorithm: the existing material in the target document will be updated with all properties of the new material. The material name will remain unchanged. All elements using this material will automatically receive the updated properties.</materialDuplicateActionTooltip>
     <closeOpenedSchedule>Close opened schedules</closeOpenedSchedule>
+    <searchModeLabel>Comparison mode:</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Regular expression</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notes"
@@ -2214,9 +2228,11 @@ An additional check is performed by type parameters – a pair of similar famili
     <t34>Replace filters if names match</t34>
     <t35>From the whole model and linked files</t35>
     <t36>Assign to all positions</t36>
+    <!--todo remove after 3.7.15.0-->
     <t37>Select views</t37>
     <t38>Process elements on current View</t38>
     <t39>Process elements on selected views</t39>
+    <!--todo remove after 3.7.15.0-->
     <t40>Views selected:</t40>
     <c1>Override for elements</c1>
     <c2>Return override for elements</c2>
@@ -2328,6 +2344,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <ss27>Mask</ss27>
     <ss28>Normal</ss28>
     <ss29>Filter Name</ss29>
+    <searchEmptyValues>Search empty values</searchEmptyValues>
+    <emptyValue>(empty)</emptyValue>
     <maskHint>Mask hint: * - any number of characters; ? - one character; # - a digit. If the search mask does not contain * ? #, then * in the replacement denotes the entire matched fragment</maskHint>
     <regexHint>Regex hint: . — any character; .* — sequence of characters; \d — digit; \w — letter/digit/underscore</regexHint>
     <systemName>System Name</systemName>
@@ -2343,6 +2361,8 @@ An additional check is performed by type parameters – a pair of similar famili
     <replaceErrorMessage>Element with name "{0}" not found in the document. Replacement is not possible.</replaceErrorMessage>
     <fillPatternName>Fill Pattern Name</fillPatternName>
     <systemElementError>The element is the built-in solid fill pattern element and cannot be modified</systemElementError>
+    <invalidNameMessage>Name contains invalid characters: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>Not on sheet</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Copy crop extents"
@@ -2955,24 +2975,6 @@ Unpin?</h13>
     <msg2>Family instances cannot be flipped by side. Add a flip control to the family editor</msg2>
     <msg3>The instance is in the group: "{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="Favorite views"
-    Description="Quick opening of favorite views">
-    <!--todo remove after 1.0.1.0-->
-    <h1>Search by name</h1>
-    <h2>Views</h2>
-    <h3>Schedules</h3>
-    <h4>Sheets</h4>
-    <h5>Assemblies</h5>
-    <h6>Views selected</h6>
-    <h7>The list of selected views for the document</h7>
-    <h8>Add views to favorites</h8>
-    <h9>Open favorite views</h9>
-    <h10>Open views</h10>
-    <h11>Views in project</h11>
-    <h12>Views added</h12>
-    <h13>Select сhecked views</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="Model comparison"
     Description="Finding differences between models">

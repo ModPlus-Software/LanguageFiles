@@ -286,7 +286,9 @@
     LocalName="CAD管理器"
     Description="管理当前文档中所有DWG文件的插入"
     FullDescription="显示所有插入的DWG文件视图——包括属于视图和不属于视图的。提供列表搜索、ID复制、视图打开和DWG插入删除功能">
+    <!--todo remove after 2.0.4.0-->
     <h1>CAD管理器</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>已复制!</h2>
     <h3>视图关联:</h3>
     <h4>按导入ID或视图的名称和ID搜索...</h4>
@@ -303,6 +305,9 @@
     <h17>删除多个插入</h17>
     <h18>打开导入文件所在文件夹</h18>
     <h19>数量(可见/总计):</h19>
+    <h20>在项目中选择</h20>
+    <h21>重新加载链接</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>全部</all>
     <sv1>未定义</sv1>
     <sv2>属于视图</sv2>
@@ -919,9 +924,13 @@
     <m4>读取族</m4>
     <m5>在明细表中搜索</m5>
     <m6>选定的搜索表中有当前族正在使用的表! 确认删除?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0}：已成功删除 {1}</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0}：成功删除 {1}，未能删除 {2}</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>清理过程中未删除的元素 ID</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0}：未找到可清理的元素</wipeOptionResultEmpty>
     <defaultTypeMessage>已指定默认类型：{0}</defaultTypeMessage>
     <reassignedInstancesMessage>已将实例重新指定为默认类型：{0}</reassignedInstancesMessage>
@@ -1230,6 +1239,8 @@
     <rewriteStartedLogFormat>开始为 {0} 个链接重写路径</rewriteStartedLogFormat>
     <rewriteCompletedLogFormat>已重写路径：{0}，错误：{1}</rewriteCompletedLogFormat>
     <rewriteErrorLogFormat>重写路径时发生常规错误：{0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>重写路径错误："{0}"：{1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>链接位于关闭的工作集中</rewritePathClosedWorksetError>
     <linkStatusLoaded>已加载</linkStatusLoaded>
     <linkStatusUnloaded>已卸载</linkStatusUnloaded>
     <linkStatusNotFound>未找到</linkStatusNotFound>
@@ -1259,7 +1270,7 @@
     <disableWorksetContains>禁用包含以下内容的工作集：</disableWorksetContains>
     <disableWorksetTooltip>请输入以逗号分隔的子字符串。加载链接时，关联模型中名称包含至少一个指定子字符串的工作集将被关闭，其余工作集将被打开。</disableWorksetTooltip>
     <fromRevitServer>来自 Revit Server</fromRevitServer>
-    <revitServerWindowTitle>从 Revit Server 加载</revitServerWindowTitle>
+    <revitServerWindowTitle>从 Revit Server 添加</revitServerWindowTitle>
     <changeTypeWorksetErrorFormat>更改类型工作集时发生错误：{0}，错误：{1}</changeTypeWorksetErrorFormat>
     <changeInstanceWorksetErrorFormat>更改实例工作集时发生错误：{0}，错误：{1}</changeInstanceWorksetErrorFormat>
     <addFromServerErrorFormat>从 Revit Server 添加链接时发生错误</addFromServerErrorFormat>
@@ -1765,6 +1776,9 @@
     <materialDuplicateActionSettings>材质名称冲突时的行为</materialDuplicateActionSettings>
     <materialDuplicateActionTooltip>当材质名称冲突并选择"替换"选项时，插件将执行以下算法：目标文档中的旧材质将被更新，并获得新材质的所有属性。材质名称将保持不变。所有使用该材质的元素都会自动获得更新后的属性。</materialDuplicateActionTooltip>
     <closeOpenedSchedule>关闭已打开的明细表</closeOpenedSchedule>
+    <searchModeLabel>比较模式：</searchModeLabel>
+    <searchModeNormal>普通</searchModeNormal>
+    <searchModeRegex>正则表达式</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="注释"
@@ -2214,9 +2228,11 @@
     <t34>名称匹配时替换筛选器</t34>
     <t35>来自整个模型和链接文件</t35>
     <t36>分配给所有位置</t36>
+    <!--todo remove after 3.7.15.0-->
     <t37>选择视图</t37>
     <t38>处理当前视图中的元素</t38>
     <t39>处理选定视图中的元素</t39>
+    <!--todo remove after 3.7.15.0-->
     <t40>已选择视图数：</t40>
     <c1>元素覆盖</c1>
     <c2>恢复元素覆盖</c2>
@@ -2328,6 +2344,8 @@
     <ss27>通配符</ss27>
     <ss28>标准</ss28>
     <ss29>过滤器名称</ss29>
+    <searchEmptyValues>搜索空值</searchEmptyValues>
+    <emptyValue>(空)</emptyValue>
     <maskHint>通配符提示：* — 任意数量的字符；? — 一个字符；# — 数字。如果搜索通配符不包含 * ? #，则替换中的 * 表示整个找到的片段</maskHint>
     <regexHint>正则表达式提示: . — 任意字符; .* — 一串字符; \d — 数字; \w — 字母/数字/下划线</regexHint>
     <systemName>系统名称</systemName>
@@ -2343,6 +2361,8 @@
     <replaceErrorMessage>在文档中未找到名称为 "{0}" 的元素。无法替换。</replaceErrorMessage>
     <fillPatternName>填充图案名称</fillPatternName>
     <systemElementError>该元素是内置的实心填充图案，无法修改</systemElementError>
+    <invalidNameMessage>名称包含无效字符: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>不在图纸上</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="复制视图裁剪"
@@ -2955,24 +2975,6 @@
     <msg2>无法沿侧面镜像族实例。请在族编辑器中添加翻转箭头</msg2>
     <msg3>实例属于组："{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="精选视图"
-    Description="快速打开收藏视图">
-    <!--todo remove after 1.0.1.0-->
-    <h1>按名称搜索</h1>
-    <h2>视图</h2>
-    <h3>明细表/规格说明</h3>
-    <h4>图纸</h4>
-    <h5>组合</h5>
-    <h6>已选视图</h6>
-    <h7>文档的精选视图列表</h7>
-    <h8>添加视图到精选</h8>
-    <h9>打开精选视图</h9>
-    <h10>打开的视图</h10>
-    <h11>项目中的视图</h11>
-    <h12>已添加视图</h12>
-    <h13>选择已勾选的视图</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="模型比較"
     Description="查找模型之间的差异">

@@ -286,7 +286,9 @@
     LocalName="CAD менеджер"
     Description="Управление всеми вставками dwg-файлов в текущем документе"
     FullDescription="Отображение всех видов вставленных dwg-файлов – как принадлежащих видам, так и не принадлежащих видам. Доступны поиск в списке, копирование идентификатора dwg-вставки или вида, открытие вида, содержащего dwg-вставку, а также удаление dwg-вставки">
+    <!--todo remove after 2.0.4.0-->
     <h1>CAD менеджер</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>Скопировано!</h2>
     <h3>Принадлежность виду:</h3>
     <h4>Поиск по имени и id импорта или по имени и id вида...</h4>
@@ -303,6 +305,9 @@
     <h17>Удалить вставки</h17>
     <h18>Открыть папку расположения файла импорта</h18>
     <h19>Количество (видимых/всего):</h19>
+    <h20>Выбрать в проекте</h20>
+    <h21>Обновить связь</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>Все</all>
     <sv1>Неопределенные</sv1>
     <sv2>Принадлежащие видам</sv2>
@@ -919,9 +924,13 @@
     <m4>Чтение семейства</m4>
     <m5>Поиск в спецификациях</m5>
     <m6>Среди выбранных таблиц поиска имеются таблицы, используемые в текущем семействе! Вы уверены, что хотите их удалить?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0} : успешно удалено {1}</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0} : успешно удалено {1}, не удалось удалить {2}</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>ID элементов, не удалённых в ходе очистки</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0} : элементы для очистки не найдены</wipeOptionResultEmpty>
     <defaultTypeMessage>Определён тип по умолчанию: {0}</defaultTypeMessage>
     <reassignedInstancesMessage>Экземпляров переведено на тип по умолчанию: {0}</reassignedInstancesMessage>
@@ -1230,6 +1239,8 @@
     <rewriteStartedLogFormat>Начало перезаписи путей для {0} связей</rewriteStartedLogFormat>
     <rewriteCompletedLogFormat>Перезаписано путей: {0}, ошибок: {1}</rewriteCompletedLogFormat>
     <rewriteErrorLogFormat>Общая ошибка при перезаписи путей: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Ошибка замены пути: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>связь находится на закрытом рабочем наборе</rewritePathClosedWorksetError>
     <linkStatusLoaded>Загружена</linkStatusLoaded>
     <linkStatusUnloaded>Выгружена</linkStatusUnloaded>
     <linkStatusNotFound>Не найдена</linkStatusNotFound>
@@ -1259,7 +1270,7 @@
     <disableWorksetContains>Отключить рабочие наборы, содержащие:</disableWorksetContains>
     <disableWorksetTooltip>Введите подстроки через запятую. При загрузке ссылки рабочие наборы связанной модели, имена которых содержат хотя бы одну из указанных подстрок, будут закрыты. Остальные рабочие наборы будут открыты.</disableWorksetTooltip>
     <fromRevitServer>Из Revit Server</fromRevitServer>
-    <revitServerWindowTitle>Загрузка из Revit Server</revitServerWindowTitle>
+    <revitServerWindowTitle>Добавить из Revit Server</revitServerWindowTitle>
     <changeTypeWorksetErrorFormat>При изменении рабочего набора типа: {0}, произошла ошибка: {1}</changeTypeWorksetErrorFormat>
     <changeInstanceWorksetErrorFormat>При изменении рабочего набора экземпляра: {0}, произошла ошибка: {1}</changeInstanceWorksetErrorFormat>
     <addFromServerErrorFormat>Ошибка при добавление связи из Revit Server</addFromServerErrorFormat>
@@ -1763,8 +1774,11 @@
     <groups>Группы</groups>
     <materialExists>В целевом документе уже имеется материал "{0}".\nВыполнить копирование с заменой?</materialExists>
     <materialDuplicateActionSettings>Поведение при совпадении имен материалов</materialDuplicateActionSettings>
-    <materialDuplicateActionTooltip>При совпадении имён материалов и выборе опции "Заменить" плагином будет выполнен следующий алгоритм: старый материал в целевом документе будет обновлён - ему будут присвоены все свойства нового материала. Имя материала останется прежним. Все элементы, использующие этот материал, автоматически получат обновлённые свойства.</materialDuplicateActionTooltip>
+    <materialDuplicateActionTooltip>При совпадении имен материалов и выборе опции "Заменить" плагином будет выполнен следующий алгоритм: старый материал в целевом документе будет обновлен - ему будут присвоены все свойства нового материала. Имя материала останется прежним. Все элементы, использующие этот материал, автоматически получат обновлённые свойства.</materialDuplicateActionTooltip>
     <closeOpenedSchedule>Закрывать открывшиеся спецификации</closeOpenedSchedule>
+    <searchModeLabel>Режим сравнения:</searchModeLabel>
+    <searchModeNormal>Обычный</searchModeNormal>
+    <searchModeRegex>Регулярное выражение</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Примечания"
@@ -2214,9 +2228,11 @@
     <t34>Заменять фильтры при совпадении имен</t34>
     <t35>Со всей модели и связанных файлов</t35>
     <t36>Назначить всем позициям</t36>
+    <!--todo remove after 3.7.15.0-->
     <t37>Выберите виды</t37>
     <t38>Обработка элементов на текущем виде</t38>
     <t39>Обработка элементов на выбранных видах</t39>
+    <!--todo remove after 3.7.15.0-->
     <t40>Выбрано видов:</t40>
     <c1>Переопределение для элементов</c1>
     <c2>Вернуть переопределение для элементов</c2>
@@ -2328,6 +2344,8 @@
     <ss27>Маска</ss27>
     <ss28>Обычный</ss28>
     <ss29>Имя фильтра</ss29>
+    <searchEmptyValues>Искать пустые значения</searchEmptyValues>
+    <emptyValue>(пусто)</emptyValue>
     <maskHint>Подсказка по маскам: * - любое количество символов; ? - один символ; # - цифра. Если маска поиска не содержит * ? #, то * в замене обозначает весь найденный фрагмент</maskHint>
     <regexHint>Подсказка по регулярным выражениям: . — любой символ; .* — последовательность символов; \d — цифра, \w — буква/цифра/подчёркивание</regexHint>
     <systemName>Имя системы</systemName>
@@ -2343,6 +2361,8 @@
     <replaceErrorMessage>Элемент с именем "{0}" не найден в документе. Замена невозможна.</replaceErrorMessage>
     <fillPatternName>Имя штриховки</fillPatternName>
     <systemElementError>Элемент является встроенным элементом сплошной штриховки и не может быть изменён</systemElementError>
+    <invalidNameMessage>Имя содержит недопустимые символы: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>Не на листе</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Копировать обрезку вида"
@@ -2955,24 +2975,6 @@
     <msg2>Экземпляры семейства нельзя отзеркалить по боковой стороне. Добавьте стрелку разворота в редакторе семейства</msg2>
     <msg3>Экземпляр состоит в группе: "{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="Избранные виды"
-    Description="Быстрое открытие избранных видов">
-    <!--todo remove after 1.0.1.0-->
-    <h1>Поиск по имени</h1>
-    <h2>Виды</h2>
-    <h3>Ведомости/Спецификации</h3>
-    <h4>Листы</h4>
-    <h5>Сборки</h5>
-    <h6>Выбрано видов</h6>
-    <h7>Список избранных видов для документа</h7>
-    <h8>Добавить виды в избранное</h8>
-    <h9>Открыть избранные виды</h9>
-    <h10>Открытые виды</h10>
-    <h11>Виды в проекте</h11>
-    <h12>Добавлено видов</h12>
-    <h13>Выделить отмеченные виды</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="Сравнение моделей"
     Description="Поиск различий между моделями Revit">
