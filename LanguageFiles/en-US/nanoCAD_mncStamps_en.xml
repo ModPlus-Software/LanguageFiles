@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mncStamps
+    LocalName="Title blocks"
+    Description="Plugin of inserting title blocks in the drawing (as AutoCAD tables) according to normative documentation, with field support"
+    FullDescription="Using the &quot;Field&quot; plugin allows you to add additional values to the document that you can insert into the title block in the form of fields. This allows you to change the values in the title block at once in all the title blocks throughout the document">
+    <h1>Title blocks</h1>
+    <h2>Name of title block</h2>
+    <h3>Normative documents for:</h3>
+    <h4>Russia</h4>
+    <h5>Ukraine</h5>
+    <h6>Belarus</h6>
+    <h7>Regulatory document:</h7>
+    <h8>Selecting the normative document</h8>
+    <h9>Table name</h9>
+    <h10>Normative document:</h10>
+    <h11>Description:</h11>
+    <h12>Brief description (reference to the title block in the normative document)</h12>
+    <h13>Inactive</h13>
+    <h14>Inserting a title block with Top-left binding</h14>
+    <h15>Inserting a title block with Top-right binding</h15>
+    <h16>Inserting a title block with Bottom-left binding</h16>
+    <h17>Inserting a title block with Bottom-right binding</h17>
+    <h18>Show image</h18>
+    <h19>Hide image</h19>
+    <h21>Title block scale:</h21>
+    <h22>Text style:</h22>
+    <h23>Main text height:</h23>
+    <h24>Additional text height:</h24>
+    <h25>Logo</h25>
+    <h26>from block:</h26>
+    <h27>from file:</h27>
+    <h28>Specify a dwg file as a logo</h28>
+    <h29>Available in full version</h29>
+    <h30>Use fields</h30>
+    <h31>Posts</h31>
+    <h32>Edit the list of user posts</h32>
+    <h33>Add post to title block</h33>
+    <h34>Remove post from title block</h34>
+    <h35>Posts in the title block</h35>
+    <h36>One line up</h36>
+    <h37>One line down</h37>
+    <h38>Launch "Fields" plugin</h38>
+    <h39>The height of the text in all cells of the title block. The default is 2.5, which corresponds to ESKD GOST 2.304-81 "Drawing fonts"</h39>
+    <h40>Additional text height. It is installed in such cells as "Document designation", "Stage", "Sheet", etc., which gives the title block expressiveness and readability. The default is 3.5, which corresponds to ESKD GOST 2.304-81 "Drawing fonts"</h40>
+    <h41>Specify the block defined in this drawing to insert it into the title block as a logo</h41>
+    <h42>The specified dwg-file will be added to the current drawing in the form of a block, which will be inserted into the title block as a logo. The file name will be the file name. If a block with this name already exists in the current drawing, the block from the drawing will be used</h42>
+    <h43>POSTS</h43>
+    <h44>Post</h44>
+    <h45>FIELDS</h45>
+    <h46>Surnames</h46>
+    <h47>Standard</h47>
+    <h48>Custom</h48>
+    <h49>POST</h49>
+    <h50>Add new post</h50>
+    <h51>Remove selected post</h51>
+    <h52>SURNAME</h52>
+    <!--todo remove after 3.0.0.0-->
+    <h53>GOST R 21.1101-2013</h53>
+    <h54>Appendix Z</h54>
+    <h55>Box 1</h55>
+    <h56>Box 2</h56>
+    <h57>Box 3</h57>
+    <h58>Box 6</h58>
+    <h59>Box 9</h59>
+    <h60>Appendix L</h60>
+    <h61>Add to drawing</h61>
+    <h62>Add completed fields to the drawing</h62>
+    <h63>From file</h63>
+    <h64>Load and set the field values from the specified dwg file</h64>
+    <h65>Save</h65>
+    <h66>Save filled fields as standard</h66>
+    <h67>Load</h67>
+    <h68>Load saved field values</h68>
+    <h69>Add fields to title block</h69>
+    <h70>Set Default Values</h70>
+    <h71>Get the value from the drawing</h71>
+    <!--todo remove after 3.0.0.0-->
+    <h72>DSTU B A.2.4-4: 2009</h72>
+    <!--todo remove after 3.0.0.0-->
+    <h73>STB 2255-2012</h73>
+    <h74>Update in drawing</h74>
+    <h75>You can use line breaks in boxes 2,3 and 9. To add line breaks use Enter</h75>
+    <h76>Date</h76>
+    <h77>Date is added if there is a surname in the line</h77>
+    <h78>The width factor for the field that is inserted into the stamp. The width factor will be applied directly to the inserted field, regardless of the width factor set in the text style. Valid values are from 0.01 to 100.0. In order not to change the width factor, specify the value 0</h78>
+    <h79>Thin lines:</h79>
+    <h80>Thick lines:</h80>
+    <h81>The line thickness changes after the stamp is created. Changing the thickness of thin lines is done by processing the thickness of the lines of the original stamp, in which the default value of thin lines is "ByBlock"</h81>
+    <h82>The line thickness changes after the stamp is created. Changing the thickness of thick lines is done by processing the thickness of the lines of the original stamp, in which the default value of thick lines is "0.40 mm"</h82>
+    <h83>W.F.</h83>
+    <h84>Width factor</h84>
+    <h85>Signatures</h85>
+    <h86>Selecting a signature block</h86>
+    <h87>Enabling or disabling the use of signature</h87>
+    <h88>Surname:</h88>
+    <h89>Signature block file:</h89>
+    <h90>Signature block name:</h90>
+    <h91>Signature block:</h91>
+    <h92>The specified file was not found!</h92>
+    <h93>Specify file and signature block</h93>
+    <h94>Add new signature</h94>
+    <h95>Remove selected signature</h95>
+    <h96>Add signatures to title block</h96>
+    <h97>Insert signatures</h97>
+    <h98>Launch "Signatures" plugin</h98>
+    <h99>The signature is inserted in the lower left corner of the cell to the right of the cell with the surname. The scale of tables (title blocks) is not taken into account!</h99>
+    <h100>Default layer</h100>
+    <h101>Copy layout name into the title block</h101>
+    <h102>You can zoom the image using the mouse wheel, pan while holding down the left mouse button and fit the image by pressing the right mouse button</h102>
+    <msg1>The configuration file is corrupt!\nRun the ModPlus Configurator</msg1>
+    <msg2>An error has occurred!</msg2>
+    <msg3>Value</msg3>
+    <msg4>already contained in the list of standard values</msg4>
+    <msg5>The list contains the same values!</msg5>
+    <msg6>Filled values updated in the current drawing\nDo not forget to call regeneration to update the values in the title blocks</msg6>
+    <msg7>Filled values added to the drawing</msg7>
+    <msg8>Saved</msg8>
+    <msg9>Select title block:</msg9>
+    <msg10>Wrong choice! This is not a title block!</msg10>
+    <msg11>Specify the object to retrieve the text (text, multileader, table):</msg11>
+    <msg12>Specify the cell:</msg12>
+    <msg13>Add fields from file</msg13>
+    <msg14>In file</msg14>
+    <msg15>no fields found</msg15>
+    <msg16>File was created in a later version of AutoCAD!</msg16>
+    <msg17>Could not copy file to disk!\nThere may be no administrator rights</msg17>
+    <msg18>Could not copy table from resource file</msg18>
+    <msg19>You can not add more than</msg19>
+    <msg20>posts</msg20>
+    <msg21>The title block does not correspond to the title block ModPlus!\nInvalid number of cells</msg21>
+    <msg22>The "Organization" cell contains a logo\nReplace on field?</msg22>
+    <msg23>Use dwg-file as a logo</msg23>
+    <msg24>Insertion point:</msg24>
+    <msg25>Field values exported</msg25>
+    <msg26>At the moment, the area for working with the tag "{0}" is selected, and the tag "{1}" is specified in the loading file.\nDo you want to continue loading?</msg26>
+    <msg27>The selected file is not a field storage file</msg27>
+    <msg28>There are no more than three signatures available in the free version!</msg28>
+    <msg29>There are no labels available to insert into the title block!</msg29>
+    <msg30>There are no signatures in the list!</msg30>
+    <msg31>The selected file is not a signature storage file!</msg31>
+  </mncStamps>
+</ModPlus>

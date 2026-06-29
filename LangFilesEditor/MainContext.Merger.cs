@@ -96,7 +96,7 @@ internal partial class MainContext
             var version = await GetVersion(sourceLanguagesDirectory);
             WriteToMergeLog($"Target language version: {version}");
 
-            var fileNames = new[] { "Common", "AutoCAD", "Revit", "Renga" };
+            var fileNames = new[] { "Common", "AutoCAD", "Revit", "Renga", "nanoCAD" };
             foreach (var directory in Directory.GetDirectories(sourceLanguagesDirectory))
             {
                 var langName = new DirectoryInfo(directory).Name;

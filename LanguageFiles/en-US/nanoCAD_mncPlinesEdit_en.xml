@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mncPlinesEdit
+    LocalName="Polylines"
+    Description="Collection of various plugins for working with polylines">
+    <h1>POLYLINES</h1>
+    <h2>Plugin works with 3D polylines</h2>
+    <h3>Plugin works with 2D polylines</h3>
+    <h4>Plugin works with LW polylines</h4>
+    <h5>Add Panel to Ribbon</h5>
+    <!-- todo remove h6 after 1.2.12.0  -->
+    <h6>Color of auxiliary geometry:</h6>
+    <h7>The ModPlus tab is not found</h7>
+    <h8>The ModPlus tab was not found to add a work panel to polylines</h8>
+    <h9>Polylines</h9>
+    <h10>Work option:</h10>
+    <h11>Min. machined arc radius:</h11>
+    <h12>Any</h12>
+    <h13>Divide the arc by an equal number of segments\nThe image shows a variant of dividing by 3 segments\nR is the arc radius in the polyline</h13>
+    <h14>Divide the arc into segments by specifying the length of the arc segments resulting from the division\nR is the arc radius in the polyline\nL – length of the arc segment</h14>
+    <h15>Divide the arc into segments by specifying the chord deviation (segment height)\nR is the arc radius in the polyline\nH – segment height</h15>
+    <h16>Divide the arc into segments by specifying the length of the chord\nR is the arc radius in the polyline\nX – chord length</h16>
+    <h17>Delete selected polylines</h17>
+    <h18>Exclude endpoints</h18>
+    <h19>Copy blocks:</h19>
+    <h20>Rotate:</h20>
+    <h21>TOLERANCES</h21>
+    <h22>P is the point of the polyline</h22>
+    <h23>- Plugin works by checking both conditions</h23>
+    <h24>H is the maximum deviation from the straight line:</h24>
+    <h25>a – angle tolerance:</h25>
+    <h26>Object type:</h26>
+    <h27>Circle radius:</h27>
+    <h28>Block type:</h28>
+    <err1>There are no blocks available for insertion in the document</err1>
+    <accept>Accept</accept>
+    <cancel>Cancel</cancel>
+    <cb1>Number of segments</cb1>
+    <cb2>Length of segment</cb2>
+    <cb3>Chord deviation</cb3>
+    <cb4>Chord length</cb4>
+    <cb5>by insertion point of the block</cb5>
+    <cb6>by geometric center</cb6>
+    <cb7>do not rotate</cb7>
+    <cb8>rotate by previous segment</cb8>
+    <cb9>rotate by next segment</cb9>
+    <l1>Convert 3D polyline to LW</l1>
+    <d1>Create copies of selected 3D polylines as LW-polylines (2D) with transfer to level 0.0</d1>
+    <l2>Deleting matching polyline vertices</l2>
+    <d2>Deleting adjacent vertices of selected polylines that have the same coordinates</d2>
+    <l3>Removing vertices that lie on a straight line</l3>
+    <d3>Deleting adjacent vertices of selected polyline, which lie on a straight line. It is possible to set tolerance for deviation from the straight or angular tolerance</d3>
+    <l4>Placing an object at the vertices of a polyline</l4>
+    <d4>Place the selected object in the vertices of the polyline. It is possible to rotate the object along the polyline segment. Blocks can be placed both on the geometric center, and on the insertion point</d4>
+    <l5>Replacing an arc segment with linear</l5>
+    <d5>Replacing the specified arc segment of the polyline with a linear</d5>
+    <l6>Replacing an linear segment with arc</l6>
+    <d6>Replacing the specified linear (or arc) segment of the polyline with an arc. It is possible to construct an arc along a tangent or a point on an arc</d6>
+    <l7>Dynamically adding a vertex</l7>
+    <d7>Dynamically adding a vertex to the specified polyline</d7>
+    <l8>Drawing a rectangle by three points</l8>
+    <l9>Removing Arc Segments from a Polyline</l9>
+    <d9>Remove polyline arc segments by replacing them with linear segments. There are several options for the plugin: the number of segments, the length of segments, the height of segments (chord deviation), the length of the chord</d9>
+    <l10>Building the middle line</l10>
+    <d10>The construction of a middle line (as polyline) between two specified curves (segments, polylines or splines)</d10>
+    <l11>Fast moving of vertices</l11>
+    <d11>Fast moving of vertices of the specified polyline</d11>
+    <l12>Split curve at intersection points</l12>
+    <d12>Split curve (segment, polyline or spline) at intersection points with other drawing objects</d12>
+    <l13>Quadrilateral by points</l13>
+    <d13>Creates a quadrilateral from two or more points. The sides of the quadrilateral are oriented according to the current coordinate system. An angular tolerance setting is available allowing the sides to capture a greater number of points.</d13>
+    <l14>Create objects at intersection points</l14>
+    <d14>Creates objects at intersection points of curves with specified objects</d14>
+    <wrong>Wrong choice!</wrong>
+    <undividable>An error occurred while dividing the curve. Try reducing the curve length</undividable>
+    <k1>Select 3D polylines</k1>
+    <k2>Select polylines</k2>
+    <k3>Vertices removed</k3>
+    <k4>Polyline</k4>
+    <k5>does not contain matching vertices</k5>
+    <k6>Select polylines or</k6>
+    <k7>Tolerances</k7>
+    <k7ln>T</k7ln>
+    <k8>The maximum deviation from the straight line (H) is accepted</k8>
+    <k9>Angular tolerance in degrees (a) accepted</k9>
+    <k10>contains only</k10>
+    <k11>vertices</k11>
+    <k12>does not contain vertices lying on a straight line or suitable under the conditions of tolerance</k12>
+    <k13>Select polyline</k13>
+    <k14>Select an object to place</k14>
+    <k15>Select an arc segment of the polyline</k15>
+    <k16>Select the polyline segment</k16>
+    <k17>Specify a point on the tangent or: [Tangent/traverse Point]</k17>
+    <k18>Specify a point on the arc or: [Tangent/traverse Point]</k18>
+    <k19>Specify the point (hold Ctrl to move the vertex forward)</k19>
+    <k20>Specify first point</k20>
+    <k21>Specify second point</k21>
+    <k22>Specify third point</k22>
+    <k23>Enter the number of segments</k23>
+    <k24>Enter the length of the segment</k24>
+    <k25>Enter the chord deviation (segment height)</k25>
+    <k26>Enter the length of the chord</k26>
+    <k27>Select first support element (line, polyline or spline)</k27>
+    <k28>Select second support element (line, polyline or spline)</k28>
+    <k29>Number of control points</k29>
+    <!--todo remove after 1.4.16-->
+    <k30>Simplify the polyline?\nThe points on the same straight line will be deleted</k30>
+    <k31>Select a curve (segment, polyline or spline)</k31>
+    <k32>Specify a point on the tangent or:</k32>
+    <k33>Tangent</k33>
+    <k33ln>T</k33ln>
+    <k34>traverse Point</k34>
+    <k34ln>P</k34ln>
+    <k35>Specify a point on the arc or:</k35>
+    <k36>Select points or</k36>
+    <k37>Exclude unnecessary objects</k37>
+    <k38>Select one or more curves (line, polyline, arc, spline or circle)</k38>
+    <k39>Select objects for intersection calculation or leave the selection empty to calculate for all objects</k39>
+    <k40>Enter angular tolerance from 0 to 30</k40>
+    <k41>TOLerance</k41>
+    <k41ln>TOL</k41ln>
+    <k42>Simplify the polyline?</k42>
+  </mncPlinesEdit>
+</ModPlus>

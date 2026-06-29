@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mncDwgBase
+    LocalName="Base de datos dwg"
+    Description="Base de datos de varios bloques y dibujos"
+    FullDescription="Base dwg le permite insertar tanto bloques como dibujos ya hechos (por ejemplo, detalles). Base de datos dwg la llenan usuarios. Es necesario tener acceso a Internet para que complemento funcione">
+    <h1>Enviar bloques y dibujos del usuario al servidor modplus.org</h1>
+    <h2>Buscar por base de datos</h2>
+    <!--todo remove after 2.1.2.0-->
+    <h3>Buscar</h3>
+    <h4>Buscar en base de datos a partir de 3 símbolos...</h4>
+    <h5>Ruta:</h5>
+    <h6>Descripción:</h6>
+    <h7>Autor:</h7>
+    <h8>Origen:</h8>
+    <h9>Base de datos dwg</h9>
+    <h10>Añadir un nuevo elemento a base de datos local</h10>
+    <h11>Métodos auxiliares para administrar base de datos del usuario</h11>
+    <h12>Eliminar</h12>
+    <h13>Cambiar nombre de grupo</h13>
+    <h14>Cambiar</h14>
+    <h15>Puede escalar y encuadrar imagen con rueda del ratón</h15>
+    <h16>Alejar imagen</h16>
+    <h17>Acercar imagen</h17>
+    <h18>Este es un bloque 3D</h18>
+    <h19>Capa:</h19>
+    <h20>Cerrar ventana después de pegar</h20>
+    <h21>Rotación</h21>
+    <h22>Añadir un bloque a base de datos</h22>
+    <h23>Añadir un dibujo a base de datos</h23>
+    <h24>Cambiar datos del bloque</h24>
+    <h25>Cambiar datos del dibujo</h25>
+    <h26>Enviar base de datos al servidor</h26>
+    <h27>Especificar uno o más archivos de su base de datos dwg. Complemento archiva estos archivos y crea archivo de puntero con elementos almacenados en estos archivos</h27>
+    <h28>Archivos en base de datos del usuario:</h28>
+    <h29>Elementos almacenados en archivo:</h29>
+    <h30>Ruta del archivo:</h30>
+    <h31>Comentario</h31>
+    <h32>Es posible dejar un comentario en archivo y le prestaremos atención</h32>
+    <h33>Archivar</h33>
+    <h34>Ver archivo de copia de seguridad</h34>
+    <h35>Eliminar archivo</h35>
+    <h36>Enviar archivo al servidor</h36>
+    <h37>Recomendaciones para añadir bloques</h37>
+    <h38>Recomendaciones</h38>
+    <h39>Seleccionar un bloque en dibujo actual</h39>
+    <h40>Descargar últimos datos ingresados</h40>
+    <h41>Archivo .dwg:</h41>
+    <h42>Archivo actual</h42>
+    <h43>Archivo .dwg en que se copiará bloque</h43>
+    <h44>Este es un bloque 3D</h44>
+    <h45>Establecer casilla si bloque especificado es bloque 3D</h45>
+    <h46>Nombre:</h46>
+    <h47>Nombre del bloque que se muestra en ventana del complemento</h47>
+    <h48>Breve descripción del bloque</h48>
+    <h49>Documento reglamentario:</h49>
+    <h50>Documento reglamentario de origen</h50>
+    <h51>Si no existe ningún documento reglamentario, es necesario dejar campo vacío</h51>
+    <h52>Añadido:</h52>
+    <h53>Persona que ha añadido bloque a base de datos dwg</h53>
+    <h54>Añadir atributos para especificaciones</h54>
+    <h55>Nombre del atributo</h55>
+    <h56>Valor predeterminado</h56>
+    <h57>Atributos del bloque:</h57>
+    <h58>Obtener valores de atributos de un bloque</h58>
+    <h59>Nombre</h59>
+    <h60>Consejo</h60>
+    <!--todo remove after 2.1.2.0-->
+    <h61>Valor</h61>
+    <h62>Recomendaciones para añadir dibujos</h62>
+    <!--todo remove after 2.1.2.0-->
+    <h63>Cambiar nombre de grupo</h63>
+    <h64>Nombre de grupo actual:</h64>
+    <h65>Nuevo nombre de grupo:</h65>
+    <!--todo remove after 2.1.2.0-->
+    <h66>Añadir</h66>
+    <h67>¿Qué debo añadir?</h67>
+    <h68>Añadir bloque</h68>
+    <h69>Añadir dibujo</h69>
+    <!--todo remove after 2.1.2.0-->
+    <h70>Propiedad</h70>
+    <h71>Valor</h71>
+    <h72>Instrucciones en video para trabajar con la base de datos</h72>
+    <h73>Comentario</h73>
+    <h74>Deje su dirección de correo electrónico, enlace a su página VK, Facebook, Telegram u otras opciones para contactarlo. Sus contactos pueden ser necesarios para informarle si los bloques (dibujos) que envía necesitan ser corregidos</h74>
+    <h75>No proporcionó información de contacto para recibir comentarios. ¡Si los bloques (dibujos) que ha enviado necesitan ser corregidos, no podremos informarle al respecto!\n¿Archivar de todos modos?</h75>
+    <h76>Ordenar por alfabeto</h76>
+    <h77>Ruta a carpeta donde se encuentra base de datos dwg del usuario</h77>
+    <h78>Especificar ruta a carpeta de almacenamiento de base de datos dwg del usuario</h78>
+    <h79>Restablecer ruta predeterminada a carpeta de almacenamiento de base de datos dwg del usuario</h79>
+    <h80>Mostrar como lista</h80>
+    <h81>Generar imágenes de vista previa...</h81>
+    <h82>abrir carpeta</h82>
+    <h83>Actualizar imagen de vista previa</h83>
+    <bt1>Base ModPlus</bt1>
+    <bt2>Del usuario</bt2>
+    <insert>Insertar</insert>
+    <insertBlock>Insertar como bloque</insertBlock>
+    <msg1>¡Archivo de puntero de base de datos dwg ModPlus no se ha encontrado!\nCierre AutoCAD y ejecute módulo de actualización automática para buscar actualizaciones</msg1>
+    <msg2>Capa actual</msg2>
+    <msg3>Archivo de índice de base del usuario no se creó. ¿Crear?</msg3>
+    <msg4>¡Falta archivo de origen! ¿Descargar?</msg4>
+    <msg5>Descargando archivo de base de datos</msg5>
+    <msg6>¡Falta acceso a Internet o al sitio web modplus.org!\nVuelva a intentarlo más tarde</msg6>
+    <msg7>Se eliminará todo grupo</msg7>
+    <msg8>y todos subgrupos</msg8>
+    <msg9>En este caso, archivos .dwg permanecerán</msg9>
+    <msg10>Eliminar grupo</msg10>
+    <msg11>Elemento seleccionado será eliminado de base de datos</msg11>
+    <msg12>Eliminar elemento</msg12>
+    <msg13>Punto de inserción</msg13>
+    <msg14>Angulo de rotación</msg14>
+    <msg15>¡No has seleccionado ningún archivo para archivar!</msg15>
+    <msg16>Crear una carpeta temporal</msg16>
+    <msg17>Recopilar elementos requeridos de base de datos</msg17>
+    <msg18>No es posible crear archivo de puntero</msg18>
+    <msg19>Archivo listo para enviar</msg19>
+    <msg20>No es posible eliminar carpeta temporal</msg20>
+    <msg21>Es posible que archivo está abierto</msg21>
+    <msg22>No se puede encontrar archivo para enviar. ¿Quizá se ha eliminado?</msg22>
+    <msg23>¡Falta acceso a Internet o al sitio web modplus.org!</msg23>
+    <msg24>Enviar</msg24>
+    <msg25>Cargar un archivo al servidor</msg25>
+    <msg26>Enviar una notificación</msg26>
+    <!--todo remove after 2.1.2.0-->
+    <msg27>Archivo</msg27>
+    <msg28>enviado al servidor modplus.org</msg28>
+    <msg29>Una vez verificado archivo, añadiremos su contenido a base de datos pública</msg29>
+    <msg30>¿Eliminar archivo creado?</msg30>
+    <msg31>¡No es posible eliminar archivo! Puede que esté abierto en este momento</msg31>
+    <msg32>¿Añadir un bloque con estos datos?</msg32>
+    <msg33>No es posible copiar bloque seleccionado al archivo especificado</msg33>
+    <msg34>Seleccionar un bloque para añadir a base de datos</msg34>
+    <msg35>Base dwg del complemento contiene un bloque llamado</msg35>
+    <msg36>¡Error al analizar archivo de puntero de base de datos del complemento!</msg36>
+    <msg37>Base de datos dwg del usuario contiene un bloque llamado</msg37>
+    <msg38>¡Error al analizar archivo de índice de base del usuario!</msg38>
+    <msg39>Especificar nombre de bloque mostrado (Nombre)</msg39>
+    <msg40>Especificar una ruta en directorio</msg40>
+    <msg41>¡Casilla "Archivo actual" para archivo .dwg está marcada, pero archivo actual no se encuentra en directorio de base de datos .dwg!</msg41>
+    <msg42>Directorio de base de datos dwg</msg42>
+    <msg43>Directorio del archivos actual</msg43>
+    <msg44>¡Es posible que archivo actual aún no se haya guardado!</msg44>
+    <msg45>Casilla "Archivo actual" para archivo .dwg está marcada, pero no es posible reconocer directorio de ubicación del archivo actual</msg45>
+    <msg46>Especificar archivo .dwg para copiar bloque</msg46>
+    <msg47>Seleccionar un archivo para añadir un bloque</msg47>
+    <msg49>Archivo seleccionado debe estar en subcarpeta de carpeta</msg49>
+    <msg50>Crear un nuevo archivo de base de datos dwg</msg50>
+    <msg51>No es necesario crear un archivo en raíz de carpeta</msg51>
+    <msg52>¡Crea una subcarpeta!</msg52>
+    <msg53>¡Atención! ¡Bloque seleccionado es dinámico! ¡Atributos de especificación se tienen en cuenta para una instancia del bloque!\nEs decir, si hay varias opciones en un bloque, ¡trabajar con dicho bloque será confuso!</msg53>
+    <msg54>Valores de atributos actuales se completan con valores predeterminados especificados cuando se creó bloque\n¡Si continúa, valores de atributos se completarán con valores del bloque seleccionado!\n¿Tomar valores de atributos del bloque seleccionado?</msg54>
+    <msg55>¡Archivo actual no se encuentra en directorio de base de datos dwg!</msg55>
+    <msg56>No es posible reconocer directorio donde se encuentra archivo actual</msg56>
+    <msg58>¿Guardar datos ingresados como "Últimos datos ingresados"?</msg58>
+    <msg59>Seleccionar un dibujo para añadir a base de datos</msg59>
+    <msg60>¡Archivo seleccionado contiene objetos proxy y no se puede añadir a base de datos!\nElimine todos objetos proxy y vuelva a intentarlo</msg60>
+    <msg61>Especifique carpeta para copiar archivo seleccionado</msg61>
+    <msg62>Ya hay un archivo en carpeta especificada</msg62>
+    <msg63>¿Reemplazar?</msg63>
+    <msg64>No seleccione una carpeta</msg64>
+    <msg65>Carpeta seleccionada debe estar en una subcarpeta de carpeta</msg65>
+    <msg66>¿Añadir un dibujo con estos datos?</msg66>
+    <msg67>Base del complemento contiene un dibujo llamado</msg67>
+    <msg68>Base de datos del usuarios contiene un dibujo llamado</msg68>
+    <msg69>Especificar nombre de dibujo mostrado (Nombre)</msg69>
+    <msg70>Especificar archivo de dibujo .dwg</msg70>
+    <msg71>Especificar nuevo nombre del grupo</msg71>
+    <msg72>Bloque "{0}" no se ha encontrado en archivo "{1}"</msg72>
+    <wrong>¡Selección incorrecta!</wrong>
+    <!--todo remove after 2.1.2.0-->
+    <p1>Documento</p1>
+    <!--todo remove after 2.1.2.0-->
+    <p2>Descripción</p2>
+    <p3>Tipo de objeto</p3>
+    <p4>Anotativo</p4>
+    <p5>Dinámica</p5>
+    <p6>Bloque 3D</p6>
+    <p7>Atributos para especificación</p7>
+    <p8>Añadido</p8>
+    <p9>Origen</p9>
+    <!--todo remove after 2.1.2.0-->
+    <p10>Camino</p10>
+    <yes>Sí</yes>
+    <no>No</no>
+    <block>Bloque</block>
+    <drawing>Dibujo</drawing>
+    <close>Cerrar</close>
+    <select>Seleccionar</select>
+    <create>Crear</create>
+    <accept>Aceptar</accept>
+    <cancel>Cancelar</cancel>
+    <copy>Copiar</copy>
+    <ad1>Posición de artículo</ad1>
+    <ad2>Designación de artículo</ad2>
+    <ad3>Nombre de artículo</ad3>
+    <ad4>Masa de artículo</ad4>
+    <ad5>Nota de artículo</ad5>
+    <a1>Posición</a1>
+    <a2>Designación</a2>
+    <a3>Nombre</a3>
+    <a4>Masa</a4>
+    <a5>Nota</a5>
+    <r1>De forma predeterminada, complemento asume que bloques añadidos a base de datos local (del usuario) se añadirán posteriormente a base de datos global, accesible para todos usuarios.</r1>
+    <r2>Por tanto, intenta seguir recomendaciones:</r2>
+    <r3>Bloque que se añade debería ser útil en su trabajo. No importa qué orientación profesional tendrá</r3>
+    <r4>No utilices una amplia variedad de capas en bloques a menos que sea necesario. La mejor opción es utilizar capas estándar del complemento ModPlus</r4>
+    <r5>Si bloque es dinámico, entonces quizás no debería añadir atributos para especificación</r5>
+    <r6>Proporcione a bloques nombres y descripciones claros para que usuario no tenga que averiguar qué es y por qué</r6>
+    <r7>Si tomó bloque de algún recurso, ¡asegúrese de indicar origen!</r7>
+    <r8>Considere cuidadosamente ruta al bloque en base de datos</r8>
+    <r10>De forma predeterminada, complemento asume que dibujos añadidos a base de datos local (del usuario) se añadirán posteriormente a base de datos global, accesible para todos usuarios.</r10>
+    <r11>Por tanto, se imponen algunas restricciones a dibujos añadidos:</r11>
+    <r13>Dibujo añadido no debe usar primitivas Proxy</r13>
+    <r14>Dibujos realizados en mala calidad (por ejemplo, con directrices de segmentos y texto, etc.) no se aceptarán en base de datos pública</r14>
+    <r15>Intenta también seguir recomendaciones:</r15>
+    <r16>No utilices una amplia variedad de capas en tus dibujos a menos que sea necesario. La mejor opción es utilizar capas estándar del complemento ModPlus</r16>
+    <r17>No utilices muchos estilos de anotación en sus dibujos. Mejor opción es utilizar estilos de anotación del complemento ModPlus</r17>
+    <r18>No utilice tipos de línea que no sean de estándar de AutoCAD en sus dibujos</r18>
+    <r19>No utilice fuentes en sus dibujos que no estén incluidas en conjunto de fuentes estándar de AutoCAD</r19>
+    <r20>Si tomaste dibujo de algún recurso, ¡asegúrate de indicar origen!</r20>
+    <r21>Considere cuidadosamente ruta al dibujo en base de datos</r21>
+    <pp1>Esto supone que ha seleccionado bloque en archivo que aún no se encuentra en directorio ModPlus/Data/DwgBase. Por lo tanto, es necesario especificar un archivo creado previamente en directorio ModPlus/Data/DwgBase para ubicar bloques en él o crear este archivo. Bloque seleccionado se copiará al archivo especificado.</pp1>
+    <pp2>Si está añadiendo varios bloques que tienen una orientación común (por ejemplo, bloques de losas alveolares per una serie), cree un archivo para ellos. ¡No es necesario crear un archivo separado para cada bloque!</pp2>
+    <pp3>¡Imposible crear archivos en raíz de carpeta ModPlus/Data/DwgBase! Cree subcarpetas en la (por ejemplo, ModPlus/Data/DwgBase/RC losas).</pp3>
+    <pp4>Si creó un archivo con bloques, lo colocó en carpeta DwgBase y ahora está añadiendo bloques de este archivo a base de datos, marque casilla "Archivo actual".</pp4>
+    <pp5>Campo se completa al azar</pp5>
+    <pp6>P.S. Nos alegra mucho que tengas un apodo original y hermoso, pero aun así intenta escribir tu apellido y nombre</pp6>
+    <pp7>Si no es el autor del bloque, indique origen de donde se tomó este bloque, para no ofender a su creador</pp7>
+    <pp8>Ruta condicional a un bloque en un directorio, formando una estructura de árbol</pp8>
+    <pp9>Por ejemplo, ruta "Bloques/Directorio1/Directorio2/Directorio3" dará este resultado:</pp9>
+    <pp10>Cada subdirectorio condicional debe estar separado con símbolo "/"</pp10>
+    <pp11>Añadir atributos a un bloque para especificaciones</pp11>
+    <pp12>Atributos se añadirán al bloque cuando este complemento lo inserte.</pp12>
+    <pp13>Todos atributos serán invisibles. Es posible cambiar su valor en propiedades del bloque después de inserción.</pp13>
+    <pp14>Puede completar valores predeterminados.</pp14>
+    <pp15>Atributos de bloque existentes</pp15>
+    <pp16>Especificar valores predeterminados para atributos. Estos valores se añadirán al bloque cuando lo inserte.</pp16>
+    <pp17>De forma predeterminada, valores de atributo que se especificaron como "valor predeterminado" al crear atributo. Puede completar valores de atributos con valores del bloque seleccionado actualmente.</pp17>
+    <pp18>Archivo .dwg de dibujo</pp18>
+    <pp19>¡Para añadirlo a base de datos, archivo debe guardarse en AutoCAD 2013!</pp19>
+    <pp20>Si ya ha ubicado archivo en subcarpeta de carpeta ModPlus/Data/DwgBase, entonces puede "Seleccionar".</pp20>
+    <pp21>Si archivo de dibujo no se encuentra en subcarpeta de carpeta ModPlus/Data/DwgBase, entonces puede "Copiar" allí.</pp21>
+    <pp22>Si está añadiendo dibujo actualmente abierto que ya está ubicado en subcarpeta de carpeta ModPlus/Data/DwgBase, marca casilla "Archivo actual".</pp22>
+    <pp23>nombre del dibujo que se muestra en ventana de complemento</pp23>
+    <pp24>Breve descripción del dibujo</pp24>
+    <pp25>Quién ha añadido dibujo a base de datos dwg</pp25>
+    <pp26>Si no eres autor del dibujo, indica origen de donde fue tomado este dibujo, para no ofender a su creador</pp26>
+    <pp27>Ruta condicional a un dibujo en un directorio, formando una estructura de árbol</pp27>
+    <u1>UTILIDADES PARA BASE DE DATOS DWG DEL USUARIO</u1>
+    <u2>Estadística</u2>
+    <u3>Cambiar "Ruta" para varios elementos</u3>
+    <u4>Cambiar "Origen" y "Añadido"</u4>
+    <u5>Archivos no utilizados</u5>
+    <u6>Elementos sin un archivo de origen</u6>
+    <u7>Reunir estadísticas</u7>
+    <u8>Seleccione varios elementos de lista (marcando casillas) para los cuales desea cambiar "Ruta" en base de datos. Especificar nuevo valor para "Rutas" y haga clic en "Aplicar"</u8>
+    <u9>Ctrl+A – seleccionar todo</u9>
+    <u10>Especificar grupo principal</u10>
+    <u11>Bloques</u11>
+    <u12>Dibujos</u12>
+    <u13>Nueva "Ruta" para elementos de base de datos especificados:</u13>
+    <u14>Seleccione varios elementos de lista (marcando casillas) para los cuales desea cambiar "Origen" y "Añadido" en base de datos. Especificar nuevo valor para "Origen" y "Añadir" y haga clic en "Aplicar" (deje campo vacío si no desea cambiar valor)</u14>
+    <u15>Archivos no utilizados son archivos ubicados en directorio</u15>
+    <u16>, a los que no hace referencia ningún elemento de bases de datos (base de datos del complemento y base de datos del usuario)</u16>
+    <u17>Buscar archivos no utilizados</u17>
+    <u18>Eliminar archivos seleccionados no utilizados</u18>
+    <u19>Imágenes de estos archivos y archivos .bak también se eliminarán</u19>
+    <u20>Elementos sin archivo de origen son elementos en base del usuario que hacen referencia a archivo de origen inexistente</u20>
+    <u21>Buscar elementos sin un archivo de origen</u21>
+    <u22>Archivo de origen específico:</u22>
+    <u23>Eliminar elementos seleccionados</u23>
+    <u24>Procesar elementos de base de datos:</u24>
+    <u25>¡Imposible especificar sólo grupo principal!</u25>
+    <u26>¡No hay nada seleccionado!</u26>
+    <u27>¡Atención! ¡Cambios realizados no se pueden deshacer!\n¿Continuar?</u27>
+    <u28>Procesando elementos de base de datos completado</u28>
+    <u29>Base del usuario contiene</u29>
+    <u30>elementos</u30>
+    <u31>De estos:</u31>
+    <u32>Bloques:</u32>
+    <u33>Dibujos:</u33>
+    <u34>Entre</u34>
+    <u35>bloque(s) disponibles:</u35>
+    <u36>Bloques dinámicos:</u36>
+    <u37>Bloques anotativos:</u37>
+    <u38>Bloques 3D:</u38>
+    <u39>Bloques que tienen atributos para especificación:</u39>
+    <u40>Base del usuario está completa</u40>
+    <u41>por autor(es):</u41>
+    <u42>Archivos .dwg existentes utilizados por base de datos:</u42>
+    <u43>Encontrado entre enlaces a archivos .dwg</u43>
+    <u44>enlaces inválidos. Es decir, ¡no hay archivo de origen!</u44>
+    <u45>¡No se han encontrado archivos no utilizados!</u45>
+    <u46>¡Archivos seleccionados se eliminarán permanentemente!\n¿Continuar?</u46>
+    <u47>Archivos eliminados</u47>
+    <u48>No es posible eliminar archivos:</u48>
+    <u49>No hay acceso a archivos. Quizás estén abiertos</u49>
+    <u50>¡No se han encontrado elementos coincidentes!</u50>
+    <u51>¡Elementos seleccionados se eliminarán permanentemente!\n¿Continuar?</u51>
+    <u52>Elementos eliminados:</u52>
+    <u53>Especificar al menos un valor ("Origen" o "Añadido") para reemplazar</u53>
+    <u54>Cambiar nombre archivo de origen</u54>
+    <u55>Seleccione en la lista uno de los archivos de base de datos, especifique un nuevo nombre del archivo sin extensión y haga clic en "Aplicar"</u55>
+    <u56>Nuevo nombre del archivo sin extensión</u56>
+    <!--todo remove after 2.1.2.0-->
+    <u57>Renombrar</u57>
+    <u58>No se especifica un nuevo nombre del archivo</u58>
+    <u59>Nombre del archivo no debe contener siguientes símbolos:</u59>
+    <u60>Sin acceso al archivo. Quizás esté abierto</u60>
+    <u61>Archivo ya existe:</u61>
+  </mncDwgBase>
+</ModPlus>

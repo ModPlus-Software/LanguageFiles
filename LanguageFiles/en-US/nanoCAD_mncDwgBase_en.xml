@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mncDwgBase
+    LocalName="Dwg base"
+    Description="Base of various blocks and drawings"
+    FullDescription="The dwg database allows you to insert both blocks and finished drawings (for example, details view). The dwg database is filled with users. Plugin requires access to the internet">
+    <h1>Sending user blocks and drawings to the modplus.org server</h1>
+    <h2>Search by database</h2>
+    <!--todo remove after 2.1.2.0-->
+    <h3>Search</h3>
+    <h4>Search by database from 3 characters...</h4>
+    <h5>Path:</h5>
+    <h6>Description:</h6>
+    <h7>Author:</h7>
+    <h8>Source:</h8>
+    <h9>Dwg base</h9>
+    <h10>Add a new item to the local database</h10>
+    <h11>Auxiliary methods for managing the user base</h11>
+    <h12>Delete</h12>
+    <h13>Rename Group</h13>
+    <h14>Edit</h14>
+    <h15>You can scale and pan the image with the mouse wheel</h15>
+    <h16>Reduce image</h16>
+    <h17>Enlarge image</h17>
+    <h18>This is a three-dimensional block</h18>
+    <h19>Layer:</h19>
+    <h20>Close the window after inserting</h20>
+    <h21>Rotation</h21>
+    <h22>Add block to base</h22>
+    <h23>Add drawing to base</h23>
+    <h24>Change block data</h24>
+    <h25>Change drawing data</h25>
+    <h26>Sending base to the server</h26>
+    <h27>Specify one or more files from your dwg database. Plugin will archive these files and create an index file for the items stored in these files</h27>
+    <h28>Files in the user base:</h28>
+    <h29>Elements that are stored in the file:</h29>
+    <h30>The path to the file:</h30>
+    <h31>Comment</h31>
+    <h32>You can leave a comment on the archive and we will pay attention to it</h32>
+    <h33>Collect archive</h33>
+    <h34>View archive</h34>
+    <h35>Delete archive</h35>
+    <h36>Send archive to server</h36>
+    <h37>Recommendations for adding blocks</h37>
+    <h38>Recommendations</h38>
+    <h39>Select a block in the current drawing</h39>
+    <h40>Upload last entered data</h40>
+    <h41>Dwg-file:</h41>
+    <h42>Current file</h42>
+    <h43>Dwg-file into which the block will be copied</h43>
+    <h44>This is a 3D block</h44>
+    <h45>Check if the specified block is three-dimensional</h45>
+    <h46>Name:</h46>
+    <h47>The name of the block that is displayed in the plugin window</h47>
+    <h48>Brief description of the block</h48>
+    <h49>Normative document:</h49>
+    <h50>Normative document – source</h50>
+    <h51>If there is no normative document, just leave the field blank</h51>
+    <h52>Added by:</h52>
+    <h53>Who added the block to the dwg database</h53>
+    <h54>Add attributes for specifications</h54>
+    <h55>Attribute name</h55>
+    <h56>Default value</h56>
+    <h57>Block attributes:</h57>
+    <h58>Take attribute values from the block</h58>
+    <h59>Name</h59>
+    <h60>Prompt</h60>
+    <!--todo remove after 2.1.2.0-->
+    <h61>Value</h61>
+    <h62>Recommendations for adding drawing</h62>
+    <!--todo remove after 2.1.2.0-->
+    <h63>Rename group</h63>
+    <h64>Current group name:</h64>
+    <h65>New group name:</h65>
+    <!--todo remove after 2.1.2.0-->
+    <h66>Add</h66>
+    <h67>What do you want to add?</h67>
+    <h68>Add block</h68>
+    <h69>Add drawing</h69>
+    <!--todo remove after 2.1.2.0-->
+    <h70>Property</h70>
+    <h71>Value</h71>
+    <h72>Video instruction for working with the database</h72>
+    <h73>Feedback</h73>
+    <h74>Please leave an email address, a link to a VK page, Facebook, Telegram or other options for contacting you. Your contacts may be needed to inform you if the blocks (drawings) you send need to be adjusted</h74>
+    <h75>You did not specify contacts for feedback. If the blocks (drawings) you send need adjustment, then we will not be able to inform you about it!\nCollect archive anyway?</h75>
+    <h76>Alphabetical Sort</h76>
+    <h77>The path to the folder where the dwg user base is located</h77>
+    <h78>Specify the path to the dwg user base storage folder</h78>
+    <h79>Restore default value of path to dwg user base storage folder</h79>
+    <h80>List view</h80>
+    <h81>Generating preview images...</h81>
+    <h82>Open folder</h82>
+    <h83>Refresh the preview image</h83>
+    <bt1>ModPlus base</bt1>
+    <bt2>User base</bt2>
+    <insert>Insert</insert>
+    <insertBlock>Insert as block</insertBlock>
+    <msg1>ModPlus database file pointer is not found!\nClose AutoCAD and run the update check by the auto-update module</msg1>
+    <msg2>Current layer</msg2>
+    <msg3>The user database file pointer was not created. Create?</msg3>
+    <msg4>The source file is missing! Download?</msg4>
+    <msg5>Downloading the database file</msg5>
+    <msg6>There is no access to the internet or modplus.org!\nPlease try again later</msg6>
+    <msg7>The group will be deleted</msg7>
+    <msg8>and all subgroups</msg8>
+    <msg9>However, dwg-files will not be deleted</msg9>
+    <msg10>Delete group</msg10>
+    <msg11>The selected item will be removed from the database</msg11>
+    <msg12>Delete item</msg12>
+    <msg13>Insertion point</msg13>
+    <msg14>Angle of rotation</msg14>
+    <msg15>You have not selected any files to archive!</msg15>
+    <msg16>Create temporary folder</msg16>
+    <msg17>Collection of required items from the database</msg17>
+    <msg18>Could not create index file</msg18>
+    <msg19>The file is ready to be sent</msg19>
+    <msg20>Could not delete temporary folder</msg20>
+    <msg21>Perhaps you have an archive opened</msg21>
+    <msg22>Could not find the file to send. Perhaps you deleted it?</msg22>
+    <msg23>There is no access to the internet or modplus.org!</msg23>
+    <msg24>Sending</msg24>
+    <msg25>Uploading a file to the server</msg25>
+    <msg26>Notification submission</msg26>
+    <!--todo remove after 2.1.2.0-->
+    <msg27>File</msg27>
+    <msg28>was sent to the modplus.org server</msg28>
+    <msg29>Once the file is verified, we will add its contents to the public database</msg29>
+    <msg30>Delete the created archive?</msg30>
+    <msg31>Could not delete archive! Maybe it's open at the moment</msg31>
+    <msg32>Add a block with such data?</msg32>
+    <msg33>Could not copy the selected block to the specified file</msg33>
+    <msg34>Select block to add to database</msg34>
+    <msg35>The plugin dwg database contains a block named</msg35>
+    <msg36>Error parsing the file-pointer of plugin database!</msg36>
+    <msg37>The dwg user database contains a block named</msg37>
+    <msg38>Error parsing the file-pointer of user database!</msg38>
+    <msg39>Specify the display name of the block</msg39>
+    <msg40>Specify the path in the catalog</msg40>
+    <msg41>Check the "Current file" for dwg-file, however, the current file is not located in the directory dwg-base!</msg41>
+    <msg42>Catalog of dwg-base</msg42>
+    <msg43>Catalog of current file</msg43>
+    <msg44>Perhaps the current file has not been saved yet!</msg44>
+    <msg45>Check the "Current file" for dwg-file, however, it failed to recognize the current location of the file directory</msg45>
+    <msg46>Specify the dwg file to copy the block</msg46>
+    <msg47>Selecting a file to add a block</msg47>
+    <msg49>The specified file must be located in a subfolder of the folder</msg49>
+    <msg50>Create a new dwg database file</msg50>
+    <msg51>Do not create a file in the root of the</msg51>
+    <msg52>Create a subfolder!</msg52>
+    <msg53>Attention! The selected block is dynamic! The attributes for the specification are counted for one instance of the block!\nIf the block has several visibility options, then working with such a block will be confusing!</msg53>
+    <msg54>The current values of the attributes are filled with the default values specified when the block was created\nIf you continue, the values of the attributes will be filled with values from the selected block insert!\nGet the values of the attributes from the selected block insert?</msg54>
+    <msg55>The current file is not located in the dwg-database directory!</msg55>
+    <msg56>Unable to recognize the location directory of the current file</msg56>
+    <msg58>Save the entered data as "Last entered data"?</msg58>
+    <msg59>Selecting a drawing to add to the database</msg59>
+    <msg60>The selected file contains proxy objects and can not be added to the database!\nDelete all proxy objects and try again</msg60>
+    <msg61>Specify the folder to copy the selected file</msg61>
+    <msg62>In the specified folder there is already a file</msg62>
+    <msg63>Replace?</msg63>
+    <msg64>Do not select a folder</msg64>
+    <msg65>The selected folder should be in the subfolder of the folder</msg65>
+    <msg66>Add a drawing with such data?</msg66>
+    <msg67>The plugin database contains a drawing with the name</msg67>
+    <msg68>The user database contains a drawing with the name</msg68>
+    <msg69>Specify a display name for the drawing</msg69>
+    <msg70>Specify the dwg file for the drawing</msg70>
+    <msg71>Enter new group name</msg71>
+    <msg72>Block "{0}" not found in file "{1}"</msg72>
+    <wrong>Wrong choice!</wrong>
+    <!--todo remove after 2.1.2.0-->
+    <p1>Document</p1>
+    <!--todo remove after 2.1.2.0-->
+    <p2>Description</p2>
+    <p3>Object type</p3>
+    <p4>Annotative</p4>
+    <p5>Dynamic</p5>
+    <p6>3D block</p6>
+    <p7>Attributes for specification</p7>
+    <p8>Added by</p8>
+    <p9>Source</p9>
+    <!--todo remove after 2.1.2.0-->
+    <p10>Path</p10>
+    <yes>Yes</yes>
+    <no>No</no>
+    <block>Block</block>
+    <drawing>Drawing</drawing>
+    <close>Close</close>
+    <select>Select</select>
+    <create>Create</create>
+    <accept>Accept</accept>
+    <cancel>Cancel</cancel>
+    <copy>Copy</copy>
+    <ad1>Product position</ad1>
+    <ad2>Designation for the product</ad2>
+    <ad3>Product name</ad3>
+    <ad4>Product mass</ad4>
+    <ad5>Note for the product</ad5>
+    <a1>Position</a1>
+    <a2>Designation</a2>
+    <a3>Name</a3>
+    <a4>Mass</a4>
+    <a5>Note</a5>
+    <r1>The default plugin assumes that the blocks added to the local (user) database will be added to the global database that is available to all users.</r1>
+    <r2>Therefore, try to follow the recommendations:</r2>
+    <r3>The added block should be useful in the work. No matter what professional orientation it will be</r3>
+    <r4>Do not use a wide variety of layers in the blocks, if this is not necessary. The best option is to use the standard layers of the ModPlus plugin</r4>
+    <r5>If the block is dynamic, then perhaps it is not necessary to add attributes for the specification</r5>
+    <r6>Let the blocks understandable names and descriptions, so that the user does not have to guess what it is and why</r6>
+    <r7>If you took a block from some resource, then be sure to specify the source!</r7>
+    <r8>Do not be lazy to think over the path to the block in the database</r8>
+    <r10>The default plugin assumes that the drawings added to the local (user) database will be added to the global database, which is accessible to all users.</r10>
+    <r11>Therefore, some restrictions are added to the attached drawings:</r11>
+    <r13>In the attached drawing, Proxy primitives should not be used</r13>
+    <r14>Drawings made in poor quality (for example, with multileaders from lines and text, etc.) will not be taken to the public database</r14>
+    <r15>Also try to follow the recommendations:</r15>
+    <r16>Do not use a wide variety of layers in the drawings, if this is not necessary. The best option is to use the standard layers of the ModPlus plugin</r16>
+    <r17>Do not use a large number of annotation styles in your drawings. The best option is to use the annotations styles of the ModPlus plugin</r17>
+    <r18>Do not use line types in drawings that are not standard for AutoCAD</r18>
+    <r19>Do not use fonts that are not part of the standard AutoCAD font set in drawings</r19>
+    <r20>If you took a drawing from some resource, then be sure to specify the source!</r20>
+    <r21>Do not be lazy to think over the way to the drawing in the database</r21>
+    <pp1>It is assumed that you have selected a block in a file that is not yet located in the ModPlus/Data/DwgBase directory. Therefore, you must either specify a file previously created in the ModPlus/Data/DwgBase directory to place blocks in it, or create this file. The selected block will be copied to the specified file.</pp1>
+    <pp2>If you add several blocks with a common orientation (for example, blocks of floor slabs), then create one file for them. You do not need to create a separate file for each block!</pp2>
+    <pp3>Files in the root of the ModPlus/Data/DwgBase folder can not be created! Create subfolders in it (for example, ModPlus/Data/DwgBase/Floor slabs).</pp3>
+    <pp4>If you created a file with blocks, put it in the folder DwgBase and now add blocks from the file to the database, check the "Current file" check box.</pp4>
+    <pp5>The field is filled in according to your wish</pp5>
+    <pp6>P.S. We are very happy for you, if you have an original and beautiful Nick, but try all the same to write Surname and First Name</pp6>
+    <pp7>If you are not the author of the block, then indicate the source from where this block was taken, so as not to offend its creator</pp7>
+    <pp8>The conditional path to the block in the directory that forms the structure of the tree</pp8>
+    <pp9>For example, the path "Блоки/Каталог1/Каталог2/Каталог3" will yield the following result:</pp9>
+    <pp10>Each conditional sub directory must be separated by a "/"</pp10>
+    <pp11>Adding attributes for the specifications to the block </pp11>
+    <pp12>Attributes will be added to the block when it is inserted by this plugin.</pp12>
+    <pp13>All attributes will be invisible. You can change their value in the block properties after inserting.</pp13>
+    <pp14>You can fill in the default values.</pp14>
+    <pp15>Existing block attributes</pp15>
+    <pp16>Specify the default values for the attributes. These values will be added to the block when it is inserted.</pp16>
+    <pp17>By default, the values of the attributes that were set as the "default value" when the attribute is created are populated. You can fill the attribute values with the values of the currently selected block.</pp17>
+    <pp18>Dwg-file of the drawing</pp18>
+    <pp19>To add to the database, the file must be saved in AutoCAD 2013 version!</pp19>
+    <pp20>If you have already located the file in the subfolder of the ModPlus/Data/DwgBase folder, then you can "Select" it.</pp20>
+    <pp21>If the drawing file is not located in the subfolder of the ModPlus/Data/DwgBase folder, then you can "Copy" it to it.</pp21>
+    <pp22>If you are adding an open drawing currently located in the subfolder of the ModPlus/Data/DwgBase folder, check the "Current file" check box.</pp22>
+    <pp23>The name of the drawing that is displayed in the plugin window</pp23>
+    <pp24>Brief Description of the Drawing</pp24>
+    <pp25>Who added the drawing to the dwg database</pp25>
+    <pp26>If you are not the author of the drawing, then indicate the source from where this drawing was taken, so as not to offend its creator</pp26>
+    <pp27>The conditional path to the drawing in the directory that forms the structure of the tree</pp27>
+    <u1>UTILITIES OF THE DWG USER BASE</u1>
+    <u2>Statistics</u2>
+    <u3>Edit "Path" for multiple elements</u3>
+    <u4>Edit "Source" and "Added by"</u4>
+    <u5>Unused files</u5>
+    <u6>Elements without source file</u6>
+    <u7>Collect statistics</u7>
+    <u8>Select several elements in the list (check the boxes) for which you want to change the "Path" in the database. Specify a new value for "Path" and click "Apply"</u8>
+    <u9>Ctrl+A – select all</u9>
+    <u10>Enter the main group</u10>
+    <u11>Blocks</u11>
+    <u12>Drawings</u12>
+    <u13>New "Path" for the specified elements of the database:</u13>
+    <u14>Select several elements in the list (check the boxes) for which you want to change "Source" and "Added by". Specify a new value for "Source" and "Added by" and click "Apply" (Leave the field blank if you do not want to change the value)</u14>
+    <u15>Unused files are files located in the directory</u15>
+    <u16>that are not referenced by any element in databases (plug-in base and user database)</u16>
+    <u17>Find unused files</u17>
+    <u18>Delete selected unused files</u18>
+    <u19>Also, images for these files and .bak files will be deleted</u19>
+    <u20>Elements without a source file are elements in the user database that reference a non-existent source file</u20>
+    <u21>Find elements without source file</u21>
+    <u22>Specified source file:</u22>
+    <u23>Delete selected elements</u23>
+    <u24>Processing of base elements:</u24>
+    <u25>You can not specify only the main group!</u25>
+    <u26>You did not choose anything!</u26>
+    <u27>Attention! The changes you made can not be undone!\nContinue?</u27>
+    <u28>Processing of database elements completed</u28>
+    <u29>The user database contains</u29>
+    <u30>elements</u30>
+    <u31>Of them:</u31>
+    <u32>Blocks:</u32>
+    <u33>Drawings:</u33>
+    <u34>Among</u34>
+    <u35>blocks there are:</u35>
+    <u36>Dynamic blocks:</u36>
+    <u37>Annotative blocks:</u37>
+    <u38>Three-dimensional blocks:</u38>
+    <u39>Blocks that have attributes for the specification:</u39>
+    <u40>User database is filled with</u40>
+    <u41>authors:</u41>
+    <u42>Existing dwg files used by the database:</u42>
+    <u43>Among references to dwg-files</u43>
+    <u44>invalid references were found. Those. source files are missing!</u44>
+    <u45>Unused files not found!</u45>
+    <u46>The selected files will be permanently deleted!\nContinue?</u46>
+    <u47>Deleted files</u47>
+    <u48>Failed to delete files:</u48>
+    <u49>Files can not be accessed. Perhaps they are open</u49>
+    <u50>No matching items were found!</u50>
+    <u51>The selected items will be deleted irrevocably!\nContinue?</u51>
+    <u52>Items deleted:</u52>
+    <u53>Specify at least one value ("Source" or "Added by") to replace</u53>
+    <u54>Rename source file</u54>
+    <u55>Select one of the database files in the list, specify a new file name without an extension, and click "Apply"</u55>
+    <u56>New file name without extension</u56>
+    <!--todo remove after 2.1.2.0-->
+    <u57>Rename</u57>
+    <u58>You did not specify a new file name</u58>
+    <u59>The file name can not contain the following characters:</u59>
+    <u60>Can not access the file. Maybe it's open</u60>
+    <u61>Already exists a file:</u61>
+  </mncDwgBase>
+</ModPlus>
