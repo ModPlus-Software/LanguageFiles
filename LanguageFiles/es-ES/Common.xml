@@ -1325,17 +1325,17 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <msg21>Especificar posición del nuevo vértice</msg21>
     <msg22>Especificar vértice a eliminar</msg22>
     <msg23>¡No es posible acceder al editor de AutoCAD! Se está ejecutando otro comando.\nFinalice comando y vuelva a intentarlo</msg23>
-    <msg24>¡Atención! Cambio de idioma en paleta, en ficha de cinta para SUDD y menús contextuales de complementos sólo se realizará después de reiniciar AutoCAD</msg24>
+    <msg24>¡Atención! El idioma de la paleta, de la ficha Smart en la cinta de opciones y de los menús contextuales de los plugins cambiará solo después de reiniciar AutoCAD</msg24>
     <msg25>Segundo punto:</msg25>
     <p1>¡ATENCIÓN!</p1>
     <p2>¡Se intentó descargar un complemento en una versión inapropiada de AutoCAD!</p2>
     <p3>Descarga está completa</p3>
-    <p4>Descargando complemento ModPlus...</p4>
+    <p4>Cargando ModPlus...</p4>
     <p5>Descargando bibliotecas de trabajo...</p5>
     <p6>Descargando bases de datos...</p6>
     <p7>Inicializar archivo de configuración:</p7>
     <p8>Descargando complemento...</p8>
-    <p9>Descarga del complemento ModPlus está completa. Tiempo empleado (ms):</p9>
+    <p9>Carga de ModPlus completada. Tiempo empleado (ms):</p9>
     <p10>¡Divertirse!</p10>
     <p11>Descargando biblioteca:</p11>
     <p12>Descargando archivo de base de datos:</p12>
@@ -1345,21 +1345,17 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
   </AutocadDlls>
   <nanocadDlls
     LocalName="Bibliotecas de trabajo AutoCAD">
-    <close>Cerrar</close>
     <bb>PorBloque</bb>
     <bl>PorCapa</bl>
     <mm>mm</mm>
     <def>Por defecto</def>
-    <h1>AJUSTES MODPLUS</h1>
     <h2>General</h2>
     <h5>Idioma:</h5>
     <h6>Tema:</h6>
-    <h12>Ajustes</h12>
     <h13>General</h13>
     <h14>Menú contextual</h14>
     <h15>Arranque silencioso</h15>
     <h16>ADAPTACIÓN</h16>
-    <h17>Cinta</h17>
     <h18>Paleta</h18>
     <h19>Complementos</h19>
     <h20>Dibujos</h20>
@@ -1372,7 +1368,6 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <h27>SELECCIÓN DE BLOQUE</h27>
     <h28>Nombre del bloque mostrado</h28>
     <h29>BLOQUES DE USO FRECUENTE</h29>
-    <h30>Archivo:</h30>
     <h31>Nombre del bloque:</h31>
     <h32>¡ATENCIÓN! ¡No utilice bloques con atributos!</h32>
     <h33>Número máximo permitido de bloques: 10</h33>
@@ -1397,7 +1392,6 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <h53>[mpAddVertexToWipeout] para agregar y [mpRemoveVertexFromWipeout] para eliminar vértices de la cobertura</h53>
     <h54>MP: Añadir vértice</h54>
     <h55>MP: Eliminar vértice</h55>
-    <h56>Área personal</h56>
     <h57>Ayuda</h57>
     <h58>Establecer capa de entrada [mpNestedEntLayer]</h58>
     <h59>MP: Establecer capa de adjuntos</h59>
@@ -1407,14 +1401,7 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <h63>Llamar al complemento "Firmas"</h63>
     <cb1>Icono</cb1>
     <cb2>Nombre</cb2>
-    <!--todo remove after 1.0.0-->
-    <tt2>Por favor ingrese su dirección de correo electrónico para trabajar con servidor modplus.org. Dirección de correo electrónico es necesaria para identificarte en servidor. Se recomienda utilizar la dirección de correo electrónico especificada al registrarse en sitio web modplus.org</tt2>
-    <!--todo remove after 1.0.0-->
-    <tt3>¡Es necesario ingresar su login en ficha "Registro"! (Configurador ModPlus)</tt3>
-    <!--todo remove after 1.0.0-->
-    <tt4>¡Dirección de correo especificada no pasó verificación!\nO ingresaste dirección de correo electrónico incorrectamente o tienes un proveedor de alojamiento de correo electrónico único =)</tt4>
     <tt5>Descargando un complemento en AutoCAD con detalles mínimos en línea de comando</tt5>
-    <tt6>Activar/desactivar cinta</tt6>
     <tt7>Activar/desactivar paleta</tt7>
     <tt8>Activar/desactivar pestaña "Complementos" en paleta</tt8>
     <tt9>Activar/desactivar pestaña "Dibujos" en paleta</tt9>
@@ -1425,8 +1412,6 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <tt14>Activar/desactivar menú contextual del minicomplemento "Bloques de uso frecuente"</tt14>
     <tt15>Ajustar una lista de bloques de uso frecuente</tt15>
     <tt16>Activar/desactivar menú contextual para minicomplemento "Bordes de ventana gráfica en espacio del modelo"</tt16>
-    <!--todo remove after 1.0.0-->
-    <tt17>Para cambiar idioma en paleta es necesario reiniciar AutoCAD</tt17>
     <tt18>Activar/desactivar el menú contextual para coberturas que permite agregar o eliminar vértices</tt18>
     <tt19>Activar/desactivar menú contextual para minicomplemento "Establecer capa de adjuntos"</tt19>
     <err1>¡Este nombre ya está en uso! Inventa algo más</err1>
@@ -1435,8 +1420,6 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <err4>¡Archivo de configuración no se ha encontrado!</err4>
     <err5>¿Estás seguro de que desea eliminar este bloque de lista?</err5>
     <err6>Especificar archivo</err6>
-    <!--todo remove after 1.0.0-->
-    <err7>¡Archivo de configuración está dañado! No es posible crear menú</err7>
     <msg1>Seleccionar segmentos, polilíneas, círculos, arcos, elipses o splines:</msg1>
     <msg2>Seleccionar bloques:</msg2>
     <msg3>Seleccionar ventana gráfica:</msg3>
@@ -1459,19 +1442,19 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <msg20>Seleccione la cobertura</msg20>
     <msg21>Especificar posición del nuevo vértice</msg21>
     <msg22>Especificar vértice a eliminar</msg22>
-    <msg23>¡No es posible acceder al editor de AutoCAD! Se está ejecutando otro comando.\nFinalice comando y vuelva a intentarlo</msg23>
-    <msg24>¡Atención! Cambio de idioma en paleta, en ficha de cinta para SUDD y menús contextuales de complementos sólo se realizará después de reiniciar AutoCAD</msg24>
+    <msg23>¡No es posible acceder al editor de nanoCAD! Se está ejecutando otro comando.\nFinalice comando y vuelva a intentarlo</msg23>
+    <msg24>¡Atención! El idioma de la adaptación y de los menús contextuales cambiará solo después de reiniciar nanoCAD</msg24>
     <msg25>Segundo punto:</msg25>
     <msg26>La adaptación de ModPlus ha sido modificada. Reinicie nanoCAD para su correcta visualización</msg26>
     <p1>¡ATENCIÓN!</p1>
-    <p2>¡Se intentó descargar un complemento en una versión inapropiada de AutoCAD!</p2>
+    <p2>¡Se intentó descargar un complemento en una versión inapropiada de nanoCAD!</p2>
     <p3>Descarga está completa</p3>
-    <p4>Descargando complemento ModPlus...</p4>
+    <p4>Cargando ModPlus...</p4>
     <p5>Descargando bibliotecas de trabajo...</p5>
     <p6>Descargando bases de datos...</p6>
     <p7>Inicializar archivo de configuración:</p7>
     <p8>Descargando complemento...</p8>
-    <p9>Descarga del complemento ModPlus está completa. Tiempo empleado (ms):</p9>
+    <p9>Carga de ModPlus completada. Tiempo empleado (ms):</p9>
     <p10>¡Divertirse!</p10>
     <p11>Descargando biblioteca:</p11>
     <p12>Descargando archivo de base de datos:</p12>
