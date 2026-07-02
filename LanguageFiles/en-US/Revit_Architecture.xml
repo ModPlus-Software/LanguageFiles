@@ -337,6 +337,7 @@
     <msg4>The parameters specified in the list are not available for the rooms of the current project:</msg4>
     <msg5>Room name is not filled in</msg5>
     <msg6>Room name not found in the matrix</msg6>
+    <!--todo remove after 4.1.11.0-->
     <msg7>There are rooms with blank or incorrect parameters in the results of the initial check. Are you sure you want to perform an apartment collection?</msg7>
     <msg8>There is a door that leads to a space without a room</msg8>
     <msg9>The room is enclosed by structures with no doors</msg9>
@@ -385,6 +386,7 @@
     <msg49>No matching room found (no vertical intersection) on typical floor "{0}"</msg49>
     <msg50>The following rooms and the selected apartment are located on different levels</msg50>
     <msg51>Still add these rooms to the apartment?</msg51>
+    <!--todo remove after 4.1.10.0-->
     <msg52>For the following apartments (id), no pairing options were found among the marked ones (apartments with the same functional purpose, located on neighboring levels and having a vertical intersection)</msg52>
     <msg53>Among the selected apartments there are apartments with a functional purpose that does not correspond to the current apartment ID specified in the settings. Are you sure you want to calculate these apartments with the current settings?</msg53>
     <msg54>Apartment ID={0} deleted: apartment room parameters cleared (string parameters) or reset to zero (numeric parameters)</msg54>
@@ -401,6 +403,9 @@
     <msg65>Parameter "{0}" was not found</msg65>
     <msg66>Parameter "{0}" has an unsupported data type (string and numeric parameters are supported)</msg66>
     <msg67>Failed to set the value to parameter "{0}". The parameter may be read-only or located in an unavailable workset</msg67>
+    <msg68>The specified apartments are on different levels! Are you sure you want to merge them into one apartment?</msg68>
+    <msg69>For the following apartments (id), no matching options were found among the selected (apartments with the same functional purpose that have vertical intersection)</msg69>
+    <msg70>The initial check results contain invalid rooms (rooms with empty or incorrect parameters, unplaced rooms)! Are you sure you want to continue?</msg70>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -789,5 +794,6 @@
     <msg30>The target parameter "{0}" is read-only</msg30>
     <msg31>The command is not available in the current version of Revit because the API does not contain the required methods</msg31>
     <msg32>Failed to get floor elevation. Baseboard with type "{0}" will be created at the bottom elevation of the Room</msg32>
+    <msg33>Unable to update the finishing: the finishing was created in a previous version of the plugin. Recreate the finishing</msg33>
   </mprRoomFinishing>
 </ModPlus>

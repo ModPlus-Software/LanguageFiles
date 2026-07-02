@@ -10,6 +10,7 @@
     <attribute>Atributo</attribute>
     <auto>Auto</auto>
     <apply>Aplicar</apply>
+    <arc>Arco</arc>
     <ascending>Por orden ascendente</ascending>
     <availFull>¡Disponible en versión completa del complemento!</availFull>
     <belarus>Bielorrusia</belarus>
@@ -65,7 +66,9 @@
     <dot>Punto</dot>
     <duplicate>Duplicar</duplicate>
     <element>Elemento</element>
+    <ellipse>Elipse</ellipse>
     <error>Error</error>
+    <errors>Errores</errors>
     <execute>Ejecutar</execute>
     <expand>Expandir</expand>
     <expandAll>Expandir todo</expandAll>
@@ -78,6 +81,7 @@
     <formula>Fórmula</formula>
     <g>g</g>
     <group>Grupo</group>
+    <hatch>Sombreado</hatch>
     <height>Altura</height>
     <hide>Ocultar</hide>
     <import>Importar</import>
@@ -117,6 +121,8 @@
     <or>O</or>
     <orderUp>Ordenar en orden ascendente</orderUp>
     <orderDown>Ordenar en orden descendente</orderDown>
+    <panelNotRegistered>¡El panel no está registrado! Reinicie Revit. ¡No inicie Revit abriendo archivos en el Explorador!</panelNotRegistered>
+    <panelNotRegistred>¡El panel no está registrado! Reinicie Revit. ¡No inicie Revit abriendo archivos en el Explorador!</panelNotRegistred>
     <parameter>Parámetro</parameter>
     <parameters>Parámetros</parameters>
     <path>Camino</path>
@@ -124,6 +130,9 @@
     <password>Contraseña</password>
     <pick>Seleccionar</pick>
     <pin>Adjuntar</pin>
+    <polyline>Polilínea</polyline>
+    <polyline2D>Polilínea 2D</polyline2D>
+    <polyline3D>Polilínea 3D</polyline3D>
     <prefix>Prefijo</prefix>
     <project>Proyecto</project>
     <property>Propiedad</property>
@@ -131,6 +140,7 @@
     <port>Puerto</port>
     <question>Pregunta</question>
     <radius>Radio</radius>
+    <region>Región</region>
     <refresh>Actualizar</refresh>
     <remoteGeneralVersion>Versión general disponible</remoteGeneralVersion>
     <remove>Eliminar</remove>
@@ -158,6 +168,7 @@
     <source>Fuente</source>
     <suffix>Sufijo</suffix>
     <sort>Clasificar</sort>
+    <spline>Spline</spline>
     <sum>Suma</sum>
     <styles>Estilos</styles>
     <table>Cuadro</table>
@@ -175,11 +186,13 @@
     <unselectAll>Deseleccionar todo</unselectAll>
     <value>Valor</value>
     <version>Versión</version>
+    <view>Vista</view>
     <warning>Advertencia</warning>
     <white>Blanco</white>
     <width>Anchura</width>
     <yes>Sí</yes>
     <example>Ejemplo</example>
+    <server>Servidor</server>
   </Common>
   <!-- todo remove after updater 46.5.0.0 and after remove Configurator -->
   <Core>
@@ -355,7 +368,9 @@
     <u48>Su cuenta del usuario ha sido bloqueada por administración de ModPlus. Si crees que bloqueo es erróneo, contacta con soporte</u48>
     <u49>Autorización a través del Navegador</u49>
     <u50>Obtener una suscripción gratuita para:</u50>
+    <!--todo remove after 40.0.4-->
     <u51>Una suscripción gratuita le da acceso a todos complementos pagos para producto seleccionado (AutoCAD o Revit) durante un mes.</u51>
+    <u51-1>Una suscripción gratuita le da acceso a todos complementos pagos para producto seleccionado durante un mes.</u51-1>
     <u52>Suscripción gratuita es única y está vinculada a su ordenador.</u52>
     <u53>Suscripción gratuita es independiente de cuenta del usuario.</u53>
     <u54>Si el botón para solicitar una suscripción gratuita no está disponible, entonces tu ordenador ya tiene una.</u54>
@@ -388,6 +403,10 @@
     <nnd7>Novedades sobre lanzamientos de nuevos complementos para Renga</nnd7>
     <nn8>Otras novedades</nn8>
     <nnd8>Otras novedades que no encajan en categorías existentes</nnd8>
+    <nn9>Actualizaciones para nanoCAD</nn9>
+    <nnd9>Noticias sobre actualizaciones importantes de los plugins existentes para nanoCAD</nnd9>
+    <nn10>Lanzamientos para nanoCAD</nn10>
+    <nnd10>Noticias sobre lanzamientos de nuevos plugins para nanoCAD</nnd10>
     <f1>Comentario</f1>
     <f2>Mensaje</f2>
     <f3>Escríbenos lo que quieras</f3>
@@ -1046,6 +1065,7 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <h120>¡El menú para {0} está vacío! Al cargar {1}, no se creará el menú!</h120>
     <h121>La comprobación de la conexión con el servidor de licencias local está disponible desde el Área personal o desde la ventana de configuración en el producto compatible</h121>
     <h122>Se han instalado nuevos complementos, pero la reconstrucción del menú está desactivada en la configuración. Use la sección "Menú" para añadir nuevos complementos al menú</h122>
+    <h123>El uso del complemento está restringido por la configuración de la organización</h123>
     <!--todo remove after 43.3.0.0-->
     <b3>Seleccionar todo</b3>
     <!--todo remove after 43.3.0.0-->
@@ -1720,6 +1740,11 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <err9>Error en orientación del contorno: curvas de contorno no son contiguas porque contorno original tiene interrupciones. Verifique si elementos del modelo que forman contorno a procesar están construidos correctamente y vuelva a intentarlo</err9>
     <err10>No es posible establecer forma "{0}" de barra de armadura creada. Error:</err10>
     <err11>El vínculo no se puede volver a cargar porque está cargado en otro documento abierto</err11>
+    <err12>No se encontró el componente "Cinta"</err12>
+    <err13>No se encontró la pestaña ModPlus. Compruebe que ModPlus está conectado a Revit en la sección "Conexiones" del módulo de actualización automática</err13>
+    <err14>El complemento solicitado no se encontró en la Cinta. Compruebe que el complemento está instalado y habilitado en la sección "Complementos" del módulo de actualización automática, y también compruebe que el complemento está añadido al menú en la sección "Menú" del módulo de actualización automática</err14>
+    <err15>No se pudo inicializar la representación gráfica del complemento solicitado</err15>
+    <err16>No se pudo obtener la capa de representaciones gráficas</err16>
     <c1>Colorear pestañas</c1>
     <c2>Combinación de colores:</c2>
     <c3>Área de coloración:</c3>
@@ -1813,6 +1838,7 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <s40>Todo o algunos de los ajustes están establecidos por los ajustes de su organización</s40>
     <s41>El documento "{0}" se añadió a la lista de documentos procesados por el temporizador de documentos</s41>
     <s42>El documento "{0}" ha sido eliminado de la lista de documentos procesados por el temporizador de documentos</s42>
+    <s43>El guardado automático del documento "{0}" se ha suspendido debido a errores de guardado repetidos. Guarde el documento manualmente — el guardado automático se reanudará tras un guardado exitoso</s43>
     <sd1>Proyectos</sd1>
     <sd2>Familias</sd2>
     <sd3>Proyectos y Familias</sd3>
@@ -1835,6 +1861,13 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <!--todo remove after 32.2.14-->
     <sl16>No es posible restaurar proyecto del archivo con estado en momento de apertura o en momento del último guardado manual</sl16>
     <sl17>Documento "{0}" no cumple con condiciones para su procesamiento por parte del servicio de guardado automático</sl17>
+    <sl18>El guardado automático del documento "{0}" se ha suspendido tras {1} intentos fallidos. Se reanudará después de guardar el documento manualmente</sl18>
+    <sl19>El documento "{0}" no es gestionado por el servicio de guardado automático ({1})</sl19>
+    <sl20>archivo vinculado</sl20>
+    <sl21>solo lectura</sl21>
+    <sl22>el tipo de documento no coincide con la configuración de guardado automático</sl22>
+    <sl23>El documento "{0}" está almacenado en la nube — no se realiza copia de seguridad local. El historial de versiones está disponible a través de Autodesk Docs (Manage Cloud Models)</sl23>
+    <sl24>documento sin nombre</sl24>
     <sel1>Elementos preseleccionados</sel1>
     <sel2>Elementos seleccionados</sel2>
     <sel3>En vista activa</sel3>

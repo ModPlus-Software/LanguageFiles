@@ -135,6 +135,14 @@
     <t130>Select linked files</t130>
     <t131>Specify the linked files in which the search for elements will be performed</t131>
     <t132>Selected linked files:</t132>
+    <t133>Write-back functions</t133>
+    <t134>Collapse block</t134>
+    <t135>Collapse all blocks</t135>
+    <t136>Expand all blocks</t136>
+    <t137>Insert parameter from project information</t137>
+    <t138>Insert global parameter</t138>
+    <t139>There are no global parameters in the current document</t139>
+    <t140>STRATEGY SETTINGS</t140>
     <msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
     <msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
     <msg3>List of strategies is not empty</msg3>
@@ -172,6 +180,7 @@
     <msg35>The specified file is in use! Close the file and try exporting again, or specify another file</msg35>
     <msg36>The value "{0}" of parameter "{1}" matches the calculated value of the expression</msg36>
     <msg37>The value "{0}" of parameter "{1}" does not match the calculated value "{2}" of the expression</msg37>
+    <msg38>Element processing skipped because the expression evaluation result is the keyword SKIP_ELEMENT</msg38>
     <err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
     <err2>The number of opening round brackets must equal the number of closing ones</err2>
     <err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -225,7 +234,7 @@
     <err52>Parameter "{0}" is not a reference to another model element</err52>
     <err53>The target parameter must not contain the character "|"</err53>
     <err54>An expression must not contain parentheses that are not function boundaries. To add parentheses to an expression, they must be escaped – "\)" and "\("</err54>
-    <err55>Function must contain a pointer to a parameter (@[] or $[]) as an argument</err55>
+    <err55>Function must contain a pointer to a parameter (@[], $[], #[] or %[]) as an argument</err55>
     <err56>The list contains fields with the same key!</err56>
     <err57>A workset named "{0}" was not found</err57>
     <err58>Function must not have any arguments</err58>
@@ -246,10 +255,16 @@
     <err73>Function must contain at least two arguments: a condition and a pointer to the result column</err73>
     <err74>The name of column {0} must be specified by a Latin letter or number</err74>
     <err75>The parameter "{0}" is a reference parameter but does not refer to a model element</err75>
+    <err76>Setting values to a global parameter is not supported</err76>
+    <err77>Setting values to the pseudo parameter ID is not supported</err77>
+    <err78>Global parameters do not have the "HasValue" property</err78>
+    <err79>Parameters of structural connection sub-elements do not have the "HasValue" property</err79>
+    <err80>The pseudo parameter ID does not have the "HasValue" property</err80>
+    <err81>The element has multiple parameters named "{0}". Remove the redundant parameter or use the parameter's key name (GUID for shared parameters, system name for built-in parameters)</err81>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
-    <rh4>Formula options</rh4>
+    <rh4>Options</rh4>
     <sm1>Process picked elements</sm1>
     <sm2>Process elements on current View</sm2>
     <sm3>Process elements in Document</sm3>
@@ -294,6 +309,8 @@
     <sld19>Strategy processes elements with the possibility to use any specified element of the model as a source element</sld19>
     <ssd20>Processing Parts</ssd20>
     <sld20>Strategy processes Parts taking into account the source elements from which the Parts are created. If a part is created from several source elements, the first element will be considered the source element</sld20>
+    <ssd21>Processing elements in assemblies</ssd21>
+    <sld21>The strategy processes elements located in assemblies</sld21>
     <se1>Host</se1>
     <sp1>Insert Host parameter</sp1>
     <se2>Group</se2>
@@ -322,6 +339,8 @@
     <sp13>Insert Curtain Wall parameter</sp13>
     <se14>Source element</se14>
     <sp14>Insert source element parameter</sp14>
+    <se15>Assembly</se15>
+    <sp15>Insert assembly parameter</sp15>
     <te1>Target element</te1>
     <tp1>Insert parameter of target element</tp1>
     <te2>Family instance</te2>
@@ -367,6 +386,7 @@
     <d-or>Returns TRUE if at least one condition &lt;c&gt; is true. Otherwise returns FALSE</d-or>
     <d-inrange>Returns TRUE if the number &lt;x&gt; is greater than or equal to &lt;min&gt; and less than or equal to &lt;max&gt;. Otherwise returns FALSE</d-inrange>
     <d-has>Returns TRUE if parameter &lt;p&gt; exists. Otherwise returns FALSE</d-has>
+    <d-hasvalue>Returns TRUE if a value has been assigned to the parameter &lt;p&gt; at least once. Otherwise returns FALSE</d-hasvalue>
     <d-firsttrue>Returns the first value of &lt;v&gt; whose &lt;c&gt; condition is true. If all conditions &lt;c&gt; are not true, returns last &lt;v&gt; value</d-firsttrue>
     <d-toupper>Returns value converted to uppercase</d-toupper>
     <d-tolower>Returns value converted to lowercase</d-tolower>
@@ -386,6 +406,8 @@
     <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-lstrindex>
     <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
     <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
-    <d-cvif>Looks for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
+    <d-cvif>Searches for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
+    <d-cvor>Searches for the first row in the strategy data source (Excel file) where at least one condition is met and returns the value from the specified column of that row</d-cvor>
+    <d-doctitle>Returns the title of the current document</d-doctitle>
   </mprParametrization>
 </ModPlus>

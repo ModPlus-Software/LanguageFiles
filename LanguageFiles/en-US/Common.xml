@@ -10,6 +10,7 @@
     <attribute>Attribute</attribute>
     <auto>Auto</auto>
     <apply>Apply</apply>
+    <arc>Arc</arc>
     <ascending>Ascending</ascending>
     <availFull>Available in the full version of the plugin!</availFull>
     <belarus>Belarus</belarus>
@@ -64,7 +65,9 @@
     <dot>Dot</dot>
     <duplicate>Duplicate</duplicate>
     <element>Element</element>
+    <ellipse>Ellipse</ellipse>
     <error>Error</error>
+    <errors>Errors</errors>
     <execute>Execute</execute>
     <expand>Expand</expand>
     <expandAll>Expand all</expandAll>
@@ -77,6 +80,7 @@
     <formula>Formula</formula>
     <g>g</g>
     <group>Group</group>
+    <hatch>Hatch</hatch>
     <height>Height</height>
     <hide>Hide</hide>
     <import>Import</import>
@@ -116,6 +120,8 @@
     <or>Or</or>
     <orderUp>Sorting in ascending order</orderUp>
     <orderDown>Sorting in descending order</orderDown>
+    <panelNotRegistered>Panel is not registered! Restart Revit. Do not launch Revit by opening files in Explorer!</panelNotRegistered>
+    <panelNotRegistred>Panel is not registered! Restart Revit. Do not launch Revit by opening files in Explorer!</panelNotRegistred>
     <parameter>Parameter</parameter>
     <parameters>Parameters</parameters>
     <path>Path</path>
@@ -123,6 +129,9 @@
     <password>Password</password>
     <pick>Pick</pick>
     <pin>Pin</pin>
+    <polyline>PolyLine</polyline>
+    <polyline2D>2D PolyLine</polyline2D>
+    <polyline3D>3D PolyLine</polyline3D>
     <prefix>Prefix</prefix>
     <project>Project</project>
     <property>Property</property>
@@ -130,6 +139,7 @@
     <port>Port</port>
     <question>Question</question>
     <radius>Radius</radius>
+    <region>Region</region>
     <refresh>Refresh</refresh>
     <remoteGeneralVersion>Available general version</remoteGeneralVersion>
     <remove>Remove</remove>
@@ -158,6 +168,7 @@
     <source>Source</source>
     <suffix>Suffix</suffix>
     <sort>Sort</sort>
+    <spline>Spline</spline>
     <sum>Sum</sum>
     <styles>Styles</styles>
     <table>Table</table>
@@ -175,11 +186,13 @@
     <unselectAll>Unselect all</unselectAll>
     <value>Value</value>
     <version>Version</version>
+    <view>View</view>
     <warning>Warning</warning>
     <white>White</white>
     <width>Width</width>
     <yes>Yes</yes>
     <example>Example</example>
+    <server>Server</server>
   </Common>
   <!-- todo remove after updater 46.5.0.0 and after remove Configurator -->
   <Core>
@@ -355,7 +368,9 @@
     <u48>Your account has been blocked by the ModPlus administration. If you think that the blocking is wrong, contact support</u48>
     <u49>Browser authorization</u49>
     <u50>Get a free subscription for:</u50>
+    <!--todo remove after 40.0.4-->
     <u51>Free subscription gives you access to all paid plugins for the selected product (AutoCAD or Revit) for one month.</u51>
+    <u51-1>Free subscription gives you access to all paid plugins for the selected product for one month.</u51-1>
     <u52>The free subscription is one-time and is attached to your computer.</u52>
     <u53>Free subscription does not depend on the user account.</u53>
     <u54>If the button to request a free subscription is not available, it means that this computer already has such a subscription on it.</u54>
@@ -388,6 +403,10 @@
     <nnd7>News about releases of new plugins for Renga</nnd7>
     <nn8>Other news</nn8>
     <nnd8>Other news that does not fit the existing categories</nnd8>
+    <nn9>Updates for nanoCAD</nn9>
+    <nnd9>News about major updates to existing nanoCAD plugins</nnd9>
+    <nn10>Releases for nanoCAD</nn10>
+    <nnd10>News about releases of new nanoCAD plugins</nnd10>
     <f1>Feedback</f1>
     <f2>Message</f2>
     <f3>Write us whatever you want</f3>
@@ -1046,6 +1065,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <h120>The menu for {0} is empty! When loading {1}, the menu will not be created!</h120>
     <h121>Checking the connection to the local license server is available from the Personal account or from the settings window in a supported product</h121>
     <h122>New plugins have been installed, but menu rebuilding is disabled in the settings. Use the "Menu" section to add new plugins to the menu</h122>
+    <h123>Plugin usage is restricted by organization settings</h123>
     <!--todo remove after 43.3.0.0-->
     <b3>Check all</b3>
     <!--todo remove after 43.3.0.0-->
@@ -1720,6 +1740,11 @@ Not all parameters may be present in the list of instance parameters, because in
     <err9>Contour orientation failed: The contour curves are not contiguous because the original contour has discontinuities. Check if the model elements that form the contour to be processed are built correctly and try again</err9>
     <err10>Failed to set the shape "{0}" to the created rebar. Error:</err10>
     <err11>The link cannot be reloaded because it is loaded into another open document</err11>
+    <err12>Ribbon component not found</err12>
+    <err13>ModPlus tab not found. Make sure ModPlus is connected to Revit in the "Connections" section of the auto-update module</err13>
+    <err14>The requested plugin was not found in the Ribbon. Make sure the plugin is installed and enabled in the "Plugins" section of the auto-update module, and also make sure the plugin is added to the menu in the "Menu" section of the auto-update module</err14>
+    <err15>Failed to initialize the graphical representation of the requested plugin</err15>
+    <err16>Failed to retrieve the graphical representations layer</err16>
     <c1>Coloring tabs</c1>
     <c2>Color scheme:</c2>
     <c3>Coloring zone:</c3>
@@ -1813,6 +1838,7 @@ Not all parameters may be present in the list of instance parameters, because in
     <s40>All or part of the settings are set by Organization Settings</s40>
     <s41>Document "{0}" added to the list of documents processed by timer</s41>
     <s42>Document "{0}" is removed from the list of documents processed by timer</s42>
+    <s43>Auto-save for document "{0}" has been suspended due to repeated save errors. Save the document manually — auto-save will resume after a successful save</s43>
     <sd1>Projects</sd1>
     <sd2>Families</sd2>
     <sd3>Projects and Families</sd3>
@@ -1835,6 +1861,13 @@ Not all parameters may be present in the list of instance parameters, because in
     <!--todo remove after 32.2.14-->
     <sl16>Failed to restore the project from a file with the state at the moment of opening or at the moment of the last manual saving</sl16>
     <sl17>Document "{0}" does not meet the conditions of autosave service processing</sl17>
+    <sl18>Auto-save for document "{0}" has been suspended after {1} failed attempts. It will resume after the document is saved manually</sl18>
+    <sl19>Document "{0}" is not handled by the auto-save service ({1})</sl19>
+    <sl20>linked file</sl20>
+    <sl21>read-only</sl21>
+    <sl22>document type does not match auto-save settings</sl22>
+    <sl23>Document "{0}" is stored in the cloud — local backup is not performed. Version history is available through Autodesk Docs (Manage Cloud Models)</sl23>
+    <sl24>unnamed document</sl24>
     <sel1>Pre-selected elements</sel1>
     <sel2>Selected elements</sel2>
     <sel3>On active view</sel3>

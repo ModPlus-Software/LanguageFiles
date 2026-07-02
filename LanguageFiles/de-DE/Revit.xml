@@ -205,6 +205,7 @@
     <vtf4>Grundrissansichten, Tragwerksplanansichten, Flächenansichten</vtf4>
     <vtf5>Visualisierte, Zeichenansichten, Legenden</vtf5>
   </mprViewCopy>
+  <!-- todo remove when used mprViewIn3D -->
   <ostViewIn3D
     LocalName="3D-Schnittbereichs"
     Description="Isolieren ausgewählter Elemente in der 3D-Ansicht mit der Möglichkeit, die Größe des 3D-Schnittbereichs festzulegen">
@@ -223,6 +224,7 @@
     <tooltip1>Ermöglicht das Festlegen eines Elements zur Ausrichtung des 3D-Schnittbereichs</tooltip1>
     <InViewScheduleMsg>In der Bauteilliste ist nur die Vorauswahl von Elementen aus dem Modell verfügbar</InViewScheduleMsg>
   </ostViewIn3D>
+  <!-- todo remove when used mprScheduleLookup -->
   <whshScheduleLookup
     LocalName="Suche in Bauteillisten"
     Description="Suche im Projekt nach Bauteillisten, die den angegebenen Wert enthalten"
@@ -241,29 +243,15 @@
     <h12>Klicken Sie auf "Suchen", um zu aktualisieren!</h12>
     <h13>Keine passenden Bauteillisten gefunden!</h13>
     <h14>Bauteillisten gefunden:</h14>
-    <!--todo remove after 1.2.4.0-->
-    <h15>Suche in den Tabellen</h15>
-    <!--todo remove after 1.2.4.0-->
-    <h16>that must be present in the schedule</h16>
     <h17>Symbol-Trennzeichen</h17>
     <h18>Teilzeichenfolge</h18>
-    <!--todo remove after 1.2.4.0-->
-    <h19>Das Register berücksichtigen</h19>
     <h20>Suchen in</h20>
     <h21>Feld</h21>
     <h22>Titel</h22>
-    <!--todo remove after 1.2.4.0-->
-    <h23>Wert</h23>
     <h24>Titelzeile</h24>
     <h25>% verarbeitet...</h25>
     <h26>STATUS:</h26>
     <h27>Drücken Sie zweimal die Leertaste zum Einfügen</h27>
-    <!--todo remove after 1.2.4.0-->
-    <h28>Geben Sie Namen der Parameter mit dem Symbol ein</h28>
-    <!--todo remove after 1.2.4.0-->
-    <h29>Geben Sie Spaltennamen mit</h29>
-    <!--todo remove after 1.2.4.0-->
-    <h30>Geben Sie Zellwerte mit</h30>
     <h31>Bauteilliste öffnen</h31>
     <h32>Groß-/Kleinschreibung ignorieren</h32>
     <h33>Geben Sie die Namen der Felder oder Parameter ein, die in der Bauteilliste vorhanden sein müssen, und verwenden Sie dabei das Symbol "{0}" als Trennzeichen</h33>
@@ -288,8 +276,6 @@
     <sr17>Ist die Suche abgeschlossen?</sr17>
     <sr18>Ist der Wert gefunden?</sr18>
     <sr19>Ist die Teilzeichenkette gefunden?</sr19>
-    <!--todo remove after 1.2.4.0-->
-    <sr20>Unter Berücksichtigung des Registers?</sr20>
     <sr21>Parameter des Sortierens?</sr21>
     <sr22>Parameter des Filterns?</sr22>
     <sr23>Kombinierter Parameter?</sr23>
@@ -300,7 +286,9 @@
     LocalName="CAD-Manager"
     Description="Verwalten aller Einfügungen von dwg-Dateien im aktuellen Dokument"
     FullDescription="Im Plugin werden alle Ansichten der eingefügten dwg-Dateien dargestellt, die zu den Ansichten gehören oder nicht gehören. Es ist auch möglich, in der Liste zu suchen, die ID der dwg-Einfügung oder Ansicht zu kopieren, die Ansicht mit der dwg-Einfügung zu öffnen und die dwg-Einfügung zu löschen">
+    <!--todo remove after 2.0.4.0-->
     <h1>CAD-Manager</h1>
+    <!--todo remove after 2.0.4.0-->
     <h2>Kopiert!</h2>
     <h3>Zugehörigkeit zur Ansicht:</h3>
     <h4>Suche nach Namen und Import-ID oder nach Namen und Ansichts-ID...</h4>
@@ -317,6 +305,9 @@
     <h17>Einfügungen löschen</h17>
     <h18>Verzeichnis mit Importdatei öffnen</h18>
     <h19>Anzahl (sichtbar/gesamt):</h19>
+    <h20>Im Projekt auswählen</h20>
+    <h21>Verknüpfung aktualisieren</h21>
+    <!--todo remove after 2.0.4.0-->
     <all>Alle</all>
     <sv1>Unbestimmte</sv1>
     <sv2>Zugehörigkeit zu einer Ansicht</sv2>
@@ -495,85 +486,6 @@
     <h20>Vom Element</h20>
     <h21>Zum Element</h21>
   </mprDimBias>
-  <mprInteriorPlanDimensions
-    LocalName="Bemaßungen im Grundriß"
-    Description="Verschiedene Varianten der Elementbemaßung im Grundriss">
-    <h2>Bemaßung von Achsen</h2>
-    <h3>Bemaßung von Öffnungen</h3>
-    <h4>Abstand der nachfolgenden Bemaßungsketten</h4>
-    <h5>Die Wände verarbeiten, die dicker sind als</h5>
-    <h6>Die Wände von der Bearbeitung ausschließen, deren Typname ... enthält:</h6>
-    <h7>Die Wände von der Bearbeitung ausschließen, deren Materialname des Layers "Struktur" enthält:</h7>
-    <h8>Abstand:</h8>
-    <h9>Grundrissansicht</h9>
-    <h10>Stützen</h10>
-    <h11>Verknüpfung mit nächsten Achsen</h11>
-    <h12>Abstand der Bemaßungskette</h12>
-    <h13>Position der horizontalen Bemaßungen</h13>
-    <h14>Position der vertikalen Bemaßungen</h14>
-    <h15>Anordnung von den Bemaßungsketten entlang der Wände auf dem gesamten Grundriss. Für korrekte Bearbeitung brauchen Sie alle Wände in der Draufsicht auszuwählen, die das Stockwerk des Gebäudes bilden. Bearbeitungsfähig sind nur gerade Elemente. Für eine korrekte Funktion müssen die zu bearbeitende Elemente orthogonal zueinander angeordnet sein</h15>
-    <h16>Pfahl zur Gruppe hinzufügen, wenn der Abstand vom Pfahleinfügepunkt zum Einfügepunkt</h16>
-    <h17>in einer Gruppe von nicht mehr als</h17>
-    <h18>Pfähle</h18>
-    <h19>Vermaßen von Stützen. Bearbeitungsfähig sind nur rechteckige Stützen</h19>
-    <h20>Positionsbemaßung von Pfählen. Die Bemaßungen werden in der Mitte der Pfähle mit Verknüpfung mit den nächstgelegenen Achsen platziert, wenn die Achsen ausgewählt wurden. Die Bearbeitung von Pfählen erfolgt gruppenweise. Gruppe von Pfählen sind nahe beieinanderliegende Pfähle. Familien unter den Kategorien "Tragwerksstützen" und "Fundament" werden bearbeitet</h20>
-    <h21>Außenmaß bei Schnittpunkten mit Achsen erstellen</h21>
-    <h22>Geschossdecken</h22>
-    <h23>Bemaßung an den äußeren Flächen der Geschossdecke und an den Bohrungen in der Geschossdecke. Bemaßung an den äußeren Flächen wird für alle Flächen der Geschossdecke ausgeführt. Bemaßung an den Bohrungen wird in der angegebenen Richtung (nach links/rechts bzw. aufwärts/abwärts) ausgeführt</h23>
-    <h24>Außenkanten bemaßen</h24>
-    <h25>Fangen von äußeren Flächen an Achsen</h25>
-    <h26>Wände</h26>
-    <h27>Bemaßung der geraden Wände mit Längs- und Quermaßen (Dicke) ohne ihren Zusammenhang mit anderen Wänden zu berücksichtigen</h27>
-    <!--todo remove after 3.4.5.0-->
-    <h28>Quermaß in der Wandmitte</h28>
-    <!--todo remove after 3.4.5.0-->
-    <h29>Fangen des Quermaßes in der Wandmitte an die nächstgelegene Achse</h29>
-    <h30>Längsmaß der Wand</h30>
-    <h31>Fangen des Längsmaßes der Wand an die nächstgelegene Achse</h31>
-    <h32>Bearbeitung von Mittelflächen (Öffnungen)</h32>
-    <h33>Bemaßung von Öffnungen</h33>
-    <h34>Fangen der Öffnungen an die nächstgelegenen Achsen</h34>
-    <h35>Position der horizontalen Bemaßungen für Öffnungen</h35>
-    <h36>Position der vertikalen Bemaßungen für Öffnungen</h36>
-    <h37>Zyklisch ablaufen</h37>
-    <h38>Quermaß</h38>
-    <h39>Fangen des Quermaßes an die nächste Achse</h39>
-    <h40>Wenn kein freies Ende vorhanden ist, Maß mittig setzen</h40>
-    <wcb1>an der Mitte der Wand</wcb1>
-    <wcb2>an der Stirnseite der Wand</wcb2>
-    <pgc1>von jedem Pfahl</pgc1>
-    <pgc2>von einem beliebigen der Pfähle</pgc2>
-    <top>Oben</top>
-    <bottom>Unten</bottom>
-    <left>Links</left>
-    <right>Rechts</right>
-    <tt1>Geben Sie, durch Kommata getrennt, die Werte an, die im Namen der Typeneigenschaften für einen Wandtyp enthalten sein können</tt1>
-    <tt2>Das Register wird nicht berücksichtigt</tt2>
-    <tt3>Zum Beispiel:</tt3>
-    <tt4>_Wär,Veredelung,Keramik</tt4>
-    <tt5>Geben Sie, durch Kommata getrennt, die Werte an, die im Materialnamen des Layers "Struktur" enthalten sein können</tt5>
-    <tt6>Stahlbeton,Mauerziegel</tt6>
-    <msg2>Wählen Sie Elemente für die Bearbeitung</msg2>
-    <err2>Es gibt im angegebenen Bearbeitungsbereich keine Wände, die von einer Schnittebene des Ansichtsbereich durchquert werden!</err2>
-    <err3>Bei der Ausführung gab es ein Gerangel! Wenn Sie diese Meldung sehen, kontaktieren Sie bitte den Entwickler!</err3>
-    <err4>Man muss mehr als ein Element auswählen!</err4>
-    <err5>Keine Wände unter den ausgewählten Elementen!</err5>
-    <err8>Die ausgewählten Pfählen erfüllen die Bearbeitungsbedingungen nicht: es konnte kein Vollkörper erhalten werden, es gibt keinen Einfügepunkt</err8>
-    <err9>Die ausgewählten Stützen erfüllen die Bearbeitungsbedingungen nicht: es konnte kein Vollkörper erhalten werden, es konnten keine Flächen erhalten werden, es gibt keinen Einfügepunkt oder es gibt gebogene Flächen</err9>
-    <err10>Die ausgewählten Geschossdecken erfüllen die Bearbeitungsbedingungen nicht: es konnte kein Vollkörper erhalten werden, es konnten keine Flächen erhalten werden</err10>
-    <err11>Die ausgewählten Wände erfüllen die Bearbeitungsbedingungen nicht: es konnte kein Vollkörper erhalten werden bzw. es konnten keine Flächen erhalten werden</err11>
-    <s1>Filtern für die ursprüngliche Liste der Wände</s1>
-    <s2>Suche nach Innen- und Außenwänden</s2>
-    <s3>Erstellen von analytischen Bemaßungen</s3>
-    <s4>Filtern von analytischen Bemaßungen</s4>
-    <s5>Erstellen von Bemaßung-Wand-Vergleichen</s5>
-    <s6>Filtern von Bemaßung-Wand-Vergleichen</s6>
-    <s7>Erhalten von endlichen Bemaßung-Wand-Vergleichen</s7>
-    <s8>Filtern von Verweisen auf Elemente</s8>
-    <s9>Erstellen von funktionierenden Bemaßungsketten</s9>
-    <s10>Filtern von funktionierenden Bemaßungsketten</s10>
-    <s11>Erstellen von endlichen Bemaßungsketten</s11>
-  </mprInteriorPlanDimensions>
   <mprNestedFamilyParamsTransfer
     LocalName="Verknüpfen von Parametern"
     Description="Vereinfachung der Verknüpfung zwischen Parametern von Unterfamilien und Parametern der Hauptfamilie"
@@ -739,6 +651,7 @@
     <m16>Grafiküberschreibung für Elemente ist in der aktuellen Ansicht nicht verfügbar</m16>
     <m17>Es ist unmöglich, Achsen-Modus in der aktuellen Ansicht zu wechseln</m17>
   </mprTools>
+  <!-- todo remove when used mprNumbering -->
   <mmOrderMarking
     LocalName="Nummerierung"
     Description="Hinzufügen einer Nummerierung zum angegebenen Elementenparameter mit der Möglichkeit der Nummerierung in der Bauteilliste"
@@ -1011,9 +924,13 @@
     <m4>Das Lesen der Familie</m4>
     <m5>Suche in den Bauteillisten</m5>
     <m6>Unter den ausgewählten Suchtabellen befinden sich Tabellen, die in der aktuellen Familie verwendet werden! Sind Sie sicher, dass sie trotzdem gelöscht werden müssen?</m6>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultSuccess>{0}: {1} erfolgreich gelöscht</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
     <wipeOptionResultPartialSummary>{0}: {1} erfolgreich gelöscht, {2} konnten nicht gelöscht werden</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultPartialDetails>IDs der Elemente, die während der Bereinigung nicht gelöscht wurden</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
     <wipeOptionResultEmpty>{0}: Keine Elemente zum Bereinigen gefunden</wipeOptionResultEmpty>
     <defaultTypeMessage>Standardtyp festgelegt: {0}</defaultTypeMessage>
     <reassignedInstancesMessage>Exemplare wurden dem Standardtyp zugewiesen: {0}</reassignedInstancesMessage>
@@ -1241,6 +1158,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <co11>Detaillinien kopieren</co11>
     <co12>Parameterwerte des Plankopfes kopieren</co12>
     <co13>Parameterwerte des Plans kopieren</co13>
+    <co14>Modelldarstellungen kopieren</co14>
     <copy>Eine Kopie erstellen</copy>
     <copyAll>Eine Kopie erstellen (für alle Fälle)</copyAll>
     <exist>Eine vorhandene verwenden</exist>
@@ -1261,6 +1179,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <m14>Wählen Sie bitte, ob Sie eine vorhandene Legende aus dem Zieldokument verwenden oder eine Kopie der Legende aus dem Quelldokument erstellen und verwenden möchten</m14>
     <m15>Das Zieldokument "{0}" enthält die Zeichenansicht "{1}"</m15>
     <m16>Wählen Sie bitte, ob Sie eine vorhandene Zeichenansicht aus dem Zieldokument verwenden oder eine Kopie der Zeichenansicht aus dem Quelldokument erstellen und verwenden möchten</m16>
+    <m17>Kopieren von Modelldarstellungen des Plans "{0}" in das Dokument "{1}"</m17>
     <notOrganized>!Nicht organisiert</notOrganized>
   </mprCopySheetsToOpenDocuments>
   <mprLinksManager
@@ -1290,6 +1209,17 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <unloadLinksTransaction>Verknüpfungen entladen</unloadLinksTransaction>
     <reloadLinksTransaction>Verknüpfungen neu laden</reloadLinksTransaction>
     <searchHint>Suchtext eingeben</searchHint>
+    <typeWorksetColumnHeader>Typ-Bearbeitungsbereich</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Exemplar-Bearbeitungsbereich</instanceWorksetColumnHeader>
+    <placeInWorkset>Im Bearbeitungsbereich platzieren</placeInWorkset>
+    <disableWorksetContains>Bearbeitungsbereiche deaktivieren, die Folgendes enthalten:</disableWorksetContains>
+    <disableWorksetTooltip>Geben Sie Teilzeichenfolgen durch Kommas getrennt ein. Beim Laden der Verknüpfung werden Bearbeitungsbereiche des verknüpften Modells geschlossen, deren Namen mindestens eine der angegebenen Teilzeichenfolgen enthalten. Alle anderen Bearbeitungsbereiche werden geöffnet.</disableWorksetTooltip>
+    <fromRevitServer>Aus Revit Server</fromRevitServer>
+    <revitServerWindowTitle>Vom Revit Server hinzufügen</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>Beim Ändern des Typ-Bearbeitungsbereichs: {0} ist ein Fehler aufgetreten: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>Beim Ändern des Bearbeitungsbereichs der Instanz: {0}, ist ein Fehler aufgetreten: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Fehler beim Hinzufügen einer Verknüpfung aus Revit Server</addFromServerErrorFormat>
+    <diffWorkset>*VARIIERT*</diffWorkset>
     <operationUnloadLocallyGenitive>lokales Entladen</operationUnloadLocallyGenitive>
     <unloadLocallyLinksTransaction>Verknüpfungen lokal entladen</unloadLocallyLinksTransaction>
     <addLinkSettingsDialogTitle>Einstellungen zum Hinzufügen</addLinkSettingsDialogTitle>
@@ -1328,6 +1258,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <rewriteStartedLogFormat>Beginn der Pfadumschreibung für {0} Verknüpfungen</rewriteStartedLogFormat>
     <rewriteCompletedLogFormat>Pfade umgeschrieben: {0}, Fehler: {1}</rewriteCompletedLogFormat>
     <rewriteErrorLogFormat>Allgemeiner Fehler beim Umschreiben der Pfade: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Fehler beim Pfad-Umschreiben: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>Verknüpfung befindet sich in einem geschlossenen Arbeitssatz</rewritePathClosedWorksetError>
     <linkStatusLoaded>Geladen</linkStatusLoaded>
     <linkStatusUnloaded>Entladen</linkStatusUnloaded>
     <linkStatusNotFound>Nicht gefunden</linkStatusNotFound>
@@ -1485,6 +1417,7 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <rp1>Jede Zeile enthält eine Liste von Bearbeitungsbereichen</rp1>
     <rp2>Jede Zeile enthält einen Bearbeitungsbereich</rp2>
   </mprWorksets>
+  <!-- todo remove when used mprRenameInFamily -->
   <zfiFamilyRenameTool
     LocalName="Gruppenumbenennen"
     Description="Gruppenumbenennen von Parameternamen, Typnamen und Parameterwerten in angegebenen Familien"
@@ -1839,6 +1772,13 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <selectElementsFromLink>Wählen Sie Elemente aus der verknüpften Datei</selectElementsFromLink>
     <groupTypeExists>Im Zieldokument ist die Gruppe "{0}" bereits vorhanden.\nKopie mit Ersetzung ausführen?</groupTypeExists>
     <groups>Gruppen</groups>
+    <materialExists>Im Zieldokument ist das Material "{0}" bereits vorhanden.\nKopie mit Ersetzung ausführen?</materialExists>
+    <materialDuplicateActionSettings>Verhalten bei übereinstimmenden Materialnamen</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>Wenn Materialnamen übereinstimmen und die Option „Ersetzen" ausgewählt wird, führt das Plugin folgenden Algorithmus aus: Das vorhandene Material im Zieldokument wird aktualisiert und erhält alle Eigenschaften des neuen Materials. Der Materialname bleibt unverändert. Alle Elemente, die dieses Material verwenden, erhalten automatisch die aktualisierten Eigenschaften.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Geöffnete Bauteillisten schließen</closeOpenedSchedule>
+    <searchModeLabel>Vergleichsmodus:</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Regulärer Ausdruck</searchModeRegex>
   </mprCopyElementsToOpenDocuments>
   <mprNotes
     LocalName="Notizen"
@@ -2288,9 +2228,11 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <t34>Filter bei Namensübereinstimmung ersetzen</t34>
     <t35>Aus dem gesamten Modell und verknüpften Dateien</t35>
     <t36>Allen Positionen zuweisen</t36>
+    <!--todo remove after 3.7.15.0-->
     <t37>Wählen Sie Ansichten aus</t37>
     <t38>Verarbeitung der Elemente in der aktuellen Ansicht</t38>
     <t39>Bearbeitung von Elementen in den ausgewählten Ansichten</t39>
+    <!--todo remove after 3.7.15.0-->
     <t40>Ansichten ausgewählt:</t40>
     <c1>Überschreiben für Elemente</c1>
     <c2>Überschreiben für Elemente zurückgeben</c2>
@@ -2402,6 +2344,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <ss27>Maske</ss27>
     <ss28>Normal</ss28>
     <ss29>Filtername</ss29>
+    <searchEmptyValues>Leere Werte suchen</searchEmptyValues>
+    <emptyValue>(leer)</emptyValue>
     <maskHint>Masken-Hinweis: * - beliebige Anzahl von Zeichen; ? - ein Zeichen; # - eine Ziffer. Wenn die Suchmaske kein * ? # enthält, dann bezeichnet * in der Ersetzung das gesamte gefundene Fragment</maskHint>
     <regexHint>Regulärer-Ausdruck-Hinweis: . — beliebiges Zeichen; .* — Zeichenfolge; \d — Ziffer; \w — Buchstabe/Ziffer/Unterstrich</regexHint>
     <systemName>Systemname</systemName>
@@ -2417,6 +2361,8 @@ Zusätzlich werden die Parameter für Typ überprüft - ein Paar ähnlicher Fami
     <replaceErrorMessage>Element mit dem Namen "{0}" wurde im Dokument nicht gefunden. Ersetzung ist nicht möglich.</replaceErrorMessage>
     <fillPatternName>Füllmustername</fillPatternName>
     <systemElementError>Das Element ist das integrierte Vollflächen-Füllmuster und kann nicht geändert werden</systemElementError>
+    <invalidNameMessage>Name enthält ungültige Zeichen: "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>Nicht auf Blatt</scheduleNotOnSheet>
   </mprFindAndReplace>
   <mprCopyCropBox
     LocalName="Kopieren zugeschnittener Ansicht"
@@ -2922,6 +2868,7 @@ Sperre aufhebben?</h13>
     <t2>Befehlssuche und Ausführen von Befehlen über ein schwebendes Bedienfeld mit dem Tracken von den jüngsten Befehlen und einer Liste von bevorzugten Befehlen</t2>
     <t3>Befehlszeile</t3>
     <t4>Befehlssuche und Ausführen von Befehlen über eine im Revit-Benutzeroberfläche integrierte Befehlszeile</t4>
+    <!--todo remove after 1.4.13.0-->
     <t5>Das Bedienfeld ist nicht registriert!</t5>
     <t6>Befehl zu Favoriten hinzufügen</t6>
     <t7>Befehl aus Favoriten entfernen</t7>
@@ -2951,6 +2898,7 @@ Sperre aufhebben?</h13>
     <!--todo remove after 1.1.2.0-->
     <t14>Auswahlbereich:</t14>
     <t15>Neuen Filter hinzufügen</t15>
+    <!--todo remove after 1.4.6.0-->
     <t16>Das Bedienfeld ist nicht registriert!</t16>
     <t17>Zur aktuellen Auswahl hinzufügen</t17>
     <t18>Aus aktueller Auswahl ausschließen</t18>
@@ -3027,24 +2975,6 @@ Sperre aufhebben?</h13>
     <msg2>Familienexemplare können nicht links/rechts gespiegelt werden. Fügen Sie im Familieneditor ein Steuerelement für Spiegelung hinzu</msg2>
     <msg3>Exemplar gehört zu der Gruppe: "{0}"</msg3>
   </mprFlipped>
-  <mprFavoriteViews
-    LocalName="Favoritenansichten"
-    Description="Schnelles Öffnen von Favoritenansichten">
-    <!--todo remove after 1.0.1.0-->
-    <h1>Suche nach Namen</h1>
-    <h2>Ansichten</h2>
-    <h3>Listen/Bauteillisten</h3>
-    <h4>Pläne</h4>
-    <h5>Baugruppen</h5>
-    <h6>Ausgewählte Ansichten</h6>
-    <h7>Die Liste der Favoritenansichten für das Dokument</h7>
-    <h8>Ansichten in Favoriten hinzufügen</h8>
-    <h9>Favoritenansichten öffnen</h9>
-    <h10>Offene Ansichten</h10>
-    <h11>Ansichten im Projekt</h11>
-    <h12>Ansichten hinzugefügt</h12>
-    <h13>Ausgewählte Ansichten markieren</h13>
-  </mprFavoriteViews>
   <mprModelCompare
     LocalName="Modellvergleich"
     Description="Unterschiede zwischen Modellen finden">
@@ -3190,4 +3120,23 @@ Sperre aufhebben?</h13>
     <h4>Der Geländemodell-Skizze enthält Ungenauigkeiten. Die Konvertierung ist erst nach Behebung der Ungenauigkeiten möglich</h4>
     <h5>Die Dicke des Geländemodell-Typs "{0}" ist unzureichend, um eine Instanz zu erstellen</h5>
   </mprToposolidFloorConverter>
+  <mprViewRange
+    LocalName="Ansichtsbereich"
+    Description="Steuerung des Ansichtsbereichs des Plans mit Schiebereglern">
+    <top>Obere Grenze:</top>
+    <cut>Schnittebene:</cut>
+    <depth>Ansichtstiefe:</depth>
+    <bottom>Untere Grenze:</bottom>
+    <h1>Verknüpfte Ebene</h1>
+    <h2>Darüber liegende Ebene </h2>
+    <h3>Darunter liegende Ebene</h3>
+    <h4>Unbegrenzt</h4>
+    <h5>Die Ansichtstiefe-Ebene liegt über der unteren Grenze</h5>
+    <h6>Die untere Grenze befindet sich oberhalb der Schnittebene</h6>
+    <h7>Die Schnittebene befindet sich oberhalb der oberen Grenze</h7>
+    <h8>Falscher Wert oder Formel eingegeben. Text zur Korrektur belassen?</h8>
+    <h9>Auf die aktuelle Ansichtsvorlage angewendet. Änderungen am Ansichtsbereich erfolgen in der Vorlage</h9>
+    <h10>Die obere Grenze befindet sich oberhalb der Ansichtstiefe-Ebene</h10>
+    <offset>Versatz:</offset>
+  </mprViewRange>
 </ModPlus>
