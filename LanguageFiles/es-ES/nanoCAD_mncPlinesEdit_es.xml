@@ -2,7 +2,35 @@
 <ModPlus>
   <mncPlinesEdit
     LocalName="Polilíneas"
-    Description="Una colección de varios complementos para trabajar con polilíneas">
+    Description="Una colección de varios complementos para trabajar con polilíneas"
+    LocalName0="Convertir polilínea 3D a LW"
+    Description0="Crear copias de polilíneas 3D seleccionadas como polilíneas LW (2D) con desplazamiento al nivel 0,0"
+    LocalName1="Eliminar vértices coincidentes de una polilínea"
+    Description1="Eliminar vértices cercanos de polilíneas seleccionadas que tienen mismas coordenadas"
+    LocalName2="Eliminar vértices que se encuentran en misma línea"
+    Description2="Eliminar vértices cercanos de polilíneas seleccionadas que se encuentran en misma línea recta. Es posible establecer una tolerancia para desviación de una línea recta o una tolerancia angular"
+    LocalName3="Ubicar un objeto en vértices de polilínea"
+    Description3="Ubicación del objeto seleccionado en vértices de polilínea. Es posible rotar un objeto a lo largo de un segmento de polilínea. Bloques se pueden ubicar en centro geométrico o en punto de inserción"
+    LocalName4="Reemplazar un segmento de arco por uno lineal"
+    Description4="Reemplazar segmento de arco de polilínea especificado por uno lineal (reemplazar arco con segmento)"
+    LocalName5="Reemplazar un segmento lineal por uno de arco"
+    Description5="Reemplazar un segmento lineal (o de arco) de una polilínea especificada con un segmento de arco (reemplazar un segmento con un arco). Es posible construir un arco a lo largo de una tangente o de un punto del arco"
+    LocalName6="Añadir dinámicamente un vértice"
+    Description6="Añadir dinámicamente un vértice a una polilínea especificada"
+    LocalName7="Dibujar un rectángulo por tres puntos"
+    Description7="Dibujar un rectángulo por tres puntos"
+    LocalName8="Eliminar segmentos de arco de una polilínea"
+    Description8="Eliminar segmentos de arco de una polilínea reemplazándolos con segmentos lineales. Hay varias opciones para complemento: número de segmentos, longitud de segmentos, altura de segmentos (desviación de cuerda), longitud de cuerda"
+    LocalName9="Dibujar línea central"
+    Description9="Dibujar una línea central (como una polilínea) entre dos curvas especificadas (segmentos, polilíneas o splines)"
+    LocalName10="Fast moving of vertices"
+    Description10="Quickly move vertices of a specified polyline"
+    LocalName11="División de curva en los puntos de intersección"
+    Description11="División de curva (segmento, polilínea o spline) en los puntos de intersección con otros objetos del dibujo"
+    LocalName12="Crear objetos en los puntos de intersección"
+    Description12="Crea objetos en los puntos de intersección de curvas con los objetos especificados"
+    LocalName13="Cuadrilátero por puntos"
+    Description13="Crea un cuadrilátero a partir de dos o más puntos. Los lados del cuadrilátero se orientan de acuerdo con el sistema de coordenadas actual. Está disponible un ajuste de tolerancia angular que permite a los lados captar una mayor cantidad de puntos.">
     <h1>POLILÍNEAS</h1>
     <h2>Complemento funciona con polilíneas 3D</h2>
     <h3>Complemento funciona con polilíneas 2D</h3>
@@ -30,6 +58,7 @@
     <h26>Tipo de objeto:</h26>
     <h27>Radio del círculo:</h27>
     <h28>Tipo de bloque:</h28>
+    <h29>Crear objetos en los puntos de intersección</h29>
     <err1>No hay bloques disponibles para insertar en el documento</err1>
     <accept>Aceptar</accept>
     <cancel>Cancelar</cancel>
@@ -42,33 +71,6 @@
     <cb7>no rotar</cb7>
     <cb8>rotar a lo largo del segmento anterior</cb8>
     <cb9>rotar a lo largo del segmento siguiente</cb9>
-    <l1>Convertir polilínea 3D a LW</l1>
-    <d1>Crear copias de polilíneas 3D seleccionadas como polilíneas LW (2D) con desplazamiento al nivel 0,0</d1>
-    <l2>Eliminar vértices coincidentes de una polilínea</l2>
-    <d2>Eliminar vértices cercanos de polilíneas seleccionadas que tienen mismas coordenadas</d2>
-    <l3>Eliminar vértices que se encuentran en misma línea</l3>
-    <d3>Eliminar vértices cercanos de polilíneas seleccionadas que se encuentran en misma línea recta. Es posible establecer una tolerancia para desviación de una línea recta o una tolerancia angular</d3>
-    <l4>Ubicar un objeto en vértices de polilínea</l4>
-    <d4>Ubicación del objeto seleccionado en vértices de polilínea. Es posible rotar un objeto a lo largo de un segmento de polilínea. Bloques se pueden ubicar en centro geométrico o en punto de inserción</d4>
-    <l5>Reemplazar un segmento de arco por uno lineal</l5>
-    <d5>Reemplazar segmento de arco de polilínea especificado por uno lineal (reemplazar arco con segmento)</d5>
-    <l6>Reemplazar un segmento lineal por uno de arco</l6>
-    <d6>Reemplazar un segmento lineal (o de arco) de una polilínea especificada con un segmento de arco (reemplazar un segmento con un arco). Es posible construir un arco a lo largo de una tangente o de un punto del arco</d6>
-    <l7>Añadir dinámicamente un vértice</l7>
-    <d7>Añadir dinámicamente un vértice a una polilínea especificada</d7>
-    <l8>Dibujar un rectángulo por tres puntos</l8>
-    <l9>Eliminar segmentos de arco de una polilínea</l9>
-    <d9>Eliminar segmentos de arco de una polilínea reemplazándolos con segmentos lineales. Hay varias opciones para complemento: número de segmentos, longitud de segmentos, altura de segmentos (desviación de cuerda), longitud de cuerda</d9>
-    <l10>Dibujar línea central</l10>
-    <d10>Dibujar una línea central (como una polilínea) entre dos curvas especificadas (segmentos, polilíneas o splines)</d10>
-    <l11>Fast moving of vertices</l11>
-    <d11>Quickly move vertices of a specified polyline</d11>
-    <l12>División de curva en los puntos de intersección</l12>
-    <d12>División de curva (segmento, polilínea o spline) en los puntos de intersección con otros objetos del dibujo</d12>
-    <l13>Cuadrilátero por puntos</l13>
-    <d13>Crea un cuadrilátero a partir de dos o más puntos. Los lados del cuadrilátero se orientan de acuerdo con el sistema de coordenadas actual. Está disponible un ajuste de tolerancia angular que permite a los lados captar una mayor cantidad de puntos.</d13>
-    <l14>Crear objetos en los puntos de intersección</l14>
-    <d14>Crea objetos en los puntos de intersección de curvas con los objetos especificados</d14>
     <wrong>¡Selección incorrecta!</wrong>
     <undividable>Se ha producido un error al dividir una curva. Intente disminuir la longitud de la curva</undividable>
     <k1>Seleccionar polilíneas 3D</k1>
