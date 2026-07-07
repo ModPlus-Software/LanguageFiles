@@ -2,7 +2,35 @@
 <ModPlus>
   <mncPlinesEdit
     LocalName="Polylines"
-    Description="Collection of various plugins for working with polylines">
+    Description="Collection of various plugins for working with polylines"
+    LocalName0="Convert 3D polyline to LW"
+    Description0="Create copies of selected 3D polylines as LW-polylines (2D) with transfer to level 0.0"
+    LocalName1="Deleting matching polyline vertices"
+    Description1="Deleting adjacent vertices of selected polylines that have the same coordinates"
+    LocalName2="Removing vertices that lie on a straight line"
+    Description2="Deleting adjacent vertices of selected polyline, which lie on a straight line. It is possible to set tolerance for deviation from the straight or angular tolerance"
+    LocalName3="Placing an object at the vertices of a polyline"
+    Description3="Place the selected object in the vertices of the polyline. It is possible to rotate the object along the polyline segment. Blocks can be placed both on the geometric center, and on the insertion point"
+    LocalName4="Replacing an arc segment with linear"
+    Description4="Replacing the specified arc segment of the polyline with a linear"
+    LocalName5="Replacing an linear segment with arc"
+    Description5="Replacing the specified linear (or arc) segment of the polyline with an arc. It is possible to construct an arc along a tangent or a point on an arc"
+    LocalName6="Dynamically adding a vertex"
+    Description6="Dynamically adding a vertex to the specified polyline"
+    LocalName7="Drawing a rectangle by three points"
+    Description7="Drawing a rectangle by three points"
+    LocalName8="Removing Arc Segments from a Polyline"
+    Description8="Remove polyline arc segments by replacing them with linear segments. There are several options for the plugin: the number of segments, the length of segments, the height of segments (chord deviation), the length of the chord"
+    LocalName9="Building the middle line"
+    Description9="The construction of a middle line (as polyline) between two specified curves (segments, polylines or splines)"
+    LocalName10="Fast moving of vertices"
+    Description10="Fast moving of vertices of the specified polyline"
+    LocalName11="Split curve at intersection points"
+    Description11="Split curve (segment, polyline or spline) at intersection points with other drawing objects"
+    LocalName12="Create objects at intersection points"
+    Description12="Creates objects at intersection points of curves with specified objects"
+    LocalName13="Quadrilateral by points"
+    Description13="Creates a quadrilateral from two or more points. The sides of the quadrilateral are oriented according to the current coordinate system. An angular tolerance setting is available allowing the sides to capture a greater number of points.">
     <h1>POLYLINES</h1>
     <h2>Plugin works with 3D polylines</h2>
     <h3>Plugin works with 2D polylines</h3>
@@ -30,6 +58,7 @@
     <h26>Object type:</h26>
     <h27>Circle radius:</h27>
     <h28>Block type:</h28>
+    <h29>Create objects at intersection points</h29>
     <err1>There are no blocks available for insertion in the document</err1>
     <accept>Accept</accept>
     <cancel>Cancel</cancel>
@@ -42,33 +71,6 @@
     <cb7>do not rotate</cb7>
     <cb8>rotate by previous segment</cb8>
     <cb9>rotate by next segment</cb9>
-    <l1>Convert 3D polyline to LW</l1>
-    <d1>Create copies of selected 3D polylines as LW-polylines (2D) with transfer to level 0.0</d1>
-    <l2>Deleting matching polyline vertices</l2>
-    <d2>Deleting adjacent vertices of selected polylines that have the same coordinates</d2>
-    <l3>Removing vertices that lie on a straight line</l3>
-    <d3>Deleting adjacent vertices of selected polyline, which lie on a straight line. It is possible to set tolerance for deviation from the straight or angular tolerance</d3>
-    <l4>Placing an object at the vertices of a polyline</l4>
-    <d4>Place the selected object in the vertices of the polyline. It is possible to rotate the object along the polyline segment. Blocks can be placed both on the geometric center, and on the insertion point</d4>
-    <l5>Replacing an arc segment with linear</l5>
-    <d5>Replacing the specified arc segment of the polyline with a linear</d5>
-    <l6>Replacing an linear segment with arc</l6>
-    <d6>Replacing the specified linear (or arc) segment of the polyline with an arc. It is possible to construct an arc along a tangent or a point on an arc</d6>
-    <l7>Dynamically adding a vertex</l7>
-    <d7>Dynamically adding a vertex to the specified polyline</d7>
-    <l8>Drawing a rectangle by three points</l8>
-    <l9>Removing Arc Segments from a Polyline</l9>
-    <d9>Remove polyline arc segments by replacing them with linear segments. There are several options for the plugin: the number of segments, the length of segments, the height of segments (chord deviation), the length of the chord</d9>
-    <l10>Building the middle line</l10>
-    <d10>The construction of a middle line (as polyline) between two specified curves (segments, polylines or splines)</d10>
-    <l11>Fast moving of vertices</l11>
-    <d11>Fast moving of vertices of the specified polyline</d11>
-    <l12>Split curve at intersection points</l12>
-    <d12>Split curve (segment, polyline or spline) at intersection points with other drawing objects</d12>
-    <l13>Quadrilateral by points</l13>
-    <d13>Creates a quadrilateral from two or more points. The sides of the quadrilateral are oriented according to the current coordinate system. An angular tolerance setting is available allowing the sides to capture a greater number of points.</d13>
-    <l14>Create objects at intersection points</l14>
-    <d14>Creates objects at intersection points of curves with specified objects</d14>
     <wrong>Wrong choice!</wrong>
     <undividable>An error occurred while dividing the curve. Try reducing the curve length</undividable>
     <k1>Select 3D polylines</k1>

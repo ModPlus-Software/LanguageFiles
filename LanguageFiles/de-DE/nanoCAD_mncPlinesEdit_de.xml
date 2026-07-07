@@ -2,7 +2,35 @@
 <ModPlus>
   <mncPlinesEdit
     LocalName="Polylinien"
-    Description="Eine Sammlung verschiedener Plugins für die Arbeit mit Polylinien">
+    Description="Eine Sammlung verschiedener Plugins für die Arbeit mit Polylinien"
+    LocalName0="3D-Polylinie in LW konvertieren"
+    Description0="Erstellen von Kopien ausgewählter 3D-Polylinien als LW-Polylinien (2D) mit Übertragung auf Ebene 0.0"
+    LocalName1="Entfernen von kongruenten Scheitelpunkten einer Polylinie"
+    Description1="Entfernen von benachbarten Scheitelpunkten ausgewählter Polylinien, die dieselben Koordinaten haben"
+    LocalName2="Entfernen von Scheitelpunkten, die auf der gleichen Linie liegen"
+    Description2="Entfernen von benachbarten Scheitelpunkten ausgewählter Polylinien, die auf der gleichen Linie liegen. Es besteht die Möglichkeit, eine gerade oder winklige Abweichungstoleranz einzustellen"
+    LocalName3="Positionierung eines Objekts in den Scheitelpunkten einer Polylinie"
+    Description3="Positionierung eines ausgewählten Objekts in den Scheitelpunkten einer Polylinie. Es besteht die Möglichkeit, ein Objekt durch ein Segment der Polylinie zu drehen. Blöcke können entweder durch geometrische Mitte oder Einfügepunkt positioniert werden"
+    LocalName4="Ersetzen des Bogensegments durch ein lineares Segment"
+    Description4="Ersetzen eines angegebenen Bogensegments einer Polylinie durch ein lineares Segment (Ersetzen eines Bogens durch eine Linie)"
+    LocalName5="Ersetzen eines linearen Segments durch ein Bogensegment"
+    Description5="Ersetzen eines angegebenen linearen (oder bogenförmigen) Segments einer Polylinie durch ein Bogensegment (Ersetzen einer Linie durch einen Bogen). Es besteht die Möglichkeit, einen Bogen durch eine Tangente oder einen Punkt auf einen Bogen zu zeichnen"
+    LocalName6="Dynamisches Hinzufügen eines Scheitelpunkts"
+    Description6="Dynamisches Hinzufügen eines Scheitelpunkts zu der angegebenen Polylinie"
+    LocalName7="Zeichnen eines Rechtecks durch drei Punkte"
+    Description7="Zeichnen eines Rechtecks durch drei Punkte"
+    LocalName8="Entfernen von Bogensegmenten aus der Polylinie"
+    Description8="Entfernen von Bogensegmenten aus der Polylinie, indem sie durch Liniensegmente ersetzt werden. Es gibt mehrere Optionen für den Plugin-Betrieb: Anzahl der Segmente, Segmentlänge, Segmenthöhe (Sehnenauslenkung), Sehnenlänge"
+    LocalName9="Zeichnen der Mittellinie"
+    Description9="Zeichnen einer Mittellinie (als Polylinie) zwischen zwei angegebenen Kurven (Linien, Polylinien oder Splines)"
+    LocalName10="Schnelle Verschiebung von Scheitelpunkten"
+    Description10="Schnelle Verschiebung von Scheitelpunkten der angegebenen Polylinie"
+    LocalName11="Teilen der Kurve in Schnittpunkten"
+    Description11="Teilen der Kurve (Linie, Polylinie oder Spline) in den Schnittpunkten mit anderen Objekten der Zeichnung"
+    LocalName12="Objekte an Schnittpunkten erstellen"
+    Description12="Erstellt Objekte an den Schnittpunkten von Kurven mit angegebenen Objekten"
+    LocalName13="Viereck nach Punkten"
+    Description13="Erstellt ein Viereck aus zwei oder mehr Punkten. Die Seiten des Vierecks werden entsprechend dem aktuellen Koordinatensystem ausgerichtet. Eine Einstellung für den Winkeltoleranzwert ist verfügbar die es den Seiten ermöglicht eine größere Anzahl von Punkten zu erfassen.">
     <h1>POLYLINIEN</h1>
     <h2>Das Plugin arbeitet mit 3D-Polylinien</h2>
     <h3>Das Plugin arbeitet mit 2D-Polylinien</h3>
@@ -30,6 +58,7 @@
     <h26>Objekttyp:</h26>
     <h27>Kreisradius:</h27>
     <h28>Blocktyp:</h28>
+    <h29>Objekte an Schnittpunkten erstellen</h29>
     <err1>Im Dokument sind keine Blöcke zum Einfügen vorhanden</err1>
     <accept>Akzeptieren</accept>
     <cancel>Abbrechen</cancel>
@@ -42,33 +71,6 @@
     <cb7>nicht drehen</cb7>
     <cb8>durch vorheriges Segment drehen</cb8>
     <cb9>durch nächstes Segment drehen</cb9>
-    <l1>3D-Polylinie in LW konvertieren</l1>
-    <d1>Erstellen von Kopien ausgewählter 3D-Polylinien als LW-Polylinien (2D) mit Übertragung auf Ebene 0.0</d1>
-    <l2>Entfernen von kongruenten Scheitelpunkten einer Polylinie</l2>
-    <d2>Entfernen von benachbarten Scheitelpunkten ausgewählter Polylinien, die dieselben Koordinaten haben</d2>
-    <l3>Entfernen von Scheitelpunkten, die auf der gleichen Linie liegen</l3>
-    <d3>Entfernen von benachbarten Scheitelpunkten ausgewählter Polylinien, die auf der gleichen Linie liegen. Es besteht die Möglichkeit, eine gerade oder winklige Abweichungstoleranz einzustellen</d3>
-    <l4>Positionierung eines Objekts in den Scheitelpunkten einer Polylinie</l4>
-    <d4>Positionierung eines ausgewählten Objekts in den Scheitelpunkten einer Polylinie. Es besteht die Möglichkeit, ein Objekt durch ein Segment der Polylinie zu drehen. Blöcke können entweder durch geometrische Mitte oder Einfügepunkt positioniert werden</d4>
-    <l5>Ersetzen des Bogensegments durch ein lineares Segment</l5>
-    <d5>Ersetzen eines angegebenen Bogensegments einer Polylinie durch ein lineares Segment (Ersetzen eines Bogens durch eine Linie)</d5>
-    <l6>Ersetzen eines linearen Segments durch ein Bogensegment</l6>
-    <d6>Ersetzen eines angegebenen linearen (oder bogenförmigen) Segments einer Polylinie durch ein Bogensegment (Ersetzen einer Linie durch einen Bogen). Es besteht die Möglichkeit, einen Bogen durch eine Tangente oder einen Punkt auf einen Bogen zu zeichnen</d6>
-    <l7>Dynamisches Hinzufügen eines Scheitelpunkts</l7>
-    <d7>Dynamisches Hinzufügen eines Scheitelpunkts zu der angegebenen Polylinie</d7>
-    <l8>Zeichnen eines Rechtecks durch drei Punkte</l8>
-    <l9>Entfernen von Bogensegmenten aus der Polylinie</l9>
-    <d9>Entfernen von Bogensegmenten aus der Polylinie, indem sie durch Liniensegmente ersetzt werden. Es gibt mehrere Optionen für den Plugin-Betrieb: Anzahl der Segmente, Segmentlänge, Segmenthöhe (Sehnenauslenkung), Sehnenlänge</d9>
-    <l10>Zeichnen der Mittellinie</l10>
-    <d10>Zeichnen einer Mittellinie (als Polylinie) zwischen zwei angegebenen Kurven (Linien, Polylinien oder Splines)</d10>
-    <l11>Schnelle Verschiebung von Scheitelpunkten</l11>
-    <d11>Schnelle Verschiebung von Scheitelpunkten der angegebenen Polylinie</d11>
-    <l12>Teilen der Kurve in Schnittpunkten</l12>
-    <d12>Teilen der Kurve (Linie, Polylinie oder Spline) in den Schnittpunkten mit anderen Objekten der Zeichnung</d12>
-    <l13>Viereck nach Punkten</l13>
-    <d13>Erstellt ein Viereck aus zwei oder mehr Punkten. Die Seiten des Vierecks werden entsprechend dem aktuellen Koordinatensystem ausgerichtet. Eine Einstellung für den Winkeltoleranzwert ist verfügbar die es den Seiten ermöglicht eine größere Anzahl von Punkten zu erfassen.</d13>
-    <l14>Objekte an Schnittpunkten erstellen</l14>
-    <d14>Erstellt Objekte an den Schnittpunkten von Kurven mit angegebenen Objekten</d14>
     <wrong>Ungültige Wahl!</wrong>
     <undividable>Beim Teilen der Kurve ist ein Fehler aufgetreten. Versuchen Sie, die Länge der Kurve zu reduzieren</undividable>
     <k1>Wählen Sie 3D-Polylinien aus</k1>
