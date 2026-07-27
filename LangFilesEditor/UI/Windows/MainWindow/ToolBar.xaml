@@ -1,0 +1,140 @@
+<UserControl x:Class="LangFilesEditor.UI.Windows.MainWindow.ToolBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             xmlns:mainWindow="clr-namespace:LangFilesEditor.UI.Windows.MainWindow"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300">
+    <UserControl.Resources>
+        <!-- Кнопки; значения берутся из ToolBar.xaml.cs — единственного источника истины,
+             так как та же ширина нужна ещё и в App.cs при создании MainWindowVM. -->
+        <x:Static x:Key="ToolBarButtonWidth" Member="mainWindow:ToolBar.ButtonWidth" />
+        <x:Static x:Key="ToolBarButtonHeight" Member="mainWindow:ToolBar.ButtonHeight" />
+
+        <!-- Контент: отступ сверху, запас по ширине (без вертикальной шапки dock) -->
+        <sys:Double x:Key="ToolBarTopContentMargin">10</sys:Double>
+        <Thickness x:Key="ToolBarTopContentMarginThickness">0,10,0,0</Thickness>
+
+        <Style x:Key="ToolBarButtonStyle"
+               TargetType="Button">
+            <Setter Property="MinWidth"
+                    Value="{StaticResource ToolBarButtonWidth}" />
+            <Setter Property="MaxWidth"
+                    Value="{StaticResource ToolBarButtonWidth}" />
+            <Setter Property="Width"
+                    Value="{StaticResource ToolBarButtonWidth}" />
+            <Setter Property="MinHeight"
+                    Value="{StaticResource ToolBarButtonHeight}" />
+            <Setter Property="Height"
+                    Value="{StaticResource ToolBarButtonHeight}" />
+            <Setter Property="Margin"
+                    Value="0 2" />
+            <Setter Property="Padding"
+                    Value="4 4" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Center" />
+            <Setter Property="VerticalContentAlignment"
+                    Value="Center" />
+        </Style>
+
+        <Style x:Key="ToolBarSeparatorStyle"
+               TargetType="Border">
+            <Setter Property="Width"
+                    Value="{StaticResource ToolBarButtonWidth}" />
+            <Setter Property="Margin"
+                    Value="0 4" />
+            <Setter Property="HorizontalAlignment"
+                    Value="Stretch" />
+            <Setter Property="BorderBrush"
+                    Value="Gray" />
+            <Setter Property="BorderThickness"
+                    Value="0 1 0 0" />
+            <Setter Property="SnapsToDevicePixels"
+                    Value="True" />
+        </Style>
+    </UserControl.Resources>
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto"
+                  VerticalAlignment="Top"
+                  HorizontalContentAlignment="Center"
+                  Padding="{StaticResource ToolBarTopContentMarginThickness}">
+        <StackPanel Width="{StaticResource ToolBarButtonWidth}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Orientation="Vertical">
+
+            <Button Command="{Binding Path=AddRowAboveCommand}"
+                    Content="Add row above"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <Button Command="{Binding Path=AddRowBelowCommand}"
+                    Content="Add row below"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <Border Style="{StaticResource ToolBarSeparatorStyle}" />
+
+            <Button Command="{Binding Path=ImportRowsBelowCommand}"
+                    Content="Import rows below"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <Button Command="{Binding Path=ImportRowsAutoCommand}"
+                    Content="Import rows auto"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <Border Style="{StaticResource ToolBarSeparatorStyle}" />
+
+            <Button Command="{Binding Path=CopyToClipboardCommand}"
+                    Content="Copy"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <Button Command="{Binding Path=PasteFromClipboard}"
+                    Content="Paste"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <Border Style="{StaticResource ToolBarSeparatorStyle}" />
+
+            <Button Command="{Binding Path=MarkForDeletionCommand}"
+                    Content="Mark for deletion"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <Border Style="{StaticResource ToolBarSeparatorStyle}" />
+
+            <Button Command="{Binding Path=RemoveItemCommand}"
+                    Content="Remove"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <ItemsControl ItemsSource="{Binding ExtensionCommands}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Width="{StaticResource ToolBarButtonWidth}">
+                            <Border Style="{StaticResource ToolBarSeparatorStyle}" />
+                            <Button Command="{Binding Command}"
+                                    Content="{Binding Label}"
+                                    Style="{StaticResource ToolBarButtonStyle}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <Border Style="{StaticResource ToolBarSeparatorStyle}" />
+
+            <Button Command="{Binding Path=OpenMergerCommand}"
+                    Content="Merge"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <Button Command="{Binding Path=OpenSettingsCommand}"
+                    Content="Settings"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+
+            <Button Command="{Binding Path=CloseWithoutSaveCommand}"
+                    Content="Close without save"
+                    Style="{StaticResource ToolBarButtonStyle}" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

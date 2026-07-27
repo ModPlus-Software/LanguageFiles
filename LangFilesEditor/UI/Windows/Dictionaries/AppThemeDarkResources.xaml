@@ -1,0 +1,200 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Тёмная тема: те же ключи, что и в AppThemeResources.xaml -->
+    <SolidColorBrush x:Key="EditorChromeBrush"
+                     Color="#2D2D30" />
+    <SolidColorBrush x:Key="EditorChromeBrushLight"
+                     Color="#252526" />
+
+    <SolidColorBrush x:Key="EditorBorderBrush"
+                     Color="#3F3F46" />
+    <SolidColorBrush x:Key="EditorBorderBrushSoft"
+                     Color="#464650" />
+
+    <SolidColorBrush x:Key="EditorTextPrimaryBrush"
+                     Color="#E4E4E7" />
+    <SolidColorBrush x:Key="EditorTextSecondaryBrush"
+                     Color="#A1A1AA" />
+    <SolidColorBrush x:Key="EditorTextMutedBrush"
+                     Color="#8B8B96" />
+
+    <SolidColorBrush x:Key="EditorHoverBrush"
+                     Color="#3E3E42" />
+    <SolidColorBrush x:Key="EditorSelectionBrush"
+                     Color="#505050" />
+    <SolidColorBrush x:Key="EditorPressedBrush"
+                     Color="#606060" />
+
+    <SolidColorBrush x:Key="NavDomainHeaderBrush"
+                     Color="#333337" />
+    <SolidColorBrush x:Key="NavDomainHeaderHoverBrush"
+                     Color="#3A3A3F" />
+    <SolidColorBrush x:Key="NavDomainHeaderExpandedBrush"
+                     Color="#404046" />
+    <SolidColorBrush x:Key="NavDomainChildrenBrush"
+                     Color="#2A2A2E" />
+
+    <SolidColorBrush x:Key="EditorWarningBrush"
+                     Color="#F07178" />
+
+    <SolidColorBrush x:Key="EditorRowErrorBrush"
+                     Color="#5A2D2D" />
+    <SolidColorBrush x:Key="EditorRowWarningBrush"
+                     Color="#5A4A2A" />
+    <SolidColorBrush x:Key="EditorRowUpdateBrush"
+                     Color="#2A4A35" />
+    <SolidColorBrush x:Key="EditorRowMarkedBrush"
+                     Color="#2A4555" />
+
+    <SolidColorBrush x:Key="EditorAccentBrush"
+                     Color="#569CD6" />
+    <SolidColorBrush x:Key="EditorProgressTrackBrush"
+                     Color="#3A3A3F" />
+
+    <SolidColorBrush x:Key="WorkspaceModuleHeaderBrush"
+                     Color="#383838" />
+    <SolidColorBrush x:Key="WorkspaceModuleHeaderSelectedBrush"
+                     Color="#454545" />
+    <SolidColorBrush x:Key="WorkspaceGridSelectionBrush"
+                     Color="#505050" />
+
+    <Style x:Key="ModulesBarTabToggleStyle"
+           TargetType="ToggleButton">
+        <Setter Property="Padding"
+                Value="8,4" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource EditorBorderBrush}" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="Foreground"
+                Value="{StaticResource EditorTextPrimaryBrush}" />
+        <Setter Property="Cursor"
+                Value="Hand" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver"
+                     Value="True">
+                <Setter Property="Background"
+                        Value="{StaticResource EditorHoverBrush}" />
+            </Trigger>
+            <Trigger Property="IsChecked"
+                     Value="True">
+                <Setter Property="Background"
+                        Value="{StaticResource EditorSelectionBrush}" />
+                <Setter Property="FontWeight"
+                        Value="SemiBold" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="EditorDialogTitleStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="16" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="Foreground"
+                Value="{StaticResource EditorTextPrimaryBrush}" />
+    </Style>
+
+    <Style x:Key="EditorDialogSectionTitleStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="FontWeight"
+                Value="SemiBold" />
+        <Setter Property="Foreground"
+                Value="{StaticResource EditorTextPrimaryBrush}" />
+    </Style>
+
+    <Style x:Key="EditorDialogFieldLabelStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="12" />
+        <Setter Property="Foreground"
+                Value="{StaticResource EditorTextSecondaryBrush}" />
+        <Setter Property="Margin"
+                Value="0,0,0,4" />
+    </Style>
+
+    <Style x:Key="EditorDialogSectionBorderStyle"
+           TargetType="Border">
+        <Setter Property="Padding"
+                Value="12" />
+        <Setter Property="Background"
+                Value="{StaticResource EditorChromeBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource EditorBorderBrush}" />
+        <Setter Property="BorderThickness"
+                Value="1" />
+        <Setter Property="CornerRadius"
+                Value="4" />
+    </Style>
+
+    <Style x:Key="EditorDialogTextBoxStyle"
+           TargetType="TextBox">
+        <Setter Property="Padding"
+                Value="4,3" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource EditorBorderBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource EditorTextPrimaryBrush}" />
+        <Setter Property="Background"
+                Value="#1E1E1E" />
+    </Style>
+
+    <Style x:Key="EditorDialogComboBoxStyle"
+           TargetType="ComboBox">
+        <Setter Property="Padding"
+                Value="4,3" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource EditorBorderBrush}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource EditorTextPrimaryBrush}" />
+        <Setter Property="Background"
+                Value="#1E1E1E" />
+    </Style>
+
+    <Style x:Key="EditorDialogButtonStyle"
+           TargetType="Button">
+        <Setter Property="Padding"
+                Value="14,5" />
+        <Setter Property="MinWidth"
+                Value="88" />
+        <Setter Property="Margin"
+                Value="0,0,8,0" />
+    </Style>
+
+    <Style x:Key="EditorDialogLogTextBoxStyle"
+           TargetType="TextBox"
+           BasedOn="{StaticResource EditorDialogTextBoxStyle}">
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="TextWrapping"
+                Value="Wrap" />
+        <Setter Property="VerticalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="Background"
+                Value="#1E1E1E" />
+        <Setter Property="FontFamily"
+                Value="Consolas" />
+        <Setter Property="FontSize"
+                Value="11" />
+    </Style>
+
+    <Style x:Key="EditorSettingsReadOnlyValueStyle"
+           TargetType="TextBox"
+           BasedOn="{StaticResource EditorDialogTextBoxStyle}">
+        <Setter Property="IsReadOnly"
+                Value="True" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Background"
+                Value="Transparent" />
+        <Setter Property="Padding"
+                Value="0" />
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:LangFilesEditor"
+                    xmlns:convertersLocal="clr-namespace:LangFilesEditor.Converters">
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <convertersLocal:ObjectReferenceEqualityConverter x:Key="ObjectReferenceEqualityConverter" />
+    <convertersLocal:WorkspaceRowKindVisibilityConverter x:Key="WorkspaceRowKindVisibilityConverter" />
+    <convertersLocal:RowVisualStateToBrushConverter x:Key="RowVisualStateToBrushConverter" />
+    <convertersLocal:DiagnosticSeverityToBrushConverter x:Key="DiagnosticSeverityToBrushConverter" />
+    <convertersLocal:NullIfEmptyStringConverter x:Key="NullIfEmptyStringConverter" />
+</ResourceDictionary>

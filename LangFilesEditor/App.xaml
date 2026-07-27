@@ -1,6 +1,15 @@
 ﻿<Application x:Class="LangFilesEditor.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
     <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="UI/Windows/Dictionaries/Converters.xaml" />
+                <ResourceDictionary Source="UI/Windows/Dictionaries/AppThemeResources.xaml" />
+                <ResourceDictionary Source="UI/Windows/Dictionaries/NavBarTreeResources.xaml" />
+                <ResourceDictionary Source="UI/Infrastructure/Docking/DockingResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

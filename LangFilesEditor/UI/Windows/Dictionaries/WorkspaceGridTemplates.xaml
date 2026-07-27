@@ -1,0 +1,153 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/UI/Windows/Dictionaries/TranslationEntriesGridResources.xaml" />
+        <ResourceDictionary Source="/UI/Windows/Dictionaries/ItemView.xaml" />
+        <ResourceDictionary Source="/UI/Windows/Dictionaries/Converters.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="WorkspaceModuleHeaderTitleTemplate">
+        <TextBlock FontSize="12"
+                   FontWeight="Bold"
+                   Foreground="{StaticResource EditorTextPrimaryBrush}"
+                   Text="{Binding WrappedTitle}"
+                   TextWrapping="Wrap"
+                   ToolTip="{Binding Title}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceModuleHeaderCellTemplate">
+        <Border Padding="6,4"
+                VerticalAlignment="Stretch"
+                Background="{StaticResource WorkspaceModuleHeaderBrush}">
+            <Border.Style>
+                <Style TargetType="Border">
+                    <Style.Triggers>
+                        <DataTrigger Value="True">
+                            <DataTrigger.Binding>
+                                <MultiBinding Converter="{StaticResource ObjectReferenceEqualityConverter}">
+                                    <Binding Path="DataContext.SelectedModule"
+                                             RelativeSource="{RelativeSource AncestorType=UserControl}" />
+                                    <Binding Path="Module" />
+                                </MultiBinding>
+                            </DataTrigger.Binding>
+                            <Setter Property="Background"
+                                    Value="{StaticResource WorkspaceModuleHeaderSelectedBrush}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderTitleTemplate}" />
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceNameCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderCellTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <ContentControl Content="{Binding Entry}"
+                            ContentTemplate="{StaticResource ItemNameCellTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceNameReadOnlyCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderCellTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <ContentControl Content="{Binding Entry}"
+                            ContentTemplate="{StaticResource ItemNameReadOnlyCellTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceModuleHeaderRowBackgroundTemplate">
+        <Border Background="{StaticResource WorkspaceModuleHeaderBrush}">
+            <Border.Style>
+                <Style TargetType="Border">
+                    <Style.Triggers>
+                        <DataTrigger Value="True">
+                            <DataTrigger.Binding>
+                                <MultiBinding Converter="{StaticResource ObjectReferenceEqualityConverter}">
+                                    <Binding Path="DataContext.SelectedModule"
+                                             RelativeSource="{RelativeSource AncestorType=UserControl}" />
+                                    <Binding Path="Module" />
+                                </MultiBinding>
+                            </DataTrigger.Binding>
+                            <Setter Property="Background"
+                                    Value="{StaticResource WorkspaceModuleHeaderSelectedBrush}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceRuRuCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderRowBackgroundTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <TextBox Text="{Binding Entry.Values[ru-RU].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                     Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceUkUaCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderRowBackgroundTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <TextBox Text="{Binding Entry.Values[uk-UA].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                     Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceEnUsCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderRowBackgroundTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <TextBox Text="{Binding Entry.Values[en-US].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                     Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceDeDeCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderRowBackgroundTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <TextBox Text="{Binding Entry.Values[de-DE].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                     Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceEsEsCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderRowBackgroundTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <TextBox Text="{Binding Entry.Values[es-ES].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                     Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceZhCnCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderRowBackgroundTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <TextBox Text="{Binding Entry.Values[zh-CN].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                     Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

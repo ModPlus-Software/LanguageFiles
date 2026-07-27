@@ -1,0 +1,21 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:models="clr-namespace:LangFilesEditor.Models">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/UI/Windows/Dictionaries/TranslationEntriesGridResources.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="ItemNameCellTemplate"
+                  DataType="{x:Type models:TranslationEntry}">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 ToolTip="{Binding Path=RowToolTip, Converter={StaticResource NullIfEmptyStringConverter}}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="ItemNameReadOnlyCellTemplate"
+                  DataType="{x:Type models:TranslationEntry}">
+        <TextBlock Style="{StaticResource TranslationEntryNameTextBlockStyle}"
+                   Text="{Binding Path=Name}"
+                   ToolTip="{Binding Path=RowToolTip, Converter={StaticResource NullIfEmptyStringConverter}}" />
+    </DataTemplate>
+</ResourceDictionary>
