@@ -39,8 +39,7 @@
         <Setter Property="Padding" Value="2" />
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="VerticalAlignment" Value="Top" />
-        <Setter Property="ToolTip"
-                Value="{Binding Path=RowToolTip, Converter={StaticResource NullIfEmptyStringConverter}}" />
+        <Setter Property="ToolTip" Value="{Binding Path=RowToolTip, Converter={StaticResource NullIfEmptyStringConverter}}" />
     </Style>
 
     <Style x:Key="TranslationEntriesDataGridStyle"
@@ -57,41 +56,29 @@
         <Setter Property="VirtualizingPanel.IsVirtualizing" Value="True" />
         <Setter Property="VirtualizingPanel.VirtualizationMode" Value="Recycling" />
         <Setter Property="ScrollViewer.CanContentScroll" Value="False" />
-        <Setter Property="ColumnHeaderStyle"
-                Value="{StaticResource TranslationEntriesDataGridColumnHeaderStyle}" />
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource TranslationEntriesDataGridColumnHeaderStyle}" />
     </Style>
 
     <Style x:Key="TranslationEntriesEntryRowStyle"
            TargetType="{x:Type DataGridRow}">
         <Setter Property="Background" Value="{Binding RowVisualState, Converter={StaticResource RowVisualStateToBrushConverter}}" />
-        <Setter Property="ToolTip"
-                Value="{Binding RowToolTip, Converter={StaticResource NullIfEmptyStringConverter}}" />
+        <Setter Property="ToolTip" Value="{Binding RowToolTip, Converter={StaticResource NullIfEmptyStringConverter}}" />
     </Style>
 
     <Style x:Key="TranslationEntriesDataGridRowStyle"
            TargetType="{x:Type DataGridRow}">
-        <Setter Property="Background"
-                Value="White" />
-        <Setter Property="MinHeight"
-                Value="40" />
-        <Setter Property="Height"
-                Value="40" />
+        <Setter Property="Background" Value="White" />
+
         <Style.Triggers>
             <DataTrigger Binding="{Binding Kind}"
                          Value="{x:Static workSpace:WorkspaceRowKind.ModuleHeader}">
-                <Setter Property="Background"
-                        Value="{StaticResource WorkspaceModuleHeaderBrush}" />
-                <Setter Property="MinHeight"
-                        Value="34" />
-                <Setter Property="Height"
-                        Value="Auto" />
+                <Setter Property="Background" Value="{StaticResource WorkspaceModuleHeaderBrush}" />
+                <Setter Property="Height" Value="Auto" />
             </DataTrigger>
             <DataTrigger Binding="{Binding Kind}"
                          Value="{x:Static workSpace:WorkspaceRowKind.Entry}">
-                <Setter Property="Background"
-                        Value="{Binding RowBackground}" />
-                <Setter Property="ToolTip"
-                        Value="{Binding RowToolTip, Converter={StaticResource NullIfEmptyStringConverter}}" />
+                <Setter Property="Background" Value="{Binding RowBackground}" />
+                <Setter Property="ToolTip" Value="{Binding RowToolTip, Converter={StaticResource NullIfEmptyStringConverter}}" />
             </DataTrigger>
         </Style.Triggers>
     </Style>
