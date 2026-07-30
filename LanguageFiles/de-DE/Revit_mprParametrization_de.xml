@@ -97,7 +97,7 @@
     <t91>Inhaltsverzeichnis:</t91>
     <t93>Wählen Sie das Ergebnis der Ausdrucksverarbeitung aus, um eine Liste mit den IDs der verarbeiteten Elemente anzeigen zu lassen</t93>
     <t94>Eingeschränkter Modus</t94>
-    <t95>Wenn kein Filter für die Regel angegeben ist, wird der allgemeine Strategiefilter verwendet</t95>
+    <t95>Die Filter der Strategie gelten für alle Regeln, für die keine eigenen Elementfilter definiert sind. Wenn im Strategiefilter nur der Kategoriefilter ausgefüllt ist und im Regel-Filter nur der Parameterfilter, entsteht ein kombinierter Filter mit den angegebenen Kategorien und Parametern. Umgekehrt können im Strategiefilter nur Kategorien und im Regel-Filter nur Parameter definiert werden. Sind in einer Regel sowohl der Kategoriefilter als auch der Parameterfilter ausgefüllt, wird der Strategiefilter ignoriert</t95>
     <t96>Wählen Sie Ansichten aus</t96>
     <t97>Datenquelle</t97>
     <t98>Strategiefilter</t98>
@@ -144,6 +144,8 @@
     <t139>Im aktuellen Dokument sind keine globalen Parameter vorhanden</t139>
     <t140>STRATEGIE-EINSTELLUNGEN</t140>
     <t141>von</t141>
+    <t142>Name und Beschreibung</t142>
+    <t143>Formel-Anleitung öffnen</t143>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -262,6 +264,7 @@
     <err79>Parameter von Unterelementen der Tragwerksverbindungen haben keine Eigenschaft "HasValue"</err79>
     <err80>Der Pseudo-Parameter ID hat keine Eigenschaft "HasValue"</err80>
     <err81>Das Element hat mehrere Parameter mit dem Namen "{0}". Entfernen Sie den überflüssigen Parameter oder verwenden Sie den Schlüsselnamen des Parameters (GUID für gemeinsam genutzte Parameter, Systemname für integrierte Parameter)</err81>
+    <err82>Das Element mit der Id {0} hat keine Geometrie</err82>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -312,6 +315,8 @@
     <sld20>Die Strategie bearbeitet Teile unter Berücksichtigung der Quellelemente, aus denen die Teile erstellt sind. Ist ein Teil aus mehreren Quellelementen erstellt, gilt das erste Element als Quellelement</sld20>
     <ssd21>Verarbeitung von Elementen in Baugruppen</ssd21>
     <sld21>Die Strategie verarbeitet Elemente, die sich in Baugruppen befinden</sld21>
+    <ssd22>Verarbeitung ansichtsgebundener Elemente</ssd22>
+    <sld22>Verarbeitet Elemente, die nur innerhalb einer einzigen Ansicht existieren und nicht Teil des dreidimensionalen Modells sind: Bemaßungen, Textbausteine, Beschriftungen, Detaillinien und schraffierte Flächen sowie Planinhalte. Solche Elemente sind an die Ansicht gebunden, in der sie erstellt wurden, und werden in anderen Ansichten nicht angezeigt. Modellelemente wie Wände, Geschossdecken oder Ausstattungselemente sind davon nicht betroffen</sld22>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -342,6 +347,7 @@
     <sp14>Parameter des Quellelements einfügen</sp14>
     <se15>Baugruppe</se15>
     <sp15>Baugruppenparameter einfügen</sp15>
+    <sp16>Ansichtsparameter einfügen</sp16>
     <te1>Zielelement</te1>
     <tp1>Parameter des Zielelementes einfügen</tp1>
     <te2>Exemplar der Familie</te2>
@@ -410,5 +416,9 @@
     <d-cvif>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der alle Bedingungen erfüllt sind, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvif>
     <d-cvor>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der mindestens eine Bedingung erfüllt ist, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvor>
     <d-doctitle>Gibt den Titel des aktuellen Dokuments zurück</d-doctitle>
+    <d-targetbottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targetbottomz>
+    <d-targettopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targettopz>
+    <d-sourcebottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcebottomz>
+    <d-sourcetopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcetopz>
   </mprParametrization>
 </ModPlus>
