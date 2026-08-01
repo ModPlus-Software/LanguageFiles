@@ -26,7 +26,9 @@
     <t19>Renumber according to the position in the table</t19>
     <t20>Export current configuration</t20>
     <t21>Import strategies into current configuration</t21>
+    <!--todo remove after 4.1.33.0-->
     <t23>Import rules into current strategy</t23>
+    <!--todo remove after 4.1.33.0-->
     <t24>Export rules of current strategy</t24>
     <t25>Write empty result</t25>
     <t26>Write an empty result, obtained by calculating the expression, to the target parameter. For string parameters it is an empty string, for numeric parameters it is 0</t26>
@@ -146,6 +148,12 @@
     <t141>of</t141>
     <t142>Name and description</t142>
     <t143>Open the formula guide</t143>
+    <t144>Pre-filter</t144>
+    <t145>The pre-filter narrows down the set of elements for all rules of the strategy at once. Unlike the strategy filter, it is not substituted for an unfilled rule filter but is applied in addition to it: an element will be processed only if it passes both the pre-filter and the rule filter. For example, if the pre-filter specifies the "Walls" category and the "Structural" parameter, all rules will operate only on structural walls, selecting elements among them by their own categories and parameters. An empty pre-filter imposes no restrictions</t145>
+    <t146>Export current strategy</t146>
+    <t147>Import into current strategy</t147>
+    <t148>Strategy filters</t148>
+    <t149>Strategy pre-filters</t149>
     <msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
     <msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
     <msg3>List of strategies is not empty</msg3>
@@ -184,6 +192,8 @@
     <msg36>The value "{0}" of parameter "{1}" matches the calculated value of the expression</msg36>
     <msg37>The value "{0}" of parameter "{1}" does not match the calculated value "{2}" of the expression</msg37>
     <msg38>Element processing skipped because the expression evaluation result is the keyword SKIP_ELEMENT</msg38>
+    <msg39>Rules № {0}: categories do not intersect with the categories of the pre-filter {1}. These rules will not process any elements</msg39>
+    <msg40>Rules № {0}: categories only partially fall within the categories of the pre-filter {1}. Non-matching categories will be discarded</msg40>
     <err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
     <err2>The number of opening round brackets must equal the number of closing ones</err2>
     <err3>The number of opening curly brackets must equal the number of closing ones</err3>

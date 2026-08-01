@@ -26,7 +26,9 @@
     <t19>Neunummerierung entsprechend der Position in der Tabelle durchführen</t19>
     <t20>Export der aktuellen Konfiguration</t20>
     <t21>Import von Strategien in die aktuelle Konfiguration</t21>
+    <!--todo remove after 4.1.33.0-->
     <t23>Import von Regeln in die aktuelle Strategie</t23>
+    <!--todo remove after 4.1.33.0-->
     <t24>Export von Regeln in die aktuelle Strategie</t24>
     <t25>Ein leeres Ergebnis schreiben</t25>
     <t26>Das leere Ergebnis der Ausdrucksberechnung in den Zielparameter schreiben. Bei Zeichenkettenparametern ist es eine leere Zeichenkette, bei numerischen Parametern ist es 0</t26>
@@ -146,6 +148,12 @@
     <t141>von</t141>
     <t142>Name und Beschreibung</t142>
     <t143>Formel-Anleitung öffnen</t143>
+    <t144>Vorfilter</t144>
+    <t145>Der Vorfilter grenzt den Elementsatz für alle Regeln der Strategie gleichzeitig ein. Im Gegensatz zum Strategiefilter wird er nicht anstelle eines nicht ausgefüllten Regelfilters eingesetzt, sondern zusätzlich zu diesem angewendet: Ein Element wird nur dann verarbeitet, wenn es sowohl den Vorfilter als auch den Regelfilter passiert. Wenn beispielsweise im Vorfilter die Kategorie „Wände" und der Parameter „Tragend" festgelegt werden, arbeiten alle Regeln nur mit tragenden Wänden und wählen daraus Elemente nach ihren eigenen Kategorien und Parametern aus. Ein leerer Vorfilter schränkt nichts ein</t145>
+    <t146>Aktuelle Strategie exportieren</t146>
+    <t147>In aktuelle Strategie importieren</t147>
+    <t148>Strategiefilter</t148>
+    <t149>Vorfilter der Strategie</t149>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -184,6 +192,8 @@
     <msg36>Der Wert "{0}" des Parameters "{1}" stimmt mit dem berechneten Wert des Ausdrucks überein</msg36>
     <msg37>Der Wert "{0}" des Parameters "{1}" stimmt nicht mit dem berechneten Wert "{2}" des Ausdrucks überein</msg37>
     <msg38>Die Verarbeitung des Elements wurde übersprungen, da das Ergebnis der Ausdrucksberechnung das Schlüsselwort SKIP_ELEMENT ist</msg38>
+    <msg39>Regeln Nr. {0}: Kategorien überschneiden sich nicht mit den Kategorien des Vorfilters {1}. Diese Regeln verarbeiten keine Elemente</msg39>
+    <msg40>Regeln Nr. {0}: Kategorien fallen nur teilweise in die Kategorien des Vorfilters {1}. Nicht übereinstimmende Kategorien werden verworfen</msg40>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>

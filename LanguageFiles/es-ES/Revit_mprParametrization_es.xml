@@ -26,7 +26,9 @@
     <t19>Renumerar según posición en tabla</t19>
     <t20>Exportar configuración actual</t20>
     <t21>Importar estrategias a configuración actual</t21>
+    <!--todo remove after 4.1.33.0-->
     <t23>Importar reglas a estrategia actual</t23>
+    <!--todo remove after 4.1.33.0-->
     <t24>Exportar reglas de estrategia actual</t24>
     <t25>Guardar resultado vacío</t25>
     <t26>Guardar resultado vacío obtenido al calcular expresión en parámetro objetivo. Para parámetros de cadena, esta es una cadena vacía, para parámetros numéricos, es 0</t26>
@@ -146,6 +148,12 @@
     <t141>de</t141>
     <t142>Nombre y descripción</t142>
     <t143>Abrir la guía de fórmulas</t143>
+    <t144>Prefiltro</t144>
+    <t145>El prefiltro reduce el conjunto de elementos simultáneamente para todas las reglas de la estrategia. A diferencia del filtro de estrategia, no se sustituye por el filtro de regla no rellenado, sino que se aplica de forma adicional: un elemento se procesará solo si pasa tanto el prefiltro como el filtro de regla. Por ejemplo, si en el prefiltro se establece la categoría "Muros" y el parámetro "Estructural", todas las reglas trabajarán únicamente con muros estructurales, seleccionando entre ellos los elementos según sus propias categorías y parámetros. Un prefiltro vacío no impone ninguna restricción</t145>
+    <t146>Exportar estrategia actual</t146>
+    <t147>Importar en la estrategia actual</t147>
+    <t148>Filtros de la estrategia</t148>
+    <t149>Prefiltros de la estrategia</t149>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -184,6 +192,8 @@
     <msg36>El valor "{0}" del parámetro "{1}" coincide con el valor calculado de la expresión</msg36>
     <msg37>El valor "{0}" del parámetro "{1}" no coincide con el valor calculado "{2}" de la expresión</msg37>
     <msg38>Se omitió el procesamiento del elemento porque el resultado de la evaluación de la expresión es la palabra clave SKIP_ELEMENT</msg38>
+    <msg39>Reglas n.º {0}: las categorías no coinciden con las categorías del prefiltro {1}. Estas reglas no procesarán ningún elemento</msg39>
+    <msg40>Reglas n.º {0}: las categorías solo coinciden parcialmente con las categorías del prefiltro {1}. Las categorías no coincidentes se descartarán</msg40>
     <err1>Cada expresión de una fórmula debe comenzar con parámetro objetivo "$[NombreDelParámetro]="</err1>
     <err2>Número de paréntesis de apertura debe ser igual al número de paréntesis de cierre</err2>
     <err3>Número de llaves de apertura debe ser igual al número de llaves de cierre</err3>
