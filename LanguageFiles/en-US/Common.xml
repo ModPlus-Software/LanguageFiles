@@ -1493,7 +1493,9 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <h18>Hidden tabs:</h18>
     <h19>Filter by category</h19>
     <h20>Filter by parameters</h20>
+    <!--todo remove after 37.6.0-->
     <h41>Search (enter * to display only checked categories)</h41>
+    <!--todo remove after 37.6.0-->
     <h42>Selected categories:</h42>
     <h43>Parameter identifier</h43>
     <h44>Condition:</h44>
@@ -1612,10 +1614,19 @@ Not all parameters may be present in the list of instance parameters, because in
     <h197>Apply to view</h197>
     <h198>Enables you to apply the selected Scope Box to the current view</h198>
     <h199>Select views</h199>
-    <h200>Views selected:</h200>
+    <h200>Views checked:</h200>
     <h201>Views</h201>
     <h202>Schedules</h202>
     <h203>Select schedules</h203>
+    <h204>Check open views</h204>
+    <h205>The values of the special parameter "{0}" are calculated from the element geometry. Such a search can take a very long time and cause the window to freeze, so it is not available. Specify the value manually: a numeric elevation in millimeters or a level name</h205>
+    <h206>The special parameter "{0}" has no values. The conditions "Presence of parameter" and "Absence of parameter" are used for it</h206>
+    <h207>The search for values of the special parameter "{0}" ({1}) is performed among the elements of the specified categories on the current view</h207>
+    <h208>The search for values of the special parameter "{0}" ({1}) is performed among all elements of the specified categories in the current project</h208>
+    <h209>The search for values of the parameter "{0}" is performed among the elements and element types of the specified categories on the current view</h209>
+    <h210>Searching for elements is not possible on the current view</h210>
+    <h211>No values of the parameter "{0}" were found in the elements and element types of the category "{1}" on the current view. The specified parameter may not exist</h211>
+    <h212>Current view</h212>
     <parameters>Parameters</parameters>
     <name>Name</name>
     <any>Any</any>
@@ -1720,11 +1731,20 @@ Not all parameters may be present in the list of instance parameters, because in
     <tt4>The specified mail address did not pass the verification!\nOr you have made a mistake in specifying the mail address or you have an very unique mail hoster =)</tt4>
     <tt5>To change the language on the Ribbon, you need to restart the Revit</tt5>
     <tt6>The previously specified backup storage folder was not found. The folder has been deleted or renamed</tt6>
+    <!--todo remove after 37.6.0-->
     <t13>Uncheck all categories</t13>
     <t14>Add condition</t14>
     <t15>Remove condition</t15>
     <t16>Check categories whose elements are present on the current view</t16>
+    <!--todo remove after 37.6.0-->
     <t17>Check all categories</t17>
+    <t18>{0} of {1} checked</t18>
+    <t19>Check all displayed categories</t19>
+    <t20>Uncheck all displayed categories</t20>
+    <ct1>Model</ct1>
+    <ct2>Annotations</ct2>
+    <ct3>Analytical Model</ct3>
+    <ct4>Other</ct4>
     <err1>The configuration file is corrupt! Can not build a Ribbon</err1>
     <err2>Plugin is not available for use in families</err2>
     <err3>The allowed number of tabs created on the ribbon is exceeded. A maximum of 20 additional tabs are allowed. Tab "{0}" will not be added!</err3>
