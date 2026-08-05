@@ -11,7 +11,7 @@ public class Domain : ObservableObject
     private string _name;
     private bool _isExpanded;
     private ObservableCollection<Module> _modules = [];
-    
+
     /// <summary>
     /// Имя домена.
     /// </summary>
@@ -24,20 +24,18 @@ public class Domain : ObservableObject
             {
                 return;
             }
-            
+
             _name = value;
             OnPropertyChanged();
         }
     }
-    
-    // todo: Почему это вообще здесь есть? Не должен КАЖДЫЙ модуль хранить это.
+
     /// <summary>
     /// Является ли домен общим (Common): хранит строки, доступные всем модулям.
     /// Всё, что не попало в конкретную категорию, относится к этому домену.
     /// </summary>
     public bool IsCommon { get; init; }
-    
-    // todo: этого зебсь быть не должно, так как это вопрос к ui, а не к model, а domain является всё-таки model частью mvvm
+
     /// <summary>
     /// Развёрнут ли узел домена в навигационном дереве.
     /// </summary>
@@ -50,12 +48,12 @@ public class Domain : ObservableObject
             {
                 return;
             }
-            
+
             _isExpanded = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Модули домена.
     /// </summary>
@@ -68,7 +66,7 @@ public class Domain : ObservableObject
             {
                 return;
             }
-            
+
             _modules = value;
             OnPropertyChanged();
         }

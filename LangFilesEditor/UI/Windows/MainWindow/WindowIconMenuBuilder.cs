@@ -35,12 +35,12 @@ internal static class WindowIconMenuBuilder
                 });
             windowsItem.Items.Add(checkItem);
         }
-        
+
         viewItem.Items.Add(windowsItem);
         menu.Items.Add(viewItem);
         return menu;
     }
-    
+
     /// <summary>
     /// Открывает меню в левом верхнем углу окна (область системной иконки заголовка).
     /// </summary>
@@ -48,11 +48,12 @@ internal static class WindowIconMenuBuilder
     /// <param name="menu">Меню, созданное через <see cref="Create"/>.</param>
     public static void ShowAtWindowIcon(Window window, ContextMenu menu)
     {
+        // Меню привязывается к самому окну: AbsolutePoint потребовал бы пересчёта экранных пикселей
+        // в аппаратно-независимые единицы и «уезжал» бы при масштабе экрана ≠ 100%.
         menu.PlacementTarget = window;
-        menu.Placement = System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint;
-        var iconPoint = window.PointToScreen(new Point(0, 0));
-        menu.HorizontalOffset = iconPoint.X;
-        menu.VerticalOffset = iconPoint.Y;
+        menu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+        menu.HorizontalOffset = 0;
+        menu.VerticalOffset = 0;
         menu.IsOpen = true;
     }
 }

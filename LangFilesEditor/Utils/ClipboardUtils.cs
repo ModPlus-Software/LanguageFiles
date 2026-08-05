@@ -27,11 +27,11 @@ public class ClipboardUtils
             {
                 // ignore
             }
-            
+
             Thread.Sleep(10);
         }
     }
-    
+
     /// <summary>
     /// Читает текст из буфера обмена с повторными попытками при временных сбоях.
     /// </summary>
@@ -48,10 +48,10 @@ public class ClipboardUtils
             {
                 // ignore
             }
-            
+
             Thread.Sleep(10);
         }
-        
+
         return string.Empty;
     }
 }

@@ -2,7 +2,6 @@ namespace LangFilesEditor.Helpers;
 
 using Models;
 
-// todo: вообще штука абсолютно бесмысленная, т. к. получить отображаемые можно через ItemsView и только такое получение их и должно быть. Единственное, что стоит рассмотреть кейс, зачем и в каких случаях
 /// <summary>
 /// Общая логика отображения строк модуля с учётом фильтра поиска.
 /// </summary>
@@ -20,14 +19,14 @@ public static class ModuleViewHelper
         {
             return module.Items.ToList();
         }
-        
+
         var result = new List<TranslationEntry>();
-        
+
         foreach (TranslationEntry item in view)
         {
             result.Add(item);
         }
-        
+
         return result;
     }
 }

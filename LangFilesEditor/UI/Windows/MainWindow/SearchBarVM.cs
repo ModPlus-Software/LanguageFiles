@@ -21,11 +21,12 @@ public class SearchBarVM : ObservableObject
     private readonly ObservableCollection<Domain> _domains;
     private readonly DispatcherTimer _debounceTimer;
     private int _searchVersion;
+    private bool _filterReapplyScheduled;
     private string _queryText = string.Empty;
     private bool _searchInCommon;
     private bool _searchInOpenModules;
     private bool _searchInAllModules;
-    
+
     /// <summary>
     /// Создаёт ViewModel панели поиска с отложенным выполнением запроса.
     /// </summary>
@@ -47,16 +48,16 @@ public class SearchBarVM : ObservableObject
         {
             Interval = TimeSpan.FromMilliseconds(SearchDebounceMilliseconds)
         };
-        
+
         _debounceTimer.Tick += async (_, _) =>
         {
             _debounceTimer.Stop();
             await ExecuteSearchAsync();
         };
-        
+
         _workspace.PropertyChanged += OnWorkspacePropertyChanged;
     }
-    
+
     /// <summary>
     /// Текст поискового запроса.
     /// </summary>
@@ -69,13 +70,13 @@ public class SearchBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _queryText = value;
             OnPropertyChanged();
             ScheduleSearch();
         }
     }
-    
+
     /// <summary>
     /// Искать в общем модуле (Common).
     /// </summary>
@@ -88,14 +89,14 @@ public class SearchBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _searchInCommon = value;
             OnPropertyChanged();
             OnPropertyChanged(nameof(IsSearchInCommonEnabled));
             ScheduleSearch();
         }
     }
-    
+
     /// <summary>
     /// Искать среди открытых модулей.
     /// </summary>
@@ -108,9 +109,9 @@ public class SearchBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _searchInOpenModules = value;
-            
+
             if (value)
             {
                 SetSearchInCommonIncluded();
@@ -119,14 +120,14 @@ public class SearchBarVM : ObservableObject
             {
                 SearchInCommon = false;
             }
-            
+
             OnPropertyChanged();
             OnPropertyChanged(nameof(IsSearchInCommonEnabled));
             OnPropertyChanged(nameof(IsSearchInOpenModulesEnabled));
             ScheduleSearch();
         }
     }
-    
+
     /// <summary>
     /// Искать во всех модулях всех доменов.
     /// </summary>
@@ -139,7 +140,7 @@ public class SearchBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _searchInAllModules = value;
             if (value)
             {
@@ -155,88 +156,120 @@ public class SearchBarVM : ObservableObject
                 OnPropertyChanged(nameof(SearchInOpenModules));
                 OnPropertyChanged(nameof(SearchInCommon));
             }
-            
+
             OnPropertyChanged();
             OnPropertyChanged(nameof(IsSearchInCommonEnabled));
             OnPropertyChanged(nameof(IsSearchInOpenModulesEnabled));
             ScheduleSearch();
         }
     }
-    
+
     /// <summary>
     /// Доступен ли флаг поиска в Common (не при открытых или всех модулях).
     /// </summary>
     public bool IsSearchInCommonEnabled => !SearchInOpenModules && !SearchInAllModules;
-    
+
     /// <summary>
     /// Доступен ли флаг поиска в открытых модулях (не при поиске по всем).
     /// </summary>
     public bool IsSearchInOpenModulesEnabled => !SearchInAllModules;
-    
+
     private void OnWorkspacePropertyChanged(object sender, PropertyChangedEventArgs e)
     {
-        if (e.PropertyName == nameof(IEditorWorkspace.ActiveDiagnosticFilter)
-            && _workspace.ActiveDiagnosticFilter != null
-            && !string.IsNullOrEmpty(_queryText))
+        switch (e.PropertyName)
         {
-            _queryText = string.Empty;
-            OnPropertyChanged(nameof(QueryText));
+            // Диагностика и текстовый поиск — взаимоисключающие режимы: включение фильтра
+            // диагностики очищает поисковый запрос.
+            case nameof(IEditorWorkspace.ActiveDiagnosticFilter)
+                when _workspace.ActiveDiagnosticFilter != null && !string.IsNullOrEmpty(_queryText):
+                _queryText = string.Empty;
+                OnPropertyChanged(nameof(QueryText));
+                break;
+
+            // Открытие нового модуля (клик по узлу дерева или по вкладке) не должно сбрасывать
+            // введённый запрос: фильтр переприменяется к новому составу области поиска.
+            case nameof(IEditorWorkspace.SelectedModule):
+                ScheduleFilterReapply();
+                break;
         }
-        
-        if (e.PropertyName != nameof(IEditorWorkspace.SelectedModule))
-        {
-            return;
-        }
-        
-        if (_workspace.IsSearchResultsView || _workspace.IsDiagnosticResultsView)
-        {
-            return;
-        }
-        
-        if (!string.IsNullOrEmpty(_queryText))
-        {
-            _queryText = string.Empty;
-            OnPropertyChanged(nameof(QueryText));
-        }
-        
-        _ = ExecuteSearchAsync();
     }
-    
+
+    /// <summary>
+    /// Планирует переприменение текущего запроса к области поиска.
+    /// Выбор модуля выключает режим результатов поиска уже после уведомления о смене выбора,
+    /// поэтому фактическое применение откладывается до конца текущей операции — к этому моменту
+    /// режим результатов уже выключен и фильтр ложится на обычный список вкладок.
+    /// </summary>
+    private void ScheduleFilterReapply()
+    {
+        if (_filterReapplyScheduled || string.IsNullOrWhiteSpace(_queryText))
+        {
+            return;
+        }
+
+        _filterReapplyScheduled = true;
+        _debounceTimer.Dispatcher.BeginInvoke(() => ReapplyFilterToCurrentScope(), DispatcherPriority.Background);
+    }
+
+    private void ReapplyFilterToCurrentScope()
+    {
+        _filterReapplyScheduled = false;
+
+        // В результатных режимах состав отображения задаётся самим поиском/диагностикой —
+        // там переприменять фильтр не нужно.
+        if (_workspace.IsSearchResultsView
+            || _workspace.IsDiagnosticResultsView
+            || string.IsNullOrWhiteSpace(_queryText))
+        {
+            return;
+        }
+
+        _searchEngine.ApplySearch(
+            _workspace.SelectedModule,
+            _workspace.SelectedModule?.Group,
+            _domains,
+            _workspace.OpenModules,
+            _queryText,
+            CreateScope());
+    }
+
     private void SetSearchInCommonIncluded()
     {
         if (_searchInCommon)
         {
             return;
         }
-        
+
         _searchInCommon = true;
         OnPropertyChanged(nameof(SearchInCommon));
         OnPropertyChanged(nameof(IsSearchInCommonEnabled));
     }
-    
+
     private void ScheduleSearch()
     {
         _debounceTimer.Stop();
         _debounceTimer.Start();
     }
-    
+
+    private SearchScopeOptions CreateScope() => new()
+    {
+        SearchInCommon = SearchInCommon,
+        SearchInOpenModules = SearchInOpenModules,
+        SearchInAllModules = SearchInAllModules
+    };
+
     private async Task ExecuteSearchAsync()
     {
         var version = ++_searchVersion;
-        var scope = new SearchScopeOptions
-        {
-            SearchInCommon = SearchInCommon,
-            SearchInOpenModules = SearchInOpenModules,
-            SearchInAllModules = SearchInAllModules
-        };
-        
+        var scope = CreateScope();
+
         var hasQuery = !string.IsNullOrWhiteSpace(_queryText);
         if (hasQuery)
         {
             _workspace.SetActiveDiagnosticFilter(null);
             _workspace.SetDiagnosticResultsView(false, []);
         }
-        
+
         if (!hasQuery)
         {
             _searchEngine.ApplySearch(
@@ -249,17 +282,17 @@ public class SearchBarVM : ObservableObject
             _workspace.SetSearchResultsView(false, []);
             return;
         }
-        
+
         if (scope.SearchInAllModules)
         {
             await _session.EnsureDomainModuleListsLoadedAsync();
         }
-        
+
         if (version != _searchVersion)
         {
             return;
         }
-        
+
         var targets = _searchEngine.ResolveTargetModules(
             _workspace.SelectedModule,
             _workspace.SelectedModule?.Group,
@@ -267,12 +300,12 @@ public class SearchBarVM : ObservableObject
             _workspace.OpenModules,
             scope);
         targets = await _session.LoadSearchScopeEntriesAsync(targets);
-        
+
         if (version != _searchVersion)
         {
             return;
         }
-        
+
         var modulesWithResults = _searchEngine.GetModulesWithResults(targets, _queryText);
         if (modulesWithResults.Count == 0)
         {
@@ -286,7 +319,7 @@ public class SearchBarVM : ObservableObject
             _workspace.SetSearchResultsView(false, []);
             return;
         }
-        
+
         _searchEngine.ApplySearch(
             _workspace.SelectedModule,
             _workspace.SelectedModule?.Group,

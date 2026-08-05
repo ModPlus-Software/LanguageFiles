@@ -4,7 +4,10 @@ using MainWindow.WorkSpace;
 using System.Collections;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+using System.Windows.Media;
+using LangFilesEditor.Models;
 using Utils;
 
 /// <summary>
@@ -13,6 +16,8 @@ using Utils;
 public partial class TranslationEntriesGrid
 {
     private ScrollViewer _scrollViewer;
+    private ScrollContentPresenter _scrollContentPresenter;
+    private DataGridRowsPresenter _rowsPresenter;
 
     /// <summary>
     /// Свойство зависимости для источника данных строк грида.
@@ -99,51 +104,95 @@ public partial class TranslationEntriesGrid
 
     /// <summary>
     /// <see langword="true"/> — строки <see cref="WorkspaceGridRow"/> (модули в одной таблице);
-    /// <see langword="false"/> — строки <see cref="Models.TranslationEntry"/> (атрибуты и простые списки).
+    /// <see langword="false"/> — строки <see cref="TranslationEntry"/> (атрибуты и простые списки).
     /// </summary>
     public bool UseWorkspaceLayout
     {
         get => (bool)GetValue(UseWorkspaceLayoutProperty);
         set => SetValue(UseWorkspaceLayoutProperty, value);
     }
-    
+
     /// <summary>
-    /// Прокручивает строку к верху видимой области; у конца списка — до максимума.
+    /// Прокручивает строку к верху видимой области. Если строка у конца списка, под ней
+    /// добавляется пустое место — иначе прокрутка упёрлась бы в край и строка осталась бы внизу.
     /// </summary>
     /// <param name="rowItem">Элемент строки для прокрутки.</param>
     public void ScrollRowToTop(object rowItem)
     {
-        if (rowItem == null)
+        if (rowItem == null || !EnsureScrollParts())
         {
             return;
         }
-        
-        _scrollViewer ??= WpfUtils.FindVisualChild<ScrollViewer>(EntriesDataGrid);
-        if (_scrollViewer == null)
-        {
-            return;
-        }
-        
+
+        // Место, добавленное прошлой прокруткой, сбрасывается — иначе оно копилось бы.
+        SetTrailingSpace(0);
         EntriesDataGrid.ScrollIntoView(rowItem);
         EntriesDataGrid.UpdateLayout();
         if (EntriesDataGrid.ItemContainerGenerator.ContainerFromItem(rowItem) is not DataGridRow dataGridRow)
         {
             return;
         }
-        
-        var transform = dataGridRow.TransformToVisual(_scrollViewer);
-        var rowTop = transform.Transform(new Point(0, 0)).Y;
+
+        // Смещение считается относительно области прокручиваемого содержимого, а не всего ScrollViewer:
+        // в шаблоне DataGrid внутри ScrollViewer над содержимым лежат заголовки колонок, поэтому отсчёт
+        // от верха ScrollViewer завышал бы смещение на их высоту и строка уезжала бы под заголовки.
+        var contentOrigin = (Visual)_scrollContentPresenter ?? _scrollViewer;
+        var rowTop = dataGridRow.TransformToVisual(contentOrigin).Transform(default).Y;
         var targetOffset = _scrollViewer.VerticalOffset + rowTop;
         var maxOffset = Math.Max(0, _scrollViewer.ExtentHeight - _scrollViewer.ViewportHeight);
+
+        // У конца списка прокрутке некуда идти, и строка осталась бы внизу таблицы. Под последней
+        // строкой добавляется ровно столько пустого места, сколько нужно, чтобы поднять её наверх.
         if (targetOffset > maxOffset)
         {
-            targetOffset = maxOffset;
+            SetTrailingSpace(Math.Min(targetOffset - maxOffset, _scrollViewer.ViewportHeight));
+            EntriesDataGrid.UpdateLayout();
+            maxOffset = Math.Max(0, _scrollViewer.ExtentHeight - _scrollViewer.ViewportHeight);
         }
-        
-        var spaceBelow = _scrollViewer.ExtentHeight - targetOffset - _scrollViewer.ViewportHeight;
-        _scrollViewer.ScrollToVerticalOffset(spaceBelow > 1 ? targetOffset : maxOffset);
+
+        _scrollViewer.ScrollToVerticalOffset(Math.Clamp(targetOffset, 0, maxOffset));
     }
-    
+
+    /// <summary>
+    /// Задаёт высоту пустого места под последней строкой таблицы.
+    /// </summary>
+    /// <param name="height">Высота пустого места в пикселях; 0 — убрать.</param>
+    private void SetTrailingSpace(double height)
+    {
+        _rowsPresenter ??= WpfUtils.FindVisualChild<DataGridRowsPresenter>(EntriesDataGrid);
+        if (_rowsPresenter == null)
+        {
+            return;
+        }
+
+        var margin = _rowsPresenter.Margin;
+        if (Math.Abs(margin.Bottom - height) < 0.5)
+        {
+            return;
+        }
+
+        _rowsPresenter.Margin = new Thickness(margin.Left, margin.Top, margin.Right, height);
+    }
+
+    /// <summary>
+    /// Находит и кеширует <see cref="ScrollViewer"/> грида и его область прокручиваемого содержимого.
+    /// </summary>
+    /// <returns><see langword="true"/>, если ScrollViewer уже построен в визуальном дереве.</returns>
+    private bool EnsureScrollParts()
+    {
+        _scrollViewer ??= WpfUtils.FindVisualChild<ScrollViewer>(EntriesDataGrid);
+        if (_scrollViewer == null)
+        {
+            return false;
+        }
+
+        _scrollContentPresenter ??=
+            _scrollViewer.Template?.FindName("PART_ScrollContentPresenter", _scrollViewer) as ScrollContentPresenter
+            ?? WpfUtils.FindVisualChild<ScrollContentPresenter>(_scrollViewer);
+
+        return true;
+    }
+
     private static void OnLayoutPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
         if (d is TranslationEntriesGrid grid)
@@ -151,7 +200,7 @@ public partial class TranslationEntriesGrid
             grid.ApplyLayoutMode();
         }
     }
-    
+
     private static void OnHeaderChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
         if (d is TranslationEntriesGrid grid)
@@ -159,7 +208,7 @@ public partial class TranslationEntriesGrid
             grid.UpdateHeaderVisibility();
         }
     }
-    
+
     private void ApplyLayoutMode()
     {
         if (UseWorkspaceLayout)
@@ -176,7 +225,7 @@ public partial class TranslationEntriesGrid
             ZhColumn.CellTemplate = (DataTemplate)FindResource("WorkspaceZhCnCellTemplate");
             return;
         }
-        
+
         EntriesDataGrid.EnableRowVirtualization = true;
         EntriesDataGrid.RowStyle = (Style)FindResource("TranslationEntriesEntryRowStyle");
         NameColumn.CellTemplate = (DataTemplate)FindResource(
@@ -188,33 +237,32 @@ public partial class TranslationEntriesGrid
         EsColumn.CellTemplate = (DataTemplate)FindResource("EntryEsEsCellTemplate");
         ZhColumn.CellTemplate = (DataTemplate)FindResource("EntryZhCnCellTemplate");
     }
-    
+
     private void UpdateHeaderVisibility()
     {
         var hasHeader = !string.IsNullOrEmpty(Header);
         HeaderRow.Height = hasHeader ? GridLength.Auto : new GridLength(0);
         HeaderTextBlock.Visibility = hasHeader ? Visibility.Visible : Visibility.Collapsed;
     }
-    
+
     private void EntriesDataGrid_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         SelectedRowChanged?.Invoke(this, EntriesDataGrid.SelectedItem);
     }
-    
+
     private void OnLoaded(object sender, RoutedEventArgs e)
     {
         EntriesDataGrid.PreviewMouseWheel -= OnPreviewMouseWheel;
         EntriesDataGrid.PreviewMouseWheel += OnPreviewMouseWheel;
     }
-    
+
     private void OnPreviewMouseWheel(object sender, MouseWheelEventArgs e)
     {
-        _scrollViewer ??= WpfUtils.FindVisualChild<ScrollViewer>(EntriesDataGrid);
-        if (_scrollViewer == null)
+        if (!EnsureScrollParts())
         {
             return;
         }
-        
+
         var maxOffset = Math.Max(0, _scrollViewer.ExtentHeight - _scrollViewer.ViewportHeight);
         var newOffset = _scrollViewer.VerticalOffset - e.Delta;
         if (newOffset < 0)
@@ -225,7 +273,7 @@ public partial class TranslationEntriesGrid
         {
             newOffset = maxOffset;
         }
-        
+
         _scrollViewer.ScrollToVerticalOffset(newOffset);
         e.Handled = true;
     }

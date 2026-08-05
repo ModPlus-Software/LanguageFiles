@@ -5,7 +5,8 @@ using Models;
 using Services;
 
 /// <summary>
-/// todo:
+/// Владелец режимов отображения результатов поиска и диагностики: какой режим активен,
+/// какие модули он показывает и в каком порядке, а также сброс фильтров модулей при выходе.
 /// </summary>
 internal sealed class WorkspaceResultsViewCoordinator
 {
@@ -13,7 +14,7 @@ internal sealed class WorkspaceResultsViewCoordinator
     private readonly ObservableCollection<Module> _openModules;
     private IReadOnlyList<Module> _searchResultModules = [];
     private IReadOnlyList<Module> _diagnosticResultModules = [];
-    
+
     /// <summary>
     /// Создаёт координатор над коллекциями доменов и открытых модулей сессии.
     /// </summary>
@@ -24,22 +25,22 @@ internal sealed class WorkspaceResultsViewCoordinator
         _domains = domains;
         _openModules = openModules;
     }
-    
+
     /// <summary>
     /// Активен ли режим отображения результатов поиска вместо открытых вкладок.
     /// </summary>
     public bool IsSearchResultsView { get; private set; }
-    
+
     /// <summary>
     /// Активен ли режим отображения результатов диагностики вместо открытых вкладок.
     /// </summary>
     public bool IsDiagnosticResultsView { get; private set; }
-    
+
     /// <summary>
     /// Активная категория фильтра диагностики рабочей области.
     /// </summary>
     public DiagnosticSeverity? ActiveDiagnosticFilter { get; private set; }
-    
+
     /// <summary>
     /// Модули для отображения в рабочей области с учётом текущего режима (диагностика/поиск/открытые вкладки).
     /// </summary>
@@ -49,20 +50,20 @@ internal sealed class WorkspaceResultsViewCoordinator
         {
             return OrderModulesForDisplay(_diagnosticResultModules);
         }
-        
+
         if (IsSearchResultsView && _searchResultModules.Count > 0)
         {
             return OrderModulesForDisplay(_searchResultModules);
         }
-        
+
         return _openModules.ToList();
     }
-    
+
     /// <summary>
     /// Устанавливает активную категорию фильтра диагностики.
     /// </summary>
     public void SetActiveDiagnosticFilter(DiagnosticSeverity? severity) => ActiveDiagnosticFilter = severity;
-    
+
     /// <summary>
     /// Включает или выключает режим результатов диагностики для указанных модулей.
     /// </summary>
@@ -70,12 +71,12 @@ internal sealed class WorkspaceResultsViewCoordinator
     {
         modules ??= [];
         var newActive = active && modules.Count > 0;
-        
+
         if (newActive)
         {
             ExitSearchResultsView();
         }
-        
+
         _diagnosticResultModules = modules;
         if (!newActive)
         {
@@ -83,10 +84,10 @@ internal sealed class WorkspaceResultsViewCoordinator
             SetActiveDiagnosticFilter(null);
             ClearPartialDiagnosticLoads();
         }
-        
+
         IsDiagnosticResultsView = newActive;
     }
-    
+
     /// <summary>
     /// Включает или выключает режим результатов поиска для указанных модулей.
     /// </summary>
@@ -94,22 +95,22 @@ internal sealed class WorkspaceResultsViewCoordinator
     {
         modules ??= [];
         var newActive = active && modules.Count > 0;
-        
+
         if (newActive)
         {
             ExitDiagnosticResultsView();
         }
-        
+
         _searchResultModules = modules;
         if (!newActive)
         {
             ClearModuleSearchFilters();
             SetActiveDiagnosticFilter(null);
         }
-        
+
         IsSearchResultsView = newActive;
     }
-    
+
     /// <summary>
     /// Выходит из режима результатов поиска (если активен) и сбрасывает поисковые фильтры модулей.
     /// </summary>
@@ -119,25 +120,25 @@ internal sealed class WorkspaceResultsViewCoordinator
         ClearModuleSearchFilters();
         IsSearchResultsView = false;
     }
-    
+
     /// <summary>
     /// Выходит из режима результатов диагностики (если активен) и сбрасывает связанные фильтры.
     /// </summary>
     public void ExitDiagnosticResultsView()
     {
         _diagnosticResultModules = [];
-        
+
         if (!IsDiagnosticResultsView)
         {
             return;
         }
-        
+
         ClearPartialDiagnosticLoads();
         SetActiveDiagnosticFilter(null);
         ClearModuleSearchFilters();
         IsDiagnosticResultsView = false;
     }
-    
+
     /// <summary>
     /// Сбрасывает пометку частичной загрузки диагностики у всех модулей всех доменов.
     /// </summary>
@@ -151,7 +152,7 @@ internal sealed class WorkspaceResultsViewCoordinator
             }
         }
     }
-    
+
     private void ClearModuleSearchFilters()
     {
         foreach (var domain in _domains)
@@ -162,7 +163,7 @@ internal sealed class WorkspaceResultsViewCoordinator
                 {
                     module.SearchString = string.Empty;
                 }
-                
+
                 if (module.DiagnosticFilter.HasValue)
                 {
                     module.DiagnosticFilter = null;
@@ -170,7 +171,7 @@ internal sealed class WorkspaceResultsViewCoordinator
             }
         }
     }
-    
+
     private IReadOnlyList<Module> OrderModulesForDisplay(IReadOnlyList<Module> modules)
     {
         var result = new List<Module>();
@@ -182,7 +183,7 @@ internal sealed class WorkspaceResultsViewCoordinator
                 result.Add(open);
             }
         }
-        
+
         foreach (var module in modules)
         {
             if (!result.Contains(module))
@@ -190,7 +191,7 @@ internal sealed class WorkspaceResultsViewCoordinator
                 result.Add(module);
             }
         }
-        
+
         return result;
     }
 }

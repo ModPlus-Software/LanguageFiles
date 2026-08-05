@@ -1,5 +1,6 @@
 namespace LangFilesEditor.Services;
 
+using Helpers;
 using Models;
 
 /// <summary>
@@ -7,9 +8,14 @@ using Models;
 /// </summary>
 public sealed class ModuleEntryStatusNotifier
 {
+    // Прогресс обновляется не на каждой строке: каждое обновление перерисовывает status bar,
+    // а строки при загрузке модуля добавляются сотнями. Шаг мельче размера порции строк,
+    // чтобы значение в status bar менялось хотя бы раз за отрисованный кадр.
+    private const int ProgressReportStep = 4;
+
     private readonly EditorOperationTracker _operations;
     private readonly HashSet<Module> _attached = [];
-    
+
     /// <summary>
     /// Создаёт notifier, публикующий сообщения в указанный трекер операций.
     /// </summary>
@@ -18,8 +24,7 @@ public sealed class ModuleEntryStatusNotifier
     {
         _operations = operations;
     }
-    
-    // todo: это можно сделать в самом модуле. Но даже так, посмотря на метод FormatUserMessage
+
     /// <summary>
     /// Подписывает модуль на уведомления о добавлении записей.
     /// </summary>
@@ -30,10 +35,10 @@ public sealed class ModuleEntryStatusNotifier
         {
             return;
         }
-        
+
         module.EntryAdded += OnEntryAdded;
     }
-    
+
     /// <summary>
     /// Подписывает все модули из перечисления на уведомления.
     /// </summary>
@@ -45,39 +50,40 @@ public sealed class ModuleEntryStatusNotifier
             Attach(module);
         }
     }
-    
+
     private void OnEntryAdded(object? sender, TranslationEntryAddedEventArgs e)
     {
         if (sender is not Module module)
         {
             return;
         }
-        
+
         if (e.Context.Source == TranslationEntryAddSource.FileRepository)
         {
-            if (e.Context.BulkProgress is { } progress)
+            if (e.Context.BulkProgress is { } progress
+                && (progress.Current % ProgressReportStep == 0 || progress.Current >= progress.Total))
             {
                 _operations.ReportByKey(module.Name, progress.Current, progress.Total);
             }
-            
+
             return;
         }
-        
+
         var message = FormatUserMessage(module, e);
         if (message != null)
         {
             _operations.PublishTransient(message);
         }
     }
-    
+
     private static string FormatUserMessage(Module module, TranslationEntryAddedEventArgs e)
     {
         return e.Context.Source switch
         {
-            // todo: локализация
-            TranslationEntryAddSource.User => $"Добавлен ключ «{e.Entry.Name}» в «{module.Name}»",
-            TranslationEntryAddSource.ExternalLoader => $"Импорт из кода: «{e.Entry.Name}» в «{module.Name}»",
-            TranslationEntryAddSource.Import => $"Импорт строки «{e.Entry.Name}» в «{module.Name}»",
+            TranslationEntryAddSource.User => EditorStrings.FormatEntryAddedByUser(e.Entry.Name, module.Name),
+            TranslationEntryAddSource.ExternalLoader =>
+                EditorStrings.FormatEntryImportedFromCode(e.Entry.Name, module.Name),
+            TranslationEntryAddSource.Import => EditorStrings.FormatEntryImported(e.Entry.Name, module.Name),
             _ => null,
         };
     }

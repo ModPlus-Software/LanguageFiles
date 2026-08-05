@@ -9,12 +9,12 @@ public enum DockChromePlacement
     /// Хром слева от содержимого.
     /// </summary>
     Left,
-    
+
     /// <summary>
     /// Хром сверху содержимого.
     /// </summary>
     Top,
-    
+
     /// <summary>
     /// Хром справа от содержимого.
     /// </summary>

@@ -13,7 +13,7 @@ using Models;
 public sealed class EntryDiagnosticsStore
 {
     private readonly ConditionalWeakTable<TranslationEntry, EditorDiagnostic> _byEntry = new();
-    
+
     /// <summary>
     /// Записывает (или заменяет) диагностику для указанной записи перевода.
     /// </summary>
@@ -24,13 +24,13 @@ public sealed class EntryDiagnosticsStore
         _byEntry.Remove(entry);
         _byEntry.Add(entry, diagnostic);
     }
-    
+
     /// <summary>
     /// Удаляет диагностику указанной записи, если она была установлена.
     /// </summary>
     /// <param name="entry">Запись перевода.</param>
     public void Clear(TranslationEntry entry) => _byEntry.Remove(entry);
-    
+
     /// <summary>
     /// Пытается получить текущую диагностику записи.
     /// </summary>

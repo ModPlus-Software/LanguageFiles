@@ -4,6 +4,7 @@ namespace LangFilesEditor.UI.Windows.DialogWindows;
 
 using System.Windows;
 using Core.Abstractions;
+using Helpers;
 
 /// <summary>
 /// Окно пометки строки на удаление в будущей версии.
@@ -11,7 +12,7 @@ using Core.Abstractions;
 public partial class MarkForDeletionWindow
 {
     private readonly IEditorWorkspace _host;
-    
+
     /// <summary>
     /// Создаёт окно с host API.
     /// </summary>
@@ -22,27 +23,33 @@ public partial class MarkForDeletionWindow
         InitializeComponent();
         TbVersion.Text = ResolveExistingVersion();
     }
-    
+
     private void Cancel_OnClick(object sender, RoutedEventArgs e) => DialogResult = false;
-    
+
     private void Mark_OnClick(object sender, RoutedEventArgs e)
     {
+        var entry = _host.SelectedTranslationEntry;
+        if (entry == null)
+        {
+            DialogResult = false;
+            return;
+        }
+
         if (!Version.TryParse(TbVersion.Text, out var version))
         {
             MessageBox.Show(
-                "Enter valid version!",
-                "Error",
+                EditorStrings.EnterValidVersion,
+                EditorStrings.ErrorCaption,
                 MessageBoxButton.OK,
                 MessageBoxImage.Error);
             return;
         }
-        
-        var entry = _host.SelectedTranslationEntry!;
+
         entry.RemovesOnVersion = version.ToString();
         entry.Comment = $"{Constants.RemoveAfterCommentPrefix}{version}";
         DialogResult = true;
     }
-    
+
     /// <summary>
     /// Возвращает версию, для которой строка уже помечена к удалению, или пустую строку.
     /// Метка хранится в комментарии вида <c>todo remove after X.Y.Z</c>, поэтому версия
@@ -56,14 +63,14 @@ public partial class MarkForDeletionWindow
         {
             return string.Empty;
         }
-        
+
         var comment = entry.Comment;
         if (!string.IsNullOrEmpty(comment)
             && comment.StartsWith(Constants.RemoveAfterCommentPrefix, StringComparison.Ordinal))
         {
             return comment[Constants.RemoveAfterCommentPrefix.Length..].Trim();
         }
-        
+
         return entry.RemovesOnVersion ?? string.Empty;
     }
 }

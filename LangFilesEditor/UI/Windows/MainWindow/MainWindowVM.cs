@@ -17,12 +17,11 @@ public class MainWindowVM : ObservableObject
     private readonly EditorBootstrap _bootstrap;
     private readonly IDialogService _dialogService;
 
-    // todo: странно, что vm знает о ширине view. Такого быть не должно.
     /// <summary>
     /// Создаёт shell редактора с панелями и подключёнными расширениями.
     /// </summary>
     /// <param name="toolBarDockPanelWidth">Ширина закреплённой панели инструментов.</param>
-    /// <param name="bootstrap">todo: словно здесь этого вообще быть не должно. Странно оно.</param>
+    /// <param name="bootstrap">Собранный набор сервисов редактора (сессия, workspace, расширения, настройки).</param>
     public MainWindowVM(double toolBarDockPanelWidth, EditorBootstrap bootstrap)
     {
         _bootstrap = bootstrap;
@@ -50,7 +49,6 @@ public class MainWindowVM : ObservableObject
             _bootstrap.Diagnostics);
         SearchBarVM = new SearchBarVM(_bootstrap.Workspace, _bootstrap.Store, _bootstrap.SearchEngine, Domains);
         WorkSpaceVM = new WorkSpaceVM(_bootstrap.Workspace);
-        // todo: локализация
         ToolPanel = new DockPanelState(
             "Tools",
             DockSide.Right,
@@ -59,92 +57,90 @@ public class MainWindowVM : ObservableObject
             minDockedSpan: toolBarDockPanelWidth,
             maxDockedSpan: toolBarDockPanelWidth);
     }
-    
+
     /// <summary>
     /// Панель навигации (domain / module).
     /// </summary>
-    /// todo: локализация
     public DockPanelState NavPanel { get; } = new("Navigation", DockSide.Left, defaultWidth: 300);
-    
+
     /// <summary>
     /// Панель инструментов.
     /// </summary>
     public DockPanelState ToolPanel { get; }
-    
+
     /// <summary>
     /// Панель поиска.
     /// </summary>
     public DockPanelState SearchPanel { get; } = new("Search", DockSide.Top, defaultHeight: 96);
-    
+
     /// <summary>
     /// Панель атрибутов module.
     /// </summary>
     public DockPanelState AttributesPanel { get; } = new("Attributes", DockSide.Bottom, defaultHeight: 160);
-    
+
     /// <summary>
     /// Запрос закрытия окна без сохранения (инициируется кнопкой toolbar, обрабатывается <see cref="MainWindow"/>).
     /// </summary>
     public event Action RequestCloseEvent;
-    
+
     /// <summary>
     /// Toolbar ViewModel.
     /// </summary>
     public ToolBarVM ToolBarVM { get; }
-    
+
     /// <summary>
     /// NavBar ViewModel.
     /// </summary>
     public NavBarVM NavBarVM { get; }
-    
+
     /// <summary>
     /// StatusBar ViewModel.
     /// </summary>
     public StatusBarVM StatusBarVM { get; }
-    
+
     /// <summary>
     /// SearchBar ViewModel.
     /// </summary>
     public SearchBarVM SearchBarVM { get; }
-    
+
     /// <summary>
     /// Workspace ViewModel.
     /// </summary>
     public WorkSpaceVM WorkSpaceVM { get; }
-    
+
     /// <summary>
     /// Меню видимости панелей.
     /// </summary>
     public WindowPanelsMenuVM WindowPanelsMenu { get; } = new();
-    
+
     /// <inheritdoc />
     public IExtensionEditorSession Session => _bootstrap.ExtensionHost.Session;
-    
+
     /// <inheritdoc />
     public IEditorCommands Commands => _bootstrap.Store;
-    
+
     /// <inheritdoc />
     public IModuleEditor Modules => _bootstrap.ExtensionHost.Modules;
-    
+
     /// <inheritdoc />
     public IBackgroundOperationService Operations => _bootstrap.ExtensionHost.Operations;
-    
+
     /// <inheritdoc />
     public IDiagnosticsPublisher Diagnostics => _bootstrap.ExtensionHost.Diagnostics;
-    
+
     /// <inheritdoc />
     public System.Collections.ObjectModel.ObservableCollection<Domain> Domains => _bootstrap.ExtensionHost.Domains;
-    
+
     /// <inheritdoc />
-    /// todo: к Store напрямую так нельзя обращаться.
     public bool SaveChanges() => _bootstrap.Store.Save();
-    
+
     /// <inheritdoc />
     public void RegisterToolbarCommand(LangFilesEditorToolbarCommand command) =>
         _bootstrap.ExtensionHost.RegisterToolbarCommand(command);
-    
+
     /// <inheritdoc />
     public IReadOnlyList<LangFilesEditorToolbarCommand> ToolbarCommands => _bootstrap.ExtensionHost.ToolbarCommands;
-    
+
     /// <summary>
     /// Начальная загрузка каталога модулей всех domain и фоновое сканирование диагностики базы.
     /// </summary>
@@ -157,7 +153,7 @@ public class MainWindowVM : ObservableObject
             await _bootstrap.Diagnostics.RunStartupScanAsync(_bootstrap.Repository, _bootstrap.Store.Languages);
         }
     }
-    
+
     /// <summary>
     /// Сохраняет изменения при обычном закрытии окна.
     /// </summary>
@@ -168,11 +164,8 @@ public class MainWindowVM : ObservableObject
         {
             return true;
         }
-        
-        // todo: локализация
-        _dialogService.ShowMessageWindow(
-            "Есть некорректные данные — изменения не сохранены." +
-            " Исправьте ошибки или закройте без сохранения.");
+
+        _dialogService.ShowMessageWindow(EditorStrings.SaveBlockedByIncorrectData);
         return false;
     }
 }

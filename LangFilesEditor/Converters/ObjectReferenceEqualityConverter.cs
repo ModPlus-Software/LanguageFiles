@@ -1,6 +1,7 @@
 namespace LangFilesEditor.Converters;
 
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 
 /// <summary>
@@ -17,8 +18,12 @@ public class ObjectReferenceEqualityConverter : IMultiValueConverter
     /// <param name="culture">Не используется.</param>
     /// <returns><see langword="true"/>, если оба значения ссылаются на один объект; иначе <see langword="false"/>.</returns>
     public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture) =>
-        values.Length >= 2 && ReferenceEquals(values[0], values[1]);
-    
+        // На этапе инициализации MultiBinding оба значения бывают UnsetValue/null — это не «совпадение».
+        values.Length >= 2
+        && values[0] != null
+        && !ReferenceEquals(values[0], DependencyProperty.UnsetValue)
+        && ReferenceEquals(values[0], values[1]);
+
     /// <summary>
     /// Обратное преобразование не поддерживается.
     /// </summary>

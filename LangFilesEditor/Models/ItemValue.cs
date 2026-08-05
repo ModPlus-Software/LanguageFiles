@@ -9,7 +9,7 @@ using ModPlusAPI.Mvvm;
 public class ItemValue : ObservableObject
 {
     private string _value;
-    
+
     /// <summary>
     /// Текст перевода; типографские кавычки нормализуются к двойным при установке.
     /// </summary>
@@ -23,7 +23,7 @@ public class ItemValue : ObservableObject
             {
                 return;
             }
-            
+
             _value = value;
             OnPropertyChanged();
         }

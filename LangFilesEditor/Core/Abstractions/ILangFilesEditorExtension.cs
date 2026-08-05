@@ -10,8 +10,7 @@ public interface ILangFilesEditorExtension
     /// Отображаемое имя расширения.
     /// </summary>
     string DisplayName { get; }
-    
-    // todo: не совсем понятное наименование
+
     /// <summary>
     /// Регистрирует расширение.
     /// </summary>

@@ -15,7 +15,7 @@ public interface IModuleEditor
     /// <param name="sourceFileName">Имя исходного XML-файла модуля.</param>
     /// <returns>Существующий или только что созданный <see cref="Module"/>.</returns>
     Module GetOrCreateModule(Domain domain, string moduleName, string sourceFileName);
-    
+
     /// <summary>
     /// Добавляет entry в module.
     /// </summary>
@@ -23,7 +23,7 @@ public interface IModuleEditor
     /// <param name="entry">Добавляемая строка перевода.</param>
     /// <param name="source">Источник добавления.</param>
     void AddTranslationEntry(Module module, TranslationEntry entry, TranslationEntryAddSource source);
-    
+
     /// <summary>
     /// Добавляет items, не перезаписывая существующие.
     /// </summary>

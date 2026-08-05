@@ -15,7 +15,7 @@ public class RowVisualStateToBrushConverter : IValueConverter
     private static readonly SolidColorBrush Warning = Freeze(0xFF, 0xF0, 0xD0);
     private static readonly SolidColorBrush Update = Freeze(0xDF, 0xF5, 0xE4);
     private static readonly SolidColorBrush Marked = Freeze(0xB3, 0xE5, 0xFC);
-    
+
     /// <summary>
     /// Возвращает кисть, соответствующую переданному <see cref="RowVisualState"/>.
     /// </summary>
@@ -26,13 +26,13 @@ public class RowVisualStateToBrushConverter : IValueConverter
     /// <returns>Кисть фона строки.</returns>
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture) =>
         value is RowVisualState state ? ToBrush(state) : Default;
-    
+
     /// <summary>
     /// Обратное преобразование не поддерживается.
     /// </summary>
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) =>
         throw new NotSupportedException();
-    
+
     /// <summary>
     /// Возвращает кисть для указанного визуального состояния строки; переиспользуется из code-behind
     /// (например, <see cref="UI.Windows.MainWindow.WorkSpace.TranslationEntryGridRow"/>) без обращения к WPF-конвертеру.
@@ -47,7 +47,7 @@ public class RowVisualStateToBrushConverter : IValueConverter
         RowVisualState.Marked => Marked,
         _ => Default,
     };
-    
+
     private static SolidColorBrush Freeze(byte r, byte g, byte b)
     {
         var brush = new SolidColorBrush(Color.FromRgb(r, g, b));

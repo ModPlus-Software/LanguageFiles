@@ -9,7 +9,7 @@ public static class DockChromeMetrics
     /// Ширина вертикальных полос хрома для панелей слева и справа (развёрнутых и свёрнутых).
     /// </summary>
     public const double VerticalWidth = 24;
-    
+
     /// <summary>
     /// Высота горизонтальных полос хрома для панелей сверху и снизу.
     /// </summary>

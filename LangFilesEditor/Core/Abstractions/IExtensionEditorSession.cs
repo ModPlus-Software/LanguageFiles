@@ -7,7 +7,6 @@ using Models;
 /// <summary>
 /// Активная сессия работы приложения, доступная в рамках расширений.
 /// </summary>
-/// todo: с этой штукой нужно что-то сделать.
 public interface IExtensionEditorSession : INotifyPropertyChanged
 {
     /// <summary>
@@ -36,7 +35,6 @@ public interface IExtensionEditorSession : INotifyPropertyChanged
     TranslationEntry SelectedTranslationEntry { get; }
 
     /// <summary>
-    /// todo: Нужно ли это поле?
     /// В процессе ли длительная операция.
     /// </summary>
     bool IsOperationInProgress { get; }

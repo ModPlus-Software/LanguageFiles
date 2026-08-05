@@ -25,17 +25,17 @@ public class WorkspaceRowKindVisibilityConverter : IValueConverter
         {
             return Visibility.Collapsed;
         }
-        
+
         if (!Enum.TryParse(expectedName, out WorkspaceRowKind expected))
         {
             return Visibility.Collapsed;
         }
-        
+
         return value is WorkspaceRowKind kind && kind == expected
             ? Visibility.Visible
             : Visibility.Collapsed;
     }
-    
+
     /// <summary>
     /// Обратное преобразование не поддерживается.
     /// </summary>
@@ -45,6 +45,6 @@ public class WorkspaceRowKindVisibilityConverter : IValueConverter
     /// <param name="culture">Не используется.</param>
     /// <returns>Не возвращает значение — выбрасывает исключение.</returns>
     /// <exception cref="NotSupportedException">Всегда, так как обратное преобразование не реализовано.</exception>
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) 
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         => throw new NotSupportedException();
 }

@@ -13,13 +13,12 @@ public class NavBarVM
 {
     private readonly IEditorWorkspace _workspace;
     private readonly IEditorSession _session;
-    
+
     /// <summary>
     /// Доступные domain.
     /// </summary>
     public ObservableCollection<Domain> Domains => _session.Domains;
 
-    // todo: мб при присвоении SelectedDomain сделать проверку существует ли он вообще в списке Domains? Словно было бы неплохо
     /// <summary>
     /// Выбранный domain.
     /// </summary>
@@ -37,7 +36,7 @@ public class NavBarVM
         get => _workspace.SelectedModule;
         set => _workspace.SelectedModule = value;
     }
-    
+
     /// <summary>
     /// Создаёт NavBar.
     /// </summary>

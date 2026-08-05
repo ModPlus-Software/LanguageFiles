@@ -1,6 +1,5 @@
 namespace LangFilesEditor.Models;
 
-// todo: а оно вообще нужно? Можно мне кажется удалить если это лишннее. И дочерни классы соответствнно тоже.
 /// <summary>
 /// Аргументы события добавления <see cref="TranslationEntry"/> в модуль.
 /// </summary>
@@ -16,12 +15,12 @@ public sealed class TranslationEntryAddedEventArgs : EventArgs
         Entry = entry;
         Context = context;
     }
-    
+
     /// <summary>
     /// Добавленная запись перевода.
     /// </summary>
     public TranslationEntry Entry { get; }
-    
+
     /// <summary>
     /// Контекст добавления записи.
     /// </summary>

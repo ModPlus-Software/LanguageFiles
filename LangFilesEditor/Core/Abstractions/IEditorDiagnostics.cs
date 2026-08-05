@@ -10,32 +10,31 @@ using Models;
 /// </summary>
 public interface IEditorDiagnostics : INotifyPropertyChanged
 {
-    // todo: мне немножко странно, что категории отдельно выписаны кроме общего списка категорий. Плохое решение словно.
     /// <summary>
     /// Категория ошибок (красный).
     /// </summary>
     DiagnosticCategory Errors { get; }
-    
+
     /// <summary>
     /// Категория предупреждений (оранжевый).
     /// </summary>
     DiagnosticCategory Warnings { get; }
-    
+
     /// <summary>
     /// Категория обновлений (зелёный).
     /// </summary>
     DiagnosticCategory Updates { get; }
-    
+
     /// <summary>
     /// Все категории в порядке отображения.
     /// </summary>
     IReadOnlyList<DiagnosticCategory> Categories { get; }
-    
+
     /// <summary>
     /// Есть ли хотя бы одна проблема любой категории.
     /// </summary>
     bool HasAny { get; }
-    
+
     /// <summary>
     /// Пытается получить диагностику расширения/скана для конкретной записи перевода — независимо
     /// от того, что запись сама по себе о диагностике не знает (диагностика хранится во внешнем слое).

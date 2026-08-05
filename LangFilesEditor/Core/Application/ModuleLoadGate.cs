@@ -4,12 +4,13 @@ using System.Collections.Concurrent;
 using Models;
 
 /// <summary>
-/// todo:
+/// Гейт «одна загрузка на модуль»: параллельные запросы на чтение строк одного модуля
+/// выстраиваются в очередь, что исключает двойное наполнение <see cref="Module.Items"/>.
 /// </summary>
 internal sealed class ModuleLoadGate
 {
     private readonly ConcurrentDictionary<Module, SemaphoreSlim> _gates = new();
-    
+
     /// <summary>
     /// Выполняет <paramref name="loadAsync"/> под эксклюзивным гейтом указанного модуля.
     /// Если для модуля уже идёт загрузка, дожидается её освобождения перед выполнением.

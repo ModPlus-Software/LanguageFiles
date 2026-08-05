@@ -6,7 +6,6 @@ namespace LangFilesEditor.Core.Abstractions;
 /// </summary>
 public interface IEditorOperationProgress
 {
-    // todo: если есть отдельный интерфейс на current и total, то можно передавать только инкрементирующее значение сюда?
     /// <summary>
     /// Сообщает прогресс операции; общий индикатор показывает суммарную долю выполнения.
     /// </summary>
@@ -14,7 +13,6 @@ public interface IEditorOperationProgress
     /// <param name="total">Общее число единиц работы; неположительное значение — неопределённый прогресс.</param>
     void Report(int current, int total);
 
-    // todo: Словно эта штука должны быть в самом сервисе нотификаций, куда можно было бы загружать разные статусы работающие при каких-то условиях со своей иерархией. Или что-то похожее. Здесь быть не должно словно.
     /// <summary>
     /// Меняет заголовок операции в status bar и во всплывающем списке.
     /// </summary>

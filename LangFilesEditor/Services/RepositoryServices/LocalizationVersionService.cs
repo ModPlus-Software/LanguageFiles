@@ -4,15 +4,19 @@ using System.IO;
 using System.Net.Http;
 using System.Windows;
 using System.Xml.Linq;
+using Helpers;
 
 /// <summary>
 /// Чтение и запись версии пакета локализации (локально и с удалённого хранилища).
 /// </summary>
 public class LocalizationVersionService
 {
+    // Каталог версий языковых пакетов ModPlus: источник актуальной (удалённой) версии локализации.
+    private const string RemoteVersionCatalogUrl = "https://storage.modplus.org/Languages/Langs.xml";
+
     // Один общий HttpClient на процесс: создание нового на каждый запрос приводит к исчерпанию сокетов.
     private static readonly HttpClient HttpClient = new();
-    
+
     /// <summary>
     /// Читает локальную версию из файла Version.txt в каталоге LanguageFiles решения.
     /// </summary>
@@ -25,12 +29,15 @@ public class LocalizationVersionService
         }
         catch
         {
-            // todo: вот для таких штук должно передаваться какое-то уведомление во view где было бы что-то вроде показать пользователю сообщение, а там уже оно само решало каким образом ему это показывать.
-            MessageBox.Show("Failed get local version!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show(
+                EditorStrings.LocalVersionReadFailed,
+                EditorStrings.ErrorCaption,
+                MessageBoxButton.OK,
+                MessageBoxImage.Error);
             return null;
         }
     }
-    
+
     /// <summary>
     /// Возвращает актуальную версию как максимум из локальной и удалённой.
     /// </summary>
@@ -42,7 +49,7 @@ public class LocalizationVersionService
         var remoteVersion = await GetRemoteVersion();
         return localVersion > remoteVersion ? localVersion : remoteVersion;
     }
-    
+
     /// <summary>
     /// Записывает указанную версию в локальный файл Version.txt.
     /// </summary>
@@ -51,8 +58,7 @@ public class LocalizationVersionService
     {
         File.WriteAllText(Path.Combine(Constants.LanguageFilesDirectory, "Version.txt"), version.ToString());
     }
-    
-    // todo: это не окей, потому что, вероятно, она должна подтягиваться с git
+
     /// <summary>
     /// Загружает версию локализации с удалённого XML-каталога ModPlus.
     /// </summary>
@@ -61,9 +67,7 @@ public class LocalizationVersionService
     {
         try
         {
-            const string url = "https://storage.modplus.org/Languages/Langs.xml"; // todo: см. todo в этом методе ниже. Или на что стоит обращать внимания если здесь указание на локализацию на сайте?
-            var str = await HttpClient.GetStringAsync(url);
-            // todo: мб добавить какую-то подкачку прямо с git? мне кажется, что это было бы удобнее, чем постоянно пулить. Т. е. если изменения только в рамках файлов локализации, то можно было бы добавить более простые способы коммитов, и подгрузки при отличии версий. А если отличается версия и самого редактора, то стоило бы писать напоминание о новой версии, и что было бы здорово с гита самому запуллить новую версию
+            var str = await HttpClient.GetStringAsync(RemoteVersionCatalogUrl);
             return !string.IsNullOrEmpty(str)
                 ? Version.Parse(XElement.Parse(str).Elements("lang").First().Attribute("Version")!.Value)
                 : null;

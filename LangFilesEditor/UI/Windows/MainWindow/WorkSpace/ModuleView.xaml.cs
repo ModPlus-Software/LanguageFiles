@@ -10,6 +10,10 @@ using Models;
 /// </summary>
 public partial class ModuleView
 {
+    // Заголовок модуля появляется в гриде не мгновенно: строки добавляются порциями с уступкой
+    // UI-потоку. Столько раз повторяем попытку прокрутки, прежде чем сдаться.
+    private const int ScrollRetryAttempts = 5;
+
     private ModuleViewVM _viewModel;
     /// <summary>
     /// Инициализирует грид и подписывается на смену контекста, выбор строк и запросы прокрутки от VM.
@@ -28,7 +32,7 @@ public partial class ModuleView
             }
         };
     }
-    
+
     private void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
     {
         UnsubscribeViewModel();
@@ -37,7 +41,7 @@ public partial class ModuleView
             SubscribeViewModel(viewModel);
         }
     }
-    
+
     private void OnLoaded(object sender, RoutedEventArgs e)
     {
         if (DataContext is ModuleViewVM viewModel)
@@ -45,47 +49,71 @@ public partial class ModuleView
             SubscribeViewModel(viewModel);
         }
     }
-    
+
     private void OnUnloaded(object sender, RoutedEventArgs e) => UnsubscribeViewModel();
-    
+
     private void SubscribeViewModel(ModuleViewVM viewModel)
     {
         if (ReferenceEquals(_viewModel, viewModel))
         {
             return;
         }
-        
+
         UnsubscribeViewModel();
         _viewModel = viewModel;
         _viewModel.ScrollToModuleRequested += ScrollToModule;
     }
-    
+
     private void UnsubscribeViewModel()
     {
         if (_viewModel == null)
         {
             return;
         }
-        
+
         _viewModel.ScrollToModuleRequested -= ScrollToModule;
         _viewModel = null;
     }
-    
+
     private void ScrollToModule(Module module)
     {
         if (module == null || _viewModel == null)
         {
             return;
         }
-        
+
         if (TryScrollToModuleHeader(module))
         {
             return;
         }
-        
-        Dispatcher.BeginInvoke(() => TryScrollToModuleHeader(module), System.Windows.Threading.DispatcherPriority.Loaded);
+
+        ScheduleScrollRetry(module, ScrollRetryAttempts);
     }
-    
+
+    private void ScheduleScrollRetry(Module module, int attemptsLeft)
+    {
+        if (attemptsLeft <= 0)
+        {
+            return;
+        }
+
+        Dispatcher.BeginInvoke(
+            () =>
+            {
+                // Пока ждали кадр, выбор мог смениться — прокручивать к прошлому модулю уже не нужно.
+                if (_viewModel == null || !ReferenceEquals(module, _viewModel.SelectedModule))
+                {
+                    return;
+                }
+
+                if (!TryScrollToModuleHeader(module))
+                {
+                    ScheduleScrollRetry(module, attemptsLeft - 1);
+                }
+            },
+            System.Windows.Threading.DispatcherPriority.Loaded);
+    }
+
     private bool TryScrollToModuleHeader(Module module)
     {
         var header = _viewModel.FindModuleHeaderRow(module);
@@ -93,7 +121,7 @@ public partial class ModuleView
         {
             return false;
         }
-        
+
         EntriesGrid.ScrollRowToTop(header);
         return true;
     }

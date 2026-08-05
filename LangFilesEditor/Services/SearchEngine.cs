@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using Models;
 using Utils;
 
-// todo: Полезные данные, нужно их сохранить, однако мб структурой какой-то? А не классом.
 /// <summary>
 /// Параметры области поиска по модулям локализации.
 /// </summary>
@@ -14,19 +13,18 @@ public sealed class SearchScopeOptions
     /// Искать в модуле Common вместе с текущим выбором.
     /// </summary>
     public bool SearchInCommon { get; init; }
-    
+
     /// <summary>
     /// Искать во всех открытых вкладках модулей.
     /// </summary>
     public bool SearchInOpenModules { get; init; }
-    
+
     /// <summary>
     /// Искать во всех модулях всех доменов.
     /// </summary>
     public bool SearchInAllModules { get; init; }
 }
 
-// todo: Здесь, наверное, нужно сделать так, чтобы был метод Search() с большим количеством перегрузок, которым можно добавлять разные параметры поиска и разными выборками получаемыми. Можно дополнительные штуки типа Scope писать, и мб передавать модули для поиска по ним. И мб какие-нибудь дополнительные вроде SearchInScope (но такого лучше поменьше, конечно)
 /// <summary>
 /// Движок поиска: применение фильтра к модулям, определение области и поиск по тегам.
 /// </summary>
@@ -58,12 +56,12 @@ public class SearchEngine
             {
                 module.SearchString = searchText;
             }
-            
+
             // Текстовый поиск и фильтр диагностики — независимые режимы; включение одного выключает другой.
             module.DiagnosticFilter = null;
         }
     }
-    
+
     /// <summary>
     /// Определяет список модулей, участвующих в поиске, по выбранной области.
     /// </summary>
@@ -84,14 +82,14 @@ public class SearchEngine
         {
             return CollectModules(domains).ToList();
         }
-        
+
         if (scope.SearchInOpenModules)
         {
             var modules = openModules?.ToList() ?? [];
             EnsureCommonModuleIncluded(domains, modules);
             return modules;
         }
-        
+
         if (scope.SearchInCommon)
         {
             var modules = new List<Module>();
@@ -99,14 +97,14 @@ public class SearchEngine
             {
                 modules.Add(selectedModule);
             }
-            
+
             EnsureCommonModuleIncluded(domains, modules);
             return modules;
         }
-        
+
         return selectedModule != null ? [selectedModule] : [];
     }
-    
+
     /// <summary>
     /// Собирает все модули из коллекции доменов без дубликатов.
     /// </summary>
@@ -114,7 +112,7 @@ public class SearchEngine
     /// <returns>Плоский список модулей.</returns>
     public static IReadOnlyList<Module> CollectAllModules(ObservableCollection<Domain> domains) =>
         CollectModules(domains).ToList();
-    
+
     /// <summary>
     /// Возвращает модули из целевого списка, в которых есть совпадения по текущему запросу.
     /// </summary>
@@ -127,7 +125,7 @@ public class SearchEngine
         {
             return [];
         }
-        
+
         var result = new List<Module>();
         foreach (var module in targets)
         {
@@ -136,10 +134,10 @@ public class SearchEngine
                 result.Add(module);
             }
         }
-        
+
         return result;
     }
-    
+
     /// <summary>
     /// Применяет фильтр диагностики к целевым модулям; остальным сбрасывает фильтр.
     /// Фильтр диагностики и текстовый поиск — независимые режимы, поэтому здесь же сбрасывается
@@ -157,14 +155,14 @@ public class SearchEngine
         foreach (var module in CollectModules(domains))
         {
             module.DiagnosticFilter = targetSet.Contains(module) ? severity : null;
-            
+
             if (module.SearchString != string.Empty)
             {
                 module.SearchString = string.Empty;
             }
         }
     }
-    
+
     /// <summary>
     /// Проверяет, проходит ли запись текущий фильтр модуля
     /// (используется для <see cref="Module.ItemsView"/> и <see cref="Module.HasVisibleSearchResults"/>).
@@ -181,22 +179,22 @@ public class SearchEngine
         {
             return false;
         }
-        
+
         if (diagnosticFilter.HasValue)
         {
             return item.DiagnosticState.MatchesDiagnosticFilter(diagnosticFilter.Value);
         }
-        
+
         if (string.IsNullOrEmpty(searchText))
         {
             return true;
         }
-        
+
         if (item.Name.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0)
         {
             return true;
         }
-        
+
         foreach (var pair in item.Values)
         {
             if (pair.Value.Value.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0)
@@ -204,10 +202,10 @@ public class SearchEngine
                 return true;
             }
         }
-        
+
         return false;
     }
-    
+
     /// <summary>
     /// Проверяет наличие записи с указанным именем (порядковое сравнение без учёта регистра не выполняется).
     /// </summary>
@@ -216,7 +214,7 @@ public class SearchEngine
     /// <returns><see langword="true"/>, если запись с таким именем уже есть в коллекции.</returns>
     public static bool ContainsItemByName(IEnumerable<TranslationEntry> items, string name) =>
         items.Any(item => string.Equals(item.Name, name, StringComparison.Ordinal));
-    
+
     /// <summary>
     /// Находит последнюю строку модуля с указанным базовым именем тега (без числового суффикса).
     /// </summary>
@@ -224,14 +222,14 @@ public class SearchEngine
     /// <param name="tagValue">Базовое имя тега без суффикса.</param>
     /// <param name="index">Индекс найденной строки или -1.</param>
     /// <returns>Наибольший числовой суффикс среди совпадений или -1.</returns>
-    public int SearchLastRowWithTagValue(Module module, string tagValue, out int index)
+    public static int SearchLastRowWithTagValue(Module module, string tagValue, out int index)
     {
         index = -1;
         if (module == null || string.IsNullOrWhiteSpace(tagValue))
         {
             return -1;
         }
-        
+
         var biggestNumber = -1;
         for (var i = 0; i < module.Items.Count; i++)
         {
@@ -241,21 +239,21 @@ public class SearchEngine
             {
                 continue;
             }
-            
+
             biggestNumber = number;
             index = i;
         }
-        
+
         return biggestNumber;
     }
-    
+
     private static IEnumerable<Module> CollectModules(ObservableCollection<Domain> domains)
     {
         if (domains == null)
         {
             yield break;
         }
-        
+
         var seen = new HashSet<Module>();
         foreach (var domain in domains)
         {
@@ -263,7 +261,7 @@ public class SearchEngine
             {
                 continue;
             }
-            
+
             foreach (var module in domain.Modules)
             {
                 if (seen.Add(module))
@@ -273,7 +271,7 @@ public class SearchEngine
             }
         }
     }
-    
+
     /// <summary>
     /// Возвращает общий (Common) домен, если он присутствует в коллекции.
     /// </summary>
@@ -281,15 +279,27 @@ public class SearchEngine
     /// <returns>Общий домен или <c>null</c>.</returns>
     public static Domain TryGetCommonDomain(ObservableCollection<Domain> domains) =>
         domains?.FirstOrDefault(d => d.IsCommon);
-    
+
     /// <summary>
-    /// Общий модуль — первый модуль общего домена (единственный источник общих строк).
+    /// Общий модуль — модуль общего домена с именем <see cref="Constants.CommonDomainName"/>
+    /// (единственный источник общих строк). Модули домена отсортированы по алфавиту,
+    /// поэтому определять общий модуль по позиции в списке нельзя — только по имени.
     /// </summary>
     /// <param name="domains">Домены редактора.</param>
     /// <returns>Общий модуль или <c>null</c>.</returns>
-    public static Module TryGetCommonModule(ObservableCollection<Domain> domains) =>
-        TryGetCommonDomain(domains)?.Modules.FirstOrDefault();
-    
+    public static Module TryGetCommonModule(ObservableCollection<Domain> domains)
+    {
+        var commonDomain = TryGetCommonDomain(domains);
+        if (commonDomain == null)
+        {
+            return null;
+        }
+
+        return commonDomain.Modules.FirstOrDefault(
+                   m => string.Equals(m.Name, Constants.CommonDomainName, StringComparison.OrdinalIgnoreCase))
+               ?? commonDomain.Modules.FirstOrDefault();
+    }
+
     private static void EnsureCommonModuleIncluded(
         ObservableCollection<Domain> domains,
         List<Module> modules)

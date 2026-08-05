@@ -2,9 +2,16 @@ namespace LangFilesEditor.Services.RepositoryServices;
 
 using System.IO;
 
-// todo: мб и есть нужна конечно... Но это яно не Services, а Utils. Т. е. я бы как минимум это переместил в другую папку, а как максимум посмотрил использования и возможно избавился бы от этого класса.
 /// <summary>
 /// Построение путей к XML-файлам локализации в каталоге LanguageFiles.
+/// <para>
+/// В каталоге языка соседствуют два соглашения об именовании: общий файл домена
+/// (<c>Revit.xml</c>, <c>Revit_Architecture.xml</c>) и вынесенный файл отдельного плагина
+/// с суффиксом языка (<c>Revit_mprAlignViews_ru.xml</c>, <c>Revit_mprAlignViews_de.xml</c>).
+/// Наружу оба варианта представлены одним языконезависимым ключом источника
+/// (<c>Revit_mprAlignViews</c>), а сопоставление ключа с реальным файлом конкретного языка
+/// выполняется здесь.
+/// </para>
 /// </summary>
 internal static class LanguageFilePaths
 {
@@ -15,67 +22,97 @@ internal static class LanguageFilePaths
     /// <param name="languageName">Код языка (имя подпапки).</param>
     public static string GetLanguageDirectory(string languageFilesRoot, string languageName) =>
         Path.Combine(languageFilesRoot, languageName);
-    
+
     /// <summary>
-    /// Возвращает полный путь к XML-файлу домена/источника для языка.
+    /// Возвращает суффикс имени файла для языка: <c>ru-RU</c> → <c>ru</c>.
+    /// </summary>
+    /// <param name="languageName">Код языка (имя подпапки).</param>
+    /// <returns>Короткий код языка или пустая строка, если код не задан.</returns>
+    public static string GetLanguageSuffix(string languageName)
+    {
+        if (string.IsNullOrEmpty(languageName))
+        {
+            return string.Empty;
+        }
+
+        var separatorIndex = languageName.IndexOf('-');
+        return separatorIndex > 0 ? languageName[..separatorIndex] : languageName;
+    }
+
+    /// <summary>
+    /// Приводит имя файла конкретного языка к языконезависимому ключу источника:
+    /// <c>Revit_mprAlignViews_ru</c> → <c>Revit_mprAlignViews</c>. Имена без суффикса языка
+    /// (<c>Revit</c>, <c>Revit_Architecture</c>) возвращаются без изменений.
+    /// </summary>
+    /// <param name="fileNameWithoutExtension">Имя файла без расширения.</param>
+    /// <param name="languageName">Код языка каталога, из которого взят файл.</param>
+    public static string GetSourceKey(string fileNameWithoutExtension, string languageName)
+    {
+        if (string.IsNullOrEmpty(fileNameWithoutExtension))
+        {
+            return fileNameWithoutExtension;
+        }
+
+        var languageSuffix = GetLanguageSuffix(languageName);
+        if (languageSuffix.Length == 0)
+        {
+            return fileNameWithoutExtension;
+        }
+
+        var suffix = $"_{languageSuffix}";
+        return fileNameWithoutExtension.EndsWith(suffix, StringComparison.OrdinalIgnoreCase)
+            ? fileNameWithoutExtension[..^suffix.Length]
+            : fileNameWithoutExtension;
+    }
+
+    /// <summary>
+    /// Возвращает путь к XML-файлу источника для языка. Сначала проверяется общий файл
+    /// (<c>{ключ}.xml</c>), затем файл отдельного плагина (<c>{ключ}_{язык}.xml</c>).
+    /// Если не существует ни одного, возвращается путь к общему файлу — вызывающий код
+    /// сам решает, что делать с отсутствующим файлом.
     /// </summary>
     /// <param name="languageFilesRoot">Корневой каталог LanguageFiles.</param>
     /// <param name="languageName">Код языка.</param>
-    /// <param name="sourceFileName">Имя XML-файла без расширения.</param>
-    public static string GetSourceFilePath(string languageFilesRoot, string languageName, string sourceFileName) =>
-        Path.Combine(GetLanguageDirectory(languageFilesRoot, languageName), $"{sourceFileName}.xml");
-    
+    /// <param name="sourceKey">Языконезависимый ключ источника (имя файла без расширения и суффикса языка).</param>
+    public static string GetSourceFilePath(string languageFilesRoot, string languageName, string sourceKey)
+    {
+        var languageDirectory = GetLanguageDirectory(languageFilesRoot, languageName);
+        var sharedFilePath = Path.Combine(languageDirectory, $"{sourceKey}.xml");
+        if (File.Exists(sharedFilePath))
+        {
+            return sharedFilePath;
+        }
+
+        var languageSuffix = GetLanguageSuffix(languageName);
+        if (languageSuffix.Length == 0)
+        {
+            return sharedFilePath;
+        }
+
+        var pluginFilePath = Path.Combine(languageDirectory, $"{sourceKey}_{languageSuffix}.xml");
+        return File.Exists(pluginFilePath) ? pluginFilePath : sharedFilePath;
+    }
+
     /// <summary>
-    /// Перечисляет существующие пути к файлу источника во всех языковых подпапках.
+    /// Перечисляет существующие пути к файлу источника во всех языковых подпапках
+    /// с учётом обоих соглашений об именовании.
     /// </summary>
     /// <param name="languageFilesRoot">Корневой каталог LanguageFiles.</param>
-    /// <param name="sourceFileName">Имя XML-файла без расширения.</param>
-    public static IEnumerable<string> EnumerateExistingSourceFilePaths(string languageFilesRoot, string sourceFileName)
+    /// <param name="sourceKey">Языконезависимый ключ источника.</param>
+    public static IEnumerable<string> EnumerateExistingSourceFilePaths(string languageFilesRoot, string sourceKey)
     {
-        if (!Directory.Exists(languageFilesRoot))
+        if (string.IsNullOrEmpty(sourceKey) || !Directory.Exists(languageFilesRoot))
         {
             yield break;
         }
-        
+
         foreach (var languageDirectory in Directory.GetDirectories(languageFilesRoot))
         {
-            var filePath = Path.Combine(languageDirectory, $"{sourceFileName}.xml");
+            var filePath = GetSourceFilePath(languageFilesRoot, Path.GetFileName(languageDirectory), sourceKey);
             if (File.Exists(filePath))
             {
                 yield return filePath;
             }
         }
-    }
-    
-    // todo: если не привязано к ui (а для методов там очень специфические требования) - то бесполезно
-    /// <summary>
-    /// Проверяет, существует ли модуль хотя бы в одном языковом файле источника.
-    /// </summary>
-    /// <param name="languageFilesRoot">Корневой каталог LanguageFiles.</param>
-    /// <param name="languages">Список кодов языков для проверки.</param>
-    /// <param name="sourceFileName">Имя XML-файла без расширения.</param>
-    /// <param name="moduleName">Имя модуля (локальное имя XML-узла).</param>
-    /// <returns><c>true</c>, если узел модуля найден в одном из файлов.</returns>
-    public static bool ModuleExistsInLanguages(
-        string languageFilesRoot,
-        IReadOnlyList<string> languages,
-        string sourceFileName,
-        string moduleName)
-    {
-        if (string.IsNullOrEmpty(sourceFileName))
-        {
-            return false;
-        }
-        
-        foreach (var languageName in languages)
-        {
-            var filePath = GetSourceFilePath(languageFilesRoot, languageName, sourceFileName);
-            if (ModuleXmlSerializer.FileContainsModule(filePath, moduleName))
-            {
-                return true;
-            }
-        }
-        
-        return false;
     }
 }

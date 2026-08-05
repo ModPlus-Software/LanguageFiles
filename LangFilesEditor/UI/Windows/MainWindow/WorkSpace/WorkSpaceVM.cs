@@ -12,7 +12,7 @@ using ModPlusAPI.Mvvm;
 public class WorkSpaceVM : ObservableObject
 {
     private readonly IEditorWorkspace _workspace;
-    
+
     /// <summary>
     /// Создаёт workspace с module grid и вкладками.
     /// </summary>
@@ -24,22 +24,22 @@ public class WorkSpaceVM : ObservableObject
         ModuleViewVM = new ModuleViewVM(workspace);
         ModulesBarVM = new ModulesBarVM(workspace);
     }
-    
+
     /// <summary>
     /// Грид entries и заголовков modules.
     /// </summary>
     public ModuleViewVM ModuleViewVM { get; }
-    
+
     /// <summary>
     /// Вкладки открытых modules.
     /// </summary>
     public ModulesBarVM ModulesBarVM { get; }
-    
+
     /// <summary>
     /// Панель вкладок скрыта в режиме просмотра диагностики.
     /// </summary>
     public bool IsModulesBarVisible => !_workspace.IsDiagnosticResultsView;
-    
+
     private void OnWorkspacePropertyChanged(object sender, PropertyChangedEventArgs e)
     {
         if (e.PropertyName == nameof(IEditorWorkspace.IsDiagnosticResultsView))

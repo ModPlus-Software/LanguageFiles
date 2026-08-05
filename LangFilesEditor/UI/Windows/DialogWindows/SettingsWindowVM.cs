@@ -27,7 +27,9 @@ public sealed class SettingsWindowVM : ObservableObject
     private readonly EditorSettingsStore _settings;
     private bool _runStartupDiagnosticsScan;
     private string _selectedThemeName;
-    
+    private ICommand _openLanguageFilesFolderCommand;
+    private ICommand _rescanDiagnosticsCommand;
+
     /// <summary>
     /// Создаёт ViewModel настроек на основе host API и сервисов редактора.
     /// </summary>
@@ -44,9 +46,8 @@ public sealed class SettingsWindowVM : ObservableObject
         _settings = settings;
         _runStartupDiagnosticsScan = settings.Current.RunStartupDiagnosticsScan;
         _selectedThemeName = ToThemeName(settings.Current.Theme);
-        
-        // todo: не нравится мне это
-        LocalVersion = new LocalizationVersionService().GetLocalVersion().ToString();
+
+        LocalVersion = new LocalizationVersionService().GetLocalVersion()?.ToString() ?? EditorStrings.UnknownVersion;
         LanguageFilesPath = Constants.LanguageFilesDirectory;
         Languages = new ObservableCollection<LanguageDisplayInfo>(
             LanguageDisplayHelper.BuildDisplayList(session.Languages));
@@ -56,47 +57,56 @@ public sealed class SettingsWindowVM : ObservableObject
             .Distinct()
             .ToList();
         HasExtensions = Extensions.Count > 0;
-        // todo: локализация. Да и вынести бы этот список тем куда-то...
-        ThemeOptions = ["Светлая", "Тёмная"];
-        
+        ThemeOptions = [EditorStrings.ThemeLight, EditorStrings.ThemeDark];
+
         _diagnostics.PropertyChanged += OnDiagnosticsPropertyChanged;
     }
-    
+
     /// <summary>
     /// Локальная версия пакета локализации.
     /// </summary>
     public string LocalVersion { get; }
-    
+
     /// <summary>
     /// Абсолютный путь к каталогу LanguageFiles (read-only).
     /// </summary>
     public string LanguageFilesPath { get; }
-    
+
     /// <summary>
     /// Языки проекта, как их видит редактор (read-only).
     /// </summary>
     public ObservableCollection<LanguageDisplayInfo> Languages { get; }
-    
+
     /// <summary>
     /// Подписи зарегистрированных расширениями команд.
     /// </summary>
     public IReadOnlyList<string> Extensions { get; }
-    
+
     /// <summary>
     /// Есть ли подключённые расширения.
     /// </summary>
     public bool HasExtensions { get; }
-    
+
+    /// <summary>
+    /// Нет ни одного подключённого расширения (для заглушки в окне настроек).
+    /// </summary>
+    public bool NoExtensions => !HasExtensions;
+
     /// <summary>
     /// Есть ли загруженные языки.
     /// </summary>
     public bool HasLanguages => Languages.Count > 0;
-    
+
+    /// <summary>
+    /// Не найдено ни одного языка (для заглушки в окне настроек).
+    /// </summary>
+    public bool NoLanguages => !HasLanguages;
+
     /// <summary>
     /// Варианты темы для ComboBox.
     /// </summary>
     public IReadOnlyList<string> ThemeOptions { get; }
-    
+
     /// <summary>
     /// Выбранная тема (отображаемое имя).
     /// </summary>
@@ -109,22 +119,22 @@ public sealed class SettingsWindowVM : ObservableObject
             {
                 return;
             }
-            
+
             _selectedThemeName = value;
             OnPropertyChanged();
-            
+
             var theme = FromThemeName(value);
             if (_settings.Current.Theme == theme)
             {
                 return;
             }
-            
+
             _settings.Current.Theme = theme;
             _settings.Save();
             EditorThemeManager.Apply(theme);
         }
     }
-    
+
     /// <summary>
     /// Сканировать диагностику при запуске редактора.
     /// </summary>
@@ -137,50 +147,51 @@ public sealed class SettingsWindowVM : ObservableObject
             {
                 return;
             }
-            
+
             _runStartupDiagnosticsScan = value;
             _settings.Current.RunStartupDiagnosticsScan = value;
             _settings.Save();
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Выполняется ли сейчас ручное сканирование диагностики.
     /// </summary>
     public bool IsDiagnosticsScanning => _diagnostics.IsScanning;
-    
+
     /// <summary>
     /// Открыть каталог LanguageFiles в проводнике.
     /// </summary>
-    public ICommand OpenLanguageFilesFolderCommand => new RelayCommand(OpenLanguageFilesFolder);
-    
+    public ICommand OpenLanguageFilesFolderCommand =>
+        _openLanguageFilesFolderCommand ??= new RelayCommand(OpenLanguageFilesFolder);
+
     /// <summary>
     /// Запустить сканирование диагностики сейчас.
     /// </summary>
-    public ICommand RescanDiagnosticsCommand => new RelayCommand(
+    public ICommand RescanDiagnosticsCommand => _rescanDiagnosticsCommand ??= new RelayCommand(
         () => SafeExecute.ExecuteAsync(RescanDiagnosticsAsync),
         _ => !IsDiagnosticsScanning);
-    
+
     private async Task RescanDiagnosticsAsync()
     {
         await _diagnostics.RunStartupScanAsync(_repository, _session.Languages);
     }
-    
+
     private void OpenLanguageFilesFolder()
     {
         if (!Directory.Exists(LanguageFilesPath))
         {
             return;
         }
-        
+
         Process.Start(new ProcessStartInfo
         {
             FileName = LanguageFilesPath,
             UseShellExecute = true,
         });
     }
-    
+
     private void OnDiagnosticsPropertyChanged(object sender, PropertyChangedEventArgs e)
     {
         if (e.PropertyName == nameof(EditorDiagnosticsService.IsScanning))
@@ -189,10 +200,12 @@ public sealed class SettingsWindowVM : ObservableObject
             CommandManager.InvalidateRequerySuggested();
         }
     }
-    
-    // todo: не очень. Локализация
-    private static string ToThemeName(EditorAppTheme theme) => theme == EditorAppTheme.Dark ? "Тёмная" : "Светлая";
-    
+
+    private static string ToThemeName(EditorAppTheme theme) =>
+        theme == EditorAppTheme.Dark ? EditorStrings.ThemeDark : EditorStrings.ThemeLight;
+
     private static EditorAppTheme FromThemeName(string name) =>
-        string.Equals(name, "Тёмная", StringComparison.Ordinal) ? EditorAppTheme.Dark : EditorAppTheme.Light;
+        string.Equals(name, EditorStrings.ThemeDark, StringComparison.Ordinal)
+            ? EditorAppTheme.Dark
+            : EditorAppTheme.Light;
 }

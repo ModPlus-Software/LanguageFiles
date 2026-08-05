@@ -1,6 +1,5 @@
 namespace LangFilesEditor.UI.Models;
 
-// todo: а точно ли в этом есть нужда? Возможно это очень даже лишний класс
 /// <summary>
 /// Строка read-only списка языков в настройках.
 /// </summary>
@@ -10,7 +9,7 @@ public sealed class LanguageDisplayInfo
     /// Код языка (например, <c>ru-RU</c>).
     /// </summary>
     public required string Code { get; init; }
-    
+
     /// <summary>
     /// Человекочитаемое название языка.
     /// </summary>

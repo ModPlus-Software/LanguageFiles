@@ -11,30 +11,29 @@ using Models;
 /// </summary>
 public interface IEditorSession : INotifyPropertyChanged, IEditorCommands
 {
-    // todo: это неплохо, но вот вопрос как передаётся
     /// <summary>
     /// Коды языков проекта.
     /// </summary>
     IReadOnlyList<string> Languages { get; }
-    
+
     /// <summary>
     /// Группы локализации.
     /// </summary>
     ObservableCollection<Domain> Domains { get; }
-    
+
     /// <summary>
     /// В процессе ли длительная операция. Детали прогресса (список операций, доли, сообщения)
     /// UI получает напрямую у трекера операций, а не через сессию.
     /// </summary>
     bool IsOperationInProgress { get; }
-    
+
     /// <summary>
     /// Загружает entries для модулей области поиска.
     /// </summary>
     /// <param name="modules">Модули, для которых требуется догрузить строки перевода.</param>
     /// <returns>Тот же список модулей после завершения загрузки entries.</returns>
     Task<IReadOnlyList<Module>> LoadSearchScopeEntriesAsync(IReadOnlyList<Module> modules);
-    
+
     /// <summary>
     /// Дожидается загрузки списков модулей всех domain.
     /// </summary>

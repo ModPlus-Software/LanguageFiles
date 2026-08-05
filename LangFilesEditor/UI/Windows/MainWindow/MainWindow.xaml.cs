@@ -14,7 +14,7 @@ public partial class MainWindow
     private const int HtSysMenu = 3;
     private WindowPanelsMenuVM _windowPanelsMenu;
     private bool _closeWithoutSave;
-    
+
     /// <summary>
     /// Создаёт окно, связывает <see cref="MainWindowVM"/> и подписывается на закрытие по запросу VM.
     /// </summary>
@@ -30,7 +30,8 @@ public partial class MainWindow
             Close();
         };
     }
-    
+
+    /// <inheritdoc />
     protected override void OnSourceInitialized(EventArgs e)
     {
         base.OnSourceInitialized(e);
@@ -39,7 +40,7 @@ public partial class MainWindow
             source.AddHook(WindowProc);
         }
     }
-    
+
     private IntPtr WindowProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
     {
         if (msg == WmNcLButtonDown && wParam == HtSysMenu)
@@ -47,21 +48,21 @@ public partial class MainWindow
             ShowWindowIconMenu();
             handled = true;
         }
-        
+
         return IntPtr.Zero;
     }
-    
+
     private void ShowWindowIconMenu()
     {
         if (_windowPanelsMenu == null)
         {
             return;
         }
-        
+
         var menu = WindowIconMenuBuilder.Create(_windowPanelsMenu);
         WindowIconMenuBuilder.ShowAtWindowIcon(this, menu);
     }
-    
+
     private void OnLoaded(object sender, RoutedEventArgs e)
     {
         Loaded -= OnLoaded;
@@ -71,7 +72,7 @@ public partial class MainWindow
             _ = vm.InitializeNavigationAsync();
         }
     }
-    
+
     private void RegisterDockPanels()
     {
         var vm = (MainWindowVM)DataContext;
@@ -95,7 +96,7 @@ public partial class MainWindow
             NavDockPanel);
         _windowPanelsMenu = vm.WindowPanelsMenu;
     }
-    
+
     private static void SetPanelContentDataContext(DockablePanel panel, object dataContext)
     {
         if (panel.PanelContent is FrameworkElement element)
@@ -103,14 +104,14 @@ public partial class MainWindow
             element.DataContext = dataContext;
         }
     }
-    
+
     private void OnClosing(object sender, CancelEventArgs e)
     {
         if (_closeWithoutSave)
         {
             return;
         }
-        
+
         if (DataContext is MainWindowVM vm && !vm.TrySaveOnExit())
         {
             e.Cancel = true;

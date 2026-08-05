@@ -10,12 +10,16 @@ using System.Windows.Media;
 /// </summary>
 public partial class DockablePanel
 {
+    // Порог в аппаратных пикселях, после которого движение мыши считается перетаскиванием панели.
+    private const double DragThreshold = 6;
+
     private Point _dragStartScreen;
+    private Point _lastDragScreen;
     private bool _isDragging;
     private DockManager _dockManager;
     private int _contentRowIndex = 1;
     private int _contentColumnIndex;
-    
+
     /// <summary>
     /// DependencyProperty для <see cref="State"/>.
     /// </summary>
@@ -25,7 +29,7 @@ public partial class DockablePanel
             typeof(DockPanelState),
             typeof(DockablePanel),
             new PropertyMetadata(null, OnStateChanged));
-    
+
     /// <summary>
     /// DependencyProperty для <see cref="PanelContent"/>.
     /// </summary>
@@ -35,7 +39,7 @@ public partial class DockablePanel
             typeof(object),
             typeof(DockablePanel),
             new PropertyMetadata(null));
-    
+
     /// <summary>
     /// DependencyProperty для <see cref="DockSide"/>.
     /// </summary>
@@ -45,7 +49,7 @@ public partial class DockablePanel
             typeof(DockSide),
             typeof(DockablePanel),
             new PropertyMetadata(DockSide.Left, OnDockSideChanged));
-    
+
     /// <summary>
     /// DependencyProperty для <see cref="ChromePlacement"/>.
     /// </summary>
@@ -55,7 +59,7 @@ public partial class DockablePanel
             typeof(DockChromePlacement),
             typeof(DockablePanel),
             new PropertyMetadata(DockChromePlacement.Top, OnChromePlacementChanged));
-    
+
     /// <summary>
     /// Инициализирует компонент и подписывается на событие загрузки.
     /// </summary>
@@ -64,7 +68,7 @@ public partial class DockablePanel
         InitializeComponent();
         Loaded += OnLoaded;
     }
-    
+
     /// <summary>
     /// Состояние панели: видимость, размеры, сторона докинга и режим плавания.
     /// </summary>
@@ -73,7 +77,7 @@ public partial class DockablePanel
         get => (DockPanelState)GetValue(StateProperty);
         set => SetValue(StateProperty, value);
     }
-    
+
     /// <summary>
     /// Содержимое панели (обычно другой <see cref="UserControl"/>).
     /// </summary>
@@ -82,7 +86,7 @@ public partial class DockablePanel
         get => GetValue(PanelContentProperty);
         set => SetValue(PanelContentProperty, value);
     }
-    
+
     /// <summary>
     /// Сторона докинга относительно центральной области.
     /// </summary>
@@ -91,7 +95,7 @@ public partial class DockablePanel
         get => (DockSide)GetValue(DockSideProperty);
         set => SetValue(DockSideProperty, value);
     }
-    
+
     /// <summary>
     /// Расположение хрома (заголовок и кнопки) относительно содержимого.
     /// </summary>
@@ -100,14 +104,14 @@ public partial class DockablePanel
         get => (DockChromePlacement)GetValue(ChromePlacementProperty);
         set => SetValue(ChromePlacementProperty, value);
     }
-    
+
     /// <summary>
     /// <see langword="true"/>, если содержимое панели задано.
     /// </summary>
     public bool HasPanelContent => PanelContent != null;
-    
+
     internal void AttachManager(DockManager manager) => _dockManager = manager;
-    
+
     /// <summary>
     /// Извлекает содержимое из панели для переноса в плавающее окно или другой хост.
     /// </summary>
@@ -118,13 +122,13 @@ public partial class DockablePanel
         {
             return null;
         }
-        
+
         PanelContent = null;
         Utils.WpfUtils.Detach(content);
         ApplyState(State);
         return content;
     }
-    
+
     /// <summary>
     /// Возвращает содержимое в панель после закрытия плавающего окна или смены хоста.
     /// </summary>
@@ -134,19 +138,19 @@ public partial class DockablePanel
         PanelContent = content;
         ApplyState(State);
     }
-    
+
     private static void OnStateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
         if (d is not DockablePanel panel)
         {
             return;
         }
-        
+
         if (e.OldValue is DockPanelState oldState)
         {
             oldState.PropertyChanged -= panel.OnStatePropertyChanged;
         }
-        
+
         if (e.NewValue is DockPanelState newState)
         {
             newState.PropertyChanged += panel.OnStatePropertyChanged;
@@ -154,7 +158,7 @@ public partial class DockablePanel
             panel.ApplyState(newState);
         }
     }
-    
+
     private static void OnDockSideChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
         if (d is DockablePanel { State: null } panel)
@@ -162,7 +166,7 @@ public partial class DockablePanel
             panel.ChromePlacement = MapChromePlacement((DockSide)e.NewValue);
         }
     }
-    
+
     private static void OnChromePlacementChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
         if (d is DockablePanel panel)
@@ -170,28 +174,28 @@ public partial class DockablePanel
             panel.ApplyChromeLayout();
         }
     }
-    
+
     private static DockChromePlacement MapChromePlacement(DockSide side) => side switch
     {
         DockSide.Left => DockChromePlacement.Left,
         DockSide.Right => DockChromePlacement.Right,
         _ => DockChromePlacement.Top
     };
-    
+
     private void OnStatePropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e) =>
         ApplyState(State);
-    
+
     private void OnLoaded(object sender, RoutedEventArgs e)
     {
         if (State != null)
         {
             ChromePlacement = State.ChromePlacement;
         }
-        
+
         ApplyChromeLayout();
         ApplyState(State);
     }
-    
+
     private void ApplyChromeLayout()
     {
         RootGrid.RowDefinitions.Clear();
@@ -214,10 +218,10 @@ public partial class DockablePanel
                 ApplyTopChromeLayout();
                 break;
         }
-        
+
         UpdateCollapseGlyph();
     }
-    
+
     private void ApplyTopChromeLayout()
     {
         RootGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
@@ -244,18 +248,16 @@ public partial class DockablePanel
         TitleText.TextTrimming = TextTrimming.CharacterEllipsis;
         TitleText.TextWrapping = TextWrapping.NoWrap;
     }
-    
+
     private void ApplyLeftChromeLayout() => ApplyVerticalChromeLayout(isRight: false);
-    
+
     private void ApplyRightChromeLayout() => ApplyVerticalChromeLayout(isRight: true);
-    
+
     private void ApplyVerticalChromeLayout(bool isRight)
     {
-        RootGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
-        RootGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
         if (isRight)
         {
-            RootGrid.ColumnDefinitions.Clear();
+            // Справа: содержимое занимает всё место, заголовок прижат к правому краю.
             RootGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             RootGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
             Grid.SetColumn(ContentHost, 0);
@@ -268,6 +270,9 @@ public partial class DockablePanel
         }
         else
         {
+            // Слева: заголовок прижат к левому краю, содержимое занимает всё оставшееся место.
+            RootGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+            RootGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             Grid.SetColumn(HeaderBorder, 0);
             Grid.SetRow(HeaderBorder, 0);
             Grid.SetColumn(ContentHost, 1);
@@ -276,7 +281,7 @@ public partial class DockablePanel
             HeaderBorder.BorderThickness = new Thickness(0, 0, 1, 0);
             TitleText.LayoutTransform = new RotateTransform(-90);
         }
-        
+
         _contentRowIndex = 0;
         ApplyVerticalChromeSize();
         HeaderBorder.Padding = new Thickness(1, 2, 1, 2);
@@ -296,7 +301,7 @@ public partial class DockablePanel
         TitleText.TextWrapping = TextWrapping.NoWrap;
         ApplyVerticalHeaderWidth(State);
     }
-    
+
     private void ApplyVerticalChromeSize()
     {
         HeaderBorder.MinWidth = DockChromeMetrics.VerticalWidth;
@@ -306,25 +311,25 @@ public partial class DockablePanel
         HeaderBorder.MaxHeight = double.PositiveInfinity;
         HeaderBorder.ClearValue(HeightProperty);
     }
-    
+
     private void ApplyVerticalHeaderWidth(DockPanelState state)
     {
         if (ChromePlacement is not (DockChromePlacement.Left or DockChromePlacement.Right))
         {
             return;
         }
-        
+
         if (state?.IsCollapsed == true)
         {
             HeaderBorder.Width = DockChromeMetrics.VerticalWidth;
             HeaderBorder.MaxWidth = DockChromeMetrics.VerticalWidth;
             return;
         }
-        
+
         HeaderBorder.ClearValue(WidthProperty);
         HeaderBorder.ClearValue(MaxWidthProperty);
     }
-    
+
     private void ClearVerticalChromeSize()
     {
         HeaderBorder.ClearValue(WidthProperty);
@@ -334,14 +339,14 @@ public partial class DockablePanel
         HeaderBorder.ClearValue(MaxHeightProperty);
         HeaderBorder.ClearValue(HeightProperty);
     }
-    
+
     private void ApplyState(DockPanelState state)
     {
         if (state == null)
         {
             return;
         }
-        
+
         Visibility = state.IsVisible && !state.IsFloating ? Visibility.Visible : Visibility.Collapsed;
         var showContent = HasPanelContent && !state.IsCollapsed;
         ContentHost.Visibility = showContent ? Visibility.Visible : Visibility.Collapsed;
@@ -360,13 +365,13 @@ public partial class DockablePanel
                 ? new GridLength(1, GridUnitType.Star)
                 : new GridLength(0);
         }
-        
+
         var showTitle = ChromePlacement == DockChromePlacement.Top || state.IsCollapsed == false;
         TitleText.Visibility = showTitle ? Visibility.Visible : Visibility.Collapsed;
         ApplyVerticalHeaderWidth(state);
         UpdateCollapseGlyph();
     }
-    
+
     private void UpdateCollapseGlyph()
     {
         var expanded = State?.IsCollapsed != true;
@@ -377,7 +382,7 @@ public partial class DockablePanel
             _ => expanded ? "\uE70D" : "\uE70E"
         };
     }
-    
+
     private void OnCollapseClick(object sender, RoutedEventArgs e)
     {
         if (State == null)
@@ -388,66 +393,102 @@ public partial class DockablePanel
         ApplyState(State);
         _dockManager?.GetSite().UpdateLayoutMetrics();
     }
-    
+
     private void OnCloseClick(object sender, RoutedEventArgs e)
     {
         if (State == null)
         {
             return;
         }
-        
+
         if (State.IsFloating)
         {
             _dockManager?.Dock(this, State.DockSide);
         }
-        
+
         State.Close();
         _dockManager?.GetSite().UpdateLayoutMetrics();
     }
-    
+
     private void OnFloatClick(object sender, RoutedEventArgs e) => _dockManager?.Float(this);
-    
+
     private void OnHeaderMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
     {
         _dragStartScreen = PointToScreen(e.GetPosition(this));
+        _lastDragScreen = _dragStartScreen;
         _isDragging = false;
         HeaderBorder.CaptureMouse();
     }
-    
+
     private void OnHeaderMouseMove(object sender, MouseEventArgs e)
     {
         if (!HeaderBorder.IsMouseCaptured || e.LeftButton != MouseButtonState.Pressed || _dockManager == null)
         {
             return;
         }
-        
+
         var current = PointToScreen(e.GetPosition(this));
-        if (!_isDragging && (current - _dragStartScreen).Length > 6)
+        _lastDragScreen = current;
+        if (!_isDragging && (current - _dragStartScreen).Length > DragThreshold)
         {
             _isDragging = true;
         }
-        
+
         if (!_isDragging)
         {
             return;
         }
-        
+
         var dockSite = _dockManager.GetSite();
-        var targetSide = dockSite.HitTestDockSide(current);
-        dockSite.ShowDropHint(targetSide);
         if (!dockSite.IsPointInside(current))
         {
+            // Панель уходит в плавающее окно: перетаскивание на этом заканчивается, иначе состояние
+            // драга «залипло» бы — мышь освобождается вместе со скрытием панели.
+            EndDrag(dockSite);
             _dockManager.Float(this, current);
+            return;
         }
+
+        dockSite.ShowDropHint(dockSite.HitTestDockSide(current));
     }
+
     private void OnHeaderMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
     {
         if (!HeaderBorder.IsMouseCaptured)
         {
             return;
         }
-        HeaderBorder.ReleaseMouseCapture();
-        _dockManager?.GetSite().ClearDropHint();
+
+        var wasDragging = _isDragging;
+        var dockSite = _dockManager?.GetSite();
+        EndDrag(dockSite);
+
+        if (!wasDragging || dockSite == null || State is { IsFloating: true })
+        {
+            return;
+        }
+
+        // Сброс внутри сайта закрепляет панель на подсвеченной стороне: раньше подсказка
+        // рисовалась, но перенос не выполнялся.
+        if (!dockSite.IsPointInside(_lastDragScreen))
+        {
+            return;
+        }
+
+        if (dockSite.HitTestDockSide(_lastDragScreen) is { } targetSide && targetSide != this.DockSide)
+        {
+            _dockManager.Dock(this, targetSide);
+        }
+    }
+
+    private void EndDrag(DockSite dockSite)
+    {
         _isDragging = false;
+        if (HeaderBorder.IsMouseCaptured)
+        {
+            HeaderBorder.ReleaseMouseCapture();
+        }
+
+        dockSite?.ClearDropHint();
     }
 }

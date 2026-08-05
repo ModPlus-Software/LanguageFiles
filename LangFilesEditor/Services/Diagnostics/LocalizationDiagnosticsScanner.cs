@@ -6,15 +6,13 @@ using Core.Abstractions;
 using Helpers;
 using Models;
 
-// todo: то, что без наполнения и правильно и нет, но в любом случае это лишнее в описании. Это в remarks стоит записать, если вообще должно быть именно в этом классе
 /// <summary>
 /// Сканирует XML на диске и считает ошибки/предупреждения валидации без наполнения UI-модулей.
 /// </summary>
 public sealed class LocalizationDiagnosticsScanner
 {
-    // todo: строго говоря валидатор здесь бесполезен, потому что выполняет валидирование по дублированию, и то не самостоятельно проверяет, а на веру подчерпнутых моделей дааных, что не окей. Хотя он должен валидировать на же ошибки. Исохдя из всего этого строятся здесь неправильные методы. Почему-то  Есть метод сканирования модуля, но сканирование происходит в методе счёта диагностики, что полностью не соответствует их наименованиям. Те мбоолее нельзя, что бы у самих TrnaslationEntry хранилась информация об ошибке в самой себе. Это странно. Слишком умная словно TrnalsationEntry и хранит данные о своей валидированности. Проверка должна по-другому идти.
     private static readonly Validator Validator = new();
-    
+
     /// <summary>
     /// Сканирует все модули доменов и возвращает счётчики диагностики по каждому модулю.
     /// </summary>
@@ -39,11 +37,11 @@ public sealed class LocalizationDiagnosticsScanner
         {
             return new Dictionary<Module, ModuleDiagnosticCounts>();
         }
-        
+
         var results = new ConcurrentDictionary<Module, ModuleDiagnosticCounts>();
         var operation = operations.Begin(EditorStrings.ScanningDiagnostics, total: toScan.Count);
         var done = 0;
-        
+
         try
         {
             await Parallel.ForEachAsync(
@@ -56,7 +54,7 @@ public sealed class LocalizationDiagnosticsScanner
                     {
                         results[module] = counts;
                     }
-                    
+
                     var completed = Interlocked.Increment(ref done);
                     operations.Report(operation, completed, toScan.Count);
                 });
@@ -65,10 +63,10 @@ public sealed class LocalizationDiagnosticsScanner
         {
             operations.End(operation);
         }
-        
+
         return results.ToDictionary(pair => pair.Key, pair => pair.Value);
     }
-    
+
     /// <summary>
     /// Подсчитывает ошибки и предупреждения по уже прочитанным записям (та же логика, что у <see cref="Module"/>).
     /// </summary>
@@ -83,7 +81,7 @@ public sealed class LocalizationDiagnosticsScanner
         var metadataList = metadata as IList<TranslationEntry> ?? metadata.ToList();
         Validator.ValidateItems(itemList);
         Validator.ValidateAttributes(metadataList);
-        
+
         var errors = 0;
         var warnings = 0;
         foreach (var entry in itemList)
@@ -92,29 +90,29 @@ public sealed class LocalizationDiagnosticsScanner
             {
                 errors++;
             }
-            
+
             if (entry.DiagnosticState.IsVisibleWarning)
             {
                 warnings++;
             }
         }
-        
+
         foreach (var entry in metadataList)
         {
             if (entry.DiagnosticState.IsVisibleError)
             {
                 errors++;
             }
-            
+
             if (entry.DiagnosticState.IsVisibleWarning)
             {
                 warnings++;
             }
         }
-        
+
         return new ModuleDiagnosticCounts(errors, warnings);
     }
-    
+
     private static async Task<ModuleDiagnosticCounts> ScanModuleAsync(
         ILanguageRepository repository,
         Module module,

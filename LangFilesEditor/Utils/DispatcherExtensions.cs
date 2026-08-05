@@ -2,17 +2,18 @@ namespace LangFilesEditor.Utils;
 
 using System.Windows.Threading;
 
-// todo: наименование мне не нравится, то, что оно чисто для расширений в том числе. Ну и вопросы про многопоточность
 /// <summary>
 /// Расширения для <see cref="Dispatcher"/>, упрощающие асинхронную работу с UI.
 /// </summary>
 internal static class DispatcherExtensions
 {
     /// <summary>
-    /// todo:
+    /// Уступает управление UI-потоку: ставит в очередь диспетчера пустую операцию и возвращает задачу
+    /// её выполнения. Позволяет длинным циклам наполнения UI не блокировать отрисовку и ввод.
     /// </summary>
     /// <param name="dispatcher">Диспетчер UI-потока, через который выполняется отложенная операция.</param>
     /// <param name="priority">Приоритет постановки операции в очередь диспетчера.</param>
+    /// <returns>Задача, завершающаяся после того, как диспетчер обработал очередь до указанного приоритета.</returns>
     public static Task YieldAsync(this Dispatcher dispatcher, DispatcherPriority priority = DispatcherPriority.Input) =>
         dispatcher.InvokeAsync(static () => { }, priority).Task;
 

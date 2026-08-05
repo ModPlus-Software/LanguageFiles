@@ -3,7 +3,6 @@ namespace LangFilesEditor.Core.Abstractions;
 using System.Collections.Generic;
 using Models;
 
-// todo: пу-пу-пу. В странном формате оно всё-таки
 /// <summary>
 /// Публикация статусов (для расширений).
 /// </summary>
@@ -15,7 +14,7 @@ public interface IDiagnosticsPublisher
     /// <param name="source">Уникальный ключ источника (например, id расширения).</param>
     /// <param name="diagnostics">Новый полный набор диагностик источника.</param>
     void Publish(string source, IEnumerable<EditorDiagnostic> diagnostics);
-    
+
     /// <summary>
     /// Удаляет все диагностики указанного источника.
     /// </summary>

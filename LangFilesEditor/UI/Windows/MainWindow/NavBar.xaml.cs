@@ -14,7 +14,7 @@ using Utils;
 public partial class NavBar
 {
     private ScrollViewer _navScrollViewer;
-    
+
     /// <summary>
     /// Инициализирует разметку панели навигации.
     /// </summary>
@@ -22,14 +22,14 @@ public partial class NavBar
     {
         InitializeComponent();
     }
-    
+
     private void NavTree_OnSelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
     {
         if (DataContext is not NavBarVM vm)
         {
             return;
         }
-        
+
         switch (e.NewValue)
         {
             case Module module:
@@ -40,42 +40,40 @@ public partial class NavBar
                 break;
         }
     }
-    
+
     private void NavTreeViewItem_Expanded(object sender, RoutedEventArgs e)
     {
         if (!ReferenceEquals(e.OriginalSource, sender))
         {
             return;
         }
-        
+
         if (sender is not TreeViewItem { DataContext: Domain domain })
         {
             return;
         }
-        
+
         domain.IsExpanded = true;
         PreserveScrollOffset();
     }
-    
+
     private void NavTreeViewItem_Collapsed(object sender, RoutedEventArgs e)
     {
         if (!ReferenceEquals(e.OriginalSource, sender))
         {
             return;
         }
-        
+
         if (sender is not TreeViewItem { DataContext: Domain domain })
         {
             return;
         }
-        
+
         domain.IsExpanded = false;
-        
-        // todo: здесь раньше были строки, останавливающие загрузку domain 
-        
+
         PreserveScrollOffset();
     }
-    
+
     private void PreserveScrollOffset()
     {
         _navScrollViewer ??= WpfUtils.FindVisualChild<ScrollViewer>(NavTree);
@@ -83,7 +81,7 @@ public partial class NavBar
         {
             return;
         }
-        
+
         var offset = _navScrollViewer.VerticalOffset;
         Dispatcher.BeginInvoke(() => _navScrollViewer.ScrollToVerticalOffset(offset), DispatcherPriority.Loaded);
     }

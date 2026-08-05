@@ -4,14 +4,13 @@ using System.Text.RegularExpressions;
 using JetBrains.Annotations;
 using Models;
 
-// todo: Вот здесь вопрос фабрики. Наименование класса не соответствует, а функционал полуUtils.
 /// <summary>
 /// Фабрика новых записей перевода и генератор имён ключей по шаблону.
 /// </summary>
 public class TranslationEntryService
 {
     private readonly IReadOnlyList<string> _languages;
-    
+
     /// <summary>
     /// Создаёт сервис с указанным списком языков для новых записей.
     /// </summary>
@@ -20,8 +19,7 @@ public class TranslationEntryService
     {
         _languages = languages ?? throw new ArgumentNullException(nameof(languages));
     }
-    
-    // todo: думал перенести в Item.cs, но тут очень большой вопрос использований. Можно было бы сделать так, чтобы нышнений выбранный элемент сам возвращал имя следующего по своему свойству Name
+
     /// <summary>
     /// Возвращает имя следующей записи, увеличивая числовой суффикс имени предыдущей записи.
     /// </summary>
@@ -36,10 +34,10 @@ public class TranslationEntryService
         {
             return string.Empty;
         }
-        
+
         return GetNewTranslationEntryName(previousTranslationEntry.Name, existingEntries);
     }
-    
+
     /// <summary>
     /// Возвращает имя следующей записи, увеличивая числовой суффикс в конце строки.
     /// Если суффикса нет — добавляет <c>1</c>. При переданном списке существующих записей
@@ -57,26 +55,26 @@ public class TranslationEntryService
         {
             return string.Empty;
         }
-        
+
         var candidate = IncrementTrailingNumber(previousTranslationEntryName);
-        
+
         // Regex.Replace без совпадения возвращает ту же строку — без суффикса имя не менялось
         // и сразу давало дубликат выбранной записи.
         if (string.Equals(candidate, previousTranslationEntryName, StringComparison.Ordinal))
         {
             candidate = previousTranslationEntryName + "1";
         }
-        
+
         if (existingEntries == null)
         {
             return candidate;
         }
-        
+
         var taken = existingEntries
             .Select(entry => entry?.Name)
             .Where(name => !string.IsNullOrEmpty(name))
             .ToHashSet(StringComparer.Ordinal);
-        
+
         while (taken.Contains(candidate))
         {
             var next = IncrementTrailingNumber(candidate);
@@ -85,13 +83,13 @@ public class TranslationEntryService
                 candidate += "1";
                 continue;
             }
-            
+
             candidate = next;
         }
-        
+
         return candidate;
     }
-    
+
     /// <summary>
     /// Создаёт новую запись с автоматически сгенерированным именем на основе строки-шаблона.
     /// </summary>
@@ -104,7 +102,7 @@ public class TranslationEntryService
         List<string> valuesInOrder = null,
         IEnumerable<TranslationEntry> existingEntries = null) =>
         GetTranslationEntry(GetNewTranslationEntryName(name, existingEntries), valuesInOrder);
-    
+
     /// <summary>
     /// Создаёт новую запись со следующим именем относительно предыдущей записи.
     /// </summary>
@@ -121,10 +119,10 @@ public class TranslationEntryService
             GetNewTranslationEntryName(previousTranslationEntry, existingEntries),
             valuesInOrder);
     }
-    
+
     private static string IncrementTrailingNumber(string name) =>
         Regex.Replace(name, "\\d+$", match => (int.Parse(match.Value) + 1).ToString());
-    
+
     /// <summary>
     /// Создаёт запись перевода с указанным именем и значениями по языкам.
     /// </summary>
@@ -137,22 +135,22 @@ public class TranslationEntryService
         {
             Name = name
         };
-        
+
         if (valuesInOrder == null)
         {
             foreach (var languageName in _languages)
             {
                 item.Add(languageName, new ItemValue());
             }
-            
+
             return item;
         }
-        
+
         for (var i = 0; i < valuesInOrder.Count && i < _languages.Count; i++)
         {
             item.Add(_languages[i], new ItemValue { Value = valuesInOrder[i] });
         }
-        
+
         return item;
     }
 }

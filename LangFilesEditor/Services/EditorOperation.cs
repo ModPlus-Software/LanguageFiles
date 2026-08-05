@@ -26,13 +26,11 @@ public sealed class EditorOperation : ObservableObject, IEditorOperation
         RefCount = 1;
     }
 
-    // todo: для этого специально есть GUID вроде бы.
     /// <summary>
     /// Ключ операции; используется для дедупликации и адресного обновления прогресса.
     /// </summary>
     internal string Key { get; }
 
-    // todo: Точно ли необходимая вещь? 
     /// <summary>
     /// Число активных удержаний операции (Begin увеличивает, End уменьшает).
     /// </summary>
@@ -61,18 +59,15 @@ public sealed class EditorOperation : ObservableObject, IEditorOperation
     /// <inheritdoc />
     public int Total => _total;
 
-    // todo: Мб вообще лишнее в контексте приложения. Хотя мб и полезная штука для расширений. Но для этого нужно какую-то другую логику сдлеать для этого.
     /// <inheritdoc />
     public bool IsIndeterminate => _total <= 0;
 
     /// <inheritdoc />
     public double Fraction => _total > 0 ? Math.Clamp((double)_current / _total, 0, 1) : 0;
 
-    // todo: локализация
     /// <inheritdoc />
     public string DisplayText => _total > 0 ? $"{_title}: {_current} из {_total}" : _title;
 
-    // todo: если оно вызывается на ui потоке, и должно отправлять важную информацию, то почему эта самая информация отправляется сюда? Так быть не должно. Странный метод.
     /// <summary>
     /// Обновляет прогресс операции; вызывается на UI-потоке трекером.
     /// </summary>
@@ -93,7 +88,6 @@ public sealed class EditorOperation : ObservableObject, IEditorOperation
         OnPropertyChanged(nameof(DisplayText));
     }
 
-    // todo: а надо ли оно если можно просто новую операцию запустить? Словно смысла нет. Это вообще неправильно так-то.
     /// <summary>
     /// Меняет заголовок операции (например, при повторном Begin с тем же ключом).
     /// </summary>

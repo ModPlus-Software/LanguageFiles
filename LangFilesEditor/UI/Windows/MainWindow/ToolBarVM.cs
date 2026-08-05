@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Input;
 using Core.Abstractions;
 using Models;
+using Helpers;
 using Services;
 using Utils;
 using ModPlusAPI;
@@ -16,12 +17,27 @@ using ModPlusAPI.Mvvm;
 /// </summary>
 public class ToolBarVM : ObservableObject
 {
+    // Префикс собственного формата буфера обмена: по нему строка отличается от произвольного текста.
+    private const string ClipboardEntryPrefix = "LANG_";
+
     private readonly IDialogService _dialogService;
     private readonly IEditorWorkspace _workspace;
     private readonly IEditorSession _session;
     private readonly IEditorCommands _commands;
     private readonly Action _requestCloseWithoutSave;
-    
+    private readonly TranslationEntryService _entryService;
+    private ICommand _addRowAboveCommand;
+    private ICommand _addRowBelowCommand;
+    private ICommand _importRowsBelowCommand;
+    private ICommand _importRowsAutoCommand;
+    private ICommand _markForDeletionCommand;
+    private ICommand _copyToClipboardCommand;
+    private ICommand _pasteFromClipboardCommand;
+    private ICommand _removeItemCommand;
+    private ICommand _openSettingsCommand;
+    private ICommand _openMergerCommand;
+    private ICommand _closeWithoutSaveCommand;
+
     /// <summary>
     /// Создаёт toolbar с core-командами и командами расширений.
     /// </summary>
@@ -42,6 +58,7 @@ public class ToolBarVM : ObservableObject
         _workspace = workspace;
         _session = session;
         _commands = session;
+        _entryService = new TranslationEntryService(session.Languages);
         ExtensionCommands = extensionCommands;
         _workspace.PropertyChanged += (_, e) =>
         {
@@ -60,35 +77,40 @@ public class ToolBarVM : ObservableObject
             }
         };
     }
-    
+
     /// <summary>
     /// Команды, зарегистрированные расширениями.
     /// </summary>
     public IReadOnlyList<LangFilesEditorToolbarCommand> ExtensionCommands { get; }
-    
+
     private bool HasSelectedModule => _workspace.SelectedModule != null;
-    
+
     private bool HasSelectedEntry => _workspace.SelectedTranslationEntry != null;
-    
+
     /// <summary>
     /// Добавить строку выше выбранной.
     /// </summary>
-    public ICommand AddRowAboveCommand => new RelayCommand(
+    public ICommand AddRowAboveCommand => _addRowAboveCommand ??= new RelayCommand(
         () => SafeExecute.Execute(() =>
         {
             var selectedModule = _workspace.SelectedModule;
             var index = selectedModule.Items.IndexOf(_workspace.SelectedTranslationEntry);
+            if (index < 0)
+            {
+                return;
+            }
+
             selectedModule.InsertTranslationEntry(
                 index,
-                new TranslationEntryService(_session.Languages).GetTranslationEntry(string.Empty),
+                _entryService.GetTranslationEntry(string.Empty),
                 TranslationEntryAddSource.User);
         }),
         _ => HasSelectedModule && HasSelectedEntry);
-    
+
     /// <summary>
     /// Добавить строку ниже выбранной.
     /// </summary>
-    public ICommand AddRowBelowCommand => new RelayCommand(
+    public ICommand AddRowBelowCommand => _addRowBelowCommand ??= new RelayCommand(
         () => SafeExecute.Execute(() =>
         {
             var selectedModule = _workspace.SelectedModule;
@@ -98,17 +120,16 @@ public class ToolBarVM : ObservableObject
             {
                 return;
             }
-            
+
             // Имя — следующий суффикс от выделенной строки (один шаг), без «перепрыгивания»
             // через уже занятые имена дальше по списку.
-            var entryService = new TranslationEntryService(_session.Languages);
-            var newName = entryService.GetNewTranslationEntryName(selectedEntry.Name);
+            var newName = _entryService.GetNewTranslationEntryName(selectedEntry.Name);
             if (SearchEngine.ContainsItemByName(selectedModule.Items, newName))
             {
                 newName = string.Empty;
             }
-            
-            var newEntry = entryService.GetTranslationEntry(newName);
+
+            var newEntry = _entryService.GetTranslationEntry(newName);
             var insertIndex = index + 1;
             if (insertIndex >= selectedModule.Items.Count)
             {
@@ -122,115 +143,141 @@ public class ToolBarVM : ObservableObject
                     TranslationEntryAddSource.User);
             }
         }), _ => HasSelectedModule && HasSelectedEntry);
-    
+
     /// <summary>
     /// Импорт строк ниже выбранной.
     /// </summary>
-    public ICommand ImportRowsBelowCommand => new RelayCommand(
+    public ICommand ImportRowsBelowCommand => _importRowsBelowCommand ??= new RelayCommand(
         () => SafeExecute.Execute(() => _dialogService.ShowImportWindow()), _ => HasSelectedModule);
-    
+
     /// <summary>
     /// Автоимпорт строк.
     /// </summary>
-    public ICommand ImportRowsAutoCommand => new RelayCommand(
+    public ICommand ImportRowsAutoCommand => _importRowsAutoCommand ??= new RelayCommand(
         () => SafeExecute.Execute(() => _dialogService.ShowImportWindowWithCheckbox()),
         _ => HasSelectedModule);
-    
+
     /// <summary>
     /// Пометить строку на удаление в будущей версии.
     /// </summary>
-    public ICommand MarkForDeletionCommand => new RelayCommand<string>(
+    public ICommand MarkForDeletionCommand => _markForDeletionCommand ??= new RelayCommand<string>(
         version => SafeExecute.Execute(() => MarkForDeletion(version)), _ => HasSelectedEntry);
-    
+
     /// <summary>
     /// Копировать строку в буфер обмена.
     /// </summary>
-    public ICommand CopyToClipboardCommand => new RelayCommand(() => SafeExecute.Execute(() =>
-    {
-        var item = _workspace.SelectedTranslationEntry;
-        var data = $"LANG_{item.Name}|" +
-                   $"{string.Join("|", item.Values.Select(v => $"{v.Key}${v.Value.Value}"))}";
-        ClipboardUtils.CopyToClipboard(data);
-    }), _ => HasSelectedEntry);
-    
+    public ICommand CopyToClipboardCommand => _copyToClipboardCommand ??= new RelayCommand(
+        () => SafeExecute.Execute(() =>
+        {
+            var item = _workspace.SelectedTranslationEntry;
+            var data = $"{ClipboardEntryPrefix}{item.Name}|" +
+                       $"{string.Join("|", item.Values.Select(v => $"{v.Key}${v.Value.Value}"))}";
+            ClipboardUtils.CopyToClipboard(data);
+        }),
+        _ => HasSelectedEntry);
+
     /// <summary>
     /// Вставить строку из буфера обмена.
     /// </summary>
-    public ICommand PasteFromClipboard => new RelayCommand(() =>
-    {
-        var selectedModule = _workspace.SelectedModule;
-        var entryService = new TranslationEntryService(_session.Languages);
-        var targetTranslationEntry = entryService
-            .GetNewTranslationEntry(
-                selectedModule.Items.LastOrDefault(),
-                valuesInOrder: null,
-                existingEntries: selectedModule.Items);
-        var data = ClipboardUtils.GetFromClipboard().Replace("LANG_", string.Empty).Split('|');
-        targetTranslationEntry.Name = data[0];
-        foreach (var s in data.Skip(1))
-        {
-            var value = s.Split('$');
-            targetTranslationEntry.Values[value[0]].Value = value[1];
-        }
-            
-        selectedModule.AddTranslationEntry(targetTranslationEntry, TranslationEntryAddSource.User);
-    }, _ => HasSelectedModule
-            && Clipboard.ContainsText()
-            && ClipboardUtils.GetFromClipboard().StartsWith("LANG_"));
-    
+    public ICommand PasteFromClipboard => _pasteFromClipboardCommand ??= new RelayCommand(
+        () => SafeExecute.Execute(PasteEntryFromClipboard),
+        _ => HasSelectedModule && Clipboard.ContainsText());
+
     /// <summary>
     /// Удалить выбранную строку.
     /// </summary>
-    public ICommand RemoveItemCommand => new RelayCommand(() => SafeExecute.Execute(() =>
+    public ICommand RemoveItemCommand => _removeItemCommand ??= new RelayCommand(() => SafeExecute.Execute(() =>
     {
         var selectedTranslationEntry = _workspace.SelectedTranslationEntry;
         if (!string.IsNullOrEmpty(selectedTranslationEntry.Comment))
         {
-            _dialogService.ShowMessageWindow("Позиции, отмеченные комментарием, удалять нельзя!");
+            _dialogService.ShowMessageWindow(EditorStrings.RemoveCommentedEntryForbidden);
             return;
         }
-            
+
         if (string.IsNullOrEmpty(selectedTranslationEntry.RemovesOnVersion))
         {
-            var question = "Нельзя удалять строки из локализации, если плагин уже в релизе!" +
-                           " Такие строки следует отмечать комментарием с todo." +
-                           "\nТочно удалить?";
-            if (!_dialogService.ShowQuestionWindow(question))
+            if (!_dialogService.ShowQuestionWindow(EditorStrings.RemoveEntryQuestion))
             {
                 return;
             }
         }
-            
+
         var selectedModule = _workspace.SelectedModule;
         _commands.TrackItemForRemoval(selectedModule, selectedTranslationEntry);
         selectedModule.RemoveTranslationEntry(selectedTranslationEntry);
     }), _ => HasSelectedEntry);
-    
+
     /// <summary>
     /// Открыть окно настроек.
     /// </summary>
-    public ICommand OpenSettingsCommand => new RelayCommand(
+    public ICommand OpenSettingsCommand => _openSettingsCommand ??= new RelayCommand(
         () => SafeExecute.Execute(() => _dialogService.ShowSettingsWindow()), _ => true);
-    
+
     /// <summary>
     /// Открыть окно merge в каталог ModPlus.
     /// </summary>
-    public ICommand OpenMergerCommand => new RelayCommand(
+    public ICommand OpenMergerCommand => _openMergerCommand ??= new RelayCommand(
         () => SafeExecute.Execute(() => _dialogService.ShowMergerWindow()), _ => true);
-    
+
     /// <summary>
     /// Закрыть приложение без сохранения.
     /// </summary>
-    public ICommand CloseWithoutSaveCommand => new RelayCommand(
+    public ICommand CloseWithoutSaveCommand => _closeWithoutSaveCommand ??= new RelayCommand(
         () => _requestCloseWithoutSave(), _ => true);
-    
+
+    /// <summary>
+    /// Вставляет строку перевода из буфера обмена. Формат — тот же, что пишет
+    /// <see cref="CopyToClipboardCommand"/>: <c>LANG_имя|язык$значение|язык$значение</c>.
+    /// Чужой или повреждённый текст игнорируется, а не роняет редактор.
+    /// </summary>
+    private void PasteEntryFromClipboard()
+    {
+        // Содержимое буфера проверяется здесь, а не в CanExecute: CanExecute переспрашивается
+        // на каждый ввод и фокус, а чтение буфера обмена — обращение к системному ресурсу.
+        var clipboardText = ClipboardUtils.GetFromClipboard();
+        var parts = clipboardText.StartsWith(ClipboardEntryPrefix, StringComparison.Ordinal)
+            ? clipboardText[ClipboardEntryPrefix.Length..].Split('|')
+            : Array.Empty<string>();
+
+        if (parts.Length == 0 || string.IsNullOrEmpty(parts[0]))
+        {
+            _dialogService.ShowMessageWindow(EditorStrings.ClipboardHasNoEntry);
+            return;
+        }
+
+        var selectedModule = _workspace.SelectedModule;
+        var targetTranslationEntry = _entryService.GetNewTranslationEntry(
+            selectedModule.Items.LastOrDefault(),
+            valuesInOrder: null,
+            existingEntries: selectedModule.Items);
+        targetTranslationEntry.Name = parts[0];
+
+        foreach (var part in parts.Skip(1))
+        {
+            var separatorIndex = part.IndexOf('$');
+            if (separatorIndex <= 0)
+            {
+                continue;
+            }
+
+            var languageName = part[..separatorIndex];
+            if (targetTranslationEntry.Values.TryGetValue(languageName, out var itemValue))
+            {
+                itemValue.Value = part[(separatorIndex + 1)..];
+            }
+        }
+
+        selectedModule.AddTranslationEntry(targetTranslationEntry, TranslationEntryAddSource.User);
+    }
+
     private void MarkForDeletion(string version)
     {
         if (string.IsNullOrEmpty(_workspace.SelectedTranslationEntry.RemovesOnVersion))
         {
             _workspace.SelectedTranslationEntry.RemovesOnVersion = version;
         }
-        
+
         _dialogService.ShowMarkForDeletionWindow();
     }
 }

@@ -16,27 +16,24 @@ public interface ILanguageRepository
     /// <param name="languageDirectory">Корневой каталог языковых файлов на диске.</param>
     /// <returns>Упорядоченный список языковых кодов, найденных в каталоге.</returns>
     IReadOnlyList<string> LoadLanguages(string languageDirectory);
-    
-    // todo: вот этот метод, и метод следующий за ним - под вопросом. ИМХО. Мб нужен какой-то один из них только? Раз есть необходимость подгружать конкретные данные в какой-то момент.
+
     /// <summary>
-    /// Получение доменов по структуре каталога.
+    /// Получение доменов по структуре каталога. Модули и их строки перевода не читаются:
+    /// каталог модулей домена запрашивается отдельно через <see cref="LoadModulesAsync"/>,
+    /// строки — через <see cref="ReadTranslationEntriesAsync"/>.
     /// </summary>
     /// <param name="languageDirectory">Корневой каталог языковых файлов.</param>
     /// <param name="languages">Список кодов языков проекта.</param>
-    /// <param name="isFullLoad">Загружать ли сразу единицы переводов(entries) модулей.</param>
     /// <returns>Коллекция доменов локализации.</returns>
-    ObservableCollection<Domain> LoadDomains(
-        string languageDirectory,
-        IReadOnlyList<string> languages,
-        bool isFullLoad = false);
-    
+    ObservableCollection<Domain> LoadDomains(string languageDirectory, IReadOnlyList<string> languages);
+
     /// <summary>
     /// Получение каталога модулей передаваемого domain без загрузки их entries.
     /// </summary>
     /// <param name="domain">Domain, для которого нужно получить список модулей.</param>
     /// <returns>Коллекция модулей domain с метаданными без строк перевода.</returns>
     Task<ObservableCollection<Module>> LoadModulesAsync(Domain domain);
-    
+
     /// <summary>
     /// Чтение metadata и единиц переводов(entries) модуля с диска.
     /// </summary>
@@ -48,8 +45,7 @@ public interface ILanguageRepository
         Module module,
         IReadOnlyList<string> languages,
         CancellationToken cancellationToken = default);
-    
-    // todo: itemsToRemove выглядит странно. Мы же всё-таки сохраняем здесь...
+
     /// <summary>
     /// Запись изменённых данных доменов на диск.
     /// </summary>
@@ -60,7 +56,7 @@ public interface ILanguageRepository
         ICollection<Domain> domains,
         IReadOnlyList<string> languages,
         IReadOnlyDictionary<string, List<string>> itemsToRemove);
-    
+
     /// <summary>
     /// Слияние LanguageFiles в каталог установленного ModPlus.
     /// </summary>

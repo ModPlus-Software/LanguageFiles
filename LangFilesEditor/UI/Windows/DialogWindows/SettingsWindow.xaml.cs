@@ -17,6 +17,6 @@ public partial class SettingsWindow
         ShowInTaskbar = false;
         WindowStartupLocation = WindowStartupLocation.CenterOwner;
     }
-    
+
     private void Close_OnClick(object sender, RoutedEventArgs e) => Close();
 }

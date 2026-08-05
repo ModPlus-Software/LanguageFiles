@@ -3,12 +3,13 @@ namespace LangFilesEditor.Core.Application;
 using Models;
 
 /// <summary>
-/// todo:
+/// Владелец состояния выбора (домен, модуль, строка) и правил его согласования:
+/// смена модуля подтягивает его домен, смена домена сбрасывает чужой модуль.
 /// </summary>
 internal sealed class EditorSelectionCoordinator
 {
     private readonly DomainModuleLoadCoordinator _domainLoads;
-    
+
     /// <summary>
     /// Создаёт координатор выбора.
     /// </summary>
@@ -17,22 +18,22 @@ internal sealed class EditorSelectionCoordinator
     {
         _domainLoads = domainLoads;
     }
-    
+
     /// <summary>
     /// Выбранный domain.
     /// </summary>
     public Domain SelectedDomain { get; private set; }
-    
+
     /// <summary>
     /// Выбранный module.
     /// </summary>
     public Module SelectedModule { get; private set; }
-    
+
     /// <summary>
     /// Выбранная строка перевода.
     /// </summary>
     public TranslationEntry SelectedTranslationEntry { get; private set; }
-    
+
     /// <summary>
     /// Выбирает domain. Если выбранный module принадлежит другому domain — сбрасывает его вместе со строкой.
     /// Для domain с незагруженным каталогом запускает фоновую загрузку списка модулей.
@@ -44,20 +45,20 @@ internal sealed class EditorSelectionCoordinator
         {
             return;
         }
-        
+
         SelectedDomain = domain;
-        
+
         if (SelectedModule != null && domain != null && SelectedModule.Group != domain)
         {
             ClearModule();
         }
-        
+
         if (domain is { Modules.Count: 0 })
         {
             _ = _domainLoads.EnsureLoadedAsync(domain);
         }
     }
-    
+
     /// <summary>
     /// Общее ядро выбора модуля: синхронизирует domain (с догрузкой его каталога) и сбрасывает выбранную строку.
     /// <see langword="null"/> сбрасывает module и строку, не трогая domain.
@@ -71,14 +72,14 @@ internal sealed class EditorSelectionCoordinator
             ClearModule();
             return false;
         }
-        
+
         if (ReferenceEquals(SelectedModule, module))
         {
             return false;
         }
-        
+
         SelectedModule = module;
-        
+
         if (SelectedDomain != module.Group)
         {
             SelectedDomain = module.Group;
@@ -87,11 +88,11 @@ internal sealed class EditorSelectionCoordinator
                 _ = _domainLoads.EnsureLoadedAsync(module.Group);
             }
         }
-        
+
         SelectedTranslationEntry = null;
         return true;
     }
-    
+
     /// <summary>
     /// Сбрасывает выбранный module вместе со строкой, не трогая domain.
     /// </summary>
@@ -100,7 +101,7 @@ internal sealed class EditorSelectionCoordinator
         SelectedModule = null;
         SelectedTranslationEntry = null;
     }
-    
+
     /// <summary>
     /// Выбирает строку перевода.
     /// </summary>

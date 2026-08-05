@@ -1,12 +1,12 @@
 namespace LangFilesEditor.Services.RepositoryServices;
 
-using System.IO;
 using System.Xml;
 using System.Xml.Linq;
 using Models;
 
 /// <summary>
-/// todo:
+/// Чтение и запись узла модуля в XML-файле локализации: атрибуты (metadata),
+/// дочерние элементы (items) и комментарии к ним.
 /// </summary>
 internal static class ModuleXmlSerializer
 {
@@ -18,29 +18,19 @@ internal static class ModuleXmlSerializer
         Indent = true,
         NewLineOnAttributes = true
     };
-    
+
     /// <summary>
-    /// Проверяет, содержит ли XML-файл узел с указанным именем модуля.
-    /// </summary>
-    /// <param name="filePath">Путь к XML-файлу.</param>
-    /// <param name="moduleName">Имя модуля (локальное имя узла).</param>
-    /// <returns><c>true</c>, если узел модуля найден.</returns>
-    public static bool FileContainsModule(string filePath, string moduleName)
-    {
-        if (!File.Exists(filePath))
-        {
-            return false;
-        }
-        
-        return XElement.Load(filePath).Element(moduleName) != null;
-    }
-    
-    /// <summary>
-    /// Собирает имена XML-атрибутов узла модуля в указанное множество.
+    /// Читает атрибуты XML-узла модуля в коллекцию записей metadata.
     /// </summary>
     /// <param name="moduleNode">XML-узел модуля.</param>
-    /// <param name="target">Множество для имён атрибутов.</param>
-    public static void CollectAttributeNames(XElement moduleNode, ISet<string> target)
+    /// <param name="target">Целевая коллекция metadata.</param>
+    /// <param name="index">Индекс уже созданных записей по имени; общий для всех языков одного модуля.</param>
+    /// <param name="languageName">Код языка для значения атрибута.</param>
+    public static void ReadMetadata(
+        XElement moduleNode,
+        ICollection<TranslationEntry> target,
+        IDictionary<string, TranslationEntry> index,
+        string languageName)
     {
         foreach (var attribute in moduleNode.Attributes())
         {
@@ -48,46 +38,37 @@ internal static class ModuleXmlSerializer
             {
                 continue;
             }
-            
-            target.Add(attribute.Name.LocalName);
-        }
-    }
-    
-    /// <summary>
-    /// Читает атрибуты XML-узла модуля в коллекцию записей metadata.
-    /// </summary>
-    /// <param name="moduleNode">XML-узел модуля.</param>
-    /// <param name="target">Целевая коллекция metadata.</param>
-    /// <param name="languageName">Код языка для значения атрибута.</param>
-    public static void ReadMetadata(XElement moduleNode, ICollection<TranslationEntry> target, string languageName)
-    {
-        foreach (var attribute in moduleNode.Attributes())
-        {
-            var entry = FindOrCreateEntry(target, attribute.Name.LocalName);
+
+            var entry = FindOrCreateEntry(target, index, attribute.Name.LocalName);
             entry.Add(languageName, new ItemValue { Value = attribute.Value });
         }
     }
-    
+
     /// <summary>
     /// Читает дочерние элементы XML-узла модуля в коллекцию записей items.
     /// </summary>
     /// <param name="moduleNode">XML-узел модуля.</param>
     /// <param name="target">Целевая коллекция items.</param>
+    /// <param name="index">Индекс уже созданных записей по имени; общий для всех языков одного модуля.</param>
     /// <param name="languageName">Код языка для значения элемента.</param>
-    public static void ReadItems(XElement moduleNode, ICollection<TranslationEntry> target, string languageName)
+    public static void ReadItems(
+        XElement moduleNode,
+        ICollection<TranslationEntry> target,
+        IDictionary<string, TranslationEntry> index,
+        string languageName)
     {
         foreach (var element in moduleNode.Elements())
         {
-            var entry = FindOrCreateEntry(target, element.Name.LocalName);
+            var entry = FindOrCreateEntry(target, index, element.Name.LocalName);
             if (string.IsNullOrEmpty(entry.Comment) && element.PreviousNode is XComment comment)
             {
                 entry.Comment = comment.Value;
             }
-            
+
             entry.Add(languageName, new ItemValue { Value = element.Value });
         }
     }
-    
+
     /// <summary>
     /// Записывает изменённые атрибуты metadata в XML-узел модуля.
     /// </summary>
@@ -104,20 +85,20 @@ internal static class ModuleXmlSerializer
             {
                 continue;
             }
-            
+
             var currentValue = (string)moduleNode.Attribute(entry.Name) ?? string.Empty;
             if (currentValue == value)
             {
                 continue;
             }
-            
+
             moduleNode.SetAttributeValue(entry.Name, value);
             modified = true;
         }
-        
+
         return modified;
     }
-    
+
     /// <summary>
     /// Записывает изменённые элементы items в XML-узел модуля.
     /// </summary>
@@ -135,7 +116,7 @@ internal static class ModuleXmlSerializer
             {
                 continue;
             }
-            
+
             var itemNode = moduleNode.Element(entry.Name);
             if (itemNode == null)
             {
@@ -148,23 +129,23 @@ internal static class ModuleXmlSerializer
                 {
                     previousItemNode.AddAfterSelf(itemNode);
                 }
-                
+
                 modified = true;
             }
-            
+
             previousItemNode = itemNode;
             if (itemNode.Value != value)
             {
                 itemNode.SetValue(value);
                 modified = true;
             }
-            
+
             modified |= WriteItemComment(itemNode, entry.Comment);
         }
-        
+
         return modified;
     }
-    
+
     /// <summary>
     /// Записывает или обновляет XML-комментарий перед элементом item.
     /// </summary>
@@ -177,22 +158,22 @@ internal static class ModuleXmlSerializer
         {
             return false;
         }
-        
+
         if (itemNode.PreviousNode is XComment existingComment)
         {
             if (existingComment.Value == comment)
             {
                 return false;
             }
-            
+
             existingComment.Value = comment;
             return true;
         }
-        
+
         itemNode.AddBeforeSelf(new XComment(comment));
         return true;
     }
-    
+
     /// <summary>
     /// Удаляет элементы items с указанными именами из XML-узла модуля.
     /// </summary>
@@ -208,14 +189,14 @@ internal static class ModuleXmlSerializer
             {
                 continue;
             }
-            
+
             itemNode.Remove();
             modified = true;
         }
-        
+
         return modified;
     }
-    
+
     /// <summary>
     /// Записывает XML-документ на диск с форматированием <see cref="SaveSettings"/>.
     /// </summary>
@@ -226,7 +207,7 @@ internal static class ModuleXmlSerializer
         using var writer = XmlWriter.Create(filePath, SaveSettings);
         document.WriteTo(writer);
     }
-    
+
     /// <summary>
     /// Пытается получить значение перевода записи для указанного языка.
     /// </summary>
@@ -241,21 +222,24 @@ internal static class ModuleXmlSerializer
             value = itemValue.Value;
             return true;
         }
-        
+
         value = string.Empty;
         return false;
     }
-    
-    private static TranslationEntry FindOrCreateEntry(ICollection<TranslationEntry> entries, string name)
+
+    private static TranslationEntry FindOrCreateEntry(
+        ICollection<TranslationEntry> entries,
+        IDictionary<string, TranslationEntry> index,
+        string name)
     {
-        var existing = entries.FirstOrDefault(e => e.Name == name);
-        if (existing != null)
+        if (index.TryGetValue(name, out var existing))
         {
             return existing;
         }
-        
+
         existing = new TranslationEntry { Name = name };
         entries.Add(existing);
+        index[name] = existing;
         return existing;
     }
 }

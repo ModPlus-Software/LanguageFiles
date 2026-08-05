@@ -17,9 +17,9 @@ public partial class DockSite
             typeof(object),
             typeof(DockSite),
             new PropertyMetadata(null, OnWorkSpaceContentChanged));
-    
+
     private readonly List<DockablePanel> _panels = new();
-    
+
     /// <summary>
     /// Инициализирует разметку сайта и создаёт <see cref="Manager"/>.
     /// </summary>
@@ -29,12 +29,12 @@ public partial class DockSite
         Manager = new DockManager(this);
         Loaded += OnLoaded;
     }
-    
+
     /// <summary>
     /// Менеджер закрепления, открепления и видимости панелей.
     /// </summary>
     public DockManager Manager { get; }
-    
+
     /// <summary>
     /// Содержимое центральной рабочей области редактора.
     /// </summary>
@@ -43,7 +43,7 @@ public partial class DockSite
         get => GetValue(WorkSpaceContentProperty);
         set => SetValue(WorkSpaceContentProperty, value);
     }
-    
+
     /// <summary>
     /// Регистрирует панель на сайте докинга и подписывает её на обновление метрик разметки.
     /// </summary>
@@ -55,19 +55,19 @@ public partial class DockSite
         {
             return;
         }
-        
+
         if (panel.State is null)
         {
             throw new InvalidOperationException(
             $"DockablePanel '{panel.Name}' requires State to be set before registration.");
         }
-        
+
         _panels.Add(panel);
         panel.AttachManager(Manager);
         panel.State.PropertyChanged += (_, _) => UpdateLayoutMetrics();
         Manager.Register(panel);
     }
-    
+
     /// <summary>
     /// Возвращает хост-контейнер для указанной стороны докинга.
     /// </summary>
@@ -81,7 +81,7 @@ public partial class DockSite
         DockSide.Bottom => BottomHost,
         _ => throw new ArgumentOutOfRangeException(nameof(side))
     };
-    
+
     /// <summary>
     /// Сохраняет текущий размер закреплённой панели в её состояние после изменения сплиттера.
     /// </summary>
@@ -104,7 +104,7 @@ public partial class DockSite
                 break;
         }
     }
-    
+
     /// <summary>
     /// Пересчитывает ширины и высоты колонок и строк сетки по состоянию всех зарегистрированных панелей.
     /// </summary>
@@ -115,7 +115,7 @@ public partial class DockSite
         UpdateSide(DockSide.Top, TopHost, TopRow, TopSplitterRow, TopSplitter);
         UpdateSide(DockSide.Bottom, BottomHost, BottomRow, BottomSplitterRow, BottomSplitter);
     }
-    
+
     /// <summary>
     /// Проверяет, попадает ли экранная точка внутрь области сайта докинга.
     /// </summary>
@@ -128,7 +128,7 @@ public partial class DockSite
         return screenPoint.X >= topLeft.X && screenPoint.X <= bottomRight.X
                && screenPoint.Y >= topLeft.Y && screenPoint.Y <= bottomRight.Y;
     }
-    
+
     /// <summary>
     /// Определяет сторону докинга по положению курсора у края сайта (для подсказки при перетаскивании).
     /// </summary>
@@ -137,32 +137,35 @@ public partial class DockSite
     public DockSide? HitTestDockSide(Point screenPoint)
     {
         const double edge = 48;
+
+        // Обе границы берутся через PointToScreen: ActualWidth/ActualHeight заданы в аппаратно-независимых
+        // единицах и при масштабе экрана ≠ 100% не совпадают с экранными пикселями.
         var topLeft = PointToScreen(new Point(0, 0));
-        var size = new Size(ActualWidth, ActualHeight);
-        
+        var bottomRight = PointToScreen(new Point(ActualWidth, ActualHeight));
+
         if (screenPoint.X <= topLeft.X + edge)
         {
             return DockSide.Left;
         }
-        
-        if (screenPoint.X >= topLeft.X + size.Width - edge)
+
+        if (screenPoint.X >= bottomRight.X - edge)
         {
             return DockSide.Right;
         }
-        
+
         if (screenPoint.Y <= topLeft.Y + edge)
         {
             return DockSide.Top;
         }
-        
-        if (screenPoint.Y >= topLeft.Y + size.Height - edge)
+
+        if (screenPoint.Y >= bottomRight.Y - edge)
         {
             return DockSide.Bottom;
         }
-        
+
         return null;
     }
-    
+
     /// <summary>
     /// Показывает визуальную подсказку зоны сброса на указанной стороне.
     /// </summary>
@@ -174,7 +177,7 @@ public partial class DockSite
         TopDropHint.Visibility = side == DockSide.Top ? Visibility.Visible : Visibility.Collapsed;
         BottomDropHint.Visibility = side == DockSide.Bottom ? Visibility.Visible : Visibility.Collapsed;
     }
-    
+
     /// <summary>
     /// Скрывает все подсказки зон сброса при перетаскивании панели.
     /// </summary>
@@ -185,21 +188,21 @@ public partial class DockSite
         TopDropHint.Visibility = Visibility.Collapsed;
         BottomDropHint.Visibility = Visibility.Collapsed;
     }
-    
+
     private void OnLoaded(object sender, RoutedEventArgs e)
     {
         if (WorkSpaceContent != null)
         {
             CenterHost.Content = WorkSpaceContent;
         }
-        
+
         LeftSplitter.DragCompleted += (_, _) => RememberHostSize(LeftHost);
         RightSplitter.DragCompleted += (_, _) => RememberHostSize(RightHost);
         TopSplitter.DragCompleted += (_, _) => RememberHostSize(TopHost);
         BottomSplitter.DragCompleted += (_, _) => RememberHostSize(BottomHost);
         UpdateLayoutMetrics();
     }
-    
+
     private void RememberHostSize(ContentControl host)
     {
         if (host.Content is DockablePanel panel)
@@ -207,7 +210,7 @@ public partial class DockSite
             RememberPanelSize(panel);
         }
     }
-    
+
     private static void OnWorkSpaceContentChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
         if (d is DockSite { IsLoaded: true } site)
@@ -215,7 +218,7 @@ public partial class DockSite
             site.CenterHost.Content = e.NewValue;
         }
     }
-    
+
     private void UpdateSide(
         DockSide side,
         ContentControl host,
@@ -225,7 +228,7 @@ public partial class DockSite
     {
         var panel = host.Content as DockablePanel;
         var visible = panel?.State.IsVisible == true && panel.State.IsFloating == false;
-        
+
         if (!visible)
         {
             ClearSpanConstraints(sizeDefinition);
@@ -234,7 +237,7 @@ public partial class DockSite
             splitter.Visibility = Visibility.Collapsed;
             return;
         }
-        
+
         if (panel!.State.IsCollapsed)
         {
             SetSpan(sizeDefinition, new GridLength(panel.State.CollapsedHeaderSpan, GridUnitType.Pixel));
@@ -242,19 +245,18 @@ public partial class DockSite
             splitter.Visibility = Visibility.Collapsed;
             return;
         }
-        
+
         var span = panel.State.GetDockedSpan(side);
         ApplySpanConstraints(sizeDefinition, panel.State, side);
         SetSpan(sizeDefinition, new GridLength(span, GridUnitType.Pixel));
         SetSpan(splitterDefinition, new GridLength(4));
         splitter.Visibility = Visibility.Visible;
     }
-    
+
     private static void ApplySpanConstraints(DefinitionBase sizeDefinition, DockPanelState state, DockSide side)
     {
         switch (sizeDefinition)
         {
-            // todo: вот это мне прям не нравится
             case ColumnDefinition column when side is DockSide.Left or DockSide.Right:
                 if (!double.IsNaN(state.MinDockedSpan))
                 {
@@ -264,7 +266,7 @@ public partial class DockSite
                 {
                     column.ClearValue(ColumnDefinition.MinWidthProperty);
                 }
-                
+
                 if (!double.IsNaN(state.MaxDockedSpan))
                 {
                     column.MaxWidth = state.MaxDockedSpan;
@@ -273,7 +275,7 @@ public partial class DockSite
                 {
                     column.ClearValue(ColumnDefinition.MaxWidthProperty);
                 }
-                
+
                 break;
             case RowDefinition row when side is DockSide.Top or DockSide.Bottom:
                 if (!double.IsNaN(state.MinDockedSpan))
@@ -284,7 +286,7 @@ public partial class DockSite
                 {
                     row.ClearValue(RowDefinition.MinHeightProperty);
                 }
-                
+
                 if (!double.IsNaN(state.MaxDockedSpan))
                 {
                     row.MaxHeight = state.MaxDockedSpan;
@@ -293,11 +295,11 @@ public partial class DockSite
                 {
                     row.ClearValue(RowDefinition.MaxHeightProperty);
                 }
-                
+
                 break;
         }
     }
-    
+
     private static void ClearSpanConstraints(DefinitionBase sizeDefinition)
     {
         switch (sizeDefinition)
@@ -312,7 +314,7 @@ public partial class DockSite
                 break;
         }
     }
-    
+
     private static void SetSpan(DefinitionBase definition, GridLength length)
     {
         switch (definition)

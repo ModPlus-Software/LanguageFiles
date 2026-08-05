@@ -2,7 +2,6 @@ namespace LangFilesEditor.Services.RepositoryServices;
 
 using Models;
 
-// todo: Этого класса быть не должно, вероятно. 
 /// <summary>
 /// Результат чтения entries модуля с диска (без мутации UI-модели).
 /// </summary>
@@ -18,12 +17,12 @@ public sealed class ModuleTranslationData
         Metadata = metadata;
         Items = items;
     }
-    
+
     /// <summary>
     /// Атрибуты (metadata) модуля, прочитанные с диска.
     /// </summary>
     public IReadOnlyList<TranslationEntry> Metadata { get; }
-    
+
     /// <summary>
     /// Записи перевода (items) модуля, прочитанные с диска.
     /// </summary>

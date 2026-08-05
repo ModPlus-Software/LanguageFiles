@@ -11,7 +11,7 @@ public sealed class LangFilesEditorToolbarCommand
     /// Название команды.
     /// </summary>
     public required string Label { get; init; }
-    
+
     /// <summary>
     /// Команда.
     /// </summary>

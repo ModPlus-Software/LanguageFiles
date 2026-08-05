@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Media;
 
-// todo: заглушка на время рефакторинга (см. заметки в StatusBarLayoutComposer про перенос этих констант/логики).
 /// <summary>
 /// Измерение ширины текстовых меток status bar для раскладки сегментов.
 /// </summary>
@@ -12,18 +11,18 @@ internal static class StatusBarTextMetrics
 {
     private const double FontSize = 11.5;
     private const double PixelsPerDip = 1.0;
-    
+
     private static readonly Typeface Typeface = new(
         new FontFamily("Segoe UI"),
         FontStyles.Normal,
         FontWeights.Normal,
         FontStretches.Normal);
-    
+
     /// <summary>
     /// Минимальная ширина метки иерархии, ниже которой текст считается нечитаемым и подлежит замене на минимальную ширину.
     /// </summary>
     public const double MinHierarchyLabelWidth = 40;
-    
+
     /// <summary>
     /// Измеряет ширину текста метки status bar в пикселях при текущих настройках шрифта.
     /// </summary>
@@ -35,7 +34,7 @@ internal static class StatusBarTextMetrics
         {
             return 0;
         }
-        
+
         var formatted = new FormattedText(
             text,
             CultureInfo.CurrentCulture,
@@ -44,7 +43,7 @@ internal static class StatusBarTextMetrics
             FontSize,
             Brushes.Black,
             PixelsPerDip);
-        
+
         return formatted.WidthIncludingTrailingWhitespace;
     }
 }

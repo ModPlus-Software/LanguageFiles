@@ -2,7 +2,6 @@ namespace LangFilesEditor.Utils;
 
 using System.Globalization;
 
-// todo: мб это куда-то перенести или переименовать как-то?
 /// <summary>
 /// Утилиты форматирования кодов языков для отображения в интерфейсе.
 /// </summary>

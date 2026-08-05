@@ -17,7 +17,7 @@ public class DialogService : IDialogService
     private readonly EditorDiagnosticsService _diagnostics;
     private readonly ILanguageRepository _repository;
     private readonly EditorSettingsStore _settings;
-    
+
     /// <summary>
     /// Создаёт сервис диалогов с host API.
     /// </summary>
@@ -36,7 +36,7 @@ public class DialogService : IDialogService
         _repository = repository;
         _settings = settings;
     }
-    
+
     /// <inheritdoc />
     public bool? ShowImportWindowWithCheckbox()
     {
@@ -44,10 +44,10 @@ public class DialogService : IDialogService
         {
             DataContext = new ImportVM(_workspace, _host),
         };
-        
+
         return win.ShowDialog();
     }
-    
+
     /// <inheritdoc />
     public bool? ShowImportWindow()
     {
@@ -55,29 +55,29 @@ public class DialogService : IDialogService
         {
             DataContext = new ImportVM(_workspace, _host),
         };
-        
+
         return win.ShowDialog();
     }
-    
+
     /// <inheritdoc />
     public bool? ShowMergerWindow()
     {
         var win = new Merger
         {
             Owner = Application.Current.MainWindow,
-            DataContext = new MergerVM(_host, this, new NotificationService()),
+            DataContext = new MergerVM(_host, _repository, this, new NotificationService()),
         };
-        
+
         return win.ShowDialog();
     }
-    
+
     /// <inheritdoc />
     public bool? ShowMarkForDeletionWindow()
     {
         var win = new MarkForDeletionWindow(_workspace);
         return win.ShowDialog();
     }
-    
+
     /// <inheritdoc />
     public void ShowSettingsWindow()
     {
@@ -86,16 +86,14 @@ public class DialogService : IDialogService
             Owner = Application.Current.MainWindow,
             DataContext = new SettingsWindowVM(_host, _extensionHost, _diagnostics, _repository, _settings),
         };
-        
+
         win.ShowDialog();
     }
-    
-    // todo: локализация
+
     /// <inheritdoc />
     public void ShowMessageWindow(string message) =>
         MessageBox.Show(message, "LangFilesEditor", MessageBoxButton.OK, MessageBoxImage.Information);
-    
-    // todo: локализация
+
     /// <inheritdoc />
     public bool ShowQuestionWindow(string message) =>
         MessageBox.Show(message, "LangFilesEditor", MessageBoxButton.YesNo, MessageBoxImage.Question)

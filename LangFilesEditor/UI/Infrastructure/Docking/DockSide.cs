@@ -9,17 +9,17 @@ public enum DockSide
     /// Левая сторона.
     /// </summary>
     Left,
-    
+
     /// <summary>
     /// Правая сторона.
     /// </summary>
     Right,
-    
+
     /// <summary>
     /// Верхняя сторона.
     /// </summary>
     Top,
-    
+
     /// <summary>
     /// Нижняя сторона.
     /// </summary>

@@ -9,8 +9,7 @@ using Services;
 public sealed class BackgroundOperationService : IBackgroundOperationService
 {
     private readonly EditorOperationTracker _operations;
-    
-    // todo: словно очень сомнительная штука как оно сейчас всё передаётся.
+
     /// <summary>
     /// Создаёт сервис фоновых операций с указанным трекером прогресса.
     /// </summary>
@@ -19,8 +18,7 @@ public sealed class BackgroundOperationService : IBackgroundOperationService
     {
         _operations = operations;
     }
-    
-    // todo: методы выглядят интересно конечно, но не до конца понятно
+
     /// <inheritdoc />
     public Task RunAsync(
         string progressMessage,
@@ -49,7 +47,6 @@ public sealed class BackgroundOperationService : IBackgroundOperationService
         }
     }
 
-    // todo: пу-пу-пу. Ну не знаю. По его расположению. 
     private sealed class OperationProgress(EditorOperationTracker operations, EditorOperation operation)
         : IEditorOperationProgress
     {

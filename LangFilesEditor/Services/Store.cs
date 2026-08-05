@@ -21,7 +21,7 @@ public class Store : ObservableObject, IEditorSession, IEditorCommands
     private readonly EditorOperationTracker _operations;
     private ObservableCollection<Domain> _domains;
     private bool _wasOperationInProgress;
-    
+
     /// <summary>
     /// Создаёт сессию с указанным репозиторием локализации.
     /// </summary>
@@ -43,38 +43,37 @@ public class Store : ObservableObject, IEditorSession, IEditorCommands
         Domains = repository.LoadDomains(Constants.LanguageFilesDirectory, Languages);
         catalogAttacher.AttachAll(Domains);
     }
-    
+
     /// <summary>
-    /// todo: нужна ли здесь вообще эта штука?
+    /// Репозиторий языковых файлов сессии; используется координаторами загрузки и сохранения.
     /// </summary>
     internal ILanguageRepository Repository { get; }
-    
+
     /// <summary>
     /// Координатор загрузки каталогов модулей domain'ов (для <see cref="EditorWorkspace"/>).
     /// </summary>
     internal DomainModuleLoadCoordinator DomainLoads => _domainLoads;
-    
+
     /// <summary>
     /// Сервис ленивой загрузки entries модулей (для <see cref="EditorWorkspace"/>).
     /// </summary>
     internal ModuleEntriesLoadService EntryLoads => _entryLoads;
-    
+
     /// <summary>
     /// Координатор загрузки entries для диагностических отображений (для <see cref="EditorWorkspace"/>).
     /// </summary>
     internal EditorDiagnosticLoadCoordinator DiagnosticLoads => _diagnostic;
-    
+
     /// <summary>
     /// Занят ли редактор длительной операцией. Детали прогресса живут в
     /// <see cref="EditorOperationTracker"/> — UI биндится к нему напрямую.
     /// </summary>
     /// <inheritdoc />
     public bool IsOperationInProgress => _operations.IsActive;
-    
-    // todo: вроде важная штука. Так её оставить? Но то, что readonly только - это круто.
+
     /// <inheritdoc />
     public IReadOnlyList<string> Languages { get; }
-    
+
     /// <inheritdoc />
     public ObservableCollection<Domain> Domains
     {
@@ -85,29 +84,26 @@ public class Store : ObservableObject, IEditorSession, IEditorCommands
             {
                 return;
             }
-            
+
             _domains = value;
             OnPropertyChanged();
         }
     }
-    
-    // todo: как я говорил, можно сделать так, чтобы в этом словно не было необходимости. Но тут нужно подумать. Это важное архитектурное решение.
+
     /// <inheritdoc />
     public async Task EnsureDomainModuleListsLoadedAsync() => await _domainLoads.EnsureAllLoadedAsync(_domains ?? []);
-    
-    // todo: Словно можно просто Load сделать, а не вот этот SearchScope. Наименование не верное. Лишние методы
+
     /// <inheritdoc />
     public async Task<IReadOnlyList<Module>> LoadSearchScopeEntriesAsync(IReadOnlyList<Module> modules) =>
         await _search.LoadScopeEntriesAsync(_domains, modules);
-    
-    // todo: Это должно быть. Но нужно посмотреть функционал.
+
     /// <inheritdoc />
     public bool Save() => _domains != null && _save.Save(_domains, Languages);
-    
+
     /// <inheritdoc />
     public void TrackItemForRemoval(Module module, TranslationEntry entry) =>
         _save.TrackItemForRemoval(module, entry);
-    
+
     // Трекер дёргает Changed на каждый Report; наружу транслируется только реальная смена
     // «занят/свободен» — остальные детали прогресса UI берёт из трекера напрямую.
     private void OnOperationChanged()
@@ -116,7 +112,7 @@ public class Store : ObservableObject, IEditorSession, IEditorCommands
         {
             return;
         }
-        
+
         _wasOperationInProgress = _operations.IsActive;
         OnPropertyChanged(nameof(IsOperationInProgress));
     }

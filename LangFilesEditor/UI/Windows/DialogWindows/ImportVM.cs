@@ -14,19 +14,26 @@ using ModPlusAPI.Mvvm;
 /// </summary>
 public class ImportVM
 {
+    // Вставляемый текст приходит из внешних редакторов, поэтому учитываются оба варианта перевода строки.
+    private static readonly string[] LineSeparators = ["\r\n", "\n"];
+
     private readonly IEditorWorkspace _workspace;
     private readonly IEditorSession _session;
-    
+    private ICommand _importRowsBelowCommand;
+    private ICommand _importRowsAutoCommand;
+
     /// <summary>
     /// Импорт строк ниже выбранной.
     /// </summary>
-    public ICommand ImportRowsBelowCommand => new RelayCommand<string>(ImportRowsBelow);
-    
+    public ICommand ImportRowsBelowCommand =>
+        _importRowsBelowCommand ??= new RelayCommand<string>(ImportRowsBelow);
+
     /// <summary>
     /// Автоимпорт с привязкой к тегам.
     /// </summary>
-    public ICommand ImportRowsAutoCommand => new RelayCommand<(string, bool)>(ImportRowsAuto);
-    
+    public ICommand ImportRowsAutoCommand =>
+        _importRowsAutoCommand ??= new RelayCommand<(string, bool)>(ImportRowsAuto);
+
     /// <summary>
     /// Создаёт VM импорта.
     /// </summary>
@@ -37,7 +44,7 @@ public class ImportVM
         _workspace = workspace;
         _session = session;
     }
-    
+
     private void ImportRowsBelow(string rows)
     {
         var languages = _session.Languages;
@@ -46,9 +53,9 @@ public class ImportVM
         {
             return;
         }
-        
+
         var resultRows = new List<List<string>>();
-        var rowsSeparated = rows.Split(["\r\n", "\n"], StringSplitOptions.TrimEntries); // todo: это можно было бы вынести в настройки. А мб просто потом пометить что это следует вынести в настройки если найдётся время.
+        var rowsSeparated = rows.Split(LineSeparators, StringSplitOptions.TrimEntries);
         var index = 0;
         var resultRow = new List<string>();
         foreach (var row in rowsSeparated)
@@ -57,35 +64,36 @@ public class ImportVM
             {
                 continue;
             }
-            
+
             if (index == languageCount)
             {
                 index = 0;
             }
-            
+
             if (index == 0)
             {
                 if (resultRow.Count == languageCount)
                 {
                     resultRows.Add(resultRow);
                 }
+
                 resultRow = [];
             }
-            
+
             resultRow.Add(row);
             index++;
         }
-        
+
         if (resultRow.Count == languageCount)
         {
             resultRows.Add(resultRow);
         }
-        
+
         if (resultRows.Count == 0)
         {
             return;
         }
-        
+
         var selectedModule = _workspace.SelectedModule;
         var translationEntryService = new TranslationEntryService(languages);
         index = selectedModule.Items.IndexOf(_workspace.SelectedTranslationEntry!) + 1;
@@ -98,10 +106,10 @@ public class ImportVM
                     translationEntryService.GetNewTranslationEntry(previousName, row),
                     TranslationEntryAddSource.Import);
             }
-            
+
             return;
         }
-        
+
         foreach (var row in resultRows)
         {
             var previousName = selectedModule.Items[index - 1].Name;
@@ -112,7 +120,7 @@ public class ImportVM
             index++;
         }
     }
-    
+
     private void ImportRowsAuto((string rows, bool autoNumerate) parameters)
     {
         var languages = _session.Languages;
@@ -121,32 +129,32 @@ public class ImportVM
         {
             return;
         }
-        
+
         var translationEntryService = new TranslationEntryService(languages);
         foreach (var key in sortedRows.Keys)
         {
-            TagTextUtils.GetTagValueAndNumber(key, out string value, out var rowNumber);
+            TagTextUtils.GetTagValueAndNumber(key, out var value, out _);
             var selectedModule = _workspace.SelectedModule;
-            var number = new SearchEngine().SearchLastRowWithTagValue(selectedModule, value, out int index);
+            var number = SearchEngine.SearchLastRowWithTagValue(selectedModule, value, out var index);
             if (index == -1)
             {
                 index = selectedModule.Items.Count - 1;
                 number = 0;
             }
-            
-            var startName = $"{value}{rowNumber}";
-            if (parameters.autoNumerate)
-            {
-                startName = translationEntryService.GetNewTranslationEntryName($"{value}{number}");
-            }
-            
+
+            // Без автонумерации имя берётся из самого тега; с автонумерацией — следующее
+            // за последней существующей строкой с тем же базовым именем.
+            var startName = parameters.autoNumerate
+                ? translationEntryService.GetNewTranslationEntryName($"{value}{number}")
+                : key;
+
             selectedModule.InsertTranslationEntry(
                 index + 1,
-                translationEntryService.GetNewTranslationEntry(startName, sortedRows[key]),
+                translationEntryService.GetTranslationEntry(startName, sortedRows[key]),
                 TranslationEntryAddSource.Import);
         }
     }
-    
+
     /// <summary>
     /// Разбирает многострочный текст на словарь «тег → значения по языкам».
     /// Строки с неполным набором значений (меньше числа языков) отбрасываются.
@@ -157,7 +165,7 @@ public class ImportVM
     private static Dictionary<string, List<string>> GetRows(string rawCopyPaste, IReadOnlyList<string> languages)
     {
         Dictionary<string, List<string>> result = [];
-        var rows = rawCopyPaste.Split(["\r\n", "\n"], StringSplitOptions.TrimEntries);
+        var rows = rawCopyPaste.Split(LineSeparators, StringSplitOptions.TrimEntries);
         foreach (var row in rows)
         {
             var tag = TagTextUtils.GetRowTagName(row);
@@ -165,17 +173,17 @@ public class ImportVM
             {
                 continue;
             }
-            
+
             var content = TagTextUtils.StripRowOfTag(row);
             if (result.ContainsKey(tag))
             {
                 result[tag].Add(content);
                 continue;
             }
-            
+
             result.Add(tag, [content]);
         }
-        
+
         foreach (var key in result.Keys.ToList())
         {
             if (result[key].Count != languages.Count)
@@ -183,7 +191,7 @@ public class ImportVM
                 result.Remove(key);
             }
         }
-        
+
         return result;
     }
 }

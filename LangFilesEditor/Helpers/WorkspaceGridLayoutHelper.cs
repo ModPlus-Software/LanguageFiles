@@ -23,10 +23,10 @@ public static class WorkspaceGridLayoutHelper
                 return i;
             }
         }
-        
+
         return -1;
     }
-    
+
     /// <summary>
     /// Находит индекс строки указанной записи перевода внутри модуля.
     /// </summary>
@@ -45,10 +45,10 @@ public static class WorkspaceGridLayoutHelper
                 return i;
             }
         }
-        
+
         return -1;
     }
-    
+
     /// <summary>
     /// Определяет индекс вставки строки записи так, чтобы порядок строк совпадал с порядком
     /// <see cref="Module.Items"/>: сразу после ближайшей предыдущей записи модуля, уже имеющей строку.
@@ -64,13 +64,13 @@ public static class WorkspaceGridLayoutHelper
         {
             return rows.Count;
         }
-        
+
         var itemIndex = module.Items.IndexOf(entry);
         if (itemIndex < 0)
         {
             return GetInsertIndexAfterModule(rows, module);
         }
-        
+
         for (var i = itemIndex - 1; i >= 0; i--)
         {
             var precedingRowIndex = IndexOfEntryRow(rows, module, module.Items[i]);
@@ -79,10 +79,10 @@ public static class WorkspaceGridLayoutHelper
                 return precedingRowIndex + 1;
             }
         }
-        
+
         return headerIndex + 1;
     }
-    
+
     /// <summary>
     /// Проверяет, есть ли в сетке строки перевода, принадлежащие указанному модулю.
     /// </summary>
@@ -91,7 +91,7 @@ public static class WorkspaceGridLayoutHelper
     /// <returns><see langword="true"/>, если у модуля есть хотя бы одна строка перевода в сетке.</returns>
     public static bool HasEntryRows(IList<WorkspaceGridRow> rows, Module module) =>
         rows.Any(r => r is TranslationEntryGridRow row && ReferenceEquals(row.Module, module));
-    
+
     /// <summary>
     /// Возвращает индекс вставки сразу после последней строки перевода указанного модуля.
     /// </summary>
@@ -105,19 +105,19 @@ public static class WorkspaceGridLayoutHelper
         {
             return rows.Count;
         }
-        
+
         index++;
-        
+
         while (index < rows.Count
                && rows[index] is TranslationEntryGridRow row
                && ReferenceEquals(row.Module, module))
         {
             index++;
         }
-        
+
         return index;
     }
-    
+
     /// <summary>
     /// Определяет индекс вставки заголовка модуля с учётом порядка модулей во вкладках.
     /// </summary>
@@ -131,10 +131,10 @@ public static class WorkspaceGridLayoutHelper
         {
             return 0;
         }
-        
+
         return GetInsertIndexAfterModule(rows, modules[moduleIndex - 1]);
     }
-    
+
     /// <summary>
     /// Удаляет все строки перевода указанного модуля, расположенные после его заголовка.
     /// </summary>
@@ -149,12 +149,12 @@ public static class WorkspaceGridLayoutHelper
             {
                 continue;
             }
-            
+
             if (rows[i] is TranslationEntryGridRow entryRow)
             {
                 entryRow.Detach();
             }
-            
+
             rows.RemoveAt(i);
         }
     }

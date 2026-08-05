@@ -1,6 +1,5 @@
 namespace LangFilesEditor.Models;
 
-// todo: <see cref="TranslationEntryEventArgs"/>
 /// <summary>
 /// Контекст мутации коллекции записей модуля.
 /// </summary>

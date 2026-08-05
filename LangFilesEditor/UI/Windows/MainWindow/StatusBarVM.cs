@@ -27,11 +27,12 @@ public class StatusBarVM : ObservableObject
     private double _overallProgress;
     private bool _isOverallIndeterminate;
     private bool _hasMultipleOperations;
-    private string _statusToolTip = "Готово";
+    private string _statusToolTip = EditorStrings.StatusBarReady;
     private bool _isOperationInProgress;
     private string _lastTransientMessage = string.Empty;
     private double _lastAvailableWidth = 480;
-    
+    private ICommand _toggleDiagnosticFilterCommand;
+
     /// <summary>
     /// Создаёт ViewModel строки состояния, подписанную на рабочую область и трекер операций.
     /// </summary>
@@ -53,32 +54,33 @@ public class StatusBarVM : ObservableObject
         UpdateProgress();
         ApplyLayoutInternal();
     }
-    
+
     /// <summary>
     /// Сводка диагностики для индикаторов строки состояния.
     /// </summary>
     public IEditorDiagnostics Diagnostics => _diagnostics;
-    
+
     /// <summary>
     /// Переключает фильтр рабочей области по категории диагностики (повторный клик — выключить).
     /// </summary>
-    public ICommand ToggleDiagnosticFilterCommand => new RelayCommand<DiagnosticCategory>(
-        category => SafeExecute.Execute(() =>
-        {
-            if (category == null)
+    public ICommand ToggleDiagnosticFilterCommand => _toggleDiagnosticFilterCommand ??=
+        new RelayCommand<DiagnosticCategory>(
+            category => SafeExecute.Execute(() =>
             {
-                return;
-            }
-            
-            _ = ToggleDiagnosticFilterAsync(category);
-        }),
-        category => category is DiagnosticCategory diagnosticCategory && diagnosticCategory.HasItems);
-    
+                if (category == null)
+                {
+                    return;
+                }
+
+                _ = ToggleDiagnosticFilterAsync(category);
+            }),
+            category => category is DiagnosticCategory { HasItems: true });
+
     /// <summary>
     /// Сегменты строки состояния для отображения в UI.
     /// </summary>
     public ObservableCollection<StatusBarSegmentVm> StatusSegments { get; } = [];
-    
+
     /// <summary>
     /// Подсказка со сводной информацией о текущем контексте.
     /// </summary>
@@ -91,17 +93,17 @@ public class StatusBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _statusToolTip = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Активные операции для развёрнутого списка прогресса.
     /// </summary>
     public ReadOnlyObservableCollection<IEditorOperation> ActiveOperations => _operations.Operations;
-    
+
     /// <summary>
     /// Сводный заголовок индикатора: текст единственной операции либо число операций.
     /// </summary>
@@ -114,12 +116,12 @@ public class StatusBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _operationsHeader = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Общая доля выполнения всех операций от 0 до 1 для шкалы прогресса.
     /// </summary>
@@ -132,12 +134,12 @@ public class StatusBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _overallProgress = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Неопределён ли общий прогресс (показывать «бегущую» шкалу).
     /// </summary>
@@ -150,12 +152,12 @@ public class StatusBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _isOverallIndeterminate = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Выполняется ли больше одной операции (есть смысл разворачивать список).
     /// </summary>
@@ -168,12 +170,12 @@ public class StatusBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _hasMultipleOperations = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Полный текст прогресса для подсказки.
     /// </summary>
@@ -186,12 +188,12 @@ public class StatusBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _progressToolTip = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Идёт ли в данный момент фоновая операция.
     /// </summary>
@@ -204,12 +206,12 @@ public class StatusBarVM : ObservableObject
             {
                 return;
             }
-            
+
             _isOperationInProgress = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Пересчитывает сегменты строки состояния под доступную ширину.
     /// </summary>
@@ -220,22 +222,22 @@ public class StatusBarVM : ObservableObject
         {
             _lastAvailableWidth = availableWidth;
         }
-        
+
         ApplyLayoutInternal();
     }
-    
+
     private void OnWorkspacePropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
         if (e.PropertyName == nameof(IEditorWorkspace.ActiveDiagnosticFilter))
         {
             SyncFilterActiveStates(_workspace.ActiveDiagnosticFilter);
         }
-        
+
         // Прогресс приходит напрямую из трекера (OnOperationsChanged); workspace сообщает
         // только смену выбора/режимов, влияющую на раскладку сегментов.
         ApplyLayoutInternal();
     }
-    
+
     private void OnOperationsChanged()
     {
         UpdateProgress();
@@ -245,15 +247,15 @@ public class StatusBarVM : ObservableObject
             ApplyLayoutInternal();
         }
     }
-    
+
     private void OnOpenModulesChanged(object sender, NotifyCollectionChangedEventArgs e)
     {
         ApplyLayoutInternal();
     }
-    
+
     private void OnDiagnosticsPropertyChanged(object sender, PropertyChangedEventArgs e) =>
         OnPropertyChanged(nameof(Diagnostics));
-    
+
     private async Task ToggleDiagnosticFilterAsync(DiagnosticCategory category)
     {
         if (_workspace.ActiveDiagnosticFilter == category.Severity)
@@ -262,17 +264,17 @@ public class StatusBarVM : ObservableObject
             SyncFilterActiveStates(null);
             return;
         }
-        
+
         var candidates = category.Modules.Select(entry => entry.Module).ToList();
         if (candidates.Count == 0)
         {
             return;
         }
-        
+
         await _workspace.ShowDiagnosticFilterAsync(category.Severity, candidates);
         SyncFilterActiveStates(category.Severity);
     }
-    
+
     private void SyncFilterActiveStates(DiagnosticSeverity? active)
     {
         foreach (var cat in _diagnostics.Categories)
@@ -280,11 +282,7 @@ public class StatusBarVM : ObservableObject
             cat.IsFilterActive = cat.Severity == active;
         }
     }
-    
-    private void RefreshHierarchyState()
-    {
-    }
-    
+
     private void ApplyLayoutInternal()
     {
         var isSearchMode = _workspace.IsSearchResultsView || _workspace.IsDiagnosticResultsView;
@@ -306,7 +304,7 @@ public class StatusBarVM : ObservableObject
         {
             StatusSegments.Add(segment);
         }
-        
+
         StatusToolTip = StatusBarLayoutComposer.BuildToolTip(
             isSearchMode,
             domainName,
@@ -319,12 +317,12 @@ public class StatusBarVM : ObservableObject
             StatusToolTip = $"{_operations.TransientMessage}\n{StatusToolTip}";
         }
     }
-    
+
     private void UpdateProgress()
     {
         var wasInProgress = IsOperationInProgress;
         IsOperationInProgress = _operations.IsActive;
-        
+
         var count = _operations.ActiveCount;
         HasMultipleOperations = count > 1;
         IsOverallIndeterminate = _operations.IsOverallIndeterminate;
@@ -333,12 +331,12 @@ public class StatusBarVM : ObservableObject
         {
             0 => string.Empty,
             1 => _operations.Operations[0].DisplayText,
-            _ => $"Операций: {count}",
+            _ => EditorStrings.FormatOperationsCount(count),
         };
         ProgressToolTip = count == 0
             ? string.Empty
             : string.Join("\n", _operations.Operations.Select(o => o.DisplayText));
-        
+
         if (wasInProgress != IsOperationInProgress)
         {
             ApplyLayoutInternal();

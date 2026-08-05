@@ -9,7 +9,6 @@ using System.Windows.Media;
 /// </summary>
 public static class WpfUtils
 {
-    // todo: а нужно ли оно вообще если вроде бы есть relative source с parent? Только для гридов? Нужно подумать.
     /// <summary>
     /// Рекурсивно ищет первый дочерний элемент заданного типа в визуальном дереве.
     /// </summary>
@@ -36,7 +35,6 @@ public static class WpfUtils
         return null;
     }
 
-    // todo: вроде бы этот метод относится к Dock панелям. Словно это можно было бы в них и поместить. Ну или по крайней мере в файлик рядом с этим
     /// <summary>
     /// Отсоединяет элемент от текущего родителя и помещает его в содержимое <see cref="ContentControl"/>.
     /// </summary>
@@ -48,7 +46,6 @@ public static class WpfUtils
         host.Content = element;
     }
 
-    // todo:мб не здесь должно быть?
     /// <summary>
     /// Отсоединяет элемент от текущего визуального или логического родителя.
     /// </summary>

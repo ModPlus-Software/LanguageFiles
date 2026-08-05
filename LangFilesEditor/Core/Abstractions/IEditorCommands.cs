@@ -2,7 +2,6 @@ namespace LangFilesEditor.Core.Abstractions;
 
 using Models;
 
-// todo: словно избыточно или ещё что-то? Выглядит странным немного дублирующем другие элементы интерфейсом.
 /// <summary>
 /// Команды редактора.
 /// </summary>
@@ -13,7 +12,7 @@ public interface IEditorCommands
     /// </summary>
     /// <returns><see langword="false"/> при ошибках валидации или некорректных данных; иначе <see langword="true"/>.</returns>
     bool Save();
-    
+
     /// <summary>
     /// Помечает entry для удаления из XML при сохранении. Пометка привязана к самим объектам,
     /// а не к их именам, поэтому переименования до сохранения её не сбивают.

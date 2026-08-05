@@ -14,7 +14,7 @@ public sealed class ExtensionSessionAdapter : IExtensionEditorSession
 {
     private readonly IEditorSession _session;
     private readonly IEditorWorkspace _workspace;
-    
+
     /// <summary>
     /// Создаёт адаптер над сессией и workspace.
     /// </summary>
@@ -42,25 +42,25 @@ public sealed class ExtensionSessionAdapter : IExtensionEditorSession
             }
         };
     }
-    
+
     /// <inheritdoc />
     public event PropertyChangedEventHandler PropertyChanged;
-    
+
     /// <inheritdoc />
     public IReadOnlyList<string> Languages => _session.Languages;
-    
+
     /// <inheritdoc />
     public ObservableCollection<Domain> Domains => _session.Domains;
-    
+
     /// <inheritdoc />
     public Domain SelectedDomain => _workspace.SelectedDomain;
-    
+
     /// <inheritdoc />
     public Module SelectedModule => _workspace.SelectedModule;
-    
+
     /// <inheritdoc />
     public TranslationEntry SelectedTranslationEntry => _workspace.SelectedTranslationEntry;
-    
+
     /// <inheritdoc />
     public bool IsOperationInProgress => _session.IsOperationInProgress;
 }

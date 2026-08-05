@@ -25,7 +25,8 @@ public class DiagnosticSeverityToBrushConverter : IValueConverter
     /// <param name="culture">Не используется.</param>
     /// <returns>Кисть индикатора категории.</returns>
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture) =>
-        value is DiagnosticSeverity severity ? ToBrush(severity) : Error;
+        // Отсутствие значения не должно выглядеть как ошибка — привязка просто не меняет кисть.
+        value is DiagnosticSeverity severity ? ToBrush(severity) : Binding.DoNothing;
 
     /// <summary>
     /// Обратное преобразование не поддерживается.
@@ -38,7 +39,7 @@ public class DiagnosticSeverityToBrushConverter : IValueConverter
         DiagnosticSeverity.Error => Error,
         DiagnosticSeverity.Warning => Warning,
         DiagnosticSeverity.Update => Update,
-        _ => Error,
+        _ => Update,
     };
 
     private static SolidColorBrush Freeze(byte r, byte g, byte b)

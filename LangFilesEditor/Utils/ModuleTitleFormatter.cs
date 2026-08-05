@@ -2,7 +2,6 @@ namespace LangFilesEditor.Utils;
 
 using System.Text;
 
-// todo: переработать здесь методы нужно
 /// <summary>
 /// Форматирование длинных имён модулей для отображения в UI с переносами по границам PascalCase-слов.
 /// </summary>
@@ -12,9 +11,10 @@ public static class ModuleTitleFormatter
     /// Максимальная длина одной строки заголовка по умолчанию.
     /// </summary>
     private const int DefaultMaxCharsPerLine = 24;
-    
+
     /// <summary>
-    /// Переносит длинные имена названий модулей для корректного отображения в UI. todo: но здесь тоже вопрос как переносит...
+    /// Переносит длинное имя модуля по границам PascalCase-слов, а слишком длинные слова —
+    /// по фиксированной ширине, чтобы заголовок помещался в ячейку грида.
     /// </summary>
     /// <param name="title">Исходный заголовок модуля, возможно, с разделителем « — » между domain и module.</param>
     /// <param name="maxCharsPerLine">Максимальное количество символов в одной строке.</param>
@@ -25,22 +25,22 @@ public static class ModuleTitleFormatter
         {
             return title;
         }
-        
+
         var separatorIndex = title.IndexOf(Constants.DomainNamesSeparator, StringComparison.Ordinal);
-        
+
         if (separatorIndex >= 0)
         {
             var left = title[..separatorIndex];
             var right = title[(separatorIndex + Constants.DomainNamesSeparator.Length)..];
             return $"{WrapForDisplay(left, maxCharsPerLine)}{Constants.DomainNamesSeparator}{WrapForDisplay(right, maxCharsPerLine)}";
         }
-        
+
         var parts = SplitPascalCaseParts(title);
         if (parts.Count == 0)
         {
             return WrapFixedWidth(title, maxCharsPerLine);
         }
-        
+
         var lines = new List<string>();
         var current = new StringBuilder();
         foreach (var part in parts)
@@ -52,40 +52,40 @@ public static class ModuleTitleFormatter
                     current.Append(part);
                     continue;
                 }
-                
+
                 lines.AddRange(SplitFixedWidth(part, maxCharsPerLine));
                 continue;
             }
-            
+
             if (current.Length + part.Length <= maxCharsPerLine)
             {
                 current.Append(part);
                 continue;
             }
-            
+
             lines.Add(current.ToString());
             current.Clear();
-            
+
             if (part.Length <= maxCharsPerLine)
             {
                 current.Append(part);
                 continue;
             }
-            
+
             lines.AddRange(SplitFixedWidth(part, maxCharsPerLine));
         }
-        
+
         if (current.Length > 0)
         {
             lines.Add(current.ToString());
         }
-        
+
         return string.Join(Environment.NewLine, lines);
     }
-    
+
     private static string WrapFixedWidth(string value, int maxCharsPerLine) =>
         string.Join(Environment.NewLine, SplitFixedWidth(value, maxCharsPerLine));
-    
+
     private static IEnumerable<string> SplitFixedWidth(string segment, int maxCharsPerLine)
     {
         for (var i = 0; i < segment.Length; i += maxCharsPerLine)
@@ -94,7 +94,7 @@ public static class ModuleTitleFormatter
             yield return segment.Substring(i, length);
         }
     }
-    
+
     private static List<string> SplitPascalCaseParts(string value)
     {
         var parts = new List<string>();
@@ -118,15 +118,15 @@ public static class ModuleTitleFormatter
                 current.Append(last).Append(ch);
                 continue;
             }
-            
+
             current.Append(ch);
         }
-        
+
         if (current.Length > 0)
         {
             parts.Add(current.ToString());
         }
-        
+
         return parts;
     }
 }

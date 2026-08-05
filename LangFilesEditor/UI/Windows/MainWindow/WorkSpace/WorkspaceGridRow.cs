@@ -18,7 +18,7 @@ public enum WorkspaceRowKind
     /// Заголовок модуля.
     /// </summary>
     ModuleHeader,
-    
+
     /// <summary>
     /// Строка записи перевода.
     /// </summary>
@@ -34,7 +34,7 @@ public abstract class WorkspaceGridRow
     /// Тип строки (заголовок или запись).
     /// </summary>
     public abstract WorkspaceRowKind Kind { get; }
-    
+
     /// <summary>
     /// Модуль, к которому относится строка.
     /// </summary>
@@ -56,31 +56,31 @@ public sealed class ModuleHeaderGridRow : WorkspaceGridRow
         Module = module;
         ShowDomainInTitle = showDomainInTitle;
     }
-    
+
     /// <inheritdoc />
     public override WorkspaceRowKind Kind => WorkspaceRowKind.ModuleHeader;
-    
+
     /// <summary>
     /// Показывать ли имя домена в заголовке.
     /// </summary>
     public bool ShowDomainInTitle { get; }
-    
+
     /// <summary>
     /// Имя домена модуля.
     /// </summary>
     public string DomainName => Module.Group?.Name ?? string.Empty;
-    
+
     /// <summary>
     /// Имя модуля.
     /// </summary>
     public string ModuleName => Module.Name;
-    
+
     /// <summary>
     /// Заголовок для отображения (с доменом или без).
     /// </summary>
     public string Title => ShowDomainInTitle && !string.IsNullOrEmpty(DomainName)
         ? $"{DomainName} — {ModuleName}" : ModuleName;
-    
+
     /// <summary>
     /// Заголовок с переносами для отображения в ячейке грида.
     /// </summary>
@@ -103,34 +103,34 @@ public sealed class TranslationEntryGridRow : WorkspaceGridRow, INotifyPropertyC
         Entry = entry;
         Entry.PropertyChanged += OnEntryPropertyChanged;
     }
-    
+
     /// <inheritdoc />
     public override WorkspaceRowKind Kind => WorkspaceRowKind.Entry;
-    
+
     /// <summary>
     /// Запись перевода, представленная строкой.
     /// </summary>
     public TranslationEntry Entry { get; }
-    
+
     /// <summary>
     /// Фон строки грида; вычисляется из <see cref="TranslationEntry.RowVisualState"/>
     /// через <see cref="RowVisualStateToBrushConverter"/> (единая точка соответствия состояний и кистей).
     /// </summary>
     public SolidColorBrush RowBackground => RowVisualStateToBrushConverter.ToBrush(Entry.RowVisualState);
-    
+
     /// <summary>
     /// Подсказка строки грида; прокси для <see cref="TranslationEntry.RowToolTip"/>.
     /// </summary>
     public string RowToolTip => Entry.RowToolTip;
-    
+
     /// <inheritdoc />
     public event PropertyChangedEventHandler PropertyChanged;
-    
+
     /// <summary>
     /// Отписывается от изменений записи перед удалением строки из грида.
     /// </summary>
     public void Detach() => Entry.PropertyChanged -= OnEntryPropertyChanged;
-    
+
     /// <summary>
     /// Принудительно обновляет привязки фона и подсказки строки.
     /// </summary>
@@ -139,20 +139,20 @@ public sealed class TranslationEntryGridRow : WorkspaceGridRow, INotifyPropertyC
         OnPropertyChanged(nameof(RowBackground));
         OnPropertyChanged(nameof(RowToolTip));
     }
-    
+
     private void OnEntryPropertyChanged(object sender, PropertyChangedEventArgs e)
     {
         if (AffectsRowBackground(e.PropertyName))
         {
             OnPropertyChanged(nameof(RowBackground));
         }
-        
+
         if (e.PropertyName == nameof(TranslationEntry.RowToolTip))
         {
             OnPropertyChanged(nameof(RowToolTip));
         }
     }
-    
+
     private static bool AffectsRowBackground(string propertyName) => propertyName switch
     {
         nameof(TranslationEntry.RowVisualState) => true,
@@ -163,7 +163,7 @@ public sealed class TranslationEntryGridRow : WorkspaceGridRow, INotifyPropertyC
         nameof(EntryDiagnosticState.ExtensionDiagnostic) => true,
         _ => false,
     };
-    
+
     private void OnPropertyChanged([CallerMemberName] string propertyName = null) =>
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 }

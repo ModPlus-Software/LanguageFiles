@@ -11,7 +11,7 @@ public sealed class WindowPanelMenuItemVm : ObservableObject
 {
     private readonly DockablePanel _panel;
     private readonly DockManager _dockManager;
-    
+
     /// <summary>
     /// Создаёт пункт меню для управления видимостью панели.
     /// </summary>
@@ -24,17 +24,17 @@ public sealed class WindowPanelMenuItemVm : ObservableObject
         State = panel.State;
         State.PropertyChanged += OnStatePropertyChanged;
     }
-    
+
     /// <summary>
     /// Состояние панели (видимость, заголовок, сторона докинга).
     /// </summary>
     public DockPanelState State { get; }
-    
+
     /// <summary>
     /// Отображаемое имя панели в меню.
     /// </summary>
     public string DisplayName => State.Title;
-    
+
     /// <summary>
     /// Видима ли панель; изменение вызывает показ или скрытие через менеджер докинга.
     /// </summary>
@@ -47,6 +47,7 @@ public sealed class WindowPanelMenuItemVm : ObservableObject
             {
                 return;
             }
+
             if (value)
             {
                 _dockManager.ShowPanel(_panel);
@@ -57,7 +58,12 @@ public sealed class WindowPanelMenuItemVm : ObservableObject
             }
         }
     }
-    
+
+    /// <summary>
+    /// Снимает подписку на состояние панели перед удалением пункта из меню.
+    /// </summary>
+    public void Unsubscribe() => State.PropertyChanged -= OnStatePropertyChanged;
+
     private void OnStatePropertyChanged(object sender, PropertyChangedEventArgs e)
     {
         if (e.PropertyName is nameof(DockPanelState.IsVisible))

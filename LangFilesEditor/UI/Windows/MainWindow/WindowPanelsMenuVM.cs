@@ -12,7 +12,7 @@ public sealed class WindowPanelsMenuVM
     /// Пункты меню, соответствующие закрепляемым панелям.
     /// </summary>
     public ObservableCollection<WindowPanelMenuItemVm> Panels { get; } = [];
-    
+
     /// <summary>
     /// Регистрирует панели в меню видимости.
     /// </summary>
@@ -20,6 +20,11 @@ public sealed class WindowPanelsMenuVM
     /// <param name="panels">Закрепляемые панели, доступные в меню.</param>
     public void RegisterPanels(DockManager dockManager, params DockablePanel[] panels)
     {
+        foreach (var item in Panels)
+        {
+            item.Unsubscribe();
+        }
+
         Panels.Clear();
         foreach (var panel in panels)
         {

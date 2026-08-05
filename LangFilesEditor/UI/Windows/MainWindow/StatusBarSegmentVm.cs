@@ -9,12 +9,12 @@ public enum StatusBarSegmentKind
     /// Текстовая метка (домен, модуль, запись).
     /// </summary>
     Label,
-    
+
     /// <summary>
     /// Стрелка-разделитель иерархии.
     /// </summary>
     Arrow,
-    
+
     /// <summary>
     /// Вертикальный разделитель сегментов.
     /// </summary>
@@ -30,23 +30,22 @@ public sealed class StatusBarSegmentVm
     /// Тип отображаемого сегмента.
     /// </summary>
     public StatusBarSegmentKind Kind { get; init; }
-    
+
     /// <summary>
     /// Текст сегмента.
     /// </summary>
     public string Text { get; init; } = string.Empty;
-    
+
     /// <summary>
     /// Подсказка сегмента.
     /// </summary>
     public string ToolTip { get; init; } = string.Empty;
-    
+
     /// <summary>
     /// Максимальная ширина метки; для <see cref="StatusBarSegmentKind.Label"/>; null — автоширина.
     /// </summary>
     public double? MaxWidth { get; init; }
-    
-    // todo: стоит об этом подумать
+
     /// <summary>
     /// Ширина метки для WPF; без ограничения — большое значение.
     /// </summary>

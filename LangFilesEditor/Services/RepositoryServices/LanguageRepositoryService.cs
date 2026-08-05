@@ -16,7 +16,7 @@ using Microsoft.Win32;
 public class LanguageRepositoryService : ILanguageRepository
 {
     private static readonly string[] MergeDomainPrefixes = ["Common", "AutoCAD", "Revit", "Renga"];
-    
+
     /// <inheritdoc />
     public IReadOnlyList<string> LoadLanguages(string languageDirectory)
     {
@@ -24,33 +24,40 @@ public class LanguageRepositoryService : ILanguageRepository
         {
             return [];
         }
-        
-        return Directory.GetDirectories(languageDirectory)
-            .Where(dir => Directory.GetFiles(dir, "*.xml", SearchOption.TopDirectoryOnly).Length > 0)
+
+        return Directory.EnumerateDirectories(languageDirectory)
+            .Where(dir => Directory.EnumerateFiles(dir, "*.xml", SearchOption.TopDirectoryOnly).Any())
             .Select(Path.GetFileName)
             .Where(name => !string.IsNullOrEmpty(name))
             .OrderBy(name => name, StringComparer.OrdinalIgnoreCase)
             .ToList()!;
     }
-    
+
     /// <inheritdoc />
-    public ObservableCollection<Domain> LoadDomains(
-        string languageDirectory,
-        IReadOnlyList<string> languages,
-        bool isFullLoad = false)
+    public ObservableCollection<Domain> LoadDomains(string languageDirectory, IReadOnlyList<string> languages)
     {
         var domains = new ObservableCollection<Domain>();
         var registeredNames = new HashSet<string>(StringComparer.Ordinal);
-        var referenceLanguageDirectory = GetReferenceLanguageDirectory(languageDirectory, languages);
-        
-        foreach (var languageFile in Directory.GetFiles(referenceLanguageDirectory))
+
+        // Домены собираются по всем языковым каталогам: файл нового плагина может появиться
+        // сначала только в одном языке, и домен всё равно должен быть виден в дереве.
+        foreach (var languageName in EnumerateLanguageNames(languageDirectory, languages))
         {
-            AddDomainFromFileName(languageFile, domains, registeredNames);
+            var directory = LanguageFilePaths.GetLanguageDirectory(languageDirectory, languageName);
+            if (!Directory.Exists(directory))
+            {
+                continue;
+            }
+
+            foreach (var languageFile in Directory.EnumerateFiles(directory, "*.xml"))
+            {
+                AddDomainFromFileName(languageFile, domains, registeredNames);
+            }
         }
-        
+
         return domains;
     }
-    
+
     /// <inheritdoc />
     public Task<ObservableCollection<Module>> LoadModulesAsync(Domain domain)
     {
@@ -58,25 +65,10 @@ public class LanguageRepositoryService : ILanguageRepository
         {
             throw new ArgumentNullException(nameof(domain));
         }
-        
+
         return Task.Run(() => LoadModules(domain));
     }
-    
-    /// <inheritdoc />
-    public string GetLanguageDirectory()
-    {
-        var languageDirectory = SelectPathWithMaxScore(
-            Directory.GetDirectories(Constants.LanguageFilesDirectory),
-            dir => Directory.GetFiles(dir, "*.xml", SearchOption.TopDirectoryOnly).Length);
-        
-        if (languageDirectory == null)
-        {
-            throw new InvalidOperationException(EditorStrings.LanguageDirectoryNotFound);
-        }
-        
-        return languageDirectory;
-    }
-    
+
     /// <inheritdoc />
     public Task<ModuleTranslationData> ReadTranslationEntriesAsync(
         Module module,
@@ -87,18 +79,17 @@ public class LanguageRepositoryService : ILanguageRepository
         {
             throw new ArgumentNullException(nameof(module));
         }
-        
+
         if (languages == null || languages.Count == 0 || string.IsNullOrEmpty(module.SourceFileName))
         {
             return Task.FromResult(new ModuleTranslationData([], []));
         }
-        
+
         return Task.Run(
             () => ReadTranslationEntries(module, languages, module.SourceFileName, cancellationToken),
             cancellationToken);
     }
-    
-    // todo: следует перерасположить методы. в порядке для удобочтения
+
     /// <inheritdoc />
     public void Save(
         ICollection<Domain> domains,
@@ -109,21 +100,28 @@ public class LanguageRepositoryService : ILanguageRepository
         {
             return;
         }
-        
+
         itemsToRemove ??= new Dictionary<string, List<string>>();
-        var allModules = domains.SelectMany(d => d.Modules).ToList();
-        var sourceFiles = CollectSourceFilesToSave(allModules, itemsToRemove);
-        if (sourceFiles.Count == 0)
+
+        // Модули группируются по ключу источника один раз на всё сохранение, а не заново для каждого языка.
+        var modulesBySourceKey = domains
+            .SelectMany(d => d.Modules)
+            .Where(m => !string.IsNullOrEmpty(m.SourceFileName))
+            .Where(m => HasLoadedEntries(m) || itemsToRemove.ContainsKey(m.Name))
+            .GroupBy(m => m.SourceFileName, StringComparer.Ordinal)
+            .ToDictionary(group => group.Key, group => (IReadOnlyList<Module>)group.ToList(), StringComparer.Ordinal);
+
+        if (modulesBySourceKey.Count == 0)
         {
             return;
         }
-        
+
         foreach (var languageName in languages)
         {
-            SaveLanguage(allModules, languageName, sourceFiles, itemsToRemove);
+            SaveLanguage(languageName, modulesBySourceKey, itemsToRemove);
         }
     }
-    
+
     /// <inheritdoc />
     public void MergeWithWorkingDirectory(NotificationService notifications)
     {
@@ -132,12 +130,12 @@ public class LanguageRepositoryService : ILanguageRepository
         {
             return;
         }
-        
+
         if (!ClearMergeTargetDirectory(targetLangDirectory, notifications))
         {
             return;
         }
-        
+
         var sourceLanguagesDirectory = Constants.LanguageFilesDirectory;
         try
         {
@@ -146,9 +144,9 @@ public class LanguageRepositoryService : ILanguageRepository
             {
                 return;
             }
-            
+
             notifications.Notify(EditorStrings.FormatTargetLanguageVersion(version));
-            
+
             foreach (var directory in Directory.GetDirectories(sourceLanguagesDirectory))
             {
                 var langName = new DirectoryInfo(directory).Name;
@@ -157,7 +155,7 @@ public class LanguageRepositoryService : ILanguageRepository
                 mergedDocument.Save(Path.Combine(targetLangDirectory, $"{langName}.xml"));
                 notifications.Notify(EditorStrings.FormatLanguageFileCreated(langName));
             }
-            
+
             notifications.Notify(EditorStrings.Done);
         }
         catch (Exception exception)
@@ -165,16 +163,29 @@ public class LanguageRepositoryService : ILanguageRepository
             notifications.Notify(exception.Message);
         }
     }
-    
-    // todo: GetLanguageDirectory как замена?
-    private static string GetReferenceLanguageDirectory(
-        string languageDirectory,
-        IReadOnlyList<string> languages) =>
-        languages is { Count: > 0 }
-            ? Path.Combine(languageDirectory, languages[0])
-            : Directory.GetDirectories(languageDirectory).First();
-    
-    private void AddDomainFromFileName(
+
+    /// <summary>
+    /// Возвращает имена языковых подпапок: переданный список, либо — если он пуст — фактическое
+    /// содержимое каталога локализации.
+    /// </summary>
+    private static IEnumerable<string> EnumerateLanguageNames(
+        string languageFilesRoot,
+        IReadOnlyList<string> languages)
+    {
+        if (languages is { Count: > 0 })
+        {
+            return languages;
+        }
+
+        if (!Directory.Exists(languageFilesRoot))
+        {
+            return [];
+        }
+
+        return Directory.EnumerateDirectories(languageFilesRoot).Select(Path.GetFileName);
+    }
+
+    private static void AddDomainFromFileName(
         string languageFilePath,
         ObservableCollection<Domain> domains,
         HashSet<string> registeredNames)
@@ -184,92 +195,114 @@ public class LanguageRepositoryService : ILanguageRepository
         {
             return;
         }
-        
-        var domainName = fileName.Contains(Constants.DomainNamesSeparator)
-            ? fileName.Split(Constants.DomainNamesSeparator)[0]
-            : fileName;
-        
+
+        var separatorIndex = fileName.IndexOf(Constants.DomainNamesSeparator, StringComparison.Ordinal);
+        var domainName = separatorIndex > 0 ? fileName[..separatorIndex] : fileName;
+
         if (!registeredNames.Add(domainName))
         {
             return;
         }
-        
-        var domain = new Domain
+
+        domains.Add(new Domain
         {
             Name = domainName,
             IsCommon = string.Equals(domainName, Constants.CommonDomainName, StringComparison.OrdinalIgnoreCase),
-        };
-        
-        domains.Add(domain);
+        });
     }
-    
-    private ObservableCollection<Module> LoadModules(Domain domain)
+
+    private static ObservableCollection<Module> LoadModules(Domain domain)
     {
         var domainPrefix = domain.Name + Constants.DomainNamesSeparator;
-        var languageDirectory = GetLanguageDirectory();
-        var modules = new ObservableCollection<Module>();
+        var sourceKeys = CollectDomainSourceKeys(domain.Name, domainPrefix)
+            .OrderBy(key => key == domain.Name ? 0 : 1)
+            .ThenBy(key => key, StringComparer.OrdinalIgnoreCase);
 
-        if (string.IsNullOrEmpty(languageDirectory))
+        var loaded = new List<Module>();
+        var loadedNames = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var sourceKey in sourceKeys)
         {
-            return modules;
-            // todo: здесь по идеи ошибку должно пробрасывать
+            LoadModulesFromFile(domain, loaded, loadedNames, sourceKey);
         }
-        
-        var sourceFiles = Directory.GetFiles(languageDirectory, "*.xml")
-            .Select(Path.GetFileNameWithoutExtension)
-            .Where(filename => filename == domain.Name || filename.StartsWith(domainPrefix, StringComparison.Ordinal))
-            .OrderBy(filename => filename == domain.Name ? 0 : 1)
-            .ThenBy(filename => filename, StringComparer.OrdinalIgnoreCase);
-        
-        foreach (var filename in sourceFiles)
-        {
-            LoadModulesFromFile(domain, modules, filename);
-        }
-        
-        return modules;
+
+        // В навигационном дереве модули каждой группы показываются по алфавиту.
+        loaded.Sort(static (first, second) => string.Compare(first.Name, second.Name, StringComparison.OrdinalIgnoreCase));
+
+        return new ObservableCollection<Module>(loaded);
     }
-    
-    // todo: строго говоря, если мы читаем какие-то translationentries у нас где-то отдельно должны быть чтение атрибутов, а не здесь внутри чтения не translationentires чтение атрибутов Это разные сущности, хотя и очень близкие. в этом и нюанс.
-    private ModuleTranslationData ReadTranslationEntries(
+
+    /// <summary>
+    /// Собирает языконезависимые ключи источников домена по всем языковым каталогам: общий файл
+    /// домена (<c>Revit.xml</c>, <c>Revit_Architecture.xml</c>) и вынесенные файлы отдельных
+    /// плагинов с суффиксом языка (<c>Revit_mprAlignViews_ru.xml</c>).
+    /// </summary>
+    private static HashSet<string> CollectDomainSourceKeys(string domainName, string domainPrefix)
+    {
+        var sourceKeys = new HashSet<string>(StringComparer.Ordinal);
+        if (!Directory.Exists(Constants.LanguageFilesDirectory))
+        {
+            return sourceKeys;
+        }
+
+        foreach (var languageDirectory in Directory.EnumerateDirectories(Constants.LanguageFilesDirectory))
+        {
+            var languageName = Path.GetFileName(languageDirectory);
+            foreach (var filePath in Directory.EnumerateFiles(languageDirectory, "*.xml"))
+            {
+                var sourceKey = LanguageFilePaths.GetSourceKey(
+                    Path.GetFileNameWithoutExtension(filePath),
+                    languageName);
+
+                if (sourceKey == domainName || sourceKey.StartsWith(domainPrefix, StringComparison.Ordinal))
+                {
+                    sourceKeys.Add(sourceKey);
+                }
+            }
+        }
+
+        return sourceKeys;
+    }
+
+    private static ModuleTranslationData ReadTranslationEntries(
         Module module,
         IReadOnlyList<string> languages,
-        string sourceFile,
+        string sourceKey,
         CancellationToken cancellationToken)
     {
         var loadedAttributes = new List<TranslationEntry>();
         var loadedItems = new List<TranslationEntry>();
+        var attributeIndex = new Dictionary<string, TranslationEntry>(StringComparer.Ordinal);
+        var itemIndex = new Dictionary<string, TranslationEntry>(StringComparer.Ordinal);
+
         foreach (var languageName in languages)
         {
             cancellationToken.ThrowIfCancellationRequested();
             var filePath = LanguageFilePaths.GetSourceFilePath(
                 Constants.LanguageFilesDirectory,
                 languageName,
-                sourceFile);
-            
+                sourceKey);
+
             if (!File.Exists(filePath))
             {
                 continue;
             }
-            
+
             var moduleNode = XElement.Load(filePath).Element(module.Name);
             if (moduleNode == null)
             {
                 continue;
             }
-            
-            // todo: странно что для чтения метаданных (атрибутов) передаются загруженные атрибуты...
-            ModuleXmlSerializer.ReadMetadata(moduleNode, loadedAttributes, languageName);
-            ModuleXmlSerializer.ReadItems(moduleNode, loadedItems, languageName);
+
+            ModuleXmlSerializer.ReadMetadata(moduleNode, loadedAttributes, attributeIndex, languageName);
+            ModuleXmlSerializer.ReadItems(moduleNode, loadedItems, itemIndex, languageName);
         }
-        
+
         return new ModuleTranslationData(loadedAttributes, loadedItems);
     }
-    
-    // todo: конкретный язык нет необходимости сохранять, а в вопросах оптимизации это словно сомнительное решение.
+
     private static void SaveLanguage(
-        IReadOnlyList<Module> allModules,
         string languageName,
-        HashSet<string> sourceFiles,
+        IReadOnlyDictionary<string, IReadOnlyList<Module>> modulesBySourceKey,
         IReadOnlyDictionary<string, List<string>> itemsToRemove)
     {
         var languageDirectory = LanguageFilePaths.GetLanguageDirectory(Constants.LanguageFilesDirectory, languageName);
@@ -277,60 +310,26 @@ public class LanguageRepositoryService : ILanguageRepository
         {
             return;
         }
-        
-        foreach (var sourceFileName in sourceFiles)
+
+        foreach (var (sourceKey, modulesInFile) in modulesBySourceKey)
         {
             var filePath = LanguageFilePaths.GetSourceFilePath(
                 Constants.LanguageFilesDirectory,
                 languageName,
-                sourceFileName);
-            
+                sourceKey);
+
+            // Файла для этого языка ещё нет: перевод на данный язык не заведён, пропускаем.
             if (!File.Exists(filePath))
             {
-                // todo: а что делать в случае если это новый плагин? Файл мб и создасться должен. я так думаю. По крайней мере где-то такая функция должна быть. Если уж не так, то хотя бы отдельный метод на создание файла нужен что ли...
                 continue;
             }
-            
-            var modulesInFile = allModules
-                .Where(m => string.Equals(m.SourceFileName, sourceFileName, StringComparison.Ordinal))
-                .Where(m => HasLoadedEntries(m) || itemsToRemove.ContainsKey(m.Name))
-                .ToList();
-            
-            if (modulesInFile.Count == 0)
-            {
-                continue;
-            }
-            
+
             SaveModulesInFile(filePath, modulesInFile, languageName, itemsToRemove);
         }
     }
-    
-    // todo: я думаю, что здесь не нужен список "itemsToRemove". А список файлов можно было бы получать совсем другим образом. Я считаю, что это лишний метод. 
-    private static HashSet<string> CollectSourceFilesToSave(
-        IEnumerable<Module> modules,
-        IReadOnlyDictionary<string, List<string>> itemsToRemove)
-    {
-        var sourceFiles = new HashSet<string>(StringComparer.Ordinal);
-        foreach (var module in modules)
-        {
-            if (string.IsNullOrEmpty(module.SourceFileName))
-            {
-                continue;
-            }
-            
-            if (HasLoadedEntries(module) || itemsToRemove.ContainsKey(module.Name))
-            {
-                sourceFiles.Add(module.SourceFileName);
-            }
-        }
-        
-        return sourceFiles;
-    }
-    
-    // todo: Это не верно, потому что Metadata это не entry. Должно работать только по Items.Count, однако в этом методе тогда нет никакого смысла.
+
     private static bool HasLoadedEntries(Module module) => module.Items.Count > 0 || module.Metadata.Count > 0;
-    
-    // todo: немножко странный метод, потому что в одном файле может быть 1 модуль.
+
     private static void SaveModulesInFile(
         string filePath,
         IReadOnlyList<Module> modules,
@@ -346,22 +345,22 @@ public class LanguageRepositoryService : ILanguageRepository
             {
                 continue;
             }
-            
+
             if (itemsToRemove.TryGetValue(module.Name, out var removedItems))
             {
                 modified |= ModuleXmlSerializer.RemoveItems(moduleNode, removedItems);
             }
-            
+
             modified |= ModuleXmlSerializer.WriteMetadata(moduleNode, module.Metadata, languageName);
             modified |= ModuleXmlSerializer.WriteItems(moduleNode, module.Items, languageName);
         }
-        
+
         if (modified)
         {
             ModuleXmlSerializer.WriteDocument(filePath, document);
         }
     }
-    
+
     private static string GetMergeTargetDirectory(NotificationService notifications)
     {
         var topDir = Registry.CurrentUser.OpenSubKey("Software\\ModPlus")?.GetValue("TopDir")?.ToString();
@@ -370,14 +369,13 @@ public class LanguageRepositoryService : ILanguageRepository
             notifications.Notify(EditorStrings.InstalledModPlusNotFound);
             return null;
         }
-        
+
         var targetLangDirectory = Path.Combine(topDir, "Languages");
         Directory.CreateDirectory(targetLangDirectory);
         notifications.Notify(EditorStrings.FormatTargetLanguagesDirectory(targetLangDirectory));
         return targetLangDirectory;
     }
-    
-    // todo: а что-то подобное точно нужно?
+
     private static bool ClearMergeTargetDirectory(string targetLangDirectory, NotificationService notifications)
     {
         foreach (var file in Directory.GetFiles(targetLangDirectory, "*.xml", SearchOption.TopDirectoryOnly))
@@ -392,11 +390,10 @@ public class LanguageRepositoryService : ILanguageRepository
                 return false;
             }
         }
-        
+
         return true;
     }
-    
-    // todo: Под вопросом вообще необходим ли он. Очень спорная вещь.
+
     private static XElement BuildMergedLanguageDocument(
         string languageDirectory,
         string languageName,
@@ -411,68 +408,70 @@ public class LanguageRepositoryService : ILanguageRepository
             notifications.Notify(EditorStrings.FormatProcessMergePart(domainPrefix));
             resultDoc.Add(new XComment(domainPrefix));
             var moduleNodes = CollectModuleNodesForMerge(languageDirectory, domainPrefix);
-            foreach (var moduleNode in moduleNodes.OrderBy(node => node.Name.LocalName))
+            foreach (var moduleNode in moduleNodes.OrderBy(node => node.Name.LocalName, StringComparer.OrdinalIgnoreCase))
             {
                 moduleNode.DescendantNodes().Where(node => node.NodeType == XmlNodeType.Comment).Remove();
                 resultDoc.Add(moduleNode);
             }
         }
-        
+
         return resultDoc;
     }
-    
-    // todo: Под вопросом вообще необходим ли он. Очень спорная вещь.
+
     private static IEnumerable<XElement> CollectModuleNodesForMerge(string languageDirectory, string domainPrefix)
     {
         var moduleNodes = new List<XElement>();
-        foreach (var file in Directory.GetFiles(languageDirectory, $"{domainPrefix}*.xml", SearchOption.TopDirectoryOnly))
+        foreach (var file in Directory.EnumerateFiles(languageDirectory, $"{domainPrefix}*.xml", SearchOption.TopDirectoryOnly))
         {
             moduleNodes.AddRange(XElement.Load(file).Elements());
         }
-        
+
         return moduleNodes;
     }
-    
-    // todo: модуль 1 может грузится с 1 файла. А не модули с файла. Тоже под вопросом немного метод.
-    private void LoadModulesFromFile(Domain domain, ObservableCollection<Module> modules, string sourceFileName)
+
+    /// <summary>
+    /// Читает список модулей одного источника: берётся самый полный языковой файл этого источника
+    /// (в разных языках файл может отставать по составу узлов).
+    /// </summary>
+    private static void LoadModulesFromFile(
+        Domain domain,
+        List<Module> modules,
+        HashSet<string> loadedNames,
+        string sourceKey)
     {
-        var domainFiles = LanguageFilePaths
-            .EnumerateExistingSourceFilePaths(Constants.LanguageFilesDirectory, sourceFileName)
-            .ToList();
-        if (domainFiles.Count == 0)
-        {
-            return;
-        }
-        
-        var filepath = SelectPathWithMaxScore(domainFiles, file => XElement.Load(file).Elements().Count());
+        var filepath = SelectPathWithMaxScore(
+            LanguageFilePaths.EnumerateExistingSourceFilePaths(Constants.LanguageFilesDirectory, sourceKey),
+            file => XElement.Load(file).Elements().Count());
+
         if (filepath == null)
         {
             return;
         }
-        
-        AddModulesFromDocument(domain, modules, sourceFileName, XElement.Load(filepath));
+
+        AddModulesFromDocument(domain, modules, loadedNames, sourceKey, XElement.Load(filepath));
     }
-    
+
     private static void AddModulesFromDocument(
         Domain domain,
-        ObservableCollection<Module> modules,
-        string sourceFileName,
+        List<Module> modules,
+        HashSet<string> loadedNames,
+        string sourceKey,
         XElement document)
     {
         foreach (var moduleNode in document.Elements())
         {
             var moduleName = moduleNode.Name.LocalName;
-            if (modules.Any(m => string.Equals(m.Name, moduleName, StringComparison.Ordinal)))
+            if (!loadedNames.Add(moduleName))
             {
                 continue;
             }
-            
-            var module = new Module(moduleName, domain, sourceFileName);
+
+            var module = new Module(moduleName, domain, sourceKey);
             module.SetCatalogEntryCount(moduleNode.Elements().Count());
             modules.Add(module);
         }
     }
-    
+
     /// <summary>
     /// Выбирает путь с наибольшим числом файлов/элементов среди кандидатов — используется, когда есть несколько
     /// каталогов/файлов-кандидатов (например, языковые копии одного домена) и нужно выбрать самый полный.
@@ -480,10 +479,22 @@ public class LanguageRepositoryService : ILanguageRepository
     /// <param name="paths">Пути-кандидаты.</param>
     /// <param name="scoreFactory">Функция подсчёта «полноты» пути (например, число XML-файлов или XML-элементов).</param>
     /// <returns>Путь с максимальным значением <paramref name="scoreFactory"/> или <see langword="null"/>, если кандидатов нет.</returns>
-    private static string SelectPathWithMaxScore(IEnumerable<string> paths, Func<string, int> scoreFactory) =>
-        paths
-            .Select(path => new { Path = path, Score = scoreFactory(path) })
-            .OrderByDescending(x => x.Score)
-            .FirstOrDefault()
-            ?.Path;
+    private static string SelectPathWithMaxScore(IEnumerable<string> paths, Func<string, int> scoreFactory)
+    {
+        string best = null;
+        var bestScore = int.MinValue;
+        foreach (var path in paths)
+        {
+            var score = scoreFactory(path);
+            if (score <= bestScore)
+            {
+                continue;
+            }
+
+            bestScore = score;
+            best = path;
+        }
+
+        return best;
+    }
 }

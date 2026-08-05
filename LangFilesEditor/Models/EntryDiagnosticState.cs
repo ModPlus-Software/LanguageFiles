@@ -12,7 +12,7 @@ public sealed class EntryDiagnosticState : ObservableObject
     private bool _hasDuplicateValue;
     private DiagnosticSeverity? _extensionDiagnostic;
     private string _diagnosticToolTip;
-    
+
     /// <summary>
     /// Содержит ли запись некорректные данные (пустое имя, цифра в начале, пустые значения).
     /// </summary>
@@ -25,13 +25,13 @@ public sealed class EntryDiagnosticState : ObservableObject
             {
                 return;
             }
-            
+
             _hasIncorrectData = value;
             OnPropertyChanged();
             OnPropertyChanged(nameof(IsVisibleError));
         }
     }
-    
+
     /// <summary>
     /// Есть ли в родительской коллекции другая запись с тем же именем.
     /// </summary>
@@ -44,13 +44,13 @@ public sealed class EntryDiagnosticState : ObservableObject
             {
                 return;
             }
-            
+
             _hasDuplicateName = value;
             OnPropertyChanged();
             OnPropertyChanged(nameof(IsVisibleError));
         }
     }
-    
+
     /// <summary>
     /// Есть ли в родительской коллекции другая запись с тем же набором значений.
     /// </summary>
@@ -63,13 +63,13 @@ public sealed class EntryDiagnosticState : ObservableObject
             {
                 return;
             }
-            
+
             _hasDuplicateValue = value;
             OnPropertyChanged();
             OnPropertyChanged(nameof(IsVisibleWarning));
         }
     }
-    
+
     /// <summary>
     /// Категория диагностики от расширения.
     /// </summary>
@@ -82,12 +82,12 @@ public sealed class EntryDiagnosticState : ObservableObject
             {
                 return;
             }
-            
+
             _extensionDiagnostic = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Текст диагностики от расширения.
     /// </summary>
@@ -100,22 +100,22 @@ public sealed class EntryDiagnosticState : ObservableObject
             {
                 return;
             }
-            
+
             _diagnosticToolTip = value;
             OnPropertyChanged();
         }
     }
-    
+
     /// <summary>
     /// Показывать ли иконку/подсветку ошибки (для фильтра «*» и счётчиков).
     /// </summary>
     public bool IsVisibleError => HasDuplicateName || HasIncorrectData;
-    
+
     /// <summary>
     /// Показывать ли иконку/подсветку предупреждения (для фильтра «*» и счётчиков).
     /// </summary>
     public bool IsVisibleWarning => HasDuplicateValue;
-    
+
     /// <summary>
     /// Проходит ли запись фильтр категории диагностики (ошибка перекрывает предупреждение,
     /// предупреждение перекрывает обновление).
@@ -126,7 +126,7 @@ public sealed class EntryDiagnosticState : ObservableObject
     {
         var isError = IsVisibleError || ExtensionDiagnostic == DiagnosticSeverity.Error;
         var isWarning = IsVisibleWarning || ExtensionDiagnostic == DiagnosticSeverity.Warning;
-        
+
         return severity switch
         {
             DiagnosticSeverity.Error => isError,

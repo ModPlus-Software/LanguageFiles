@@ -7,7 +7,9 @@ using System.Windows.Threading;
 using Core.Abstractions;
 
 /// <summary>
-/// todo:
+/// Трекер длительных операций редактора: хранит список активных операций, их суммарный прогресс
+/// и последнее краткое сообщение. Владелец состояния прогресса на всё приложение — status bar
+/// биндится к нему напрямую.
 /// </summary>
 public sealed class EditorOperationTracker
 {
@@ -24,14 +26,13 @@ public sealed class EditorOperationTracker
         Operations = new ReadOnlyObservableCollection<IEditorOperation>(_operations);
     }
 
-    // todo: Так это model или ui/models? Скорее сервис должен быть. Над расположением класса нужно подумать
     /// <summary>
-    /// Активные операции в порядке начала; 
+    /// Активные операции в порядке их начала.
     /// </summary>
     public ReadOnlyObservableCollection<IEditorOperation> Operations { get; }
 
     /// <summary>
-    /// todo:
+    /// Выполняется ли хотя бы одна операция.
     /// </summary>
     public bool IsActive => _operations.Count > 0;
 
@@ -40,15 +41,13 @@ public sealed class EditorOperationTracker
     /// </summary>
     public int ActiveCount => _operations.Count;
 
-    // todo: это я бы совсем убрал если честно. Не pyf. в каких кейсах может быть полезно.
     /// <summary>
     /// Неопределён ли общий прогресс (ни у одной активной операции нет известного объёма).
     /// </summary>
     public bool IsOverallIndeterminate => _operations.Count > 0 && _operations.All(o => o.Total <= 0);
- 
-    // todo: Вообще забавно, что он здесь скорее как метод используется
+
     /// <summary>
-    /// Общая доля выполнения всех операций от 0 до 1;
+    /// Общая доля выполнения всех операций с известным объёмом — от 0 до 1.
     /// </summary>
     public double OverallProgress
     {
@@ -72,7 +71,7 @@ public sealed class EditorOperationTracker
     }
 
     /// <summary>
-    /// todo:
+    /// Последнее краткое сообщение для status bar; сбрасывается при начале новой операции.
     /// </summary>
     public string TransientMessage => _transientMessage;
 
@@ -81,7 +80,6 @@ public sealed class EditorOperationTracker
     /// </summary>
     public event Action? Changed;
 
-    // todo: вот здесь и возникает проблема. Почему это начинает операцию? Это же не contorller, и не manager. Это лишь Tracker. Т. е. оно должно отслеживать, а не начинать что-то. А даже если и отслеживать, то скорее какой-то notification и подписка. Tracker это активное что-то. Как он сам вклиниваться будет в процесс? В существующей архитектуре, вероятно, никак. Здесь не EDD
     /// <summary>
     /// Начинает операцию или присоединяется к существующей с тем же ключом.
     /// </summary>
@@ -120,7 +118,6 @@ public sealed class EditorOperationTracker
         return result!;
     }
 
-    // todo: меня немного смущает вызов метода RunOnUI.
     /// <summary>
     /// Обновляет прогресс операции.
     /// </summary>
@@ -134,14 +131,13 @@ public sealed class EditorOperationTracker
             return;
         }
 
-        RunOnUi(() =>
+        PostToUi(() =>
         {
             operation.Report(current, total);
             Changed?.Invoke();
         });
     }
 
-    // todo: меня немного смущает вызов метода RunOnUI. Ключи здесь тоже не оптимальные.
     /// <summary>
     /// Обновляет прогресс операции по её ключу, если такая активна.
     /// </summary>
@@ -155,7 +151,7 @@ public sealed class EditorOperationTracker
             return;
         }
 
-        RunOnUi(() =>
+        PostToUi(() =>
         {
             if (!_byKey.TryGetValue(key, out var operation))
             {
@@ -167,7 +163,6 @@ public sealed class EditorOperationTracker
         });
     }
 
-    // todo: Можно по подписке было бы вместо метода сделать
     /// <summary>
     /// Меняет заголовок активной операции.
     /// </summary>
@@ -193,14 +188,13 @@ public sealed class EditorOperationTracker
     /// <param name="message">Текст транзиентного сообщения.</param>
     public void PublishTransient(string message)
     {
-        RunOnUi(() =>
+        PostToUi(() =>
         {
             _transientMessage = message ?? string.Empty;
             Changed?.Invoke();
         });
     }
 
-    // todo: Здесь смешение происходит функционала, чего быть не должно.
     /// <summary>
     /// Завершает одно удержание операции; удаляет её из списка при достижении нуля.
     /// </summary>
@@ -227,4 +221,21 @@ public sealed class EditorOperationTracker
 
     private static void RunOnUi(Action action) =>
         Utils.DispatcherExtensions.RunOnUiThread(Application.Current?.Dispatcher, action, DispatcherPriority.Background);
+
+    /// <summary>
+    /// Ставит обновление в очередь UI-потока, не дожидаясь его выполнения. Прогресс приходит из
+    /// параллельных фоновых задач; синхронный <see cref="Dispatcher.Invoke(Action, DispatcherPriority)"/>
+    /// на каждое сообщение выстраивал бы рабочие потоки в очередь к UI-потоку.
+    /// </summary>
+    private static void PostToUi(Action action)
+    {
+        var dispatcher = Application.Current?.Dispatcher;
+        if (dispatcher == null || dispatcher.CheckAccess())
+        {
+            action();
+            return;
+        }
+
+        dispatcher.InvokeAsync(action, DispatcherPriority.Background);
+    }
 }

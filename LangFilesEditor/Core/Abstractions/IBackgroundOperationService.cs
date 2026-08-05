@@ -5,7 +5,6 @@ namespace LangFilesEditor.Core.Abstractions;
 /// </summary>
 public interface IBackgroundOperationService
 {
-    // todo:  Вообще странным выглядит максимально. Почему мутации связаны с UI...
     /// <summary>
     /// Выполняет работу в фоне; мутации UI и моделей — только в <paramref name="applyOnUiThread"/>.
     /// </summary>
@@ -20,7 +19,6 @@ public interface IBackgroundOperationService
         Func<Task> applyOnUiThread,
         CancellationToken cancellationToken = default);
 
-    // todo: не понимаю, раз такое отличие, то зачем в обоих applyOnUiThread.
     /// <summary>
     /// То же, что и базовый <see cref="RunAsync(string, Func{CancellationToken, Task}, Func{Task}, CancellationToken)"/>,
     /// но передаёт в фоновую работу <see cref="IEditorOperationProgress"/> для отправки прогресса и смены заголовка.

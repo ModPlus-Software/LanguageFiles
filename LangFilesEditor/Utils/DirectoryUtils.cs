@@ -3,6 +3,7 @@ namespace LangFilesEditor.Utils;
 using System.IO;
 using System.Reflection;
 using Exceptions;
+using Helpers;
 
 /// <summary>
 /// Утилиты для определения путей к каталогам на диске.
@@ -22,13 +23,12 @@ public class DirectoryUtils
         {
             parent = Directory.GetParent(parent.FullName);
         }
-        
+
         if (parent == null)
         {
-            // todo: локализация
-            throw new CriticalException("Не найден корневой каталог решения (LanguageFiles).");
+            throw new CriticalException(EditorStrings.SolutionDirectoryNotFound);
         }
-        
+
         return parent.FullName;
     }
 }

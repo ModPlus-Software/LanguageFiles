@@ -1,6 +1,7 @@
 namespace LangFilesEditor.Converters;
 
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 
 /// <summary>
@@ -18,16 +19,17 @@ public class NodeVisibilityConverter : IMultiValueConverter
     /// <returns><see cref="System.Windows.Visibility.Visible"/>, если ссылки совпадают; иначе <see cref="System.Windows.Visibility.Collapsed"/>.</returns>
     public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
     {
-        if (values.Length < 2)
+        // На этапе инициализации MultiBinding оба значения бывают UnsetValue/null — это не «совпадение».
+        if (values.Length < 2 || values[0] == null || ReferenceEquals(values[0], DependencyProperty.UnsetValue))
         {
-            return System.Windows.Visibility.Collapsed;
+            return Visibility.Collapsed;
         }
-        
+
         return ReferenceEquals(values[0], values[1])
-            ? System.Windows.Visibility.Visible
-            : System.Windows.Visibility.Collapsed;
+            ? Visibility.Visible
+            : Visibility.Collapsed;
     }
-    
+
     /// <summary>
     /// Обратное преобразование не поддерживается.
     /// </summary>
@@ -36,6 +38,6 @@ public class NodeVisibilityConverter : IMultiValueConverter
     /// <param name="parameter">Дополнительный параметр.</param>
     /// <param name="culture">Не используется.</param>
     /// <returns>Всегда <see langword="null"/>.</returns>
-    public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture) 
+    public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
         => throw new NotSupportedException();
 }

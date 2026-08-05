@@ -8,7 +8,7 @@ using System.Windows;
 public partial class FloatWindow
 {
     private readonly DockablePanel _ownerPanel;
-    
+
     /// <summary>
     /// Создаёт плавающее окно с содержимым панели и размерами из её состояния.
     /// </summary>
@@ -40,12 +40,12 @@ public partial class FloatWindow
         }
         MinHeight = ownerPanel.DockSide is DockSide.Top or DockSide.Bottom ? 80 : 160;
     }
-    
+
     /// <summary>
     /// Вызывается при закрытии окна; передаёт панель-владельца для возврата содержимого в докинг.
     /// </summary>
     public event Action<DockablePanel> PanelClosing;
-    
+
     /// <summary>
     /// Извлекает содержимое из окна перед закрытием для восстановления в закреплённой панели.
     /// </summary>
@@ -56,23 +56,23 @@ public partial class FloatWindow
         {
             return null;
         }
-        
+
         PanelHost.Content = null;
         return content;
     }
-    
+
     protected override void OnClosed(EventArgs e)
     {
         if (ActualWidth > 0)
         {
             _ownerPanel.State.FloatingWidth = ActualWidth;
         }
-        
+
         if (ActualHeight > 0)
         {
             _ownerPanel.State.FloatingHeight = ActualHeight;
         }
-        
+
         PanelClosing?.Invoke(_ownerPanel);
         base.OnClosed(e);
     }
