@@ -1,6 +1,5 @@
 namespace LangFilesEditor;
 
-using System.IO;
 using Utils;
 
 /// <summary>
@@ -9,10 +8,17 @@ using Utils;
 public static class Constants
 {
     /// <summary>
-    /// Абсолютный путь к каталогу <c>LanguageFiles</c> в корне solution.
+    /// Абсолютный путь к каталогу <c>LanguageFiles</c>. Каталог ищется относительно
+    /// запущенного приложения — см. <see cref="LanguageFilesLocator"/>.
     /// </summary>
-    public static readonly string LanguageFilesDirectory =
-        Path.Combine(DirectoryUtils.GetSolutionDirectory(), "LanguageFiles");
+    /// <remarks>
+    /// Свойство, а не поле: инициализатор статического поля выполняется в инициализаторе типа,
+    /// и исключение из него CLR оборачивает в <see cref="System.TypeInitializationException"/>.
+    /// Обработчик <c>CriticalException</c> в <c>App.OnStartup</c> такое исключение не ловил,
+    /// и вместо понятного сообщения редактор падал с системным окном ошибки. Заодно порча
+    /// инициализатора типа делала недоступными и остальные члены класса.
+    /// </remarks>
+    public static string LanguageFilesDirectory => LanguageFilesLocator.Resolve();
 
     /// <summary>
     /// Разделитель частей имени XML-файла домена, например <c>Revit_Architecture</c>.

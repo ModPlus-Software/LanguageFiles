@@ -121,9 +121,15 @@ internal static class EditorStrings
     public static string FormatOperationsCount(int operationsCount) => $"Операций: {operationsCount}";
 
     /// <summary>
-    /// Сообщение об отсутствии корневого каталога решения.
+    /// Форматирует сообщение об отсутствии каталога файлов локализации с перечнем проверенных путей.
     /// </summary>
-    public const string SolutionDirectoryNotFound = "Не найден корневой каталог решения (LanguageFiles).";
+    /// <param name="probedPaths">Пути, по которым каталог искали.</param>
+    public static string FormatLanguageFilesDirectoryNotFound(IEnumerable<string> probedPaths) =>
+        "Не найден каталог файлов локализации LanguageFiles." + Environment.NewLine +
+        "Он ищется рядом с исполняемым файлом редактора и во всех родительских каталогах." +
+        Environment.NewLine + Environment.NewLine +
+        "Проверены пути:" + Environment.NewLine +
+        string.Join(Environment.NewLine, probedPaths);
 
     /// <summary>
     /// Сообщение об ошибке чтения локальной версии пакета локализации.

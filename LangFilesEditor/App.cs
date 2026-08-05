@@ -5,6 +5,7 @@ namespace LangFilesEditor;
 
 using System.Windows;
 using Exceptions;
+using Helpers;
 using UI.Windows.MainWindow;
 
 /// <summary>
@@ -32,7 +33,13 @@ public partial class App
         }
         catch (CriticalException ex)
         {
-            MessageBox.Show(ex.Message);
+            // Сообщение перечисляет проверенные пути, поэтому у него должны быть
+            // заголовок и значок ошибки — иначе окно выглядит как безымянная простыня текста.
+            MessageBox.Show(
+                ex.Message,
+                EditorStrings.ErrorCaption,
+                MessageBoxButton.OK,
+                MessageBoxImage.Error);
             Environment.Exit(CriticalErrorExitCode);
         }
     }
