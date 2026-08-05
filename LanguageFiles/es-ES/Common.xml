@@ -23,6 +23,7 @@
     <category>Categoría</category>
     <categories>Categorías</categories>
     <checkAll>Comprobar todo</checkAll>
+    <checked>Marcado</checked>
     <circle>Círculo</circle>
     <clear>Limpiar</clear>
     <close>Cerrar</close>
@@ -110,7 +111,9 @@
     <mm>mm</mm>
     <model>Modelo</model>
     <multiSelect>Puede usar las teclas Ctrl y Mayús para seleccionar varias posiciones</multiSelect>
+    <name>Nombre</name>
     <no>No</no>
+    <notInFamily>El complemento no está diseñado para funcionar en familias</notInFamily>
     <notOrganized>!No organizado</notOrganized>
     <number>Número</number>
     <object>Objeto</object>
@@ -164,6 +167,7 @@
     <setConfigOrg>Archivo de almacenamiento de configuraciones está especificado por ajustes de su organización</setConfigOrg>
     <settings>Ajustes</settings>
     <sheet>Hoja</sheet>
+    <sheets>Hojas</sheets>
     <show>Mostrar</show>
     <source>Fuente</source>
     <suffix>Sufijo</suffix>
@@ -187,6 +191,7 @@
     <value>Valor</value>
     <version>Versión</version>
     <view>Vista</view>
+    <views>Vistas</views>
     <warning>Advertencia</warning>
     <white>Blanco</white>
     <width>Anchura</width>
@@ -1491,7 +1496,9 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <h18>Fichas ocultas:</h18>
     <h19>Filtro por categoría</h19>
     <h20>Filtro por parámetros</h20>
+    <!--todo remove after 37.6.0-->
     <h41>Buscar (ingrese * para mostrar sólo categorías seleccionadas)</h41>
+    <!--todo remove after 37.6.0-->
     <h42>Categorías seleccionadas:</h42>
     <h43>Identificador de parámetro</h43>
     <h44>Condición:</h44>
@@ -1610,10 +1617,29 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <h197>Aplicar a vista</h197>
     <h198>Permite aplicar la Caja de referencia seleccionada a la vista actual</h198>
     <h199>Seleccionar vistas</h199>
+    <!-- todo remove after 37.6.0 -->
     <h200>Vistas seleccionadas:</h200>
+    <!-- todo remove after 37.6.0 -->
     <h201>Vistas</h201>
     <h202>Tabla de planificacións</h202>
     <h203>Seleccionar tablas de planificación</h203>
+    <h204>Seleccionar vistas abiertas</h204>
+    <h205>Los valores del parámetro especial "{0}" se calculan a partir de la geometría de los elementos. Esta búsqueda puede tardar mucho tiempo y provocar que la ventana se bloquee, por lo que no está disponible. Especifique el valor manualmente: una cota numérica en milímetros o el nombre de un nivel</h205>
+    <h206>El parámetro especial "{0}" no tiene valores. Para él se utilizan las condiciones "Con parámetro" y "Sin parámetro"</h206>
+    <h207>La búsqueda de valores del parámetro especial "{0}" ({1}) se realiza entre los elementos de las categorías especificadas en la vista actual</h207>
+    <h208>La búsqueda de valores del parámetro especial "{0}" ({1}) se realiza entre todos los elementos de las categorías especificadas en el proyecto actual</h208>
+    <h209>La búsqueda de valores del parámetro "{0}" se realiza entre los elementos y los tipos de elementos de las categorías especificadas en la vista actual</h209>
+    <h210>No es posible buscar elementos en la vista actual</h210>
+    <h211>No se encontraron valores del parámetro "{0}" en los elementos ni en los tipos de elementos de la categoría "{1}" en la vista actual. Es posible que el parámetro especificado no exista</h211>
+    <h212>Vista actual</h212>
+    <h213>Seleccionar hojas</h213>
+    <h214>Seleccionar elementos</h214>
+    <h215>Colores vivos</h215>
+    <h216>Utilizar colores de notificación más saturados. La opción se aplica simultáneamente a las notificaciones sobre la necesidad de guardar y de sincronizar, ya que el color de fondo y el color del texto del título de la ventana de Revit se seleccionan conjuntamente</h216>
+    <h217>Guardar conjunto de condiciones por parámetros</h217>
+    <h218>Cargar un conjunto de condiciones por parámetros (sustituir las condiciones actuales por las del conjunto seleccionado)</h218>
+    <h219>Conjunto de condiciones guardado estará disponible para descargar sólo en complemento actual</h219>
+    <h220>Conjunto de condiciones guardado estará disponible para descargar en cualquier complemento que utilice la ventana de condiciones por parámetros</h220>
     <parameters>Parámetros</parameters>
     <name>Nombre</name>
     <any>Cualquier</any>
@@ -1658,7 +1684,7 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <r20>Descargar ajustes de refuerzo y establecerlos para grupo actual</r20>
     <r21>Liso</r21>
     <r22>Periódico</r22>
-    <r23>Los parámetros clave</r23>
+    <r23>Los parámetros especiales</r23>
     <ri1>1. Esquina</ri1>
     <ri2>2. Forma de T</ri2>
     <ri3>3. Forma de cruz</ri3>
@@ -1683,24 +1709,24 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <i7>Parámetros del tipo "on/off" se verifican como un número entero (0 – off, 1 – on).</i7>
     <i8>Operador "Y" verifica todas subcondiciones simples de condición de grupo, es decir, todas subcondiciones deben coincidir.</i8>
     <i9>En lugar del nombre del parámetro, puede especificar un GUID para parámetros generales o un nombre del sistema para parámetros integrados.</i9>
-    <i10>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Group" (grupo primario) respectivamente verifican si elemento está en grupo o no. Es decir, la condición "Con parámetro" interpreta la verificación "El elemento debe estar en el grupo", y la condición "Sin parámetro" interpreta la verificación "El elemento no debe estar en el grupo". Cualquier otra condición, si el elemento está en un grupo, verifica el nombre del grupo según las reglas para cadenas.</i10>
-    <i11>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Assembly" (ensamblaje primario) respectivamente verifican si elemento está en ensamblaje o no. Es decir, la condición "Con parámetro" interpreta la verificación "El elemento debe estar en el ensamblaje", y la condición "Sin parámetro" interpreta la verificación "El elemento no debe estar en el ensamblaje". Cualquier otra condición, si el elemento está en un grupo, verifica el nombre del ensamblaje según las reglas para cadenas.</i11>
-    <i12>Al utilizar los parámetros clave "BottomZ" y "TopZ", se comprueban respectivamente las marcas más bajas y más altas de la geometría del elemento. Los parámetros clave "BottomZ" y "TopZ" se consideran numéricos y se comprueban mediante las condiciones correspondientes. Los valores de las marcas se toman en milímetros, redondeados a tres decimales. En el campo "Valor" se pueden especificar los nombres de los niveles. Si se encuentra el nivel especificado, se utilizará su marca en milímetros, redondeada a 3 decimales.</i12>
+    <i10>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro especial "Group" (grupo primario) respectivamente verifican si elemento está en grupo o no. Es decir, la condición "Con parámetro" interpreta la verificación "El elemento debe estar en el grupo", y la condición "Sin parámetro" interpreta la verificación "El elemento no debe estar en el grupo". Cualquier otra condición, si el elemento está en un grupo, verifica el nombre del grupo según las reglas para cadenas.</i10>
+    <i11>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro especial "Assembly" (ensamblaje primario) respectivamente verifican si elemento está en ensamblaje o no. Es decir, la condición "Con parámetro" interpreta la verificación "El elemento debe estar en el ensamblaje", y la condición "Sin parámetro" interpreta la verificación "El elemento no debe estar en el ensamblaje". Cualquier otra condición, si el elemento está en un grupo, verifica el nombre del ensamblaje según las reglas para cadenas.</i11>
+    <i12>Al utilizar los parámetros especiales "BottomZ" y "TopZ", se comprueban respectivamente las marcas más bajas y más altas de la geometría del elemento. Los parámetros especiales "BottomZ" y "TopZ" se consideran numéricos y se comprueban mediante las condiciones correspondientes. Los valores de las marcas se toman en milímetros, redondeados a tres decimales. En el campo "Valor" se pueden especificar los nombres de los niveles. Si se encuentra el nivel especificado, se utilizará su marca en milímetros, redondeada a 3 decimales.</i12>
     <!--todo remove after 34.2.4-->
-    <i13>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Curtain" (es un muro cortina) respectivamente verifican si el muro esté un muro cortina o no. Es decir, la condición "Con parámetro" interpreta la verificación "El muro debe estar un muro cortina", y la condición "Sin parámetro" interpreta la verificación "El muro no debe estar un muro cortina". Si el elemento no es un muro, la condición se ignora (siempre devuelve "verdadero").</i13>
-    <i13-1>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Curtain" (es un muro cortina) respectivamente verifican si el muro esté un muro cortina o no. Es decir, la condición "Con parámetro" interpreta la verificación "El muro debe estar un muro cortina", y la condición "Sin parámetro" interpreta la verificación "El muro no debe estar un muro cortina".</i13-1>
+    <i13>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro especial "Curtain" (es un muro cortina) respectivamente verifican si el muro esté un muro cortina o no. Es decir, la condición "Con parámetro" interpreta la verificación "El muro debe estar un muro cortina", y la condición "Sin parámetro" interpreta la verificación "El muro no debe estar un muro cortina". Si el elemento no es un muro, la condición se ignora (siempre devuelve "verdadero").</i13>
+    <i13-1>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro especial "Curtain" (es un muro cortina) respectivamente verifican si el muro esté un muro cortina o no. Es decir, la condición "Con parámetro" interpreta la verificación "El muro debe estar un muro cortina", y la condición "Sin parámetro" interpreta la verificación "El muro no debe estar un muro cortina".</i13-1>
     <!--todo remove after 34.2.4-->
-    <i14>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Nested" (familia es anidada) respectivamente verifican si la familia está anidada o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar anidada", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar anidada". Si el elemento no es una familia, la condición se ignora (siempre devuelve "verdadero").</i14>
-    <i14-1>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Nested" (familia es anidada) respectivamente verifican si la familia está anidada o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar anidada", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar anidada".</i14-1>
+    <i14>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro especial "Nested" (familia es anidada) respectivamente verifican si la familia está anidada o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar anidada", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar anidada". Si el elemento no es una familia, la condición se ignora (siempre devuelve "verdadero").</i14>
+    <i14-1>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro especial "Nested" (familia es anidada) respectivamente verifican si la familia está anidada o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar anidada", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar anidada".</i14-1>
     <!--todo remove after 34.2.4-->
-    <i15>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Parent" (familia es primaria) respectivamente verifican si la familia está primaria (contiene familias anidadas) o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar primaria", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar primaria". Si el elemento no es una familia, la condición se ignora (siempre devuelve "verdadero").</i15>
-    <i15-1>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro clave "Parent" (familia es primaria) respectivamente verifican si la familia está primaria (contiene familias anidadas) o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar primaria", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar primaria".</i15-1>
+    <i15>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro especial "Parent" (familia es primaria) respectivamente verifican si la familia está primaria (contiene familias anidadas) o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar primaria", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar primaria". Si el elemento no es una familia, la condición se ignora (siempre devuelve "verdadero").</i15>
+    <i15-1>Condiciones "Con parámetro" y "Sin parámetro" al verificar parámetro especial "Parent" (familia es primaria) respectivamente verifican si la familia está primaria (contiene familias anidadas) o no. Es decir, la condición "Con parámetro" interpreta la verificación "La familia debe estar primaria", y la condición "Sin parámetro" interpreta la verificación "La familia no debe estar primaria".</i15-1>
     <!--todo remove after 34.2.4-->
-    <i16>El parámetro clave AreaScheme devuelve el nombre del esquema de áreas al que pertenece el Área. El valor del parámetro clave AreaScheme se comprueba según las reglas de cadena. Si el elemento no es un Área, la condición se ignora (la condición siempre devuelve "verdadero").</i16>
-    <i16-1>El parámetro clave AreaScheme devuelve el nombre del esquema de áreas al que pertenece el Área. El valor del parámetro clave AreaScheme se comprueba según las reglas de cadena.</i16-1>
-    <i17>Condiciones "Con parámetro" y "Sin parámetro" al verificar el parámetro clave "InMEPSystem" (el elemento forma parte de un sistema de ingeniería) respectivamente verifican si el elemento forma parte de un sistema de ingeniería o no. Es decir, la condición "Con parámetro" interpreta la verificación "El elemento forma parte de un sistema de ingeniería", y la condición "Sin parámetro" interpreta la verificación "El elemento no forma parte de un sistema de ingeniería".</i17>
-    <i18>Las condiciones "Con parámetro" y "Sin parámetro" al comprobar el parámetro clave "InRebarSystem" (la armadura está en un sistema de armaduras) determinan respectivamente si la armadura forma parte de un sistema de armaduras o no. Es decir, la condición "Existe el parámetro" interpreta la comprobación como "La armadura forma parte de un sistema de armaduras", y la condición "No existe el parámetro" interpreta la comprobación como "La armadura no forma parte de un sistema de armaduras".</i18>
-    <i19>El parámetro clave DocumentTitle devuelve el nombre del documento actual. El valor del parámetro clave DocumentTitle se comprueba según las reglas para cadenas. Si el documento no está guardado o está desvinculado, se devolverá el valor predeterminado o una cadena vacía.</i19>
+    <i16>El parámetro especial AreaScheme devuelve el nombre del esquema de áreas al que pertenece el Área. El valor del parámetro especial AreaScheme se comprueba según las reglas de cadena. Si el elemento no es un Área, la condición se ignora (la condición siempre devuelve "verdadero").</i16>
+    <i16-1>El parámetro especial AreaScheme devuelve el nombre del esquema de áreas al que pertenece el Área. El valor del parámetro especial AreaScheme se comprueba según las reglas de cadena.</i16-1>
+    <i17>Condiciones "Con parámetro" y "Sin parámetro" al verificar el parámetro especial "InMEPSystem" (el elemento forma parte de un sistema de ingeniería) respectivamente verifican si el elemento forma parte de un sistema de ingeniería o no. Es decir, la condición "Con parámetro" interpreta la verificación "El elemento forma parte de un sistema de ingeniería", y la condición "Sin parámetro" interpreta la verificación "El elemento no forma parte de un sistema de ingeniería".</i17>
+    <i18>Las condiciones "Con parámetro" y "Sin parámetro" al comprobar el parámetro especial "InRebarSystem" (la armadura está en un sistema de armaduras) determinan respectivamente si la armadura forma parte de un sistema de armaduras o no. Es decir, la condición "Existe el parámetro" interpreta la comprobación como "La armadura forma parte de un sistema de armaduras", y la condición "No existe el parámetro" interpreta la comprobación como "La armadura no forma parte de un sistema de armaduras".</i18>
+    <i19>El parámetro especial DocumentTitle devuelve el nombre del documento actual. El valor del parámetro especial DocumentTitle se comprueba según las reglas para cadenas. Si el documento no está guardado o está desvinculado, se devolverá el valor predeterminado o una cadena vacía.</i19>
     <i20>La condición "Solo lectura" con el valor "No" significa que el elemento se procesará si el parámetro está disponible para su edición. La condición "Solo lectura" con el valor "Sí" significa que el elemento se procesará si el parámetro no está disponible para su edición. Un parámetro puede no estar disponible para su edición si es un parámetro de sistema no editable (por ejemplo, el parámetro "Volumen"), el elemento se encuentra en un conjunto de trabajo no accesible o en otras condiciones.</i20>
     <et1>Igual</et1>
     <et2>Más</et2>
@@ -1718,11 +1744,20 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <tt4>¡Dirección de correo especificada no pasó verificación!\nO ingresaste dirección de correo electrónico incorrectamente o tienes un proveedor de alojamiento de correo electrónico único =)</tt4>
     <tt5>Para cambiar idioma en cinta es necesario reiniciar Revit</tt5>
     <tt6>Carpeta de almacenamiento de respaldo especificada anteriormente no encontrada. Carpeta ha sido eliminada o cambiada de nombre</tt6>
+    <!--todo remove after 37.6.0-->
     <t13>Desmarcar todas categorías</t13>
     <t14>Añadir condición</t14>
     <t15>Eliminar condición</t15>
     <t16>Marcar categorías cuyos elementos están presentes en vista actual</t16>
+    <!--todo remove after 37.6.0-->
     <t17>Marcar todas categorías</t17>
+    <t18>{0} de {1} seleccionados</t18>
+    <t19>Seleccionar todas las categorías mostradas</t19>
+    <t20>Deseleccionar todas las categorías mostradas</t20>
+    <ct1>Modelo</ct1>
+    <ct2>Anotaciones</ct2>
+    <ct3>Modelo analítico</ct3>
+    <ct4>Otros</ct4>
     <err1>¡Archivo de configuración está dañado! No es posible construir cinta</err1>
     <err2>Complemento no está disponible para su uso en familias</err2>
     <err3>Número permitido de pestañas creadas en cinta se ha excedido. Se permiten un máximo de 20 pestañas adicionales. ¡Ficha "{0}" no se añadirá!</err3>
