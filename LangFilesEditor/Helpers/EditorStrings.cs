@@ -141,6 +141,11 @@ internal static class EditorStrings
     public const string ErrorCaption = "Ошибка";
 
     /// <summary>
+    /// Состояние записи, у которой нет пометки к удалению.
+    /// </summary>
+    public const string EntryNotMarkedForDeletion = "Строка не помечена к удалению";
+
+    /// <summary>
     /// Значение, отображаемое вместо неизвестной версии локализации.
     /// </summary>
     public const string UnknownVersion = "—";
@@ -246,4 +251,10 @@ internal static class EditorStrings
         string.IsNullOrWhiteSpace(version)
             ? "Помечен к удалению"
             : $"Помечен к удалению после версии {version.Trim()}";
+
+    /// <summary>
+    /// Форматирует показ произвольного комментария записи, не являющегося пометкой к удалению.
+    /// </summary>
+    /// <param name="comment">Текст комментария.</param>
+    public static string FormatEntryComment(string comment) => $"Комментарий: {comment?.Trim()}";
 }

@@ -8,8 +8,11 @@
         Height="480"
         MinWidth="640"
         MinHeight="360"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}"
+        FontFamily="{DynamicResource DefaultFont}"
         mc:Ignorable="d">
-    <Border Background="{StaticResource EditorChromeBrushLight}"
+    <Border Background="{DynamicResource EditorChromeBrushLight}"
             Padding="16">
         <Grid>
             <Grid.RowDefinitions>
@@ -41,7 +44,7 @@
                     <Button Command="{Binding Path=MergeCommand}"
                             Content="Merge"
                             Margin="0"
-                            Style="{StaticResource EditorDialogButtonStyle}" />
+                            Style="{StaticResource EditorDialogPrimaryButtonStyle}" />
                 </StackPanel>
             </Border>
 

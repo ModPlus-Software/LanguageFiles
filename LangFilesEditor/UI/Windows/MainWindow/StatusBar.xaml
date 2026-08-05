@@ -15,7 +15,7 @@
             <TextBlock VerticalAlignment="Center"
                        MaxWidth="{Binding LabelMaxWidth}"
                        FontSize="11.5"
-                       Foreground="{StaticResource EditorTextSecondaryBrush}"
+                       Foreground="{DynamicResource EditorTextSecondaryBrush}"
                        Text="{Binding Text}"
                        TextTrimming="CharacterEllipsis"
                        ToolTip="{Binding ToolTip}" />
@@ -25,7 +25,7 @@
             <TextBlock Margin="6,0"
                        VerticalAlignment="Center"
                        FontSize="11.5"
-                       Foreground="{StaticResource EditorTextSecondaryBrush}"
+                       Foreground="{DynamicResource EditorTextSecondaryBrush}"
                        Text="→" />
         </DataTemplate>
 
@@ -33,16 +33,16 @@
             <TextBlock Margin="10,0"
                        VerticalAlignment="Center"
                        FontSize="11"
-                       Foreground="{StaticResource EditorTextPrimaryBrush}"
+                       Foreground="{DynamicResource EditorTextPrimaryBrush}"
                        Text="|" />
         </DataTemplate>
 
         <Style x:Key="EditorProgressBarStyle"
                TargetType="ProgressBar">
             <Setter Property="Background"
-                    Value="{StaticResource EditorProgressTrackBrush}" />
+                    Value="{DynamicResource EditorProgressTrackBrush}" />
             <Setter Property="Foreground"
-                    Value="{StaticResource EditorAccentBrush}" />
+                    Value="{DynamicResource EditorAccentBrush}" />
             <Setter Property="BorderThickness"
                     Value="0" />
             <Setter Property="Template">
@@ -109,13 +109,13 @@
                                      Value="True">
                                 <Setter TargetName="Chip"
                                         Property="Background"
-                                        Value="{StaticResource EditorHoverBrush}" />
+                                        Value="{DynamicResource EditorHoverBrush}" />
                             </Trigger>
                             <Trigger Property="IsChecked"
                                      Value="True">
                                 <Setter TargetName="Chip"
                                         Property="Background"
-                                        Value="{StaticResource EditorSelectionBrush}" />
+                                        Value="{DynamicResource EditorSelectionBrush}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -145,7 +145,7 @@
                                      Value="True">
                                 <Setter TargetName="Row"
                                         Property="Background"
-                                        Value="{StaticResource EditorHoverBrush}" />
+                                        Value="{DynamicResource EditorHoverBrush}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -168,7 +168,7 @@
                         <TextBlock HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    FontSize="12"
-                                   Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                   Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                    Text="▴" />
                     </Border>
                     <ToggleButton Style="{StaticResource DiagnosticChipToggleStyle}"
@@ -184,7 +184,7 @@
                             <TextBlock Margin="4,0,0,0"
                                        VerticalAlignment="Center"
                                        FontSize="11.5"
-                                       Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                       Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                        Text="{Binding Count}" />
                         </StackPanel>
                     </ToggleButton>
@@ -199,8 +199,8 @@
                             MaxWidth="340"
                             Margin="8"
                             Padding="10,8"
-                            Background="{StaticResource EditorChromeBrush}"
-                            BorderBrush="{StaticResource EditorBorderBrush}"
+                            Background="{DynamicResource EditorChromeBrush}"
+                            BorderBrush="{DynamicResource EditorBorderBrush}"
                             BorderThickness="1"
                             CornerRadius="4"
                             MouseEnter="DiagnosticPopup_MouseEnter"
@@ -219,11 +219,11 @@
                                 <TextBlock Margin="6,0,0,0"
                                            FontSize="11"
                                            FontWeight="SemiBold"
-                                           Foreground="{StaticResource EditorTextPrimaryBrush}"
+                                           Foreground="{DynamicResource EditorTextPrimaryBrush}"
                                            Text="{Binding Title}" />
                                 <TextBlock Margin="6,0,0,0"
                                            FontSize="11"
-                                           Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                           Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                            Text="{Binding Count}" />
                             </StackPanel>
                             <ItemsControl Margin="0,6,0,0"
@@ -241,14 +241,14 @@
                                                 </Grid.ColumnDefinitions>
                                                 <TextBlock Grid.Column="0"
                                                            FontSize="11.5"
-                                                           Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                                           Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                                            Text="{Binding ModuleName}"
                                                            TextTrimming="CharacterEllipsis" />
                                                 <TextBlock Grid.Column="1"
                                                            Margin="12,0,0,0"
                                                            FontSize="11.5"
                                                            FontWeight="SemiBold"
-                                                           Foreground="{StaticResource EditorTextPrimaryBrush}"
+                                                           Foreground="{DynamicResource EditorTextPrimaryBrush}"
                                                            Text="{Binding Count}" />
                                             </Grid>
                                         </Button>
@@ -299,7 +299,7 @@
             <TextBlock Margin="0,0,8,0"
                        VerticalAlignment="Center"
                        FontSize="11"
-                       Foreground="{StaticResource EditorTextPrimaryBrush}"
+                       Foreground="{DynamicResource EditorTextPrimaryBrush}"
                        Text="|" />
 
             <Border x:Name="ExpandIcon"
@@ -314,7 +314,7 @@
                 <TextBlock HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            FontSize="12"
-                           Foreground="{StaticResource EditorTextSecondaryBrush}"
+                           Foreground="{DynamicResource EditorTextSecondaryBrush}"
                            Text="▴" />
             </Border>
 
@@ -322,7 +322,7 @@
                        VerticalAlignment="Center"
                        FontSize="11.5"
                        MaxWidth="220"
-                       Foreground="{StaticResource EditorTextSecondaryBrush}"
+                       Foreground="{DynamicResource EditorTextSecondaryBrush}"
                        Text="{Binding OperationsHeader}"
                        TextTrimming="CharacterEllipsis"
                        ToolTip="{Binding ProgressToolTip}" />
@@ -349,8 +349,8 @@
                         MaxWidth="340"
                         Margin="8"
                         Padding="10,8"
-                        Background="{StaticResource EditorChromeBrush}"
-                        BorderBrush="{StaticResource EditorBorderBrush}"
+                        Background="{DynamicResource EditorChromeBrush}"
+                        BorderBrush="{DynamicResource EditorBorderBrush}"
                         BorderThickness="1"
                         CornerRadius="4"
                         MouseEnter="Popup_MouseEnter"
@@ -363,7 +363,7 @@
                     <StackPanel>
                         <TextBlock FontSize="11"
                                    FontWeight="SemiBold"
-                                   Foreground="{StaticResource EditorTextPrimaryBrush}"
+                                   Foreground="{DynamicResource EditorTextPrimaryBrush}"
                                    Text="Выполняемые операции" />
                         <ItemsControl Margin="0,6,0,0"
                                       ItemsSource="{Binding ActiveOperations}">
@@ -376,7 +376,7 @@
                                         </Grid.RowDefinitions>
                                         <TextBlock Grid.Row="0"
                                                    FontSize="11.5"
-                                                   Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                                   Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                                    Text="{Binding DisplayText}"
                                                    TextTrimming="CharacterEllipsis" />
                                         <ProgressBar Grid.Row="1"

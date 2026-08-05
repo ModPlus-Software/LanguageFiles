@@ -77,12 +77,12 @@
 
             <Border x:Name="TopDropHint"
                     Grid.Row="0"
-                    Background="#402196F3"
+                    Background="{DynamicResource DropHintBrush}"
                     Visibility="Collapsed"
                     IsHitTestVisible="False" />
             <Border x:Name="BottomDropHint"
                     Grid.Row="4"
-                    Background="#402196F3"
+                    Background="{DynamicResource DropHintBrush}"
                     Visibility="Collapsed"
                     IsHitTestVisible="False" />
         </Grid>
@@ -104,12 +104,12 @@
 
         <Border x:Name="LeftDropHint"
                 Grid.Column="0"
-                Background="#402196F3"
+                Background="{DynamicResource DropHintBrush}"
                 Visibility="Collapsed"
                 IsHitTestVisible="False" />
         <Border x:Name="RightDropHint"
                 Grid.Column="4"
-                Background="#402196F3"
+                Background="{DynamicResource DropHintBrush}"
                 Visibility="Collapsed"
                 IsHitTestVisible="False" />
     </Grid>

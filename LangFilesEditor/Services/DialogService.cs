@@ -74,7 +74,13 @@ public class DialogService : IDialogService
     /// <inheritdoc />
     public bool? ShowMarkForDeletionWindow()
     {
-        var win = new MarkForDeletionWindow(_workspace);
+        var win = new MarkForDeletionWindow(_workspace)
+        {
+            // Без владельца WindowStartupLocation="CenterOwner" откатывается
+            // к позиции по умолчанию и окно появляется в углу экрана.
+            Owner = Application.Current.MainWindow,
+        };
+
         return win.ShowDialog();
     }
 

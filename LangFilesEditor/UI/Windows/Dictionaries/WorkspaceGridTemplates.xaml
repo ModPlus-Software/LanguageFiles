@@ -9,7 +9,7 @@
     <DataTemplate x:Key="WorkspaceModuleHeaderTitleTemplate">
         <TextBlock FontSize="12"
                    FontWeight="Bold"
-                   Foreground="{StaticResource EditorTextPrimaryBrush}"
+                   Foreground="{DynamicResource EditorTextPrimaryBrush}"
                    Text="{Binding WrappedTitle}"
                    TextWrapping="Wrap"
                    ToolTip="{Binding Title}" />
@@ -18,7 +18,7 @@
     <DataTemplate x:Key="WorkspaceModuleHeaderCellTemplate">
         <Border Padding="6,4"
                 VerticalAlignment="Stretch"
-                Background="{StaticResource WorkspaceModuleHeaderBrush}">
+                Background="{DynamicResource WorkspaceModuleHeaderBrush}">
             <Border.Style>
                 <Style TargetType="Border">
                     <Style.Triggers>
@@ -31,7 +31,7 @@
                                 </MultiBinding>
                             </DataTrigger.Binding>
                             <Setter Property="Background"
-                                    Value="{StaticResource WorkspaceModuleHeaderSelectedBrush}" />
+                                    Value="{DynamicResource WorkspaceModuleHeaderSelectedBrush}" />
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -64,7 +64,7 @@
     </DataTemplate>
 
     <DataTemplate x:Key="WorkspaceModuleHeaderRowBackgroundTemplate">
-        <Border Background="{StaticResource WorkspaceModuleHeaderBrush}">
+        <Border Background="{DynamicResource WorkspaceModuleHeaderBrush}">
             <Border.Style>
                 <Style TargetType="Border">
                     <Style.Triggers>
@@ -77,7 +77,7 @@
                                 </MultiBinding>
                             </DataTrigger.Binding>
                             <Setter Property="Background"
-                                    Value="{StaticResource WorkspaceModuleHeaderSelectedBrush}" />
+                                    Value="{DynamicResource WorkspaceModuleHeaderSelectedBrush}" />
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>

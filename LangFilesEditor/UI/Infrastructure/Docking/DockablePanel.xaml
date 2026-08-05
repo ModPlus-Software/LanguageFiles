@@ -8,12 +8,12 @@
              d:DesignWidth="240"
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch">
-    
+
     <Border Style="{StaticResource DockPanelChromeBorderStyle}">
         <Grid x:Name="RootGrid">
+            <!--  Толщину рамки шапки задаёт code-behind: она зависит от стороны стыковки  -->
             <Border x:Name="HeaderBorder"
-                    Background="#EAEAEA"
-                    BorderBrush="#C8C8C8"
+                    Style="{StaticResource DockPanelHeaderBorderStyle}"
                     Cursor="SizeAll"
                     MouseLeftButtonDown="OnHeaderMouseLeftButtonDown"
                     MouseMove="OnHeaderMouseMove"
@@ -23,27 +23,33 @@
                                Text="{Binding State.Title, RelativeSource={RelativeSource AncestorType=UserControl}}"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"
+                               Foreground="{DynamicResource GrayBrush1}"
                                FontWeight="SemiBold" />
                     <StackPanel x:Name="HeaderButtons"
                                 Orientation="Horizontal">
+                        <!--  Значки заданы стилем явно: содержимое кнопки живёт в логическом
+                              дереве под самой кнопкой и ресурсы её шаблона не видит  -->
                         <Button x:Name="CollapseButton"
                                 Style="{StaticResource DockChromeButtonStyle}"
                                 ToolTip="Collapse / expand"
                                 Click="OnCollapseClick">
                             <TextBlock x:Name="CollapseGlyph"
+                                       Style="{StaticResource DockChromeGlyphStyle}"
                                        FontFamily="Segoe MDL2 Assets"
                                        Text="&#xE70D;" />
                         </Button>
                         <Button Style="{StaticResource DockChromeButtonStyle}"
                                 ToolTip="Pop out"
                                 Click="OnFloatClick">
-                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                            <TextBlock Style="{StaticResource DockChromeGlyphStyle}"
+                                       FontFamily="Segoe MDL2 Assets"
                                        Text="&#xE7A7;" />
                         </Button>
-                        <Button Style="{StaticResource DockChromeButtonStyle}"
+                        <Button Style="{StaticResource DockChromeCloseButtonStyle}"
                                 ToolTip="Close"
                                 Click="OnCloseClick">
-                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                            <TextBlock Style="{StaticResource DockChromeGlyphStyle}"
+                                       FontFamily="Segoe MDL2 Assets"
                                        Text="&#xE711;" />
                         </Button>
                     </StackPanel>

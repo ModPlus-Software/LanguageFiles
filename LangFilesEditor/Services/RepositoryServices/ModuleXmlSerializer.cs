@@ -3,6 +3,7 @@ namespace LangFilesEditor.Services.RepositoryServices;
 using System.Xml;
 using System.Xml.Linq;
 using Models;
+using Utils;
 
 /// <summary>
 /// Чтение и запись узла модуля в XML-файле локализации: атрибуты (metadata),
@@ -150,13 +151,25 @@ internal static class ModuleXmlSerializer
     /// Записывает или обновляет XML-комментарий перед элементом item.
     /// </summary>
     /// <param name="itemNode">XML-узел элемента перевода.</param>
-    /// <param name="comment">Текст комментария.</param>
-    /// <returns><c>true</c>, если комментарий был добавлен или изменён.</returns>
+    /// <param name="comment">Текст комментария. Пустое значение удаляет существующий комментарий.</param>
+    /// <returns><c>true</c>, если комментарий был добавлен, изменён или удалён.</returns>
     public static bool WriteItemComment(XElement itemNode, string comment)
     {
         if (string.IsNullOrEmpty(comment))
         {
-            return false;
+            // Пустой комментарий — это снятие пометки, а не «нечего писать». Без удаления
+            // узла метка осталась бы в файле и вернулась бы в запись при следующей загрузке.
+            // Удаляется только сама пометка: перед элементом может стоять чужой комментарий —
+            // граница диапазона «todo remove after X start/end» или осиротевший комментарий
+            // от удалённого ранее элемента, и терять их нельзя.
+            if (itemNode.PreviousNode is not XComment obsoleteComment
+                || !DeletionMarker.IsMarked(obsoleteComment.Value))
+            {
+                return false;
+            }
+
+            obsoleteComment.Remove();
+            return true;
         }
 
         if (itemNode.PreviousNode is XComment existingComment)

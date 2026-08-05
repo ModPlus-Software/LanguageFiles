@@ -8,6 +8,9 @@
         Height="800"
         MinWidth="300"
         MinHeight="300"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}"
+        FontFamily="{DynamicResource DefaultFont}"
         WindowStartupLocation="CenterOwner"
         mc:Ignorable="d">
     
@@ -33,7 +36,8 @@
                  TextChanged="TbText_OnTextChanged"
                  TextWrapping="Wrap" />
 
-        <CheckBox Grid.Row="2" 
+        <CheckBox Grid.Row="2"
+                  Margin="5 0"
                   Name="CbAutoNumbering"
                   Content="Автоматически нумеровать теги"/>
 
@@ -47,6 +51,7 @@
                     Padding="8 4"
                     Margin="4"/>
             <Button Name="BtCancel"
+                    Style="{StaticResource TransparentButton}"
                     Click="BtCancel_OnClick"
                     Content="Cancel"
                     Padding="8 4"

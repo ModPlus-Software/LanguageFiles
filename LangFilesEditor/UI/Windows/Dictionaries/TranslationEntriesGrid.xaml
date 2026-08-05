@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:LangFilesEditor.UI.Windows.Dictionaries"
+             xmlns:infrastructure="clr-namespace:LangFilesEditor.UI.Infrastructure"
              mc:Ignorable="d"
              d:DesignHeight="300"
              d:DesignWidth="400"
@@ -32,15 +33,23 @@
                    Margin="4 4 4 0"
                    Text="{Binding Header, RelativeSource={RelativeSource AncestorType=local:TranslationEntriesGrid}}"
                    TextWrapping="Wrap" />
+        <!--  Грид оформлен как карточка: рамка и скругление те же, что у панелей сервера лицензий.
+              CornerClip обязателен — сам Border содержимое по скруглению не обрезает,
+              и непрозрачный грид закрасил бы углы  -->
         <Border Grid.Row="1"
                 Margin="4 4 4 0"
                 VerticalAlignment="Stretch"
-                BorderBrush="Gray"
-                BorderThickness="1">
+                Background="{DynamicResource ControlBackgroundBrush}"
+                BorderBrush="{DynamicResource SolidColorBrush.Control.Border}"
+                BorderThickness="1"
+                CornerRadius="6"
+                infrastructure:CornerClip.Radius="6"
+                SnapsToDevicePixels="True">
             <DataGrid x:Name="EntriesDataGrid"
                       ItemsSource="{Binding ItemsSource, RelativeSource={RelativeSource AncestorType=local:TranslationEntriesGrid}}"
                       SelectionChanged="EntriesDataGrid_OnSelectionChanged"
-                      Style="{StaticResource TranslationEntriesDataGridStyle}">
+                      Style="{StaticResource TranslationEntriesDataGridStyle}"
+                      ColumnHeaderStyle="{StaticResource TranslationEntriesDataGridColumnHeaderStyle}">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn x:Name="NameColumn"
                                             Width="Auto" />

@@ -2,6 +2,7 @@ namespace LangFilesEditor.Models;
 
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using Utils;
 using ModPlusAPI.Mvvm;
 
 /// <summary>
@@ -233,7 +234,7 @@ public class TranslationEntry : ObservableObject
         }
 
         var deletionVersion = ResolveDeletionVersion();
-        if (deletionVersion != null || IsMarkedForDeletionByComment())
+        if (deletionVersion != null)
         {
             parts.Add(Helpers.EditorStrings.FormatEntryMarkedForDeletion(deletionVersion));
         }
@@ -247,19 +248,15 @@ public class TranslationEntry : ObservableObject
 
     private string ResolveDeletionVersion()
     {
-        if (!string.IsNullOrWhiteSpace(RemovesOnVersion))
+        // Комментарий важнее рантайм-поля: он приходит из файла и переживает перезапуск,
+        // а RemovesOnVersion живёт только в памяти текущей сессии.
+        if (DeletionMarker.TryGetVersion(Comment, out var versionFromComment))
         {
-            return RemovesOnVersion.Trim();
+            return versionFromComment;
         }
 
-        return IsMarkedForDeletionByComment()
-            ? Comment[Constants.RemoveAfterCommentPrefix.Length..].Trim()
-            : null;
+        return string.IsNullOrWhiteSpace(RemovesOnVersion) ? null : RemovesOnVersion.Trim();
     }
-
-    private bool IsMarkedForDeletionByComment() =>
-        !string.IsNullOrEmpty(Comment)
-        && Comment.StartsWith(Constants.RemoveAfterCommentPrefix, StringComparison.Ordinal);
 
     private static bool AffectsRowVisualState(string propertyName) => propertyName switch
     {

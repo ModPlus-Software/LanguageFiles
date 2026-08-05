@@ -1,200 +1,142 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!-- Тёмная тема: те же ключи, что и в AppThemeResources.xaml -->
-    <SolidColorBrush x:Key="EditorChromeBrush"
-                     Color="#2D2D30" />
-    <SolidColorBrush x:Key="EditorChromeBrushLight"
-                     Color="#252526" />
+    <!--  Тёмная тема: тот же набор ключей, что и в AppThemeResources.xaml, другие значения.
+          У сервера лицензий тёмной темы нет — оттенки подобраны так, чтобы сохранить его
+          логику (голубой акцент, мягкие рамки, три ступени отклика) на тёмных поверхностях.
 
-    <SolidColorBrush x:Key="EditorBorderBrush"
-                     Color="#3F3F46" />
-    <SolidColorBrush x:Key="EditorBorderBrushSoft"
-                     Color="#464650" />
+          Ключ, добавленный в светлую тему и забытый здесь, оставит DynamicResource-ссылку
+          без значения после переключения. Соответствие ключей проверяется скриптом.  -->
 
-    <SolidColorBrush x:Key="EditorTextPrimaryBrush"
-                     Color="#E4E4E7" />
-    <SolidColorBrush x:Key="EditorTextSecondaryBrush"
-                     Color="#A1A1AA" />
-    <SolidColorBrush x:Key="EditorTextMutedBrush"
-                     Color="#8B8B96" />
+    <!--  ==================== Акцентные цвета ====================  -->
+    <!--  На тёмном фоне заметнее светлый оттенок, а не тёмный, поэтому пара
+          MainBlue/MainDarkBlue меняется местами по светлоте: MainDarkBlue —
+          состояние наведения и должен быть ярче базового  -->
+    <Color x:Key="MainBlueColor">#3D8FD0</Color>
+    <Color x:Key="MainDarkBlueColor">#55A5E0</Color>
+    <Color x:Key="MainGreenColor">#4CAF50</Color>
+    <Color x:Key="MainRedColor">#E05252</Color>
+    <Color x:Key="MainOrangeColor">#E8A857</Color>
 
-    <SolidColorBrush x:Key="EditorHoverBrush"
-                     Color="#3E3E42" />
-    <SolidColorBrush x:Key="EditorSelectionBrush"
-                     Color="#505050" />
-    <SolidColorBrush x:Key="EditorPressedBrush"
-                     Color="#606060" />
+    <Color x:Key="MouseOverBackgroundColor">#2A343E</Color>
+    <Color x:Key="ControlBorderColor">#3F4A55</Color>
 
-    <SolidColorBrush x:Key="NavDomainHeaderBrush"
-                     Color="#333337" />
-    <SolidColorBrush x:Key="NavDomainHeaderHoverBrush"
-                     Color="#3A3A3F" />
-    <SolidColorBrush x:Key="NavDomainHeaderExpandedBrush"
-                     Color="#404046" />
-    <SolidColorBrush x:Key="NavDomainChildrenBrush"
-                     Color="#2A2A2E" />
+    <!--  ==================== Оттенки серого ====================  -->
+    <!--  Шкала инвертирована относительно светлой темы: Gray1 остаётся самым
+          контрастным к фону, но фон теперь тёмный  -->
+    <Color x:Key="Gray1">#FFE4E4E7</Color>
+    <Color x:Key="Gray2">#FFA1A1AA</Color>
+    <Color x:Key="Gray3">#FF8B8B96</Color>
+    <Color x:Key="Gray5">#FF6B6B74</Color>
+    <Color x:Key="Gray6">#FF55555C</Color>
+    <Color x:Key="Gray8">#FF3A3A40</Color>
+    <Color x:Key="Gray10">#FF2A2A2E</Color>
 
-    <SolidColorBrush x:Key="EditorWarningBrush"
-                     Color="#F07178" />
+    <!--  ==================== Поверхности ====================  -->
+    <Color x:Key="TextColor">#FFE4E4E7</Color>
+    <Color x:Key="WindowBackgroundColor">#FF1E1E1E</Color>
 
-    <SolidColorBrush x:Key="EditorRowErrorBrush"
-                     Color="#5A2D2D" />
-    <SolidColorBrush x:Key="EditorRowWarningBrush"
-                     Color="#5A4A2A" />
-    <SolidColorBrush x:Key="EditorRowUpdateBrush"
-                     Color="#2A4A35" />
-    <SolidColorBrush x:Key="EditorRowMarkedBrush"
-                     Color="#2A4555" />
+    <Color x:Key="ControlBackgroundColor">#FF252526</Color>
+    <Color x:Key="NavBackgroundColor">#FF252526</Color>
+    <Color x:Key="CardHeaderColor">#FF2D2D30</Color>
 
-    <SolidColorBrush x:Key="EditorAccentBrush"
-                     Color="#569CD6" />
-    <SolidColorBrush x:Key="EditorProgressTrackBrush"
-                     Color="#3A3A3F" />
+    <Color x:Key="HoverColor">#2A343E</Color>
+    <Color x:Key="SelectionColor">#2E3D4C</Color>
+    <Color x:Key="SelectionStrongColor">#39506A</Color>
+    <Color x:Key="PressedColor">#456380</Color>
 
-    <SolidColorBrush x:Key="WorkspaceModuleHeaderBrush"
-                     Color="#383838" />
-    <SolidColorBrush x:Key="WorkspaceModuleHeaderSelectedBrush"
-                     Color="#454545" />
-    <SolidColorBrush x:Key="WorkspaceGridSelectionBrush"
-                     Color="#505050" />
+    <!--  ==================== Информационные плашки ====================  -->
+    <Color x:Key="InfoBackgroundColor">#22303C</Color>
+    <Color x:Key="WarningBackgroundColor">#3D3222</Color>
+    <Color x:Key="WarningForegroundColor">#E8A857</Color>
 
-    <Style x:Key="ModulesBarTabToggleStyle"
-           TargetType="ToggleButton">
-        <Setter Property="Padding"
-                Value="8,4" />
-        <Setter Property="Background"
-                Value="Transparent" />
-        <Setter Property="BorderBrush"
-                Value="{StaticResource EditorBorderBrush}" />
-        <Setter Property="BorderThickness"
-                Value="1" />
-        <Setter Property="Foreground"
-                Value="{StaticResource EditorTextPrimaryBrush}" />
-        <Setter Property="Cursor"
-                Value="Hand" />
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver"
-                     Value="True">
-                <Setter Property="Background"
-                        Value="{StaticResource EditorHoverBrush}" />
-            </Trigger>
-            <Trigger Property="IsChecked"
-                     Value="True">
-                <Setter Property="Background"
-                        Value="{StaticResource EditorSelectionBrush}" />
-                <Setter Property="FontWeight"
-                        Value="SemiBold" />
-            </Trigger>
-        </Style.Triggers>
-    </Style>
+    <Color x:Key="SwitchTrackOffColor">#3F3F46</Color>
 
-    <Style x:Key="EditorDialogTitleStyle"
-           TargetType="TextBlock">
-        <Setter Property="FontSize"
-                Value="16" />
-        <Setter Property="FontWeight"
-                Value="SemiBold" />
-        <Setter Property="Foreground"
-                Value="{StaticResource EditorTextPrimaryBrush}" />
-    </Style>
+    <Color x:Key="DropHintColor">#5559A9E3</Color>
 
-    <Style x:Key="EditorDialogSectionTitleStyle"
-           TargetType="TextBlock">
-        <Setter Property="FontSize"
-                Value="12" />
-        <Setter Property="FontWeight"
-                Value="SemiBold" />
-        <Setter Property="Foreground"
-                Value="{StaticResource EditorTextPrimaryBrush}" />
-    </Style>
+    <!--  ==================== Кисти палитры ====================  -->
+    <SolidColorBrush x:Key="MainBlue" Color="{StaticResource MainBlueColor}" />
+    <SolidColorBrush x:Key="MainDarkBlue" Color="{StaticResource MainDarkBlueColor}" />
+    <SolidColorBrush x:Key="MainGreen" Color="{StaticResource MainGreenColor}" />
+    <SolidColorBrush x:Key="MainRed" Color="{StaticResource MainRedColor}" />
+    <SolidColorBrush x:Key="MainOrange" Color="{StaticResource MainOrangeColor}" />
+    <SolidColorBrush x:Key="MouseOverBackgroundBrush" Color="{StaticResource MouseOverBackgroundColor}" />
 
-    <Style x:Key="EditorDialogFieldLabelStyle"
-           TargetType="TextBlock">
-        <Setter Property="FontSize"
-                Value="12" />
-        <Setter Property="Foreground"
-                Value="{StaticResource EditorTextSecondaryBrush}" />
-        <Setter Property="Margin"
-                Value="0,0,0,4" />
-    </Style>
+    <SolidColorBrush x:Key="SolidColorBrush.Control.Border" Color="{StaticResource ControlBorderColor}" />
+    <SolidColorBrush x:Key="SolidColorBrush.Hint" Color="{StaticResource ControlBorderColor}" />
 
-    <Style x:Key="EditorDialogSectionBorderStyle"
-           TargetType="Border">
-        <Setter Property="Padding"
-                Value="12" />
-        <Setter Property="Background"
-                Value="{StaticResource EditorChromeBrush}" />
-        <Setter Property="BorderBrush"
-                Value="{StaticResource EditorBorderBrush}" />
-        <Setter Property="BorderThickness"
-                Value="1" />
-        <Setter Property="CornerRadius"
-                Value="4" />
-    </Style>
+    <SolidColorBrush x:Key="GrayBrush1" Color="{StaticResource Gray1}" />
+    <SolidColorBrush x:Key="GrayBrush2" Color="{StaticResource Gray2}" />
+    <SolidColorBrush x:Key="GrayBrush3" Color="{StaticResource Gray3}" />
+    <SolidColorBrush x:Key="GrayBrush5" Color="{StaticResource Gray5}" />
+    <SolidColorBrush x:Key="GrayBrush6" Color="{StaticResource Gray6}" />
+    <SolidColorBrush x:Key="GrayBrush8" Color="{StaticResource Gray8}" />
+    <SolidColorBrush x:Key="GrayBrush10" Color="{StaticResource Gray10}" />
 
-    <Style x:Key="EditorDialogTextBoxStyle"
-           TargetType="TextBox">
-        <Setter Property="Padding"
-                Value="4,3" />
-        <Setter Property="BorderBrush"
-                Value="{StaticResource EditorBorderBrush}" />
-        <Setter Property="Foreground"
-                Value="{StaticResource EditorTextPrimaryBrush}" />
-        <Setter Property="Background"
-                Value="#1E1E1E" />
-    </Style>
+    <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}" />
+    <!--  Кисть надписей на акцентной заливке: белая в обеих темах  -->
+    <SolidColorBrush x:Key="WhiteBrush" Color="White" />
 
-    <Style x:Key="EditorDialogComboBoxStyle"
-           TargetType="ComboBox">
-        <Setter Property="Padding"
-                Value="4,3" />
-        <Setter Property="BorderBrush"
-                Value="{StaticResource EditorBorderBrush}" />
-        <Setter Property="Foreground"
-                Value="{StaticResource EditorTextPrimaryBrush}" />
-        <Setter Property="Background"
-                Value="#1E1E1E" />
-    </Style>
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{StaticResource WindowBackgroundColor}" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{StaticResource ControlBackgroundColor}" />
+    <SolidColorBrush x:Key="NavBackgroundBrush" Color="{StaticResource NavBackgroundColor}" />
+    <SolidColorBrush x:Key="CardHeaderBrush" Color="{StaticResource CardHeaderColor}" />
 
-    <Style x:Key="EditorDialogButtonStyle"
-           TargetType="Button">
-        <Setter Property="Padding"
-                Value="14,5" />
-        <Setter Property="MinWidth"
-                Value="88" />
-        <Setter Property="Margin"
-                Value="0,0,8,0" />
-    </Style>
+    <SolidColorBrush x:Key="HoverBrush" Color="{StaticResource HoverColor}" />
+    <SolidColorBrush x:Key="SelectionBrush" Color="{StaticResource SelectionColor}" />
+    <SolidColorBrush x:Key="SelectionStrongBrush" Color="{StaticResource SelectionStrongColor}" />
+    <SolidColorBrush x:Key="PressedBrush" Color="{StaticResource PressedColor}" />
 
-    <Style x:Key="EditorDialogLogTextBoxStyle"
-           TargetType="TextBox"
-           BasedOn="{StaticResource EditorDialogTextBoxStyle}">
-        <Setter Property="IsReadOnly"
-                Value="True" />
-        <Setter Property="TextWrapping"
-                Value="Wrap" />
-        <Setter Property="VerticalScrollBarVisibility"
-                Value="Auto" />
-        <Setter Property="Background"
-                Value="#1E1E1E" />
-        <Setter Property="FontFamily"
-                Value="Consolas" />
-        <Setter Property="FontSize"
-                Value="11" />
-    </Style>
+    <SolidColorBrush x:Key="InfoBackgroundBrush" Color="{StaticResource InfoBackgroundColor}" />
+    <SolidColorBrush x:Key="WarningBackgroundBrush" Color="{StaticResource WarningBackgroundColor}" />
+    <SolidColorBrush x:Key="WarningForegroundBrush" Color="{StaticResource WarningForegroundColor}" />
 
-    <Style x:Key="EditorSettingsReadOnlyValueStyle"
-           TargetType="TextBox"
-           BasedOn="{StaticResource EditorDialogTextBoxStyle}">
-        <Setter Property="IsReadOnly"
-                Value="True" />
-        <Setter Property="BorderThickness"
-                Value="0" />
-        <Setter Property="Background"
-                Value="Transparent" />
-        <Setter Property="Padding"
-                Value="0" />
-    </Style>
+    <SolidColorBrush x:Key="SwitchTrackOffBrush" Color="{StaticResource SwitchTrackOffColor}" />
+    <SolidColorBrush x:Key="DropHintBrush" Color="{StaticResource DropHintColor}" />
+
+    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="{StaticResource SelectionStrongColor}" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="{StaticResource TextColor}" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{StaticResource SelectionColor}" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{StaticResource TextColor}" />
+
+    <!--  ==================== Кисти редактора ====================  -->
+    <SolidColorBrush x:Key="EditorChromeBrush" Color="{StaticResource NavBackgroundColor}" />
+    <SolidColorBrush x:Key="EditorChromeBrushLight" Color="{StaticResource WindowBackgroundColor}" />
+
+    <SolidColorBrush x:Key="EditorBorderBrush" Color="{StaticResource ControlBorderColor}" />
+    <SolidColorBrush x:Key="EditorBorderBrushSoft" Color="{StaticResource Gray8}" />
+
+    <SolidColorBrush x:Key="EditorTextPrimaryBrush" Color="{StaticResource TextColor}" />
+    <SolidColorBrush x:Key="EditorTextSecondaryBrush" Color="{StaticResource Gray2}" />
+    <SolidColorBrush x:Key="EditorTextMutedBrush" Color="{StaticResource Gray1}" />
+
+    <SolidColorBrush x:Key="EditorHoverBrush" Color="{StaticResource HoverColor}" />
+    <SolidColorBrush x:Key="EditorSelectionBrush" Color="{StaticResource SelectionStrongColor}" />
+    <SolidColorBrush x:Key="EditorPressedBrush" Color="{StaticResource PressedColor}" />
+
+    <SolidColorBrush x:Key="NavDomainHeaderBrush" Color="#2A343E" />
+    <SolidColorBrush x:Key="NavDomainHeaderHoverBrush" Color="#303C48" />
+    <SolidColorBrush x:Key="NavDomainHeaderExpandedBrush" Color="#36434F" />
+    <SolidColorBrush x:Key="NavDomainChildrenBrush" Color="#23282E" />
+
+    <SolidColorBrush x:Key="EditorWarningBrush" Color="{StaticResource MainRedColor}" />
+
+    <SolidColorBrush x:Key="EditorRowDefaultBrush" Color="{StaticResource ControlBackgroundColor}" />
+    <SolidColorBrush x:Key="EditorRowErrorBrush" Color="#4A2A2A" />
+    <SolidColorBrush x:Key="EditorRowWarningBrush" Color="#4A3D28" />
+    <SolidColorBrush x:Key="EditorRowUpdateBrush" Color="#28402F" />
+    <!--  Пометка к удалению — сиреневый, чтобы не совпадать с выделением строки  -->
+    <SolidColorBrush x:Key="EditorRowMarkedBrush" Color="#3A2E45" />
+
+    <SolidColorBrush x:Key="EditorDiagnosticErrorBrush" Color="{StaticResource MainRedColor}" />
+    <SolidColorBrush x:Key="EditorDiagnosticWarningBrush" Color="{StaticResource MainOrangeColor}" />
+    <SolidColorBrush x:Key="EditorDiagnosticUpdateBrush" Color="{StaticResource MainGreenColor}" />
+
+    <SolidColorBrush x:Key="EditorAccentBrush" Color="{StaticResource MainDarkBlueColor}" />
+    <SolidColorBrush x:Key="EditorProgressTrackBrush" Color="{StaticResource Gray8}" />
+
+    <SolidColorBrush x:Key="WorkspaceModuleHeaderBrush" Color="#2A343E" />
+    <SolidColorBrush x:Key="WorkspaceModuleHeaderSelectedBrush" Color="#36434F" />
+    <SolidColorBrush x:Key="WorkspaceGridSelectionBrush" Color="{StaticResource SelectionStrongColor}" />
 
 </ResourceDictionary>

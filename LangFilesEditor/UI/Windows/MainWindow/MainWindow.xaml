@@ -11,6 +11,9 @@
         Height="800"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}"
+        FontFamily="{DynamicResource DefaultFont}"
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
@@ -65,8 +68,8 @@
             </Grid>
         </Grid>
         <Border Grid.Row="1"
-                Background="{StaticResource EditorChromeBrushLight}"
-                BorderBrush="{StaticResource EditorBorderBrush}"
+                Background="{DynamicResource EditorChromeBrushLight}"
+                BorderBrush="{DynamicResource EditorBorderBrush}"
                 BorderThickness="0,1,0,0">
             <mainWindow:StatusBar DataContext="{Binding StatusBarVM}" />
         </Border>

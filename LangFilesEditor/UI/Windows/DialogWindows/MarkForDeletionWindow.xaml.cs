@@ -5,6 +5,7 @@ namespace LangFilesEditor.UI.Windows.DialogWindows;
 using System.Windows;
 using Core.Abstractions;
 using Helpers;
+using Utils;
 
 /// <summary>
 /// Окно пометки строки на удаление в будущей версии.
@@ -21,7 +22,7 @@ public partial class MarkForDeletionWindow
     {
         _host = host;
         InitializeComponent();
-        TbVersion.Text = ResolveExistingVersion();
+        ShowCurrentState();
     }
 
     private void Cancel_OnClick(object sender, RoutedEventArgs e) => DialogResult = false;
@@ -46,31 +47,65 @@ public partial class MarkForDeletionWindow
         }
 
         entry.RemovesOnVersion = version.ToString();
-        entry.Comment = $"{Constants.RemoveAfterCommentPrefix}{version}";
+        entry.Comment = DeletionMarker.Build(version.ToString());
         DialogResult = true;
     }
 
-    /// <summary>
-    /// Возвращает версию, для которой строка уже помечена к удалению, или пустую строку.
-    /// Метка хранится в комментарии вида <c>todo remove after X.Y.Z</c>, поэтому версия
-    /// извлекается из него; рантайм-поле <see cref="Models.TranslationEntry.RemovesOnVersion"/>
-    /// используется как запасной источник.
-    /// </summary>
-    private string ResolveExistingVersion()
+    private void Unmark_OnClick(object sender, RoutedEventArgs e)
     {
         var entry = _host.SelectedTranslationEntry;
         if (entry == null)
         {
-            return string.Empty;
+            DialogResult = false;
+            return;
         }
 
-        var comment = entry.Comment;
-        if (!string.IsNullOrEmpty(comment)
-            && comment.StartsWith(Constants.RemoveAfterCommentPrefix, StringComparison.Ordinal))
+        // Чужой комментарий не трогаем: снимается только пометка к удалению.
+        // Кнопка и так недоступна в остальных случаях, но проверка страхует от
+        // потери комментария, если состояние окна разойдётся с записью.
+        if (DeletionMarker.IsMarked(entry.Comment))
         {
-            return comment[Constants.RemoveAfterCommentPrefix.Length..].Trim();
+            entry.Comment = null;
         }
 
-        return entry.RemovesOnVersion ?? string.Empty;
+        entry.RemovesOnVersion = null;
+        DialogResult = true;
+    }
+
+    /// <summary>
+    /// Показывает текущее состояние выбранной записи и подставляет версию в поле ввода.
+    /// </summary>
+    private void ShowCurrentState()
+    {
+        var entry = _host.SelectedTranslationEntry;
+        if (entry == null)
+        {
+            TbState.Text = EditorStrings.EntryNotMarkedForDeletion;
+            BtUnmark.IsEnabled = false;
+            return;
+        }
+
+        // Снимать можно только то, что реально записано в файл, поэтому состояние окна
+        // определяет комментарий. RemovesOnVersion живёт лишь в памяти текущей сессии
+        // и годится только как подсказка для поля ввода.
+        var isMarked = DeletionMarker.TryGetVersion(entry.Comment, out var version);
+
+        TbVersion.Text = isMarked ? version : entry.RemovesOnVersion ?? string.Empty;
+        BtUnmark.IsEnabled = isMarked;
+
+        if (isMarked)
+        {
+            TbState.Text = EditorStrings.FormatEntryMarkedForDeletion(version);
+        }
+        else if (!string.IsNullOrWhiteSpace(entry.Comment))
+        {
+            // Комментарий есть, но это не пометка к удалению — показываем его: иначе
+            // непонятно, почему строка подкрашена и почему её нельзя удалить.
+            TbState.Text = EditorStrings.FormatEntryComment(entry.Comment);
+        }
+        else
+        {
+            TbState.Text = EditorStrings.EntryNotMarkedForDeletion;
+        }
     }
 }

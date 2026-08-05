@@ -18,7 +18,10 @@
         <sys:Double x:Key="ToolBarTopContentMargin">10</sys:Double>
         <Thickness x:Key="ToolBarTopContentMarginThickness">0,10,0,0</Thickness>
 
+        <!--  Контурная кнопка, а не акцентная: на панели их полтора десятка подряд,
+              сплошная синяя заливка перетянула бы внимание с рабочей области  -->
         <Style x:Key="ToolBarButtonStyle"
+               BasedOn="{StaticResource TransparentButton}"
                TargetType="Button">
             <Setter Property="MinWidth"
                     Value="{StaticResource ToolBarButtonWidth}" />
@@ -51,7 +54,7 @@
             <Setter Property="HorizontalAlignment"
                     Value="Stretch" />
             <Setter Property="BorderBrush"
-                    Value="Gray" />
+                    Value="{DynamicResource EditorBorderBrush}" />
             <Setter Property="BorderThickness"
                     Value="0 1 0 0" />
             <Setter Property="SnapsToDevicePixels"

@@ -8,8 +8,11 @@
         Height="620"
         MinWidth="420"
         MinHeight="480"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}"
+        FontFamily="{DynamicResource DefaultFont}"
         mc:Ignorable="d">
-    <Border Background="{StaticResource EditorChromeBrushLight}"
+    <Border Background="{DynamicResource EditorChromeBrushLight}"
             Padding="16">
         <Grid>
             <Grid.RowDefinitions>
@@ -53,13 +56,13 @@
                                        Style="{StaticResource EditorDialogFieldLabelStyle}"
                                        Text="Порядок колонок в гриде (read-only)" />
                             <TextBlock Margin="0,6,0,0"
-                                       Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                       Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                        FontSize="12"
                                        Text="Языки определяются по каталогам в LanguageFiles."
                                        TextWrapping="Wrap" />
                             <TextBlock Margin="0,8,0,0"
                                        FontSize="12"
-                                       Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                       Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                        Text="Языки не найдены."
                                        Visibility="{Binding NoLanguages, Converter={StaticResource BooleanToVisibilityConverter}}" />
                             <ItemsControl Margin="0,6,0,0"
@@ -69,7 +72,7 @@
                                     <DataTemplate>
                                         <TextBlock Margin="0,2"
                                                    FontSize="12"
-                                                   Foreground="{StaticResource EditorTextPrimaryBrush}"
+                                                   Foreground="{DynamicResource EditorTextPrimaryBrush}"
                                                    Text="{Binding DisplayText}" />
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
@@ -84,7 +87,7 @@
                                        Text="Диагностика" />
                             <CheckBox Margin="0,8,0,0"
                                       Content="Сканировать при запуске"
-                                      Foreground="{StaticResource EditorTextPrimaryBrush}"
+                                      Foreground="{DynamicResource EditorTextPrimaryBrush}"
                                       IsChecked="{Binding RunStartupDiagnosticsScan}" />
                             <Button Margin="0,10,0,0"
                                     HorizontalAlignment="Left"
@@ -117,11 +120,11 @@
                             <StackPanel Margin="0,6,0,0"
                                         Orientation="Horizontal">
                                 <TextBlock FontSize="12"
-                                           Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                           Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                            Text="Версия локализации:" />
                                 <TextBlock Margin="6,0,0,0"
                                            FontSize="12"
-                                           Foreground="{StaticResource EditorTextPrimaryBrush}"
+                                           Foreground="{DynamicResource EditorTextPrimaryBrush}"
                                            Text="{Binding LocalVersion}" />
                             </StackPanel>
                         </StackPanel>
@@ -140,7 +143,7 @@
                             <Grid Grid.Row="1"
                                   Margin="0,6,0,0">
                                 <TextBlock FontSize="12"
-                                           Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                           Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                            Text="Подключённых расширений нет."
                                            Visibility="{Binding NoExtensions, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                 <ItemsControl ItemsSource="{Binding Extensions}"
@@ -149,7 +152,7 @@
                                         <DataTemplate>
                                             <TextBlock Margin="0,2"
                                                        FontSize="12"
-                                                       Foreground="{StaticResource EditorTextSecondaryBrush}"
+                                                       Foreground="{DynamicResource EditorTextSecondaryBrush}"
                                                        Text="{Binding}" />
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>
@@ -166,7 +169,7 @@
                     HorizontalAlignment="Right"
                     Click="Close_OnClick"
                     Content="Закрыть"
-                    Style="{StaticResource EditorDialogButtonStyle}" />
+                    Style="{StaticResource EditorDialogPrimaryButtonStyle}" />
         </Grid>
     </Border>
 </Window>

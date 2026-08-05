@@ -1,12 +1,17 @@
-﻿<Application x:Class="LangFilesEditor.App"
+<Application x:Class="LangFilesEditor.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+
     <Application.Resources>
         <ResourceDictionary>
+            <!--  Палитра темы идёт первой: EditorThemeManager подменяет именно её.
+                  Styles.xaml подключает Controls.xaml сам — BasedOn работает через
+                  StaticResource и требует базовые стили уже на момент разбора,
+                  поэтому зависеть от порядка в этом списке он не должен.  -->
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="UI/Windows/Dictionaries/Converters.xaml" />
                 <ResourceDictionary Source="UI/Windows/Dictionaries/AppThemeResources.xaml" />
+                <ResourceDictionary Source="UI/Windows/Dictionaries/Styles.xaml" />
                 <ResourceDictionary Source="UI/Windows/Dictionaries/NavBarTreeResources.xaml" />
                 <ResourceDictionary Source="UI/Infrastructure/Docking/DockingResources.xaml" />
             </ResourceDictionary.MergedDictionaries>

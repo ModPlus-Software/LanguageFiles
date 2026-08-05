@@ -4,7 +4,10 @@
         ShowInTaskbar="False"
         ResizeMode="CanResize"
         WindowStyle="SingleBorderWindow"
-        SizeToContent="Manual">
+        SizeToContent="Manual"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}"
+        FontFamily="{DynamicResource DefaultFont}">
     <ContentControl x:Name="PanelHost"
                     HorizontalContentAlignment="Stretch"
                     VerticalContentAlignment="Stretch" />

@@ -7,10 +7,41 @@
              mc:Ignorable="d"
              d:DesignHeight="40"
              d:DesignWidth="800">
-    
+
+    <UserControl.Resources>
+        <!--  Крестик закрытия вкладки. Базовая кнопка здесь не годится: у неё
+              акцентная заливка при наведении и минимальная ширина 88  -->
+        <Style x:Key="ModulesBarCloseButtonStyle" TargetType="Button">
+            <Setter Property="MinWidth" Value="0" />
+            <Setter Property="MinHeight" Value="0" />
+            <Setter Property="Width" Value="18" />
+            <Setter Property="Height" Value="18" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="3">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{DynamicResource EditorPressedBrush}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <Border Padding="4,2"
-            Background="{StaticResource EditorChromeBrush}"
-            BorderBrush="{StaticResource EditorBorderBrush}"
+            Background="{DynamicResource EditorChromeBrush}"
+            BorderBrush="{DynamicResource EditorBorderBrush}"
             BorderThickness="0,0,0,1">
         <ScrollViewer HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Disabled">
@@ -41,18 +72,17 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
+                                <!--  Цвет привязан к вкладке: сеттер общего стиля TextBlock
+                                      перекрыл бы наследование, и выбранная вкладка не стала бы синей  -->
                                 <TextBlock Grid.Column="0"
                                            VerticalAlignment="Center"
+                                           Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}"
                                            Text="{Binding Name}" />
                                 <Button Grid.Column="1"
-                                        MinWidth="0"
-                                        MinHeight="0"
                                         Margin="4 0 0 0"
-                                        Padding="0"
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"
-                                        Background="Transparent"
-                                        BorderThickness="0"
+                                        Style="{StaticResource ModulesBarCloseButtonStyle}"
                                         Command="{Binding DataContext.CloseModuleCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
                                         CommandParameter="{Binding}">
                                     <Viewbox Width="14"
@@ -60,7 +90,7 @@
                                         <Canvas Width="24"
                                                 Height="24">
                                             <Path Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-                                                  Fill="#666" />
+                                                  Fill="{DynamicResource EditorTextSecondaryBrush}" />
                                         </Canvas>
                                     </Viewbox>
                                 </Button>

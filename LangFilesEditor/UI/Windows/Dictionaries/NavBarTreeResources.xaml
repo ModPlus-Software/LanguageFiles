@@ -30,7 +30,7 @@
                               HorizontalAlignment="Center"
                               VerticalAlignment="Center"
                               Data="M 2 1 L 8 6 L 2 11 Z"
-                              Fill="{StaticResource EditorTextSecondaryBrush}"
+                              Fill="{DynamicResource EditorTextSecondaryBrush}"
                               RenderTransformOrigin="0.5,0.5"
                               Stretch="Uniform"
                               StrokeThickness="0">
@@ -53,7 +53,7 @@
                                  Value="True">
                             <Setter TargetName="ExpandPath"
                                     Property="Fill"
-                                    Value="{StaticResource EditorTextMutedBrush}" />
+                                    Value="{DynamicResource EditorTextMutedBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -69,7 +69,7 @@
                     Padding="0"
                     HorizontalAlignment="Stretch"
                     Background="Transparent"
-                    BorderBrush="{StaticResource EditorBorderBrush}"
+                    BorderBrush="{DynamicResource EditorBorderBrush}"
                     BorderThickness="0"
                     SnapsToDevicePixels="True">
                 <Grid HorizontalAlignment="Stretch">
@@ -93,7 +93,7 @@
             </Border>
             <Border x:Name="ChildrenBd"
                     Background="Transparent"
-                    BorderBrush="{StaticResource EditorBorderBrush}"
+                    BorderBrush="{DynamicResource EditorBorderBrush}"
                     BorderThickness="0"
                     SnapsToDevicePixels="True">
                 <ItemsPresenter x:Name="ItemsHost"
@@ -129,7 +129,7 @@
                      Value="True">
                 <Setter TargetName="HeaderBd"
                         Property="Background"
-                        Value="{StaticResource NavDomainHeaderBrush}" />
+                        Value="{DynamicResource NavDomainHeaderBrush}" />
                 <Setter TargetName="HeaderBd"
                         Property="BorderThickness"
                         Value="0,0,0,1" />
@@ -143,10 +143,10 @@
                         Value="Visible" />
                 <Setter TargetName="HeaderBd"
                         Property="Background"
-                        Value="{StaticResource NavDomainHeaderExpandedBrush}" />
+                        Value="{DynamicResource NavDomainHeaderExpandedBrush}" />
                 <Setter TargetName="ChildrenBd"
                         Property="Background"
-                        Value="{StaticResource NavDomainChildrenBrush}" />
+                        Value="{DynamicResource NavDomainChildrenBrush}" />
                 <Setter TargetName="ChildrenBd"
                         Property="BorderThickness"
                         Value="0,0,0,1" />
@@ -162,13 +162,13 @@
                 </MultiTrigger.Conditions>
                 <Setter TargetName="HeaderBd"
                         Property="Background"
-                        Value="{StaticResource NavDomainHeaderHoverBrush}" />
+                        Value="{DynamicResource NavDomainHeaderHoverBrush}" />
             </MultiTrigger>
             <Trigger Property="IsSelected"
                      Value="True">
                 <Setter TargetName="HeaderBd"
                         Property="Background"
-                        Value="{StaticResource EditorSelectionBrush}" />
+                        Value="{DynamicResource EditorSelectionBrush}" />
             </Trigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
@@ -181,7 +181,7 @@
                 </MultiTrigger.Conditions>
                 <Setter TargetName="HeaderBd"
                         Property="Background"
-                        Value="{StaticResource EditorHoverBrush}" />
+                        Value="{DynamicResource EditorHoverBrush}" />
             </MultiTrigger>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
@@ -192,7 +192,7 @@
                 </MultiTrigger.Conditions>
                 <Setter TargetName="HeaderBd"
                         Property="Background"
-                        Value="{StaticResource EditorSelectionBrush}" />
+                        Value="{DynamicResource EditorSelectionBrush}" />
             </MultiTrigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
