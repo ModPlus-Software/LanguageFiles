@@ -1,0 +1,70 @@
+﻿<Window x:Class="LangFilesEditor.UI.Windows.DialogWindows.Merger"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        Title="Merge"
+        Width="820"
+        Height="480"
+        MinWidth="640"
+        MinHeight="360"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}"
+        FontFamily="{DynamicResource DefaultFont}"
+        mc:Ignorable="d">
+    <Border Background="{DynamicResource EditorChromeBrushLight}"
+            Padding="16">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       Style="{StaticResource EditorDialogTitleStyle}"
+                       Text="Merge в ModPlus" />
+
+            <Border Grid.Row="1"
+                    Margin="0,12,0,0"
+                    Style="{StaticResource EditorDialogSectionBorderStyle}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center"
+                               Margin="0,0,8,0"
+                               Style="{StaticResource EditorDialogFieldLabelStyle}"
+                               Text="Local version:" />
+                    <TextBox MinWidth="120"
+                             VerticalAlignment="Center"
+                             Style="{StaticResource EditorDialogTextBoxStyle}"
+                             Text="{Binding Path=LocalVersion, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <Button Command="{Binding Path=SetLocalVersionCommand}"
+                            Content="Set"
+                            Margin="8,0,0,0"
+                            Style="{StaticResource EditorDialogButtonStyle}" />
+                    <Button Command="{Binding Path=MergeCommand}"
+                            Content="Merge"
+                            Margin="0"
+                            Style="{StaticResource EditorDialogPrimaryButtonStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="2"
+                    Margin="0,10,0,0"
+                    Style="{StaticResource EditorDialogSectionBorderStyle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
+                               Style="{StaticResource EditorDialogSectionTitleStyle}"
+                               Text="Log" />
+                    <TextBox Grid.Row="1"
+                             Margin="0,8,0,0"
+                             Style="{StaticResource EditorDialogLogTextBoxStyle}"
+                             Text="{Binding MergeLog, Mode=OneWay}" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

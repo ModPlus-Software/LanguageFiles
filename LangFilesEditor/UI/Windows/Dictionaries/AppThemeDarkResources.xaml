@@ -1,0 +1,142 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--  Тёмная тема: тот же набор ключей, что и в AppThemeResources.xaml, другие значения.
+          У сервера лицензий тёмной темы нет — оттенки подобраны так, чтобы сохранить его
+          логику (голубой акцент, мягкие рамки, три ступени отклика) на тёмных поверхностях.
+
+          Ключ, добавленный в светлую тему и забытый здесь, оставит DynamicResource-ссылку
+          без значения после переключения. Соответствие ключей проверяется скриптом.  -->
+
+    <!--  ==================== Акцентные цвета ====================  -->
+    <!--  На тёмном фоне заметнее светлый оттенок, а не тёмный, поэтому пара
+          MainBlue/MainDarkBlue меняется местами по светлоте: MainDarkBlue —
+          состояние наведения и должен быть ярче базового  -->
+    <Color x:Key="MainBlueColor">#3D8FD0</Color>
+    <Color x:Key="MainDarkBlueColor">#55A5E0</Color>
+    <Color x:Key="MainGreenColor">#4CAF50</Color>
+    <Color x:Key="MainRedColor">#E05252</Color>
+    <Color x:Key="MainOrangeColor">#E8A857</Color>
+
+    <Color x:Key="MouseOverBackgroundColor">#2A343E</Color>
+    <Color x:Key="ControlBorderColor">#3F4A55</Color>
+
+    <!--  ==================== Оттенки серого ====================  -->
+    <!--  Шкала инвертирована относительно светлой темы: Gray1 остаётся самым
+          контрастным к фону, но фон теперь тёмный  -->
+    <Color x:Key="Gray1">#FFE4E4E7</Color>
+    <Color x:Key="Gray2">#FFA1A1AA</Color>
+    <Color x:Key="Gray3">#FF8B8B96</Color>
+    <Color x:Key="Gray5">#FF6B6B74</Color>
+    <Color x:Key="Gray6">#FF55555C</Color>
+    <Color x:Key="Gray8">#FF3A3A40</Color>
+    <Color x:Key="Gray10">#FF2A2A2E</Color>
+
+    <!--  ==================== Поверхности ====================  -->
+    <Color x:Key="TextColor">#FFE4E4E7</Color>
+    <Color x:Key="WindowBackgroundColor">#FF1E1E1E</Color>
+
+    <Color x:Key="ControlBackgroundColor">#FF252526</Color>
+    <Color x:Key="NavBackgroundColor">#FF252526</Color>
+    <Color x:Key="CardHeaderColor">#FF2D2D30</Color>
+
+    <Color x:Key="HoverColor">#2A343E</Color>
+    <Color x:Key="SelectionColor">#2E3D4C</Color>
+    <Color x:Key="SelectionStrongColor">#39506A</Color>
+    <Color x:Key="PressedColor">#456380</Color>
+
+    <!--  ==================== Информационные плашки ====================  -->
+    <Color x:Key="InfoBackgroundColor">#22303C</Color>
+    <Color x:Key="WarningBackgroundColor">#3D3222</Color>
+    <Color x:Key="WarningForegroundColor">#E8A857</Color>
+
+    <Color x:Key="SwitchTrackOffColor">#3F3F46</Color>
+
+    <Color x:Key="DropHintColor">#5559A9E3</Color>
+
+    <!--  ==================== Кисти палитры ====================  -->
+    <SolidColorBrush x:Key="MainBlue" Color="{StaticResource MainBlueColor}" />
+    <SolidColorBrush x:Key="MainDarkBlue" Color="{StaticResource MainDarkBlueColor}" />
+    <SolidColorBrush x:Key="MainGreen" Color="{StaticResource MainGreenColor}" />
+    <SolidColorBrush x:Key="MainRed" Color="{StaticResource MainRedColor}" />
+    <SolidColorBrush x:Key="MainOrange" Color="{StaticResource MainOrangeColor}" />
+    <SolidColorBrush x:Key="MouseOverBackgroundBrush" Color="{StaticResource MouseOverBackgroundColor}" />
+
+    <SolidColorBrush x:Key="SolidColorBrush.Control.Border" Color="{StaticResource ControlBorderColor}" />
+    <SolidColorBrush x:Key="SolidColorBrush.Hint" Color="{StaticResource ControlBorderColor}" />
+
+    <SolidColorBrush x:Key="GrayBrush1" Color="{StaticResource Gray1}" />
+    <SolidColorBrush x:Key="GrayBrush2" Color="{StaticResource Gray2}" />
+    <SolidColorBrush x:Key="GrayBrush3" Color="{StaticResource Gray3}" />
+    <SolidColorBrush x:Key="GrayBrush5" Color="{StaticResource Gray5}" />
+    <SolidColorBrush x:Key="GrayBrush6" Color="{StaticResource Gray6}" />
+    <SolidColorBrush x:Key="GrayBrush8" Color="{StaticResource Gray8}" />
+    <SolidColorBrush x:Key="GrayBrush10" Color="{StaticResource Gray10}" />
+
+    <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}" />
+    <!--  Кисть надписей на акцентной заливке: белая в обеих темах  -->
+    <SolidColorBrush x:Key="WhiteBrush" Color="White" />
+
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{StaticResource WindowBackgroundColor}" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{StaticResource ControlBackgroundColor}" />
+    <SolidColorBrush x:Key="NavBackgroundBrush" Color="{StaticResource NavBackgroundColor}" />
+    <SolidColorBrush x:Key="CardHeaderBrush" Color="{StaticResource CardHeaderColor}" />
+
+    <SolidColorBrush x:Key="HoverBrush" Color="{StaticResource HoverColor}" />
+    <SolidColorBrush x:Key="SelectionBrush" Color="{StaticResource SelectionColor}" />
+    <SolidColorBrush x:Key="SelectionStrongBrush" Color="{StaticResource SelectionStrongColor}" />
+    <SolidColorBrush x:Key="PressedBrush" Color="{StaticResource PressedColor}" />
+
+    <SolidColorBrush x:Key="InfoBackgroundBrush" Color="{StaticResource InfoBackgroundColor}" />
+    <SolidColorBrush x:Key="WarningBackgroundBrush" Color="{StaticResource WarningBackgroundColor}" />
+    <SolidColorBrush x:Key="WarningForegroundBrush" Color="{StaticResource WarningForegroundColor}" />
+
+    <SolidColorBrush x:Key="SwitchTrackOffBrush" Color="{StaticResource SwitchTrackOffColor}" />
+    <SolidColorBrush x:Key="DropHintBrush" Color="{StaticResource DropHintColor}" />
+
+    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="{StaticResource SelectionStrongColor}" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="{StaticResource TextColor}" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{StaticResource SelectionColor}" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{StaticResource TextColor}" />
+
+    <!--  ==================== Кисти редактора ====================  -->
+    <SolidColorBrush x:Key="EditorChromeBrush" Color="{StaticResource NavBackgroundColor}" />
+    <SolidColorBrush x:Key="EditorChromeBrushLight" Color="{StaticResource WindowBackgroundColor}" />
+
+    <SolidColorBrush x:Key="EditorBorderBrush" Color="{StaticResource ControlBorderColor}" />
+    <SolidColorBrush x:Key="EditorBorderBrushSoft" Color="{StaticResource Gray8}" />
+
+    <SolidColorBrush x:Key="EditorTextPrimaryBrush" Color="{StaticResource TextColor}" />
+    <SolidColorBrush x:Key="EditorTextSecondaryBrush" Color="{StaticResource Gray2}" />
+    <SolidColorBrush x:Key="EditorTextMutedBrush" Color="{StaticResource Gray1}" />
+
+    <SolidColorBrush x:Key="EditorHoverBrush" Color="{StaticResource HoverColor}" />
+    <SolidColorBrush x:Key="EditorSelectionBrush" Color="{StaticResource SelectionStrongColor}" />
+    <SolidColorBrush x:Key="EditorPressedBrush" Color="{StaticResource PressedColor}" />
+
+    <SolidColorBrush x:Key="NavDomainHeaderBrush" Color="#2A343E" />
+    <SolidColorBrush x:Key="NavDomainHeaderHoverBrush" Color="#303C48" />
+    <SolidColorBrush x:Key="NavDomainHeaderExpandedBrush" Color="#36434F" />
+    <SolidColorBrush x:Key="NavDomainChildrenBrush" Color="#23282E" />
+
+    <SolidColorBrush x:Key="EditorWarningBrush" Color="{StaticResource MainRedColor}" />
+
+    <SolidColorBrush x:Key="EditorRowDefaultBrush" Color="{StaticResource ControlBackgroundColor}" />
+    <SolidColorBrush x:Key="EditorRowErrorBrush" Color="#4A2A2A" />
+    <SolidColorBrush x:Key="EditorRowWarningBrush" Color="#4A3D28" />
+    <SolidColorBrush x:Key="EditorRowUpdateBrush" Color="#28402F" />
+    <!--  Пометка к удалению — сиреневый, чтобы не совпадать с выделением строки  -->
+    <SolidColorBrush x:Key="EditorRowMarkedBrush" Color="#3A2E45" />
+
+    <SolidColorBrush x:Key="EditorDiagnosticErrorBrush" Color="{StaticResource MainRedColor}" />
+    <SolidColorBrush x:Key="EditorDiagnosticWarningBrush" Color="{StaticResource MainOrangeColor}" />
+    <SolidColorBrush x:Key="EditorDiagnosticUpdateBrush" Color="{StaticResource MainGreenColor}" />
+
+    <SolidColorBrush x:Key="EditorAccentBrush" Color="{StaticResource MainDarkBlueColor}" />
+    <SolidColorBrush x:Key="EditorProgressTrackBrush" Color="{StaticResource Gray8}" />
+
+    <SolidColorBrush x:Key="WorkspaceModuleHeaderBrush" Color="#2A343E" />
+    <SolidColorBrush x:Key="WorkspaceModuleHeaderSelectedBrush" Color="#36434F" />
+    <SolidColorBrush x:Key="WorkspaceGridSelectionBrush" Color="{StaticResource SelectionStrongColor}" />
+
+</ResourceDictionary>

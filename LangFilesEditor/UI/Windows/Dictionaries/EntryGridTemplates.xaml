@@ -1,0 +1,38 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/UI/Windows/Dictionaries/TranslationEntriesGridResources.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="EntryRuRuCellTemplate">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Values[ru-RU].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="EntryUkUaCellTemplate">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Values[uk-UA].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="EntryEnUsCellTemplate">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Values[en-US].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="EntryDeDeCellTemplate">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Values[de-DE].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="EntryEsEsCellTemplate">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Values[es-ES].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="EntryZhCnCellTemplate">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Values[zh-CN].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+</ResourceDictionary>

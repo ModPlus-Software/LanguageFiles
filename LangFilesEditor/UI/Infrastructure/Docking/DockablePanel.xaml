@@ -1,0 +1,65 @@
+<UserControl x:Class="LangFilesEditor.UI.Infrastructure.Docking.DockablePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="200"
+             d:DesignWidth="240"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch">
+
+    <Border Style="{StaticResource DockPanelChromeBorderStyle}">
+        <Grid x:Name="RootGrid">
+            <!--  Толщину рамки шапки задаёт code-behind: она зависит от стороны стыковки  -->
+            <Border x:Name="HeaderBorder"
+                    Style="{StaticResource DockPanelHeaderBorderStyle}"
+                    Cursor="SizeAll"
+                    MouseLeftButtonDown="OnHeaderMouseLeftButtonDown"
+                    MouseMove="OnHeaderMouseMove"
+                    MouseLeftButtonUp="OnHeaderMouseLeftButtonUp">
+                <Grid x:Name="HeaderLayout">
+                    <TextBlock x:Name="TitleText"
+                               Text="{Binding State.Title, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Foreground="{DynamicResource GrayBrush1}"
+                               FontWeight="SemiBold" />
+                    <StackPanel x:Name="HeaderButtons"
+                                Orientation="Horizontal">
+                        <!--  Значки заданы стилем явно: содержимое кнопки живёт в логическом
+                              дереве под самой кнопкой и ресурсы её шаблона не видит  -->
+                        <Button x:Name="CollapseButton"
+                                Style="{StaticResource DockChromeButtonStyle}"
+                                ToolTip="Collapse / expand"
+                                Click="OnCollapseClick">
+                            <TextBlock x:Name="CollapseGlyph"
+                                       Style="{StaticResource DockChromeGlyphStyle}"
+                                       FontFamily="Segoe MDL2 Assets"
+                                       Text="&#xE70D;" />
+                        </Button>
+                        <Button Style="{StaticResource DockChromeButtonStyle}"
+                                ToolTip="Pop out"
+                                Click="OnFloatClick">
+                            <TextBlock Style="{StaticResource DockChromeGlyphStyle}"
+                                       FontFamily="Segoe MDL2 Assets"
+                                       Text="&#xE7A7;" />
+                        </Button>
+                        <Button Style="{StaticResource DockChromeCloseButtonStyle}"
+                                ToolTip="Close"
+                                Click="OnCloseClick">
+                            <TextBlock Style="{StaticResource DockChromeGlyphStyle}"
+                                       FontFamily="Segoe MDL2 Assets"
+                                       Text="&#xE711;" />
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <ContentPresenter x:Name="ContentHost"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch"
+                              Content="{Binding PanelContent, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+        </Grid>
+    </Border>
+</UserControl>

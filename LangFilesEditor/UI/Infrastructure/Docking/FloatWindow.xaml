@@ -1,0 +1,14 @@
+<Window x:Class="LangFilesEditor.UI.Infrastructure.Docking.FloatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ShowInTaskbar="False"
+        ResizeMode="CanResize"
+        WindowStyle="SingleBorderWindow"
+        SizeToContent="Manual"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}"
+        FontFamily="{DynamicResource DefaultFont}">
+    <ContentControl x:Name="PanelHost"
+                    HorizontalContentAlignment="Stretch"
+                    VerticalContentAlignment="Stretch" />
+</Window>

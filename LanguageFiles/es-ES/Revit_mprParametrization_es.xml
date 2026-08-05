@@ -26,7 +26,9 @@
     <t19>Renumerar según posición en tabla</t19>
     <t20>Exportar configuración actual</t20>
     <t21>Importar estrategias a configuración actual</t21>
+    <!--todo remove after 4.1.33.0-->
     <t23>Importar reglas a estrategia actual</t23>
+    <!--todo remove after 4.1.33.0-->
     <t24>Exportar reglas de estrategia actual</t24>
     <t25>Guardar resultado vacío</t25>
     <t26>Guardar resultado vacío obtenido al calcular expresión en parámetro objetivo. Para parámetros de cadena, esta es una cadena vacía, para parámetros numéricos, es 0</t26>
@@ -97,7 +99,7 @@
     <t91>Contenido:</t91>
     <t93>Seleccione resultado del procesamiento de expresiones para ver una lista de ID de elementos procesados</t93>
     <t94>Modo limitado</t94>
-    <t95>Si no se ha especificado ningún filtro en la regla, se utilizará un filtro de estrategia general</t95>
+    <t95>Los filtros de la estrategia se aplican a todas las reglas para las que no se hayan definido filtros propios. Si en el filtro de la estrategia solo se especifica el filtro por categorías y en el filtro de la regla solo el filtro por parámetros, el resultado será un filtro combinado con las categorías y parámetros definidos. Y viceversa: en el filtro de la estrategia se pueden definir solo categorías y en el de la regla solo parámetros. Si en la regla se definen tanto el filtro por categorías como el filtro por parámetros, el filtro de la estrategia se ignorará</t95>
     <t96>Seleccionar vistas</t96>
     <t97>Origen de datos</t97>
     <t98>Filtro de estrategia</t98>
@@ -144,6 +146,14 @@
     <t139>No hay parámetros globales en el documento actual</t139>
     <t140>CONFIGURACIÓN DE ESTRATEGIAS</t140>
     <t141>de</t141>
+    <t142>Nombre y descripción</t142>
+    <t143>Abrir la guía de fórmulas</t143>
+    <t144>Prefiltro</t144>
+    <t145>El prefiltro reduce el conjunto de elementos simultáneamente para todas las reglas de la estrategia. A diferencia del filtro de estrategia, no se sustituye por el filtro de regla no rellenado, sino que se aplica de forma adicional: un elemento se procesará solo si pasa tanto el prefiltro como el filtro de regla. Por ejemplo, si en el prefiltro se establece la categoría "Muros" y el parámetro "Estructural", todas las reglas trabajarán únicamente con muros estructurales, seleccionando entre ellos los elementos según sus propias categorías y parámetros. Un prefiltro vacío no impone ninguna restricción</t145>
+    <t146>Exportar estrategia actual</t146>
+    <t147>Importar en la estrategia actual</t147>
+    <t148>Filtros de la estrategia</t148>
+    <t149>Prefiltros de la estrategia</t149>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -182,6 +192,8 @@
     <msg36>El valor "{0}" del parámetro "{1}" coincide con el valor calculado de la expresión</msg36>
     <msg37>El valor "{0}" del parámetro "{1}" no coincide con el valor calculado "{2}" de la expresión</msg37>
     <msg38>Se omitió el procesamiento del elemento porque el resultado de la evaluación de la expresión es la palabra clave SKIP_ELEMENT</msg38>
+    <msg39>Reglas n.º {0}: las categorías no coinciden con las categorías del prefiltro {1}. Estas reglas no procesarán ningún elemento</msg39>
+    <msg40>Reglas n.º {0}: las categorías solo coinciden parcialmente con las categorías del prefiltro {1}. Las categorías no coincidentes se descartarán</msg40>
     <err1>Cada expresión de una fórmula debe comenzar con parámetro objetivo "$[NombreDelParámetro]="</err1>
     <err2>Número de paréntesis de apertura debe ser igual al número de paréntesis de cierre</err2>
     <err3>Número de llaves de apertura debe ser igual al número de llaves de cierre</err3>
@@ -262,6 +274,7 @@
     <err79>Los parámetros de los subelementos de las conexiones estructurales no tienen la propiedad "HasValue"</err79>
     <err80>El pseudoparámetro ID no tiene la propiedad "HasValue"</err80>
     <err81>El elemento tiene varios parámetros con el nombre "{0}". Elimine el parámetro sobrante o utilice el nombre clave del parámetro (GUID para los parámetros compartidos, nombre del sistema para los parámetros incorporados)</err81>
+    <err82>El elemento con Id {0} no tiene geometría</err82>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -312,6 +325,8 @@
     <sld20>La estrategia procesa las piezas teniendo en cuenta los elementos originales a partir de los cuales se crean las piezas. Si una pieza se crea a partir de varios elementos originales, el primer elemento se considerará el elemento original</sld20>
     <ssd21>Procesamiento de elementos en conjuntos</ssd21>
     <sld21>La estrategia procesa los elementos ubicados en conjuntos</sld21>
+    <ssd22>Procesamiento de elementos específicos de la vista</ssd22>
+    <sld22>Procesa los elementos que existen únicamente dentro de una vista y no forman parte del modelo tridimensional: cotas, notas de texto, etiquetas, líneas de detalle y regiones rellenadas, así como el contenido de las láminas. Estos elementos están vinculados a la vista en la que se crearon y no se muestran en las demás. Los elementos de modelo, como muros, suelos o equipamiento, no se ven afectados</sld22>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -342,6 +357,7 @@
     <sp14>Insertar parámetro de elemento original</sp14>
     <se15>Conjunto</se15>
     <sp15>Insertar parámetro de conjunto</sp15>
+    <sp16>Insertar parámetro de vista</sp16>
     <te1>Elemento objetivo</te1>
     <tp1>Insertar parámetro de elemento objetivo</tp1>
     <te2>Ejemplar de familia</te2>
@@ -410,5 +426,9 @@
     <d-cvif>Busca la primera fila en la fuente de datos de la estrategia (archivo Excel) donde se cumplen todas las condiciones y devuelve el valor de la columna especificada de esa fila</d-cvif>
     <d-cvor>Busca la primera fila en la fuente de datos de la estrategia (archivo Excel) donde se cumple al menos una condición y devuelve el valor de la columna especificada de esa fila</d-cvor>
     <d-doctitle>Devuelve el título del documento actual</d-doctitle>
+    <d-targetbottomz>Devuelve la cota más baja (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targetbottomz>
+    <d-targettopz>Devuelve la cota más alta (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targettopz>
+    <d-sourcebottomz>Devuelve la cota más baja (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcebottomz>
+    <d-sourcetopz>Devuelve la cota más alta (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcetopz>
   </mprParametrization>
 </ModPlus>

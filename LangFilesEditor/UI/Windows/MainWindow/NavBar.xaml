@@ -1,0 +1,76 @@
+<UserControl x:Class="LangFilesEditor.UI.Windows.MainWindow.NavBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:models="clr-namespace:LangFilesEditor.Models"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <Style x:Key="NavBarTreeViewItemContainerStyle"
+               TargetType="TreeViewItem"
+               BasedOn="{StaticResource NavTreeViewItemStyle}">
+            <EventSetter Event="Expanded"
+                         Handler="NavTreeViewItem_Expanded" />
+            <EventSetter Event="Collapsed"
+                         Handler="NavTreeViewItem_Collapsed" />
+        </Style>
+    </UserControl.Resources>
+    <TreeView x:Name="NavTree"
+              Margin="0"
+              Padding="0"
+              ItemsSource="{Binding Domains}"
+              Background="{DynamicResource EditorChromeBrush}"
+              BorderThickness="0"
+              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+              ScrollViewer.CanContentScroll="False"
+              VirtualizingPanel.IsVirtualizing="False"
+              SelectedItemChanged="NavTree_OnSelectedItemChanged"
+              ItemContainerStyle="{StaticResource NavBarTreeViewItemContainerStyle}">
+        <TreeView.ItemTemplate>
+            <HierarchicalDataTemplate DataType="{x:Type models:Domain}"
+                                      ItemsSource="{Binding Modules}">
+                <TextBlock FontSize="12.5"
+                           FontWeight="SemiBold"
+                           Foreground="{DynamicResource EditorTextPrimaryBrush}"
+                           Text="{Binding Name}"
+                           TextTrimming="CharacterEllipsis" />
+                <HierarchicalDataTemplate.ItemTemplate>
+                    <DataTemplate DataType="{x:Type models:Module}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Viewbox Width="13"
+                                     Height="13"
+                                     Margin="0,0,6,0"
+                                     Visibility="{Binding HasIncorrectData, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                <Canvas Width="24"
+                                        Height="24">
+                                    <Path Data="M11,15H13V17H11V15M11,7H13V13H11V7M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20Z"
+                                          Fill="{DynamicResource EditorWarningBrush}" />
+                                </Canvas>
+                            </Viewbox>
+                            <TextBlock Grid.Column="1"
+                                       VerticalAlignment="Center"
+                                       FontSize="12"
+                                       Foreground="{DynamicResource EditorTextPrimaryBrush}"
+                                       Text="{Binding Name}"
+                                       TextTrimming="CharacterEllipsis" />
+                            <TextBlock Grid.Column="2"
+                                       Margin="8,0,10,0"
+                                       VerticalAlignment="Center"
+                                       FontSize="11"
+                                       Foreground="{DynamicResource EditorTextSecondaryBrush}"
+                                       Text="{Binding EntryCount}" />
+                        </Grid>
+                    </DataTemplate>
+                </HierarchicalDataTemplate.ItemTemplate>
+            </HierarchicalDataTemplate>
+        </TreeView.ItemTemplate>
+    </TreeView>
+</UserControl>

@@ -5,15 +5,16 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>LangFilesEditor.ico</ApplicationIcon>
+    <ApplicationIcon>Properties/LangFilesEditor.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="LangFilesEditor.ico" />
+    <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
+    <PackageReference Include="ModPlusAPI" Version="40.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
+    <PackageReference Include="ModPlus.Analyzer" Version="3.0.0" ExcludeAssets="runtime" />
   </ItemGroup>
-
+  
 </Project>

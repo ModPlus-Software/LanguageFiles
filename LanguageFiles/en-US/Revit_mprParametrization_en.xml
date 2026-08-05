@@ -26,7 +26,9 @@
     <t19>Renumber according to the position in the table</t19>
     <t20>Export current configuration</t20>
     <t21>Import strategies into current configuration</t21>
+    <!--todo remove after 4.1.33.0-->
     <t23>Import rules into current strategy</t23>
+    <!--todo remove after 4.1.33.0-->
     <t24>Export rules of current strategy</t24>
     <t25>Write empty result</t25>
     <t26>Write an empty result, obtained by calculating the expression, to the target parameter. For string parameters it is an empty string, for numeric parameters it is 0</t26>
@@ -97,7 +99,7 @@
     <t91>Table of Contents:</t91>
     <t93>Select the result of expression processing to see a list of processed element IDs</t93>
     <t94>Restricted mode</t94>
-    <t95>If no filter is specified in the rule, a common strategy filter will be used</t95>
+    <t95>The strategy filters apply to all rules for which no own filters elements are populated. If only the category filter is filled in the strategy filter and only the parameter filter is filled in the rule filter, the result will be a combined filter with specified categories and parameters. And vice versa, in the strategy filter you can set only categories, and in the rule filter only parameters. If both the category filter and the parameter filter are filled in the rule, the strategy filter will be ignored</t95>
     <t96>Select views</t96>
     <t97>Data source</t97>
     <t98>Strategy filter</t98>
@@ -144,6 +146,14 @@
     <t139>There are no global parameters in the current document</t139>
     <t140>STRATEGY SETTINGS</t140>
     <t141>of</t141>
+    <t142>Name and description</t142>
+    <t143>Open the formula guide</t143>
+    <t144>Pre-filter</t144>
+    <t145>The pre-filter narrows down the set of elements for all rules of the strategy at once. Unlike the strategy filter, it is not substituted for an unfilled rule filter but is applied in addition to it: an element will be processed only if it passes both the pre-filter and the rule filter. For example, if the pre-filter specifies the "Walls" category and the "Structural" parameter, all rules will operate only on structural walls, selecting elements among them by their own categories and parameters. An empty pre-filter imposes no restrictions</t145>
+    <t146>Export current strategy</t146>
+    <t147>Import into current strategy</t147>
+    <t148>Strategy filters</t148>
+    <t149>Strategy pre-filters</t149>
     <msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
     <msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
     <msg3>List of strategies is not empty</msg3>
@@ -182,6 +192,8 @@
     <msg36>The value "{0}" of parameter "{1}" matches the calculated value of the expression</msg36>
     <msg37>The value "{0}" of parameter "{1}" does not match the calculated value "{2}" of the expression</msg37>
     <msg38>Element processing skipped because the expression evaluation result is the keyword SKIP_ELEMENT</msg38>
+    <msg39>Rules № {0}: categories do not intersect with the categories of the pre-filter {1}. These rules will not process any elements</msg39>
+    <msg40>Rules № {0}: categories only partially fall within the categories of the pre-filter {1}. Non-matching categories will be discarded</msg40>
     <err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
     <err2>The number of opening round brackets must equal the number of closing ones</err2>
     <err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -262,6 +274,7 @@
     <err79>Parameters of structural connection sub-elements do not have the "HasValue" property</err79>
     <err80>The pseudo parameter ID does not have the "HasValue" property</err80>
     <err81>The element has multiple parameters named "{0}". Remove the redundant parameter or use the parameter's key name (GUID for shared parameters, system name for built-in parameters)</err81>
+    <err82>The element with Id {0} has no geometry</err82>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -312,6 +325,8 @@
     <sld20>Strategy processes Parts taking into account the source elements from which the Parts are created. If a part is created from several source elements, the first element will be considered the source element</sld20>
     <ssd21>Processing elements in assemblies</ssd21>
     <sld21>The strategy processes elements located in assemblies</sld21>
+    <ssd22>Processing view-specific elements</ssd22>
+    <sld22>Processes elements that exist only within a single view and are not part of the 3D model: dimensions, text notes, tags, detail lines and filled regions, and sheet contents. Such elements are bound to the view on which they were created and are not displayed on other views. Model elements such as walls, floors, or equipment are not affected</sld22>
     <se1>Host</se1>
     <sp1>Insert Host parameter</sp1>
     <se2>Group</se2>
@@ -342,6 +357,7 @@
     <sp14>Insert source element parameter</sp14>
     <se15>Assembly</se15>
     <sp15>Insert assembly parameter</sp15>
+    <sp16>Insert view parameter</sp16>
     <te1>Target element</te1>
     <tp1>Insert parameter of target element</tp1>
     <te2>Family instance</te2>
@@ -410,5 +426,9 @@
     <d-cvif>Searches for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
     <d-cvor>Searches for the first row in the strategy data source (Excel file) where at least one condition is met and returns the value from the specified column of that row</d-cvor>
     <d-doctitle>Returns the title of the current document</d-doctitle>
+    <d-targetbottomz>Returns the lowest elevation (Z) from the geometry of the target element. The elevation is returned in millimeters, rounded to 3 decimal places</d-targetbottomz>
+    <d-targettopz>Returns the highest elevation (Z) from the geometry of the target element. The elevation is returned in millimeters, rounded to 3 decimal places</d-targettopz>
+    <d-sourcebottomz>Returns the lowest elevation (Z) from the geometry of the conditional source element. The elevation is returned in millimeters, rounded to 3 decimal places</d-sourcebottomz>
+    <d-sourcetopz>Returns the highest elevation (Z) from the geometry of the conditional source element. The elevation is returned in millimeters, rounded to 3 decimal places</d-sourcetopz>
   </mprParametrization>
 </ModPlus>
