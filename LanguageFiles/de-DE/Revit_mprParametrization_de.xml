@@ -100,6 +100,7 @@
     <t93>Wählen Sie das Ergebnis der Ausdrucksverarbeitung aus, um eine Liste mit den IDs der verarbeiteten Elemente anzeigen zu lassen</t93>
     <t94>Eingeschränkter Modus</t94>
     <t95>Die Filter der Strategie gelten für alle Regeln, für die keine eigenen Elementfilter definiert sind. Wenn im Strategiefilter nur der Kategoriefilter ausgefüllt ist und im Regel-Filter nur der Parameterfilter, entsteht ein kombinierter Filter mit den angegebenen Kategorien und Parametern. Umgekehrt können im Strategiefilter nur Kategorien und im Regel-Filter nur Parameter definiert werden. Sind in einer Regel sowohl der Kategoriefilter als auch der Parameterfilter ausgefüllt, wird der Strategiefilter ignoriert</t95>
+    <!--todo remove after 4.1.33.0-->
     <t96>Wählen Sie Ansichten aus</t96>
     <t97>Datenquelle</t97>
     <t98>Strategiefilter</t98>
@@ -133,6 +134,7 @@
     <t126>Überprüfen</t126>
     <t127>Ein vollständiger Parametrisierungszyklus für die ausgewählten Regeln der ausgewählten Strategien wird durchgeführt, aber anstatt einer Zuweisung wird ein Vergleich zwischen dem Berechnungsergebnis der Formel und dem aktuellen Wert des Zielparameters durchgeführt</t127>
     <t128>Überprüfungsergebnisse</t128>
+    <!--todo remove after 4.1.33.0-->
     <t129>Ansichten ausgewählt:</t129>
     <t130>Verknüpfte Dateien auswählen</t130>
     <t131>Geben Sie die verknüpften Dateien an, in denen die Suche nach Elementen durchgeführt wird</t131>
@@ -147,7 +149,7 @@
     <t140>STRATEGIE-EINSTELLUNGEN</t140>
     <t141>von</t141>
     <t142>Name und Beschreibung</t142>
-    <t143>Formel-Anleitung öffnen</t143>
+    <t143>Anleitung öffnen</t143>
     <t144>Vorfilter</t144>
     <t145>Der Vorfilter grenzt den Elementsatz für alle Regeln der Strategie gleichzeitig ein. Im Gegensatz zum Strategiefilter wird er nicht anstelle eines nicht ausgefüllten Regelfilters eingesetzt, sondern zusätzlich zu diesem angewendet: Ein Element wird nur dann verarbeitet, wenn es sowohl den Vorfilter als auch den Regelfilter passiert. Wenn beispielsweise im Vorfilter die Kategorie „Wände" und der Parameter „Tragend" festgelegt werden, arbeiten alle Regeln nur mit tragenden Wänden und wählen daraus Elemente nach ihren eigenen Kategorien und Parametern aus. Ein leerer Vorfilter schränkt nichts ein</t145>
     <t146>Aktuelle Strategie exportieren</t146>
@@ -167,6 +169,25 @@
     <t160>Gruppe umbenennen</t160>
     <t161>Gruppe löschen. Die Konfigurationen dieser Gruppe werden nicht gelöscht — sie bleiben ohne Gruppe</t161>
     <t162>Anzahl der Konfigurationen in der Gruppe</t162>
+    <t163>Gruppe</t163>
+    <t164>Parameter oder Ausdruck, zum Beispiel $[Typname]</t164>
+    <t168>Groß- und Kleinschreibung ignorieren</t168>
+    <t169>Sortieren</t169>
+    <t170>Absteigend</t170>
+    <t171>Innerhalb der Gruppe sortieren nach, zum Beispiel $[Länge]</t171>
+    <t172>Elemente mit demselben Wert bilden eine Gruppe</t172>
+    <t173>Gruppierung ist nicht festgelegt</t173>
+    <t174>Gruppieren nach</t174>
+    <t178>Innerhalb der Gruppe sortieren nach</t178>
+    <t179>Werte ohne Berücksichtigung der Groß- und Kleinschreibung vergleichen. Auf numerische Werte hat dies keinen Einfluss</t179>
+    <t180>Die Elemente innerhalb der Gruppe sortieren. Beeinflusst das Ergebnis der Funktion GIndex und die Reihenfolge der Werte in GJoin</t180>
+    <t181>Absteigend sortieren. Wirkt nur, wenn die Sortierung aktiviert ist</t181>
+    <t183>Gruppierung</t183>
+    <t184>Zuordnung</t184>
+    <t185>Das bedingte Quellelement wird dem Zielelement zugeordnet, wenn dieser Wert mit dem Wert der Gruppierung der Zielelemente übereinstimmt</t185>
+    <t186>Zuordnen nach</t186>
+    <t187>Parameter oder Ausdruck, zum Beispiel @[Typname]</t187>
+    <t188>Zuordnung ist nicht festgelegt</t188>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -210,6 +231,7 @@
     <msg41>Der Ausdruck wurde übersprungen: Er ist mit "Nur zur Prüfung" markiert und wird nur im Modus "Prüfen" verarbeitet</msg41>
     <msg42>Der Wert "{0}" des Parameters "{1}" erfüllt die Bedingung "{2} {3}"</msg42>
     <msg43>Der Wert "{0}" des Parameters "{1}" erfüllt die Bedingung "{2} {3}" nicht</msg43>
+    <msg44>Das Element wurde übersprungen: Der Gruppierungsschlüssel wurde als leer berechnet</msg44>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -291,6 +313,21 @@
     <err80>Der Pseudo-Parameter ID hat keine Eigenschaft "HasValue"</err80>
     <err81>Das Element hat mehrere Parameter mit dem Namen "{0}". Entfernen Sie den überflüssigen Parameter oder verwenden Sie den Schlüsselnamen des Parameters (GUID für gemeinsam genutzte Parameter, Systemname für integrierte Parameter)</err81>
     <err82>Das Element mit der Id {0} hat keine Geometrie</err82>
+    <err83>Es konnte nicht ermittelt werden, für welche Elemente der Gruppe die Aggregatfunktion berechnet werden soll: Der Funktionskörper enthält keinen einzigen Elementparameter</err83>
+    <err84>Das Argument der Funktion muss der Buchstabe "s" (bedingte Quellelemente) oder "t" (Zielelemente) sein</err84>
+    <err85>Die Funktion muss einen Ausdruck enthalten, der für jedes Element der Gruppe berechnet wird</err85>
+    <err86>Die Funktion muss zwei oder drei Argumente enthalten</err86>
+    <err87>Das dritte Argument der Funktion darf nur die Buchstaben "d", "s" und "r" enthalten</err87>
+    <err88>Die Funktion gibt die laufende Nummer des Zielelements zurück, daher ist der Buchstabe "t" das einzige zulässige Argument</err88>
+    <err89>Die Strategie hat ein bedingtes Quellelement, daher muss die Rolle der Gruppenelemente ausdrücklich angegeben werden: "s" - bedingte Quellelemente, "t" - Zielelemente</err89>
+    <err90>Im Ausdruck des Gruppierungsschlüssels sind nur Parameter und Funktionen für die Arbeit mit Zeichenfolgen und Zahlen zulässig</err90>
+    <err91>Regel {0}: Die Zuordnung der bedingten Quellelemente wird in dieser Strategie nicht verwendet - das bedingte Quellelement ergibt sich aus seiner Beziehung zum Zielelement</err91>
+    <err92>Regel {0}: Die Zuordnung der bedingten Quellelemente ist festgelegt, die Gruppierung der Zielelemente jedoch nicht - es gibt nichts, womit zugeordnet werden könnte</err92>
+    <err93>Regel {0}: Die Rückschreibe-Funktionen SUM und JOIN können nicht zusammen mit der Gruppierung verwendet werden</err93>
+    <err94>Im Zuordnungsausdruck dürfen keine Parameter des Zielelements verwendet werden: Zum Zeitpunkt seiner Auswertung ist das Zielelement noch nicht gewählt</err94>
+    <err95>Die Funktion muss ein oder zwei Argumente enthalten: einen Spalten- (Zeilen-) Verweis und einen optionalen Zellbereich, getrennt durch zwei Punkte ".."</err95>
+    <err96>Die Zeilennummer "{0}" muss eine positive ganze Zahl sein</err96>
+    <err97>Der Zellbereich "{0}" muss zwei durch zwei Punkte ".." getrennte Grenzen enthalten</err97>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -396,6 +433,7 @@
     <ft2>Logische Funktionen</ft2>
     <ft3>Modifizierende Funktionen</ft3>
     <ft4>Get-Value-Funktionen</ft4>
+    <ft5>Aggregatfunktionen</ft5>
     <d-min>Gibt die kleinere der beiden Zahlen zurück</d-min>
     <d-max>Gibt die größere der beiden Zahlen zurück</d-max>
     <d-abs>Gibt den absoluten Wert der Zahl zurück</d-abs>
@@ -446,5 +484,17 @@
     <d-targettopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targettopz>
     <d-sourcebottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcebottomz>
     <d-sourcetopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcetopz>
+    <d-gsum>Gibt die Summe der Ausdruckswerte über die Elemente der Gruppe zurück</d-gsum>
+    <d-gcount>Gibt die Anzahl der Gruppenelemente der angegebenen Rolle zurück: "s" - bedingte Quellelemente, "t" - Zielelemente</d-gcount>
+    <d-gjoin>Verbindet die Ausdruckswerte über die Elemente der Gruppe mit dem angegebenen Trennzeichen</d-gjoin>
+    <d-gmin>Gibt den kleinsten Wert des Ausdrucks über die Elemente der Gruppe zurück</d-gmin>
+    <d-gmax>Gibt den größten Wert des Ausdrucks über die Elemente der Gruppe zurück</d-gmax>
+    <d-gavg>Gibt den Durchschnittswert des Ausdrucks über die Elemente der Gruppe zurück</d-gavg>
+    <d-gindex>Gibt die laufende Nummer des Zielelements innerhalb der Gruppe zurück</d-gindex>
+    <d-ranges>Fasst Folgen aufeinanderfolgender ganzer Zahlen zu Bereichen der Form 1-3 zusammen</d-ranges>
+    <d-ccmin>Gibt den Mindestwert aus einer Spalte der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-ccmin>
+    <d-ccmax>Gibt den Höchstwert aus einer Spalte der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-ccmax>
+    <d-crmin>Gibt den Mindestwert aus einer Zeile der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-crmin>
+    <d-crmax>Gibt den Höchstwert aus einer Zeile der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-crmax>
   </mprParametrization>
 </ModPlus>

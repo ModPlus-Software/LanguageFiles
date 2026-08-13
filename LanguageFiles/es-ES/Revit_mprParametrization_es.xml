@@ -100,6 +100,7 @@
     <t93>Seleccione resultado del procesamiento de expresiones para ver una lista de ID de elementos procesados</t93>
     <t94>Modo limitado</t94>
     <t95>Los filtros de la estrategia se aplican a todas las reglas para las que no se hayan definido filtros propios. Si en el filtro de la estrategia solo se especifica el filtro por categorías y en el filtro de la regla solo el filtro por parámetros, el resultado será un filtro combinado con las categorías y parámetros definidos. Y viceversa: en el filtro de la estrategia se pueden definir solo categorías y en el de la regla solo parámetros. Si en la regla se definen tanto el filtro por categorías como el filtro por parámetros, el filtro de la estrategia se ignorará</t95>
+    <!--todo remove after 4.1.33.0-->
     <t96>Seleccionar vistas</t96>
     <t97>Origen de datos</t97>
     <t98>Filtro de estrategia</t98>
@@ -133,6 +134,7 @@
     <t126>Comprobar</t126>
     <t127>Se ejecutará un ciclo completo de parametrización para las reglas seleccionadas de las estrategias seleccionadas, pero en lugar de asignación, se realizará una comparación entre el resultado del cálculo de la fórmula y el valor actual del parámetro objetivo</t127>
     <t128>Resultados de la comprobación</t128>
+    <!--todo remove after 4.1.33.0-->
     <t129>Vistas seleccionadas:</t129>
     <t130>Seleccionar archivos vinculados</t130>
     <t131>Especifique los archivos vinculados en los que se realizará la búsqueda de elementos</t131>
@@ -147,7 +149,7 @@
     <t140>CONFIGURACIÓN DE ESTRATEGIAS</t140>
     <t141>de</t141>
     <t142>Nombre y descripción</t142>
-    <t143>Abrir la guía de fórmulas</t143>
+    <t143>Abrir la guía</t143>
     <t144>Prefiltro</t144>
     <t145>El prefiltro reduce el conjunto de elementos simultáneamente para todas las reglas de la estrategia. A diferencia del filtro de estrategia, no se sustituye por el filtro de regla no rellenado, sino que se aplica de forma adicional: un elemento se procesará solo si pasa tanto el prefiltro como el filtro de regla. Por ejemplo, si en el prefiltro se establece la categoría "Muros" y el parámetro "Estructural", todas las reglas trabajarán únicamente con muros estructurales, seleccionando entre ellos los elementos según sus propias categorías y parámetros. Un prefiltro vacío no impone ninguna restricción</t145>
     <t146>Exportar estrategia actual</t146>
@@ -167,6 +169,25 @@
     <t160>Cambiar el nombre del grupo</t160>
     <t161>Eliminar el grupo. Las configuraciones del grupo no se eliminan — quedarán sin grupo</t161>
     <t162>Número de configuraciones en el grupo</t162>
+    <t163>grupo</t163>
+    <t164>Parámetro o expresión, por ejemplo $[Nombre de tipo]</t164>
+    <t168>Ignorar mayúsculas y minúsculas</t168>
+    <t169>Ordenar</t169>
+    <t170>Descendente</t170>
+    <t171>Ordenar dentro del grupo por, por ejemplo $[Longitud]</t171>
+    <t172>Los elementos con el mismo valor forman un grupo</t172>
+    <t173>La agrupación no está definida</t173>
+    <t174>Agrupar por</t174>
+    <t178>Ordenar dentro del grupo por</t178>
+    <t179>Comparar los valores sin distinguir mayúsculas y minúsculas. No afecta a los valores numéricos</t179>
+    <t180>Ordenar los elementos dentro del grupo. Afecta al resultado de la función GIndex y al orden de los valores en GJoin</t180>
+    <t181>Ordenar de forma descendente. Solo se aplica si la ordenación está activada</t181>
+    <t183>Agrupación</t183>
+    <t184>Correspondencia</t184>
+    <t185>El elemento original condicional se asigna al elemento objetivo cuando este valor coincide con el valor de la agrupación de los elementos objetivo</t185>
+    <t186>Corresponder por</t186>
+    <t187>Parámetro o expresión, por ejemplo @[Nombre de tipo]</t187>
+    <t188>La correspondencia no está indicada</t188>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -210,6 +231,7 @@
     <msg41>La expresión se omitió: está marcada como "Solo para comprobación" y se procesa únicamente en el modo "Comprobar"</msg41>
     <msg42>El valor "{0}" del parámetro "{1}" cumple la condición "{2} {3}"</msg42>
     <msg43>El valor "{0}" del parámetro "{1}" no cumple la condición "{2} {3}"</msg43>
+    <msg44>Elemento omitido: la clave de agrupación se calculó como vacía</msg44>
     <err1>Cada expresión de una fórmula debe comenzar con parámetro objetivo "$[NombreDelParámetro]="</err1>
     <err2>Número de paréntesis de apertura debe ser igual al número de paréntesis de cierre</err2>
     <err3>Número de llaves de apertura debe ser igual al número de llaves de cierre</err3>
@@ -291,6 +313,21 @@
     <err80>El pseudoparámetro ID no tiene la propiedad "HasValue"</err80>
     <err81>El elemento tiene varios parámetros con el nombre "{0}". Elimine el parámetro sobrante o utilice el nombre clave del parámetro (GUID para los parámetros compartidos, nombre del sistema para los parámetros incorporados)</err81>
     <err82>El elemento con Id {0} no tiene geometría</err82>
+    <err83>No se ha podido determinar para qué elementos del grupo se debe calcular la función de agregación: el cuerpo de la función no contiene ningún parámetro de elemento</err83>
+    <err84>El argumento de la función debe ser la letra "s" (elementos original condicional) o "t" (elementos objetivo)</err84>
+    <err85>La función debe contener una expresión que se calcula para cada elemento del grupo</err85>
+    <err86>Función debe contener dos o tres argumentos</err86>
+    <err87>El tercer argumento de la función solo puede contener las letras "d", "s" y "r"</err87>
+    <err88>La función devuelve el número de orden del elemento objetivo, por lo que el único argumento admitido es la letra "t"</err88>
+    <err89>La estrategia tiene elemento original condicional, por lo que el rol de los elementos del grupo debe indicarse explícitamente: "s" - original condicional, "t" - objetivo</err89>
+    <err90>En la expresión de la clave de agrupación solo se admiten parámetros y funciones de trabajo con cadenas y números</err90>
+    <err91>Regla {0}: la correspondencia de los elementos originales condicionales no se aplica en esta estrategia: el elemento original condicional se conoce por su relación con el elemento objetivo</err91>
+    <err92>Regla {0}: se ha indicado la correspondencia de los elementos originales condicionales, pero no la agrupación de los elementos objetivo: no hay con qué compararla</err92>
+    <err93>Regla {0}: las funciones de escritura inversa SUM y JOIN no se pueden utilizar junto con la agrupación</err93>
+    <err94>En la expresión de correspondencia no se pueden usar parámetros del elemento objetivo: en el momento de evaluarla el elemento objetivo aún no está elegido</err94>
+    <err95>La función debe contener uno o dos argumentos: un indicador de columna (fila) y un rango de celdas opcional separado por dos puntos ".."</err95>
+    <err96>El número de fila "{0}" debe ser un entero positivo</err96>
+    <err97>El rango de celdas "{0}" debe contener dos límites separados por dos puntos ".."</err97>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -396,6 +433,7 @@
     <ft2>Funciones lógicas</ft2>
     <ft3>Funciones de modificación</ft3>
     <ft4>Funciones para obtener valor</ft4>
+    <ft5>Funciones de agregación</ft5>
     <d-min>Devuelve el menor de números</d-min>
     <d-max>Devuelve el mayor de números</d-max>
     <d-abs>Devuelve valor absoluto de un número</d-abs>
@@ -446,5 +484,17 @@
     <d-targettopz>Devuelve la cota más alta (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targettopz>
     <d-sourcebottomz>Devuelve la cota más baja (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcebottomz>
     <d-sourcetopz>Devuelve la cota más alta (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcetopz>
+    <d-gsum>Devuelve la suma de los valores de la expresión de los elementos del grupo</d-gsum>
+    <d-gcount>Devuelve el número de elementos del grupo del rol indicado: "s" - original condicional, "t" - objetivo</d-gcount>
+    <d-gjoin>Une los valores de la expresión de los elementos del grupo mediante el separador indicado</d-gjoin>
+    <d-gmin>Devuelve el valor mínimo de la expresión de los elementos del grupo</d-gmin>
+    <d-gmax>Devuelve el valor máximo de la expresión de los elementos del grupo</d-gmax>
+    <d-gavg>Devuelve el valor medio de la expresión de los elementos del grupo</d-gavg>
+    <d-gindex>Devuelve el número de orden del elemento objetivo dentro del grupo</d-gindex>
+    <d-ranges>Contrae las secuencias de números enteros consecutivos en intervalos del tipo 1-3</d-ranges>
+    <d-ccmin>Devuelve el valor mínimo de una columna de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-ccmin>
+    <d-ccmax>Devuelve el valor máximo de una columna de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-ccmax>
+    <d-crmin>Devuelve el valor mínimo de una fila de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-crmin>
+    <d-crmax>Devuelve el valor máximo de una fila de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-crmax>
   </mprParametrization>
 </ModPlus>
