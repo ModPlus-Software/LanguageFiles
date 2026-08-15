@@ -297,7 +297,7 @@
     <err64>Los parámetros clave "ToRoom" y "FromRoom" sólo se pueden utilizar al procesar familias en las categorías "Puertas", "Ventanas"</err64>
     <err65>En el modelo no se ha encontrado ningún elemento original que coincidiera con las condiciones de filtración</err65>
     <err66>Los datos para asignar el resultado de evaluación de expresión no están definidos</err66>
-    <err67>Cada expresión en la fórmula debe comenzar con parámetro objetivo"$[NombreDelParámetro]=" o con la función de guardar la combinación de resultados en el elemento original condicional "JOIN(@[NombreDelParámetro],)=", o con la función de guardar la suma de resultados en el elemento original condicional "SUM(@[NombreDelParámetro])="</err67>
+    <err67>Cada expresión en la fórmula debe comenzar con el parámetro objetivo "$[NombreDelParámetro]=" o con una función de escritura inversa que guarda el resultado en el elemento original condicional: "SUM(@[NombreDelParámetro])=", "MIN(@[NombreDelParámetro])=", "MAX(@[NombreDelParámetro])=", "AVG(@[NombreDelParámetro])=", "FIRST(@[NombreDelParámetro])=", "LAST(@[NombreDelParámetro])=" o "JOIN(@[NombreDelParámetro],)="</err67>
     <err68>No se puede obtener número de valor "{0}"</err68>
     <err69>No se puede guardar el resultado en el elemento original condicional desde el archivo vinculado</err69>
     <err70>Elemento está ocupado por el usuario "{0}" y no está disponible para cambiar</err70>
@@ -323,11 +323,12 @@
     <err90>En la expresión de la clave de agrupación solo se admiten parámetros y funciones de trabajo con cadenas y números</err90>
     <err91>Regla {0}: la correspondencia de los elementos originales condicionales no se aplica en esta estrategia: el elemento original condicional se conoce por su relación con el elemento objetivo</err91>
     <err92>Regla {0}: se ha indicado la correspondencia de los elementos originales condicionales, pero no la agrupación de los elementos objetivo: no hay con qué compararla</err92>
-    <err93>Regla {0}: las funciones de escritura inversa SUM y JOIN no se pueden utilizar junto con la agrupación</err93>
+    <err93>Regla {0}: las funciones de escritura inversa no se pueden utilizar junto con la agrupación</err93>
     <err94>En la expresión de correspondencia no se pueden usar parámetros del elemento objetivo: en el momento de evaluarla el elemento objetivo aún no está elegido</err94>
     <err95>La función debe contener uno o dos argumentos: un indicador de columna (fila) y un rango de celdas opcional separado por dos puntos ".."</err95>
     <err96>El número de fila "{0}" debe ser un entero positivo</err96>
     <err97>El rango de celdas "{0}" debe contener dos límites separados por dos puntos ".."</err97>
+    <err98>El segundo argumento de la función solo puede ser la letra "s": ordenar los valores antes de elegir</err98>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -496,5 +497,12 @@
     <d-ccmax>Devuelve el valor máximo de una columna de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-ccmax>
     <d-crmin>Devuelve el valor mínimo de una fila de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-crmin>
     <d-crmax>Devuelve el valor máximo de una fila de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-crmax>
+    <d-wb-avg>Guarda el promedio de los resultados en un parámetro del elemento original condicional</d-wb-avg>
+    <d-wb-first>Guarda el primer resultado en un parámetro del elemento original condicional</d-wb-first>
+    <d-wb-join>Guarda los resultados unidos con un separador en un parámetro del elemento original condicional</d-wb-join>
+    <d-wb-last>Guarda el último resultado en un parámetro del elemento original condicional</d-wb-last>
+    <d-wb-max>Guarda el resultado máximo en un parámetro del elemento original condicional</d-wb-max>
+    <d-wb-min>Guarda el resultado mínimo en un parámetro del elemento original condicional</d-wb-min>
+    <d-wb-sum>Guarda la suma de los resultados en un parámetro del elemento original condicional</d-wb-sum>
   </mprParametrization>
 </ModPlus>

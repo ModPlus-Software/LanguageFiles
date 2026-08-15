@@ -297,7 +297,7 @@
     <err64>Die Schlüsselparameter "ToRoom" und "FromRoom" dürfen ausschließlich bei der Bearbeitung von Familien in den Kategorien "Türen", "Fenster" verwendet werden</err64>
     <err65>Kein den Filterbedingungen entsprechendes Quellelement ist im Modell gefunden</err65>
     <err66>Keine Daten zur Zuordnung des Ergebnisses der Ausdruckauswertung sind definiert</err66>
-    <err67>Jeder Ausdruck der Formel muss mit dem Zielparameter "$[ParemeterName]=" oder mit der Funktion zum Schreiben der Ergebniskombination in das bedingte Quellelement "JOIN(@[ParameterName],)=", oder mit der Funktion zum Schreiben der Summe der Ergebnisse in das bedingte Quellelement "SUM(@[ParameterName])=" anfangen</err67>
+    <err67>Jeder Ausdruck der Formel muss mit dem Zielparameter "$[ParameterName]=" oder mit einer Rückschreibe-Funktion anfangen, die das Ergebnis in das bedingte Quellelement schreibt: "SUM(@[ParameterName])=", "MIN(@[ParameterName])=", "MAX(@[ParameterName])=", "AVG(@[ParameterName])=", "FIRST(@[ParameterName])=", "LAST(@[ParameterName])=" oder "JOIN(@[ParameterName],)="</err67>
     <err68>Aus dem Wert "{0}" konnte keine Zahl abgerufen werden</err68>
     <err69>Das Ergebnis kann nicht aus der verknüpften Datei in das bedingte Quellelement geschrieben werden</err69>
     <err70>Das Element wird aktuell vom Benutzer "{0}" verwendet und kann nicht geändert werden</err70>
@@ -323,11 +323,12 @@
     <err90>Im Ausdruck des Gruppierungsschlüssels sind nur Parameter und Funktionen für die Arbeit mit Zeichenfolgen und Zahlen zulässig</err90>
     <err91>Regel {0}: Die Zuordnung der bedingten Quellelemente wird in dieser Strategie nicht verwendet - das bedingte Quellelement ergibt sich aus seiner Beziehung zum Zielelement</err91>
     <err92>Regel {0}: Die Zuordnung der bedingten Quellelemente ist festgelegt, die Gruppierung der Zielelemente jedoch nicht - es gibt nichts, womit zugeordnet werden könnte</err92>
-    <err93>Regel {0}: Die Rückschreibe-Funktionen SUM und JOIN können nicht zusammen mit der Gruppierung verwendet werden</err93>
+    <err93>Regel {0}: Rückschreibe-Funktionen können nicht zusammen mit der Gruppierung verwendet werden</err93>
     <err94>Im Zuordnungsausdruck dürfen keine Parameter des Zielelements verwendet werden: Zum Zeitpunkt seiner Auswertung ist das Zielelement noch nicht gewählt</err94>
     <err95>Die Funktion muss ein oder zwei Argumente enthalten: einen Spalten- (Zeilen-) Verweis und einen optionalen Zellbereich, getrennt durch zwei Punkte ".."</err95>
     <err96>Die Zeilennummer "{0}" muss eine positive ganze Zahl sein</err96>
     <err97>Der Zellbereich "{0}" muss zwei durch zwei Punkte ".." getrennte Grenzen enthalten</err97>
+    <err98>Das zweite Argument der Funktion darf nur der Buchstabe "s" sein - die Werte vor der Auswahl sortieren</err98>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -496,5 +497,12 @@
     <d-ccmax>Gibt den Höchstwert aus einer Spalte der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-ccmax>
     <d-crmin>Gibt den Mindestwert aus einer Zeile der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-crmin>
     <d-crmax>Gibt den Höchstwert aus einer Zeile der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-crmax>
+    <d-wb-avg>Schreibt den Mittelwert der Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-avg>
+    <d-wb-first>Schreibt das erste Ergebnis in einen Parameter des bedingten Quellelements</d-wb-first>
+    <d-wb-join>Schreibt die mit einem Trennzeichen verbundenen Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-join>
+    <d-wb-last>Schreibt das letzte Ergebnis in einen Parameter des bedingten Quellelements</d-wb-last>
+    <d-wb-max>Schreibt das größte Ergebnis in einen Parameter des bedingten Quellelements</d-wb-max>
+    <d-wb-min>Schreibt das kleinste Ergebnis in einen Parameter des bedingten Quellelements</d-wb-min>
+    <d-wb-sum>Schreibt die Summe der Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-sum>
   </mprParametrization>
 </ModPlus>

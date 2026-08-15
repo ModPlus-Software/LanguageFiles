@@ -297,7 +297,7 @@
     <err64>The "ToRoom" and "FromRoom" key parameters may only be used when processing families in the "Doors", "Windows" categories</err64>
     <err65>No source element matching the filtering conditions was found in the model</err65>
     <err66>The data for assigning the result of an expression calculation is not defined</err66>
-    <err67>Each expression in the formula must begin with the target parameter "$[Parameter Name]=", or with the function of writing the join of results to the conditional source element "JOIN(@[Parameter Name],)=", or with the function of writing the sum of results to the conditional source element "SUM(@[Parameter Name])="</err67>
+    <err67>Each expression in the formula must begin with the target parameter "$[Parameter Name]=" or with a write-back function that writes the result to the conditional source element: "SUM(@[Parameter Name])=", "MIN(@[Parameter Name])=", "MAX(@[Parameter Name])=", "AVG(@[Parameter Name])=", "FIRST(@[Parameter Name])=", "LAST(@[Parameter Name])=" or "JOIN(@[Parameter Name],)="</err67>
     <err68>Failed to retrieve a number from the value "{0}"</err68>
     <err69>Unable to write the result to a conditional source element from a linked file</err69>
     <err70>Element is occupied by user "{0}" and is not available for modification</err70>
@@ -323,11 +323,12 @@
     <err90>Only parameters and functions for working with strings and numbers are allowed in the grouping key expression</err90>
     <err91>Rule {0}: matching of the conditionally source elements is not used in this strategy - the conditionally source element is known from its relation to the target element</err91>
     <err92>Rule {0}: matching of the conditionally source elements is set, but the grouping of the target elements is not - there is nothing to match against</err92>
-    <err93>Rule {0}: the write-back functions SUM and JOIN cannot be used together with grouping</err93>
+    <err93>Rule {0}: write-back functions cannot be used together with grouping</err93>
     <err94>Parameters of the target element cannot be used in the matching expression: at the moment it is calculated the target element is not chosen yet</err94>
     <err95>The function must contain one or two arguments: a column (row) pointer and an optional cell range separated by two dots ".."</err95>
     <err96>Row number "{0}" must be a positive integer</err96>
     <err97>Cell range "{0}" must contain two bounds separated by two dots ".."</err97>
+    <err98>The second argument of the function can only be the letter "s" - sort the values before picking</err98>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -496,5 +497,12 @@
     <d-ccmax>Returns the maximum value from a column of the strategy data source. Cells whose value cannot be converted to a number are skipped</d-ccmax>
     <d-crmin>Returns the minimum value from a row of the strategy data source. Cells whose value cannot be converted to a number are skipped</d-crmin>
     <d-crmax>Returns the maximum value from a row of the strategy data source. Cells whose value cannot be converted to a number are skipped</d-crmax>
+    <d-wb-avg>Writes the average of the results to a parameter of the conditional source element</d-wb-avg>
+    <d-wb-first>Writes the first result to a parameter of the conditional source element</d-wb-first>
+    <d-wb-join>Writes the results joined with a separator to a parameter of the conditional source element</d-wb-join>
+    <d-wb-last>Writes the last result to a parameter of the conditional source element</d-wb-last>
+    <d-wb-max>Writes the maximum result to a parameter of the conditional source element</d-wb-max>
+    <d-wb-min>Writes the minimum result to a parameter of the conditional source element</d-wb-min>
+    <d-wb-sum>Writes the sum of the results to a parameter of the conditional source element</d-wb-sum>
   </mprParametrization>
 </ModPlus>
