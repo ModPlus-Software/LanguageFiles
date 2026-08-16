@@ -334,6 +334,9 @@
     <err98>The second argument of the function can only be the letter "s" - sort the values before picking</err98>
     <err99>The function must contain three arguments: the list string, the separator and the item index</err99>
     <err100>The function must contain three arguments: the list string, the separator and the search value</err100>
+    <err101>The function must contain two arguments: the list string and the separator</err101>
+    <err102>The right part of the "{0}" operator must be a list - the result of the List, CCList or CRList function</err102>
+    <err103>A list can only be used to the right of the "=|" or "!=|" membership operator</err103>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -506,6 +509,9 @@
     <d-finditem>Returns the first list item that contains the search value. Returns an empty value if there is no such item. The function is case insensitive</d-finditem>
     <d-itemindex>Returns the zero-based index of the first list item that contains the search value. Returns -1 if there is no such item. The function is case insensitive</d-itemindex>
     <d-trim>Returns the value without leading and trailing spaces</d-trim>
+    <d-list>Represents a string with the specified separator as a list for membership check by the "=|" and "!=|" operators. Leading and trailing spaces of the items and empty items are dropped</d-list>
+    <d-cclist>Returns the values of a column of the strategy data source as a list for membership check by the "=|" and "!=|" operators</d-cclist>
+    <d-crlist>Returns the values of a row of the strategy data source as a list for membership check by the "=|" and "!=|" operators</d-crlist>
     <d-wb-avg>Writes the average of the results to a parameter of the conditional source element</d-wb-avg>
     <d-wb-first>Writes the first result to a parameter of the conditional source element</d-wb-first>
     <d-wb-join>Writes the results joined with a separator to a parameter of the conditional source element</d-wb-join>
