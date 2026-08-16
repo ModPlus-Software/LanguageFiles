@@ -188,6 +188,9 @@
     <t186>Zuordnen nach</t186>
     <t187>Parameter oder Ausdruck, zum Beispiel @[Typname]</t187>
     <t188>Zuordnung ist nicht festgelegt</t188>
+    <t189>Schreibweise egal</t189>
+    <t190>aufsteigend</t190>
+    <t191>absteigend</t191>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -329,6 +332,8 @@
     <err96>Die Zeilennummer "{0}" muss eine positive ganze Zahl sein</err96>
     <err97>Der Zellbereich "{0}" muss zwei durch zwei Punkte ".." getrennte Grenzen enthalten</err97>
     <err98>Das zweite Argument der Funktion darf nur der Buchstabe "s" sein - die Werte vor der Auswahl sortieren</err98>
+    <err99>Die Funktion muss drei Argumente enthalten: die Listenzeichenfolge, das Trennzeichen und den Elementindex</err99>
+    <err100>Die Funktion muss drei Argumente enthalten: die Listenzeichenfolge, das Trennzeichen und den Suchwert</err100>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -497,6 +502,10 @@
     <d-ccmax>Gibt den Höchstwert aus einer Spalte der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-ccmax>
     <d-crmin>Gibt den Mindestwert aus einer Zeile der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-crmin>
     <d-crmax>Gibt den Höchstwert aus einer Zeile der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-crmax>
+    <d-item>Gibt das Listenelement mit dem angegebenen nullbasierten Index zurück. Gibt einen leeren Wert zurück, wenn es kein Element mit diesem Index gibt</d-item>
+    <d-finditem>Gibt das erste Listenelement zurück, das den Suchwert enthält. Gibt einen leeren Wert zurück, wenn es kein solches Element gibt. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-finditem>
+    <d-itemindex>Gibt den nullbasierten Index des ersten Listenelements zurück, das den Suchwert enthält. Gibt -1 zurück, wenn es kein solches Element gibt. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-itemindex>
+    <d-trim>Gibt den Wert ohne führende und nachfolgende Leerzeichen zurück</d-trim>
     <d-wb-avg>Schreibt den Mittelwert der Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-avg>
     <d-wb-first>Schreibt das erste Ergebnis in einen Parameter des bedingten Quellelements</d-wb-first>
     <d-wb-join>Schreibt die mit einem Trennzeichen verbundenen Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-join>
