@@ -1,23 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModPlus>
   <mprQRCode
-    LocalName="QR code by URL"
-    Description="Generating QR codes from links in element type parameters">
+    LocalName="QR code generator"
+    Description="Generating QR codes from links in element parameters">
     <h1>QR code settings</h1>
     <h2>Parameter with link</h2>
     <h3>Parameter for QR code</h3>
     <h4>QR code module size, pixels</h4>
-    <h5>Skip types with filled parameter</h5>
+    <h5>Skip elements with filled parameter</h5>
     <h6>Element filter</h6>
-    <t1>The list shows parameters with the "URL" data type bound to element types: shared parameters and project parameters.</t1>
-    <t2>The list shows parameters with the "Image" data type bound to element types: shared parameters and project parameters.</t2>
-    <t3>There are no parameters with the "Image" data type bound to types in the document. Add a shared parameter or a project parameter bound to types.</t3>
-    <t4>Affects the image resolution, but not the code size in the schedule — the size there is set by the column settings.</t4>
+    <h7>Instance parameter</h7>
+    <h8>Type parameter</h8>
+    <t1>Parameters with the "URL" data type available on model elements are shown.</t1>
+    <t2>Parameters with the "Image" data type available on model elements are shown.</t2>
+    <t3>There are no parameters with the "Image" data type in the document. Add a shared parameter or a project parameter and assign it to the required categories.</t3>
+    <t4>Affects the image resolution, but not the code size in the schedule - the size there is set by the column settings.</t4>
     <t5>The higher the value, the better the code reads when printed, but the larger the project file size.</t5>
+    <t6>An instance parameter is selected: the QR code will be written to each element separately. A single image is created for identical links, but the number of filled parameters and the project file size will grow noticeably. A type parameter is recommended for standard products.</t6>
     <m1>No suitable elements found</m1>
     <m2>Parameter with link is not selected</m2>
     <m3>Parameter for QR code is not selected</m3>
-    <m4>Parameter "{0}" is not writable for the type</m4>
+    <m4>Parameter "{0}" is not writable</m4>
     <m5>Parameter "{0}" is empty</m5>
     <m6>Failed to create QR code: {0}</m6>
     <m7>The link is too long for a QR code: {0} characters</m7>
