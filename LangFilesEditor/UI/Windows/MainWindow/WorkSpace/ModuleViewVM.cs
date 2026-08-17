@@ -332,7 +332,9 @@ public class ModuleViewVM : ObservableObject
     {
         try
         {
-            var yieldBudget = new UiYieldBudget();
+            var yieldBudget = new UiYieldBudget(
+                EditorSettingsStore.Instance.Current.InitialRowsPerFrame,
+                EditorSettingsStore.Instance.Current.MaxRowsPerFrame);
             foreach (var entry in ModuleViewHelper.GetVisibleEntries(module))
             {
                 cts.Token.ThrowIfCancellationRequested();

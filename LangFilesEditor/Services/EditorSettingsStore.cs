@@ -26,6 +26,7 @@ public sealed class EditorSettingsStore
             var path = GetSettingsFilePath();
             if (!File.Exists(path))
             {
+                Instance = store;
                 return store;
             }
 
@@ -41,8 +42,14 @@ public sealed class EditorSettingsStore
             store.Current = new EditorSettings();
         }
 
+        Instance = store;
         return store;
     }
+
+    /// <summary>
+    /// Текущий глобальный экземпляр настроек.
+    /// </summary>
+    public static EditorSettingsStore Instance { get; private set; } = new();
 
     /// <summary>
     /// Текущий снимок настроек.

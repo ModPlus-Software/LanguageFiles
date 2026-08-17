@@ -16,18 +16,20 @@ namespace LangFilesEditor.Utils;
 /// </summary>
 internal sealed class UiYieldBudget
 {
-    /// <summary>
-    /// Размер первой порции строк.
-    /// </summary>
-    private const int InitialRowsPerFrame = 4;
-
-    /// <summary>
-    /// Предельный размер порции строк.
-    /// </summary>
-    private const int MaxRowsPerFrame = 32;
-
-    private int _rowsPerFrame = InitialRowsPerFrame;
+    private readonly int _maxRowsPerFrame;
+    private int _rowsPerFrame;
     private int _rowsSinceYield;
+
+    /// <summary>
+    /// Стандартный конструктор класса
+    /// </summary>
+    /// <param name="initialRowsPerFrame">Размер первой порции строк.</param>
+    /// <param name="maxRowsPerFrame">Предельный размер порции строк.</param>
+    public UiYieldBudget(int initialRowsPerFrame = 4, int maxRowsPerFrame = 32)
+    {
+        _rowsPerFrame = initialRowsPerFrame;
+        _maxRowsPerFrame = maxRowsPerFrame;
+    }
 
     /// <summary>
     /// Учитывает добавленную строку.
@@ -41,6 +43,6 @@ internal sealed class UiYieldBudget
     public void Reset()
     {
         _rowsSinceYield = 0;
-        _rowsPerFrame = Math.Min(_rowsPerFrame * 2, MaxRowsPerFrame);
+        _rowsPerFrame = Math.Min(_rowsPerFrame * 2, _maxRowsPerFrame);
     }
 }
