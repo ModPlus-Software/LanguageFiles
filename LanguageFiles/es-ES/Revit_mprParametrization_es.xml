@@ -339,6 +339,10 @@
     <err101>La función debe contener dos argumentos: la cadena de la lista y el separador</err101>
     <err102>La parte derecha del operador "{0}" debe ser una lista: el resultado de la función List, CCList o CRList</err102>
     <err103>Una lista solo se puede usar a la derecha del operador de pertenencia "=|" o "!=|"</err103>
+    <err104>Un patrón de expresión regular debe ser una cadena entre comillas dobles, una referencia a un parámetro o el resultado de una función. Sin comillas el patrón lo analiza el lenguaje de fórmulas: los paréntesis se consideran límites de función, las llaves un bloque aritmético, la coma un separador de argumentos y la barra invertida un carácter de escape</err104>
+    <err105>Un patrón de expresión regular no debe estar vacío</err105>
+    <err106>Patrón de expresión regular no válido "{0}". {1}</err106>
+    <err107>La evaluación de la expresión regular "{0}" no terminó en el tiempo asignado. Normalmente esto significa que el patrón admite demasiadas formas de analizar el valor</err107>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -514,6 +518,8 @@
     <d-list>Representa una cadena con el separador indicado como una lista para comprobar la pertenencia con los operadores "=|" y "!=|". Se descartan los espacios al principio y al final de los elementos y los elementos vacíos</d-list>
     <d-cclist>Devuelve los valores de una columna de la fuente de datos de la estrategia como una lista para comprobar la pertenencia con los operadores "=|" y "!=|"</d-cclist>
     <d-crlist>Devuelve los valores de una fila de la fuente de datos de la estrategia como una lista para comprobar la pertenencia con los operadores "=|" y "!=|"</d-crlist>
+    <d-rgxreplace>Devuelve el valor &lt;s&gt; en el que todas las coincidencias de la expresión regular &lt;s1&gt; se reemplazan por &lt;s2&gt;. El patrón &lt;s1&gt; se escribe entre comillas dobles, procede del valor de un parámetro o es el resultado de una función anidada. En &lt;s2&gt; están disponibles las sustituciones de grupos: "$1", "$2", etcétera. La distinción de mayúsculas se define en la opción de la fórmula</d-rgxreplace>
+    <d-rgxmatch>Devuelve TRUE si el valor &lt;s&gt; contiene una coincidencia de la expresión regular &lt;s1&gt;. En caso contrario devuelve FALSE. El patrón &lt;s1&gt; se escribe entre comillas dobles, procede del valor de un parámetro o es el resultado de una función anidada. Para coincidir con el valor completo use los anclajes "^" y "$". La distinción de mayúsculas se define en la opción de la fórmula</d-rgxmatch>
     <d-wb-avg>Guarda el promedio de los resultados en un parámetro del elemento original condicional</d-wb-avg>
     <d-wb-first>Guarda el primer resultado en un parámetro del elemento original condicional</d-wb-first>
     <d-wb-join>Guarda los resultados unidos con un separador en un parámetro del elemento original condicional</d-wb-join>

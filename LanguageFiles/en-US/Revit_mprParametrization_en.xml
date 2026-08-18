@@ -339,6 +339,10 @@
     <err101>The function must contain two arguments: the list string and the separator</err101>
     <err102>The right part of the "{0}" operator must be a list - the result of the List, CCList or CRList function</err102>
     <err103>A list can only be used to the right of the "=|" or "!=|" membership operator</err103>
+    <err104>A regular expression pattern must be a double-quoted string, a parameter reference or a function result. Without quotes the pattern is parsed by the formula language: round brackets are treated as function boundaries, curly ones as an arithmetic block, a comma as an argument separator and a backslash as an escape character</err104>
+    <err105>A regular expression pattern must not be empty</err105>
+    <err106>Invalid regular expression pattern "{0}". {1}</err106>
+    <err107>Evaluation of the regular expression "{0}" did not finish within the allotted time. This usually means the pattern allows too many ways to parse the value</err107>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -514,6 +518,8 @@
     <d-list>Represents a string with the specified separator as a list for membership check by the "=|" and "!=|" operators. Leading and trailing spaces of the items and empty items are dropped</d-list>
     <d-cclist>Returns the values of a column of the strategy data source as a list for membership check by the "=|" and "!=|" operators</d-cclist>
     <d-crlist>Returns the values of a row of the strategy data source as a list for membership check by the "=|" and "!=|" operators</d-crlist>
+    <d-rgxreplace>Returns value &lt;s&gt; in which every match of the regular expression &lt;s1&gt; is replaced by &lt;s2&gt;. Pattern &lt;s1&gt; is written in double quotes, comes from a parameter value or is the result of a nested function. Group substitutions - "$1", "$2" and so on - are available in &lt;s2&gt;. Case sensitivity is set by the formula option</d-rgxreplace>
+    <d-rgxmatch>Returns TRUE if value &lt;s&gt; contains a match of the regular expression &lt;s1&gt;. Otherwise returns FALSE. Pattern &lt;s1&gt; is written in double quotes, comes from a parameter value or is the result of a nested function. Use the "^" and "$" anchors to match the whole value. Case sensitivity is set by the formula option</d-rgxmatch>
     <d-wb-avg>Writes the average of the results to a parameter of the conditional source element</d-wb-avg>
     <d-wb-first>Writes the first result to a parameter of the conditional source element</d-wb-first>
     <d-wb-join>Writes the results joined with a separator to a parameter of the conditional source element</d-wb-join>
