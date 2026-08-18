@@ -95,9 +95,9 @@ public class ToolBarVM : ObservableObject
         {
             var selectedModule = _workspace.SelectedModule;
             var index = selectedModule.Items.IndexOf(_workspace.SelectedTranslationEntry);
-            if (index < 0)
+            if (index <= -1)
             {
-                return;
+                index = 0;
             }
 
             selectedModule.InsertTranslationEntry(
@@ -105,7 +105,7 @@ public class ToolBarVM : ObservableObject
                 _entryService.GetTranslationEntry(string.Empty),
                 TranslationEntryAddSource.User);
         }),
-        _ => HasSelectedModule && HasSelectedEntry);
+        _ => HasSelectedModule);
 
     /// <summary>
     /// Добавить строку ниже выбранной.
@@ -116,8 +116,13 @@ public class ToolBarVM : ObservableObject
             var selectedModule = _workspace.SelectedModule;
             var selectedEntry = _workspace.SelectedTranslationEntry;
             var index = selectedModule.Items.IndexOf(selectedEntry);
-            if (index < 0)
+            if (index <= -1)
             {
+                index = 0;
+                selectedModule.InsertTranslationEntry(
+                    index,
+                    _entryService.GetTranslationEntry(string.Empty),
+                    TranslationEntryAddSource.User);
                 return;
             }
 
@@ -142,7 +147,7 @@ public class ToolBarVM : ObservableObject
                     newEntry,
                     TranslationEntryAddSource.User);
             }
-        }), _ => HasSelectedModule && HasSelectedEntry);
+        }), _ => HasSelectedModule);
 
     /// <summary>
     /// Импорт строк ниже выбранной.

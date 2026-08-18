@@ -374,7 +374,9 @@ public class Module : ObservableObject
             }
 
             var total = Math.Max(Math.Max(items.Count, EntryCount), 1);
-            var yieldBudget = new UiYieldBudget();
+            var yieldBudget = new UiYieldBudget(
+                EditorSettingsStore.Instance.Current.InitialRowsPerFrame,
+                EditorSettingsStore.Instance.Current.MaxRowsPerFrame);
 
             for (var i = 0; i < items.Count; i++)
             {
@@ -450,7 +452,9 @@ public class Module : ObservableObject
         try
         {
             var total = Math.Max(matching.Count, 1);
-            var yieldBudget = new UiYieldBudget();
+            var yieldBudget = new UiYieldBudget(
+                Services.EditorSettingsStore.Instance.Current.InitialRowsPerFrame,
+                Services.EditorSettingsStore.Instance.Current.MaxRowsPerFrame);
             var addedNames = new HashSet<string>(Items.Select(item => item.Name), StringComparer.Ordinal);
 
             for (var i = 0; i < matching.Count; i++)

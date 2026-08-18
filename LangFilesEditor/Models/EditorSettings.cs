@@ -16,4 +16,14 @@ public sealed class EditorSettings
     /// Выбранная тема интерфейса.
     /// </summary>
     public EditorAppTheme Theme { get; set; } = EditorAppTheme.Light;
+
+    /// <summary>
+    /// Размер первой порции строк при загрузке модуля.
+    /// </summary>
+    public int InitialRowsPerFrame { get; set; } = 4;
+
+    /// <summary>
+    /// Предельный размер порции строк при загрузке модуля.
+    /// </summary>
+    public int MaxRowsPerFrame { get; set; } = 32;
 }
