@@ -193,6 +193,7 @@
     <t191>absteigend</t191>
     <t192>Zu prüfende Bedingung:</t192>
     <t193>Prüfergebnis:</t193>
+    <t194>Diese Funktionen dürfen nur am Anfang eines Ausdrucks stehen</t194>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -343,6 +344,8 @@
     <err105>Ein Muster eines regulären Ausdrucks darf nicht leer sein</err105>
     <err106>Ungültiges Muster des regulären Ausdrucks "{0}". {1}</err106>
     <err107>Die Auswertung des regulären Ausdrucks "{0}" wurde nicht in der vorgesehenen Zeit abgeschlossen</err107>
+    <err108>Das Element mit der Id {0} ist nicht linear: seine Position ist nicht durch eine gerade Linie definiert</err108>
+    <err109>Die Funktion kann ein optionales Argument enthalten - die Toleranz in Grad im Bereich von 0 bis 90</err109>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -449,6 +452,7 @@
     <ft3>Modifizierende Funktionen</ft3>
     <ft4>Get-Value-Funktionen</ft4>
     <ft5>Aggregatfunktionen</ft5>
+    <ft6>Rückschreibe-Funktionen</ft6>
     <d-min>Gibt die kleinere der beiden Zahlen zurück</d-min>
     <d-max>Gibt die größere der beiden Zahlen zurück</d-max>
     <d-abs>Gibt den absoluten Wert der Zahl zurück</d-abs>
@@ -481,6 +485,8 @@
     <d-sstr>Gibt die Teilzeichenkette zurück</d-sstr>
     <d-tmirrored>Gibt TRUE zurück, wenn die Zielfamilie gespiegelt ist</d-tmirrored>
     <d-smirrored>Gibt TRUE zurück, wenn die bedingte Quellfamilie gespiegelt ist</d-smirrored>
+    <d-isvertical>Gibt TRUE zurück, wenn die Achse des Zielelements senkrecht verläuft. Andernfalls FALSE. Das optionale Argument &lt;a&gt; legt die Toleranz in Grad fest, standardmäßig 0.1. Die Funktion gilt nur für Elemente, deren Position durch eine gerade Linie definiert ist</d-isvertical>
+    <d-ishorizontal>Gibt TRUE zurück, wenn die Achse des Zielelements waagerecht verläuft. Andernfalls FALSE. Das optionale Argument &lt;a&gt; legt die Toleranz in Grad fest, standardmäßig 0.1. Die Funktion gilt nur für Elemente, deren Position durch eine gerade Linie definiert ist</d-ishorizontal>
     <d-strlen>Gibt die Länge einer Zeichenfolge zurück</d-strlen>
     <d-strindex>Gibt den Index zurück, der auf Null des ersten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-strindex>
     <d-valuestr>Gibt den Parameterwert als Zeichenfolge mit Maßeinheiten zurück</d-valuestr>

@@ -193,6 +193,7 @@
     <t191>descendente</t191>
     <t192>Condición comprobada:</t192>
     <t193>Resultado de la comprobación:</t193>
+    <t194>Estas funciones solo pueden colocarse al principio de una expresión</t194>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -343,6 +344,8 @@
     <err105>Un patrón de expresión regular no debe estar vacío</err105>
     <err106>Patrón de expresión regular no válido "{0}". {1}</err106>
     <err107>La evaluación de la expresión regular "{0}" no terminó en el tiempo asignado</err107>
+    <err108>El elemento con Id {0} no es lineal: su posición no está definida por una línea recta</err108>
+    <err109>La función puede contener un argumento opcional - la tolerancia en grados en el rango de 0 a 90</err109>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -449,6 +452,7 @@
     <ft3>Funciones de modificación</ft3>
     <ft4>Funciones para obtener valor</ft4>
     <ft5>Funciones de agregación</ft5>
+    <ft6>Funciones de escritura inversa</ft6>
     <d-min>Devuelve el menor de números</d-min>
     <d-max>Devuelve el mayor de números</d-max>
     <d-abs>Devuelve valor absoluto de un número</d-abs>
@@ -481,6 +485,8 @@
     <d-sstr>Devuelve una subcadena</d-sstr>
     <d-tmirrored>Devuelve TRUE si familia objetiva está reflejada</d-tmirrored>
     <d-smirrored>Devuelve TRUE si familia condicionalmente original está reflejada</d-smirrored>
+    <d-isvertical>Devuelve TRUE si el eje del elemento objetivo está en posición vertical. En caso contrario devuelve FALSE. El argumento opcional &lt;a&gt; define la tolerancia en grados, 0.1 por defecto. La función solo se aplica a los elementos cuya posición está definida por una línea recta</d-isvertical>
+    <d-ishorizontal>Devuelve TRUE si el eje del elemento objetivo está en posición horizontal. En caso contrario devuelve FALSE. El argumento opcional &lt;a&gt; define la tolerancia en grados, 0.1 por defecto. La función solo se aplica a los elementos cuya posición está definida por una línea recta</d-ishorizontal>
     <d-strlen>Devuelve longitud de una cadena</d-strlen>
     <d-strindex>Devuelve el índice basado en cero de la primera entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena</d-strindex>
     <d-valuestr>Devuelve valor del parámetro como una cadena con unidades de medida</d-valuestr>
