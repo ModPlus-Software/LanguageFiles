@@ -184,9 +184,6 @@
     <t181>Ordenar de forma descendente. Solo se aplica si la ordenación está activada</t181>
     <t183>Agrupación</t183>
     <t184>Correspondencia</t184>
-    <t185>El elemento original condicional se asigna al elemento objetivo cuando este valor coincide con el valor de la agrupación de los elementos objetivo</t185>
-    <t186>Corresponder por</t186>
-    <t187>Parámetro o expresión, por ejemplo @[Nombre de tipo]</t187>
     <t188>La correspondencia no está indicada</t188>
     <t189>sin mayúsculas</t189>
     <t190>ascendente</t190>
@@ -194,6 +191,25 @@
     <t192>Condición comprobada:</t192>
     <t193>Resultado de la comprobación:</t193>
     <t194>Estas funciones solo pueden colocarse al principio de una expresión</t194>
+    <t175>Emparejar elementos de origen por</t175>
+    <t176>Emparejar elementos de destino por</t176>
+    <t177>Vista previa del emparejamiento</t177>
+    <t195>Los elementos de origen condicional y de destino forman un grupo cuando los valores calculados en ambos lados coinciden. Sobre ese grupo se calculan las funciones de agregación</t195>
+    <t196>Los grupos incompletos aparecen primero: sus elementos se omiten durante el procesamiento</t196>
+    <t197>Valor</t197>
+    <t198>De origen</t198>
+    <t199>De destino</t199>
+    <t200>Ejemplos de origen</t200>
+    <t201>Ejemplos de destino</t201>
+    <t202>Problema</t202>
+    <t203>Grupos: {0}, completos: {1}. Elementos de origen condicional: {2}, de destino: {3}</t203>
+    <t204>El valor no se calculó en los de origen: {0}, en los de destino: {1}</t204>
+    <t205>Parámetro o expresión sobre los elementos de origen condicional, por ejemplo @[Tipo de apartamento]</t205>
+    <t206>Parámetro o expresión sobre los elementos de destino, por ejemplo $[Tipo de habitación]</t206>
+    <t207>No hay elementos de destino con este valor</t207>
+    <t208>No hay elementos de origen condicional con este valor</t208>
+    <t209>Los valores de emparejamiento coinciden</t209>
+    <t210>Los valores de emparejamiento no coinciden: durante el procesamiento este par no se forma</t210>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -238,6 +254,7 @@
     <msg42>El valor "{0}" del parámetro "{1}" cumple la condición "{2} {3}"</msg42>
     <msg43>El valor "{0}" del parámetro "{1}" no cumple la condición "{2} {3}"</msg43>
     <msg44>Elemento omitido: la clave de agrupación se calculó como vacía</msg44>
+    <msg45>Elemento omitido: no se encontró ningún elemento de origen condicional con el mismo valor de emparejamiento</msg45>
     <err1>Cada expresión de una fórmula debe comenzar con parámetro objetivo "$[NombreDelParámetro]="</err1>
     <err2>Número de paréntesis de apertura debe ser igual al número de paréntesis de cierre</err2>
     <err3>Número de llaves de apertura debe ser igual al número de llaves de cierre</err3>
@@ -327,10 +344,10 @@
     <err88>La función devuelve el número de orden del elemento objetivo, por lo que el único argumento admitido es la letra "t"</err88>
     <err89>La estrategia tiene elemento original condicional, por lo que el rol de los elementos del grupo debe indicarse explícitamente: "s" - original condicional, "t" - objetivo</err89>
     <err90>En la expresión de la clave de agrupación solo se admiten parámetros y funciones de trabajo con cadenas y números</err90>
-    <err91>Regla {0}: la correspondencia de los elementos originales condicionales no se aplica en esta estrategia: el elemento original condicional se conoce por su relación con el elemento objetivo</err91>
-    <err92>Regla {0}: se ha indicado la correspondencia de los elementos originales condicionales, pero no la agrupación de los elementos objetivo: no hay con qué compararla</err92>
-    <err93>Regla {0}: las funciones de escritura inversa no se pueden utilizar junto con la agrupación</err93>
-    <err94>En la expresión de correspondencia no se pueden usar parámetros del elemento objetivo: en el momento de evaluarla el elemento objetivo aún no está elegido</err94>
+    <err91>Regla {0}: el emparejamiento está definido en una estrategia que no lo admite: el elemento de origen condicional se determina por una relación, no por la coincidencia de un valor</err91>
+    <err92>Regla {0}: el emparejamiento está definido solo en un lado: no hay con qué emparejar</err92>
+    <err93>Regla {0}: las funciones de agregación no se pueden usar junto con las funciones de escritura inversa: el valor de agregación es el mismo para todos los pares del grupo y el acumulador lo sumaría tantas veces como pares haya en el grupo</err93>
+    <err94>En la expresión de emparejamiento de los elementos de origen condicional no se pueden usar parámetros del elemento de destino: en ese momento el elemento de destino aún no está emparejado</err94>
     <err95>La función debe contener uno o dos argumentos: un indicador de columna (fila) y un rango de celdas opcional separado por dos puntos ".."</err95>
     <err96>El número de fila "{0}" debe ser un entero positivo</err96>
     <err97>El rango de celdas "{0}" debe contener dos límites separados por dos puntos ".."</err97>
@@ -346,8 +363,16 @@
     <err107>La evaluación de la expresión regular "{0}" no terminó en el tiempo asignado</err107>
     <err108>El elemento con Id {0} no es lineal: su posición no está definida por una línea recta</err108>
     <err109>La función puede contener un argumento opcional - la tolerancia en grados en el rango de 0 a 90</err109>
-    <err110>En la expresión de agrupación no se pueden usar parámetros del elemento de origen condicional: en esta estrategia la clave de agrupación se calcula antes de que se haya emparejado el elemento de origen. En la expresión de ordenación sí se permiten</err110>
-    <err111>Regla {0}: en la expresión de agrupación de los elementos objetivo no se pueden usar parámetros del elemento de origen condicional: la clave se calcula antes de que se haya emparejado el elemento de origen</err111>
+    <err110>En la expresión de emparejamiento de los elementos de destino no se pueden usar parámetros del elemento de origen condicional: en ese momento el elemento de origen condicional aún no está emparejado</err110>
+    <err111>Regla {0}: en la expresión de emparejamiento de los elementos de destino no se pueden usar parámetros del elemento de origen condicional</err111>
+    <err112>No se ha especificado el archivo Excel de origen de datos de la estrategia</err112>
+    <err113>No se ha encontrado o no está disponible el archivo Excel de origen de datos de la estrategia: {0}</err113>
+    <err114>No se ha seleccionado la hoja del archivo Excel de origen de datos de la estrategia</err114>
+    <err115>No se ha encontrado la hoja {0} en el archivo Excel de origen de datos de la estrategia</err115>
+    <err116>Regla {0}: en esta estrategia los pares se forman por emparejamiento, por lo que el emparejamiento debe estar definido</err116>
+    <err117>Regla {0}: en una estrategia con emparejamiento no se define la agrupación: el grupo de la regla es el grupo de emparejamiento</err117>
+    <err118>El emparejamiento debe estar definido en ambos lados: el valor se calcula tanto sobre los elementos de origen condicional como sobre los de destino y se compara entre sí</err118>
+    <err119>Regla {0}: en la expresión de emparejamiento de los elementos de origen condicional no se pueden usar parámetros del elemento de destino</err119>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -400,6 +425,12 @@
     <sld21>La estrategia procesa los elementos ubicados en conjuntos</sld21>
     <ssd22>Procesamiento de elementos específicos de la vista</ssd22>
     <sld22>Procesa los elementos que existen únicamente dentro de una vista y no forman parte del modelo tridimensional: cotas, notas de texto, etiquetas, líneas de detalle y regiones rellenadas, así como el contenido de las láminas. Estos elementos están vinculados a la vista en la que se crearon y no se muestran en las demás. Los elementos de modelo, como muros, suelos o equipamiento, no se ven afectados</sld22>
+    <ssd23>Procesamiento de componentes de escalera</ssd23>
+    <sld23>Procesa los componentes de las escaleras: tramos, mesetas, soportes y las barandillas asociadas a la escalera. El elemento de origen condicional es la escalera. Los componentes de una escalera de varias plantas se procesan a través de la escalera a la que pertenecen</sld23>
+    <ssd24>Procesamiento de aberturas de la habitación</ssd24>
+    <sld24>Procesa las aberturas - puertas y ventanas - que dan a la habitación. El elemento de origen condicional es la habitación. Las aberturas se buscan en los elementos de contorno de la habitación, muros cortina incluidos, y la pertenencia se determina por las propiedades "Hacia la habitación" y "Desde la habitación" teniendo en cuenta la fase de la habitación; si esas propiedades están vacías, por la intersección de la geometría de la abertura con el volumen de la habitación</sld24>
+    <ssd25>Procesamiento de dos conjuntos de elementos emparejados por valor</ssd25>
+    <sld25>La estrategia procesa dos conjuntos independientes de elementos: de origen condicional y de destino. El par no se forma por una relación de los elementos en el modelo, sino por la coincidencia del valor calculado en ambos lados por el ajuste de emparejamiento. Los elementos coincidentes forman un grupo sobre el que se calculan las funciones de agregación</sld25>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -431,6 +462,10 @@
     <se15>Conjunto</se15>
     <sp15>Insertar parámetro de conjunto</sp15>
     <sp16>Insertar parámetro de vista</sp16>
+    <se16>Escalera</se16>
+    <sp17>Insertar parámetro de la escalera</sp17>
+    <se17>Elementos de origen</se17>
+    <sp18>Insertar parámetro del elemento de origen</sp18>
     <te1>Elemento objetivo</te1>
     <tp1>Insertar parámetro de elemento objetivo</tp1>
     <te2>Ejemplar de familia</te2>
@@ -449,6 +484,10 @@
     <tp8>Insertar parámetro de material</tp8>
     <te9>Pieza</te9>
     <tp10>Insertar parámetro de pieza</tp10>
+    <te10>Componente de escalera</te10>
+    <tp11>Insertar parámetro del componente de escalera</tp11>
+    <te11>Abertura</te11>
+    <tp9>Insertar parámetro de la abertura</tp9>
     <ft1>Funciones matemáticas</ft1>
     <ft2>Funciones lógicas</ft2>
     <ft3>Funciones de modificación</ft3>

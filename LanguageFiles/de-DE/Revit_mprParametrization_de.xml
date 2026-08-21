@@ -184,9 +184,6 @@
     <t181>Absteigend sortieren. Wirkt nur, wenn die Sortierung aktiviert ist</t181>
     <t183>Gruppierung</t183>
     <t184>Zuordnung</t184>
-    <t185>Das bedingte Quellelement wird dem Zielelement zugeordnet, wenn dieser Wert mit dem Wert der Gruppierung der Zielelemente übereinstimmt</t185>
-    <t186>Zuordnen nach</t186>
-    <t187>Parameter oder Ausdruck, zum Beispiel @[Typname]</t187>
     <t188>Zuordnung ist nicht festgelegt</t188>
     <t189>Schreibweise egal</t189>
     <t190>aufsteigend</t190>
@@ -194,6 +191,25 @@
     <t192>Zu prüfende Bedingung:</t192>
     <t193>Prüfergebnis:</t193>
     <t194>Diese Funktionen dürfen nur am Anfang eines Ausdrucks stehen</t194>
+    <t175>Quellelemente zuordnen nach</t175>
+    <t176>Zielelemente zuordnen nach</t176>
+    <t177>Zuordnungsvorschau</t177>
+    <t195>Bedingte Quell- und Zielelemente kommen in eine Gruppe, wenn die auf beiden Seiten berechneten Werte übereinstimmen. Über diese Gruppe werden die Aggregatfunktionen berechnet</t195>
+    <t196>Unvollständige Gruppen stehen zuerst: ihre Elemente werden bei der Bearbeitung übersprungen</t196>
+    <t197>Wert</t197>
+    <t198>Quellelemente</t198>
+    <t199>Zielelemente</t199>
+    <t200>Beispiele Quellelemente</t200>
+    <t201>Beispiele Zielelemente</t201>
+    <t202>Problem</t202>
+    <t203>Gruppen: {0}, davon vollständig: {1}. Bedingte Quellelemente: {2}, Zielelemente: {3}</t203>
+    <t204>Wert wurde nicht berechnet bei Quellelementen: {0}, bei Zielelementen: {1}</t204>
+    <t205>Parameter oder Ausdruck über bedingte Quellelemente, zum Beispiel @[Wohnungstyp]</t205>
+    <t206>Parameter oder Ausdruck über Zielelemente, zum Beispiel $[Raumtyp]</t206>
+    <t207>Keine Zielelemente mit diesem Wert</t207>
+    <t208>Keine bedingten Quellelemente mit diesem Wert</t208>
+    <t209>Die Zuordnungswerte stimmen überein</t209>
+    <t210>Die Zuordnungswerte stimmen nicht überein: bei der Bearbeitung wird dieses Paar nicht gebildet</t210>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -238,6 +254,7 @@
     <msg42>Der Wert "{0}" des Parameters "{1}" erfüllt die Bedingung "{2} {3}"</msg42>
     <msg43>Der Wert "{0}" des Parameters "{1}" erfüllt die Bedingung "{2} {3}" nicht</msg43>
     <msg44>Das Element wurde übersprungen: Der Gruppierungsschlüssel wurde als leer berechnet</msg44>
+    <msg45>Element übersprungen: es wurde kein bedingtes Quellelement mit demselben Zuordnungswert gefunden</msg45>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -327,10 +344,10 @@
     <err88>Die Funktion gibt die laufende Nummer des Zielelements zurück, daher ist der Buchstabe "t" das einzige zulässige Argument</err88>
     <err89>Die Strategie hat ein bedingtes Quellelement, daher muss die Rolle der Gruppenelemente ausdrücklich angegeben werden: "s" - bedingte Quellelemente, "t" - Zielelemente</err89>
     <err90>Im Ausdruck des Gruppierungsschlüssels sind nur Parameter und Funktionen für die Arbeit mit Zeichenfolgen und Zahlen zulässig</err90>
-    <err91>Regel {0}: Die Zuordnung der bedingten Quellelemente wird in dieser Strategie nicht verwendet - das bedingte Quellelement ergibt sich aus seiner Beziehung zum Zielelement</err91>
-    <err92>Regel {0}: Die Zuordnung der bedingten Quellelemente ist festgelegt, die Gruppierung der Zielelemente jedoch nicht - es gibt nichts, womit zugeordnet werden könnte</err92>
-    <err93>Regel {0}: Rückschreibe-Funktionen können nicht zusammen mit der Gruppierung verwendet werden</err93>
-    <err94>Im Zuordnungsausdruck dürfen keine Parameter des Zielelements verwendet werden: Zum Zeitpunkt seiner Auswertung ist das Zielelement noch nicht gewählt</err94>
+    <err91>Regel {0}: die Zuordnung ist in einer Strategie festgelegt, die sie nicht unterstützt - das bedingte Quellelement wird über eine Beziehung bestimmt, nicht über einen übereinstimmenden Wert</err91>
+    <err92>Regel {0}: die Zuordnung ist nur auf einer Seite festgelegt - es gibt nichts zuzuordnen</err92>
+    <err93>Regel {0}: Aggregatfunktionen können nicht zusammen mit Rückschreibfunktionen verwendet werden - der Aggregatwert ist für alle Paare der Gruppe gleich, und der Sammler würde ihn so oft addieren, wie es Paare in der Gruppe gibt</err93>
+    <err94>Im Zuordnungsausdruck der bedingten Quellelemente können keine Parameter des Zielelements verwendet werden: das Zielelement ist zu diesem Zeitpunkt noch nicht zugeordnet</err94>
     <err95>Die Funktion muss ein oder zwei Argumente enthalten: einen Spalten- (Zeilen-) Verweis und einen optionalen Zellbereich, getrennt durch zwei Punkte ".."</err95>
     <err96>Die Zeilennummer "{0}" muss eine positive ganze Zahl sein</err96>
     <err97>Der Zellbereich "{0}" muss zwei durch zwei Punkte ".." getrennte Grenzen enthalten</err97>
@@ -346,8 +363,16 @@
     <err107>Die Auswertung des regulären Ausdrucks "{0}" wurde nicht in der vorgesehenen Zeit abgeschlossen</err107>
     <err108>Das Element mit der Id {0} ist nicht linear: seine Position ist nicht durch eine gerade Linie definiert</err108>
     <err109>Die Funktion kann ein optionales Argument enthalten - die Toleranz in Grad im Bereich von 0 bis 90</err109>
-    <err110>Im Gruppierungsausdruck dürfen keine Parameter des bedingten Ausgangselements verwendet werden: In dieser Strategie wird der Gruppierungsschlüssel berechnet, bevor das Ausgangselement zugeordnet ist. Im Sortierausdruck sind sie zulässig</err110>
-    <err111>Regel {0}: Im Gruppierungsausdruck der Zielelemente dürfen keine Parameter des bedingten Ausgangselements verwendet werden - der Schlüssel wird berechnet, bevor das Ausgangselement zugeordnet ist</err111>
+    <err110>Im Zuordnungsausdruck der Zielelemente können keine Parameter des bedingten Quellelements verwendet werden: das bedingte Quellelement ist zu diesem Zeitpunkt noch nicht zugeordnet</err110>
+    <err111>Regel {0}: im Zuordnungsausdruck der Zielelemente können keine Parameter des bedingten Quellelements verwendet werden</err111>
+    <err112>Die Excel-Datei der Datenquelle der Strategie ist nicht angegeben</err112>
+    <err113>Die Excel-Datei der Datenquelle der Strategie wurde nicht gefunden oder ist nicht verfügbar: {0}</err113>
+    <err114>Es ist kein Blatt der Excel-Datei der Datenquelle der Strategie ausgewählt</err114>
+    <err115>Das Blatt {0} wurde in der Excel-Datei der Datenquelle der Strategie nicht gefunden</err115>
+    <err116>Regel {0}: in dieser Strategie werden Paare über die Zuordnung gebildet, daher muss die Zuordnung festgelegt sein</err116>
+    <err117>Regel {0}: in einer Strategie mit Zuordnung wird keine Gruppierung festgelegt - die Gruppe der Regel ist die Zuordnungsgruppe</err117>
+    <err118>Die Zuordnung muss auf beiden Seiten festgelegt sein: der Wert wird sowohl über die bedingten Quellelemente als auch über die Zielelemente berechnet und miteinander verglichen</err118>
+    <err119>Regel {0}: im Zuordnungsausdruck der bedingten Quellelemente können keine Parameter des Zielelements verwendet werden</err119>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -400,6 +425,12 @@
     <sld21>Die Strategie verarbeitet Elemente, die sich in Baugruppen befinden</sld21>
     <ssd22>Verarbeitung ansichtsgebundener Elemente</ssd22>
     <sld22>Verarbeitet Elemente, die nur innerhalb einer einzigen Ansicht existieren und nicht Teil des dreidimensionalen Modells sind: Bemaßungen, Textbausteine, Beschriftungen, Detaillinien und schraffierte Flächen sowie Planinhalte. Solche Elemente sind an die Ansicht gebunden, in der sie erstellt wurden, und werden in anderen Ansichten nicht angezeigt. Modellelemente wie Wände, Geschossdecken oder Ausstattungselemente sind davon nicht betroffen</sld22>
+    <ssd23>Verarbeitung von Treppenkomponenten</ssd23>
+    <sld23>Verarbeitet Treppenkomponenten: Läufe, Podeste, Auflager sowie die der Treppe zugeordneten Geländer. Bedingtes Ausgangselement ist die Treppe. Die Komponenten einer geschossübergreifenden Treppe werden über die Treppe verarbeitet, zu der sie gehören</sld23>
+    <ssd24>Verarbeitung von Raumöffnungen</ssd24>
+    <sld24>Verarbeitet die Öffnungen - Türen und Fenster -, die in den Raum führen. Bedingtes Ausgangselement ist der Raum. Die Öffnungen werden in den Raumbegrenzungen einschließlich Fassaden gesucht; die Zugehörigkeit wird über die Eigenschaften "Nach Raum" und "Von Raum" unter Berücksichtigung der Raumphase bestimmt und bei leeren Eigenschaften über den Schnitt der Öffnungsgeometrie mit dem Raumvolumen</sld24>
+    <ssd25>Bearbeitung von zwei nach Wert zugeordneten Elementmengen</ssd25>
+    <sld25>Die Strategie bearbeitet zwei unabhängige Elementmengen - bedingte Quellelemente und Zielelemente. Ein Paar wird nicht über eine Beziehung der Elemente im Modell gebildet, sondern über die Übereinstimmung des Wertes, der auf beiden Seiten durch die Zuordnung berechnet wird. Übereinstimmende Elemente bilden eine Gruppe, über die Aggregatfunktionen berechnet werden</sld25>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -431,6 +462,10 @@
     <se15>Baugruppe</se15>
     <sp15>Baugruppenparameter einfügen</sp15>
     <sp16>Ansichtsparameter einfügen</sp16>
+    <se16>Treppe</se16>
+    <sp17>Treppenparameter einfügen</sp17>
+    <se17>Quellelemente</se17>
+    <sp18>Parameter des Quellelements einfügen</sp18>
     <te1>Zielelement</te1>
     <tp1>Parameter des Zielelementes einfügen</tp1>
     <te2>Exemplar der Familie</te2>
@@ -449,6 +484,10 @@
     <tp8>Materialparameter einfügen</tp8>
     <te9>Teil</te9>
     <tp10>Parameter des Teiles einfügen</tp10>
+    <te10>Treppenkomponente</te10>
+    <tp11>Parameter der Treppenkomponente einfügen</tp11>
+    <te11>Öffnung</te11>
+    <tp9>Parameter der Öffnung einfügen</tp9>
     <ft1>Mathematische Funktionen</ft1>
     <ft2>Logische Funktionen</ft2>
     <ft3>Modifizierende Funktionen</ft3>
