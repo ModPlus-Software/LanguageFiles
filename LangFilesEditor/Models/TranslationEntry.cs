@@ -163,6 +163,17 @@ public class TranslationEntry : ObservableObject
         Validate();
     }
 
+    public void Update(string languageName, string itemValue)
+    {
+        if (string.IsNullOrEmpty(languageName) || itemValue == null)
+        {
+            return;
+        }
+
+        _values[languageName].Value = itemValue;
+        Validate();
+    }
+
     private void ItemValueOnPropertyChanged(object sender, PropertyChangedEventArgs e)
     {
         Validate();

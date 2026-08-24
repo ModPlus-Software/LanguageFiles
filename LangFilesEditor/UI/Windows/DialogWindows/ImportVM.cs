@@ -5,9 +5,10 @@ namespace LangFilesEditor.UI.Windows.DialogWindows;
 using System.Windows.Input;
 using Core.Abstractions;
 using Models;
+using ModPlusAPI;
+using ModPlusAPI.Mvvm;
 using Services;
 using Utils;
-using ModPlusAPI.Mvvm;
 
 /// <summary>
 /// ViewModel импорта строк перевода.
@@ -131,15 +132,30 @@ public class ImportVM
         }
 
         var translationEntryService = new TranslationEntryService(languages);
+        List<List<string>> notCreated = [];
         foreach (var key in sortedRows.Keys)
         {
             TagTextUtils.GetTagValueAndNumber(key, out var value, out _);
             var selectedModule = _workspace.SelectedModule;
+            var foundRow = selectedModule.Items.FirstOrDefault(i => i.Name == key);
+
+            if (foundRow != null)
+            {
+                var valuesInOrder = sortedRows[key];
+                for (var i = 0; i < valuesInOrder.Count && i < languages.Count; i++)
+                {
+                    foundRow.Add(languages[i], new ItemValue { Value = valuesInOrder[i] });
+                    foundRow.Update(languages[i], valuesInOrder[i]);
+                }
+
+                continue;
+            }
+
             var number = SearchEngine.SearchLastRowWithTagValue(selectedModule, value, out var index);
             if (index == -1)
             {
-                index = selectedModule.Items.Count - 1;
-                number = 0;
+                notCreated.Add(sortedRows[key]);
+                continue;
             }
 
             // Без автонумерации имя берётся из самого тега; с автонумерацией — следующее

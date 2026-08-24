@@ -22,6 +22,11 @@ public partial class ImportWindowWithCheckbox
 
     private void Accept_OnClick(object sender, RoutedEventArgs e)
     {
+        if (DataContext is ImportVM vm)
+        {
+            vm.ImportRowsAutoCommand.Execute((TbText.Text, CbAutoNumbering.IsChecked is true));
+        }
+
         DialogResult = true;
     }
 
