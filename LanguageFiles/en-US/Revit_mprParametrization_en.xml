@@ -431,6 +431,8 @@
     <sld24>Processes the openings - doors and windows - that face the room. The conditional source element is the room. Openings are taken from the room boundary elements, curtain walls included, and membership is resolved by the To Room and From Room properties in the room phase; when those properties are empty, by the intersection of the opening geometry with the room volume</sld24>
     <ssd25>Processing of two sets of elements matched by value</ssd25>
     <sld25>Strategy processes two independent sets of elements - conditionally source and target. A pair is built not by a relation of elements in the model, but by a coinciding value calculated on both sides by the matching setting. Coinciding elements form a group over which aggregate functions are calculated</sld25>
+    <ssd26>Processing of room finishing</ssd26>
+    <sld26>Strategy processes room finishing created by the «Room finishing» plugin. The conditionally source element is a room, the target elements are the finishing elements created for it, including those linked to the room manually by means of the same plugin. Finishing created by any other means is not processed by the strategy</sld26>
     <se1>Host</se1>
     <sp1>Insert Host parameter</sp1>
     <se2>Group</se2>
@@ -488,6 +490,8 @@
     <tp11>Insert stair component parameter</tp11>
     <te11>Opening</te11>
     <tp9>Insert opening parameter</tp9>
+    <te12>Finishing element</te12>
+    <tp12>Insert finishing element parameter</tp12>
     <ft1>Mathematical functions</ft1>
     <ft2>Logical functions</ft2>
     <ft3>Modifying functions</ft3>

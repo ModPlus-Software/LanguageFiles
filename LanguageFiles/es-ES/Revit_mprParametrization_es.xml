@@ -431,6 +431,8 @@
     <sld24>Procesa las aberturas - puertas y ventanas - que dan a la habitación. El elemento de origen condicional es la habitación. Las aberturas se buscan en los elementos de contorno de la habitación, muros cortina incluidos, y la pertenencia se determina por las propiedades "Hacia la habitación" y "Desde la habitación" teniendo en cuenta la fase de la habitación; si esas propiedades están vacías, por la intersección de la geometría de la abertura con el volumen de la habitación</sld24>
     <ssd25>Procesamiento de dos conjuntos de elementos emparejados por valor</ssd25>
     <sld25>La estrategia procesa dos conjuntos independientes de elementos: de origen condicional y de destino. El par no se forma por una relación de los elementos en el modelo, sino por la coincidencia del valor calculado en ambos lados por el ajuste de emparejamiento. Los elementos coincidentes forman un grupo sobre el que se calculan las funciones de agregación</sld25>
+    <ssd26>Procesamiento del acabado de habitaciones</ssd26>
+    <sld26>La estrategia procesa el acabado de habitaciones creado por el complemento «Acabado de habitaciones». El elemento de origen condicional es una habitación y los elementos de destino son los elementos de acabado creados para ella, incluidos los vinculados a la habitación manualmente con los medios del mismo complemento. El acabado creado por cualquier otro medio no lo procesa la estrategia</sld26>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -488,6 +490,8 @@
     <tp11>Insertar parámetro del componente de escalera</tp11>
     <te11>Abertura</te11>
     <tp9>Insertar parámetro de la abertura</tp9>
+    <te12>Elemento de acabado</te12>
+    <tp12>Insertar parámetro del elemento de acabado</tp12>
     <ft1>Funciones matemáticas</ft1>
     <ft2>Funciones lógicas</ft2>
     <ft3>Funciones de modificación</ft3>
