@@ -100,6 +100,7 @@
     <t93>Seleccione resultado del procesamiento de expresiones para ver una lista de ID de elementos procesados</t93>
     <t94>Modo limitado</t94>
     <t95>Los filtros de la estrategia se aplican a todas las reglas para las que no se hayan definido filtros propios. Si en el filtro de la estrategia solo se especifica el filtro por categorías y en el filtro de la regla solo el filtro por parámetros, el resultado será un filtro combinado con las categorías y parámetros definidos. Y viceversa: en el filtro de la estrategia se pueden definir solo categorías y en el de la regla solo parámetros. Si en la regla se definen tanto el filtro por categorías como el filtro por parámetros, el filtro de la estrategia se ignorará</t95>
+    <!--todo remove after 4.1.33.0-->
     <t96>Seleccionar vistas</t96>
     <t97>Origen de datos</t97>
     <t98>Filtro de estrategia</t98>
@@ -133,6 +134,7 @@
     <t126>Comprobar</t126>
     <t127>Se ejecutará un ciclo completo de parametrización para las reglas seleccionadas de las estrategias seleccionadas, pero en lugar de asignación, se realizará una comparación entre el resultado del cálculo de la fórmula y el valor actual del parámetro objetivo</t127>
     <t128>Resultados de la comprobación</t128>
+    <!--todo remove after 4.1.33.0-->
     <t129>Vistas seleccionadas:</t129>
     <t130>Seleccionar archivos vinculados</t130>
     <t131>Especifique los archivos vinculados en los que se realizará la búsqueda de elementos</t131>
@@ -147,13 +149,67 @@
     <t140>CONFIGURACIÓN DE ESTRATEGIAS</t140>
     <t141>de</t141>
     <t142>Nombre y descripción</t142>
-    <t143>Abrir la guía de fórmulas</t143>
+    <t143>Abrir la guía</t143>
     <t144>Prefiltro</t144>
     <t145>El prefiltro reduce el conjunto de elementos simultáneamente para todas las reglas de la estrategia. A diferencia del filtro de estrategia, no se sustituye por el filtro de regla no rellenado, sino que se aplica de forma adicional: un elemento se procesará solo si pasa tanto el prefiltro como el filtro de regla. Por ejemplo, si en el prefiltro se establece la categoría "Muros" y el parámetro "Estructural", todas las reglas trabajarán únicamente con muros estructurales, seleccionando entre ellos los elementos según sus propias categorías y parámetros. Un prefiltro vacío no impone ninguna restricción</t145>
     <t146>Exportar estrategia actual</t146>
     <t147>Importar en la estrategia actual</t147>
     <t148>Filtros de la estrategia</t148>
     <t149>Prefiltros de la estrategia</t149>
+    <t150>Editar nombre de regla</t150>
+    <t151>Ingresar nombre de regla</t151>
+    <t152>La fórmula contiene expresiones marcadas como "Solo para comprobación": expresiones en las que después del parámetro de destino se indica un operador de comparación distinto de "=". Estas expresiones se procesan únicamente en el modo "Comprobar" y se omiten en el modo "Ejecutar"</t152>
+    <t153>Solo para comprobación</t153>
+    <t154>Sin grupo</t154>
+    <t155>Nombre y grupo de la configuración</t155>
+    <t156>Filtrar configuraciones por grupo</t156>
+    <t157>Escriba o seleccione un grupo</t157>
+    <t158>Quitar la configuración del grupo</t158>
+    <t159>Grupos</t159>
+    <t160>Cambiar el nombre del grupo</t160>
+    <t161>Eliminar el grupo. Las configuraciones del grupo no se eliminan — quedarán sin grupo</t161>
+    <t162>Número de configuraciones en el grupo</t162>
+    <t163>grupo</t163>
+    <t164>Parámetro o expresión, por ejemplo $[Nombre de tipo]</t164>
+    <t168>Ignorar mayúsculas y minúsculas</t168>
+    <t169>Ordenar</t169>
+    <t170>Descendente</t170>
+    <t171>Ordenar dentro del grupo por, por ejemplo $[Longitud]</t171>
+    <t172>Los elementos con el mismo valor forman un grupo</t172>
+    <t173>La agrupación no está definida</t173>
+    <t174>Agrupar por</t174>
+    <t178>Ordenar dentro del grupo por</t178>
+    <t179>Comparar los valores sin distinguir mayúsculas y minúsculas. No afecta a los valores numéricos</t179>
+    <t180>Ordenar los elementos dentro del grupo. Afecta al resultado de la función GIndex y al orden de los valores en GJoin</t180>
+    <t181>Ordenar de forma descendente. Solo se aplica si la ordenación está activada</t181>
+    <t183>Agrupación</t183>
+    <t184>Correspondencia</t184>
+    <t188>La correspondencia no está indicada</t188>
+    <t189>sin mayúsculas</t189>
+    <t190>ascendente</t190>
+    <t191>descendente</t191>
+    <t192>Condición comprobada:</t192>
+    <t193>Resultado de la comprobación:</t193>
+    <t194>Estas funciones solo pueden colocarse al principio de una expresión</t194>
+    <t175>Emparejar elementos de origen por</t175>
+    <t176>Emparejar elementos de destino por</t176>
+    <t177>Vista previa del emparejamiento</t177>
+    <t195>Los elementos de origen condicional y de destino forman un grupo cuando los valores calculados en ambos lados coinciden. Sobre ese grupo se calculan las funciones de agregación</t195>
+    <t196>Los grupos incompletos aparecen primero: sus elementos se omiten durante el procesamiento</t196>
+    <t197>Valor</t197>
+    <t198>De origen</t198>
+    <t199>De destino</t199>
+    <t200>Ejemplos de origen</t200>
+    <t201>Ejemplos de destino</t201>
+    <t202>Problema</t202>
+    <t203>Grupos: {0}, completos: {1}. Elementos de origen condicional: {2}, de destino: {3}</t203>
+    <t204>El valor no se calculó en los de origen: {0}, en los de destino: {1}</t204>
+    <t205>Parámetro o expresión sobre los elementos de origen condicional, por ejemplo @[Tipo de apartamento]</t205>
+    <t206>Parámetro o expresión sobre los elementos de destino, por ejemplo $[Tipo de habitación]</t206>
+    <t207>No hay elementos de destino con este valor</t207>
+    <t208>No hay elementos de origen condicional con este valor</t208>
+    <t209>Los valores de emparejamiento coinciden</t209>
+    <t210>Los valores de emparejamiento no coinciden: durante el procesamiento este par no se forma</t210>
     <msg1>¡Configuración se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg1>
     <msg2>¡Estrategia se eliminará permanentemente! ¿Estás seguro de que desea continuar?</msg2>
     <msg3>Lista de estrategias no está vacía</msg3>
@@ -194,6 +250,11 @@
     <msg38>Se omitió el procesamiento del elemento porque el resultado de la evaluación de la expresión es la palabra clave SKIP_ELEMENT</msg38>
     <msg39>Reglas n.º {0}: las categorías no coinciden con las categorías del prefiltro {1}. Estas reglas no procesarán ningún elemento</msg39>
     <msg40>Reglas n.º {0}: las categorías solo coinciden parcialmente con las categorías del prefiltro {1}. Las categorías no coincidentes se descartarán</msg40>
+    <msg41>La expresión se omitió: está marcada como "Solo para comprobación" y se procesa únicamente en el modo "Comprobar"</msg41>
+    <msg42>El valor "{0}" del parámetro "{1}" cumple la condición "{2} {3}"</msg42>
+    <msg43>El valor "{0}" del parámetro "{1}" no cumple la condición "{2} {3}"</msg43>
+    <msg44>Elemento omitido: la clave de agrupación se calculó como vacía</msg44>
+    <msg45>Elemento omitido: no se encontró ningún elemento de origen condicional con el mismo valor de emparejamiento</msg45>
     <err1>Cada expresión de una fórmula debe comenzar con parámetro objetivo "$[NombreDelParámetro]="</err1>
     <err2>Número de paréntesis de apertura debe ser igual al número de paréntesis de cierre</err2>
     <err3>Número de llaves de apertura debe ser igual al número de llaves de cierre</err3>
@@ -259,7 +320,7 @@
     <err64>Los parámetros clave "ToRoom" y "FromRoom" sólo se pueden utilizar al procesar familias en las categorías "Puertas", "Ventanas"</err64>
     <err65>En el modelo no se ha encontrado ningún elemento original que coincidiera con las condiciones de filtración</err65>
     <err66>Los datos para asignar el resultado de evaluación de expresión no están definidos</err66>
-    <err67>Cada expresión en la fórmula debe comenzar con parámetro objetivo"$[NombreDelParámetro]=" o con la función de guardar la combinación de resultados en el elemento original condicional "JOIN(@[NombreDelParámetro],)=", o con la función de guardar la suma de resultados en el elemento original condicional "SUM(@[NombreDelParámetro])="</err67>
+    <err67>Cada expresión en la fórmula debe comenzar con el parámetro objetivo "$[NombreDelParámetro]=" o con una función de escritura inversa que guarda el resultado en el elemento original condicional: "SUM(@[NombreDelParámetro])=", "MIN(@[NombreDelParámetro])=", "MAX(@[NombreDelParámetro])=", "AVG(@[NombreDelParámetro])=", "FIRST(@[NombreDelParámetro])=", "LAST(@[NombreDelParámetro])=" o "JOIN(@[NombreDelParámetro],)="</err67>
     <err68>No se puede obtener número de valor "{0}"</err68>
     <err69>No se puede guardar el resultado en el elemento original condicional desde el archivo vinculado</err69>
     <err70>Elemento está ocupado por el usuario "{0}" y no está disponible para cambiar</err70>
@@ -275,6 +336,43 @@
     <err80>El pseudoparámetro ID no tiene la propiedad "HasValue"</err80>
     <err81>El elemento tiene varios parámetros con el nombre "{0}". Elimine el parámetro sobrante o utilice el nombre clave del parámetro (GUID para los parámetros compartidos, nombre del sistema para los parámetros incorporados)</err81>
     <err82>El elemento con Id {0} no tiene geometría</err82>
+    <err83>No se ha podido determinar para qué elementos del grupo se debe calcular la función de agregación: el cuerpo de la función no contiene ningún parámetro de elemento</err83>
+    <err84>El argumento de la función debe ser la letra "s" (elementos original condicional) o "t" (elementos objetivo)</err84>
+    <err85>La función debe contener una expresión que se calcula para cada elemento del grupo</err85>
+    <err86>Función debe contener dos o tres argumentos</err86>
+    <err87>El tercer argumento de la función solo puede contener las letras "d", "s" y "r"</err87>
+    <err88>La función devuelve el número de orden del elemento objetivo, por lo que el único argumento admitido es la letra "t"</err88>
+    <err89>La estrategia tiene elemento original condicional, por lo que el rol de los elementos del grupo debe indicarse explícitamente: "s" - original condicional, "t" - objetivo</err89>
+    <err90>En la expresión de la clave de agrupación solo se admiten parámetros y funciones de trabajo con cadenas y números</err90>
+    <err91>Regla {0}: el emparejamiento está definido en una estrategia que no lo admite: el elemento de origen condicional se determina por una relación, no por la coincidencia de un valor</err91>
+    <err92>Regla {0}: el emparejamiento está definido solo en un lado: no hay con qué emparejar</err92>
+    <err93>Regla {0}: las funciones de agregación no se pueden usar junto con las funciones de escritura inversa: el valor de agregación es el mismo para todos los pares del grupo y el acumulador lo sumaría tantas veces como pares haya en el grupo</err93>
+    <err94>En la expresión de emparejamiento de los elementos de origen condicional no se pueden usar parámetros del elemento de destino: en ese momento el elemento de destino aún no está emparejado</err94>
+    <err95>La función debe contener uno o dos argumentos: un indicador de columna (fila) y un rango de celdas opcional separado por dos puntos ".."</err95>
+    <err96>El número de fila "{0}" debe ser un entero positivo</err96>
+    <err97>El rango de celdas "{0}" debe contener dos límites separados por dos puntos ".."</err97>
+    <err98>El segundo argumento de la función solo puede ser la letra "s": ordenar los valores antes de elegir</err98>
+    <err99>La función debe contener tres argumentos: la cadena de la lista, el separador y el índice del elemento</err99>
+    <err100>La función debe contener tres argumentos: la cadena de la lista, el separador y el valor buscado</err100>
+    <err101>La función debe contener dos argumentos: la cadena de la lista y el separador</err101>
+    <err102>La parte derecha del operador "{0}" debe ser una lista: el resultado de la función List, CCList o CRList</err102>
+    <err103>Una lista solo se puede usar a la derecha del operador de pertenencia "=|" o "!=|"</err103>
+    <err104>Un patrón de expresión regular debe ser una cadena entre comillas dobles, una referencia a un parámetro o el resultado de una función</err104>
+    <err105>Un patrón de expresión regular no debe estar vacío</err105>
+    <err106>Patrón de expresión regular no válido "{0}". {1}</err106>
+    <err107>La evaluación de la expresión regular "{0}" no terminó en el tiempo asignado</err107>
+    <err108>El elemento con Id {0} no es lineal: su posición no está definida por una línea recta</err108>
+    <err109>La función puede contener un argumento opcional - la tolerancia en grados en el rango de 0 a 90</err109>
+    <err110>En la expresión de emparejamiento de los elementos de destino no se pueden usar parámetros del elemento de origen condicional: en ese momento el elemento de origen condicional aún no está emparejado</err110>
+    <err111>Regla {0}: en la expresión de emparejamiento de los elementos de destino no se pueden usar parámetros del elemento de origen condicional</err111>
+    <err112>No se ha especificado el archivo Excel de origen de datos de la estrategia</err112>
+    <err113>No se ha encontrado o no está disponible el archivo Excel de origen de datos de la estrategia: {0}</err113>
+    <err114>No se ha seleccionado la hoja del archivo Excel de origen de datos de la estrategia</err114>
+    <err115>No se ha encontrado la hoja {0} en el archivo Excel de origen de datos de la estrategia</err115>
+    <err116>Regla {0}: en esta estrategia los pares se forman por emparejamiento, por lo que el emparejamiento debe estar definido</err116>
+    <err117>Regla {0}: en una estrategia con emparejamiento no se define la agrupación: el grupo de la regla es el grupo de emparejamiento</err117>
+    <err118>El emparejamiento debe estar definido en ambos lados: el valor se calcula tanto sobre los elementos de origen condicional como sobre los de destino y se compara entre sí</err118>
+    <err119>Regla {0}: en la expresión de emparejamiento de los elementos de origen condicional no se pueden usar parámetros del elemento de destino</err119>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -327,6 +425,14 @@
     <sld21>La estrategia procesa los elementos ubicados en conjuntos</sld21>
     <ssd22>Procesamiento de elementos específicos de la vista</ssd22>
     <sld22>Procesa los elementos que existen únicamente dentro de una vista y no forman parte del modelo tridimensional: cotas, notas de texto, etiquetas, líneas de detalle y regiones rellenadas, así como el contenido de las láminas. Estos elementos están vinculados a la vista en la que se crearon y no se muestran en las demás. Los elementos de modelo, como muros, suelos o equipamiento, no se ven afectados</sld22>
+    <ssd23>Procesamiento de componentes de escalera</ssd23>
+    <sld23>Procesa los componentes de las escaleras: tramos, mesetas, soportes y las barandillas asociadas a la escalera. El elemento de origen condicional es la escalera. Los componentes de una escalera de varias plantas se procesan a través de la escalera a la que pertenecen</sld23>
+    <ssd24>Procesamiento de aberturas de la habitación</ssd24>
+    <sld24>Procesa las aberturas - puertas y ventanas - que dan a la habitación. El elemento de origen condicional es la habitación. Las aberturas se buscan en los elementos de contorno de la habitación, muros cortina incluidos, y la pertenencia se determina por las propiedades "Hacia la habitación" y "Desde la habitación" teniendo en cuenta la fase de la habitación; si esas propiedades están vacías, por la intersección de la geometría de la abertura con el volumen de la habitación</sld24>
+    <ssd25>Procesamiento de dos conjuntos de elementos emparejados por valor</ssd25>
+    <sld25>La estrategia procesa dos conjuntos independientes de elementos: de origen condicional y de destino. El par no se forma por una relación de los elementos en el modelo, sino por la coincidencia del valor calculado en ambos lados por el ajuste de emparejamiento. Los elementos coincidentes forman un grupo sobre el que se calculan las funciones de agregación</sld25>
+    <ssd26>Procesamiento del acabado de habitaciones</ssd26>
+    <sld26>La estrategia procesa el acabado de habitaciones creado por el complemento «Acabado de habitaciones». El elemento de origen condicional es una habitación y los elementos de destino son los elementos de acabado creados para ella, incluidos los vinculados a la habitación manualmente con los medios del mismo complemento. El acabado creado por cualquier otro medio no lo procesa la estrategia</sld26>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -358,6 +464,10 @@
     <se15>Conjunto</se15>
     <sp15>Insertar parámetro de conjunto</sp15>
     <sp16>Insertar parámetro de vista</sp16>
+    <se16>Escalera</se16>
+    <sp17>Insertar parámetro de la escalera</sp17>
+    <se17>Elementos de origen</se17>
+    <sp18>Insertar parámetro del elemento de origen</sp18>
     <te1>Elemento objetivo</te1>
     <tp1>Insertar parámetro de elemento objetivo</tp1>
     <te2>Ejemplar de familia</te2>
@@ -376,10 +486,18 @@
     <tp8>Insertar parámetro de material</tp8>
     <te9>Pieza</te9>
     <tp10>Insertar parámetro de pieza</tp10>
+    <te10>Componente de escalera</te10>
+    <tp11>Insertar parámetro del componente de escalera</tp11>
+    <te11>Abertura</te11>
+    <tp9>Insertar parámetro de la abertura</tp9>
+    <te12>Elemento de acabado</te12>
+    <tp12>Insertar parámetro del elemento de acabado</tp12>
     <ft1>Funciones matemáticas</ft1>
     <ft2>Funciones lógicas</ft2>
     <ft3>Funciones de modificación</ft3>
     <ft4>Funciones para obtener valor</ft4>
+    <ft5>Funciones de agregación</ft5>
+    <ft6>Funciones de escritura inversa</ft6>
     <d-min>Devuelve el menor de números</d-min>
     <d-max>Devuelve el mayor de números</d-max>
     <d-abs>Devuelve valor absoluto de un número</d-abs>
@@ -412,6 +530,8 @@
     <d-sstr>Devuelve una subcadena</d-sstr>
     <d-tmirrored>Devuelve TRUE si familia objetiva está reflejada</d-tmirrored>
     <d-smirrored>Devuelve TRUE si familia condicionalmente original está reflejada</d-smirrored>
+    <d-isvertical>Devuelve TRUE si el eje del elemento objetivo está en posición vertical. En caso contrario devuelve FALSE. El argumento opcional &lt;a&gt; define la tolerancia en grados, 0.1 por defecto. La función solo se aplica a los elementos cuya posición está definida por una línea recta</d-isvertical>
+    <d-ishorizontal>Devuelve TRUE si el eje del elemento objetivo está en posición horizontal. En caso contrario devuelve FALSE. El argumento opcional &lt;a&gt; define la tolerancia en grados, 0.1 por defecto. La función solo se aplica a los elementos cuya posición está definida por una línea recta</d-ishorizontal>
     <d-strlen>Devuelve longitud de una cadena</d-strlen>
     <d-strindex>Devuelve el índice basado en cero de la primera entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena</d-strindex>
     <d-valuestr>Devuelve valor del parámetro como una cadena con unidades de medida</d-valuestr>
@@ -430,5 +550,33 @@
     <d-targettopz>Devuelve la cota más alta (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targettopz>
     <d-sourcebottomz>Devuelve la cota más baja (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcebottomz>
     <d-sourcetopz>Devuelve la cota más alta (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcetopz>
+    <d-gsum>Devuelve la suma de los valores de la expresión de los elementos del grupo</d-gsum>
+    <d-gcount>Devuelve el número de elementos del grupo del rol indicado: "s" - original condicional, "t" - objetivo</d-gcount>
+    <d-gjoin>Une los valores de la expresión de los elementos del grupo mediante el separador indicado</d-gjoin>
+    <d-gmin>Devuelve el valor mínimo de la expresión de los elementos del grupo</d-gmin>
+    <d-gmax>Devuelve el valor máximo de la expresión de los elementos del grupo</d-gmax>
+    <d-gavg>Devuelve el valor medio de la expresión de los elementos del grupo</d-gavg>
+    <d-gindex>Devuelve el número de orden del elemento objetivo dentro del grupo</d-gindex>
+    <d-ranges>Contrae las secuencias de números enteros consecutivos en intervalos del tipo 1-3</d-ranges>
+    <d-ccmin>Devuelve el valor mínimo de una columna de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-ccmin>
+    <d-ccmax>Devuelve el valor máximo de una columna de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-ccmax>
+    <d-crmin>Devuelve el valor mínimo de una fila de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-crmin>
+    <d-crmax>Devuelve el valor máximo de una fila de la fuente de datos de la estrategia. Se omiten las celdas cuyo valor no se puede convertir en un número</d-crmax>
+    <d-item>Devuelve el elemento de la lista con el índice indicado, empezando por cero. Devuelve un valor vacío si no existe un elemento con ese índice</d-item>
+    <d-finditem>Devuelve el primer elemento de la lista que contiene el valor buscado. Devuelve un valor vacío si no existe tal elemento. La función no distingue entre mayúsculas y minúsculas</d-finditem>
+    <d-itemindex>Devuelve el índice, empezando por cero, del primer elemento de la lista que contiene el valor buscado. Devuelve -1 si no existe tal elemento. La función no distingue entre mayúsculas y minúsculas</d-itemindex>
+    <d-trim>Devuelve el valor sin espacios al principio ni al final de la cadena</d-trim>
+    <d-list>Representa una cadena con el separador indicado como una lista para comprobar la pertenencia con los operadores "=|" y "!=|". Se descartan los espacios al principio y al final de los elementos y los elementos vacíos</d-list>
+    <d-cclist>Devuelve los valores de una columna de la fuente de datos de la estrategia como una lista para comprobar la pertenencia con los operadores "=|" y "!=|"</d-cclist>
+    <d-crlist>Devuelve los valores de una fila de la fuente de datos de la estrategia como una lista para comprobar la pertenencia con los operadores "=|" y "!=|"</d-crlist>
+    <d-rgxreplace>Devuelve el valor &lt;s&gt; en el que todas las coincidencias de la expresión regular &lt;s1&gt; se reemplazan por &lt;s2&gt;. El patrón &lt;s1&gt; se escribe entre comillas dobles, procede del valor de un parámetro o es el resultado de una función anidada. En &lt;s2&gt; están disponibles las sustituciones de grupos: "$1", "$2", etcétera. La distinción de mayúsculas se define en la opción de la fórmula</d-rgxreplace>
+    <d-rgxmatch>Devuelve TRUE si el valor &lt;s&gt; contiene una coincidencia de la expresión regular &lt;s1&gt;. En caso contrario devuelve FALSE. El patrón &lt;s1&gt; se escribe entre comillas dobles, procede del valor de un parámetro o es el resultado de una función anidada. Para coincidir con el valor completo use los anclajes "^" y "$". La distinción de mayúsculas se define en la opción de la fórmula</d-rgxmatch>
+    <d-wb-avg>Guarda el promedio de los resultados en un parámetro del elemento original condicional</d-wb-avg>
+    <d-wb-first>Guarda el primer resultado en un parámetro del elemento original condicional</d-wb-first>
+    <d-wb-join>Guarda los resultados unidos con un separador en un parámetro del elemento original condicional</d-wb-join>
+    <d-wb-last>Guarda el último resultado en un parámetro del elemento original condicional</d-wb-last>
+    <d-wb-max>Guarda el resultado máximo en un parámetro del elemento original condicional</d-wb-max>
+    <d-wb-min>Guarda el resultado mínimo en un parámetro del elemento original condicional</d-wb-min>
+    <d-wb-sum>Guarda la suma de los resultados en un parámetro del elemento original condicional</d-wb-sum>
   </mprParametrization>
 </ModPlus>

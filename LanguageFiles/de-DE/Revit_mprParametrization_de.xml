@@ -100,6 +100,7 @@
     <t93>Wählen Sie das Ergebnis der Ausdrucksverarbeitung aus, um eine Liste mit den IDs der verarbeiteten Elemente anzeigen zu lassen</t93>
     <t94>Eingeschränkter Modus</t94>
     <t95>Die Filter der Strategie gelten für alle Regeln, für die keine eigenen Elementfilter definiert sind. Wenn im Strategiefilter nur der Kategoriefilter ausgefüllt ist und im Regel-Filter nur der Parameterfilter, entsteht ein kombinierter Filter mit den angegebenen Kategorien und Parametern. Umgekehrt können im Strategiefilter nur Kategorien und im Regel-Filter nur Parameter definiert werden. Sind in einer Regel sowohl der Kategoriefilter als auch der Parameterfilter ausgefüllt, wird der Strategiefilter ignoriert</t95>
+    <!--todo remove after 4.1.33.0-->
     <t96>Wählen Sie Ansichten aus</t96>
     <t97>Datenquelle</t97>
     <t98>Strategiefilter</t98>
@@ -133,6 +134,7 @@
     <t126>Überprüfen</t126>
     <t127>Ein vollständiger Parametrisierungszyklus für die ausgewählten Regeln der ausgewählten Strategien wird durchgeführt, aber anstatt einer Zuweisung wird ein Vergleich zwischen dem Berechnungsergebnis der Formel und dem aktuellen Wert des Zielparameters durchgeführt</t127>
     <t128>Überprüfungsergebnisse</t128>
+    <!--todo remove after 4.1.33.0-->
     <t129>Ansichten ausgewählt:</t129>
     <t130>Verknüpfte Dateien auswählen</t130>
     <t131>Geben Sie die verknüpften Dateien an, in denen die Suche nach Elementen durchgeführt wird</t131>
@@ -147,13 +149,67 @@
     <t140>STRATEGIE-EINSTELLUNGEN</t140>
     <t141>von</t141>
     <t142>Name und Beschreibung</t142>
-    <t143>Formel-Anleitung öffnen</t143>
+    <t143>Anleitung öffnen</t143>
     <t144>Vorfilter</t144>
     <t145>Der Vorfilter grenzt den Elementsatz für alle Regeln der Strategie gleichzeitig ein. Im Gegensatz zum Strategiefilter wird er nicht anstelle eines nicht ausgefüllten Regelfilters eingesetzt, sondern zusätzlich zu diesem angewendet: Ein Element wird nur dann verarbeitet, wenn es sowohl den Vorfilter als auch den Regelfilter passiert. Wenn beispielsweise im Vorfilter die Kategorie „Wände" und der Parameter „Tragend" festgelegt werden, arbeiten alle Regeln nur mit tragenden Wänden und wählen daraus Elemente nach ihren eigenen Kategorien und Parametern aus. Ein leerer Vorfilter schränkt nichts ein</t145>
     <t146>Aktuelle Strategie exportieren</t146>
     <t147>In aktuelle Strategie importieren</t147>
     <t148>Strategiefilter</t148>
     <t149>Vorfilter der Strategie</t149>
+    <t150>Regelnamen bearbeiten</t150>
+    <t151>Geben Sie einen Namen der Regel ein</t151>
+    <t152>Die Formel enthält Ausdrücke mit der Markierung "Nur zur Prüfung" - Ausdrücke, in denen nach dem Zielparameter ein anderer Vergleichsoperator als "=" angegeben ist. Solche Ausdrücke werden nur im Modus "Prüfen" verarbeitet und im Modus "Ausführen" übersprungen</t152>
+    <t153>Nur zur Prüfung</t153>
+    <t154>Ohne Gruppe</t154>
+    <t155>Name und Gruppe der Konfiguration</t155>
+    <t156>Konfigurationen nach Gruppe filtern</t156>
+    <t157>Gruppe eingeben oder auswählen</t157>
+    <t158>Konfiguration aus der Gruppe entfernen</t158>
+    <t159>Gruppen</t159>
+    <t160>Gruppe umbenennen</t160>
+    <t161>Gruppe löschen. Die Konfigurationen dieser Gruppe werden nicht gelöscht — sie bleiben ohne Gruppe</t161>
+    <t162>Anzahl der Konfigurationen in der Gruppe</t162>
+    <t163>Gruppe</t163>
+    <t164>Parameter oder Ausdruck, zum Beispiel $[Typname]</t164>
+    <t168>Groß- und Kleinschreibung ignorieren</t168>
+    <t169>Sortieren</t169>
+    <t170>Absteigend</t170>
+    <t171>Innerhalb der Gruppe sortieren nach, zum Beispiel $[Länge]</t171>
+    <t172>Elemente mit demselben Wert bilden eine Gruppe</t172>
+    <t173>Gruppierung ist nicht festgelegt</t173>
+    <t174>Gruppieren nach</t174>
+    <t178>Innerhalb der Gruppe sortieren nach</t178>
+    <t179>Werte ohne Berücksichtigung der Groß- und Kleinschreibung vergleichen. Auf numerische Werte hat dies keinen Einfluss</t179>
+    <t180>Die Elemente innerhalb der Gruppe sortieren. Beeinflusst das Ergebnis der Funktion GIndex und die Reihenfolge der Werte in GJoin</t180>
+    <t181>Absteigend sortieren. Wirkt nur, wenn die Sortierung aktiviert ist</t181>
+    <t183>Gruppierung</t183>
+    <t184>Zuordnung</t184>
+    <t188>Zuordnung ist nicht festgelegt</t188>
+    <t189>Schreibweise egal</t189>
+    <t190>aufsteigend</t190>
+    <t191>absteigend</t191>
+    <t192>Zu prüfende Bedingung:</t192>
+    <t193>Prüfergebnis:</t193>
+    <t194>Diese Funktionen dürfen nur am Anfang eines Ausdrucks stehen</t194>
+    <t175>Quellelemente zuordnen nach</t175>
+    <t176>Zielelemente zuordnen nach</t176>
+    <t177>Zuordnungsvorschau</t177>
+    <t195>Bedingte Quell- und Zielelemente kommen in eine Gruppe, wenn die auf beiden Seiten berechneten Werte übereinstimmen. Über diese Gruppe werden die Aggregatfunktionen berechnet</t195>
+    <t196>Unvollständige Gruppen stehen zuerst: ihre Elemente werden bei der Bearbeitung übersprungen</t196>
+    <t197>Wert</t197>
+    <t198>Quellelemente</t198>
+    <t199>Zielelemente</t199>
+    <t200>Beispiele Quellelemente</t200>
+    <t201>Beispiele Zielelemente</t201>
+    <t202>Problem</t202>
+    <t203>Gruppen: {0}, davon vollständig: {1}. Bedingte Quellelemente: {2}, Zielelemente: {3}</t203>
+    <t204>Wert wurde nicht berechnet bei Quellelementen: {0}, bei Zielelementen: {1}</t204>
+    <t205>Parameter oder Ausdruck über bedingte Quellelemente, zum Beispiel @[Wohnungstyp]</t205>
+    <t206>Parameter oder Ausdruck über Zielelemente, zum Beispiel $[Raumtyp]</t206>
+    <t207>Keine Zielelemente mit diesem Wert</t207>
+    <t208>Keine bedingten Quellelemente mit diesem Wert</t208>
+    <t209>Die Zuordnungswerte stimmen überein</t209>
+    <t210>Die Zuordnungswerte stimmen nicht überein: bei der Bearbeitung wird dieses Paar nicht gebildet</t210>
     <msg1>Die Konfiguration wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg1>
     <msg2>Die Strategie wird unwiderruflich gelöscht! Sind Sie sicher, dass Sie fortsetzen wollen?</msg2>
     <msg3>Die Liste der Strategien ist nicht leer</msg3>
@@ -194,6 +250,11 @@
     <msg38>Die Verarbeitung des Elements wurde übersprungen, da das Ergebnis der Ausdrucksberechnung das Schlüsselwort SKIP_ELEMENT ist</msg38>
     <msg39>Regeln Nr. {0}: Kategorien überschneiden sich nicht mit den Kategorien des Vorfilters {1}. Diese Regeln verarbeiten keine Elemente</msg39>
     <msg40>Regeln Nr. {0}: Kategorien fallen nur teilweise in die Kategorien des Vorfilters {1}. Nicht übereinstimmende Kategorien werden verworfen</msg40>
+    <msg41>Der Ausdruck wurde übersprungen: Er ist mit "Nur zur Prüfung" markiert und wird nur im Modus "Prüfen" verarbeitet</msg41>
+    <msg42>Der Wert "{0}" des Parameters "{1}" erfüllt die Bedingung "{2} {3}"</msg42>
+    <msg43>Der Wert "{0}" des Parameters "{1}" erfüllt die Bedingung "{2} {3}" nicht</msg43>
+    <msg44>Das Element wurde übersprungen: Der Gruppierungsschlüssel wurde als leer berechnet</msg44>
+    <msg45>Element übersprungen: es wurde kein bedingtes Quellelement mit demselben Zuordnungswert gefunden</msg45>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -259,7 +320,7 @@
     <err64>Die Schlüsselparameter "ToRoom" und "FromRoom" dürfen ausschließlich bei der Bearbeitung von Familien in den Kategorien "Türen", "Fenster" verwendet werden</err64>
     <err65>Kein den Filterbedingungen entsprechendes Quellelement ist im Modell gefunden</err65>
     <err66>Keine Daten zur Zuordnung des Ergebnisses der Ausdruckauswertung sind definiert</err66>
-    <err67>Jeder Ausdruck der Formel muss mit dem Zielparameter "$[ParemeterName]=" oder mit der Funktion zum Schreiben der Ergebniskombination in das bedingte Quellelement "JOIN(@[ParameterName],)=", oder mit der Funktion zum Schreiben der Summe der Ergebnisse in das bedingte Quellelement "SUM(@[ParameterName])=" anfangen</err67>
+    <err67>Jeder Ausdruck der Formel muss mit dem Zielparameter "$[ParameterName]=" oder mit einer Rückschreibe-Funktion anfangen, die das Ergebnis in das bedingte Quellelement schreibt: "SUM(@[ParameterName])=", "MIN(@[ParameterName])=", "MAX(@[ParameterName])=", "AVG(@[ParameterName])=", "FIRST(@[ParameterName])=", "LAST(@[ParameterName])=" oder "JOIN(@[ParameterName],)="</err67>
     <err68>Aus dem Wert "{0}" konnte keine Zahl abgerufen werden</err68>
     <err69>Das Ergebnis kann nicht aus der verknüpften Datei in das bedingte Quellelement geschrieben werden</err69>
     <err70>Das Element wird aktuell vom Benutzer "{0}" verwendet und kann nicht geändert werden</err70>
@@ -275,6 +336,43 @@
     <err80>Der Pseudo-Parameter ID hat keine Eigenschaft "HasValue"</err80>
     <err81>Das Element hat mehrere Parameter mit dem Namen "{0}". Entfernen Sie den überflüssigen Parameter oder verwenden Sie den Schlüsselnamen des Parameters (GUID für gemeinsam genutzte Parameter, Systemname für integrierte Parameter)</err81>
     <err82>Das Element mit der Id {0} hat keine Geometrie</err82>
+    <err83>Es konnte nicht ermittelt werden, für welche Elemente der Gruppe die Aggregatfunktion berechnet werden soll: Der Funktionskörper enthält keinen einzigen Elementparameter</err83>
+    <err84>Das Argument der Funktion muss der Buchstabe "s" (bedingte Quellelemente) oder "t" (Zielelemente) sein</err84>
+    <err85>Die Funktion muss einen Ausdruck enthalten, der für jedes Element der Gruppe berechnet wird</err85>
+    <err86>Die Funktion muss zwei oder drei Argumente enthalten</err86>
+    <err87>Das dritte Argument der Funktion darf nur die Buchstaben "d", "s" und "r" enthalten</err87>
+    <err88>Die Funktion gibt die laufende Nummer des Zielelements zurück, daher ist der Buchstabe "t" das einzige zulässige Argument</err88>
+    <err89>Die Strategie hat ein bedingtes Quellelement, daher muss die Rolle der Gruppenelemente ausdrücklich angegeben werden: "s" - bedingte Quellelemente, "t" - Zielelemente</err89>
+    <err90>Im Ausdruck des Gruppierungsschlüssels sind nur Parameter und Funktionen für die Arbeit mit Zeichenfolgen und Zahlen zulässig</err90>
+    <err91>Regel {0}: die Zuordnung ist in einer Strategie festgelegt, die sie nicht unterstützt - das bedingte Quellelement wird über eine Beziehung bestimmt, nicht über einen übereinstimmenden Wert</err91>
+    <err92>Regel {0}: die Zuordnung ist nur auf einer Seite festgelegt - es gibt nichts zuzuordnen</err92>
+    <err93>Regel {0}: Aggregatfunktionen können nicht zusammen mit Rückschreibfunktionen verwendet werden - der Aggregatwert ist für alle Paare der Gruppe gleich, und der Sammler würde ihn so oft addieren, wie es Paare in der Gruppe gibt</err93>
+    <err94>Im Zuordnungsausdruck der bedingten Quellelemente können keine Parameter des Zielelements verwendet werden: das Zielelement ist zu diesem Zeitpunkt noch nicht zugeordnet</err94>
+    <err95>Die Funktion muss ein oder zwei Argumente enthalten: einen Spalten- (Zeilen-) Verweis und einen optionalen Zellbereich, getrennt durch zwei Punkte ".."</err95>
+    <err96>Die Zeilennummer "{0}" muss eine positive ganze Zahl sein</err96>
+    <err97>Der Zellbereich "{0}" muss zwei durch zwei Punkte ".." getrennte Grenzen enthalten</err97>
+    <err98>Das zweite Argument der Funktion darf nur der Buchstabe "s" sein - die Werte vor der Auswahl sortieren</err98>
+    <err99>Die Funktion muss drei Argumente enthalten: die Listenzeichenfolge, das Trennzeichen und den Elementindex</err99>
+    <err100>Die Funktion muss drei Argumente enthalten: die Listenzeichenfolge, das Trennzeichen und den Suchwert</err100>
+    <err101>Die Funktion muss zwei Argumente enthalten: die Listenzeichenfolge und das Trennzeichen</err101>
+    <err102>Der rechte Teil des Operators "{0}" muss eine Liste sein - das Ergebnis der Funktion List, CCList oder CRList</err102>
+    <err103>Eine Liste darf nur rechts vom Zugehörigkeitsoperator "=|" oder "!=|" verwendet werden</err103>
+    <err104>Ein Muster eines regulären Ausdrucks muss eine Zeichenfolge in doppelten Anführungszeichen, ein Parameterverweis oder ein Funktionsergebnis sein</err104>
+    <err105>Ein Muster eines regulären Ausdrucks darf nicht leer sein</err105>
+    <err106>Ungültiges Muster des regulären Ausdrucks "{0}". {1}</err106>
+    <err107>Die Auswertung des regulären Ausdrucks "{0}" wurde nicht in der vorgesehenen Zeit abgeschlossen</err107>
+    <err108>Das Element mit der Id {0} ist nicht linear: seine Position ist nicht durch eine gerade Linie definiert</err108>
+    <err109>Die Funktion kann ein optionales Argument enthalten - die Toleranz in Grad im Bereich von 0 bis 90</err109>
+    <err110>Im Zuordnungsausdruck der Zielelemente können keine Parameter des bedingten Quellelements verwendet werden: das bedingte Quellelement ist zu diesem Zeitpunkt noch nicht zugeordnet</err110>
+    <err111>Regel {0}: im Zuordnungsausdruck der Zielelemente können keine Parameter des bedingten Quellelements verwendet werden</err111>
+    <err112>Die Excel-Datei der Datenquelle der Strategie ist nicht angegeben</err112>
+    <err113>Die Excel-Datei der Datenquelle der Strategie wurde nicht gefunden oder ist nicht verfügbar: {0}</err113>
+    <err114>Es ist kein Blatt der Excel-Datei der Datenquelle der Strategie ausgewählt</err114>
+    <err115>Das Blatt {0} wurde in der Excel-Datei der Datenquelle der Strategie nicht gefunden</err115>
+    <err116>Regel {0}: in dieser Strategie werden Paare über die Zuordnung gebildet, daher muss die Zuordnung festgelegt sein</err116>
+    <err117>Regel {0}: in einer Strategie mit Zuordnung wird keine Gruppierung festgelegt - die Gruppe der Regel ist die Zuordnungsgruppe</err117>
+    <err118>Die Zuordnung muss auf beiden Seiten festgelegt sein: der Wert wird sowohl über die bedingten Quellelemente als auch über die Zielelemente berechnet und miteinander verglichen</err118>
+    <err119>Regel {0}: im Zuordnungsausdruck der bedingten Quellelemente können keine Parameter des Zielelements verwendet werden</err119>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -327,6 +425,14 @@
     <sld21>Die Strategie verarbeitet Elemente, die sich in Baugruppen befinden</sld21>
     <ssd22>Verarbeitung ansichtsgebundener Elemente</ssd22>
     <sld22>Verarbeitet Elemente, die nur innerhalb einer einzigen Ansicht existieren und nicht Teil des dreidimensionalen Modells sind: Bemaßungen, Textbausteine, Beschriftungen, Detaillinien und schraffierte Flächen sowie Planinhalte. Solche Elemente sind an die Ansicht gebunden, in der sie erstellt wurden, und werden in anderen Ansichten nicht angezeigt. Modellelemente wie Wände, Geschossdecken oder Ausstattungselemente sind davon nicht betroffen</sld22>
+    <ssd23>Verarbeitung von Treppenkomponenten</ssd23>
+    <sld23>Verarbeitet Treppenkomponenten: Läufe, Podeste, Auflager sowie die der Treppe zugeordneten Geländer. Bedingtes Ausgangselement ist die Treppe. Die Komponenten einer geschossübergreifenden Treppe werden über die Treppe verarbeitet, zu der sie gehören</sld23>
+    <ssd24>Verarbeitung von Raumöffnungen</ssd24>
+    <sld24>Verarbeitet die Öffnungen - Türen und Fenster -, die in den Raum führen. Bedingtes Ausgangselement ist der Raum. Die Öffnungen werden in den Raumbegrenzungen einschließlich Fassaden gesucht; die Zugehörigkeit wird über die Eigenschaften "Nach Raum" und "Von Raum" unter Berücksichtigung der Raumphase bestimmt und bei leeren Eigenschaften über den Schnitt der Öffnungsgeometrie mit dem Raumvolumen</sld24>
+    <ssd25>Bearbeitung von zwei nach Wert zugeordneten Elementmengen</ssd25>
+    <sld25>Die Strategie bearbeitet zwei unabhängige Elementmengen - bedingte Quellelemente und Zielelemente. Ein Paar wird nicht über eine Beziehung der Elemente im Modell gebildet, sondern über die Übereinstimmung des Wertes, der auf beiden Seiten durch die Zuordnung berechnet wird. Übereinstimmende Elemente bilden eine Gruppe, über die Aggregatfunktionen berechnet werden</sld25>
+    <ssd26>Bearbeitung des Raumausbaus</ssd26>
+    <sld26>Die Strategie bearbeitet den Raumausbau, der vom Plugin «Raumausbau» erstellt wurde. Das bedingte Quellelement ist ein Raum, die Zielelemente sind die für ihn erstellten Ausbauelemente, einschließlich derjenigen, die mit denselben Mitteln von Hand mit dem Raum verknüpft wurden. Ausbau, der auf andere Weise erstellt wurde, wird von der Strategie nicht bearbeitet</sld26>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -358,6 +464,10 @@
     <se15>Baugruppe</se15>
     <sp15>Baugruppenparameter einfügen</sp15>
     <sp16>Ansichtsparameter einfügen</sp16>
+    <se16>Treppe</se16>
+    <sp17>Treppenparameter einfügen</sp17>
+    <se17>Quellelemente</se17>
+    <sp18>Parameter des Quellelements einfügen</sp18>
     <te1>Zielelement</te1>
     <tp1>Parameter des Zielelementes einfügen</tp1>
     <te2>Exemplar der Familie</te2>
@@ -376,10 +486,18 @@
     <tp8>Materialparameter einfügen</tp8>
     <te9>Teil</te9>
     <tp10>Parameter des Teiles einfügen</tp10>
+    <te10>Treppenkomponente</te10>
+    <tp11>Parameter der Treppenkomponente einfügen</tp11>
+    <te11>Öffnung</te11>
+    <tp9>Parameter der Öffnung einfügen</tp9>
+    <te12>Ausbauelement</te12>
+    <tp12>Parameter des Ausbauelements einfügen</tp12>
     <ft1>Mathematische Funktionen</ft1>
     <ft2>Logische Funktionen</ft2>
     <ft3>Modifizierende Funktionen</ft3>
     <ft4>Get-Value-Funktionen</ft4>
+    <ft5>Aggregatfunktionen</ft5>
+    <ft6>Rückschreibe-Funktionen</ft6>
     <d-min>Gibt die kleinere der beiden Zahlen zurück</d-min>
     <d-max>Gibt die größere der beiden Zahlen zurück</d-max>
     <d-abs>Gibt den absoluten Wert der Zahl zurück</d-abs>
@@ -412,6 +530,8 @@
     <d-sstr>Gibt die Teilzeichenkette zurück</d-sstr>
     <d-tmirrored>Gibt TRUE zurück, wenn die Zielfamilie gespiegelt ist</d-tmirrored>
     <d-smirrored>Gibt TRUE zurück, wenn die bedingte Quellfamilie gespiegelt ist</d-smirrored>
+    <d-isvertical>Gibt TRUE zurück, wenn die Achse des Zielelements senkrecht verläuft. Andernfalls FALSE. Das optionale Argument &lt;a&gt; legt die Toleranz in Grad fest, standardmäßig 0.1. Die Funktion gilt nur für Elemente, deren Position durch eine gerade Linie definiert ist</d-isvertical>
+    <d-ishorizontal>Gibt TRUE zurück, wenn die Achse des Zielelements waagerecht verläuft. Andernfalls FALSE. Das optionale Argument &lt;a&gt; legt die Toleranz in Grad fest, standardmäßig 0.1. Die Funktion gilt nur für Elemente, deren Position durch eine gerade Linie definiert ist</d-ishorizontal>
     <d-strlen>Gibt die Länge einer Zeichenfolge zurück</d-strlen>
     <d-strindex>Gibt den Index zurück, der auf Null des ersten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-strindex>
     <d-valuestr>Gibt den Parameterwert als Zeichenfolge mit Maßeinheiten zurück</d-valuestr>
@@ -430,5 +550,33 @@
     <d-targettopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targettopz>
     <d-sourcebottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcebottomz>
     <d-sourcetopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcetopz>
+    <d-gsum>Gibt die Summe der Ausdruckswerte über die Elemente der Gruppe zurück</d-gsum>
+    <d-gcount>Gibt die Anzahl der Gruppenelemente der angegebenen Rolle zurück: "s" - bedingte Quellelemente, "t" - Zielelemente</d-gcount>
+    <d-gjoin>Verbindet die Ausdruckswerte über die Elemente der Gruppe mit dem angegebenen Trennzeichen</d-gjoin>
+    <d-gmin>Gibt den kleinsten Wert des Ausdrucks über die Elemente der Gruppe zurück</d-gmin>
+    <d-gmax>Gibt den größten Wert des Ausdrucks über die Elemente der Gruppe zurück</d-gmax>
+    <d-gavg>Gibt den Durchschnittswert des Ausdrucks über die Elemente der Gruppe zurück</d-gavg>
+    <d-gindex>Gibt die laufende Nummer des Zielelements innerhalb der Gruppe zurück</d-gindex>
+    <d-ranges>Fasst Folgen aufeinanderfolgender ganzer Zahlen zu Bereichen der Form 1-3 zusammen</d-ranges>
+    <d-ccmin>Gibt den Mindestwert aus einer Spalte der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-ccmin>
+    <d-ccmax>Gibt den Höchstwert aus einer Spalte der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-ccmax>
+    <d-crmin>Gibt den Mindestwert aus einer Zeile der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-crmin>
+    <d-crmax>Gibt den Höchstwert aus einer Zeile der Datenquelle der Strategie zurück. Zellen, deren Wert sich nicht in eine Zahl umwandeln lässt, werden übersprungen</d-crmax>
+    <d-item>Gibt das Listenelement mit dem angegebenen nullbasierten Index zurück. Gibt einen leeren Wert zurück, wenn es kein Element mit diesem Index gibt</d-item>
+    <d-finditem>Gibt das erste Listenelement zurück, das den Suchwert enthält. Gibt einen leeren Wert zurück, wenn es kein solches Element gibt. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-finditem>
+    <d-itemindex>Gibt den nullbasierten Index des ersten Listenelements zurück, das den Suchwert enthält. Gibt -1 zurück, wenn es kein solches Element gibt. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-itemindex>
+    <d-trim>Gibt den Wert ohne führende und nachfolgende Leerzeichen zurück</d-trim>
+    <d-list>Stellt eine Zeichenfolge mit dem angegebenen Trennzeichen als Liste für die Zugehörigkeitsprüfung durch die Operatoren "=|" und "!=|" dar. Führende und nachfolgende Leerzeichen der Elemente sowie leere Elemente werden verworfen</d-list>
+    <d-cclist>Gibt die Werte einer Spalte der Datenquelle der Strategie als Liste für die Zugehörigkeitsprüfung durch die Operatoren "=|" und "!=|" zurück</d-cclist>
+    <d-crlist>Gibt die Werte einer Zeile der Datenquelle der Strategie als Liste für die Zugehörigkeitsprüfung durch die Operatoren "=|" und "!=|" zurück</d-crlist>
+    <d-rgxreplace>Gibt den Wert &lt;s&gt; zurück, in dem alle Treffer des regulären Ausdrucks &lt;s1&gt; durch &lt;s2&gt; ersetzt sind. Das Muster &lt;s1&gt; steht in doppelten Anführungszeichen, stammt aus einem Parameterwert oder ist das Ergebnis einer verschachtelten Funktion. In &lt;s2&gt; sind Gruppenersetzungen - "$1", "$2" und so weiter - verfügbar. Die Groß- und Kleinschreibung wird durch die Formeloption bestimmt</d-rgxreplace>
+    <d-rgxmatch>Gibt TRUE zurück, wenn der Wert &lt;s&gt; einen Treffer des regulären Ausdrucks &lt;s1&gt; enthält. Andernfalls FALSE. Das Muster &lt;s1&gt; steht in doppelten Anführungszeichen, stammt aus einem Parameterwert oder ist das Ergebnis einer verschachtelten Funktion. Für eine Übereinstimmung mit dem gesamten Wert die Anker "^" und "$" verwenden. Die Groß- und Kleinschreibung wird durch die Formeloption bestimmt</d-rgxmatch>
+    <d-wb-avg>Schreibt den Mittelwert der Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-avg>
+    <d-wb-first>Schreibt das erste Ergebnis in einen Parameter des bedingten Quellelements</d-wb-first>
+    <d-wb-join>Schreibt die mit einem Trennzeichen verbundenen Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-join>
+    <d-wb-last>Schreibt das letzte Ergebnis in einen Parameter des bedingten Quellelements</d-wb-last>
+    <d-wb-max>Schreibt das größte Ergebnis in einen Parameter des bedingten Quellelements</d-wb-max>
+    <d-wb-min>Schreibt das kleinste Ergebnis in einen Parameter des bedingten Quellelements</d-wb-min>
+    <d-wb-sum>Schreibt die Summe der Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-sum>
   </mprParametrization>
 </ModPlus>

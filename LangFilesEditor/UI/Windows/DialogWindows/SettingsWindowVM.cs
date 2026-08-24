@@ -26,6 +26,8 @@ public sealed class SettingsWindowVM : ObservableObject
     private readonly ILanguageRepository _repository;
     private readonly EditorSettingsStore _settings;
     private bool _runStartupDiagnosticsScan;
+    private int _initialRowsPerFrame;
+    private int _maxRowsPerFrame;
     private string _selectedThemeName;
     private ICommand _openLanguageFilesFolderCommand;
     private ICommand _rescanDiagnosticsCommand;
@@ -45,6 +47,8 @@ public sealed class SettingsWindowVM : ObservableObject
         _repository = repository;
         _settings = settings;
         _runStartupDiagnosticsScan = settings.Current.RunStartupDiagnosticsScan;
+        _initialRowsPerFrame = settings.Current.InitialRowsPerFrame;
+        _maxRowsPerFrame = settings.Current.MaxRowsPerFrame;
         _selectedThemeName = ToThemeName(settings.Current.Theme);
 
         LocalVersion = new LocalizationVersionService().GetLocalVersion()?.ToString() ?? EditorStrings.UnknownVersion;
@@ -150,6 +154,46 @@ public sealed class SettingsWindowVM : ObservableObject
 
             _runStartupDiagnosticsScan = value;
             _settings.Current.RunStartupDiagnosticsScan = value;
+            _settings.Save();
+            OnPropertyChanged();
+        }
+    }
+
+    /// <summary>
+    /// Минимальный размер пачки единиц перевода при загрузке модуля.
+    /// </summary>
+    public int InitialRowsPerFrame
+    {
+        get => _initialRowsPerFrame;
+        set
+        {
+            if (_initialRowsPerFrame == value)
+            {
+                return;
+            }
+
+            _initialRowsPerFrame = value;
+            _settings.Current.InitialRowsPerFrame = value;
+            _settings.Save();
+            OnPropertyChanged();
+        }
+    }
+
+    /// <summary>
+    /// Максимальный размер пачки единиц перевода при загрузке модуля.
+    /// </summary>
+    public int MaxRowsPerFrame
+    {
+        get => _maxRowsPerFrame;
+        set
+        {
+            if (_maxRowsPerFrame == value)
+            {
+                return;
+            }
+
+            _maxRowsPerFrame = value;
+            _settings.Current.MaxRowsPerFrame = value;
             _settings.Save();
             OnPropertyChanged();
         }

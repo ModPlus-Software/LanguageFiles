@@ -100,6 +100,7 @@
     <t93>Select the result of expression processing to see a list of processed element IDs</t93>
     <t94>Restricted mode</t94>
     <t95>The strategy filters apply to all rules for which no own filters elements are populated. If only the category filter is filled in the strategy filter and only the parameter filter is filled in the rule filter, the result will be a combined filter with specified categories and parameters. And vice versa, in the strategy filter you can set only categories, and in the rule filter only parameters. If both the category filter and the parameter filter are filled in the rule, the strategy filter will be ignored</t95>
+    <!--todo remove after 4.1.33.0-->
     <t96>Select views</t96>
     <t97>Data source</t97>
     <t98>Strategy filter</t98>
@@ -133,6 +134,7 @@
     <t126>Check</t126>
     <t127>A full parameterization cycle will be run for the selected rules of the selected strategies, but instead of assignment, a comparison will be made between the formula calculation result and the current value of the target parameter</t127>
     <t128>Check Results</t128>
+    <!--todo remove after 4.1.33.0-->
     <t129>Views selected:</t129>
     <t130>Select linked files</t130>
     <t131>Specify the linked files in which the search for elements will be performed</t131>
@@ -147,13 +149,67 @@
     <t140>STRATEGY SETTINGS</t140>
     <t141>of</t141>
     <t142>Name and description</t142>
-    <t143>Open the formula guide</t143>
+    <t143>Open the guide</t143>
     <t144>Pre-filter</t144>
     <t145>The pre-filter narrows down the set of elements for all rules of the strategy at once. Unlike the strategy filter, it is not substituted for an unfilled rule filter but is applied in addition to it: an element will be processed only if it passes both the pre-filter and the rule filter. For example, if the pre-filter specifies the "Walls" category and the "Structural" parameter, all rules will operate only on structural walls, selecting elements among them by their own categories and parameters. An empty pre-filter imposes no restrictions</t145>
     <t146>Export current strategy</t146>
     <t147>Import into current strategy</t147>
     <t148>Strategy filters</t148>
     <t149>Strategy pre-filters</t149>
+    <t150>Edit rule name</t150>
+    <t151>Enter rule name</t151>
+    <t152>The formula contains expressions marked as "Check only" - expressions in which a comparison operator other than "=" is specified after the target parameter. Such expressions are processed only in the "Check" mode and are skipped in the "Execute" mode</t152>
+    <t153>Check only</t153>
+    <t154>No group</t154>
+    <t155>Configuration name and group</t155>
+    <t156>Filter configurations by group</t156>
+    <t157>Enter or select a group</t157>
+    <t158>Remove the configuration from the group</t158>
+    <t159>Groups</t159>
+    <t160>Rename group</t160>
+    <t161>Delete group. Configurations of this group are not deleted — they will remain without a group</t161>
+    <t162>Number of configurations in the group</t162>
+    <t163>group</t163>
+    <t164>Parameter or expression, for example $[Type Name]</t164>
+    <t168>Ignore case</t168>
+    <t169>Sort</t169>
+    <t170>Descending</t170>
+    <t171>Sort within the group by, for example $[Length]</t171>
+    <t172>Elements with the same value form one group</t172>
+    <t173>Grouping is not set</t173>
+    <t174>Group by</t174>
+    <t178>Sort within the group by</t178>
+    <t179>Compare values ignoring letter case. Does not affect numeric values</t179>
+    <t180>Sort elements within the group. Affects the result of the GIndex function and the order of values in GJoin</t180>
+    <t181>Sort in descending order. Applies only if sorting is enabled</t181>
+    <t183>Grouping</t183>
+    <t184>Matching</t184>
+    <t188>Matching is not set</t188>
+    <t189>ignore case</t189>
+    <t190>ascending</t190>
+    <t191>descending</t191>
+    <t192>Condition being checked:</t192>
+    <t193>Check result:</t193>
+    <t194>These functions can only be placed at the beginning of an expression</t194>
+    <t175>Match source elements by</t175>
+    <t176>Match target elements by</t176>
+    <t177>Matching preview</t177>
+    <t195>Conditionally source and target elements fall into one group when the values calculated on both sides coincide. This group is what aggregate functions are calculated over</t195>
+    <t196>Incomplete groups come first: their elements are skipped during processing</t196>
+    <t197>Value</t197>
+    <t198>Source</t198>
+    <t199>Target</t199>
+    <t200>Source examples</t200>
+    <t201>Target examples</t201>
+    <t202>Problem</t202>
+    <t203>Groups: {0}, complete: {1}. Conditionally source elements: {2}, target elements: {3}</t203>
+    <t204>Value was not calculated for source elements: {0}, for target elements: {1}</t204>
+    <t205>Parameter or expression over conditionally source elements, for example @[Apartment type]</t205>
+    <t206>Parameter or expression over target elements, for example $[Room type]</t206>
+    <t207>No target elements with this value</t207>
+    <t208>No conditionally source elements with this value</t208>
+    <t209>Matching values coincide</t209>
+    <t210>Matching values do not coincide: this pair is not built during processing</t210>
     <msg1>Configuration will be deleted permanently! Are you sure you want to continue?</msg1>
     <msg2>Strategy will be deleted permanently! Are you sure you want to continue?</msg2>
     <msg3>List of strategies is not empty</msg3>
@@ -194,6 +250,11 @@
     <msg38>Element processing skipped because the expression evaluation result is the keyword SKIP_ELEMENT</msg38>
     <msg39>Rules № {0}: categories do not intersect with the categories of the pre-filter {1}. These rules will not process any elements</msg39>
     <msg40>Rules № {0}: categories only partially fall within the categories of the pre-filter {1}. Non-matching categories will be discarded</msg40>
+    <msg41>The expression is skipped: it is marked as "Check only" and is processed only in the "Check" mode</msg41>
+    <msg42>The value "{0}" of parameter "{1}" satisfies the condition "{2} {3}"</msg42>
+    <msg43>The value "{0}" of parameter "{1}" does not satisfy the condition "{2} {3}"</msg43>
+    <msg44>Element skipped: the grouping key was calculated as empty</msg44>
+    <msg45>Element skipped: no conditionally source element with the same matching value was found</msg45>
     <err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
     <err2>The number of opening round brackets must equal the number of closing ones</err2>
     <err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -259,7 +320,7 @@
     <err64>The "ToRoom" and "FromRoom" key parameters may only be used when processing families in the "Doors", "Windows" categories</err64>
     <err65>No source element matching the filtering conditions was found in the model</err65>
     <err66>The data for assigning the result of an expression calculation is not defined</err66>
-    <err67>Each expression in the formula must begin with the target parameter "$[Parameter Name]=", or with the function of writing the join of results to the conditional source element "JOIN(@[Parameter Name],)=", or with the function of writing the sum of results to the conditional source element "SUM(@[Parameter Name])="</err67>
+    <err67>Each expression in the formula must begin with the target parameter "$[Parameter Name]=" or with a write-back function that writes the result to the conditional source element: "SUM(@[Parameter Name])=", "MIN(@[Parameter Name])=", "MAX(@[Parameter Name])=", "AVG(@[Parameter Name])=", "FIRST(@[Parameter Name])=", "LAST(@[Parameter Name])=" or "JOIN(@[Parameter Name],)="</err67>
     <err68>Failed to retrieve a number from the value "{0}"</err68>
     <err69>Unable to write the result to a conditional source element from a linked file</err69>
     <err70>Element is occupied by user "{0}" and is not available for modification</err70>
@@ -275,6 +336,43 @@
     <err80>The pseudo parameter ID does not have the "HasValue" property</err80>
     <err81>The element has multiple parameters named "{0}". Remove the redundant parameter or use the parameter's key name (GUID for shared parameters, system name for built-in parameters)</err81>
     <err82>The element with Id {0} has no geometry</err82>
+    <err83>Failed to determine which elements of the group the aggregate function should be calculated for: the function body does not contain any element parameter</err83>
+    <err84>The function argument must be the letter "s" (conditional source elements) or "t" (target elements)</err84>
+    <err85>The function must contain an expression that is calculated for each element of the group</err85>
+    <err86>Function must contain two or three arguments</err86>
+    <err87>The third argument of the function can contain only the letters "d", "s" and "r"</err87>
+    <err88>The function returns the ordinal number of the target element, therefore the only valid argument is the letter "t"</err88>
+    <err89>The strategy has a conditional source element, therefore the role of the group elements must be specified explicitly: "s" - conditional source, "t" - target</err89>
+    <err90>Only parameters and functions for working with strings and numbers are allowed in the grouping key expression</err90>
+    <err91>Rule {0}: matching is set in a strategy that does not support it - the conditionally source element is determined by a relation, not by a coinciding value</err91>
+    <err92>Rule {0}: matching is set on one side only - there is nothing to match with</err92>
+    <err93>Rule {0}: aggregate functions cannot be used together with write-back functions - the aggregate value is the same for all pairs of the group, and the accumulator would add it as many times as there are pairs in the group</err93>
+    <err94>Parameters of the target element cannot be used in the matching expression of conditionally source elements: the target element has not been matched yet at that moment</err94>
+    <err95>The function must contain one or two arguments: a column (row) pointer and an optional cell range separated by two dots ".."</err95>
+    <err96>Row number "{0}" must be a positive integer</err96>
+    <err97>Cell range "{0}" must contain two bounds separated by two dots ".."</err97>
+    <err98>The second argument of the function can only be the letter "s" - sort the values before picking</err98>
+    <err99>The function must contain three arguments: the list string, the separator and the item index</err99>
+    <err100>The function must contain three arguments: the list string, the separator and the search value</err100>
+    <err101>The function must contain two arguments: the list string and the separator</err101>
+    <err102>The right part of the "{0}" operator must be a list - the result of the List, CCList or CRList function</err102>
+    <err103>A list can only be used to the right of the "=|" or "!=|" membership operator</err103>
+    <err104>A regular expression pattern must be a double-quoted string, a parameter reference or a function result</err104>
+    <err105>A regular expression pattern must not be empty</err105>
+    <err106>Invalid regular expression pattern "{0}". {1}</err106>
+    <err107>Evaluation of the regular expression "{0}" did not finish within the allotted time</err107>
+    <err108>The element with Id {0} is not linear: its location is not defined by a straight line</err108>
+    <err109>The function can contain one optional argument - the tolerance in degrees in the range from 0 to 90</err109>
+    <err110>Parameters of the conditionally source element cannot be used in the matching expression of target elements: the conditionally source element has not been matched yet at that moment</err110>
+    <err111>Rule {0}: parameters of the conditionally source element cannot be used in the matching expression of target elements</err111>
+    <err112>Strategy data source Excel file is not specified</err112>
+    <err113>Strategy data source Excel file not found or unavailable: {0}</err113>
+    <err114>Strategy data source Excel file sheet is not selected</err114>
+    <err115>Sheet {0} not found in the strategy data source Excel file</err115>
+    <err116>Rule {0}: in this strategy pairs are built by matching, therefore matching must be set</err116>
+    <err117>Rule {0}: grouping is not set in a strategy with matching - the group of the rule is the matching group</err117>
+    <err118>Matching must be set on both sides: the value is calculated both over conditionally source elements and over target elements and compared with each other</err118>
+    <err119>Rule {0}: parameters of the target element cannot be used in the matching expression of conditionally source elements</err119>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -327,6 +425,14 @@
     <sld21>The strategy processes elements located in assemblies</sld21>
     <ssd22>Processing view-specific elements</ssd22>
     <sld22>Processes elements that exist only within a single view and are not part of the 3D model: dimensions, text notes, tags, detail lines and filled regions, and sheet contents. Such elements are bound to the view on which they were created and are not displayed on other views. Model elements such as walls, floors, or equipment are not affected</sld22>
+    <ssd23>Processing stair components</ssd23>
+    <sld23>Processes stair components: runs, landings, supports and the railings associated with the stair. The conditional source element is the stair. Components of a multistory stair are processed against the stair they belong to</sld23>
+    <ssd24>Processing room openings</ssd24>
+    <sld24>Processes the openings - doors and windows - that face the room. The conditional source element is the room. Openings are taken from the room boundary elements, curtain walls included, and membership is resolved by the To Room and From Room properties in the room phase; when those properties are empty, by the intersection of the opening geometry with the room volume</sld24>
+    <ssd25>Processing of two sets of elements matched by value</ssd25>
+    <sld25>Strategy processes two independent sets of elements - conditionally source and target. A pair is built not by a relation of elements in the model, but by a coinciding value calculated on both sides by the matching setting. Coinciding elements form a group over which aggregate functions are calculated</sld25>
+    <ssd26>Processing of room finishing</ssd26>
+    <sld26>Strategy processes room finishing created by the «Room finishing» plugin. The conditionally source element is a room, the target elements are the finishing elements created for it, including those linked to the room manually by means of the same plugin. Finishing created by any other means is not processed by the strategy</sld26>
     <se1>Host</se1>
     <sp1>Insert Host parameter</sp1>
     <se2>Group</se2>
@@ -358,6 +464,10 @@
     <se15>Assembly</se15>
     <sp15>Insert assembly parameter</sp15>
     <sp16>Insert view parameter</sp16>
+    <se16>Stair</se16>
+    <sp17>Insert stair parameter</sp17>
+    <se17>Source elements</se17>
+    <sp18>Insert source element parameter</sp18>
     <te1>Target element</te1>
     <tp1>Insert parameter of target element</tp1>
     <te2>Family instance</te2>
@@ -376,10 +486,18 @@
     <tp8>Insert material parameter</tp8>
     <te9>Part</te9>
     <tp10>Insert part parameter</tp10>
+    <te10>Stair component</te10>
+    <tp11>Insert stair component parameter</tp11>
+    <te11>Opening</te11>
+    <tp9>Insert opening parameter</tp9>
+    <te12>Finishing element</te12>
+    <tp12>Insert finishing element parameter</tp12>
     <ft1>Mathematical functions</ft1>
     <ft2>Logical functions</ft2>
     <ft3>Modifying functions</ft3>
     <ft4>Value retrieval functions</ft4>
+    <ft5>Aggregate functions</ft5>
+    <ft6>Write-back functions</ft6>
     <d-min>Returns the smaller of numbers</d-min>
     <d-max>Returns the larger of numbers</d-max>
     <d-abs>Returns the absolute value of the number</d-abs>
@@ -412,6 +530,8 @@
     <d-sstr>Returns substring</d-sstr>
     <d-tmirrored>Returns TRUE if the target family is mirrored</d-tmirrored>
     <d-smirrored>Returns TRUE if the conditional source family is mirrored</d-smirrored>
+    <d-isvertical>Returns TRUE if the axis of the target element is vertical. Otherwise returns FALSE. The optional argument &lt;a&gt; sets the tolerance in degrees, 0.1 by default. The function applies only to elements whose location is defined by a straight line</d-isvertical>
+    <d-ishorizontal>Returns TRUE if the axis of the target element is horizontal. Otherwise returns FALSE. The optional argument &lt;a&gt; sets the tolerance in degrees, 0.1 by default. The function applies only to elements whose location is defined by a straight line</d-ishorizontal>
     <d-strlen>Returns string length</d-strlen>
     <d-strindex>Returns an index counting from zero of the first occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-strindex>
     <d-valuestr>Returns the value of the parameter as a string with units</d-valuestr>
@@ -430,5 +550,33 @@
     <d-targettopz>Returns the highest elevation (Z) from the geometry of the target element. The elevation is returned in millimeters, rounded to 3 decimal places</d-targettopz>
     <d-sourcebottomz>Returns the lowest elevation (Z) from the geometry of the conditional source element. The elevation is returned in millimeters, rounded to 3 decimal places</d-sourcebottomz>
     <d-sourcetopz>Returns the highest elevation (Z) from the geometry of the conditional source element. The elevation is returned in millimeters, rounded to 3 decimal places</d-sourcetopz>
+    <d-gsum>Returns the sum of the expression values over the elements of the group</d-gsum>
+    <d-gcount>Returns the number of group elements of the specified role: "s" - conditional source, "t" - target</d-gcount>
+    <d-gjoin>Joins the expression values over the elements of the group using the specified separator</d-gjoin>
+    <d-gmin>Returns the minimum value of the expression over the elements of the group</d-gmin>
+    <d-gmax>Returns the maximum value of the expression over the elements of the group</d-gmax>
+    <d-gavg>Returns the average value of the expression over the elements of the group</d-gavg>
+    <d-gindex>Returns the ordinal number of the target element within the group</d-gindex>
+    <d-ranges>Collapses sequences of consecutive integers into ranges of the form 1-3</d-ranges>
+    <d-ccmin>Returns the minimum value from a column of the strategy data source. Cells whose value cannot be converted to a number are skipped</d-ccmin>
+    <d-ccmax>Returns the maximum value from a column of the strategy data source. Cells whose value cannot be converted to a number are skipped</d-ccmax>
+    <d-crmin>Returns the minimum value from a row of the strategy data source. Cells whose value cannot be converted to a number are skipped</d-crmin>
+    <d-crmax>Returns the maximum value from a row of the strategy data source. Cells whose value cannot be converted to a number are skipped</d-crmax>
+    <d-item>Returns the list item at the specified zero-based index. Returns an empty value if there is no item with such index</d-item>
+    <d-finditem>Returns the first list item that contains the search value. Returns an empty value if there is no such item. The function is case insensitive</d-finditem>
+    <d-itemindex>Returns the zero-based index of the first list item that contains the search value. Returns -1 if there is no such item. The function is case insensitive</d-itemindex>
+    <d-trim>Returns the value without leading and trailing spaces</d-trim>
+    <d-list>Represents a string with the specified separator as a list for membership check by the "=|" and "!=|" operators. Leading and trailing spaces of the items and empty items are dropped</d-list>
+    <d-cclist>Returns the values of a column of the strategy data source as a list for membership check by the "=|" and "!=|" operators</d-cclist>
+    <d-crlist>Returns the values of a row of the strategy data source as a list for membership check by the "=|" and "!=|" operators</d-crlist>
+    <d-rgxreplace>Returns value &lt;s&gt; in which every match of the regular expression &lt;s1&gt; is replaced by &lt;s2&gt;. Pattern &lt;s1&gt; is written in double quotes, comes from a parameter value or is the result of a nested function. Group substitutions - "$1", "$2" and so on - are available in &lt;s2&gt;. Case sensitivity is set by the formula option</d-rgxreplace>
+    <d-rgxmatch>Returns TRUE if value &lt;s&gt; contains a match of the regular expression &lt;s1&gt;. Otherwise returns FALSE. Pattern &lt;s1&gt; is written in double quotes, comes from a parameter value or is the result of a nested function. Use the "^" and "$" anchors to match the whole value. Case sensitivity is set by the formula option</d-rgxmatch>
+    <d-wb-avg>Writes the average of the results to a parameter of the conditional source element</d-wb-avg>
+    <d-wb-first>Writes the first result to a parameter of the conditional source element</d-wb-first>
+    <d-wb-join>Writes the results joined with a separator to a parameter of the conditional source element</d-wb-join>
+    <d-wb-last>Writes the last result to a parameter of the conditional source element</d-wb-last>
+    <d-wb-max>Writes the maximum result to a parameter of the conditional source element</d-wb-max>
+    <d-wb-min>Writes the minimum result to a parameter of the conditional source element</d-wb-min>
+    <d-wb-sum>Writes the sum of the results to a parameter of the conditional source element</d-wb-sum>
   </mprParametrization>
 </ModPlus>

@@ -15,7 +15,7 @@ using Microsoft.Win32;
 /// </summary>
 public class LanguageRepositoryService : ILanguageRepository
 {
-    private static readonly string[] MergeDomainPrefixes = ["Common", "AutoCAD", "Revit", "Renga"];
+    private static readonly string[] MergeDomainPrefixes = ["Common", "AutoCAD", "Revit", "Renga", "nanoCAD"];
 
     /// <inheritdoc />
     public IReadOnlyList<string> LoadLanguages(string languageDirectory)
