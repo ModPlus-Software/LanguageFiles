@@ -373,6 +373,9 @@
     <err117>Regel {0}: in einer Strategie mit Zuordnung wird keine Gruppierung festgelegt - die Gruppe der Regel ist die Zuordnungsgruppe</err117>
     <err118>Die Zuordnung muss auf beiden Seiten festgelegt sein: der Wert wird sowohl über die bedingten Quellelemente als auch über die Zielelemente berechnet und miteinander verglichen</err118>
     <err119>Regel {0}: im Zuordnungsausdruck der bedingten Quellelemente können keine Parameter des Zielelements verwendet werden</err119>
+    <err120>Die Funktion muss einen Bezeichner des Ansichtsparameters enthalten: Name, GUID des gemeinsam genutzten Parameters oder Systemname</err120>
+    <err121>Die Funktion zum Abrufen eines Ansichtsparameters ist nur bei der Verarbeitung der Elemente in der aktuellen Ansicht, in den ausgewählten Ansichten oder bei der Verarbeitung der ausgewählten Elemente verfügbar</err121>
+    <err122>Die aktuelle Ansicht "{0}" hat keinen Parameter "{1}"</err122>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -433,6 +436,10 @@
     <sld25>Die Strategie bearbeitet zwei unabhängige Elementmengen - bedingte Quellelemente und Zielelemente. Ein Paar wird nicht über eine Beziehung der Elemente im Modell gebildet, sondern über die Übereinstimmung des Wertes, der auf beiden Seiten durch die Zuordnung berechnet wird. Übereinstimmende Elemente bilden eine Gruppe, über die Aggregatfunktionen berechnet werden</sld25>
     <ssd26>Bearbeitung des Raumausbaus</ssd26>
     <sld26>Die Strategie bearbeitet den Raumausbau, der vom Plugin «Raumausbau» erstellt wurde. Das bedingte Quellelement ist ein Raum, die Zielelemente sind die für ihn erstellten Ausbauelemente, einschließlich derjenigen, die mit denselben Mitteln von Hand mit dem Raum verknüpft wurden. Ausbau, der auf andere Weise erstellt wurde, wird von der Strategie nicht bearbeitet</sld26>
+    <ssd27>Bearbeitung von Elementen mit Ebenenbindung</ssd27>
+    <sld27>Die Strategie bearbeitet Elemente nach ihrer Bindung an eine Ebene. Das bedingte Quellelement ist eine Ebene, die Zielelemente sind die auf ihr befindlichen Elemente. Die Ebene wird der Elementeigenschaft entnommen, und falls diese nicht gefüllt ist - dem Ebenenparameter («Ebene», «Referenzebene», «Basisabhängigkeit»). Ein Element, das sich über mehrere Ebenen erstreckt (Wand, Stütze, Treppe), gehört zu seiner unteren Ebene. Ebenen werden automatisch in die Bearbeitung aufgenommen, sie müssen im Modell nicht ausgewählt werden</sld27>
+    <ssd28>Bearbeitung von Bewehrungskupplungen</ssd28>
+    <sld28>Die Strategie bearbeitet Bewehrungsstäbe, die durch eine Bewehrungskupplung verbunden sind. Das bedingte Quellelement ist die Kupplung, die Zielelemente sind ein oder zwei Stäbe, auf deren Enden sie sitzt. Eine Kupplung auf einem einzelnen Stab ergibt eine Eins-zu-eins-Beziehung: In diesem Fall wird der Wert des Stabes mit den Rückschreibfunktionen in die Kupplung übertragen. Bei einer Kupplung auf zwei Stäben wird die rechte Seite der Rückschreibung für beide Stäbe berechnet</sld28>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -468,6 +475,10 @@
     <sp17>Treppenparameter einfügen</sp17>
     <se17>Quellelemente</se17>
     <sp18>Parameter des Quellelements einfügen</sp18>
+    <se18>Ebene</se18>
+    <sp19>Ebenenparameter einfügen</sp19>
+    <se19>Kupplung</se19>
+    <sp20>Kupplungsparameter einfügen</sp20>
     <te1>Zielelement</te1>
     <tp1>Parameter des Zielelementes einfügen</tp1>
     <te2>Exemplar der Familie</te2>
@@ -546,6 +557,7 @@
     <d-cvif>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der alle Bedingungen erfüllt sind, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvif>
     <d-cvor>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der mindestens eine Bedingung erfüllt ist, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvor>
     <d-doctitle>Gibt den Titel des aktuellen Dokuments zurück</d-doctitle>
+    <d-getcurrentviewparameter>Gibt den Wert des Parameters &lt;p&gt; der Ansicht zurück, in der die Verarbeitung ausgeführt wird. Verfügbar bei der Verarbeitung der Elemente in der aktuellen Ansicht, in den ausgewählten Ansichten und bei der Verarbeitung der ausgewählten Elemente</d-getcurrentviewparameter>
     <d-targetbottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targetbottomz>
     <d-targettopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targettopz>
     <d-sourcebottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcebottomz>

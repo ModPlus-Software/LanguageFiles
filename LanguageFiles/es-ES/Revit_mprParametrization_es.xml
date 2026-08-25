@@ -373,6 +373,9 @@
     <err117>Regla {0}: en una estrategia con emparejamiento no se define la agrupación: el grupo de la regla es el grupo de emparejamiento</err117>
     <err118>El emparejamiento debe estar definido en ambos lados: el valor se calcula tanto sobre los elementos de origen condicional como sobre los de destino y se compara entre sí</err118>
     <err119>Regla {0}: en la expresión de emparejamiento de los elementos de origen condicional no se pueden usar parámetros del elemento de destino</err119>
+    <err120>La función debe contener un identificador del parámetro de vista: nombre, GUID del parámetro compartido o nombre del sistema</err120>
+    <err121>La función de obtención del parámetro de vista solo está disponible al procesar elementos en la vista actual, en las vistas seleccionadas o al procesar los elementos seleccionados</err121>
+    <err122>La vista actual "{0}" no tiene el parámetro "{1}"</err122>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -433,6 +436,10 @@
     <sld25>La estrategia procesa dos conjuntos independientes de elementos: de origen condicional y de destino. El par no se forma por una relación de los elementos en el modelo, sino por la coincidencia del valor calculado en ambos lados por el ajuste de emparejamiento. Los elementos coincidentes forman un grupo sobre el que se calculan las funciones de agregación</sld25>
     <ssd26>Procesamiento del acabado de habitaciones</ssd26>
     <sld26>La estrategia procesa el acabado de habitaciones creado por el complemento «Acabado de habitaciones». El elemento de origen condicional es una habitación y los elementos de destino son los elementos de acabado creados para ella, incluidos los vinculados a la habitación manualmente con los medios del mismo complemento. El acabado creado por cualquier otro medio no lo procesa la estrategia</sld26>
+    <ssd27>Procesamiento de elementos vinculados a un nivel</ssd27>
+    <sld27>La estrategia procesa los elementos por su vinculación a un nivel. El elemento de origen condicional es un nivel y los elementos de destino son los situados en él. El nivel se toma de la propiedad del elemento y, si no está rellenada, del parámetro de nivel («Nivel», «Nivel de referencia», «Restricción inferior»). Un elemento extendido entre niveles (un muro, un pilar, una escalera) pertenece a su nivel inferior. Los niveles se añaden al procesamiento automáticamente, no es necesario seleccionarlos en el modelo</sld27>
+    <ssd28>Procesamiento de acopladores de barras de refuerzo</ssd28>
+    <sld28>La estrategia procesa las barras de refuerzo unidas por un acoplador. El elemento de origen condicional es el acoplador y los elementos de destino son una o dos barras en cuyos extremos está colocado. Un acoplador colocado en una sola barra da una relación uno a uno: en este caso el valor de la barra se transfiere al acoplador mediante las funciones de escritura inversa. Para un acoplador colocado en dos barras, la parte derecha de la escritura inversa se calcula para ambas</sld28>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -468,6 +475,10 @@
     <sp17>Insertar parámetro de la escalera</sp17>
     <se17>Elementos de origen</se17>
     <sp18>Insertar parámetro del elemento de origen</sp18>
+    <se18>Nivel</se18>
+    <sp19>Insertar parámetro del nivel</sp19>
+    <se19>Acoplador</se19>
+    <sp20>Insertar parámetro del acoplador</sp20>
     <te1>Elemento objetivo</te1>
     <tp1>Insertar parámetro de elemento objetivo</tp1>
     <te2>Ejemplar de familia</te2>
@@ -546,6 +557,7 @@
     <d-cvif>Busca la primera fila en la fuente de datos de la estrategia (archivo Excel) donde se cumplen todas las condiciones y devuelve el valor de la columna especificada de esa fila</d-cvif>
     <d-cvor>Busca la primera fila en la fuente de datos de la estrategia (archivo Excel) donde se cumple al menos una condición y devuelve el valor de la columna especificada de esa fila</d-cvor>
     <d-doctitle>Devuelve el título del documento actual</d-doctitle>
+    <d-getcurrentviewparameter>Devuelve el valor del parámetro &lt;p&gt; de la vista en la que se realiza el procesamiento. Disponible al procesar elementos en la vista actual, en las vistas seleccionadas y al procesar los elementos seleccionados</d-getcurrentviewparameter>
     <d-targetbottomz>Devuelve la cota más baja (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targetbottomz>
     <d-targettopz>Devuelve la cota más alta (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targettopz>
     <d-sourcebottomz>Devuelve la cota más baja (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcebottomz>

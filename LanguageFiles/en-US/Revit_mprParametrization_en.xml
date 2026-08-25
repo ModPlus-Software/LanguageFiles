@@ -373,6 +373,9 @@
     <err117>Rule {0}: grouping is not set in a strategy with matching - the group of the rule is the matching group</err117>
     <err118>Matching must be set on both sides: the value is calculated both over conditionally source elements and over target elements and compared with each other</err118>
     <err119>Rule {0}: parameters of the target element cannot be used in the matching expression of conditionally source elements</err119>
+    <err120>The function must contain a view parameter identifier: name, shared parameter GUID or system name</err120>
+    <err121>The view parameter function is available only when processing elements on the current view, on selected views or when processing picked elements</err121>
+    <err122>The current view "{0}" has no parameter "{1}"</err122>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -433,6 +436,10 @@
     <sld25>Strategy processes two independent sets of elements - conditionally source and target. A pair is built not by a relation of elements in the model, but by a coinciding value calculated on both sides by the matching setting. Coinciding elements form a group over which aggregate functions are calculated</sld25>
     <ssd26>Processing of room finishing</ssd26>
     <sld26>Strategy processes room finishing created by the «Room finishing» plugin. The conditionally source element is a room, the target elements are the finishing elements created for it, including those linked to the room manually by means of the same plugin. Finishing created by any other means is not processed by the strategy</sld26>
+    <ssd27>Processing of elements bound to a level</ssd27>
+    <sld27>Strategy processes elements by their binding to a level. The conditionally source element is a level, the target elements are those located on it. The level is taken from the element property, and if it is not filled in - from the level parameter («Level», «Reference Level», «Base Constraint»). An element stretched between levels (a wall, a column, a stair) belongs to its lower level. Levels are added to processing automatically, there is no need to select them in the model</sld27>
+    <ssd28>Processing of rebar couplers</ssd28>
+    <sld28>Strategy processes rebars connected by a rebar coupler. The conditionally source element is a coupler, the target elements are one or two rebars its ends are placed on. A coupler placed on a single rebar gives a one to one relation: in this case a rebar value is transferred into the coupler by write back functions. For a coupler placed on two rebars the right part of a write back is calculated for both of them</sld28>
     <se1>Host</se1>
     <sp1>Insert Host parameter</sp1>
     <se2>Group</se2>
@@ -468,6 +475,10 @@
     <sp17>Insert stair parameter</sp17>
     <se17>Source elements</se17>
     <sp18>Insert source element parameter</sp18>
+    <se18>Level</se18>
+    <sp19>Insert level parameter</sp19>
+    <se19>Coupler</se19>
+    <sp20>Insert coupler parameter</sp20>
     <te1>Target element</te1>
     <tp1>Insert parameter of target element</tp1>
     <te2>Family instance</te2>
@@ -546,6 +557,7 @@
     <d-cvif>Searches for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
     <d-cvor>Searches for the first row in the strategy data source (Excel file) where at least one condition is met and returns the value from the specified column of that row</d-cvor>
     <d-doctitle>Returns the title of the current document</d-doctitle>
+    <d-getcurrentviewparameter>Returns the value of the parameter &lt;p&gt; of the view on which the processing is performed. Available when processing elements on the current view, on selected views and when processing picked elements</d-getcurrentviewparameter>
     <d-targetbottomz>Returns the lowest elevation (Z) from the geometry of the target element. The elevation is returned in millimeters, rounded to 3 decimal places</d-targetbottomz>
     <d-targettopz>Returns the highest elevation (Z) from the geometry of the target element. The elevation is returned in millimeters, rounded to 3 decimal places</d-targettopz>
     <d-sourcebottomz>Returns the lowest elevation (Z) from the geometry of the conditional source element. The elevation is returned in millimeters, rounded to 3 decimal places</d-sourcebottomz>
