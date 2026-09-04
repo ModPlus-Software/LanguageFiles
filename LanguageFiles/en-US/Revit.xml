@@ -1728,6 +1728,13 @@ An additional check is performed by type parameters – a pair of similar famili
     <h45>Check all categories</h45>
     <h46>Uncheck all categories</h46>
     <h47>Insert the saved search value</h47>
+    <h48>How the "And" and "Or" conditions work</h48>
+    <h49>"Or" — an element matches if at least one of the checked values matches.</h49>
+    <h50>"And" — an element must match all parameters that have checked values. If several values are checked for one parameter, they are treated as alternatives: any one of them is enough.</h50>
+    <h51>Example. Checked: "Rebar grade" → A500C; "Diameter" → 10, 12, 16</h51>
+    <h52>"Or" selects all rebar of grade A500C, and also all rebar with a diameter of 10, 12 or 16 of any grade</h52>
+    <h53>"And" selects only rebar of grade A500C with a diameter of 10, 12 or 16</h53>
+    <h54>Categories are always combined with each other: an element belongs to one category only. An instance parameter and a type parameter with the same name are treated as different parameters.</h54>
     <fo1>All elements</fo1>
     <fo2>All elements in view</fo2>
     <fo3>Selected elements</fo3>
