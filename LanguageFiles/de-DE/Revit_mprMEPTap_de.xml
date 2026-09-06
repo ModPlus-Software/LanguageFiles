@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPTap
+    LocalName="MEP-Stutzen"
+    Description="Werkzeugsatz für die Arbeit mit Stutzen technischer Anlagen"
+    LocalName1="Verbindung ersetzen"
+    Description1="Ersetzen eines T-Stücks durch einen Stutzen und eines Stutzens durch ein T-Stück unter Beibehaltung der ursprünglichen Lage der Hauptleitung">
+    <t1>T-Stücke und Stutzen zum Ersetzen auswählen</t1>
+    <err1>Das T-Stück konnte nicht ausgewertet werden: Es muss drei Endanschlüsse haben, von denen zwei auf einer Achse liegen, und an diesen müssen gerade Abschnitte der Hauptleitung und der Abzweigleitung angeschlossen sein</err1>
+    <err2>Der Stutzen konnte nicht ausgewertet werden: An ihm müssen die Hauptleitung und die Abzweigleitung angeschlossen sein</err2>
+    <err3>Die Hauptleitung und die Abzweigleitung müssen gerade Abschnitte sein, und die Abschnitte der Hauptleitung müssen auf einer Geraden liegen</err3>
+    <err4>Die Abschnitte der Hauptleitung haben unterschiedliche Typen oder Größen und können nicht verbunden werden</err4>
+    <err5>Das Trennen der Hauptleitung wird nur für Luftkanäle und Rohre unterstützt</err5>
+    <err6>Der Stutzen liegt zu nah am Ende der Hauptleitung: Nach dem Trennen wäre der Abschnitt kürzer als zulässig</err6>
+    <err7>Die Abzweigleitung ist zu kurz, um die Verbindung zu ersetzen</err7>
+    <err8>Der Typ der Hauptleitung konnte nicht ermittelt werden</err8>
+    <err9>Der Typ der Hauptleitung "{0}" steht nicht zur Bearbeitung zur Verfügung. Möglicherweise ist er von einem anderen Benutzer im Bearbeitungssatz belegt</err9>
+    <err10>In den Leitungsführungseinstellungen des Typs "{0}" ist kein passendes Formteil festgelegt. Fügen Sie einen Stutzen und ein T-Stück zur Regelgruppe "Verbindungen" hinzu</err10>
+    <err11>Es konnten keine freien Anschlüsse zum Erstellen der Verbindung gefunden werden</err11>
+    <err12>Der Stutzen konnte nicht erstellt werden</err12>
+    <err13>Prüfen Sie die Leitungsführungseinstellungen für die angegebenen Typen</err13>
+    <err14>Die Abschnitte der Hauptleitung konnten nach dem Entfernen des T-Stücks nicht verbunden werden</err14>
+    <err15>Die Hauptleitung konnte am Stutzenpunkt nicht getrennt werden</err15>
+    <err16>Die T-Stück-Familie "{0}" konnte nicht für einen Anschluss von {1}° eingerichtet werden: Prüfen Sie, ob sie parametrisch ist und diesen Winkel unterstützt</err16>
+    <err17>Das T-Stück konnte nicht mit den Rohren verbunden werden: Ein Abschnitt ist möglicherweise kürzer als die Baulänge des T-Stücks</err17>
+    <err18>Die Verbindung wurde ersetzt, das Element konnte jedoch nicht in seine ursprüngliche Lage zurückgesetzt werden: Prüfen Sie die Geometrie oder machen Sie den Vorgang rückgängig</err18>
+    <err19>Der Stutzen wurde erstellt, ist aber nicht mit der Hauptleitung verbunden</err19>
+    <err20>Unerwarteter Fehler</err20>
+  </mprMEPTap>
+</ModPlus>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPTap
+    LocalName="MEP tap"
+    Description="A set of tools for working with taps of engineering systems"
+    LocalName1="Replace junction"
+    Description1="Replacing a tee with a tap and a tap with a tee while keeping the original position of the main run">
+    <t1>Select tees and taps to replace</t1>
+    <err1>Failed to parse the tee: it must have three end connectors, two of which lie on the same axis, with straight main run and branch segments connected to them</err1>
+    <err2>Failed to parse the tap: the main run and the branch must be connected to it</err2>
+    <err3>The main run and the branch must be straight segments, and the main run segments must lie on the same line</err3>
+    <err4>The main run segments have different types or sizes and cannot be joined</err4>
+    <err5>Breaking the main run is supported for ducts and pipes only</err5>
+    <err6>The tap is too close to the end of the main run: after breaking, the segment will be shorter than allowed</err6>
+    <err7>The branch is too short to replace the junction</err7>
+    <err8>Failed to get the main run type</err8>
+    <err9>The main run type "{0}" is not available for editing. It may be owned by another user in the worksharing file</err9>
+    <err10>No suitable fitting is defined in the routing preferences of type "{0}". Add a tap and a tee to the "Junctions" rule group</err10>
+    <err11>Failed to find free connectors to create the junction</err11>
+    <err12>Failed to create a tap</err12>
+    <err13>Check the routing preferences for the specified types</err13>
+    <err14>Failed to join the main run segments after removing the tee</err14>
+    <err15>Failed to break the main run at the tap point</err15>
+    <err16>Failed to set up the tee family "{0}" for a {1}° connection: make sure it is parametric and supports such an angle</err16>
+    <err17>Failed to connect the tee to the pipes: a segment may be shorter than the tee extension</err17>
+    <err18>The junction has been replaced, but the element could not be restored to its original position: check the geometry or undo the operation</err18>
+    <err19>The tap has been created but is not connected to the main run</err19>
+    <err20>Unexpected error</err20>
+  </mprMEPTap>
+</ModPlus>
