@@ -528,12 +528,12 @@
     <d-rounddown>Devuelve número entero más grande que es menor o igual al número especificado</d-rounddown>
     <d-sqrt>Devuelve raíz cuadrada del número especificado</d-sqrt>
     <d-pow>Devuelve número especificado elevado a potencia especificada</d-pow>
-    <d-sin>Devuelve seno del ángulo especificado</d-sin>
-    <d-cos>Devuelve coseno del ángulo especificado</d-cos>
-    <d-tan>Devuelve tangente del ángulo especificado</d-tan>
-    <d-asin>Devuelve ángulo cuyo seno es igual al número especificado</d-asin>
-    <d-acos>Devuelve ángulo cuyo coseno es igual al número especificado</d-acos>
-    <d-atan>Devuelve un ángulo cuya tangente es igual al número especificado</d-atan>
+    <d-sin>Devuelve seno del ángulo especificado. El ángulo se indica en grados</d-sin>
+    <d-cos>Devuelve coseno del ángulo especificado. El ángulo se indica en grados</d-cos>
+    <d-tan>Devuelve tangente del ángulo especificado. El ángulo se indica en grados</d-tan>
+    <d-asin>Devuelve el ángulo en grados cuyo seno es igual al número especificado</d-asin>
+    <d-acos>Devuelve el ángulo en grados cuyo coseno es igual al número especificado</d-acos>
+    <d-atan>Devuelve el ángulo en grados cuya tangente es igual al número especificado</d-atan>
     <d-log>Devuelve logaritmo del número especificado con base especificada</d-log>
     <d-ln>Devuelve logaritmo natural (base e) del número especificado</d-ln>
     <d-exp>Devuelve e elevado a potencia especificada</d-exp>
@@ -555,14 +555,14 @@
     <d-isvertical>Devuelve TRUE si el eje del elemento objetivo está en posición vertical. En caso contrario devuelve FALSE. El argumento opcional &lt;a&gt; define la tolerancia en grados, 0.1 por defecto. La función solo se aplica a los elementos cuya posición está definida por una línea recta</d-isvertical>
     <d-ishorizontal>Devuelve TRUE si el eje del elemento objetivo está en posición horizontal. En caso contrario devuelve FALSE. El argumento opcional &lt;a&gt; define la tolerancia en grados, 0.1 por defecto. La función solo se aplica a los elementos cuya posición está definida por una línea recta</d-ishorizontal>
     <d-strlen>Devuelve longitud de una cadena</d-strlen>
-    <d-strindex>Devuelve el índice basado en cero de la primera entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena</d-strindex>
+    <d-strindex>Devuelve el índice basado en cero de la primera entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena. La función no distingue entre mayúsculas y minúsculas</d-strindex>
     <d-valuestr>Devuelve valor del parámetro como una cadena con unidades de medida</d-valuestr>
     <d-eindex>Devuelve índice de correcto de declaración de fórmula actual</d-eindex>
     <d-replace>Devuelve valor en que todas apariciones de cadena especificada se reemplazan por otra cadena especificada</d-replace>
     <d-format>Convierte número en cadena usando formato especificado</d-format>
     <d-cv>Devuelve valor de celda de origen de datos de estrategia especificada</d-cv>
-    <d-count>Devuelve el número de veces que aparece una subcadena en una cadena. Si la subcadena no se encuentra en la cadena, devuelve 0</d-count>
-    <d-lstrindex>Devuelve el índice basado en cero de la última entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena</d-lstrindex>
+    <d-count>Devuelve el número de coincidencias con el patrón en la cadena. Si no hay coincidencias, devuelve 0. El patrón es una expresión regular. La función no distingue entre mayúsculas y minúsculas</d-count>
+    <d-lstrindex>Devuelve el índice basado en cero de la última entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena. La función no distingue entre mayúsculas y minúsculas</d-lstrindex>
     <d-not>Devuelve TRUE si la condición es falsa. De lo contrario devuelve FALSE</d-not>
     <d-distinct>Devuelve valores de lista diferentes, ignorando los espacios iniciales y finales al comparar los valores</d-distinct>
     <d-cvif>Busca la primera fila en la fuente de datos de la estrategia (archivo Excel) donde se cumplen todas las condiciones y devuelve el valor de la columna especificada de esa fila</d-cvif>
@@ -575,7 +575,7 @@
     <d-sourcetopz>Devuelve la cota más alta (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcetopz>
     <d-gsum>Devuelve la suma de los valores de la expresión de los elementos del grupo</d-gsum>
     <d-gcount>Devuelve el número de elementos del grupo del rol indicado: "s" - original condicional, "t" - objetivo</d-gcount>
-    <d-gjoin>Une los valores de la expresión de los elementos del grupo mediante el separador indicado</d-gjoin>
+    <d-gjoin>Une los valores de la expresión de los elementos del grupo mediante el separador indicado. El tercer argumento opcional define los indicadores: "d" - solo valores distintos, "s" - ordenar, "r" - contraer números consecutivos en rangos</d-gjoin>
     <d-gmin>Devuelve el valor mínimo de la expresión de los elementos del grupo</d-gmin>
     <d-gmax>Devuelve el valor máximo de la expresión de los elementos del grupo</d-gmax>
     <d-gavg>Devuelve el valor medio de la expresión de los elementos del grupo</d-gavg>

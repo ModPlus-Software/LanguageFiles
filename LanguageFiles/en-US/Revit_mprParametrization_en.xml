@@ -528,12 +528,12 @@
     <d-rounddown>Returns the largest integral value less than or equal to the specified number</d-rounddown>
     <d-sqrt>Returns the square root of a specified number</d-sqrt>
     <d-pow>Returns a specified number raised to the specified power</d-pow>
-    <d-sin>Returns the sine of a specified angle</d-sin>
-    <d-cos>Returns the cosine of a specified angle</d-cos>
-    <d-tan>Returns the tangent of a specified angle</d-tan>
-    <d-asin>Returns the angle whose sine is the specified number</d-asin>
-    <d-acos>Returns the angle whose cosine is the specified number</d-acos>
-    <d-atan>Returns the angle whose tangent is the specified number</d-atan>
+    <d-sin>Returns the sine of a specified angle. The angle is specified in degrees</d-sin>
+    <d-cos>Returns the cosine of a specified angle. The angle is specified in degrees</d-cos>
+    <d-tan>Returns the tangent of a specified angle. The angle is specified in degrees</d-tan>
+    <d-asin>Returns the angle in degrees whose sine is the specified number</d-asin>
+    <d-acos>Returns the angle in degrees whose cosine is the specified number</d-acos>
+    <d-atan>Returns the angle in degrees whose tangent is the specified number</d-atan>
     <d-log>Returns the logarithm of a specified number with a specified base</d-log>
     <d-ln>Returns the natural logarithm (with base e) of the specified number</d-ln>
     <d-exp>Returns e multiplied by the specified power</d-exp>
@@ -555,14 +555,14 @@
     <d-isvertical>Returns TRUE if the axis of the target element is vertical. Otherwise returns FALSE. The optional argument &lt;a&gt; sets the tolerance in degrees, 0.1 by default. The function applies only to elements whose location is defined by a straight line</d-isvertical>
     <d-ishorizontal>Returns TRUE if the axis of the target element is horizontal. Otherwise returns FALSE. The optional argument &lt;a&gt; sets the tolerance in degrees, 0.1 by default. The function applies only to elements whose location is defined by a straight line</d-ishorizontal>
     <d-strlen>Returns string length</d-strlen>
-    <d-strindex>Returns an index counting from zero of the first occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-strindex>
+    <d-strindex>Returns an index counting from zero of the first occurrence of the substring in the string. Returns -1 if the substring is not found in the string. The function is case insensitive</d-strindex>
     <d-valuestr>Returns the value of the parameter as a string with units</d-valuestr>
     <d-eindex>Returns the index of the successful use of the current formula expression</d-eindex>
     <d-replace>Returns value in which all occurrences of the given string are replaced by another given string</d-replace>
     <d-format>Converts a number to a string using the specified format</d-format>
     <d-cv>Returns the value from the specified cell of the strategy data source</d-cv>
-    <d-count>Returns the number of times the substring occurs in the string. If the substring is not found in the string, returns 0</d-count>
-    <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-lstrindex>
+    <d-count>Returns the number of matches of the pattern in the string. Returns 0 if there are no matches. The pattern is a regular expression. The function is case insensitive</d-count>
+    <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string. The function is case insensitive</d-lstrindex>
     <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
     <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
     <d-cvif>Searches for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
@@ -575,7 +575,7 @@
     <d-sourcetopz>Returns the highest elevation (Z) from the geometry of the conditional source element. The elevation is returned in millimeters, rounded to 3 decimal places</d-sourcetopz>
     <d-gsum>Returns the sum of the expression values over the elements of the group</d-gsum>
     <d-gcount>Returns the number of group elements of the specified role: "s" - conditional source, "t" - target</d-gcount>
-    <d-gjoin>Joins the expression values over the elements of the group using the specified separator</d-gjoin>
+    <d-gjoin>Joins the expression values over the elements of the group using the specified separator. The optional third argument sets flags: "d" - distinct values only, "s" - sort, "r" - collapse consecutive integers into ranges</d-gjoin>
     <d-gmin>Returns the minimum value of the expression over the elements of the group</d-gmin>
     <d-gmax>Returns the maximum value of the expression over the elements of the group</d-gmax>
     <d-gavg>Returns the average value of the expression over the elements of the group</d-gavg>

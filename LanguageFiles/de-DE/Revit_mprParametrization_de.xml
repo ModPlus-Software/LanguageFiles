@@ -528,12 +528,12 @@
     <d-rounddown>Gibt die größte Ganzzahl zurück, die kleiner oder gleich der angegebenen Zahl ist</d-rounddown>
     <d-sqrt>Gibt die Quadratwurzel der angegebenen Zahl zurück</d-sqrt>
     <d-pow>Potenziert eine angegebene Zahl mit dem angegebenen Exponenten</d-pow>
-    <d-sin>Gibt den Sinus des angegebenen Winkels zurück</d-sin>
-    <d-cos>Gibt den Kosinus des angegebenen Winkels zurück</d-cos>
-    <d-tan>Gibt den Tangens des angegebenen Winkels zurück</d-tan>
-    <d-asin>Gibt den Winkel zurück, dessen Sinus gleich der angegebenen Zahl ist</d-asin>
-    <d-acos>Gibt den Winkel zurück, dessen Kosinus gleich der angegebenen Zahl ist</d-acos>
-    <d-atan>Gibt den Winkel zurück, dessen Tangens gleich der angegebenen Zahl ist</d-atan>
+    <d-sin>Gibt den Sinus des angegebenen Winkels zurück. Der Winkel wird in Grad angegeben</d-sin>
+    <d-cos>Gibt den Kosinus des angegebenen Winkels zurück. Der Winkel wird in Grad angegeben</d-cos>
+    <d-tan>Gibt den Tangens des angegebenen Winkels zurück. Der Winkel wird in Grad angegeben</d-tan>
+    <d-asin>Gibt den Winkel in Grad zurück, dessen Sinus gleich der angegebenen Zahl ist</d-asin>
+    <d-acos>Gibt den Winkel in Grad zurück, dessen Kosinus gleich der angegebenen Zahl ist</d-acos>
+    <d-atan>Gibt den Winkel in Grad zurück, dessen Tangens gleich der angegebenen Zahl ist</d-atan>
     <d-log>Gibt den Logarithmus der angegebenen Zahl mit der angegebenen Basis zurück</d-log>
     <d-ln>Gibt den natürlichen Logarithmus (mit der Basis e) der angegebenen Zahl zurück</d-ln>
     <d-exp>Gibt e, auf einen bestimmten Grad angehoben, zurück</d-exp>
@@ -555,14 +555,14 @@
     <d-isvertical>Gibt TRUE zurück, wenn die Achse des Zielelements senkrecht verläuft. Andernfalls FALSE. Das optionale Argument &lt;a&gt; legt die Toleranz in Grad fest, standardmäßig 0.1. Die Funktion gilt nur für Elemente, deren Position durch eine gerade Linie definiert ist</d-isvertical>
     <d-ishorizontal>Gibt TRUE zurück, wenn die Achse des Zielelements waagerecht verläuft. Andernfalls FALSE. Das optionale Argument &lt;a&gt; legt die Toleranz in Grad fest, standardmäßig 0.1. Die Funktion gilt nur für Elemente, deren Position durch eine gerade Linie definiert ist</d-ishorizontal>
     <d-strlen>Gibt die Länge einer Zeichenfolge zurück</d-strlen>
-    <d-strindex>Gibt den Index zurück, der auf Null des ersten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-strindex>
+    <d-strindex>Gibt den Index zurück, der auf Null des ersten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-strindex>
     <d-valuestr>Gibt den Parameterwert als Zeichenfolge mit Maßeinheiten zurück</d-valuestr>
     <d-eindex>Gibt den Index der erfolgreicher Verwendung der aktuellen Formelanweisung zurück</d-eindex>
     <d-replace>Gibt den Wert zurück, im dem alle Auftreten der Vorgabezeile durch eine andere Vorgabezeile ersetzt sind</d-replace>
     <d-format>Konvertiert eine Zahl im angegebenen Format in eine Zeichenfolge</d-format>
     <d-cv>Gibt den Wert aus der angegebenen Zelle der Strategiedatenquelle zurück</d-cv>
-    <d-count>Gibt die Anzahl der Vorkommen der Teilzeichenfolge in der Zeichenfolge zurück. Gibt 0 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-count>
-    <d-lstrindex>Gibt den Index zurück, der auf Null des letzten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-lstrindex>
+    <d-count>Gibt die Anzahl der Übereinstimmungen mit dem Muster in der Zeichenfolge zurück. Gibt 0 zurück, wenn es keine Übereinstimmungen gibt. Das Muster ist ein regulärer Ausdruck. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-count>
+    <d-lstrindex>Gibt den Index zurück, der auf Null des letzten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-lstrindex>
     <d-not>Gibt TRUE zurück, wenn die Bedingung falsch ist. Ansonsten wird FALSE zurückgegeben</d-not>
     <d-distinct>Gibt die unterscheidenden Werte aus der Liste zurück und lässt dabei die Leerzeichen am Anfang und am Ende unbeachtet</d-distinct>
     <d-cvif>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der alle Bedingungen erfüllt sind, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvif>
@@ -575,7 +575,7 @@
     <d-sourcetopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcetopz>
     <d-gsum>Gibt die Summe der Ausdruckswerte über die Elemente der Gruppe zurück</d-gsum>
     <d-gcount>Gibt die Anzahl der Gruppenelemente der angegebenen Rolle zurück: "s" - bedingte Quellelemente, "t" - Zielelemente</d-gcount>
-    <d-gjoin>Verbindet die Ausdruckswerte über die Elemente der Gruppe mit dem angegebenen Trennzeichen</d-gjoin>
+    <d-gjoin>Verbindet die Ausdruckswerte über die Elemente der Gruppe mit dem angegebenen Trennzeichen. Das optionale dritte Argument legt Flags fest: "d" - nur unterschiedliche Werte, "s" - sortieren, "r" - aufeinanderfolgende ganze Zahlen zu Bereichen zusammenfassen</d-gjoin>
     <d-gmin>Gibt den kleinsten Wert des Ausdrucks über die Elemente der Gruppe zurück</d-gmin>
     <d-gmax>Gibt den größten Wert des Ausdrucks über die Elemente der Gruppe zurück</d-gmax>
     <d-gavg>Gibt den Durchschnittswert des Ausdrucks über die Elemente der Gruppe zurück</d-gavg>
