@@ -2,7 +2,9 @@
 <ModPlus>
   <mprParametrization
     LocalName="Parametrisierung"
-    Description="Ausfüllen von Elementparametern mit verschiedenen Strategien">
+    Description="Ausfüllen von Elementparametern mit verschiedenen Strategien"
+    LocalName1="Parametrisierung. Palette"
+    Description1="Blendet die Palette zum schnellen Ausführen der Regeln der ausgewählten Strategie ein oder aus">
     <!-- todo remove after 3.3.6.0 start -->
     <t1>Den Inhalt des Fensters minimieren</t1>
     <t2>Den Inhalt des Fensters vergrößern</t2>
@@ -446,6 +448,8 @@
     <sld27>Die Strategie bearbeitet Elemente nach ihrer Bindung an eine Ebene. Das bedingte Quellelement ist eine Ebene, die Zielelemente sind die auf ihr befindlichen Elemente. Die Ebene wird der Elementeigenschaft entnommen, und falls diese nicht gefüllt ist - dem Ebenenparameter («Ebene», «Referenzebene», «Basisabhängigkeit»). Ein Element, das sich über mehrere Ebenen erstreckt (Wand, Stütze, Treppe), gehört zu seiner unteren Ebene. Ebenen werden automatisch in die Bearbeitung aufgenommen, sie müssen im Modell nicht ausgewählt werden</sld27>
     <ssd28>Bearbeitung von Bewehrungskupplungen</ssd28>
     <sld28>Die Strategie bearbeitet Bewehrungsstäbe, die durch eine Bewehrungskupplung verbunden sind. Das bedingte Quellelement ist die Kupplung, die Zielelemente sind ein oder zwei Stäbe, auf deren Enden sie sitzt. Eine Kupplung auf einem einzelnen Stab ergibt eine Eins-zu-eins-Beziehung: In diesem Fall wird der Wert des Stabes mit den Rückschreibfunktionen in die Kupplung übertragen. Bei einer Kupplung auf zwei Stäben wird die rechte Seite der Rückschreibung für beide Stäbe berechnet</sld28>
+    <ssd29>Bearbeitung der Ansichten einer Ebene</ssd29>
+    <sld29>Die Strategie bearbeitet die einer Ebene zugeordneten Ansichten. Das bedingte Quellelement ist eine Ebene, die Zielelemente sind die zu dieser Ebene gehörenden Grundrisse, Deckenpläne, Tragwerkspläne und Flächenpläne. Die Ebene einer Ansicht wird beim Erstellen der Ansicht festgelegt und ändert sich nicht: ein durch Kopieren erhaltener Grundriss bleibt auf der Ebene des Originals. Ansichten anderer Art - Schnitte, Ansichten, 3D-Ansichten, Legenden, Bauteillisten - sind keiner Ebene zugeordnet und werden nicht bearbeitet, Ansichtsvorlagen ebenfalls nicht. Die zu bearbeitenden Ebenen werden wie die Elemente jeder anderen Strategie ermittelt: bei der Bearbeitung des gesamten Dokuments sind das alle Ebenen des Dokuments, bei der Auswahl einzelner Elemente nur die ausgewählten Ebenen, bei der Bearbeitung einer Ansicht die in dieser Ansicht sichtbaren Ebenen. Eine Ebene wird im Modell in einem Schnitt oder einer Ansicht gewählt, wo sie ein gewöhnliches Element ist; ein Grundriss hat keine Ebenenlinie, daher wird bei der Bearbeitung eines Grundrisses die Ebene übernommen, nach der er erzeugt ist</sld29>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -509,6 +513,7 @@
     <tp9>Parameter der Öffnung einfügen</tp9>
     <te12>Ausbauelement</te12>
     <tp12>Parameter des Ausbauelements einfügen</tp12>
+    <tp13>Ansichtsparameter einfügen</tp13>
     <ft1>Mathematische Funktionen</ft1>
     <ft2>Logische Funktionen</ft2>
     <ft3>Modifizierende Funktionen</ft3>
@@ -596,5 +601,24 @@
     <d-wb-max>Schreibt das größte Ergebnis in einen Parameter des bedingten Quellelements</d-wb-max>
     <d-wb-min>Schreibt das kleinste Ergebnis in einen Parameter des bedingten Quellelements</d-wb-min>
     <d-wb-sum>Schreibt die Summe der Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-sum>
+    <t211>The plugin window is open. The palette is available after it is closed</t211>
+    <t212>Data source is not selected. Open the plugin window</t212>
+    <t213>Organization settings have changed. Open the plugin window to select a data source</t213>
+    <t214>Data source file is not available</t214>
+    <t215>There are no configurations in the data source</t215>
+    <t216>There are no strategies in the current configuration</t216>
+    <t217>Open the plugin window</t217>
+    <t218>Work type</t218>
+    <t219>Strategy of the current configuration</t219>
+    <t220>Run all rules of the strategy</t220>
+    <t221>Click to run the rule</t221>
+    <t222>Show or hide the palette</t222>
+    <t223>Source</t223>
+    <t224>PF SE</t224>
+    <t225>PF TE</t225>
+    <t226>F SE</t226>
+    <t227>F TE</t227>
+    <t228>The plugin does not work in family files</t228>
+    <t229>No open document</t229>
   </mprParametrization>
 </ModPlus>

@@ -2,7 +2,9 @@
 <ModPlus>
   <mprParametrization
     LocalName="Parametrización"
-    Description="Relleno de parámetros de elementos con varias estrategias">
+    Description="Relleno de parámetros de elementos con varias estrategias"
+    LocalName1="Parametrización. Paleta"
+    Description1="Muestra u oculta la paleta para ejecutar rápidamente las reglas de la estrategia seleccionada">
     <!-- todo remove after 3.3.6.0 start -->
     <t1>Minimizar contenido de ventana</t1>
     <t2>Expandir contenido de ventana</t2>
@@ -446,6 +448,8 @@
     <sld27>La estrategia procesa los elementos por su vinculación a un nivel. El elemento de origen condicional es un nivel y los elementos de destino son los situados en él. El nivel se toma de la propiedad del elemento y, si no está rellenada, del parámetro de nivel («Nivel», «Nivel de referencia», «Restricción inferior»). Un elemento extendido entre niveles (un muro, un pilar, una escalera) pertenece a su nivel inferior. Los niveles se añaden al procesamiento automáticamente, no es necesario seleccionarlos en el modelo</sld27>
     <ssd28>Procesamiento de acopladores de barras de refuerzo</ssd28>
     <sld28>La estrategia procesa las barras de refuerzo unidas por un acoplador. El elemento de origen condicional es el acoplador y los elementos de destino son una o dos barras en cuyos extremos está colocado. Un acoplador colocado en una sola barra da una relación uno a uno: en este caso el valor de la barra se transfiere al acoplador mediante las funciones de escritura inversa. Para un acoplador colocado en dos barras, la parte derecha de la escritura inversa se calcula para ambas</sld28>
+    <ssd29>Procesamiento de las vistas del nivel</ssd29>
+    <sld29>La estrategia procesa las vistas asociadas a un nivel. El elemento de origen condicional es un nivel y los elementos de destino son las plantas, los planos de techo, las plantas estructurales y las plantas de áreas generadas por ese nivel. El nivel de una vista se establece al crear la vista y no cambia: una planta obtenida por copia permanece en el nivel del original. Las vistas de otro tipo - secciones, alzados, vistas 3D, leyendas, tablas de planificación - no están asociadas a un nivel y no se procesan, las plantillas de vista tampoco. Los niveles que se procesan se obtienen igual que los elementos de cualquier otra estrategia: al procesar todo el documento son todos los niveles del documento; al seleccionar elementos, solo los niveles seleccionados; al procesar una vista, los niveles visibles en ella. El nivel se señala en el modelo en una sección o un alzado, donde es un elemento corriente; una planta no tiene línea de nivel, por eso al procesar una planta se toma el nivel por el que está generada</sld29>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -509,6 +513,7 @@
     <tp9>Insertar parámetro de la abertura</tp9>
     <te12>Elemento de acabado</te12>
     <tp12>Insertar parámetro del elemento de acabado</tp12>
+    <tp13>Insertar parámetro de la vista</tp13>
     <ft1>Funciones matemáticas</ft1>
     <ft2>Funciones lógicas</ft2>
     <ft3>Funciones de modificación</ft3>
@@ -596,5 +601,24 @@
     <d-wb-max>Guarda el resultado máximo en un parámetro del elemento original condicional</d-wb-max>
     <d-wb-min>Guarda el resultado mínimo en un parámetro del elemento original condicional</d-wb-min>
     <d-wb-sum>Guarda la suma de los resultados en un parámetro del elemento original condicional</d-wb-sum>
+    <t211>The plugin window is open. The palette is available after it is closed</t211>
+    <t212>Data source is not selected. Open the plugin window</t212>
+    <t213>Organization settings have changed. Open the plugin window to select a data source</t213>
+    <t214>Data source file is not available</t214>
+    <t215>There are no configurations in the data source</t215>
+    <t216>There are no strategies in the current configuration</t216>
+    <t217>Open the plugin window</t217>
+    <t218>Work type</t218>
+    <t219>Strategy of the current configuration</t219>
+    <t220>Run all rules of the strategy</t220>
+    <t221>Click to run the rule</t221>
+    <t222>Show or hide the palette</t222>
+    <t223>Source</t223>
+    <t224>PF SE</t224>
+    <t225>PF TE</t225>
+    <t226>F SE</t226>
+    <t227>F TE</t227>
+    <t228>The plugin does not work in family files</t228>
+    <t229>No open document</t229>
   </mprParametrization>
 </ModPlus>

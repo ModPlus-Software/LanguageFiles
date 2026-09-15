@@ -2,7 +2,9 @@
 <ModPlus>
   <mprParametrization
     LocalName="参数化"
-    Description="使用不同策略填充元素参数">
+    Description="使用不同策略填充元素参数"
+    LocalName1="参数化。选项板"
+    Description1="显示或隐藏用于快速运行所选策略规则的选项板">
     <!-- todo remove after 3.3.6.0 start -->
     <t1>折叠窗口内容</t1>
     <t2>展开窗口内容</t2>
@@ -446,6 +448,8 @@
     <sld27>该策略按图元与标高的关联进行处理。条件源图元是标高，目标图元是位于该标高上的图元。标高取自图元属性；若该属性为空，则取自标高参数（“标高”“参照标高”“底部约束”）。跨越多个标高的图元（墙、柱、楼梯）归属于其下部标高。标高会自动加入处理，无需在模型中选择</sld27>
     <ssd28>处理钢筋连接器</ssd28>
     <sld28>该策略处理由钢筋连接器连接的钢筋。条件源图元是连接器，目标图元是其套在端部的一根或两根钢筋。仅套在一根钢筋上的连接器构成一对一关系：此时可用回写函数将钢筋的值传入连接器。对于套在两根钢筋上的连接器，回写表达式的右侧将按两根钢筋分别计算</sld28>
+    <ssd29>处理标高的视图</ssd29>
+    <sld29>该策略处理与标高关联的视图。条件源图元是标高，目标图元是依据该标高生成的楼层平面、天花板平面、结构平面和面积平面。视图的标高在创建视图时确定且不会改变：通过复制得到的平面视图仍属于原视图的标高。其他类型的视图（剖面、立面、三维视图、图例、明细表）不与标高关联，因此不会被处理，视图样板同样不会被处理。参与处理的标高与其他策略的图元按同样方式获取：按文档处理时为文档中的全部标高；逐个选择图元时仅为所选的标高；按视图处理时为该视图上可见的标高。标高在剖面和立面上用鼠标选取，在这些视图中它是普通图元；平面视图上没有标高线，因此处理平面视图时取该平面所依据的标高</sld29>
     <se1>基础</se1>
     <sp1>插入基础参数</sp1>
     <se2>组</se2>
@@ -509,6 +513,7 @@
     <tp9>插入洞口参数</tp9>
     <te12>装饰面图元</te12>
     <tp12>插入装饰面图元参数</tp12>
+    <tp13>插入视图参数</tp13>
     <ft1>数学函数</ft1>
     <ft2>逻辑函数</ft2>
     <ft3>修改函数</ft3>
@@ -596,5 +601,24 @@
     <d-wb-max>将最大结果写入条件源元素的参数</d-wb-max>
     <d-wb-min>将最小结果写入条件源元素的参数</d-wb-min>
     <d-wb-sum>将结果之和写入条件源元素的参数</d-wb-sum>
+    <t211>The plugin window is open. The palette is available after it is closed</t211>
+    <t212>Data source is not selected. Open the plugin window</t212>
+    <t213>Organization settings have changed. Open the plugin window to select a data source</t213>
+    <t214>Data source file is not available</t214>
+    <t215>There are no configurations in the data source</t215>
+    <t216>There are no strategies in the current configuration</t216>
+    <t217>Open the plugin window</t217>
+    <t218>Work type</t218>
+    <t219>Strategy of the current configuration</t219>
+    <t220>Run all rules of the strategy</t220>
+    <t221>Click to run the rule</t221>
+    <t222>Show or hide the palette</t222>
+    <t223>Source</t223>
+    <t224>PF SE</t224>
+    <t225>PF TE</t225>
+    <t226>F SE</t226>
+    <t227>F TE</t227>
+    <t228>The plugin does not work in family files</t228>
+    <t229>No open document</t229>
   </mprParametrization>
 </ModPlus>
