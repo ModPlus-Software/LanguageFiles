@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprBeamsReinforcement
+    LocalName="Refuerzo de viga"
+    Description="Análisis, agrupamiento y refuerzo de vigas según condiciones especificadas"
+    FullDescription="Procesamiento tanto de vigas seleccionadas individualmente como de todas las vigas en vista o documento. El refuerzo transversal se puede configurar utilizando varias opciones de formas de barras. Funciona incluso en una plantilla vacía">
+    <h1>Opciones</h1>
+    <h2>Seleccionar vigas</h2>
+    <h3>Seleccionar todas vigas en vista actual</h3>
+    <h4>Seleccionar todas vigas del proyecto</h4>
+    <h5>Crear refuerzo sólo es posible en vigas portantes</h5>
+    <h6>Seleccionar</h6>
+    <h7>Analizar</h7>
+    <h8>Total de vigas seleccionadas:</h8>
+    <h9>De ellos, se han analizado con éxito los siguientes:</h9>
+    <h10>Reforzar</h10>
+    <h11>Ajustes de refuerzo de grupo</h11>
+    <h12>Agrupamiento</h12>
+    <h13>Por nivel</h13>
+    <h15>Agrupar</h15>
+    <h16>Cantidad</h16>
+    <h17>Perfil</h17>
+    <h18>Niveles</h18>
+    <h19>Agrupar todos</h19>
+    <h20>Vigas en grupo:</h20>
+    <h21>Nivel</h21>
+    <h23>Agrupar por:</h23>
+    <h24>Sección</h24>
+    <h25>Refuerzo longitudinal</h25>
+    <h27>Espesor del recubrimiento de hormigón para la armadura principal:</h27>
+    <coverTop>Arriba:</coverTop>
+    <coverBottom>Abajo:</coverBottom>
+    <coverSide>A lados:</coverSide>
+    <coverEnd>Desde extremos:</coverEnd>
+    <h28>El recubrimiento de armadura para la armadura principal debe ser de al menos 20 mm o al menos igual al diámetro de la barra de refuerzo</h28>
+    <h30>Parámetro</h30>
+    <h31>Número de barras a lo ancho:</h31>
+    <h32>Número de barras a altura:</h32>
+    <h33>Editar distancias</h33>
+    <h34>Escuadría de viga, mm²:</h34>
+    <h35>Escuadría de armadura, mm²:</h35>
+    <h36>Porcentaje de refuerzo:</h36>
+    <h37>No se recomienda asignar escuadría de armadura longitudinal a más del 5% del escuadría de viga</h37>
+    <h38>Distancias entre barras a lo ancho de viga:</h38>
+    <h39>Distancias entre barras a lo largo de altura de viga:</h39>
+    <h40>¡Atención! Al cambiar el diámetro, el recubrimiento de armadura o el número de barras, las distancias entre las barras se restablecerán a valores equivalentes</h40>
+    <h41>Arranques de refuerzo longitudinal</h41>
+    <h42>Refuerzo transversal (disposición)</h42>
+    <h43>Refuerzo transversal (formas)</h43>
+    <h44>Doblar barras superiores si no hay suficiente distancia para anclaje</h44>
+    <h45>Forzado de cursor de armadura de trabajo al borde de viga en centro de armadura. Forzado de cursor se calcula en función del diámetro de barra del modelo</h45>
+    <h50>Ajustes</h50>
+    <h51>VENTANA DEL COMPLEMENTO:</h51>
+    <h53>REPRESENTACIÓN EN MODELO:</h53>
+    <h54>Factor de escalado:</h54>
+    <!-- todo remove after 1.18.16.0 -->
+    <h55>REFUERZO PREDETERMINADO:</h55>
+    <h56>Desfase</h56>
+    <h57>Envolvimiento</h57>
+    <h58>Eliminar forma seleccionada</h58>
+    <!-- todo remove after 1.18.16.0 -->
+    <h59>Especificar tipo de gancho de forma, parámetros, diámetro y tipo de barra de refuerzo que se establecerán de forma predeterminada para formas de refuerzo transversal añadidas</h59>
+    <h60>Paso del refuerzo transversal en zonas de engrosamiento, mm:</h60>
+    <h61>Calcular anclaje según SP 52-101-2003</h61>
+    <h72>No se puede añadir un formulario al diseño actual: ¡no hay lugares disponibles para ubicar forma!</h72>
+    <!-- todo remove after 1.18.16.0 -->
+    <h73>Ajustes de refuerzo de viga</h73>
+    <h74>Reemplazar con ajustes de refuerzo de grupo</h74>
+    <h75>Dejar ajustes de refuerzo</h75>
+    <!-- todo remove after 1.18.16.0 -->
+    <h76>Refuerzo de viga</h76>
+    <h79>Ganchos de forma predeterminada:</h79>
+    <h80>Ganchos en forma:</h80>
+    <h81>establecer en boceto</h81>
+    <h82>utilizar ganchos Revit</h82>
+    <h83>Parámetros predeterminados</h83>
+    <h84>Recubrimiento de armadura en los extremos de las barras, mm:</h84>
+    <h85>Paso principal del refuerzo transversal, mm:</h85>
+    <h86>Longitud de extremo de viga, mm:</h86>
+    <h87>Engrosamiento del refuerzo transversal</h87>
+    <h88>Longitud de engrosamiento, mm:</h88>
+    <h89>Longitud de engrosamiento, fracciones:</h89>
+    <h90>Engrosamiento de refuerzo en extremos de viga</h90>
+    <h91>Engrosamiento de refuerzo en extremos de viga en ausencia de elementos inferiores (extremos voladizos de viga)</h91>
+    <h93>Estribos triangular:</h93>
+    <h94>Tener en cuenta pilares y muros inferiores y de extremo</h94>
+    <h96>Por parámetro:</h96>
+    <h97>Parámetro</h97>
+    <h98>Distancia entre centros de barras</h98>
+    <h99>Distancia entre bordes de barras</h99>
+    <!-- todo remove after 1.18.16.0 -->
+    <h100>¡Atención! Número y posición de barras de refuerzo longitudinal, así como disposición de refuerzo transversal, se pueden guardar, descargar y copiar en vigas marcadas de una sección adecuada, ¡pero no se pueden guardar de forma predeterminada!</h100>
+    <h102>Tipo de refuerzo:</h102>
+    <h103>Pieza No. 1</h103>
+    <h104>Longitud de anclaje de arranques rectos, mm:</h104>
+    <h105>Calcular longitud del anclaje</h105>
+    <h106>Pieza No. 2</h106>
+    <h107>Intersecciones en T</h107>
+    <h108>Intersecciones cruzadas</h108>
+    <h110>Crear refuerzo</h110>
+    <h141>No cerrar ventana después de crear refuerzo</h141>
+    <h142>Ver intersección</h142>
+    <h143>Eliminar geometría auxiliar</h143>
+    <!-- todo remove after 1.18.16.0 start -->
+    <h147>Restablecer</h147>
+    <h173>Barras rectas:</h173>
+    <h174>Barras en forma de L:</h174>
+    <h177>Barras transversales en forma de C (clavijas). Ganchos en boceto:</h177>
+    <h178>Barras transversales en forma de S (clavijas). Ganchos en boceto:</h178>
+    <h180>Barras en forma de U:</h180>
+    <h181>Estribos rectangulares:</h181>
+    <h182>Barras en forma de L con gran flexión:</h182>
+    <h183>Restablecer todos valores a "Auto"</h183>
+    <h184>Formas preferidas de barras de refuerzo</h184>
+    <!-- todo remove after 1.18.16.0 end -->
+    <h186>Seleccionar de nuevo</h186>
+    <h187>Volver a seleccionar vigas que se procesaron en vista actual cuando se utilizó anteriormente complemento</h187>
+    <h205>Barras transversales en forma de C (clavijas). Ganchos Revit:</h205>
+    <h206>Barras transversales en forma de S (clavijas). Ganchos Revit:</h206>
+    <h207>Utilizar geometría de viga sin considerar conexiones</h207>
+    <h208>Insertar barras de refuerzo longitudinales en vigas verticales en contacto ubicadas en extremos de viga actual</h208>
+    <h226>Eliminar armadura creada anteriormente:</h226>
+    <h229>Nivel</h229>
+    <h238>Crear:</h238>
+    <h239>Refuerzo transversal</h239>
+    <h240>Propiedades de formas predeterminadas</h240>
+    <h241>Si ya existe forma con mismo boceto en lista, propiedades se heredarán de ella</h241>
+    <h243>Ajustes generales de refuerzo</h243>
+    <h244>Refuerzo de intersección</h244>
+    <h245>Vigas</h245>
+    <h246>Intersecciones</h246>
+    <h247>Tipo de intersección</h247>
+    <h248>Intersecciones angulares</h248>
+    <h249>Longitud de anclaje, mm:</h249>
+    <h250>Núm.de intersec.</h250>
+    <h251>Tipo de intersección</h251>
+    <h252>Parámetros</h252>
+    <h253>Intersecciones en grupo:</h253>
+    <h255>Vigas en intersección:</h255>
+    <h256>Número de vigas</h256>
+    <h257>Ajustes de refuerzo de grupos</h257>
+    <h258>No crear refuerzo transversal sobre muros y pilares inferiores</h258>
+    <h259>Otro diámetro de refuerzo para fila superior:</h259>
+    <h260>Distancia entre barras a lo ancho se calcula para diámetro principal del refuerzo. Para fila superior no tener en cuenta otros diámetros de refuerzo</h260>
+    <h261>Distancia hasta inicio de parte, mm:</h261>
+    <h262>Restablecer a valores equivalentes</h262>
+    <srd>Guardar datos sobre vigas seleccionadas</srd>
+    <hook>Gancho:</hook>
+    <jt1>No se crean arranques de armadura longitudinal. Las barras se recortan en el extremo de la viga según el valor especificado del recubrimiento de armadura en los extremos de las barras</jt1>
+    <jt2>Se crean arranques rectos de barras de refuerzo para refuerzo longitudinal. Longitud del anclaje se establece desde borde de viga. Arranques se crean sólo si hay muro o pilar al extremo de viga. De lo contrario, arranques no se crearán y barras longitudinales se cortarán al final de viga teniendo en cuenta capa protectora especificada</jt2>
+    <msg1>Seleccionar vigas</msg1>
+    <m1>Ingresar valor de</m1>
+    <m2>a</m2>
+    <m4>Barras corrugadas</m4>
+    <m5>Barras lisas</m5>
+    <!-- todo remove after 1.18.16.0 -->
+    <m13>Recubrimiento de armadura</m13>
+    <m20>Lista de vigas contiene vigas cuyas ajustes de refuerzo se han cambiado manualmente y difieren de ajustes de refuerzo grupal</m20>
+    <m23>Ajustes de refuerzo copiados</m23>
+    <m24>¡No se especifica para qué grupos crear refuerzo!</m24>
+    <m25>¡No se ha seleccionado grupos para crear refuerzo!</m25>
+    <m27>¡Atención! ¡No se han encontrado formas de barras de refuerzo descargadas en proyecto actual! ¡En este caso, formas de barras de refuerzo creadas al ejecutar complemento no podrán abrirse en editor familiar! ¡Se recomienda descargar formas de barras de refuerzo en proyecto antes de usar complemento!\n¿Reforzar a pesar de que faltan formas de barras de refuerzo?</m27>
+    <rn>Armadura de apoyo ⌀</rn>
+    <!-- todo remove after 1.18.16.0 -->
+    <full>¡Disponible en versión completa del complemento!</full>
+    <!-- todo remove after 1.18.16.0 -->
+    <full2>En versión limitada, sólo hay una forma disponible</full2>
+    <!-- todo remove after 1.18.16.0 -->
+    <noInFamily>¡Complemento no está disponible en familias!</noInFamily>
+    <p1>Análisis de viga:</p1>
+    <p2>Buscar elementos vinculados:</p2>
+    <pt1>Viga en T</pt1>
+    <pt2>Viga en doble T</pt2>
+    <pt3>Rectángulo</pt3>
+    <pt4>Cuadrado</pt4>
+    <pt5>No definido</pt5>
+    <pt6>Trapecio</pt6>
+    <pt7>forma de L</pt7>
+    <rr1>Eliminar armadura del mismo tipo que se creó</rr1>
+    <rr2>Eliminar toda armadura creada anteriormente</rr2>
+    <rr3>No eliminar</rr3>
+    <e1>Errores de análisis de vigas</e1>
+    <e2>No se puede inicializar viga</e2>
+    <e3>No se puede obtener cuerpos sólidos</e3>
+    <e4>No se puede obtener ningún sólido principal o combinado</e4>
+    <e6>No se puede determinar perfil de sección transversal</e6>
+    <p1>Análisis de viga:</p1>
+    <p2>Buscar elementos vinculados:</p2>
+    <p8>Eliminar refuerzo creado anteriormente</p8>
+    <p9>Calcular y modelar reforzamiento de refuerzo longitudinal</p9>
+    <p10>Calcular y modelar reforzamiento de refuerzo transversal</p10>
+    <p11>Calcular y modelar refuerzo de intersección</p11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t7>Grupo contiene vigas cuyas ajustes de refuerzo se han editado manualmente y difieren de ajustes de refuerzo grupal</t7>
+    <!-- todo remove after 1.18.16.0 -->
+    <t8>Añadir un nuevo grupo vacío</t8>
+    <!-- todo remove after 1.18.16.0 -->
+    <t9>Eliminar grupo vacío</t9>
+    <t10>Marcar todos grupos</t10>
+    <t11>Desmarcar todos grupos</t11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t12>Ajustes de refuerzo de viga se han editado manualmente y difieren de los ajustes de refuerzo grupal</t12>
+    <!-- todo remove after 1.18.16.0 -->
+    <t13>Editar ajustes de refuerzo para viga seleccionada</t13>
+    <!-- todo remove after 1.18.16.0 -->
+    <t14>Reemplazar ajustes de refuerzo del pilar con ajustes de grupo</t14>
+    <t15>Mostrar en modelo viga anterior en lista</t15>
+    <t16>Mostrar en modelo viga seleccionada en lista</t16>
+    <t17>Mostrar en modelo siguiente viga en lista</t17>
+    <t23>Mostrar en modelo intersección anterior en lista</t23>
+    <t24>Mostrar en modelo intersección seleccionada en lista</t24>
+    <t25>Mostrar en modelo siguiente intersección en lista</t25>
+    <!-- todo remove after 1.18.16.0 -->
+    <t40>Copiar ajustes de refuerzo de grupo actual a todos grupos seleccionados</t40>
+    <!-- todo remove after 1.18.16.0 -->
+    <t41>Guardar ajustes de refuerzo de grupo actual en un archivo .xml</t41>
+    <!-- todo remove after 1.18.16.0 -->
+    <t42>Descargar ajustes de refuerzo del archivo .xml y establecerlos para grupo actual</t42>
+    <!-- todo remove after 1.18.16.0 -->
+    <t53>Restablecer todos valores de ajustes de refuerzo predeterminados actual a valores estándar incluidos en complemento</t53>
+    <!-- todo remove after 1.18.16.0 -->
+    <t63>Puede especificar formas preferidas de barras de refuerzo para diferentes tipos de barras de refuerzo creadas por complemento.</t63>
+    <!-- todo remove after 1.18.16.0 -->
+    <t64>Establecer formas preferidas no garantiza que se creará refuerzo utilizando forma de barra de refuerzo especificada.</t64>
+    <!-- todo remove after 1.18.16.0 -->
+    <t65>Al crear barras de refuerzo, se intentará utilizar forma especificada. Si no es posible crear una barra con forma especificada, Revit buscará automáticamente una forma adecuada o creará una nueva forma.</t65>
+    <!-- todo remove after 1.18.16.0 -->
+    <t66>Guardar ajustes de refuerzo actual como ajustes de refuerzo predeterminados</t66>
+    <t67>Agrupar vigas e intersecciones utilizando configuración de agrupación actual</t67>
+    <re1>Se ha producido un error al crear refuerzo longitudinal de viga id={0}</re1>
+    <re2>Se ha producido un error al calcular puntos de ubicación del refuerzo transversal de viga id={0}</re2>
+    <re3>Se ha producido un error al crear una pieza de refuerzo transversal de tipo "{0}" en viga id={1}</re3>
+    <re4>No se puede crear una barra de refuerzo recta con forma de barra preferida especificada "{0}". Error: {1}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re4>
+    <re5>No se puede crear una barra de refuerzo con forma "{0}" con forma de barra preferida especificada "{1}". Error: {2}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re5>
+    <!-- todo remove after 1.18.16.0 -->
+    <re6>No se puede establecer valores de parámetros</re6>
+    <re9>Error al crear piezas de conexión de esquina en vigas {0}:</re9>
+    <re10>Error al crear piezas de conexión T en vigas {0}:</re10>
+    <re11>Error al crear piezas de conexión en cruz en vigas {0}:</re11>
+    <re22>¡No es posible mostrar intersección en vista actual! Ir al plano de planta</re22>
+  </mprBeamsReinforcement>
+</ModPlus>

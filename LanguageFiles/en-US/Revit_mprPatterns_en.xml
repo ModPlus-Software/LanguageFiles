@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprPatterns
+    LocalName="Fill patterns"
+    Description="Managing fill patterns with import, export, editing, and creation capabilities"
+    FullDescription="Changing the type of existing fill patterns, increasing or decreasing fill pattern scale are available. Batch import from pat files and batch export to pat files are supported. New fill patterns can be created using standard tools with offset and angle, using the conversion of drafting views, and with using a graphical editor">
+    <full>Available in the full version of the plugin!</full>
+    <mi1>Create</mi1>
+    <mi2>New empty pattern</mi2>
+    <mi3>From drafting view</mi3>
+    <mi4>Using a graphical editor</mi4>
+    <mi5>Load from pat-file</mi5>
+    <mi6>Remove</mi6>
+    <mi7>Remove selected pattern</mi7>
+    <mi8>Remove all drafting patterns</mi8>
+    <mi9>Remove all model patterns</mi9>
+    <mi10>Remove all unsaved patterns from the list</mi10>
+    <mi11>Import</mi11>
+    <mi12>Import selected pat-file</mi12>
+    <mi13>Import pat files from folder</mi13>
+    <mi14>Export</mi14>
+    <mi15>Export to pat-file</mi15>
+    <mi16>Tools</mi16>
+    <mi17>Remove Solid pattern duplicates</mi17>
+    <mi18>Display current pattern in notepad</mi18>
+    <mi19>Preview selected pattern</mi19>
+    <mi20>Duplicate selected pattern</mi20>
+    <mi21>Remove multiple patterns</mi21>
+    <all>All</all>
+    <drafting>Drafting</drafting>
+    <model>Model</model>
+    <basic>Basic</basic>
+    <custom>Custom</custom>
+    <search>Search...</search>
+    <apply>To apply</apply>
+    <accept>Accept</accept>
+    <cancel>Cancel</cancel>
+    <checkAll>Check all</checkAll>
+    <uncheckAll>Uncheck all</uncheckAll>
+    <mm>mm</mm>
+    <inch>inch</inch>
+    <o1>Orient to View</o1>
+    <o2>Keep Readable</o2>
+    <o3>Align with Element</o3>
+    <h1>Patterns count in the list:</h1>
+    <h2>Pattern name:</h2>
+    <h3>Pattern type:</h3>
+    <h4>Pattern creation type:</h4>
+    <h5>Orientation in Host Layers:</h5>
+    <h6>Parameters</h6>
+    <h7>Parallel lines</h7>
+    <h8>Crosshatch</h8>
+    <h9>Line angle:</h9>
+    <h10>Line spacing 1, mm:</h10>
+    <h11>Line spacing 2, mm:</h11>
+    <h12>File units are:</h12>
+    <h13>Import scale:</h13>
+    <h14>Change pattern scale:</h14>
+    <h15>Increase</h15>
+    <h16>Decrease</h16>
+    <h17>Show grid</h17>
+    <h18>Cell size,</h18>
+    <h19>Pattern width:</h19>
+    <h20>Pattern height:</h20>
+    <h21>Snap to grid</h21>
+    <h22>Snap to grip points</h22>
+    <h23>Create and edit geometry</h23>
+    <h24>Selected item properties</h24>
+    <h25>Offset:</h25>
+    <h26>Shift:</h26>
+    <h27>Millimeters</h27>
+    <h28>Inches</h28>
+    <h29>Edit pattern in graphic editor</h29>
+    <h30>Specify the units in which the pattern will be edited</h30>
+    <h31>Remove pattern "{0}"</h31>
+    <h32>Remove all drafting patterns</h32>
+    <h33>Remove all model patterns</h33>
+    <h34>Fix Solid Fill Patterns</h34>
+    <h35>Create pattern in graphic editor</h35>
+    <h36>Hatch Patterns</h36>
+    <h37>Create pattern from pat-file</h37>
+    <h38>Specify units to which pattern will be converted</h38>
+    <h39>Select patterns to export</h39>
+    <h40>Export patterns to pat-file</h40>
+    <h41>Specify the units to which patterns will be converted during export</h41>
+    <h42>New pattern name</h42>
+    <h43>Import from pat-file:</h43>
+    <h44>Import pat:</h44>
+    <h45>Pattern units:</h45>
+    <h46>View scale: 1:</h46>
+    <h47>Scale multiple:</h47>
+    <h48>Rotation:</h48>
+    <h49>Flip horizontal</h49>
+    <h50>Flip vertical</h50>
+    <h51>Curve approximation accuracy:</h51>
+    <h52>Preview icons</h52>
+    <h53>Nothing selected!</h53>
+    <h54>Graphics pattern editor</h54>
+    <h55>Creation from drafting view</h55>
+    <t1>Restore original pattern state</t1>
+    <t2>Offset defines the distance between parallel lines. Offset is not displayed in the geometry editor. Offset affects the conditional boundaries of the pattern</t2>
+    <t3>Shift moves the pattern of dashes and spaces along the length of each new parallel line. Shift is ignored if the line is solid</t3>
+    <m1>Decrease pattern by 10 times?</m1>
+    <m2>When changing the pattern type from model to drafting it is strongly recommended to decrease the size of the pattern</m2>
+    <m3>Failed to decrease the size of the pattern</m3>
+    <m4>When try to decrease the pattern size, the size is smaller than the allowed size</m4>
+    <m5>Increase pattern by 10 times?</m5>
+    <m6>When changing the pattern type from drafting to model it is strongly recommended to increase the size of the pattern</m6>
+    <m7>Failed to increase the size of the pattern</m7>
+    <m8>When try to increase the pattern size, the size is bigger than the allowed size</m8>
+    <m9>Failed to convert pattern</m9>
+    <m10>Wrong pattern type! Valid edit only the custom pattern</m10>
+    <m11>Could not get geometric objects from pattern</m11>
+    <m12>An empty pattern name is not valid</m12>
+    <m13>The pattern list already has a pattern named {0}</m13>
+    <m14>Are you sure you want to remove pattern "{0}"?</m14>
+    <m15>Are you sure you want to remove all drafting patterns?</m15>
+    <m16>Are you sure you want to remove all model patterns?</m16>
+    <m17>There are no duplicate solid fills in the current project</m17>
+    <m18>Are you sure you want to remove duplicate solid fills?</m18>
+    <m19>Are you sure you want to remove all unsaved patterns from the list?</m19>
+    <m20>Go to the Drafting view!</m20>
+    <m21>Pick the first point of the rectangle that is the border of the pattern</m21>
+    <m22>Pick the opposite point of the rectangle that is the border of the pattern</m22>
+    <m23>Select items to create pattern</m23>
+    <m24>Process pat files in subfolders?</m24>
+    <m25>Pattern width too small</m25>
+    <m26>Pattern width too big</m26>
+    <m27>Failed to convert elements to pattern</m27>
+    <m28>The current pattern has no geometry. Nothing to export</m28>
+    <m29>The current pattern already has geometry. Choose further action:</m29>
+    <m30>Add imported geometry to the current pattern</m30>
+    <m31>Remove current geometry and load from selected file</m31>
+    <m32>Cancel import of geometry</m32>
+    <m33>The selected file is not a geometry file for the pattern editor</m33>
+    <m34>The geometry of the selected file cannot be loaded because the pattern type and units of the current editor and the loaded file must match! The current editor has a pattern type "{0}" and a unit of measure "{1}". The loaded file has a pattern type "{2}" and a unit of measure "{3}"</m34>
+  </mprPatterns>
+</ModPlus>

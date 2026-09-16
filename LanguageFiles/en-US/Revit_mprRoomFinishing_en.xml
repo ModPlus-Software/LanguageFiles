@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprRoomFinishing
+    LocalName="Room finishing"
+    Description="Creation of finishing elements in the rooms"
+    LocalName1="Update Room finishing"
+    Description1="Update of finishing elements in rooms"
+    LocalName2="Manage Room finishing"
+    Description2="Management of finishing elements in rooms">
+    <t1>Rooms filter:</t1>
+    <t2>Floors</t2>
+    <!--todo remove after 2.0.0-->
+    <t3>Floor type:</t3>
+    <t4>Height Offset from Level, mm:</t4>
+    <t5>Set the thickness value of the selected Floor type, taking into account previous Floor type</t5>
+    <t6>Copy parameter value (from room to floor):</t6>
+    <t7>From</t7>
+    <t8>to</t8>
+    <t9>Ceilings</t9>
+    <t10>Walls</t10>
+    <t11>When leading the floor to the doorways to the full wall width consider the main room:</t11>
+    <t12>If door leads to exit</t12>
+    <t13>If door leads to entrance</t13>
+    <t14>The floor of the main room will be created with the lead-in to the doorway. Respectively, for a room that is defined as non-main room, no door leading into the doorway will be created. This option works only for families in the "Doors" category with filled FromRoom and ToRoom internal properties. The direction of movement in the opening is determined by the direction of the family's exterior side</t14>
+    <t15>Cut door solid geometry out of the floor boundary</t15>
+    <t16>Delete previously created finishing elements</t16>
+    <t17>By picked Rooms</t17>
+    <t18>By Rooms on View</t18>
+    <t19>By all rooms</t19>
+    <!--todo remove after 2.0.0-->
+    <t20>For all rooms from linked files</t20>
+    <t21>Update parameters</t21>
+    <t22>Move up</t22>
+    <t23>Move down</t23>
+    <t24>By pre-selected Rooms</t24>
+    <t26>Type is not set or the corresponding type is not found in the model. This configuration cannot be processed!</t26>
+    <t27>Base:</t27>
+    <t28>Bottom, mm:</t28>
+    <t29>Offset from the bottom of the room, mm</t29>
+    <t30>Wall height, mm:</t30>
+    <t31>Select type of finishing wall</t31>
+    <t32>Top, mm:</t32>
+    <t33>Offset from the bottom of the room, mm</t33>
+    <t34>Boundary</t34>
+    <t35>Room boundary</t35>
+    <t36>Add a layer</t36>
+    <t37>Add base</t37>
+    <t38>Copy parameter value (from the room to finishing walls):</t38>
+    <t39>Join finishing walls to the base</t39>
+    <t40>Bottom of walls</t40>
+    <t41>Finishing walls are built on top of this floor</t41>
+    <t42>Layer:</t42>
+    <t43>For all walls types</t43>
+    <!--todo remove after 2.0.0-->
+    <t44>Ceiling type:</t44>
+    <t45>Set the thickness value of the selected Ceiling type, taking into account previous Ceiling type</t45>
+    <t46>Copy the parameter value (from room to ceiling):</t46>
+    <t47>Add finishing creation settings</t47>
+    <t48>Select type of wall or column for the base</t48>
+    <t49>Select the type of floor</t49>
+    <t50>Select ceiling type</t50>
+    <t51>Specify in the model walls or columns whose types will be the base for creating finishing walls</t51>
+    <t52>Base selection mode:</t52>
+    <t53>Filter is not specified</t53>
+    <t54>Baseboards</t54>
+    <t55>Select baseboard type</t55>
+    <t56>Baseboard height, mm:</t56>
+    <t57>Copy parameter value (from room to baseboard)</t57>
+    <t58>Other settings</t58>
+    <t59>Process floor-level windows</t59>
+    <t60>If the option is enabled the floor will extend into openings created by elements of the "Windows" category for the full opening depth. If the option is disabled such openings will be processed according to the general rules</t60>
+    <t61>Wall Joins:</t61>
+    <t62>Select wall and column type</t62>
+    <t63>Corresponding type is not found in the model. This configuration cannot be processed!</t63>
+    <t64>Select rooms</t64>
+    <t65>Select finishing elements to create a link to the room</t65>
+    <t66>Select finishing elements to remove the link</t66>
+    <t67>The value of the source-parameter is collected from rooms linked to finishing elements grouped by type sorted and written comma-separated to the target parameter of each room finishing element. For example if finishing elements of the same type belong to rooms with source-parameter values "3" "1" and "5" then "1, 3, 5" will be written to the specified target parameter of these elements. The "Create ranges" option merges sequences of numbers with a hyphen for example "3-5"</t67>
+    <t68>Select a room parameter</t68>
+    <t69>Select a floor parameter</t69>
+    <t70>Create ranges</t70>
+    <t71>Select a wall parameter</t71>
+    <t72>Select a ceiling parameter</t72>
+    <t73>Parameters are not filled in</t73>
+    <t74>Fill parameters</t74>
+    <t76>Select room finishes</t76>
+    <t77>Selects finishing elements in the model linked to the room</t77>
+    <t78>Link finishes to a room</t78>
+    <t79>Establishes a link between finishing elements and the room so that parameters can later be filled using the "Fill parameters" function and the "Select finishes" function can also be used</t79>
+    <t80>Remove the link between finishes and a room</t80>
+    <t81>Removes the link between finishing elements and the room so that the finishing element is no longer associated with the selected room</t81>
+    <t82>Parameter filling</t82>
+    <t83>Room finish creation</t83>
+    <t84>Select room</t84>
+    <t85>Offset from room bottom:</t85>
+    <t86>Bottom offset basis:</t86>
+    <t87>Offset from the Room level, mm</t87>
+    <t88>Show only selected</t88>
+    <l1>Do not extend the floor boundary into door openings</l1>
+    <l2>Extend the boundary to the middle of the opening</l2>
+    <l3>Extend the boundary to the full opening width</l3>
+    <l4>Extend the boundary to the specified value, mm</l4>
+    <l5>Extend the boundary to the middle of the door leaf</l5>
+    <l6>For all wall and column types</l6>
+    <l7>Select wall and column types</l7>
+    <l8>Wall and column filter</l8>
+    <l9>Butt </l9>
+    <l10>Miter</l10>
+    <l11>Square off</l11>
+    <l12>No join</l12>
+    <l13>From level</l13>
+    <l14>From room bottom</l14>
+    <msg1>No processing rooms available!</msg1>
+    <msg2>No rooms filtered by "{0}" were found</msg2>
+    <msg3>Floor type not specified</msg3>
+    <msg4>Floor type "{0}" not found</msg4>
+    <msg5>Floor with type "{0}" is created by contour of the Room</msg5>
+    <msg6>It was not possible to create a Floor by contour of the Room</msg6>
+    <msg7>The room contour has errors</msg7>
+    <msg8>Failed to process an opening contour. Error "{0}". The floor contour will not be lead into the opening</msg8>
+    <msg9>Parameter "{0}" not found</msg9>
+    <msg10>Failed to copy value of parameter "{0}" to parameter "{1}"</msg10>
+    <msg11>Incompatible parameter types or unknown cause</msg11>
+    <msg12>Failed to create finishing walls. Error</msg12>
+    <msg13>Finishing walls with type "{0}" are created along the contour of the room</msg13>
+    <msg14>Failed to get the height of the room</msg14>
+    <msg15>It was not possible to create a Ceiling by contour of the Room</msg15>
+    <msg16>Ceiling with type "{0}" is created by contour of the Room</msg16>
+    <msg17>Failed to edit wall profile</msg17>
+    <msg18>The height of the finishing wall cannot be less than 0</msg18>
+    <msg19>Baseboards with type "{0}" have been created along the room boundary</msg19>
+    <msg20>Failed to get floor elevation. Baseboard with type "{0}" will be created at the Room level elevation</msg20>
+    <msg21>Failed to create baseboard along the room boundary</msg21>
+    <msg22>Failed to edit sketch</msg22>
+    <msg23>Floor with type "{0}" has been updated along the room boundary</msg23>
+    <msg24>Failed to update floor along the room boundary</msg24>
+    <msg25>Ceiling with type "{0}" has been updated along the room boundary</msg25>
+    <msg26>Failed to connect finishing wall {0} with base {1}</msg26>
+    <msg27>The target parameter "{0}" is not a string parameter</msg27>
+    <msg28>Parameters have been successfully filled in the elements</msg28>
+    <msg29>The parameters already contain the required value</msg29>
+    <msg30>The target parameter "{0}" is read-only</msg30>
+    <msg31>The command is not available in the current version of Revit because the API does not contain the required methods</msg31>
+    <msg32>Failed to get floor elevation. Baseboard with type "{0}" will be created at the bottom elevation of the Room</msg32>
+    <msg33>Unable to update the finishing: the finishing was created in a previous version of the plugin. Recreate the finishing</msg33>
+  </mprRoomFinishing>
+</ModPlus>

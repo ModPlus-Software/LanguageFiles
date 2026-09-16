@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprLinksManager
+    LocalName="Менеджер зв'язків"
+    Description="Керування зовнішніми зв'язками Revit і CAD у поточному документі"
+    FullDescription="Плагін дає змогу переглядати, фільтрувати, додавати, завантажувати, вивантажувати, перезавантажувати, видаляти зв'язки та переписувати шляхи до них у поточному документі Revit">
+    <filtersGroupHeader>Фільтри</filtersGroupHeader>
+    <statusLabel>Стан:</statusLabel>
+    <linksListGroupHeader>Список зв'язків</linksListGroupHeader>
+    <columnNameHeader>Ім'я</columnNameHeader>
+    <columnStatusHeader>Стан</columnStatusHeader>
+    <loadSettingsGroupHeader>Налаштування завантаження</loadSettingsGroupHeader>
+    <positioningLabel>Позиціювання</positioningLabel>
+    <onAddBehaviorLabel>Під час додавання</onAddBehaviorLabel>
+    <fileSelectButton>Вибрати файли</fileSelectButton>
+    <operationsGroupHeader>Операції</operationsGroupHeader>
+    <deleteSelectedButton>Видалити</deleteSelectedButton>
+    <unloadButton>Вивантажити</unloadButton>
+    <reloadButton>Перезавантажити</reloadButton>
+    <updateButton>Оновити</updateButton>
+    <rewritePathText>Переписати шляхи</rewritePathText>
+    <rewritePathsByFolderButton>Переписати шляхи (папка)</rewritePathsByFolderButton>
+    <showLogButton>Показати журнал</showLogButton>
+    <addLinkSettingsDialogTitle>Налаштування додавання</addLinkSettingsDialogTitle>
+    <rewriteHintText>Підстановки: * — будь-яка послідовність, ? — один символ, # — цифра. Екранування: \* \? \# \\. Якщо ввімкнено режим "Змінювати лише шлях", маска застосовується тільки до каталогу.</rewriteHintText>
+    <rewriteModeLabel>Режим заміни:</rewriteModeLabel>
+    <rewriteModeNormal>Звичайний</rewriteModeNormal>
+    <rewriteModeMask>Маска</rewriteModeMask>
+    <findTextLabel>Знайти:</findTextLabel>
+    <replaceTextLabel>Замінити на:</replaceTextLabel>
+    <pathOnlyModeLabel>Змінювати лише шлях</pathOnlyModeLabel>
+    <originalPathColumnHeader>Початковий шлях</originalPathColumnHeader>
+    <newPathColumnHeader>Новий шлях</newPathColumnHeader>
+    <fileNotFoundTooltip>Файл не знайдено</fileNotFoundTooltip>
+    <tableHintText>Позначте зв'язки для виконання операцій</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Менеджер зв'язків запущено</managerStartedLogFormat>
+    <openFilesFilter>Файли Revit і DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Файли Revit (*.rvt)|*.rvt|Файли DWG (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Пропущено вже наявних зв'язків: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>Додавання {0} зв'язків</addStartedLogFormat>
+    <addCompletedLogFormat>Додано зв'язків: {0}, помилок: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Помилка додавання файлу "{0}": {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>Загальна помилка: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>видалення</operationDeleteGenitive>
+    <operationLoadGenitive>завантаження</operationLoadGenitive>
+    <operationUnloadGenitive>вивантаження</operationUnloadGenitive>
+    <operationReloadGenitive>перезавантаження</operationReloadGenitive>
+    <deleteConfirmationMessage>Ви впевнені, що хочете видалити вибрані зв'язки?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Видалення</deleteConfirmationTitle>
+    <operationCanceledLogFormat>Операцію {0} скасовано користувачем</operationCanceledLogFormat>
+    <operationStartedLogFormat>Початок {0} {1} зв'язків</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Успішно: {0}, пропущено: {1}, помилок: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Результат {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>Загальна помилка під час {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Вибір папки скасовано користувачем</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Переписування шляхів скасовано користувачем</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Немає змін для переписування шляхів</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Початок переписування шляхів для {0} зв'язків</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Переписано шляхів: {0}, помилок: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>Загальна помилка під час переписування шляхів: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Помилка перезапису шляху: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>зв'язок знаходиться на закритому робочому наборі</rewritePathClosedWorksetError>
+    <linkStatusLoaded>Завантажено</linkStatusLoaded>
+    <linkStatusUnloaded>Вивантажено</linkStatusUnloaded>
+    <linkStatusNotFound>Не знайдено</linkStatusNotFound>
+    <handlerLinkSavedByLaterRevitVersion>Модель була збережена у пізнішій версії Revit</handlerLinkSavedByLaterRevitVersion>
+    <positioningSharedCoordinates>За спільними координатами</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Суміщення внутрішніх початків</positioningOriginToOrigin>
+    <positioningCenterToCenter>Суміщення центрів</positioningCenterToCenter>
+    <onAddLoadImmediately>Одразу завантажити</onAddLoadImmediately>
+    <onAddAddUnloaded>Додати вивантаженим</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Файл зв'язку не знайдено: {0}</handlerLinkFileNotFoundFormat>
+    <handlerCannotLinkDocumentToItself>Не можна додати поточну модель як зв'язок саму до себе</handlerCannotLinkDocumentToItself>
+    <handlerUnsupportedLinkTypeFormat>Тип зв'язку "{0}" не підтримується</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>Розширення файлу "{0}" не підтримується</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Додавання зв'язків</addLinksTransaction>
+    <deleteLinksTransaction>Видалення зв'язків</deleteLinksTransaction>
+    <loadLinksTransaction>Завантаження зв'язків</loadLinksTransaction>
+    <unloadLinksTransaction>Вивантаження зв'язків</unloadLinksTransaction>
+    <reloadLinksTransaction>Перезавантаження зв'язків</reloadLinksTransaction>
+    <searchHint>Введіть текст для пошуку</searchHint>
+    <typeWorksetColumnHeader>Робочий набір типу</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Робочий набір екземплярів</instanceWorksetColumnHeader>
+    <placeInWorkset>Розмістити в робочому наборі</placeInWorkset>
+    <createWorksetByPrefixLabel>Розмістити у власному робочому наборі</createWorksetByPrefixLabel>
+    <worksetNamePrefixLabel>Префікс робочого набору:</worksetNamePrefixLabel>
+    <disableWorksetContains>Вимкнути робочі набори, що містять:</disableWorksetContains>
+    <disableWorksetTooltip>Введіть підрядки через кому. Під час завантаження зв’язку робочі набори пов’язаної моделі, імена яких містять хоча б один із зазначених підрядків, будуть закриті. Решта робочих наборів буде відкрито.</disableWorksetTooltip>
+    <fromRevitServer>З Revit Server</fromRevitServer>
+    <revitServerWindowTitle>Додати з Revit Server</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>Під час зміни робочого набору типу: {0}, сталася помилка: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>Під час зміни робочого набору екземпляра: {0}, сталася помилка: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Помилка при додаванні зв’язку з Revit Server</addFromServerErrorFormat>
+    <diffWorkset>*РІЗНІ*</diffWorkset>
+    <unloadForSelfMenuItem>Для мене</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Для всіх користувачів</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>локального вивантаження</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Локальне вивантаження зв'язків</unloadLocallyLinksTransaction>
+  </mprLinksManager>
+</ModPlus>

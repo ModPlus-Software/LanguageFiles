@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprContextFilter
+    LocalName="Context filter"
+    Description="Filtering elements by parameters via context menu"
+    FullDescription="Launched in one of three ways: left-clicking while holding Ctrl, sequential key presses, or a key combination. Three processing levels – all model elements, current view elements, or selected elements. Presets are available for quick filter use"
+    LocalName1="Filter. Window mode"
+    Description1="Filtering elements by parameters in window mode">
+    <h1>Presets</h1>
+    <h3>Apply preset to current list</h3>
+    <h4>Category search</h4>
+    <h5>Select checked elements</h5>
+    <h6>Isolate checked elements</h6>
+    <h7>Isolate all except selected items</h7>
+    <h8>Clear the list</h8>
+    <h9>Save or update preset</h9>
+    <h10>Save as new</h10>
+    <h11>Preset name</h11>
+    <h12>Preset description (not necessary)</h12>
+    <h13>Save the current list of checked parameters as a new preset</h13>
+    <h14>Change current preset</h14>
+    <h15>Enter the name of the preset!</h15>
+    <h16>The specified preset name is already in use! Enter a different name</h16>
+    <h17>[No value]</h17>
+    <h18>Specify one of three options to call the context filter dialog and run it</h18>
+    <h19>Run the filter when loading Revit</h19>
+    <h20>Run filter</h20>
+    <h21>Stop filter</h21>
+    <h22>Use Ctrl + LMB</h22>
+    <h23>Use sequence</h23>
+    <h24>Use combination</h24>
+    <h25>The context filter dialog is called by left-clicking the mouse while holding down the Ctrl key. In this case, there may be some restrictions on working in Revit associated with the use of this combination of buttons. For example, when you try to add other elements to the set of selected items</h25>
+    <h26>The context filter dialog is called by successive pressing of the indicated keys. The default sequence is "F, F". The time interval between keystrokes is not taken into account. When specifying a sequence, consider the assigned Revit hot keys</h26>
+    <h27>The context filter dialog is called by pressing the specified key combination. The default key combination is "Shift + F". When specifying a different combination, consider existing combinations (Ctrl + C, Ctrl + V and others)</h27>
+    <h28>Exclude checked elements from the current selection</h28>
+    <h29>Do not close the filter after applying the action</h29>
+    <h30>Dynamic selection</h30>
+    <h31>When selecting a position in the tree, the selection of elements in the model will be performed</h31>
+    <h32>[Not set]</h32>
+    <h33>Parameter filter</h33>
+    <h34>Collapse all categories</h34>
+    <h35>The category list is filled with categories derived from the selected elements, but all model elements will be processed</h35>
+    <h36>Got it</h36>
+    <h37>Shared parameter</h37>
+    <h38>Type parameter</h38>
+    <h39>Same parameters</h39>
+    <h40>Check more than one category to display the same parameters of the checked categories</h40>
+    <h41>Without values</h41>
+    <h42>Save only categories and parameter names in the preset for later selection of all parameter values</h42>
+    <h43>[No Category]</h43>
+    <h44>ModPlus filter</h44>
+    <h45>Check all categories</h45>
+    <h46>Uncheck all categories</h46>
+    <h47>Insert the saved search value</h47>
+    <h48>How the "And" and "Or" conditions work</h48>
+    <h49>"Or" — an element matches if at least one of the checked values matches.</h49>
+    <h50>"And" — an element must match all parameters that have checked values. If several values are checked for one parameter, they are treated as alternatives: any one of them is enough.</h50>
+    <h51>Example. Checked: "Rebar grade" → A500C; "Diameter" → 10, 12, 16</h51>
+    <h52>"Or" selects all rebar of grade A500C, and also all rebar with a diameter of 10, 12 or 16 of any grade</h52>
+    <h53>"And" selects only rebar of grade A500C with a diameter of 10, 12 or 16</h53>
+    <h54>Categories are always combined with each other: an element belongs to one category only. An instance parameter and a type parameter with the same name are treated as different parameters.</h54>
+    <fo1>All elements</fo1>
+    <fo2>All elements in view</fo2>
+    <fo3>Selected elements</fo3>
+    <fo4>All by selected</fo4>
+    <fo5>Found on view</fo5>
+    <fo6>Found in model</fo6>
+    <fo7>By filter on view</fo7>
+  </mprContextFilter>
+</ModPlus>

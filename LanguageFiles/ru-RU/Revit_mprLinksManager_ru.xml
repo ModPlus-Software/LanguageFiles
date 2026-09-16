@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprLinksManager
+    LocalName="Менеджер связей"
+    Description="Управление внешними связями Revit и CAD в текущем документе"
+    FullDescription="Просмотр, фильтрация, добавление, загрузка, выгрузка, перезагрузка, удаление связей и переписывание путей к ним в текущем документе Revit">
+    <filtersGroupHeader>Фильтры</filtersGroupHeader>
+    <statusLabel>Состояние:</statusLabel>
+    <linksListGroupHeader>Список связей</linksListGroupHeader>
+    <columnNameHeader>Имя</columnNameHeader>
+    <columnStatusHeader>Состояние</columnStatusHeader>
+    <loadSettingsGroupHeader>Настройки загрузки</loadSettingsGroupHeader>
+    <positioningLabel>Позиционирование</positioningLabel>
+    <onAddBehaviorLabel>При добавлении</onAddBehaviorLabel>
+    <fileSelectButton>Выбрать файлы</fileSelectButton>
+    <operationsGroupHeader>Операции</operationsGroupHeader>
+    <deleteSelectedButton>Удалить</deleteSelectedButton>
+    <unloadButton>Выгрузить</unloadButton>
+    <reloadButton>Обновить</reloadButton>
+    <updateButton>Перезагрузить</updateButton>
+    <rewritePathText>Переписать пути</rewritePathText>
+    <rewritePathsByFolderButton>Переписать пути (папка)</rewritePathsByFolderButton>
+    <showLogButton>Показать журнал</showLogButton>
+    <addLinkSettingsDialogTitle>Настройки добавления</addLinkSettingsDialogTitle>
+    <rewriteHintText>Подстановки: * — любая последовательность, ? — один символ, # — цифра. Экранирование: \* \? \# \\. При включённом режиме "Менять только путь" маска применяется только к директории.</rewriteHintText>
+    <rewriteModeLabel>Режим замены:</rewriteModeLabel>
+    <rewriteModeNormal>Обычный</rewriteModeNormal>
+    <rewriteModeMask>Маска</rewriteModeMask>
+    <findTextLabel>Найти:</findTextLabel>
+    <replaceTextLabel>Заменить на:</replaceTextLabel>
+    <pathOnlyModeLabel>Менять только путь</pathOnlyModeLabel>
+    <originalPathColumnHeader>Исходный путь</originalPathColumnHeader>
+    <newPathColumnHeader>Новый путь</newPathColumnHeader>
+    <fileNotFoundTooltip>Файл не найден</fileNotFoundTooltip>
+    <tableHintText>Отметьте связи для выполнения операций</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Менеджер связей запущен</managerStartedLogFormat>
+    <openFilesFilter>Файлы Revit и DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Файлы Revit (*.rvt)|*.rvt|Файлы DWG (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Пропущено уже существующих связей: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>Добавление {0} связей</addStartedLogFormat>
+    <addCompletedLogFormat>Добавлено связей: {0}, ошибок: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Ошибка добавления файла "{0}": {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>Общая ошибка: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>удаления</operationDeleteGenitive>
+    <operationLoadGenitive>загрузки</operationLoadGenitive>
+    <operationUnloadGenitive>выгрузки</operationUnloadGenitive>
+    <operationReloadGenitive>перезагрузки</operationReloadGenitive>
+    <deleteConfirmationMessage>Вы уверены, что хотите удалить выбранные связи?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Удаление</deleteConfirmationTitle>
+    <operationCanceledLogFormat>Операция {0} отменена пользователем</operationCanceledLogFormat>
+    <operationStartedLogFormat>Начало {0} {1} связей</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Успешно: {0}, пропущено: {1}, ошибок: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Результат {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>Общая ошибка во время {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Выбор папки отменен пользователем</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Перезапись путей отменена пользователем</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Нет изменений для перезаписи путей</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Начало перезаписи путей для {0} связей</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Перезаписано путей: {0}, ошибок: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>Общая ошибка при перезаписи путей: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Ошибка замены пути: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>связь находится на закрытом рабочем наборе</rewritePathClosedWorksetError>
+    <linkStatusLoaded>Загружена</linkStatusLoaded>
+    <linkStatusUnloaded>Выгружена</linkStatusUnloaded>
+    <linkStatusNotFound>Не найдена</linkStatusNotFound>
+    <positioningSharedCoordinates>По общим координатам</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Совмещение внутренних начал</positioningOriginToOrigin>
+    <positioningCenterToCenter>Совмещение центров</positioningCenterToCenter>
+    <onAddLoadImmediately>Сразу загрузить</onAddLoadImmediately>
+    <onAddAddUnloaded>Добавить выгруженной</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Файл связи не найден: {0}</handlerLinkFileNotFoundFormat>
+    <handlerCannotLinkDocumentToItself>Нельзя добавить текущую модель как связь саму к себе</handlerCannotLinkDocumentToItself>
+    <handlerLinkSavedByLaterRevitVersion>Модель была сохранена в более поздней версии Revit</handlerLinkSavedByLaterRevitVersion>
+    <handlerUnsupportedLinkTypeFormat>Тип связи "{0}" не поддерживается</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>Расширение файла "{0}" не поддерживается</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Добавление связей</addLinksTransaction>
+    <deleteLinksTransaction>Удаление связей</deleteLinksTransaction>
+    <loadLinksTransaction>Загрузка связей</loadLinksTransaction>
+    <unloadLinksTransaction>Выгрузка связей</unloadLinksTransaction>
+    <reloadLinksTransaction>Перезагрузка связей</reloadLinksTransaction>
+    <unloadForSelfMenuItem>Для меня</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Для всех пользователей</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>локальной выгрузки</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Локальная выгрузка связей</unloadLocallyLinksTransaction>
+    <searchHint>Введите текст для поиска</searchHint>
+    <typeWorksetColumnHeader>Рабочий набор типа</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Рабочий набор экземпляров</instanceWorksetColumnHeader>
+    <placeInWorkset>Разместить в рабочем наборе</placeInWorkset>
+    <createWorksetByPrefixLabel>Поместить в свой рабочий набор</createWorksetByPrefixLabel>
+    <worksetNamePrefixLabel>Префикс рабочего набора:</worksetNamePrefixLabel>
+    <disableWorksetContains>Отключить рабочие наборы, содержащие:</disableWorksetContains>
+    <disableWorksetTooltip>Введите подстроки через запятую. При загрузке ссылки рабочие наборы связанной модели, имена которых содержат хотя бы одну из указанных подстрок, будут закрыты. Остальные рабочие наборы будут открыты.</disableWorksetTooltip>
+    <fromRevitServer>Из Revit Server</fromRevitServer>
+    <revitServerWindowTitle>Добавить из Revit Server</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>При изменении рабочего набора типа: {0}, произошла ошибка: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>При изменении рабочего набора экземпляра: {0}, произошла ошибка: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Ошибка при добавление связи из Revit Server</addFromServerErrorFormat>
+    <diffWorkset>*РАЗНЫЕ*</diffWorkset>
+  </mprLinksManager>
+</ModPlus>

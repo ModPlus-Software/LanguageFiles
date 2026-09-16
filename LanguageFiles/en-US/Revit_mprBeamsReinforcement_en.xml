@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprBeamsReinforcement
+    LocalName="Beams reinforcement"
+    Description="Analysis, grouping and reinforcement of beams for specified conditions"
+    FullDescription="Processing both individually selected beams and all beams in a view or document. Transverse reinforcement can be assembled using a variety of rebar shape options. Plugin can work even on an empty template">
+    <h1>Selection variants</h1>
+    <h2>Pick beams</h2>
+    <h3>Select all beams on current view</h3>
+    <h4>Select all beams in document</h4>
+    <h5>Reinforcement is possible only in structural beams</h5>
+    <h6>Select</h6>
+    <h7>Analyze</h7>
+    <h8>Total selected columns:</h8>
+    <h9>Of these successfully analyzed:</h9>
+    <h10>Create reinforcement</h10>
+    <h11>Group reinforcement settings</h11>
+    <h12>Grouping</h12>
+    <h13>By Level</h13>
+    <h15>Group</h15>
+    <h16>Count</h16>
+    <h17>Profile</h17>
+    <h18>Levels</h18>
+    <h19>Group All</h19>
+    <h20>Beams in group:</h20>
+    <h21>Level</h21>
+    <h23>Group by:</h23>
+    <h24>Section</h24>
+    <h25>Longitudinal reinforcement</h25>
+    <h27>Working reinforcement cover:</h27>
+    <coverTop>Top:</coverTop>
+    <coverBottom>Bottom:</coverBottom>
+    <coverSide>Side:</coverSide>
+    <coverEnd>Ends:</coverEnd>
+    <h28>Cover for the working reinforcement shall be not less than 20 mm or not less than the diameter of the reinforcement</h28>
+    <h30>Parameter</h30>
+    <h31>The number of rods in width:</h31>
+    <h32>The number of rods in height:</h32>
+    <h33>Edit spaces</h33>
+    <h34>The cross-sectional area of the beam, sq.mm:</h34>
+    <h35>Cross-sectional area of reinforcement, sq.mm:</h35>
+    <h36>Reinforcement percentage:</h36>
+    <h37>The cross-sectional area of longitudinal reinforcement is not recommended to assign more than 5% of the cross-sectional area of the beam</h37>
+    <h38>Spaces between rods along the width of the beam:</h38>
+    <h39>Spaces between rods along the height of the beam:</h39>
+    <h40>Attention! When changing the diameter, cover or number of rods, the distances between the rods will be reset to equivalent values!</h40>
+    <h41>Longitudinal reinforcement joints</h41>
+    <h42>Transverse reinforcement (layout)</h42>
+    <h43>Transverse reinforcement (shapes)</h43>
+    <h44>Bend upper rods in case of insufficient anchoring distance</h44>
+    <h45>Binding of the working rebar to the edge of the beam by the center of the rebar. Binding is calculated by model diameter</h45>
+    <h50>Settings</h50>
+    <h51>PLUGIN WINDOW:</h51>
+    <h53>DISPLAY IN THE MODEL:</h53>
+    <h54>Scaling factor:</h54>
+    <!-- todo remove after 1.18.16.0 -->
+    <h55>REINFORCEMENT BY DEFAULT:</h55>
+    <h56>Displacement</h56>
+    <h57>Girth</h57>
+    <h58>Remove selected shape</h58>
+    <!-- todo remove after 1.18.16.0 -->
+    <h59>Specify type of shapes hooks, parameters, diameter and rebar bar type of rebar that will be set by default for added transverse reinforcement shapes</h59>
+    <h60>Step of transverse reinforcement in areas of thickening, mm:</h60>
+    <h61>Calculation of anchoring by SP 52-101-2003</h61>
+    <h72>Failed to add form to current layout: no place available to place the form!</h72>
+    <!-- todo remove after 1.18.16.0 -->
+    <h73>Beam reinforcement settings</h73>
+    <h74>Replace with reinforcement settings of the group</h74>
+    <h75>Leave the reinforcement settings</h75>
+    <!-- todo remove after 1.18.16.0 -->
+    <h76>Beams reinforcement</h76>
+    <h79>Shape hooks by default:</h79>
+    <h80>Shape hooks:</h80>
+    <h81>set in sketch</h81>
+    <h82>use Revit hooks</h82>
+    <h83>Default parameters</h83>
+    <h84>Cover from the rebars ends, mm:</h84>
+    <h85>The main step of the transverse reinforcement, mm:</h85>
+    <h86>Indent from the end of the beam, mm:</h86>
+    <h87>Thickening of transverse reinforcement</h87>
+    <h88>Thickening distance, mm:</h88>
+    <h89>Thickening distance, fraction:</h89>
+    <h90>Thickening at the ends of the beam</h90>
+    <h91>Thickening of reinforcement at the ends of the beam in the absence of underlying elements (cantilevered beam ends)</h91>
+    <h93>Triangular stirrups:</h93>
+    <h94>Take into account underlying and end columns and walls</h94>
+    <h97>Parameter</h97>
+    <h96>By parameter:</h96>
+    <h98>Distance between the centers of the rods</h98>
+    <h99>Distance between the edges of the rods</h99>
+    <!-- todo remove after 1.18.16.0 -->
+    <h100>Attention! The number and position of the longitudinal rebars and the layout of the transverse rebars can be saved, loaded and copied into the checked beams of a suitable cross section, but cannot be saved as default!</h100>
+    <h102>Type of reinforcement:</h102>
+    <h103>Detail №1</h103>
+    <h104>Anchoring length of straight joints, mm:</h104>
+    <h105>Calculate anchoring length</h105>
+    <h106>Detail №2</h106>
+    <h107>T-shaped intersections</h107>
+    <h108>Cross intersections</h108>
+    <h110>Create Reinforcement</h110>
+    <h141>Do not close the window after creating reinforcement</h141>
+    <h142>View intersection</h142>
+    <h143>Deleting auxiliary geometry</h143>
+    <!-- todo remove after 1.18.16.0 start -->
+    <h147>Reset</h147>
+    <h173>Straight rebars:</h173>
+    <h174>L-shaped rebars:</h174>
+    <h177>C-shaped cross holes (stirrups). Hooks in sketch:</h177>
+    <h178>S-shaped cross holes (stirrups). Hooks in sketch:</h178>
+    <h180>U-shaped rebars:</h180>
+    <h181>Rectangular stirrups:</h181>
+    <h182>L-shaped rebars with big bend:</h182>
+    <h183>Reset all values to "Auto"</h183>
+    <h184>Preferred Rebar Shapes</h184>
+    <!-- todo remove after 1.18.16.0 end -->
+    <h186>Select again</h186>
+    <h187>Reselect beams that were processed in the current view when using the plugin</h187>
+    <h205>C-shaped cross holes (stirrups). Revit hooks:</h205>
+    <h206>S-shaped cross holes (stirrups). Revit hooks:</h206>
+    <h207>Use beam geometry without considering connections</h207>
+    <h208>Enter the longitudinal rebars in the adjacent perpendicular beams, located at the ends of the current beam</h208>
+    <h226>Removal of previously created reinforcement:</h226>
+    <h229>Level</h229>
+    <h238>Create:</h238>
+    <h239>Transverse reinforcement</h239>
+    <h240>Default form properties</h240>
+    <h241>If there is already a form with the same sketch in the list, the properties will be taken from it</h241>
+    <h243>General reinforcement settings</h243>
+    <h244>Reinforcement of intersections</h244>
+    <h245>Beams</h245>
+    <h246>Intersections</h246>
+    <h247>Intersection type</h247>
+    <h248>Corner intersections</h248>
+    <h249>Anchoring length, mm:</h249>
+    <h250>Intersections count</h250>
+    <h251>Intersection type</h251>
+    <h252>Parameters</h252>
+    <h253>Intersections in the group:</h253>
+    <h255>Beams in the intersection:</h255>
+    <h256>Beams count</h256>
+    <h257>Group reinforcement settings</h257>
+    <h258>Do not create transverse reinforcement over underlying walls and columns</h258>
+    <h259>Different rebar diameter for the top row:</h259>
+    <h260>The width spacing of the bars is derived for the main diameter of the reinforcement. Other rebar diameters for the top row are not taken into account</h260>
+    <h261>Indent from the beginning of the section, mm:</h261>
+    <h262>Reset to equal values</h262>
+    <srd>Saving data of selected beams</srd>
+    <hook>Hook:</hook>
+    <jt1>Longitudinal reinforcement joints are not created. The rods are cut off at the side of the beam according to the specified value of the cover layer from the ends of the reinforcement</jt1>
+    <jt2>Straight joints of the rebars of the longitudinal reinforcement are created. The anchoring length is set from the edge of the beam. The joints are only created if there is a wall or column at the end of the beam, otherwise the joints will not be created and the longitudinal bars will be cut at the end of the beam, taking into account the specified ends cover</jt2>
+    <msg1>Pick beams</msg1>
+    <m1>Enter a value from</m1>
+    <m2>to</m2>
+    <m4>Deformed deformation type rebars</m4>
+    <m5>Plain deformation type rebars</m5>
+    <!-- todo remove after 1.18.16.0 -->
+    <m13>Reinforcement cover</m13>
+    <m20>The list of beams contains beams whose reinforcement settings have been changed manually and differ from the settings of the reinforcement group</m20>
+    <m23>Reinforcement settings copied</m23>
+    <m24>You did not specify for which groups to create reinforcement!</m24>
+    <m25>No groups were selected for creating reinforcement!</m25>
+    <m27>Attention! No loaded rebar shapes found in the current project! In this case, the rebar shapes created during the operation of the plugin cannot be opened in the Family Editor! It is recommended that before using the plugin, load the rebar shapes into the project!\nPerform reinforcement, despite the missing rebar shapes?</m27>
+    <rn>Rebar ⌀</rn>
+    <!-- todo remove after 1.18.16.0 -->
+    <full>Available in full version!</full>
+    <!-- todo remove after 1.18.16.0 -->
+    <full2>Limited version only has one form available</full2>
+    <!-- todo remove after 1.18.16.0 -->
+    <noInFamily>Plugin operation in families is not available!</noInFamily>
+    <p1>Analysis of the beam:</p1>
+    <p2>Search for related elements:</p2>
+    <pt1>Taurus</pt1>
+    <pt2>I-Beam</pt2>
+    <pt3>Rectangle</pt3>
+    <pt4>Square</pt4>
+    <pt5>Undefined</pt5>
+    <pt6>Trapezoid</pt6>
+    <pt7>L-Beam</pt7>
+    <rr1>Remove reinforcement of the same type that is created</rr1>
+    <rr2>Remove all previously created reinforcement</rr2>
+    <rr3>Do not remove</rr3>
+    <e1>Beam analysis errors</e1>
+    <e2>Failed to initialize column</e2>
+    <e3>Failed to get solids</e3>
+    <e4>Failed to get main or union solid</e4>
+    <e6>Failed to determine transverse profile</e6>
+    <p1>Analysis of the beam:</p1>
+    <p2>Search for related elements:</p2>
+    <p8>Removing the reinforcement created earlier</p8>
+    <p9>Calculation and modeling of longitudinal reinforcement</p9>
+    <p10>Calculation and modeling of transverse reinforcement</p10>
+    <p11>Calculation and modeling of intersection reinforcement</p11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t7>The group contains beams whose reinforcement settings have been manually edited and differ from the group reinforcement settings</t7>
+    <!-- todo remove after 1.18.16.0 -->
+    <t8>Add a new empty group</t8>
+    <!-- todo remove after 1.18.16.0 -->
+    <t9>Delete an empty group</t9>
+    <t10>Check all groups</t10>
+    <t11>Uncheck all groups</t11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t12>The beam reinforcement settings have been edited manually and differ from the group reinforcement settings</t12>
+    <!-- todo remove after 1.18.16.0 -->
+    <t13>Edit the reinforcement settings of the selected beam</t13>
+    <!-- todo remove after 1.18.16.0 -->
+    <t14>Replace column reinforcement settings from the group</t14>
+    <t15>Display in the model the previous beam in the list</t15>
+    <t16>Display in the model the beam selected in the list</t16>
+    <t17>Display in the model the next beam in the list</t17>
+    <t23>Display in the model the previous intersection in the list</t23>
+    <t24>Display in the model the intersection selected in the list</t24>
+    <t25>Display in the model the next intersection in the list</t25>
+    <!-- todo remove after 1.18.16.0 -->
+    <t40>Copy the reinforcement settings of the current group to all selected groups</t40>
+    <!-- todo remove after 1.18.16.0 -->
+    <t41>Save the reinforcement settings of current group in the xml-file</t41>
+    <!-- todo remove after 1.18.16.0 -->
+    <t42>Load the reinforcement settings from the xml-file and set it for the current group</t42>
+    <!-- todo remove after 1.18.16.0 -->
+    <t53>Reset all values of the current default reinforcement settings to the default values set in the plugin</t53>
+    <!-- todo remove after 1.18.16.0 -->
+    <t63>You can specify preferred rebar shapes for different types of rebars created by the plugin.</t63>
+    <!-- todo remove after 1.18.16.0 -->
+    <t64>Setting the preferred shapes does not guarantee that the reinforcement will be created using the specified shape of the rebar.</t64>
+    <!-- todo remove after 1.18.16.0 -->
+    <t65>When creating rebars, an attempt will be made to use the specified shape. If creating a rebar with the specified shape is not possible, Revit will automatically search for a suitable shape or create a new shape.</t65>
+    <!-- todo remove after 1.18.16.0 -->
+    <t66>Save current reinforcement settings as default reinforcement settings</t66>
+    <t67>Group beams and intersections according to the current grouping settings</t67>
+    <re1>An error occurred while creating longitudinal reinforcement for beam id = {0}</re1>
+    <re2>An error occurred while calculating the location points of the transverse reinforcement for beam id = {0}</re2>
+    <re3>An error occurred while creating a transverse reinforcement part of type "{0}" in beam id = {1}</re3>
+    <re4>Failed to create a straight rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re4>
+    <re5>Failed to create a rebar of shape "{0}" with a given preferred shape of rebar "{1}". Error: {2}\nAn attempt was made to create a rebar with automatic rebar shape selection or creation</re5>
+    <!-- todo remove after 1.18.16.0 -->
+    <re6>Failed to set parameter values</re6>
+    <re9>Error when creating details of corner intersection in the beams {0}:</re9>
+    <re10>Error while creating details of T-shaped intersection in the beams {0}:</re10>
+    <re11>Error while creating details of cross intersection in the beams {0}:</re11>
+    <re22>It is not possible to display the intersection in the current view! Go to the floor plan</re22>
+  </mprBeamsReinforcement>
+</ModPlus>

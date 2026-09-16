@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpProductInsert
+    LocalName="Produkt einfügen"
+    Description="Einfügen von Produkten aus der ModPlus-Datenbank als Blöcke mit erweiterten Daten"
+    FullDescription="Erstellung von AutoCAD-Blöcken anhand der Daten aus der Datenbank. Den Blöcken werden erweiterte Daten hinzugefügt, die es anderen Plugins ermöglichen, diese Blöcke zu verarbeiten und damit eine Bauteilliste zu erstellen\nErweiterte Daten können auch gewöhnlichen AutoCAD-Objekten hinzugefügt werden\nWichtig: Sie müssen Blöcke mit diesem Plugin einfügen oder bereits eingefügte Blöcke kopieren, sonst werden keine erweiterten Daten beim Einfügen mit den üblichen AutoCAD-Werkzeuge hinzugefügt!">
+    <all>Alle</all>
+    <cb1>Metall</cb1>
+    <cb2>Stahlbeton</cb2>
+    <cb3>Holz/Kunststoffe</cb3>
+    <cb4>Werkstoffe</cb4>
+    <cb5>Sonstiges</cb5>
+    <h1>Die Liste der vom Plugin verwendeten Dokumente ändern</h1>
+    <h2>Die Suchleiste der Datenbank öffnen</h2>
+    <h4>Ab 2 Zeichen</h4>
+    <h5>Produkt einfügen</h5>
+    <h6>Wählen Sie eine Sektion:</h6>
+    <h7>Filtern nach Gruppen:</h7>
+    <h8>Wählen Sie ein Dokument aus:</h8>
+    <h9>Bild öffnen</h9>
+    <h10>Aktuell</h10>
+    <h11>Ungültig</h11>
+    <h12>Keine Informationen verfügbar oder nicht gesetzlich definiert</h12>
+    <h13>Länge mm</h13>
+    <h14>Zwischen zwei Punkten messen</h14>
+    <h15>Durchmesser, mm</h15>
+    <h16>Breite, mm</h16>
+    <h17>Höhe (Dicke), mm</h17>
+    <h18>Stahl:</h18>
+    <h19>Dichte (kg/m3):</h19>
+    <h20>Die eingegebenen Bemaßungswerte speichern</h20>
+    <h21>Position des Produkts</h21>
+    <h22>Einfügeoption</h22>
+    <h23>Wipeout</h23>
+    <h24>Wipeout hinzufügen, um Elemente hinter dem Block zu verbergen</h24>
+    <h25>Einfügen</h25>
+    <h26>Einfügen eines Produkts als Block mit einfacher Geometrie und erweiterten Daten</h26>
+    <h27>Den Block ersetzen</h27>
+    <h28>Den Block ersetzen, der das Produkt darstellt</h28>
+    <h29>Zum Objekt hinzufügen</h29>
+    <h30>Die erweiterten Daten, die Produktinformationen enthalten, zum angegebenen Objekt hinzufügen</h30>
+    <h31>Dokumente für den Datenbankbereich anzeigen:</h31>
+    <h32>Status des Dokuments:</h32>
+    <h33>Aktuell</h33>
+    <h34>Nicht aktuell</h34>
+    <h35>Keine Informationen verfügbar oder nicht gesetzlich definiert</h35>
+    <h36>Produktdaten</h36>
+    <h37>An zwei Punkten</h37>
+    <h38>In Form einer Polylinie</h38>
+    <h39>Die Einfügeoptionen "Mit zwei Punkten" und "In Form einer Polylinie" sind nur für lineare Produkte verfügbar (Produkte, deren Länge erforderlich ist). Die Einfügeoption wird verwendet, wenn sie aktiv und ausgewählt ist. Bei beiden Optionen müssen Sie die Produktlänge nicht im Voraus im Plugin-Fenster angeben. Die Einfügeoption "Mit zwei Punkten" ist verfügbar, wenn die Anzeigeoption "Ansicht von der Seite" oder "Ansicht von oben" ausgewählt ist. Die Einfügeoption "In Form einer Polylinie" ist verfügbar, wenn die Anzeigeoption "Ansicht von vorne (Schnittansicht)" ausgewählt ist</h39>
+    <h40>Status des Dokuments:</h40>
+    <h41>Blockmaßstab:</h41>
+    <rb1>Seitenansicht</rb1>
+    <rb2>Vorderansicht (Schnitt)</rb2>
+    <rb3>Draufsicht</rb3>
+    <s1>Von der Seite</s1>
+    <s2>Von vorne (Schnittansicht)</s2>
+    <err1>Fehler beim Erstellen des Blocknamens!</err1>
+    <err2>Inkorrekter Blockname!</err2>
+    <msg1>Wählen Sie den Ersetzungsblock aus:</msg1>
+    <msg2>Der ausgewählte Block enthält nicht die erweiterten ModPlus-Produktdaten. \nWollen Sie dieses Block ersetzen?</msg2>
+    <msg3>Wählen Sie die Objekte aus, für die Sie Produktdaten hinzufügen möchten</msg3>
+    <msg4>Geben Sie Länge des Produkts an</msg4>
+    <msg5>Geben Sie Durchmesser des Produkts an</msg5>
+    <msg6>Geben Sie Breite des Produkts an</msg6>
+    <msg7>Geben Sie Höhe des Produkts an</msg7>
+    <msg8>Einfügepunkt:</msg8>
+    <msg9>MP:Produktdaten</msg9>
+    <msg10>Erster Punkt</msg10>
+    <msg11>Zweiter Punkt</msg11>
+  </mpProductInsert>
+</ModPlus>

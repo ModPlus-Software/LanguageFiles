@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpESKD
+    LocalName="Smart"
+    Description="Erstellung intelligenter Objekte, die Möglichkeiten von AutoCAD erweitern und eine Gestaltung nach geltenden landesspezifischen Normen (ISO) zulassen">
+    <tab1>Linien</tab1>
+    <tab2>Einstellungen</tab2>
+    <tab3>Achsen</tab3>
+    <tab4>Stile und Einstellungen</tab4>
+    <tab5>Verwendung von Stilen und Einstellungen der intelligenten ModPlus-Objekte</tab5>
+    <tab6>Palette der Eigenschaften</tab6>
+    <tab7>Palette der Eigenschaften von intelligenten ModPlus-Objekten</tab7>
+    <tab8>Ansichten, Schnittansichten</tab8>
+    <tab9>Dienstprogramme</tab9>
+    <tab10>Suchen</tab10>
+    <tab11>Höhen der Ebene</tab11>
+    <!-- todo remove tab12 after 1.28.24.0  -->
+    <tab12>Nach Wert finden</tab12>
+    <tab13>Suche nach intelligenten Objekten nach Typ</tab13>
+    <!-- todo remove tab14 after 1.28.24.0  -->
+    <tab14>Suche nach intelligenten Objekten auf der Grundlage der Werte von Zeichenketten- und numerischen Eigenschaften</tab14>
+    <tab15>Führungslinien</tab15>
+    <tab16>Darstellungsweisen</tab16>
+    <tab17>Suchen und ersetzen</tab17>
+    <tab18>Suche und Ersetzen in intelligenten Objekten auf der Grundlage der Werte von Zeichenketten- und numerischen Eigenschaften</tab18>
+    <tab19>Schweißen</tab19>
+    <!--todo remove after 2.5.18.0-->
+    <defl>Standardmäßig</defl>
+    <err1>Die Datei konnte nicht gefunden werden</err1>
+    <err2>Linientyp konnte nicht heruntergeladen werden</err2>
+    <err5>Fehler beim Abrufen von Daten aus dem Register! Starten Sie den Konfigurator, um die Daten im Register zu aktualisieren</err5>
+    <msg1>Geben Sie einen Einfügepunkt an:</msg1>
+    <msg2>Geben Sie einen Endpunkt an:</msg2>
+    <msg3>Wählen Sie den Block aus, der das intelligente ModPlus-Objekt darstellt</msg3>
+    <msg5>Geben Sie den nächsten Punkt an:</msg5>
+    <msg6>Wählen Sie eine Polylinie aus:</msg6>
+    <msg7>Wollen Sie die ursprüngliche Polylinie löschen?</msg7>
+    <msg8>Wollen Sie den Layer kopieren? [Ja/Nein]</msg8>
+    <msg9>Intelligente Objekte verarbeitet</msg9>
+    <msg10>Im aktuellen Bereich wurden keine intelligenten Objekte der angegebenen Typen gefunden</msg10>
+    <msg11>Geben Sie einen Startpunkt an:</msg11>
+    <msg12>Geben Sie einen Ebenenpunkt an:</msg12>
+    <msg13>Geben Sie eine Position von der Ansicht der Ebene an:</msg13>
+    <msg14>Wählen Sie die Ansichten der Ebenen an:</msg14>
+    <msg15>Wählen Sie die Ursprungsansicht der Ebenen an:</msg15>
+    <msg16>Objekte aus der Auswahl entfernen:</msg16>
+    <msg17>Geben Sie einen Punkt des Rahmens an:</msg17>
+    <msg18>Geben Sie einen Punkt der Führungslinie an:</msg18>
+    <msg19>Geben Sie einen Platzierungspunkt für den Text an:</msg19>
+    <msg20>Geben Sie einen Punkt für den Textversatz an:</msg20>
+    <msg21>Geben Sie einen Punkt für die Textposition an:</msg21>
+    <msg22>Nächsten Punkt angeben oder</msg22>
+    <msg23>Wählen Sie die erste Kante aus</msg23>
+    <msg24>Wählen Sie die zweite Kante aus</msg24>
+    <msg25>Bogenmittelpunkt angeben</msg25>
+    <msg26>Bogenanfang angeben</msg26>
+    <msg27>Bogenende angeben</msg27>
+    <msg28>Punkt für neue Achse angeben</msg28>
+    <wrong>Ungültiges Objekt!</wrong>
+    <vc1>UNTERSCHIEDLICHE</vc1>
+    <vc2>NICHT BESTIMMT</vc2>
+    <h1>Einstellungen der Palette</h1>
+    <h2>Autostart mit AutoCAD</h2>
+    <h3>Verbindung mit der ModPlus-Palette</h3>
+    <h4>Die maximale Anzahl wurde überschritten</h4>
+    <h5>für die ausgewählten Objekte</h5>
+    <h6>Der Palettenbetrieb wurde gestoppt</h6>
+    <h7>Die maximale Anzahl von den ausgewählten Objekten</h7>
+    <h8>kann geändert werden in</h8>
+    <h9>den Einstellungen</h9>
+    <h10>des Plugins</h10>
+    <h11>Eigenschaften Smart</h11>
+    <h12>System</h12>
+    <h13>Neuer benutzerdefinierte Stil</h13>
+    <h14>Stil-Editor</h14>
+    <h15>Einstellungen</h15>
+    <h16>Einen neuen benutzerdefinierten Stil hinzufügen</h16>
+    <h17>Den ausgewählten benutzerdefinierten Stil löschen</h17>
+    <h18>Den ausgewählten Stil als Standardstil festlegen</h18>
+    <h19>Einen neuen Stil auf der Grundlage der ausgewählten intelligenten Objekte erstellen</h19>
+    <h20>Beschreibung der Eigenschaft:</h20>
+    <h21>Allgemeine Einstellungen</h21>
+    <h22>Beim Erstellen des Objekts den Maßstab aus dem Stil einstellen</h22>
+    <h23>Wenn dies durch einen Haken markiert ist, wird beim Erstellen eines intelligenten Objekts der im aktuellen Stil eingestellte Maßstab unabhängig vom Beschriftungsmaßstab der Zeichnung auf das Objekt angewendet. Andernfalls wird ein beschreibender Zeichnungsmaßstab auf das Objekt angewendet</h23>
+    <h24>Beim Erstellen des Objekts den Layer aus dem Stil einstellen</h24>
+    <h25>Wenn dies durch einen Haken markiert ist, wird beim Erstellen eines intelligenten Objekts der im aktuellen Stil eingestellte Layer unabhängig vom aktuellen Layer der Zeichnung auf das Objekt angewendet. Andernfalls wird der aktuelle Zeichenlayer auf das Objekt angewendet</h25>
+    <h26>Wenn der im Stil angegebene Layer im aktuellen Dokument nicht vorhanden ist:</h26>
+    <h27>Den aktuellen Layer anwenden</h27>
+    <h28>Beim Erstellen des Objekts wird der aktuelle Zeichenlayer auf das Objekt angewendet</h28>
+    <h29>Einen Layer aus dem Stil erstellen und anwenden</h29>
+    <h30>Im aktuellen Dokument wird ein Layer erstellt und auf das intelligente Objekt angewendet, der im Stil festgelegt ist</h30>
+    <h31>Beim Erstellen des Objekts den Textstil aus dem Stil einstellen</h31>
+    <h32>Wenn dies durch einen Haken markiert ist, wird beim Erstellen eines intelligenten Objekts der im aktuellen Stil eingestellte Textstil unabhängig vom aktuellen Textstil der Zeichnung auf das Objekt angewendet. Andernfalls wird der aktuelle Zeichnungstextstil auf das Objekt angewendet</h32>
+    <h33>Wenn der im Stil angegebene Textlayer im aktuellen Dokument nicht vorhanden ist:</h33>
+    <h34>Den aktuellen Textstil anwenden</h34>
+    <h35>Beim Erstellen des intelligenten Objekts wird der aktuelle Textstil der Zeichnung auf das Objekt angewendet</h35>
+    <h36>Einen Textstil aus dem Stil erstellen und anwenden</h36>
+    <h37>Im aktuellen Dokument wird der im Stil festgelegte Textstil erstellt und danach auf das Objekt angewendet</h37>
+    <h38>Die maximale Anzahl von den ausgewählten Objekten, bei der die Eigenschaftenpalette nicht mehr funktioniert. Mit dieser Einstellung können Sie Ihre Arbeit in der AutoCAD-Umgebung beschleunigen, indem Sie die Ablesung von Objekteigenschaften deaktivieren. Wenn Sie zum Beispiel 1000 Objekte auswählen, um sie in eine andere Zeichnung zu kopieren, müssen Sie nicht die Eigenschaften all dieser Objekte verarbeiten</h38>
+    <h39>Die maximale Anzahl von den ausgewählten Objekten (0 – immer funktionieren):</h39>
+    <h40>Einstellungen für intelligente Objekte</h40>
+    <h41>Gerade Achse</h41>
+    <h42>Den Maßstab des Linientyps im Verhältnis zum Maßstab des Objekts ändern</h42>
+    <h43>Der Maßstab des für die Achse eingestellten Linientyp ändert sich proportional zum Hauptmaßstab der Achse. Wenn zum Beispiel der Achsenmaßstab auf 1:1 und der Maßstab für den Linientyp auf 2 eingestellt wurde, wird der Maßstab für den Linientyp 200, wenn der Achsenmaßstab auf 1:100 eingestellt wird</h43>
+    <h44>Werte der zu erstellenden Achsen fortsetzen</h44>
+    <h45>Beim Erstellen der Achsen wird nach bereits in der Zeichnung erstellten Achsen gesucht und deren Werte von der ersten Achsenmarkierung gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Achsenmarkierung für die zu erstellende Achse wird auf den folgenden Wert des zuletzt gefundenen Wertes gesetzt</h45>
+    <h46>Hilfslinien anzeigen</h46>
+    <h47>Bei der Auswahl der Höhe der Ebene werden die Hilfslinien vom Referenzpunkt zum Ebenenpunkt und vom Ebenenpunkt zur Höhe der Ebene angezeigt</h47>
+    <h48>Schnittverlauf</h48>
+    <h49>Grundlegende</h49>
+    <h50>Stil:</h50>
+    <h51>Geometrie</h51>
+    <h52>Stil des intelligenten Objekts</h52>
+    <h53>Grundstil für Schnittverlauf</h53>
+    <h54>Name des Stils</h54>
+    <h55>Beschreibung des Stils</h55>
+    <h56>Erstellen vom Schnittverlauf</h56>
+    <h57>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den Schnittverlauf durch Angabe von zwei Punkten beschreibt</h57>
+    <h58>Gekrümmter Schnittverlauf</h58>
+    <h59>Zylindrischer Schnittverlauf</h59>
+    <h60>Erstellen des gekrümmten Schnittverlaufs</h60>
+    <h61>Erstellen des zylindrischen Schnittverlaufs</h61>
+    <h62>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den gekrümmten Schnittverlaufs durch Angabe von zwei Punkten beschreibt</h62>
+    <h63>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den zylindrischen Schnittverlaufs durch Angabe von zwei Punkten beschreibt</h63>
+    <h64>Inhalt</h64>
+    <h65>Erstellen von der geraden Achse</h65>
+    <h66>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den Schnittverlauf durch Angabe von zwei Punkten beschreibt</h66>
+    <h68>Grundstil für eine gerade Achse</h68>
+    <h69>Der ausgewählte Stil wird unwiderruflich gelöscht! Wollen Sie fortsetzen?</h69>
+    <h70>Stilgruppe</h70>
+    <h71>enthält Stile mit demselben Namen</h71>
+    <h72>Benennen Sie die Stile so um, dass sie nicht denselben Namen haben</h72>
+    <h73>Bodenlinie</h73>
+    <h74>Erstellen einer Bodenmarkierungslinie</h74>
+    <h75>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Bodenlinie beschreibt</h75>
+    <h76>Bodenmarkierungslinie der ausgewählten Polylinie</h76>
+    <h77>Umwandlung der ausgewählten Polylinie in eine Bodenmarkierungslinie</h77>
+    <h78>Grundstil für Bodenlinie</h78>
+    <h79>Schnittansicht</h79>
+    <h80>Erstellen der Darstellung von Schnitt (Querschnitt)</h80>
+    <h81>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den Schnitt (Querschnitt) durch Angabe von zwei Punkten beschreibt</h81>
+    <h82>Schnittlinie mit Verkürzungen</h82>
+    <h83>Schnittlinie aus einer Polylinie</h83>
+    <h84>Erstellen der Darstellung von der Schnittlinie mit Verkürzungen (Querschnitt)</h84>
+    <h85>Umwandlung der ausgewählten Polylinie in eine Schnittmarkierungslinie</h85>
+    <h86>Werte für neue Schnitte fortsetzen</h86>
+    <h87>Beim Erstellen eines neuen Schnitts im aktuellen Bereich wird der zuletzt erstellte Schnitt gesucht und dessen Wert als Grundlage für einen neuen Schnitt genommen</h87>
+    <h88>Hilfsschnittlinie anzeigen</h88>
+    <h89>Bei der Auswahl eines Schnitts wird eine Hilfslinie angezeigt, die durch alle Punkte des Schnitts verläuft</h89>
+    <h90>Abhängiges Verschieben von Text</h90>
+    <h93>Textposition wiederherstellen</h93>
+    <h95>MP: Ein Analogon erstellen</h95>
+    <h96>Grundstil für den Schnitt</h96>
+    <h97>Beim Verschieben eines der Texte des Schnitts wird der andere automatisch um die gleiche Strecke verschoben</h97>
+    <h98>Verarbeitung der Eigenschaft "Layer" während des Befehls "Ein Analogon erstellen":</h98>
+    <h99>Suche nach intelligenten Objekten</h99>
+    <h100>Geben Sie die zu suchenden Typen von Objekten an</h100>
+    <h101>Alle auswählen</h101>
+    <h102>Alle abwählen</h102>
+    <h103>Der Stil fehlt in der Datenbank</h103>
+    <h104>Ein oder mehrere Objekte befinden sich auf einem blockierten Layer und können nicht aktualisiert werden</h104>
+    <h105>Höhe der Ebene</h105>
+    <h106>Erstellen von der Höhe der Ebene</h106>
+    <h107>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Höhe der Ebene beschreibt</h107>
+    <h108>Grundstil für die Höhe der Ebene</h108>
+    <h110>Ausrichten der Höhen der Ebene</h110>
+    <h111>Vertikales Ausrichten der Position der Marken</h111>
+    <h112>Angleichung der Startpunkte</h112>
+    <h113>Mit diesem Befehl kann man die Höhen der Ebene an verschiedenen Bedingungen ausrichten</h113>
+    <h114>Wasserabdichtung</h114>
+    <h115>Erstellen einer Markierungslinie für Wasserabdichtung</h115>
+    <h116>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Wasserabdichtungslinie beschreibt</h116>
+    <h117>Wasserabdichtung aus Polylinie</h117>
+    <h118>Umwandlung der ausgewählten Polylinie in eine Markierungslinie für Wasserabdichtung</h118>
+    <h119>Für das zu erstellte intelligente Objekt, das die anzuzeigende Zahl enthält Trennzeichen zwischen dem ganzzahligen und dem gebrochenen Teil einstellen:</h119>
+    <h120>Wert für die Suche</h120>
+    <h121>Suchen</h121>
+    <h122>Das ganze Wort</h122>
+    <h123>Unter Berücksichtigung des Registers</h123>
+    <h124>Die Abfrage "{0}" hat nichts ergeben</h124>
+    <h125>Alle zur aktuellen Auswahl hinzufügen</h125>
+    <h126>Führungslinie des Details</h126>
+    <h127>Erstellen von einer Führungslinie des Details</h127>
+    <h128>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Führungslinie des Details beschreibt</h128>
+    <h129>Grundstil für die Wasserabdichtung</h129>
+    <h130>Grundstil für die Führungslinie des Details</h130>
+    <h131>Werte der zu erstellenden Führungslinien des Details fortsetzen</h131>
+    <h132>Beim Erstellen der Führungslinien des Details wird nach bereits in der Zeichnung erstellten Führungslinien des Details gesucht und deren Werte der Detailnummer gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Nummer der zu erstellender Führungslinie des Details wird auf die nächste Nummer des Details ab dem zuletzt gefundenen Wert gesetzt</h132>
+    <h133>Schnittführungslinie des Details</h133>
+    <h134>Erstellen von einer Schnittführungslinie des Details</h134>
+    <h135>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Schnittführungslinie des Details beschreibt</h135>
+    <h136>Werte der zu erstellenden Schnittführungslinien des Details fortsetzen</h136>
+    <h137>Beim Erstellen der Schnittführungslinien des Details wird nach bereits in der Zeichnung erstellten Schnittführungslinien des Details gesucht und deren Werte der Detailnummer gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Nummer des zu erstellenden Führungslinie des Details wird auf die nächste Nummer des Details ab dem zuletzt gefundenen Wert gesetzt</h137>
+    <h138>Grundstil für die Schnittführungslinie des Details</h138>
+    <h139>Schweißnaht</h139>
+    <h140>Erstellen der Darstellung von Schweißverbindungen</h140>
+    <h141>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Schweißverbindungen beschreibt</h141>
+    <h142>Grundstil für die Darstellung von Schweißverbindungen</h142>
+    <h143>Schweißnaht als Polylinie</h143>
+    <h144>Umwandlung der ausgewählten Polylinie in eine Schweißnahtmarkierungslinie</h144>
+    <h145>Darstellung des Detailausschnittes</h145>
+    <h146>Grundstil für die Darstellung des Detailausschnittes</h146>
+    <h147>Erstellen von der Darstellung des Detailausschnittes</h147>
+    <h148>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Darstellung des Detailausschnittes durch Angabe von zwei Punkten beschreibt</h148>
+    <h149>Werte der zu erstellenden Detailausschnitte fortsetzen</h149>
+    <h150>Beim Erstellen der Detailausschnitte wird nach bereits in der Zeichnung erstellten Detailausschnitten gesucht und deren Werte der Nummer gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Nummer des zu erstellenden Detailausschnittes wird auf die nächste Nummer des Detailausschnittes ab dem zuletzt gefundenen Wert gesetzt</h150>
+    <h151>Darstellung der Ansicht/des Schnittes</h151>
+    <h152>Grundstil für die Darstellung der Ansicht/des Schnittes</h152>
+    <h153>Darstellung der Ansicht</h153>
+    <h154>Erstellen von der Darstellung der Ansicht </h154>
+    <h155>Erstellen eines intelligenten Objekts von der Darstellung der Ansicht auf der Grundlage eines anonymen Blocks</h155>
+    <h156>Werte für neue Ansichten fortsetzen</h156>
+    <h157>Beim Erstellen einer neuen Darstellung der Ansicht/des Schnittes im aktuellen Bereich wird die zuletzt erstellte Darstellung gesucht und deren Wert als Grundlage für eine neue Darstellung der Ansicht/des Schnittes genommen</h157>
+    <h158>Darstellung des Schnittes</h158>
+    <h159>Erstellen von der Darstellung des Schnittes</h159>
+    <h160>Erstellen eines intelligenten Objekts von der Darstellung des Schnittes auf der Grundlage eines anonymen Blocks</h160>
+    <h161>Buchstäbliche Linie</h161>
+    <h162>Grundstil für die Buchstabenlinie</h162>
+    <h163>Zeichnen einer Darstellung von der Buchstabenlinie</h163>
+    <h164>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der eine Buchstabenlinie beschreibt</h164>
+    <h165>Buchstabenlinie als Polylinie</h165>
+    <h166>Umwandlung der ausgewählten Polylinie in eine Buchstabenlinie</h166>
+    <h167>Ansicht</h167>
+    <h168>Grundstil für die Darstellung der Ansicht</h168>
+    <h169>Erstellen der Darstellung von Ansicht</h169>
+    <h170>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Darstellung der Ansicht beschreibt</h170>
+    <h171>Höhe der Ebene auf dem Plan</h171>
+    <h172>Grundstil für die Darstellung der Höhe der Ebene auf dem Plan</h172>
+    <h173>Erstellen der Höhe der Ebene auf dem Plan</h173>
+    <h174>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Höhe der Ebene auf dem Plan beschreibt</h174>
+    <h175>Multi-Führungslinie mit mehreren Bemaßungszeichen</h175>
+    <h176>Grundstil für die Multi-Führungslinie mit mehreren Bemaßungszeichen</h176>
+    <h177>Erstellen der Multi-Führungslinie mit mehreren Bemaßungszeichen</h177>
+    <h178>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Multi-Führungslinie mit mehreren Bemaßungszeichen beschreibt</h178>
+    <h179>Werte der zu erstellenden Multi-Führungslinien mit mehreren Bemaßungszeichen fortsetzen</h179>
+    <h180>Beim Erstellen der Multi-Führungslinien mit mehreren Bemaßungszeichen wird nach bereits in der Zeichnung erstellten Multi-Führungslinien mit mehreren Bemaßungszeichen gesucht und deren Werte gesammelt und dann in aufsteigender Reihenfolge sortiert. Der Wert der Nummer oder des Buchstabens der zu erstellender Führungslinie wird auf die nächste Nummer oder Buchstabe ab dem zuletzt gefundenen Wert gesetzt. Die Funktion ist nur dann wirksam, wenn alle erstellten Multi-Führungslinien mit mehreren Bemaßungszeichen numerische oder buchstäbliche Werte haben</h180>
+    <h181>Bei Textdrehung ist der Drehwinkel des Blockes zu berücksichtigen</h181>
+    <h182>Der Text der geraden Achse dreht sich mit dem Achsenblock, wenn der Befehl DREHEN verwendet wird</h182>
+    <h183>Kammförmige Führungslinie</h183>
+    <h184>Grundstil für die kammförmige Führungslinie</h184>
+    <h185>Erstellen einer kammförmigen Führungslinie</h185>
+    <h186>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die kammförmige Führungslinie beschreibt</h186>
+    <h187>Dicker Pfeil</h187>
+    <h188>Grundstil für die Darstellung des dicken Pfeils</h188>
+    <h189>Erstellen des dicken Pfeils</h189>
+    <h190>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der den dicken Pfeil beschreibt</h190>
+    <h191>Vergußnaht</h191>
+    <h192>Vergußnaht erstellen</h192>
+    <h193>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Vergußnaht beschreibt</h193>
+    <h194>Vergußnaht als Polylinie</h194>
+    <h195>Umwandlung der ausgewählten Polylinie in eine Markierungslinie für Vergußnaht</h195>
+    <h196>Grundstil für die Darstellung der Vergußnaht</h196>
+    <h197>Detaildarstellung</h197>
+    <h198>Detaildarstellung erstellen</h198>
+    <h199>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Detaildarstellung beschreibt</h199>
+    <h200>Grundstil für die Detaildarstellung</h200>
+    <h201>Werte der zu erstellenden Detaildarstellung fortsetzen</h201>
+    <h202>Beim Erstellen einer Detaildarstellung wird in der Zeichnung nach den bereits erstellten Detaildarstellungen gesucht, deren Nummerwerte gesammelt und dann in aufsteigender Reihenfolge sortiert. Für die erstellende Detaildarstellung wird die nächstfolgende Nummer ab dem zuletzt gefundenen Wert gesetzt</h202>
+    <h203>Änderungskennung</h203>
+    <h204>Änderungskennung erstellen</h204>
+    <h205>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Änderungskennung beschreibt</h205>
+    <h206>Grundstil für die Änderungskennung</h206>
+    <h207>Crested leader</h207>
+    <h208>Basic style for crested leader</h208>
+    <h209>Creation of the crested leader</h209>
+    <h210>Creating an smart entity based on an anonymous block describing the crested leader</h210>
+    <h211>Pfählenbeschriftung</h211>
+    <h212>Grundstil für Pfählenbeschriftung</h212>
+    <h213>Pfählenbeschriftung erstellen</h213>
+    <h214>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Pfählenbeschriftung beschreibt</h214>
+    <h215>Marke für Neigung</h215>
+    <h216>Erstellen einer Marke für Neigung</h216>
+    <h217>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Marke für Neigung beschreibt</h217>
+    <h218>Grundstil der Marke für Neigung</h218>
+    <h219>Alle ersetzen</h219>
+    <h220>Ausgewähltes ersetzen</h220>
+    <h221>Objekttyp</h221>
+    <h224>Eigenschaft ohne Namen</h224>
+    <h225>Anzahl der gefundenen intelligenten Objekte:</h225>
+    <h226>Anzahl der gefundenen Eigenschaften:</h226>
+    <h227>Nur nach ersetzbaren Eigenschaften suchen</h227>
+    <h228>Ersetzbar</h228>
+    <h229>Wert für Ersetzen</h229>
+    <h230>Isolation</h230>
+    <h231>Erstellen einer Markierungslinie für verschiedene Isolationstypen</h231>
+    <h232>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der verschiedene Isolationstypen beschreibt</h232>
+    <h233>Isolation aus Polylinie</h233>
+    <h234>Umwandlung der ausgewählten Polylinie in eine Markierungslinie für verschiedene Isolationstypen</h234>
+    <h235>Zusätzliche Handles bei den linearen intelligenten Objekten anzeigen</h235>
+    <h236>Grundstil für Isolation</h236>
+    <h237>Zusätzliche funktionale Handles bei Auswahl von linearen intelligenten Objekten anzeigen</h237>
+    <h238>Schweißnahtbezeichnung</h238>
+    <h239>Schweißnahtbezeichnung erstellen</h239>
+    <h240>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Schweißnahtbezeichnung beschreibt</h240>
+    <h241>Grundstil für die Darstellung der Schweißnahtbezeichnung</h241>
+    <h242>Seite</h242>
+    <h243>Schweißnahtkathete</h243>
+    <h244>Schweißnahtkathete erstellen</h244>
+    <h245>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Schweißnahtkathete beschreibt</h245>
+    <h246>Schweißnahtkathete anhand drei Punkte erstellen</h246>
+    <h247>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Schweißnahtkathete beschreibt</h247>
+    <h248>Grundstil für die Darstellung der Schweißnahtkathete</h248>
+    <h249>Füllung von Bohrungen</h249>
+    <h250>Erstellen der Füllung von Bohrungen</h250>
+    <h251>Erstellen eines intelligenten Objekts auf der Grundlage eines anonymen Blocks, der die Füllung von Bohrungen beschreibt</h251>
+    <h252>Grundstil für die Darstellung der Füllung von Bohrungen</h252>
+    <h253>Schweißnahtkathete anhand drei Punkte</h253>
+    <h254>Keine intelligenten Objekte im Dokument vorhanden</h254>
+    <h255>Polare Achse</h255>
+    <h256>Polare Achse erstellen</h256>
+    <h257>Erstellung eines intelligenten Objekts auf Basis eines anonymen Blocks, der die Kennzeichnung der polaren Achse beschreibt</h257>
+    <h258>Grundstil für die polare Achse</h258>
+    <h259>Anfangswert</h259>
+    <h260>Mehrzeilige Führungslinie</h260>
+    <h261>Mehrzeilige Führungslinie erstellen</h261>
+    <h262>Intelligentes Objekt basierend auf einem anonymen Block erstellen, der die mehrzeilige Führungslinie beschreibt</h262>
+    <h263>Gespeicherte Werte bearbeiten</h263>
+    <h264>Gespeicherte Werte der mehrzeiligen Führungslinie bearbeiten</h264>
+    <h265>Basisstil für die mehrzeilige Führungslinie</h265>
+    <h266>Neue Zeile</h266>
+    <h267>Maximale Anzahl der Elemente:</h267>
+    <h268>Werte im aktuellen Objekt</h268>
+    <h269>Gespeicherte Werte</h269>
+    <h270>Pfeillinie</h270>
+    <h271>Pfeillinie erstellen</h271>
+    <h272>Intelligentes Objekt basierend auf einem anonymen Block erstellen, der die Pfeillinie beschreibt</h272>
+    <h273>Pfeillinie aus Polylinie</h273>
+    <h274>Ausgewählte Polylinie in Pfeillinie konvertieren</h274>
+    <h275>Basisstil für Pfeillinie</h275>
+    <h276>Allgemeine Eigenschaften</h276>
+    <h277>Neue Gruppe</h277>
+    <h278>Gruppe hinzufügen</h278>
+    <h279>Stromleitung</h279>
+    <h280>Erstellen einer Stromleitung</h280>
+    <h281>Erstellen eines intelligenten Objekts auf Basis eines anonymen Blocks, der eine Stromleitung beschreibt</h281>
+    <h282>Stromleitung aus Polylinie</h282>
+    <h283>Konvertieren der ausgewählten Polylinie in eine Stromleitung</h283>
+    <h284>Basisstil für Stromleitung</h284>
+    <h285>Maßeinheiten</h285>
+    <h286>Gruppe löschen</h286>
+    <h287>Zeile hinzufügen</h287>
+    <h288>Zeile löschen</h288>
+    <so0>Grafiken aktualisieren</so0>
+    <sot0>Die Grafiken aller gefundenen intelligenten Objekte werden regeneriert</sot0>
+    <so1>Auswählen</so1>
+    <sot1>Alle intelligenten Objekte der angegebenen Typen im aktuellen Bereich werden ausgewählt</sot1>
+    <so2>Daten löschen</so2>
+    <sot2>Bei allen intelligenten Objekten der angegebenen Typen im aktuellen Bereich werden die erweiterten Daten gelöscht, so dass die Objekte zu gewöhnlichen Blöcken werden</sot2>
+    <so3>Explodieren</so3>
+    <sot3>Alle intelligenten Objekte der angegebenen Typen im aktuellen Bereich werden explodiert</sot3>
+    <so4>Löschen</so4>
+    <sot4>Alle intelligenten Objekte der angegebenen Typen im aktuellen Bereich werden gelöscht</sot4>
+    <mtleadavailfull>Die Verwendung gespeicherter Werte ist in der Vollversion des Plugins verfügbar!</mtleadavailfull>
+    <la1>Kopieren</la1>
+    <la2>Nicht kopieren</la2>
+    <la3>Fragen</la3>
+    <gp1>Strecken</gp1>
+    <gp2>Verschieben</gp2>
+    <gp3>Scheitelpunkt löschen</gp3>
+    <gp4>Scheitelpunkt hinzufügen</gp4>
+    <gp5>Multi-Führungslinie hinzufügen</gp5>
+    <gp6>Multi-Führungslinie entfernen</gp6>
+    <gp7>Pfeilspitzentyp</gp7>
+    <gp8>Füllung</gp8>
+    <blt1>Linear</blt1>
+    <blt2>Gekrümmt</blt2>
+    <blt3>Zylindrisch</blt3>
+    <amt1>Beiderseitig</amt1>
+    <amt2>Oberhalb</amt2>
+    <amt3>Unterhalb</amt3>
+    <amt4>Erster</amt4>
+    <amt5>Zweiter</amt5>
+    <vlt1>Schnittansicht</vlt1>
+    <vlt2>Ansicht</vlt2>
+    <llt1>Standard</llt1>
+    <llt2>Zusammengesetzt</llt2>
+    <type1>Typ 1</type1>
+    <type2>Typ 2</type2>
+    <glfst1>Abstand zwischen den Strichlinien</glfst1>
+    <glfst2>Die Hälfte des Abstands zwischen den Gruppen der Strichlinien</glfst2>
+    <glfst3>Abstand zwischen den Gruppen der Strichlinien</glfst3>
+    <wpfst1>Die Hälfte des Abstands zwischen den Strichlinien</wpfst1>
+    <wpfst2>Kein Einzug</wpfst2>
+    <separator1>Aus den ModPlus Einstellungen</separator1>
+    <separator2>Aus dem Stil</separator2>
+    <separator3>Punkt</separator3>
+    <separator4>Komma</separator4>
+    <tha1>Links</tha1>
+    <tha2>Mittig</tha2>
+    <tha3>Rechts</tha3>
+    <tha4>Rechts oben</tha4>
+    <tha5>Rechts unten</tha5>
+    <tha6>Links unten</tha6>
+    <tha7>Links oben</tha7>
+    <tha8>Beliebig</tha8>
+    <ft1>Rund</ft1>
+    <ft2>Rechteckig</ft2>
+    <ft3>Linie</ft3>
+    <ft4>Ohne Rahmen</ft4>
+    <let0>Nein</let0>
+    <let1>Halbpfeil</let1>
+    <let2>Punkt</let2>
+    <let3>Doppeltes Bemaßungszeichen</let3>
+    <let4>Rechter Winkel</let4>
+    <let5>Gefüllte geschlossene</let5>
+    <let6>Geöffnete</let6>
+    <let7>Geschlossene</let7>
+    <let8>Pfeilspitze</let8>
+    <let9>Schnitt</let9>
+    <wjt1>Stumpfnaht, werkseitig hergestellte, durchgehende, auf der sichtbaren Seite</wjt1>
+    <wjt2>Stumpfnaht, werkseitig hergestellte, durchgehende, auf der unsichtbaren Seite</wjt2>
+    <wjt3>Stumpfnaht mit Montagestoß, durchgehende, auf der sichtbaren Seite</wjt3>
+    <wjt4>Stumpfnaht mit Montagestoß, durchgehende, auf der unsichtbaren Seite</wjt4>
+    <wjt5>Stumpfnaht, werkseitig hergestellte, unterbrochene, auf der sichtbaren Seite</wjt5>
+    <wjt6>Stumpfnaht, werkseitig hergestellte, unterbrochene, auf der unsichtbaren Seite</wjt6>
+    <wjt7>Stumpfnaht mit Montagestoß, unterbrochene, auf der sichtbaren Seite</wjt7>
+    <wjt8>Stumpfnaht mit Montagestoß, unterbrochene, auf der unsichtbaren Seite</wjt8>
+    <wjt9>Kehlnaht, werkseitig hergestellte, durchgehende, auf der sichtbaren Seite</wjt9>
+    <wjt10>Kehlnaht, werkseitig hergestellte, durchgehende, auf der unsichtbaren Seite</wjt10>
+    <wjt11>Kehlnaht mit Montagestoß, durchgehende, auf der sichtbaren Seite</wjt11>
+    <wjt12>Kehlnaht mit Montagestoß, durchgehende, auf der unsichtbaren Seite</wjt12>
+    <wjt13>Kehlnaht, werkseitig hergestellte, unterbrochene, auf der sichtbaren Seite</wjt13>
+    <wjt14>Kehlnaht, werkseitig hergestellte, unterbrochene, auf der unsichtbaren Seite</wjt14>
+    <wjt15>Kehlnaht mit Montagestoß, unterbrochene, auf der sichtbaren Seite</wjt15>
+    <wjt16>Kehlnaht mit Montagestoß, unterbrochene, auf der unsichtbaren Seite</wjt16>
+    <pil0>Typ 0</pil0>
+    <pil1>Typ 1</pil1>
+    <pil2>Typ 2</pil2>
+    <pil3>Typ 3</pil3>
+    <pil4>Typ 4</pil4>
+    <pil5>Typ 5</pil5>
+    <pil6>Typ 6</pil6>
+    <pil7>Typ 7</pil7>
+    <pil8>Typ 8</pil8>
+    <pil9>Typ 9</pil9>
+    <pil10>Typ 10</pil10>
+    <pit0>Kreis</pit0>
+    <pit1>Rechteck</pit1>
+    <dmt0>Promille</dmt0>
+    <dmt1>Grad</dmt1>
+    <dmt2>Verhältnis</dmt2>
+    <dmt3>Zahl</dmt3>
+    <dmt4>Prozent</dmt4>
+    <dot>Punkt</dot>
+    <comma>Komma</comma>
+    <len>Länge</len>
+    <p1>Typ des Schnittverlaufs</p1>
+    <d1>Linientyp: linear, gekrümmt oder zylindrisch</d1>
+    <p2>Überstand vom Objekt</p2>
+    <d2>Bei einem linearen Schnittverlauf wird der Überstandswert in mm angegeben. Bei einem gekrümmten Schnittverlauf wird der Überstandswert in % der Länge zwischen den Hauptpunkten angegeben. Bei einem zylindrischen Schnittverlauf wird kein Überstandswert verwendet</d2>
+    <p3>Breite des Bruches</p3>
+    <d3>Breite des Bruches in mm. Nur für den Schnittverlauf des linearen Typs</d3>
+    <p4>Höhe des Bruches</p4>
+    <d4>Höhe des Bruches in mm. Nur für den Schnittverlauf des linearen Typs</d4>
+    <p5>Maßstab</p5>
+    <d5>Maßstab des Schnittverlaufs</d5>
+    <d5-1>Maßstab der Achse</d5-1>
+    <p6>Maßstab des Linientyps</p6>
+    <d6>Maßstab des Linientyps für den in den Blockeigenschaften angegebenen Linientyp</d6>
+    <p7>Layer</p7>
+    <d7>Layer der Objekt</d7>
+    <p8>Position der Rasterlinien</p8>
+    <d8>Position der Rasterlinien: beiderseits, oberhalb oder unterhalb</d8>
+    <p9>Bogen</p9>
+    <d9>Höhe des Bogens der Achse</d9>
+    <p10>Durchmesser der Rasterlinien</p10>
+    <d10>Durchmesser der Rasterlinien der Achse</d10>
+    <p11>Anzahl der Rasterlinien</p11>
+    <d11>Anzahl der Rasterlinien der Achse</d11>
+    <p12>Typ der ersten Rasterlinie</p12>
+    <d12>Typ der ersten Rasterlinie der Achse</d12>
+    <p13>Typ der zweiten Rasterlinie</p13>
+    <d13>Typ der zweiten Rasterlinie der Achse</d13>
+    <p14>Typ der dritten Rasterlinie</p14>
+    <d14>Typ der dritten Rasterlinie der Achse</d14>
+    <p15>Der untere Abstand des Bogens</p15>
+    <d15>Der untere Abstand des Bogens der Achse</d15>
+    <p16>Der obere Abstand des Bogens</p16>
+    <d16>Der obere Abstand des Bogens der Achse</d16>
+    <p16-2>Abstand des Bogens</p16-2>
+    <d16-2>Der obere oder der untere Abstand des Bogens der Achse</d16-2>
+    <p17>Textstil</p17>
+    <d17>Textstil für Textelemente der Achse</d17>
+    <p18>Texthöhe</p18>
+    <d18>Texthöhe der Textelemente der Achse</d18>
+    <p19>Linientyp der Achse</p19>
+    <p20>Präfix des ersten Wertes</p20>
+    <p21>Suffix des ersten Wertes</p21>
+    <p22>Der erste Wert</p22>
+    <p23>Präfix des zweiten Wertes</p23>
+    <p24>Suffix des zweiten Wertes</p24>
+    <p25>Der zweite Wert</p25>
+    <p26>Präfix des dritten Wertes</p26>
+    <p27>Suffix des dritten Wertes</p27>
+    <p28>Der dritte Wert</p28>
+    <p29>Pfeilspitzengröße</p29>
+    <p30>Wert der unteren Referenzmarker</p30>
+    <p31>Wert der oberen Referenzmarker</p31>
+    <p32>Die untere Referenzmarker</p32>
+    <d32>Sichtbarkeit der unteren Referenzmarker</d32>
+    <p33>Die obere Referenzmarker</p33>
+    <d33>Sichtbarkeit der oberen Referenzmarker</d33>
+    <p34>Typ der Referenzmarker</p34>
+    <d34>Typ der Referenzmarker der Achse</d34>
+    <p35>Linientyp</p35>
+    <d35>Typ der Hauptpolylinie</d35>
+    <d35-1>Linientyp Standard oder zusammengesetzt</d35-1>
+    <p36>Versatz der ersten Strichlinie</p36>
+    <d36>Versatz der ersten Strichlinie auf jedem Segment der Bodenlinie</d36>
+    <d36-1>Versatz der ersten Strichlinie auf jedem Segment der Wasserabdichtungslinie</d36-1>
+    <p37>Länge der Strichlinie</p37>
+    <p38>Abstand zwischen den Strichlinien</p38>
+    <p39>Neigungswinkel der Strichlinie</p39>
+    <p40>Versatz der Gruppe der Strichlinien</p40>
+    <p41>Textstil</p41>
+    <d41>Textstil für Textelemente</d41>
+    <p42>Länge der mittigen Strichlinie</p42>
+    <d42>Länge der mittigen Strichlinie bis zum Bruchpunkt</d42>
+    <p43>Dicke der Strichlinien</p43>
+    <d43>Dicke aller Strichlinien von Schnitt</d43>
+    <p44>Länge der Strichlinie</p44>
+    <d44>Länge der Hauptstrichlinien von Schnitt</d44>
+    <p45>Versatz der Verlängerung</p45>
+    <d45>Versatz der Verlängerung über die Länge der Strichlinie</d45>
+    <p46>Länge der Verlängerung</p46>
+    <p47>Länge der Pfeilspitze</p47>
+    <p48>Dicke der Pfeilspitze</p48>
+    <p49>Texthöhe</p49>
+    <p50>Texthöhe des kleinformatigen Textes</p50>
+    <p51>Darstellung des Schnittes</p51>
+    <p52>Präfix der Darstellung</p52>
+    <p53>Nummer des Plans</p53>
+    <p54>Position der Nummer des Plans</p54>
+    <d54>Optionen für Position der Nummer des Plans: beiderseits, unterhalb, oberhalb</d54>
+    <p55>Linie zum Objekt</p55>
+    <d55>ob eine Linie von der Höhe der Ebene zum Messobjekt gezeichnet werden soll</d55>
+    <p56>Versatz der Linie zum Objekt</p56>
+    <d56>Versatz der Linie zum Objekt vom Messobjekt</d56>
+    <p57>Länge der unteren Verlängerung</p57>
+    <d57>Länge der unteren Verlängerung von dem Rand der Verlängerung auf der Seite des Messobjekts bis zur Pfeilspitze der Höhenmarke</d57>
+    <p58>Überstand der unteren Verlängerung</p58>
+    <d58>Überstand der unteren Verlängerung von der Pfeilspitze der Höhenmarke bis zu dem Rand der Verlängerung auf der gegenüberliegenden Seite des Messobjekts</d58>
+    <p59>Höhe der Pfeilspitze</p59>
+    <p60>Dicke der Pfeilspitze</p60>
+    <p61>Textversatz</p61>
+    <p62>Vertikaler Textversatz</p62>
+    <p63>Überstand der Verlängerung</p63>
+    <d63>Überstand der Verlängerung relativ zum Text mit der größten Länge</d63>
+    <d63-1>Überstand der Verlängerung in Relation zum Text</d63-1>
+    <p63-1>Höhe der Verlängerung</p63-1>
+    <p64>Pluszeichen anzeigen</p64>
+    <d64>Pluszeichen anzeigen, wenn der gemessene Wert größer als Null ist. Die Eigenschaft wird nicht berücksichtigt, wenn der Text überschrieben ist</d64>
+    <p65>Gemessener Wert</p65>
+    <p66>Textüberschreibung</p66>
+    <p67>Genauigkeit</p67>
+    <d67>Genauigkeit des gemessenen Wertes. Legt die Anzahl der Nachkommastellen</d67>
+    <p68>Notiz</p68>
+    <p69>Maßstab der Messung</p69>
+    <d69>Legt einen Wert im Bereich von 0,000001 bis 1000000 fest, mit dem der in der Zeichnung gemessene Abstand multipliziert wird</d69>
+    <p70>Liniendicke</p70>
+    <p71>Drehwinkel des Textes</p71>
+    <p72>Zahlentrennzeichen</p72>
+    <d72>Trennzeichen zwischen dem ganzzahligen und dem gebrochenen Teil von Zahl</d72>
+    <p73>Textausrichtung</p73>
+    <d73>Horizontale Textausrichtung</d73>
+    <p74>Ausrichten der Notiz</p74>
+    <p75>Sternchen anzeigen</p75>
+    <d75>Hinzufügen eines Sternchens am Ende des Hauptwertes</d75>
+    <p76>Höhe des Rahmens</p76>
+    <p77>Breite des Rahmens</p77>
+    <p78>Position der Verlängerung</p78>
+    <p79>Nummer des Details</p79>
+    <p80>Nummer des Plans</p80>
+    <p81>Planadresse</p81>
+    <p82>Rahmentyp</p82>
+    <p83>Radius von Rundung</p83>
+    <d83>Radius von Rundung der Ecken eines rechteckigen Rahmens</d83>
+    <d83-1>Radius von Rundung der Ecken von der Darstellung des Detailausschnittes</d83-1>
+    <p84>Der Text ist immer horizontal</p84>
+    <d84>Die Führungslinie mit dem Text wird ihre horizontale Position beibehalten, wenn das Objekt mit dem Befehl "Drehen" gedreht wird</d84>
+    <p85>Den Hintergrund ausblenden</p85>
+    <d85>Hinzufügen einer Maskierung um den Umriss des Textes mit der eingestellten Versetzung. Die Anzeige von Maskierungsrahmen wird durch die Systemvariablen WIPEOUTFRAME und FRAME gesteuert</d85>
+    <d85-1>Hinzufügen einer Maskierung um den Umriss des Textes mit der eingestellten Versetzung. Die Anzeige von Maskierungsrahmen wird durch die Systemvariablen WIPEOUTFRAME und FRAME gesteuert. Wenn ein rechteckiger Rahmen eingestellt ist, wird die Maskierung entlang des Rahmens ohne Berücksichtigung von Abstand erstellt</d85-1>
+    <p86>Abstand der Maskierung</p86>
+    <d86>Bei den Rahmentypen "Linie" und "Kein Rahmen" wird der Abstand der Maskierung berücksichtigt</d86>
+    <d87>Vorhandensein von Pfeilen: beidseitig, erster oder zweiter</d87>
+    <p87>Dicke des Ansichtselements</p87>
+    <p88>Länge des Ansichtselements</p88>
+    <p89>Schweißnahttyp</p89>
+    <p90>Abstand des Bemaßungszeichens</p90>
+    <p91>Halbe Höhe des Bemaßungszeichens</p91>
+    <p92>Abstand des großen Kreuzsymbols</p92>
+    <p93>Abstand des kleinen Kreuzsymbols</p93>
+    <p94>Halbe Höhe des großen Kreuzsymbols</p94>
+    <p95>Höhe des kleinen Kreuzsymbols</p95>
+    <p96>Länge der Reihe</p96>
+    <p97>Länge der Leerstelle</p97>
+    <p98>Intervall zwischen den Reihen</p98>
+    <p99>Höhe des kleinen Bemaßungszeichens</p99>
+    <p100>Radius von Rundung</p100>
+    <p101>Haupttext</p101>
+    <p102>Kleinformatiger Text</p102>
+    <p103>Ansichtstyp</p103>
+    <d103>Ansichtstyp: Schnittansicht oder Ansicht</d103>
+    <p104>Führungslinie</p104>
+    <d104>Aktivieren/Deaktivieren von Führungslinie</d104>
+    <p105>Generieren des Linientyps</p105>
+    <d105>Generieren von Linientyp über die gesamte Polylinie</d105>
+    <p106>Abstand zwischen Text</p106>
+    <p107>Formel für die Linie</p107>
+    <d107>Die Formel für die Linie wird durch ganze Zahlen angegeben, die durch Bindestriche getrennt sind. Jede ungerade Zahl (1, 3, 5, ...) gibt die Länge der Strichlinie an. Jede gerade Zahl (2, 4, 6, ...) gibt die Länge der Leerstelle an</d107>
+    <p108>Versatz des ersten Textes</p108>
+    <p109>Darstellung der Ansicht</p109>
+    <p110>Höhe der Ebene</p110>
+    <p111>Präfix</p111>
+    <p112>Suffix</p112>
+    <p113>Wert</p113>
+    <p114>Liniendicke</p114>
+    <p115>Vorhandensein von Pfeilen</p115>
+    <p116>Breite des Bogens</p116>
+    <p117>Länge der Linie am linken Rand</p117>
+    <d117>Länge der Linie am linken Rand des Nahtliniensegments</d117>
+    <p118>Linien an Rändern</p118>
+    <d118>Sichtbarkeit von Linien an Rändern von Nahtliniensegmenten</d118>
+    <p119>Höhe des Bogens</p119>
+    <p120>Kreisdurchmesser</p120>
+    <p121>Äußerer Kreisdurchmesser</p121>
+    <p122>Vertikaler Abstand des kleinformatigen Textes</p122>
+    <d122>Vertikaler Abstand des kleinformatigen Textes von der Linie</d122>
+    <p123>Äußerer Kreis</p123>
+    <p124>Textversatz für die Nummer</p124>
+    <p125>Textversatz für die Notiz</p125>
+    <p126>Position der Verlängerung für die Notiz</p126>
+    <p127>Wolkenstil für den Rahmen</p127>
+    <p128>Länge des Wolkenbogens</p128>
+    <p129>Höhe der Nummer</p129>
+    <p130>Höhe der Notiz</p130>
+    <p131>Nummer</p131>
+    <p132>Oberer Text</p132>
+    <p133>Unterer Text</p133>
+    <p134>Höhe des oberen Textes</p134>
+    <p135>Höhe des unteren Textes</p135>
+    <p136>Bitte Text eingeben</p136>
+    <p137>Schnittbreite</p137>
+    <p138>Schnitthöhe</p138>
+    <p139>Schnittdurchmesser</p139>
+    <p140>Abstand der Mittellinien</p140>
+    <p141>Position der Nummer</p141>
+    <p142>Sichtbarkeit der Nummer</p142>
+    <p143>Sichtbarkeit der Achsen</p143>
+    <p144>Sichtbarkeit der Führungslinie</p144>
+    <p145>Abstand der Nummer</p145>
+    <p146>Vertikaler Abstand der Nummer</p146>
+    <p147>Dicke der Hauptlinie</p147>
+    <p148>Mittellinientyp</p148>
+    <p149>Mittellinienmaßstab</p149>
+    <p150>Nur Umgrenzung</p150>
+    <p151>Querschnittstyp</p151>
+    <p152>Bezeichnungstyp</p152>
+    <p153>Markentyp</p153>
+    <p154>Pfeilgröße</p154>
+    <p155>Als Richtung</p155>
+    <d155>Neigung als Richtung anzeigen</d155>
+    <p156>Kegelsymbol</p156>
+    <d156>Kegelsymbol statt Neigungssymbol anzeigen</d156>
+    <p157>Bezug auf den linken Punkt</p157>
+    <d157>Bei der Berechnung der Neigung den Punkt am linken Rand als ersten Punkt nehmen</d157>
+    <p158>Textplatzierungsseite</p158>
+    <d158>Die Seite, wo ein horizontaler Text platziert wird</d158>
+    <p159>Isolationstyp</p159>
+    <p160>Kreisradius</p160>
+    <p161>Punktradius</p161>
+    <p162>Rundungsradius</p162>
+    <p163>Breite des Isolationstyps</p163>
+    <p164>Höhe des Isolationstyps</p164>
+    <p165>Zeichnen der äußeren Grenze</p165>
+    <p166>Nahtnummer</p166>
+    <p167>Gesamtanzahl der Nähte</p167>
+    <p168>Kategorie der Kontrolle</p168>
+    <p169>GOST</p169>
+    <p170>Bezeichnung</p170>
+    <p171>Schweißverfahren</p171>
+    <p172>Kathetenmaß</p172>
+    <p173>Nahtmaß</p173>
+    <p174>Nahtabstandsmaß</p174>
+    <p175>Seite</p175>
+    <p176>Geschlossene Naht</p176>
+    <p177>Montagenaht</p177>
+    <p178>Nahtuntertyp</p178>
+    <p179>Maßzeichen</p179>
+    <p180>Frontseitige Hilfszeichen</p180>
+    <p181>Rückseitige Hilfszeichen</p181>
+    <p182>Frontseitige Oberflächenzeichen</p182>
+    <p183>Rückseitige Oberflächenzeichen</p183>
+    <p184>Text für frontseitige Oberflächenzeichen</p184>
+    <p185>Text für rückseitige Oberflächenzeichen</p185>
+    <p186>Kathetenlänge</p186>
+    <p187>Konvexität/Konkavität</p187>
+    <d187>Konvexität (0 bis 1) oder Konkavität (-1 bis 1)</d187>
+    <p191>Achsen anzeigen</p191>
+    <p192>Äußere Länge der Achsen</p192>
+    <p193>Gewinde anzeigen</p193>
+    <p194>Gewindeabstand</p194>
+    <p195>Innengewinde</p195>
+    <p196>Füllung drehen</p196>
+    <p197>Typ der Bohrung</p197>
+    <p198>Bezugssymbole anzeigen</p198>
+    <p199>Bemaßung der Bezugssymbole</p199>
+    <d199>Bezugsgröße der Bemaßung von 0.1 bis 1</d199>
+    <p200>Füllung der Bezugssymbole</p200>
+    <p201>Trunkieren statt Runden</p201>
+    <p202>Unterdrückung von Nullen am Ende</p202>
+    <p203>Länge des oberen Knicks</p203>
+    <p204>Länge des unteren Knicks</p204>
+    <p205>Neigungswinkel des oberen Knicks</p205>
+    <d205>Neigungswinkel des oberen Knicks (von -90 bis 90)</d205>
+    <p206>Neigungswinkel des unteren Knicks</p206>
+    <d206>Neigungswinkel des unteren Knicks (von -90 bis 90)</d206>
+    <p207>Knicklinie bis zum Basispunkt anzeigen</p207>
+    <d207>Knicklinie am Mittelpunkt der ersten Markierung oder bis zum Griff ausrichten</d207>
+    <p208>Zusätzliche Markierungen entlang des Basisvektors ausrichten</p208>
+    <d208>Zusätzliche Markierungen entlang des Knickvektors oder des ursprünglichen Vektors anzeigen</d208>
+    <p209>Startpunkt des Pfeils</p209>
+    <p210>Abstand zur nächsten Linie</p210>
+    <p211>Seite der Seitenlinie</p211>
+    <p212>Länge der Linie</p212>
+    <p213>Pfeile auf Bogensegmenten krümmen</p213>
+    <p214>Gekürzte Pfeile anzeigen</p214>
+    <p215>Pfeiltyp</p215>
+    <p216>Lücken mit zusätzlichen Strichen füllen</p216>
+    <p217>Farbe der Hauptstriche</p217>
+    <p218>Farbe der zusätzlichen Striche</p218>
+    <p219>Abstand</p219>
+    <p220>Hintergrund ausblenden</p220>
+    <p221>Maskierungshöhe</p221>
+    <p222>Vertikaler Abstand zwischen Zeilen</p222>
+    <p223>Abstand zwischen Spalten</p223>
+    <p224>Horizontale Ausrichtung der zusätzlichen Spalte</p224>
+    <p225>Seite der zusätzlichen Spalte</p225>
+    <p226>Markierungsgröße</p226>
+    <p227>Pfeile vom Markierungszentrum anzeigen</p227>
+    <p228>Hauptpolylinie anzeigen</p228>
+    <p229>Markierungstyp</p229>
+    <jigM1>Kreisbogen</jigM1>
+    <jigM2>LInie</jigM2>
+    <grpM1>Scheitelpunkt strecken</grpM1>
+    <grpM2>Scheitelpunkt hinzufügen</grpM2>
+    <grpM3>Scheitelpunkt entfernen</grpM3>
+    <grpM4>Change direction</grpM4>
+    <grpM5>Strecken</grpM5>
+    <grpM6>Scheitelpunkt hinzufügen</grpM6>
+    <grpM7>In Bogen konvertieren</grpM7>
+    <grpM8>In Liniekonvertieren</grpM8>
+    <ilt1>Typ 1</ilt1>
+    <ilt2>Typ 2</ilt2>
+    <ilt3>Typ 3</ilt3>
+    <ilt4>Typ 4</ilt4>
+    <ilt5>Typ 5</ilt5>
+    <ilt6>Typ 6</ilt6>
+    <ilt7>Typ 7</ilt7>
+    <ilt8>Typ 8</ilt8>
+    <none>Nicht vorhanden</none>
+    <djauxs1>Nahtverstärkung entfernen</djauxs1>
+    <djauxs2>Naht entlang einer nicht geschlossenen Linie</djauxs2>
+    <djauxs3>Fließender Übergang</djauxs3>
+    <djsrs1>Die Oberfläche ist nicht regelbar</djsrs1>
+    <djsrs2>Mit Entfernung der Oberflächenschicht</djsrs2>
+    <djsrs3>Ohne Entfernung der Oberflächenschicht</djsrs3>
+    <djwstt1>Kettennaht</djwstt1>
+    <djwstt2>Versetzte Naht</djwstt2>
+    <djwsub1>Lötverbindung</djwsub1>
+    <djwsub2>Nähverbindung</djwsub2>
+    <djwsub3>Klammerverbindung</djwsub3>
+    <djwsub4>Winkelverbindung</djwsub4>
+    <djwsub5>Klebeverbindung</djwsub5>
+    <djwsd0>Äußeres</djwsd0>
+    <djwsd1>Inneres</djwsd1>
+    <hfqt1>Viertel 1</hfqt1>
+    <hfqt2>Viertel 2</hfqt2>
+    <hfqt3>Viertel 3</hfqt3>
+    <hfqt4>Viertel 4</hfqt4>
+    <mtArrowPos1>Automatisch</mtArrowPos1>
+    <mtArrowPos2>Unten links</mtArrowPos2>
+    <mtArrowPos3>Unten rechts</mtArrowPos3>
+    <mtArrowPos4>Oben rechts</mtArrowPos4>
+    <mtArrowPos5>Oben links</mtArrowPos5>
+    <mtLedSide1>Automatisch</mtLedSide1>
+    <mtLedSide2>Links</mtLedSide2>
+    <mtLedSide3>Rechts</mtLedSide3>
+    <pwrLineArrType1>Niederspannungsleitung</pwrLineArrType1>
+    <pwrLineArrType2>Hochspannungsleitung</pwrLineArrType2>
+    <arrLineType1>Einfacher Pfeil</arrLineType1>
+    <arrLineType2>Dicker Pfeil</arrLineType2>
+    <arrLineType3>Einfacher Pfeil mit Strich</arrLineType3>
+    <pwrLineMrkType1>Ohne Markierung</pwrLineMrkType1>
+    <pwrLineMrkType2>Runde Markierung</pwrLineMrkType2>
+    <pwrLineMrkType3>Gefüllte runde Markierung</pwrLineMrkType3>
+    <pwrLineMrkType4>Rechteckige Markierung</pwrLineMrkType4>
+    <pwrLineMrkType5>Gefüllte rechteckige Markierung</pwrLineMrkType5>
+  </mpESKD>
+</ModPlus>

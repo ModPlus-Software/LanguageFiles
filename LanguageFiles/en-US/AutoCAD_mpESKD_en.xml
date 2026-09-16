@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpESKD
+    LocalName="Smart"
+    Description="Create smart objects that extend the capabilities of AutoCAD, as well as allow to perform design according to state standards (ISO)">
+    <tab1>Lines</tab1>
+    <tab2>Settings</tab2>
+    <tab3>Axes</tab3>
+    <tab4>Styles and settings</tab4>
+    <tab5>Working with styles and settings of ModPlus smart entities</tab5>
+    <tab6>Properties palette</tab6>
+    <tab7>ModPlus smart entities properties palette</tab7>
+    <tab8>Views, sections</tab8>
+    <tab9>Tools</tab9>
+    <tab10>Search</tab10>
+    <tab11>Level marks</tab11>
+    <!-- todo remove tab12 after 1.28.24.0  -->
+    <tab12>Search by value</tab12>
+    <tab13>Search for smart entities by type</tab13>
+    <!-- todo remove tab14 after 1.28.24.0  -->
+    <tab14>Search for smart entities by the value of string and numeric properties</tab14>
+    <tab15>Leaders</tab15>
+    <tab16>Marks</tab16>
+    <tab17>Find and replace</tab17>
+    <tab18>Find and replace in smart objects by value of string and numeric properties</tab18>
+    <tab19>Welding</tab19>
+    <!--todo remove after 2.5.18.0-->
+    <defl>Default</defl>
+    <err1>Could not find file</err1>
+    <err2>Failed to load linetype</err2>
+    <err5>Error getting data from the registry! Run the Configurator to update the data in the registry</err5>
+    <msg1>Specify the insertion point:</msg1>
+    <msg2>Specify an endpoint:</msg2>
+    <msg3>Select a block that is an ModPlus smart entity</msg3>
+    <msg5>Specify next point:</msg5>
+    <msg6>Select Polyline:</msg6>
+    <msg7>Delete the original polyline?</msg7>
+    <msg8>Copy layer? [Yes/No]</msg8>
+    <msg9>Processed smart entities</msg9>
+    <msg10>smart entities of the specified types are not found in the current space</msg10>
+    <msg11>Specify the base point:</msg11>
+    <msg12>Specify the level point:</msg12>
+    <msg13>Specify the position point of the Level Mark:</msg13>
+    <msg14>Select Level Marks:</msg14>
+    <msg15>Select reference Level Mark:</msg15>
+    <msg16>Remove objects from the selection:</msg16>
+    <msg17>Specify the frame point:</msg17>
+    <msg18>Specify the leader point:</msg18>
+    <msg19>Specify the text placement point:</msg19>
+    <msg20>Specify the point of a text indent:</msg20>
+    <msg21>Specify the text position point:</msg21>
+    <msg22>Specify next point or</msg22>
+    <msg23>Select the first welded rib</msg23>
+    <msg24>Select the second welded rib</msg24>
+    <msg25>Specify arc center</msg25>
+    <msg26>Specify arc start point</msg26>
+    <msg27>Specify arc end point</msg27>
+    <msg28>Specify point for new axis</msg28>
+    <wrong>Invalid object!</wrong>
+    <vc1>VARIOUS</vc1>
+    <vc2>UNDEFINED</vc2>
+    <h1>Palette settings</h1>
+    <h2>Autostart with AutoCAD</h2>
+    <h3>Connect to the ModPlus palette</h3>
+    <h4>Exceeded maximum limit</h4>
+    <h5>of the selected objects</h5>
+    <h6>Palette work is stopped</h6>
+    <h7>Maximum limit of the selected objects</h7>
+    <h8>can be changed in the plugin</h8>
+    <h9>settings</h9>
+    <h10>plugins</h10>
+    <h11>Smart properties</h11>
+    <h12>System</h12>
+    <h13>New User Style</h13>
+    <h14>Style editor</h14>
+    <h15>Settings</h15>
+    <h16>Add a new custom style</h16>
+    <h17>Delete the selected custom style</h17>
+    <h18>Set the selected style as the default style</h18>
+    <h19>Create a new style based on the selected smart entity</h19>
+    <h20>Property description:</h20>
+    <h21>General settings</h21>
+    <h22>When creating an entity, set the scale from the style</h22>
+    <h23>If checked, then when creating the smart entity, the scale will be applied to it, set in the current style, regardless of the annotative scale of the drawing. Otherwise, the annotative scale of the drawing will be applied to the entity</h23>
+    <h24>When creating an entity, set the layer from the style</h24>
+    <h25>If checked, then when creating the smart entity, it will be applied layer, installed in the current style, regardless of the current layer of the drawing. Otherwise, the current layer of the drawing will be applied to the entity</h25>
+    <h26>If there is no layer in the current document specified in the style:</h26>
+    <h27>Apply current layer</h27>
+    <h28>When you create a smart entity, the current drawing layer is applied to it</h28>
+    <h29>Create and apply a layer from the style</h29>
+    <h30>In the current document, a layer set in style will be created and applied to the smart entity</h30>
+    <h31>When creating an entity, set the text style from the style</h31>
+    <h32>If checked, then when you create the smart entity, a text style will be applied to it, set in the current style, regardless of the current text style of the drawing. Otherwise, the current text style of the drawing will be applied to the entity</h32>
+    <h33>If there is no text style specified in the style in the current document:</h33>
+    <h34>Apply current text style</h34>
+    <h35>When creating an smart entity, the current text style of the drawing will be applied to it</h35>
+    <h36>Create and apply a text style from the style</h36>
+    <h37>In the current document, a text style will be created and applied to the entity, set in style</h37>
+    <h38>The maximum limit of the selected entities when the property palette stops working. This setting is needed to speed up the work in the AutoCAD environment by disabling the reading of object properties. For example, if you need to select 1000 objects to copy to another drawing, then processing the properties of all these objects is not necessary</h38>
+    <h39>Maximum limit of the selected entities (0 – always work):</h39>
+    <h40>Smart entities settings</h40>
+    <h41>Straight axis</h41>
+    <h42>Change the scale of the line type in proportion to the scale of the entity</h42>
+    <h43>The scale of the line type that is set for the axis will vary in proportion to the basic scale of the axis. For example, if you set the axis scale to 1:1 and scale the line type to 2, then if you set the axis scale to 1:100, the line type scale becomes 200</h43>
+    <h44>Continue values of created axes</h44>
+    <h45>When creating axes, there will be search for already created axes in the drawing and collect their values from the first axis marker, followed by sorting the values in ascending order. For the created axis, the axis marker value will be set next from the last found value</h45>
+    <h46>Show helper lines</h46>
+    <h47>When you select a Level Mark, auxiliary lines from the base point to the level point and from the level point to the level mark will be shown</h47>
+    <h48>Break Line</h48>
+    <h49>General</h49>
+    <h50>Style:</h50>
+    <h51>Geometry</h51>
+    <h52>Style of smart entity</h52>
+    <h53>Basic style for Break Line</h53>
+    <h54>Style name</h54>
+    <h55>Style description</h55>
+    <h56>Create break line</h56>
+    <h57>Creation of an smart entity on the basis of an anonymous block describing the line of the break, by specifying two points</h57>
+    <h58>Curvilinear break</h58>
+    <h59>Cylindrical break</h59>
+    <h60>Create curvilinear break</h60>
+    <h61>Create cylindrical break</h61>
+    <h62>Creating an smart entity based on an anonymous block describing a curvilinear break, by specifying two points</h62>
+    <h63>Creating an smart entity based on an anonymous block describing a cylindrical break, by specifying two points</h63>
+    <h64>Content</h64>
+    <h65>Creating a straight axis</h65>
+    <h66>Creating an smart entity based on an anonymous block describing the straight axis, by specifying two points</h66>
+    <h68>Basic style for Straight Axis</h68>
+    <h69>The selected style will be permanently deleted! Continue?</h69>
+    <h70>Style group</h70>
+    <h71>contains styles with the same name</h71>
+    <h72>Rename the styles so that there are no identical names</h72>
+    <h73>Ground line</h73>
+    <h74>Creating a ground marking line</h74>
+    <h75>Creating an smart entity based on an anonymous block describing the ground line</h75>
+    <h76>Ground line from polyline</h76>
+    <h77>Converting the selected polyline to the ground line</h77>
+    <h78>Basic style for Ground line</h78>
+    <h79>Section</h79>
+    <h80>Creating a section designation</h80>
+    <h81>Creating an smart entity based on an anonymous block describing the section</h81>
+    <h82>Broken section</h82>
+    <h83>Section from polyline</h83>
+    <h84>Creating a broken section designation</h84>
+    <h85>Convert selected polyline to section designation</h85>
+    <h86>Continue values for new sections</h86>
+    <h87>When creating a new section in the current space, the last created section will be searched, the value of which will be taken as the basis for the new section.</h87>
+    <h88>Display auxiliary section line</h88>
+    <h89>When you select a section, an auxiliary line will be displayed that passes through all points of the section</h89>
+    <h90>Dependent text movement</h90>
+    <h93>Restore text position</h93>
+    <h95>MP:Create analog</h95>
+    <h96>Base style for Section</h96>
+    <h97>When you move one of the texts of Section, the second text will automatically shift to the same distance</h97>
+    <h98>How to handle the "Layer" property in the "Create analog" command:</h98>
+    <h99>Search for smart entities</h99>
+    <h100>Specify types of entities to search</h100>
+    <h101>Check all</h101>
+    <h102>Uncheck all</h102>
+    <h103>Style is not in the database</h103>
+    <h104>One or more entities are located on the locked layer, they cannot be updated</h104>
+    <h105>Level mark</h105>
+    <h106>Creating a elevation</h106>
+    <h107>Creating an smart entity based on an anonymous block describing the elevation</h107>
+    <h108>Base style for Level Mark</h108>
+    <h110>Align Level Marks</h110>
+    <h111>Vertical alignment of Level Marks</h111>
+    <h112>Combining the starting points</h112>
+    <h113>This command allows you to align the Level Marks according to various conditions</h113>
+    <h114>Waterproofing</h114>
+    <h115>Creating a waterproofing marking line</h115>
+    <h116>Creating an smart entity based on an anonymous block describing the waterproofing line</h116>
+    <h117>Waterproofing from polyline</h117>
+    <h118>Convert selected polyline to waterproofing line</h118>
+    <h119>For the smart entity being created that contains the displayed number, set the separator for integer and fractional parts:</h119>
+    <h120>Search value</h120>
+    <h121>Search</h121>
+    <h122>Whole word</h122>
+    <h123>Case sensitive</h123>
+    <h124>No results were found for "{0}"</h124>
+    <h125>Add all to the current selection</h125>
+    <h126>Nodal leader</h126>
+    <h127>Creating a nodal leader</h127>
+    <h128>Creating an smart entity based on an anonymous block describing the nodal leader</h128>
+    <h129>Default style for Waterproofing</h129>
+    <h130>Default style for Nodal Leader</h130>
+    <h131>Continue the values of the nodal leaders being created</h131>
+    <h132>When creating nodal leaders, there will be a search for already created nodal leaders in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created nodal leader, the value of the node number next from the last found value will be set</h132>
+    <h133>Secant nodal leader</h133>
+    <h134>Creating a secant nodal leader</h134>
+    <h135>Creating an smart entity based on an anonymous block describing the secant nodal leader</h135>
+    <h136>Continue the values of the secant nodal leaders being created</h136>
+    <h137>When creating secant nodal leaders, there will be a search for already created secant nodal leaders in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created secant nodal leader, the value of the node number next from the last found value will be set</h137>
+    <h138>Default style for Secant Nodal Leader</h138>
+    <h139>Weld joint</h139>
+    <h140>Creating of a seam symbol for welded joints</h140>
+    <h141>Creating an smart entity based on an anonymous block describing the seam of welded joints</h141>
+    <h142>Default style for seam symbol for welded joints</h142>
+    <h143>Weld joint from polyline</h143>
+    <h144>Convert selected polyline into a line for marking the weld seam</h144>
+    <h145>Fragment mark</h145>
+    <h146>Default style for the fragment mark</h146>
+    <h147>Creating a fragment mark</h147>
+    <h148>Creating an smart entity based on an anonymous block describing a fragment mark, by specifying two points</h148>
+    <h149>Continue the values of the fragment being created</h149>
+    <h150>When creating fragments, there will be a search for already created fragments in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created fragment will be set to the value of the fragment number following from the last value found</h150>
+    <h151>Designation View/Section label</h151>
+    <h152>Default style for designation View/Section label</h152>
+    <h153>View label</h153>
+    <h154>Creating designation View label</h154>
+    <h155>Creating an smart entity based on an anonymous block describing the View label</h155>
+    <h156>Continue the values of the View/Section being created</h156>
+    <h157>When creating View/Section label, there will be a search for already created View/Section label in the drawing and collecting their number values, followed by sorting the values in ascending order. For the created View/Section label, the value of the number next from the last found value will be set</h157>
+    <h158>Section label</h158>
+    <h159>Creating Designation Section label</h159>
+    <h160>Creating an smart entity based on an anonymous block describing the Section label</h160>
+    <h161>Letter Line</h161>
+    <h162>Default style for Letter Line</h162>
+    <h163>Drawing a letter line designation</h163>
+    <h164>Creating an smart entity based on an anonymous block describing the Letter Line</h164>
+    <h165>Letter Line from polyline</h165>
+    <h166>Convert the selected polyline to a Letter Line</h166>
+    <h167>View</h167>
+    <h168>Default style for the view designation</h168>
+    <h169>Creating a view designation</h169>
+    <h170>Creating an smart entity based on an anonymous block describing the view designation</h170>
+    <h171>Level mark on plan</h171>
+    <h172>Default style for the view designation for Level mark on the plan</h172>
+    <h173>Creating Level mark on the plan</h173>
+    <h174>Creating an smart entity based on an anonymous block describing the Level mark on the plan</h174>
+    <h175>Chain leader</h175>
+    <h176>Default style for the view designation for chain leader</h176>
+    <h177>Creating chain leader designation</h177>
+    <h178>Creating an smart entity based on an anonymous block describing the Chain leader</h178>
+    <h179>Continue the values of the chain leader being created</h179>
+    <h180>When creating chain leaders, there will be a search for already created leaders in the drawing and collection of their values, and then sorting the values in ascending order. The value of the number or letter next to the last found value will be set for the created leader. The function works only if all created chain leaders have numeric or alphabetic values</h180>
+    <h181>Consider block rotation angle when rotating text</h181>
+    <h182>The text of the straight axis will rotate together with the axis block, when using the ROTATE command</h182>
+    <h183>Crested leader</h183>
+    <h184>Default style for the view designation for crested leader</h184>
+    <h185>Creating crested leader designation</h185>
+    <h186>Creating an smart entity based on an anonymous block describing the crested leader</h186>
+    <h187>Thick arrow</h187>
+    <h188>Default style for the thick arrow</h188>
+    <h189>Creating a thick arrow</h189>
+    <h190>Creating an smart entity based on an anonymous block describing the thick arrow</h190>
+    <h191>Concrete Joint</h191>
+    <h192>Creation of the concreting joint</h192>
+    <h193>Creating an smart entity based on an anonymous block describing the concreting joint</h193>
+    <h194>Concreting joint from polyline</h194>
+    <h195>Converting the selected polyline to a concreting joint marking line</h195>
+    <h196>Default style for marking the concreting joint</h196>
+    <h197>Node designation</h197>
+    <h198>Creation of the node designation</h198>
+    <h199>Creating an smart entity based on an anonymous block describing the node designation</h199>
+    <h200>Default style for node designation</h200>
+    <h201>Continue the values of the node designations being created</h201>
+    <h202>When creating node designations, there will be a search for already created node designations in the drawing and collecting their node number values, followed by sorting the values in ascending order. For the created node designation, the value of the node number next from the last found value will be set</h202>
+    <h203>Revision mark</h203>
+    <h204>Creation of the revision mark</h204>
+    <h205>Creating an smart entity based on an anonymous block describing the revision mark</h205>
+    <h206>Default style for revision mark</h206>
+    <h207>Crested leader</h207>
+    <h208>Default style for crested leader</h208>
+    <h209>Creation of the crested leader</h209>
+    <h210>Creating an smart entity based on an anonymous block describing the crested leader</h210>
+    <h211>Pile mark</h211>
+    <h212>Default style for pile mark</h212>
+    <h213>Creation of the pile mark</h213>
+    <h214>Creating an smart entity based on an anonymous block describing the pile mark</h214>
+    <h215>Dip mark</h215>
+    <h216>Creation of the dip mark</h216>
+    <h217>Creating an smart entity based on an anonymous block describing the dip mark</h217>
+    <h218>Default style for dip mark</h218>
+    <h219>Replace all</h219>
+    <h220>Replace selected</h220>
+    <h221>Object type</h221>
+    <h224>Property without name</h224>
+    <h225>Found smart entities:</h225>
+    <h226>Found properties:</h226>
+    <h227>Searching for replaceable properties only</h227>
+    <h228>Can be changed</h228>
+    <h229>Value to replace</h229>
+    <h230>Insulation</h230>
+    <h231>Creation of a line describing different types of insulation</h231>
+    <h232>Creating an smart entity based on an anonymous block describing different types of insulation</h232>
+    <h233>Insulation from polyline</h233>
+    <h234>Converting the selected polyline to a line of different types of insulation designations</h234>
+    <h235>Display additional grips on linear smart objects</h235>
+    <h236>Default style for insulation</h236>
+    <h237>Display additional function grips when selecting linear smart objects</h237>
+    <h238>Weld designation</h238>
+    <h239>Creation of the weld designation</h239>
+    <h240>Creating an smart entity based on an anonymous block describing the weld designation</h240>
+    <h241>Default style for weld designation</h241>
+    <h242>Side</h242>
+    <h243>Weld Leg</h243>
+    <h244>Creation of the weld leg</h244>
+    <h245>Creating an smart entity based on an anonymous block describing the weld leg</h245>
+    <h246>Creation of the weld leg by three points</h246>
+    <h247>Creating an smart entity based on an anonymous block describing the weld leg by three points</h247>
+    <h248>Default style for weld leg</h248>
+    <h249>Hole filling</h249>
+    <h250>Creation of the hole filling</h250>
+    <h251>Creating an smart entity based on an anonymous block describing the hole filling</h251>
+    <h252>Default style for hole filling</h252>
+    <h253>Weld Leg by three point</h253>
+    <h254>There are no smart entities in the document</h254>
+    <h255>Polar Axis</h255>
+    <h256>Create Polar Axis</h256>
+    <h257>Create an intelligent object based on an anonymous block defining the polar axis symbol</h257>
+    <h258>Default style for the polar axis</h258>
+    <h259>Initial value</h259>
+    <h260>Multiline leader</h260>
+    <h261>Create multiline leader</h261>
+    <h262>Create an intelligent object based on an anonymous block describing the multiline leader</h262>
+    <h263>Edit saved values</h263>
+    <h264>Edit saved multiline leader values</h264>
+    <h265>Default style for multiline leader</h265>
+    <h266>New line</h266>
+    <h267>Maximum number of items:</h267>
+    <h268>Values in current object</h268>
+    <h269>Saved values</h269>
+    <h270>Arrow line</h270>
+    <h271>Create arrow line</h271>
+    <h272>Create an intelligent object based on an anonymous block describing the arrow line</h272>
+    <h273>Arrow line from polyline</h273>
+    <h274>Convert selected polyline to arrow line</h274>
+    <h275>Base style for arrow line</h275>
+    <h276>Common Properties</h276>
+    <h277>New Group</h277>
+    <h278>Add Group</h278>
+    <h279>Power Line</h279>
+    <h280>Creating a Power Line</h280>
+    <h281>Creating an Intelligent Object Based on an Anonymous Block Describing a Power Line</h281>
+    <h282>Power Line from Polyline</h282>
+    <h283>Converting the Selected Polyline into a Power Line</h283>
+    <h284>Base Style for Power Line</h284>
+    <h285>Units of Measurement</h285>
+    <h286>Delete Group</h286>
+    <h287>Add Row</h287>
+    <h288>Delete Row</h288>
+    <so0>Refresh graphics</so0>
+    <sot0>All found smart entities will have graphics regeneration</sot0>
+    <so1>Select</so1>
+    <sot1>All smart entities of the specified types in the current space will be selected</sot1>
+    <so2>Remove data</so2>
+    <sot2>All smart entities of the specified types in the current space will delete the extended data, which will turn the entities into ordinary blocks</sot2>
+    <so3>Explode</so3>
+    <sot3>All smart entities of the specified types in the current space will be explode</sot3>
+    <so4>Delete</so4>
+    <sot4>All smart entities of the specified types in the current space will be delete</sot4>
+    <mtleadavailfull>Use of saved values is available in the full version of the plugin!</mtleadavailfull>
+    <la1>Copy</la1>
+    <la2>Do not copy</la2>
+    <la3>To ask</la3>
+    <gp1>Stretch</gp1>
+    <gp2>Move</gp2>
+    <gp3>Remove vertex</gp3>
+    <gp4>Add vertex</gp4>
+    <gp5>Add leader</gp5>
+    <gp6>Remove leader</gp6>
+    <gp7>Leader end type</gp7>
+    <gp8>Filling</gp8>
+    <blt1>Linear</blt1>
+    <blt2>Curvilinear</blt2>
+    <blt3>Cylindrical</blt3>
+    <amt1>From two sides</amt1>
+    <amt2>From above</amt2>
+    <amt3>From below</amt3>
+    <amt4>First</amt4>
+    <amt5>Second</amt5>
+    <vlt1>Section</vlt1>
+    <vlt2>View</vlt2>
+    <llt1>Standard</llt1>
+    <llt2>Composite</llt2>
+    <type1>Type 1</type1>
+    <type2>Type 2</type2>
+    <glfst1>Distance between strokes</glfst1>
+    <glfst2>Half the distance between groups of strokes</glfst2>
+    <glfst3>The distance between groups of strokes</glfst3>
+    <wpfst1>Half distance between strokes</wpfst1>
+    <wpfst2>No offset</wpfst2>
+    <separator1>From ModPlus settings</separator1>
+    <separator2>From style</separator2>
+    <separator3>Dot</separator3>
+    <separator4>Comma</separator4>
+    <tha1>Left</tha1>
+    <tha2>Center</tha2>
+    <tha3>Right</tha3>
+    <tha4>Top right</tha4>
+    <tha5>Bottom right</tha5>
+    <tha6>Bottom left</tha6>
+    <tha7>Top left</tha7>
+    <tha8>Free</tha8>
+    <ft1>Round</ft1>
+    <ft2>Rectangular</ft2>
+    <ft3>Line</ft3>
+    <ft4>No frame</ft4>
+    <let0>None</let0>
+    <let1>Half Arrow</let1>
+    <let2>Point</let2>
+    <let3>Double oblique stroke</let3>
+    <let4>Angle</let4>
+    <let5>Arrow</let5>
+    <let6>Open Arrow</let6>
+    <let7>Closed Arrow</let7>
+    <let8>Oblique stroke</let8>
+    <let9>Section</let9>
+    <wjt1>Butt factory solid on the visible side</wjt1>
+    <wjt2>Butt factory solid on the invisible side</wjt2>
+    <wjt3>Butt mounting solid from the visible side</wjt3>
+    <wjt4>Butt mounting solid from the invisible side</wjt4>
+    <wjt5>Butt factory intermittent on the visible side</wjt5>
+    <wjt6>Butt factory intermittent on the invisible side</wjt6>
+    <wjt7>Butt mounting intermittent from the visible side</wjt7>
+    <wjt8>Butt mounting intermittent from the invisible side</wjt8>
+    <wjt9>Corner factory solid on the visible side</wjt9>
+    <wjt10>Corner factory solid on the invisible side</wjt10>
+    <wjt11>Corner mounting solid from the visible side</wjt11>
+    <wjt12>Corner mounting solid from the invisible side</wjt12>
+    <wjt13>Corner factory intermittent on the visible side</wjt13>
+    <wjt14>Corner factory intermittent on the invisible side</wjt14>
+    <wjt15>Corner mounting intermittent from the visible side</wjt15>
+    <wjt16>Corner mounting intermittent on the invisible side</wjt16>
+    <pil0>Type 0</pil0>
+    <pil1>Type 1</pil1>
+    <pil2>Type 2</pil2>
+    <pil3>Type 3</pil3>
+    <pil4>Type 4</pil4>
+    <pil5>Type 5</pil5>
+    <pil6>Type 6</pil6>
+    <pil7>Type 7</pil7>
+    <pil8>Type 8</pil8>
+    <pil9>Type 9</pil9>
+    <pil10>Type 10</pil10>
+    <pit0>Round</pit0>
+    <pit1>Rectangle</pit1>
+    <dmt0>Ppm</dmt0>
+    <dmt1>Degrees</dmt1>
+    <dmt2>Ratio</dmt2>
+    <dmt3>Number</dmt3>
+    <dmt4>Percentages</dmt4>
+    <dot>Dot</dot>
+    <comma>Comma</comma>
+    <len>Length</len>
+    <p1>BreakLine type</p1>
+    <d1>BreakLine type: linear, curved or cylindrical</d1>
+    <p2>Projections per object</p2>
+    <d2>For linear break value of the projection is specified in mm For curved break the value of the projection is specified in % of the length between the main points. For cylindrical break value of the projection is not being used</d2>
+    <p3>Break width</p3>
+    <d3>Break width in mm. Only for linear type BreakLine</d3>
+    <p4>Break height</p4>
+    <d4>Break height in mm. Only for linear type BreakLine</d4>
+    <p5>Scale</p5>
+    <d5>BreakLine scale</d5>
+    <d5-1>Axis scale</d5-1>
+    <p6>Linetype scale</p6>
+    <d6>The scale of the linetype specified in the properties of block</d6>
+    <p7>Layer</p7>
+    <d7>Entity layer</d7>
+    <p8>Markers position</p8>
+    <d8>Position of markers: from two sides, from above or from below</d8>
+    <p9>Fracture</p9>
+    <d9>Fracture height of axis</d9>
+    <p10>Markers diameter</p10>
+    <d10>Diameter of axis markers</d10>
+    <p11>Markers count</p11>
+    <d11>Number of axis markers</d11>
+    <p12>First marker type</p12>
+    <d12>Type of axis first marker</d12>
+    <p13>Second marker type</p13>
+    <d13>Type of axis second marker</d13>
+    <p14>Third marker type</p14>
+    <d14>Type of axis third marker</d14>
+    <p15>Bottom fracture offset</p15>
+    <d15>Offset of bottom axis fracture</d15>
+    <p16>Top fracture offset</p16>
+    <d16>Offset of top axis fracture</d16>
+    <p16-2>Fracture offset</p16-2>
+    <d16-2>Offset of top or bottom axis fracture</d16-2>
+    <p17>Text style</p17>
+    <d17>Text style for axis text elements</d17>
+    <p18>Text height</p18>
+    <d18>Text height of axis text elements</d18>
+    <p19>Axis line type</p19>
+    <p20>First value prefix</p20>
+    <p21>First value suffix:</p21>
+    <p22>First value</p22>
+    <p23>Second value prefix</p23>
+    <p24>Second value suffix</p24>
+    <p25>Second value</p25>
+    <p26>Third value prefix</p26>
+    <p27>Third value suffix</p27>
+    <p28>Third value</p28>
+    <p29>Arrows size</p29>
+    <p30>Bottom orient marker value</p30>
+    <p31>Top orient marker value</p31>
+    <p32>Bottom orient marker</p32>
+    <d32>Visibility of the bottom orient marker</d32>
+    <p33>Top orient marker</p33>
+    <d33>Visibility of the top orient marker</d33>
+    <p34>Orient marker type</p34>
+    <d34>Type of axis orient marker</d34>
+    <p35>Line type</p35>
+    <d35>Line type of main polyline</d35>
+    <d35-1>Line type standard or compound</d35-1>
+    <p36>First stroke indent</p36>
+    <d36>Indent the first stroke in each segment of the ground line</d36>
+    <d36-1>Indent the first stroke in each segment of the waterproofing line</d36-1>
+    <p37>Stroke length</p37>
+    <p38>Distance between strokes</p38>
+    <p39>Tilt angle of the stroke</p39>
+    <p40>Indent group of strokes</p40>
+    <p41>Text style</p41>
+    <d41>Text style for text elements</d41>
+    <p42>Middle stroke length</p42>
+    <d42>The length of the middle stroke to the point of fracture</d42>
+    <p43>Stroke thickness</p43>
+    <d43>Thickness of all section strokes</d43>
+    <p44>Stroke length</p44>
+    <d44>The length of the main strokes of the section</d44>
+    <p45>Shelf indent</p45>
+    <d45>Shelf indent along the stroke in percent</d45>
+    <p46>Shelf length</p46>
+    <p47>Arrow length</p47>
+    <p48>Arrow thickness</p48>
+    <p49>Text height</p49>
+    <p50>Small text height</p50>
+    <p51>Designation</p51>
+    <p52>Designation prefix</p52>
+    <p53>Sheet number</p53>
+    <p54>Sheet number position</p54>
+    <d54>Sheet number position: on both sides, bottom, top</d54>
+    <p55>Object line</p55>
+    <d55>Whether to draw a line from the Level Mark to the measurement object</d55>
+    <p56>Object line offset</p56>
+    <d56>Offset of the object line from the measurement object</d56>
+    <p57>Bottom shelf length</p57>
+    <d57>The length of the bottom shelf from the edge of the shelf from the side of the measurement object to the arrow of the Level mark</d57>
+    <p58>Bottom shelf ledge</p58>
+    <d58>Ledge of the bottom shelf from the Level Mark arrow to the edge of the shelf on the opposite side of the measurement object</d58>
+    <p59>Arrow height</p59>
+    <p60>Arrow thickness</p60>
+    <p61>Text indent</p61>
+    <p62>Vertical text offset</p62>
+    <p63>Shelf ledge</p63>
+    <d63>Shelf ledge relative to the longest text</d63>
+    <d63-1>Shelf overhang relative to the text</d63-1>
+    <p63-1>Shelf height</p63-1>
+    <p64>Show plus</p64>
+    <d64>Show plus if the measured value is greater than zero. This property is ignored if the text is redefined</d64>
+    <p65>Measured value</p65>
+    <p66>Redefining the text</p66>
+    <p67>Accuracy</p67>
+    <d67>Accuracy of the measured value. Sets the number of decimal places</d67>
+    <p68>Note</p68>
+    <p69>Scale of measurement</p69>
+    <d69>Sets a value in the range from 0.000001 to 1000000 by which the distance measured in the drawing is multiplied</d69>
+    <p70>Line thickness</p70>
+    <p71>Text rotation angle</p71>
+    <p72>Number separator</p72>
+    <d72>Separator for integer and fractional parts of a number</d72>
+    <p73>Text alignment</p73>
+    <d73>Horizontal text alignment</d73>
+    <p74>Note alignment</p74>
+    <p75>Show asterisk</p75>
+    <d75>Adding an asterisk at the end of the main value</d75>
+    <p76>Frame height</p76>
+    <p77>Frame width</p77>
+    <p78>Shelf position</p78>
+    <p79>Node number</p79>
+    <p80>Sheet number</p80>
+    <p81>Node address</p81>
+    <p82>Frame type</p82>
+    <p83>Corner radius</p83>
+    <d83>Corner radius of the rectangular frame</d83>
+    <d83-1>Corner radius of the fragment mark</d83-1>
+    <p84>Text is always horizontal</p84>
+    <d84>Leader with text will maintain a horizontal position after rotating the object with the "Rotate" command</d84>
+    <p85>Hide background</p85>
+    <d85>Adding wipeout along the text outline with a specified offset. The display of frames for wipeouts is controlled by the WIPEOUTFRAME and FRAME system variables.</d85>
+    <d85-1>Adding wipeout along the text outline with a specified offset. The display of frames for wipeouts is controlled by the WIPEOUTFRAME and FRAME system variables. If rectangular frame is set, then the wipeout is created along the frame without taking into account the offset</d85-1>
+    <p86>Wipeout offset</p86>
+    <d86>Wipeout offset is considered for frame types "Line" and "No frame"</d86>
+    <d87>Presence of arrows: on both sides, a first or second</d87>
+    <p87>Secant element thickness</p87>
+    <p88>Secant element length</p88>
+    <p89>Weld joint type</p89>
+    <p90>Tick mark step</p90>
+    <p91>Tick mark half-height</p91>
+    <p92>Large cross step</p92>
+    <p93>Small cross step</p93>
+    <p94>Large cross half-height</p94>
+    <p95>Small cross height</p95>
+    <p96>Series length</p96>
+    <p97>Space length</p97>
+    <p98>Interval between series</p98>
+    <p99>Small tick mark height</p99>
+    <p100>Corner radius</p100>
+    <p101>Main text</p101>
+    <p102>Small text</p102>
+    <p103>View type</p103>
+    <d103>View type: Section or View</d103>
+    <p104>Leader</p104>
+    <d104>Leader on/off</d104>
+    <p105>Line type generation</p105>
+    <d105>Line type generation along the whole polyline</d105>
+    <p106>Distance between text</p106>
+    <p107>Line Formula</p107>
+    <d107>The line formula is given by integers separated by hyphens. Each odd number (1, 3, 5, ...) specifies the stroke length. Each even number (2, 4, 6, ...) specifies a space length</d107>
+    <p108>First text indent</p108>
+    <p109>View designation</p109>
+    <p110>Level mark</p110>
+    <p111>Prefix</p111>
+    <p112>Suffix</p112>
+    <p113>Value</p113>
+    <p114>Line thickness</p114>
+    <p115>Presence of arrows</p115>
+    <p116>Break width</p116>
+    <p117>Line length at the left edge</p117>
+    <d117>Line length at the left edge of the joint line segment</d117>
+    <p118>Lines around the edges</p118>
+    <d118>Visibility at lines on the edges of joint line segments</d118>
+    <p119>Break height</p119>
+    <p120>Circle diameter</p120>
+    <p121>Diameter of the outer circle</p121>
+    <p122>Vertical offset of small text</p122>
+    <d122>Vertical offset of small text from the line</d122>
+    <p123>Outer circle</p123>
+    <p124>Number text indent</p124>
+    <p125>Note text indent</p125>
+    <p126>Note shelf position</p126>
+    <p127>Cloudy frame style</p127>
+    <p128>Cloud arc length</p128>
+    <p129>Number height</p129>
+    <p130>Note height</p130>
+    <p131>Number</p131>
+    <p132>Top text</p132>
+    <p133>Bottom text</p133>
+    <p134>Top text heigth</p134>
+    <p135>Bottom text heigth</p135>
+    <p136>Enter text</p136>
+    <p137>Section width</p137>
+    <p138>Section height</p138>
+    <p139>Section diameter</p139>
+    <p140>Отступ осевых линий</p140>
+    <p141>Number position</p141>
+    <p142>Number visibility</p142>
+    <p143>Axis visibility</p143>
+    <p144>Leader visibility</p144>
+    <p145>Number indent</p145>
+    <p146>Vertical offset of number</p146>
+    <p147>Thickness of main line</p147>
+    <p148>Type of center line</p148>
+    <p149>Scale of the centerline</p149>
+    <p150>Contour only</p150>
+    <p151>Cross section type</p151>
+    <p152>Designation type</p152>
+    <p153>Mark type</p153>
+    <p154>Arrow size</p154>
+    <p155>As direction</p155>
+    <d155>Display slope as direction</d155>
+    <p156>Taper symbol</p156>
+    <d156>Display the taper symbol instead of the slope symbol</d156>
+    <p157>Starting from the left point</p157>
+    <d157>Take the leftmost of the two points as the first point when calculating the slope</d157>
+    <p158>Text positioning side</p158>
+    <d158>The side on which the horizontal text will be placed</d158>
+    <p159>Insulation type</p159>
+    <p160>Circle radius</p160>
+    <p161>Dot radius</p161>
+    <p162>Радіус заокруглення</p162>
+    <p163>Width of insulation type</p163>
+    <p164>Height of the insulation type</p164>
+    <p165>Outer boundary drawing</p165>
+    <p166>Weld number</p166>
+    <p167>Total number of welds</p167>
+    <p168>Inspection category</p168>
+    <p169>GOST</p169>
+    <p170>Designation</p170>
+    <p171>Welding method</p171>
+    <p172>Cathetal size</p172>
+    <p173>Seam size</p173>
+    <p174>Seam pitch size</p174>
+    <p175>Side</p175>
+    <p176>Closed weld</p176>
+    <p177>Assembly joint</p177>
+    <p178>Weld subtype</p178>
+    <p179>Size sign</p179>
+    <p180>Front auxiliary mark</p180>
+    <p181>Reverse auxiliary mark</p181>
+    <p182>Front surface mark</p182>
+    <p183>Revolving surface mark</p183>
+    <p184>Text of the obverse surface mark</p184>
+    <p185>Text of the reverse surface mark</p185>
+    <p186>Leg length</p186>
+    <p187>Convexity/concavity</p187>
+    <d187>Convexity (0 to 1), or concavity (-1 to 1)</d187>
+    <p191>Display axes</p191>
+    <p192>External length of axes</p192>
+    <p193>Display threading</p193>
+    <p194>Thread distance</p194>
+    <p195>Internal thread</p195>
+    <p196>Rotate fill</p196>
+    <p197>Hole type</p197>
+    <p198>Display symbols</p198>
+    <p199>Size of symbols</p199>
+    <d199>Conditional size value from 0.1 to 1.</d199>
+    <p200>Fill symbols</p200>
+    <p201>Truncate instead of rounding</p201>
+    <p202>Suppression of tail zeros</p202>
+    <p203>Upper break length</p203>
+    <p204>Lower break length</p204>
+    <p205>Upper break angle</p205>
+    <d205>Upper break angle (from -90 to 90)</d205>
+    <p206>Lower break angle</p206>
+    <d206>Lower break angle (from -90 to 90)</d206>
+    <p207>Display break line to the base point</p207>
+    <d207>Align the break line with the center of the first marker or to the grip</d207>
+    <p208>Align additional markers with the base vector</p208>
+    <d208>Display additional markers along the break vector or along the original vector</d208>
+    <p209>Arrow start point</p209>
+    <p210>Offset to next shelf</p210>
+    <p211>Side of side line</p211>
+    <p212>Line length</p212>
+    <p213>Curve arrows on arc segments</p213>
+    <p214>Display trimmed arrows</p214>
+    <p215>Arrow type</p215>
+    <p216>Fill gaps with additional strokes</p216>
+    <p217>Color of main strokes</p217>
+    <p218>Color of additional strokes</p218>
+    <p219>Offset</p219>
+    <p220>Hide Background</p220>
+    <p221>Mask Height</p221>
+    <p222>Vertical Spacing Between Lines</p222>
+    <p223>Spacing Between Columns</p223>
+    <p224>Horizontal Alignment of Additional Column</p224>
+    <p225>Side of Additional Column</p225>
+    <p226>Mark Size</p226>
+    <p227>Display Arrows from Mark Center</p227>
+    <p228>Display Main Polyline</p228>
+    <p229>Mark Type</p229>
+    <jigM1>Arc</jigM1>
+    <jigM2>Line</jigM2>
+    <grpM1>Stretch Vertex</grpM1>
+    <grpM2>Add Vertex</grpM2>
+    <grpM3>Remove Vertex</grpM3>
+    <grpM4>Change Direction</grpM4>
+    <grpM5>Stretch</grpM5>
+    <grpM6>Add Vertex</grpM6>
+    <grpM7>Convert to Arc</grpM7>
+    <grpM8>Convert to Line</grpM8>
+    <ilt1>Type 1</ilt1>
+    <ilt2>Type 2</ilt2>
+    <ilt3>Type 3</ilt3>
+    <ilt4>Type 4</ilt4>
+    <ilt5>Type 5</ilt5>
+    <ilt6>Type 6</ilt6>
+    <ilt7>Type 7</ilt7>
+    <ilt8>Type 8</ilt8>
+    <none>None</none>
+    <djauxs1>Remove seam reinforcement</djauxs1>
+    <djauxs2>Seam on an unclosed line</djauxs2>
+    <djauxs3>Smooth transition</djauxs3>
+    <djsrs1>Surface is not regulated</djsrs1>
+    <djsrs2>With removal of surface layer</djsrs2>
+    <djsrs3>Without removal of the surface layer</djsrs3>
+    <djwstt1>Chain weld seam</djwstt1>
+    <djwstt2>Staggered weld seam</djwstt2>
+    <djwsub1>Solder joint</djwsub1>
+    <djwsub2>Stapling</djwsub2>
+    <djwsub3>Staple joint</djwsub3>
+    <djwsub4>Corner joint</djwsub4>
+    <djwsub5>Glue joint</djwsub5>
+    <djwsd0>Inner</djwsd0>
+    <djwsd1>Outer</djwsd1>
+    <hfqt1>quarter 1</hfqt1>
+    <hfqt2>quarter 2</hfqt2>
+    <hfqt3>quarter 3</hfqt3>
+    <hfqt4>quarter 4</hfqt4>
+    <mtArrowPos1>Automatic</mtArrowPos1>
+    <mtArrowPos2>Bottom left</mtArrowPos2>
+    <mtArrowPos3>Bottom right</mtArrowPos3>
+    <mtArrowPos4>Top right</mtArrowPos4>
+    <mtArrowPos5>Top left</mtArrowPos5>
+    <mtLedSide1>Automatic</mtLedSide1>
+    <mtLedSide2>Left</mtLedSide2>
+    <mtLedSide3>Right</mtLedSide3>
+    <pwrLineArrType1>Low Voltage Power Line</pwrLineArrType1>
+    <pwrLineArrType2>High Voltage Power Line</pwrLineArrType2>
+    <arrLineType1>Simple arrow</arrLineType1>
+    <arrLineType2>Thick arrow</arrLineType2>
+    <arrLineType3>Simple Arrow with Tick</arrLineType3>
+    <pwrLineMrkType1>No Mark</pwrLineMrkType1>
+    <pwrLineMrkType2>Round Mark</pwrLineMrkType2>
+    <pwrLineMrkType3>Filled Round Mark</pwrLineMrkType3>
+    <pwrLineMrkType4>Rectangular Mark</pwrLineMrkType4>
+    <pwrLineMrkType5>Filled Rectangular Mark</pwrLineMrkType5>
+  </mpESKD>
+</ModPlus>

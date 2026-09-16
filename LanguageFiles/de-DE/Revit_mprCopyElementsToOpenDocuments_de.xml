@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCopyElementsToOpenDocuments
+    LocalName="Kopieren von Elementen"
+    Description="Gruppenkopieren von Elementen in geöffnete Dokumente"
+    FullDescription="Gruppenkopieren von ausgewählten Elementen aus dem aktuellen Dokument in bestimmte geöffnete Dokumente">
+    <h1>Ausgewählte Elemente:</h1>
+    <h2>Aus dem Projekt:</h2>
+    <h3>In das Projekt:</h3>
+    <h4>Optionen zum Kopieren</h4>
+    <!--todo remove after 2.4.4.0-->
+    <h5>Arbeitsprotokoll</h5>
+    <h6>Kopiervorgang durchführen</h6>
+    <h7>In Notepad öffnen</h7>
+    <h8>Alle Positionen auf die zweite Schachtelungsebene erweitern</h8>
+    <h9>Alle zusammenklappen</h9>
+    <h10>Alle auswählen</h10>
+    <h11>Alle abwählen</h11>
+    <h12>GUID der gemeinsam genutzte Parameter anzeigen</h12>
+    <h13>Sonstige Einstellungen</h13>
+    <h14>Typen</h14>
+    <h15>Sonstige Elemente</h15>
+    <h16>Warnungen unterdrücken</h16>
+    <h17>Verknüpfte Dateien anzeigen</h17>
+    <h18>Verhalten bei doppelten Namen</h18>
+    <h19>Verhalten bei doppelten Namen für Typen</h19>
+    <h20>Datensatz</h20>
+    <h21>Verhalten bei doppelten Namen für Filter</h21>
+    <h22>Verhalten bei doppelten Namen für Ansichten</h22>
+    <h23>Legt das Verhalten bei doppelten Namen für zugehörige Elemente fest. Wenn Sie z.B. ein Wandexemplar kopieren, während das Zieldokument bereits über einen Wandtyp mit demselben Namen verfügt, bietet Revit an, den Typ des Zieldokuments zu verwenden oder eine Kopie des Typs mit Ergänzung des Namens um ein digitales Suffix zu erstellen.</h23>
+    <h24>Diese Option beeinflusst keine vom Plugin kopierten Elemente, sie muss jedoch in der von der Revit-API verwendeten Kopiermethode festgelegt werden. Die meisten Elemente werden mit einem ergänzenden digitalen Suffix kopiert, unabhängig von der ausgewählten Option.</h24>
+    <h25>Wenn Sie die Option "Ersetzen" gewählt haben, wird bei doppelten Typennamen folgende Strategie durch Plugin implementiert: der Typ mit dem gleichen Namen, wie bei dem zu kopierenden Typ, wird im Zieldokument umbenannt. Dann wird der neue Typ kopiert. Der neue Typ wird allen Elementenexemplaren zugewiesen, die mit dem alten Typ verknüpft waren. Der alte Typ wird gelöscht.</h25>
+    <h26>Wenn Sie die Option "Ersetzen" gewählt haben, wird bei doppelten Filternamen folgende Strategie durch Plugin implementiert: im Zieldokument werden alle Ansichten und Ansichtsvorlagen gefunden, auf die der Filter mit dem gleichen Namen wie bei dem zu kopierenden (alten) Filter angewandt wurde. Dann wird der neue Filter mit einem ergänzenden digitalen Suffix im Namen kopiert. Die Filter werden auf alle zuvor gefundenen Ansichten und Ansichtsvorlagen erneut angewandt, wobei der alte Filter durch den neuen ersetzt wird, jedoch mit Beibehaltung der vorhandenen Sichtbarkeitseinstellungen. Der alte Filter wird gelöscht. Der neue Filter erhält den Namen des alten Filters.</h26>
+    <h27>Wenn Sie die Option "Ersetzen" gewählt haben, wird bei doppelten Ansichtsnamen folgende Strategie durch Plugin implementiert: im Zieldokument werden alle Ansichtsfenster gefunden, die die alte Ansicht zeigen, bzw. alle Ansichten, die die alte Ansicht als eine Vorlage verwenden (wenn der zu kopierende Ansicht eine Vorlage ist). Dann wird die neue Ansicht mit einem ergänzenden digitalen Suffix im Namen kopiert. Die neue Ansicht wird als die angezeigte Ansicht für alle zuvor gefundenen Ansichtsfenster bzw. als Vorlage für alle zuvor gefundenen Ansichten festgelegt. Die alte Ansicht wird gelöscht. Die neue Ansicht erhält den Namen der alten Ansicht.</h27>
+    <h28>Als neuen Datensatz speichern</h28>
+    <h29>Aktuellen Datensatz behalten</h29>
+    <h30>Datensatz löschen</h30>
+    <h31>Geben Sie einen Namen für den neuen Datensatz ein</h31>
+    <h32>Die Änderung der Ansichtsfenster ist nur ab Revit 2023 möglich!</h32>
+    <filters>Filter</filters>
+    <link>Verknüpfung:</link>
+    <b1>Die Namen des Zieldokuments verwenden</b1>
+    <b2>Einfügen abbrechen</b2>
+    <b3>Standardmäßiges Verhalten</b3>
+    <b4>Ersetzen</b4>
+    <b5>Fragen</b5>
+    <elementGetError>Beim Abrufen eines Elements ist ein Fehler aufgetreten. Id: "{0}". Fehler: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
+    <m1>{0} - FEHLER! Beim Abrufen eines Elements ist ein Fehler aufgetreten. Id: "{1}". Fehler: "{2}".</m1>
+    <startCollectingElements>Beginn des Vorgangs zu dem Zusammenbau von Modellelementen ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m2>{0} - Beginn des Vorgangs zu dem Zusammenbau von Modellelementen ({1}).</m2>
+    <completionCollectingElements>Ende des Vorgangs zu dem Zusammenbau von Modellelementen ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m3>{0} - Ende des Vorgangs zu dem Zusammenbau von Modellelementen ({1}).</m3>
+    <collectingElementsCriticalError>Kritischer Fehler bei dem Zusammenbau von Modellelementen ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
+    <m4>{0} - FEHLER! Kritischer Fehler bei dem Zusammenbau von Modellelementen ({1}).</m4>
+    <startCopyingElements>Beginn des Kopierens von Elementen aus Dokument "{0}" in Dokumente "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m5>{0} - Beginn des Kopierens von Elementen aus Dokument "{1}" in Dokumente "{2}".</m5>
+    <completionCopyingElements>Ende des Kopierens von Elementen aus Dokument "{0}" in Dokumente "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m6>{0} - Ende des Kopierens von Elementen aus Dokument "{1}" in Dokumente "{2}".</m6>
+    <elementCopyError>Beim Kopieren des Elements "{0} (id: {1})" der Kategorie "{2}" ist ein Fehler aufgetreten: "{3}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
+    <m7>{0} - FEHLER! Beim Kopieren des Elements "{1} (id: {2})" der Kategorie "{3}" ist ein Fehler aufgetreten: "{4}".</m7>
+    <worksharingDisabledWarning>In diesem Dokument ({0}) ist die gemeinsame Nutzung deaktiviert. Es gibt kein Kopieren der Bearbeitungsbereiche.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
+    <m9>{0} - WARNUNG! In diesem Dokument ({1}) ist die gemeinsame Nutzung deaktiviert. Es gibt kein Kopieren der Bearbeitungsbereiche.</m9>
+    <m10>Bearbeitungsbereiche</m10>
+    <m11> (Typ)</m11>
+    <m12>Browser</m12>
+    <m13>Bemaßungen</m13>
+    <m14>Füllmuster</m14>
+    <m15>Filter für Parameter</m15>
+    <m16>Linientypen</m16>
+    <m17>Ladbare Familien</m17>
+    <m18>Phasenfilter</m18>
+    <m19>Druckereinrichtung</m19>
+    <m20>Änderungen</m20>
+    <m21>Ändern der Einstellungen</m21>
+    <m22>Textstile</m22>
+    <m23>Familientyp der Ansichten</m23>
+    <m24>Ansichten</m24>
+    <m25>Parameter</m25>
+    <m26>Gemeinsam genutzte Parameter</m26>
+    <m27>Kopieren von Elementen</m27>
+    <m28>Alle Gruppen</m28>
+    <m29>Ansichten (Vorlagen)</m29>
+    <m30>Das Kopieren ist abgeschlossen</m30>
+    <!--todo remove after 2.4.4.0-->
+    <m32>Abbrechen</m32>
+    <m33>Suchen</m33>
+    <m34>Raumpläne</m34>
+    <m35>Deckenpläne</m35>
+    <m36>Bauteillisten der Stützen</m36>
+    <m37>Kostenbericht</m37>
+    <m38>Details</m38>
+    <m39>Zeichenansichten</m39>
+    <m40>Zeichnungspläne</m40>
+    <m41>Ansichten</m41>
+    <m42>Ingenieurtechnische Pläne</m42>
+    <m43>Grundrissansichten</m43>
+    <m44>Innere</m44>
+    <m45>Legenden</m45>
+    <m46>Ladebericht</m46>
+    <m47>Bauteillisten der Panels</m47>
+    <m48>Berichte über Druckverluste</m48>
+    <m49>Browser</m49>
+    <m50>Rendering</m50>
+    <m51>Berichte</m51>
+    <m52>Bauteillisten</m52>
+    <m53>Schnittansichten</m53>
+    <m54>System-Browser</m54>
+    <m55>Systemanalyse-Bericht</m55>
+    <m56>3D</m56>
+    <m57>Typ</m57>
+    <m58>Unbestimmt</m58>
+    <m59>Kategorien</m59>
+    <startCollectingTypes>Beginn des Sammelvorganges der Typeneigenschaften des Modells ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m60>{0} - Beginn des Sammelvorganges der Typeneigenschaften des Modells ({1}).</m60>
+    <completionCollectingTypes>Ende des Sammelvorganges der Typeneigenschaften des Modells ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m61>{0} - Ende des Sammelvorganges der Typeneigenschaften des Modells ({1}).</m61>
+    <m62>es gab eine kritische Revit-Warnung, die eine Bestätigung durch den Benutzer erforderte. Deaktivieren Sie die Warnunterdrückung und kopieren Sie erneut</m62>
+    <m63>Gemeinsam genutzte Parameter</m63>
+    <m64>Keine Kategorie</m64>
+    <elementCopySkipped>das Kopieren des Elements "{0} (id {1})" der Kategorie "{2}" fehlt.</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
+    <m65>{0} - das Kopieren des Elements "{1} (id {2})" der Kategorie "{3}" fehlt.</m65>
+    <m66>Das Zieldokument enthält bereits die Familie "{0}" mit dem Typ "{1}".{2}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m66>
+    <m67>Globale Parameter</m67>
+    <m68>Linienmuster</m68>
+    <m69>Farbschemata</m69>
+    <m70>Projektparameter</m70>
+    <m71>Das Zieldokument enthält bereits den Filter "{0}".{1}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m71>
+    <m72>Das Zieldokument enthält bereits die Ansicht "{0}".{1}Wollen Sie Kopiervorgang mit Ersetzen durchführen?</m72>
+    <copyConduitStandardWithReplace>Im Zieldokument ist der Kanalstandard "{0}" bereits vorhanden.{1}Kopie mit Ersetzung ausführen?</copyConduitStandardWithReplace>
+    <!--todo remove after 2.4.4.0-->
+    <m73>Elemente kopiert:</m73>
+    <!--todo remove after 2.4.4.0-->
+    <m74>Elemente übersprungen:</m74>
+    <!--todo remove after 2.4.4.0-->
+    <m75>Anzahl Fehler:</m75>
+    <m76>Details im Arbeitstagebuch</m76>
+    <m77>Exporteinstellungen</m77>
+    <m78>Einstellungen für DWG/DXF-Export</m78>
+    <m79>Einstellungen für DGN-Export</m79>
+    <fillPatterns>Füllmuster</fillPatterns>
+    <startCollectingFamilies>Beginn des Vorgangs zum Sammeln von Modellfamilien ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Abschluss des Vorgangs zum Sammeln von Modellfamilien ({0})</completionCollectingFamilies>
+    <families>Familien</families>
+    <familyProcessError>Beim Verarbeiten der Familie "{0}" (ID: {1}) ist ein Fehler aufgetreten: "{2}"</familyProcessError>
+    <familyExists>Im Zieldokument ist die Familie "{0}" bereits vorhanden.{1}Kopie ausführen?</familyExists>
+    <duplicateCreated>Es wurde ein Duplikat der Familie {0} erstellt</duplicateCreated>
+    <elementTab>Elemente</elementTab>
+    <modelElementTab>Modellelemente</modelElementTab>
+    <selectedInModel>Im Modell ausgewählt</selectedInModel>
+    <selectFromLink>Aus Verknüpfung auswählen</selectFromLink>
+    <selectElementsFrom>Wählen Sie Elemente aus {0}</selectElementsFrom>
+    <copyResultMessage>Kopieren abgeschlossen. Kopiert: {0}, Übersprungen: {1}, Mit Fehlern: {2}</copyResultMessage>
+    <messageInvalidActiveDocument>Das aktive Dokument stimmt nicht mit der ausgewählten Quelle überein</messageInvalidActiveDocument>
+    <notSelectedElements>Im Modell ist kein Element ausgewählt</notSelectedElements>
+    <selectElementsFromLink>Wählen Sie Elemente aus der verknüpften Datei</selectElementsFromLink>
+    <groupTypeExists>Im Zieldokument ist die Gruppe "{0}" bereits vorhanden.\nKopie mit Ersetzung ausführen?</groupTypeExists>
+    <groups>Gruppen</groups>
+    <materialExists>Im Zieldokument ist das Material "{0}" bereits vorhanden.\nKopie mit Ersetzung ausführen?</materialExists>
+    <materialDuplicateActionSettings>Verhalten bei übereinstimmenden Materialnamen</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>Wenn Materialnamen übereinstimmen und die Option „Ersetzen" ausgewählt wird, führt das Plugin folgenden Algorithmus aus: Das vorhandene Material im Zieldokument wird aktualisiert und erhält alle Eigenschaften des neuen Materials. Der Materialname bleibt unverändert. Alle Elemente, die dieses Material verwenden, erhalten automatisch die aktualisierten Eigenschaften.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Geöffnete Bauteillisten schließen</closeOpenedSchedule>
+    <searchModeLabel>Vergleichsmodus:</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Regulärer Ausdruck</searchModeRegex>
+    <patternCopyWarning>Das Muster "{0}" (ID: {1}) konnte nicht in das Zieldokument kopiert werden. Die Filterüberschreibung wird ohne dieses Muster angewendet.</patternCopyWarning>
+    <viewTemplateFiltersCopyError>Filter konnten nicht auf die kopierte Ansichtsvorlage "{0}" angewendet werden. Fehler: "{1}".</viewTemplateFiltersCopyError>
+  </mprCopyElementsToOpenDocuments>
+</ModPlus>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPCopy
+    LocalName="Copia MEP"
+    Description="Conjunto de herramientas para copiar elementos MEP"
+    LocalName1="Copiar por nivel"
+    Description1="Copiar elementos MEP justificados a niveles seleccionados"
+    LocalName2="Copiar verticalmente"
+    Description2="Copiar elementos MEP verticalmente a distancia"
+    LocalName3="Copiar en dirección"
+    Description3="Copiar elementos MEP en una dirección a distancia">
+    <msg1>No se ha seleccionado elementos MEP</msg1>
+    <msg2>Seleccionar elementos MEP para copiar</msg2>
+    <msg3>No es posible determinar nivel de referencia de elemento</msg3>
+    <msg4>Especificar punto en curva MEP para seleccionar dirección</msg4>
+    <t1>Número hacia arriba:</t1>
+    <t2>Número hacia abajo:</t2>
+    <t3>Distancia:</t3>
+    <t4>Cantidad:</t4>
+    <t5>Mostrar solo los seleccionados</t5>
+    <t6>Niveles seleccionados:</t6>
+    <t7>Si las opciones "Cantidad" y "Distancia" están activadas, los elementos seleccionados se copiarán la cantidad de veces especificada, a la distancia especificada y en la dirección especificada.
+
+Si está activada la opción "Cantidad", sólo se copiarán los elementos conectados a curvas MEP cuya dirección coincida con la dirección seleccionada. La copia se realiza la cantidad de veces especificada con pasos iguales hasta el final de la curva MEP.
+
+Si está activada la opción "Distancia", sólo se copiarán los elementos conectados a curvas MEP cuya dirección coincida con la dirección seleccionada. La copia se realiza a una distancia especificada y se repite hasta que los elementos se puedan conectar a las curvas MEP.
+    </t7>
+    <err1>No se pudieron conectar elementos</err1>
+  </mprMEPCopy>
+</ModPlus>

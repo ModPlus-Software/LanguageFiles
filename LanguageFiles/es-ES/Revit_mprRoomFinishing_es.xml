@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprRoomFinishing
+    LocalName="Acabado de habitación"
+    Description="Creación de elementos de acabado en habitaciones."
+    LocalName1="Actualizar acabados de habitaciones"
+    Description1="Actualización de los elementos de acabado en habitaciones"
+    LocalName2="Gestión del acabado de habitaciones"
+    Description2="Gestión de elementos de acabado en habitaciones">
+    <t1>Filtro de habitación:</t1>
+    <t2>Suelos</t2>
+    <!--todo remove after 2.0.0-->
+    <t3>Tipo de forjado:</t3>
+    <t4>Desfase desde nivel, mm:</t4>
+    <t5>Establecer valor de espesor del tipo seleccionado del forjado teniendo en cuenta forjados anteriores</t5>
+    <t6>Copiar valor del parámetro (de habitación al suelo):</t6>
+    <t7>De</t7>
+    <t8>en</t8>
+    <t9>Techos</t9>
+    <t10>Muros</t10>
+    <t11>Al establecer suelos en huecos de puertas en todo espesor de muro, considerar habitación principal siguiente:</t11>
+    <t12>Si puerta conduce a salida</t12>
+    <t13>Si puerta conduce a entrada</t13>
+    <t14>Suelo de habitación principal se creará insertando en hueco de puerta. En consecuencia, para habitación definida como no principal, no se creará un hueco de puerta. Esta opción sólo funciona para familias en categoría "Puertas" que tienen propiedades internas FromRoom y ToRoom rellenas. Dirección del movimiento en hueco está determinada por dirección del lado exterior de familia</t14>
+    <t15>Recortar geometría sólida de puerta del contorno del suelo</t15>
+    <t16>Eliminar elementos de acabado creados previamente</t16>
+    <t17>Por habitaciones seleccionadas</t17>
+    <t18>Por habitaciones a vista</t18>
+    <t19>Por todas habitaciones</t19>
+    <!--todo remove after 2.0.0-->
+    <t20>Por todas habitaciones de archivos vinculados</t20>
+    <t21>Actualizar parámetros</t21>
+    <t22>Mover hacia arriba</t22>
+    <t23>Mover hacia abajo</t23>
+    <t24>Por habitaciones preseleccionadas</t24>
+    <t26>No se especifica el tipo o no se encontró el tipo correspondiente en el modelo. ¡Procesamiento de configuración actual no es posible!</t26>
+    <t27>Base:</t27>
+    <t28>Inferior, mm:</t28>
+    <t29>Desfase desde la parte inferior de la habitación, mm</t29>
+    <t30>Altura de muro, mm:</t30>
+    <t31>Seleccionar el tipo de muro de acabado</t31>
+    <t32>Superior, mm:</t32>
+    <t33>Desfase desde la parte superior de la habitación, mm</t33>
+    <t34>Delimitación</t34>
+    <t35>Delimitación de habitación</t35>
+    <t36>Añadir una capa</t36>
+    <t37>Añadir base</t37>
+    <t38>Copiar valor del parámetro (de habitación al muros de acabado):</t38>
+    <t39>Unir los muros de acabado a la base</t39>
+    <t40>Parte inferior del muro</t40>
+    <t41>Muros de acabado se construyen sobre este suelo</t41>
+    <t42>Capa:</t42>
+    <t43>Para todos tipos de muros</t43>
+    <!--todo remove after 2.0.0-->
+    <t44>Tipo del techo:</t44>
+    <t45>Establecer valor de espesor del tipo seleccionado del techo teniendo en cuenta techos anteriores</t45>
+    <t46>Copiar valor del parámetro (de habitación al techo):</t46>
+    <t47>Añadir ajustes de creación de acabado</t47>
+    <t48>Seleccionar el tipo de muro o pilar para la base</t48>
+    <t49>Seleccione el tipo de suelo</t49>
+    <t50>Seleccione el tipo de techo</t50>
+    <t51>Especificar en el modelo los muros o pilares cuyos tipos serán la base para crear muros de acabado</t51>
+    <t52>Modo de selección de la base:</t52>
+    <t53>Filtro no especificado</t53>
+    <t54>Rodapiés</t54>
+    <t55>Seleccione el tipo de rodapié</t55>
+    <t56>Altura del rodapié, mm:</t56>
+    <t57>Copiar el valor del parámetro (de la habitación al rodapié)</t57>
+    <t58>Otros ajustes</t58>
+    <t59>Procesar ventanas hasta el suelo</t59>
+    <t60>Si la opción está activada el suelo se extenderá en los huecos realizados por elementos de la categoría "Ventanas" a todo el espesor del hueco. Si la opción está desactivada dichos huecos se procesarán según las reglas generales</t60>
+    <t61>Uniones de muros:</t61>
+    <t62>Seleccione el tipo de muros y columnas</t62>
+    <t63>No se encontró el tipo correspondiente en el modelo. ¡Procesamiento de configuración actual no es posible!</t63>
+    <t64>Seleccionar habitaciones</t64>
+    <t65>Seleccione los elementos de acabado para crear un vínculo con la habitación</t65>
+    <t66>Seleccione los elementos de acabado para eliminar el vínculo</t66>
+    <t67>El valor del parámetro-origen se recopila de las habitaciones vinculadas con los elementos de acabado se agrupa por tipo se ordena y se escribe separado por comas en el parámetro de destino de cada elemento de acabado de la habitación. Por ejemplo si los elementos de acabado del mismo tipo pertenecen a habitaciones con valores del parámetro-origen "3" "1" y "5" entonces se escribirá "1, 3, 5" en el parámetro de destino indicado de esos elementos. La opción "Formar rangos" combina secuencias de números con un guion por ejemplo "3-5"</t67>
+    <t68>Seleccione un parámetro de habitación</t68>
+    <t69>Seleccione un parámetro de suelos</t69>
+    <t70>Formar rangos</t70>
+    <t71>Seleccione un parámetro de muros</t71>
+    <t72>Seleccione un parámetro de techos</t72>
+    <t73>Los parámetros no están rellenados</t73>
+    <t74>Rellenar parámetros</t74>
+    <t76>Seleccionar acabados de habitaciones</t76>
+    <t77>Selecciona los elementos de acabado del modelo vinculados con la habitación</t77>
+    <t78>Vincular acabados con una habitación</t78>
+    <t79>Establece un vínculo entre los elementos de acabado y la habitación para que posteriormente se puedan rellenar los parámetros mediante la función "Rellenar parámetros" y también se pueda utilizar la función "Seleccionar acabados de habitaciones"</t79>
+    <t80>Eliminar el vínculo entre los acabados y una habitación</t80>
+    <t81>Elimina el vínculo entre los elementos de acabado y la habitación para que el elemento de acabado ya no esté vinculado a la habitación seleccionada</t81>
+    <t82>Relleno de parámetros</t82>
+    <t83>Creación de acabados de habitaciones</t83>
+    <t84>Seleccionar habitación</t84>
+    <t85>Desfase desde la parte inferior de la habitación:</t85>
+    <t86>Medir el desfase inferior desde:</t86>
+    <t87>Desfase desde el nivel de la habitación, mm</t87>
+    <t88>Mostrar solo los seleccionados</t88>
+    <l1>No extender el contorno del suelo en huecos de puertas</l1>
+    <l2>Extender el contorno hasta la mitad del hueco</l2>
+    <l3>Extender el contorno a todo el espesor del hueco</l3>
+    <l4>Extender el contorno al valor especificado, mm</l4>
+    <l5>Extender el contorno hasta la mitad de la hoja de la puerta</l5>
+    <l6>Para todos los tipos de muros y columnas</l6>
+    <l7>Selección de tipos de muros y columnas</l7>
+    <l8>Filtro de muros y columnas</l8>
+    <l9>Tope </l9>
+    <l10>Inglete</l10>
+    <l11>Cuadrar</l11>
+    <l12>Sin unión</l12>
+    <l13>Desde nivel</l13>
+    <l14>Desde la parte inferior de la habitación</l14>
+    <msg1>No processing rooms available!</msg1>
+    <msg2>No se han encontrado habitaciones que satisfacen al filtro por parámetros "{0}"</msg2>
+    <msg3>Tipo de suelo no se ha especificado</msg3>
+    <msg4>Tipo de suelo "{0}" no se ha encontrado</msg4>
+    <msg5>Se crea un suelo del tipo "{0}" según contorno de habitación</msg5>
+    <msg6>No se puede crear suelo según contorno de habitación</msg6>
+    <msg7>El contorno de la habitación tiene errores</msg7>
+    <msg8>No se puede procesar contorno de hueco. Error "{0}". Contorno del piso no se insertará en hueco</msg8>
+    <msg9>Parámetro "{0}" no se ha encontrado</msg9>
+    <msg10>No se puede copiar valor del parámetro "{0}" en parámetro "{1}"</msg10>
+    <msg11>Tipos de parámetros incompatibles o motivo desconocido</msg11>
+    <msg12>No es posible crear muros de acabado. Error</msg12>
+    <msg13>Los muros de acabado con tipo "{0}" se crean según contorno de la habitación</msg13>
+    <msg14>No se puede obtener altura de habitación</msg14>
+    <msg15>No se puede crear techo según contorno de habitación</msg15>
+    <msg16>Techo con tipo "{0}" se crea según contorno de la habitación</msg16>
+    <msg17>Failed to edit wall profile</msg17>
+    <msg18>La altura del muro de acabado no puede ser inferior a 0</msg18>
+    <msg19>Los rodapiés con el tipo "{0}" se han creado según el contorno de la habitación</msg19>
+    <msg20>No se pudo obtener la cota del forjado. El rodapié con el tipo "{0}" se creará en la cota del nivel de la habitación</msg20>
+    <msg21>No se pudo crear el rodapié según el contorno de la habitación</msg21>
+    <msg22>No se pudo editar el croquis</msg22>
+    <msg23>El suelo con el tipo "{0}" se ha actualizado según el contorno de la habitación</msg23>
+    <msg24>No se pudo actualizar el suelo según el contorno de la habitación</msg24>
+    <msg25>El techo con el tipo "{0}" se ha actualizado según el contorno de la habitación</msg25>
+    <msg26>No se pudo conectar el muro de acabado {0} con la base {1}</msg26>
+    <msg27>El parámetro de destino "{0}" no es un parámetro de texto</msg27>
+    <msg28>Los parámetros se han rellenado correctamente en los elementos</msg28>
+    <msg29>Los parámetros ya contienen el valor requerido</msg29>
+    <msg30>El parámetro de destino "{0}" es de solo lectura</msg30>
+    <msg31>El comando no está disponible en la versión actual de Revit porque la API no contiene los métodos necesarios</msg31>
+    <msg32>No se pudo obtener la cota del forjado. El rodapié con el tipo "{0}" se creará en la cota de la parte inferior de la habitación</msg32>
+    <msg33>No se puede actualizar el acabado: el acabado se creó en una versión anterior del plugin. Vuelva a crear el acabado</msg33>
+  </mprRoomFinishing>
+</ModPlus>

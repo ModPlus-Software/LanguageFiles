@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprColumnsReinforcement
+    LocalName="Refuerzo del pilar"
+    Description="Análisis, agrupamiento y refuerzo de pilares según condiciones especificadas"
+    FullDescription="Procesamiento tanto de pilares seleccionados individualmente como de todos los pilares en una vista o documento. Refuerzo se realiza teniendo en cuenta posición relativa de pilares una encima de otra. El refuerzo transversal se puede configurar utilizando varias opciones de formas de barras. Funciona incluso en una plantilla vacía">
+    <h1>Opciones</h1>
+    <h2>Seleccionar pilares</h2>
+    <h3>Seleccionar todos pilares en vista actual</h3>
+    <h4>Seleccionar todos pilares del proyecto</h4>
+    <h5>Crear refuerzo sólo es posible en pilares portantes</h5>
+    <h6>Seleccionar</h6>
+    <h7>Analizar</h7>
+    <h8>Total de pilares seleccionados:</h8>
+    <h9>De ellos, se han analizado con éxito los siguientes:</h9>
+    <h10>Reforzar</h10>
+    <h11>Ajustes de refuerzo de grupo</h11>
+    <h12>Agrupamiento</h12>
+    <h13>Por nivel</h13>
+    <h14>Por altura</h14>
+    <h15>Agrupar</h15>
+    <h16>Cantidad</h16>
+    <h17>Perfil</h17>
+    <h18>Niveles</h18>
+    <h19>Alturas</h19>
+    <h20>pilares en un grupo:</h20>
+    <h21>Nivel</h21>
+    <h22>Altura</h22>
+    <h23>Agrupar por:</h23>
+    <h24>Sección</h24>
+    <h25>Refuerzo longitudinal</h25>
+    <h26>Armadura longitudinal (de trabajo)</h26>
+    <h27>Espesor del recubrimiento de hormigón para la armadura principal:</h27>
+    <h28>El recubrimiento para la armadura principal debe ser como mínimo de 20 mm o no menor que el diámetro de la armadura</h28>
+    <h29>Se recomienda que diámetro de barras longitudinales de trabajo de pilares prefabricados sea de al menos 16 mm. Para pilares monolíticos, así como para armadura estructural, se permite utilizar un diámetro de barra de 12 mm</h29>
+    <h30>Parámetro</h30>
+    <h31>Número de barras a lo ancho:</h31>
+    <h32>Número de barras a profundidad:</h32>
+    <h33>Editar distancias</h33>
+    <h34>Escuadría del pilar, mm²:</h34>
+    <h35>Escuadría de armadura, mm²:</h35>
+    <h36>Porcentaje de refuerzo:</h36>
+    <h37>No se recomienda asignar escuadría de armadura longitudinal a más del 5% del escuadría del pilar</h37>
+    <h38>Distancias entre bordes de barras a lo ancho del pilar:</h38>
+    <h39>Distancias entre bordes de barras a profundidad del pilar:</h39>
+    <h40>¡Atención! Al modificar el diámetro, el recubrimiento o el número de barras, las distancias entre barras se restablecerán a valores equivalentes.</h40>
+    <h41>Arranques de refuerzo longitudinal</h41>
+    <h42>Refuerzo transversal (disposición)</h42>
+    <h43>Refuerzo transversal (formas)</h43>
+    <h45>Número de barras de esquina:</h45>
+    <!-- todo remove after 3.22.12.0 -->
+    <h46>Número de barras intermedias:</h46>
+    <h47>Arranques de refuerzo longitudinal de pilares inferiores y medias con misma (o ligeramente diferente) sección transversal de pilares superiores</h47>
+    <h48>Arranques del refuerzo longitudinal de pilares inferiores y medias con una sección transversal grande (≥ 100 mm en cada lado) en un pilar superior con una sección transversal más pequeña</h48>
+    <h49>Arranques de refuerzo longitudinal de pilares superiores</h49>
+    <h50>Ajustes</h50>
+    <h51>VENTANA DEL COMPLEMENTO:</h51>
+    <h53>REPRESENTACIÓN EN MODELO:</h53>
+    <h54>Factor de escalado:</h54>
+    <!-- todo remove after 3.22.12.0 -->
+    <h55>REFUERZO PREDETERMINADO:</h55>
+    <h56>Desfase</h56>
+    <h57>Envolvimiento</h57>
+    <h58>Eliminar forma seleccionada</h58>
+    <!-- todo remove after 3.22.12.0 -->
+    <h59>Especificar tipo de gancho de forma, parámetros, diámetro y tipo de barra de refuerzo que se establecerán de forma predeterminada para formas de refuerzo transversal añadidas</h59>
+    <h60>Paso del refuerzo transversal en zonas de engrosamiento, mm:</h60>
+    <h61>Calcular anclaje según SP 52-101-2003</h61>
+    <h62>Diámetro:</h62>
+    <h63>Escuadría, mm²:</h63>
+    <h64>Clase de hormigón:</h64>
+    <h65>Tipo de superficie de refuerzo:</h65>
+    <h66>Resistencia de diseño a tracción, MPa:</h66>
+    <h67>Longitud de anclaje base (principal), mm:</h67>
+    <h68>Factor α:</h68>
+    <h69>Longitud de anclaje requerida (calculada), mm:</h69>
+    <h70>Longitud de anclaje:</h70>
+    <h71>Se recomienda que paso principal del refuerzo transversal sea igual a 15d, y paso del refuerzo transversal en zonas de engrosamiento sea 10d. Donde d es diámetro de armadura longitudinal (de trabajo)</h71>
+    <h72>No se puede añadir un formulario al diseño actual: ¡no hay lugares disponibles para ubicar forma!</h72>
+    <!-- todo remove after 3.22.12.0 -->
+    <h73>Ajustes de refuerzo del pilar</h73>
+    <h74>Reemplazar con ajustes de refuerzo de grupo</h74>
+    <h75>Dejar ajustes de refuerzo</h75>
+    <h76>Refuerzo del pilar</h76>
+    <h79>Ganchos de forma predeterminada:</h79>
+    <h80>Ganchos en forma:</h80>
+    <h81>establecer en boceto</h81>
+    <h82>utilizar ganchos Revit</h82>
+    <h83>Parámetros predeterminados</h83>
+    <h84>Recubrimiento en los extremos de la armadura, mm:</h84>
+    <h85>Paso principal del refuerzo transversal, mm:</h85>
+    <h86>Distancia hasta cara superior del pilar, mm:</h86>
+    <h87>Engrosamiento de refuerzo transversal en zona superior del pilar</h87>
+    <h88>Longitud de engrosamiento, mm:</h88>
+    <h89>Longitud de engrosamiento, fracciones:</h89>
+    <h90>Engrosamiento de refuerzo transversal en zona inferior del pilar</h90>
+    <h91>Si hay arranques entrantes, establecer distancia de engrosamiento de zona inferior a lo largo de arranques</h91>
+    <h93>Estribos triangular:</h93>
+    <h94>Estribos redondos:</h94>
+    <h95>Ganchos del boceto de esta forma no se pueden utilizar</h95>
+    <h96>Por parámetro:</h96>
+    <h97>Parámetro</h97>
+    <h98>Distancia entre centros de barras</h98>
+    <h99>Distancia entre bordes de barras</h99>
+    <!-- todo remove after 3.22.12.0 -->
+    <h100>¡Atención! Número y posición de barras de refuerzo longitudinal, así como disposición de refuerzo transversal, se pueden guardar, descargar y copiar en pilares marcados de una sección adecuada, ¡pero no se pueden guardar de forma predeterminada!</h100>
+    <h104>Longitud de empalme por solape de arranques rectos, mm:</h104>
+    <h105>Calcular longitud del anclaje</h105>
+    <h106>Longitud de anclaje de arranques en losa, mm:</h106>
+    <h107>Longitud de anclaje en pilar, mm:</h107>
+    <h108>Longitud de empalme por solape en el pilar superior, mm</h108>
+    <h109>El valor calculado de la longitud de empalme por solape se multiplica por 2</h109>
+    <h110>Crear refuerzo</h110>
+    <!-- todo remove after 3.22.12.0 -->
+    <h119>Ajustes de refuerzo predeterminados</h119>
+    <h127>Arranques de losa inferior</h127>
+    <h135>Tipo de arranques:</h135>
+    <h138>Recubrimiento de armadura:</h138>
+    <h141>No cerrar ventana después de crear refuerzo</h141>
+    <h144>Distancia de pieza hasta base de losa de cimentación:</h144>
+    <!-- todo remove after 3.22.12.0 -->
+    <h147>Restablecer</h147>
+    <h148>Longitud de anclaje en losa, mm:</h148>
+    <h149>Crear arranques sólo de losas en categoría "Cimentación estructural"</h149>
+    <h150>Arranques de losa inferior se crean sólo si no hay un pilar inferior. Vínculos de pilares se determinan sólo entre pilares seleccionados</h150>
+    <h160>Tipo de arranques:</h160>
+    <h161>Espesor de losa condicional, mm:</h161>
+    <h165>Si falta una losa plana encima del pilar, entonces</h165>
+    <h166>Forzado de cursor de flexiones en parte superior de losa (en centro de armadura)</h166>
+    <h167>Forzado de cursor de flexiones en parte inferior de losa (en centro de armadura)</h167>
+    <!-- todo remove after 3.22.12.0 start -->
+    <h173>Barras rectas:</h173>
+    <h174>Barras en forma de L (al crear flexiones de barras verticales):</h174>
+    <h177>Barras transversales en forma de C (clavijas). Ganchos en boceto:</h177>
+    <h178>Barras transversales en forma de S (clavijas). Ganchos en boceto:</h178>
+    <h179>Barras en forma de L:</h179>
+    <h180>Barras en forma de U:</h180>
+    <h181>Estribos rectangulares:</h181>
+    <h182>Barras en forma de L con gran flexión:</h182>
+    <h183>Restablecer todos valores a "Auto"</h183>
+    <h184>Formas preferidas de barras de refuerzo</h184>
+    <h185>No se puede establecer valores de parámetros para algunos elementos. A continuación se muestran códigos de elementos (id), nombres de parámetros y valores establecidos:</h185>
+    <!-- todo remove after 3.22.12.0 end -->
+    <h186>Seleccionar de nuevo</h186>
+    <h187>Volver a seleccionar pilares que se procesaron en vista actual cuando se utilizó anteriormente complemento</h187>
+    <h188>Distancia hasta cara inferior del pilar, mm:</h188>
+    <h189>Radio en:</h189>
+    <h190>Especificar parámetro de forma de barra de refuerzo que especifique radio de espiral</h190>
+    <h191>Paso en espiral:</h191>
+    <h193>Primera longitud de empalme por solape, mm:</h193>
+    <h194>Segunda longitud de empalme por solape, mm:</h194>
+    <h195>Calcular longitud de empalme por solape</h195>
+    <h196>Longitud de empalme por solape, mm:</h196>
+    <h205>Barras transversales en forma de C (clavijas). Ganchos Revit:</h205>
+    <h206>Barras transversales en forma de S (clavijas). Ganchos Revit:</h206>
+    <h207>Barras en espiral:</h207>
+    <h208>Utilizar geometría del pilar sin considerar conexiones</h208>
+    <h221>Barras plegadas longitudinalmente (forma "botella")</h221>
+    <h226>Eliminar armadura creada anteriormente:</h226>
+    <h227>Forzado de cursor de armadura de trabajo al borde del pilar en centro de armadura. Forzado de cursor se calcula en función del diámetro de barra del modelo</h227>
+    <h228>Instalar acopladores de armadura</h228>
+    <h229>Primera armadura</h229>
+    <h230>Segunda armadura</h230>
+    <h231>Los acopladores de armadura se instalarán solo si las columnas procesadas tienen la misma sección transversal y el tipo de acoplador está presente en el documento. Los tipos de acopladores se buscan en el documento según las reglas especificadas en la ventana </h231>
+    <h232>. En las columnas donde se instalarán los acopladores, el refuerzo longitudinal se realizará con barras de armadura individuales sin composición.</h232>
+    <h233>Especifique las reglas de instalación de acopladores para tipos específicos de barras de armadura. Puede especificar tanto el nombre completo del tipo de barra de armadura como uno parcial. Por ejemplo, especifique el valor "10". Entonces, el tipo de barra de armadura se considerará adecuado si su nombre contiene "10".</h233>
+    <h234>Plegar parte inferior de barras rectas</h234>
+    <h235>Distancia de plegado (O), mm:</h235>
+    <h236>Longitud de plegado (L), mm:</h236>
+    <h237>Plegado de parte inferior se realiza para barras rectas, siempre que pilares a procesar tengan misma sección transversal.</h237>
+    <h238>Crear:</h238>
+    <h239>Refuerzo transversal</h239>
+    <h240>Propiedades de formas predeterminadas</h240>
+    <h241>Si ya existe forma con mismo boceto en lista, propiedades se heredarán de ella</h241>
+    <h242>Dirección de plegado:</h242>
+    <h243>Ajustes generales de refuerzo</h243>
+    <h244>No se recomienda establecer el recubrimiento según los ajustes de refuerzo si el refuerzo transversal tiene diferentes diámetros y/o diferente valor de la propiedad "Unión del refuerzo transversal".</h244>
+    <h245>Combinar refuerzo longitudinal en conjuntos de barras de refuerzo</h245>
+    <h262>Restablecer a valores equivalentes</h262>
+    <h263>Longitud de saliente, mm:</h263>
+    <h264>Establecer la longitud de saliente desde la parte superior del pilar, ignorando las losas planas superiores</h264>
+    <srd>Guardar datos sobre pilares seleccionados</srd>
+    <hook>Gancho:</hook>
+    <err1>Ajustes del refuerzo de pilares indican arranques en forma de barras encorvadas en forma "botella", para cuya creación debe haber losas o una distancia distinta de cero entre pilares. No encontrada la losa superior o distancia a pilar superior es 0</err1>
+    <npa1>no crear arranques</npa1>
+    <npa2>crear arranques rectos</npa2>
+    <npa3>considerar condicionalmente que losa existe</npa3>
+    <pt1>Círculo</pt1>
+    <pt3>Rectángulo</pt3>
+    <pt4>Cuadrado</pt4>
+    <pt5>No definido</pt5>
+    <rr1>Eliminar armadura del mismo tipo que se creó</rr1>
+    <rr2>Eliminar toda armadura creada anteriormente</rr2>
+    <rr3>No eliminar</rr3>
+    <jt1>No se crean arranques del refuerzo longitudinal. Las barras se recortan en la parte superior de la columna conforme al valor establecido del recubrimiento en los extremos de la armadura.</jt1>
+    <jt2>Se crean arranques rectos de barras de refuerzo para refuerzo longitudinal. Longitud del anclaje se establece desde parte superior de a losa plana superior o desde parte superior del pilar si falta losa plana. No se tiene en cuenta posición de barras de refuerzo longitudinal de pilares superior</jt2>
+    <jt3>Se crean arranques de barras de refuerzo longitudinal con una patilla en pilar superior. Longitud del anclaje se establece desde parte superior de a losa plana superior o desde parte superior del pilar si falta losa plana</jt3>
+    <jt4>Arranques se crean en forma de barras adicionales con un diámetro determinado</jt4>
+    <jt5>Se crean arranques rectos de barras de refuerzo para refuerzo longitudinal. Longitud del saliente se establece desde parte superior de losa plana superior o desde parte superior del pilar si falta losa plana</jt5>
+    <jt6>Se crean arranques de barras de refuerzo longitudinal anclando en losa plana superior. Longitud del anclaje se mide desde cara lateral del pilar</jt6>
+    <bbd1>Todos arranques se doblan a lo largo del lado corto del pilar</bbd1>
+    <bbd2>Todos arranques se doblan a lo largo del lado largo del pilar</bbd2>
+    <bbd3>Arranques de esquina se doblan hacia centro del pilar, restos – a lo largo de bordes del pilar</bbd3>
+    <bbd4>Arranques de esquina se doblan hacia centro del pilar. A lo largo del lado largo – a lo largo de bordes del pilar. A lo largo del lado corto – a lo largo de bordes del pilar</bbd4>
+    <bbd5>Arranques de esquina se doblan a lo largo del lado largo del pilar, los restos – dentro del pilar</bbd5>
+    <bbd6>Arranques de esquina se doblan a lo largo del lado corto del pilar, los restos – a lo largo de bordes del pilar</bbd6>
+    <msg1>Seleccionar pilares</msg1>
+    <m1>Ingresar valor de</m1>
+    <m2>a</m2>
+    <m4>Barras corrugadas</m4>
+    <m5>Barras lisas</m5>
+    <!-- todo remove after 3.22.12.0 -->
+    <m13>Recubrimiento de armadura</m13>
+    <m20>Lista de pilares contiene pilares cuyos ajustes de refuerzo se han cambiado manualmente y difieren de ajustes de refuerzo grupal</m20>
+    <m23>Ajustes de refuerzo copiados</m23>
+    <m24>¡No se especifica para qué grupos crear refuerzo!</m24>
+    <m25>¡No se ha seleccionado grupos para crear refuerzo!</m25>
+    <m27>¡Atención! ¡No se han encontrado formas de barras de refuerzo descargadas en proyecto actual! ¡En este caso, formas de barras de refuerzo creadas al ejecutar complemento no podrán abrirse en editor familiar! ¡Se recomienda descargar formas de barras de refuerzo en proyecto antes de usar complemento!\n¿Reforzar a pesar de que faltan formas de barras de refuerzo?</m27>
+    <rn>Armadura de apoyo ⌀</rn>
+    <!-- todo remove after 3.22.12.0 -->
+    <full>¡Disponible en versión completa del complemento!</full>
+    <!-- todo remove after 3.22.12.0 -->
+    <full2>En versión limitada, sólo hay una forma disponible</full2>
+    <!-- todo remove after 3.22.12.0 -->
+    <noInFamily>¡Complemento no está disponible en familias!</noInFamily>
+    <p1>Análisis de pilares:</p1>
+    <p2>Buscar elementos vinculados:</p2>
+    <p8>Eliminar refuerzo creado anteriormente</p8>
+    <p9>Calcular y modelar reforzamiento de refuerzo longitudinal</p9>
+    <p10>Calcular y modelar reforzamiento de refuerzo transversal</p10>
+    <p14>Calcular y modelar arranques de losa</p14>
+    <p15>Instalación de acopladores de armadura</p15>
+    <e1>Errores de análisis de pilares</e1>
+    <e2>No se puede inicializar pilar</e2>
+    <e3>No se puede obtener cuerpos sólidos</e3>
+    <e4>No se puede obtener ningún sólido principal o combinado</e4>
+    <e5>No se puede obtener borde superior o inferior</e5>
+    <e6>No se puede determinar perfil de sección transversal</e6>
+    <e7>No se ha especificado nombre de forma utilizada para crear refuerzo en espiral. Utilizar ventana de ajustes de formas de barra de refuerzo preferidas para especificar forma de refuerzo en espiral</e7>
+    <e9>Parámetro especificado que especifica radio del refuerzo en espiral no se ha encontrado en documento</e9>
+    <!-- todo remove after 3.22.12.0 -->
+    <t7>Grupo contiene pilares cuyos ajustes de refuerzo se han editado manualmente y difieren de ajustes de refuerzo grupal</t7>
+    <t10>Marcar todos grupos</t10>
+    <t11>Desmarcar todos grupos</t11>
+    <!-- todo remove after 3.22.12.0 -->
+    <t12>Ajustes de refuerzo del pilar se han editado manualmente y difieren de ajustes de refuerzo grupal</t12>
+    <!-- todo remove after 3.22.12.0 -->
+    <t13>Editar ajustes de refuerzo para pilar seleccionado</t13>
+    <!-- todo remove after 3.22.12.0 -->
+    <t14>Reemplazar ajustes de refuerzo del pilar con ajustes de grupo</t14>
+    <t15>Mostrar en modelo pilar anterior en lista</t15>
+    <t16>Mostrar en modelo pilar seleccionado en lista</t16>
+    <t17>Mostrar en modelo siguiente pilar de lista</t17>
+    <!-- todo remove after 3.22.12.0 -->
+    <t40>Copiar ajustes de refuerzo de grupo actual a todos grupos seleccionados</t40>
+    <!-- todo remove after 3.22.12.0 -->
+    <t41>Guardar ajustes de refuerzo de grupo actual en un archivo .xml</t41>
+    <!-- todo remove after 3.22.12.0 -->
+    <t42>Descargar ajustes de refuerzo del archivo .xml y establecerlos para grupo actual</t42>
+    <t43>¡Atención! Tipo de superficie de refuerzo puede depender de clase de armadura, diámetro u otros valores que programa no tiene en cuenta. Leer documentación reglamentaria</t43>
+    <t44>α es un factor que tiene en cuenta influencia del comportamiento esfuerzo del hormigón y de armadura sobre longitud de anclaje y concepto estructural del elemento en zona de anclaje. Al anclar barras corrugadas con extremos rectos (anclaje recto) o barras lisas con bisagras de ganchos sin dispositivos de anclaje adicionales, se toma α = 1,0 para barras de tensión y α = 0,75 para barras de compresión. Según cláusula 10.3.30 del SP 63.13330, factor α se puede aumentar a 2,0</t44>
+    <!-- todo remove after 3.22.12.0 -->
+    <t53>Restablecer todos valores de ajustes de refuerzo predeterminados actual a valores estándar incluidos en complemento</t53>
+    <!-- todo remove after 3.22.12.0 -->
+    <t63>Puede especificar formas preferidas de barras de refuerzo para diferentes tipos de barras de refuerzo creadas por complemento.</t63>
+    <!-- todo remove after 3.22.12.0 -->
+    <t64>Establecer formas preferidas no garantiza que se creará refuerzo utilizando forma de barra de refuerzo especificada.</t64>
+    <!-- todo remove after 3.22.12.0 -->
+    <t65>Al crear barras de refuerzo, se intentará utilizar forma especificada. Si no es posible crear una barra con forma especificada, Revit buscará automáticamente una forma adecuada o creará una nueva forma.</t65>
+    <!-- todo remove after 3.22.12.0 -->
+    <t66>Guardar ajustes de refuerzo actual como ajustes de refuerzo predeterminados</t66>
+    <re1>Se ha producido un error al crear refuerzo longitudinal de pilar id={0}:</re1>
+    <re2>Se ha producido un error al calcular puntos de ubicación del refuerzo transversal del pilar id={0}:</re2>
+    <re3>Se ha producido un error al crear una pieza de refuerzo transversal de tipo "{0}" en pilar id={1} :</re3>
+    <re4>No se puede crear una barra de refuerzo recta con forma de barra preferida especificada "{0}". Error: {1}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re4>
+    <re5>No se puede crear una barra de refuerzo con forma "{0}" con forma de barra preferida especificada "{1}". Error: {2}\nse intentó crear una barra con selección automática o creación de una forma de barra de refuerzo</re5>
+    <re17>Error al crear arranques desde losa id={0} en pilar id={1}:</re17>
+    <re18>Error al crear acopladores al conectar columnas id={0} e id={1}:</re18>
+    <re19>Error al crear acopladores al procesar la columna id={0}:</re19>
+  </mprColumnsReinforcement>
+</ModPlus>

@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprColumnsReinforcement
+    LocalName="Columns reinforcement"
+    Description="Analysis, grouping and reinforcement of columns for specified conditions"
+    FullDescription="Processing both individually selected columns and all columns in a view or document. Reinforcement is carried out taking into account the relative position of the columns above each other. Transverse reinforcement can be assembled using various rebar shape options. Can work even on an empty template">
+    <h1>Selection variants</h1>
+    <h2>Pick columns</h2>
+    <h3>Select all columns on current view</h3>
+    <h4>Select all columns in document</h4>
+    <h5>Reinforcement is possible only in structural columns</h5>
+    <h6>Select</h6>
+    <h7>Analyze</h7>
+    <h8>Total selected columns:</h8>
+    <h9>Of these successfully analyzed:</h9>
+    <h10>Create reinforcement</h10>
+    <h11>Group reinforcement settings</h11>
+    <h12>Grouping</h12>
+    <h13>By Level</h13>
+    <h14>By Height</h14>
+    <h15>Group</h15>
+    <h16>Count</h16>
+    <h17>Profile</h17>
+    <h18>Levels</h18>
+    <h19>Heights</h19>
+    <h20>Columns in group:</h20>
+    <h21>Level</h21>
+    <h22>Height</h22>
+    <h23>Group by:</h23>
+    <h24>Section</h24>
+    <h25>Longitudinal reinforcement</h25>
+    <h26>Longitudinal (working) rebars</h26>
+    <h27>Working reinforcement cover:</h27>
+    <h28>Cover for the working reinforcement shall be not less than 20 mm or not less than the diameter of the reinforcement</h28>
+    <h29>The diameter of the longitudinal working rebars of precast columns it is recommended to appoint not less than 16 mm. For monolithic columns and for structural reinforcement may be applied bar diameter 12 mm</h29>
+    <h30>Parameter</h30>
+    <h31>The number of rods in width:</h31>
+    <h32>The number of rods in depth:</h32>
+    <h33>Edit spaces</h33>
+    <h34>The cross-sectional area of the column, sq.mm:</h34>
+    <h35>Cross-sectional area of reinforcement, sq.mm:</h35>
+    <h36>Reinforcement percentage:</h36>
+    <h37>The cross-sectional area of longitudinal reinforcement is not recommended to assign more than 5% of the cross-sectional area of the column</h37>
+    <h38>Spaces between the edges of the rods along the width of the column:</h38>
+    <h39>Spaces between the edges of the rods along the depth of the column:</h39>
+    <h40>Attention! When changing the diameter, cover or number of rods, the distances between the rods will be reset to equivalent values!</h40>
+    <h41>Longitudinal reinforcement joints</h41>
+    <h42>Transverse reinforcement (layout)</h42>
+    <h43>Transverse reinforcement (shapes)</h43>
+    <h45>The number of corner rods:</h45>
+    <!-- todo remove after 3.22.12.0 -->
+    <h46>Number of intermediate rods:</h46>
+    <h47>Joints of longitudinal reinforcement of lower and middle columns with the same (or slight difference) cross-section of the overlying columns</h47>
+    <h48>Joints of longitudinal reinforcement of lower and middle columns with a large cross section (≥ 100 mm on each side) to the overlying column with a smaller cross section</h48>
+    <h49>Joints of longitudinal reinforcement of the top columns</h49>
+    <h50>Settings</h50>
+    <h51>PLUGIN WINDOW:</h51>
+    <h53>DISPLAY IN THE MODEL:</h53>
+    <h54>Scaling factor:</h54>
+    <!-- todo remove after 3.22.12.0 -->
+    <h55>REINFORCEMENT BY DEFAULT:</h55>
+    <h56>Displacement</h56>
+    <h57>Girth</h57>
+    <h58>Remove selected shape</h58>
+    <!-- todo remove after 3.22.12.0 -->
+    <h59>Specify type of shapes hooks, parameters, diameter and rebar bar type of rebar that will be set by default for added transverse reinforcement shapes</h59>
+    <h60>Step of transverse reinforcement in areas of thickening, mm:</h60>
+    <h61>Calculation of anchoring by SP 52-101-2003</h61>
+    <h62>Diameter:</h62>
+    <h63>Sectional area, mm²:</h63>
+    <h64>Concrete class:</h64>
+    <h65>Type of the surface of reinforcement:</h65>
+    <h66>Estimated tensile strength, MPa:</h66>
+    <h67>Basic (main) length of anchoring, mm:</h67>
+    <h68>Coefficient α:</h68>
+    <h69>Required (estimated) anchoring length, mm:</h69>
+    <h70>Anchoring length:</h70>
+    <h71>The main step of the transverse reinforcement is recommended to be taken equal to 15d, and the step of the transverse reinforcement in the areas of thickening is 10d. Where d is the diameter of the longitudinal (working) reinforcement</h71>
+    <h72>Failed to add form to current layout: no place available to place the form!</h72>
+    <!-- todo remove after 3.22.12.0 -->
+    <h73>Column reinforcement settings</h73>
+    <h74>Replace with reinforcement settings of the group</h74>
+    <h75>Leave the reinforcement settings</h75>
+    <h76>Columns reinforcement</h76>
+    <h79>Shape hooks by default:</h79>
+    <h80>Shape hooks:</h80>
+    <h81>set in sketch</h81>
+    <h82>use Revit hooks</h82>
+    <h83>Default parameters</h83>
+    <h84>Cover from the rebars ends, mm:</h84>
+    <h85>The main step of the transverse reinforcement, mm:</h85>
+    <h86>Indent from the top of the column, mm:</h86>
+    <h87>Thickening of transverse reinforcement in the upper zone of the column</h87>
+    <h88>Thickening distance, mm:</h88>
+    <h89>Thickening distance, fraction:</h89>
+    <h90>Thickening of transverse reinforcement in the lower zone of the column</h90>
+    <h91>If there are incoming joints, set the thickening distance of the lower zone along the length of joints</h91>
+    <h93>Triangular stirrups:</h93>
+    <h94>Circle girth rebars:</h94>
+    <h95>Hooks cannot be used in this form in a sketch</h95>
+    <h96>By parameter:</h96>
+    <h97>Parameter</h97>
+    <h98>Distance between the centers of the rods</h98>
+    <h99>Distance between the edges of the rods</h99>
+    <!-- todo remove after 3.22.12.0 -->
+    <h100>Attention! The number and position of the longitudinal rebars and the layout of the transverse rebars can be saved, loaded and copied into the checked columns of a suitable cross section, but cannot be saved as default!</h100>
+    <h104>Overlap length of straight joint, mm:</h104>
+    <h105>Calculate anchoring length</h105>
+    <h106>Floor anchoring length, mm:</h106>
+    <h107>Anchoring length per column, mm</h107>
+    <h108>Overlap length in the overlying column, mm</h108>
+    <h109>The calculated overlap length is multiplied by 2</h109>
+    <h110>Create Reinforcement</h110>
+    <!-- todo remove after 3.22.12.0 -->
+    <h119>Default reinforcement settings</h119>
+    <h127>Joints from underlying floor</h127>
+    <h135>Joints type:</h135>
+    <h138>Reinforcement cover:</h138>
+    <h141>Do not close the window after creating reinforcement</h141>
+    <h144>Detail offset from base plate sole:</h144>
+    <!-- todo remove after 3.22.12.0 -->
+    <h147>Reset</h147>
+    <h148>Anchorage length in plate, mm:</h148>
+    <h149>Create joints only from floor in the category "Structural foundation"</h149>
+    <h150>Joints from the underlying floor are created only if there is no underlying column. Column relations are defined only between selected columns</h150>
+    <h160>Joints type:</h160>
+    <h161>Nominal floor thickness, mm:</h161>
+    <h165>If the floor above the column is missing, then</h165>
+    <h166>Binding bends to the top of the floor (by the center of the rebar)</h166>
+    <h167>Binding bends to the bottom of the floor (by the center of the rebar)</h167>
+    <!-- todo remove after 3.22.12.0 start -->
+    <h173>Straight rebars:</h173>
+    <h174>L-shaped rebars (when creating bends of vertical rebars):</h174>
+    <h177>C-shaped cross holes (stirrups). Hooks in sketch:</h177>
+    <h178>S-shaped cross holes (stirrups). Hooks in sketch:</h178>
+    <h179>L-shaped rebars:</h179>
+    <h180>U-shaped rebars:</h180>
+    <h181>Rectangular stirrups:</h181>
+    <h182>L-shaped rebars with big bend:</h182>
+    <h183>Reset all values to "Auto"</h183>
+    <h184>Preferred Rebar Shapes</h184>
+    <h185>Failed to set parameter values for some elements. Below are the elements codes (id), parameter names, and set values:</h185>
+    <!-- todo remove after 3.22.12.0 end -->
+    <h186>Select again</h186>
+    <h187>Reselect columns that were processed in the current view when using the plugin</h187>
+    <h188>Indent from the bottom of the column, mm:</h188>
+    <h189>Radius in:</h189>
+    <h190>Specify a rebar shape parameter that defines the radius of the spiral</h190>
+    <h191>Spiral pitch:</h191>
+    <h193>First overlap length, mm:</h193>
+    <h194>Second overlap length, mm:</h194>
+    <h195>Calculate overlap length</h195>
+    <h196>Overlap length, mm:</h196>
+    <h205>C-shaped cross holes (stirrups). Revit hooks:</h205>
+    <h206>S-shaped cross holes (stirrups). Revit hooks:</h206>
+    <h207>Spiral rebars:</h207>
+    <h208>Use column geometry without considering connections</h208>
+    <h221>Longitudinally curved rods (bent into a "bottle")</h221>
+    <h226>Removal of previously created reinforcement:</h226>
+    <h227>Binding of the working rebar to the edge of the column by the center of the rebar. Binding is calculated by model diameter</h227>
+    <h228>Install couplers</h228>
+    <h229>First Rebar</h229>
+    <h230>Second rebar</h230>
+    <h231>Couplers will be installed only if the treated columns have the same cross-section and the coupler type is present in the document. Coupler types are searched in the document based on the rules specified in the </h231>
+    <h232> window. In columns where connectors will be installed, the longitudinal reinforcement will be made by individual reinforcing bars without a layout.</h232>
+    <h233>Specify the rules for the installation of couplers for certain types of rebars. You can specify either the full name of the rebar type or a partial name. For example, specify the value "10". Then the type of rebar will be considered as suitable if it has "10" in its name.</h233>
+    <h234>Bend the bottom of straight rebars</h234>
+    <h235>Bend offset (O), mm:</h235>
+    <h236>Bend length (L), mm:</h236>
+    <h237>Bottom bending is performed for straight rebars provided that the columns to be machined have the same cross-section.</h237>
+    <h238>Create:</h238>
+    <h239>Transverse reinforcement</h239>
+    <h240>Default form properties</h240>
+    <h241>If there is already a form with the same sketch in the list, the properties will be taken from it</h241>
+    <h242>Bending direction:</h242>
+    <h243>General reinforcement settings</h243>
+    <h244>It is not recommended to set the cover based on the reinforcement settings if the transverse reinforcement has different diameters and/or different values of the "Stirrup/Tie Attachment" property</h244>
+    <h245>Combine longitudinal reinforcement into Rebar sets</h245>
+    <h262>Reset to equal values</h262>
+    <h263>Joint length, mm:</h263>
+    <h264>Specify the length of the joint from the top of the column, ignoring overlying floor</h264>
+    <srd>Saving data of selected columns</srd>
+    <hook>Hook:</hook>
+    <err1>In the column reinforcement settings, there are bent "in the bottle" rods that must have a floor or non-zero distance between the columns in order to create them. No overlying floor found or distance to overlying column is 0</err1>
+    <npa1>do not create joint</npa1>
+    <npa2>create straight joints</npa2>
+    <npa3>assume a floor conditionally existing</npa3>
+    <pt1>Circle</pt1>
+    <pt3>Rectangle</pt3>
+    <pt4>Square</pt4>
+    <pt5>Undefined</pt5>
+    <rr1>Remove reinforcement of the same type that is created</rr1>
+    <rr2>Remove all previously created reinforcement</rr2>
+    <rr3>Do not remove</rr3>
+    <jt1>Longitudinal reinforcement joints are not created. The rods are cut off at the top of the column according to the specified value of the cover layer from the ends of the reinforcement</jt1>
+    <jt2>Straight joints of longitudinal reinforcement bars are created. The anchor length is set from the top of the overlying floor or from the top of the column if there is no floor. The position of the rods of the longitudinal reinforcement of the overlying columns is not taken into account</jt2>
+    <jt3>Joints of longitudinal reinforcement bars with a bend in the overlying column are created. The anchor length is set from the top of the overlying floor or from the top of the column if there is no floor.</jt3>
+    <jt4>Joints are created in the form of additional rods of the specified diameter</jt4>
+    <jt5>Straight joints of longitudinal reinforcement bars are created. The joint length is set from the top of the overlying floor or from the top of the column if there is no floor</jt5>
+    <jt6>Joints of longitudinal reinforcement bars with anchoring in the overlying floor are created. The anchor length is calculated from the side face of the column</jt6>
+    <bbd1>All joints are bent along the short side of the column</bbd1>
+    <bbd2>All joints are bent along the long side of the column</bbd2>
+    <bbd3>The corner joints are bent towards the center of the column, while the other joints are bent along the column faces</bbd3>
+    <bbd4>The corner joints are bent towards the center of the column. On the long side - along the edges of the column. On the short side - across the edges of the column</bbd4>
+    <bbd5>The corner joints are bent along the long side of the column, while the rest are bent inwards into the column</bbd5>
+    <bbd6>The corner joints are bent along the short side of the column, while the other releases are bent along the column faces</bbd6>
+    <msg1>Pick columns</msg1>
+    <m1>Enter a value from</m1>
+    <m2>to</m2>
+    <m4>Deformed deformation type rebars</m4>
+    <m5>Plain deformation type rebars</m5>
+    <!-- todo remove after 3.22.12.0 -->
+    <m13>Reinforcement cover</m13>
+    <m20>The list of columns contains columns whose reinforcement settings have been changed manually and differ from the settings of the reinforcement group</m20>
+    <m23>Reinforcement settings copied</m23>
+    <m24>You did not specify for which groups to create reinforcement!</m24>
+    <m25>No groups were selected for creating reinforcement!</m25>
+    <m27>Attention! No loaded rebar shapes found in the current project! In this case, the rebar shapes created during the operation of the plugin cannot be opened in the Family Editor! It is recommended that before using the plugin, load the rebar shapes into the project!\nPerform reinforcement, despite the missing rebar shapes?</m27>
+    <rn>Rebar ⌀</rn>
+    <!-- todo remove after 3.22.12.0 -->
+    <full>Available in full version!</full>
+    <!-- todo remove after 3.22.12.0 -->
+    <full2>Limited version only has one form available</full2>
+    <!-- todo remove after 3.22.12.0 -->
+    <noInFamily>Plugin operation in families is not available!</noInFamily>
+    <p1>Analysis of the column:</p1>
+    <p2>Search for related elements:</p2>
+    <p8>Removing the reinforcement created earlier</p8>
+    <p9>Calculation and modeling of longitudinal reinforcement</p9>
+    <p10>Calculation and modeling of transverse reinforcement</p10>
+    <p14>Calculation and modeling of joints from the plate</p14>
+    <p15>Creating couplers</p15>
+    <e1>Column analysis errors</e1>
+    <e2>Failed to initialize column</e2>
+    <e3>Failed to get solids</e3>
+    <e4>Failed to get main or union solid</e4>
+    <e5>Failed to get the top or bottom face</e5>
+    <e6>Failed to determine transverse profile</e6>
+    <e7>The name of the shape used to create the spiral reinforcement is not specified. Use the Preferred Rebar Shapes window to specify the shape of the spiral rebar</e7>
+    <e9>The specified parameter that specifies the radius of the spiral reinforcement was not found in the document</e9>
+    <!-- todo remove after 3.22.12.0 -->
+    <t7>The group contains columns whose reinforcement settings have been manually edited and differ from the group reinforcement settings</t7>
+    <t10>Check all groups</t10>
+    <t11>Uncheck all groups</t11>
+    <!-- todo remove after 3.22.12.0 -->
+    <t12>The column reinforcement settings have been edited manually and differ from the group reinforcement settings</t12>
+    <!-- todo remove after 3.22.12.0 -->
+    <t13>Edit the reinforcement settings of the selected column</t13>
+    <!-- todo remove after 3.22.12.0 -->
+    <t14>Replace column reinforcement settings from the group</t14>
+    <t15>Display in the model the previous column in the list</t15>
+    <t16>Display in the model the column selected in the list</t16>
+    <t17>Display in the model the next column in the list</t17>
+    <!-- todo remove after 3.22.12.0 -->
+    <t40>Copy the reinforcement settings of the current group to all selected groups</t40>
+    <!-- todo remove after 3.22.12.0 -->
+    <t41>Save the reinforcement settings of current group in the xml-file</t41>
+    <!-- todo remove after 3.22.12.0 -->
+    <t42>Load the reinforcement settings from the xml-file and set it for the current group</t42>
+    <t43>Attention! The surface appearance of the reinforcement may depend on the class of reinforcement, diameter or other values that are not considered by the program. Read the normative documentation</t43>
+    <t44>α is a coefficient that takes into account the effect on the anchoring length of the stress state of concrete and reinforcement and the structural solution of the element in the anchoring zone. When anchoring rods of a periodic profile with straight ends (straight anchoring) or smooth reinforcement with hooks or loops without additional anchoring devices for stretched rods, take α = 1.0, and for compressed ones – α = 0.75. According to clause 10.3.30 of SP 63.13330, the coefficient α may be increased to 2.0</t44>
+    <!-- todo remove after 3.22.12.0 -->
+    <t53>Reset all values of the current default reinforcement settings to the default values set in the plugin</t53>
+    <!-- todo remove after 3.22.12.0 -->
+    <t63>You can specify preferred rebar shapes for different types of rebars created by the plugin.</t63>
+    <!-- todo remove after 3.22.12.0 -->
+    <t64>Setting the preferred shapes does not guarantee that the reinforcement will be created using the specified shape of the rebar.</t64>
+    <!-- todo remove after 3.22.12.0 -->
+    <t65>When creating rebars, an attempt will be made to use the specified shape. If creating a rebar with the specified shape is not possible, Revit will automatically search for a suitable shape or create a new shape.</t65>
+    <!-- todo remove after 3.22.12.0 -->
+    <t66>Save current reinforcement settings as default reinforcement settings</t66>
+    <re1>An error occurred while creating longitudinal reinforcement for column id = {0}:</re1>
+    <re2>An error occurred while calculating the location points of the transverse reinforcement for column id = {0}:</re2>
+    <re3>An error occurred while creating a transverse reinforcement part of type "{0}" in column id = {1}:</re3>
+    <re4>Failed to create a straight rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re4>
+    <re5>Failed to create a rebar of shape "{0}" with a given preferred shape of rebar "{1}". Error: {2}\nAn attempt was made to create a rebar with automatic rebar shape selection or creation</re5>
+    <re17>Error while creating joints from floor id={0} to column id={1}:</re17>
+    <re18>Error creating couplers when connecting columns id={0} and id={1}:</re18>
+    <re19>Error creating couplers when processing column id={0}:</re19>
+  </mprColumnsReinforcement>
+</ModPlus>

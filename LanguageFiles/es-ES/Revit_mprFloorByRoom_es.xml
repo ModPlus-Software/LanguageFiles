@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprFloorByRoom
+    LocalName="Suelo por habitación"
+    Description="Creación de suelos según de contorno de habitación">
+    <t1>Filtro de habitación:</t1>
+    <t2>Tipo de forjado:</t2>
+    <t3>Desfase desde nivel, mm:</t3>
+    <t4>Establecer en huecos de puerta</t4>
+    <t5>¡Tipo de forjado no está especificado! ¡Esta configuración no se puede procesar!</t5>
+    <t6>Según habitaciones a vista</t6>
+    <t7>Según habitaciones seleccionadas</t7>
+    <t8>Por habitaciones preseleccionadas</t8>
+    <t9>Establecer valor de espesor del tipo seleccionado del forjado</t9>
+    <t10>Copiar valor del parámetro (de habitación al suelo):</t10>
+    <t11>De</t11>
+    <t12>en</t12>
+    <t13>Al establecer suelos en huecos de puertas en todo espesor de muro, considerar habitación principal siguiente:</t13>
+    <t14>Si puerta conduce a salida</t14>
+    <t15>Si puerta conduce a entrada</t15>
+    <t16>Suelo de habitación principal se creará insertando en hueco de puerta. En consecuencia, para habitación definida como no principal, no se creará un hueco de puerta. Esta opción sólo funciona para familias en categoría "Puertas" que tienen propiedades internas FromRoom y ToRoom rellenas. Dirección del movimiento en hueco está determinada por dirección del lado exterior de familia</t16>
+    <t17>Recortar geometría sólida de puerta del contorno del suelo</t17>
+    <l1>No insertar contorno del suelo en hueco de puerta</l1>
+    <l2>Insertar contorno al centro de muro</l2>
+    <l3>Insertar contorno en todo espesor de muro</l3>
+    <l4>Insertar contorno al valor especificado, mm</l4>
+    <msg1>¡Para iniciar complemento, vaya al plano de planta!</msg1>
+    <msg2>Se crea un suelo del tipo "{0}" según contorno de habitación</msg2>
+    <msg3>No se puede crear suelo según contorno de habitación</msg3>
+    <msg4>No se han encontrado habitaciones que satisfacen al filtro por parámetros "{0}"</msg4>
+    <msg5>¡No hay habitaciones en vista actual!</msg5>
+    <msg6>No se puede procesar contorno de hueco. Error "{0}". Contorno del piso no se insertará en hueco</msg6>
+    <msg7>Parámetro "{0}" no se ha encontrado</msg7>
+    <msg8>No se puede copiar valor del parámetro "{0}" en parámetro "{1}"</msg8>
+    <msg9>Tipos de parámetros incompatibles o motivo desconocido</msg9>
+    <msg10>¡El soporte y desarrollo de este complemento han sido descontinuado! Todas las tareas que realiza este complemento las realiza el complemento "Acabado de habitación"</msg10>
+  </mprFloorByRoom>
+</ModPlus>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCopyElementsToOpenDocuments
+    LocalName="复制元素"
+    Description="批量复制元素到打开的文档"
+    FullDescription="从当前文档批量复制选定元素到指定的打开文档">
+    <h1>已选元素：</h1>
+    <h2>从项目：</h2>
+    <h3>到项目：</h3>
+    <h4>复制选项</h4>
+    <!--todo remove after 2.4.4.0-->
+    <h5>操作日志</h5>
+    <h6>执行复制</h6>
+    <h7>在记事本中打开</h7>
+    <h8>展开所有二级嵌套项</h8>
+    <h9>全部折叠</h9>
+    <h10>全选</h10>
+    <h11>取消全选</h11>
+    <h12>显示共享参数的guid</h12>
+    <h13>其他设置</h13>
+    <h14>类型</h14>
+    <h15>其他元素</h15>
+    <h16>抑制警告</h16>
+    <h17>显示链接文件</h17>
+    <h18>名称冲突时的行为</h18>
+    <h19>类型名称冲突时的行为</h19>
+    <h20>集合</h20>
+    <h21>过滤器名称冲突时的行为</h21>
+    <h22>视图名称冲突时的行为</h22>
+    <h23>定义关联元素名称冲突时的行为。例如，如果复制墙实例且目标文档中已有同名的墙类型，Revit会提示使用目标文档的类型或创建带数字后缀的类型副本</h23>
+    <h24>此选项不影响插件复制的大多数元素，但必须设置在Revit API使用的复制方法中。大多数元素会添加数字后缀，无论此选项的值如何</h24>
+    <h25>类型名称冲突且选择"替换"时，插件将执行以下算法：目标文档中与复制类型同名的类型（旧类型）将被重命名。然后复制新类型。新类型将分配给所有使用旧类型的实例。旧类型将被删除</h25>
+    <h26>过滤器名称冲突且选择"替换"时，插件将执行以下算法：目标文档中所有应用与复制过滤器同名的过滤器（旧过滤器）的视图和视图模板将被找到。然后复制新过滤器，并添加数字后缀。所有之前找到的视图和模板将重新应用过滤器，替换旧过滤器为新过滤器，但保留可见性设置。旧过滤器将被删除。新过滤器将使用旧过滤器的名称</h26>
+    <h27>视图名称冲突且选择"替换"时，插件将执行以下算法：目标文档中所有引用旧视图的视口或使用旧视图作为模板的视图（如果复制的视图是模板）将被找到。然后复制新视图，并添加数字后缀。所有之前找到的视口将设置新视图为引用视图或所有之前找到的视图将设置新视图为模板。旧视图将被删除。新视图将使用旧视图的名称</h27>
+    <h28>另存为新集合</h28>
+    <h29>保存当前集合</h29>
+    <h30>删除集合</h30>
+    <h31>输入新集合名称</h31>
+    <h32>视口修改仅从Revit 2023版本开始支持！</h32>
+    <filters>过滤器</filters>
+    <link>链接：</link>
+    <b1>使用目标文档的名称</b1>
+    <b2>中止粘贴</b2>
+    <b3>默认行为</b3>
+    <b4>替换</b4>
+    <b5>询问</b5>
+    <elementGetError>获取元素时出错。Id："{0}"。错误："{1}"。</elementGetError>
+    <!--todo remove after 2.4.4.0-->
+    <m1>{0} – 错误！获取元素时出错。Id："{1}"。错误："{2}"。</m1>
+    <startCollectingElements>开始收集模型元素操作（{0}）。</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m2>{0} – 开始收集模型元素操作（{1}）。</m2>
+    <completionCollectingElements>完成收集模型元素操作（{0}）。</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m3>{0} – 完成收集模型元素操作（{1}）。</m3>
+    <collectingElementsCriticalError>收集模型元素操作中发生严重错误（{0}）。</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
+    <m4>{0} – 错误！收集模型元素操作中发生严重错误（{1}）。</m4>
+    <startCopyingElements>开始从文档"{0}"复制元素到文档"{1}"。</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m5>{0} – 开始从文档"{1}"复制元素到文档"{2}"。</m5>
+    <completionCopyingElements>完成从文档"{0}"复制元素到文档"{1}"。</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m6>{0} – 完成从文档"{1}"复制元素到文档"{2}"。</m6>
+    <elementCopyError>复制元素"{0}（id：{1}）"类别"{2}"时出错："{3}"。</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
+    <m7>{0} – 错误！复制元素"{1}（id：{2}）"类别"{3}"时出错："{4}"。</m7>
+    <worksharingDisabledWarning>此文档（{0}）已禁用共享。不复制工作集。</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
+    <m9>{0} – 警告！此文档（{1}）已禁用共享。不复制工作集。</m9>
+    <m10>工作集</m10>
+    <m11>（类型）</m11>
+    <m12>浏览器</m12>
+    <m13>尺寸</m13>
+    <m14>填充样式</m14>
+    <m15>参数过滤器</m15>
+    <m16>线型</m16>
+    <m17>可载入族</m17>
+    <m18>阶段过滤器</m18>
+    <m19>打印设置</m19>
+    <m20>修订</m20>
+    <m21>修订设置</m21>
+    <m22>文字样式</m22>
+    <m23>视图族类型</m23>
+    <m24>视图</m24>
+    <m25>参数</m25>
+    <m26>共享参数</m26>
+    <m27>复制元素</m27>
+    <m28>所有组</m28>
+    <m29>视图（模板）</m29>
+    <m30>复制完成</m30>
+    <!--todo remove after 2.4.4.0-->
+    <m32>取消</m32>
+    <m33>搜索</m33>
+    <m34>面积平面</m34>
+    <m35>天花板平面</m35>
+    <m36>柱明细表</m36>
+    <m37>成本报告</m37>
+    <m38>详图</m38>
+    <m39>草图视图</m39>
+    <m40>图纸</m40>
+    <m41>立面图</m41>
+    <m42>工程平面</m42>
+    <m43>楼层平面</m43>
+    <m44>内部</m44>
+    <m45>图例</m45>
+    <m46>负荷报告</m46>
+    <m47>面板明细表</m47>
+    <m48>压损报告</m48>
+    <m49>浏览器</m49>
+    <m50>渲染</m50>
+    <m51>报告</m51>
+    <m52>明细表</m52>
+    <m53>剖面图</m53>
+    <m54>系统浏览器</m54>
+    <m55>系统分析报告</m55>
+    <m56>3D</m56>
+    <m57>漫游</m57>
+    <m58>未定义</m58>
+    <m59>类别</m59>
+    <startCollectingTypes>开始收集模型类型操作（{0}）。</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m60>{0} – 开始收集模型类型操作（{1}）。</m60>
+    <completionCollectingTypes>完成收集模型类型操作（{0}）。</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m61>{0} – 完成收集模型类型操作（{1}）。</m61>
+    <m62>出现需要用户确认的关键Revit警告。请禁用警告抑制并重试复制</m62>
+    <m63>共享参数</m63>
+    <m64>无类别</m64>
+    <elementCopySkipped>跳过复制元素"{0}（id {1}）"类别"{2}"。</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
+    <m65>{0} – 跳过复制元素"{1}（id {2}）"类别"{3}"。</m65>
+    <m66>目标文档中已存在族"{0}"类型"{1}"。{2}是否复制并替换？</m66>
+    <m67>全局参数</m67>
+    <m68>线样式</m68>
+    <m69>颜色方案</m69>
+    <m70>项目参数</m70>
+    <m71>目标文档中已存在过滤器"{0}"。{1}是否复制并替换？</m71>
+    <m72>目标文档中已存在视图"{0}"。{1}是否复制并替换？</m72>
+    <copyConduitStandardWithReplace>目标文档中已存在风管标准 "{0}"。{1}是否执行复制并替换？</copyConduitStandardWithReplace>
+    <!--todo remove after 2.4.4.0-->
+    <m73>已复制元素：</m73>
+    <!--todo remove after 2.4.4.0-->
+    <m74>已跳过元素：</m74>
+    <!--todo remove after 2.4.4.0-->
+    <m75>错误数量：</m75>
+    <m76>详情见操作日志</m76>
+    <m77>导出设置</m77>
+    <m78>DWG/DXF导出设置</m78>
+    <m79>DGN导出设置</m79>
+    <fillPatterns>填充图案</fillPatterns>
+    <startCollectingFamilies>开始模型族收集操作 ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>完成模型族收集操作 ({0})</completionCollectingFamilies>
+    <families>族</families>
+    <familyProcessError>处理族 "{0}"（ID: {1}）时发生错误："{2}"</familyProcessError>
+    <familyExists>目标文档中已存在族 "{0}"。{1}要执行复制吗？</familyExists>
+    <duplicateCreated>已创建族 {0} 的副本</duplicateCreated>
+    <elementTab>元素</elementTab>
+    <modelElementTab>模型元素</modelElementTab>
+    <selectedInModel>在模型中选定的</selectedInModel>
+    <selectFromLink>从链接中选择</selectFromLink>
+    <selectElementsFrom>请选择来自 {0} 的元素</selectElementsFrom>
+    <copyResultMessage>复制完成。已复制：{0}，已跳过：{1}，有错误：{2}</copyResultMessage>
+    <messageInvalidActiveDocument>活动文档与所选来源不一致</messageInvalidActiveDocument>
+    <notSelectedElements>模型中未选择任何元素</notSelectedElements>
+    <selectElementsFromLink>请选择来自链接文件的元素</selectElementsFromLink>
+    <groupTypeExists>目标文档中已存在组 "{0}"。\n是否执行复制并替换？</groupTypeExists>
+    <groups>组</groups>
+    <materialExists>目标文档中已存在材质 "{0}"。\n是否执行复制并替换？</materialExists>
+    <materialDuplicateActionSettings>材质名称冲突时的行为</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>当材质名称冲突并选择"替换"选项时，插件将执行以下算法：目标文档中的旧材质将被更新，并获得新材质的所有属性。材质名称将保持不变。所有使用该材质的元素都会自动获得更新后的属性。</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>关闭已打开的明细表</closeOpenedSchedule>
+    <searchModeLabel>比较模式：</searchModeLabel>
+    <searchModeNormal>普通</searchModeNormal>
+    <searchModeRegex>正则表达式</searchModeRegex>
+    <patternCopyWarning>无法将图案 "{0}" (id: {1}) 复制到目标文档。过滤器覆盖将应用时不包含此图案。</patternCopyWarning>
+    <viewTemplateFiltersCopyError>无法将过滤器应用到复制的视图样板 "{0}"。错误: "{1}"。</viewTemplateFiltersCopyError>
+  </mprCopyElementsToOpenDocuments>
+</ModPlus>

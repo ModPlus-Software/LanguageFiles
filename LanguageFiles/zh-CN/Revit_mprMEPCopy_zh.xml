@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPCopy
+    LocalName="MEP复制"
+    Description="MEP元件复制工具集"
+    LocalName1="按标高复制"
+    Description1="按选定标高复制并对齐MEP元件"
+    LocalName2="垂直复制"
+    Description2="按指定距离垂直复制MEP元件"
+    LocalName3="定向复制"
+    Description3="按指定方向和距离复制MEP元件">
+    <msg1>未选择MEP元件</msg1>
+    <msg2>选择要复制的MEP元件</msg2>
+    <msg3>无法确定元件基准标高</msg3>
+    <msg4>在MEP曲线上指定点以确定方向</msg4>
+    <t1>向上数量：</t1>
+    <t2>向下数量：</t2>
+    <t3>距离：</t3>
+    <t4>数量：</t4>
+    <t5>仅显示选定项</t5>
+    <t6>已选择标高：</t6>
+    <t7>当同时启用"数量"和"距离"选项时，将按指定方向和距离复制选定元件指定次数。
+
+若仅启用"数量"选项，则仅复制与选定方向一致的MEP曲线连接元件，并按等距步长复制至MEP曲线末端。
+
+若仅启用"距离"选项，则仅复制与选定方向一致的MEP曲线连接元件，并按指定距离重复复制直至无法连接。</t7>
+    <err1>无法连接元件</err1>
+  </mprMEPCopy>
+</ModPlus>
