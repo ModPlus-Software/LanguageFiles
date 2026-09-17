@@ -8,7 +8,6 @@ using Core.Abstractions;
 using Helpers;
 using Models;
 using Loggers;
-using Microsoft.Win32;
 
 /// <summary>
 /// Чтение и запись XML-файлов локализации на диске.
@@ -361,10 +360,24 @@ public class LanguageRepositoryService : ILanguageRepository
         }
     }
 
+    /// <summary>
+    /// Возвращает каталог, куда слияние кладёт языковые файлы: <c>Languages</c> в установленном ModPlus.
+    /// </summary>
+    /// <remarks>
+    /// Путь задан жёстко, а не взят из <c>TopDir</c> в реестре: это значение безусловно
+    /// перезаписывает геттер <c>ModPlusAPI.Constants.CurrentDirectory</c> родителем того каталога,
+    /// откуда загружена <c>ModPlusAPI.dll</c>, а вызывается он уже из статического конструктора
+    /// <c>ModPlusAPI.Language</c>. Поэтому сеанс XAML-дизайнера Visual Studio, поднявший сборки
+    /// плагина из <c>…\VisualStudio\&lt;версия&gt;\Designer\Cache</c>, оставлял в реестре путь на этот
+    /// кэш, и слияние раскладывало файлы туда вместо установленного ModPlus.
+    /// </remarks>
+    /// <param name="notifications">Служба уведомлений для лога слияния.</param>
+    /// <returns>Путь к каталогу назначения или <c>null</c>, если установленный ModPlus не найден.</returns>
     private static string GetMergeTargetDirectory(NotificationService notifications)
     {
-        var topDir = Registry.CurrentUser.OpenSubKey("Software\\ModPlus")?.GetValue("TopDir")?.ToString();
-        if (string.IsNullOrEmpty(topDir) || !Directory.Exists(topDir))
+        var topDir = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "ModPlus");
+        if (!Directory.Exists(topDir))
         {
             notifications.NotifyError(EditorStrings.InstalledModPlusNotFound);
             return null;
