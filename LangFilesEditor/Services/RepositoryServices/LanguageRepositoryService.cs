@@ -160,7 +160,7 @@ public class LanguageRepositoryService : ILanguageRepository
         }
         catch (Exception exception)
         {
-            notifications.Notify(exception.Message);
+            notifications.NotifyError(exception.Message);
         }
     }
 
@@ -366,7 +366,7 @@ public class LanguageRepositoryService : ILanguageRepository
         var topDir = Registry.CurrentUser.OpenSubKey("Software\\ModPlus")?.GetValue("TopDir")?.ToString();
         if (string.IsNullOrEmpty(topDir) || !Directory.Exists(topDir))
         {
-            notifications.Notify(EditorStrings.InstalledModPlusNotFound);
+            notifications.NotifyError(EditorStrings.InstalledModPlusNotFound);
             return null;
         }
 
@@ -386,7 +386,7 @@ public class LanguageRepositoryService : ILanguageRepository
             }
             catch (Exception exception)
             {
-                notifications.Notify(EditorStrings.FormatDeleteFileFailed(file, exception.Message));
+                notifications.NotifyError(EditorStrings.FormatDeleteFileFailed(file, exception.Message));
                 return false;
             }
         }
