@@ -61,6 +61,7 @@
     <emptyValue>(leer)</emptyValue>
     <maskHint>Masken-Hinweis: * - beliebige Anzahl von Zeichen; ? - ein Zeichen; # - eine Ziffer. Wenn die Suchmaske kein * ? # enthält, dann bezeichnet * in der Ersetzung das gesamte gefundene Fragment</maskHint>
     <regexHint>Regulärer-Ausdruck-Hinweis: . — beliebiges Zeichen; .* — Zeichenfolge; \d — Ziffer; \w — Buchstabe/Ziffer/Unterstrich</regexHint>
+    <counterHint>Zähler: {CountN} - Zahl, {CountC} - Buchstabe. Beispiel: Ansicht_{CountC} => Ansicht_A, Ansicht_B. Parameter: {CountN:Start:Breite}, {CountC:Buchstabe}</counterHint>
     <systemName>Systemname</systemName>
     <elementSystemName>Systemname des Elements</elementSystemName>
     <unknownCategory>Unbekannte Kategorie</unknownCategory>
@@ -81,5 +82,9 @@
     <dimensionAbove>Oberer Index</dimensionAbove>
     <dimensionBelow>Unterer Index</dimensionBelow>
     <dimensionValueOverride>Wertüberschreibung</dimensionValueOverride>
+    <siteName>Name des Geländes</siteName>
+    <worksetName>Name des Arbeitsbereichs</worksetName>
+    <worksetNameExistsMessage>Ein Arbeitsbereich mit dem Namen "{0}" existiert bereits</worksetNameExistsMessage>
+    <worksetNotEditableMessage>Arbeitsbereich "{0}" kann nicht bearbeitet werden</worksetNotEditableMessage>
   </mprFindAndReplace>
 </ModPlus>
