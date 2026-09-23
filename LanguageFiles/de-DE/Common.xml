@@ -222,6 +222,7 @@
     <msg6>Die Datei "{0}" ist keine gültige XML-Datei. {1}</msg6>
     <msg7>Die Daten aus der Datei "{0}" konnten nicht gelesen werden. {1}</msg7>
     <msg8>Bei der ausgewählten Datei handelt es sich nicht um eine Datei für die Konfigurationsspeicherung</msg8>
+    <msg9>Die Datei "{0}" konnte nicht gespeichert werden. Möglicherweise ist sie in einem anderen Programm geöffnet. Schließen Sie die Datei und versuchen Sie es erneut</msg9>
     <close>Schließen</close>
     <yes>Ja</yes>
     <no>Nein</no>
@@ -279,7 +280,7 @@
     <h50>Berechnung der Verankerungs- oder Überlappungslänge</h50>
     <h51>Berechnung der Verankerungslänge</h51>
     <h52>Berechnung der Überlappungslänge</h52>
-    <h53>Beim Senden einer Anfrage an den ModPlus Webdienst ist eine Zugriffssperre aufgetreten. Wenden Sie sich bitte an Ihren lokalen Netzwerkadministrator, um Zugriff auf Dienste in der Subdomäne https://*.modplus.org (https://api.modplus.org, https://update.modplus.org, https://api-lsm.modplus.org) zu erhalten</h53>
+    <h53>Statt einer Antwort des ModPlus-Webdienstes wurde eine Webseite empfangen (unten angezeigt). Das bedeutet meist, dass die Verbindung von einem Proxyserver, einer Firewall, einem VPN oder einem System zur Internetzugangskontrolle abgefangen wird oder dass das Netzwerk eine Anmeldung erfordert (zum Beispiel Gäste-WLAN). Wenn ein VPN verwendet wird, versuchen Sie, es auszuschalten oder umgekehrt einzuschalten. Wenn der Internetzugang in Ihrer Organisation eingeschränkt ist, wenden Sie sich an Ihren lokalen Netzwerkadministrator, um Zugriff auf die Dienste in der Subdomäne https://*.modplus.org (https://api.modplus.org, https://api-lsm.modplus.org, https://update.modplus.org, https://storage.modplus.org) zu erhalten</h53>
     <h54>In Notepad öffnen</h54>
     <h55>Benachrichtigungseinstellungen</h55>
     <h56>Neuigkeiten</h56>
@@ -326,6 +327,22 @@
     <em3>oder in Support-Chat bei</em3>
     <em4>Telegram</em4>
     <em5>Beschreiben Sie bitte ausführlich, welche Vorgänge den Fehler verursacht haben</em5>
+    <ke1>Ursache</ke1>
+    <ke2>Was ist zu tun</ke2>
+    <ke3>Eines oder mehrere der bearbeiteten Elemente liegen außerhalb der Konstruktionsgrenzen von Revit. Die gesamte Modellgeometrie muss sich innerhalb von 16 km (10 Meilen) vom internen Ursprung des Projekts befinden. Mit Koordinaten jenseits dieser Grenze kann Revit keine Geometrie erstellen. Der Fehler tritt auf der Seite von Revit auf und hängt nicht mit der Arbeit des Plugins zusammen.</ke3>
+    <ke4>Prüfen Sie, ob sich im Modell Elemente befinden, die versehentlich weit vom Hauptteil des Modells entfernt wurden. Das passiert häufig nach dem Kopieren, dem Import einer DWG oder dem Einfügen aus einem anderen Projekt. Führen Sie in einer Grundrissansicht „Zoom to Fit“ (ZF) aus: Wenn das Modell zu einem Punkt schrumpft, gibt es entfernte Elemente. Suchen Sie diese und löschen oder verschieben Sie sie.</ke4>
+    <ke5>Wenn sich das gesamte Modell weiter als 16 km vom internen Ursprung befindet, verschieben Sie es näher an ihn heran. Die reale Lage wird über gemeinsam genutzte Koordinaten festgelegt: „Manage“ → „Coordinates“ → „Specify Coordinates at Point“.</ke5>
+    <ke6>Keine Verbindung zum ModPlus-Server möglich: Die Verbindung wurde abgelehnt oder unterbrochen, oder die Serveradresse konnte nicht aufgelöst werden. Die Ursache liegt im Netzwerk des Computers: Es besteht kein Internetzugang, oder die Verbindung wird von einer Firewall, einem Virenschutz, einem Proxyserver oder den Netzwerkregeln Ihrer Organisation blockiert. Der Fehler wird nicht durch das Plugin verursacht.</ke6>
+    <ke7>Prüfen Sie, ob der Computer Internetzugang hat, und wiederholen Sie den Vorgang in einigen Minuten.</ke7>
+    <ke8>Wenn die Internetverbindung über einen Proxyserver läuft, prüfen Sie die Proxy-Einstellungen in ModPlus. Wenn der Internetzugang in Ihrer Organisation eingeschränkt ist, bitten Sie Ihren Systemadministrator, Verbindungen zu api.modplus.org, api-lsm.modplus.org, update.modplus.org und storage.modplus.org (Port 443) zuzulassen.</ke8>
+    <ke9>Statt einer Antwort des ModPlus-Servers wurde eine Webseite empfangen. Das bedeutet meist, dass die Verbindung von einem Proxyserver, einer Firewall oder einem System zur Internetzugangskontrolle abgefangen wird oder dass das Netzwerk eine Anmeldung erfordert (zum Beispiel Gäste-WLAN). Seltener ist der Server vorübergehend nicht erreichbar. Der Fehler wird nicht durch das Plugin verursacht.</ke9>
+    <ke10>Der Server hat statt einer Antwort auf die Anfrage eine Webseite zurückgegeben</ke10>
+    <ke11>Öffnen Sie eine beliebige Website im Browser: Wenn das Netzwerk eine Anmeldung erfordert, wird eine Anmeldeseite angezeigt. Melden Sie sich an und wiederholen Sie den Vorgang.</ke11>
+    <ke12>Wenn auf dem Computer ein VPN verwendet wird, versuchen Sie, es auszuschalten oder umgekehrt einzuschalten: Der Zugriff auf die ModPlus-Server kann davon abhängen, aus welchem Land die Verbindung hergestellt wird. Wiederholen Sie anschließend den Vorgang.</ke12>
+    <ke13>Der Fehler „Methode nicht gefunden“ weist darauf hin, dass Ihre Version von ModPlus nur teilweise aktualisiert wurde: Einige Komponenten wurden aktualisiert, andere sind auf der vorherigen Version geblieben und nicht miteinander kompatibel. Der Fehler wird nicht durch das Plugin selbst verursacht.</ke13>
+    <ke14>Schließen Sie alle unterstützten Produkte (AutoCAD, Revit usw.), starten Sie dann die Suche nach Updates im Modul für automatische Updates (Symbol im Windows-Infobereich) und installieren Sie alle verfügbaren Updates.</ke14>
+    <ke15>Wenn das Modul für automatische Updates die erforderlichen Updates nicht installiert (es werden keine Updates gefunden, die Installation schlägt fehl oder dieser Fehler tritt nach dem Update erneut auf), laden Sie den ModPlus-Installer herunter und aktualisieren Sie damit.</ke15>
+    <ke16>ModPlus-Installer herunterladen</ke16>
     <p1>Berechnungsergebnis in Word</p1>
     <p2>Ein neues Dokument erstellen</p2>
     <p3>Ausfüllen der Angaben</p3>

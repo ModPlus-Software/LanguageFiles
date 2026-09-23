@@ -222,6 +222,7 @@
     <msg6>The file "{0}" is not a valid xml file. {1}</msg6>
     <msg7>Failed to read data from the file "{0}". {1}</msg7>
     <msg8>The selected file is not a configuration storage file</msg8>
+    <msg9>Failed to save file "{0}". It may be open in another program. Close the file and try again</msg9>
     <close>Close</close>
     <yes>Yes</yes>
     <no>No</no>
@@ -279,7 +280,7 @@
     <h50>Calculation of the length of anchorage or overlap</h50>
     <h51>Calculation of the length of anchorage</h51>
     <h52>Calculation of the length of overlap</h52>
-    <h53>Access to the ModPlus web service was blocked when sending a request. Contact your local network administrator to access the services in the https://*.modplus.org subdomain (https://api.modplus.org, https://update.modplus.org, https://api-lsm.modplus.org)</h53>
+    <h53>A web page (shown below) was received instead of a response from the ModPlus web service. This usually means the connection is intercepted by a proxy server, firewall, VPN or internet access control system, or the network requires sign-in (for example, guest Wi-Fi). If a VPN is used, try turning it off or, conversely, turning it on. If internet access in your organization is restricted, contact your local network administrator to get access to the services in the https://*.modplus.org subdomain (https://api.modplus.org, https://api-lsm.modplus.org, https://update.modplus.org, https://storage.modplus.org)</h53>
     <h54>Open in Notepad</h54>
     <h55>Notification settings</h55>
     <h56>News</h56>
@@ -326,6 +327,22 @@
     <em3>or write to our support chat in</em3>
     <em4>Telegram</em4>
     <em5>Describe in detail what actions caused the error</em5>
+    <ke1>Cause</ke1>
+    <ke2>What to do</ke2>
+    <ke3>One or more of the processed elements are outside the Revit design limits. All model geometry must be within 10 miles (16 km) of the project's internal origin. Revit can't build geometry with coordinates beyond this limit. The error comes from Revit itself and isn't caused by the plugin.</ke3>
+    <ke4>Check whether some elements were accidentally moved far away from the main part of the model. This often happens after copying, importing a DWG or pasting from another project. Use "Zoom to Fit" (ZF) on a plan view: if the model shrinks to a dot, there are distant elements. Find them and delete or move them.</ke4>
+    <ke5>If the whole model is more than 10 miles (16 km) from the internal origin, move it closer. Set the real-world location with shared coordinates: "Manage" → "Coordinates" → "Specify Coordinates at Point".</ke5>
+    <ke6>Couldn't connect to the ModPlus server: the connection was refused or dropped, or the server address couldn't be resolved. The cause is on the computer's network side: there's no internet access, or the connection is blocked by a firewall, antivirus, proxy server or your organization's network rules. The error isn't caused by the plugin.</ke6>
+    <ke7>Make sure the computer has internet access and try again in a few minutes.</ke7>
+    <ke8>If the internet connection goes through a proxy server, check the proxy settings in ModPlus. If internet access in your organization is restricted, ask your system administrator to allow connections to api.modplus.org, api-lsm.modplus.org, update.modplus.org and storage.modplus.org (port 443).</ke8>
+    <ke9>A web page was received instead of a response from the ModPlus server. This usually means the connection is intercepted by a proxy server, firewall or internet access control system, or the network requires sign-in (for example, guest Wi-Fi). Less often, the server is temporarily unavailable. The error isn't caused by the plugin.</ke9>
+    <ke10>The server returned a web page instead of a response to the request</ke10>
+    <ke11>Open any website in your browser: if the network requires sign-in, a sign-in page will open. Sign in and try again.</ke11>
+    <ke12>If a VPN is used on the computer, try turning it off or, conversely, turning it on: access to the ModPlus servers may depend on the country the connection comes from. Then try again.</ke12>
+    <ke13>The "Method not found" error indicates that your version of ModPlus has only received partial updates: some components have been updated while others remain at the previous version, and they are incompatible with each other. The error isn't caused by the plugin itself.</ke13>
+    <ke14>Close all supported products (AutoCAD, Revit, etc.), then run an update check in the auto-update module (the icon in the Windows notification area) and install all available updates.</ke14>
+    <ke15>If the auto-update module doesn't install the required updates (no updates are found, the installation fails, or this error persists after updating), download the ModPlus installer and update using it.</ke15>
+    <ke16>Download the ModPlus installer</ke16>
     <p1>Result of calculation in Word</p1>
     <p2>Create a new document</p2>
     <p3>Filling data</p3>

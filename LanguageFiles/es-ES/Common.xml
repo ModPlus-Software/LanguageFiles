@@ -222,6 +222,7 @@
     <msg6>El archivo "{0}" no es un archivo xml válido. {1}</msg6>
     <msg7>No se pudieron leer los datos del archivo "{0}". {1}</msg7>
     <msg8>Archivo seleccionado no es archivo de almacenamiento de configuración</msg8>
+    <msg9>No se pudo guardar el archivo "{0}". Es posible que esté abierto en otro programa. Cierre el archivo e inténtelo de nuevo</msg9>
     <close>Cerrar</close>
     <yes>Sí</yes>
     <no>No</no>
@@ -279,7 +280,7 @@
     <h50>Cálculo de longitud de anclaje o empalme solapado</h50>
     <h51>Calcular longitud del anclaje</h51>
     <h52>Calcular longitud de empalme solapado</h52>
-    <h53>Al enviar solicitud al servicio web de ModPlus, acceso estaba bloqueado. Comuníquese con su administrador de red local para obtener acceso a servicios en subdominio https://*.modplus.org(https://api.modplus.org, https://update.modplus.org, https://api-lsm.modplus.org)</h53>
+    <h53>Se recibió una página web (se muestra abajo) en lugar de una respuesta del servicio web de ModPlus. Normalmente significa que la conexión está interceptada por un servidor proxy, un firewall, una VPN o un sistema de control de acceso a Internet, o que la red requiere iniciar sesión (por ejemplo, una Wi-Fi de invitados). Si se utiliza una VPN, intente desactivarla o, al contrario, activarla. Si el acceso a Internet en su organización está restringido, comuníquese con el administrador de su red local para obtener acceso a los servicios del subdominio https://*.modplus.org (https://api.modplus.org, https://api-lsm.modplus.org, https://update.modplus.org, https://storage.modplus.org)</h53>
     <h54>Abrir en Bloc de notas</h54>
     <h55>Ajustes de notificaciones</h55>
     <h56>Novedades</h56>
@@ -326,6 +327,22 @@
     <em3>o chat de soporte en</em3>
     <em4>Telegram</em4>
     <em5>Describe en detalle qué acciones llevaron al error</em5>
+    <ke1>Causa</ke1>
+    <ke2>Qué hacer</ke2>
+    <ke3>Uno o varios de los elementos procesados se encuentran fuera de los límites de diseño de Revit. Toda la geometría del modelo debe estar a menos de 16 km (10 millas) del origen interno del proyecto. Revit no puede construir geometría con coordenadas más allá de este límite. El error se produce en Revit y no está relacionado con el funcionamiento del plugin.</ke3>
+    <ke4>Compruebe si en el modelo hay elementos que se hayan desplazado accidentalmente lejos de la parte principal del modelo. Esto suele ocurrir después de copiar, importar un DWG o pegar desde otro proyecto. Ejecute «Zoom to Fit» (ZF) en una vista de planta: si el modelo se reduce a un punto, hay elementos alejados. Búsquelos y elimínelos o muévalos.</ke4>
+    <ke5>Si todo el modelo se encuentra a más de 16 km del origen interno, acérquelo a él. La ubicación real se define mediante coordenadas compartidas: «Manage» → «Coordinates» → «Specify Coordinates at Point».</ke5>
+    <ke6>No se pudo conectar con el servidor de ModPlus: la conexión fue rechazada o interrumpida, o no se pudo resolver la dirección del servidor. La causa está en la red del equipo: no hay acceso a Internet, o la conexión está bloqueada por un firewall, un antivirus, un servidor proxy o las reglas de red de su organización. El error no lo provoca el complemento.</ke6>
+    <ke7>Compruebe que el equipo tiene acceso a Internet y vuelva a intentarlo dentro de unos minutos.</ke7>
+    <ke8>Si la conexión a Internet pasa por un servidor proxy, revise la configuración de proxy en ModPlus. Si el acceso a Internet en su organización está restringido, pida al administrador del sistema que permita las conexiones a api.modplus.org, api-lsm.modplus.org, update.modplus.org y storage.modplus.org (puerto 443).</ke8>
+    <ke9>Se recibió una página web en lugar de una respuesta del servidor de ModPlus. Normalmente significa que la conexión está interceptada por un servidor proxy, un firewall o un sistema de control de acceso a Internet, o que la red requiere iniciar sesión (por ejemplo, una Wi-Fi de invitados). Con menos frecuencia, el servidor no está disponible temporalmente. El error no lo provoca el complemento.</ke9>
+    <ke10>El servidor devolvió una página web en lugar de una respuesta a la solicitud</ke10>
+    <ke11>Abra cualquier sitio web en el navegador: si la red requiere iniciar sesión, se abrirá una página de inicio de sesión. Inicie sesión y vuelva a intentarlo.</ke11>
+    <ke12>Si en el equipo se utiliza una VPN, intente desactivarla o, al contrario, activarla: el acceso a los servidores de ModPlus puede depender del país desde el que se realiza la conexión. Después, vuelva a intentarlo.</ke12>
+    <ke13>El error «Método no encontrado» indica que su versión de ModPlus solo ha recibido actualizaciones parciales: algunos componentes se han actualizado y otros siguen en la versión anterior, y no son compatibles entre sí. El error no lo provoca el propio complemento.</ke13>
+    <ke14>Cierre todos los productos compatibles (AutoCAD, Revit, etc.); después, busque actualizaciones en el módulo de actualización automática (el icono en el área de notificaciones de Windows) e instale todas las actualizaciones disponibles.</ke14>
+    <ke15>Si el módulo de actualización automática no instala las actualizaciones necesarias (no encuentra actualizaciones, la instalación falla o este error persiste después de actualizar), descargue el instalador de ModPlus y actualice con él.</ke15>
+    <ke16>Descargar el instalador de ModPlus</ke16>
     <p1>Resultado del cálculo en Word</p1>
     <p2>Creando un nuevo documento</p2>
     <p3>Completando datos</p3>
