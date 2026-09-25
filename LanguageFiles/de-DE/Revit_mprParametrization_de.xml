@@ -153,7 +153,7 @@
     <t142>Name und Beschreibung</t142>
     <t143>Anleitung öffnen</t143>
     <t144>Vorfilter</t144>
-    <t145>Der Vorfilter grenzt den Elementsatz für alle Regeln der Strategie gleichzeitig ein. Im Gegensatz zum Strategiefilter wird er nicht anstelle eines nicht ausgefüllten Regelfilters eingesetzt, sondern zusätzlich zu diesem angewendet: Ein Element wird nur dann verarbeitet, wenn es sowohl den Vorfilter als auch den Regelfilter passiert. Wenn beispielsweise im Vorfilter die Kategorie „Wände" und der Parameter „Tragend" festgelegt werden, arbeiten alle Regeln nur mit tragenden Wänden und wählen daraus Elemente nach ihren eigenen Kategorien und Parametern aus. Ein leerer Vorfilter schränkt nichts ein</t145>
+    <t145>Der Vorfilter grenzt den Elementsatz für alle Regeln der Strategie gleichzeitig ein. Im Gegensatz zum Strategiefilter wird er nicht anstelle eines nicht ausgefüllten Regelfilters eingesetzt, sondern zusätzlich zu diesem angewendet: Ein Element wird nur dann verarbeitet, wenn es sowohl den Vorfilter als auch den Regelfilter passiert. Wenn beispielsweise im Vorfilter die Kategorien „Wände", „Tragwerksstützen" und „Skelettbau" sowie der Parameter „Tragend" festgelegt werden, arbeiten alle Regeln nur mit tragenden Elementen dieser Kategorien und wählen daraus Elemente nach ihren eigenen Kategorien und Parametern aus. Ein leerer Vorfilter schränkt nichts ein</t145>
     <t146>Aktuelle Strategie exportieren</t146>
     <t147>In aktuelle Strategie importieren</t147>
     <t148>Strategiefilter</t148>
@@ -451,6 +451,20 @@
     <sld28>Die Strategie bearbeitet Bewehrungsstäbe, die durch eine Bewehrungskupplung verbunden sind. Das bedingte Quellelement ist die Kupplung, die Zielelemente sind ein oder zwei Stäbe, auf deren Enden sie sitzt. Eine Kupplung auf einem einzelnen Stab ergibt eine Eins-zu-eins-Beziehung: In diesem Fall wird der Wert des Stabes mit den Rückschreibfunktionen in die Kupplung übertragen. Bei einer Kupplung auf zwei Stäben wird die rechte Seite der Rückschreibung für beide Stäbe berechnet</sld28>
     <ssd29>Bearbeitung der Ansichten einer Ebene</ssd29>
     <sld29>Die Strategie bearbeitet die einer Ebene zugeordneten Ansichten. Das bedingte Quellelement ist eine Ebene, die Zielelemente sind die zu dieser Ebene gehörenden Grundrisse, Deckenpläne, Tragwerkspläne und Flächenpläne. Die Ebene einer Ansicht wird beim Erstellen der Ansicht festgelegt und ändert sich nicht: ein durch Kopieren erhaltener Grundriss bleibt auf der Ebene des Originals. Ansichten anderer Art - Schnitte, Ansichten, 3D-Ansichten, Legenden, Bauteillisten - sind keiner Ebene zugeordnet und werden nicht bearbeitet, Ansichtsvorlagen ebenfalls nicht. Die zu bearbeitenden Ebenen werden wie die Elemente jeder anderen Strategie ermittelt: bei der Bearbeitung des gesamten Dokuments sind das alle Ebenen des Dokuments, bei der Auswahl einzelner Elemente nur die ausgewählten Ebenen, bei der Bearbeitung einer Ansicht die in dieser Ansicht sichtbaren Ebenen. Eine Ebene wird im Modell in einem Schnitt oder einer Ansicht gewählt, wo sie ein gewöhnliches Element ist; ein Grundriss hat keine Ebenenlinie, daher wird bei der Bearbeitung eines Grundrisses die Ebene übernommen, nach der er erzeugt ist</sld29>
+    <sg1>Ohne Zusammenhänge</sg1>
+    <sgd1>Es werden die Parameter der Elemente selbst bearbeitet, ohne Bezug auf andere Elemente</sgd1>
+    <sg2>Enthalten in einem Element</sg2>
+    <sgd2>Die Zielelemente befinden sich im bedingten Quellelement oder gehören zu ihm</sgd2>
+    <sg3>Bestandteile</sg3>
+    <sgd3>Die Zielelemente sind Teile des bedingten Quellelements</sgd3>
+    <sg4>Räume</sg4>
+    <sgd4>Die Zielelemente sind mit dem Raum anders als durch ihre Lage darin verbunden</sgd4>
+    <sg5>Angrenzende Elemente</sg5>
+    <sgd5>Die Zielelemente berühren das bedingte Quellelement oder sind mit ihm verbunden</sgd5>
+    <sg6>Ebenen und Ansichten</sg6>
+    <sgd6>Die Zielelemente sind an eine Ebene oder eine Ansicht gebunden</sgd6>
+    <sg7>Beliebige Beziehung</sg7>
+    <sgd7>Das Paar wird nicht durch eine Beziehung im Modell bestimmt, sondern manuell angegeben oder nach Werten zugeordnet</sgd7>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -571,9 +585,9 @@
     <d-doctitle>Gibt den Titel des aktuellen Dokuments zurück</d-doctitle>
     <d-getcurrentviewparameter>Gibt den Wert des Parameters &lt;p&gt; der Ansicht zurück, in der die Verarbeitung ausgeführt wird. Verfügbar bei der Verarbeitung der Elemente in der aktuellen Ansicht, in den ausgewählten Ansichten und bei der Verarbeitung der ausgewählten Elemente</d-getcurrentviewparameter>
     <d-targetbottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targetbottomz>
-    <d-targettopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targettopz>
+    <d-targettopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben. Wenn die Verarbeitung nicht im gesamten Dokument erfolgt, wird die Geometrie in der aktiven Ansicht genommen: In einem Grundriss ist die höchste Höhenkote die Schnittebene des Grundrisses und nicht die tatsächliche Oberkante des Elements</d-targettopz>
     <d-sourcebottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcebottomz>
-    <d-sourcetopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcetopz>
+    <d-sourcetopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben. Wenn die Verarbeitung nicht im gesamten Dokument erfolgt, wird die Geometrie in der aktiven Ansicht genommen: In einem Grundriss ist die höchste Höhenkote die Schnittebene des Grundrisses und nicht die tatsächliche Oberkante des Elements</d-sourcetopz>
     <d-gsum>Gibt die Summe der Ausdruckswerte über die Elemente der Gruppe zurück</d-gsum>
     <d-gcount>Gibt die Anzahl der Gruppenelemente der angegebenen Rolle zurück: "s" - bedingte Quellelemente, "t" - Zielelemente</d-gcount>
     <d-gjoin>Verbindet die Ausdruckswerte über die Elemente der Gruppe mit dem angegebenen Trennzeichen. Das optionale dritte Argument legt Flags fest: "d" - nur unterschiedliche Werte, "s" - sortieren, "r" - aufeinanderfolgende ganze Zahlen zu Bereichen zusammenfassen</d-gjoin>
@@ -632,5 +646,7 @@
     <t238>Benutzerdefinierte Bearbeitungsbereiche</t238>
     <t239>Lokale Datei vor und nach der Synchronisierung mit der Zentraldatei speichern</t239>
     <t240>Zurück</t240>
+    <t241>Excel-Datei der Datenquelle der Strategie auswählen</t241>
+    <t242>Excel-Datei aus der Datenquelle der Strategie entfernen (die Datei selbst wird nicht gelöscht)</t242>
   </mprParametrization>
 </ModPlus>

@@ -331,6 +331,7 @@
     <h237>Raumnummerierung</h237>
     <h238>Nummerierung für jede Ebene in mehrgeschossigen Wohnungen zurücksetzen</h238>
     <h239>Parameter nach Wohnungsebenen</h239>
+    <h240>Rundung der Fläche mit einem Faktor:</h240>
     <msg1>Der Parameter "{0}" nicht gefunden</msg1>
     <msg2>Der Parameter "{0}" wurde nicht ausgefüllt</msg2>
     <msg3>Der Parameter "{0}" hat einen ungültigen Wert</msg3>
@@ -406,6 +407,7 @@
     <msg68>Die angegebenen Wohnungen befinden sich auf verschiedenen Ebenen! Sind Sie sicher, dass Sie sie zu einer Wohnung zusammenführen möchten?</msg68>
     <msg69>Für die folgenden Wohnungen (id) wurden unter den markierten keine Kopplungsoptionen gefunden (Wohnungen mit gleicher Funktionsbestimmung, die eine vertikale Überschneidung aufweisen)</msg69>
     <msg70>Die Ergebnisse der Ausgangsprüfung enthalten ungültige Räume (Räume mit nicht ausgefüllten oder fehlerhaften Parametern, nicht platzierte Räume)! Sind Sie sicher, dass Sie fortfahren möchten?</msg70>
+    <msg71>Die Wohnungsdaten im Modell wurden geändert, nachdem diese Liste erstellt wurde (in einer anderen Registerkarte oder manuell). Die Liste ist möglicherweise veraltet – führen Sie den Vorgang erneut aus</msg71>
     <tt1>Der Wert des Parameters "Funktionale Bestimmung", der zur Auswahl der zu verarbeitenden Räume dient. Wenn der Parameter einen anderen Wert hat, wird der Raum bei allen Algorithmen ausgelassen</tt1>
     <tt2>Die Anweisung ausblenden</tt2>
     <tt3>Wählen Sie für jede Gruppe in der Liste einen Raum im Projekt aus, nach dem die Startwohnung für die Nummerierung bestimmt werden soll</tt3>
@@ -449,6 +451,9 @@
     <tt38>Inkorrekter Wert. Überprüfen Sie die in Klammern angegebenen Bedingungen</tt38>
     <tt39>Ausgewählte Räume anzeigen</tt39>
     <tt40>Raumnamen aus der Liste der Raumnamen des aktuellen Dokuments festlegen</tt40>
+    <tt41>Wenn die Option aktiviert ist, wird die angegebene Rundung auf die Fläche mit einem Faktor jedes Raums (Parameter "КВ_Площадь с коэффициентом") sowie auf die Gesamtflächen der Wohnung "КВ_Площадь общая" und "КВ_Площадь неотапл. помещений с коэфф." angewendet. Andere Flächen werden gemäß der Eigenschaft "Rundung der Fläche" gerundet.</tt41>
+    <tt42>Beispiel: Die ursprüngliche Raumfläche beträgt 3.48. Rundung der Fläche 0.1. Rundung der Fläche mit einem Faktor 0.01. Faktor 0.5. Gerundete Fläche - 3.5, Fläche mit Faktor - 3.5 * 0.5 = 1.75, nach der Rundung - 1.75 (ohne diese Option wäre es 1.8).</tt42>
+    <tt43>Wenn die Option deaktiviert ist, wird für alle Flächen die Eigenschaft "Rundung der Fläche" verwendet.</tt43>
     <instruction>Anweisung</instruction>
     <instruction1>Alle Räume im Projekt müssen die in dieser Liste angegebenen allgemeinen Parameter aufweisen. Sie können Ihre eigenen allgemeinen Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen allgemeinen Parameter in der Liste an oder klicken Sie auf "Fehlende Parameter erstellen. Alle numerischen Parameter werden durch den Typ "Währungseinheit" dargestellt, so dass die Räume in Gruppen verarbeitet werden können</instruction1>
     <instruction1_1>Die zusätzlichen Parameter werden nur beim Vorhandensein dieser Parameter bei den Räumen verarbeitet und ausgefüllt. Sie können Ihre eigenen gemeinsam genutzten Parameter desselben Typs verwenden (in Klammern angegeben). Geben Sie Ihre eigenen gemeinsam genutzten Parameter in der Liste an oder klicken Sie auf Schaltfläche "Fehlende Parameter erstellen"</instruction1_1>

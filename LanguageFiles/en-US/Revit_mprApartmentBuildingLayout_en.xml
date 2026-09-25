@@ -331,6 +331,7 @@
     <h237>Room numbering</h237>
     <h238>Reset numbering for each level in multi-level apartments</h238>
     <h239>Apartment level parameters</h239>
+    <h240>Rounding areas with a factor:</h240>
     <msg1>Parameter "{0}" not found</msg1>
     <msg2>Parameter "{0}" is not filled</msg2>
     <msg3>Parameter "{0}" has an invalid value</msg3>
@@ -406,6 +407,7 @@
     <msg68>The specified apartments are on different levels! Are you sure you want to merge them into one apartment?</msg68>
     <msg69>For the following apartments (id), no matching options were found among the selected (apartments with the same functional purpose that have vertical intersection)</msg69>
     <msg70>The initial check results contain invalid rooms (rooms with empty or incorrect parameters, unplaced rooms)! Are you sure you want to continue?</msg70>
+    <msg71>Apartment data in the model has changed since this list was built (on another tab or manually). The list may be out of date — run the operation again</msg71>
     <tt1>The value of the "Functional purpose" parameter, which is used to select the rooms to be processed. If the parameter has a different value, the room will be skipped during the operation of all algorithms</tt1>
     <tt2>Hide instruction</tt2>
     <tt3>For each group in the list, select the room in the project, which will be used to determine the initial apartment for numbering</tt3>
@@ -449,6 +451,9 @@
     <tt38>Incorrect value. Check the conditions in brackets</tt38>
     <tt39>Show selected rooms</tt39>
     <tt40>Set the room name from the list of room names in the current document</tt40>
+    <tt41>If the option is enabled, the specified rounding is applied to the area with a factor of each room (parameter "КВ_Площадь с коэффициентом"), as well as to the flat total areas "КВ_Площадь общая" and "КВ_Площадь неотапл. помещений с коэфф.". Other areas are rounded according to the "Rounding areas" property.</tt41>
+    <tt42>For example, the original room area is 3.48. Rounding areas 0.1. Rounding areas with a factor 0.01. Factor 0.5. Rounded area - 3.5, area with a factor - 3.5 * 0.5 = 1.75, after rounding - 1.75 (without this option it would be 1.8).</tt42>
+    <tt43>If the option is disabled, the "Rounding areas" property is used for all areas.</tt43>
     <instruction>Instruction</instruction>
     <instruction1>All rooms in the project must have the shared parameters specified in this list. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button. All numeric parameters are represented by the "Currency" type, which allows to process rooms in groups</instruction1>
     <instruction1_1>Additional parameters are processed and filled only if the rooms have these parameters. You can use your own shared parameters of the same type (specified in parentheses). Specify your own shared parameters in the list or click the "Create missing parameters" button</instruction1_1>

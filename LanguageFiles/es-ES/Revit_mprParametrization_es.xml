@@ -153,7 +153,7 @@
     <t142>Nombre y descripción</t142>
     <t143>Abrir la guía</t143>
     <t144>Prefiltro</t144>
-    <t145>El prefiltro reduce el conjunto de elementos simultáneamente para todas las reglas de la estrategia. A diferencia del filtro de estrategia, no se sustituye por el filtro de regla no rellenado, sino que se aplica de forma adicional: un elemento se procesará solo si pasa tanto el prefiltro como el filtro de regla. Por ejemplo, si en el prefiltro se establece la categoría "Muros" y el parámetro "Estructural", todas las reglas trabajarán únicamente con muros estructurales, seleccionando entre ellos los elementos según sus propias categorías y parámetros. Un prefiltro vacío no impone ninguna restricción</t145>
+    <t145>El prefiltro reduce el conjunto de elementos simultáneamente para todas las reglas de la estrategia. A diferencia del filtro de estrategia, no se sustituye por el filtro de regla no rellenado, sino que se aplica de forma adicional: un elemento se procesará solo si pasa tanto el prefiltro como el filtro de regla. Por ejemplo, si en el prefiltro se establecen las categorías "Muros", "Pilares estructurales" y "Armazón estructural", así como el parámetro "Estructural", todas las reglas trabajarán únicamente con los elementos estructurales de estas categorías, seleccionando entre ellos los elementos según sus propias categorías y parámetros. Un prefiltro vacío no impone ninguna restricción</t145>
     <t146>Exportar estrategia actual</t146>
     <t147>Importar en la estrategia actual</t147>
     <t148>Filtros de la estrategia</t148>
@@ -451,6 +451,20 @@
     <sld28>La estrategia procesa las barras de refuerzo unidas por un acoplador. El elemento de origen condicional es el acoplador y los elementos de destino son una o dos barras en cuyos extremos está colocado. Un acoplador colocado en una sola barra da una relación uno a uno: en este caso el valor de la barra se transfiere al acoplador mediante las funciones de escritura inversa. Para un acoplador colocado en dos barras, la parte derecha de la escritura inversa se calcula para ambas</sld28>
     <ssd29>Procesamiento de las vistas del nivel</ssd29>
     <sld29>La estrategia procesa las vistas asociadas a un nivel. El elemento de origen condicional es un nivel y los elementos de destino son las plantas, los planos de techo, las plantas estructurales y las plantas de áreas generadas por ese nivel. El nivel de una vista se establece al crear la vista y no cambia: una planta obtenida por copia permanece en el nivel del original. Las vistas de otro tipo - secciones, alzados, vistas 3D, leyendas, tablas de planificación - no están asociadas a un nivel y no se procesan, las plantillas de vista tampoco. Los niveles que se procesan se obtienen igual que los elementos de cualquier otra estrategia: al procesar todo el documento son todos los niveles del documento; al seleccionar elementos, solo los niveles seleccionados; al procesar una vista, los niveles visibles en ella. El nivel se señala en el modelo en una sección o un alzado, donde es un elemento corriente; una planta no tiene línea de nivel, por eso al procesar una planta se toma el nivel por el que está generada</sld29>
+    <sg1>Sin relaciones</sg1>
+    <sgd1>Se procesan los parámetros de los propios elementos, sin recurrir a otros elementos</sgd1>
+    <sg2>Inclusión en un elemento</sg2>
+    <sgd2>Los elementos de destino se encuentran en el elemento de origen condicional o le pertenecen</sgd2>
+    <sg3>Componentes</sg3>
+    <sgd3>Los elementos de destino son partes del elemento de origen condicional</sgd3>
+    <sg4>Habitaciones</sg4>
+    <sgd4>Los elementos de destino están relacionados con la habitación de otra forma que por estar ubicados dentro de ella</sgd4>
+    <sg5>Elementos adyacentes</sg5>
+    <sgd5>Los elementos de destino están en contacto con el elemento de origen condicional o unidos a él</sgd5>
+    <sg6>Niveles y vistas</sg6>
+    <sgd6>Los elementos de destino están vinculados a un nivel o a una vista</sgd6>
+    <sg7>Relación arbitraria</sg7>
+    <sgd7>El par no se define por una relación en el modelo, sino que se indica manualmente o se empareja por valores</sgd7>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -571,9 +585,9 @@
     <d-doctitle>Devuelve el título del documento actual</d-doctitle>
     <d-getcurrentviewparameter>Devuelve el valor del parámetro &lt;p&gt; de la vista en la que se realiza el procesamiento. Disponible al procesar elementos en la vista actual, en las vistas seleccionadas y al procesar los elementos seleccionados</d-getcurrentviewparameter>
     <d-targetbottomz>Devuelve la cota más baja (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targetbottomz>
-    <d-targettopz>Devuelve la cota más alta (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targettopz>
+    <d-targettopz>Devuelve la cota más alta (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales. Si el procesamiento no se realiza en todo el documento, la geometría se toma en la vista activa: en una planta, la cota más alta es el plano de corte de la planta y no la parte superior real del elemento</d-targettopz>
     <d-sourcebottomz>Devuelve la cota más baja (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcebottomz>
-    <d-sourcetopz>Devuelve la cota más alta (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcetopz>
+    <d-sourcetopz>Devuelve la cota más alta (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales. Si el procesamiento no se realiza en todo el documento, la geometría se toma en la vista activa: en una planta, la cota más alta es el plano de corte de la planta y no la parte superior real del elemento</d-sourcetopz>
     <d-gsum>Devuelve la suma de los valores de la expresión de los elementos del grupo</d-gsum>
     <d-gcount>Devuelve el número de elementos del grupo del rol indicado: "s" - original condicional, "t" - objetivo</d-gcount>
     <d-gjoin>Une los valores de la expresión de los elementos del grupo mediante el separador indicado. El tercer argumento opcional define los indicadores: "d" - solo valores distintos, "s" - ordenar, "r" - contraer números consecutivos en rangos</d-gjoin>
@@ -632,5 +646,7 @@
     <t238>Subproyectos creados por el usuario</t238>
     <t239>Guardar archivo local antes y después de sincronizar con el archivo central</t239>
     <t240>Atrás</t240>
+    <t241>Seleccionar el archivo Excel de origen de datos de la estrategia</t241>
+    <t242>Quitar el archivo Excel del origen de datos de la estrategia (el archivo en sí no se elimina)</t242>
   </mprParametrization>
 </ModPlus>
