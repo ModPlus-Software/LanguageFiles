@@ -393,7 +393,7 @@
     <sm3>Procesando elementos en documento</sm3>
     <sm4>Procesando elementos en vistas seleccionadas</sm4>
     <ssd1>Procesando elementos sin relaciones</ssd1>
-    <sld1>Estrategia procesa ejemplares de elementos sin tener en cuenta sus relaciones con otros elementos. Es necesario rellenar al menos un filtro (por categoría o por parámetros)</sld1>
+    <sld1>Estrategia procesa elementos sin tener en cuenta sus relaciones con otros elementos. Es necesario rellenar al menos un filtro (por categoría o por parámetros)</sld1>
     <ssd2>Procesando ejemplares de familias sin relaciones</ssd2>
     <sld2>Estrategia procesa ejemplares de familias sin tomar en cuenta sus relaciones con otros elementos. Es posible no utilizar un filtro por categoría o filtro por parámetros</sld2>
     <ssd3>Procesando tipos</ssd3>
@@ -403,17 +403,17 @@
     <ssd5>Procesando elementos en grupo</ssd5>
     <sld5>Estrategia procesa elementos ubicados en grupos. Al crear fórmulas, tenga en cuenta que parámetro objetivo debe poder cambiar entre ejemplares de grupo.</sld5>
     <ssd6>Procesando elementos en habitación</ssd6>
-    <sld6>Estrategia procesa elementos ubicados en interior. Estrategia sólo se puede utilizar en vistas que contengan geometría de habitaciones. Por ejemplo, en vistas 3D estrategia no funcionará</sld6>
+    <sld6>Estrategia procesa elementos ubicados dentro de habitaciones</sld6>
     <ssd7>Procesando elementos en espacio</ssd7>
-    <sld7>Estrategia procesa elementos ubicados dentro de espacios. Estrategia sólo se puede utilizar en vistas que contengan geometría espacial. Por ejemplo, en vistas 3D estrategia no funcionará</sld7>
-    <ssd8>Procesando elementos en elementos formativos</ssd8>
-    <sld8>Estrategia procesa elementos que tienen una forma 3D y se encuentran dentro elementos formativos. Elementos formativos tener una forma 3D. Elementos formativos pueden estar en archivos vinculados</sld8>
+    <sld7>Estrategia procesa elementos ubicados dentro de espacios</sld7>
+    <ssd8>Procesando elementos en elemento formativo</ssd8>
+    <sld8>Estrategia procesa elementos que tienen una forma 3D y se encuentran dentro de elementos formativos. Los elementos formativos deben tener una forma 3D</sld8>
     <ssd9>Procesando elementos en forma 3D</ssd9>
-    <sld9>Estrategia procesa elementos que tienen forma 3D y se ubican dentro de otros elementos que tienen forma 3D. Elementos primarios pueden estar en archivos vinculados</sld9>
-    <ssd10>Procesando elementos que tocan bordes de formas 3D</ssd10>
-    <sld10>Estrategia procesa elementos que tienen una forma 3D y se tocan entre sí con bordes planos de forma. Elementos tocados pueden estar en archivos vinculados</sld10>
+    <sld9>Estrategia procesa elementos que tienen forma 3D y se ubican dentro de otros elementos que tienen forma 3D</sld9>
+    <ssd10>Procesando elementos que se tocan con caras de formas 3D</ssd10>
+    <sld10>Estrategia procesa elementos que tienen una forma 3D y se tocan entre sí con caras planas de la forma</sld10>
     <ssd11>Procesando cerramientos de habitaciones</ssd11>
-    <sld11>Estrategia procesa elementos que son estructuras cerramientos de habitaciones</sld11>
+    <sld11>Estrategia procesa elementos que son cerramientos de habitaciones</sld11>
     <ssd12>Procesando elementos anidados de conexiones estructurales</ssd12>
     <sld12>Estrategia procesa elementos ubicados en conexiones estructurales (placas, pernos, etc.). No se proporciona filtrado de elementos anidados por parámetros, así como una lista de parámetros de elementos anidados en editor de fórmulas. Parámetros numéricos se especifican sin conversión a unidades internas</sld12>
     <ssd13>Procesando familias anidadas</ssd13>
@@ -428,18 +428,18 @@
     <sld17>Estrategia procesa elementos que conforman sistema MEP (sistema eléctrico, sistema de tuberías o sistema de conductos de aire). Convencionalmente, elemento original es sistema primario del elemento</sld17>
     <ssd18>Procesamiento de componentes de muro cortina</ssd18>
     <sld18>Estrategia procesa componentes de muro cortina (montantes y paneles). Convencionalmente, el elemento original es un muro</sld18>
-    <ssd19>Procesamiento de elementos en relación con elementos original especificados</ssd19>
+    <ssd19>Procesamiento de elementos en relación con elementos originales especificados</ssd19>
     <sld19>La estrategia procesa elementos con la posibilidad de utilizar cualquier elemento de modelo especificado como elemento original</sld19>
     <ssd20>Procesar piezas</ssd20>
     <sld20>La estrategia procesa las piezas teniendo en cuenta los elementos originales a partir de los cuales se crean las piezas. Si una pieza se crea a partir de varios elementos originales, el primer elemento se considerará el elemento original</sld20>
-    <ssd21>Procesamiento de elementos en conjuntos</ssd21>
+    <ssd21>Procesamiento de elementos en el conjunto</ssd21>
     <sld21>La estrategia procesa los elementos ubicados en conjuntos</sld21>
     <ssd22>Procesamiento de elementos específicos de la vista</ssd22>
-    <sld22>Procesa los elementos que existen únicamente dentro de una vista y no forman parte del modelo tridimensional: cotas, notas de texto, etiquetas, líneas de detalle y regiones rellenadas, así como el contenido de las láminas. Estos elementos están vinculados a la vista en la que se crearon y no se muestran en las demás. Los elementos de modelo, como muros, suelos o equipamiento, no se ven afectados</sld22>
+    <sld22>La estrategia procesa los elementos que existen únicamente dentro de una vista y no forman parte del modelo tridimensional: cotas, notas de texto, etiquetas, líneas de detalle y regiones rellenadas, así como el contenido de las láminas. Estos elementos están vinculados a la vista en la que se crearon y no se muestran en las demás. Los elementos de modelo, como muros, suelos o equipamiento, no se ven afectados</sld22>
     <ssd23>Procesamiento de componentes de escalera</ssd23>
-    <sld23>Procesa los componentes de las escaleras: tramos, mesetas, soportes y las barandillas asociadas a la escalera. El elemento de origen condicional es la escalera. Los componentes de una escalera de varias plantas se procesan a través de la escalera a la que pertenecen</sld23>
+    <sld23>La estrategia procesa los componentes de las escaleras: tramos, mesetas, soportes y las barandillas asociadas a la escalera. El elemento de origen condicional es la escalera. Los componentes de una escalera de varias plantas se procesan a través de la escalera a la que pertenecen</sld23>
     <ssd24>Procesamiento de aberturas de la habitación</ssd24>
-    <sld24>Procesa las aberturas - puertas y ventanas - que dan a la habitación. El elemento de origen condicional es la habitación. Las aberturas se buscan en los elementos de contorno de la habitación, muros cortina incluidos, y la pertenencia se determina por las propiedades "Hacia la habitación" y "Desde la habitación" teniendo en cuenta la fase de la habitación; si esas propiedades están vacías, por la intersección de la geometría de la abertura con el volumen de la habitación</sld24>
+    <sld24>La estrategia procesa las aberturas - puertas y ventanas - que dan a la habitación. El elemento de origen condicional es la habitación. Las aberturas se buscan en los elementos de contorno de la habitación, muros cortina incluidos, y la pertenencia se determina por las propiedades "Hacia la habitación" y "Desde la habitación" teniendo en cuenta la fase de la habitación; si esas propiedades están vacías, por la intersección de la geometría de la abertura con el volumen de la habitación</sld24>
     <ssd25>Procesamiento de dos conjuntos de elementos emparejados por valor</ssd25>
     <sld25>La estrategia procesa dos conjuntos independientes de elementos: de origen condicional y de destino. El par no se forma por una relación de los elementos en el modelo, sino por la coincidencia del valor calculado en ambos lados por el ajuste de emparejamiento. Los elementos coincidentes forman un grupo sobre el que se calculan las funciones de agregación</sld25>
     <ssd26>Procesamiento del acabado de habitaciones</ssd26>

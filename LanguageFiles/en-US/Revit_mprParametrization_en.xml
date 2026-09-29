@@ -410,16 +410,16 @@
     <sld8>Strategy processes elements that have Solid geometry and are located in Masses. Masses must have a Solid form</sld8>
     <ssd9>Processing elements in the Solid</ssd9>
     <sld9>Strategy processes elements that have Solid geometry and are located inside other elements that have Solid geometry</sld9>
-    <ssd10>Processing elements that touch their solids</ssd10>
-    <sld10>Strategy processes elements that Solid geometry and have flat solid faces that touch each other</sld10>
+    <ssd10>Processing elements touching by solid faces</ssd10>
+    <sld10>Strategy processes elements that have Solid geometry and touch each other with flat faces of the Solid</sld10>
     <ssd11>Processing room boundaries</ssd11>
     <sld11>Strategy processes elements that are room boundaries</sld11>
     <ssd12>Processing sub-elements of Structure Connections</ssd12>
-    <sld12>Strategy processes elements placed in Structure Connections (Plates, bolts, etc.). Filtering of sub-elements by parameters, as well as the list of parameters of sub-elements in the formula editor, are not provided. Numerical parameters are set without conversion to internal units</sld12>
+    <sld12>Strategy processes elements placed in Structure Connections (plates, bolts, etc.). Filtering of sub-elements by parameters, as well as the list of parameters of sub-elements in the formula editor, are not provided. Numerical parameters are set without conversion to internal units</sld12>
     <ssd13>Processing nested families</ssd13>
     <sld13>Strategy processes families that are nested within the parent family</sld13>
     <ssd14>Pipe and Duct Insulation processing</ssd14>
-    <sld14>Processing Pipe insulation elements and/or Duct insulation elements. It is acceptable not to use a parameter filter for insulation</sld14>
+    <sld14>Strategy processes Pipe insulation elements and/or Duct insulation elements. It is acceptable not to use a parameter filter for insulation</sld14>
     <ssd15>Processing of rebars in the system</ssd15>
     <sld15>Strategy processes rebars as part of reinforcement systems – Area reinforcement and Path reinforcement</sld15>
     <ssd16>Processing materials</ssd16>
@@ -432,14 +432,14 @@
     <sld19>Strategy processes elements with the possibility to use any specified element of the model as a source element</sld19>
     <ssd20>Processing Parts</ssd20>
     <sld20>Strategy processes Parts taking into account the source elements from which the Parts are created. If a part is created from several source elements, the first element will be considered the source element</sld20>
-    <ssd21>Processing elements in assemblies</ssd21>
-    <sld21>The strategy processes elements located in assemblies</sld21>
+    <ssd21>Processing elements in the Assembly</ssd21>
+    <sld21>Strategy processes elements located in assemblies</sld21>
     <ssd22>Processing view-specific elements</ssd22>
-    <sld22>Processes elements that exist only within a single view and are not part of the 3D model: dimensions, text notes, tags, detail lines and filled regions, and sheet contents. Such elements are bound to the view on which they were created and are not displayed on other views. Model elements such as walls, floors, or equipment are not affected</sld22>
+    <sld22>Strategy processes elements that exist only within a single view and are not part of the 3D model: dimensions, text notes, tags, detail lines and filled regions, and sheet contents. Such elements are bound to the view on which they were created and are not displayed on other views. Model elements such as walls, floors, or equipment are not affected</sld22>
     <ssd23>Processing stair components</ssd23>
-    <sld23>Processes stair components: runs, landings, supports and the railings associated with the stair. The conditional source element is the stair. Components of a multistory stair are processed against the stair they belong to</sld23>
+    <sld23>Strategy processes stair components: runs, landings, supports and the railings associated with the stair. The conditional source element is the stair. Components of a multistory stair are processed against the stair they belong to</sld23>
     <ssd24>Processing room openings</ssd24>
-    <sld24>Processes the openings - doors and windows - that face the room. The conditional source element is the room. Openings are taken from the room boundary elements, curtain walls included, and membership is resolved by the To Room and From Room properties in the room phase; when those properties are empty, by the intersection of the opening geometry with the room volume</sld24>
+    <sld24>Strategy processes the openings - doors and windows - that face the room. The conditional source element is the room. Openings are taken from the room boundary elements, curtain walls included, and membership is resolved by the To Room and From Room properties in the room phase; when those properties are empty, by the intersection of the opening geometry with the room volume</sld24>
     <ssd25>Processing of two sets of elements matched by value</ssd25>
     <sld25>Strategy processes two independent sets of elements - conditionally source and target. A pair is built not by a relation of elements in the model, but by a coinciding value calculated on both sides by the matching setting. Coinciding elements form a group over which aggregate functions are calculated</sld25>
     <ssd26>Processing of room finishing</ssd26>
@@ -476,8 +476,8 @@
     <sp5>Insert Mass parameter</sp5>
     <se6>Parent element</se6>
     <sp6>Insert parameter of parent element</sp6>
-    <se7>Touchable element</se7>
-    <sp7>Insert parameter of touchable element</sp7>
+    <se7>Touched element</se7>
+    <sp7>Insert parameter of touched element</sp7>
     <se8>Connection</se8>
     <sp8>Insert parameter of Structural Connection</sp8>
     <se9>Parent family</se9>
