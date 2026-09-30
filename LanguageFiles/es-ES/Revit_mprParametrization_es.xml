@@ -19,6 +19,7 @@
     <t10>Eliminar estrategia</t10>
     <t11>Reglas</t11>
     <t12>Procesar elementos del archivos vinculados</t12>
+    <!--todo remove after 4.1.33.0-->
     <t13>Elementos primarios se recopilarán del archivos vinculados. Por ejemplo, para estrategia InMass estos son elementos formativos, para estrategia InSolid son elementos que tienen un sólido, etc. Los elementos se ensamblarán de acuerdo con las categorías especificadas en la columna de reglas correspondiente</t13>
     <t14>¡Se recomienda ejecutar estrategias que funcionan con geometría de elementos (como InRoom, InSpace, InSolid, SolidTouch, etc.) en vista activa! Si inicio se realiza en todo documento, elementos se toman de geometría que no tiene en cuenta interacción con otros elementos, lo que puede llevar a resultados incorrectos</t14>
     <t15>Ingresar nombre de estrategia</t15>
@@ -258,6 +259,68 @@
     <msg45>Elemento omitido: no se encontró ningún elemento de origen condicional con el mismo valor de emparejamiento</msg45>
     <msg46>Archivo seleccionado no es archivo de almacenamiento de configuración</msg46>
     <msg47>¿Sincronizar el proyecto con el modelo central antes de ejecutar?</msg47>
+    <msg48>La instrucción está vacía</msg48>
+    <msg49>La instrucción no es un xml válido: {0}</msg49>
+    <msg50>El elemento raíz de la instrucción debe llamarse "{0}"</msg50>
+    <msg51>La versión "{0}" de la instrucción no es compatible. Versión compatible: {1}</msg51>
+    <msg52>Se omitió el elemento desconocido "{0}" de la instrucción</msg52>
+    <msg53>No se ha especificado el elemento obligatorio "{0}"</msg53>
+    <msg54>El elemento "{0}" está vacío</msg54>
+    <msg55>El elemento "{0}" está vacío. Si el valor no es necesario, elimine el elemento</msg55>
+    <msg56>Valor no válido "{0}" del elemento "{1}". Valores permitidos: {2}</msg56>
+    <msg57>El elemento "{0}" debe tener el valor true o false</msg57>
+    <msg58>El atributo "{0}" del elemento "{1}" debe tener el valor true o false</msg58>
+    <msg59>En el elemento "{0}" no se pueden especificar a la vez {1}="true" y una lista de vistas</msg59>
+    <msg60>Se omitió el elemento desconocido "{0}" en "{1}"</msg60>
+    <msg61>"{0}" contiene elementos "{1}" vacíos</msg61>
+    <msg62>La lista "{0}" está vacía. Si la lista no es necesaria, elimine el elemento</msg62>
+    <msg63>El elemento "{0}" se ha especificado varias veces</msg63>
+    <msg64>Ejecución automática rechazada: la ejecución anterior aún no ha terminado</msg64>
+    <msg65>Procesamiento interrumpido: {0}</msg65>
+    <msg66>Ejecución automática interrumpida por un error inesperado</msg66>
+    <msg67>Ejecución automática finalizada. Resultado: {0}</msg67>
+    <msg68>Ejecución automática. Instrucción:</msg68>
+    <msg69>Leyendo el archivo de configuraciones "{0}"</msg69>
+    <msg70>Configuración "{0}" ({1})</msg70>
+    <msg71>La carpeta de registros no existe: "{0}"</msg71>
+    <msg72>La carpeta de resultados no existe: "{0}"</msg72>
+    <msg73>Hay una transacción abierta en el documento activo. La ejecución automática debe realizarse sin transacciones abiertas</msg73>
+    <msg74>La instrucción no se ha ejecutado. Errores encontrados: {0}</msg74>
+    <msg75>El archivo de configuraciones no se ha especificado en la instrucción y el origen de configuraciones nunca se ha seleccionado en la ventana del plugin</msg75>
+    <msg76>No se encontró el archivo de configuraciones: "{0}"</msg76>
+    <msg77>Se ha especificado el archivo de configuraciones, pero no la configuración. La configuración actual solo se usa junto con el archivo de configuraciones seleccionado en la ventana del plugin</msg77>
+    <msg78>No se encontró la configuración actual en el archivo "{0}"</msg78>
+    <msg79>No se encontró la configuración "{0}" en el archivo "{1}"</msg79>
+    <msg80>El archivo "{0}" contiene varias configuraciones con el nombre "{1}". Especifique el identificador de la configuración</msg80>
+    <msg81>La configuración no tiene estrategias marcadas</msg81>
+    <msg82>No se encontró la estrategia "{0}" en la configuración</msg82>
+    <msg83>Se encontraron varias estrategias "{0}". Se procesarán todas</msg83>
+    <msg84>No se encontró ninguna de las estrategias de la instrucción</msg84>
+    <msg85>Estrategias a procesar: {0}</msg85>
+    <msg86>La vista actual no es una vista gráfica</msg86>
+    <msg87>Ámbito de procesamiento: {0}</msg87>
+    <msg88>No se encontró la vista "{0}"</msg88>
+    <msg89>Se encontraron varias vistas con el nombre "{0}" ({1}). Se procesarán todas</msg89>
+    <msg90>No se encontró ninguna de las vistas de la instrucción</msg90>
+    <msg91>Vistas a procesar: {0}</msg91>
+    <msg92>Se omite la lista de archivos vinculados: el procesamiento de elementos de archivos vinculados está desactivado</msg92>
+    <msg93>No se encontró el archivo vinculado "{0}"</msg93>
+    <msg94>No se encontró ninguno de los archivos vinculados de la instrucción</msg94>
+    <msg95>Archivos vinculados a procesar: {0}</msg95>
+    <msg96>Los resultados se guardan en un archivo de texto</msg96>
+    <msg97>El procesamiento se ha completado, pero no se pudo guardar el archivo de resultados "{0}"</msg97>
+    <msg98>Resultados guardados en el archivo "{0}"</msg98>
+    <msg99>No se pudo crear el archivo de registro "{0}"</msg99>
+    <msg100>Inicio del procesamiento de la configuración "{0}" ({1}). Modo: {2}. {3}. Estrategias: {4}</msg100>
+    <msg101>Procesamiento de la configuración "{0}" completado en {1}</msg101>
+    <msg102>Procesamiento en la vista "{0}" ({1})</msg102>
+    <msg103>Recopilando elementos de archivos vinculados</msg103>
+    <msg104>Elementos recopilados de archivos vinculados: {0}</msg104>
+    <msg105>Recopilando elementos. {0}</msg105>
+    <msg106>Elementos recopilados: {0}</msg106>
+    <msg107>Procesamiento de la estrategia "{0}" ({1}). Reglas: {2}</msg107>
+    <msg108>La regla {0} de la estrategia "{1}" no se ha procesado</msg108>
+    <msg109>Procesamiento interrumpido por un error</msg109>
     <err1>Cada expresión de una fórmula debe comenzar con parámetro objetivo "$[NombreDelParámetro]="</err1>
     <err2>Número de paréntesis de apertura debe ser igual al número de paréntesis de cierre</err2>
     <err3>Número de llaves de apertura debe ser igual al número de llaves de cierre</err3>
@@ -384,6 +447,7 @@
     <err125>El proyecto no tiene el parámetro global "{0}"</err125>
     <err126>El subelemento de la conexión {0} no tiene el parámetro "{1}"</err126>
     <err127>No se pudo calcular la clave de agrupación: el elemento no tiene el parámetro "{0}"</err127>
+    <err128>El elemento {0} no tiene habitación "{1}": no se puede escribir un valor en su parámetro</err128>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -647,5 +711,6 @@
     <t240>Atrás</t240>
     <t241>Seleccionar el archivo Excel de origen de datos de la estrategia</t241>
     <t242>Quitar el archivo Excel del origen de datos de la estrategia (el archivo en sí no se elimina)</t242>
+    <t243>Se recopilarán de los archivos vinculados los elementos de las categorías especificadas en las columnas de las reglas, tanto para los elementos de origen condicionales como para los elementos de destino. Después se procesan al igual que los elementos del modelo actual: por ejemplo, para la estrategia InMass pueden ser elementos formativos, para la estrategia InSolid, elementos que tienen un sólido, para la estrategia ManyToMany, elementos de origen condicionales. Los valores de los parámetros de los elementos de archivos vinculados se pueden usar en las fórmulas, pero no es posible guardar un valor en un parámetro de un elemento de un archivo vinculado: esa escritura se marca en el informe como error</t243>
   </mprParametrization>
 </ModPlus>

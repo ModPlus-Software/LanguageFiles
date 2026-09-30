@@ -19,6 +19,7 @@
     <t10>Remove strategy</t10>
     <t11>Rules</t11>
     <t12>Processing elements from linked files</t12>
+    <!--todo remove after 4.1.33.0-->
     <t13>The parent elements will be collected from the linked files. For example, for the InMass strategy, these are Masses, for the InSolid strategy, they are solid elements, etc. Elements will be collected according to the categories specified in the corresponding column of rules</t13>
     <t14>Strategies that work with element geometry (such as InRoom, InSpace, InSolid, SolidTouch, etc.) are recommended to run on the active view! If you run in the entire document, the elements take geometry that does not take into account the connection with other elements, which can lead to incorrect results</t14>
     <t15>Enter strategy name</t15>
@@ -258,6 +259,68 @@
     <msg45>Element skipped: no conditionally source element with the same matching value was found</msg45>
     <msg46>The selected file is not a configuration storage file</msg46>
     <msg47>Synchronize the project with the central model before running?</msg47>
+    <msg48>The instruction is empty</msg48>
+    <msg49>The instruction is not valid xml: {0}</msg49>
+    <msg50>The root element of the instruction must be named "{0}"</msg50>
+    <msg51>Instruction version "{0}" is not supported. Supported version: {1}</msg51>
+    <msg52>Unknown instruction element "{0}" skipped</msg52>
+    <msg53>Required element "{0}" is not specified</msg53>
+    <msg54>Element "{0}" is empty</msg54>
+    <msg55>Element "{0}" is empty. If the value is not needed, remove the element</msg55>
+    <msg56>Invalid value "{0}" of element "{1}". Allowed values: {2}</msg56>
+    <msg57>Element "{0}" must be true or false</msg57>
+    <msg58>Attribute "{0}" of element "{1}" must be true or false</msg58>
+    <msg59>Element "{0}" cannot contain both {1}="true" and a list of views</msg59>
+    <msg60>Unknown element "{0}" in "{1}" skipped</msg60>
+    <msg61>"{0}" contains empty "{1}" elements</msg61>
+    <msg62>List "{0}" is empty. If the list is not needed, remove the element</msg62>
+    <msg63>Element "{0}" is specified more than once</msg63>
+    <msg64>Automatic run rejected: the previous run has not finished yet</msg64>
+    <msg65>Processing interrupted: {0}</msg65>
+    <msg66>Automatic run interrupted by an unexpected error</msg66>
+    <msg67>Automatic run finished. Result: {0}</msg67>
+    <msg68>Automatic run. Instruction:</msg68>
+    <msg69>Reading configuration file "{0}"</msg69>
+    <msg70>Configuration "{0}" ({1})</msg70>
+    <msg71>Log folder does not exist: "{0}"</msg71>
+    <msg72>Results folder does not exist: "{0}"</msg72>
+    <msg73>A transaction is open in the active document. The automatic run must be performed without open transactions</msg73>
+    <msg74>The instruction was not executed. Errors found: {0}</msg74>
+    <msg75>The configuration file is not specified in the instruction, and the configuration source has never been selected in the plugin window</msg75>
+    <msg76>Configuration file not found: "{0}"</msg76>
+    <msg77>The configuration file is specified, but the configuration is not. The current configuration is used only together with the configuration file selected in the plugin window</msg77>
+    <msg78>The current configuration was not found in file "{0}"</msg78>
+    <msg79>Configuration "{0}" was not found in file "{1}"</msg79>
+    <msg80>File "{0}" contains several configurations named "{1}". Specify the configuration identifier</msg80>
+    <msg81>The configuration has no checked strategies</msg81>
+    <msg82>Strategy "{0}" was not found in the configuration</msg82>
+    <msg83>Several strategies "{0}" found. All of them will be processed</msg83>
+    <msg84>None of the strategies from the instruction were found</msg84>
+    <msg85>Strategies to process: {0}</msg85>
+    <msg86>The current view is not a graphical view</msg86>
+    <msg87>Processing scope: {0}</msg87>
+    <msg88>View "{0}" not found</msg88>
+    <msg89>Several views named "{0}" found ({1}). All of them will be processed</msg89>
+    <msg90>None of the views from the instruction were found</msg90>
+    <msg91>Views to process: {0}</msg91>
+    <msg92>The list of linked files is skipped: processing of elements from linked files is turned off</msg92>
+    <msg93>Linked file "{0}" not found</msg93>
+    <msg94>None of the linked files from the instruction were found</msg94>
+    <msg95>Linked files to process: {0}</msg95>
+    <msg96>Results are saved to a text file</msg96>
+    <msg97>Processing completed, but the results file "{0}" could not be saved</msg97>
+    <msg98>Results saved to file "{0}"</msg98>
+    <msg99>Failed to create log file "{0}"</msg99>
+    <msg100>Starting processing of configuration "{0}" ({1}). Mode: {2}. {3}. Strategies: {4}</msg100>
+    <msg101>Processing of configuration "{0}" completed in {1}</msg101>
+    <msg102>Processing on view "{0}" ({1})</msg102>
+    <msg103>Collecting elements from linked files</msg103>
+    <msg104>Elements collected from linked files: {0}</msg104>
+    <msg105>Collecting elements. {0}</msg105>
+    <msg106>Elements collected: {0}</msg106>
+    <msg107>Processing strategy "{0}" ({1}). Rules: {2}</msg107>
+    <msg108>Rule {0} of strategy "{1}" was not processed</msg108>
+    <msg109>Processing interrupted by an error</msg109>
     <err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
     <err2>The number of opening round brackets must equal the number of closing ones</err2>
     <err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -384,6 +447,7 @@
     <err125>The project has no global parameter "{0}"</err125>
     <err126>Connection subelement {0} has no parameter "{1}"</err126>
     <err127>Failed to evaluate the grouping key: the element has no parameter "{0}"</err127>
+    <err128>Element {0} has no room "{1}": a value cannot be written to its parameter</err128>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -647,5 +711,6 @@
     <t240>Back</t240>
     <t241>Select strategy data source Excel file</t241>
     <t242>Clear strategy data source Excel file (the file itself is not deleted)</t242>
+    <t243>Elements of the categories specified in the rule columns – both for conditional source and for target elements – will be collected from the linked files. They are then processed on a par with the elements of the current model: for example, for the InMass strategy these can be Masses, for the InSolid strategy – elements that have a solid, for the ManyToMany strategy – conditional source elements. Parameter values of elements from linked files can be used in formulas, but writing a value to a parameter of an element from a linked file is not possible – such a write is marked in the report as an error</t243>
   </mprParametrization>
 </ModPlus>

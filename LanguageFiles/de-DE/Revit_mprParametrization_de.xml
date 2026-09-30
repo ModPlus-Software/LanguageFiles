@@ -19,6 +19,7 @@
     <t10>Die Strategie löschen</t10>
     <t11>Regeln</t11>
     <t12>Verarbeitung der Elemente aus den verknüpften Dateien</t12>
+    <!--todo remove after 4.1.33.0-->
     <t13>Aus den verknüpften Dateien werden die übergeordneten Elemente gesammelt. Bei der Strategie InMass sind es beispielsweise die Formelemente, bei der Strategie InSolid die Vollkörperelemente usw. Die Elemente werden nach den Kategorien gesammelt, die in der entsprechenden Spalte der Regel angegeben sind</t13>
     <t14>Strategien, die mit der Geometrie von Elementen arbeiten (wie z.B. InRoom, InSpace, InSolid, SolidTouch, etc.), sollten in der aktiven Ansicht gestartet werden! Erfolgt der Start im gesamten Dokument, wird die Geometrie von Elementen übernommen, die die Interaktion mit anderen Elementen nicht berücksichtigt, was zu falschen Ergebnissen führen kann.</t14>
     <t15>Geben Sie einen Namen der Strategie ein</t15>
@@ -258,6 +259,68 @@
     <msg45>Element übersprungen: es wurde kein bedingtes Quellelement mit demselben Zuordnungswert gefunden</msg45>
     <msg46>Bei der ausgewählten Datei handelt es sich nicht um eine Datei für die Konfigurationsspeicherung</msg46>
     <msg47>Das Projekt vor dem Start mit dem Zentralmodell synchronisieren?</msg47>
+    <msg48>Die Anweisung ist leer</msg48>
+    <msg49>Die Anweisung ist kein gültiges XML: {0}</msg49>
+    <msg50>Das Stammelement der Anweisung muss "{0}" heißen</msg50>
+    <msg51>Die Version "{0}" der Anweisung wird nicht unterstützt. Unterstützte Version: {1}</msg51>
+    <msg52>Unbekanntes Element "{0}" der Anweisung wurde übersprungen</msg52>
+    <msg53>Das erforderliche Element "{0}" ist nicht angegeben</msg53>
+    <msg54>Das Element "{0}" ist leer</msg54>
+    <msg55>Das Element "{0}" ist leer. Wenn der Wert nicht benötigt wird, entfernen Sie das Element</msg55>
+    <msg56>Ungültiger Wert "{0}" des Elements "{1}". Zulässige Werte: {2}</msg56>
+    <msg57>Das Element "{0}" muss den Wert true oder false haben</msg57>
+    <msg58>Das Attribut "{0}" des Elements "{1}" muss den Wert true oder false haben</msg58>
+    <msg59>Im Element "{0}" können {1}="true" und eine Liste von Ansichten nicht gleichzeitig angegeben werden</msg59>
+    <msg60>Unbekanntes Element "{0}" in "{1}" wurde übersprungen</msg60>
+    <msg61>"{0}" enthält leere Elemente "{1}"</msg61>
+    <msg62>Die Liste "{0}" ist leer. Wenn die Liste nicht benötigt wird, entfernen Sie das Element</msg62>
+    <msg63>Das Element "{0}" ist mehrfach angegeben</msg63>
+    <msg64>Automatischer Start abgelehnt: Der vorherige Start ist noch nicht abgeschlossen</msg64>
+    <msg65>Verarbeitung abgebrochen: {0}</msg65>
+    <msg66>Automatischer Start durch einen unerwarteten Fehler abgebrochen</msg66>
+    <msg67>Automatischer Start abgeschlossen. Ergebnis: {0}</msg67>
+    <msg68>Automatischer Start. Anweisung:</msg68>
+    <msg69>Konfigurationsdatei "{0}" wird gelesen</msg69>
+    <msg70>Konfiguration "{0}" ({1})</msg70>
+    <msg71>Der Ordner für Protokolle existiert nicht: "{0}"</msg71>
+    <msg72>Der Ordner für Ergebnisse existiert nicht: "{0}"</msg72>
+    <msg73>Im aktiven Dokument ist eine Transaktion geöffnet. Der automatische Start muss ohne geöffnete Transaktionen ausgeführt werden</msg73>
+    <msg74>Die Anweisung wurde nicht ausgeführt. Gefundene Fehler: {0}</msg74>
+    <msg75>Die Konfigurationsdatei ist in der Anweisung nicht angegeben, und die Konfigurationsquelle wurde im Plugin-Fenster nie ausgewählt</msg75>
+    <msg76>Konfigurationsdatei nicht gefunden: "{0}"</msg76>
+    <msg77>Die Konfigurationsdatei ist angegeben, die Konfiguration jedoch nicht. Die aktuelle Konfiguration wird nur zusammen mit der im Plugin-Fenster ausgewählten Konfigurationsdatei verwendet</msg77>
+    <msg78>Die aktuelle Konfiguration wurde in der Datei "{0}" nicht gefunden</msg78>
+    <msg79>Die Konfiguration "{0}" wurde in der Datei "{1}" nicht gefunden</msg79>
+    <msg80>Die Datei "{0}" enthält mehrere Konfigurationen mit dem Namen "{1}". Geben Sie die Kennung der Konfiguration an</msg80>
+    <msg81>Die Konfiguration enthält keine markierten Strategien</msg81>
+    <msg82>Die Strategie "{0}" wurde in der Konfiguration nicht gefunden</msg82>
+    <msg83>Mehrere Strategien "{0}" gefunden. Alle werden verarbeitet</msg83>
+    <msg84>Keine der Strategien aus der Anweisung wurde gefunden</msg84>
+    <msg85>Zu verarbeitende Strategien: {0}</msg85>
+    <msg86>Die aktuelle Ansicht ist keine grafische Ansicht</msg86>
+    <msg87>Verarbeitungsbereich: {0}</msg87>
+    <msg88>Ansicht "{0}" nicht gefunden</msg88>
+    <msg89>Mehrere Ansichten mit dem Namen "{0}" gefunden ({1}). Alle werden verarbeitet</msg89>
+    <msg90>Keine der Ansichten aus der Anweisung wurde gefunden</msg90>
+    <msg91>Zu verarbeitende Ansichten: {0}</msg91>
+    <msg92>Die Liste der verknüpften Dateien wird übersprungen: Die Verarbeitung von Elementen aus verknüpften Dateien ist ausgeschaltet</msg92>
+    <msg93>Verknüpfte Datei "{0}" nicht gefunden</msg93>
+    <msg94>Keine der verknüpften Dateien aus der Anweisung wurde gefunden</msg94>
+    <msg95>Zu verarbeitende verknüpfte Dateien: {0}</msg95>
+    <msg96>Die Ergebnisse werden in einer Textdatei gespeichert</msg96>
+    <msg97>Die Verarbeitung wurde ausgeführt, aber die Ergebnisdatei "{0}" konnte nicht gespeichert werden</msg97>
+    <msg98>Ergebnisse in Datei "{0}" gespeichert</msg98>
+    <msg99>Die Protokolldatei "{0}" konnte nicht erstellt werden</msg99>
+    <msg100>Start der Verarbeitung der Konfiguration "{0}" ({1}). Modus: {2}. {3}. Strategien: {4}</msg100>
+    <msg101>Verarbeitung der Konfiguration "{0}" in {1} abgeschlossen</msg101>
+    <msg102>Verarbeitung in der Ansicht "{0}" ({1})</msg102>
+    <msg103>Elemente aus verknüpften Dateien werden gesammelt</msg103>
+    <msg104>Aus verknüpften Dateien gesammelte Elemente: {0}</msg104>
+    <msg105>Elemente werden gesammelt. {0}</msg105>
+    <msg106>Gesammelte Elemente: {0}</msg106>
+    <msg107>Verarbeitung der Strategie "{0}" ({1}). Regeln: {2}</msg107>
+    <msg108>Regel {0} der Strategie "{1}" wurde nicht verarbeitet</msg108>
+    <msg109>Verarbeitung durch einen Fehler abgebrochen</msg109>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -384,6 +447,7 @@
     <err125>Das Projekt enthält keinen globalen Parameter "{0}"</err125>
     <err126>Das Unterelement der Verbindung {0} hat keinen Parameter "{1}"</err126>
     <err127>Der Gruppierungsschlüssel konnte nicht berechnet werden: Das Element hat keinen Parameter "{0}"</err127>
+    <err128>Das Element {0} hat keinen Raum "{1}": In dessen Parameter kann kein Wert geschrieben werden</err128>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -647,5 +711,6 @@
     <t240>Zurück</t240>
     <t241>Excel-Datei der Datenquelle der Strategie auswählen</t241>
     <t242>Excel-Datei aus der Datenquelle der Strategie entfernen (die Datei selbst wird nicht gelöscht)</t242>
+    <t243>Aus den verknüpften Dateien werden die Elemente der Kategorien gesammelt, die in den Spalten der Regeln angegeben sind – sowohl für bedingte Quellelemente als auch für Zielelemente. Anschließend werden sie gleichberechtigt mit den Elementen des aktuellen Modells verarbeitet: Bei der Strategie InMass können es beispielsweise die Formelemente sein, bei der Strategie InSolid die Vollkörperelemente, bei der Strategie ManyToMany die bedingten Quellelemente. Die Parameterwerte der Elemente aus verknüpften Dateien können in Formeln verwendet werden, aber ein Wert kann nicht in einen Parameter eines Elements aus einer verknüpften Datei geschrieben werden – ein solcher Schreibvorgang wird im Bericht als Fehler gekennzeichnet</t243>
   </mprParametrization>
 </ModPlus>
