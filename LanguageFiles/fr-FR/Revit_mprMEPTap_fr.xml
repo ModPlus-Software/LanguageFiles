@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPTap
+    LocalName="Piquage MEP"
+    Description="Ensemble d'outils pour travailler avec les piquages des réseaux techniques"
+    LocalName1="Remplacement de jonction"
+    Description1="Remplacement d'un té par un piquage et d'un piquage par un té en conservant la position d'origine de la conduite principale">
+    <t1>Sélectionnez les tés et piquages à remplacer</t1>
+    <err1>Impossible d'analyser le té : il doit avoir trois connecteurs d'extrémité, dont deux sur le même axe, avec la conduite principale et la dérivation connectées</err1>
+    <err2>Impossible d'analyser le piquage : la conduite principale et la dérivation doivent y être connectées</err2>
+    <err3>La conduite principale et la dérivation doivent être des segments droits, et les tronçons de la conduite principale doivent se trouver sur une même droite</err3>
+    <err4>Les tronçons de la conduite principale de part et d'autre du té ont des types ou des sections différents — le remplacement n'est pas effectué, car on ne sait pas quels paramètres doit recevoir la canalisation fusionnée</err4>
+    <err5>Le remplacement d'un piquage par un té n'est possible que pour les gaines et les canalisations : pour cette catégorie, Revit ne prend pas en charge la scission</err5>
+    <err6>Le piquage est trop proche de l'extrémité de la conduite principale : après la scission, le tronçon sera plus court que la longueur admissible</err6>
+    <err7>La dérivation est trop courte pour remplacer la jonction</err7>
+    <err8>Impossible d'obtenir le type de la conduite principale</err8>
+    <err9>Le type de la conduite principale "{0}" n'est pas modifiable. Il est peut-être emprunté par un autre utilisateur dans le sous-projet</err9>
+    <err10>Le raccord requis n'est pas défini dans les préférences d'acheminement du type "{0}". Ajoutez un piquage et un té au groupe de règles "Jonctions"</err10>
+    <err11>Impossible de trouver des connecteurs libres pour créer la jonction</err11>
+    <err12>Impossible de créer le piquage</err12>
+    <err13>Vérifiez les préférences d'acheminement du type de la conduite principale</err13>
+    <err14>Impossible de fusionner les tronçons de la conduite principale après la suppression du té</err14>
+    <err15>Impossible de scinder la conduite principale au point de piquage</err15>
+    <err16>Impossible d'ajuster la famille de té "{0}" pour un raccordement à {1}° : vérifiez qu'elle est paramétrique et prend en charge cet angle</err16>
+    <err17>Impossible de connecter le té aux canalisations : un tronçon est peut-être plus court que le débord du té</err17>
+    <err18>La jonction a été remplacée, mais la position d'origine n'a pas pu être restaurée : vérifiez la géométrie ou annulez l'opération</err18>
+    <err19>Le piquage a été créé, mais n'est pas connecté à la conduite principale</err19>
+    <err20>Erreur inattendue</err20>
+    <err21>Revit a annulé l'opération, le remplacement n'a pas été effectué</err21>
+    <err22>Impossible de rétablir les préférences d'acheminement du type "{0}", le remplacement est annulé</err22>
+  </mprMEPTap>
+</ModPlus>

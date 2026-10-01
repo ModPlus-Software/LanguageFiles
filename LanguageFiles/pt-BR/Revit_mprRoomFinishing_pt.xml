@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprRoomFinishing
+    LocalName="Acabamento de ambientes"
+    Description="Criação de elementos de acabamento nos ambientes"
+    LocalName1="Atualizar acabamento de ambientes"
+    Description1="Atualização dos elementos de acabamento nos ambientes"
+    LocalName2="Gerenciar acabamento de ambientes"
+    Description2="Gerenciamento dos elementos de acabamento nos ambientes">
+    <t1>Filtro de ambientes:</t1>
+    <t2>Pisos</t2>
+    <!--todo remove after 2.0.0-->
+    <t3>Tipo de piso:</t3>
+    <t4>Deslocamento do nível, mm:</t4>
+    <t5>Definir o valor da espessura do tipo de piso selecionado, considerando os pisos anteriores</t5>
+    <t6>Copiar o valor do parâmetro (do ambiente para o piso):</t6>
+    <t7>De</t7>
+    <t8>para</t8>
+    <t9>Forros</t9>
+    <t10>Paredes</t10>
+    <t11>Ao estender o piso nos vãos de porta por toda a espessura da parede, considerar como ambiente principal:</t11>
+    <t12>Se a porta leva para a saída</t12>
+    <t13>Se a porta leva para a entrada</t13>
+    <t14>O piso do ambiente principal será criado com extensão no vão da porta. Consequentemente, para o ambiente definido como não principal, a extensão no vão da porta não será criada. Esta opção funciona somente para famílias da categoria "Portas" que tenham as propriedades internas FromRoom e ToRoom preenchidas. O sentido de passagem pela abertura é determinado pelo lado externo da família</t14>
+    <t15>Recortar a geometria sólida da porta do contorno do piso</t15>
+    <t16>Excluir os elementos de acabamento criados anteriormente</t16>
+    <t17>Pelos ambientes selecionados</t17>
+    <t18>Pelos ambientes na vista</t18>
+    <t19>Por todos os ambientes</t19>
+    <!--todo remove after 2.0.0-->
+    <t20>Por todos os ambientes dos arquivos vinculados</t20>
+    <t21>Atualizar parâmetros</t21>
+    <t22>Mover para cima</t22>
+    <t23>Mover para baixo</t23>
+    <t24>Pelos ambientes pré-selecionados</t24>
+    <t26>O tipo não foi definido ou o tipo correspondente não foi encontrado no modelo. Não é possível processar esta configuração!</t26>
+    <t27>Hospedeiro:</t27>
+    <t28>Inferior, mm:</t28>
+    <t29>Deslocamento a partir da parte inferior do ambiente, mm</t29>
+    <t30>Altura da parede, mm:</t30>
+    <t31>Selecione o tipo de parede de acabamento</t31>
+    <t32>Superior, mm:</t32>
+    <t33>Deslocamento a partir da parte superior do ambiente, mm</t33>
+    <t34>Limite</t34>
+    <t35>Limite do ambiente</t35>
+    <t36>Adicionar camada</t36>
+    <t37>Adicionar hospedeiro</t37>
+    <t38>Copiar o valor do parâmetro (do ambiente para as paredes de acabamento):</t38>
+    <t39>Unir as paredes de acabamento ao hospedeiro</t39>
+    <t40>Base das paredes</t40>
+    <t41>As paredes de acabamento são construídas sobre este piso</t41>
+    <t42>Camada:</t42>
+    <t43>Para todos os tipos de parede</t43>
+    <!--todo remove after 2.0.0-->
+    <t44>Tipo de forro:</t44>
+    <t45>Definir o valor da espessura do tipo de forro selecionado, considerando os forros anteriores</t45>
+    <t46>Copiar o valor do parâmetro (do ambiente para o forro):</t46>
+    <t47>Adicionar configurações de criação de acabamento</t47>
+    <t48>Selecione o tipo de parede ou pilar para o hospedeiro</t48>
+    <t49>Selecione o tipo de piso</t49>
+    <t50>Selecione o tipo de forro</t50>
+    <t51>Indicar no modelo as paredes ou pilares cujos tipos serão o hospedeiro para criar as paredes de acabamento</t51>
+    <t52>Modo de seleção do hospedeiro:</t52>
+    <t53>Filtro não definido</t53>
+    <t54>Rodapés</t54>
+    <t55>Selecione o tipo de rodapé</t55>
+    <t56>Altura do rodapé, mm:</t56>
+    <t57>Copiar o valor do parâmetro (do ambiente para o rodapé)</t57>
+    <t58>Outras configurações</t58>
+    <t59>Processar janelas até o piso</t59>
+    <t60>Se a opção estiver ativada, o piso será estendido nas aberturas criadas por elementos da categoria "Janelas" por toda a profundidade da abertura. Se a opção estiver desativada, essas aberturas serão processadas conforme as regras gerais</t60>
+    <t61>União de paredes:</t61>
+    <t62>Selecione o tipo de paredes e pilares</t62>
+    <t63>O tipo correspondente não foi encontrado no modelo. Não é possível processar esta configuração!</t63>
+    <t64>Selecione os ambientes</t64>
+    <t65>Selecione os elementos de acabamento para criar o vínculo com o ambiente</t65>
+    <t66>Selecione os elementos de acabamento para remover o vínculo</t66>
+    <t67>O valor do parâmetro de origem é coletado dos ambientes vinculados aos elementos de acabamento, agrupado por tipo, ordenado e gravado separado por vírgulas no parâmetro de destino de cada elemento de acabamento do ambiente. Por exemplo, se os elementos de acabamento do mesmo tipo pertencem a ambientes com os valores do parâmetro de origem "3", "1" e "5", então "1, 3, 5" será gravado no parâmetro de destino especificado desses elementos. A opção "Formar intervalos" une sequências de números com hífen, por exemplo, "3-5"</t67>
+    <t68>Selecione um parâmetro dos ambientes</t68>
+    <t69>Selecione um parâmetro dos pisos</t69>
+    <t70>Formar intervalos</t70>
+    <t71>Selecione um parâmetro das paredes</t71>
+    <t72>Selecione um parâmetro dos forros</t72>
+    <t73>Parâmetros não preenchidos</t73>
+    <t74>Preencher parâmetros</t74>
+    <t76>Selecionar acabamento de ambientes</t76>
+    <t77>Seleciona no modelo os elementos de acabamento vinculados ao ambiente</t77>
+    <t78>Vincular acabamento ao ambiente</t78>
+    <t79>Estabelece um vínculo entre os elementos de acabamento e o ambiente para que depois seja possível preencher os parâmetros com a função "Preencher parâmetros" e também usar a função "Selecionar acabamento"</t79>
+    <t80>Remover o vínculo do acabamento com o ambiente</t80>
+    <t81>Remove o vínculo entre os elementos de acabamento e o ambiente, para que o elemento de acabamento deixe de estar vinculado ao ambiente selecionado</t81>
+    <t82>Preenchimento de parâmetros</t82>
+    <t83>Criação de acabamento de ambientes</t83>
+    <t84>Selecione um ambiente</t84>
+    <t85>Deslocamento a partir da parte inferior do ambiente:</t85>
+    <t86>Calcular o deslocamento inferior a partir de:</t86>
+    <t87>Deslocamento a partir do nível do ambiente, mm</t87>
+    <t88>Exibir somente os selecionados</t88>
+    <l1>Não estender o contorno do piso nos vãos de porta</l1>
+    <l2>Estender o contorno até o meio da abertura</l2>
+    <l3>Estender o contorno por toda a espessura da abertura</l3>
+    <l4>Estender o contorno pelo valor especificado, mm</l4>
+    <l5>Estender o contorno até o meio da folha da porta</l5>
+    <l6>Para todos os tipos de paredes e pilares</l6>
+    <l7>Seleção de tipos de paredes e pilares</l7>
+    <l8>Filtro de paredes e pilares</l8>
+    <l9>Topo a topo</l9>
+    <l10>Meia-esquadria</l10>
+    <l11>Esquadrejar</l11>
+    <l12>Sem união</l12>
+    <l13>A partir do nível</l13>
+    <l14>A partir da parte inferior do ambiente</l14>
+    <msg1>Não há ambientes para processar!</msg1>
+    <msg2>Não foram encontrados ambientes que passaram pelo filtro por parâmetros "{0}"</msg2>
+    <msg3>O tipo de piso não foi especificado</msg3>
+    <msg4>Tipo de piso "{0}" não encontrado</msg4>
+    <msg5>O piso do tipo "{0}" foi criado pelo contorno do ambiente</msg5>
+    <msg6>Não foi possível criar o piso pelo contorno do ambiente</msg6>
+    <msg7>O contorno do ambiente tem erros</msg7>
+    <msg8>Não foi possível processar o contorno da abertura. Erro "{0}". O contorno do piso não será estendido na abertura</msg8>
+    <msg9>Parâmetro "{0}" não encontrado</msg9>
+    <msg10>Não foi possível copiar o valor do parâmetro "{0}" para o parâmetro "{1}"</msg10>
+    <msg11>Tipos de parâmetros incompatíveis ou causa desconhecida</msg11>
+    <msg12>Não foi possível criar as paredes de acabamento. Erro</msg12>
+    <msg13>As paredes de acabamento do tipo "{0}" foram criadas pelo contorno do ambiente</msg13>
+    <msg14>Não foi possível obter a altura do ambiente</msg14>
+    <msg15>Não foi possível criar o forro pelo contorno do ambiente</msg15>
+    <msg16>O forro do tipo "{0}" foi criado pelo contorno do ambiente</msg16>
+    <msg17>Não foi possível editar o perfil da parede</msg17>
+    <msg18>A altura da parede de acabamento não pode ser menor que 0</msg18>
+    <msg19>Os rodapés do tipo "{0}" foram criados pelo contorno do ambiente</msg19>
+    <msg20>Não foi possível obter a elevação do piso. O rodapé do tipo "{0}" será criado na elevação do nível do ambiente</msg20>
+    <msg21>Não foi possível criar o rodapé pelo contorno do ambiente</msg21>
+    <msg22>Não foi possível editar o esboço</msg22>
+    <msg23>O piso do tipo "{0}" foi atualizado pelo contorno do ambiente</msg23>
+    <msg24>Não foi possível atualizar o piso pelo contorno do ambiente</msg24>
+    <msg25>O forro do tipo "{0}" foi atualizado pelo contorno do ambiente</msg25>
+    <msg26>Não foi possível unir a parede de acabamento {0} ao hospedeiro {1}</msg26>
+    <msg27>O parâmetro de gravação "{0}" não é do tipo texto</msg27>
+    <msg28>Os parâmetros dos elementos foram preenchidos com sucesso</msg28>
+    <msg29>Os parâmetros já contêm o valor necessário</msg29>
+    <msg30>O parâmetro de gravação "{0}" é somente leitura</msg30>
+    <msg31>O comando não está disponível na versão atual do Revit, pois a API não contém os métodos necessários</msg31>
+    <msg32>Não foi possível obter a elevação do piso. O rodapé do tipo "{0}" será criado na elevação da parte inferior do ambiente</msg32>
+    <msg33>Não é possível atualizar o acabamento: ele foi criado em uma versão anterior do plugin. Recrie o acabamento</msg33>
+  </mprRoomFinishing>
+</ModPlus>

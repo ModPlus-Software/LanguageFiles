@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPConnect
+    LocalName="Connexions MEP"
+    Description="Ensemble d'outils pour automatiser les connexions des réseaux techniques"
+    LocalName1="Connecter les diffuseurs"
+    Description1="Connexion par lots des diffuseurs aux gaines"
+    LocalName2="Connecter les connecteurs"
+    Description2="Connexion de deux connecteurs (ou courbes MEP) avec rotation et déplacement du premier sélectionné"
+    LocalName3="Connecter les éléments rectilignes"
+    Description3="Connexion par lots des canalisations, gaines, fils, chemins de câbles ou conduits rectilignes situés sur une même droite"
+    LocalName4="Déconnecter les connecteurs"
+    Description4="Rupture de la connexion entre le connecteur connecté le plus proche de l'élément MEP sélectionné et l'élément adjacent"
+    LocalName5="Déconnecter du système"
+    Description5="Déconnexion de la branche associée d'éléments MEP du système">
+    <msg1>Sélectionnez les gaines et les diffuseurs à y connecter</msg1>
+    <msg2>Aucune gaine sélectionnée !</msg2>
+    <msg3>Aucun diffuseur sélectionné ! Seuls les diffuseurs disposant d'un connecteur non connecté orienté le long de l'axe Z peuvent être traités</msg3>
+    <msg4>Sélectionnez l'élément à connecter</msg4>
+    <msg5>Sélectionnez l'élément auquel le connecter</msg5>
+    <msg6>Sélectionnez des canalisations, gaines, fils, chemins de câbles ou conduits rectilignes</msg6>
+    <msg7>Effectuer la connexion ?</msg7>
+    <msg8>Sélectionnez l'élément à déconnecter</msg8>
+    <msg9>Sélectionnez un élément du système à déconnecter. Si l'élément appartient à plusieurs systèmes, cliquez plus près du connecteur du système voulu</msg9>
+    <msg10>Système introuvable</msg10>
+    <msg11>Après la déconnexion du système "{0}", le système "{1}" a été automatiquement affecté aux éléments</msg11>
+    <msg12>Le système "{0}" a bien été déconnecté des éléments</msg12>
+    <msg13>Impossible de déconnecter le système "{0}" des éléments</msg13>
+    <t1>Type de dérivation à créer :</t1>
+    <t2>Créer une connexion souple entre le diffuseur et la dérivation</t2>
+    <t3>Type de gaine souple :</t3>
+    <t4>Longueur de la gaine souple, mm :</t4>
+    <t5>Connexion des diffuseurs</t5>
+    <dt1>Diffuseur ovale</dt1>
+    <dt2>Diffuseur rond</dt2>
+    <dt3>Diffuseur rectangulaire</dt3>
+    <err1>Le décalage vertical entre le diffuseur et la gaine est insuffisant pour créer la connexion</err1>
+    <err2>La distance entre le diffuseur et la gaine est inférieure à la longueur indiquée de la connexion souple</err2>
+    <err3>Impossible de connecter le diffuseur</err3>
+    <err4>Impossible de créer le coude</err4>
+    <err5>Vérifiez les préférences d'acheminement des types de gaines indiqués</err5>
+    <err6>Impossible de créer le té</err6>
+    <err7>Impossible de créer la transition</err7>
+    <err8>Impossible de créer le piquage</err8>
+    <err9>L'élément sélectionné n'a pas de connecteurs libres</err9>
+    <err10>Les éléments sélectionnés ont des connecteurs de formes différentes</err10>
+    <err11>Les éléments sélectionnés ont des connecteurs de dimensions différentes</err11>
+    <err12>Les éléments sélectionnés ont des connecteurs de types de systèmes différents</err12>
+    <err13>L'élément sélectionné n'a pas de connecteurs connectés</err13>
+  </mprMEPConnect>
+</ModPlus>

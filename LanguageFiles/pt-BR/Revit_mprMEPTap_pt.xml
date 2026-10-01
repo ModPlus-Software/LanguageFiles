@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPTap
+    LocalName="Derivação MEP"
+    Description="Conjunto de ferramentas para trabalhar com derivações de sistemas prediais"
+    LocalName1="Substituição de junção"
+    Description1="Substituição de tê por derivação e de derivação por tê, mantendo a posição original da linha principal">
+    <t1>Selecione os tês e as derivações a substituir</t1>
+    <err1>Não foi possível analisar o tê: ele deve ter três conectores de extremidade, dois deles no mesmo eixo, com a linha principal e o ramal conectados</err1>
+    <err2>Não foi possível analisar a derivação: a linha principal e o ramal devem estar conectados a ela</err2>
+    <err3>A linha principal e o ramal devem ser segmentos retos, e os trechos da linha principal devem estar na mesma reta</err3>
+    <err4>Os trechos da linha principal dos dois lados do tê têm tipos ou seções diferentes — a substituição não é feita, pois não está claro quais parâmetros o tubo unido deve receber</err4>
+    <err5>A substituição de derivação por tê só é possível para dutos e tubos: para esta categoria o Revit não suporta a divisão</err5>
+    <err6>A derivação está muito próxima da extremidade da linha principal: após a divisão, o trecho ficará mais curto que o permitido</err6>
+    <err7>O ramal é curto demais para substituir a junção</err7>
+    <err8>Não foi possível obter o tipo da linha principal</err8>
+    <err9>O tipo da linha principal "{0}" não está disponível para edição. Talvez ele pertença a outro usuário no workset</err9>
+    <err10>Nas preferências de roteamento do tipo "{0}" não está definida a conexão necessária. Adicione uma derivação e um tê ao grupo de regras "Junções"</err10>
+    <err11>Não foi possível encontrar conectores livres para criar a junção</err11>
+    <err12>Não foi possível criar a derivação</err12>
+    <err13>Verifique as preferências de roteamento do tipo da linha principal</err13>
+    <err14>Não foi possível unir os trechos da linha principal após excluir o tê</err14>
+    <err15>Não foi possível dividir a linha principal no ponto da derivação</err15>
+    <err16>Não foi possível ajustar a família do tê "{0}" para uma junção a {1}°: verifique se ela é paramétrica e suporta esse ângulo</err16>
+    <err17>Não foi possível conectar o tê aos tubos: o trecho pode ser mais curto que o comprimento do tê</err17>
+    <err18>A junção foi substituída, mas não foi possível restaurar a posição original: verifique a geometria ou desfaça a operação</err18>
+    <err19>A derivação foi criada, mas não está conectada à linha principal</err19>
+    <err20>Erro inesperado</err20>
+    <err21>O Revit cancelou a operação; a substituição não foi feita</err21>
+    <err22>Não foi possível restaurar as preferências de roteamento do tipo "{0}"; a substituição foi cancelada</err22>
+  </mprMEPTap>
+</ModPlus>

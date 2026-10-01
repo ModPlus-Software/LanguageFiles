@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprTools
+    LocalName="Outils"
+    Description="Ensemble d'outils auxiliaires">
+    <ttShow>Afficher tous les éléments de la catégorie indiquée dans la vue courante</ttShow>
+    <ttHide>Masquer tous les éléments de la catégorie indiquée dans la vue courante</ttHide>
+    <Category>Tous</Category>
+    <Walls>Murs</Walls>
+    <Windows>Fenêtres</Windows>
+    <Doors>Portes</Doors>
+    <Tags>Étiquettes</Tags>
+    <Floors>Sols</Floors>
+    <Columns>Poteaux</Columns>
+    <Levels>Niveaux</Levels>
+    <Grids>Quadrillages</Grids>
+    <StairsRailing>Garde-corps</StairsRailing>
+    <Stairs>Escaliers</Stairs>
+    <Ramps>Rampes</Ramps>
+    <Roofs>Toits</Roofs>
+    <Ceilings>Plafonds</Ceilings>
+    <Elevations>Élévations</Elevations>
+    <Sections>Coupes</Sections>
+    <Components>Composants</Components>
+    <ReferencePlanes>Plans de référence</ReferencePlanes>
+    <StructuralFraming>Ossature</StructuralFraming>
+    <StructuralFoundation>Fondations</StructuralFoundation>
+    <Analytical>Toutes les catégories du modèle analytique</Analytical>
+    <GenericModels>Modèles génériques</GenericModels>
+    <Reinforcement>Ferraillage</Reinforcement>
+    <Lines>Lignes</Lines>
+    <Links>Liens</Links>
+    <Mass>Volume</Mass>
+    <Ducts>Gaines</Ducts>
+    <FlexDucts>Gaines flexibles</FlexDucts>
+    <Pipes>Canalisations</Pipes>
+    <Wires>Câbles</Wires>
+    <CableTrays>Chemins de câbles</CableTrays>
+    <Conduits>Conduits</Conduits>
+    <PointClouds>Nuages de points</PointClouds>
+    <Equipment>Équipement</Equipment>
+    <Images>Images raster</Images>
+    <Annotations>Annotations</Annotations>
+    <ElectricalDevices>Dispositifs électriques</ElectricalDevices>
+    <Imports>Symboles d'importation</Imports>
+    <h1>Distance d'entaille</h1>
+    <h2>Distance d'entaille, mm</h2>
+    <h3>Modification automatique de la distance d'entaille pour les éléments d'ossature</h3>
+    <!--todo remove after 2.27.8-->
+    <h4>Attention ! La distance d'entaille sera redéfinie à la valeur indiquée à chaque modification de la géométrie de l'élément !</h4>
+    <!--todo remove after 2.27.8-->
+    <h5>Modifier la distance d'entaille des éléments sélectionnés</h5>
+    <!--todo remove after 2.27.8-->
+    <h6>Modifier la distance d'entaille de tous les éléments de la vue courante</h6>
+    <h7>Modification de la distance d'entaille des éléments indiqués ou activation du mode de modification automatique de la distance d'entaille</h7>
+    <h8>Sélectionnez les poutres</h8>
+    <h9>Modification de la distance d'entaille</h9>
+    <h10>Valeur saisie incorrecte !</h10>
+    <h11>Mode du quadrillage</h11>
+    <h12>Basculement du mode 2D-3D du quadrillage indiqué</h12>
+    <!--todo remove after 2.27.8-->
+    <h13>Basculer tout le quadrillage de la vue courante en 2D</h13>
+    <!--todo remove after 2.27.8-->
+    <h14>Basculer tout le quadrillage de la vue courante en 3D</h14>
+    <!--todo remove after 2.27.8-->
+    <h15>Inverser le mode du quadrillage</h15>
+    <h16>Basculer le quadrillage 2D en 3D et le quadrillage 3D en 2D</h16>
+    <h17>Armatures hors de l'hôte</h17>
+    <h18>Pour les barres d'armature, la recherche s'effectue de deux manières : si la disposition de la barre a la valeur "Unique", on vérifie que la barre est située dans l'hôte. Pour les autres dispositions, on vérifie que l'armature ne dépasse pas de l'hôte. Pour les armatures d'un système (par exemple, une armature surfacique), on vérifie que l'armature ne dépasse pas de l'hôte</h18>
+    <h19>Visibilité des bulles de quadrillage</h19>
+    <h20>Activation/désactivation de la visibilité des bulles du quadrillage sélectionné ou du quadrillage de la vue</h20>
+    <!--todo remove after 2.27.8-->
+    <h21>Afficher les bulles au début</h21>
+    <!--todo remove after 2.27.8-->
+    <h22>Afficher les bulles à la fin</h22>
+    <!--todo remove after 2.27.8-->
+    <h23>Masquer les bulles au début</h23>
+    <!--todo remove after 2.27.8-->
+    <h24>Masquer les bulles à la fin</h24>
+    <h25>Inverser l'affichage des bulles</h25>
+    <h26>Du quadrillage sélectionné</h26>
+    <h27>Du quadrillage de la vue</h27>
+    <h28>Sélectionnez le quadrillage</h28>
+    <h29>Sélection d'annotations</h29>
+    <h30>Sélection rapide par fenêtre de certaines annotations : cotes, étiquettes, texte</h30>
+    <h31>Restaurer les vues</h31>
+    <h32>Ouvrir les vues du document courant qui étaient ouvertes à la fin de la session Revit précédente</h32>
+    <h33>Suppression des segments nuls</h33>
+    <h34>Suppression des segments nuls des chaînes de cotes</h34>
+    <h35>Copie des graphismes</h35>
+    <h36>Copie des propriétés</h36>
+    <h37>Sélectionnez l'élément source</h37>
+    <h38>Sélectionnez les éléments cibles</h38>
+    <h39>Copie des remplacements de graphismes dans la vue de l'élément source vers les éléments cibles</h39>
+    <h40>Affectation aux éléments cibles du même type que l'élément source sélectionné et copie des valeurs des paramètres de l'élément source dans les éléments cibles. La valeur des paramètres partagés n'est copiée que si leurs GUID correspondent. Le type ne sera pas modifié si le type de l'élément source n'est pas compatible avec l'élément cible</h40>
+    <h41>Ouvrir les vues</h41>
+    <h42>Ouvrir les vues et les feuilles sélectionnées dans l'arborescence du projet</h42>
+    <h43>Sélectionnez des vues et des feuilles dans l'arborescence du projet à l'aide de Ctrl et/ou Maj, puis lancez le plugin pour les ouvrir</h43>
+    <h44>Zoom sur la sélection</h44>
+    <h45>Zoom et centrage de la vue courante sur les éléments sélectionnés</h45>
+    <h51>Longueur totale de {0} éléments de la catégorie "{1}"</h51>
+    <h52>Longueur totale de tous les éléments sélectionnés</h52>
+    <h53>Somme des longueurs</h53>
+    <h54>Affichage de la longueur totale des éléments linéaires sélectionnés</h54>
+    <h55>Fusionner les splines</h55>
+    <h56>Fusion des lignes de détail ou des lignes de modèle réalisées sous forme de spline et ayant une extrémité commune</h56>
+    <h57>Sélectionnez les splines</h57>
+    <h58>Afficher les éléments</h58>
+    <h59>Affichage des éléments sélectionnés dans la vue en faisant passer leur état de "masqué" à "visible"</h59>
+    <h60>Afficher les informations</h60>
+    <h61>Obtenir</h61>
+    <h62>Zoomer</h62>
+    <h63>Restaurer la vue d'origine</h63>
+    <h64>Total des catégories</h64>
+    <h65>Total des éléments</h65>
+    <h66>Affichage des informations principales sur l'élément</h66>
+    <h67>Nombre</h67>
+    <h68>Classe</h68>
+    <h69>Créateur</h69>
+    <h70>Dernière modification</h70>
+    <h71>Propriétaire</h71>
+    <h72>Sous-projet</h72>
+    <h73>Inconnu</h73>
+    <h74>Personne</h74>
+    <h75>Aucune catégorie</h75>
+    <h76>Les limites des éléments ne peuvent pas être affichées dans la vue courante. Basculer vers une autre vue ?</h76>
+    <h77>Désactiver les vues temporaires</h77>
+    <h78>Désactive le mode de masquage/isolement temporaire dans toutes les vues du document courant</h78>
+    <!--todo remove after 3.0.0-->
+    <h79>Basculer en 2D dans les vues sélectionnées</h79>
+    <!--todo remove after 3.0.0-->
+    <h80>Basculer en 3D dans les vues sélectionnées</h80>
+    <!--todo remove after 3.0.0-->
+    <h81>Inverser la sélection dans les vues sélectionnées</h81>
+    <h82>au début</h82>
+    <h83>à la fin</h83>
+    <h84>au début et à la fin</h84>
+    <h85>Afficher les bulles</h85>
+    <!--todo remove after 3.0.0-->
+    <h86>Inverser la sélection dans la vue courante</h86>
+    <!--todo remove after 3.0.0-->
+    <h87>Basculer en 2D dans la vue courante</h87>
+    <!--todo remove after 3.0.0-->
+    <h88>Basculer en 3D dans la vue courante</h88>
+    <h89>Jonctions de murs</h89>
+    <h90>Modification automatique du type de jonction des murs</h90>
+    <h91>Modification automatique du type de jonction lors de la création des murs</h91>
+    <h92>Réglage des jonctions de murs</h92>
+    <h93>Autoriser la jonction</h93>
+    <h94>Interdire la jonction</h94>
+    <h95>Bout à bout</h95>
+    <h96>Onglet</h96>
+    <h97>Équerre</h97>
+    <h98>Le type de jonction des murs sera modifié lors de la création des murs</h98>
+    <h99>Modifier le type de jonction des murs sélectionnés</h99>
+    <h100>Modifier le type de jonction des murs dans la vue courante</h100>
+    <h101>Sélectionnez les murs</h101>
+    <h102>Modifier les connexions et le type de jonction au mur</h102>
+    <h103>La distance d'entaille sera redéfinie à la valeur indiquée à chaque modification de la géométrie de l'élément</h103>
+    <h104>Modifier la distance d'entaille des éléments sélectionnés</h104>
+    <h105>Modifier la distance d'entaille de tous les éléments de la vue courante</h105>
+    <h106>Les éléments ne sont pas visibles dans la vue courante. Zoomer sur leurs coordonnées ?</h106>
+    <h107>&lt;varie&gt;</h107>
+    <h108>Mode d'affichage</h108>
+    <h109>Modifier</h109>
+    <h110>Basculer dans la vue courante</h110>
+    <h111>Basculer dans les vues sélectionnées</h111>
+    <h112>Inversion</h112>
+    <m1>Impossible de modifier la visibilité de la catégorie dans la vue courante, car un gabarit de vue est appliqué à la vue</m1>
+    <m2>Aucune armature n'a été trouvée dans le projet courant</m2>
+    <m3>Trouvé dans le projet courant :</m3>
+    <m4>Barres d'armature :</m4>
+    <m5>Barres d'armature dans un système :</m5>
+    <m6>Lancer la vérification</m6>
+    <m7>Résultat de la vérification :</m7>
+    <m8>Barres d'armature situées hors de l'hôte ou dépassant de l'hôte (en cas de disposition) :</m8>
+    <m9>Sélectionner les barres d'armature</m9>
+    <m10>Armatures sans hôte :</m10>
+    <m11>Barres d'armature dans un système dépassant de l'hôte :</m11>
+    <m12>Sélectionner les systèmes</m12>
+    <m13>Tout sélectionner</m13>
+    <m14>Aucun résultat</m14>
+    <m15>Aucune information enregistrée pour la restauration des vues n'a été trouvée</m15>
+    <m16>Le remplacement des graphismes des éléments n'est pas disponible dans la vue courante</m16>
+    <m17>Impossible de basculer le mode du quadrillage dans la vue courante</m17>
+  </mprTools>
+</ModPlus>

@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprSlabsReinforcement
+    LocalName="Ferraillage des dalles"
+    Description="Analyse, regroupement et ferraillage des dalles selon des conditions données"
+    FullDescription="Traitement aussi bien des dalles sélectionnées individuellement que de toutes les dalles de la vue ou du document. Le ferraillage principal de la dalle est disponible aussi bien en barres séparées qu'en armature surfacique. L'analyse des ouvertures est effectuée à partir de la géométrie de la dalle elle-même et ne dépend pas des familles utilisées. Fonctionne même avec un gabarit vide">
+    <h1>Options de sélection</h1>
+    <h2>Sélectionner des dalles</h2>
+    <h3>Sélectionner toutes les dalles de la vue actuelle</h3>
+    <h4>Sélectionner toutes les dalles du projet</h4>
+    <h6>Sélectionner</h6>
+    <h7>Analyser</h7>
+    <h8>Total de dalles sélectionnées :</h8>
+    <h9>Dont analysées avec succès :</h9>
+    <h10>Effectuer le ferraillage</h10>
+    <h11>Réglages du ferraillage</h11>
+    <h12>Épaisseur</h12>
+    <h13>Élévation inférieure</h13>
+    <h14>Ferraillage principal (de base)</h14>
+    <h15>Ferraillage supplémentaire</h15>
+    <h16>Ferraillage des rives</h16>
+    <h17>Encadrement des ouvertures</h17>
+    <h18>Nombre de nappes du ferraillage de base</h18>
+    <h19>Décalage de la barre extrême (par l'axe de la barre) depuis le bord de la dalle :</h19>
+    <!--todo remove after 3.3.14.0-->
+    <h19-1>Décalage de la barre extrême (par la face de la barre) depuis le bord de la dalle :</h19-1>
+    <h20>Réglages</h20>
+    <h21>FENÊTRE DU PLUGIN :</h21>
+    <h23>Première nappe (supérieure)</h23>
+    <h24>Deuxième nappe (inférieure)</h24>
+    <h25>Armatures longitudinales (direction principale) :</h25>
+    <h26>Armatures transversales (direction secondaire) :</h26>
+    <h27>Enrobage supérieur (depuis la face supérieure de la dalle) :</h27>
+    <h28>Enrobage inférieur (depuis la face inférieure de la dalle) :</h28>
+    <h29>Les réglages de ferraillage de la nappe inférieure reprennent ceux de la nappe supérieure</h29>
+    <h30>Mode de création du ferraillage de base :</h30>
+    <h31>Décaler l'espacement résiduel vers :</h31>
+    <h32>Créer :</h32>
+    <!-- todo remove after 2.20.2.0 -->
+    <h33>FERRAILLAGE PAR DÉFAUT :</h33>
+    <h34>Ferraillage de la dalle</h34>
+    <h35>Utiliser l'élément "Armature surfacique" pour :</h35>
+    <h36>Chaque direction dans chaque nappe</h36>
+    <h37>Chaque direction</h37>
+    <h38>L'ensemble du ferraillage de base</h38>
+    <h39>Réglages principaux du ferraillage</h39>
+    <h40>Dalles</h40>
+    <h41>Ouvertures dans la dalle sélectionnée</h41>
+    <h42>Dimension</h42>
+    <!-- todo remove after 2.20.2.0 -->
+    <h43>Dans les dalles traitées, l'enrobage</h43>
+    <!-- todo remove after 2.20.2.0 -->
+    <h44>Définir à zéro</h44>
+    <!-- todo remove after 2.20.2.0 -->
+    <h45>Définir selon les réglages de ferraillage</h45>
+    <h47>Zoom étendu</h47>
+    <h48>Copier dans toutes les ouvertures cochées de la dalle actuelle</h48>
+    <h49>Copier dans toutes les ouvertures cochées de toutes les dalles cochées</h49>
+    <h50>Non défini</h50>
+    <h51>Il est déconseillé d'encadrer les ouvertures de moins de 300 mm</h51>
+    <h52>Les limites de l'ouverture ne sont pas alignées sur la direction du ferraillage. Encadrement impossible !</h52>
+    <h53>Appliquer les réglages d'enrobage supérieur et inférieur uniquement aux nappes du ferraillage de base</h53>
+    <h54>Créer chaque pièce comme une barre d'armature distincte</h54>
+    <h55>Multiple de l'espacement par rapport à l'espacement des barres du ferraillage de base</h55>
+    <!-- todo remove after 2.20.2.0 -->
+    <h56>Impossible de définir les valeurs des paramètres pour certains éléments. Ci-dessous figurent les codes des éléments (id), les noms des paramètres et les valeurs à définir :</h56>
+    <h57>Paramètres du ferraillage longitudinal</h57>
+    <h58>Paramètres du ferraillage transversal</h58>
+    <h59>Placer avec l'espacement du ferraillage de base</h59>
+    <h60>Barre complémentaire en bord de dalle avec un retrait (au centre) par rapport à la barre extrême :</h60>
+    <h61>Calcul de l'ancrage selon SP 52-101-2003</h61>
+    <h62>Diamètre :</h62>
+    <h63>Aire de la section, mm² :</h63>
+    <h64>Classe de béton :</h64>
+    <h65>Type de surface de l'armature :</h65>
+    <h66>Résistance de calcul à la traction, MPa :</h66>
+    <h67>Longueur d'ancrage de base, mm :</h67>
+    <h68>Coefficient α :</h68>
+    <h69>Longueur d'ancrage requise (de calcul), mm :</h69>
+    <h70>Longueur d'ancrage :</h70>
+    <h71>En cas d'espacements différents des nappes du ferraillage de base, définir l'espacement des barres en U aux rives selon les</h71>
+    <h72>barres de la nappe supérieure</h72>
+    <h73>barres de la nappe inférieure</h73>
+    <h76>Ferraillage de la dalle</h76>
+    <h79>Espacement, mm :</h79>
+    <h80>Définir le type des occurrences "Armature surfacique" créées :</h80>
+    <h81>Chaque nappe</h81>
+    <h82>Transmettre les valeurs des paramètres de l'"Armature surfacique" aux barres d'armature</h82>
+    <h84>Enrobage aux extrémités des armatures, mm :</h84>
+    <h85>Ferraillage des rives dans la direction longitudinale</h85>
+    <h86>Ferraillage des rives dans la direction transversale</h86>
+    <h87>Reprendre les réglages de ferraillage des rives dans la direction longitudinale</h87>
+    <h88>Orientation de la nappe inférieure :</h88>
+    <h89>Impossible d'utiliser l'orientation codirectionnelle de la nappe inférieure lorsque l'armature surfacique est utilisée pour tout le ferraillage de base. L'orientation en miroir sera utilisée</h89>
+    <h91>Ne pas créer la pièce si la longueur de la pièce obtenue lors de la génération est inférieure à, mm :</h91>
+    <h92>Longueur de la pièce, mm :</h92>
+    <h93>Calculer la longueur de la barre en U</h93>
+    <h104>Longueur d'ancrage, mm :</h104>
+    <h105>Calculer la longueur d'ancrage</h105>
+    <h109>Barres droites dans le sens longitudinal</h109>
+    <h110>Créer le ferraillage</h110>
+    <h111>Distance par rapport à l'ouverture :</h111>
+    <h112>Nombre de rangées :</h112>
+    <h113>Décaler en cas de rencontre avec les barres du ferraillage principal</h113>
+    <h114>Barres droites dans le sens transversal</h114>
+    <h115>Barres en U dans le sens longitudinal</h115>
+    <h116>Barres en U dans le sens transversal</h116>
+    <h117>Longueur de la pièce, mm :</h117>
+    <h118>Espacement des pièces, mm :</h118>
+    <!-- todo remove after 2.20.2.0 -->
+    <h119>Réglages de ferraillage par défaut pour les dalles</h119>
+    <!-- todo remove after 2.20.2.0 -->
+    <h120>Réglages de ferraillage par défaut pour les ouvertures</h120>
+    <h121>Paramètres des barres de la nappe supérieure</h121>
+    <h122>Paramètres des barres de la nappe inférieure</h122>
+    <h141>Ne pas fermer la fenêtre après la création du ferraillage</h141>
+    <!-- todo remove after 2.20.2.0 -->
+    <h147>Réinitialiser</h147>
+    <h153>Ferraillage indirect</h153>
+    <h155>Longueur des barres :</h155>
+    <!-- todo remove after 2.20.2.0 -->
+    <h173>Barres droites :</h173>
+    <!-- todo remove after 2.20.2.0 -->
+    <h180>Barres en U :</h180>
+    <!-- todo remove after 2.20.2.0 -->
+    <h181>Barres enveloppantes (cadres) :</h181>
+    <!-- todo remove after 2.20.2.0 -->
+    <h183>Réinitialiser toutes les valeurs sur "Auto"</h183>
+    <!-- todo remove after 2.20.2.0 -->
+    <h184>Formes d'armature préférées</h184>
+    <h185>Créer :</h185>
+    <h186>Ferraillage longitudinal et transversal</h186>
+    <h187>Ferraillage longitudinal uniquement</h187>
+    <h188>Ferraillage transversal uniquement</h188>
+    <h199>Cadres dans le sens longitudinal</h199>
+    <h203>Sélectionner à nouveau</h203>
+    <h204>Sélectionner à nouveau les dalles traitées dans la vue courante lors de l'utilisation précédente du plugin</h204>
+    <h205>SÉLECTION DES OUVERTURES :</h205>
+    <h206>Par défaut, laisser non cochées les ouvertures dont le rectangle circonscrit a</h206>
+    <h207>un des côtés</h207>
+    <h208>tous les côtés</h208>
+    <h209>inférieur(s) à</h209>
+    <h210>Répartition sur la longueur :</h210>
+    <h211>de l'ouverture</h211>
+    <h212>des barres droites</h212>
+    <h214>Cadres dans le sens transversal</h214>
+    <h226>Suppression du ferraillage créé précédemment :</h226>
+    <h229>Pour pouvoir créer des cadres, vous devez activer la création d'au moins deux barres droites dans le sens longitudinal avec l'option "Décaler en cas de rencontre avec les barres du ferraillage principal" désactivée</h229>
+    <h230>Pour pouvoir créer des cadres, vous devez activer la création d'au moins deux barres droites dans le sens transversal avec l'option "Décaler en cas de rencontre avec les barres du ferraillage principal" désactivée</h230>
+    <h231>Longueur d'ancrage de la barre complémentaire :</h231>
+    <h232>Couper les barres en U par le corps de la dalle si les barres dépassent les limites du corps de la dalle</h232>
+    <h233>Paramètres de l'armature surfacique</h233>
+    <h234>Paramètres de l'armature structurelle</h234>
+    <h235>Paramètres de l'armature surfacique de la nappe supérieure</h235>
+    <h236>Paramètres de l'armature surfacique de la nappe inférieure</h236>
+    <srd>Enregistrement des données des dalles sélectionnées</srd>
+    <hook>Crochet :</hook>
+    <msg1>Sélectionnez les dalles</msg1>
+    <!-- todo remove after 2.20.2.0 -->
+    <m13>Enrobage des armatures</m13>
+    <m24>Vous n'avez pas indiqué le type de ferraillage à créer !</m24>
+    <m25>Vous n'avez sélectionné aucune dalle pour créer le ferraillage !</m25>
+    <m27>Attention ! Aucune forme d'armature chargée n'a été trouvée dans le projet courant ! Dans ce cas, les formes d'armature créées par le plugin ne pourront pas être ouvertes dans l'éditeur de familles ! Il est recommandé de charger les formes d'armature dans le projet avant d'utiliser le plugin !\nEffectuer le ferraillage malgré l'absence des formes d'armature ?</m27>
+    <p1>Analyse de la dalle :</p1>
+    <p2>Calcul et modélisation du ferraillage de base</p2>
+    <p3>Calcul et modélisation du ferraillage complémentaire</p3>
+    <p4>Calcul et modélisation du ferraillage des rives</p4>
+    <p5>Calcul et modélisation de l'encadrement des ouvertures</p5>
+    <p8>Suppression du ferraillage créé précédemment</p8>
+    <p12>Génération des armatures Revit</p12>
+    <e1>Erreurs d'analyse de la dalle</e1>
+    <e2>Impossible d'initialiser la dalle</e2>
+    <e3>Impossible d'obtenir l'épaisseur de la dalle à partir du paramètre</e3>
+    <e4>Impossible d'obtenir le solide à partir de la géométrie de la dalle</e4>
+    <e5>Impossible d'obtenir la face supérieure et/ou inférieure à partir de la géométrie de la dalle</e5>
+    <e7>Impossible d'obtenir les contours extérieurs à partir de la géométrie de la dalle</e7>
+    <e8>Impossible d'obtenir le contour pour l'armature surfacique</e8>
+    <e9>Impossible de créer le ferraillage de base de la dalle :</e9>
+    <e10>Impossible de créer le ferraillage des rives de la dalle :</e10>
+    <e11>Impossible de créer le ferraillage complémentaire de la dalle :</e11>
+    <e12>Impossible de créer l'encadrement des ouvertures de la dalle :</e12>
+    <e13>Impossible d'obtenir les lignes de l'armature surfacique créée. Le ferraillage de la dalle est interrompu. Erreur :</e13>
+    <m1>Saisissez une valeur de</m1>
+    <m2>à</m2>
+    <m6>Pour la barre d'armature</m6>
+    <m7>la valeur de la propriété "Diamètre de pliage standard"</m7>
+    <m8>n'est pas conforme aux normes SP 63.13330.2012</m8>
+    <m9>La valeur minimale du diamètre de pliage pour l'armature</m9>
+    <m10>de diamètre</m10>
+    <m11>doit être égale à :</m11>
+    <m12>La valeur de la propriété sera remplacée</m12>
+    <m23>Réglages de ferraillage copiés</m23>
+    <rn>Armature porteuse ⌀</rn>
+    <!-- todo remove after 2.20.2.0 -->
+    <full>Disponible dans la version complète du plugin !</full>
+    <notSet>Ne pas définir</notSet>
+    <br1>Par barres individuelles</br1>
+    <br2>Par armature surfacique</br2>
+    <as1>vers le bord de la dalle</as1>
+    <as2>vers le milieu de la dalle</as2>
+    <rr1>Supprimer le ferraillage du même type que celui créé</rr1>
+    <rr2>Supprimer tout le ferraillage créé précédemment</rr2>
+    <rr3>Ne pas supprimer</rr3>
+    <t1>Selon SP 63.13330.2012 art. 10.3.5 – la distance libre minimale entre les barres d'armature doit être au moins égale au plus grand diamètre de barre, ainsi qu'au moins 25 mm pour les armatures inférieures et 30 mm pour les armatures supérieures ; art. 10.3.8 – l'entraxe maximal des barres ne doit pas dépasser 200 mm pour une hauteur de section de dalle h &lt;= 150 mm, ni 1,5h et 400 mm pour une hauteur de section h &gt; 150 mm</t1>
+    <t2>La vérification et le décalage en cas de rencontre avec les barres du ferraillage de base sont effectués pour la première barre (la plus proche), ce qui ne garantit pas le décalage correct de la deuxième ou de la troisième barre. Le décalage tient compte de la distance libre minimale admissible entre les barres – 30 mm</t2>
+    <!-- todo remove after 2.20.2.0 -->
+    <t4>Enregistrer les réglages de ferraillage actuels comme réglages de ferraillage par défaut</t4>
+    <t5>Si l'option est activée, l'enrobage supérieur et inférieur sera appliqué lors de la création des nappes du ferraillage de base, sans tenir compte des diamètres des autres armatures. Si l'option est désactivée, l'enrobage sera appliqué à tous les types d'armatures créées, et la position des nappes du ferraillage de base par rapport aux faces supérieure et inférieure de la dalle sera calculée à partir des conditions définies</t5>
+    <t6>Les barres en U seront placées avec l'espacement des barres de la nappe supérieure du ferraillage de base. Si le ferraillage de base n'est pas créé dans la dalle, les barres en U seront créées avec l'espacement indiqué</t6>
+    <t7>Sélectionner toutes les ouvertures de la liste disponibles pour le traitement</t7>
+    <t8>Désélectionner toutes les ouvertures de la liste</t8>
+    <t9>Les cadres seront placés avec l'espacement des barres de la nappe supérieure du ferraillage de base. Si le ferraillage de base n'est pas créé dans la dalle, les cadres seront créés avec l'espacement indiqué</t9>
+    <t37>Copier les réglages de ferraillage de l'ouverture courante dans les ouvertures cochées</t37>
+    <t38>Enregistrer les réglages de ferraillage de l'ouverture courante</t38>
+    <t39>Charger les réglages de ferraillage et les appliquer à l'ouverture courante</t39>
+    <t40>Copier les réglages de ferraillage de la dalle courante dans toutes les dalles cochées</t40>
+    <t41>Enregistrer les réglages de ferraillage de la dalle courante</t41>
+    <t42>Charger les réglages de ferraillage et les appliquer à la dalle courante</t42>
+    <t43>Attention ! L'aspect de surface des armatures peut dépendre de la classe d'armature, du diamètre ou d'autres valeurs qui ne sont pas prises en compte par le programme. Consultez la documentation normative</t43>
+    <t44>α – coefficient tenant compte de l'influence, sur la longueur d'ancrage, de l'état de contrainte du béton et de l'armature ainsi que de la solution constructive de l'élément dans la zone d'ancrage. Pour l'ancrage de barres à haute adhérence à extrémités droites (ancrage droit) ou d'armatures lisses avec crochets ou boucles sans dispositifs d'ancrage supplémentaires, on prend α = 1,0 pour les barres tendues et α = 0,75 pour les barres comprimées.</t44>
+    <t46>Conformément à GOST 21.501-2018 art. 6.4.7, la longueur de la pièce est définie selon la face extérieure de la barre d'armature</t46>
+    <t47>La longueur de la pièce est égale à la longueur d'ancrage</t47>
+    <t49>Nombre de rangées d'armatures dans le sens longitudinal (une rangée comprend deux barres "le long" de l'ouverture)</t49>
+    <t50>Nombre de rangées d'armatures dans le sens transversal (une rangée comprend deux barres "le long" de l'ouverture)</t50>
+    <!-- todo remove after 2.20.2.0 -->
+    <t53>Réinitialisation de toutes les valeurs des réglages de ferraillage par défaut actuels aux valeurs standard prévues dans le plugin</t53>
+    <t58>La longueur de la barre est la somme de deux longueurs d'ancrage</t58>
+    <!-- todo remove after 2.20.2.0 -->
+    <t63>Vous pouvez indiquer les formes d'armature préférées pour les différents types de barres d'armature créées par le plugin.</t63>
+    <!-- todo remove after 2.20.2.0 -->
+    <t64>La définition de formes préférées ne garantit pas que l'armature sera créée avec la forme d'armature indiquée.</t64>
+    <!-- todo remove after 2.20.2.0 -->
+    <t65>Lors de la création des barres d'armature, le plugin tentera d'utiliser la forme indiquée. Si la création d'une barre avec la forme indiquée est impossible, Revit recherchera automatiquement une forme adaptée ou créera une nouvelle forme.</t65>
+    <re4>Impossible de créer une barre d'armature droite avec la forme d'armature préférée "{0}". Erreur : {1}\nTentative de création de la barre avec sélection ou création automatique de la forme d'armature</re4>
+    <re5>Impossible de créer une barre d'armature de forme "{0}" avec la forme d'armature préférée "{1}". Erreur : {2}\nTentative de création de la barre avec sélection ou création automatique de la forme d'armature</re5>
+    <re18>Erreur lors de la création des cadres d'encadrement de l'ouverture dans la dalle id={0}</re18>
+    <re20>Impossible de créer la barre d'armature avec la forme d'armature préférée indiquée "{0}". Erreur : {1}\nUne tentative de création de la barre avec sélection ou création automatique de la forme d'armature a été effectuée</re20>
+  </mprSlabsReinforcement>
+</ModPlus>

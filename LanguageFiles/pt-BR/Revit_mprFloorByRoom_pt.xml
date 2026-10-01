@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprFloorByRoom
+    LocalName="Piso por ambiente"
+    Description="Criação de pisos pelo contorno dos ambientes">
+    <t1>Filtro de ambientes:</t1>
+    <t2>Tipo de piso:</t2>
+    <t3>Deslocamento do nível, mm:</t3>
+    <t4>Estender nas aberturas de portas</t4>
+    <t5>O tipo de piso não foi definido! Esta configuração não pode ser processada!</t5>
+    <t6>Pelos ambientes na vista</t6>
+    <t7>Pelos ambientes selecionados</t7>
+    <t8>Pelos ambientes pré-selecionados</t8>
+    <t9>Definir o valor da espessura do tipo de piso selecionado</t9>
+    <t10>Copiar o valor do parâmetro (do ambiente para o piso):</t10>
+    <t11>De</t11>
+    <t12>para</t12>
+    <t13>Ao estender o piso nas aberturas de portas por toda a espessura da parede, considerar como ambiente principal:</t13>
+    <t14>Se a porta leva à saída</t14>
+    <t15>Se a porta leva à entrada</t15>
+    <t16>O piso do ambiente principal será criado estendendo-se na abertura da porta. Assim, para o ambiente definido como não principal, o piso não será estendido na abertura. Esta opção funciona apenas para famílias da categoria "Portas" com as propriedades internas FromRoom e ToRoom preenchidas. A direção de passagem na abertura é determinada pela direção do lado externo da família</t16>
+    <t17>Recortar a geometria sólida da porta do contorno do piso</t17>
+    <l1>Não estender o contorno do piso nas aberturas de portas</l1>
+    <l2>Estender o contorno até o meio da parede</l2>
+    <l3>Estender o contorno por toda a espessura da parede</l3>
+    <l4>Estender o contorno pelo valor indicado, mm</l4>
+    <msg1>Para executar o plugin, vá para a planta de piso!</msg1>
+    <msg2>Piso do tipo "{0}" criado pelo contorno do ambiente</msg2>
+    <msg3>Não foi possível criar o piso pelo contorno do ambiente</msg3>
+    <msg4>Não foram encontrados ambientes que passem pelo filtro dos parâmetros "{0}"</msg4>
+    <msg5>Não há ambientes na vista atual!</msg5>
+    <msg6>Não foi possível processar o contorno da abertura. Erro "{0}". O contorno do piso não será estendido na abertura</msg6>
+    <msg7>Parâmetro "{0}" não encontrado</msg7>
+    <msg8>Não foi possível copiar o valor do parâmetro "{0}" para o parâmetro "{1}"</msg8>
+    <msg9>Tipos de parâmetro incompatíveis ou causa desconhecida</msg9>
+    <msg10>O suporte e o desenvolvimento deste plugin foram encerrados! Todas as tarefas executadas por este plugin são executadas pelo plugin "Acabamento de ambientes"</msg10>
+  </mprFloorByRoom>
+</ModPlus>

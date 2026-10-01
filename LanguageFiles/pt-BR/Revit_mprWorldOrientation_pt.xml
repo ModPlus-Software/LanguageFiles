@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWorldOrientation
+    LocalName="Pontos cardeais"
+    Description="Análise da orientação dos elementos pelos pontos cardeais em relação ao ambiente ou à sua posição no terreno">
+    <!--todo remove after 2.2.1.0-->
+    <d1>A análise de orientação dos ambientes é feita pelas janelas, portas e paredes cortina. O resultado da análise pode ser gravado em um parâmetro dos ambientes ou em um parâmetro das janelas, portas e paredes cortina</d1>
+    <!--todo remove after 2.2.1.0-->
+    <d2>Análise de orientação dos elementos. O resultado da análise pode ser gravado em um parâmetro das janelas, portas ou paredes cortina.</d2>
+    <d3>Para os elementos das categorias selecionadas, é determinado o ponto cardeal (considerando a orientação pelo norte verdadeiro) em relação ao ambiente selecionado, independentemente da orientação do próprio elemento no terreno. O resultado da análise pode ser gravado em um parâmetro do ambiente e/ou em um parâmetro dos elementos selecionados</d3>
+    <d4>Para os elementos das categorias selecionadas, é determinada a orientação da face frontal em relação ao norte verdadeiro. Os resultados da análise podem ser gravados em um parâmetro dos elementos selecionados</d4>
+    <tab1>Por ambientes</tab1>
+    <tab2>Por elementos</tab2>
+    <!-- todo remove after 2.0.0.0 -->
+    <v1>Parâmetro:</v1>
+    <v2>Gravar o resultado no parâmetro de:</v2>
+    <v3>Portas</v3>
+    <v4>Janelas</v4>
+    <v5>Paredes cortina</v5>
+    <v6>Filtrar ambientes:</v6>
+    <v7>Ambientes</v7>
+    <v8>Elementos</v8>
+    <v9>Ambientes e elementos</v9>
+    <v10>Elementos para análise:</v10>
+    <v11>Paredes</v11>
+    <s1>N</s1>
+    <s2>S</s2>
+    <s3>O</s3>
+    <s4>L</s4>
+    <s5>NO</s5>
+    <s6>SO</s6>
+    <s7>NE</s7>
+    <s8>SE</s8>
+    <h1>Elementos selecionados</h1>
+    <h2>Na vista ativa</h2>
+    <h3>No projeto</h3>
+    <tr1>Determinação da direção das aberturas</tr1>
+    <t1>Os elementos de ambiente não têm o parâmetro "{0}", portanto não é possível preencher os resultados da análise</t1>
+    <t2>Não foi possível definir o valor do parâmetro "{0}". Verifique o tipo do parâmetro a ser preenchido – ele deve ser do tipo texto</t2>
+    <t3>Total de ambientes encontrados: {0}</t3>
+    <t4>Total de elementos da categoria "{0}" aos quais foi atribuído um valor após a análise: {1}</t4>
+    <t5>Não foi possível determinar a direção do elemento</t5>
+    <t6>Para os elementos da categoria "{0}" não foi definido o parâmetro de destino para gravar o resultado</t6>
+  </mprWorldOrientation>
+</ModPlus>

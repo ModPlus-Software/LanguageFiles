@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprTools
+    LocalName="Utilitalar"
+    Description="Yordamchi utilitalar toʻplami">
+    <ttShow>Joriy koʻrinishda koʻrsatilgan toifadagi barcha elementlarni koʻrsatish</ttShow>
+    <ttHide>Joriy koʻrinishda koʻrsatilgan toifadagi barcha elementlarni yashirish</ttHide>
+    <Category>Barchasi</Category>
+    <Walls>Devorlar</Walls>
+    <Windows>Derazalar</Windows>
+    <Doors>Eshiklar</Doors>
+    <Tags>Markalar</Tags>
+    <Floors>Orayopmalar</Floors>
+    <Columns>Kolonnalar</Columns>
+    <Levels>Sathlar</Levels>
+    <Grids>Oʻqlar</Grids>
+    <StairsRailing>Toʻsiqlar</StairsRailing>
+    <Stairs>Zinapoyalar</Stairs>
+    <Ramps>Panduslar</Ramps>
+    <Roofs>Tomlar</Roofs>
+    <Ceilings>Shiftlar</Ceilings>
+    <Elevations>Fasadlar</Elevations>
+    <Sections>Qirqimlar</Sections>
+    <Components>Komponentlar</Components>
+    <ReferencePlanes>Tayanch tekisliklar</ReferencePlanes>
+    <StructuralFraming>Yuk koʻtaruvchi karkas</StructuralFraming>
+    <StructuralFoundation>Yuk koʻtaruvchi konstruksiya poydevori</StructuralFoundation>
+    <Analytical>Analitik modelning barcha toifalari</Analytical>
+    <GenericModels>Umumlashtirilgan modellar</GenericModels>
+    <Reinforcement>Armaturalash</Reinforcement>
+    <Lines>Chiziqlar</Lines>
+    <Links>Bogʻlanishlar</Links>
+    <Mass>Shakl hosil qiluvchilar</Mass>
+    <Ducts>Havo quvurlari</Ducts>
+    <FlexDucts>Egiluvchan havo quvurlari</FlexDucts>
+    <Pipes>Quvurlar</Pipes>
+    <Wires>Simlar</Wires>
+    <CableTrays>Kabel lotoklari</CableTrays>
+    <Conduits>Qutilar</Conduits>
+    <PointClouds>Nuqtalar bulutlari</PointClouds>
+    <Equipment>Uskuna</Equipment>
+    <Images>Rastrli tasvirlar</Images>
+    <Annotations>Annotatsiyalar</Annotations>
+    <ElectricalDevices>Elektr uskunalari</ElectricalDevices>
+    <Imports>Import belgilari</Imports>
+    <h1>Kesib kirish chekinishi</h1>
+    <h2>Kesib kirish chekinishi, mm</h2>
+    <h3>Yuk koʻtaruvchi karkas elementlari uchun Kesib kirish chekinishini avtomatik oʻzgartirish</h3>
+    <!--todo remove after 2.27.8-->
+    <h4>Diqqat! Element geometriyasi har qanday oʻzgarganda kesib kirish chekinishi qiymati koʻrsatilgan qiymatga oʻrnatiladi!</h4>
+    <!--todo remove after 2.27.8-->
+    <h5>Tanlangan elementlar uchun Kesib kirish chekinishini oʻzgartirish</h5>
+    <!--todo remove after 2.27.8-->
+    <h6>Joriy koʻrinishdagi barcha elementlar uchun Kesib kirish chekinishini oʻzgartirish</h6>
+    <h7>Koʻrsatilgan elementlar uchun Kesib kirish chekinishini oʻzgartirish yoki Kesib kirish chekinishini oʻzgartirishning avtomatik rejimini yoqish</h7>
+    <h8>Toʻsinlarni tanlang</h8>
+    <h9>Kesib kirish chekinishini oʻzgartirish</h9>
+    <h10>Notoʻgʻri qiymat kiritildi!</h10>
+    <h11>Oʻqlar rejimi</h11>
+    <h12>Koʻrsatilgan oʻqlarning 2D-3D rejimini almashtirish</h12>
+    <!--todo remove after 2.27.8-->
+    <h13>Joriy koʻrinishdagi barcha oʻqlarni 2D ga oʻtkazish</h13>
+    <!--todo remove after 2.27.8-->
+    <h14>Joriy koʻrinishdagi barcha oʻqlarni 3D ga oʻtkazish</h14>
+    <!--todo remove after 2.27.8-->
+    <h15>Oʻqlar rejimini teskari aylantirish</h15>
+    <h16>2D oʻqlar rejimini 3D ga, 3D oʻqlarni – 2D ga oʻtkazish</h16>
+    <h17>Asosdan tashqaridagi armatura</h17>
+    <h18>Armatura sterjenlari uchun qidiruv ikki variant boʻyicha amalga oshiriladi: agar sterjen joylashuvi "Bitta" qiymatiga ega boʻlsa, sterjenning asosda joylashuvi tekshiriladi. Joylashuvning boshqa variantlarida armaturaning asosdan chiqib turishi tekshiriladi. Tizimdagi armaturani tekshirishda (masalan, maydon boʻyicha armaturalash) armaturaning asosdan chiqib turishi tekshiriladi</h18>
+    <h19>Oʻq doirachalarining koʻrinishi</h19>
+    <h20>Tanlangan oʻqlar yoki koʻrinishdagi oʻqlar doirachalarining koʻrinishini yoqish/oʻchirish</h20>
+    <!--todo remove after 2.27.8-->
+    <h21>Boshidagi doirachalarni yoqish</h21>
+    <!--todo remove after 2.27.8-->
+    <h22>Oxiridagi doirachalarni yoqish</h22>
+    <!--todo remove after 2.27.8-->
+    <h23>Boshidagi doirachalarni oʻchirish</h23>
+    <!--todo remove after 2.27.8-->
+    <h24>Oxiridagi doirachalarni oʻchirish</h24>
+    <h25>Doirachalar koʻrinishini teskari aylantirish</h25>
+    <h26>Tanlangan oʻqlar</h26>
+    <h27>Koʻrinishdagi oʻqlar</h27>
+    <h28>Oʻqlarni tanlang</h28>
+    <h29>Annotatsiyalarni tanlash</h29>
+    <h30>Muayyan annotatsiyalarni ramka bilan tez tanlash: oʻlchamlar, markalar, matn</h30>
+    <h31>Koʻrinishlarni tiklash</h31>
+    <h32>Joriy hujjatning Revit oldingi ish seansi tugaganda ochiq boʻlgan koʻrinishlarini ochish</h32>
+    <h33>Nol segmentlarni oʻchirish</h33>
+    <h34>Oʻlchamlar zanjirlaridan nol segmentlarni oʻchirish</h34>
+    <h35>Grafika nusxasi</h35>
+    <h36>Xususiyatlar nusxasi</h36>
+    <h37>Manba elementni tanlang</h37>
+    <h38>Maqsadli elementlarni tanlang</h38>
+    <h39>Koʻrinishdagi grafikani qayta belgilash sozlamalarini manba elementdan maqsadli elementlarga nusxalash</h39>
+    <h40>Maqsadli elementlarga tanlangan manba elementdagi kabi turni oʻrnatish, shuningdek manba element parametrlari qiymatlarini maqsadli elementlarga nusxalash. Umumiy parametrlar qiymati faqat ularning GUID mos kelganda nusxalanadi. Agar manba element turi maqsadli element bilan mos kelmasa, tur oʻzgarmaydi</h40>
+    <h41>Koʻrinishlarni ochish</h41>
+    <h42>Loyiha dispetcherida ajratilgan koʻrinishlar va varaqlarni ochish</h42>
+    <h43>Loyiha dispetcherida Ctrl va/yoki Shift yordamida koʻrinishlar va varaqlarni tanlang va ularni ochish uchun plaginni ishga tushiring</h43>
+    <h44>Tanlanganni sigʻdirish</h44>
+    <h45>Joriy koʻrinishni tanlangan elementlarga masshtablash va markazlash</h45>
+    <h51>"{1}" toifasidagi {0} ta elementning umumiy uzunligi</h51>
+    <h52>Barcha tanlangan elementlarning umumiy uzunligi</h52>
+    <h53>Uzunliklar yigʻindisi</h53>
+    <h54>Tanlangan chiziqli elementlarning umumiy uzunligini chiqarish</h54>
+    <h55>Splaynlarni birlashtirish</h55>
+    <h56>Splayn koʻrinishida bajarilgan va umumiy uch nuqtasiga ega boʻlgan detallashtirish chiziqlari yoki model chiziqlarini birlashtirish</h56>
+    <h57>Splaynlarni tanlang</h57>
+    <h58>Elementlarni koʻrsatish</h58>
+    <h59>Tanlangan elementlarni koʻrinishda ularning holatini "yashirin"dan "koʻrinadigan"ga oʻzgartirgan holda koʻrsatish</h59>
+    <h60>Maʼlumotni koʻrsatish</h60>
+    <h61>Olish</h61>
+    <h62>Yaqinlashtirish</h62>
+    <h63>Dastlabki koʻrinishni tiklash</h63>
+    <h64>Jami toifalar</h64>
+    <h65>Jami elementlar</h65>
+    <h66>Element haqidagi asosiy maʼlumotni koʻrsatish</h66>
+    <h67>Soni</h67>
+    <h68>Sinf</h68>
+    <h69>Yaratuvchi</h69>
+    <h70>Oxirgi oʻzgartirish</h70>
+    <h71>Egasi</h71>
+    <h72>Ishchi toʻplam</h72>
+    <h73>Nomaʼlum</h73>
+    <h74>Hech kim</h74>
+    <h75>Toifa yoʻq</h75>
+    <h76>Elementlar chegaralarini joriy koʻrinishda koʻrsatib boʻlmaydi. Boshqa koʻrinishga oʻtilsinmi?</h76>
+    <h77>Vaqtinchalik koʻrinishlarni oʻchirish</h77>
+    <h78>Joriy hujjatning barcha koʻrinishlarida vaqtinchalik yashirish/izolyatsiya rejimini oʻchiradi</h78>
+    <!--todo remove after 3.0.0-->
+    <h79>Tanlangan koʻrinishlarda 2D ga oʻtkazish</h79>
+    <!--todo remove after 3.0.0-->
+    <h80>Tanlangan koʻrinishlarda 3D ga oʻtkazish</h80>
+    <!--todo remove after 3.0.0-->
+    <h81>Tanlangan koʻrinishlarda tanlovni teskari aylantirish</h81>
+    <h82>boshida</h82>
+    <h83>oxirida</h83>
+    <h84>boshida va oxirida</h84>
+    <h85>Doirachalarni yoqish</h85>
+    <!--todo remove after 3.0.0-->
+    <h86>Joriy koʻrinishda tanlovni teskari aylantirish</h86>
+    <!--todo remove after 3.0.0-->
+    <h87>Joriy koʻrinishda 2D ga oʻtkazish</h87>
+    <!--todo remove after 3.0.0-->
+    <h88>Joriy koʻrinishda 3D ga oʻtkazish</h88>
+    <h89>Devorlar tutashuvi</h89>
+    <h90>Devorlar tutashuvi turini avtomatik oʻzgartirish</h90>
+    <h91>Devorlarni yaratishda tutashuv turini avtomatik oʻzgartirish</h91>
+    <h92>Devorlar tutashuvini sozlash</h92>
+    <h93>Tutashuvga ruxsat berish</h93>
+    <h94>Tutashuvni bekor qilish</h94>
+    <h95>Uchma-uch ulash</h95>
+    <h96>Burchak ostida</h96>
+    <h97>Kesik</h97>
+    <h98>Devorlarni yaratishda devorlar tutashuvi turi oʻzgartiriladi</h98>
+    <h99>Tanlangan devorlar uchun tutashuv turini oʻzgartirish</h99>
+    <h100>Joriy koʻrinishda devorlar tutashuvi turini oʻzgartirish</h100>
+    <h101>Devorlarni tanlang</h101>
+    <h102>Devorga ulanishlar va tutashuv turini oʻzgartirish</h102>
+    <h103>Element geometriyasi har qanday oʻzgarganda kesib kirish chekinishi qiymati koʻrsatilgan qiymatga oʻrnatiladi</h103>
+    <h104>Tanlangan elementlar uchun kesib kirish chekinishini oʻzgartirish</h104>
+    <h105>Joriy koʻrinishdagi barcha elementlar uchun kesib kirish chekinishini oʻzgartirish</h105>
+    <h106>Elementlar joriy koʻrinishda koʻrinmaydi. Koordinatalar boʻyicha yaqinlashtirilsinmi?</h106>
+    <h107>&lt;turlicha&gt;</h107>
+    <h108>Koʻrsatish rejimi</h108>
+    <h109>Tahrirlash</h109>
+    <h110>Joriy koʻrinishda almashtirish</h110>
+    <h111>Tanlangan koʻrinishlarda almashtirish</h111>
+    <h112>Inversiya</h112>
+    <m1>Joriy koʻrinishda toifa uchun koʻrinish sozlamalarini oʻzgartirib boʻlmaydi, chunki koʻrinishga koʻrinish shabloni qoʻllanilgan</m1>
+    <m2>Joriy loyihada armatura topilmadi</m2>
+    <m3>Joriy loyihada topildi:</m3>
+    <m4>Armatura sterjenlari:</m4>
+    <m5>Tizimdagi armatura sterjenlari:</m5>
+    <m6>Tekshiruvni bajarish</m6>
+    <m7>Tekshiruv natijasi:</m7>
+    <m8>Asosdan tashqarida joylashgan yoki asosdan chiqib turgan armatura sterjenlari (joylashtirishda):</m8>
+    <m9>Armatura sterjenlarini tanlash</m9>
+    <m10>Asosga ega boʻlmagan armatura:</m10>
+    <m11>Tizimdagi asosdan chiqib turgan armatura sterjenlari:</m11>
+    <m12>Tizimlarni tanlash</m12>
+    <m13>Barchasini tanlash</m13>
+    <m14>Hech narsa topilmadi</m14>
+    <m15>Koʻrinishlarni tiklash uchun saqlangan maʼlumot topilmadi</m15>
+    <m16>Joriy koʻrinishda elementlar uchun grafikani qayta belgilash mavjud emas</m16>
+    <m17>Joriy koʻrinishda oʻqlar rejimini almashtirib boʻlmaydi</m17>
+  </mprTools>
+</ModPlus>

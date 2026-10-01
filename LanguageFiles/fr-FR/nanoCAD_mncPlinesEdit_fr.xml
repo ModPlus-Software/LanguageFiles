@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mncPlinesEdit
+    LocalName="Polylignes"
+    Description="Ensemble d'outils pour travailler avec les polylignes"
+    LocalName1="Convertir une polyligne 3D en LW"
+    Description1="Création de copies des polylignes 3D sélectionnées sous forme de polylignes LW (2D) ramenées à l'élévation 0,0"
+    LocalName2="Suppression des sommets confondus de la polyligne"
+    Description2="Suppression des sommets adjacents des polylignes sélectionnées ayant les mêmes coordonnées"
+    LocalName3="Suppression des sommets alignés"
+    Description3="Suppression des sommets adjacents des polylignes sélectionnées qui sont alignés. Il est possible de définir une tolérance d'écart par rapport à la droite ou une tolérance angulaire"
+    LocalName4="Placement d'un objet aux sommets d'une polyligne"
+    Description4="Placement de l'objet sélectionné aux sommets de la polyligne. Il est possible d'orienter l'objet selon le segment de la polyligne. Les blocs peuvent être placés selon leur centre géométrique ou selon leur point d'insertion"
+    LocalName5="Remplacement d'un segment d'arc par un segment linéaire"
+    Description5="Remplacement du segment d'arc indiqué de la polyligne par un segment linéaire (remplacement de l'arc par une ligne)"
+    LocalName6="Remplacement d'un segment linéaire par un segment d'arc"
+    Description6="Remplacement du segment linéaire (ou d'arc) indiqué de la polyligne par un segment d'arc (remplacement de la ligne par un arc). Il est possible de construire l'arc par une tangente ou par un point sur l'arc"
+    LocalName7="Ajout dynamique d'un sommet"
+    Description7="Ajout dynamique d'un sommet à la polyligne indiquée"
+    LocalName8="Tracé d'un rectangle par trois points"
+    Description8="Tracé d'un rectangle par trois points"
+    LocalName9="Suppression des segments d'arc d'une polyligne"
+    Description9="Suppression des segments d'arc d'une polyligne en les remplaçant par des segments linéaires. Le plugin propose plusieurs modes de fonctionnement : nombre de segments, longueur des segments, hauteur des segments (écart de la corde), longueur de la corde"
+    LocalName10="Construction de la ligne médiane"
+    Description10="Construction d'une ligne médiane (sous forme de polyligne) entre deux courbes indiquées (lignes, polylignes ou splines)"
+    LocalName11="Déplacement rapide des sommets"
+    Description11="Déplacement rapide des sommets de la polyligne indiquée"
+    LocalName12="Division d'une courbe aux points d'intersection"
+    Description12="Division d'une courbe (ligne, polyligne ou spline) aux points d'intersection avec d'autres objets du dessin"
+    LocalName13="Créer des objets aux points d'intersection"
+    Description13="Crée des objets aux points d'intersection des courbes avec les objets indiqués"
+    LocalName14="Quadrilatère par points"
+    Description14="Crée un quadrilatère à partir de deux points ou plus. Les côtés du quadrilatère sont orientés selon le système de coordonnées courant. Une tolérance angulaire peut être réglée pour permettre aux côtés de capturer un plus grand nombre de points.">
+    <h1>Polylignes</h1>
+    <h2>Le plugin fonctionne avec les polylignes 3D</h2>
+    <h3>Le plugin fonctionne avec les polylignes 2D</h3>
+    <h4>Le plugin fonctionne avec les polylignes LW</h4>
+    <h5>Ajouter le groupe de fonctions au ruban</h5>
+    <h7>Onglet ModPlus introuvable</h7>
+    <h8>L'onglet ModPlus est introuvable pour y ajouter le groupe de fonctions Polylignes</h8>
+    <h9>Polylignes</h9>
+    <h10>Mode de fonctionnement :</h10>
+    <h11>Rayon d'arc minimal traité :</h11>
+    <h12>Quelconque</h12>
+    <h13>Division de l'arc en un nombre indiqué de segments égaux\nL'image montre une division en 3 segments\nR – rayon de l'arc dans la polyligne</h13>
+    <h14>Division de l'arc en segments en indiquant la longueur des segments d'arc obtenus par la division\nR – rayon de l'arc dans la polyligne\nL – longueur du segment d'arc</h14>
+    <h15>Division de l'arc en segments en indiquant l'écart de la corde (hauteur du segment)\nR – rayon de l'arc dans la polyligne\nH – hauteur du segment</h15>
+    <h16>Division de l'arc en segments en indiquant la longueur de la corde\nR – rayon de l'arc dans la polyligne\nX – longueur de la corde</h16>
+    <h17>Supprimer les polylignes sélectionnées</h17>
+    <h18>Exclure les points d'extrémité</h18>
+    <h19>Copier les blocs :</h19>
+    <h20>Orienter :</h20>
+    <h21>Tolérances</h21>
+    <h22>P – point considéré de la polyligne</h22>
+    <h23>- Le plugin vérifie les deux conditions</h23>
+    <h24>H – écart maximal par rapport à la droite :</h24>
+    <h25>a – tolérance angulaire :</h25>
+    <h26>Type d'objet :</h26>
+    <h27>Rayon du cercle :</h27>
+    <h28>Type de bloc :</h28>
+    <h29>Créer des objets aux points d'intersection</h29>
+    <err1>Le document ne contient aucun bloc à insérer</err1>
+    <accept>Accepter</accept>
+    <cancel>Annuler</cancel>
+    <cb1>Nombre de segments</cb1>
+    <cb2>Longueur du segment</cb2>
+    <cb3>Écart de la corde</cb3>
+    <cb4>Longueur de la corde</cb4>
+    <cb5>selon le point d'insertion du bloc</cb5>
+    <cb6>selon le centre géométrique</cb6>
+    <cb7>ne pas orienter</cb7>
+    <cb8>orienter selon le segment précédent</cb8>
+    <cb9>orienter selon le segment suivant</cb9>
+    <wrong>Sélection incorrecte !</wrong>
+    <undividable>Une erreur s'est produite lors de la division de la courbe. Essayez de réduire la longueur de la courbe</undividable>
+    <k1>Sélectionnez des polylignes 3D</k1>
+    <k2>Sélectionnez des polylignes</k2>
+    <k3>Sommets supprimés</k3>
+    <k4>La polyligne</k4>
+    <k5>ne contient pas de sommets confondus</k5>
+    <k6>Sélectionnez des polylignes ou</k6>
+    <k7>TOLérances</k7>
+    <k7ln>TOL</k7ln>
+    <k8>Écart maximal par rapport à la droite (H) retenu</k8>
+    <k9>Tolérance angulaire en degrés (a) retenue</k9>
+    <k10>ne contient que</k10>
+    <k11>sommets</k11>
+    <k12>ne contient aucun sommet aligné ou répondant aux conditions de tolérance</k12>
+    <k13>Sélectionnez une polyligne</k13>
+    <k14>Sélectionnez l'objet à placer</k14>
+    <k15>Sélectionnez un segment d'arc de la polyligne</k15>
+    <k16>Sélectionnez un segment de la polyligne</k16>
+    <k17>Indiquez un point sur la tangente ou : [Tangente/Passage]</k17>
+    <k18>Indiquez un point sur l'arc ou : [Tangente/Passage]</k18>
+    <k19>Indiquez un point (maintenez Ctrl pour passer au sommet suivant)</k19>
+    <k20>Indiquez le premier point</k20>
+    <k21>Indiquez le deuxième point</k21>
+    <k22>Indiquez le troisième point</k22>
+    <k23>Indiquez le nombre de segments</k23>
+    <k24>Indiquez la longueur du segment</k24>
+    <k25>Indiquez l'écart de la corde (hauteur du segment)</k25>
+    <k26>Indiquez la longueur de la corde</k26>
+    <k27>Sélectionnez le premier élément d'appui (ligne, polyligne ou spline)</k27>
+    <k28>Sélectionnez le deuxième élément d'appui (ligne, polyligne ou spline)</k28>
+    <k29>Nombre de points d'appui</k29>
+    <k31>Sélectionnez une courbe (ligne, polyligne ou spline)</k31>
+    <k32>Indiquez un point sur la tangente ou :</k32>
+    <k33>Tangente</k33>
+    <k33ln>T</k33ln>
+    <k34>Passage</k34>
+    <k34ln>P</k34ln>
+    <k35>Indiquez un point sur l'arc ou :</k35>
+    <k36>Sélectionnez des points ou</k36>
+    <k37>Excluez les objets inutiles</k37>
+    <k38>Sélectionnez une ou plusieurs courbes (ligne, polyligne, arc, spline ou cercle)</k38>
+    <k39>Sélectionnez les objets pour le calcul des intersections ou laissez la sélection vide pour effectuer le calcul sur tous les objets</k39>
+    <k40>Saisissez une tolérance angulaire de 0 à 30</k40>
+    <k41>TOLérance</k41>
+    <k41ln>TOL</k41ln>
+    <k42>Simplifier la polyligne ?</k42>
+  </mncPlinesEdit>
+</ModPlus>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprFamilyDuplicateFixer
+    LocalName="Correction des doublons"
+    Description="Automatisation de la correction des doublons de familles ou de types"
+    FullDescription="Copie des types des familles en doublon vers les familles principales, copie des valeurs des paramètres de type, mise à jour des occurrences de familles et suppression des familles en doublon. Le remplacement des types de familles en doublon et la suppression des types remplacés sont également disponibles">
+    <h1>Copier les types</h1>
+    <h3>Remplacer les occurrences de familles</h3>
+    <h4>Supprimer les familles en doublon</h4>
+    <h5>Exécuter</h5>
+    <h6>Ajouter une paire de familles "Doublon - Famille principale"</h6>
+    <h7>Sélectionnez la famille en doublon</h7>
+    <h8>Sélectionnez la famille principale (dans laquelle les types seront copiés)</h8>
+    <h9>Accepter</h9>
+    <h10>Aucune famille correspondante pour laquelle la famille sélectionnée est un doublon n'a été trouvée dans la catégorie active.
+Une vérification supplémentaire porte sur les paramètres de type – les deux familles similaires doivent avoir les mêmes paramètres de type</h10>
+    <h11>Copier les valeurs des paramètres de l'occurrence de famille remplacée</h11>
+    <h12>Définir le type de la famille principale</h12>
+    <h13>La liste des familles principales affiche les familles de la même catégorie que la famille en doublon sélectionnée, dont les types sont interchangeables. Le nombre et les noms des paramètres de type doivent être identiques.</h13>
+    <h14>Correction des doublons de familles</h14>
+    <h15>Correction des doublons de types</h15>
+    <h16>Ajouter des familles</h16>
+    <h17>Supprimer les types remplacés de la famille</h17>
+    <h18>La liste contient uniquement les familles ayant plus d'un type</h18>
+    <m1>Aucun type n'est sélectionné dans la liste des familles à traiter !</m1>
+    <m2>Création du type "{0}" pour la famille "{1}"</m2>
+    <m3>Copie des valeurs des paramètres du type "{0}" de la famille "{1}" vers la famille "{2}"</m3>
+    <m4>Remplacement du type de l'occurrence de la famille "{0}" {1}</m4>
+    <m5>Remplacement du type "{0}" par le type "{1}" dans la famille "{2}"</m5>
+    <m6>Type "{0}" remplacé par le type "{1}"</m6>
+    <m7>Suppression du type "{0}" dans la famille "{1}"</m7>
+    <m8>Type "{0}" supprimé dans la famille "{1}"</m8>
+    <e1>Le type "{0}" n'a pas été créé dans la famille "{1}"</e1>
+    <e2>Impossible de charger la famille "{0}" dans le document</e2>
+    <e3>Paramètre "{0}" introuvable dans le type "{1}" de la famille "{2}"</e3>
+    <e4>Type "{0}" introuvable dans la famille "{1}"</e4>
+    <e5>Impossible de supprimer la famille "{0}", car des occurrences de cette famille sont présentes dans le modèle</e5>
+    <e6>Erreur lors du remplacement du type dans la famille "{0}" : {1}</e6>
+    <e7>Erreur de suppression du type "{0}" dans la famille "{1}" : {2}</e7>
+    <t1>Sens du traitement : la famille de gauche est le doublon, la famille de droite est la famille principale</t1>
+    <t2>Ajouter à la liste de traitement une paire de familles non détectées par la recherche standard de doublons</t2>
+    <t3>Dans la famille principale seront créés les nouveaux types présents et cochés dans la famille en doublon et absents de la famille principale</t3>
+    <t5>Les occurrences de la famille en doublon des types cochés seront remplacées par des occurrences de la famille principale avec le type équivalent. Si la famille principale ne possède pas le type requis, le remplacement de l'occurrence de la famille en doublon sera ignoré</t5>
+    <t6>Les familles en doublon sans occurrence dans le modèle seront supprimées</t6>
+    <t7>Les valeurs des paramètres d'occurrence seront copiées de la famille en doublon remplacée vers la famille principale de remplacement</t7>
+    <t8>Les occurrences de la famille en doublon recevront les types de la famille principale sélectionnés dans les listes déroulantes</t8>
+    <t9>Ajouter à la liste des familles non détectées par la recherche standard de doublons</t9>
+    <t10>À gauche figurent les types de la famille, à droite les listes déroulantes de remplacement du type. Si aucun type n'est sélectionné dans la liste, le remplacement ne sera pas effectué</t10>
+    <t11>Effacer la sélection</t11>
+  </mprFamilyDuplicateFixer>
+</ModPlus>

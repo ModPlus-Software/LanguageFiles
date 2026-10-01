@@ -330,8 +330,8 @@
     <ke1>Ursache</ke1>
     <ke2>Was ist zu tun</ke2>
     <ke3>Eines oder mehrere der bearbeiteten Elemente liegen außerhalb der Konstruktionsgrenzen von Revit. Die gesamte Modellgeometrie muss sich innerhalb von 16 km (10 Meilen) vom internen Ursprung des Projekts befinden. Mit Koordinaten jenseits dieser Grenze kann Revit keine Geometrie erstellen. Der Fehler tritt auf der Seite von Revit auf und hängt nicht mit der Arbeit des Plugins zusammen.</ke3>
-    <ke4>Prüfen Sie, ob sich im Modell Elemente befinden, die versehentlich weit vom Hauptteil des Modells entfernt wurden. Das passiert häufig nach dem Kopieren, dem Import einer DWG oder dem Einfügen aus einem anderen Projekt. Führen Sie in einer Grundrissansicht „Zoom to Fit“ (ZF) aus: Wenn das Modell zu einem Punkt schrumpft, gibt es entfernte Elemente. Suchen Sie diese und löschen oder verschieben Sie sie.</ke4>
-    <ke5>Wenn sich das gesamte Modell weiter als 16 km vom internen Ursprung befindet, verschieben Sie es näher an ihn heran. Die reale Lage wird über gemeinsam genutzte Koordinaten festgelegt: „Manage“ → „Coordinates“ → „Specify Coordinates at Point“.</ke5>
+    <ke4>Prüfen Sie, ob sich im Modell Elemente befinden, die versehentlich weit vom Hauptteil des Modells entfernt wurden. Das passiert häufig nach dem Kopieren, dem Import einer DWG oder dem Einfügen aus einem anderen Projekt. Führen Sie in einer Grundrissansicht „Zoom to Fit" (ZF) aus: Wenn das Modell zu einem Punkt schrumpft, gibt es entfernte Elemente. Suchen Sie diese und löschen oder verschieben Sie sie.</ke4>
+    <ke5>Wenn sich das gesamte Modell weiter als 16 km vom internen Ursprung befindet, verschieben Sie es näher an ihn heran. Die reale Lage wird über gemeinsam genutzte Koordinaten festgelegt: „Manage" → „Coordinates" → „Specify Coordinates at Point".</ke5>
     <ke6>Keine Verbindung zum ModPlus-Server möglich: Die Verbindung wurde abgelehnt oder unterbrochen, oder die Serveradresse konnte nicht aufgelöst werden. Die Ursache liegt im Netzwerk des Computers: Es besteht kein Internetzugang, oder die Verbindung wird von einer Firewall, einem Virenschutz, einem Proxyserver oder den Netzwerkregeln Ihrer Organisation blockiert. Der Fehler wird nicht durch das Plugin verursacht.</ke6>
     <ke7>Prüfen Sie, ob der Computer Internetzugang hat, und wiederholen Sie den Vorgang in einigen Minuten.</ke7>
     <ke8>Wenn die Internetverbindung über einen Proxyserver läuft, prüfen Sie die Proxy-Einstellungen in ModPlus. Wenn der Internetzugang in Ihrer Organisation eingeschränkt ist, bitten Sie Ihren Systemadministrator, Verbindungen zu api.modplus.org, api-lsm.modplus.org, update.modplus.org und storage.modplus.org (Port 443) zuzulassen.</ke8>
@@ -339,7 +339,7 @@
     <ke10>Der Server hat statt einer Antwort auf die Anfrage eine Webseite zurückgegeben</ke10>
     <ke11>Öffnen Sie eine beliebige Website im Browser: Wenn das Netzwerk eine Anmeldung erfordert, wird eine Anmeldeseite angezeigt. Melden Sie sich an und wiederholen Sie den Vorgang.</ke11>
     <ke12>Wenn auf dem Computer ein VPN verwendet wird, versuchen Sie, es auszuschalten oder umgekehrt einzuschalten: Der Zugriff auf die ModPlus-Server kann davon abhängen, aus welchem Land die Verbindung hergestellt wird. Wiederholen Sie anschließend den Vorgang.</ke12>
-    <ke13>Der Fehler „Methode nicht gefunden“ weist darauf hin, dass Ihre Version von ModPlus nur teilweise aktualisiert wurde: Einige Komponenten wurden aktualisiert, andere sind auf der vorherigen Version geblieben und nicht miteinander kompatibel. Der Fehler wird nicht durch das Plugin selbst verursacht.</ke13>
+    <ke13>Der Fehler „Methode nicht gefunden" weist darauf hin, dass Ihre Version von ModPlus nur teilweise aktualisiert wurde: Einige Komponenten wurden aktualisiert, andere sind auf der vorherigen Version geblieben und nicht miteinander kompatibel. Der Fehler wird nicht durch das Plugin selbst verursacht.</ke13>
     <ke14>Schließen Sie alle unterstützten Produkte (AutoCAD, Revit usw.), starten Sie dann die Suche nach Updates im Modul für automatische Updates (Symbol im Windows-Infobereich) und installieren Sie alle verfügbaren Updates.</ke14>
     <ke15>Wenn das Modul für automatische Updates die erforderlichen Updates nicht installiert (es werden keine Updates gefunden, die Installation schlägt fehl oder dieser Fehler tritt nach dem Update erneut auf), laden Sie den ModPlus-Installer herunter und aktualisieren Sie damit.</ke15>
     <ke16>ModPlus-Installer herunterladen</ke16>
@@ -487,6 +487,9 @@
     <uk-UA>Український (Україна)</uk-UA>
     <es-ES>Español (España)</es-ES>
     <zh-CN>简体中文</zh-CN>
+    <fr-FR>Français (France)</fr-FR>
+    <pt-BR>Português (Brasil)</pt-BR>
+    <uz-Latn-UZ>Oʻzbekcha (Oʻzbekiston)</uz-Latn-UZ>
     <ny>Weihnachtsdekorationen</ny>
   </ModPlusAPI>
   <Geometry>
@@ -1100,6 +1103,7 @@ Um Updates zu aktivieren, installieren Sie ModPlus im empfohlenen Ordner "{1}" o
     <h127>Es sind alle Produktversionen ausgewählt. Installieren, Aktivieren und Deaktivieren eines Plugins gelten sofort für alle Versionen</h127>
     <h128>Das Plugin wird für die Produktversionen installiert: {0}. Fortfahren?</h128>
     <h129>Updates konnten nicht heruntergeladen werden. Ein weiterer Versuch erfolgt später</h129>
+    <h130>Aktualisierungen werden nach dem Schließen von {0} installiert</h130>
     <!--todo remove after 43.3.0.0-->
     <b3>Alle auswählen</b3>
     <!--todo remove after 43.3.0.0-->
@@ -1222,6 +1226,7 @@ Um Updates zu aktivieren, installieren Sie ModPlus im empfohlenen Ordner "{1}" o
     <msg51>Alle angezeigten nicht installierten oder veralteten Plugins werden installiert. Fortfahren?</msg51>
     <msg52>Die Verbindung zu den ModPlus-Diensten war erfolgreich</msg52>
     <msg53>Verbindung zu den ModPlus-Diensten konnte nicht hergestellt werden. Überprüfen Sie Ihre Proxy-Einstellungen und versuchen Sie es erneut</msg53>
+    <!--todo remove after 52.0.1.0-->
     <msg54>Aktualisierungen wurden heruntergeladen und werden nach dem Schließen von {0} installiert</msg54>
     <msg55>Für die Aktualisierung muss {0} geschlossen werden</msg55>
     <msg56>Die Funktionalität des Moduls ist eingeschränkt, da die Anwendung {0} geöffnet ist</msg56>

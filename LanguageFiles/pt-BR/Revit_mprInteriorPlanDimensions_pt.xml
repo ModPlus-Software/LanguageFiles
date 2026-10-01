@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprInteriorPlanDimensions
+    LocalName="Cotas na planta"
+    Description="Diversas opções de cotagem de elementos na planta">
+    <h2>Cotar eixos</h2>
+    <h3>Cotar aberturas</h3>
+    <h4>Deslocamento das cadeias de cotas seguintes</h4>
+    <h5>Processar paredes com espessura a partir de</h5>
+    <h6>Excluir do processamento as paredes cujo nome do tipo contenha:</h6>
+    <h7>Excluir do processamento as paredes cujo nome do material da camada "Estrutura" contenha:</h7>
+    <h8>Espaçamento:</h8>
+    <h9>Planta de piso</h9>
+    <h10>Pilares</h10>
+    <h11>Vincular aos eixos mais próximos</h11>
+    <h12>Deslocamento da cadeia de cotas</h12>
+    <h13>Posição das cotas horizontais</h13>
+    <h14>Posição das cotas verticais</h14>
+    <h15>Criação de cadeias de cotas ao longo das paredes em toda a planta de piso. Para o funcionamento correto, é necessário selecionar todas as paredes da planta que formam o pavimento do edifício. São processados apenas elementos retilíneos. Para o funcionamento correto, os elementos processados devem estar dispostos ortogonalmente entre si</h15>
+    <h16>Adicionar a estaca ao grupo se a distância do ponto de inserção da estaca até o ponto de inserção de</h16>
+    <h17>no grupo não for maior que</h17>
+    <h18>Estacas</h18>
+    <h19>Criação das cotas totais dos pilares. São processados apenas pilares retangulares</h19>
+    <h20>Criação das cotas de posição das estacas. As cotas são colocadas no centro das estacas, vinculadas aos eixos mais próximos, se os eixos tiverem sido selecionados. As estacas são processadas em grupos. Um grupo de estacas são estacas localizadas próximas umas das outras. São processadas as famílias das categorias "Pilares estruturais" e "Fundação estrutural"</h20>
+    <h21>Criar cota total ao cruzar eixos</h21>
+    <h22>Pisos</h22>
+    <h23>Criação de cotas pelas faces externas do piso e pelas aberturas no piso. As cotas pelas faces externas são criadas para todas as faces do piso. As cotas pelas aberturas são criadas na direção indicada (esquerda/direita e para cima/para baixo)</h23>
+    <h24>Cotar faces externas</h24>
+    <h25>Vincular as faces externas aos eixos</h25>
+    <h26>Paredes</h26>
+    <h27>Criação de cotas longitudinais e transversais (espessura) de paredes retas, sem considerar sua relação com outras paredes</h27>
+    <!--todo remove after 3.4.5.0-->
+    <h28>Cota transversal no centro da parede</h28>
+    <!--todo remove after 3.4.5.0-->
+    <h29>Vincular a cota transversal no centro da parede ao eixo mais próximo</h29>
+    <h30>Cota longitudinal da parede</h30>
+    <h31>Vincular a cota longitudinal da parede ao eixo mais próximo</h31>
+    <h32>Processamento das faces intermediárias (aberturas)</h32>
+    <h33>Cotar aberturas</h33>
+    <h34>Vincular as aberturas aos eixos mais próximos</h34>
+    <h35>Posição das cotas horizontais das aberturas</h35>
+    <h36>Posição das cotas verticais das aberturas</h36>
+    <h37>Trabalhar em ciclo</h37>
+    <h38>Cota transversal</h38>
+    <h39>Vincular a cota transversal ao eixo mais próximo</h39>
+    <h40>Se não houver extremidade livre, colocar a cota no centro</h40>
+    <h41>Considerar a faixa da vista</h41>
+    <h42>Deslocamento</h42>
+    <h43>ao cruzar</h43>
+    <h44>Processamento de elementos de arquivos vinculados</h44>
+    <h45>Criação de cotas pelas faces externas das zonas de armadura adicional</h45>
+    <h46>Vincular a zona de armadura aos eixos mais próximos</h46>
+    <h47>Processamento</h47>
+    <h48>Armadura</h48>
+    <h49>Zonas de reforço</h49>
+    <h50>Eixos</h50>
+    <h51>Apenas valores de cota não inteiros</h51>
+    <wcb1>no centro da parede</wcb1>
+    <wcb2>na extremidade da parede</wcb2>
+    <wcb3>de um lado</wcb3>
+    <wcb4>dos dois lados</wcb4>
+    <wcb5>Armadura da área</wcb5>
+    <wcb6>Áreas da tela soldada</wcb6>
+    <wcb7>Folha de tela soldada</wcb7>
+    <wcb8>Armadura do caminho</wcb8>
+    <pgc1>de cada estaca</pgc1>
+    <pgc2>de qualquer estaca</pgc2>
+    <top>Em cima</top>
+    <bottom>Embaixo</bottom>
+    <left>À esquerda</left>
+    <right>À direita</right>
+    <tt1>Informe, separados por vírgula, os valores que podem estar contidos no nome do tipo da parede</tt1>
+    <tt2>Não diferencia maiúsculas e minúsculas</tt2>
+    <tt3>Por exemplo:</tt3>
+    <tt4>_Isol,Acabamento,Cerâmica</tt4>
+    <tt5>Informe, separados por vírgula, os valores que podem estar contidos no nome do material da camada "Estrutura" da parede</tt5>
+    <tt6>concreto armado,tijolo</tt6>
+    <tt7>Com a opção ativada, os elementos localizados abaixo do nível "Plano de corte" não serão processados</tt7>
+    <msg2>Selecione os elementos para processar</msg2>
+    <err2>No conjunto indicado não há paredes cortadas pelo plano de corte da faixa da vista!</err2>
+    <err3>Ocorreu um loop infinito durante a execução! Se você vir esta mensagem, entre em contato com o desenvolvedor!</err3>
+    <err4>É necessário selecionar mais de um elemento!</err4>
+    <err5>Não há paredes entre os elementos selecionados!</err5>
+    <err8>As estacas selecionadas não atendem às condições de processamento: não foi possível obter o sólido ou as estacas não têm ponto de inserção</err8>
+    <err9>Os pilares selecionados não atendem às condições de processamento: não foi possível obter o sólido, não foi possível obter as faces, não têm ponto de inserção ou têm faces curvas</err9>
+    <err10>Os pisos selecionados não atendem às condições de processamento: não foi possível obter o sólido ou não foi possível obter as faces</err10>
+    <err11>As paredes selecionadas não atendem às condições de processamento: não foi possível obter o sólido ou não foi possível obter as faces</err11>
+    <err12>As zonas de armadura selecionadas não atendem às condições de processamento</err12>
+    <s1>Filtragem da lista inicial de paredes</s1>
+    <s2>Busca de paredes internas e externas</s2>
+    <s3>Criação de cotas analíticas</s3>
+    <s4>Filtragem de cotas analíticas</s4>
+    <s5>Criação de correspondências cota - paredes</s5>
+    <s6>Filtragem de correspondências cota - paredes</s6>
+    <s7>Obtenção das correspondências finais cota - paredes</s7>
+    <s8>Filtragem de referências a elementos</s8>
+    <s9>Criação de cadeias de cotas de trabalho</s9>
+    <s10>Filtragem de cadeias de cotas de trabalho</s10>
+    <s11>Criação das cadeias de cotas finais</s11>
+    <button1>Selecionar do atual</button1>
+    <button2>Selecionar do vinculado</button2>
+  </mprInteriorPlanDimensions>
+</ModPlus>
