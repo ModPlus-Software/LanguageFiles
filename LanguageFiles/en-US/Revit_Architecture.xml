@@ -686,13 +686,18 @@
     <t23>Move down</t23>
     <t24>By pre-selected Rooms</t24>
     <t26>Type is not set or the corresponding type is not found in the model. This configuration cannot be processed!</t26>
+    <!--todo remove after 1.0.10-->
     <t27>Base:</t27>
+    <!--todo remove after 3.1.16-->
     <t28>Bottom, mm:</t28>
-    <t29>Offset from the bottom of the room, mm</t29>
+    <t29>Offset from the bottom of the room, mm:</t29>
     <t30>Wall height, mm:</t30>
     <t31>Select type of finishing wall</t31>
+    <!--todo remove after 3.1.16-->
     <t32>Top, mm:</t32>
-    <t33>Offset from the bottom of the room, mm</t33>
+    <!--todo remove after 3.1.16-->
+    <t33>Offset from the top of the room, mm:</t33>
+    <!--todo remove after 3.1.16-->
     <t34>Boundary</t34>
     <t35>Room boundary</t35>
     <t36>Add a layer</t36>
@@ -702,10 +707,11 @@
     <t40>Bottom of walls</t40>
     <t41>Finishing walls are built on top of this floor</t41>
     <t42>Layer:</t42>
+    <!--todo remove after 1.0.10-->
     <t43>For all walls types</t43>
     <!--todo remove after 2.0.0-->
     <t44>Ceiling type:</t44>
-    <t45>Set the thickness value of the selected Ceiling type, taking into account previous Ceiling type</t45>
+    <t45>The settings contain errors. This configuration cannot be processed!</t45>
     <t46>Copy the parameter value (from room to ceiling):</t46>
     <t47>Add finishing creation settings</t47>
     <t48>Select type of wall or column for the base</t48>
@@ -746,8 +752,21 @@
     <t84>Select room</t84>
     <t85>Offset from room bottom:</t85>
     <t86>Bottom offset basis:</t86>
-    <t87>Offset from the Room level, mm</t87>
+    <t87>Offset from the Room level, mm:</t87>
     <t88>Show only selected</t88>
+    <t89>For all rooms</t89>
+    <t90>Wall height must be greater than 0</t90>
+    <t91>Finish height must be greater than the sum of the heights of the lower parts of the layer</t91>
+    <t92>Settings name:</t92>
+    <t93>Add part</t93>
+    <t94>Wall height:</t94>
+    <t95>Offset from boundaries, mm:</t95>
+    <t96>Offset of the ceiling boundary into the room from the room boundaries (walls, columns)</t96>
+    <t97>Offset from the top of the room, mm</t97>
+    <t98>Finish height, mm</t98>
+    <t99>In the current model</t99>
+    <t100>In a linked file</t100>
+    <t101>The offset is defined by the floor with the "Bottom of walls" option enabled</t101>
     <l1>Do not extend the floor boundary into door openings</l1>
     <l2>Extend the boundary to the middle of the opening</l2>
     <l3>Extend the boundary to the full opening width</l3>
@@ -762,6 +781,10 @@
     <l12>No join</l12>
     <l13>From level</l13>
     <l14>From room bottom</l14>
+    <l15>Place on the floor</l15>
+    <l16>Place from the room level, mm:</l16>
+    <l17>Place from the room bottom, mm:</l17>
+    <l18>Up to room top</l18>
     <msg1>No processing rooms available!</msg1>
     <msg2>No rooms filtered by "{0}" were found</msg2>
     <msg3>Floor type not specified</msg3>
@@ -785,6 +808,7 @@
     <msg21>Failed to create baseboard along the room boundary</msg21>
     <msg22>Failed to edit sketch</msg22>
     <msg23>Floor with type "{0}" has been updated along the room boundary</msg23>
+    <!--todo remove after 3.0.2-->
     <msg24>Failed to update floor along the room boundary</msg24>
     <msg25>Ceiling with type "{0}" has been updated along the room boundary</msg25>
     <msg26>Failed to connect finishing wall {0} with base {1}</msg26>
@@ -795,5 +819,9 @@
     <msg31>The command is not available in the current version of Revit because the API does not contain the required methods</msg31>
     <msg32>Failed to get floor elevation. Baseboard with type "{0}" will be created at the bottom elevation of the Room</msg32>
     <msg33>Unable to update the finishing: the finishing was created in a previous version of the plugin. Recreate the finishing</msg33>
+    <msg34>No finishing elements associated with the room were found ({0})</msg34>
+    <msg35>Failed to offset the ceiling boundary into the room by {0} mm</msg35>
+    <msg36>The selected elements include walls with a height of 80 to 200 mm. Link them to the room as baseboards?</msg36>
+    <msg37>The settings will be deleted permanently. Continue?</msg37>
   </mprRoomFinishing>
 </ModPlus>

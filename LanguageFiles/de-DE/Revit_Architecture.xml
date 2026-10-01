@@ -686,13 +686,18 @@
     <t23>Nach unten bewegen</t23>
     <t24>Nach den vorausgewählten Räumen</t24>
     <t26>Der Typ ist nicht festgelegt oder der entsprechende Typ ist im Modell nicht gefunden. Diese Konfiguration kann nicht verarbeitet werden!</t26>
+    <!--todo remove after 1.0.10-->
     <t27>Basis:</t27>
+    <!--todo remove after 3.1.16-->
     <t28>Unten, mm:</t28>
-    <t29>Der Versatz von der Unterkante des Raumes in mm</t29>
+    <t29>Der Versatz von der Unterkante des Raumes in mm:</t29>
     <t30>Wandhöhe (mm):</t30>
     <t31>Wählen Sie einen Abschlusswandtyp aus</t31>
+    <!--todo remove after 3.1.16-->
     <t32>Oben, mm:</t32>
-    <t33>Der Versatz von der Oberkante des Raumes in mm</t33>
+    <!--todo remove after 3.1.16-->
+    <t33>Der Versatz von der Oberkante des Raumes in mm:</t33>
+    <!--todo remove after 3.1.16-->
     <t34>Begrenzungen</t34>
     <t35>Die Begrenzungen des Raumes</t35>
     <t36>Layer hinzufügen</t36>
@@ -702,10 +707,11 @@
     <t40>Unterkante der Wände</t40>
     <t41>Die Abschlusswände werden auf diesem Geschossdecke errichtet</t41>
     <t42>Layer:</t42>
+    <!--todo remove after 1.0.10-->
     <t43>Für alle Wandtypen</t43>
     <!--todo remove after 2.0.0-->
     <t44>Deckentyp:</t44>
-    <t45>Den Wert für die Dicke des ausgewählten Typs der Decke unter Berücksichtigung früherer Decken festlegen</t45>
+    <t45>Die Einstellungen enthalten Fehler. Diese Konfiguration kann nicht verarbeitet werden!</t45>
     <t46>Den Parameterwert kopieren (aus dem Raum in die Decke):</t46>
     <t47>Einstellungen für Erstellung der Ausstattung hinzufügen</t47>
     <t48>Wählen Sie einen Wandtyp oder Stützentyp für die Basis aus</t48>
@@ -746,8 +752,21 @@
     <t84>Raum auswählen</t84>
     <t85>Versatz von der Unterkante des Raumes:</t85>
     <t86>Unteren Versatz messen ab:</t86>
-    <t87>Versatz von der Raumebene, mm</t87>
+    <t87>Versatz von der Raumebene, mm:</t87>
     <t88>Nur ausgewählte anzeigen</t88>
+    <t89>Für alle Räume</t89>
+    <t90>Die Wandhöhe muss größer als 0 sein</t90>
+    <t91>Die Ausbauhöhe muss größer als die Summe der Höhen der unteren Teile der Schicht sein</t91>
+    <t92>Name der Einstellungen:</t92>
+    <t93>Teil hinzufügen</t93>
+    <t94>Wandhöhe:</t94>
+    <t95>Versatz von den Begrenzungen, mm:</t95>
+    <t96>Versatz der Deckenbegrenzung von den Raumbegrenzungen (Wände, Stützen) in den Raum hinein</t96>
+    <t97>Der Versatz von der Oberkante des Raumes in mm</t97>
+    <t98>Ausbauhöhe, mm</t98>
+    <t99>Im aktuellen Modell</t99>
+    <t100>In einer verknüpften Datei</t100>
+    <t101>Der Versatz wird durch die Geschossdecke mit aktivierter Option "Unterkante der Wände" festgelegt</t101>
     <l1>Kontur der Geschossdecke in Türöffnungen nicht hineinführen</l1>
     <l2>Kontur bis zur Mitte der Öffnung verlaufen</l2>
     <l3>Kontur auf die gesamte Stärke der Öffnung verlaufen</l3>
@@ -762,6 +781,10 @@
     <l12>Ohne Verbindung</l12>
     <l13>Von Ebene</l13>
     <l14>Von Unterkante des Raumes</l14>
+    <l15>Auf der Decke platzieren</l15>
+    <l16>Von der Raumebene platzieren, mm:</l16>
+    <l17>Von der Unterkante des Raumes platzieren, mm:</l17>
+    <l18>Bis Oberkante Raum</l18>
     <msg1>Keine Räume zur Verarbeitung vorhanden!</msg1>
     <msg2>Keine Räume gefunden, die nach Parametern "{0}" gefiltert wurden</msg2>
     <msg3>Kein Geschossdeckentyp angegeben</msg3>
@@ -785,6 +808,7 @@
     <msg21>Sockelleiste entlang der Raumkontur konnte nicht erstellt werden</msg21>
     <msg22>Skizze konnte nicht bearbeitet werden</msg22>
     <msg23>Geschossdecke mit dem Typ "{0}" wurde entlang der Raumkontur aktualisiert</msg23>
+    <!--todo remove after 3.0.2-->
     <msg24>Geschossdecke entlang der Raumkontur konnte nicht aktualisiert werden</msg24>
     <msg25>Decke mit dem Typ "{0}" wurde entlang der Raumkontur aktualisiert</msg25>
     <msg26>Verbindung der Ausbauwand {0} mit der Basis {1} fehlgeschlagen</msg26>
@@ -795,5 +819,9 @@
     <msg31>Der Befehl ist in der aktuellen Version von Revit nicht verfügbar, da die API die erforderlichen Methoden nicht enthält</msg31>
     <msg32>Die Höhenlage der Decke konnte nicht ermittelt werden. Die Sockelleiste mit dem Typ "{0}" wird auf der Höhenlage der Unterkante des Raumes erstellt</msg32>
     <msg33>Aktualisierung der Raumausstattung nicht möglich: Raumausstattung wurde in einer früheren Version des Plugins erstellt. Erstellen Sie die Raumausstattung erneut</msg33>
+    <msg34>Keine dem Raum zugeordneten Ausbauelemente gefunden ({0})</msg34>
+    <msg35>Die Deckenbegrenzung konnte nicht um {0} mm in den Raum hinein versetzt werden</msg35>
+    <msg36>Die ausgewählten Elemente enthalten Wände mit einer Höhe von 80 bis 200 mm. Sollen diese Wände dem Raum als Sockelleisten zugeordnet werden?</msg36>
+    <msg37>Die Einstellungen werden endgültig gelöscht. Fortfahren?</msg37>
   </mprRoomFinishing>
 </ModPlus>
