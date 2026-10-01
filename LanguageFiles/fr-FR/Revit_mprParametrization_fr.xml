@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprParametrization
+    LocalName="Paramétrage"
+    Description="Renseignement des paramètres des éléments selon différentes stratégies"
+    LocalName1="Paramétrage. Palette"
+    Description1="Affiche ou masque la palette de lancement rapide des règles de la stratégie sélectionnée">
+    <!-- todo remove after 3.3.6.0 start -->
+    <t1>Réduire le contenu de la fenêtre</t1>
+    <t2>Développer le contenu de la fenêtre</t2>
+    <t3>Créer une nouvelle configuration</t3>
+    <t4>Dupliquer la configuration actuelle</t4>
+    <t5>Supprimer la configuration actuelle</t5>
+    <!-- todo remove after 3.3.6.0 end -->
+    <t6>Saisissez le nom de la configuration</t6>
+    <t7>Stratégies</t7>
+    <t8>Ajouter une stratégie</t8>
+    <t9>Dupliquer la stratégie</t9>
+    <t10>Supprimer la stratégie</t10>
+    <t11>Règles</t11>
+    <t12>Traitement des éléments des fichiers liés</t12>
+    <!--todo remove after 4.1.33.0-->
+    <t13>Les éléments parents seront collectés dans les fichiers liés. Par exemple, pour la stratégie InMass, il s'agit des volumes, pour la stratégie InSolid, des éléments ayant un solide, etc. La collecte des éléments s'effectue selon les catégories indiquées dans la colonne correspondante des règles</t13>
+    <t14>Il est recommandé d'exécuter les stratégies travaillant avec la géométrie des éléments (comme InRoom, InSpace, InSolid, SolidTouch, etc.) sur la vue active ! Si l'exécution porte sur tout le document, la géométrie des éléments est obtenue sans tenir compte de leur interaction avec d'autres éléments, ce qui peut conduire à un résultat incorrect</t14>
+    <t15>Saisissez le nom de la stratégie</t15>
+    <t16>Ajouter une nouvelle règle</t16>
+    <t17>Supprimer les règles sélectionnées</t17>
+    <t18>Dupliquer les règles sélectionnées</t18>
+    <t19>Renuméroter selon la position dans le tableau</t19>
+    <t20>Exporter la configuration actuelle</t20>
+    <t21>Importer des stratégies dans la configuration actuelle</t21>
+    <!--todo remove after 4.1.33.0-->
+    <t23>Importer des règles dans la stratégie actuelle</t23>
+    <!--todo remove after 4.1.33.0-->
+    <t24>Exporter les règles de la stratégie actuelle</t24>
+    <t25>Écrire un résultat vide</t25>
+    <t26>Écrire dans le paramètre cible le résultat vide obtenu lors du calcul de l'expression. Pour les paramètres de type chaîne, il s'agit d'une chaîne vide, pour les paramètres numériques, de 0</t26>
+    <t27>Respecter la casse lors de la comparaison des valeurs de chaîne dans les conditions</t27>
+    <t28>Tolérance utilisée lors de la comparaison des valeurs numériques dans les conditions</t28>
+    <t29>Insérer une fonction</t29>
+    <t30>Aperçu de la formule</t30>
+    <t31>Éditeur de formule</t31>
+    <t32>Respect de la casse</t32>
+    <t33>Écriture des vides</t33>
+    <t34>Identifiant unique de la stratégie (ne pas modifier !) :</t34>
+    <t35>Nom personnalisé de la stratégie :</t35>
+    <t36>copie</t36>
+    <t37>Stratégie</t37>
+    <t38>aucun paramètre</t38>
+    <t39>Règle</t39>
+    <t40>Expression</t40>
+    <t41>SolidTouch : tolérance de distance entre les faces des éléments, mm :</t41>
+    <t42>Renvoyer le texte à la ligne</t42>
+    <t43>Sélectionnez ou créez une configuration</t43>
+    <t44>Algorithme de recherche d'inclusion des solides :</t44>
+    <t45>Rayons auxiliaires</t45>
+    <t46>Opérations booléennes</t46>
+    <t47>Définit l'algorithme de recherche d'inclusion des solides pour les stratégies InRoom, InSpace, InMass, InSolid. L'algorithme "Rayons auxiliaires" est rapide, mais ne permet de rattacher un solide qu'à un seul solide parent. L'algorithme "Opérations booléennes" est lent, mais permet de rattacher un solide à plusieurs solides parents. Pour plus de détails, consultez l'aide</t47>
+    <t48>Champs</t48>
+    <t49>Champs favoris</t49>
+    <t50>Ajouter un nouveau champ</t50>
+    <t51>Supprimer le champ</t51>
+    <t52>Insérer le champ dans la formule</t52>
+    <t53>Ajouter des champs depuis la liste des champs favoris</t53>
+    <t54>Ajouter le champ à la liste des champs favoris</t54>
+    <t55>Retirer le champ de la liste des champs favoris</t55>
+    <t56>La liste des champs contient déjà un champ avec cette clé</t56>
+    <t57>Dupliquer le champ</t57>
+    <t58>Mappage des noms de fonctions</t58>
+    <t59>Dans cette fenêtre, vous pouvez définir vos propres noms pour les fonctions utilisées dans l'éditeur de formules. Les noms de fonctions ne doivent pas contenir d'espaces ni de caractères de contrôle (parenthèses, virgules, points, etc.). La casse n'a pas d'importance</t59>
+    <t60>Rechercher et remplacer</t60>
+    <t61>Créer un champ</t61>
+    <t62>Saisissez une clé unique pour le nouveau champ</t62>
+    <t63>Dissocier</t63>
+    <t64>Supprimer l'association du paramètre cible avec le paramètre global du projet, si elle existe</t64>
+    <t65>Supprimer toutes les stratégies</t65>
+    <t66>Copier les règles sélectionnées dans le presse-papiers</t66>
+    <t67>Coller les règles depuis le presse-papiers</t67>
+    <t68>Mettre à jour la valeur du champ dans toutes les règles</t68>
+    <t69>Afficher la formule</t69>
+    <t70>Masquer la formule</t70>
+    <t71>Utiliser la géométrie des familles imbriquées si la famille n'a pas de géométrie</t71>
+    <t72>Saisissez la description de la stratégie</t72>
+    <t73>Séparateur décimal des valeurs numériques :</t73>
+    <t74>Système</t74>
+    <t75>Le séparateur décimal des valeurs numériques est utilisé lors de la conversion des valeurs numériques en chaînes pendant le calcul de la formule. Ces conversions ont lieu lors de l'obtention de valeurs à partir de paramètres numériques, lors du calcul d'expressions mathématiques, ainsi que lors de l'évaluation de fonctions dont le résultat est un nombre</t75>
+    <t76>Nombre de règles : activées/total</t76>
+    <t77>Modifier l'arrière-plan de la stratégie dans la liste</t77>
+    <t78>Modifier l'arrière-plan de la première cellule des règles sélectionnées</t78>
+    <t79>Résultats du paramétrage</t79>
+    <t80>Configuration : {0}. Nombre total de stratégies : {1}. Nombre total de règles : {2}. Durée totale : {3}</t80>
+    <t81>Nombre total d'éléments traités</t81>
+    <t82>Durée totale d'exécution</t82>
+    <t83>Règles exécutées :</t83>
+    <t84>Nombre d'éléments modifiés</t84>
+    <t85>Nombre d'éléments ignorés</t85>
+    <t86>Nombre d'éléments qui n'ont pas pu être modifiés</t86>
+    <t87>Éléments traités</t87>
+    <t88>Tout sélectionner</t88>
+    <t89>Tout isoler</t89>
+    <t90>Exporter en txt</t90>
+    <t91>Sommaire :</t91>
+    <t93>Sélectionnez un résultat de traitement d'expression pour afficher la liste des identifiants des éléments traités</t93>
+    <t94>Mode limité</t94>
+    <t95>Les filtres de la stratégie s'appliquent à toutes les règles dont les filtres d'éléments propres ne sont pas renseignés. Si, dans le filtre de la stratégie, seul le filtre par catégories est renseigné et, dans le filtre de la règle, seul le filtre par paramètres, le résultat sera un filtre combiné avec les catégories et les paramètres indiqués. Et inversement : dans le filtre de la stratégie, vous pouvez définir uniquement des catégories et, dans le filtre de la règle, uniquement des paramètres. Si la règle a à la fois le filtre par catégories et le filtre par paramètres renseignés, le filtre de la stratégie sera ignoré</t95>
+    <!--todo remove after 4.1.33.0-->
+    <t96>Sélectionnez les vues</t96>
+    <t97>Source de données</t97>
+    <t98>Filtre de la stratégie</t98>
+    <t99>Développer la liste des règles</t99>
+    <t100>Réduire la liste des règles</t100>
+    <t101>Sélectionner l'élément source dans le modèle</t101>
+    <t102>Nombre d'expressions :</t102>
+    <t103>Les réglages suivants sont enregistrés dans la configuration actuelle</t103>
+    <t104>Validation des modifications dans le document :</t104>
+    <t105>Lors de l'affectation d'une valeur au paramètre</t105>
+    <t106>Lors du traitement d'une règle</t106>
+    <t107>Lors du traitement d'une stratégie</t107>
+    <t108>Lors de l'affectation d'une valeur au paramètre – les modifications sont validées dans le document après chaque affectation d'une valeur au paramètre de chaque élément. Dans ce cas, chaque expression suivante de la formule peut utiliser les valeurs des paramètres modifiés dans l'expression précédente. Cette option peut nécessiter un temps de traitement plus long.</t108>
+    <t109>Lors du traitement d'une règle – les modifications sont validées dans le document après le traitement de toutes les expressions d'une même règle. Dans ce cas, il est impossible, au sein d'une même règle, de modifier puis de réutiliser un même paramètre, car sa valeur modifiée n'est pas encore validée dans le document.</t109>
+    <t110>Lors du traitement d'une stratégie – les modifications sont validées dans le document après le traitement de toutes les règles de la stratégie. Dans ce cas, il est impossible, dans différentes règles d'une même stratégie, de modifier puis de réutiliser un même paramètre, car sa valeur modifiée n'est pas encore validée dans le document.</t110>
+    <t111>Exporter la configuration actuelle. Pour stocker et transférer les données, utilisez XML. Il est recommandé d'utiliser Excel uniquement pour une modification rapide suivie d'un rechargement</t111>
+    <t112>Exporter la stratégie actuelle. Pour stocker et transférer les données, utilisez XML. Il est recommandé d'utiliser Excel uniquement pour une modification rapide suivie d'un rechargement</t112>
+    <t113>Calcul pas à pas</t113>
+    <t114>Le calcul pas à pas permet d'évaluer successivement chaque expression de la formule en affichant le résultat à chaque étape. Cela permet de vérifier que les expressions sont correctement écrites</t114>
+    <t115>Le calcul pas à pas ne tient pas compte des relations géométriques entre les éléments (inclusion dans un solide, contact, etc.)</t115>
+    <t116>Sélectionner dans un lien</t116>
+    <t117>Sélectionner le système</t117>
+    <t118>Sélectionner un matériau</t118>
+    <t119>Sélectionner un type</t119>
+    <t120>Élément de la catégorie :</t120>
+    <t121>Expression d'origine :</t121>
+    <t122>Remplacement des paramètres par des clés uniques :</t122>
+    <t123>L'expression ne contient aucun paramètre</t123>
+    <t124>Formule normalisée :</t124>
+    <t125>Résultat du calcul de l'expression :</t125>
+    <t126>Vérifier</t126>
+    <t127>Un cycle complet de paramétrage sera exécuté pour les règles sélectionnées des stratégies sélectionnées, mais au lieu de l'affectation, le résultat du calcul de la formule sera comparé à la valeur actuelle du paramètre cible</t127>
+    <t128>Résultats de la vérification</t128>
+    <!--todo remove after 4.1.33.0-->
+    <t129>Vues sélectionnées :</t129>
+    <t130>Sélectionner les fichiers liés</t130>
+    <t131>Indiquez les fichiers liés dans lesquels les éléments seront recherchés</t131>
+    <t132>Fichiers liés sélectionnés :</t132>
+    <t133>Fonctions de réécriture</t133>
+    <t134>Réduire le bloc</t134>
+    <t135>Réduire tous les blocs</t135>
+    <t136>Développer tous les blocs</t136>
+    <t137>Insérer un paramètre des informations sur le projet</t137>
+    <t138>Insérer un paramètre global</t138>
+    <t139>Le document actif ne contient aucun paramètre global</t139>
+    <t140>RÉGLAGES DES STRATÉGIES</t140>
+    <t141>sur</t141>
+    <t142>Nom et description</t142>
+    <t143>Ouvrir l'instruction</t143>
+    <t144>Préfiltre</t144>
+    <t145>Le préfiltre restreint l'ensemble des éléments pour toutes les règles de la stratégie à la fois. Contrairement au filtre de la stratégie, il ne remplace pas un filtre de règle non renseigné, mais s'applique en plus de celui-ci : un élément n'est traité que s'il passe à la fois le préfiltre et le filtre de la règle. Par exemple, si le préfiltre définit les catégories "Murs", "Poteaux porteurs" et "Ossature", ainsi que le paramètre "Porteur", toutes les règles ne traiteront que les éléments porteurs de ces catégories, en sélectionnant parmi eux les éléments selon leurs propres catégories et paramètres. Un préfiltre non renseigné n'impose aucune restriction</t145>
+    <t146>Exporter la stratégie actuelle</t146>
+    <t147>Importer dans la stratégie actuelle</t147>
+    <t148>Filtres de la stratégie</t148>
+    <t149>Préfiltres de la stratégie</t149>
+    <t150>Modifier le nom de la règle</t150>
+    <t151>Saisissez le nom de la règle</t151>
+    <t152>La formule contient des expressions marquées "Vérification uniquement" - des expressions dans lesquelles le paramètre cible est suivi d'un opérateur de comparaison autre que "=". Ces expressions sont traitées uniquement en mode "Vérifier" et sont ignorées en mode "Exécuter"</t152>
+    <t153>Vérification uniquement</t153>
+    <t154>Sans groupe</t154>
+    <t155>Nom et groupe de la configuration</t155>
+    <t156>Filtrer les configurations par groupe</t156>
+    <t157>Saisissez ou sélectionnez un groupe</t157>
+    <t158>Retirer la configuration du groupe</t158>
+    <t159>Groupes</t159>
+    <t160>Renommer le groupe</t160>
+    <t161>Supprimer le groupe. Les configurations du groupe ne sont pas supprimées — elles resteront sans groupe</t161>
+    <t162>Nombre de configurations dans le groupe</t162>
+    <t164>Paramètre ou expression, par exemple $[Nom du type]</t164>
+    <t168>Ignorer la casse</t168>
+    <t169>Trier</t169>
+    <t170>Décroissant</t170>
+    <t171>Trier au sein du groupe par, par exemple $[Longueur]</t171>
+    <t172>Les éléments ayant la même valeur seront placés dans un même groupe</t172>
+    <t173>Regroupement non défini</t173>
+    <t174>Regrouper par</t174>
+    <t178>Trier au sein du groupe par</t178>
+    <t179>Comparer les valeurs sans tenir compte de la casse. N'affecte pas les valeurs numériques</t179>
+    <t180>Trier les éléments au sein du groupe. Influe sur le résultat de la fonction GIndex et sur l'ordre des valeurs dans GJoin</t180>
+    <t181>Trier par ordre décroissant. S'applique uniquement si le tri est activé</t181>
+    <t183>Regroupement</t183>
+    <t184>Correspondance</t184>
+    <t188>Correspondance non définie</t188>
+    <t189>sans casse</t189>
+    <t190>croissant</t190>
+    <t191>décroissant</t191>
+    <t192>Condition vérifiée :</t192>
+    <t193>Résultat de la vérification :</t193>
+    <t194>Ces fonctions se placent uniquement au début d'une expression</t194>
+    <t175>Faire correspondre les éléments sources par</t175>
+    <t176>Faire correspondre les éléments cibles par</t176>
+    <t177>Aperçu de la correspondance</t177>
+    <t195>Les éléments considérés comme sources et les éléments cibles sont placés dans un même groupe lorsque les valeurs calculées des deux côtés coïncident. C'est sur ce groupe que sont calculées les fonctions d'agrégation</t195>
+    <t196>Les groupes incomplets apparaissent en premier : leurs éléments sont ignorés lors du traitement</t196>
+    <t197>Valeur</t197>
+    <t198>Sources</t198>
+    <t199>Cibles</t199>
+    <t200>Exemples de sources</t200>
+    <t201>Exemples de cibles</t201>
+    <t202>Problème</t202>
+    <t203>Groupes : {0}, dont complets : {1}. Éléments considérés comme sources : {2}, cibles : {3}</t203>
+    <t204>Valeur non calculée pour les sources : {0}, pour les cibles : {1}</t204>
+    <t205>Paramètre ou expression portant sur les éléments considérés comme sources, par exemple @[Type d'appartement]</t205>
+    <t206>Paramètre ou expression portant sur les éléments cibles, par exemple $[Type de chambre]</t206>
+    <t207>Aucun élément cible avec cette valeur</t207>
+    <t208>Aucun élément considéré comme source avec cette valeur</t208>
+    <t209>Les valeurs de correspondance coïncident</t209>
+    <t210>Les valeurs de correspondance ne coïncident pas : cette paire n'est pas formée lors du traitement</t210>
+    <msg1>La configuration sera supprimée définitivement ! Voulez-vous vraiment continuer ?</msg1>
+    <msg2>La stratégie sera supprimée définitivement ! Voulez-vous vraiment continuer ?</msg2>
+    <msg3>La liste des stratégies n'est pas vide</msg3>
+    <msg4>Remplacer la liste actuelle des stratégies ou y ajouter les stratégies importées ?</msg4>
+    <msg5>Recherche des relations entre les occurrences d'éléments</msg5>
+    <msg6>Traitement de la stratégie</msg6>
+    <msg7>aucun élément traité</msg7>
+    <msg8>Aucun élément n'a été traité par les règles sélectionnées des stratégies sélectionnées</msg8>
+    <msg9>Validation des modifications dans le document...</msg9>
+    <msg10>La liste des règles n'est pas vide</msg10>
+    <msg11>Remplacer la liste actuelle des règles ou y ajouter les règles importées ?</msg11>
+    <msg12>Règle ignorée, car aucune formule n'est définie</msg12>
+    <msg13>Traitement de la règle</msg13>
+    <msg14>affectation de la valeur ignorée, car le paramètre "{0}" a déjà la même valeur</msg14>
+    <msg15>traité</msg15>
+    <msg16>non traité en raison d'une erreur</msg16>
+    <msg17>Dans la version limitée du plugin, vous ne pouvez créer qu'une seule configuration</msg17>
+    <msg18>Dans la version limitée du plugin, vous ne pouvez pas créer plus de trois stratégies</msg18>
+    <msg19>Dans la version limitée du plugin, vous ne pouvez pas créer plus de trois règles</msg19>
+    <msg20>La liste des champs favoris contient déjà un champ avec cette clé</msg20>
+    <msg21>Voulez-vous vraiment supprimer définitivement toutes les stratégies de la configuration actuelle ?</msg21>
+    <msg22>La valeur de ce champ sera mise à jour dans toutes les règles de toutes les configurations lorsque la clé du champ correspond.\nContinuer ?</msg22>
+    <msg23>Champ "{0}" mis à jour : configuration "{1}" – stratégie "{2}" – règle "{3}"</msg23>
+    <msg24>Le champ "{0}" n'a été trouvé dans aucune règle !</msg24>
+    <msg25>Impossible de sélectionner des éléments dans la vue active. Passez à une autre vue</msg25>
+    <msg26>Remplacer les filtres actuels de la stratégie par les filtres de la stratégie du fichier importé ?</msg26>
+    <msg27>Remplacer la source de données actuelle de la stratégie par la source de données du fichier importé ?</msg27>
+    <msg28>Le fichier sélectionné n'est ni un fichier de stockage de configuration ni un fichier de stockage de stratégie</msg28>
+    <msg29>Le fichier sélectionné n'est pas un fichier de stockage de stratégie</msg29>
+    <msg30>Une catégorie ajoutée dans une version plus récente de Revit et absente de la version actuelle de Revit a été supprimée du filtre de la stratégie "{0}" pour l'élément source</msg30>
+    <msg31>Une catégorie ajoutée dans une version plus récente de Revit et absente de la version actuelle de Revit a été supprimée du filtre de la stratégie "{0}" pour l'élément cible</msg31>
+    <msg32>Une catégorie ajoutée dans une version plus récente de Revit et absente de la version actuelle de Revit a été supprimée du filtre de la règle "{0}" de la stratégie "{1}" pour l'élément source</msg32>
+    <msg33>Une catégorie ajoutée dans une version plus récente de Revit et absente de la version actuelle de Revit a été supprimée du filtre de la règle "{0}" de la stratégie "{1}" pour l'élément cible</msg33>
+    <msg34>L'export vers Excel n'est pas disponible si le résultat contient plus de 255 stratégies</msg34>
+    <msg35>Le fichier indiqué est occupé ! Fermez le fichier et relancez l'export, ou indiquez un autre fichier</msg35>
+    <msg36>La valeur "{0}" du paramètre "{1}" correspond à la valeur calculée de l'expression</msg36>
+    <msg37>La valeur "{0}" du paramètre "{1}" ne correspond pas à la valeur calculée "{2}" de l'expression</msg37>
+    <msg38>Traitement de l'élément ignoré, car le résultat du calcul de l'expression est le mot-clé SKIP_ELEMENT</msg38>
+    <msg39>Règles n° {0} : les catégories ne recoupent pas les catégories du préfiltre {1}. Ces règles ne traiteront aucun élément</msg39>
+    <msg40>Règles n° {0} : les catégories ne correspondent que partiellement aux catégories du préfiltre {1}. Les catégories non concordantes seront écartées</msg40>
+    <msg41>Expression ignorée : elle est marquée "Vérification uniquement" et n'est traitée qu'en mode "Vérifier"</msg41>
+    <msg42>La valeur "{0}" du paramètre "{1}" satisfait la condition "{2} {3}"</msg42>
+    <msg43>La valeur "{0}" du paramètre "{1}" ne satisfait pas la condition "{2} {3}"</msg43>
+    <msg44>Élément ignoré : la clé de regroupement calculée est vide</msg44>
+    <msg45>Élément ignoré : aucun élément considéré comme source avec la même valeur de correspondance n'a été trouvé</msg45>
+    <msg46>Le fichier sélectionné n'est pas un fichier de stockage de configuration</msg46>
+    <msg47>Synchroniser le projet avec le modèle central avant l'exécution ?</msg47>
+    <msg48>L'instruction est vide</msg48>
+    <msg49>L'instruction n'est pas un xml valide : {0}</msg49>
+    <msg50>L'élément racine de l'instruction doit être nommé "{0}"</msg50>
+    <msg51>La version "{0}" de l'instruction n'est pas prise en charge. Version prise en charge : {1}</msg51>
+    <msg52>Élément d'instruction inconnu "{0}" ignoré</msg52>
+    <msg53>L'élément obligatoire "{0}" n'est pas défini</msg53>
+    <msg54>L'élément "{0}" est vide</msg54>
+    <msg55>L'élément "{0}" est vide. Si la valeur n'est pas nécessaire, supprimez l'élément</msg55>
+    <msg56>Valeur "{0}" non valide pour l'élément "{1}". Valeurs autorisées : {2}</msg56>
+    <msg57>L'élément "{0}" doit avoir la valeur true ou false</msg57>
+    <msg58>L'attribut "{0}" de l'élément "{1}" doit avoir la valeur true ou false</msg58>
+    <msg59>L'élément "{0}" ne peut pas contenir à la fois {1}="true" et une liste de vues</msg59>
+    <msg60>Élément inconnu "{0}" dans "{1}" ignoré</msg60>
+    <msg61>"{0}" contient des éléments "{1}" vides</msg61>
+    <msg62>La liste "{0}" est vide. Si la liste n'est pas nécessaire, supprimez l'élément</msg62>
+    <msg63>L'élément "{0}" est défini plusieurs fois</msg63>
+    <msg64>Exécution automatique refusée : l'exécution précédente n'est pas encore terminée</msg64>
+    <msg65>Traitement interrompu : {0}</msg65>
+    <msg66>Exécution automatique interrompue par une erreur inattendue</msg66>
+    <msg67>Exécution automatique terminée. Résultat : {0}</msg67>
+    <msg68>Exécution automatique. Instruction :</msg68>
+    <msg69>Lecture du fichier de configurations "{0}"</msg69>
+    <msg70>Configuration "{0}" ({1})</msg70>
+    <msg71>Le dossier des journaux n'existe pas : "{0}"</msg71>
+    <msg72>Le dossier des résultats n'existe pas : "{0}"</msg72>
+    <msg73>Une transaction est ouverte dans le document actif. Le lancement automatique doit être effectué sans transaction ouverte</msg73>
+    <msg74>L'instruction n'a pas été exécutée. Erreurs trouvées : {0}</msg74>
+    <msg75>Le fichier de configurations n'est pas défini dans l'instruction, et la source de configurations n'a jamais été sélectionnée dans la fenêtre du plugin</msg75>
+    <msg76>Fichier de configurations introuvable : "{0}"</msg76>
+    <msg77>Le fichier de configurations est défini, mais la configuration ne l'est pas. La configuration actuelle n'est utilisée qu'avec le fichier de configurations sélectionné dans la fenêtre du plugin</msg77>
+    <msg78>La configuration actuelle est introuvable dans le fichier "{0}"</msg78>
+    <msg79>La configuration "{0}" est introuvable dans le fichier "{1}"</msg79>
+    <msg80>Le fichier "{0}" contient plusieurs configurations nommées "{1}". Indiquez l'identifiant de la configuration</msg80>
+    <msg81>La configuration ne contient aucune stratégie cochée</msg81>
+    <msg82>La stratégie "{0}" est introuvable dans la configuration</msg82>
+    <msg83>Plusieurs stratégies "{0}" trouvées. Elles seront toutes traitées</msg83>
+    <msg84>Aucune stratégie de l'instruction n'a été trouvée</msg84>
+    <msg85>Stratégies à traiter : {0}</msg85>
+    <msg86>La vue courante n'est pas une vue graphique</msg86>
+    <msg87>Portée du traitement : {0}</msg87>
+    <msg88>Vue "{0}" introuvable</msg88>
+    <msg89>Plusieurs vues nommées "{0}" trouvées ({1}). Elles seront toutes traitées</msg89>
+    <msg90>Aucune vue de l'instruction n'a été trouvée</msg90>
+    <msg91>Vues à traiter : {0}</msg91>
+    <msg92>La liste des fichiers liés est ignorée : le traitement des éléments des fichiers liés est désactivé</msg92>
+    <msg93>Fichier lié "{0}" introuvable</msg93>
+    <msg94>Aucun fichier lié de l'instruction n'a été trouvé</msg94>
+    <msg95>Fichiers liés à traiter : {0}</msg95>
+    <msg96>Les résultats sont enregistrés dans un fichier texte</msg96>
+    <msg97>Traitement terminé, mais le fichier de résultats "{0}" n'a pas pu être enregistré</msg97>
+    <msg98>Résultats enregistrés dans le fichier "{0}"</msg98>
+    <msg99>Impossible de créer le fichier journal "{0}"</msg99>
+    <msg100>Lancement du traitement de la configuration "{0}" ({1}). Mode : {2}. {3}. Stratégies : {4}</msg100>
+    <msg101>Traitement de la configuration "{0}" terminé en {1}</msg101>
+    <msg102>Traitement sur la vue "{0}" ({1})</msg102>
+    <msg103>Collecte des éléments des fichiers liés</msg103>
+    <msg104>Éléments collectés dans les fichiers liés : {0}</msg104>
+    <msg105>Collecte des éléments. {0}</msg105>
+    <msg106>Éléments collectés : {0}</msg106>
+    <msg107>Traitement de la stratégie "{0}" ({1}). Règles : {2}</msg107>
+    <msg108>La règle {0} de la stratégie "{1}" n'a pas été traitée</msg108>
+    <msg109>Traitement interrompu par une erreur</msg109>
+    <err1>Chaque expression de la formule doit commencer par le paramètre cible "$[NomParamètre]="</err1>
+    <err2>Le nombre de parenthèses ouvrantes doit être égal au nombre de parenthèses fermantes</err2>
+    <err3>Le nombre d'accolades ouvrantes doit être égal au nombre d'accolades fermantes</err3>
+    <err4>Impossible de calculer l'expression arithmétique</err4>
+    <err5>La condition "{0}" doit contenir des opérateurs conditionnels de comparaison ({1})</err5>
+    <!-- todo remove after 3.3.18.0 -->
+    <err6>La condition "{0}" doit contenir des valeurs avant et après le symbole "{1}"</err6>
+    <err9>Opérateur conditionnel inattendu</err9>
+    <err10>Impossible de traiter la condition</err10>
+    <err11>La fonction doit contenir des nombres séparés par une virgule</err11>
+    <err12>Valeur de convention d'arrondi "{0}" non valide. Utilisez le symbole "z" pour la convention AwayFromZero ou le symbole "e" pour la convention ToEven</err12>
+    <err13>Le nombre de décimales doit être indiqué sous forme d'entier supérieur à 0 ou de nombre décimal compris entre 0 et 1</err13>
+    <err14>Le deuxième argument doit être une convention d'arrondi (symbole "z" pour la convention AwayFromZero ou "e" pour la convention ToEven) ou un nombre de décimales</err14>
+    <err15>La fonction ne doit pas contenir plus de trois arguments</err15>
+    <err16>La fonction doit contenir deux arguments numériques séparés par une virgule</err16>
+    <err17>La fonction doit contenir trois arguments séparés par des virgules : une condition, une valeur lorsque la condition est remplie et une valeur lorsque la condition n'est pas remplie</err17>
+    <err18>La fonction doit contenir au moins deux conditions séparées par une virgule</err18>
+    <err19>La fonction doit contenir deux arguments séparés par une virgule : le nombre à vérifier et la plage de nombres séparée par deux points ".."</err19>
+    <err20>L'argument "{0}" doit contenir deux nombres séparés par deux points ".."</err20>
+    <err21>La fonction doit contenir au moins deux arguments séparés par un point-virgule</err21>
+    <err22>L'argument "{0}" doit contenir une condition et une valeur séparées par un deux-points</err22>
+    <err23>Impossible de convertir la valeur "{0}" en nombre</err23>
+    <err24>Impossible de calculer la fonction</err24>
+    <err25>La feuille "{0}" contient un nombre incorrect de lignes et de colonnes</err25>
+    <err26>La 4e colonne de la 1re ligne de la feuille "{0}" doit contenir l'identifiant unique de la stratégie (Self, OnlyFamilies, Types, InHost, etc.)</err26>
+    <err27>Erreur de lecture des catégories</err27>
+    <err28>Erreur de lecture des paramètres</err28>
+    <err29>Formule incorrecte</err29>
+    <err30>Le traitement de la ligne s'est terminé par une erreur</err30>
+    <err31>Type de stratégie non pris en charge</err31>
+    <err32>erreur de l'expression "{0}"</err32>
+    <err33>paramètre "{0}" introuvable</err33>
+    <err34>Revit n'a pas pu définir la valeur du paramètre</err34>
+    <!-- todo remove after 2.31.10.0 -->
+    <err35>type de valeur de référence du paramètre non pris en charge</err35>
+    <err36>valeur de référence "{0}" introuvable lors de l'affectation au paramètre "{1}"</err36>
+    <err37>le paramètre "{0}" n'est pas modifiable</err37>
+    <err38>le paramètre "{0}" est de type de données "Entier", mais la valeur affectée "{1}" n'est pas un nombre entier</err38>
+    <err39>La stratégie parente ne permet pas d'utiliser les paramètres des éléments sources conditionnels (@[Paramètre])</err39>
+    <err40>Impossible d'obtenir le champ à partir de la valeur "{0}". La valeur doit commencer par une clé de champ entre chevrons</err40>
+    <err41>Le type de données du paramètre "{0}" n'est pas défini</err41>
+    <err42>la valeur vide obtenue lors du calcul de la formule n'est pas écrite dans le paramètre, car l'option "Écriture des vides" n'est pas activée dans la formule</err42>
+    <err43>le type nommé "{0}" est introuvable dans la liste des types autorisés de l'élément traité</err43>
+    <err44>le type nommé "{0}" existe déjà</err44>
+    <err45>L'identifiant de l'élément (ID) ne peut pas être utilisé comme paramètre cible</err45>
+    <err46>Le deuxième argument doit être un entier supérieur à zéro</err46>
+    <err48>Le troisième argument doit être un entier supérieur à zéro</err48>
+    <err49>La fonction doit contenir deux arguments</err49>
+    <err50>La fonction doit contenir deux ou trois arguments</err50>
+    <err51>Le champ avec la clé "{0}" figure déjà dans la liste des champs de la formule actuelle</err51>
+    <err52>Le paramètre "{0}" ne fait pas référence à un autre élément du modèle</err52>
+    <err53>Le paramètre cible ne doit pas contenir le caractère "|"</err53>
+    <err54>Une expression ne doit pas contenir de parenthèses qui ne délimitent pas une fonction. Pour ajouter des parenthèses à une expression, il faut les échapper – "\)" et "\("</err54>
+    <err55>La fonction doit contenir un pointeur vers un paramètre (@[], $[], #[] ou %[]) comme argument</err55>
+    <err56>La liste contient des champs ayant la même clé !</err56>
+    <err57>Sous-projet nommé "{0}" introuvable</err57>
+    <err58>La fonction ne doit avoir aucun argument</err58>
+    <err59>La fonction doit contenir trois arguments : la valeur source, la valeur à rechercher et la valeur de remplacement</err59>
+    <err60>L'identifiant unique de stratégie "{0}" de la feuille "{1}" ne correspond pas à l'identifiant de la stratégie actuelle "{2}"</err60>
+    <err61>La fonction doit contenir une adresse de cellule de la forme "A1"</err61>
+    <err62>Le fichier Excel de la source de données n'est pas indiqué ou est introuvable</err62>
+    <err63>Type d'isolation "{0}" introuvable dans le projet actuel</err63>
+    <err64>Les paramètres clés "ToRoom" et "FromRoom" ne peuvent être utilisés que lors du traitement des familles des catégories "Portes", "Fenêtres"</err64>
+    <err65>Aucun élément source correspondant aux conditions de filtrage n'a été trouvé dans le modèle</err65>
+    <err66>Les données d'affectation du résultat du calcul de l'expression ne sont pas définies</err66>
+    <err67>Chaque expression de la formule doit commencer par le paramètre cible "$[NomParamètre]=" ou par une fonction d'écriture inverse du résultat dans l'élément source conditionnel : "SUM(@[NomParamètre])=", "MIN(@[NomParamètre])=", "MAX(@[NomParamètre])=", "AVG(@[NomParamètre])=", "FIRST(@[NomParamètre])=", "LAST(@[NomParamètre])=" ou "JOIN(@[NomParamètre],)="</err67>
+    <err68>Impossible d'obtenir un nombre à partir de la valeur "{0}"</err68>
+    <err69>Impossible d'écrire le résultat dans un élément source conditionnel provenant d'un fichier lié</err69>
+    <err70>L'élément est emprunté par l'utilisateur "{0}" et ne peut pas être modifié</err70>
+    <err71>Aucun élément source correspondant aux conditions de filtrage n'a été trouvé dans la vue courante</err71>
+    <err72>Impossible d'écrire le résultat dans le paramètre d'un élément provenant d'un fichier lié</err72>
+    <err73>La fonction doit contenir au moins deux arguments : une condition et un pointeur vers la colonne de résultat</err73>
+    <err74>Le nom de la colonne {0} doit être indiqué par une lettre latine ou un chiffre</err74>
+    <err75>Le paramètre "{0}" est un paramètre de référence, mais ne fait pas référence à un élément du modèle</err75>
+    <err76>L'affectation de valeurs à un paramètre global n'est pas prise en charge</err76>
+    <err77>L'affectation de valeurs au pseudo-paramètre ID n'est pas prise en charge</err77>
+    <err78>Les paramètres globaux n'ont pas de propriété "HasValue"</err78>
+    <err79>Les paramètres des éléments imbriqués des assemblages structurels n'ont pas de propriété "HasValue"</err79>
+    <err80>Le pseudo-paramètre ID n'a pas de propriété "HasValue"</err80>
+    <err81>L'élément possède plusieurs paramètres nommés "{0}". Supprimez le paramètre superflu ou utilisez le nom clé du paramètre (GUID pour les paramètres partagés, nom système pour les paramètres système)</err81>
+    <err82>L'élément d'Id {0} n'a pas de géométrie</err82>
+    <err83>Impossible de déterminer sur quels éléments du groupe calculer la fonction d'agrégation : le corps de la fonction ne contient aucun paramètre d'élément</err83>
+    <err84>L'argument de la fonction doit être la lettre "s" (éléments sources conditionnels) ou "t" (éléments cibles)</err84>
+    <err85>La fonction doit contenir une expression calculée pour chaque élément du groupe</err85>
+    <err86>La fonction doit contenir deux ou trois arguments</err86>
+    <err87>Le troisième argument de la fonction ne peut contenir que les lettres "d", "s" et "r"</err87>
+    <err88>La fonction renvoie le numéro d'ordre de l'élément cible, le seul argument autorisé est donc la lettre "t"</err88>
+    <err89>La stratégie comporte un élément source conditionnel, le rôle des éléments du groupe doit donc être indiqué explicitement : "s" - sources conditionnels, "t" - cibles</err89>
+    <err90>Seuls les paramètres et les fonctions de traitement des chaînes et des nombres sont autorisés dans l'expression de la clé de regroupement</err90>
+    <err91>Règle {0} : la mise en correspondance est définie dans une stratégie qui ne la prend pas en charge - l'élément source conditionnel est déterminé par une relation, et non par une valeur coïncidente</err91>
+    <err92>Règle {0} : la mise en correspondance n'est définie que d'un seul côté - il n'y a rien à mettre en correspondance</err92>
+    <err93>Règle {0} : les fonctions d'agrégation ne peuvent pas être utilisées avec les fonctions d'écriture inverse - la valeur agrégée est identique pour toutes les paires du groupe, et l'accumulateur l'additionnerait autant de fois qu'il y a de paires dans le groupe</err93>
+    <err94>Les paramètres de l'élément cible ne peuvent pas être utilisés dans l'expression de mise en correspondance des éléments sources conditionnels : l'élément cible n'est pas encore déterminé à ce stade</err94>
+    <err95>La fonction doit contenir un ou deux arguments : un pointeur vers une colonne (ligne) et une plage de cellules facultative séparée par deux points ".."</err95>
+    <err96>Le numéro de ligne "{0}" doit être un entier positif</err96>
+    <err97>La plage de cellules "{0}" doit contenir deux bornes séparées par deux points ".."</err97>
+    <err98>Le deuxième argument de la fonction ne peut être que la lettre "s" - trier les valeurs avant la sélection</err98>
+    <err99>La fonction doit contenir trois arguments : la chaîne de liste, le séparateur et l'index de l'élément</err99>
+    <err100>La fonction doit contenir trois arguments : la chaîne de liste, le séparateur et la valeur recherchée</err100>
+    <err101>La fonction doit contenir deux arguments : la chaîne de liste et le séparateur</err101>
+    <err102>La partie droite de l'opérateur "{0}" doit être une liste - le résultat de la fonction List, CCList ou CRList</err102>
+    <err103>Une liste ne peut être utilisée qu'à droite de l'opérateur d'appartenance "=|" ou "!=|"</err103>
+    <err104>Le modèle d'expression régulière doit être une chaîne entre guillemets doubles, une référence à un paramètre ou le résultat d'une fonction</err104>
+    <err105>Le modèle d'expression régulière ne doit pas être vide</err105>
+    <err106>Modèle d'expression régulière "{0}" non valide. {1}</err106>
+    <err107>L'évaluation de l'expression régulière "{0}" ne s'est pas terminée dans le délai imparti</err107>
+    <err108>L'élément d'Id {0} n'est pas linéaire : sa position n'est pas définie par une ligne droite</err108>
+    <err109>La fonction peut contenir un argument facultatif - la tolérance en degrés, comprise entre 0 et 90</err109>
+    <err110>Les paramètres de l'élément source conditionnel ne peuvent pas être utilisés dans l'expression de mise en correspondance des éléments cibles : l'élément source conditionnel n'est pas encore déterminé à ce stade</err110>
+    <err111>Règle {0} : les paramètres de l'élément source conditionnel ne peuvent pas être utilisés dans l'expression de mise en correspondance des éléments cibles</err111>
+    <err112>Le fichier Excel de la source de données de la stratégie n'est pas indiqué</err112>
+    <err113>Fichier Excel de la source de données de la stratégie introuvable ou inaccessible : {0}</err113>
+    <err114>La feuille du fichier Excel de la source de données de la stratégie n'est pas sélectionnée</err114>
+    <err115>La feuille {0} est introuvable dans le fichier Excel de la source de données de la stratégie</err115>
+    <err116>Règle {0} : dans cette stratégie, les paires sont formées par mise en correspondance, la mise en correspondance doit donc être définie</err116>
+    <err117>Règle {0} : le regroupement n'est pas défini dans une stratégie avec mise en correspondance - le groupe de la règle est le groupe de mise en correspondance</err117>
+    <err118>La mise en correspondance doit être définie des deux côtés : la valeur est calculée à la fois pour les éléments sources conditionnels et pour les éléments cibles, puis comparée</err118>
+    <err119>Règle {0} : les paramètres de l'élément cible ne peuvent pas être utilisés dans l'expression de mise en correspondance des éléments sources conditionnels</err119>
+    <err120>La fonction doit contenir l'identifiant d'un paramètre de vue : nom, GUID du paramètre partagé ou nom système</err120>
+    <err121>La fonction d'obtention d'un paramètre de vue n'est disponible que lors du traitement des éléments de la vue courante, des vues sélectionnées ou des éléments sélectionnés</err121>
+    <err122>La vue courante "{0}" n'a pas de paramètre "{1}"</err122>
+    <err123>L'élément {0} n'a pas de paramètre "{1}"</err123>
+    <err124>Les informations sur le projet ne contiennent pas de paramètre "{0}"</err124>
+    <err125>Le projet ne contient pas de paramètre global "{0}"</err125>
+    <err126>L'élément imbriqué de l'assemblage {0} n'a pas de paramètre "{1}"</err126>
+    <err127>Impossible de calculer la clé de regroupement : l'élément n'a pas de paramètre "{0}"</err127>
+    <err128>L'élément {0} n'a pas de pièce "{1}" : impossible d'écrire une valeur dans son paramètre</err128>
+    <rh1>N°</rh1>
+    <rh2>Activé</rh2>
+    <rh3>Formule</rh3>
+    <rh4>Options</rh4>
+    <sm1>Traitement des éléments sélectionnés</sm1>
+    <sm2>Traitement des éléments de la vue courante</sm2>
+    <sm3>Traitement des éléments du document</sm3>
+    <sm4>Traitement des éléments des vues sélectionnées</sm4>
+    <ssd1>Traitement des éléments sans relations</ssd1>
+    <sld1>La stratégie traite les éléments sans tenir compte de leurs relations avec d'autres éléments. Au moins un filtre (par catégorie ou par paramètres) doit être renseigné</sld1>
+    <ssd2>Traitement des occurrences de familles sans relations</ssd2>
+    <sld2>La stratégie traite les occurrences de familles sans tenir compte de leurs relations avec d'autres éléments. Il est possible de ne pas utiliser le filtre par catégorie ni le filtre par paramètres</sld2>
+    <ssd3>Traitement des types</ssd3>
+    <sld3>La stratégie traite les types. Si l'option "Traitement des éléments sélectionnés" est choisie, les types des éléments sélectionnés sont traités. Si l'option "Traitement des éléments de la vue courante" est choisie, les types des éléments de la vue courante sont traités. Si l'option "Traitement des éléments du document" est choisie, tous les types du document sont traités</sld3>
+    <ssd4>Traitement des éléments dans l'hôte</ssd4>
+    <sld4>La stratégie traite les éléments qui disposent d'informations sur leur hôte. Ces éléments comprennent : barre d'armature, armature surfacique, armature de chemin, conteneur d'armatures, ouvertures, murs empilés, ainsi que les familles (y compris les éléments des systèmes de murs-rideaux)</sld4>
+    <ssd5>Traitement des éléments dans le groupe</ssd5>
+    <sld5>La stratégie traite les éléments situés dans des groupes. Lors de la création des formules, tenez compte du fait que le paramètre cible doit pouvoir varier selon les occurrences de groupe.</sld5>
+    <ssd6>Traitement des éléments dans la pièce</ssd6>
+    <sld6>La stratégie traite les éléments situés à l'intérieur des pièces</sld6>
+    <ssd7>Traitement des éléments dans l'espace</ssd7>
+    <sld7>La stratégie traite les éléments situés à l'intérieur des espaces</sld7>
+    <ssd8>Traitement des éléments dans le volume</ssd8>
+    <sld8>La stratégie traite les éléments qui ont une géométrie solide et sont situés à l'intérieur de volumes. Les volumes doivent avoir une géométrie solide</sld8>
+    <ssd9>Traitement des éléments dans le solide</ssd9>
+    <sld9>La stratégie traite les éléments qui ont une géométrie solide et sont situés à l'intérieur d'autres éléments ayant une géométrie solide</sld9>
+    <ssd10>Traitement des éléments en contact par les faces des solides</ssd10>
+    <sld10>La stratégie traite les éléments qui ont une géométrie solide et sont en contact les uns avec les autres par des faces planes du solide</sld10>
+    <ssd11>Traitement des limites des pièces</ssd11>
+    <sld11>La stratégie traite les éléments qui constituent les limites des pièces</sld11>
+    <ssd12>Traitement des éléments imbriqués des assemblages structurels</ssd12>
+    <sld12>La stratégie traite les éléments placés dans les assemblages structurels (plaques, boulons, etc.). Le filtrage des éléments imbriqués par paramètres, ainsi que la liste des paramètres des éléments imbriqués dans l'éditeur de formule, ne sont pas disponibles. Les paramètres numériques sont définis sans conversion en unités internes</sld12>
+    <ssd13>Traitement des familles imbriquées</ssd13>
+    <sld13>La stratégie traite les familles imbriquées dans la famille parente</sld13>
+    <ssd14>Traitement de l'isolation des canalisations et des gaines</ssd14>
+    <sld14>La stratégie traite les éléments d'isolation des canalisations et/ou les éléments d'isolation des gaines. Il est possible de ne pas utiliser de filtre par paramètres pour l'isolation</sld14>
+    <ssd15>Traitement des armatures dans le système</ssd15>
+    <sld15>La stratégie traite les barres d'armature faisant partie des systèmes d'armature – armature surfacique et armature de chemin</sld15>
+    <ssd16>Traitement des matériaux</ssd16>
+    <sld16>La stratégie traite tous les matériaux du document actuel, quelle que soit l'option de sélection des éléments</sld16>
+    <ssd17>Traitement des éléments des systèmes MEP</ssd17>
+    <sld17>La stratégie traite les éléments faisant partie d'un système MEP (système électrique, système de canalisations ou système de gaines). L'élément source conditionnel est le système parent de l'élément</sld17>
+    <ssd18>Traitement des composants du mur-rideau</ssd18>
+    <sld18>La stratégie traite les composants du mur-rideau (meneaux et panneaux). L'élément source conditionnel est le mur</sld18>
+    <ssd19>Traitement des éléments par rapport aux éléments sources indiqués</ssd19>
+    <sld19>La stratégie traite les éléments en permettant d'utiliser n'importe quel élément indiqué du modèle comme élément source</sld19>
+    <ssd20>Traitement des parties</ssd20>
+    <sld20>La stratégie traite les parties en tenant compte des éléments sources à partir desquels elles ont été créées. Si une partie a été créée à partir de plusieurs éléments sources, le premier élément est considéré comme l'élément source</sld20>
+    <ssd21>Traitement des éléments dans l'ensemble</ssd21>
+    <sld21>La stratégie traite les éléments situés dans des ensembles</sld21>
+    <ssd22>Traitement des éléments propres à une vue</ssd22>
+    <sld22>La stratégie traite les éléments qui n'existent que dans une seule vue et ne font pas partie du modèle 3D : cotes, notes textuelles, étiquettes, lignes et régions de détail, ainsi que le contenu des feuilles. Ces éléments sont liés à la vue dans laquelle ils ont été créés et ne s'affichent pas dans les autres. Les éléments de modèle tels que les murs, les sols ou les équipements ne sont pas concernés</sld22>
+    <ssd23>Traitement des composants d'escaliers</ssd23>
+    <sld23>La stratégie traite les composants d'escaliers : volées, paliers, supports et garde-corps associés à l'escalier. L'élément source conditionnel est l'escalier. Les composants d'un escalier multiétage sont traités selon l'escalier auquel ils appartiennent</sld23>
+    <ssd24>Traitement des ouvertures des pièces</ssd24>
+    <sld24>La stratégie traite les ouvertures - portes et fenêtres - donnant sur la pièce. L'élément source conditionnel est la pièce. Les ouvertures sont recherchées dans les limites de la pièce, murs-rideaux compris, et l'appartenance à la pièce est déterminée par les propriétés "Vers la pièce" et "De la pièce" en tenant compte de la phase de la pièce ; si ces propriétés ne sont pas renseignées, par l'intersection de la géométrie de l'ouverture avec le volume de la pièce</sld24>
+    <ssd25>Traitement de deux ensembles d'éléments mis en correspondance par valeur</ssd25>
+    <sld25>La stratégie traite deux ensembles d'éléments indépendants - sources conditionnels et cibles. La paire n'est pas formée par une relation entre les éléments du modèle, mais par la coïncidence d'une valeur calculée des deux côtés par le réglage de mise en correspondance. Les éléments coïncidents forment un groupe sur lequel les fonctions d'agrégation sont calculées</sld25>
+    <ssd26>Traitement des finitions des pièces</ssd26>
+    <sld26>La stratégie traite les finitions des pièces créées par le plugin «Finitions des pièces». L'élément source conditionnel est la pièce, les éléments cibles sont les éléments de finition créés pour elle, y compris ceux associés manuellement à la pièce à l'aide du même plugin. Les finitions créées par tout autre moyen ne sont pas traitées par la stratégie</sld26>
+    <ssd27>Traitement des éléments associés à un niveau</ssd27>
+    <sld27>La stratégie traite les éléments selon leur association à un niveau. L'élément source conditionnel est le niveau, les éléments cibles sont les éléments qui y sont situés. Le niveau est pris dans la propriété de l'élément et, si elle n'est pas renseignée, dans le paramètre de niveau («Niveau», «Niveau de référence», «Contrainte inférieure»). Un élément s'étendant entre plusieurs niveaux (mur, poteau, escalier) appartient à son niveau inférieur. Les niveaux sont ajoutés au traitement automatiquement, il n'est pas nécessaire de les sélectionner dans le modèle</sld27>
+    <ssd28>Traitement des coupleurs d'armature</ssd28>
+    <sld28>La stratégie traite les barres d'armature reliées par un coupleur d'armature. L'élément source conditionnel est le coupleur, les éléments cibles sont la ou les deux barres aux extrémités desquelles il est posé. Un coupleur posé sur une seule barre donne une relation un à un : dans ce cas, la valeur de la barre est transférée dans le coupleur par les fonctions d'écriture inverse. Pour un coupleur posé sur deux barres, la partie droite de l'écriture inverse est calculée sur les deux</sld28>
+    <ssd29>Traitement des vues de niveau</ssd29>
+    <sld29>La stratégie traite les vues associées à un niveau. L'élément source conditionnel est le niveau, les éléments cibles sont les plans d'étage, plans de plafond, plans de structure et plans de surface générés pour ce niveau. Le niveau d'une vue est défini lors de sa création et ne change pas : un plan obtenu par copie reste au niveau de l'original. Les vues d'autres types - coupes, élévations, vues 3D, légendes, nomenclatures - ne sont pas associées à un niveau et ne sont pas traitées, les gabarits de vue ne sont pas traités. Les niveaux à traiter sont pris de la même manière que les éléments pour toute autre stratégie : lors du traitement du document, ce sont tous les niveaux du document, lors de la sélection à l'unité, uniquement les niveaux sélectionnés, lors du traitement d'une vue, les niveaux visibles dans cette vue. Le niveau est désigné avec la souris dans une coupe ou une élévation, où il s'agit d'un élément ordinaire ; un plan n'a pas de ligne de niveau, c'est pourquoi lors du traitement d'un plan, le niveau utilisé est celui sur lequel le plan a été généré</sld29>
+    <sg1>Sans relations</sg1>
+    <sgd1>Les paramètres des éléments eux-mêmes sont traités, sans faire appel à d'autres éléments</sgd1>
+    <sg2>Inclusion dans un élément</sg2>
+    <sgd2>Les éléments cibles se trouvent dans l'élément source conditionnel ou lui appartiennent</sgd2>
+    <sg3>Composants</sg3>
+    <sgd3>Les éléments cibles font partie de l'élément source conditionnel</sgd3>
+    <sg4>Pièces</sg4>
+    <sgd4>Les éléments cibles sont liés à la pièce autrement que par leur position à l'intérieur de celle-ci</sgd4>
+    <sg5>Éléments adjacents</sg5>
+    <sgd5>Les éléments cibles sont en contact avec l'élément source conditionnel ou y sont attachés</sgd5>
+    <sg6>Niveaux et vues</sg6>
+    <sgd6>Les éléments cibles sont associés à un niveau ou à une vue</sgd6>
+    <sg7>Relation arbitraire</sg7>
+    <sgd7>La paire n'est pas définie par une relation dans le modèle, mais indiquée manuellement ou déterminée par les valeurs</sgd7>
+    <se1>Hôte</se1>
+    <sp1>Insérer un paramètre de l'hôte</sp1>
+    <se2>Groupe</se2>
+    <sp2>Insérer un paramètre du groupe</sp2>
+    <se3>Pièce</se3>
+    <sp3>Insérer un paramètre de la pièce</sp3>
+    <se4>Espace</se4>
+    <sp4>Insérer un paramètre de l'espace</sp4>
+    <se5>Volume</se5>
+    <sp5>Insérer un paramètre du volume</sp5>
+    <se6>Élément parent</se6>
+    <sp6>Insérer un paramètre de l'élément parent</sp6>
+    <se7>Élément en contact</se7>
+    <sp7>Insérer un paramètre de l'élément en contact</sp7>
+    <se8>Assemblage</se8>
+    <sp8>Insérer un paramètre de l'assemblage structurel</sp8>
+    <se9>Famille parente</se9>
+    <sp9>Insérer un paramètre de la famille parente</sp9>
+    <se10>Canalisation ou gaine</se10>
+    <sp10>Insérer un paramètre de la canalisation ou de la gaine</sp10>
+    <se11>Système</se11>
+    <sp11>Insérer un paramètre du système d'armature parent</sp11>
+    <se12>Système MEP</se12>
+    <sp12>Insérer un paramètre du système MEP parent</sp12>
+    <se13>Mur-rideau</se13>
+    <sp13>Insérer un paramètre du mur-rideau</sp13>
+    <se14>Élément source</se14>
+    <sp14>Insérer un paramètre de l'élément source</sp14>
+    <se15>Assemblage</se15>
+    <sp15>Insérer un paramètre de l'ensemble</sp15>
+    <sp16>Insérer un paramètre de la vue</sp16>
+    <se16>Escalier</se16>
+    <sp17>Insérer un paramètre de l'escalier</sp17>
+    <se17>Éléments sources</se17>
+    <sp18>Insérer un paramètre de l'élément source</sp18>
+    <se18>Niveau</se18>
+    <sp19>Insérer un paramètre du niveau</sp19>
+    <se19>Coupleur</se19>
+    <sp20>Insérer un paramètre du coupleur</sp20>
+    <te1>Élément cible</te1>
+    <tp1>Insérer un paramètre de l'élément cible</tp1>
+    <te2>Occurrence de famille</te2>
+    <tp2>Insérer un paramètre de l'occurrence de famille</tp2>
+    <te3>Type</te3>
+    <tp3>Insérer un paramètre du type cible</tp3>
+    <te4>Élément imbriqué</te4>
+    <tp4>Insérer un paramètre de l'élément imbriqué cible</tp4>
+    <te5>Famille imbriquée</te5>
+    <tp5>Insérer un paramètre de la famille imbriquée</tp5>
+    <te6>Isolation</te6>
+    <tp6>Insérer un paramètre de l'isolation</tp6>
+    <te7>Barre d'armature</te7>
+    <tp7>Insérer un paramètre de la barre d'armature cible</tp7>
+    <te8>Matériau</te8>
+    <tp8>Insérer un paramètre du matériau</tp8>
+    <te9>Partie</te9>
+    <tp10>Insérer un paramètre de la partie</tp10>
+    <te10>Composant d'escalier</te10>
+    <tp11>Insérer un paramètre du composant d'escalier</tp11>
+    <te11>Ouverture</te11>
+    <tp9>Insérer un paramètre de l'ouverture</tp9>
+    <te12>Élément de finition</te12>
+    <tp12>Insérer un paramètre de l'élément de finition</tp12>
+    <tp13>Insérer un paramètre de la vue</tp13>
+    <ft1>Fonctions mathématiques</ft1>
+    <ft2>Fonctions logiques</ft2>
+    <ft3>Fonctions de modification</ft3>
+    <ft4>Fonctions d'obtention de valeur</ft4>
+    <ft5>Fonctions d'agrégation</ft5>
+    <ft6>Fonctions de réécriture</ft6>
+    <d-min>Renvoie le plus petit des nombres</d-min>
+    <d-max>Renvoie le plus grand des nombres</d-max>
+    <d-abs>Renvoie la valeur absolue du nombre</d-abs>
+    <d-round>Arrondit la valeur à l'entier le plus proche ou au nombre de décimales indiqué</d-round>
+    <d-roundup>Renvoie le plus petit entier supérieur ou égal au nombre indiqué</d-roundup>
+    <d-rounddown>Renvoie le plus grand entier inférieur ou égal au nombre indiqué</d-rounddown>
+    <d-sqrt>Renvoie la racine carrée du nombre indiqué</d-sqrt>
+    <d-pow>Renvoie le nombre indiqué élevé à la puissance indiquée</d-pow>
+    <d-sin>Renvoie le sinus de l'angle indiqué. L'angle est indiqué en degrés</d-sin>
+    <d-cos>Renvoie le cosinus de l'angle indiqué. L'angle est indiqué en degrés</d-cos>
+    <d-tan>Renvoie la tangente de l'angle indiqué. L'angle est indiqué en degrés</d-tan>
+    <d-asin>Renvoie l'angle en degrés dont le sinus est égal au nombre indiqué</d-asin>
+    <d-acos>Renvoie l'angle en degrés dont le cosinus est égal au nombre indiqué</d-acos>
+    <d-atan>Renvoie l'angle en degrés dont la tangente est égale au nombre indiqué</d-atan>
+    <d-log>Renvoie le logarithme du nombre indiqué dans la base indiquée</d-log>
+    <d-ln>Renvoie le logarithme naturel (de base e) du nombre indiqué</d-ln>
+    <d-exp>Renvoie e élevé à la puissance indiquée</d-exp>
+    <d-pi>Renvoie le rapport entre la circonférence d'un cercle et son diamètre</d-pi>
+    <d-if>Renvoie la première valeur &lt;true&gt; si la condition &lt;c&gt; est vraie. Renvoie la deuxième valeur &lt;false&gt; si la condition &lt;c&gt; est fausse</d-if>
+    <d-and>Renvoie TRUE si toutes les conditions &lt;c&gt; sont vraies. Sinon, renvoie FALSE</d-and>
+    <d-or>Renvoie TRUE si au moins une condition &lt;c&gt; est vraie. Sinon, renvoie FALSE</d-or>
+    <d-inrange>Renvoie TRUE si le nombre &lt;x&gt; est supérieur ou égal à &lt;min&gt; et inférieur ou égal à &lt;max&gt;. Sinon, renvoie FALSE</d-inrange>
+    <d-has>Renvoie TRUE si le paramètre &lt;p&gt; existe. Sinon, renvoie FALSE</d-has>
+    <d-hasvalue>Renvoie TRUE si une valeur a été affectée au moins une fois au paramètre &lt;p&gt;. Sinon, renvoie FALSE</d-hasvalue>
+    <d-firsttrue>Renvoie la première valeur &lt;v&gt; dont la condition &lt;c&gt; est vraie. Si toutes les conditions &lt;c&gt; sont fausses, renvoie la dernière valeur &lt;v&gt;</d-firsttrue>
+    <d-toupper>Renvoie la valeur convertie en majuscules</d-toupper>
+    <d-tolower>Renvoie la valeur convertie en minuscules</d-tolower>
+    <d-lstr>Renvoie le nombre indiqué de caractères à partir du début de la chaîne</d-lstr>
+    <d-rstr>Renvoie le nombre indiqué de caractères à partir de la fin de la chaîne</d-rstr>
+    <d-sstr>Renvoie une sous-chaîne</d-sstr>
+    <d-tmirrored>Renvoie TRUE si la famille cible est en miroir</d-tmirrored>
+    <d-smirrored>Renvoie TRUE si la famille source conditionnelle est en miroir</d-smirrored>
+    <d-isvertical>Renvoie TRUE si la ligne d'axe de l'élément cible est verticale. Sinon, renvoie FALSE. L'argument facultatif &lt;a&gt; définit la tolérance en degrés, 0.1 par défaut. La fonction ne s'applique qu'aux éléments dont la position est définie par une ligne droite</d-isvertical>
+    <d-ishorizontal>Renvoie TRUE si la ligne d'axe de l'élément cible est horizontale. Sinon, renvoie FALSE. L'argument facultatif &lt;a&gt; définit la tolérance en degrés, 0.1 par défaut. La fonction ne s'applique qu'aux éléments dont la position est définie par une ligne droite</d-ishorizontal>
+    <d-strlen>Renvoie la longueur de la chaîne</d-strlen>
+    <d-strindex>Renvoie l'index (à partir de zéro) de la première occurrence de la sous-chaîne dans la chaîne. Renvoie -1 si la sous-chaîne est introuvable dans la chaîne. La fonction n'est pas sensible à la casse</d-strindex>
+    <d-valuestr>Renvoie la valeur du paramètre sous forme de chaîne avec les unités</d-valuestr>
+    <d-eindex>Renvoie l'indice de l'utilisation réussie de l'expression actuelle de la formule</d-eindex>
+    <d-replace>Renvoie la valeur dans laquelle toutes les occurrences de la chaîne indiquée sont remplacées par une autre chaîne indiquée</d-replace>
+    <d-format>Convertit un nombre en chaîne selon le format indiqué</d-format>
+    <d-cv>Renvoie la valeur de la cellule indiquée de la source de données de la stratégie</d-cv>
+    <d-count>Renvoie le nombre de correspondances du modèle dans la chaîne. S'il n'y a aucune correspondance, renvoie 0. Le modèle est une expression régulière. La fonction n'est pas sensible à la casse</d-count>
+    <d-lstrindex>Renvoie l'indice (à partir de zéro) de la dernière occurrence de la sous-chaîne dans la chaîne. Renvoie -1 si la sous-chaîne est introuvable dans la chaîne. La fonction n'est pas sensible à la casse</d-lstrindex>
+    <d-not>Renvoie TRUE si la condition est fausse. Sinon, renvoie FALSE</d-not>
+    <d-distinct>Renvoie les valeurs distinctes de la liste, en ignorant les espaces de début et de fin lors de la comparaison des valeurs</d-distinct>
+    <d-cvif>Recherche la première ligne de la source de données de la stratégie (fichier Excel) où toutes les conditions sont remplies et renvoie la valeur de la colonne indiquée de cette ligne</d-cvif>
+    <d-cvor>Recherche la première ligne de la source de données de la stratégie (fichier Excel) où au moins une condition est remplie et renvoie la valeur de la colonne indiquée de cette ligne</d-cvor>
+    <d-doctitle>Renvoie le titre du document actuel</d-doctitle>
+    <d-getcurrentviewparameter>Renvoie la valeur du paramètre &lt;p&gt; de la vue sur laquelle le traitement est effectué. Disponible lors du traitement des éléments de la vue actuelle, des vues sélectionnées et lors du traitement des éléments sélectionnés</d-getcurrentviewparameter>
+    <d-targetbottomz>Renvoie la cote la plus basse (Z) de la géométrie de l'élément cible. La cote est renvoyée en millimètres, arrondie à 3 décimales</d-targetbottomz>
+    <d-targettopz>Renvoie la cote la plus haute (Z) de la géométrie de l'élément cible. La cote est renvoyée en millimètres, arrondie à 3 décimales. Lorsque le traitement ne porte pas sur l'ensemble du document, la géométrie est prise dans la vue active : sur un plan d'étage, la cote la plus haute correspond au plan de coupe du plan et non au sommet réel de l'élément</d-targettopz>
+    <d-sourcebottomz>Renvoie la cote la plus basse (Z) de la géométrie de l'élément source conditionnel. La cote est renvoyée en millimètres, arrondie à 3 décimales</d-sourcebottomz>
+    <d-sourcetopz>Renvoie la cote la plus haute (Z) de la géométrie de l'élément source conditionnel. La cote est renvoyée en millimètres, arrondie à 3 décimales. Lorsque le traitement ne porte pas sur l'ensemble du document, la géométrie est prise dans la vue active : sur un plan d'étage, la cote la plus haute correspond au plan de coupe du plan et non au sommet réel de l'élément</d-sourcetopz>
+    <d-gsum>Renvoie la somme des valeurs de l'expression pour les éléments du groupe</d-gsum>
+    <d-gcount>Renvoie le nombre d'éléments du groupe ayant le rôle indiqué : "s" - sources conditionnels, "t" - cibles</d-gcount>
+    <d-gjoin>Joint les valeurs de l'expression pour les éléments du groupe avec le séparateur indiqué. Le troisième argument facultatif définit des indicateurs : "d" - valeurs distinctes uniquement, "s" - tri, "r" - regroupement des nombres consécutifs en plages</d-gjoin>
+    <d-gmin>Renvoie la valeur minimale de l'expression pour les éléments du groupe</d-gmin>
+    <d-gmax>Renvoie la valeur maximale de l'expression pour les éléments du groupe</d-gmax>
+    <d-gavg>Renvoie la valeur moyenne de l'expression pour les éléments du groupe</d-gavg>
+    <d-gindex>Renvoie le numéro d'ordre de l'élément cible dans le groupe</d-gindex>
+    <d-ranges>Regroupe les suites d'entiers consécutifs en plages de la forme 1-3</d-ranges>
+    <d-ccmin>Renvoie la valeur minimale d'une colonne de la source de données de la stratégie. Les cellules dont la valeur ne peut pas être convertie en nombre sont ignorées</d-ccmin>
+    <d-ccmax>Renvoie la valeur maximale d'une colonne de la source de données de la stratégie. Les cellules dont la valeur ne peut pas être convertie en nombre sont ignorées</d-ccmax>
+    <d-crmin>Renvoie la valeur minimale d'une ligne de la source de données de la stratégie. Les cellules dont la valeur ne peut pas être convertie en nombre sont ignorées</d-crmin>
+    <d-crmax>Renvoie la valeur maximale d'une ligne de la source de données de la stratégie. Les cellules dont la valeur ne peut pas être convertie en nombre sont ignorées</d-crmax>
+    <d-item>Renvoie l'élément de la liste à l'indice indiqué (à partir de zéro). S'il n'existe aucun élément à cet indice, renvoie une valeur vide</d-item>
+    <d-finditem>Renvoie le premier élément de la liste contenant la valeur recherchée. S'il n'existe aucun élément de ce type, renvoie une valeur vide. La fonction n'est pas sensible à la casse</d-finditem>
+    <d-itemindex>Renvoie l'indice (à partir de zéro) du premier élément de la liste contenant la valeur recherchée. Renvoie -1 s'il n'existe aucun élément de ce type. La fonction n'est pas sensible à la casse</d-itemindex>
+    <d-trim>Renvoie la valeur sans les espaces de début et de fin de chaîne</d-trim>
+    <d-list>Représente une chaîne avec le séparateur indiqué comme une liste pour la vérification d'appartenance par les opérateurs "=|" et "!=|". Les espaces de début et de fin des éléments et les éléments vides sont supprimés</d-list>
+    <d-cclist>Renvoie les valeurs d'une colonne de la source de données de la stratégie sous forme de liste pour la vérification d'appartenance par les opérateurs "=|" et "!=|"</d-cclist>
+    <d-crlist>Renvoie les valeurs d'une ligne de la source de données de la stratégie sous forme de liste pour la vérification d'appartenance par les opérateurs "=|" et "!=|"</d-crlist>
+    <d-rgxreplace>Renvoie la valeur &lt;s&gt; dans laquelle toutes les correspondances de l'expression régulière &lt;s1&gt; sont remplacées par &lt;s2&gt;. Le modèle &lt;s1&gt; est écrit entre guillemets doubles, provient de la valeur d'un paramètre ou est le résultat d'une fonction imbriquée. Dans &lt;s2&gt;, les substitutions de groupes sont disponibles - "$1", "$2" et ainsi de suite. La sensibilité à la casse est définie par le réglage de la formule</d-rgxreplace>
+    <d-rgxmatch>Renvoie TRUE si la valeur &lt;s&gt; contient une correspondance de l'expression régulière &lt;s1&gt;. Sinon, renvoie FALSE. Le modèle &lt;s1&gt; est écrit entre guillemets doubles, provient de la valeur d'un paramètre ou est le résultat d'une fonction imbriquée. Pour une correspondance avec la valeur entière, utilisez les ancres "^" et "$". La sensibilité à la casse est définie par le réglage de la formule</d-rgxmatch>
+    <d-wb-avg>Écrit la moyenne des résultats dans un paramètre de l'élément source conditionnel</d-wb-avg>
+    <d-wb-first>Écrit le premier résultat dans un paramètre de l'élément source conditionnel</d-wb-first>
+    <d-wb-join>Écrit les résultats joints avec un séparateur dans un paramètre de l'élément source conditionnel</d-wb-join>
+    <d-wb-last>Écrit le dernier résultat dans un paramètre de l'élément source conditionnel</d-wb-last>
+    <d-wb-max>Écrit le résultat maximal dans un paramètre de l'élément source conditionnel</d-wb-max>
+    <d-wb-min>Écrit le résultat minimal dans un paramètre de l'élément source conditionnel</d-wb-min>
+    <d-wb-sum>Écrit la somme des résultats dans un paramètre de l'élément source conditionnel</d-wb-sum>
+    <t211>La fenêtre du plugin est ouverte. La palette sera disponible après sa fermeture</t211>
+    <t212>Le fichier de configurations n'est pas sélectionné. Ouvrez la fenêtre du plugin</t212>
+    <t213>Les réglages de l'organisation ont changé. Ouvrez la fenêtre du plugin pour sélectionner un fichier de configurations</t213>
+    <t214>Le fichier de configurations n'est pas disponible</t214>
+    <t215>Le fichier de configurations ne contient aucune configuration</t215>
+    <t216>La configuration actuelle ne contient aucune stratégie</t216>
+    <t217>Ouvrir la fenêtre du plugin</t217>
+    <t218>Type de travail</t218>
+    <t219>Stratégie de la configuration actuelle</t219>
+    <t220>Exécuter toutes les règles de la stratégie</t220>
+    <t221>Cliquez pour exécuter la règle</t221>
+    <t222>Afficher ou masquer la palette</t222>
+    <t223>Source</t223>
+    <t224>PF ÉS</t224>
+    <t225>PF ÉC</t225>
+    <t226>F ÉS</t226>
+    <t227>F ÉC</t227>
+    <t228>Le plugin ne fonctionne pas dans les fichiers de famille</t228>
+    <t229>Aucun document ouvert</t229>
+    <t230>Demander la synchronisation avant l'exécution</t230>
+    <t231>Options de synchronisation</t231>
+    <t232>Compacter le modèle central (ralentit la synchronisation)</t232>
+    <t233>Après la synchronisation, libérer les sous-projets et éléments suivants :</t233>
+    <t234>Sous-projets des standards de projet</t234>
+    <t235>Sous-projets de famille</t235>
+    <t236>Éléments empruntés</t236>
+    <t237>Sous-projets de vue</t237>
+    <t238>Sous-projets créés par l'utilisateur</t238>
+    <t239>Enregistrer le fichier local avant et après la synchronisation avec le fichier central</t239>
+    <t240>Retour</t240>
+    <t241>Sélectionner le fichier Excel de la source de données de la stratégie</t241>
+    <t242>Retirer le fichier Excel de la source de données de la stratégie (le fichier lui-même n'est pas supprimé)</t242>
+    <t243>Les éléments des catégories indiquées dans les colonnes des règles seront collectés dans les fichiers liés, tant pour les éléments sources conditionnels que pour les éléments cibles. Ils sont ensuite traités au même titre que les éléments du modèle actuel : par exemple, pour la stratégie InMass, il peut s'agir de volumes, pour la stratégie InSolid, d'éléments possédant un solide, pour la stratégie ManyToMany, d'éléments sources conditionnels. Les valeurs des paramètres des éléments des fichiers liés peuvent être utilisées dans les formules, mais il est impossible d'écrire une valeur dans un paramètre d'un élément d'un fichier lié : une telle écriture est signalée comme erreur dans le rapport</t243>
+  </mprParametrization>
+</ModPlus>

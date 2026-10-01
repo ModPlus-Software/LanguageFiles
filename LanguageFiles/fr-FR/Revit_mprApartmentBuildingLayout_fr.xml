@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprApartmentBuildingLayout
+    LocalName="Typologie des appartements"
+    Description="Réalisation complète de la typologie des appartements"
+    LocalName1="Calcul auto"
+    Description1="Recalcul automatique des surfaces de l'appartement lors de la modification des dimensions des pièces">
+    <tab1>Paramètres</tab1>
+    <tab2>Sources</tab2>
+    <tab3>Vérification initiale</tab3>
+    <tab4>Regroupement des appartements</tab4>
+    <tab5>Calcul des appartements</tab5>
+    <tab6>Numérotation</tab6>
+    <tab7>Nomenclatures</tab7>
+    <!-- todo remove after 2.11.15.0 -->
+    <tab8>Vues des appartements</tab8>
+    <tab9>Éditeur d'appartements</tab9>
+    <tab10>Verrouillés</tab10>
+    <tab11>Classification</tab11>
+    <rt1>Non défini</rt1>
+    <rt2>Habitable</rt2>
+    <rt3>Non habitable</rt3>
+    <rt4>Non chauffé</rt4>
+    <rtm1>habitable,résidentiel,logement</rtm1>
+    <rtm2>non habitable,non résidentiel,inoccupé</rtm2>
+    <rtm3>non chauffé,non chauffée,balcon,loggia,terrasse</rtm3>
+    <sa1>Surface arrondie</sa1>
+    <sa2>Surface arrondie avec coefficient</sa2>
+    <fc1>SP 12.13130</fc1>
+    <fc2>Euroclasse</fc2>
+    <apartment>Appartement</apartment>
+    <view>dans la vue courante</view>
+    <model>dans tout le projet</model>
+    <flatArea>Surface de l'appartement</flatArea>
+    <totalArea>Surface totale</totalArea>
+    <livingArea>Surface habitable</livingArea>
+    <flatAreaS>S app.</flatAreaS>
+    <totalAreaS>S tot.</totalAreaS>
+    <totalAreaWithoutFactorS>S tot. sans coef.</totalAreaWithoutFactorS>
+    <livingAreaS>S hab.</livingAreaS>
+    <number>Numéro</number>
+    <p1>PI_Destination fonctionnelle</p1>
+    <pd1>Saisie manuelle ! Intervient dans tous les algorithmes principaux de la typologie des appartements</pd1>
+    <p2>PI_N°_Pièce</p2>
+    <pd2>Remplace le paramètre système "Numéro"</pd2>
+    <p3>AP_ID Appartement</p3>
+    <pd3>Index unique de l'appartement</pd3>
+    <p4>AP_Type Appartement</p4>
+    <pd4>Par exemple : 1K, 2C, 3K</pd4>
+    <p5>AP_Type Pièce</p5>
+    <pd5>Type de pièce. Attribué selon la matrice des pièces</pd5>
+    <p6>AP_Nombre de pièces habitables</p6>
+    <pd6>Nombre de pièces habitables dans l'appartement</pd6>
+    <p7>AP_Surface arrondie</p7>
+    <pd7>Surface de la pièce de l'appartement, arrondie au nombre de décimales indiqué</pd7>
+    <p8>AP_Surface avec coefficient</p8>
+    <pd8>Surface de la pièce de l'appartement, arrondie au nombre de décimales indiqué. Avec coefficient de réduction</pd8>
+    <p9>AP_Coefficient de surface</p9>
+    <pd9>Coefficient de réduction pour balcon, loggia, terrasse</pd9>
+    <p10>AP_Épaisseur de finition brute</p10>
+    <pd10>Épaisseur de la finition brute utilisée pour le calcul des surfaces, en mm</pd10>
+    <p11>AP_Index de pièce</p11>
+    <pd11>Numéro d'ordre des pièces de même nom dans l'appartement</pd11>
+    <p12>AP_Surface habitable</p12>
+    <pd12>Somme des surfaces des pièces habitables de l'appartement</pd12>
+    <p13>AP_Surface appartement</p13>
+    <pd13>Somme des surfaces des pièces de l'appartement sans les pièces non chauffées (Totale)</pd13>
+    <p14>AP_Surface totale</p14>
+    <pd14>Somme de toutes les surfaces des pièces de l'appartement. Pièces non chauffées comprises, avec coefficients de réduction (Pondérée)</pd14>
+    <p14-1>AP_Surface totale sans coef.</p14-1>
+    <pd14-1>Somme de toutes les surfaces des pièces de l'appartement sans coefficient de réduction</pd14-1>
+    <p15>AP_Surface des pièces non chauffées</p15>
+    <pd15>Somme des surfaces des pièces non chauffées de l'appartement. Sans coefficients de réduction</pd15>
+    <p16>AP_Surface des pièces non chauffées avec coef.</p16>
+    <pd16>Somme des surfaces des pièces non chauffées de l'appartement. Avec coefficient de réduction</pd16>
+    <p17>AP_Marqueur appartement</p17>
+    <pd17>Paramètre auxiliaire permettant de compter le nombre d'appartements dans les nomenclatures</pd17>
+    <p18>AP_N° Appartement</p18>
+    <pd18>Renseigné en fin de conception (avant l'enregistrement cadastral)</pd18>
+    <p19>AP_Nombre de niveaux</p19>
+    <pd19>Nombre de niveaux d'un appartement à plusieurs niveaux</pd19>
+    <p20>PI_Mezzanine</p20>
+    <pd20>Paramètre supplémentaire permettant de désigner la pièce comme mezzanine</pd20>
+    <pt1>Texte</pt1>
+    <pt2>Surface</pt2>
+    <pt3>Devise</pt3>
+    <pt4>Entier</pt4>
+    <pt5>Oui/Non</pt5>
+    <pt6>Nombre</pt6>
+    <h1>ID Appartement</h1>
+    <h2>Paramètres partagés</h2>
+    <h3>Jeux de couleurs</h3>
+    <h4>DF</h4>
+    <h5>Nom de la pièce</h5>
+    <h6>Épaisseur finition brute</h6>
+    <h7>Type de pièce</h7>
+    <h8>Coef. de surface</h8>
+    <h9>Identifiant des appartements :</h9>
+    <h10>Arrondi des surfaces :</h10>
+    <h11>Général</h11>
+    <h12>Surfaces des appartements</h12>
+    <h13>Indiquez quelle surface de pièce – arrondie ou arrondie avec coefficient – utiliser pour le calcul des surfaces totales de l'appartement</h13>
+    <h14>Matrice des pièces</h14>
+    <h15>Types d'appartements</h15>
+    <h16>Créer les paramètres manquants</h16>
+    <h17>Identifiants autorisés :</h17>
+    <h18>Suppression des familles non placées</h18>
+    <h19>Fichiers Excel|*.xlsx</h19>
+    <h20>Priorité de numérotation</h20>
+    <h21>Regroupement des appartements</h21>
+    <h22>Remplissage des données selon la matrice des pièces</h22>
+    <h23>Calcul des surfaces</h23>
+    <h24>Destination fonctionnelle</h24>
+    <h25>Type d'appartement</h25>
+    <h26>Nombre de pièces habitables</h26>
+    <h27>Nb pièces hab.</h27>
+    <h28>Surface minimale</h28>
+    <h30>Surface maximale</h30>
+    <h32>Contient les pièces</h32>
+    <h33>Contient pièc.</h33>
+    <h34>Ne contient pas les pièces</h34>
+    <h35>Ne contient pas pièc.</h35>
+    <h36>Création des paramètres</h36>
+    <h37>Importer depuis Excel</h37>
+    <h38>Indiquez la ligne de départ à partir de laquelle la lecture des données doit commencer, ainsi que les numéros des colonnes contenant les valeurs des propriétés indiquées</h38>
+    <h39>Ligne de départ :</h39>
+    <h40>Regrouper</h40>
+    <h41>Colonne "Nom de la pièce" :</h41>
+    <h42>Colonne "Épaisseur de finition brute" :</h42>
+    <h43>Colonne "Type de pièce" :</h43>
+    <h44>Colonne "Coefficient de surface" :</h44>
+    <h45>Colonne "Priorité de numérotation" :</h45>
+    <h46>Colonne "Type d'appartement" :</h46>
+    <h47>Colonne "Nombre de pièces habitables" :</h47>
+    <h48>Colonne "Surface minimale" :</h48>
+    <h49>Colonne "Surface maximale" :</h49>
+    <h50>Colonne "Contient les pièces" :</h50>
+    <h51>Colonne "Ne contient pas les pièces" :</h51>
+    <h52>Numéro de la pièce</h52>
+    <h53>Problèmes</h53>
+    <h54>Aucune pièce non placée n'a été trouvée dans le projet</h54>
+    <h55>Pièces non valides</h55>
+    <h56>Paramètre</h56>
+    <h57>Utiliser</h57>
+    <h58>Regrouper les appartements</h58>
+    <h59>Appartements regroupés :</h59>
+    <h60>Niveau</h60>
+    <h61>Nb pièces dans l'appartement</h61>
+    <h62>Aucun appartement n'a été regroupé ! Vérifiez que les paramètres "Destination fonctionnelle" et "Nom" des pièces sont correctement renseignés et correspondent à la matrice des pièces</h62>
+    <h63>Pièces incorrectes :</h63>
+    <h64>Aucune pièce incorrecte n'a été détectée lors du regroupement des appartements</h64>
+    <h65>Appartements calculés :</h65>
+    <h66>Aucun appartement à calculer n'a été trouvé ! Renseignez les paramètres de pièce "Destination fonctionnelle" et "Nom" conformément à la matrice des pièces, puis effectuez le regroupement des appartements</h66>
+    <h67>Pièces non placées</h67>
+    <h68>Supprimer la sélection</h68>
+    <h69>Supprimer tout</h69>
+    <h70>Pour sélectionner plusieurs éléments de la liste, utilisez la touche Maj et/ou la touche Ctrl</h70>
+    <h71>Calculer</h71>
+    <h72>ou</h72>
+    <h73>Regrouper selon les pièces sélectionnées</h73>
+    <h74>Calculer selon les pièces sélectionnées</h74>
+    <h75>Réduire le contenu de la fenêtre</h75>
+    <h76>Développer le contenu de la fenêtre</h76>
+    <h77>Activer l'option "Au premier plan"</h77>
+    <h78>Désactiver l'option "Au premier plan"</h78>
+    <h79>Tout sélectionner</h79>
+    <h80>Rétablir le masquage des instructions</h80>
+    <h81>Service de recalcul automatique des surfaces de l'appartement lors de la modification des dimensions des pièces et service de recalcul complet (paramétrage selon la matrice, recalcul des surfaces et détermination du type d'appartement) lors de la suppression de pièces. Les services ne traitent que les pièces dont le paramètre "ID Appartement" est renseigné</h81>
+    <h81-1>Le service tient compte des réglages définis dans la section "Surfaces des appartements"</h81-1>
+    <h82>Recherche par nom de pièce</h82>
+    <h83>Toutes les pièces du projet sont valides</h83>
+    <h84>Toutes les pièces de la vue courante sont valides</h84>
+    <h85>Enregistrer par défaut</h85>
+    <h86>Enregistre la correspondance actuelle des paramètres comme valeurs par défaut. Lors du lancement du plugin dans un nouveau document où la correspondance des paramètres n'est pas configurée, les valeurs par défaut enregistrées seront utilisées (si les paramètres existent dans le document)</h86>
+    <h87>Numéroter</h87>
+    <h88>Numérotation des appartements</h88>
+    <h89>Appartements numérotés :</h89>
+    <h90>Aucun appartement à numéroter n'a été trouvé</h90>
+    <h91>Regroupement</h91>
+    <h92>Réglages de la numérotation</h92>
+    <h93>Numérotation continue</h93>
+    <h94>Sens de la numérotation :</h94>
+    <h95>dans le sens horaire</h95>
+    <h96>dans le sens antihoraire</h96>
+    <h97>Début de la numérotation :</h97>
+    <h98>coin supérieur gauche</h98>
+    <h99>coin supérieur droit</h99>
+    <h100>coin inférieur gauche</h100>
+    <h101>coin inférieur droit</h101>
+    <h102>désigner</h102>
+    <h103>Numéro initial :</h103>
+    <h104>Regroupement par bâtiments</h104>
+    <h105>Regroupement par sections</h105>
+    <h106>Tri :</h106>
+    <h107>croissant</h107>
+    <h108>décroissant</h108>
+    <h109>Impossible de trouver la porte d'entrée !</h109>
+    <h110>Bâtiment</h110>
+    <h111>Section</h111>
+    <h112>Bâtiment dans le numéro</h112>
+    <h113>Section dans le numéro</h113>
+    <h114>Non sélectionné</h114>
+    <!-- todo remove after 2.11.15.0 -->
+    <h115>Aucun appartement trouvé dans la vue courante</h115>
+    <h116>Valeur du paramètre dans le numéro</h116>
+    <!-- todo remove after 2.11.15.0 start -->
+    <h117>Mode de duplication de la vue :</h117>
+    <h118>Dupliquer</h118>
+    <h119>Dupliquer avec les détails</h119>
+    <h120>Appliquer le gabarit de vue :</h120>
+    <h121>Décalage du contour de la zone cadrée :</h121>
+    <h122>Appliquer l'échelle de la vue :</h122>
+    <h123>Essayer d'utiliser le type d'appartement comme nom de vue</h123>
+    <h124>Créer les vues des appartements</h124>
+    <!-- todo remove after 2.11.15.0 end -->
+    <h125>La période d'essai du plugin est terminée ! Achetez une licence du plugin ou un abonnement pour Revit afin de continuer à utiliser le plugin "Typologie des appartements"</h125>
+    <h126>Période d'essai. Jours restants</h126>
+    <h127>Nb pièces (hab.)</h127>
+    <h128>Surf. min.</h128>
+    <h129>Surf. max.</h129>
+    <h130>Pour déterminer les types d'appartements selon le tableau, utiliser :</h130>
+    <h131>Surface de l'appartement</h131>
+    <h132>La surface habitable de l'appartement</h132>
+    <h133>La surface totale de l'appartement</h133>
+    <!--todo remove after 3.8.8.0-->
+    <h134>Le service de recalcul automatique des surfaces n'est pas chargé ! Réactivez le plugin à l'aide du Configurateur ModPlus</h134>
+    <h134-1>Le service de recalcul automatique des surfaces n'est pas chargé ! Réactivez le plugin à l'aide du module de mise à jour automatique ModPlus (menu "Plugins")</h134-1>
+    <h135>Ajouter depuis les pièces</h135>
+    <h136>Matrice des pièces courante :</h136>
+    <h137>Tableau courant des types d'appartements :</h137>
+    <h138>Exporter les sources courantes vers Excel</h138>
+    <h139>Exporter toutes les sources vers Excel</h139>
+    <h140>Toutes les sources</h140>
+    <h141>Fusion d'appartements</h141>
+    <h142>Séparateur</h142>
+    <h143>*DIFFÉRENTS*</h143>
+    <h144>Ouvrir la liste des paramètres dans le Bloc-notes</h144>
+    <h145>Écrire les valeurs modifiées</h145>
+    <h146>Appartements</h146>
+    <h147>Données des appartements cochés</h147>
+    <h148>Nombre d'appartements cochés :</h148>
+    <h149>Modification des données des appartements</h149>
+    <h150>Fusionner en appartements à plusieurs niveaux</h150>
+    <!-- todo remove after 2.11.15.0 -->
+    <h151>Fusion en appartements à plusieurs niveaux</h151>
+    <h152>Ordre d'indexation des pièces de même nom dans l'appartement (paramètre "Index de pièce") :</h152>
+    <h153>Par surface croissante</h153>
+    <h154>Par surface décroissante</h154>
+    <h155>Renseigner le paramètre "Marqueur appartement" pour la pièce</h155>
+    <h156>ayant la plus grande surface</h156>
+    <h157>ayant la plus grande surface du type</h157>
+    <h158>Le paramètre "Marqueur appartement" sera renseigné pour la pièce ayant la plus grande surface du type indiqué. Si l'appartement ne contient aucune pièce du type indiqué, le paramètre "Marqueur appartement" sera renseigné pour la pièce ayant la plus grande surface</h158>
+    <h159>Mode d'effacement préalable des paramètres des pièces traitées avant le regroupement des appartements :</h159>
+    <h160>Tout effacer</h160>
+    <h161>Effacer uniquement avec l'identifiant d'appartement</h161>
+    <h162>Ne pas effacer (non recommandé)</h162>
+    <h163>Utiliser le paramètre système "Numéro" au lieu du paramètre "PI_N°_Pièce"</h163>
+    <h164>Verrouillage des appartements</h164>
+    <h165>Regrouper les appartements verrouillés</h165>
+    <h166>Aucun appartement verrouillé trouvé !</h166>
+    <h167>Déverrouillage des appartements</h167>
+    <h168>Numérotation selon une courbe</h168>
+    <h169>Sélectionnez une courbe pour la numérotation des appartements</h169>
+    <h170>Paramètre "Bâtiment" :</h170>
+    <h171>Paramètre "Section" :</h171>
+    <h172>Verrouiller les appartements sélectionnés</h172>
+    <h173>Paramètre cible</h173>
+    <!-- todo remove after 2.8.6.0 -->
+    <h174>Ajouter les pièces sélectionnées à l'appartement sélectionné</h174>
+    <h175>Étages types</h175>
+    <h176>Tableau courant des étages types :</h176>
+    <h177>Colonne "Étage"</h177>
+    <h178>Colonne "Étage type"</h178>
+    <h179>Étage</h179>
+    <h180>Étage type</h180>
+    <h181>Prendre en compte les étages types</h181>
+    <h182>Prendre en compte les étages types lors du regroupement et du calcul des appartements</h182>
+    <h183>Copie des paramètres des appartements types</h183>
+    <h184>Pièce redondante</h184>
+    <h185>Non fermée</h185>
+    <h186>Nommer le tableau courant d'après le nom de la feuille du fichier Excel importé</h186>
+    <h187>Vous pouvez indiquer plusieurs valeurs d'identifiant d'appartement en les séparant par des points-virgules sans espaces</h187>
+    <h188>Réinitialiser la numérotation pour chaque niveau (numérotation non continue)</h188>
+    <h189>Pour le calcul de la surface avec coefficient, utiliser :</h189>
+    <h190>La surface arrondie</h190>
+    <h191>La surface d'origine</h191>
+    <h192>Retrait d'une pièce de l'appartement</h192>
+    <h193>Calculer les appartements sélectionnés</h193>
+    <h194>Supprimer les appartements sélectionnés</h194>
+    <h195>La surface totale de l'appartement sans coefficient</h195>
+    <h196>Paramètres obligatoires</h196>
+    <h197>Paramètres supplémentaires</h197>
+    <h198>M</h198>
+    <h199>Mezzanine</h199>
+    <h200>Marquer les pièces sélectionnées comme "Mezzanine"</h200>
+    <h201>Retirer la marque "Mezzanine" des pièces sélectionnées</h201>
+    <h202>Conditions</h202>
+    <h203>Configuration courante</h203>
+    <h204>Indiquez le nouveau nom du tableau</h204>
+    <h205>Des erreurs se sont produites lors de la classification</h205>
+    <h206>Modifier les colonnes</h206>
+    <h208>Traiter les appartements verrouillés</h208>
+    <h209>Traiter toute destination fonctionnelle</h209>
+    <h210>Classer</h210>
+    <h211>Classer selon les pièces sélectionnées</h211>
+    <h212>Appartements classés :</h212>
+    <h213>Ouvrir le journal</h213>
+    <h214>Aucun appartement à classer n'a été trouvé !</h214>
+    <h215>Indiquez le paramètre !</h215>
+    <h216>Valeur du paramètre</h216>
+    <h217>Vérification que le paramètre de toutes les pièces de l'appartement a la valeur indiquée</h217>
+    <h218>Vérification que l'appartement ne contient pas les pièces indiquées</h218>
+    <h219>Vérification que l'appartement contient les pièces indiquées</h219>
+    <h220>Vérification du nombre de pièces habitables dans l'appartement</h220>
+    <h221>Vérification que l'appartement a une surface au moins égale à la valeur indiquée. La surface est lue dans le paramètre de la première pièce trouvée de l'appartement</h221>
+    <h222>Vérification que l'appartement a une surface au plus égale à la valeur indiquée. La surface est lue dans le paramètre de la première pièce trouvée de l'appartement</h222>
+    <h223>Sélectionner l'appartement</h223>
+    <h224>Commande intégrée "Sélectionner l'appartement"</h224>
+    <h225>Permet de sélectionner toutes les pièces de l'appartement auquel appartient la pièce sélectionnée</h225>
+    <h226>Calculer les surfaces des appartements verrouillés</h226>
+    <h227>Compte tenu du filtre :</h227>
+    <h228>Surface d'origine</h228>
+    <h229>Calculer les appartements</h229>
+    <h230>Calculer la surface</h230>
+    <h231>Exclure les pièces dont la destination fonctionnelle correspond à l'identifiant d'appartement courant</h231>
+    <h232>Renseigner la destination fonctionnelle</h232>
+    <h233>Renseigner le paramètre "Destination fonctionnelle" des pièces dont les noms figurent dans la matrice des pièces courante</h233>
+    <h234>Effectuer la typification des appartements</h234>
+    <h235>Format du numéro de pièce</h235>
+    <h236>Depuis un paramètre</h236>
+    <h237>Numérotation des pièces</h237>
+    <h238>Réinitialiser la numérotation pour chaque niveau dans les appartements à plusieurs niveaux</h238>
+    <h239>Paramètres par niveau d'appartement</h239>
+    <h240>Arrondi des surfaces avec coefficient :</h240>
+    <msg1>Paramètre "{0}" introuvable</msg1>
+    <msg2>Le paramètre "{0}" n'est pas renseigné</msg2>
+    <msg3>Le paramètre "{0}" a une valeur non valide</msg3>
+    <msg4>Les paramètres listés sont absents des pièces du projet courant :</msg4>
+    <msg5>Le nom de la pièce n'est pas renseigné</msg5>
+    <msg6>Nom de pièce introuvable dans la matrice</msg6>
+    <!--todo remove after 4.1.11.0-->
+    <msg7>Les résultats de la vérification initiale contiennent des pièces dont les paramètres sont vides ou incorrects. Voulez-vous vraiment effectuer le regroupement des appartements ?</msg7>
+    <msg8>Une porte donne sur un espace sans pièce</msg8>
+    <msg9>La pièce est délimitée par des éléments sans porte</msg9>
+    <msg10>La matrice des pièces est vide ! Rien à exporter</msg10>
+    <msg11>La liste des types d'appartements est vide ! Rien à exporter</msg11>
+    <msg12>Aucune donnée à importer !</msg12>
+    <msg13>Le nombre de lignes remplies est inférieur au numéro de la première ligne indiqué !</msg13>
+    <msg14>Supprimer les valeurs actuelles de la matrice ? Oui – supprimer, Non – compléter</msg14>
+    <msg15>Supprimer les valeurs actuelles de la liste des types de pièces ? Oui – supprimer, Non – compléter</msg15>
+    <msg16>Impossible de construire le solide auxiliaire et d'obtenir le contour auxiliaire</msg16>
+    <msg17>Impossible d'obtenir les limites de la pièce. Vérifiez que le contour de la pièce ne présente pas de petits défauts. Ces défauts résultent le plus souvent d'une modélisation imprécise des éléments de délimitation</msg17>
+    <msg18>La pièce n'est pas correctement fermée ou n'est pas fermée du tout</msg18>
+    <msg19>Aucune entrée trouvée dans la matrice pour la pièce "{0}"</msg19>
+    <msg20>L'entrée de la matrice pour la pièce "{0}" n'est pas valide</msg20>
+    <msg21>Impossible d'obtenir la destination fonctionnelle</msg21>
+    <msg22>Le lancement du plugin dans un document de famille n'est pas autorisé !</msg22>
+    <msg23>Ces instructions ne s'afficheront plus lors des lancements suivants du plugin. Voulez-vous vraiment les fermer ?</msg23>
+    <msg24>Une erreur s'est produite lors de la création de la vue</msg24>
+    <!-- todo remove after 2.11.15.0 start -->
+    <msg25>Impossible de créer un contour selon les éléments de délimitation tenant compte de chaque élément</msg25>
+    <msg26>La variante de création du contour selon la plus grande épaisseur des éléments de délimitation a été utilisée</msg26>
+    <msg27>Impossible de créer un contour selon les éléments de délimitation tenant compte de leur plus grande épaisseur</msg27>
+    <msg28>La variante de création du contour de l'appartement selon les contours des pièces a été utilisée</msg28>
+    <msg29>Impossible d'obtenir le contour de l'appartement. Erreur :</msg29>
+    <msg30>La vue de l'appartement n'a pas été créée</msg30>
+    <!-- todo remove after 2.11.15.0 end -->
+    <msg31>La longueur du nom ne peut pas dépasser 28 caractères</msg31>
+    <msg32>Les caractères suivants \ / * ? : [ ] ne sont pas autorisés dans le nom</msg32>
+    <msg33>La matrice des pièces courante sera définitivement supprimée ! Voulez-vous vraiment continuer ?</msg33>
+    <msg34>Le tableau courant des types d'appartements sera définitivement supprimé ! Voulez-vous vraiment continuer ?</msg34>
+    <msg35>Données mises à jour</msg35>
+    <!-- todo remove after 2.8.6.0 -->
+    <msg36>Pour les appartements suivants (id) parmi ceux cochés, aucune possibilité d'association n'a été trouvée (appartements situés sur des niveaux voisins et se superposant verticalement)</msg36>
+    <msg37>Les appartements ({0}) ont été fusionnés en un appartement à plusieurs niveaux d'id : {1}</msg37>
+    <msg38>Une erreur s'est produite lors de la fusion des appartements</msg38>
+    <msg39>Le paramètre "Type de pièce" n'est pas renseigné pour une ou plusieurs pièces de l'appartement</msg39>
+    <msg40>Impossible de définir la valeur du paramètre "{0}" de la pièce {1} – le paramètre a la propriété "Lecture seule". La pièce se trouve peut-être dans un sous-projet que vous ne pouvez pas modifier</msg40>
+    <msg41>Le paramètre "{0}" est introuvable dans la pièce {1}. Si vous effectuez une numérotation, vérifiez que vous avez sélectionné le bon paramètre dans la propriété "Paramètre cible"</msg41>
+    <msg42>Le tableau courant des étages types sera définitivement supprimé ! Voulez-vous vraiment continuer ?</msg42>
+    <msg43>Supprimer les valeurs actuelles de la liste des étages types ? Oui – supprimer, Non – compléter</msg43>
+    <msg44>Étage non indiqué</msg44>
+    <msg45>Étage type non indiqué</msg45>
+    <msg46>Cet étage est déjà indiqué comme étage type dans une autre entrée</msg46>
+    <msg47>L'étage indiqué comme étage type est indiqué comme étage non type dans une autre entrée</msg47>
+    <msg48>Cet étage est déjà indiqué dans une autre entrée</msg48>
+    <msg49>Aucune pièce correspondante trouvée (pas de superposition verticale) à l'étage type "{0}"</msg49>
+    <msg50>Les pièces suivantes et l'appartement sélectionné sont situés sur des niveaux différents</msg50>
+    <msg51>Ajouter quand même ces pièces à l'appartement ?</msg51>
+    <!--todo remove after 4.1.10.0-->
+    <msg52>Pour les appartements suivants (id) parmi ceux cochés, aucune possibilité d'association n'a été trouvée (appartements de même destination fonctionnelle, situés sur des niveaux voisins et se superposant verticalement)</msg52>
+    <msg53>Parmi les appartements sélectionnés figurent des appartements dont la destination fonctionnelle ne correspond pas à l'identifiant d'appartement courant indiqué dans les réglages. Voulez-vous vraiment calculer ces appartements avec les réglages actuels ?</msg53>
+    <msg54>Appartement ID={0} supprimé : les paramètres des pièces de l'appartement ont été effacés (paramètres texte) ou remis à zéro (paramètres numériques)</msg54>
+    <msg55>Les appartements verrouillés ont été ajoutés à la liste de l'onglet "Verrouillés"</msg55>
+    <msg56>Le paramètre "PI_Mezzanine" est introuvable. Créez les paramètres supplémentaires manquants dans l'onglet "Paramètres" - "Paramètres supplémentaires"</msg56>
+    <msg57>Tous les tableaux seront définitivement supprimés !</msg57>
+    <msg58>Êtes-vous sûr ?</msg58>
+    <msg59>Les pièces du projet courant n'ont pas le paramètre "{0}"</msg59>
+    <msg60>Une erreur s'est produite lors du traitement du tableau</msg60>
+    <msg61>Aucune pièce appropriée n'a été regroupée ! Précisez les conditions de filtrage et réessayez</msg61>
+    <msg62>La destination fonctionnelle a été renseignée pour {0} pièces</msg62>
+    <msg63>La pièce porte le nom "{0}", absent de la matrice des pièces courante. Le remplissage de la destination fonctionnelle a été ignoré</msg63>
+    <msg64>Le paramètre "Destination fonctionnelle" n'a pas été créé ou n'est pas associé. Accédez à l'onglet "Paramètres" et créez/associez les paramètres</msg64>
+    <msg65>Paramètre "{0}" introuvable</msg65>
+    <msg66>Le paramètre "{0}" a un type de données non pris en charge (les paramètres texte et numériques sont pris en charge)</msg66>
+    <msg67>Impossible de définir la valeur du paramètre "{0}". Le paramètre a peut-être la propriété "Lecture seule" ou se trouve dans un sous-projet non disponible</msg67>
+    <msg68>Les appartements indiqués sont situés sur des niveaux différents ! Voulez-vous vraiment les fusionner en un seul appartement ?</msg68>
+    <msg69>Pour les appartements suivants (id) parmi ceux cochés, aucune possibilité d'association n'a été trouvée (appartements de même destination fonctionnelle se superposant verticalement)</msg69>
+    <msg70>Les résultats de la vérification initiale contiennent des pièces incorrectes (pièces avec des paramètres vides ou incorrects, pièces non placées) ! Voulez-vous vraiment continuer ?</msg70>
+    <msg71>Les données des appartements dans le modèle ont changé depuis la création de cette liste (dans un autre onglet ou manuellement). La liste n'est peut-être plus à jour — relancez l'opération</msg71>
+    <tt1>Valeur du paramètre "Destination fonctionnelle" utilisée pour sélectionner les pièces à traiter. Si le paramètre a une autre valeur, la pièce sera ignorée par tous les algorithmes</tt1>
+    <tt2>Masquer les instructions</tt2>
+    <tt3>Pour chaque groupe de la liste, sélectionnez la pièce du projet qui servira à déterminer l'appartement de départ de la numérotation</tt3>
+    <tt4>Liste des valeurs autorisées du paramètre "Destination fonctionnelle". Cette liste sert à exclure de la vérification initiale les pièces dont la valeur du paramètre "Destination fonctionnelle" ne correspond pas à l'identifiant des appartements et ne figure pas dans la matrice des pièces</tt4>
+    <tt5>Pour regrouper correctement les appartements, sélectionnez toutes les pièces qui doivent faire partie des appartements</tt5>
+    <tt6>Pour calculer les appartements, il suffit de sélectionner au moins une pièce de chaque appartement. Les appartements seront regroupés selon la valeur du paramètre "ID Appartement"</tt6>
+    <tt7>La valeur du paramètre "Bâtiment" sera ajoutée au numéro de l'appartement sous forme de préfixe séparé par un tiret</tt7>
+    <tt8>La valeur du paramètre "Section" sera ajoutée au numéro de l'appartement sous forme de préfixe séparé par un tiret</tt8>
+    <tt9>La valeur du paramètre sélectionné sera ajoutée au numéro de l'appartement sous forme de préfixe séparé par un tiret, à condition que le paramètre ait une valeur et que cette valeur soit identique pour toutes les pièces de l'appartement</tt9>
+    <tt10>Ajout au tableau courant de nouvelles entrées collectées à partir des pièces du projet courant. Seules les entrées dont la valeur "Nom de la pièce" est renseignée sont ajoutées</tt10>
+    <!-- todo remove after 2.8.6.0 -->
+    <tt11>Fusionner en un seul les appartements sélectionnés dans la liste</tt11>
+    <tt12>Valeur utilisée comme séparateur lors de l'ajout du bâtiment, de la section et/ou de la valeur du paramètre au numéro</tt12>
+    <tt13>Sélectionner et afficher les appartements cochés</tt13>
+    <tt14>Le calcul des surfaces de l'appartement n'a pas été effectué en raison d'erreurs critiques</tt14>
+    <!-- todo remove after 2.11.15.0 -->
+    <tt15>Verrouiller les appartements sélectionnés. Les pièces des appartements verrouillés ne seront pas traitées lors des regroupements d'appartements suivants</tt15>
+    <tt15_1>Verrouiller les appartements sélectionnés. Les pièces des appartements verrouillés ne seront pas traitées lors des regroupements et calculs d'appartements suivants</tt15_1>
+    <tt16>Déverrouiller les appartements sélectionnés</tt16>
+    <tt17>Sélectionner une courbe</tt17>
+    <tt18>Appartement verrouillé</tt18>
+    <tt19>Ajouter un étage à partir du document actuel</tt19>
+    <tt20>Sélectionner et afficher toutes les pièces problématiques</tt20>
+    <tt21>Appartement sur plusieurs niveaux</tt21>
+    <tt22>Fusionner les appartements sélectionnés dans la liste en un seul. Seuls les appartements ayant la même destination fonctionnelle peuvent être fusionnés</tt22>
+    <tt23>Ajouter les pièces sélectionnées à l'appartement sélectionné. L'appartement et la pièce doivent avoir la même destination fonctionnelle</tt23>
+    <tt24>Par exemple, la surface d'origine de la pièce est 3.48. Arrondi des surfaces 0.1. Coefficient 0.5.</tt24>
+    <tt25>Si l'option "Surface arrondie" est sélectionnée, la surface arrondie est d'abord calculée – 3.5, le résultat obtenu est multiplié par le coefficient – 3.5 * 0.5 = 1.75, puis arrondi – 1.8.</tt25>
+    <tt26>Si l'option "Surface d'origine" est sélectionnée, la surface d'origine est multipliée par le coefficient – 3.48 * 0.5 = 1.74, puis arrondie – 1.7.</tt26>
+    <tt27>Cet appartement est verrouillé : les pièces de l'appartement ne seront pas traitées lors du regroupement des appartements</tt27>
+    <tt28>Effacer la liste</tt28>
+    <tt29>La pièce sera retirée de l'appartement. Tous les paramètres de la pièce seront effacés (paramètres texte) ou remis à zéro (paramètres numériques)</tt29>
+    <tt30>Calculer les appartements sélectionnés avec les réglages et les sources actuels. Les appartements calculés seront également affichés dans l'onglet "Calcul des appartements"</tt30>
+    <tt31>Le nombre de pièces de l'appartement a été modifié ! Un nouveau calcul de l'appartement est nécessaire</tt31>
+    <tt32>Tous les paramètres des pièces de l'appartement seront effacés (paramètres texte) ou remis à zéro (paramètres numériques)</tt32>
+    <tt33>Créer un nouveau tableau de conditions de classification</tt33>
+    <tt34>Supprimer tous les tableaux de conditions de classification</tt34>
+    <tt35>Pour classifier les appartements, il suffit de sélectionner au moins une pièce de l'appartement. Les appartements seront regroupés selon la valeur du paramètre "ID d'appartement"</tt35>
+    <tt36>Ajouter une nouvelle ligne</tt36>
+    <tt37>Supprimer les lignes sélectionnées</tt37>
+    <tt38>Valeur incorrecte. Vérifiez les conditions indiquées entre parenthèses</tt38>
+    <tt39>Afficher les pièces sélectionnées</tt39>
+    <tt40>Définir le nom de la pièce à partir de la liste des noms de pièces du document actuel</tt40>
+    <tt41>Si l'option est activée, l'arrondi indiqué s'applique à la surface avec coefficient de chaque pièce (paramètre «AP_Surface avec coefficient»), ainsi qu'aux surfaces totales de l'appartement «AP_Surface totale» et «AP_Surface des pièces non chauffées avec coef.». Les autres surfaces sont arrondies selon la propriété «Arrondi des surfaces».</tt41>
+    <tt42>Par exemple, la surface d'origine de la pièce est 3.48. Arrondi des surfaces 0.1. Arrondi des surfaces avec coefficient 0.01. Coefficient 0.5. Surface arrondie – 3.5, surface avec coefficient – 3.5 * 0.5 = 1.75, après arrondi – 1.75 (sans cette option, on obtiendrait 1.8).</tt42>
+    <tt43>Si l'option est désactivée, la propriété «Arrondi des surfaces» est utilisée pour toutes les surfaces.</tt43>
+    <instruction>Instructions</instruction>
+    <instruction1>Toutes les pièces du projet doivent avoir les paramètres partagés indiqués dans cette liste. Vous pouvez utiliser vos propres paramètres partagés du même type (indiqué entre parenthèses). Indiquez vos propres paramètres partagés dans la liste ou cliquez sur le bouton "Créer les paramètres manquants". Tous les paramètres numériques sont du type "Devise", ce qui permet de traiter les pièces dans des groupes</instruction1>
+    <instruction1_1>Les paramètres supplémentaires ne sont traités et renseignés que si les pièces possèdent ces paramètres. Vous pouvez utiliser vos propres paramètres partagés du même type (indiqué entre parenthèses). Indiquez vos propres paramètres partagés dans la liste ou cliquez sur le bouton "Créer les paramètres manquants"</instruction1_1>
+    <instruction2>La matrice des pièces définit les propriétés principales pour la sélection des pièces à traiter, la numérotation des pièces dans l'appartement, ainsi que les valeurs pour le calcul des surfaces de l'appartement. Les valeurs de la matrice sont choisies par correspondance de la destination fonctionnelle (colonne DF) et du nom de la pièce. Dans la colonne "Nom de la pièce", vous pouvez ajouter un astérisque à la fin du nom pour vérifier la correspondance avec le début du nom de la pièce (par exemple, la valeur "Chambre*" correspondra aux noms de pièces "Chambre 1", "Chambre 2", etc.)</instruction2>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction2_1>Ce tableau définit les données utilisées pour déterminer le type d'appartement. Les valeurs "Contient les pièces" et "Ne contient pas les pièces" sont renseignées avec des noms de pièces séparés par un point-virgule (;)</instruction2_1>
+    <instruction2_2>La liste définit la correspondance entre les étages et les étages types. Si un étage type est défini pour un étage, lors du regroupement et du calcul des appartements, tous les paramètres des pièces situées sur cet étage seront repris de la pièce correspondante située sur l'étage type. La pièce de l'étage type est déterminée à l'aide d'un rayon vertical passant par le point d'insertion de la pièce traitée. Les étages peuvent être définis par les noms des niveaux ou par les élévations des niveaux</instruction2_2>
+    <instruction2_3>Ce tableau définit les données utilisées pour déterminer le type d'appartement. Les conditions "Contient les pièces" et "Ne contient pas les pièces" sont renseignées avec des noms de pièces séparés par un point-virgule (;). Les noms de pièces peuvent être complétés par une condition de vérification de la surface et/ou une condition vérifiant que la pièce est une mezzanine. Pour cela, après le nom de la pièce, indiquez entre parenthèses la condition et la valeur de surface et/ou, séparée par une virgule, la condition de vérification "Mezzanine" si nécessaire. Conditions disponibles – égal (=), différent (!=), supérieur (&gt;), supérieur ou égal (&gt;=), inférieur (&lt;), inférieur ou égal (&lt;=). Pour la vérification "Mezzanine", ajoutez après une virgule le symbole "m" pour définir la condition "La pièce doit être une mezzanine" ou "nm" pour définir la condition "La pièce ne doit pas être une mezzanine". Il est possible de définir uniquement la vérification "Mezzanine" sans vérification de la surface. Exemples : "Cuisine (&gt;10); Chambre", "Cellier (&lt;5,m)", "Cellier (nm)"</instruction2_3>
+    <instruction3>La vérification initiale comprend deux parties : la vérification des pièces non placées et la vérification du remplissage des paramètres "Destination fonctionnelle" et "Nom". Si la valeur du paramètre "Destination fonctionnelle" d'une pièce correspond à la valeur "Identifiant des appartements" indiquée dans les réglages, le paramètre "Nom" sera vérifié selon la matrice des pièces actuelle</instruction3>
+    <instruction4>Le regroupement des appartements s'effectue à partir des caractéristiques géométriques des pièces, en tenant compte de la communication entre les pièces par les fenêtres, les portes et les séparateurs de pièce. Toutes les pièces d'un même appartement reçoivent la même valeur du paramètre "ID d'appartement". Il est recommandé d'effectuer une vérification visuelle supplémentaire en créant un jeu de couleurs selon le paramètre "ID d'appartement"</instruction4>
+    <instruction5>Le calcul des appartements comprend le calcul des surfaces de l'appartement, du nombre de pièces d'habitation, ainsi que la détermination du type d'appartement à partir de la source "Types d'appartements". Toutes les valeurs obtenues sont affectées aux paramètres des pièces de l'appartement. Tous les appartements sont déterminés selon la valeur du paramètre "ID d'appartement" définie à l'étape "Regroupement des appartements"</instruction5>
+    <instruction5_1>Cet onglet ne fait pas partie de l'algorithme principal de typologie des appartements ! Il est destiné uniquement à renseigner le paramètre "AP_Surface arrondie" (ou le paramètre correspondant utilisé) dans les pièces sélectionnées en tenant compte des réglages d'arrondi. Utilisez cette fonction uniquement pour les pièces qui ne correspondent pas à la destination fonctionnelle actuelle</instruction5_1>
+    <instruction6>La numérotation des appartements peut s'effectuer en les regroupant par Bâtiments et/ou Sections, en activant les options correspondantes et en indiquant les noms des paramètres dont proviennent les valeurs de Bâtiment et/ou de Section. Les sections sont considérées comme des sous-groupes des bâtiments. La propriété "numérotation continue" signifie que la numérotation du groupe suivant sera poursuivie et non recommencée à partir de la valeur définie dans la propriété "Numéro de départ". Si vous choisissez l'option "spécifier" dans la propriété "Début de la numérotation", vous devrez sélectionner une pièce pour chaque groupe d'appartements</instruction6>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction7>Les vues d'appartements sont créées en dupliquant la vue actuelle, puis en la cadrant selon le contour de l'appartement. Le plugin tente d'abord de créer un contour de cadrage tenant compte de l'épaisseur des murs d'enveloppe (uniquement pour Revit 2020 et versions ultérieures). En cas d'échec, il tente de créer un contour de cadrage tenant compte de la plus grande épaisseur des murs d'enveloppe. Si le contour de cadrage n'est pas créé, le contour de l'appartement obtenu à partir des limites des pièces sera utilisé. Si l'option "Essayer d'utiliser le type d'appartement comme nom de vue" est activée, les vues créées recevront un nom de la forme "NOM_NIVEAU – Appartement TYPE_APPARTEMENT"</instruction7>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction8>L'éditeur d'appartements permet de modifier manuellement les valeurs des surfaces des appartements, ainsi que de regrouper les appartements sur plusieurs niveaux. Lors du regroupement d'appartements sur plusieurs niveaux, les surfaces sont recalculées et la valeur du paramètre "AP_Nombre de niveaux" est renseignée IMPORTANT ! Lors d'un nouveau calcul des appartements sur un niveau donné, les valeurs des paramètres des pièces appartenant à l'appartement sur plusieurs niveaux, mais situées sur un autre niveau, ne seront pas recalculées</instruction8>
+    <instruction8_1>Le regroupement des appartements s'effectue indépendamment de la valeur actuelle de l'identifiant des appartements indiquée dans les réglages. L'éditeur d'appartements permet de modifier les valeurs des surfaces des appartements, ainsi que de regrouper les appartements sur plusieurs niveaux. Lors du regroupement d'appartements sur plusieurs niveaux, les surfaces sont recalculées et la valeur du paramètre "AP_Nombre de niveaux" est renseignée. L'éditeur d'appartements permet également de recalculer, de verrouiller, de déverrouiller ou de supprimer les appartements sélectionnés</instruction8_1>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction9>Les appartements verrouillés sont des appartements dont les pièces ne seront pas traitées lors du regroupement des appartements. Le verrouillage des appartements s'effectue dans l'onglet "Regroupement des appartements". La liste affiche les appartements verrouillés indépendamment de la valeur actuelle de l'"Identifiant des appartements" (valeur du paramètre "Destination fonctionnelle")</instruction9>
+    <instruction9_1>Les appartements verrouillés sont des appartements dont les pièces ne seront pas traitées lors du regroupement et du calcul des appartements. La liste affiche les appartements verrouillés indépendamment de la valeur actuelle de l'"Identifiant des appartements" (valeur du paramètre "Destination fonctionnelle")</instruction9_1>
+    <instruction10>La classification permet de renseigner certains paramètres des appartements en fonction de leurs caractéristiques. Vous devez d'abord créer des tableaux de conditions dans l'onglet "Conditions", puis vous pouvez effectuer la classification avec affichage du résultat dans l'onglet "Classification"</instruction10>
+    <instruction10_1>Indiquez le paramètre cible – un paramètre texte dans lequel le résultat de la classification sera écrit. La vérification de la surface s'effectue selon le paramètre indiqué d'une pièce quelconque de l'appartement (c.-à-d. que ce paramètre est considéré comme ayant la même valeur pour toutes les pièces). Les conditions "Contient les pièces" et "Ne contient pas les pièces" sont renseignées avec des noms de pièces séparés par un point-virgule (;). Les noms de pièces peuvent être complétés par une condition de vérification de la surface et/ou une condition vérifiant que la pièce est une mezzanine. Pour cela, après le nom de la pièce, indiquez entre parenthèses la condition et la valeur de surface et/ou, séparée par une virgule, la condition de vérification "Mezzanine" si nécessaire. Conditions disponibles – égal (=), différent (!=), supérieur (&gt;), supérieur ou égal (&gt;=), inférieur (&lt;), inférieur ou égal (&lt;=). Pour la vérification "Mezzanine", ajoutez après une virgule le symbole "m" pour définir la condition "La pièce doit être une mezzanine" ou "nm" pour définir la condition "La pièce ne doit pas être une mezzanine". Il est possible de définir uniquement la vérification "Mezzanine" sans vérification de la surface. Exemples : "Cuisine (&gt;10); Chambre", "Cellier (&lt;5,m)", "Cellier (nm)"</instruction10_1>
+    <instruction10_2>La classification s'effectue selon les tableaux de conditions cochés dans l'onglet "Conditions". Si l'appartement vérifié ne correspond à aucune ligne de conditions du tableau, le paramètre cible sera effacé</instruction10_2>
+    <instruction11>Indiquez les paramètres dans lesquels le plugin écrira les valeurs correspondantes pour chaque niveau d'un appartement sur plusieurs niveaux. Il est recommandé d'utiliser des paramètres ayant le même type de données que les paramètres principaux. Les valeurs seront renseignées pour tous les appartements. Pour les appartements sur un seul niveau, les valeurs reprendront celles des paramètres principaux</instruction11>
+  </mprApartmentBuildingLayout>
+</ModPlus>

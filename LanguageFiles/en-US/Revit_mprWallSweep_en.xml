@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWallSweep
+    LocalName="Wall layouts"
+    Description="Create wall layouts">
+    <v1>Cut to the top edge of the top slab</v1>
+    <v2>Cut to the bottom edge of the bottom slab</v2>
+    <v3>Elevation</v3>
+    <v4>Section</v4>
+    <v5>Apply view template</v5>
+    <v6>Number of curve splits</v6>
+    <v8>Projection depth</v8>
+    <v9>Place on the sheet</v9>
+    <v10>Inside offset</v10>
+    <v11>Set suffix/prefix</v11>
+    <v12>Suffix</v12>
+    <v13>Prefix</v13>
+    <v14>In current document</v14>
+    <v15>In linked document</v15>
+    <v16>Select element</v16>
+    <v17>Top offset</v17>
+    <v18>Down offset</v18>
+    <v19>In the active view in the current document</v19>
+    <v20>Create sheet</v20>
+    <v21>Side offset</v21>
+    <v22>You can specify the source room parameter in curly braces. For example: "Layout {Name}"</v22>
+    <v23>You can specify the source wall parameter in curly braces. For example: "Layout {Mark}"</v23>
+    <v24>NO PARAMETER</v24>
+    <v25>NO VALUE</v25>
+    <t2>Wall</t2>
+    <t3>Room</t3>
+    <t5>Layout name:</t5>
+    <t6>Options</t6>
+    <t7>Create:</t7>
+    <t8>Create by:</t8>
+    <t9>Dimensions</t9>
+    <t10>Other</t10>
+    <t11>Reversed order</t11>
+    <t1>Selected element type: </t1>
+    <t4>Element is not select</t4>
+    <e1>Cancel selection</e1>
+    <e2>No matching item selected</e2>
+    <e4>Could not find dependent walls</e4>
+    <e5>Failed to determine closest plane to point</e5>
+    <e6>An unexpected error has occurred: </e6>
+    <e7>No views to build</e7>
+    <e8>The selected element is not a wall, room, or column</e8>
+    <e9>Failed to define a line to build a section</e9>
+    <e10>Failed to get room or wall wrapper object</e10>
+    <m1>Choose a room or wall</m1>
+    <m2>Specify the point that will be closest to the face along which the flat pattern will be created. For correct operation, the choice of a point must be made in the plan</m2>
+    <tr1>Create views</tr1>
+    <elevationType>Elevation type:</elevationType>
+    <sectionType>Section type:</sectionType>
+    <roomSelected>Rooms selected:</roomSelected>
+    <wallSelected>Walls selected:</wallSelected>
+    <columnSelected>Columns selected:</columnSelected>
+    <invalidViewDirection>Failed to determine the view direction. The selected point is too close to the wall face. Please select a point farther from the wall.</invalidViewDirection>
+    <viewDirection>View direction:</viewDirection>
+    <manualSelection>Manual selection</manualSelection>
+    <innerSide>Interior side</innerSide>
+    <outerSide>Exterior side</outerSide>
+    <manualSelectionTooltip>A point must be specified for each wall to determine the view direction</manualSelectionTooltip>
+    <innerSideTooltip>When selecting multiple walls, automatically creates sweeps on the inner side</innerSideTooltip>
+    <outerSideTooltip>When selecting multiple walls, automatically creates sweeps on the outer side</outerSideTooltip>
+    <cylindricalColumnsNotSupportError>Creating layouts for cylindrical columns is not supported</cylindricalColumnsNotSupportError>
+    <verticalFacesNotFound>Failed to find vertical faces of the column</verticalFacesNotFound>
+    <columnMode>Column</columnMode>
+  </mprWallSweep>
+</ModPlus>

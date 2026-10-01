@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWorldOrientation
+    LocalName="Lado del mundo"
+    Description="Análisis de la orientación de los elementos según los puntos cardinales en relación con la habitación o su ubicación en el sitio">
+    <!--todo remove after 2.2.1.0-->
+    <d1>Análisis de orientación de habitaciones se realiza en ventanas, puertas y vidrieras. Resultado del análisis se puede registrar en parámetro de habitación o en parámetro de ventana, puerta o vidriera</d1>
+    <!--todo remove after 2.2.1.0-->
+    <d2>Análisis de orientación de elementos. Resultado del análisis se puede registrar en parámetro de ventanas, puertas o vidrieras.</d2>
+    <d3>Para los elementos de las categorías seleccionadas se determina el punto cardinal (teniendo en cuenta la orientación hacia el norte verdadero) en relación con la habitación seleccionada, independientemente de la orientación propia del elemento en el sitio. El resultado del análisis puede registrarse en el parámetro del espacio y/o en el parámetro de los elementos seleccionados</d3>
+    <d4>Para los elementos de las categorías seleccionadas se determina la orientación de la cara frontal en relación con el norte verdadero. Los resultados del análisis pueden registrarse en el parámetro de los elementos seleccionados</d4>
+    <tab1>Por habitaciones</tab1>
+    <tab2>Por elementos</tab2>
+    <!-- todo remove after 2.0.0.0 -->
+    <v1>Parámetro:</v1>
+    <v2>Guardar resultado en parámetro:</v2>
+    <v3>Puertas</v3>
+    <v4>Ventanas</v4>
+    <v5>Vidrieras</v5>
+    <v6>Filtrar habitaciones:</v6>
+    <v7>Habitaciones</v7>
+    <v8>Elementos</v8>
+    <v9>Habitaciones y elementos</v9>
+    <v10>Elementos para análisis:</v10>
+    <v11>Paredes</v11>
+    <s1>N</s1>
+    <s2>S</s2>
+    <s3>O</s3>
+    <s4>E</s4>
+    <s5>NO</s5>
+    <s6>SO</s6>
+    <s7>NE</s7>
+    <s8>SE</s8>
+    <h1>Elementos seleccionados</h1>
+    <h2>En vista activa</h2>
+    <h3>En proyecto</h3>
+    <tr1>Determinar dirección de huecos</tr1>
+    <t1>Elementos de habitación no tienen parámetro "{0}", por lo que no es posible rellenar resultados del análisis</t1>
+    <t2>No se puede establecer valor para parámetro "{0}". Verificar tipo de parámetro que se está rellenar – debe ser una cadena</t2>
+    <t3>Total de locales encontrados: {0}</t3>
+    <t4>Total de elementos de categoría "{0}"a los que, previo análisis, se les asigna siguiente valor: {1}</t4>
+    <t5>No se puede determinar dirección del elemento</t5>
+    <t6>Elementos de categoría "{0}" no tienen parámetro objetivo establecido para guardar resultado</t6>
+  </mprWorldOrientation>
+</ModPlus>

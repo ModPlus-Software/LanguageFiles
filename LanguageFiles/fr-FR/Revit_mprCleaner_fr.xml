@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCleaner
+    LocalName="Nettoyage du modèle"
+    Description="Suppression du modèle des objets de certaines catégories, avec possibilité de supprimer les éléments inutilisés">
+    <h1>Résultat du nettoyage</h1>
+    <h2>Rechercher...</h2>
+    <h3>Tout cocher</h3>
+    <h4>Désélectionner tout</h4>
+    <h5>Inverser la sélection</h5>
+    <h6>Effacer</h6>
+    <h7>Vous n'avez rien sélectionné</h7>
+    <h8>éléments</h8>
+    <h9>Ignorer les avertissements de Revit</h9>
+    <h10>Nettoyage de base</h10>
+    <h11>Gabarits de vue</h11>
+    <h12>Pour sélectionner plusieurs éléments de la liste, utilisez la touche Maj et/ou la touche Ctrl</h12>
+    <h13>Gabarits de vue appliqués :</h13>
+    <h14>Ignorer</h14>
+    <h15>Supprimer les références au gabarit de vue</h15>
+    <h16>Nom du gabarit de vue</h16>
+    <h17>Utilisé</h17>
+    <h18>Suppression des gabarits de vue</h18>
+    <h19>Gabarits ignorés -</h19>
+    <h20>Gabarits supprimés -</h20>
+    <h21>Références aux gabarits de vue supprimées -</h21>
+    <h22>Paramètres partagés inutilisés</h22>
+    <h23>La recherche des paramètres partagés inutilisés peut prendre un certain temps, car elle nécessite l'ouverture de toutes les familles du projet</h23>
+    <h24>Nom du paramètre</h24>
+    <h25>Nombre de paramètres :</h25>
+    <h26>Supprimer la sélection</h26>
+    <h27>Suppression des paramètres partagés inutilisés</h27>
+    <h28>{0} paramètres partagés supprimés</h28>
+    <h29>Filtres de vue</h29>
+    <h30>Suppression des filtres de vue</h30>
+    <h31>Utilisé dans des gabarits</h31>
+    <h32>Utilisé dans des vues</h32>
+    <h33>Nomenclatures</h33>
+    <h34>Suppression des nomenclatures</h34>
+    <h35>Placée sur une feuille</h35>
+    <h36>Paramètres partagés</h36>
+    <h37>Suppression des paramètres partagés</h37>
+    <h38>Pièces non placées</h38>
+    <h39>Suppression des pièces non placées</h39>
+    <h40>Supprimer tout</h40>
+    <h41>Numéro</h41>
+    <h42>Nom</h42>
+    <h43>Espaces non placés</h43>
+    <h44>Suppression des espaces non placés</h44>
+    <h45>Ouvrir dans le Bloc-notes</h45>
+    <h46>Impossible de traiter la famille. Erreur</h46>
+    <h47>Impossible de supprimer le paramètre partagé. Erreur</h47>
+    <h48>Dans le fichier de paramètres partagés courant, par GUID</h48>
+    <h49>Dans le fichier de paramètres partagés courant, par nom</h49>
+    <h50>Afficher</h50>
+    <h51>Utilisé dans</h51>
+    <h52>Utilisé dans une nomenclature</h52>
+    <h53>Utilisé dans une famille</h53>
+    <h54>Recherche du paramètre dans les nomenclatures, les familles, les informations sur le projet et les filtres</h54>
+    <h55>Paramètre introuvable dans les nomenclatures, les familles, les informations sur le projet et les filtres</h55>
+    <h56>Paramètres de projet</h56>
+    <h57>Titre du projet</h57>
+    <!--todo remove after 2.24.0.0-->
+    <h58>Nom du paramètre</h58>
+    <h59>Utilisé dans les informations sur le projet</h59>
+    <h60>Suppression des paramètres de projet</h60>
+    <h61>Impossible de supprimer le paramètre de projet. Erreur</h61>
+    <h62>{0} paramètres de projet supprimés</h62>
+    <h63>Utilisé dans un filtre</h63>
+    <h64>Utilisé dans une occurrence de famille</h64>
+    <h65>Options cochées</h65>
+    <!--todo remove after 3.0.0.0-->
+    <h66>Vues</h66>
+    <h67>Placé sur une feuille</h67>
+    <h68>Suppression des vues</h68>
+    <h69>Ouvrir dans le Bloc-notes la liste de tous les paramètres partagés trouvés</h69>
+    <h70>Tables de recherche</h70>
+    <h71>Suppression des tables de recherche</h71>
+    <h72>Surfaces non placées</h72>
+    <h73>Suppression des surfaces non placées</h73>
+    <h74>Vue dépendante placée sur une feuille</h74>
+    <dav1>Avant la suppression, Revit basculera vers une autre vue disponible</dav1>
+    <dav2>La suppression de toutes les vues vers lesquelles il est possible de basculer n'est pas autorisée !</dav2>
+    <pattern>Motif</pattern>
+    <patternName>Nom du motif</patternName>
+    <patternsNumber>Nombre de motifs</patternsNumber>
+    <linePatterns>Motifs de ligne</linePatterns>
+    <lp1>Recherche du motif dans les styles d'objets et les remplacements de visibilité/graphismes</lp1>
+    <lp2>Tenir compte des remplacements de graphismes des éléments</lp2>
+    <lp3>Suppression des motifs de ligne</lp3>
+    <lp4>Suppression du motif de ligne</lp4>
+    <lp5>Impossible de supprimer le motif de ligne. Erreur</lp5>
+    <lp6>Motifs de ligne supprimés</lp6>
+    <lp7>Le motif n'est utilisé ni dans les styles d'objets ni dans les remplacements de visibilité/graphismes</lp7>
+    <lpm1>Utilisé dans le style de sous-catégorie de ligne : {0}</lpm1>
+    <lpm2>Utilisé dans les styles d'objets de modèle : {0}</lpm2>
+    <lpm3>Utilisé dans les styles d'objets d'annotation : {0}</lpm3>
+    <lpm4>Utilisé dans les styles d'objets du modèle analytique : {0}</lpm4>
+    <lpm5>Utilisé dans le style de sous-catégorie d'objets de modèle {0} : {1}</lpm5>
+    <lpm6>Utilisé dans le style de sous-catégorie d'objets d'annotation {0} : {1}</lpm6>
+    <lpm7>Utilisé dans le style de sous-catégorie d'objets du modèle analytique {0} : {1}</lpm7>
+    <lpm8>Utilisé dans le style de sous-catégorie d'objets importés dans la famille : {0}</lpm8>
+    <lpm9>Utilisé dans le style de sous-catégorie d'un objet importé dans le modèle {0} : {1}</lpm9>
+    <lpm10>Utilisé dans les remplacements de graphismes de la vue {0}, dans la catégorie de modèle : {1}</lpm10>
+    <lpm11>Utilisé dans les remplacements de graphismes de la vue {0}, dans la catégorie d'annotation : {1}</lpm11>
+    <lpm12>Utilisé dans les remplacements de graphismes de la vue {0}, dans la catégorie du modèle analytique : {1}</lpm12>
+    <lpm13>Utilisé dans les remplacements de graphismes du gabarit de vue {0}, dans la catégorie de modèle : {1}</lpm13>
+    <lpm14>Utilisé dans les remplacements de graphismes du gabarit de vue {0}, dans la catégorie d'annotation : {1}</lpm14>
+    <lpm15>Utilisé dans les remplacements de graphismes du gabarit de vue {0}, dans la catégorie du modèle analytique : {1}</lpm15>
+    <lpm16>Utilisé dans les remplacements de graphismes de la vue {0}, dans la sous-catégorie de modèle {1} : {2}</lpm16>
+    <lpm17>Utilisé dans les remplacements de graphismes de la vue {0}, dans la sous-catégorie d'annotation {1} : {2}</lpm17>
+    <lpm18>Utilisé dans les remplacements de graphismes de la vue {0}, dans la sous-catégorie du modèle analytique {1} : {2}</lpm18>
+    <lpm19>Utilisé dans les remplacements de graphismes de la vue {0}, dans la sous-catégorie d'objets importés dans la famille : {1}</lpm19>
+    <lpm20>Utilisé dans les remplacements de graphismes de la vue {0}, dans la sous-catégorie d'un objet importé dans le modèle {1} : {2}</lpm20>
+    <lpm21>Utilisé dans les remplacements de graphismes du gabarit de vue {0}, dans la sous-catégorie de modèle {1} : {2}</lpm21>
+    <lpm22>Utilisé dans les remplacements de graphismes du gabarit de vue {0}, dans la sous-catégorie d'annotation {1} : {2}</lpm22>
+    <lpm23>Utilisé dans les remplacements de graphismes du gabarit de vue {0}, dans la sous-catégorie du modèle analytique {1} : {2}</lpm23>
+    <lpm24>Utilisé dans les remplacements de graphismes du gabarit de vue {0}, dans la sous-catégorie d'objets importés dans la famille : {1}</lpm24>
+    <lpm25>Utilisé dans les remplacements de graphismes du gabarit de vue {0}, dans la sous-catégorie d'un objet importé dans le modèle {1} : {2}</lpm25>
+    <lpm26>Utilisé dans le filtre de la vue {0} : {1}</lpm26>
+    <lpm27>Utilisé dans le filtre du gabarit de vue {0} : {1}</lpm27>
+    <lpm28>Utilisé dans les remplacements de graphismes de la vue {0}, pour l'élément : {1}</lpm28>
+    <search>Rechercher</search>
+    <name>Nom</name>
+    <collect>Regrouper</collect>
+    <w1>Supprimer toutes les vues (plans de surface uniquement)</w1>
+    <w2>Supprimer toutes les surfaces</w2>
+    <w3>Supprimer toutes les lignes de séparation de surface</w3>
+    <w4>Supprimer toutes les contraintes</w4>
+    <w5>Supprimer toutes les vues (vues de détail uniquement)</w5>
+    <w6>Supprimer toutes les vues (vues de dessin uniquement)</w6>
+    <w7>Supprimer tous les motifs de remplissage (de dessin)</w7>
+    <w8>Supprimer tous les repères d'élévation</w8>
+    <w9>Supprimer toutes les vues (élévations uniquement)</w9>
+    <w10>Supprimer toutes les vues (plans de structure uniquement)</w10>
+    <w11>Supprimer tous les liens externes</w11>
+    <w12>Supprimer tous les filtres</w12>
+    <w13>Supprimer (et dissocier) tous les groupes</w13>
+    <w13-1>Supprimer tous les groupes inutilisés</w13-1>
+    <w13-2>Dissocier tous les groupes (sans suppression)</w13-2>
+    <w14>Supprimer tous les motifs de ligne importés</w14>
+    <w14-1>Supprimer tous les motifs de ligne</w14-1>
+    <w15>Supprimer toutes les vues (légendes uniquement)</w15>
+    <w16>Supprimer tous les matériaux</w16>
+    <w17>Supprimer tous les motifs de remplissage (de modèle)</w17>
+    <w18>Supprimer toutes les vues (plans d'étage uniquement)</w18>
+    <w19>Supprimer toutes les vues (plans de plafond uniquement)</w19>
+    <w20>Supprimer tous les plans de référence</w20>
+    <w21>Supprimer tous les matériaux (matériaux de rendu uniquement)</w21>
+    <w22>Supprimer toutes les pièces</w22>
+    <w23>Supprimer toutes les lignes de séparation de pièce</w23>
+    <w24>Supprimer toutes les vues (nomenclatures uniquement)</w24>
+    <w25>Supprimer toutes les zones de définition</w25>
+    <w26>Supprimer toutes les vues (coupes uniquement)</w26>
+    <w27>Supprimer toutes les feuilles (sauf celles ouvertes)</w27>
+    <w27-1>Supprimer toutes les feuilles (sauf celles ouvertes) avec les vues qui y sont placées</w27-1>
+    <w28>Supprimer toutes les vues (vues 3D uniquement)</w28>
+    <w29>Supprimer toutes les vues non référencées (plans de surface uniquement)</w29>
+    <w30>Supprimer toutes les vues non référencées (vues de détail uniquement)</w30>
+    <w31>Supprimer toutes les vues non référencées (vues de dessin uniquement)</w31>
+    <w32>Supprimer toutes les vues non référencées (élévations uniquement)</w32>
+    <w33>Supprimer toutes les vues non référencées (plans de structure uniquement)</w33>
+    <w34>Supprimer toutes les vues non référencées (plans d'étage uniquement)</w34>
+    <w35>Supprimer toutes les vues non référencées (plans de plafond uniquement)</w35>
+    <w36>Supprimer toutes les vues non référencées (coupes uniquement)</w36>
+    <w37>Supprimer toutes les vues non référencées (vues 3D uniquement)</w37>
+    <w38>Supprimer tous les éléments inutilisés</w38>
+    <w39>Supprimer toutes les vues (de tout type, sauf les vues et feuilles ouvertes)</w39>
+    <w40>Supprimer tous les gabarits de vue</w40>
+    <w41>Supprimer tous les éléments du sous-projet</w41>
+    <w42>Supprimer tous les modèles de coordination</w42>
+    <w43>Supprimer tous les types de quadrillage inutilisés</w43>
+    <w44>Supprimer tous les types de niveau inutilisés</w44>
+    <w45>Supprimer toutes les vues non référencées (légendes uniquement)</w45>
+    <w46>Supprimer tous les filtres inutilisés</w46>
+    <w47>Supprimer tous les sous-projets vides</w47>
+    <w48>Supprimer tous les gabarits de vue inutilisés</w48>
+    <m1>Le modèle doit être enregistré pour supprimer les liens externes</m1>
+    <m2>Le fonctionnement dans un document de famille n'est pas prévu</m2>
+    <m3>Récupération des données de la table de liaisons du document</m3>
+    <m4>Lecture de la famille</m4>
+    <m5>Recherche dans les nomenclatures</m5>
+    <m6>Parmi les tables de recherche sélectionnées, certaines sont utilisées dans la famille courante ! Voulez-vous vraiment les supprimer ?</m6>
+    <!--todo remove after 2.28.7-->
+    <wipeOptionResultSuccess>{0} : {1} supprimé(s) avec succès</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
+    <wipeOptionResultPartialSummary>{0} : {1} supprimé(s) avec succès, échec de la suppression de {2}</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
+    <wipeOptionResultPartialDetails>ID des éléments non supprimés lors du nettoyage</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
+    <wipeOptionResultEmpty>{0} : aucun élément à nettoyer n'a été trouvé</wipeOptionResultEmpty>
+    <defaultTypeMessage>Type par défaut défini : {0}</defaultTypeMessage>
+    <reassignedInstancesMessage>Occurrences réaffectées au type par défaut : {0}</reassignedInstancesMessage>
+    <reassignedTypeParametersMessage>Références réaffectées dans les paramètres de type : {0}</reassignedTypeParametersMessage>
+    <RemoveAllScheduleTypes>Supprimer tous les types de nomenclatures</RemoveAllScheduleTypes>
+    <RemoveAllLegendViewTypes>Supprimer tous les types de légendes</RemoveAllLegendViewTypes>
+    <RemoveAllDraftingViewTypes>Supprimer tous les types de vues de dessin</RemoveAllDraftingViewTypes>
+    <RemoveAllElevationViewTypes>Supprimer tous les types d'élévations</RemoveAllElevationViewTypes>
+    <RemoveAllFloorPlanTypes>Supprimer tous les types de plans d'étage</RemoveAllFloorPlanTypes>
+    <RemoveAllSectionViewTypes>Supprimer tous les types de coupes</RemoveAllSectionViewTypes>
+    <RemoveAll3DViewTypes>Supprimer tous les types de vues 3D</RemoveAll3DViewTypes>
+    <RemoveAllSpotSlopeTypes>Supprimer tous les types de pentes ponctuelles</RemoveAllSpotSlopeTypes>
+    <RemoveAllSpotCoordinateTypes>Supprimer tous les types de coordonnées ponctuelles</RemoveAllSpotCoordinateTypes>
+    <RemoveAllSpotElevationTypes>Supprimer tous les types de cotes d'élévation</RemoveAllSpotElevationTypes>
+    <RemoveAllDiameterDimensionTypes>Supprimer tous les types de cotes de diamètre</RemoveAllDiameterDimensionTypes>
+    <RemoveAllRadialDimensionTypes>Supprimer tous les types de cotes radiales</RemoveAllRadialDimensionTypes>
+    <RemoveAllAngularDimensionTypes>Supprimer tous les types de cotes angulaires</RemoveAllAngularDimensionTypes>
+    <RemoveAllLinearDimensionTypes>Supprimer tous les types de cotes linéaires</RemoveAllLinearDimensionTypes>
+    <RemoveAllModelTextTypes>Supprimer tous les types de texte de modèle</RemoveAllModelTextTypes>
+    <RemoveAllTextNoteTypes>Supprimer tous les types de notes textuelles</RemoveAllTextNoteTypes>
+    <RemoveAllColorFillRegions>Supprimer toutes les zones de remplissage de couleurs</RemoveAllColorFillRegions>
+    <RemoveAllColorSchemes>Supprimer tous les jeux de couleurs</RemoveAllColorSchemes>
+    <RemoveAllSectionMarkTypes>Supprimer tous les types de repères de coupe</RemoveAllSectionMarkTypes>
+    <RemoveAllElevationMarkTypes>Supprimer tous les types de repères d'élévation</RemoveAllElevationMarkTypes>
+    <RemoveAllCalloutTagTypes>Supprimer tous les types d'étiquettes de vue de détail</RemoveAllCalloutTagTypes>
+    <RemoveAllTickMarkTypes>Supprimer tous les types de marques de cote</RemoveAllTickMarkTypes>
+    <FailureProcessingWindowTitle>Traitement des erreurs</FailureProcessingWindowTitle>
+    <FailureProcessingHeader>Des problèmes ont été détectés lors de l'exécution de l'opération</FailureProcessingHeader>
+    <FailureProcessingDescription>Sélectionnez les problèmes à tenter de résoudre automatiquement</FailureProcessingDescription>
+    <MessageCountText>Nombre de messages</MessageCountText>
+    <ResultWindowHeader>Nettoyage du modèle terminé</ResultWindowHeader>
+    <ResultWindowDescription>Vous trouverez ci-dessous le rapport des opérations effectuées</ResultWindowDescription>
+    <ResultWindowTitle>Résultat du nettoyage du modèle</ResultWindowTitle>
+    <ShowProblemElements>Afficher les éléments problématiques</ShowProblemElements>
+    <HideProblemElements>Masquer les éléments problématiques</HideProblemElements>
+    <WithoutResolutionCaption>Aucune solution n'est disponible pour ce problème. Ces éléments seront ignorés</WithoutResolutionCaption>
+    <ErrorShortDescription>Erreur d'exécution de l'opération</ErrorShortDescription>
+    <OwnedShortDescription>Éléments empruntés par un autre utilisateur</OwnedShortDescription>
+    <PinnedShortDescription>Éléments verrouillés</PinnedShortDescription>
+    <PinnedDescription>Certains éléments sont verrouillés et ne peuvent pas être modifiés ni supprimés. Pour effectuer l'opération, vous devez d'abord déverrouiller ces éléments</PinnedDescription>
+    <PinnedResolutionActionCaption>Déverrouiller et continuer</PinnedResolutionActionCaption>
+    <GroupedShortDescription>Éléments dans un groupe</GroupedShortDescription>
+    <GroupedDescription>Certains éléments se trouvent dans un groupe et ne peuvent pas être modifiés ni supprimés. Pour effectuer l'opération, vous devez d'abord dissocier les groupes correspondants</GroupedDescription>
+    <GroupedResolutionActionCaption>Dissocier et continuer</GroupedResolutionActionCaption>
+    <BlockingShortDescription>Éléments bloquants</BlockingShortDescription>
+    <BlockingDescription>Certains éléments n'ont pas été traités, car ils provoquent des erreurs sur d'autres éléments au cours de l'opération</BlockingDescription>
+    <RollbackShortDescription>Tous les éléments n'ont pas pu être traités</RollbackShortDescription>
+    <RollbackDescription>Certains éléments n'ont pas pu être traités en raison d'erreurs survenues pendant l'opération. Vous pouvez relancer l'opération pour ces éléments ou les ignorer</RollbackDescription>
+    <RetryOperation>Relancer l'opération</RetryOperation>
+    <ExceptionDescriptionText>Impossible d'effectuer l'opération pour certains éléments</ExceptionDescriptionText>
+    <WipeOptionResultSuccess>{0} supprimé(s) avec succès</WipeOptionResultSuccess>
+    <WipeOptionResultPartialSummary>{0} supprimé(s) avec succès, échec de la suppression de {1}</WipeOptionResultPartialSummary>
+    <WipeOptionResultEmpty>Aucun élément à nettoyer n'a été trouvé</WipeOptionResultEmpty>
+    <SelectAllElementsInCategory>Sélectionner tous les éléments de la catégorie</SelectAllElementsInCategory>
+    <DetailItemTypes>Types de composants de détail</DetailItemTypes>
+    <DetailItems>Composants de détail</DetailItems>
+    <DimensionTypes>Types de cotes</DimensionTypes>
+    <ElementTypes>Types d'éléments</ElementTypes>
+    <Groups>Groupes</Groups>
+    <ModelElements>Éléments de modèle</ModelElements>
+    <RevitLinks>Liens Revit</RevitLinks>
+    <Sheets>Feuilles</Sheets>
+    <TagTypes>Types d'étiquettes</TagTypes>
+    <TextTypes>Types de texte</TextTypes>
+    <UnusedElements>Éléments inutilisés</UnusedElements>
+    <ViewTypes>Types de vues</ViewTypes>
+    <Views>Vues</Views>
+    <Worksets>Sous-projets</Worksets>
+  </mprCleaner>
+</ModPlus>

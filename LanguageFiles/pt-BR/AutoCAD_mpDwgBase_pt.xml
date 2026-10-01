@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpDwgBase
+    LocalName="Base DWG"
+    Description="Biblioteca de diversos blocos e desenhos"
+    FullDescription="Inserção tanto de blocos quanto de desenhos prontos (por exemplo, detalhes). A base DWG é preenchida pelos usuários. É necessário acesso à internet">
+    <h1>Envio de blocos e desenhos do usuário para o servidor modplus.org</h1>
+    <h2>Pesquisa na base</h2>
+    <!--todo remove after 2.1.2.0-->
+    <h3>Pesquisar</h3>
+    <h4>Pesquisa na base a partir de 3 caracteres...</h4>
+    <h5>Caminho:</h5>
+    <h6>Descrição:</h6>
+    <h7>Autor:</h7>
+    <h8>Fonte:</h8>
+    <h9>Base DWG</h9>
+    <h10>Adicionar novo item à base local</h10>
+    <h11>Métodos auxiliares de gerenciamento da base do usuário</h11>
+    <h12>Excluir</h12>
+    <h13>Renomear grupo</h13>
+    <h14>Editar</h14>
+    <h15>Você pode aplicar zoom e panorâmica na imagem com a roda do mouse</h15>
+    <h16>Reduzir imagem</h16>
+    <h17>Ampliar imagem</h17>
+    <h18>Este é um bloco tridimensional</h18>
+    <h19>Camada:</h19>
+    <h20>Fechar a janela após a inserção</h20>
+    <h21>Rotação</h21>
+    <h22>Adicionar bloco à base</h22>
+    <h23>Adicionar desenho à base</h23>
+    <h24>Alterar dados do bloco</h24>
+    <h25>Alterar dados do desenho</h25>
+    <h26>Envio da base para o servidor</h26>
+    <h27>Especifique um ou mais arquivos da sua base DWG. O plugin compactará esses arquivos em um arquivo e criará um arquivo de índice dos itens armazenados neles</h27>
+    <h28>Arquivos na base do usuário:</h28>
+    <h29>Itens armazenados no arquivo:</h29>
+    <h30>Caminho do arquivo:</h30>
+    <h31>Comentário</h31>
+    <h32>Você pode deixar um comentário sobre o arquivo compactado, e nós o levaremos em consideração</h32>
+    <h33>Criar arquivo compactado</h33>
+    <h34>Visualizar arquivo compactado</h34>
+    <h35>Excluir arquivo compactado</h35>
+    <h36>Enviar arquivo compactado ao servidor</h36>
+    <h37>Recomendações para adicionar blocos</h37>
+    <h38>Recomendações</h38>
+    <h39>Selecionar um bloco no desenho atual</h39>
+    <h40>Carregar os últimos dados inseridos</h40>
+    <h41>Arquivo DWG:</h41>
+    <h42>Arquivo atual</h42>
+    <h43>Arquivo DWG para o qual o bloco será copiado</h43>
+    <h44>Este é um bloco 3D</h44>
+    <h45>Marque esta opção se o bloco especificado for tridimensional</h45>
+    <h46>Nome:</h46>
+    <h47>Nome do bloco exibido na janela do plugin</h47>
+    <h48>Breve descrição do bloco</h48>
+    <h49>Documento normativo:</h49>
+    <h50>Documento normativo de origem</h50>
+    <h51>Se não houver documento normativo, deixe o campo em branco</h51>
+    <h52>Adicionado por:</h52>
+    <h53>Quem adicionou o bloco à base DWG</h53>
+    <h54>Adicionar atributos para listas de materiais</h54>
+    <h55>Nome do atributo</h55>
+    <h56>Valor padrão</h56>
+    <h57>Atributos do bloco:</h57>
+    <h58>Obter valores dos atributos do bloco</h58>
+    <h59>Nome</h59>
+    <h60>Aviso</h60>
+    <!--todo remove after 2.1.2.0-->
+    <h61>Valor</h61>
+    <h62>Recomendações para adicionar desenhos</h62>
+    <!--todo remove after 2.1.2.0-->
+    <h63>Renomear grupo</h63>
+    <h64>Nome atual do grupo:</h64>
+    <h65>Novo nome do grupo:</h65>
+    <!--todo remove after 2.1.2.0-->
+    <h66>Adicionar</h66>
+    <h67>O que você deseja adicionar?</h67>
+    <h68>Adicionar bloco</h68>
+    <h69>Adicionar desenho</h69>
+    <!--todo remove after 2.1.2.0-->
+    <h70>Propriedade</h70>
+    <h71>Valor</h71>
+    <h72>Vídeo de instruções sobre o uso da base</h72>
+    <h73>Contato</h73>
+    <h74>Deixe um endereço de e-mail, um link para sua página no VK, Facebook, Telegram ou outra forma de contato. Seus contatos podem ser necessários para informá-lo caso os blocos (desenhos) enviados precisem de correções</h74>
+    <h75>Você não informou contatos. Se os blocos (desenhos) enviados precisarem de correções, não poderemos informá-lo!\nCriar o arquivo compactado mesmo assim?</h75>
+    <h76>Ordenar alfabeticamente</h76>
+    <h77>Caminho da pasta onde está localizada a base DWG do usuário</h77>
+    <h78>Especificar o caminho da pasta de armazenamento da base DWG do usuário</h78>
+    <h79>Restaurar o valor padrão do caminho da pasta de armazenamento da base DWG do usuário</h79>
+    <h80>Exibição em lista</h80>
+    <h81>Gerando imagens de pré-visualização...</h81>
+    <h82>Abrir pasta</h82>
+    <h83>Atualizar a imagem de pré-visualização</h83>
+    <bt1>Base ModPlus</bt1>
+    <bt2>Do usuário</bt2>
+    <insert>Inserir</insert>
+    <insertBlock>Inserir como bloco</insertBlock>
+    <msg1>Arquivo de índice da base DWG do ModPlus não encontrado!\nFeche o AutoCAD e execute a verificação de atualizações pelo módulo de atualização automática</msg1>
+    <msg2>Camada atual</msg2>
+    <msg3>O arquivo de índice da base do usuário não foi criado. Criar?</msg3>
+    <msg4>O arquivo de origem não existe! Baixar?</msg4>
+    <msg5>Baixando arquivo da base</msg5>
+    <msg6>Não há acesso à internet ou ao site modplus.org!\nTente novamente mais tarde</msg6>
+    <msg7>Todo o grupo será excluído</msg7>
+    <msg8>e todos os subgrupos</msg8>
+    <msg9>Os arquivos DWG serão mantidos</msg9>
+    <msg10>Excluir grupo</msg10>
+    <msg11>O item selecionado será removido da base</msg11>
+    <msg12>Excluir item</msg12>
+    <msg13>Ponto de inserção</msg13>
+    <msg14>Ângulo de rotação</msg14>
+    <msg15>Você não selecionou nenhum arquivo para compactar!</msg15>
+    <msg16>Criação de pasta temporária</msg16>
+    <msg17>Coleta dos itens necessários da base</msg17>
+    <msg18>Não foi possível criar o arquivo de índice</msg18>
+    <msg19>O arquivo está pronto para envio</msg19>
+    <msg20>Não foi possível excluir a pasta temporária</msg20>
+    <msg21>Talvez o arquivo compactado esteja aberto</msg21>
+    <msg22>Não foi possível encontrar o arquivo para envio. Talvez você o tenha excluído?</msg22>
+    <msg23>Não há acesso à internet ou ao site modplus.org!</msg23>
+    <msg24>Envio</msg24>
+    <msg25>Carregando arquivo para o servidor</msg25>
+    <msg26>Envio de notificação</msg26>
+    <!--todo remove after 2.1.2.0-->
+    <msg27>Arquivo</msg27>
+    <msg28>enviado para o servidor modplus.org</msg28>
+    <msg29>Assim que o arquivo for verificado, adicionaremos seu conteúdo à base pública</msg29>
+    <msg30>Excluir o arquivo compactado criado?</msg30>
+    <msg31>Não foi possível excluir o arquivo compactado! Talvez ele esteja aberto no momento</msg31>
+    <msg32>Adicionar um bloco com esses dados?</msg32>
+    <msg33>Não foi possível copiar o bloco selecionado para o arquivo especificado</msg33>
+    <msg34>Selecione o bloco para adicionar à base</msg34>
+    <msg35>A base DWG do plugin contém um bloco com o nome</msg35>
+    <msg36>Erro ao analisar o arquivo de índice da base do plugin!</msg36>
+    <msg37>A base DWG do usuário contém um bloco com o nome</msg37>
+    <msg38>Erro ao analisar o arquivo de índice da base do usuário!</msg38>
+    <msg39>Especifique o nome de exibição do bloco (Nome)</msg39>
+    <msg40>Especifique o caminho no catálogo</msg40>
+    <msg41>A opção "Arquivo atual" está marcada para o arquivo DWG, mas o arquivo atual não está localizado no diretório da base DWG!</msg41>
+    <msg42>Diretório da base DWG</msg42>
+    <msg43>Diretório do arquivo atual</msg43>
+    <msg44>Talvez o arquivo atual ainda não tenha sido salvo!</msg44>
+    <msg45>A opção "Arquivo atual" está marcada para o arquivo DWG, mas não foi possível identificar o diretório do arquivo atual</msg45>
+    <msg46>Especifique o arquivo DWG para copiar o bloco</msg46>
+    <msg47>Seleção do arquivo para adicionar o bloco</msg47>
+    <msg49>O arquivo especificado deve estar em uma subpasta da pasta</msg49>
+    <msg50>Criar novo arquivo da base DWG</msg50>
+    <msg51>Não crie o arquivo na raiz da pasta</msg51>
+    <msg52>Crie uma subpasta!</msg52>
+    <msg53>Atenção! O bloco selecionado é dinâmico! Os atributos para a lista de materiais são considerados para uma única instância do bloco!\nOu seja, se o bloco tiver várias opções de escolha, trabalhar com ele será confuso!</msg53>
+    <msg54>Os valores atuais dos atributos estão preenchidos com os valores padrão definidos na criação do bloco\nSe continuar, os valores dos atributos serão preenchidos com os valores do bloco selecionado!\nObter os valores dos atributos do bloco selecionado?</msg54>
+    <msg55>O arquivo atual não está localizado no diretório da base DWG!</msg55>
+    <msg56>Não foi possível identificar o diretório do arquivo atual</msg56>
+    <msg58>Salvar os dados inseridos como "Últimos dados inseridos"?</msg58>
+    <msg59>Seleção do desenho para adicionar à base</msg59>
+    <msg60>O arquivo selecionado contém objetos proxy e não pode ser adicionado à base!\nExclua todos os objetos proxy e tente novamente</msg60>
+    <msg61>Especifique a pasta para copiar o arquivo selecionado</msg61>
+    <msg62>Já existe um arquivo na pasta especificada</msg62>
+    <msg63>Substituir?</msg63>
+    <msg64>Não selecione a pasta</msg64>
+    <msg65>A pasta selecionada deve estar em uma subpasta da pasta</msg65>
+    <msg66>Adicionar um desenho com esses dados?</msg66>
+    <msg67>A base do plugin contém um desenho com o nome</msg67>
+    <msg68>A base do usuário contém um desenho com o nome</msg68>
+    <msg69>Especifique o nome de exibição do desenho (Nome)</msg69>
+    <msg70>Especifique o arquivo DWG do desenho</msg70>
+    <msg71>Informe o novo nome do grupo</msg71>
+    <msg72>Bloco "{0}" não encontrado no arquivo "{1}"</msg72>
+    <wrong>Seleção inválida!</wrong>
+    <!--todo remove after 2.1.2.0-->
+    <p1>Documento</p1>
+    <!--todo remove after 2.1.2.0-->
+    <p2>Descrição</p2>
+    <p3>Tipo de objeto</p3>
+    <p4>Anotativo</p4>
+    <p5>Dinâmico</p5>
+    <p6>Bloco 3D</p6>
+    <p7>Atributos para a lista de materiais</p7>
+    <p8>Adicionado por</p8>
+    <p9>Fonte</p9>
+    <!--todo remove after 2.1.2.0-->
+    <p10>Caminho</p10>
+    <yes>Sim</yes>
+    <no>Não</no>
+    <block>Bloco</block>
+    <drawing>Desenho</drawing>
+    <close>Fechar</close>
+    <select>Selecionar</select>
+    <create>Criar</create>
+    <accept>Aceitar</accept>
+    <cancel>Cancelar</cancel>
+    <copy>Copiar</copy>
+    <ad1>Marcação do item</ad1>
+    <ad2>Designação do item</ad2>
+    <ad3>Nome do item</ad3>
+    <ad4>Massa do item</ad4>
+    <ad5>Observação do item</ad5>
+    <a1>Marcação</a1>
+    <a2>Designação</a2>
+    <a3>Nome</a3>
+    <a4>Massa</a4>
+    <a5>Observação</a5>
+    <r1>Por padrão, o plugin considera que os blocos adicionados à base local (do usuário) serão posteriormente adicionados à base global, disponível para todos os usuários.</r1>
+    <r2>Por isso, procure seguir as recomendações:</r2>
+    <r3>O bloco adicionado deve ser útil no trabalho, independentemente da área profissional</r3>
+    <r4>Não use uma grande variedade de camadas nos blocos sem necessidade. A melhor opção é usar as camadas padrão do plugin ModPlus</r4>
+    <r5>Se o bloco for dinâmico, talvez não seja necessário adicionar atributos para a lista de materiais</r5>
+    <r6>Dê aos blocos nomes e descrições claros, para que o usuário não precise adivinhar o que é e para que serve</r6>
+    <r7>Se você obteve o bloco de algum recurso, não deixe de indicar a fonte!</r7>
+    <r8>Pense com cuidado no caminho do bloco na base</r8>
+    <r10>Por padrão, o plugin considera que os desenhos adicionados à base local (do usuário) serão posteriormente adicionados à base global, disponível para todos os usuários.</r10>
+    <r11>Por isso, os desenhos adicionados estão sujeitos a algumas restrições:</r11>
+    <r13>O desenho adicionado não deve conter objetos proxy</r13>
+    <r14>Desenhos de má qualidade (por exemplo, com linhas de chamada feitas de linhas e textos etc.) não serão aceitos na base pública</r14>
+    <r15>Procure também seguir as recomendações:</r15>
+    <r16>Não use uma grande variedade de camadas nos desenhos sem necessidade. A melhor opção é usar as camadas padrão do plugin ModPlus</r16>
+    <r17>Não use um grande número de estilos de anotação nos desenhos. A melhor opção é usar os estilos de anotação do plugin ModPlus</r17>
+    <r18>Não use nos desenhos tipos de linha que não sejam padrão do AutoCAD</r18>
+    <r19>Não use nos desenhos fontes que não façam parte do conjunto padrão de fontes do AutoCAD</r19>
+    <r20>Se você obteve o desenho de algum recurso, não deixe de indicar a fonte!</r20>
+    <r21>Pense com cuidado no caminho do desenho na base</r21>
+    <pp1>Presume-se que você selecionou um bloco em um arquivo que ainda não está localizado no diretório ModPlus/Data/DwgBase. Por isso, você deve especificar um arquivo criado anteriormente no diretório ModPlus/Data/DwgBase para colocar os blocos nele ou criar esse arquivo. O bloco selecionado será copiado para o arquivo especificado.</pp1>
+    <pp2>Se você estiver adicionando vários blocos com uma finalidade comum (por exemplo, blocos de lajes alveolares de uma série), crie um único arquivo para eles. Não é necessário criar um arquivo separado para cada bloco!</pp2>
+    <pp3>Não é permitido criar arquivos na raiz da pasta ModPlus/Data/DwgBase! Crie subpastas nela (por exemplo, ModPlus/Data/DwgBase/Lajes de concreto).</pp3>
+    <pp4>Se você criou um arquivo com blocos, colocou-o na pasta DwgBase e agora está adicionando blocos desse arquivo à base, marque a opção "Arquivo atual".</pp4>
+    <pp5>O preenchimento do campo é opcional, para satisfazer o seu orgulho</pp5>
+    <pp6>P.S. Ficamos muito felizes se você tem um apelido original e bonito, mas procure escrever seu nome e sobrenome</pp6>
+    <pp7>Se você não é o autor do bloco, indique a fonte de onde ele foi obtido, para não ofender o seu criador</pp7>
+    <pp8>Caminho convencional do bloco no catálogo, que forma a estrutura da árvore</pp8>
+    <pp9>Por exemplo, o caminho "Blocos/Catálogo1/Catálogo2/Catálogo3" produzirá o seguinte resultado:</pp9>
+    <pp10>Cada subcatálogo convencional deve ser separado pelo caractere "/"</pp10>
+    <pp11>Adição de atributos para listas de materiais ao bloco</pp11>
+    <pp12>Os atributos serão adicionados ao bloco quando ele for inserido por este plugin.</pp12>
+    <pp13>Todos os atributos serão invisíveis. Você poderá alterar seus valores nas propriedades do bloco após a inserção.</pp13>
+    <pp14>Você pode preencher os valores padrão.</pp14>
+    <pp15>Atributos existentes do bloco</pp15>
+    <pp16>Especifique os valores padrão dos atributos. Esses valores serão adicionados ao bloco quando ele for inserido.</pp16>
+    <pp17>Por padrão, são preenchidos os valores dos atributos definidos como "valor padrão" na criação do atributo. Você pode preencher os valores dos atributos com os valores do bloco selecionado no momento.</pp17>
+    <pp18>Arquivo DWG do desenho</pp18>
+    <pp19>Para ser adicionado à base, o arquivo deve estar salvo na versão do AutoCAD 2013!</pp19>
+    <pp20>Se você já colocou o arquivo em uma subpasta da pasta ModPlus/Data/DwgBase, pode "Selecionar" o arquivo.</pp20>
+    <pp21>Se o arquivo de desenho não estiver em uma subpasta da pasta ModPlus/Data/DwgBase, você pode "Copiar" o arquivo para lá.</pp21>
+    <pp22>Se você estiver adicionando o desenho aberto no momento, já localizado em uma subpasta da pasta ModPlus/Data/DwgBase, marque a opção "Arquivo atual".</pp22>
+    <pp23>Nome do desenho exibido na janela do plugin</pp23>
+    <pp24>Breve descrição do desenho</pp24>
+    <pp25>Quem adicionou o desenho à base DWG</pp25>
+    <pp26>Se você não é o autor do desenho, indique a fonte de onde ele foi obtido, para não ofender o seu criador</pp26>
+    <pp27>Caminho convencional do desenho no catálogo, que forma a estrutura da árvore</pp27>
+    <u1>Utilitários da base DWG do usuário</u1>
+    <u2>Estatísticas</u2>
+    <u3>Alterar "Caminho" de vários itens</u3>
+    <u4>Alterar "Fonte" e "Adicionado por"</u4>
+    <u5>Arquivos não utilizados</u5>
+    <u6>Itens sem arquivo de origem</u6>
+    <u7>Coletar estatísticas</u7>
+    <u8>Selecione na lista vários itens (marcando as caixas de seleção) cujo "Caminho" na base você deseja alterar. Especifique o novo valor de "Caminho" e clique em "Aplicar"</u8>
+    <u9>Ctrl+A – selecionar tudo</u9>
+    <u10>Especifique o grupo principal</u10>
+    <u11>Blocos</u11>
+    <u12>Desenhos</u12>
+    <u13>Novo "Caminho" para os itens especificados da base:</u13>
+    <u14>Selecione na lista vários itens (marcando as caixas de seleção) cujos "Fonte" e "Adicionado por" você deseja alterar. Especifique os novos valores de "Fonte" e "Adicionado por" e clique em "Aplicar" (deixe o campo em branco se não quiser alterar o valor)</u14>
+    <u15>Arquivos não utilizados são arquivos localizados no diretório</u15>
+    <u16>, que não são referenciados por nenhum item das bases (base do plugin e base do usuário)</u16>
+    <u17>Localizar arquivos não utilizados</u17>
+    <u18>Excluir os arquivos não utilizados selecionados</u18>
+    <u19>As imagens desses arquivos e os arquivos .bak também serão excluídos</u19>
+    <u20>Itens sem arquivo de origem são itens da base do usuário que fazem referência a um arquivo de origem inexistente</u20>
+    <u21>Localizar itens sem arquivo de origem</u21>
+    <u22>Arquivo de origem especificado:</u22>
+    <u23>Excluir os itens selecionados</u23>
+    <u24>Processamento dos itens da base:</u24>
+    <u25>Não é permitido especificar apenas o grupo principal!</u25>
+    <u26>Você não selecionou nada!</u26>
+    <u27>Atenção! As alterações feitas não podem ser desfeitas!\nContinuar?</u27>
+    <u28>Processamento dos itens da base concluído</u28>
+    <u29>A base do usuário contém</u29>
+    <u30>itens</u30>
+    <u31>Dentre eles:</u31>
+    <u32>Blocos:</u32>
+    <u33>Desenhos:</u33>
+    <u34>Entre</u34>
+    <u35>bloco(s), há:</u35>
+    <u36>Blocos dinâmicos:</u36>
+    <u37>Blocos anotativos:</u37>
+    <u38>Blocos tridimensionais:</u38>
+    <u39>Blocos com atributos para a lista de materiais:</u39>
+    <u40>A base do usuário foi preenchida por</u40>
+    <u41>autor(es):</u41>
+    <u42>Arquivos DWG existentes usados pela base:</u42>
+    <u43>Entre as referências a arquivos DWG, foram encontradas</u43>
+    <u44>referências inválidas, ou seja, os arquivos de origem estão ausentes!</u44>
+    <u45>Nenhum arquivo não utilizado foi encontrado!</u45>
+    <u46>Os arquivos selecionados serão excluídos permanentemente!\nContinuar?</u46>
+    <u47>Arquivos excluídos</u47>
+    <u48>Não foi possível excluir os arquivos:</u48>
+    <u49>Sem acesso aos arquivos. Talvez estejam abertos</u49>
+    <u50>Nenhum item correspondente foi encontrado!</u50>
+    <u51>Os itens selecionados serão excluídos permanentemente!\nContinuar?</u51>
+    <u52>Itens excluídos:</u52>
+    <u53>Especifique pelo menos um valor ("Fonte" ou "Adicionado por") para substituição</u53>
+    <u54>Renomear arquivo de origem</u54>
+    <u55>Selecione na lista um dos arquivos da base, especifique o novo nome do arquivo sem extensão e clique em "Aplicar"</u55>
+    <u56>Novo nome do arquivo sem extensão</u56>
+    <!--todo remove after 2.1.2.0-->
+    <u57>Renomear</u57>
+    <u58>Você não especificou o novo nome do arquivo</u58>
+    <u59>O nome do arquivo não pode conter os seguintes caracteres:</u59>
+    <u60>Sem acesso ao arquivo. Talvez esteja aberto</u60>
+    <u61>Já existe o arquivo:</u61>
+  </mpDwgBase>
+</ModPlus>

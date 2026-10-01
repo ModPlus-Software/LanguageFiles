@@ -2,7 +2,9 @@
 <ModPlus>
   <mprParametrization
     LocalName="Parametrization"
-    Description="Fill element parameters with different strategies">
+    Description="Fill element parameters with different strategies"
+    LocalName1="Parametrization. Palette"
+    Description1="Shows or hides the palette for quickly running the rules of the selected strategy">
     <!-- todo remove after 3.3.6.0 start -->
     <t1>Minimize window contents</t1>
     <t2>Expand window contents</t2>
@@ -17,6 +19,7 @@
     <t10>Remove strategy</t10>
     <t11>Rules</t11>
     <t12>Processing elements from linked files</t12>
+    <!--todo remove after 4.1.33.0-->
     <t13>The parent elements will be collected from the linked files. For example, for the InMass strategy, these are Masses, for the InSolid strategy, they are solid elements, etc. Elements will be collected according to the categories specified in the corresponding column of rules</t13>
     <t14>Strategies that work with element geometry (such as InRoom, InSpace, InSolid, SolidTouch, etc.) are recommended to run on the active view! If you run in the entire document, the elements take geometry that does not take into account the connection with other elements, which can lead to incorrect results</t14>
     <t15>Enter strategy name</t15>
@@ -151,7 +154,7 @@
     <t142>Name and description</t142>
     <t143>Open the guide</t143>
     <t144>Pre-filter</t144>
-    <t145>The pre-filter narrows down the set of elements for all rules of the strategy at once. Unlike the strategy filter, it is not substituted for an unfilled rule filter but is applied in addition to it: an element will be processed only if it passes both the pre-filter and the rule filter. For example, if the pre-filter specifies the "Walls" category and the "Structural" parameter, all rules will operate only on structural walls, selecting elements among them by their own categories and parameters. An empty pre-filter imposes no restrictions</t145>
+    <t145>The pre-filter narrows down the set of elements for all rules of the strategy at once. Unlike the strategy filter, it is not substituted for an unfilled rule filter but is applied in addition to it: an element will be processed only if it passes both the pre-filter and the rule filter. For example, if the pre-filter specifies the "Walls", "Structural Columns" and "Structural Framing" categories along with the "Structural" parameter, all rules will operate only on structural elements of these categories, selecting elements among them by their own categories and parameters. An empty pre-filter imposes no restrictions</t145>
     <t146>Export current strategy</t146>
     <t147>Import into current strategy</t147>
     <t148>Strategy filters</t148>
@@ -169,7 +172,6 @@
     <t160>Rename group</t160>
     <t161>Delete group. Configurations of this group are not deleted — they will remain without a group</t161>
     <t162>Number of configurations in the group</t162>
-    <t163>group</t163>
     <t164>Parameter or expression, for example $[Type Name]</t164>
     <t168>Ignore case</t168>
     <t169>Sort</t169>
@@ -256,6 +258,69 @@
     <msg44>Element skipped: the grouping key was calculated as empty</msg44>
     <msg45>Element skipped: no conditionally source element with the same matching value was found</msg45>
     <msg46>The selected file is not a configuration storage file</msg46>
+    <msg47>Synchronize the project with the central model before running?</msg47>
+    <msg48>The instruction is empty</msg48>
+    <msg49>The instruction is not valid xml: {0}</msg49>
+    <msg50>The root element of the instruction must be named "{0}"</msg50>
+    <msg51>Instruction version "{0}" is not supported. Supported version: {1}</msg51>
+    <msg52>Unknown instruction element "{0}" skipped</msg52>
+    <msg53>Required element "{0}" is not specified</msg53>
+    <msg54>Element "{0}" is empty</msg54>
+    <msg55>Element "{0}" is empty. If the value is not needed, remove the element</msg55>
+    <msg56>Invalid value "{0}" of element "{1}". Allowed values: {2}</msg56>
+    <msg57>Element "{0}" must be true or false</msg57>
+    <msg58>Attribute "{0}" of element "{1}" must be true or false</msg58>
+    <msg59>Element "{0}" cannot contain both {1}="true" and a list of views</msg59>
+    <msg60>Unknown element "{0}" in "{1}" skipped</msg60>
+    <msg61>"{0}" contains empty "{1}" elements</msg61>
+    <msg62>List "{0}" is empty. If the list is not needed, remove the element</msg62>
+    <msg63>Element "{0}" is specified more than once</msg63>
+    <msg64>Automatic run rejected: the previous run has not finished yet</msg64>
+    <msg65>Processing interrupted: {0}</msg65>
+    <msg66>Automatic run interrupted by an unexpected error</msg66>
+    <msg67>Automatic run finished. Result: {0}</msg67>
+    <msg68>Automatic run. Instruction:</msg68>
+    <msg69>Reading configuration file "{0}"</msg69>
+    <msg70>Configuration "{0}" ({1})</msg70>
+    <msg71>Log folder does not exist: "{0}"</msg71>
+    <msg72>Results folder does not exist: "{0}"</msg72>
+    <msg73>A transaction is open in the active document. The automatic run must be performed without open transactions</msg73>
+    <msg74>The instruction was not executed. Errors found: {0}</msg74>
+    <msg75>The configuration file is not specified in the instruction, and the configuration source has never been selected in the plugin window</msg75>
+    <msg76>Configuration file not found: "{0}"</msg76>
+    <msg77>The configuration file is specified, but the configuration is not. The current configuration is used only together with the configuration file selected in the plugin window</msg77>
+    <msg78>The current configuration was not found in file "{0}"</msg78>
+    <msg79>Configuration "{0}" was not found in file "{1}"</msg79>
+    <msg80>File "{0}" contains several configurations named "{1}". Specify the configuration identifier</msg80>
+    <msg81>The configuration has no checked strategies</msg81>
+    <msg82>Strategy "{0}" was not found in the configuration</msg82>
+    <msg83>Several strategies "{0}" found. All of them will be processed</msg83>
+    <msg84>None of the strategies from the instruction were found</msg84>
+    <msg85>Strategies to process: {0}</msg85>
+    <msg86>The current view is not a graphical view</msg86>
+    <msg87>Processing scope: {0}</msg87>
+    <msg88>View "{0}" not found</msg88>
+    <msg89>Several views named "{0}" found ({1}). All of them will be processed</msg89>
+    <msg90>None of the views from the instruction were found</msg90>
+    <msg91>Views to process: {0}</msg91>
+    <msg92>The list of linked files is skipped: processing of elements from linked files is turned off</msg92>
+    <msg93>Linked file "{0}" not found</msg93>
+    <msg94>None of the linked files from the instruction were found</msg94>
+    <msg95>Linked files to process: {0}</msg95>
+    <msg96>Results are saved to a text file</msg96>
+    <msg97>Processing completed, but the results file "{0}" could not be saved</msg97>
+    <msg98>Results saved to file "{0}"</msg98>
+    <msg99>Failed to create log file "{0}"</msg99>
+    <msg100>Starting processing of configuration "{0}" ({1}). Mode: {2}. {3}. Strategies: {4}</msg100>
+    <msg101>Processing of configuration "{0}" completed in {1}</msg101>
+    <msg102>Processing on view "{0}" ({1})</msg102>
+    <msg103>Collecting elements from linked files</msg103>
+    <msg104>Elements collected from linked files: {0}</msg104>
+    <msg105>Collecting elements. {0}</msg105>
+    <msg106>Elements collected: {0}</msg106>
+    <msg107>Processing strategy "{0}" ({1}). Rules: {2}</msg107>
+    <msg108>Rule {0} of strategy "{1}" was not processed</msg108>
+    <msg109>Processing interrupted by an error</msg109>
     <err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
     <err2>The number of opening round brackets must equal the number of closing ones</err2>
     <err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -382,6 +447,7 @@
     <err125>The project has no global parameter "{0}"</err125>
     <err126>Connection subelement {0} has no parameter "{1}"</err126>
     <err127>Failed to evaluate the grouping key: the element has no parameter "{0}"</err127>
+    <err128>Element {0} has no room "{1}": a value cannot be written to its parameter</err128>
     <rh1>#</rh1>
     <rh2>On</rh2>
     <rh3>Formula</rh3>
@@ -408,16 +474,16 @@
     <sld8>Strategy processes elements that have Solid geometry and are located in Masses. Masses must have a Solid form</sld8>
     <ssd9>Processing elements in the Solid</ssd9>
     <sld9>Strategy processes elements that have Solid geometry and are located inside other elements that have Solid geometry</sld9>
-    <ssd10>Processing elements that touch their solids</ssd10>
-    <sld10>Strategy processes elements that Solid geometry and have flat solid faces that touch each other</sld10>
+    <ssd10>Processing elements touching by solid faces</ssd10>
+    <sld10>Strategy processes elements that have Solid geometry and touch each other with flat faces of the Solid</sld10>
     <ssd11>Processing room boundaries</ssd11>
     <sld11>Strategy processes elements that are room boundaries</sld11>
     <ssd12>Processing sub-elements of Structure Connections</ssd12>
-    <sld12>Strategy processes elements placed in Structure Connections (Plates, bolts, etc.). Filtering of sub-elements by parameters, as well as the list of parameters of sub-elements in the formula editor, are not provided. Numerical parameters are set without conversion to internal units</sld12>
+    <sld12>Strategy processes elements placed in Structure Connections (plates, bolts, etc.). Filtering of sub-elements by parameters, as well as the list of parameters of sub-elements in the formula editor, are not provided. Numerical parameters are set without conversion to internal units</sld12>
     <ssd13>Processing nested families</ssd13>
     <sld13>Strategy processes families that are nested within the parent family</sld13>
     <ssd14>Pipe and Duct Insulation processing</ssd14>
-    <sld14>Processing Pipe insulation elements and/or Duct insulation elements. It is acceptable not to use a parameter filter for insulation</sld14>
+    <sld14>Strategy processes Pipe insulation elements and/or Duct insulation elements. It is acceptable not to use a parameter filter for insulation</sld14>
     <ssd15>Processing of rebars in the system</ssd15>
     <sld15>Strategy processes rebars as part of reinforcement systems – Area reinforcement and Path reinforcement</sld15>
     <ssd16>Processing materials</ssd16>
@@ -430,14 +496,14 @@
     <sld19>Strategy processes elements with the possibility to use any specified element of the model as a source element</sld19>
     <ssd20>Processing Parts</ssd20>
     <sld20>Strategy processes Parts taking into account the source elements from which the Parts are created. If a part is created from several source elements, the first element will be considered the source element</sld20>
-    <ssd21>Processing elements in assemblies</ssd21>
-    <sld21>The strategy processes elements located in assemblies</sld21>
+    <ssd21>Processing elements in the Assembly</ssd21>
+    <sld21>Strategy processes elements located in assemblies</sld21>
     <ssd22>Processing view-specific elements</ssd22>
-    <sld22>Processes elements that exist only within a single view and are not part of the 3D model: dimensions, text notes, tags, detail lines and filled regions, and sheet contents. Such elements are bound to the view on which they were created and are not displayed on other views. Model elements such as walls, floors, or equipment are not affected</sld22>
+    <sld22>Strategy processes elements that exist only within a single view and are not part of the 3D model: dimensions, text notes, tags, detail lines and filled regions, and sheet contents. Such elements are bound to the view on which they were created and are not displayed on other views. Model elements such as walls, floors, or equipment are not affected</sld22>
     <ssd23>Processing stair components</ssd23>
-    <sld23>Processes stair components: runs, landings, supports and the railings associated with the stair. The conditional source element is the stair. Components of a multistory stair are processed against the stair they belong to</sld23>
+    <sld23>Strategy processes stair components: runs, landings, supports and the railings associated with the stair. The conditional source element is the stair. Components of a multistory stair are processed against the stair they belong to</sld23>
     <ssd24>Processing room openings</ssd24>
-    <sld24>Processes the openings - doors and windows - that face the room. The conditional source element is the room. Openings are taken from the room boundary elements, curtain walls included, and membership is resolved by the To Room and From Room properties in the room phase; when those properties are empty, by the intersection of the opening geometry with the room volume</sld24>
+    <sld24>Strategy processes the openings - doors and windows - that face the room. The conditional source element is the room. Openings are taken from the room boundary elements, curtain walls included, and membership is resolved by the To Room and From Room properties in the room phase; when those properties are empty, by the intersection of the opening geometry with the room volume</sld24>
     <ssd25>Processing of two sets of elements matched by value</ssd25>
     <sld25>Strategy processes two independent sets of elements - conditionally source and target. A pair is built not by a relation of elements in the model, but by a coinciding value calculated on both sides by the matching setting. Coinciding elements form a group over which aggregate functions are calculated</sld25>
     <ssd26>Processing of room finishing</ssd26>
@@ -446,6 +512,22 @@
     <sld27>Strategy processes elements by their binding to a level. The conditionally source element is a level, the target elements are those located on it. The level is taken from the element property, and if it is not filled in - from the level parameter («Level», «Reference Level», «Base Constraint»). An element stretched between levels (a wall, a column, a stair) belongs to its lower level. Levels are added to processing automatically, there is no need to select them in the model</sld27>
     <ssd28>Processing of rebar couplers</ssd28>
     <sld28>Strategy processes rebars connected by a rebar coupler. The conditionally source element is a coupler, the target elements are one or two rebars its ends are placed on. A coupler placed on a single rebar gives a one to one relation: in this case a rebar value is transferred into the coupler by write back functions. For a coupler placed on two rebars the right part of a write back is calculated for both of them</sld28>
+    <ssd29>Processing of level views</ssd29>
+    <sld29>Strategy processes the views associated with a level. The conditionally source element is a level, the target elements are the floor plans, ceiling plans, structural plans and area plans generated for that level. The level of a view is set when the view is created and does not change: a plan obtained by copying stays on the level of the original. Views of other kinds - sections, elevations, 3D views, legends, schedules - are not associated with a level and are not processed, view templates are not processed either. Levels for processing are taken the same way as the elements of any other strategy: when processing the whole document these are all the levels of the document, when picking elements - only the picked levels, when processing a view - the levels visible on that view. A level is picked in the model on a section and on an elevation, where it is an ordinary element; a plan has no level line, therefore when a plan is processed the level the plan is generated by is taken</sld29>
+    <sg1>Without relations</sg1>
+    <sgd1>Parameters of the elements themselves are processed, without reference to other elements</sgd1>
+    <sg2>Containment in an element</sg2>
+    <sgd2>Target elements are located in the conditionally source element or belong to it</sgd2>
+    <sg3>Components</sg3>
+    <sgd3>Target elements are parts of the conditionally source element</sgd3>
+    <sg4>Rooms</sg4>
+    <sgd4>Target elements are related to the room other than by being located inside it</sgd4>
+    <sg5>Adjacent elements</sg5>
+    <sgd5>Target elements touch the conditionally source element or are attached to it</sgd5>
+    <sg6>Levels and views</sg6>
+    <sgd6>Target elements are bound to a level or a view</sgd6>
+    <sg7>Arbitrary relation</sg7>
+    <sgd7>The pair is not defined by a relation in the model: it is specified manually or matched by values</sgd7>
     <se1>Host</se1>
     <sp1>Insert Host parameter</sp1>
     <se2>Group</se2>
@@ -458,8 +540,8 @@
     <sp5>Insert Mass parameter</sp5>
     <se6>Parent element</se6>
     <sp6>Insert parameter of parent element</sp6>
-    <se7>Touchable element</se7>
-    <sp7>Insert parameter of touchable element</sp7>
+    <se7>Touched element</se7>
+    <sp7>Insert parameter of touched element</sp7>
     <se8>Connection</se8>
     <sp8>Insert parameter of Structural Connection</sp8>
     <se9>Parent family</se9>
@@ -509,6 +591,7 @@
     <tp9>Insert opening parameter</tp9>
     <te12>Finishing element</te12>
     <tp12>Insert finishing element parameter</tp12>
+    <tp13>Insert view parameter</tp13>
     <ft1>Mathematical functions</ft1>
     <ft2>Logical functions</ft2>
     <ft3>Modifying functions</ft3>
@@ -523,12 +606,12 @@
     <d-rounddown>Returns the largest integral value less than or equal to the specified number</d-rounddown>
     <d-sqrt>Returns the square root of a specified number</d-sqrt>
     <d-pow>Returns a specified number raised to the specified power</d-pow>
-    <d-sin>Returns the sine of a specified angle</d-sin>
-    <d-cos>Returns the cosine of a specified angle</d-cos>
-    <d-tan>Returns the tangent of a specified angle</d-tan>
-    <d-asin>Returns the angle whose sine is the specified number</d-asin>
-    <d-acos>Returns the angle whose cosine is the specified number</d-acos>
-    <d-atan>Returns the angle whose tangent is the specified number</d-atan>
+    <d-sin>Returns the sine of a specified angle. The angle is specified in degrees</d-sin>
+    <d-cos>Returns the cosine of a specified angle. The angle is specified in degrees</d-cos>
+    <d-tan>Returns the tangent of a specified angle. The angle is specified in degrees</d-tan>
+    <d-asin>Returns the angle in degrees whose sine is the specified number</d-asin>
+    <d-acos>Returns the angle in degrees whose cosine is the specified number</d-acos>
+    <d-atan>Returns the angle in degrees whose tangent is the specified number</d-atan>
     <d-log>Returns the logarithm of a specified number with a specified base</d-log>
     <d-ln>Returns the natural logarithm (with base e) of the specified number</d-ln>
     <d-exp>Returns e multiplied by the specified power</d-exp>
@@ -550,14 +633,14 @@
     <d-isvertical>Returns TRUE if the axis of the target element is vertical. Otherwise returns FALSE. The optional argument &lt;a&gt; sets the tolerance in degrees, 0.1 by default. The function applies only to elements whose location is defined by a straight line</d-isvertical>
     <d-ishorizontal>Returns TRUE if the axis of the target element is horizontal. Otherwise returns FALSE. The optional argument &lt;a&gt; sets the tolerance in degrees, 0.1 by default. The function applies only to elements whose location is defined by a straight line</d-ishorizontal>
     <d-strlen>Returns string length</d-strlen>
-    <d-strindex>Returns an index counting from zero of the first occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-strindex>
+    <d-strindex>Returns an index counting from zero of the first occurrence of the substring in the string. Returns -1 if the substring is not found in the string. The function is case insensitive</d-strindex>
     <d-valuestr>Returns the value of the parameter as a string with units</d-valuestr>
     <d-eindex>Returns the index of the successful use of the current formula expression</d-eindex>
     <d-replace>Returns value in which all occurrences of the given string are replaced by another given string</d-replace>
     <d-format>Converts a number to a string using the specified format</d-format>
     <d-cv>Returns the value from the specified cell of the strategy data source</d-cv>
-    <d-count>Returns the number of times the substring occurs in the string. If the substring is not found in the string, returns 0</d-count>
-    <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string</d-lstrindex>
+    <d-count>Returns the number of matches of the pattern in the string. Returns 0 if there are no matches. The pattern is a regular expression. The function is case insensitive</d-count>
+    <d-lstrindex>Returns an index counting from zero of the last occurrence of the substring in the string. Returns -1 if the substring is not found in the string. The function is case insensitive</d-lstrindex>
     <d-not>Returns TRUE if the condition is false. Otherwise returns FALSE</d-not>
     <d-distinct>Returns the differing values of the list, ignoring the start and end spaces when comparing values</d-distinct>
     <d-cvif>Searches for the first row in the strategy data source (Excel file) where all conditions are met and returns the value from the specified column of that row</d-cvif>
@@ -565,12 +648,12 @@
     <d-doctitle>Returns the title of the current document</d-doctitle>
     <d-getcurrentviewparameter>Returns the value of the parameter &lt;p&gt; of the view on which the processing is performed. Available when processing elements on the current view, on selected views and when processing picked elements</d-getcurrentviewparameter>
     <d-targetbottomz>Returns the lowest elevation (Z) from the geometry of the target element. The elevation is returned in millimeters, rounded to 3 decimal places</d-targetbottomz>
-    <d-targettopz>Returns the highest elevation (Z) from the geometry of the target element. The elevation is returned in millimeters, rounded to 3 decimal places</d-targettopz>
+    <d-targettopz>Returns the highest elevation (Z) from the geometry of the target element. The elevation is returned in millimeters, rounded to 3 decimal places. When processing is not performed in the whole document, the geometry is taken in the active view: on a floor plan, the highest elevation is the plan cut plane rather than the actual top of the element</d-targettopz>
     <d-sourcebottomz>Returns the lowest elevation (Z) from the geometry of the conditional source element. The elevation is returned in millimeters, rounded to 3 decimal places</d-sourcebottomz>
-    <d-sourcetopz>Returns the highest elevation (Z) from the geometry of the conditional source element. The elevation is returned in millimeters, rounded to 3 decimal places</d-sourcetopz>
+    <d-sourcetopz>Returns the highest elevation (Z) from the geometry of the conditional source element. The elevation is returned in millimeters, rounded to 3 decimal places. When processing is not performed in the whole document, the geometry is taken in the active view: on a floor plan, the highest elevation is the plan cut plane rather than the actual top of the element</d-sourcetopz>
     <d-gsum>Returns the sum of the expression values over the elements of the group</d-gsum>
     <d-gcount>Returns the number of group elements of the specified role: "s" - conditional source, "t" - target</d-gcount>
-    <d-gjoin>Joins the expression values over the elements of the group using the specified separator</d-gjoin>
+    <d-gjoin>Joins the expression values over the elements of the group using the specified separator. The optional third argument sets flags: "d" - distinct values only, "s" - sort, "r" - collapse consecutive integers into ranges</d-gjoin>
     <d-gmin>Returns the minimum value of the expression over the elements of the group</d-gmin>
     <d-gmax>Returns the maximum value of the expression over the elements of the group</d-gmax>
     <d-gavg>Returns the average value of the expression over the elements of the group</d-gavg>
@@ -596,5 +679,38 @@
     <d-wb-max>Writes the maximum result to a parameter of the conditional source element</d-wb-max>
     <d-wb-min>Writes the minimum result to a parameter of the conditional source element</d-wb-min>
     <d-wb-sum>Writes the sum of the results to a parameter of the conditional source element</d-wb-sum>
+    <t211>The plugin window is open. The palette is available after it is closed</t211>
+    <t212>Configurations file is not selected. Open the plugin window</t212>
+    <t213>Organization settings have changed. Open the plugin window to select a configurations file</t213>
+    <t214>Configurations file is not available</t214>
+    <t215>There are no configurations in the configurations file</t215>
+    <t216>There are no strategies in the current configuration</t216>
+    <t217>Open the plugin window</t217>
+    <t218>Work type</t218>
+    <t219>Strategy of the current configuration</t219>
+    <t220>Run all rules of the strategy</t220>
+    <t221>Click to run the rule</t221>
+    <t222>Show or hide the palette</t222>
+    <t223>Source</t223>
+    <t224>PF SE</t224>
+    <t225>PF TE</t225>
+    <t226>F SE</t226>
+    <t227>F TE</t227>
+    <t228>The plugin does not work in family files</t228>
+    <t229>No open document</t229>
+    <t230>Ask to synchronize with the central model before running</t230>
+    <t231>Synchronization options</t231>
+    <t232>Compact Central Model (slow)</t232>
+    <t233>After synchronizing, relinquish the following worksets and elements:</t233>
+    <t234>Project Standard Worksets</t234>
+    <t235>Family Worksets</t235>
+    <t236>Borrowed Elements</t236>
+    <t237>View Worksets</t237>
+    <t238>User-created Worksets</t238>
+    <t239>Save Local File before and after synchronizing with central</t239>
+    <t240>Back</t240>
+    <t241>Select strategy data source Excel file</t241>
+    <t242>Clear strategy data source Excel file (the file itself is not deleted)</t242>
+    <t243>Elements of the categories specified in the rule columns – both for conditional source and for target elements – will be collected from the linked files. They are then processed on a par with the elements of the current model: for example, for the InMass strategy these can be Masses, for the InSolid strategy – elements that have a solid, for the ManyToMany strategy – conditional source elements. Parameter values of elements from linked files can be used in formulas, but writing a value to a parameter of an element from a linked file is not possible – such a write is marked in the report as an error</t243>
   </mprParametrization>
 </ModPlus>

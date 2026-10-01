@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpESKD
+    LocalName="Smart"
+    Description="AutoCAD imkoniyatlarini kengaytiruvchi, shuningdek davlat standartlari (SPDS, YeSKD) boʻyicha rasmiylashtirish imkonini beruvchi intellektual obyektlarni yaratish">
+    <tab1>Chiziqlar</tab1>
+    <tab2>Sozlamalar</tab2>
+    <tab3>Oʻqlar</tab3>
+    <tab4>Uslublar va sozlamalar</tab4>
+    <tab5>ModPlus intellektual obyektlarining uslublari va sozlamalari bilan ishlash</tab5>
+    <tab6>Xususiyatlar palitrasi</tab6>
+    <tab7>ModPlus intellektual obyektlarining xususiyatlar palitrasi</tab7>
+    <tab8>Koʻrinishlar, qirqimlar</tab8>
+    <tab9>Utilitalar</tab9>
+    <tab10>Topish</tab10>
+    <tab11>Sath belgilari</tab11>
+    <!-- todo remove tab12 after 1.28.24.0  -->
+    <tab12>Qiymat boʻyicha topish</tab12>
+    <tab13>Intellektual obyektlarni turi boʻyicha qidirish</tab13>
+    <!-- todo remove tab14 after 1.28.24.0  -->
+    <tab14>Intellektual obyektlarni satr va son xususiyatlari qiymati boʻyicha qidirish</tab14>
+    <tab15>Izoh chizigʻilar</tab15>
+    <tab16>Belgilashlar</tab16>
+    <tab17>Topish va almashtirish</tab17>
+    <tab18>Intellektual obyektlarda satr va son xususiyatlari qiymati boʻyicha qidirish va almashtirish</tab18>
+    <tab19>Payvandlash</tab19>
+    <!--todo remove after 2.5.18.0-->
+    <defl>Standart boʻyicha</defl>
+    <err1>Faylni topib boʻlmadi</err1>
+    <err2>Chiziq turini yuklab boʻlmadi</err2>
+    <err5>Reyestrdan maʼlumot olishda xato! Reyestrdagi maʼlumotlarni yangilash uchun Konfiguratorni ishga tushiring</err5>
+    <msg1>Qoʻyish nuqtasini koʻrsating:</msg1>
+    <msg2>Oxirgi nuqtani koʻrsating:</msg2>
+    <msg3>ModPlus intellektual obyekti boʻlgan blokni tanlang</msg3>
+    <msg5>Keyingi nuqtani koʻrsating:</msg5>
+    <msg6>Polichiziqni tanlang:</msg6>
+    <msg7>Dastlabki polichiziq oʻchirilsinmi?</msg7>
+    <msg8>Qatlam nusxalansinmi? [Ha/Yoʻq]</msg8>
+    <msg9>Qayta ishlangan intellektual obyektlar</msg9>
+    <msg10>Joriy fazoda koʻrsatilgan turdagi intellektual obyektlar topilmadi</msg10>
+    <msg11>Hisob boshi nuqtasini koʻrsating:</msg11>
+    <msg12>Sath nuqtasini koʻrsating:</msg12>
+    <msg13>Sath belgisi joylashuvi nuqtasini koʻrsating:</msg13>
+    <msg14>Sath belgilarini tanlang:</msg14>
+    <msg15>Etalon sath belgisini tanlang:</msg15>
+    <msg16>Obyektlarni tanlovdan chiqarish:</msg16>
+    <msg17>Ramka nuqtasini koʻrsating:</msg17>
+    <msg18>Izoh chizigʻi nuqtasini koʻrsating:</msg18>
+    <msg19>Matn joylashtirish nuqtasini koʻrsating:</msg19>
+    <msg20>Matn chekinishi nuqtasini koʻrsating:</msg20>
+    <msg21>Matn joylashuvi nuqtasini koʻrsating:</msg21>
+    <msg22>Keyingi nuqta yoki</msg22>
+    <msg23>Birinchi qirrani tanlang</msg23>
+    <msg24>Ikkinchi qirrani tanlang</msg24>
+    <msg25>Yoy markazini koʻrsating</msg25>
+    <msg26>Yoy boshini koʻrsating</msg26>
+    <msg27>Yoy oxirini koʻrsating</msg27>
+    <msg28>Yangi oʻq uchun nuqtani koʻrsating</msg28>
+    <wrong>Notoʻgʻri obyekt!</wrong>
+    <vc1>TURLICHA</vc1>
+    <vc2>ANIQLANMAGAN</vc2>
+    <h1>Palitra sozlamalari</h1>
+    <h2>AutoCAD bilan birga avtomatik ishga tushirish</h2>
+    <h3>ModPlus palitrasiga ulanish</h3>
+    <h4>Chegaraviy maksimum oshib ketdi</h4>
+    <h5>tanlangan obyekt</h5>
+    <h6>Palitra ishi toʻxtatildi</h6>
+    <h7>Tanlangan obyektlarning chegaraviy maksimumini</h7>
+    <h8>quyidagida oʻzgartirish mumkin</h8>
+    <h9>sozlamalarida</h9>
+    <h10>plagini</h10>
+    <h11>Smart xususiyatlari</h11>
+    <h12>Tizim</h12>
+    <h13>Yangi foydalanuvchi uslubi</h13>
+    <h14>Uslublar muharriri</h14>
+    <h15>Sozlamalar</h15>
+    <h16>Yangi foydalanuvchi uslubini qoʻshish</h16>
+    <h17>Tanlangan foydalanuvchi uslubini oʻchirish</h17>
+    <h18>Tanlangan uslubni standart uslub sifatida oʻrnatish</h18>
+    <h19>Tanlangan intellektual obyekt asosida yangi uslub yaratish</h19>
+    <h20>Xususiyat tavsifi:</h20>
+    <h21>Umumiy sozlamalar</h21>
+    <h22>Obyekt yaratilganda masshtabni uslubdan oʻrnatish</h22>
+    <h23>Agar belgilangan boʻlsa, intellektual obyekt yaratilganda unga chizmaning annotativ masshtabidan qatʼi nazar joriy uslubda oʻrnatilgan masshtab qoʻllaniladi. Aks holda obyektga chizmaning annotativ masshtabi qoʻllaniladi</h23>
+    <h24>Obyekt yaratilganda qatlamni uslubdan oʻrnatish</h24>
+    <h25>Agar belgilangan boʻlsa, intellektual obyekt yaratilganda unga chizmaning joriy qatlamidan qatʼi nazar joriy uslubda oʻrnatilgan qatlam qoʻllaniladi. Aks holda obyektga chizmaning joriy qatlami qoʻllaniladi</h25>
+    <h26>Joriy hujjatda uslubda koʻrsatilgan qatlam boʻlmasa:</h26>
+    <h27>Joriy qatlamni qoʻllash</h27>
+    <h28>Obyekt yaratilganda unga chizmaning joriy qatlami qoʻllaniladi</h28>
+    <h29>Qatlamni uslubdan yaratish va qoʻllash</h29>
+    <h30>Joriy hujjatda uslubda oʻrnatilgan qatlam yaratiladi va intellektual obyektga qoʻllaniladi</h30>
+    <h31>Obyekt yaratilganda matn uslubini uslubdan oʻrnatish</h31>
+    <h32>Agar belgilangan boʻlsa, intellektual obyekt yaratilganda unga chizmaning joriy matn uslubidan qatʼi nazar joriy uslubda oʻrnatilgan matn uslubi qoʻllaniladi. Aks holda obyektga chizmaning joriy matn uslubi qoʻllaniladi</h32>
+    <h33>Joriy hujjatda uslubda koʻrsatilgan matn uslubi boʻlmasa:</h33>
+    <h34>Joriy matn uslubini qoʻllash</h34>
+    <h35>Intellektual obyekt yaratilganda unga chizmaning joriy matn uslubi qoʻllaniladi</h35>
+    <h36>Matn uslubini uslubdan yaratish va qoʻllash</h36>
+    <h37>Joriy hujjatda uslubda oʻrnatilgan matn uslubi yaratiladi va obyektga qoʻllaniladi</h37>
+    <h38>Xususiyatlar palitrasi ishlashdan toʻxtaydigan tanlangan obyektlarning maksimal soni. Ushbu sozlama obyekt xususiyatlarini oʻqishni oʻchirib qoʻyish orqali AutoCAD muhitida ishlashni tezlashtirish uchun kerak. Masalan, agar boshqa chizmaga nusxalash uchun 1000 ta obyektni tanlashingiz kerak boʻlsa, bu obyektlarning barchasi xususiyatlarini qayta ishlash shart emas</h38>
+    <h39>Tanlangan obyektlar maksimumi (0 – har doim ishlash):</h39>
+    <h40>Intellektual obyektlar sozlamalari</h40>
+    <h41>Toʻgʻri oʻq</h41>
+    <h42>Chiziq turi masshtabini obyekt masshtabiga mutanosib ravishda oʻzgartirish</h42>
+    <h43>Oʻq uchun oʻrnatiladigan chiziq turi masshtabi oʻqning asosiy masshtabiga mutanosib ravishda oʻzgaradi. Masalan, agar oʻq masshtabi 1:1 va chiziq turi masshtabi 2 ga teng qilib oʻrnatilgan boʻlsa, oʻq masshtabi 1:100 qilib oʻrnatilganda chiziq turi masshtabi 200 ga teng boʻladi</h43>
+    <h44>Yaratilayotgan oʻqlar qiymatlarini davom ettirish</h44>
+    <h45>Oʻqlar yaratilganda chizmada allaqachon yaratilgan oʻqlar qidiriladi va ularning birinchi oʻq markeri qiymatlari yigʻilib, oʻsish tartibida saralanadi. Yaratilayotgan oʻq uchun oxirgi topilgan qiymatdan keyingi oʻq markeri qiymati oʻrnatiladi</h45>
+    <h46>Yordamchi chiziqlarni koʻrsatish</h46>
+    <h47>Sath belgisi tanlanganda hisob boshi nuqtasidan sath nuqtasigacha va sath nuqtasidan sath belgisigacha yordamchi chiziqlar koʻrsatiladi</h47>
+    <h48>Uzilish chizigʻi</h48>
+    <h49>Asosiy</h49>
+    <h50>Uslub:</h50>
+    <h51>Geometriya</h51>
+    <h52>Intellektual obyekt uslubi</h52>
+    <h53>Uzilish chizigʻi uchun bazaviy uslub</h53>
+    <h54>Uslub nomi</h54>
+    <h55>Uslub tavsifi</h55>
+    <h56>Uzilish chizigʻini yaratish</h56>
+    <h57>Ikki nuqtani koʻrsatish orqali uzilish chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h57>
+    <h58>Egri chiziqli uzilish</h58>
+    <h59>Silindrik uzilish</h59>
+    <h60>Egri chiziqli uzilish yaratish</h60>
+    <h61>Silindrik uzilish yaratish</h61>
+    <h62>Ikki nuqtani koʻrsatish orqali egri chiziqli uzilishni tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h62>
+    <h63>Ikki nuqtani koʻrsatish orqali silindrik uzilishni tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h63>
+    <h64>Tarkib</h64>
+    <h65>Toʻgʻri oʻq yaratish</h65>
+    <h66>Ikki nuqtani koʻrsatish orqali toʻgʻri oʻqni tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h66>
+    <h68>Toʻgʻri oʻq uchun bazaviy uslub</h68>
+    <h69>Tanlangan uslub butunlay oʻchiriladi! Davom ettirilsinmi?</h69>
+    <h70>Uslublar guruhi</h70>
+    <h71>bir xil nomli uslublarni oʻz ichiga oladi</h71>
+    <h72>Bir xil nomlar boʻlmasligi uchun uslublar nomini oʻzgartiring</h72>
+    <h73>Grunt chizigʻi</h73>
+    <h74>Grunt belgilash chizigʻini yaratish</h74>
+    <h75>Grunt chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h75>
+    <h76>Polichiziqdan grunt chizigʻi</h76>
+    <h77>Tanlangan polichiziqni grunt belgilash chizigʻiga aylantirish</h77>
+    <h78>Grunt chizigʻi uchun bazaviy uslub</h78>
+    <h79>Qirqim</h79>
+    <h80>Qirqim (kesim) belgisini yaratish</h80>
+    <h81>Qirqimni (kesimni) tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h81>
+    <h82>Siniq qirqim</h82>
+    <h83>Polichiziqdan qirqim</h83>
+    <h84>Siniq qirqim (kesim) belgisini yaratish</h84>
+    <h85>Tanlangan polichiziqni qirqim belgisiga aylantirish</h85>
+    <h86>Yangi qirqimlar uchun qiymatlarni davom ettirish</h86>
+    <h87>Joriy fazoda yangi qirqim yaratilganda oxirgi yaratilgan qirqim qidiriladi va uning qiymati yangi qirqim uchun asos qilib olinadi</h87>
+    <h88>Kesimning yordamchi chizigʻini koʻrsatish</h88>
+    <h89>Qirqim tanlanganda qirqimning barcha nuqtalari orqali oʻtuvchi yordamchi chiziq koʻrsatiladi</h89>
+    <h90>Matnning bogʻliq siljishi</h90>
+    <h93>Matn holatini tiklash</h93>
+    <h95>MP: Analog yaratish</h95>
+    <h96>Qirqim uchun bazaviy uslub</h96>
+    <h97>Qirqim matnlaridan biri siljitilganda ikkinchisi avtomatik ravishda xuddi shunday masofaga siljiydi</h97>
+    <h98>"Analog yaratish" buyrugʻi ishlayotganda "Qatlam" xususiyatini qanday qayta ishlash kerak:</h98>
+    <h99>Intellektual obyektlarni qidirish</h99>
+    <h100>Qidirish uchun obyekt turlarini koʻrsating</h100>
+    <h101>Barchasini tanlash</h101>
+    <h102>Tanlovni bekor qilish</h102>
+    <h103>Uslub bazada mavjud emas</h103>
+    <h104>Bir yoki bir nechta obyekt qulflangan qatlamda joylashgan, ularni yangilab boʻlmaydi</h104>
+    <h105>Sath belgisi</h105>
+    <h106>Balandlik belgisini yaratish</h106>
+    <h107>Balandlik belgisini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h107>
+    <h108>Sath belgisi uchun bazaviy uslub</h108>
+    <h110>Sath belgilarini tekislash</h110>
+    <h111>Belgilar holatini vertikal boʻyicha tekislash</h111>
+    <h112>Hisob boshi nuqtalarini moslashtirish</h112>
+    <h113>Buyruq sath belgilarini turli shartlar boʻyicha tekislash imkonini beradi</h113>
+    <h114>Gidroizolyatsiya</h114>
+    <h115>Gidroizolyatsiya belgilash chizigʻini yaratish</h115>
+    <h116>Gidroizolyatsiya chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h116>
+    <h117>Polichiziqdan gidroizolyatsiya</h117>
+    <h118>Tanlangan polichiziqni gidroizolyatsiya belgilash chizigʻiga aylantirish</h118>
+    <h119>Koʻrsatiladigan sonni oʻz ichiga olgan yaratilayotgan intellektual obyekt uchun butun va kasr qism ajratuvchisini oʻrnatish:</h119>
+    <h120>Qidiruv qiymati</h120>
+    <h121>Qidirish</h121>
+    <h122>Butun soʻz</h122>
+    <h123>Registrni hisobga olish</h123>
+    <h124>"{0}" soʻrovi boʻyicha hech narsa topilmadi</h124>
+    <h125>Barchasini joriy tanlovga qoʻshish</h125>
+    <h126>Tugun izoh chizigʻi</h126>
+    <h127>Tugun izoh chizigʻini yaratish</h127>
+    <h128>Tugun izoh chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h128>
+    <h129>Gidroizolyatsiya uchun bazaviy uslub</h129>
+    <h130>Tugun izoh chizigʻi uchun bazaviy uslub</h130>
+    <h131>Yaratilayotgan tugun izoh chiziqlari qiymatlarini davom ettirish</h131>
+    <h132>Tugun izoh chiziqlari yaratilganda chizmada allaqachon yaratilgan tugun izoh chiziqlari qidiriladi va ularning tugun raqami qiymatlari yigʻilib, oʻsish tartibida saralanadi. Yaratilayotgan tugun izoh chizigʻi uchun oxirgi topilgan qiymatdan keyingi tugun raqami qiymati oʻrnatiladi</h132>
+    <h133>Kesuvchi tugun izoh chizigʻi</h133>
+    <h134>Kesuvchi tugun izoh chizigʻini yaratish</h134>
+    <h135>Kesuvchi tugun izoh chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h135>
+    <h136>Yaratilayotgan kesuvchi tugun izoh chiziqlari qiymatlarini davom ettirish</h136>
+    <h137>Kesuvchi tugun izoh chiziqlari yaratilganda chizmada allaqachon yaratilgan kesuvchi tugun izoh chiziqlari qidiriladi va ularning tugun raqami qiymatlari yigʻilib, oʻsish tartibida saralanadi. Yaratilayotgan kesuvchi tugun izoh chizigʻi uchun oxirgi topilgan qiymatdan keyingi tugun raqami qiymati oʻrnatiladi</h137>
+    <h138>Kesuvchi tugun izoh chizigʻi uchun bazaviy uslub</h138>
+    <h139>Payvand chok</h139>
+    <h140>Payvand birikmalar choki belgisini yaratish</h140>
+    <h141>Payvand birikmalar chokini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h141>
+    <h142>Payvand birikmalar choki belgisi uchun bazaviy uslub</h142>
+    <h143>Polichiziqdan payvand chok</h143>
+    <h144>Tanlangan polichiziqni payvand birikmalar choki belgilash chizigʻiga aylantirish</h144>
+    <h145>Fragment belgisi</h145>
+    <h146>Fragment belgisi uchun bazaviy uslub</h146>
+    <h147>Fragment belgisini yaratish</h147>
+    <h148>Ikki nuqtani koʻrsatish orqali fragment belgisini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h148>
+    <h149>Yaratilayotgan fragmentlar qiymatlarini davom ettirish</h149>
+    <h150>Fragmentlar yaratilganda chizmada allaqachon yaratilgan fragmentlar qidiriladi va ularning raqam qiymatlari yigʻilib, oʻsish tartibida saralanadi. Yaratilayotgan fragment uchun oxirgi topilgan qiymatdan keyingi fragment raqami qiymati oʻrnatiladi</h150>
+    <h151>Koʻrinish/Qirqim belgisi</h151>
+    <h152>Koʻrinish/Qirqim belgisi uchun bazaviy uslub</h152>
+    <h153>Koʻrinish belgisi</h153>
+    <h154>Koʻrinish belgisini yaratish </h154>
+    <h155>Anonim blok asosida koʻrinish belgisi intellektual obyektini yaratish</h155>
+    <h156>Yangi koʻrinishlar uchun qiymatlarni davom ettirish</h156>
+    <h157>Joriy fazoda yangi koʻrinish/qirqim belgisi yaratilganda oxirgi yaratilgan koʻrinish/qirqim belgisi qidiriladi va uning qiymati yangi koʻrinish/qirqim belgisi uchun asos qilib olinadi</h157>
+    <h158>Qirqim belgisi</h158>
+    <h159>Qirqim belgisini yaratish</h159>
+    <h160>Anonim blok asosida qirqim belgisi intellektual obyektini yaratish</h160>
+    <h161>Harfli chiziq</h161>
+    <h162>Harfli chiziq uchun bazaviy uslub</h162>
+    <h163>Harfli chiziq belgisini chizish</h163>
+    <h164>Harfli chiziqni tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h164>
+    <h165>Polichiziqdan harfli chiziq</h165>
+    <h166>Tanlangan polichiziqni harfli chiziqqa aylantirish</h166>
+    <h167>Koʻrinish</h167>
+    <h168>Koʻrinish belgisi uchun bazaviy uslub</h168>
+    <h169>Koʻrinish belgisini yaratish</h169>
+    <h170>Koʻrinish belgisini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h170>
+    <h171>Rejadagi sath belgisi</h171>
+    <h172>Rejadagi sath belgisi uchun bazaviy uslub</h172>
+    <h173>Rejadagi sath belgisini yaratish</h173>
+    <h174>Rejadagi sath belgisini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h174>
+    <h175>Zanjirli izoh chizigʻi</h175>
+    <h176>Zanjirli izoh chizigʻi uchun bazaviy uslub</h176>
+    <h177>Zanjirli izoh chizigʻini yaratish</h177>
+    <h178>Zanjirli izoh chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h178>
+    <h179>Yaratilayotgan zanjirli izoh chiziqlari qiymatlarini davom ettirish</h179>
+    <h180>Zanjirli izoh chiziqlari yaratilganda chizmada allaqachon yaratilgan izoh chiziqlari qidiriladi va ularning qiymatlari yigʻilib, oʻsish tartibida saralanadi. Yaratilayotgan izoh chizigʻi uchun oxirgi topilgan qiymatdan keyingi son yoki harf qiymati oʻrnatiladi. Funksiya faqat barcha yaratilgan zanjirli izoh chiziqlari son yoki harf qiymatlariga ega boʻlgandagina ishlaydi</h180>
+    <h181>Matnni burishda blokning burilish burchagini hisobga olish</h181>
+    <h182>BURISH buyrugʻidan foydalanilganda toʻgʻri oʻq matni oʻq bloki bilan birga buriladi</h182>
+    <h183>Taroqsimon izoh chizigʻi</h183>
+    <h184>Taroqsimon izoh chizigʻi belgisi uchun bazaviy uslub</h184>
+    <h185>Taroqsimon izoh chizigʻini yaratish</h185>
+    <h186>Taroqsimon izoh chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h186>
+    <h187>Qalin strelka</h187>
+    <h188>Qalin strelka belgisi uchun bazaviy uslub</h188>
+    <h189>Qalin strelka yaratish</h189>
+    <h190>Qalin strelkani tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h190>
+    <h191>Betonlash choki</h191>
+    <h192>Betonlash chokini yaratish</h192>
+    <h193>Betonlash chokini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h193>
+    <h194>Polichiziqdan betonlash choki</h194>
+    <h195>Tanlangan polichiziqni betonlash choki belgilash chizigʻiga aylantirish</h195>
+    <h196>Betonlash choki belgisi uchun bazaviy uslub</h196>
+    <h197>Tugun belgisi</h197>
+    <h198>Tugun belgisini yaratish</h198>
+    <h199>Tugun belgisini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h199>
+    <h200>Tugun belgisi uchun bazaviy uslub</h200>
+    <h201>Yaratilayotgan tugun belgilari qiymatlarini davom ettirish</h201>
+    <h202>Tugun belgilari yaratilganda chizmada allaqachon yaratilgan tugun belgilari qidiriladi va ularning tugun raqami qiymatlari yigʻilib, oʻsish tartibida saralanadi. Yaratilayotgan tugun belgisi uchun oxirgi topilgan qiymatdan keyingi tugun raqami qiymati oʻrnatiladi</h202>
+    <h203>Oʻzgartirish markeri</h203>
+    <h204>Oʻzgartirish markerini yaratish</h204>
+    <h205>Oʻzgartirish markerini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h205>
+    <h206>Oʻzgartirish markeri uchun bazaviy uslub</h206>
+    <h207>Taroqsimon izoh chizigʻi</h207>
+    <h208>Taroqsimon izoh chizigʻi uchun bazaviy uslub</h208>
+    <h209>Taroqsimon izoh chizigʻini yaratish</h209>
+    <h210>Taroqsimon izoh chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h210>
+    <h211>Qoziq markasi</h211>
+    <h212>Qoziq markasi uchun bazaviy uslub</h212>
+    <h213>Qoziq markasini yaratish</h213>
+    <h214>Qoziq markasini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h214>
+    <h215>Qiyalik belgisi</h215>
+    <h216>Qiyalik belgisini yaratish</h216>
+    <h217>Qiyalik belgisini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h217>
+    <h218>Qiyalik belgisi uchun bazaviy uslub</h218>
+    <h219>Barchasini almashtirish</h219>
+    <h220>Tanlanganni almashtirish</h220>
+    <h221>Obyekt turi</h221>
+    <h224>Nomsiz xususiyat</h224>
+    <h225>Topilgan intellektual obyektlar:</h225>
+    <h226>Topilgan xususiyatlar:</h226>
+    <h227>Faqat almashtiriladigan xususiyatlarni qidirish</h227>
+    <h228>Oʻzgartirish mumkin</h228>
+    <h229>Almashtirish uchun qiymat</h229>
+    <h230>Izolyatsiya</h230>
+    <h231>Turli xil izolyatsiya belgilash chizigʻini yaratish</h231>
+    <h232>Turli xil izolyatsiyani tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h232>
+    <h233>Polichiziqdan izolyatsiya</h233>
+    <h234>Tanlangan polichiziqni turli xil izolyatsiya belgilash chizigʻiga aylantirish</h234>
+    <h235>Chiziqli intellektual obyektlarda qoʻshimcha tutqichlarni koʻrsatish</h235>
+    <h236>Izolyatsiya uchun bazaviy uslub</h236>
+    <h237>Chiziqli intellektual obyektlar tanlanganda qoʻshimcha funksional tutqichlarni koʻrsatish</h237>
+    <h238>Payvand chok belgisi</h238>
+    <h239>Payvand chok belgisini yaratish</h239>
+    <h240>Payvand chok belgisini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h240>
+    <h241>Payvand chok belgisi uchun bazaviy uslub</h241>
+    <h242>Tomon</h242>
+    <h243>Payvand katet</h243>
+    <h244>Payvand katetni yaratish</h244>
+    <h245>Payvand katetni tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h245>
+    <h246>Uch nuqta boʻyicha payvand katetni yaratish</h246>
+    <h247>Uch nuqta boʻyicha payvand katetni tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h247>
+    <h248>Payvand katet uchun bazaviy uslub</h248>
+    <h249>Teshiklarni toʻldirish</h249>
+    <h250>Teshiklarni toʻldirishni yaratish</h250>
+    <h251>Teshiklarni toʻldirishni tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h251>
+    <h252>Teshiklarni toʻldirish uchun bazaviy uslub</h252>
+    <h253>Uch nuqta boʻyicha payvand katet</h253>
+    <h254>Hujjatda intellektual obyektlar yoʻq</h254>
+    <h255>Qutbiy oʻq</h255>
+    <h256>Qutbiy oʻq yaratish</h256>
+    <h257>Qutbiy oʻq belgisini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h257>
+    <h258>Qutbiy oʻq uchun bazaviy uslub</h258>
+    <h259>Boshlangʻich qiymat</h259>
+    <h260>Koʻp qatorli izoh chizigʻi</h260>
+    <h261>Koʻp qatorli izoh chizigʻini yaratish</h261>
+    <h262>Koʻp qatorli izoh chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h262>
+    <h263>Saqlangan qiymatlarni tahrirlash</h263>
+    <h264>Koʻp qatorli izoh chizigʻining saqlangan qiymatlarini tahrirlash</h264>
+    <h265>Koʻp qatorli izoh chizigʻi uchun bazaviy uslub</h265>
+    <h266>Yangi satr</h266>
+    <h267>Elementlarning maksimal soni:</h267>
+    <h268>Joriy obyektdagi qiymatlar</h268>
+    <h269>Saqlangan qiymatlar</h269>
+    <h270>Strelkali chiziq</h270>
+    <h271>Strelkali chiziq yaratish</h271>
+    <h272>Strelkali chiziqni tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h272>
+    <h273>Polichiziqdan strelkali chiziq</h273>
+    <h274>Tanlangan polichiziqni strelkali chiziqqa aylantirish</h274>
+    <h275>Strelkali chiziq uchun bazaviy uslub</h275>
+    <h276>Umumiy xususiyatlar</h276>
+    <h277>Yangi guruh</h277>
+    <h278>Guruh qoʻshish</h278>
+    <h279>EUL chizigʻi</h279>
+    <h280>EUL chizigʻini yaratish</h280>
+    <h281>EUL chizigʻini tavsiflovchi anonim blok asosida intellektual obyekt yaratish</h281>
+    <h282>Polichiziqdan EUL chizigʻi</h282>
+    <h283>Tanlangan polichiziqni EUL chizigʻiga aylantirish</h283>
+    <h284>EUL chizigʻi uchun bazaviy uslub</h284>
+    <h285>Oʻlchov birliklari</h285>
+    <h286>Guruhni oʻchirish</h286>
+    <h287>Satr qoʻshish</h287>
+    <h288>Satrni oʻchirish</h288>
+    <so0>Grafikani yangilash</so0>
+    <sot0>Barcha topilgan intellektual obyektlar grafikasi regeneratsiya qilinadi</sot0>
+    <so1>Tanlash</so1>
+    <sot1>Joriy fazodagi koʻrsatilgan turdagi barcha intellektual obyektlar tanlanadi</sot1>
+    <so2>Maʼlumotlarni oʻchirish</so2>
+    <sot2>Joriy fazodagi koʻrsatilgan turdagi barcha intellektual obyektlarning kengaytirilgan maʼlumotlari oʻchiriladi, bu obyektlarni oddiy bloklarga aylantiradi</sot2>
+    <so3>Portlatish</so3>
+    <sot3>Joriy fazodagi koʻrsatilgan turdagi barcha intellektual obyektlar portlatiladi</sot3>
+    <so4>Oʻchirish</so4>
+    <sot4>Joriy fazodagi koʻrsatilgan turdagi barcha intellektual obyektlar oʻchiriladi</sot4>
+    <mtleadavailfull>Saqlangan qiymatlardan foydalanish plaginning toʻliq versiyasida mavjud!</mtleadavailfull>
+    <la1>Nusxalash</la1>
+    <la2>Nusxalamaslik</la2>
+    <la3>Soʻrash</la3>
+    <gp1>Choʻzish</gp1>
+    <gp2>Koʻchirish</gp2>
+    <gp3>Uchni oʻchirish</gp3>
+    <gp4>Uch qoʻshish</gp4>
+    <gp5>Izoh chizigʻini qoʻshish</gp5>
+    <gp6>Izoh chizigʻini oʻchirish</gp6>
+    <gp7>Izoh chizigʻi strelkasi turi</gp7>
+    <gp8>Toʻldirish</gp8>
+    <blt1>Chiziqli</blt1>
+    <blt2>Egri chiziqli</blt2>
+    <blt3>Silindrik</blt3>
+    <amt1>Ikki tomondan</amt1>
+    <amt2>Yuqoridan</amt2>
+    <amt3>Pastdan</amt3>
+    <amt4>Birinchi</amt4>
+    <amt5>Ikkinchi</amt5>
+    <vlt1>Qirqim</vlt1>
+    <vlt2>Koʻrinish</vlt2>
+    <llt1>Standart</llt1>
+    <llt2>Tarkibli</llt2>
+    <type1>Tur 1</type1>
+    <type2>Tur 2</type2>
+    <glfst1>Shtrixlar orasidagi masofa</glfst1>
+    <glfst2>Shtrixlar guruhlari orasidagi masofaning yarmi</glfst2>
+    <glfst3>Shtrixlar guruhlari orasidagi masofa</glfst3>
+    <wpfst1>Shtrixlar orasidagi masofaning yarmi</wpfst1>
+    <wpfst2>Chekinishsiz</wpfst2>
+    <separator1>ModPlus sozlamalaridan</separator1>
+    <separator2>Uslubdan</separator2>
+    <separator3>Nuqta</separator3>
+    <separator4>Vergul</separator4>
+    <tha1>Chapga</tha1>
+    <tha2>Markaz boʻyicha</tha2>
+    <tha3>Oʻngga</tha3>
+    <tha4>Oʻngda yuqorida</tha4>
+    <tha5>Oʻngda pastda</tha5>
+    <tha6>Chapda pastda</tha6>
+    <tha7>Chapda yuqorida</tha7>
+    <tha8>Ixtiyoriy</tha8>
+    <ft1>Doiraviy</ft1>
+    <ft2>Toʻgʻri burchakli</ft2>
+    <ft3>Chiziq</ft3>
+    <ft4>Ramkasiz</ft4>
+    <let0>Yoʻq</let0>
+    <let1>Yarim strelka</let1>
+    <let2>Nuqta</let2>
+    <let3>Qoʻsh kesik</let3>
+    <let4>Toʻgʻri burchak</let4>
+    <let5>Boʻyalgan yopiq</let5>
+    <let6>Ochiq</let6>
+    <let7>Yopiq</let7>
+    <let8>Kesik</let8>
+    <let9>Kesim</let9>
+    <wjt1>Uchma-uch zavod uzluksiz, koʻrinadigan tomondan</wjt1>
+    <wjt2>Uchma-uch zavod uzluksiz, koʻrinmaydigan tomondan</wjt2>
+    <wjt3>Uchma-uch montaj uzluksiz, koʻrinadigan tomondan</wjt3>
+    <wjt4>Uchma-uch montaj uzluksiz, koʻrinmaydigan tomondan</wjt4>
+    <wjt5>Uchma-uch zavod uzlukli, koʻrinadigan tomondan</wjt5>
+    <wjt6>Uchma-uch zavod uzlukli, koʻrinmaydigan tomondan</wjt6>
+    <wjt7>Uchma-uch montaj uzlukli, koʻrinadigan tomondan</wjt7>
+    <wjt8>Uchma-uch montaj uzlukli, koʻrinmaydigan tomondan</wjt8>
+    <wjt9>Burchakli zavod uzluksiz, koʻrinadigan tomondan</wjt9>
+    <wjt10>Burchakli zavod uzluksiz, koʻrinmaydigan tomondan</wjt10>
+    <wjt11>Burchakli montaj uzluksiz, koʻrinadigan tomondan</wjt11>
+    <wjt12>Burchakli montaj uzluksiz, koʻrinmaydigan tomondan</wjt12>
+    <wjt13>Burchakli zavod uzlukli, koʻrinadigan tomondan</wjt13>
+    <wjt14>Burchakli zavod uzlukli, koʻrinmaydigan tomondan</wjt14>
+    <wjt15>Burchakli montaj uzlukli, koʻrinadigan tomondan</wjt15>
+    <wjt16>Burchakli montaj uzlukli, koʻrinmaydigan tomondan</wjt16>
+    <pil0>Tur 0</pil0>
+    <pil1>Tur 1</pil1>
+    <pil2>Tur 2</pil2>
+    <pil3>Tur 3</pil3>
+    <pil4>Tur 4</pil4>
+    <pil5>Tur 5</pil5>
+    <pil6>Tur 6</pil6>
+    <pil7>Tur 7</pil7>
+    <pil8>Tur 8</pil8>
+    <pil9>Tur 9</pil9>
+    <pil10>Tur 10</pil10>
+    <pit0>Doira</pit0>
+    <pit1>Toʻgʻri toʻrtburchak</pit1>
+    <dmt0>Promille</dmt0>
+    <dmt1>Gradus</dmt1>
+    <dmt2>Nisbat</dmt2>
+    <dmt3>Son</dmt3>
+    <dmt4>Foiz</dmt4>
+    <dot>Nuqta</dot>
+    <comma>Vergul</comma>
+    <len>Uzunlik</len>
+    <p1>Uzilish chizigʻi turi</p1>
+    <d1>Chiziq turi: chiziqli, egri chiziqli yoki silindrsimon</d1>
+    <p2>Obyektdan chiqish</p2>
+    <d2>Chiziqli uzilish uchun chiqish qiymati mm da beriladi. Egri chiziqli uzilish uchun chiqish qiymati asosiy nuqtalar orasidagi uzunlikning % ida beriladi. Silindrsimon uzilish uchun chiqish qiymati ishlatilmaydi</d2>
+    <p3>Uzilish belgisi kengligi</p3>
+    <d3>Uzilish belgisi kengligi mm da. Faqat chiziqli turdagi uzilish chizigʻi uchun</d3>
+    <p4>Uzilish belgisi balandligi</p4>
+    <d4>Uzilish belgisi balandligi mm da. Faqat chiziqli turdagi uzilish chizigʻi uchun</d4>
+    <p5>Masshtab</p5>
+    <d5>Uzilish chizigʻi masshtabi</d5>
+    <d5-1>Oʻq masshtabi</d5-1>
+    <p6>Chiziq turi masshtabi</p6>
+    <d6>Blok xossalarida berilgan chiziq turi uchun chiziq turi masshtabi</d6>
+    <p7>Qatlam</p7>
+    <d7>Obyekt qatlami</d7>
+    <p8>Markerlar joylashuvi</p8>
+    <d8>Markerlar joylashuvi: ikki tomondan, yuqoridan yoki pastdan</d8>
+    <p9>Sinish</p9>
+    <d9>Oʻq sinishi balandligi</d9>
+    <p10>Markerlar diametri</p10>
+    <d10>Oʻq markerlari diametri</d10>
+    <p11>Markerlar soni</p11>
+    <d11>Oʻq markerlari soni</d11>
+    <p12>Birinchi marker turi</p12>
+    <d12>Oʻqning birinchi markeri turi</d12>
+    <p13>Ikkinchi marker turi</p13>
+    <d13>Oʻqning ikkinchi markeri turi</d13>
+    <p14>Uchinchi marker turi</p14>
+    <d14>Oʻqning uchinchi markeri turi</d14>
+    <p15>Sinishning pastki chekinishi</p15>
+    <d15>Oʻq sinishining pastki chekinishi</d15>
+    <p16>Sinishning yuqori chekinishi</p16>
+    <d16>Oʻq sinishining yuqori chekinishi</d16>
+    <p16-2>Sinish chekinishi</p16-2>
+    <d16-2>Oʻq sinishining yuqori yoki pastki chekinishi</d16-2>
+    <p17>Matn uslubi</p17>
+    <d17>Oʻqning matn elementlari uchun matn uslubi</d17>
+    <p18>Matn balandligi</p18>
+    <d18>Oʻqning matn elementlari matn balandligi</d18>
+    <p19>Oʻq chizigʻi turi</p19>
+    <p20>Birinchi qiymat prefiksi</p20>
+    <p21>Birinchi qiymat suffiksi</p21>
+    <p22>Birinchi qiymat</p22>
+    <p23>Ikkinchi qiymat prefiksi</p23>
+    <p24>Ikkinchi qiymat suffiksi</p24>
+    <p25>Ikkinchi qiymat</p25>
+    <p26>Uchinchi qiymat prefiksi</p26>
+    <p27>Uchinchi qiymat suffiksi</p27>
+    <p28>Uchinchi qiymat</p28>
+    <p29>Strelkalar oʻlchami</p29>
+    <p30>Pastki moʻljal markeri qiymati</p30>
+    <p31>Yuqori moʻljal markeri qiymati</p31>
+    <p32>Pastki moʻljal markeri</p32>
+    <d32>Pastki moʻljal markerining koʻrinishi</d32>
+    <p33>Yuqori moʻljal markeri</p33>
+    <d33>Yuqori moʻljal markerining koʻrinishi</d33>
+    <p34>Moʻljal markeri turi</p34>
+    <d34>Oʻqning moʻljal markeri turi</d34>
+    <p35>Chiziq turi</p35>
+    <d35>Asosiy polichiziqning chiziq turi</d35>
+    <d35-1>Chiziq turi standart yoki tarkibiy</d35-1>
+    <p36>Birinchi shtrix chekinishi</p36>
+    <d36>Grunt chizigʻining har bir segmentidagi birinchi shtrix chekinishi</d36>
+    <d36-1>Gidroizolyatsiya chizigʻining har bir segmentidagi birinchi shtrix chekinishi</d36-1>
+    <p37>Shtrix uzunligi</p37>
+    <p38>Shtrixlar orasidagi masofa</p38>
+    <p39>Shtrixning qiyalik burchagi</p39>
+    <p40>Shtrixlar guruhi chekinishi</p40>
+    <p41>Matn uslubi</p41>
+    <d41>Matn elementlari uchun matn uslubi</d41>
+    <p42>Oʻrta shtrix uzunligi</p42>
+    <d42>Sinish nuqtasigacha boʻlgan oʻrta shtrix uzunligi</d42>
+    <p43>Shtrixlar qalinligi</p43>
+    <d43>Qirqimning barcha shtrixlari qalinligi</d43>
+    <p44>Shtrix uzunligi</p44>
+    <d44>Qirqimning asosiy shtrixlari uzunligi</d44>
+    <p45>Tokcha chekinishi</p45>
+    <d45>Shtrix uzunligi boʻyicha tokcha chekinishi foizda</d45>
+    <p46>Tokcha uzunligi</p46>
+    <p47>Strelka uzunligi</p47>
+    <p48>Strelka qalinligi</p48>
+    <p49>Matn balandligi</p49>
+    <p50>Kichik matn balandligi</p50>
+    <p51>Qirqim belgisi</p51>
+    <p52>Belgilash prefiksi</p52>
+    <p53>Varaq raqami</p53>
+    <p54>Varaq raqamining joylashuvi</p54>
+    <d54>Varaq raqamining joylashuv varianti: ikki tomondan, pastdan, yuqoridan</d54>
+    <p55>Obyekt chizigʻi</p55>
+    <d55>Sath belgisidan oʻlchanadigan obyektgacha chiziq chizilsinmi</d55>
+    <p56>Obyekt chizigʻi chekinishi</p56>
+    <d56>Obyekt chizigʻining oʻlchanadigan obyektdan chekinishi</d56>
+    <p57>Pastki tokcha uzunligi</p57>
+    <d57>Pastki tokchaning oʻlchanadigan obyekt tomonidagi chetidan balandlik belgisi strelkasigacha boʻlgan uzunligi</d57>
+    <p58>Pastki tokcha chiqishi</p58>
+    <d58>Pastki tokchaning balandlik belgisi strelkasidan oʻlchanadigan obyektga qarama-qarshi tomondagi tokcha chetigacha chiqishi</d58>
+    <p59>Strelka balandligi</p59>
+    <p60>Strelka qalinligi</p60>
+    <p61>Matn chekinishi</p61>
+    <p62>Matnning vertikal chekinishi</p62>
+    <p63>Tokcha chiqishi</p63>
+    <d63>Eng uzun matnga nisbatan tokcha chiqishi</d63>
+    <d63-1>Matnga nisbatan tokcha chiqishi</d63-1>
+    <p63-1>Tokcha balandligi</p63-1>
+    <p64>Plyusni koʻrsatish</p64>
+    <d64>Oʻlchangan qiymat noldan katta boʻlsa, plyusni koʻrsatish. Matn qayta belgilangan boʻlsa, xossa hisobga olinmaydi</d64>
+    <p65>Oʻlchangan qiymat</p65>
+    <p66>Matnni qayta belgilash</p66>
+    <p67>Aniqlik</p67>
+    <d67>Oʻlchangan qiymat aniqligi. Verguldan keyingi belgilar sonini belgilaydi</d67>
+    <p68>Izoh</p68>
+    <p69>Oʻlchash masshtabi</p69>
+    <d69>Chizmada oʻlchangan masofa koʻpaytiriladigan 0,000001 dan 1000000 gacha boʻlgan oraliqdagi qiymatni belgilaydi</d69>
+    <p70>Chiziq qalinligi</p70>
+    <p71>Matnning burilish burchagi</p71>
+    <p72>Son ajratgichi</p72>
+    <d72>Sonning butun va kasr qismlari ajratgichi</d72>
+    <p73>Matnni tekislash</p73>
+    <d73>Matnni gorizontal tekislash</d73>
+    <p74>Izohni tekislash</p74>
+    <p75>Yulduzchani koʻrsatish</p75>
+    <d75>Asosiy qiymat oxiriga yulduzcha qoʻshish</d75>
+    <p76>Ramka balandligi</p76>
+    <p77>Ramka kengligi</p77>
+    <p78>Tokcha joylashuvi</p78>
+    <p79>Tugun raqami</p79>
+    <p80>Varaq raqami</p80>
+    <p81>Tugun manzili</p81>
+    <p82>Ramka turi</p82>
+    <p83>Yumaloqlash radiusi</p83>
+    <d83>Toʻrtburchak ramka burchaklarini yumaloqlash radiusi</d83>
+    <d83-1>Fragment belgisi burchaklarini yumaloqlash radiusi</d83-1>
+    <p84>Matn doim gorizontal</p84>
+    <d84>Matnli izoh chizigʻi obyekt "Burish" buyrugʻi bilan burilgandan keyin gorizontal holatini saqlaydi</d84>
+    <p85>Orqa fonni yashirish</p85>
+    <d85>Matn konturi boʻylab berilgan chekinish bilan niqoblash qoʻshish. Niqoblash ramkalarining koʻrinishi WIPEOUTFRAME va FRAME tizim oʻzgaruvchilari bilan boshqariladi</d85>
+    <d85-1>Matn konturi boʻylab berilgan chekinish bilan niqoblash qoʻshish. Niqoblash ramkalarining koʻrinishi WIPEOUTFRAME va FRAME tizim oʻzgaruvchilari bilan boshqariladi. Agar toʻrtburchak ramka berilgan boʻlsa, niqoblash chekinishni hisobga olmasdan ramka boʻyicha yaratiladi</d85-1>
+    <p86>Niqoblash chekinishi</p86>
+    <d86>Niqoblash chekinishi "Chiziq" va "Ramkasiz" ramka turlarida hisobga olinadi</d86>
+    <d87>Strelkalar mavjudligi: ikki tomondan, birinchi yoki ikkinchi</d87>
+    <p87>Kesuvchi element qalinligi</p87>
+    <p88>Kesuvchi element uzunligi</p88>
+    <p89>Payvand chok turi</p89>
+    <p90>Kertik qadami</p90>
+    <p91>Kertik yarim balandligi</p91>
+    <p92>Katta xoch qadami</p92>
+    <p93>Kichik xoch qadami</p93>
+    <p94>Katta xoch yarim balandligi</p94>
+    <p95>Kichik xoch balandligi</p95>
+    <p96>Seriya uzunligi</p96>
+    <p97>Boʻshliq uzunligi</p97>
+    <p98>Seriyalar orasidagi interval</p98>
+    <p99>Kichik kertik balandligi</p99>
+    <p100>Yumaloqlash radiusi</p100>
+    <p101>Asosiy matn</p101>
+    <p102>Kichik matn</p102>
+    <p103>Koʻrinish turi</p103>
+    <d103>Koʻrinish turi: Qirqim yoki Koʻrinish</d103>
+    <p104>Izoh chizigʻi</p104>
+    <d104>Izoh chizigʻini yoqish/oʻchirish</d104>
+    <p105>Chiziq turini generatsiya qilish</p105>
+    <d105>Chiziq turini butun polichiziq boʻylab generatsiya qilish</d105>
+    <p106>Matnlar orasidagi masofa</p106>
+    <p107>Chiziq formulasi</p107>
+    <d107>Chiziq formulasi defislar bilan ajratilgan butun sonlar bilan beriladi. Har bir toq son (1, 3, 5...) shtrix uzunligini belgilaydi. Har bir juft son (2, 4, 6...) boʻshliq uzunligini belgilaydi</d107>
+    <p108>Birinchi matn chekinishi</p108>
+    <p109>Koʻrinish belgisi</p109>
+    <p110>Sath belgisi</p110>
+    <p111>Prefiks</p111>
+    <p112>Suffiks</p112>
+    <p113>Qiymat</p113>
+    <p114>Chiziq qalinligi</p114>
+    <p115>Strelkalar mavjudligi</p115>
+    <p116>Sinish kengligi</p116>
+    <p117>Chap chetdagi chiziq uzunligi</p117>
+    <d117>Chok chizigʻi segmentining chap chetidagi chiziq uzunligi</d117>
+    <p118>Chetlardagi chiziqlar</p118>
+    <d118>Chok chizigʻi segmentlari chetlaridagi chiziqlarning koʻrinishi</d118>
+    <p119>Sinish balandligi</p119>
+    <p120>Aylana diametri</p120>
+    <p121>Tashqi aylana diametri</p121>
+    <p122>Kichik matnning vertikal chekinishi</p122>
+    <d122>Kichik matnning chiziqdan vertikal chekinishi</d122>
+    <p123>Tashqi aylana</p123>
+    <p124>Raqam matni chekinishi</p124>
+    <p125>Izoh matni chekinishi</p125>
+    <p126>Izoh tokchasining joylashuvi</p126>
+    <p127>Ramkaning bulutsimon uslubi</p127>
+    <p128>Bulut yoyi uzunligi</p128>
+    <p129>Raqam balandligi</p129>
+    <p130>Izoh balandligi</p130>
+    <p131>Raqam</p131>
+    <p132>Yuqori matn</p132>
+    <p133>Pastki matn</p133>
+    <p134>Yuqori matn balandligi</p134>
+    <p135>Pastki matn balandligi</p135>
+    <p136>Matnni kiriting</p136>
+    <p137>Kesim kengligi</p137>
+    <p138>Kesim balandligi</p138>
+    <p139>Kesim diametri</p139>
+    <p140>Oʻq chiziqlari chekinishi</p140>
+    <p141>Raqam joylashuvi</p141>
+    <p142>Raqamning koʻrinishi</p142>
+    <p143>Oʻqlarning koʻrinishi</p143>
+    <p144>Izoh chizigʻining koʻrinishi</p144>
+    <p145>Raqam chekinishi</p145>
+    <p146>Raqamning vertikal chekinishi</p146>
+    <p147>Asosiy chiziq qalinligi</p147>
+    <p148>Oʻq chizigʻi turi</p148>
+    <p149>Oʻq chizigʻi masshtabi</p149>
+    <p150>Faqat kontur</p150>
+    <p151>Koʻndalang kesim turi</p151>
+    <p152>Belgilash turi</p152>
+    <p153>Belgi turi</p153>
+    <p154>Strelka oʻlchami</p154>
+    <p155>Yoʻnalish sifatida</p155>
+    <d155>Qiyalikni yoʻnalish sifatida koʻrsatish</d155>
+    <p156>Konuslik belgisi</p156>
+    <d156>Qiyalik belgisi oʻrniga konuslik belgisini koʻrsatish</d156>
+    <p157>Chap nuqtadan hisoblash</p157>
+    <d157>Qiyalikni hisoblashda birinchi nuqta sifatida ikkitasidan eng chapdagisini olish</d157>
+    <p158>Matn joylashadigan tomon</p158>
+    <d158>Gorizontal matn joylashadigan tomon</d158>
+    <p159>Izolyatsiya turi</p159>
+    <p160>Aylana radiusi</p160>
+    <p161>Nuqta radiusi</p161>
+    <p162>Yumaloqlash radiusi</p162>
+    <p163>Izolyatsiya turi kengligi</p163>
+    <p164>Izolyatsiya turi balandligi</p164>
+    <p165>Tashqi chegarani chizish</p165>
+    <p166>Chok raqami</p166>
+    <p167>Choklarning umumiy soni</p167>
+    <p168>Nazorat toifasi</p168>
+    <p169>GOST</p169>
+    <p170>Belgilash</p170>
+    <p171>Payvandlash usuli</p171>
+    <p172>Katet oʻlchami</p172>
+    <p173>Chok oʻlchami</p173>
+    <p174>Chok qadami oʻlchami</p174>
+    <p175>Tomon</p175>
+    <p176>Yopiq chok</p176>
+    <p177>Montaj choki</p177>
+    <p178>Chok kichik turi</p178>
+    <p179>Oʻlcham belgisi</p179>
+    <p180>Old yordamchi belgi</p180>
+    <p181>Orqa yordamchi belgi</p181>
+    <p182>Old sirt belgisi</p182>
+    <p183>Orqa sirt belgisi</p183>
+    <p184>Old sirt belgisi matni</p184>
+    <p185>Orqa sirt belgisi matni</p185>
+    <p186>Katet uzunligi</p186>
+    <p187>Qavariqlik\Botiqlik</p187>
+    <d187>Qavariqlik (0 dan 1 gacha) yoki botiqlik (-1 dan 1 gacha)</d187>
+    <p191>Oʻqlarni koʻrsatish</p191>
+    <p192>Oʻqlarning tashqi uzunligi</p192>
+    <p193>Rezbani koʻrsatish</p193>
+    <p194>Rezba masofasi</p194>
+    <p195>Ichki rezba</p195>
+    <p196>Toʻldirishni burish</p196>
+    <p197>Teshik turi</p197>
+    <p198>Shartli belgilarni koʻrsatish</p198>
+    <p199>Shartli belgilar oʻlchami</p199>
+    <d199>Oʻlchamning 0.1 dan 1 gacha shartli qiymati</d199>
+    <p200>Shartli belgilarni toʻldirish</p200>
+    <p201>Yaxlitlash oʻrniga kesish</p201>
+    <p202>Oxirgi nollarni bostirish</p202>
+    <p203>Yuqori sinish uzunligi</p203>
+    <p204>Pastki sinish uzunligi</p204>
+    <p205>Yuqori sinishning qiyalik burchagi</p205>
+    <d205>Yuqori sinishning qiyalik burchagi (-90 dan 90 gacha)</d205>
+    <p206>Pastki sinishning qiyalik burchagi</p206>
+    <d206>Pastki sinishning qiyalik burchagi (-90 dan 90 gacha)</d206>
+    <p207>Sinish chizigʻini bazaviy nuqtagacha koʻrsatish</p207>
+    <d207>Sinish chizigʻini birinchi marker markazi boʻyicha yoki tutqichgacha yoʻnaltirish</d207>
+    <p208>Qoʻshimcha markerlarni bazaviy vektor boʻyicha yoʻnaltirish</p208>
+    <d208>Qoʻshimcha markerlarni sinish vektori yoki dastlabki vektor boʻyicha koʻrsatish</d208>
+    <p209>Strelka boshlanish nuqtasi</p209>
+    <p210>Keyingi tokchagacha chekinish</p210>
+    <p211>Yon chiziq tomoni</p211>
+    <p212>Chiziq uzunligi</p212>
+    <p213>Yoy segmentlarida strelkalarni egish</p213>
+    <p214>Kesilgan strelkalarni koʻrsatish</p214>
+    <p215>Strelkalar turi</p215>
+    <p216>Boʻshliqlarni qoʻshimcha shtrixlar bilan toʻldirish</p216>
+    <p217>Asosiy shtrixlar rangi</p217>
+    <p218>Qoʻshimcha shtrixlar rangi</p218>
+    <p219>Chekinish</p219>
+    <p220>Orqa fonni yashirish</p220>
+    <p221>Niqoblash balandligi</p221>
+    <p222>Satrlar orasidagi vertikal chekinish</p222>
+    <p223>Ustunlar orasidagi chekinish</p223>
+    <p224>Qoʻshimcha ustunni gorizontal tekislash</p224>
+    <p225>Qoʻshimcha ustun tomoni</p225>
+    <p226>Belgi oʻlchami</p226>
+    <p227>Strelkalarni belgi markazidan koʻrsatish</p227>
+    <p228>Asosiy polichiziqni koʻrsatish</p228>
+    <p229>Belgi turi</p229>
+    <jigM1>Yoy</jigM1>
+    <jigM2>Chiziqli</jigM2>
+    <grpM1>Uchidan choʻzish</grpM1>
+    <grpM2>Uch qoʻshish</grpM2>
+    <grpM3>Uchni oʻchirish</grpM3>
+    <grpM4>Yoʻnalishni oʻzgartirish</grpM4>
+    <grpM5>Choʻzish</grpM5>
+    <grpM6>Uch qoʻshish</grpM6>
+    <grpM7>Yoyga aylantirish</grpM7>
+    <grpM8>Kesmaga aylantirish</grpM8>
+    <ilt1>Tur 1</ilt1>
+    <ilt2>Tur 2</ilt2>
+    <ilt3>Tur 3</ilt3>
+    <ilt4>Tur 4</ilt4>
+    <ilt5>Tur 5</ilt5>
+    <ilt6>Tur 6</ilt6>
+    <ilt7>Tur 7</ilt7>
+    <ilt8>Tur 8</ilt8>
+    <none>Mavjud emas</none>
+    <djauxs1>Chok kuchaytirilishini olib tashlash</djauxs1>
+    <djauxs2>Ochiq chiziq boʻylab chok</djauxs2>
+    <djauxs3>Silliq oʻtish</djauxs3>
+    <djsrs1>Sirt rostlanmaydi</djsrs1>
+    <djsrs2>Sirt qatlamini olib tashlash bilan</djsrs2>
+    <djsrs3>Sirt qatlamini olib tashlamasdan</djsrs3>
+    <djwstt1>Zanjirsimon joylashgan chok</djwstt1>
+    <djwstt2>Shaxmat tartibida joylashgan chok</djwstt2>
+    <djwsub1>Kavsharlash bilan birikma</djwsub1>
+    <djwsub2>Tikish bilan birikma</djwsub2>
+    <djwsub3>Skobalar bilan birikma</djwsub3>
+    <djwsub4>Burchaklar bilan birikma</djwsub4>
+    <djwsub5>Yelim birikma</djwsub5>
+    <djwsd0>Ichki</djwsd0>
+    <djwsd1>Tashqi</djwsd1>
+    <hfqt1>Chorak 1</hfqt1>
+    <hfqt2>Chorak 2</hfqt2>
+    <hfqt3>Chorak 3</hfqt3>
+    <hfqt4>Chorak 4</hfqt4>
+    <mtArrowPos1>Avtomatik</mtArrowPos1>
+    <mtArrowPos2>Chapdan pastda</mtArrowPos2>
+    <mtArrowPos3>Oʻngdan pastda</mtArrowPos3>
+    <mtArrowPos4>Oʻngdan yuqorida</mtArrowPos4>
+    <mtArrowPos5>Chapdan yuqorida</mtArrowPos5>
+    <mtLedSide1>Avtomatik</mtLedSide1>
+    <mtLedSide2>Chapda</mtLedSide2>
+    <mtLedSide3>Oʻngda</mtLedSide3>
+    <pwrLineArrType1>Past kuchlanishli EUL</pwrLineArrType1>
+    <pwrLineArrType2>Yuqori kuchlanishli EUL</pwrLineArrType2>
+    <arrLineType1>Oddiy strelka</arrLineType1>
+    <arrLineType2>Qalin strelka</arrLineType2>
+    <arrLineType3>Kertikli oddiy strelka</arrLineType3>
+    <pwrLineMrkType1>Belgisiz</pwrLineMrkType1>
+    <pwrLineMrkType2>Dumaloq belgi</pwrLineMrkType2>
+    <pwrLineMrkType3>Toʻldirilgan dumaloq belgi</pwrLineMrkType3>
+    <pwrLineMrkType4>Toʻrtburchak belgi</pwrLineMrkType4>
+    <pwrLineMrkType5>Toʻldirilgan toʻrtburchak belgi</pwrLineMrkType5>
+  </mpESKD>
+</ModPlus>

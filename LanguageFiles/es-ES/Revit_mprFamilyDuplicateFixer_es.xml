@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprFamilyDuplicateFixer
+    LocalName="Corrección de duplicados"
+    Description="Automatizar corrección de duplicados de familias o de tipos"
+    FullDescription="Copia de tipos desde familias duplicadas a familias principales, copia de valores de parámetros de tipo, actualización de ejemplares de familia y eliminación de familias duplicadas. También permite reemplazar tipos de familia duplicados y eliminar tipos reemplazados">
+    <h1>Copiar tipos</h1>
+    <h3>Reemplazar ejemplares de familias</h3>
+    <h4>Eliminar familias duplicadas</h4>
+    <h5>Ejecutar</h5>
+    <h6>Añadir par de familias "Duplicado - Familia principal"</h6>
+    <h7>Seleccionar familia duplicado</h7>
+    <h8>Seleccionar familia principal (a la que se copiarán tipos)</h8>
+    <h9>Aceptar</h9>
+    <h10>No se han encontrado familias coincidentes en categoría actual para la cual familia seleccionada es un duplicado.
+Se realiza verificación adicional basada en parámetros de tipo: un par de familias similares deben tener mismos parámetros de tipo</h10>
+    <h11>Copiar valores de parámetros de ejemplar de familia reemplazado</h11>
+    <h12>Establecer un tipo de familia principal</h12>
+    <h13>Lista de familias principales muestra familias de misma categoría que familia duplicada seleccionada, cuyos tipos son intercambiables. En este caso, número y nombres de parámetros de tipo deben ser mismos.</h13>
+    <h14>Corrección de duplicados de familias</h14>
+    <h15>Corrección de duplicados tipo</h15>
+    <h16>Añadir familias</h16>
+    <h17>Eliminar tipos reemplazados de una familia</h17>
+    <h18>Lista contiene sólo familias que tienen más de un tipo</h18>
+    <m1>¡No hay tipos seleccionados en lista de familias procesadas!</m1>
+    <m2>Crear tipo "{0}" para familia "{1}"</m2>
+    <m3>Copiar valores de parámetros de tipo "{0}" de familia "{1}" a familia "{2}"</m3>
+    <m4>Reemplazar tipo por ejemplar de familia "{0}" {1}</m4>
+    <m5>Reemplazar tipo "{0}" por tipo "{1}" en familia "{2}"</m5>
+    <m6>Tipo "{0}" reemplazado por tipo "{1}"</m6>
+    <m7>Eliminar tipo "{0}" en familia "{1}"</m7>
+    <m8>Tipo "{0}" eliminado en familia "{1}"</m8>
+    <e1>Tipo "{0}" no fue creado en familia "{1}"</e1>
+    <e2>No se puede descargar familia "{0}" en documento</e2>
+    <e3>No se ha encontrado parámetro "{0}" en tipo "{1}" de familia "{2}"</e3>
+    <e4>Tipo "{0}" no se ha encontrado en familia "{1}"</e4>
+    <e5>No se puede eliminar familia "{0}" porque hay ejemplares de esta familia en modelo</e5>
+    <e6>Error al reemplazar un tipo en familia "{0}": {1}</e6>
+    <e7>Error al eliminar tipo "{0}" en familia "{1}": {2}</e7>
+    <t1>Dirección de trabajo: familia de izquierda es un duplicado, familia de derecha es familia primaria</t1>
+    <t2>Añadir un par de familias a lista de procesamiento que no coincidieron con búsqueda estándar de duplicados</t2>
+    <t3>En familia principal, se crearán nuevos tipos que están presentes y verificados en familia duplicada y que están ausentes en familia principal</t3>
+    <t5>Ejemplares de familia duplicada de tipos marcados serán reemplazadas por ejemplares de familia principal con establecimiento de mismo tipo. Si ejemplar de familia principal no tiene tipo requerido, se omitirá reemplazo de ejemplar de familia duplicada</t5>
+    <t6>Se eliminarán familias duplicadas que no tengan ejemplares en modelo</t6>
+    <t7>Valores de parámetros de ejemplar se copiarán de familia duplicada reemplazada a familia principal de reemplazo</t7>
+    <t8>Para ejemplares de familia duplicada, se instalarán tipos de familia principal seleccionados en listas desplegables</t8>
+    <t9>Añadir a lista familias que no coincidieron con búsqueda estándar de duplicados</t9>
+    <t10>En lado izquierdo hay tipos de familia, en lado derecho hay listas desplegables para reemplazar tipo. Si no se selecciona tipo en lista, no se realizará reemplazo</t10>
+    <t11>Limpiar selección</t11>
+  </mprFamilyDuplicateFixer>
+</ModPlus>

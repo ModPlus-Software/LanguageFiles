@@ -222,6 +222,7 @@
     <msg6>El archivo "{0}" no es un archivo xml válido. {1}</msg6>
     <msg7>No se pudieron leer los datos del archivo "{0}". {1}</msg7>
     <msg8>Archivo seleccionado no es archivo de almacenamiento de configuración</msg8>
+    <msg9>No se pudo guardar el archivo "{0}". Es posible que esté abierto en otro programa. Cierre el archivo e inténtelo de nuevo</msg9>
     <close>Cerrar</close>
     <yes>Sí</yes>
     <no>No</no>
@@ -237,7 +238,7 @@
     <h3>Detalles</h3>
     <h4>Origen</h4>
     <h5>Seguimiento de pila</h5>
-    <h6>SELECCIONAR UN NÚMERO DEL TEXTO</h6>
+    <h6>Seleccionar un número del texto</h6>
     <h7>Delimitador decimal:</h7>
     <h8>Punto</h8>
     <h9>Coma</h9>
@@ -279,7 +280,7 @@
     <h50>Cálculo de longitud de anclaje o empalme solapado</h50>
     <h51>Calcular longitud del anclaje</h51>
     <h52>Calcular longitud de empalme solapado</h52>
-    <h53>Al enviar solicitud al servicio web de ModPlus, acceso estaba bloqueado. Comuníquese con su administrador de red local para obtener acceso a servicios en subdominio https://*.modplus.org(https://api.modplus.org, https://update.modplus.org, https://api-lsm.modplus.org)</h53>
+    <h53>Se recibió una página web (se muestra abajo) en lugar de una respuesta del servicio web de ModPlus. Normalmente significa que la conexión está interceptada por un servidor proxy, un firewall, una VPN o un sistema de control de acceso a Internet, o que la red requiere iniciar sesión (por ejemplo, una Wi-Fi de invitados). Si se utiliza una VPN, intente desactivarla o, al contrario, activarla. Si el acceso a Internet en su organización está restringido, comuníquese con el administrador de su red local para obtener acceso a los servicios del subdominio https://*.modplus.org (https://api.modplus.org, https://api-lsm.modplus.org, https://update.modplus.org, https://storage.modplus.org)</h53>
     <h54>Abrir en Bloc de notas</h54>
     <h55>Ajustes de notificaciones</h55>
     <h56>Novedades</h56>
@@ -326,6 +327,22 @@
     <em3>o chat de soporte en</em3>
     <em4>Telegram</em4>
     <em5>Describe en detalle qué acciones llevaron al error</em5>
+    <ke1>Causa</ke1>
+    <ke2>Qué hacer</ke2>
+    <ke3>Uno o varios de los elementos procesados se encuentran fuera de los límites de diseño de Revit. Toda la geometría del modelo debe estar a menos de 16 km (10 millas) del origen interno del proyecto. Revit no puede construir geometría con coordenadas más allá de este límite. El error se produce en Revit y no está relacionado con el funcionamiento del plugin.</ke3>
+    <ke4>Compruebe si en el modelo hay elementos que se hayan desplazado accidentalmente lejos de la parte principal del modelo. Esto suele ocurrir después de copiar, importar un DWG o pegar desde otro proyecto. Ejecute "Zoom to Fit" (ZF) en una vista de planta: si el modelo se reduce a un punto, hay elementos alejados. Búsquelos y elimínelos o muévalos.</ke4>
+    <ke5>Si todo el modelo se encuentra a más de 16 km del origen interno, acérquelo a él. La ubicación real se define mediante coordenadas compartidas: "Manage" → "Coordinates" → "Specify Coordinates at Point".</ke5>
+    <ke6>No se pudo conectar con el servidor de ModPlus: la conexión fue rechazada o interrumpida, o no se pudo resolver la dirección del servidor. La causa está en la red del equipo: no hay acceso a Internet, o la conexión está bloqueada por un firewall, un antivirus, un servidor proxy o las reglas de red de su organización. El error no lo provoca el complemento.</ke6>
+    <ke7>Compruebe que el equipo tiene acceso a Internet y vuelva a intentarlo dentro de unos minutos.</ke7>
+    <ke8>Si la conexión a Internet pasa por un servidor proxy, revise la configuración de proxy en ModPlus. Si el acceso a Internet en su organización está restringido, pida al administrador del sistema que permita las conexiones a api.modplus.org, api-lsm.modplus.org, update.modplus.org y storage.modplus.org (puerto 443).</ke8>
+    <ke9>Se recibió una página web en lugar de una respuesta del servidor de ModPlus. Normalmente significa que la conexión está interceptada por un servidor proxy, un firewall o un sistema de control de acceso a Internet, o que la red requiere iniciar sesión (por ejemplo, una Wi-Fi de invitados). Con menos frecuencia, el servidor no está disponible temporalmente. El error no lo provoca el complemento.</ke9>
+    <ke10>El servidor devolvió una página web en lugar de una respuesta a la solicitud</ke10>
+    <ke11>Abra cualquier sitio web en el navegador: si la red requiere iniciar sesión, se abrirá una página de inicio de sesión. Inicie sesión y vuelva a intentarlo.</ke11>
+    <ke12>Si en el equipo se utiliza una VPN, intente desactivarla o, al contrario, activarla: el acceso a los servidores de ModPlus puede depender del país desde el que se realiza la conexión. Después, vuelva a intentarlo.</ke12>
+    <ke13>El error "Método no encontrado" indica que su versión de ModPlus solo ha recibido actualizaciones parciales: algunos componentes se han actualizado y otros siguen en la versión anterior, y no son compatibles entre sí. El error no lo provoca el propio complemento.</ke13>
+    <ke14>Cierre todos los productos compatibles (AutoCAD, Revit, etc.); después, busque actualizaciones en el módulo de actualización automática (el icono en el área de notificaciones de Windows) e instale todas las actualizaciones disponibles.</ke14>
+    <ke15>Si el módulo de actualización automática no instala las actualizaciones necesarias (no encuentra actualizaciones, la instalación falla o este error persiste después de actualizar), descargue el instalador de ModPlus y actualice con él.</ke15>
+    <ke16>Descargar el instalador de ModPlus</ke16>
     <p1>Resultado del cálculo en Word</p1>
     <p2>Creando un nuevo documento</p2>
     <p3>Completando datos</p3>
@@ -470,6 +487,9 @@
     <uk-UA>Український (Україна)</uk-UA>
     <es-ES>Español (España)</es-ES>
     <zh-CN>简体中文</zh-CN>
+    <fr-FR>Français (France)</fr-FR>
+    <pt-BR>Português (Brasil)</pt-BR>
+    <uz-Latn-UZ>Oʻzbekcha (Oʻzbekiston)</uz-Latn-UZ>
     <ny>Decoraciones de año nuevo</ny>
   </ModPlusAPI>
   <Geometry>
@@ -594,7 +614,7 @@
     <closeCad>Para iniciar configurador ModPlus es necesario cerrar AutoCAD</closeCad>
     <closeRevit>Para iniciar configurador ModPlus es necesario cerrar Revit</closeRevit>
     <closeRenga>Para iniciar configurador ModPlus es necesario cerrar Renga</closeRenga>
-    <loading>CARGANDO...</loading>
+    <loading>Cargando...</loading>
     <progress1>Inicie un avisador para verificar ejecución de aplicaciones de AutoCAD o Revit</progress1>
     <progress2>Verificar ruta del directorio de complementos</progress2>
     <progress4>Verificar de directorios estándar</progress4>
@@ -634,7 +654,7 @@
     <header12>Bordes de ventanas:</header12>
     <header16>Registro</header16>
     <header17>Contactos:</header17>
-    <header18>HISTORIAL DE CAMBIOS</header18>
+    <header18>Historial de cambios</header18>
     <header19>Complemento</header19>
     <header20>Producto</header20>
     <header21>Versión del producto</header21>
@@ -644,7 +664,7 @@
     <header25>Opción de la vinculación:</header25>
     <header26>Asignar a un disco físico:</header26>
     <header27>Asignar de cuenta del usuario:</header27>
-    <header28>MÁS SOBRE LA VINCULACIÓN</header28>
+    <header28>Más sobre la vinculación</header28>
     <header29>Versión del configurador:</header29>
     <header30>Versión del módulo de actualización automática:</header30>
     <header31>Versión de bibliotecas de trabajo para AutoCAD:</header31>
@@ -974,7 +994,7 @@
     <h17>Versión del complemento:</h17>
     <h18>Versión del producto:</h18>
     <!--todo remove after 46.5.0.0-->
-    <h21>MÓDULO DE ACTUALIZACIÓN AUTOMÁTICA: AJUSTES</h21>
+    <h21>Módulo de actualización automática: ajustes</h21>
     <h23>Período de búsqueda de actualización:</h23>
     <h24>Si hay actualizaciones:</h24>
     <h25>Al instalar nuevos complementos:</h25>
@@ -1083,6 +1103,7 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <h127>Se han seleccionado todas las versiones del producto. La instalación, la activación y la desactivación del complemento se aplican a todas las versiones a la vez</h127>
     <h128>El complemento se instalará para las versiones del producto: {0}. ¿Continuar?</h128>
     <h129>No se han podido descargar las actualizaciones. Se volverá a intentar más tarde</h129>
+    <h130>Las actualizaciones se instalarán después de cerrar {0}</h130>
     <!--todo remove after 43.3.0.0-->
     <b3>Seleccionar todo</b3>
     <!--todo remove after 43.3.0.0-->
@@ -1205,6 +1226,7 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <msg51>Se instalarán todos los complementos mostrados que no estén instalados o estén desactualizados. ¿Continuar?</msg51>
     <msg52>La conexión a los servicios de ModPlus fue exitosa</msg52>
     <msg53>No se pudo conectar a los servicios de ModPlus. Verifique la configuración del proxy e inténtelo de nuevo</msg53>
+    <!--todo remove after 52.0.1.0-->
     <msg54>Las actualizaciones se han descargado y se instalarán después de cerrar {0}</msg54>
     <msg55>Para actualizar es necesario cerrar {0}</msg55>
     <msg56>El funcionamiento del módulo está limitado porque la aplicación {0} está abierta</msg56>
@@ -1316,6 +1338,12 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <h66>Título</h66>
     <h67>Icono</h67>
     <h68>Pestaña ModPlus en la cinta</h68>
+    <h69>Seleccionar anterior [mpSelectPrevious]</h69>
+    <h70>MP: Seleccionar anterior</h70>
+    <h71>Seleccionar objetos en la ventana gráfica [mpSelectByViewport]</h71>
+    <h72>MP: Seleccionar objetos en la ventana gráfica</h72>
+    <h73>Seleccionar objeto del campo [mpSelectByField]</h73>
+    <h74>MP: Seleccionar objetos del campo</h74>
     <cb1>Icono</cb1>
     <cb2>Nombre</cb2>
     <tt2>Por favor ingrese su dirección de correo electrónico para trabajar con servidor modplus.org. Dirección de correo electrónico es necesaria para identificarte en servidor. Se recomienda utilizar la dirección de correo electrónico especificada al registrarse en sitio web modplus.org</tt2>
@@ -1339,6 +1367,9 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <!--todo remove after 15.2.4.0-->
     <tt20>Mostrar el icono vectorial de ModPlus a la izquierda del nombre de la pestaña</tt20>
     <tt21>Qué mostrar en el encabezado de la pestaña ModPlus de la cinta</tt21>
+    <tt22>Activación/desactivación del menú contextual para el mini-plugin "Seleccionar anterior"</tt22>
+    <tt23>Activación/desactivación del menú contextual para el mini-plugin "Seleccionar objetos en la ventana gráfica"</tt23>
+    <tt24>Activación/desactivación del menú contextual para el mini-plugin "Seleccionar objetos del campo"</tt24>
     <err1>¡Este nombre ya está en uso! Inventa algo más</err1>
     <err2>¡Es necesario especificar nombre para mostrar del bloque!</err2>
     <err3>¡Es necesario seleccionar un bloque de lista!</err3>
@@ -1371,7 +1402,8 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <msg23>¡No es posible acceder al editor de AutoCAD! Se está ejecutando otro comando.\nFinalice comando y vuelva a intentarlo</msg23>
     <msg24>¡Atención! El idioma de la paleta, de la ficha Smart en la cinta de opciones y de los menús contextuales de los plugins cambiará solo después de reiniciar AutoCAD</msg24>
     <msg25>Segundo punto:</msg25>
-    <p1>¡ATENCIÓN!</p1>
+    <msg26>Seleccione objetos con campos:</msg26>
+    <p1>¡Atención!</p1>
     <p2>¡Se intentó descargar un complemento en una versión inapropiada de AutoCAD!</p2>
     <p3>Descarga está completa</p3>
     <p4>Cargando ModPlus...</p4>
@@ -1487,7 +1519,7 @@ Para habilitar actualizaciones, instale ModPlus en la carpeta recomendada "{1}" 
     <msg24>¡Atención! El idioma de la adaptación y de los menús contextuales cambiará solo después de reiniciar nanoCAD</msg24>
     <msg25>Segundo punto:</msg25>
     <msg26>La adaptación de ModPlus ha sido modificada. Reinicie nanoCAD para su correcta visualización</msg26>
-    <p1>¡ATENCIÓN!</p1>
+    <p1>¡Atención!</p1>
     <p2>¡Se intentó descargar un complemento en una versión inapropiada de nanoCAD!</p2>
     <p3>Descarga está completa</p3>
     <p4>Cargando ModPlus...</p4>
@@ -1681,6 +1713,17 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <h232>Pestaña ModPlus en la cinta</h232>
     <h233>Cambiar el tema de los complementos al cambiar el tema de Revit</h233>
     <h234>Al cambiar el tema de la interfaz de Revit, el tema de las ventanas de los complementos ModPlus cambia automáticamente a claro u oscuro. El tema que elija se recuerda por separado para el tema claro y el oscuro de Revit y se restaura al volver a cambiar</h234>
+    <h235>La opción de ModPlus «{0}» está activada. El tema de la interfaz de Revit es oscuro, pero para las ventanas de los complementos está seleccionado el tema claro «{1}», por lo que se sustituirá por «{2}».
+
+¿Mantener el tema seleccionado «{1}»?
+
+Para desactivar por completo el cambio automático, desmarque esa opción en la configuración de ModPlus.</h235>
+    <h236>La opción de ModPlus «{0}» está activada. El tema de la interfaz de Revit es claro, pero para las ventanas de los complementos está seleccionado el tema oscuro «{1}», por lo que se sustituirá por «{2}».
+
+¿Mantener el tema seleccionado «{1}»?
+
+Para desactivar por completo el cambio automático, desmarque esa opción en la configuración de ModPlus.</h236>
+    <h237>No se encontraron anotaciones en la vista actual para los elementos seleccionados</h237>
     <parameters>Parámetros</parameters>
     <name>Nombre</name>
     <any>Cualquier</any>
@@ -1818,6 +1861,7 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <err14>El complemento solicitado no se encontró en la Cinta. Compruebe que el complemento está instalado y habilitado en la sección "Complementos" del módulo de actualización automática, y también compruebe que el complemento está añadido al menú en la sección "Menú" del módulo de actualización automática</err14>
     <err15>No se pudo inicializar la representación gráfica del complemento solicitado</err15>
     <err16>No se pudo obtener la capa de representaciones gráficas</err16>
+    <err17>No todas las condiciones tienen especificado el nombre del parámetro. Especifique el nombre del parámetro o elimine la condición</err17>
     <c1>Colorear pestañas</c1>
     <c2>Combinación de colores:</c2>
     <c3>Área de coloración:</c3>
@@ -1960,11 +2004,16 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <tcm13>Cerrar todos los documentos excepto el actual</tcm13>
     <tcm14>Cerrar todos los documentos sin guardar</tcm14>
     <tcm15>Cerrar todos los documentos excepto el actual sin guardar</tcm15>
+    <plgs1>Buscar plugin</plgs1>
+    <plgs2>Mostrar en la cinta de opciones</plgs2>
+    <plgs3>No se encontró nada</plgs3>
+    <plgs4>El comando no está disponible en el contexto actual. Use el botón de la lupa para encontrarlo en la cinta de opciones</plgs4>
+    <plgs5>oculto en el menú actual</plgs5>
   </RevitDlls>
   <!-- todo после версии 9.3.0 имена типов и расчетных характеристик вынесены в отдельные узлы -->
   <RengaDlls
     LocalName="Bibliotecas de trabajo Renga">
-    <h1>AJUSTES MODPLUS</h1>
+    <h1>Ajustes ModPlus</h1>
     <h2>General</h2>
     <h5>Idioma:</h5>
     <h6>Tema:</h6>
@@ -2009,6 +2058,7 @@ Es posible que no todos los parámetros estén presentes en la lista de parámet
     <ef27>El objeto coincide si</ef27>
     <ef28>todas condiciones coinciden</ef28>
     <ef29>al menos una condición coincide</ef29>
+    <ef30>No todas las condiciones tienen especificado el nombre del atributo. Especifique el nombre del atributo o elimine la condición</ef30>
     <et1>Igual</et1>
     <et2>Más</et2>
     <et3>Menos</et3>
@@ -2216,7 +2266,7 @@ don=8ds - ds ≥ 20 mm;</r1>
     <r2>Diámetro mínimo del mandril para evitar daños a armadura es:
 4Ø para un diámetro de barra Ø ≤ 16 mm;
 7Ø para un diámetro de barra Ø &gt; 16 mm;</r2>
-    <h1>REGLAS DE CURVATURA DE ARMADURA</h1>
+    <h1>Reglas de curvatura de armadura</h1>
     <h2>Origen de reglas:</h2>
     <h3>Descripción de reglas:</h3>
     <h4>Diámetros de flexión correctos para tipos existentes</h4>

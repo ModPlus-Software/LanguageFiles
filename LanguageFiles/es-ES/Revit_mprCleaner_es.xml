@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCleaner
+    LocalName="Limpiar modelo"
+    Description="Eliminar objetos de determinadas categorías del modelo con posibilidad de eliminar elementos no utilizados">
+    <h1>Resultado de limpieza</h1>
+    <h2>Buscar...</h2>
+    <h3>Seleccionar todo</h3>
+    <h4>Cancelar selección</h4>
+    <h5>Invertir selección</h5>
+    <h6>Limpiar</h6>
+    <h7>No hay nada seleccionado</h7>
+    <h8>elementos</h8>
+    <h9>Ignorar advertencias de Revit</h9>
+    <h10>Limpieza principal</h10>
+    <h11>Plantillas de vista</h11>
+    <h12>Para seleccionar varios elementos de lista, presionar tecla Mayús y/o tecla Ctrl</h12>
+    <h13>Plantillas de vista aplicadas:</h13>
+    <h14>Saltar</h14>
+    <h15>Eliminar enlaces de plantilla de vista</h15>
+    <h16>Nombre de plantilla de vista</h16>
+    <h17>Usado</h17>
+    <h18>Eliminar plantillas de vista</h18>
+    <h19>Plantillas faltantes -</h19>
+    <h20>Plantillas eliminadas -</h20>
+    <h21>Enlaces eliminados para plantillas de vista -</h21>
+    <h22>Parámetros compartidos no utilizados</h22>
+    <h23>Buscar parámetros compartidos no utilizados puede llevar algún tiempo, ya que será necesario abrir todas familias del proyecto</h23>
+    <h24>Nombre del parámetro</h24>
+    <h25>Número de parámetros:</h25>
+    <h26>Eliminar seleccionado</h26>
+    <h27>Eliminar parámetros compartidos no utilizadas</h27>
+    <h28>{0} parámetros compartidos eliminados</h28>
+    <h29>Filtros de vista</h29>
+    <h30>Eliminar filtros de vista</h30>
+    <h31>Utilizado en plantillas</h31>
+    <h32>Utilizado en vistas</h32>
+    <h33>Tabla de planificacións</h33>
+    <h34>Eliminar tabla de planificacións</h34>
+    <h35>Ubicado en una hoja</h35>
+    <h36>Parámetros compartidos</h36>
+    <h37>Eliminar parámetros compartidos</h37>
+    <h38>Habitaciones no colocados</h38>
+    <h39>Eliminar habitaciones no ubicadas</h39>
+    <h40>Eliminar todo</h40>
+    <h41>Número</h41>
+    <h42>Nombre</h42>
+    <h43>Espacios no colocados</h43>
+    <h44>Eliminar espacios no colocados</h44>
+    <h45>Abrir en Bloc de notas</h45>
+    <h46>No se puede procesar familia. Error</h46>
+    <h47>No se puede eliminar parámetro general. Error</h47>
+    <h48>En APG actual por Guid</h48>
+    <h49>En APG actual por nombre</h49>
+    <h50>Mostrar</h50>
+    <h51>Utilizado en</h51>
+    <h52>Utilizado en tabla de planificación</h52>
+    <h53>Utilizado en familia</h53>
+    <h54>Buscar parámetro en tabla de planificacións, familias, detalles del proyecto y filtros</h54>
+    <h55>Parámetro no se ha encontrado en tabla de planificacións, familias, detalles del proyecto o filtros</h55>
+    <h56>Parámetros del proyecto</h56>
+    <h57>Título del proyecto</h57>
+    <!--todo remove after 2.24.0.0-->
+    <h58>Nombre del parámetro</h58>
+    <h59>Utilizado en detalles del proyecto</h59>
+    <h60>Eliminar parámetros del proyecto</h60>
+    <h61>No se puede eliminar parámetros del proyecto. Error</h61>
+    <h62>{0} parámetros del proyecto eliminados</h62>
+    <h63>Utilizado en filtro</h63>
+    <h64>Utilizado en ejemplar de familia</h64>
+    <h65>Opciones seleccionadas</h65>
+    <!--todo remove after 3.0.0.0-->
+    <h66>Vistas</h66>
+    <h67>Ubicado en hoja</h67>
+    <h68>Eliminar vistas</h68>
+    <h69>Abrir lista de todos parámetros compartidos encontrados en Bloc de notas</h69>
+    <h70>Tablas de consulta</h70>
+    <h71>Eliminar tablas de consulta</h71>
+    <h72>Zonas no colocadas</h72>
+    <h73>Eliminar áreas no colocadas</h73>
+    <h74>Vista dependiente colocada en plano</h74>
+    <dav1>Antes de eliminar, Revit cambiará a otra vista disponible</dav1>
+    <dav2>No se permite eliminar todas las vistas disponibles para el cambio</dav2>
+    <pattern>Patrón</pattern>
+    <patternName>Nombre del patrón</patternName>
+    <patternsNumber>Cantidad de patrones</patternsNumber>
+    <linePatterns>Patrones de líneas</linePatterns>
+    <lp1>Búsqueda del patrón en estilos de objetos y sobrescrituras de visibilidad/gráficos</lp1>
+    <lp2>Tener en cuenta la sobrescritura gráfica del elemento</lp2>
+    <lp3>Eliminación de patrones de línea</lp3>
+    <lp4>Eliminación del patrón de línea</lp4>
+    <lp5>No se pudo eliminar el patrón de línea. Error</lp5>
+    <lp6>Patrones de línea eliminados</lp6>
+    <lp7>El patrón no se utiliza en los estilos de objetos ni en las sobrescrituras de visibilidad/gráficos</lp7>
+    <lpm1>Se utiliza en el estilo de subcategoría de línea: {0}</lpm1>
+    <lpm2>Se utiliza en los estilos de objetos del modelo: {0}</lpm2>
+    <lpm3>Se utiliza en los estilos de objetos de anotación: {0}</lpm3>
+    <lpm4>Se utiliza en los estilos de objetos del modelo analítico: {0}</lpm4>
+    <lpm5>Se utiliza en el estilo de subcategoría de los objetos del modelo {0}: {1}</lpm5>
+    <lpm6>Se utiliza en el estilo de subcategoría de los objetos de anotación {0}: {1}</lpm6>
+    <lpm7>Se utiliza en el estilo de subcategoría de los objetos del modelo analítico {0}: {1}</lpm7>
+    <lpm8>Se utiliza en el estilo de subcategoría de los objetos importados en la familia: {0}</lpm8>
+    <lpm9>Se utiliza en el estilo de subcategoría del objeto importado en el modelo {0}: {1}</lpm9>
+    <lpm10>Se utiliza en la sobrescritura gráfica de la vista {0}, en la categoría del modelo: {1}</lpm10>
+    <lpm11>Se utiliza en la sobrescritura gráfica de la vista {0}, en la categoría de anotación: {1}</lpm11>
+    <lpm12>Se utiliza en la sobrescritura gráfica de la vista {0}, en la categoría del modelo analítico: {1}</lpm12>
+    <lpm13>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la categoría del modelo: {1}</lpm13>
+    <lpm14>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la categoría de anotación: {1}</lpm14>
+    <lpm15>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la categoría del modelo analítico: {1}</lpm15>
+    <lpm16>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría del modelo {1}: {2}</lpm16>
+    <lpm17>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría de anotación {1}: {2}</lpm17>
+    <lpm18>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría del modelo analítico {1}: {2}</lpm18>
+    <lpm19>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría de los objetos importados en la familia: {1}</lpm19>
+    <lpm20>Se utiliza en la sobrescritura gráfica de la vista {0}, en la subcategoría del objeto importado en el modelo {1}: {2}</lpm20>
+    <lpm21>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría del modelo {1}: {2}</lpm21>
+    <lpm22>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría de anotación {1}: {2}</lpm22>
+    <lpm23>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría del modelo analítico {1}: {2}</lpm23>
+    <lpm24>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría de los objetos importados en la familia: {1}</lpm24>
+    <lpm25>Se utiliza en la sobrescritura gráfica de la plantilla de vista {0}, en la subcategoría del objeto importado en el modelo {1}: {2}</lpm25>
+    <lpm26>Se utiliza en el filtro de vista {0}: {1}</lpm26>
+    <lpm27>Se utiliza en el filtro de la plantilla de vista {0}: {1}</lpm27>
+    <lpm28>Se utiliza en la sobrescritura gráfica en la vista {0}, para el elemento: {1}</lpm28>
+    <search>Buscar</search>
+    <name>Nombre</name>
+    <collect>Recopilar</collect>
+    <w1>Eliminar todas vistas (sólo planes de zonificación)</w1>
+    <w2>Eliminar todas zonas</w2>
+    <w3>Eliminar todas líneas de contornos de zonas</w3>
+    <w4>Eliminar todas restricciones</w4>
+    <w5>Eliminar todas vistas (sólo detalles)</w5>
+    <w6>Eliminar todas vistas (sólo vistas de dibujo)</w6>
+    <w7>Eliminar todos sombreados (condicional)</w7>
+    <w8>Eliminar todas marcas de alzados</w8>
+    <w9>Eliminar todas vistas (sólo alzados)</w9>
+    <w10>Eliminar todas vistas (sólo planos estructurales)</w10>
+    <w11>Eliminar todos archivos vinculados</w11>
+    <w12>Eliminar todos filtros</w12>
+    <w13>Eliminar (y desagrupar) todos grupos</w13>
+    <w13-1>Eliminar todos grupos no utilizados</w13-1>
+    <w13-2>Desagrupar todos grupos (sin eliminarlos)</w13-2>
+    <w14>Eliminar todos patrones de líneas importados</w14>
+    <w14-1>Eliminar todos patrones de líneas</w14-1>
+    <w15>Eliminar todas vistas (sólo leyendas)</w15>
+    <w16>Eliminar todos materiales</w16>
+    <w17>Eliminar todos sombreados (modelado)</w17>
+    <w18>Eliminar todas vistas (sólo planos de planta)</w18>
+    <w19>Eliminar todas vistas (sólo planos de techo)</w19>
+    <w20>Eliminar todos planos de referencia</w20>
+    <w21>Eliminar todos materiales (sólo materiales a visualizar)</w21>
+    <w22>Eliminar todas habitaciones</w22>
+    <w23>Eliminar todas líneas de separación de habitaciones</w23>
+    <w24>Eliminar todas vistas (sólo tabla de planificacións)</w24>
+    <w25>Eliminar todas cajas de referencia</w25>
+    <w26>Eliminar todas vistas (sólo secciones)</w26>
+    <w27>Eliminar todas hojas (excepto abiertas)</w27>
+    <w27-1>Eliminar todas hojas (excepto abiertas) con vistas ubicadas en ellas</w27-1>
+    <w28>Eliminar todas vistas (sólo vistas 3D)</w28>
+    <w29>Eliminar todas vistas sin enlaces (sólo planes de zonificación)</w29>
+    <w30>Eliminar todas vistas sin enlaces (sólo detalles)</w30>
+    <w31>Eliminar todas vistas sin enlaces (sólo vistas de dibujo)</w31>
+    <w32>Eliminar todas vistas sin enlaces (sólo alzados)</w32>
+    <w33>Eliminar todas vistas sin enlaces (sólo planos estructurales)</w33>
+    <w34>Eliminar todas vistas sin enlaces (sólo planos de planta)</w34>
+    <w35>Eliminar todas vistas sin enlaces (sólo planos de techo)</w35>
+    <w36>Eliminar todas vistas sin enlaces (sólo secciones)</w36>
+    <w37>Eliminar todas vistas sin enlaces (sólo vistas 3D)</w37>
+    <w38>Eliminar todos elementos no utilizados</w38>
+    <w39>Eliminar todas vistas (cualquier tipo excepto vistas y hojas abiertas)</w39>
+    <w40>Eliminar todas plantillas de vista</w40>
+    <w41>Eliminar todos elementos del subproyecto</w41>
+    <w42>Eliminar todos modelos de coordinación</w42>
+    <w43>Eliminar todos tipos de ejes no utilizados</w43>
+    <w44>Eliminar todos tipos de niveles no utilizados</w44>
+    <w45>Eliminar todas vistas sin enlaces (sólo leyendas)</w45>
+    <w46>Eliminar todos filtros no utilizados</w46>
+    <w47>Eliminar todos subproyectos vacíos</w47>
+    <w48>Eliminar todas las plantillas de vista no utilizadas</w48>
+    <m1>Modelo debe guardarse para eliminar enlaces externos</m1>
+    <m2>No es posible trabajar en documento familiar</m2>
+    <m3>Recibir datos de mapa de vinculación de documentos</m3>
+    <m4>Leer familia</m4>
+    <m5>Buscar en tabla de planificacións</m5>
+    <m6>¡Tablas de búsqueda consulta incluyen tablas utilizadas en familia actual! ¿Estás seguro de que desea eliminar?</m6>
+    <!--todo remove after 2.28.7-->
+    <wipeOptionResultSuccess>{0}: eliminado correctamente {1}</wipeOptionResultSuccess>
+    <!--todo remove after 2.28.7-->
+    <wipeOptionResultPartialSummary>{0}: se eliminó correctamente {1}, no se pudo eliminar {2}</wipeOptionResultPartialSummary>
+    <!--todo remove after 2.28.7.0-->
+    <wipeOptionResultPartialDetails>IDs de los elementos no eliminados durante la limpieza</wipeOptionResultPartialDetails>
+    <!--todo remove after 2.28.7.0-->
+    <wipeOptionResultEmpty>{0}: no se encontraron elementos para limpiar</wipeOptionResultEmpty>
+    <defaultTypeMessage>Tipo predeterminado asignado: {0}</defaultTypeMessage>
+    <reassignedInstancesMessage>Ejemplares reasignados al tipo predeterminado: {0}</reassignedInstancesMessage>
+    <reassignedTypeParametersMessage>Referencias en los parámetros de tipo reasignadas: {0}</reassignedTypeParametersMessage>
+    <RemoveAllScheduleTypes>Eliminar todos los tipos de planificación</RemoveAllScheduleTypes>
+    <RemoveAllLegendViewTypes>Eliminar todos los tipos de vista de leyenda</RemoveAllLegendViewTypes>
+    <RemoveAllDraftingViewTypes>Eliminar todos los tipos de vista de detalle</RemoveAllDraftingViewTypes>
+    <RemoveAllElevationViewTypes>Eliminar todos los tipos de vista de alzado</RemoveAllElevationViewTypes>
+    <RemoveAllFloorPlanTypes>Eliminar todos los tipos de plano de planta</RemoveAllFloorPlanTypes>
+    <RemoveAllSectionViewTypes>Eliminar todos los tipos de vista de sección</RemoveAllSectionViewTypes>
+    <RemoveAll3DViewTypes>Eliminar todos los tipos de vista 3D</RemoveAll3DViewTypes>
+    <RemoveAllSpotSlopeTypes>Eliminar todos los tipos de pendiente puntual</RemoveAllSpotSlopeTypes>
+    <RemoveAllSpotCoordinateTypes>Eliminar todos los tipos de coordenadas puntuales</RemoveAllSpotCoordinateTypes>
+    <RemoveAllSpotElevationTypes>Eliminar todos los tipos de cota de elevación puntual</RemoveAllSpotElevationTypes>
+    <RemoveAllDiameterDimensionTypes>Eliminar todos los tipos de cotas de diámetro</RemoveAllDiameterDimensionTypes>
+    <RemoveAllRadialDimensionTypes>Eliminar todos los tipos de cotas radiales</RemoveAllRadialDimensionTypes>
+    <RemoveAllAngularDimensionTypes>Eliminar todos los tipos de cotas angulares</RemoveAllAngularDimensionTypes>
+    <RemoveAllLinearDimensionTypes>Eliminar todos los tipos de cotas lineales</RemoveAllLinearDimensionTypes>
+    <RemoveAllModelTextTypes>Eliminar todos los tipos de texto de modelo</RemoveAllModelTextTypes>
+    <RemoveAllTextNoteTypes>Eliminar todos los tipos de notas de texto</RemoveAllTextNoteTypes>
+    <RemoveAllColorFillRegions>Eliminar todas las regiones de relleno de color</RemoveAllColorFillRegions>
+    <RemoveAllColorSchemes>Eliminar todos los esquemas de color</RemoveAllColorSchemes>
+    <RemoveAllSectionMarkTypes>Eliminar todos los tipos de marcas de sección</RemoveAllSectionMarkTypes>
+    <RemoveAllElevationMarkTypes>Eliminar todos los tipos de marcas de alzado</RemoveAllElevationMarkTypes>
+    <RemoveAllCalloutTagTypes>Eliminar todos los tipos de etiquetas de detalle</RemoveAllCalloutTagTypes>
+    <RemoveAllTickMarkTypes>Eliminar todos los tipos de marcas</RemoveAllTickMarkTypes>
+    <FailureProcessingWindowTitle>Procesamiento de errores</FailureProcessingWindowTitle>
+    <FailureProcessingHeader>Se detectaron problemas durante la ejecución de la operación</FailureProcessingHeader>
+    <FailureProcessingDescription>Seleccione qué problemas se deben intentar resolver automáticamente</FailureProcessingDescription>
+    <MessageCountText>Número de mensajes</MessageCountText>
+    <ResultWindowHeader>La limpieza del modelo se ha completado</ResultWindowHeader>
+    <ResultWindowDescription>A continuación se muestra un informe de las operaciones realizadas</ResultWindowDescription>
+    <ResultWindowTitle>Resultado de la limpieza del modelo</ResultWindowTitle>
+    <ShowProblemElements>Mostrar elementos problemáticos</ShowProblemElements>
+    <HideProblemElements>Ocultar elementos problemáticos</HideProblemElements>
+    <WithoutResolutionCaption>No hay ninguna solución disponible para este problema. Estos elementos se omitirán</WithoutResolutionCaption>
+    <ErrorShortDescription>Error de operación</ErrorShortDescription>
+    <OwnedShortDescription>Los elementos están ocupados por otro usuario</OwnedShortDescription>
+    <PinnedShortDescription>Elementos fijados</PinnedShortDescription>
+    <PinnedDescription>Algunos elementos están fijados y no se pueden modificar ni eliminar. Para ejecutar la operación, primero debe desanclar estos elementos</PinnedDescription>
+    <PinnedResolutionActionCaption>Desanclar y continuar</PinnedResolutionActionCaption>
+    <GroupedShortDescription>Elementos en grupo</GroupedShortDescription>
+    <GroupedDescription>Algunos elementos están en un grupo y no se pueden modificar ni eliminar. Para ejecutar la operación, primero debe desagrupar los grupos correspondientes</GroupedDescription>
+    <GroupedResolutionActionCaption>Desagrupar y continuar</GroupedResolutionActionCaption>
+    <BlockingShortDescription>Elementos bloqueantes</BlockingShortDescription>
+    <BlockingDescription>Algunos elementos no se procesaron porque durante la operación provocan errores en otros elementos</BlockingDescription>
+    <RollbackShortDescription>No se pudieron procesar todos los elementos</RollbackShortDescription>
+    <RollbackDescription>Algunos elementos no se pudieron procesar debido a errores producidos durante la operación. Puede reintentar la operación para estos elementos u omitirlos</RollbackDescription>
+    <RetryOperation>Reintentar operación</RetryOperation>
+    <ExceptionDescriptionText>No se pudo completar la operación para algunos elementos</ExceptionDescriptionText>
+    <WipeOptionResultSuccess>Se han eliminado correctamente {0}</WipeOptionResultSuccess>
+    <WipeOptionResultPartialSummary>Se han eliminado correctamente {0}; no se han podido eliminar {1}</WipeOptionResultPartialSummary>
+    <WipeOptionResultEmpty>No se encontraron elementos para limpiar</WipeOptionResultEmpty>
+    <SelectAllElementsInCategory>Seleccionar todos los elementos de la categoría</SelectAllElementsInCategory>
+    <DetailItemTypes>Tipos de componentes de detalle</DetailItemTypes>
+    <DetailItems>Componentes de detalle</DetailItems>
+    <DimensionTypes>Tipos de cotas</DimensionTypes>
+    <ElementTypes>Tipos de elementos</ElementTypes>
+    <Groups>Grupos</Groups>
+    <ModelElements>Elementos de modelo</ModelElements>
+    <RevitLinks>Vínculos de Revit</RevitLinks>
+    <Sheets>Planos</Sheets>
+    <TagTypes>Tipos de etiquetas</TagTypes>
+    <TextTypes>Tipos de texto</TextTypes>
+    <UnusedElements>Elementos no utilizados</UnusedElements>
+    <ViewTypes>Tipos de vista</ViewTypes>
+    <Views>Vistas</Views>
+    <Worksets>Conjuntos de trabajo</Worksets>
+  </mprCleaner>
+</ModPlus>

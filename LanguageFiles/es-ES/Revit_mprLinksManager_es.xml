@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprLinksManager
+    LocalName="Gestor de vínculos"
+    Description="Gestionar vínculos externos de Revit y CAD en el documento actual"
+    FullDescription="Visualización, filtrado, adición, carga, descarga, recarga, eliminación de vínculos y reescritura de sus rutas en el documento actual de Revit">
+    <filtersGroupHeader>Filtros</filtersGroupHeader>
+    <statusLabel>Estado:</statusLabel>
+    <linksListGroupHeader>Lista de vínculos</linksListGroupHeader>
+    <columnNameHeader>Nombre</columnNameHeader>
+    <columnStatusHeader>Estado</columnStatusHeader>
+    <loadSettingsGroupHeader>Ajustes de carga</loadSettingsGroupHeader>
+    <positioningLabel>Posicionamiento</positioningLabel>
+    <onAddBehaviorLabel>Al añadir</onAddBehaviorLabel>
+    <fileSelectButton>Seleccionar archivos</fileSelectButton>
+    <operationsGroupHeader>Operaciones</operationsGroupHeader>
+    <deleteSelectedButton>Eliminar</deleteSelectedButton>
+    <unloadButton>Descargar</unloadButton>
+    <reloadButton>Volver a cargar</reloadButton>
+    <updateButton>Actualizar</updateButton>
+    <rewritePathText>Reescribir rutas</rewritePathText>
+    <rewritePathsByFolderButton>Reescribir rutas (carpeta)</rewritePathsByFolderButton>
+    <showLogButton>Mostrar registro</showLogButton>
+    <addLinkSettingsDialogTitle>Configuración de adición</addLinkSettingsDialogTitle>
+    <rewriteHintText>Comodines: * — cualquier secuencia, ? — un carácter, # — dígito. Escape: \* \? \# \\. Cuando está activado el modo "Cambiar solo ruta", la máscara se aplica solo al directorio.</rewriteHintText>
+    <rewriteModeLabel>Modo de reemplazo:</rewriteModeLabel>
+    <rewriteModeNormal>Normal</rewriteModeNormal>
+    <rewriteModeMask>Máscara</rewriteModeMask>
+    <findTextLabel>Buscar:</findTextLabel>
+    <replaceTextLabel>Reemplazar por:</replaceTextLabel>
+    <pathOnlyModeLabel>Cambiar solo ruta</pathOnlyModeLabel>
+    <originalPathColumnHeader>Ruta original</originalPathColumnHeader>
+    <newPathColumnHeader>Nueva ruta</newPathColumnHeader>
+    <fileNotFoundTooltip>Archivo no encontrado</fileNotFoundTooltip>
+    <tableHintText>Marque vínculos para ejecutar operaciones</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Gestor de vínculos iniciado</managerStartedLogFormat>
+    <openFilesFilter>Archivos Revit y DWG (*.rvt;*.dwg)|*.rvt;*.dwg|Archivos Revit (*.rvt)|*.rvt|Archivos DWG (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Vínculos ya existentes omitidos: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>Añadiendo {0} vínculos</addStartedLogFormat>
+    <addCompletedLogFormat>Vínculos añadidos: {0}, errores: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Error al añadir el archivo "{0}": {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>Error general: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>eliminación</operationDeleteGenitive>
+    <operationLoadGenitive>carga</operationLoadGenitive>
+    <operationUnloadGenitive>descarga</operationUnloadGenitive>
+    <operationReloadGenitive>recarga</operationReloadGenitive>
+    <deleteConfirmationMessage>¿Está seguro de que desea eliminar los vínculos seleccionados?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Eliminar</deleteConfirmationTitle>
+    <operationCanceledLogFormat>La operación {0} fue cancelada por el usuario</operationCanceledLogFormat>
+    <operationStartedLogFormat>Inicio de {0} de {1} vínculos</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Correctos: {0}, omitidos: {1}, errores: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Resultado de {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>Error general durante {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>La selección de carpeta fue cancelada por el usuario</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>La reescritura de rutas fue cancelada por el usuario</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>No hay cambios para reescribir rutas</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Inicio de reescritura de rutas para {0} vínculos</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Rutas reescritas: {0}, errores: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>Error general al reescribir rutas: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Error al reescribir ruta: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>el vínculo está en un conjunto de trabajo cerrado</rewritePathClosedWorksetError>
+    <linkStatusLoaded>Cargado</linkStatusLoaded>
+    <linkStatusUnloaded>Descargado</linkStatusUnloaded>
+    <linkStatusNotFound>No encontrado</linkStatusNotFound>
+    <positioningSharedCoordinates>Por coordenadas compartidas</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Origen a origen</positioningOriginToOrigin>
+    <positioningCenterToCenter>Centro a centro</positioningCenterToCenter>
+    <onAddLoadImmediately>Cargar inmediatamente</onAddLoadImmediately>
+    <onAddAddUnloaded>Agregar descargado</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Archivo de vínculo no encontrado: {0}</handlerLinkFileNotFoundFormat>
+    <handlerCannotLinkDocumentToItself>No se puede agregar el modelo actual como vínculo a sí mismo</handlerCannotLinkDocumentToItself>
+    <handlerLinkSavedByLaterRevitVersion>El modelo se guardó en una versión más reciente de Revit</handlerLinkSavedByLaterRevitVersion>
+    <handlerUnsupportedLinkTypeFormat>El tipo de vínculo "{0}" no es compatible</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>La extensión de archivo "{0}" no es compatible</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Agregar vínculos</addLinksTransaction>
+    <deleteLinksTransaction>Eliminar vínculos</deleteLinksTransaction>
+    <loadLinksTransaction>Cargar vínculos</loadLinksTransaction>
+    <unloadLinksTransaction>Descargar vínculos</unloadLinksTransaction>
+    <reloadLinksTransaction>Recargar vínculos</reloadLinksTransaction>
+    <searchHint>Introduzca texto para buscar</searchHint>
+    <typeWorksetColumnHeader>Subproyecto de tipo</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Subproyecto de ejemplares</instanceWorksetColumnHeader>
+    <placeInWorkset>Colocar en el subproyecto</placeInWorkset>
+    <createWorksetByPrefixLabel>Colocar en el subproyecto propio</createWorksetByPrefixLabel>
+    <worksetNamePrefixLabel>Prefijo del subproyecto:</worksetNamePrefixLabel>
+    <disableWorksetContains>Desactivar subproyectos que contengan:</disableWorksetContains>
+    <disableWorksetTooltip>Introduzca subcadenas separadas por comas. Al cargar el vínculo, los subproyectos del modelo vinculado cuyos nombres contengan al menos una de las subcadenas especificadas se cerrarán. Los demás subproyectos se abrirán.</disableWorksetTooltip>
+    <fromRevitServer>Desde Revit Server</fromRevitServer>
+    <revitServerWindowTitle>Agregar desde Revit Server</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>Se produjo un error al cambiar el subproyecto de tipo: {0}, error: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>Se produjo un error al cambiar el subproyecto de ejemplar: {0}, error: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Error al agregar vínculo desde Revit Server</addFromServerErrorFormat>
+    <diffWorkset>*VARÍA*</diffWorkset>
+    <unloadForSelfMenuItem>Para mí</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Para todos los usuarios</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>descarga local</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Descarga local de vínculos</unloadLocallyLinksTransaction>
+  </mprLinksManager>
+</ModPlus>

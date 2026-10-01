@@ -29,11 +29,17 @@ public class LocalizationVersionService
         }
         catch
         {
-            MessageBox.Show(
-                EditorStrings.LocalVersionReadFailed,
-                EditorStrings.ErrorCaption,
-                MessageBoxButton.OK,
-                MessageBoxImage.Error);
+            // В консольной утилите нет UI-потока: показывать модальное окно некому и нельзя —
+            // вызов заблокировал бы headless-процесс. Ошибку обрабатывает вызывающий код.
+            if (Application.Current != null)
+            {
+                MessageBox.Show(
+                    EditorStrings.LocalVersionReadFailed,
+                    EditorStrings.ErrorCaption,
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+
             return null;
         }
     }

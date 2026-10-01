@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCopyElementsToOpenDocuments
+    LocalName="Copiar elementos"
+    Description="Copia por lotes de elementos en documentos abiertos"
+    FullDescription="Copia por lotes elementos seleccionados del documento actual en documentos abiertos específicos">
+    <h1>Elementos seleccionados:</h1>
+    <h2>Del proyecto:</h2>
+    <h3>Al proyecto:</h3>
+    <h4>Opciones de copiar</h4>
+    <!--todo remove after 2.4.4.0-->
+    <h5>Registro de trabajo</h5>
+    <h6>Copiar</h6>
+    <h7>Abrir en Bloc de notas</h7>
+    <h8>Expandir todas posiciones al segundo nivel de anidamiento</h8>
+    <h9>Minimizar todo</h9>
+    <h10>Seleccionar todo</h10>
+    <h11>Deseleccionar</h11>
+    <h12>Mostrar GUID de parámetros compartidos</h12>
+    <h13>Otros ajustes</h13>
+    <h14>Tipos</h14>
+    <h15>Otros elementos</h15>
+    <h16>Suprimir advertencias</h16>
+    <h17>Mostrar archivos vinculados</h17>
+    <h18>Si nombres coinciden</h18>
+    <h19>Si nombres de tipos coinciden</h19>
+    <h20>Conjunto</h20>
+    <h21>Si nombres de filtros coinciden</h21>
+    <h22>Si nombres de vistas coinciden</h22>
+    <h23>Especifica comportamiento cuando coinciden nombres de elementos complementarios. Por ejemplo, si está copiando ejemplar de muro y documento objetivo ya tiene tipo de muro con mismo nombre que muro que está copiando, Revit le solicitará a utilizar tipo del documento objetivo o crear copia del tipo con sufijo numérico.</h23>
+    <h24>Esta opción no afecta a mayoría de elementos copiados por complemento , pero es requerido especificar en método de copia utilizado desde API de Revit. Mayoría de elementos se copian con un sufijo digital añadido, independientemente del valor de esta opción.</h24>
+    <h25>Si nombres de tipos coinciden y se selecciona opción "Reemplazar", complemento realizará siguiente algoritmo: en documento de destino, se cambiará nombre del tipo con mismo nombre que tipo copiado (tipo anterior). Luego se copiará nuevo tipo. Nuevo tipo se asignará a todos ejemplares de elementos a los que se les asignó tipo anterior. Se eliminará tipo anterior.</h25>
+    <h26>Si nombres de filtros coinciden y se selecciona opción "Reemplazar", complemento ejecutará siguiente algoritmo: todas vistas y plantillas de vista a las que se aplica un filtro con mismo nombre que filtro copiado (filtro anterior) se encontrarán en documento de destino. Luego, se copiará nuevo filtro añadiendo sufijo digital. Para todas vistas y plantillas de vista encontradas anteriormente, se volverán a aplicar filtros, reemplazando filtro anterior por nuevo, pero guardando ajustes de visibilidad. Filtro anterior se eliminará. Nuevo filtro recibirá nombre del filtro anterior.</h26>
+    <h27>Si nombres de vistas coinciden y selecciona opción "Reemplazar", complemento realizará siguiente algoritmo: en documento de destino, encontrará todas ventanas gráficas que muestran vista anterior, o todas vistas que usan vista anterior como plantilla (si vista que se está copiando es plantilla). Luego se copiará nueva vista añadiendo un sufijo digital. Para todas ventanas gráficas encontradas anteriormente, nueva vista se establecerá como vista de visualización, o para todas vistas encontradas anteriormente, nueva vista se establecerá como plantilla. Vista anterior se eliminará. Nueva vista recibirá nombre de vista anterior.</h27>
+    <h28>Guardar como nuevo conjunto</h28>
+    <h29>Guardar conjunto actual</h29>
+    <h30>Eliminar conjunto</h30>
+    <h31>Ingresar nombre de nuevo conjunto</h31>
+    <h32>¡Solo es posible cambiar ventanas gráficas desde Revit 2023!</h32>
+    <filters>Filtros</filters>
+    <link>Vínculo:</link>
+    <b1>Utilizar nombres de documentos de destino</b1>
+    <b2>Anular inserción</b2>
+    <b3>Comportamiento predeterminado</b3>
+    <b4>Reemplazar</b4>
+    <b5>Preguntar</b5>
+    <elementGetError>¡ERROR! Se ha producido un error al recibir artículo. Id: "{0}". Error: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
+    <m1>{0} – ¡ERROR! Se ha producido un error al recibir artículo. Id: "{1}". Error: "{2}".</m1>
+    <startCollectingElements>Iniciar ensamblaje de elementos del modelo ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m2>{0} – Iniciar ensamblaje de elementos del modelo ({1}).</m2>
+    <completionCollectingElements>Finalizar ensamblaje de elementos del modelo ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m3>{0} – Finalizar ensamblaje de elementos del modelo ({1}).</m3>
+    <collectingElementsCriticalError>¡ERROR! Error crítico durante ensamblaje de elementos del modelo ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
+    <m4>{0} – ¡ERROR! Error crítico durante ensamblaje de elementos del modelo ({1}).</m4>
+    <startCopyingElements>Inicio de copiar elementos de documento "{0}" a documentos "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m5>{0} – Inicio de copiar elementos de documento "{1}" a documentos "{2}".</m5>
+    <completionCopyingElements>Finalización de copiar elementos de documento "{0}" a documentos "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m6>{0} – Finalización de copiar elementos de documento "{1}" a documentos "{2}".</m6>
+    <elementCopyError>¡ERROR! Se ha producido un error al copiar elemento "{0} (id: {1})" de categoría "{2}": "{3}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
+    <m7>{0} – ¡ERROR! Se ha producido un error al copiar elemento "{1} (id: {2})" de categoría "{3}": "{4}".</m7>
+    <worksharingDisabledWarning>¡ADVERTENCIA! Este documento ({0}) ha sido desactivado para acceso público. Conjuntos de trabajo no se copian.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
+    <m9>{0} – ¡ADVERTENCIA! Este documento ({1}) ha sido desactivado para acceso público. Conjuntos de trabajo no se copian.</m9>
+    <m10>Conjuntos de trabajo</m10>
+    <m11> (Tipo)</m11>
+    <m12>Explorador</m12>
+    <m13>Cotas</m13>
+    <m14>Sombreados</m14>
+    <m15>Filtros de parámetros</m15>
+    <m16>Tipos de línea</m16>
+    <m17>Familias descargables</m17>
+    <m18>Filtros de etapa</m18>
+    <m19>Ajustes de impresión</m19>
+    <m20>Cambios</m20>
+    <m21>Ajustes de cambio</m21>
+    <m22>Estilos de texto</m22>
+    <m23>Tipos de familia de vista</m23>
+    <m24>Vistas</m24>
+    <m25>Parámetros</m25>
+    <m26>Parámetros compartidos</m26>
+    <m27>Copiar elementos</m27>
+    <m28>Todos grupos</m28>
+    <m29>Vistas (plantillas)</m29>
+    <m30>Copia completa</m30>
+    <!--todo remove after 2.4.4.0-->
+    <m32>Cancelar</m32>
+    <m33>Buscar</m33>
+    <m34>Planos de área</m34>
+    <m35>Planos de techo</m35>
+    <m36>Tabla de planificacións de pilar</m36>
+    <m37>Informes de costos</m37>
+    <m38>Detalles</m38>
+    <m39>Vistas preliminares</m39>
+    <m40>Hojas de dibujo</m40>
+    <m41>Alzados</m41>
+    <m42>Planos de ingenieria</m42>
+    <m43>Planos de planta</m43>
+    <m44>Interior</m44>
+    <m45>Leyendas</m45>
+    <m46>Informe de carga</m46>
+    <m47>Tabla de planificacións de paneles</m47>
+    <m48>Informes de pérdida de presión</m48>
+    <m49>Explorador</m49>
+    <m50>Render</m50>
+    <m51>Informes</m51>
+    <m52>Tabla de planificacións</m52>
+    <m53>Secciones</m53>
+    <m54>Explorador del sistema</m54>
+    <m55>Informe de análisis de sistemas</m55>
+    <m56>3D</m56>
+    <m57>Recorrido</m57>
+    <m58>Incierto</m58>
+    <m59>Categorías</m59>
+    <startCollectingTypes>Iniciar ensamblaje de tipos de modelo ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m60>{0} – Iniciar ensamblaje de tipos de modelo ({1}).</m60>
+    <completionCollectingTypes>Finalizar ensamblaje de tipos de modelo ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m61>{0} – Finalizar ensamblaje de tipos de modelo ({1}).</m61>
+    <m62>Se produjo una alerta crítica de Revit que requirió confirmación por parte del usuario. Desactive supresión de advertencias e intente copiar nuevamente</m62>
+    <m63>Parámetros compartidos</m63>
+    <m64>Sin categoría</m64>
+    <elementCopySkipped>Se omitió copiar elemento "{0} (id {1})" de categoría "{2}".</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
+    <m65>{0} – Se omitió copiar elemento "{1} (id {2})" de categoría "{3}".</m65>
+    <m66>Documento objetivo ya tiene familia "{0}" con tipo "{1}".{2} ¿Copiar y reemplazar?</m66>
+    <m67>Parámetros globales</m67>
+    <m68>Patrones de línea</m68>
+    <m69>Combinaciones de colores</m69>
+    <m70>Parámetros de proyecto</m70>
+    <m71>Documento objetivo ya tiene filtro "{0}".{1} ¿Copiar y reemplazar?</m71>
+    <m72>Documento objetivo ya tiene vista "{0}".{1} ¿Copiar y reemplazar?</m72>
+    <copyConduitStandardWithReplace>El documento de destino ya contiene el estándar de conductos "{0}".{1}¿Desea realizar la copia con reemplazo?</copyConduitStandardWithReplace>
+    <!--todo remove after 2.4.4.0-->
+    <m73>Elementos copiados:</m73>
+    <!--todo remove after 2.4.4.0-->
+    <m74>Elementos omitidos:</m74>
+    <!--todo remove after 2.4.4.0-->
+    <m75>Número de errores:</m75>
+    <m76>Detalles en registro de trabajo</m76>
+    <m77>Parámetros de exportación</m77>
+    <m78>Parámetros de exportación DWG/DXF</m78>
+    <m79>Parámetros de exportación DGN</m79>
+    <fillPatterns>Patrones de relleno</fillPatterns>
+    <startCollectingFamilies>Inicio de la operación de recopilación de familias del modelo ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Finalización de la operación de recopilación de familias del modelo ({0})</completionCollectingFamilies>
+    <families>Familias</families>
+    <familyProcessError>Se produjo un error al procesar la familia "{0}" (id: {1}): "{2}"</familyProcessError>
+    <familyExists>El documento de destino ya contiene la familia "{0}".{1}¿Desea realizar la copia?</familyExists>
+    <duplicateCreated>Se ha creado un duplicado de la familia {0}</duplicateCreated>
+    <elementTab>Elementos</elementTab>
+    <modelElementTab>Elementos del modelo</modelElementTab>
+    <selectedInModel>Seleccionados en el modelo</selectedInModel>
+    <selectFromLink>Seleccionar desde el vínculo</selectFromLink>
+    <selectElementsFrom>Seleccione elementos de {0}</selectElementsFrom>
+    <copyResultMessage>Copia completada. Copiados: {0}, Omitidos: {1}, Con errores: {2}</copyResultMessage>
+    <messageInvalidActiveDocument>El documento activo no coincide con la fuente seleccionada</messageInvalidActiveDocument>
+    <notSelectedElements>No hay ningún elemento seleccionado en el modelo</notSelectedElements>
+    <selectElementsFromLink>Seleccione elementos del archivo vinculado</selectElementsFromLink>
+    <groupTypeExists>El documento de destino ya contiene el grupo "{0}".\n¿Desea realizar la copia con reemplazo?</groupTypeExists>
+    <groups>Grupos</groups>
+    <materialExists>El documento de destino ya contiene el material "{0}".\n¿Desea realizar la copia con reemplazo?</materialExists>
+    <materialDuplicateActionSettings>Comportamiento cuando los nombres de los materiales coinciden</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>Cuando los nombres de los materiales coincidan y se seleccione la opción "Reemplazar", el complemento aplicará el siguiente algoritmo: el material existente en el documento de destino se actualizará con todas las propiedades del nuevo material. El nombre del material permanecerá sin cambios. Todos los elementos que utilicen este material recibirán automáticamente las propiedades actualizadas.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Cerrar tablas de planificación abiertas</closeOpenedSchedule>
+    <searchModeLabel>Modo de comparación:</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Expresión regular</searchModeRegex>
+    <patternCopyWarning>No se pudo copiar el patrón "{0}" (id: {1}) al documento de destino. La anulación del filtro se aplicará sin este patrón.</patternCopyWarning>
+    <viewTemplateFiltersCopyError>No se pudieron aplicar los filtros a la plantilla de vista copiada "{0}". Error: "{1}".</viewTemplateFiltersCopyError>
+  </mprCopyElementsToOpenDocuments>
+</ModPlus>

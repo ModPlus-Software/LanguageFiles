@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCopyElementsToOpenDocuments
+    LocalName="Copy elements"
+    Description="Batch copying of elements to open documents"
+    FullDescription="Batch copying of the current document's selected elements to the specified opened documents">
+    <h1>Elements selected:</h1>
+    <h2>From:</h2>
+    <h3>To:</h3>
+    <h4>Copying options</h4>
+    <!--todo remove after 2.4.4.0-->
+    <h5>Work Log</h5>
+    <h6>Transfer elements</h6>
+    <h7>Open in Notepad</h7>
+    <h8>Expand all positions to the second nesting level</h8>
+    <h9>Collapse all</h9>
+    <h10>Check all</h10>
+    <h11>Uncheck all</h11>
+    <h12>Show guid of shared parameters</h12>
+    <h13>Other settings</h13>
+    <h14>Types</h14>
+    <h15>Other elements</h15>
+    <h16>Suppress warnings</h16>
+    <h17>Show linked files</h17>
+    <h18>Name matching behavior</h18>
+    <h19>Type name matching behavior</h19>
+    <h20>Set</h20>
+    <h21>Filter name matching behavior</h21>
+    <h22>View name matching behavior</h22>
+    <h23>Specifies the behavior when the names of related elements match. For example, if a wall instance is copied and the target document already has a wall type with the same name as the copied wall, Revit suggests using the target document type or creating a copy of the type with a numeric suffix.</h23>
+    <h24>This option does not affect most elements copied by the plugin, but must be set in the copy method used from the Revit API. Most elements are copied with the addition of a numeric suffix regardless of the value of this option.</h24>
+    <h25>If the type names match and the "Replace" option is selected, the plugin will perform the following algorithm: in the target document, a type name with the same name as the copied type name (the old type name) will be renamed. Then the new type will be copied. The new type will be assigned to all instances of the elements to which the old type was assigned. The old type will be deleted.</h25>
+    <h26>If the filter names match and the "Replace" option is selected, the plugin will perform the following algorithm: in the target document, it will find all the views and view templates to which a filter with the same name as the filter to be copied (the old filter) has been applied. Then the new filter will be copied, with the addition of a numeric suffix. For all previously found views and view templates, the filters will be reapplied, replacing the old filter with the new filter, but keeping the visibility settings intact. The old filter will be deleted. The new filter will be given the name of the old filter.</h26>
+    <h27>If the view names match and the "Replace" option is selected, the plugin will perform the following algorithm: in the target document it will find all viewports that translate the old view, or all views that use the old view as a template (if the view to be copied is a template). The new view will then be copied, with a numeric suffix added. For all previously found views, the new view will be set as the translated view, or for all previously found views, the new view will be set as a template. The old view will be deleted. The new view will be given the name of the old view.</h27>
+    <h28>Save as new set</h28>
+    <h29>Save current set</h29>
+    <h30>Delete set</h30>
+    <h31>Enter a name for the new set</h31>
+    <h32>Changes to viewports are only available from Revit 2023!</h32>
+    <filters>Filters</filters>
+    <link>Link:</link>
+    <b1>Use destination document names</b1>
+    <b2>Abort paste</b2>
+    <b3>Default behavior</b3>
+    <b4>Replace</b4>
+    <b5>Ask</b5>
+    <elementGetError>The error occurred during an element retrieving process. Id: "{0}". Message: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
+    <m1>{0} – Error! The error occurred during an element retrieving process. Id: "{1}". Message: "{2}".</m1>
+    <startCollectingElements>The element collecting process has been started ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m2>{0} – The element collecting process has been started ({1}).</m2>
+    <completionCollectingElements>The element collecting process has been finished ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m3>{0} – The element collecting process has been finished ({1}).</m3>
+    <collectingElementsCriticalError>The element collecting process has stopped with a critical error ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
+    <m4>{0} – Error! The element collecting process has stopped with a critical error ({1}).</m4>
+    <startCopyingElements>Start elements copying from "{0}" to "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m5>{0} – Start elements copying from "{1}" to "{2}".</m5>
+    <completionCopyingElements>Finish elements copying from "{0}" to "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m6>{0} – Finish elements copying from "{1}" to "{2}".</m6>
+    <elementCopyError>The error (message: "{3}") occured during the copying process of an element "{0} (id: {1})" of category "{2}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
+    <m7>{0} – Error! The error (message: "{4}") occured during the copying process of an element "{1} (id: {2})" of category "{3}".</m7>
+    <worksharingDisabledWarning>The document ({0}) is not workshared one. The worksets will not be copied.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
+    <m9>{0} – Warning! The document ({1}) is not workshared one. The worksets will not be copied.</m9>
+    <m10>Worksets</m10>
+    <m11> (Type)</m11>
+    <m12>Browser Organization</m12>
+    <m13>Dimension Types</m13>
+    <m14>Fill Patterns</m14>
+    <m15>Parameter Filters</m15>
+    <m16>Line patterns</m16>
+    <m17>Loadable Families</m17>
+    <m18>Phase Filters</m18>
+    <m19>Print Settings</m19>
+    <m20>Revisions</m20>
+    <m21>Revision Settings</m21>
+    <m22>TextNote Types</m22>
+    <m23>View Family Types</m23>
+    <m24>Views</m24>
+    <m25>Parameters</m25>
+    <m26>Shared parameters</m26>
+    <m27>Elements copying</m27>
+    <m28>All groups</m28>
+    <m29>Views (Templates)</m29>
+    <m30>Copying finished</m30>
+    <!--todo remove after 2.4.4.0-->
+    <m32>Cancel</m32>
+    <m33>Search</m33>
+    <m34>Area plan</m34>
+    <m35>Ceiling plan</m35>
+    <m36>Column schedule</m36>
+    <m37>Cost report</m37>
+    <m38>Detail</m38>
+    <m39>Drafting view</m39>
+    <m40>Drawing sheet</m40>
+    <m41>Elevation</m41>
+    <m42>Engineering plan</m42>
+    <m43>Floor plan</m43>
+    <m44>Internal</m44>
+    <m45>Legend</m45>
+    <m46>Loads report</m46>
+    <m47>Panel schedule</m47>
+    <m48>Pressure loss report</m48>
+    <m49>Project browser</m49>
+    <m50>Rendering</m50>
+    <m51>Report</m51>
+    <m52>Schedule</m52>
+    <m53>Section</m53>
+    <m54>System browser</m54>
+    <m55>Systems analysis report</m55>
+    <m56>3D</m56>
+    <m57>Walkthrough</m57>
+    <m58>Undefined</m58>
+    <m59>Categories</m59>
+    <startCollectingTypes>The types collecting process has been started ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m60>{0} – The types collecting process has been started ({1}).</m60>
+    <completionCollectingTypes>The types collecting process has been finished ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m61>{0} – The types collecting process has been finished ({1}).</m61>
+    <m62>there was a critical Revit warning that required confirmation from the user. Disable warning suppression and try copying again</m62>
+    <m63>Shared parameters</m63>
+    <m64>No category</m64>
+    <elementCopySkipped>Copying element "{0} (id {1})" of category "{2}" skipped.</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
+    <m65>{0} – Copying element "{1} (id {2})" of category "{3}" skipped.</m65>
+    <m66>The target document already has the "{0}" family with the type "{1}".{2}Do a copy with replace?</m66>
+    <m67>Global parameters</m67>
+    <m68>Line Patterns</m68>
+    <m69>Color schemes</m69>
+    <m70>Project parameters</m70>
+    <m71>The target document already has a filter with name "{0}".{1}Do a copy with replace?</m71>
+    <m72>The target document already has a view with name "{0}".{1}Do a copy with replace?</m72>
+    <copyConduitStandardWithReplace>The target document already contains the Conduit Standard "{0}".{1}Proceed with copying and replacing it?</copyConduitStandardWithReplace>
+    <!--todo remove after 2.4.4.0-->
+    <m73>Elements copied:</m73>
+    <!--todo remove after 2.4.4.0-->
+    <m74>Elements skipped:</m74>
+    <!--todo remove after 2.4.4.0-->
+    <m75>Error count:</m75>
+    <m76>Details in the work log</m76>
+    <m77>Export Options</m77>
+    <m78>DWG/DXF export options</m78>
+    <m79>DGN export options</m79>
+    <fillPatterns>Fill Patterns</fillPatterns>
+    <startCollectingFamilies>Start of model family collection operation ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Completion of model family collection operation ({0})</completionCollectingFamilies>
+    <families>Families</families>
+    <familyProcessError>An error occurred while processing the family "{0}" (id: {1}): "{2}"</familyProcessError>
+    <familyExists>The target document already contains the family "{0}".{1}Proceed with copying?</familyExists>
+    <duplicateCreated>A duplicate of the family {0} has been created</duplicateCreated>
+    <elementTab>Elements</elementTab>
+    <modelElementTab>Model elements</modelElementTab>
+    <selectedInModel>Selected in Model</selectedInModel>
+    <selectFromLink>Select from Link</selectFromLink>
+    <selectElementsFrom>Select elements from {0}</selectElementsFrom>
+    <copyResultMessage>Copying completed. Copied: {0}, Skipped: {1}, Errors: {2}</copyResultMessage>
+    <messageInvalidActiveDocument>The active document does not match the selected source</messageInvalidActiveDocument>
+    <notSelectedElements>No elements are selected in the model</notSelectedElements>
+    <selectElementsFromLink>Select elements from the linked file</selectElementsFromLink>
+    <groupTypeExists>The target document already contains the group "{0}".\nProceed with copying and replacing it?</groupTypeExists>
+    <groups>Groups</groups>
+    <materialExists>The target document already contains the material "{0}".\nProceed with copying and replacing it?</materialExists>
+    <materialDuplicateActionSettings>Behavior when material names match</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>When material names match and the "Replace" option is selected, the plugin will apply the following algorithm: the existing material in the target document will be updated with all properties of the new material. The material name will remain unchanged. All elements using this material will automatically receive the updated properties.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Close opened schedules</closeOpenedSchedule>
+    <searchModeLabel>Comparison mode:</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Regular expression</searchModeRegex>
+    <patternCopyWarning>The pattern "{0}" (id: {1}) could not be copied to the target document. The filter override will be applied without this pattern.</patternCopyWarning>
+    <viewTemplateFiltersCopyError>Failed to apply filters to the copied view template "{0}". Error: "{1}".</viewTemplateFiltersCopyError>
+  </mprCopyElementsToOpenDocuments>
+</ModPlus>

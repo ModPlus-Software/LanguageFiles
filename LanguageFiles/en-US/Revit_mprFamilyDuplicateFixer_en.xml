@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprFamilyDuplicateFixer
+    LocalName="Fix duplicates"
+    Description="Automate the fix for duplicate families or types"
+    FullDescription="Copying types from duplicate families to main families, copying type parameter values, updating family instances, and deleting duplicate families. Replacing duplicate family types and deleting replaced types is also available">
+    <h1>Copy types</h1>
+    <h3>Replace family instances</h3>
+    <h4>Delete duplicate families</h4>
+    <h5>Run</h5>
+    <h6>Add a couple of families "Duplicate-Main family"</h6>
+    <h7>Select Duplicate Family</h7>
+    <h8>Select the main family (into which the types will be copied)</h8>
+    <h9>Accept</h9>
+    <h10>No matching families were found in the current category for which the selected family is a duplicate.
+An additional check is performed by type parameters – a pair of similar families should have the same type parameters</h10>
+    <h11>Copy parameter values of replaced family instance</h11>
+    <h12>Set family type from source family</h12>
+    <h13>The list of main families displays families of the same category as the selected duplicate family, whose types are interchangeable. At the same time, the number and names of type parameters must be the same.</h13>
+    <h14>Fix families duplicates</h14>
+    <h15>Fix family types duplicates</h15>
+    <h16>Add families</h16>
+    <h17>Remove replaced types from family</h17>
+    <h18>The list contains only families with more than one type</h18>
+    <m1>No types were selected in the list of processed families!</m1>
+    <m2>Creating type "{0}" for family "{1}"</m2>
+    <m3>Copying parameter values of frame type "{0}" from the family "{1}" to the family "{2}"</m3>
+    <m4>Replacing the type for an instance of the family "{0}" {1}</m4>
+    <m5>Replacing type "{0}" with type "{1}" in family "{2}"</m5>
+    <m6>Type "{0}" replaced with type "{1}"</m6>
+    <m7>Removing type "{0}" in family "{1}"</m7>
+    <m8>Type "{0}" removed in family "{1}"</m8>
+    <e1>Type "{0}" was not created in the family "{1}"</e1>
+    <e2>The family "{0}" could not be loaded into the document</e2>
+    <e3>The parameter "{0}" was not found in the type "{1}" of the family "{2}"</e3>
+    <e4>Type "{0}" not found in family "{1}"</e4>
+    <e5>Failed to delete family "{0}" because instances of this family are present in the model</e5>
+    <e6>Error while replacing type in family "{0}": {1}</e6>
+    <e7>Error deleting type "{0}" in family "{1}": {2}</e7>
+    <t1>Direction of processing: the family on the left is a duplicate, the family on the right is the main family</t1>
+    <t2>Add to the processing list a couple of families that did not match the standard duplicate search</t2>
+    <t3>New types will be created in the main family that are present and checked in the duplicate family and are absent in the main family</t3>
+    <t5>Duplicate family instances of checked types will be replaced with instances of the main family with the same type set. If an instance of the main family does not have the required type, the duplicate family instance will be skipped</t5>
+    <t6>Duplicate families that do not have instances in the model will be deleted</t6>
+    <t7>The instance parameters values will be copied from the replaced duplicate family to the replacement main family</t7>
+    <t8>The instances of the duplicate family are set to the types from the main family, which are selected in the dropdown lists</t8>
+    <t9>Add to the list families that did not match the standard search for duplicates</t9>
+    <t10>On the left side there are the types of the family, on the right – drop-down lists for replacing the type. If the type is not selected in the list, then replacement will not be performed</t10>
+    <t11>Clear selection</t11>
+  </mprFamilyDuplicateFixer>
+</ModPlus>

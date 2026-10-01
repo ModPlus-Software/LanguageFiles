@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCopyElementsToOpenDocuments
+    LocalName="Copiar elementos"
+    Description="Cópia em lote de elementos para documentos abertos"
+    FullDescription="Cópia em lote dos elementos selecionados do documento atual para os documentos abertos especificados">
+    <h1>Elementos selecionados:</h1>
+    <h2>Do projeto:</h2>
+    <h3>Para o projeto:</h3>
+    <h4>Opções de cópia</h4>
+    <!--todo remove after 2.4.4.0-->
+    <h5>Registro de trabalho</h5>
+    <h6>Executar cópia</h6>
+    <h7>Abrir no Bloco de Notas</h7>
+    <h8>Expandir todos os itens até o segundo nível de aninhamento</h8>
+    <h9>Recolher tudo</h9>
+    <h10>Selecionar todos</h10>
+    <h11>Desmarcar todos</h11>
+    <h12>Mostrar GUID dos parâmetros compartilhados</h12>
+    <h13>Outras configurações</h13>
+    <h14>Tipos</h14>
+    <h15>Outros elementos</h15>
+    <h16>Suprimir avisos</h16>
+    <h17>Mostrar arquivos vinculados</h17>
+    <h18>Comportamento quando os nomes coincidem</h18>
+    <h19>Comportamento quando os nomes de tipo coincidem</h19>
+    <h20>Conjunto</h20>
+    <h21>Comportamento quando os nomes de filtro coincidem</h21>
+    <h22>Comportamento quando os nomes de vista coincidem</h22>
+    <h23>Define o comportamento quando os nomes de elementos relacionados coincidem. Por exemplo, se uma instância de parede for copiada e o documento de destino já tiver um tipo de parede com o mesmo nome do da parede copiada, o Revit sugere usar o tipo do documento de destino ou criar uma cópia do tipo com um sufixo numérico.</h23>
+    <h24>Esta opção não afeta a maioria dos elementos copiados pelo plugin, mas precisa obrigatoriamente ser definida no método de cópia utilizado da Revit API. A maioria dos elementos é copiada com a adição de um sufixo numérico, independentemente do valor desta opção.</h24>
+    <h25>Quando os nomes de tipo coincidem e a opção "Substituir" está selecionada, o plugin executa o seguinte algoritmo: no documento de destino, o tipo com o mesmo nome do tipo copiado (tipo antigo) é renomeado. Em seguida, o novo tipo é copiado. O novo tipo é atribuído a todas as instâncias de elementos às quais o tipo antigo estava atribuído. O tipo antigo é excluído.</h25>
+    <h26>Quando os nomes de filtro coincidem e a opção "Substituir" está selecionada, o plugin executa o seguinte algoritmo: no documento de destino, são encontradas todas as vistas e modelos de vista aos quais está aplicado um filtro com o mesmo nome do filtro copiado (filtro antigo). Em seguida, o novo filtro é copiado com a adição de um sufixo numérico. Em todas as vistas e modelos de vista encontrados, os filtros são reaplicados, substituindo o filtro antigo pelo novo, mas mantendo as configurações de visibilidade. O filtro antigo é excluído. O novo filtro recebe o nome do filtro antigo.</h26>
+    <h27>Quando os nomes de vista coincidem e a opção "Substituir" está selecionada, o plugin executa o seguinte algoritmo: no documento de destino, são encontrados todos os viewports que exibem a vista antiga ou todas as vistas que usam a vista antiga como modelo (se a vista copiada for um modelo). Em seguida, a nova vista é copiada com a adição de um sufixo numérico. Em todos os viewports encontrados, a nova vista passa a ser a vista exibida ou, em todas as vistas encontradas, a nova vista passa a ser o modelo. A vista antiga é excluída. A nova vista recebe o nome da vista antiga.</h27>
+    <h28>Salvar como novo conjunto</h28>
+    <h29>Salvar o conjunto atual</h29>
+    <h30>Excluir conjunto</h30>
+    <h31>Insira o nome do novo conjunto</h31>
+    <h32>A alteração de viewports só está disponível a partir do Revit 2023!</h32>
+    <filters>Filtros</filters>
+    <link>Vínculo:</link>
+    <b1>Usar os nomes do documento de destino</b1>
+    <b2>Interromper a colagem</b2>
+    <b3>Comportamento padrão</b3>
+    <b4>Substituir</b4>
+    <b5>Perguntar</b5>
+    <elementGetError>Ocorreu um erro ao obter o elemento. Id: "{0}". Erro: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
+    <m1>{0} – ERRO! Ocorreu um erro ao obter o elemento. Id: "{1}". Erro: "{2}".</m1>
+    <startCollectingElements>Início da coleta dos elementos do modelo ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m2>{0} – Início da coleta dos elementos do modelo ({1}).</m2>
+    <completionCollectingElements>Conclusão da coleta dos elementos do modelo ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m3>{0} – Conclusão da coleta dos elementos do modelo ({1}).</m3>
+    <collectingElementsCriticalError>Erro crítico durante a coleta dos elementos do modelo ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
+    <m4>{0} – ERRO! Erro crítico durante a coleta dos elementos do modelo ({1}).</m4>
+    <startCopyingElements>Início da cópia dos elementos do documento "{0}" para os documentos "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m5>{0} – Início da cópia dos elementos do documento "{1}" para os documentos "{2}".</m5>
+    <completionCopyingElements>Conclusão da cópia dos elementos do documento "{0}" para os documentos "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m6>{0} – Conclusão da cópia dos elementos do documento "{1}" para os documentos "{2}".</m6>
+    <elementCopyError>Ocorreu um erro ao copiar o elemento "{0} (id: {1})" da categoria "{2}": "{3}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
+    <m7>{0} – ERRO! Ocorreu um erro ao copiar o elemento "{1} (id: {2})" da categoria "{3}": "{4}".</m7>
+    <worksharingDisabledWarning>O compartilhamento de trabalho está desativado neste documento ({0}). Os worksets não serão copiados.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
+    <m9>{0} – AVISO! O compartilhamento de trabalho está desativado neste documento ({1}). Os worksets não serão copiados.</m9>
+    <m10>Worksets</m10>
+    <m11> (Tipo)</m11>
+    <m12>Organização do navegador de projeto</m12>
+    <m13>Cotas</m13>
+    <m14>Padrões de preenchimento</m14>
+    <m15>Filtros de parâmetros</m15>
+    <m16>Padrões de linha</m16>
+    <m17>Famílias carregáveis</m17>
+    <m18>Filtros de fase</m18>
+    <m19>Configurações de impressão</m19>
+    <m20>Revisões</m20>
+    <m21>Configurações de revisão</m21>
+    <m22>Estilos de texto</m22>
+    <m23>Tipos de família de vista</m23>
+    <m24>Vistas</m24>
+    <m25>Parâmetros</m25>
+    <m26>Parâmetros compartilhados</m26>
+    <m27>Cópia de elementos</m27>
+    <m28>Todos os grupos</m28>
+    <m29>Vistas (modelos)</m29>
+    <m30>Cópia concluída</m30>
+    <!--todo remove after 2.4.4.0-->
+    <m32>Cancelar</m32>
+    <m33>Pesquisar</m33>
+    <m34>Plantas de área</m34>
+    <m35>Plantas de forro refletido</m35>
+    <m36>Tabelas de pilares</m36>
+    <m37>Relatórios de custos</m37>
+    <m38>Vistas de detalhe</m38>
+    <m39>Vistas de desenho</m39>
+    <m40>Folhas de desenho</m40>
+    <m41>Elevações</m41>
+    <m42>Plantas estruturais</m42>
+    <m43>Plantas de piso</m43>
+    <m44>Interno</m44>
+    <m45>Legendas</m45>
+    <m46>Relatório de cargas</m46>
+    <m47>Tabelas de painéis</m47>
+    <m48>Relatórios de perda de pressão</m48>
+    <m49>Navegador</m49>
+    <m50>Renderização</m50>
+    <m51>Relatórios</m51>
+    <m52>Tabelas</m52>
+    <m53>Cortes</m53>
+    <m54>Navegador de sistemas</m54>
+    <m55>Relatório de análise de sistemas</m55>
+    <m56>3D</m56>
+    <m57>Percurso virtual</m57>
+    <m58>Indefinido</m58>
+    <m59>Categorias</m59>
+    <startCollectingTypes>Início da coleta dos tipos do modelo ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m60>{0} – Início da coleta dos tipos do modelo ({1}).</m60>
+    <completionCollectingTypes>Conclusão da coleta dos tipos do modelo ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m61>{0} – Conclusão da coleta dos tipos do modelo ({1}).</m61>
+    <m62>houve um aviso crítico do Revit que exigia confirmação do usuário. Desative a supressão de avisos e repita a cópia</m62>
+    <m63>Parâmetros compartilhados</m63>
+    <m64>Sem categoria</m64>
+    <elementCopySkipped>A cópia do elemento "{0} (id {1})" da categoria "{2}" foi ignorada.</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
+    <m65>{0} – A cópia do elemento "{1} (id {2})" da categoria "{3}" foi ignorada.</m65>
+    <m66>O documento de destino já contém a família "{0}" com o tipo "{1}".{2}Executar a cópia com substituição?</m66>
+    <m67>Parâmetros globais</m67>
+    <m68>Padrões de linha</m68>
+    <m69>Esquemas de cores</m69>
+    <m70>Parâmetros de projeto</m70>
+    <m71>O documento de destino já contém o filtro "{0}".{1}Executar a cópia com substituição?</m71>
+    <m72>O documento de destino já contém a vista "{0}".{1}Executar a cópia com substituição?</m72>
+    <copyConduitStandardWithReplace>O documento de destino já contém o padrão de conduíte "{0}".{1}Executar a cópia com substituição?</copyConduitStandardWithReplace>
+    <!--todo remove after 2.4.4.0-->
+    <m73>Elementos copiados:</m73>
+    <!--todo remove after 2.4.4.0-->
+    <m74>Elementos ignorados:</m74>
+    <!--todo remove after 2.4.4.0-->
+    <m75>Quantidade de erros:</m75>
+    <m76>Detalhes no registro de trabalho</m76>
+    <m77>Opções de exportação</m77>
+    <m78>Opções de exportação DWG/DXF</m78>
+    <m79>Opções de exportação DGN</m79>
+    <fillPatterns>Padrões de preenchimento</fillPatterns>
+    <startCollectingFamilies>Início da coleta das famílias do modelo ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Conclusão da coleta das famílias do modelo ({0})</completionCollectingFamilies>
+    <families>Famílias</families>
+    <familyProcessError>Ocorreu um erro ao processar a família "{0}" (id: {1}): "{2}"</familyProcessError>
+    <familyExists>O documento de destino já contém a família "{0}".{1}Executar a cópia?</familyExists>
+    <duplicateCreated>Foi criada uma duplicata da família {0}</duplicateCreated>
+    <elementTab>Elementos</elementTab>
+    <modelElementTab>Elementos de modelo</modelElementTab>
+    <selectedInModel>Selecionados no modelo</selectedInModel>
+    <selectFromLink>Selecionar do vínculo</selectFromLink>
+    <selectElementsFrom>Selecione os elementos de {0}</selectElementsFrom>
+    <copyResultMessage>Cópia concluída. Copiados: {0}, Ignorados: {1}, Com erros: {2}</copyResultMessage>
+    <messageInvalidActiveDocument>O documento ativo não corresponde à origem selecionada</messageInvalidActiveDocument>
+    <notSelectedElements>Nenhum elemento selecionado no modelo</notSelectedElements>
+    <selectElementsFromLink>Selecione os elementos do arquivo vinculado</selectElementsFromLink>
+    <groupTypeExists>O documento de destino já contém o grupo "{0}".\nExecutar a cópia com substituição?</groupTypeExists>
+    <groups>Grupos</groups>
+    <materialExists>O documento de destino já contém o material "{0}".\nExecutar a cópia com substituição?</materialExists>
+    <materialDuplicateActionSettings>Comportamento quando os nomes de material coincidem</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>Quando os nomes de material coincidem e a opção "Substituir" está selecionada, o plugin executa o seguinte algoritmo: o material antigo no documento de destino é atualizado e recebe todas as propriedades do novo material. O nome do material permanece o mesmo. Todos os elementos que usam esse material recebem automaticamente as propriedades atualizadas.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Fechar as tabelas que forem abertas</closeOpenedSchedule>
+    <searchModeLabel>Modo de comparação:</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Expressão regular</searchModeRegex>
+    <patternCopyWarning>Não foi possível copiar o padrão "{0}" (id: {1}) para o documento de destino. A sobreposição de gráficos do filtro será aplicada sem esse padrão.</patternCopyWarning>
+    <viewTemplateFiltersCopyError>Não foi possível aplicar os filtros ao modelo de vista copiado "{0}". Erro: "{1}".</viewTemplateFiltersCopyError>
+  </mprCopyElementsToOpenDocuments>
+</ModPlus>

@@ -2,7 +2,9 @@
 <ModPlus>
   <mprParametrization
     LocalName="Parametrización"
-    Description="Relleno de parámetros de elementos con varias estrategias">
+    Description="Relleno de parámetros de elementos con varias estrategias"
+    LocalName1="Parametrización. Paleta"
+    Description1="Muestra u oculta la paleta para ejecutar rápidamente las reglas de la estrategia seleccionada">
     <!-- todo remove after 3.3.6.0 start -->
     <t1>Minimizar contenido de ventana</t1>
     <t2>Expandir contenido de ventana</t2>
@@ -17,6 +19,7 @@
     <t10>Eliminar estrategia</t10>
     <t11>Reglas</t11>
     <t12>Procesar elementos del archivos vinculados</t12>
+    <!--todo remove after 4.1.33.0-->
     <t13>Elementos primarios se recopilarán del archivos vinculados. Por ejemplo, para estrategia InMass estos son elementos formativos, para estrategia InSolid son elementos que tienen un sólido, etc. Los elementos se ensamblarán de acuerdo con las categorías especificadas en la columna de reglas correspondiente</t13>
     <t14>¡Se recomienda ejecutar estrategias que funcionan con geometría de elementos (como InRoom, InSpace, InSolid, SolidTouch, etc.) en vista activa! Si inicio se realiza en todo documento, elementos se toman de geometría que no tiene en cuenta interacción con otros elementos, lo que puede llevar a resultados incorrectos</t14>
     <t15>Ingresar nombre de estrategia</t15>
@@ -151,7 +154,7 @@
     <t142>Nombre y descripción</t142>
     <t143>Abrir la guía</t143>
     <t144>Prefiltro</t144>
-    <t145>El prefiltro reduce el conjunto de elementos simultáneamente para todas las reglas de la estrategia. A diferencia del filtro de estrategia, no se sustituye por el filtro de regla no rellenado, sino que se aplica de forma adicional: un elemento se procesará solo si pasa tanto el prefiltro como el filtro de regla. Por ejemplo, si en el prefiltro se establece la categoría "Muros" y el parámetro "Estructural", todas las reglas trabajarán únicamente con muros estructurales, seleccionando entre ellos los elementos según sus propias categorías y parámetros. Un prefiltro vacío no impone ninguna restricción</t145>
+    <t145>El prefiltro reduce el conjunto de elementos simultáneamente para todas las reglas de la estrategia. A diferencia del filtro de estrategia, no se sustituye por el filtro de regla no rellenado, sino que se aplica de forma adicional: un elemento se procesará solo si pasa tanto el prefiltro como el filtro de regla. Por ejemplo, si en el prefiltro se establecen las categorías "Muros", "Pilares estructurales" y "Armazón estructural", así como el parámetro "Estructural", todas las reglas trabajarán únicamente con los elementos estructurales de estas categorías, seleccionando entre ellos los elementos según sus propias categorías y parámetros. Un prefiltro vacío no impone ninguna restricción</t145>
     <t146>Exportar estrategia actual</t146>
     <t147>Importar en la estrategia actual</t147>
     <t148>Filtros de la estrategia</t148>
@@ -169,7 +172,6 @@
     <t160>Cambiar el nombre del grupo</t160>
     <t161>Eliminar el grupo. Las configuraciones del grupo no se eliminan — quedarán sin grupo</t161>
     <t162>Número de configuraciones en el grupo</t162>
-    <t163>grupo</t163>
     <t164>Parámetro o expresión, por ejemplo $[Nombre de tipo]</t164>
     <t168>Ignorar mayúsculas y minúsculas</t168>
     <t169>Ordenar</t169>
@@ -256,6 +258,69 @@
     <msg44>Elemento omitido: la clave de agrupación se calculó como vacía</msg44>
     <msg45>Elemento omitido: no se encontró ningún elemento de origen condicional con el mismo valor de emparejamiento</msg45>
     <msg46>Archivo seleccionado no es archivo de almacenamiento de configuración</msg46>
+    <msg47>¿Sincronizar el proyecto con el modelo central antes de ejecutar?</msg47>
+    <msg48>La instrucción está vacía</msg48>
+    <msg49>La instrucción no es un xml válido: {0}</msg49>
+    <msg50>El elemento raíz de la instrucción debe llamarse "{0}"</msg50>
+    <msg51>La versión "{0}" de la instrucción no es compatible. Versión compatible: {1}</msg51>
+    <msg52>Se omitió el elemento desconocido "{0}" de la instrucción</msg52>
+    <msg53>No se ha especificado el elemento obligatorio "{0}"</msg53>
+    <msg54>El elemento "{0}" está vacío</msg54>
+    <msg55>El elemento "{0}" está vacío. Si el valor no es necesario, elimine el elemento</msg55>
+    <msg56>Valor no válido "{0}" del elemento "{1}". Valores permitidos: {2}</msg56>
+    <msg57>El elemento "{0}" debe tener el valor true o false</msg57>
+    <msg58>El atributo "{0}" del elemento "{1}" debe tener el valor true o false</msg58>
+    <msg59>En el elemento "{0}" no se pueden especificar a la vez {1}="true" y una lista de vistas</msg59>
+    <msg60>Se omitió el elemento desconocido "{0}" en "{1}"</msg60>
+    <msg61>"{0}" contiene elementos "{1}" vacíos</msg61>
+    <msg62>La lista "{0}" está vacía. Si la lista no es necesaria, elimine el elemento</msg62>
+    <msg63>El elemento "{0}" se ha especificado varias veces</msg63>
+    <msg64>Ejecución automática rechazada: la ejecución anterior aún no ha terminado</msg64>
+    <msg65>Procesamiento interrumpido: {0}</msg65>
+    <msg66>Ejecución automática interrumpida por un error inesperado</msg66>
+    <msg67>Ejecución automática finalizada. Resultado: {0}</msg67>
+    <msg68>Ejecución automática. Instrucción:</msg68>
+    <msg69>Leyendo el archivo de configuraciones "{0}"</msg69>
+    <msg70>Configuración "{0}" ({1})</msg70>
+    <msg71>La carpeta de registros no existe: "{0}"</msg71>
+    <msg72>La carpeta de resultados no existe: "{0}"</msg72>
+    <msg73>Hay una transacción abierta en el documento activo. La ejecución automática debe realizarse sin transacciones abiertas</msg73>
+    <msg74>La instrucción no se ha ejecutado. Errores encontrados: {0}</msg74>
+    <msg75>El archivo de configuraciones no se ha especificado en la instrucción y el origen de configuraciones nunca se ha seleccionado en la ventana del plugin</msg75>
+    <msg76>No se encontró el archivo de configuraciones: "{0}"</msg76>
+    <msg77>Se ha especificado el archivo de configuraciones, pero no la configuración. La configuración actual solo se usa junto con el archivo de configuraciones seleccionado en la ventana del plugin</msg77>
+    <msg78>No se encontró la configuración actual en el archivo "{0}"</msg78>
+    <msg79>No se encontró la configuración "{0}" en el archivo "{1}"</msg79>
+    <msg80>El archivo "{0}" contiene varias configuraciones con el nombre "{1}". Especifique el identificador de la configuración</msg80>
+    <msg81>La configuración no tiene estrategias marcadas</msg81>
+    <msg82>No se encontró la estrategia "{0}" en la configuración</msg82>
+    <msg83>Se encontraron varias estrategias "{0}". Se procesarán todas</msg83>
+    <msg84>No se encontró ninguna de las estrategias de la instrucción</msg84>
+    <msg85>Estrategias a procesar: {0}</msg85>
+    <msg86>La vista actual no es una vista gráfica</msg86>
+    <msg87>Ámbito de procesamiento: {0}</msg87>
+    <msg88>No se encontró la vista "{0}"</msg88>
+    <msg89>Se encontraron varias vistas con el nombre "{0}" ({1}). Se procesarán todas</msg89>
+    <msg90>No se encontró ninguna de las vistas de la instrucción</msg90>
+    <msg91>Vistas a procesar: {0}</msg91>
+    <msg92>Se omite la lista de archivos vinculados: el procesamiento de elementos de archivos vinculados está desactivado</msg92>
+    <msg93>No se encontró el archivo vinculado "{0}"</msg93>
+    <msg94>No se encontró ninguno de los archivos vinculados de la instrucción</msg94>
+    <msg95>Archivos vinculados a procesar: {0}</msg95>
+    <msg96>Los resultados se guardan en un archivo de texto</msg96>
+    <msg97>El procesamiento se ha completado, pero no se pudo guardar el archivo de resultados "{0}"</msg97>
+    <msg98>Resultados guardados en el archivo "{0}"</msg98>
+    <msg99>No se pudo crear el archivo de registro "{0}"</msg99>
+    <msg100>Inicio del procesamiento de la configuración "{0}" ({1}). Modo: {2}. {3}. Estrategias: {4}</msg100>
+    <msg101>Procesamiento de la configuración "{0}" completado en {1}</msg101>
+    <msg102>Procesamiento en la vista "{0}" ({1})</msg102>
+    <msg103>Recopilando elementos de archivos vinculados</msg103>
+    <msg104>Elementos recopilados de archivos vinculados: {0}</msg104>
+    <msg105>Recopilando elementos. {0}</msg105>
+    <msg106>Elementos recopilados: {0}</msg106>
+    <msg107>Procesamiento de la estrategia "{0}" ({1}). Reglas: {2}</msg107>
+    <msg108>La regla {0} de la estrategia "{1}" no se ha procesado</msg108>
+    <msg109>Procesamiento interrumpido por un error</msg109>
     <err1>Cada expresión de una fórmula debe comenzar con parámetro objetivo "$[NombreDelParámetro]="</err1>
     <err2>Número de paréntesis de apertura debe ser igual al número de paréntesis de cierre</err2>
     <err3>Número de llaves de apertura debe ser igual al número de llaves de cierre</err3>
@@ -382,6 +447,7 @@
     <err125>El proyecto no tiene el parámetro global "{0}"</err125>
     <err126>El subelemento de la conexión {0} no tiene el parámetro "{1}"</err126>
     <err127>No se pudo calcular la clave de agrupación: el elemento no tiene el parámetro "{0}"</err127>
+    <err128>El elemento {0} no tiene habitación "{1}": no se puede escribir un valor en su parámetro</err128>
     <rh1>No.</rh1>
     <rh2>Activar</rh2>
     <rh3>Fórmula</rh3>
@@ -391,7 +457,7 @@
     <sm3>Procesando elementos en documento</sm3>
     <sm4>Procesando elementos en vistas seleccionadas</sm4>
     <ssd1>Procesando elementos sin relaciones</ssd1>
-    <sld1>Estrategia procesa ejemplares de elementos sin tener en cuenta sus relaciones con otros elementos. Es necesario rellenar al menos un filtro (por categoría o por parámetros)</sld1>
+    <sld1>Estrategia procesa elementos sin tener en cuenta sus relaciones con otros elementos. Es necesario rellenar al menos un filtro (por categoría o por parámetros)</sld1>
     <ssd2>Procesando ejemplares de familias sin relaciones</ssd2>
     <sld2>Estrategia procesa ejemplares de familias sin tomar en cuenta sus relaciones con otros elementos. Es posible no utilizar un filtro por categoría o filtro por parámetros</sld2>
     <ssd3>Procesando tipos</ssd3>
@@ -401,17 +467,17 @@
     <ssd5>Procesando elementos en grupo</ssd5>
     <sld5>Estrategia procesa elementos ubicados en grupos. Al crear fórmulas, tenga en cuenta que parámetro objetivo debe poder cambiar entre ejemplares de grupo.</sld5>
     <ssd6>Procesando elementos en habitación</ssd6>
-    <sld6>Estrategia procesa elementos ubicados en interior. Estrategia sólo se puede utilizar en vistas que contengan geometría de habitaciones. Por ejemplo, en vistas 3D estrategia no funcionará</sld6>
+    <sld6>Estrategia procesa elementos ubicados dentro de habitaciones</sld6>
     <ssd7>Procesando elementos en espacio</ssd7>
-    <sld7>Estrategia procesa elementos ubicados dentro de espacios. Estrategia sólo se puede utilizar en vistas que contengan geometría espacial. Por ejemplo, en vistas 3D estrategia no funcionará</sld7>
-    <ssd8>Procesando elementos en elementos formativos</ssd8>
-    <sld8>Estrategia procesa elementos que tienen una forma 3D y se encuentran dentro elementos formativos. Elementos formativos tener una forma 3D. Elementos formativos pueden estar en archivos vinculados</sld8>
+    <sld7>Estrategia procesa elementos ubicados dentro de espacios</sld7>
+    <ssd8>Procesando elementos en elemento formativo</ssd8>
+    <sld8>Estrategia procesa elementos que tienen una forma 3D y se encuentran dentro de elementos formativos. Los elementos formativos deben tener una forma 3D</sld8>
     <ssd9>Procesando elementos en forma 3D</ssd9>
-    <sld9>Estrategia procesa elementos que tienen forma 3D y se ubican dentro de otros elementos que tienen forma 3D. Elementos primarios pueden estar en archivos vinculados</sld9>
-    <ssd10>Procesando elementos que tocan bordes de formas 3D</ssd10>
-    <sld10>Estrategia procesa elementos que tienen una forma 3D y se tocan entre sí con bordes planos de forma. Elementos tocados pueden estar en archivos vinculados</sld10>
+    <sld9>Estrategia procesa elementos que tienen forma 3D y se ubican dentro de otros elementos que tienen forma 3D</sld9>
+    <ssd10>Procesando elementos que se tocan con caras de formas 3D</ssd10>
+    <sld10>Estrategia procesa elementos que tienen una forma 3D y se tocan entre sí con caras planas de la forma</sld10>
     <ssd11>Procesando cerramientos de habitaciones</ssd11>
-    <sld11>Estrategia procesa elementos que son estructuras cerramientos de habitaciones</sld11>
+    <sld11>Estrategia procesa elementos que son cerramientos de habitaciones</sld11>
     <ssd12>Procesando elementos anidados de conexiones estructurales</ssd12>
     <sld12>Estrategia procesa elementos ubicados en conexiones estructurales (placas, pernos, etc.). No se proporciona filtrado de elementos anidados por parámetros, así como una lista de parámetros de elementos anidados en editor de fórmulas. Parámetros numéricos se especifican sin conversión a unidades internas</sld12>
     <ssd13>Procesando familias anidadas</ssd13>
@@ -426,18 +492,18 @@
     <sld17>Estrategia procesa elementos que conforman sistema MEP (sistema eléctrico, sistema de tuberías o sistema de conductos de aire). Convencionalmente, elemento original es sistema primario del elemento</sld17>
     <ssd18>Procesamiento de componentes de muro cortina</ssd18>
     <sld18>Estrategia procesa componentes de muro cortina (montantes y paneles). Convencionalmente, el elemento original es un muro</sld18>
-    <ssd19>Procesamiento de elementos en relación con elementos original especificados</ssd19>
+    <ssd19>Procesamiento de elementos en relación con elementos originales especificados</ssd19>
     <sld19>La estrategia procesa elementos con la posibilidad de utilizar cualquier elemento de modelo especificado como elemento original</sld19>
     <ssd20>Procesar piezas</ssd20>
     <sld20>La estrategia procesa las piezas teniendo en cuenta los elementos originales a partir de los cuales se crean las piezas. Si una pieza se crea a partir de varios elementos originales, el primer elemento se considerará el elemento original</sld20>
-    <ssd21>Procesamiento de elementos en conjuntos</ssd21>
+    <ssd21>Procesamiento de elementos en el conjunto</ssd21>
     <sld21>La estrategia procesa los elementos ubicados en conjuntos</sld21>
     <ssd22>Procesamiento de elementos específicos de la vista</ssd22>
-    <sld22>Procesa los elementos que existen únicamente dentro de una vista y no forman parte del modelo tridimensional: cotas, notas de texto, etiquetas, líneas de detalle y regiones rellenadas, así como el contenido de las láminas. Estos elementos están vinculados a la vista en la que se crearon y no se muestran en las demás. Los elementos de modelo, como muros, suelos o equipamiento, no se ven afectados</sld22>
+    <sld22>La estrategia procesa los elementos que existen únicamente dentro de una vista y no forman parte del modelo tridimensional: cotas, notas de texto, etiquetas, líneas de detalle y regiones rellenadas, así como el contenido de las láminas. Estos elementos están vinculados a la vista en la que se crearon y no se muestran en las demás. Los elementos de modelo, como muros, suelos o equipamiento, no se ven afectados</sld22>
     <ssd23>Procesamiento de componentes de escalera</ssd23>
-    <sld23>Procesa los componentes de las escaleras: tramos, mesetas, soportes y las barandillas asociadas a la escalera. El elemento de origen condicional es la escalera. Los componentes de una escalera de varias plantas se procesan a través de la escalera a la que pertenecen</sld23>
+    <sld23>La estrategia procesa los componentes de las escaleras: tramos, mesetas, soportes y las barandillas asociadas a la escalera. El elemento de origen condicional es la escalera. Los componentes de una escalera de varias plantas se procesan a través de la escalera a la que pertenecen</sld23>
     <ssd24>Procesamiento de aberturas de la habitación</ssd24>
-    <sld24>Procesa las aberturas - puertas y ventanas - que dan a la habitación. El elemento de origen condicional es la habitación. Las aberturas se buscan en los elementos de contorno de la habitación, muros cortina incluidos, y la pertenencia se determina por las propiedades "Hacia la habitación" y "Desde la habitación" teniendo en cuenta la fase de la habitación; si esas propiedades están vacías, por la intersección de la geometría de la abertura con el volumen de la habitación</sld24>
+    <sld24>La estrategia procesa las aberturas - puertas y ventanas - que dan a la habitación. El elemento de origen condicional es la habitación. Las aberturas se buscan en los elementos de contorno de la habitación, muros cortina incluidos, y la pertenencia se determina por las propiedades "Hacia la habitación" y "Desde la habitación" teniendo en cuenta la fase de la habitación; si esas propiedades están vacías, por la intersección de la geometría de la abertura con el volumen de la habitación</sld24>
     <ssd25>Procesamiento de dos conjuntos de elementos emparejados por valor</ssd25>
     <sld25>La estrategia procesa dos conjuntos independientes de elementos: de origen condicional y de destino. El par no se forma por una relación de los elementos en el modelo, sino por la coincidencia del valor calculado en ambos lados por el ajuste de emparejamiento. Los elementos coincidentes forman un grupo sobre el que se calculan las funciones de agregación</sld25>
     <ssd26>Procesamiento del acabado de habitaciones</ssd26>
@@ -446,6 +512,22 @@
     <sld27>La estrategia procesa los elementos por su vinculación a un nivel. El elemento de origen condicional es un nivel y los elementos de destino son los situados en él. El nivel se toma de la propiedad del elemento y, si no está rellenada, del parámetro de nivel («Nivel», «Nivel de referencia», «Restricción inferior»). Un elemento extendido entre niveles (un muro, un pilar, una escalera) pertenece a su nivel inferior. Los niveles se añaden al procesamiento automáticamente, no es necesario seleccionarlos en el modelo</sld27>
     <ssd28>Procesamiento de acopladores de barras de refuerzo</ssd28>
     <sld28>La estrategia procesa las barras de refuerzo unidas por un acoplador. El elemento de origen condicional es el acoplador y los elementos de destino son una o dos barras en cuyos extremos está colocado. Un acoplador colocado en una sola barra da una relación uno a uno: en este caso el valor de la barra se transfiere al acoplador mediante las funciones de escritura inversa. Para un acoplador colocado en dos barras, la parte derecha de la escritura inversa se calcula para ambas</sld28>
+    <ssd29>Procesamiento de las vistas del nivel</ssd29>
+    <sld29>La estrategia procesa las vistas asociadas a un nivel. El elemento de origen condicional es un nivel y los elementos de destino son las plantas, los planos de techo, las plantas estructurales y las plantas de áreas generadas por ese nivel. El nivel de una vista se establece al crear la vista y no cambia: una planta obtenida por copia permanece en el nivel del original. Las vistas de otro tipo - secciones, alzados, vistas 3D, leyendas, tablas de planificación - no están asociadas a un nivel y no se procesan, las plantillas de vista tampoco. Los niveles que se procesan se obtienen igual que los elementos de cualquier otra estrategia: al procesar todo el documento son todos los niveles del documento; al seleccionar elementos, solo los niveles seleccionados; al procesar una vista, los niveles visibles en ella. El nivel se señala en el modelo en una sección o un alzado, donde es un elemento corriente; una planta no tiene línea de nivel, por eso al procesar una planta se toma el nivel por el que está generada</sld29>
+    <sg1>Sin relaciones</sg1>
+    <sgd1>Se procesan los parámetros de los propios elementos, sin recurrir a otros elementos</sgd1>
+    <sg2>Inclusión en un elemento</sg2>
+    <sgd2>Los elementos de destino se encuentran en el elemento de origen condicional o le pertenecen</sgd2>
+    <sg3>Componentes</sg3>
+    <sgd3>Los elementos de destino son partes del elemento de origen condicional</sgd3>
+    <sg4>Habitaciones</sg4>
+    <sgd4>Los elementos de destino están relacionados con la habitación de otra forma que por estar ubicados dentro de ella</sgd4>
+    <sg5>Elementos adyacentes</sg5>
+    <sgd5>Los elementos de destino están en contacto con el elemento de origen condicional o unidos a él</sgd5>
+    <sg6>Niveles y vistas</sg6>
+    <sgd6>Los elementos de destino están vinculados a un nivel o a una vista</sgd6>
+    <sg7>Relación arbitraria</sg7>
+    <sgd7>El par no se define por una relación en el modelo, sino que se indica manualmente o se empareja por valores</sgd7>
     <se1>Base</se1>
     <sp1>Insertar parámetro de base</sp1>
     <se2>Grupo</se2>
@@ -509,6 +591,7 @@
     <tp9>Insertar parámetro de la abertura</tp9>
     <te12>Elemento de acabado</te12>
     <tp12>Insertar parámetro del elemento de acabado</tp12>
+    <tp13>Insertar parámetro de la vista</tp13>
     <ft1>Funciones matemáticas</ft1>
     <ft2>Funciones lógicas</ft2>
     <ft3>Funciones de modificación</ft3>
@@ -523,12 +606,12 @@
     <d-rounddown>Devuelve número entero más grande que es menor o igual al número especificado</d-rounddown>
     <d-sqrt>Devuelve raíz cuadrada del número especificado</d-sqrt>
     <d-pow>Devuelve número especificado elevado a potencia especificada</d-pow>
-    <d-sin>Devuelve seno del ángulo especificado</d-sin>
-    <d-cos>Devuelve coseno del ángulo especificado</d-cos>
-    <d-tan>Devuelve tangente del ángulo especificado</d-tan>
-    <d-asin>Devuelve ángulo cuyo seno es igual al número especificado</d-asin>
-    <d-acos>Devuelve ángulo cuyo coseno es igual al número especificado</d-acos>
-    <d-atan>Devuelve un ángulo cuya tangente es igual al número especificado</d-atan>
+    <d-sin>Devuelve seno del ángulo especificado. El ángulo se indica en grados</d-sin>
+    <d-cos>Devuelve coseno del ángulo especificado. El ángulo se indica en grados</d-cos>
+    <d-tan>Devuelve tangente del ángulo especificado. El ángulo se indica en grados</d-tan>
+    <d-asin>Devuelve el ángulo en grados cuyo seno es igual al número especificado</d-asin>
+    <d-acos>Devuelve el ángulo en grados cuyo coseno es igual al número especificado</d-acos>
+    <d-atan>Devuelve el ángulo en grados cuya tangente es igual al número especificado</d-atan>
     <d-log>Devuelve logaritmo del número especificado con base especificada</d-log>
     <d-ln>Devuelve logaritmo natural (base e) del número especificado</d-ln>
     <d-exp>Devuelve e elevado a potencia especificada</d-exp>
@@ -550,14 +633,14 @@
     <d-isvertical>Devuelve TRUE si el eje del elemento objetivo está en posición vertical. En caso contrario devuelve FALSE. El argumento opcional &lt;a&gt; define la tolerancia en grados, 0.1 por defecto. La función solo se aplica a los elementos cuya posición está definida por una línea recta</d-isvertical>
     <d-ishorizontal>Devuelve TRUE si el eje del elemento objetivo está en posición horizontal. En caso contrario devuelve FALSE. El argumento opcional &lt;a&gt; define la tolerancia en grados, 0.1 por defecto. La función solo se aplica a los elementos cuya posición está definida por una línea recta</d-ishorizontal>
     <d-strlen>Devuelve longitud de una cadena</d-strlen>
-    <d-strindex>Devuelve el índice basado en cero de la primera entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena</d-strindex>
+    <d-strindex>Devuelve el índice basado en cero de la primera entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena. La función no distingue entre mayúsculas y minúsculas</d-strindex>
     <d-valuestr>Devuelve valor del parámetro como una cadena con unidades de medida</d-valuestr>
     <d-eindex>Devuelve índice de correcto de declaración de fórmula actual</d-eindex>
     <d-replace>Devuelve valor en que todas apariciones de cadena especificada se reemplazan por otra cadena especificada</d-replace>
     <d-format>Convierte número en cadena usando formato especificado</d-format>
     <d-cv>Devuelve valor de celda de origen de datos de estrategia especificada</d-cv>
-    <d-count>Devuelve el número de veces que aparece una subcadena en una cadena. Si la subcadena no se encuentra en la cadena, devuelve 0</d-count>
-    <d-lstrindex>Devuelve el índice basado en cero de la última entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena</d-lstrindex>
+    <d-count>Devuelve el número de coincidencias con el patrón en la cadena. Si no hay coincidencias, devuelve 0. El patrón es una expresión regular. La función no distingue entre mayúsculas y minúsculas</d-count>
+    <d-lstrindex>Devuelve el índice basado en cero de la última entrada de una subcadena en una cadena. Devuelve -1 si la subcadena no se encuentra en la cadena. La función no distingue entre mayúsculas y minúsculas</d-lstrindex>
     <d-not>Devuelve TRUE si la condición es falsa. De lo contrario devuelve FALSE</d-not>
     <d-distinct>Devuelve valores de lista diferentes, ignorando los espacios iniciales y finales al comparar los valores</d-distinct>
     <d-cvif>Busca la primera fila en la fuente de datos de la estrategia (archivo Excel) donde se cumplen todas las condiciones y devuelve el valor de la columna especificada de esa fila</d-cvif>
@@ -565,12 +648,12 @@
     <d-doctitle>Devuelve el título del documento actual</d-doctitle>
     <d-getcurrentviewparameter>Devuelve el valor del parámetro &lt;p&gt; de la vista en la que se realiza el procesamiento. Disponible al procesar elementos en la vista actual, en las vistas seleccionadas y al procesar los elementos seleccionados</d-getcurrentviewparameter>
     <d-targetbottomz>Devuelve la cota más baja (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targetbottomz>
-    <d-targettopz>Devuelve la cota más alta (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales</d-targettopz>
+    <d-targettopz>Devuelve la cota más alta (Z) de la geometría del elemento de destino. La cota se devuelve en milímetros, redondeada a 3 decimales. Si el procesamiento no se realiza en todo el documento, la geometría se toma en la vista activa: en una planta, la cota más alta es el plano de corte de la planta y no la parte superior real del elemento</d-targettopz>
     <d-sourcebottomz>Devuelve la cota más baja (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcebottomz>
-    <d-sourcetopz>Devuelve la cota más alta (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales</d-sourcetopz>
+    <d-sourcetopz>Devuelve la cota más alta (Z) de la geometría del elemento de origen condicional. La cota se devuelve en milímetros, redondeada a 3 decimales. Si el procesamiento no se realiza en todo el documento, la geometría se toma en la vista activa: en una planta, la cota más alta es el plano de corte de la planta y no la parte superior real del elemento</d-sourcetopz>
     <d-gsum>Devuelve la suma de los valores de la expresión de los elementos del grupo</d-gsum>
     <d-gcount>Devuelve el número de elementos del grupo del rol indicado: "s" - original condicional, "t" - objetivo</d-gcount>
-    <d-gjoin>Une los valores de la expresión de los elementos del grupo mediante el separador indicado</d-gjoin>
+    <d-gjoin>Une los valores de la expresión de los elementos del grupo mediante el separador indicado. El tercer argumento opcional define los indicadores: "d" - solo valores distintos, "s" - ordenar, "r" - contraer números consecutivos en rangos</d-gjoin>
     <d-gmin>Devuelve el valor mínimo de la expresión de los elementos del grupo</d-gmin>
     <d-gmax>Devuelve el valor máximo de la expresión de los elementos del grupo</d-gmax>
     <d-gavg>Devuelve el valor medio de la expresión de los elementos del grupo</d-gavg>
@@ -596,5 +679,38 @@
     <d-wb-max>Guarda el resultado máximo en un parámetro del elemento original condicional</d-wb-max>
     <d-wb-min>Guarda el resultado mínimo en un parámetro del elemento original condicional</d-wb-min>
     <d-wb-sum>Guarda la suma de los resultados en un parámetro del elemento original condicional</d-wb-sum>
+    <t211>The plugin window is open. The palette is available after it is closed</t211>
+    <t212>Configurations file is not selected. Open the plugin window</t212>
+    <t213>Organization settings have changed. Open the plugin window to select a configurations file</t213>
+    <t214>Configurations file is not available</t214>
+    <t215>There are no configurations in the configurations file</t215>
+    <t216>There are no strategies in the current configuration</t216>
+    <t217>Open the plugin window</t217>
+    <t218>Work type</t218>
+    <t219>Strategy of the current configuration</t219>
+    <t220>Run all rules of the strategy</t220>
+    <t221>Click to run the rule</t221>
+    <t222>Show or hide the palette</t222>
+    <t223>Source</t223>
+    <t224>PF SE</t224>
+    <t225>PF TE</t225>
+    <t226>F SE</t226>
+    <t227>F TE</t227>
+    <t228>The plugin does not work in family files</t228>
+    <t229>No open document</t229>
+    <t230>Preguntar por la sincronización con el modelo central antes de ejecutar</t230>
+    <t231>Opciones de sincronización</t231>
+    <t232>Compactar modelo central (lento)</t232>
+    <t233>Después de sincronizar, ceder los siguientes subproyectos y elementos:</t233>
+    <t234>Subproyectos de estándares de proyecto</t234>
+    <t235>Subproyectos de familias</t235>
+    <t236>Elementos prestados</t236>
+    <t237>Subproyectos de vistas</t237>
+    <t238>Subproyectos creados por el usuario</t238>
+    <t239>Guardar archivo local antes y después de sincronizar con el archivo central</t239>
+    <t240>Atrás</t240>
+    <t241>Seleccionar el archivo Excel de origen de datos de la estrategia</t241>
+    <t242>Quitar el archivo Excel del origen de datos de la estrategia (el archivo en sí no se elimina)</t242>
+    <t243>Se recopilarán de los archivos vinculados los elementos de las categorías especificadas en las columnas de las reglas, tanto para los elementos de origen condicionales como para los elementos de destino. Después se procesan al igual que los elementos del modelo actual: por ejemplo, para la estrategia InMass pueden ser elementos formativos, para la estrategia InSolid, elementos que tienen un sólido, para la estrategia ManyToMany, elementos de origen condicionales. Los valores de los parámetros de los elementos de archivos vinculados se pueden usar en las fórmulas, pero no es posible guardar un valor en un parámetro de un elemento de un archivo vinculado: esa escritura se marca en el informe como error</t243>
   </mprParametrization>
 </ModPlus>

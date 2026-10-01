@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprStructureToParameter
+    LocalName="Structure to parameter"
+    Description="Transferring the structure of a multilayer type to a multiline parameter"
+    LocalName1="Volume of layers to parameter"
+    Description1="Transferring of layer volumes of multilayer elements into a multiline parameter">
+    <t1>Search by type or material name:</t1>
+    <t2>Show only Types with required parameters</t2>
+    <t3>Show only used Types</t3>
+    <t4>Usable are the Types used in at least one instance of the element in the model</t4>
+    <t5>Number of instances in the model with the current Type</t5>
+    <t6>Structure</t6>
+    <t7>Layer thickness</t7>
+    <t8>Number of uses of the material in other Types (loaded in the plugin), including the current Type</t8>
+    <t9>This layer has variable thickness</t9>
+    <t10>Var. thick</t10>
+    <t11>Current result</t11>
+    <t12>New result</t12>
+    <t13>Update</t13>
+    <t14>Types:</t14>
+    <t15>Number of Types loaded in the plugin</t15>
+    <t16>Displayed:</t16>
+    <t17>Number of Types displayed in table with all filters</t17>
+    <t18>Templates:</t18>
+    <t19>Number of displayed Types with filled in parameter "Template"</t19>
+    <t20>Changed:</t20>
+    <t21>Number of displayed Types, in which the value of the new result is different from the value of the current result</t21>
+    <t22>Will be updated:</t22>
+    <t23>Number of displayed Types, whose value will be updated</t23>
+    <t24>Selected:</t24>
+    <t25>Number of displayed Types selected in the table</t25>
+    <t26>Result:</t26>
+    <t27>Variable thickness:</t27>
+    <!--todo remove after 2.0.2.0-->
+    <t28>Structure wildcard</t28>
+    <t29>Numbering</t29>
+    <t30>Number format:</t30>
+    <t31>String format</t31>
+    <t32>{0} – material name. {1} – layer thickness. {2} – variable thickness. {3} - number of layers</t32>
+    <t33>Standard layer:</t33>
+    <t34>Zero-thickness layer:</t34>
+    <t35>Variable thickness layer:</t35>
+    <t36>Required type parameter with the data type "Multiline text". This parameter specifies the template of result formation. To output the list of structure layers in the template, it is necessary to specify the structure wildcard</t36>
+    <t37>Required type parameter with the data type "Multiline text". In this type parameter, a numbered list of structure layers is written, taking into account the specified line formats and numbering settings</t37>
+    <t38>Optional type parameter with data type "Text". This type parameter specifies a custom variable thickness value that can be used in string format for a variable thickness layer</t38>
+    <!--todo remove after 2.0.2.0-->
+    <t39>The wildcard specified in the template, which is replaced by a formatted list of structure layers in the result</t39>
+    <t40>By Category</t40>
+    <t41>No parameter</t41>
+    <t42>Take material name from material parameter:</t42>
+    <t43>Reverse result:</t43>
+    <t44>Optional type parameter with the data type "Multiline Text". The same result is written to this parameter as to the "Result" parameter, but in reverse order. The parameter is processed if the type being processed has it</t44>
+    <t45>Example result</t45>
+    <t46>Required instance parameter with the data type "Multiline text". In this parameter, a numbered list of volumes of the structure layers is written, taking into account the specified line formats and numbering settings</t46>
+    <t47>{0} – material name. {1} – material volume</t47>
+    <t48>Rounding the volume value</t48>
+    <t49>Combined layer:</t49>
+    <t50>layer</t50>
+    <t51>layers</t51>
+    <t52>layers</t52>
+    <t53>Structure placeholders specified in the template</t53>
+    <t54>@ - required, used to substitute a formatted list of structure layers in the result</t54>
+    <t55>&amp; - optional, used to substitute a formatted list of merged structure layers in the result</t55>
+    <t56>[n] - optional, used to specify the indices of layers that will be used to substitute a formatted list of structure layers in the result</t56>
+    <t57>^ - optional, used to define a subtitle for layers. Specified before @. A string written after ^ will not be included in the numbering of structure layers in the result</t57>
+    <t58>Result for type:</t58>
+    <t59>Result for instances:</t59>
+    <t60>Required type parameter with the data type "Multiline text". This parameter contains a numbered list of the total volumes of the structure layers, taking into account the specified line formats and numbering settings</t60>
+    <t61>Use numbering</t61>
+    <t62>Show only changed Types</t62>
+    <t63>{0} in {3} layers - {3}х{1}</t63>
+    <t64>Change the value of the specified material parameter To enable the possibility to change the value activate the "Take material name from material parameter" option in the string format settings</t64>
+    <s1>No change. The Type parameters will not be updated</s1>
+    <s2>The required parameters "Template" and "Result" are missing</s2>
+    <s3>The new result value is different from the current result value. The Type parameters will not be updated, because the "Update" checkbox is not checked</s3>
+    <s4>The new result value is different from the current result value. The Type parameters will be updated</s4>
+    <msg1>Instance parameter "{0}" not found</msg1>
+    <!--todo remove after 2.0.2.0-->
+    <msg2>The volume of layers is set to the parameter of the instance of the Type "{0}"</msg2>
+    <msg3>The volume of layers has been written to the instance parameter "{0}" for type "{1}"</msg3>
+    <msg4>There are no placed instances for types. The volume cannot be calculated</msg4>
+    <msg5>The total volume of layers has been written to the type parameter "{0}"</msg5>
+    <msg6>Structure of the layers recorded in the type parameter</msg6>
+    <msg7>Type parameter "{0}" not found</msg7>
+    <msg8>Material is missing</msg8>
+    <msg9>Material is not assigned to layer {0}</msg9>
+    <msg10>Enter parameter value</msg10>
+    <msg11>{0}\for material {1}</msg11>
+    <msg12>Parameter {0} not found or is read-only</msg12>
+    <str1>Structure [1]</str1>
+    <str2>Substrate [2]</str2>
+    <str3>Thermal/Air Layer [3]</str3>
+    <str4>Finish 1 [4]</str4>
+    <str5>Finish 2 [5]</str5>
+    <str6>Membrane Layer [6]</str6>
+    <str7>Structural Deck [7]</str7>
+  </mprStructureToParameter>
+</ModPlus>

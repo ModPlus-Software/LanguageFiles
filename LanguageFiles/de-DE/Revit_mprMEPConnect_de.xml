@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPConnect
+    LocalName="MEP-Verbindungen"
+    Description="Werkzeugsammlung zur Automatisierung von Verbindungen der Gebäudetechnik"
+    LocalName1="Diffusoren anschließen"
+    Description1="Gruppenanschluss von Diffusoren an Luftkanäle"
+    LocalName2="Anschlüsse verbinden"
+    Description2="Verbinden zweier Anschlüsse (oder MEP-Kurven) durch Drehen und Verschieben des ersten ausgewählten Anschlusses"
+    LocalName3="Gerade Teile verbinden"
+    Description3="Gruppenverbindung von geraden Rohren, Luftkanälen, Kabel, Kabeltrassen oder -kanälen, die auf derselben geraden Linie liegen"
+    LocalName4="Anschlüsse trennen"
+    Description4="Trennung der Verbindung zwischen dem nächstgelegenen verbundenen Anschluss des ausgewählten MEP-Elements und dem angrenzenden Element"
+    LocalName5="Von System trennen"
+    Description5="Trennen des zugehörigen Zweigs von MEP-Elementen vom System">
+    <msg1>Wählen Sie die Luftkanäle und die daran anzuschließenden Diffusoren aus</msg1>
+    <msg2>Keine Luftkanäle ausgewählt!</msg2>
+    <msg3>Keine Diffusoren ausgewählt! Es können nur Diffusoren verarbeitet werden, die einen unverbundenen, entlang der Z-Achse ausgerichteten Anschluss haben</msg3>
+    <msg4>Wählen Sie das zu verbindende Element aus</msg4>
+    <msg5>Wählen Sie das Element aus, an das Sie eine Verbindung herstellen möchten</msg5>
+    <msg6>Wählen Sie gerade Rohre, Luftkanäle, Kabel, Kabeltrassen oder -kanäle aus</msg6>
+    <msg7>Wollen Sie die Verbindung ausführen?</msg7>
+    <msg8>Wählen Sie das zu trennende Element aus</msg8>
+    <msg9>Wählen Sie ein Systemelement zum Trennen aus. Wenn das Element mehrere Systeme aufweist, klicken Sie näher am Anschluss des gewünschten Systems</msg9>
+    <msg10>System nicht gefunden</msg10>
+    <msg11>Nach dem Trennen vom System "{0}" wurde den Elementen automatisch das System "{1}" zugewiesen</msg11>
+    <msg12>Das System "{0}" wurde erfolgreich von den Elementen getrennt</msg12>
+    <msg13>Das System "{0}" konnte nicht von den Elementen getrennt werden</msg13>
+    <t1>Der Typ des zu erstellenden Abzweigabschnittes:</t1>
+    <t2>Eine flexible Verbindung zwischen Diffusor und Abzweigabschnitt schaffen</t2>
+    <t3>Typ des Flexkanals:</t3>
+    <t4>Länge des Flexkanals, mm:</t4>
+    <t5>Anschluss von Diffusoren</t5>
+    <dt1>Ovaler Diffusor</dt1>
+    <dt2>Runder Diffusor</dt2>
+    <dt3>Rechteckiger Diffusor</dt3>
+    <err1>Vertikaler Versatz zwischen Diffusor und Luftkanal reicht nicht aus, um eine Anschlussverbindung herzustellen</err1>
+    <err2>Der Abstand zwischen Diffusor und Luftkanal ist kleiner als die angegebene Länge der flexiblen Verbindung</err2>
+    <err3>Anschluss des Diffusors fehlgeschlagen</err3>
+    <err4>Abzweigung konnte nicht erstellt werden</err4>
+    <err5>Überprüfen Sie die Routing-Einstellungen für die angegebenen Typen von Luftkanälen</err5>
+    <err6>T-Stück konnte nicht erstellt werden</err6>
+    <err7>Die Erstellung eines variablen Formadapters ist fehlgeschlagen</err7>
+    <err8>Ansatz konnte nicht erstellt werden</err8>
+    <err9>Das ausgewählte Element hat keine freien Anschlüsse</err9>
+    <err10>Die ausgewählten Elemente haben Anschluss mit unterschiedlichen Formen</err10>
+    <err11>Die ausgewählten Elemente haben Anschluss mit unterschiedlichen Bemaßungen</err11>
+    <err12>Die ausgewählten Elemente haben Anschluss von unterschiedlichen Systemtypen</err12>
+    <err13>Das ausgewählte Element hat keine verbundenen Anschlüsse</err13>
+  </mprMEPConnect>
+</ModPlus>

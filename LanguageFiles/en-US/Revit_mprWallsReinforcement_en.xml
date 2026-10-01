@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWallsReinforcement
+    LocalName="Walls reinforcement"
+    Description="Analysis, grouping and reinforcement according to given conditions of walls and openings"
+    FullDescription="Works only with walls located on a single level. Analyzes walls, allowing you to find three types of intersections (corner, end and cross) and openings. Flexible grouping allows you to specify exactly what type of reinforcement should be made. You can perform reinforcement only for the specified groups – walls, intersections or openings. Can work even on an empty template">
+    <h2>PLUGIN WINDOW:</h2>
+    <h4>Over the windows</h4>
+    <h5>DISPLAY IN THE MODEL:</h5>
+    <h6>Scaling factor:</h6>
+    <!-- todo remove after 5.24.16.0 -->
+    <h7>REINFORCEMENT BY DEFAULT:</h7>
+    <h8>Background wall reinforcement</h8>
+    <h9>Reinforcement of intersections</h9>
+    <h10>Openings reinforcement</h10>
+    <h11>Select</h11>
+    <h12>Analyze</h12>
+    <h13>Group All</h13>
+    <h14>Selected walls count:</h14>
+    <h15>Grouping</h15>
+    <h16>Walls</h16>
+    <h17>Intersections</h17>
+    <h18>Openings</h18>
+    <h19>Group by:</h19>
+    <h20>Width of walls</h20>
+    <h21>Height of walls</h21>
+    <h22>Parameter of walls</h22>
+    <h23>Group</h23>
+    <h24>Walls count</h24>
+    <h25>Walls width</h25>
+    <h26>Wall heights</h26>
+    <h27>Walls in a group:</h27>
+    <h28>Width</h28>
+    <h29>Heights</h29>
+    <h30>Parameter</h30>
+    <!-- todo remove after 5.24.16.0 -->
+    <h31>You can drag a wall from the current group to other groups</h31>
+    <h32>Create:</h32>
+    <h33>Intersection type</h33>
+    <h34>Wall heights</h34>
+    <h35>Walls reinforcement</h35>
+    <h36>Intersections count</h36>
+    <h37>Intersection type</h37>
+    <h38>Parameters</h38>
+    <h39>Intersections in the group:</h39>
+    <!-- todo remove after 5.24.16.0 -->
+    <h40>You can drag and drop the intersections from the current group to other groups</h40>
+    <h41>Walls in the intersection:</h41>
+    <h42>Reinforcement</h42>
+    <h43>Opening size</h43>
+    <h44>1. Openings to</h44>
+    <h45>2. Openings from</h45>
+    <h46>mm to:</h46>
+    <h47>3. Openings from</h47>
+    <h48>Set the basic reinforcement for size groups</h48>
+    <h49>Source</h49>
+    <h50>Openings count</h50>
+    <h51>Wall width</h51>
+    <h52>Group by width</h52>
+    <h53>Group by height</h53>
+    <h54>Source</h54>
+    <h55>Openings in the group:</h55>
+    <!-- todo remove after 5.24.16.0 -->
+    <h58>You can drag and drop openings from the current group to other groups</h58>
+    <h59>Group reinforcement settings</h59>
+    <h60>Carry out reinforcement</h60>
+    <h61>Calculation of anchoring by SP 52-101-2003</h61>
+    <h62>Diameter:</h62>
+    <h63>Sectional area, mm²:</h63>
+    <h64>Concrete class:</h64>
+    <h65>Type of the surface of reinforcement:</h65>
+    <h66>Estimated tensile strength, MPa:</h66>
+    <h67>Basic (main) length of anchoring, mm:</h67>
+    <h68>Coefficient α:</h68>
+    <h69>Required (estimated) anchoring length, mm:</h69>
+    <h70>Anchoring length:</h70>
+    <!-- todo remove after 5.24.16.0 -->
+    <h71>Intersection reinforcement settings</h71>
+    <!-- todo remove after 5.24.16.0 -->
+    <h72>Opening reinforcement settings</h72>
+    <!-- todo remove after 5.24.16.0 -->
+    <h73>Wall reinforcement settings</h73>
+    <!-- todo remove after 5.24.16.0 -->
+    <h74>Replace with reinforcement settings of the group</h74>
+    <!-- todo remove after 5.24.16.0 -->
+    <h75>Leave the reinforcement settings</h75>
+    <h76>Vertical reinforcement</h76>
+    <h79>Step, mm:</h79>
+    <h80>Binding of the center to the edge of the wall, mm:</h80>
+    <h81>Processing additional step:</h81>
+    <h82>Distance from the end of the wall, mm:</h82>
+    <h83>Overhang over the wall, mm:</h83>
+    <h84>Cover from the rebars ends, mm:</h84>
+    <h85>Create the reinforcement above the last opening at a height of the wall above the opening more (mm):</h85>
+    <h86>Do not create the reinforcement under the opening if the height of the wall under the opening is less than or equal to two wall thicknesses (but not less than 400 mm)</h86>
+    <h87>Horizontal reinforcement</h87>
+    <h88>Location::</h88>
+    <h89>Indentation of the first rebar, mm:</h89>
+    <h90>Indentation of the last rebar, mm:</h90>
+    <h91>U-shaped rebars in the wall ends</h91>
+    <h92>Detail length, mm:</h92>
+    <h93>Calculate the length of the U-shaped rebar</h93>
+    <h94>Cross clamps (Stirrups)</h94>
+    <h95>Stirrup type</h95>
+    <h96>Turn the stirrups under 45° with the girth of the intersections of the main reinforcement</h96>
+    <h97>Type of layout:</h97>
+    <h98>Horizontal step, mm:</h98>
+    <h99>Vertical step, mm:</h99>
+    <h100>Corner intersections</h100>
+    <h101>Step of details:</h101>
+    <h102>Type of reinforcement:</h102>
+    <h103>Detail №1</h103>
+    <h104>Anchoring length, mm:</h104>
+    <h105>Calculate anchoring length</h105>
+    <h106>Detail №2</h106>
+    <h107>T-shaped intersections</h107>
+    <h108>Cross intersections</h108>
+    <h109>Vertical rebars</h109>
+    <h110>Create Reinforcement</h110>
+    <h111>Indent from the opening:</h111>
+    <h112>Rows count:</h112>
+    <h113>Displace when hit by vertical reinforcement bars</h113>
+    <h114>Horizontal rebars at the top</h114>
+    <h115>U-shaped rebars along vertical</h115>
+    <h116>U-shaped rebars at the top</h116>
+    <h117>Detail length, mm:</h117>
+    <h118>Detail step, mm:</h118>
+    <h119>Default reinforcement settings for walls</h119>
+    <h120>Default reinforcement settings for intersections</h120>
+    <h121>Default reinforcement settings for openings</h121>
+    <h122>First size group</h122>
+    <h123>Second size group</h123>
+    <h124>Third size group</h124>
+    <h127>Joints from underlying slabs</h127>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h128>Select underlying slabs</h128>
+    <h129>Underlying slabs</h129>
+    <h130>Thickness</h130>
+    <!-- todo remove after 5.24.16.0 -->
+    <h131>Groups of walls in contact with the slab:</h131>
+    <h132>Reinforcement settings of slab joints</h132>
+    <h133>Joints by middle walls</h133>
+    <h134>Default reinforcement settings for joints from underlying slabs</h134>
+    <h135>Joints type:</h135>
+    <h136>Joints by outer walls</h136>
+    <h137>Use settings for joints by middle walls</h137>
+    <h138>Reinforcement cover:</h138>
+    <h139>Horizontal reinforcement is located inside – cover on the vertical reinforcement is</h139>
+    <h140>Horizontal reinforcement is located outside – cover on the horizontal reinforcement is</h140>
+    <h141>Do not close the window after creating reinforcement</h141>
+    <h142>View intersection</h142>
+    <h143>Deleting auxiliary geometry</h143>
+    <h144>Detail offset from bottom of underlying slab:</h144>
+    <h145>First anchorage length, mm:</h145>
+    <h146>Second anchoring length, mm:</h146>
+    <!-- todo remove after 5.24.16.0 -->
+    <h147>Reset</h147>
+    <h148>Anchorage length into the slab, mm:</h148>
+    <h149>Underlying slab joints</h149>
+    <h150>Contiguous walls count</h150>
+    <h151>Additional vertical rebars in ends</h151>
+    <h152>Indent from extreme vertical rebars</h152>
+    <h153>Top diagonal reinforcement</h153>
+    <h154>Bottom diagonal reinforcement</h154>
+    <h155>Rebar length:</h155>
+    <h156>U-shaped rebars along top wall end</h156>
+    <h157>Joints</h157>
+    <h158>Joints of background vertical rebars</h158>
+    <h159>Joints of intersections vertical rebars</h159>
+    <h160>Joints type:</h160>
+    <h161>Nominal slab thickness, mm:</h161>
+    <h162>Create "Breaking in" joints</h162>
+    <h163>If there is an opening in the overlying wall, then</h163>
+    <h164>Also apply to areas of the overlying wall whose height under the opening (or the height of the entire wall) is less than or equal to two wall widths (but not less than 400)</h164>
+    <h165>If the slab above the wall is missing, then</h165>
+    <h166>Binding bends to the top of the slab (by the center of the rebar), mm:</h166>
+    <h167>Binding bends to the bottom of the slab (by the center of the rebar), mm:</h167>
+    <h168>Select walls by rectangle</h168>
+    <h169>Pick walls</h169>
+    <h170>Trim joints by solid of wall</h170>
+    <h171>Number of additional pairs of rebars:</h171>
+    <h172>Rebars step:</h172>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h173>Straight rebars:</h173>
+    <h174>L-shaped rebars (when creating bends of vertical rebars):</h174>
+    <h175>U-shaped rebars in the wall ends:</h175>
+    <h176>U-shaped rebars along top wall end:</h176>
+    <h177>C-shaped cross holes (stirrups). Hooks in sketch:</h177>
+    <h178>S-shaped cross holes (stirrups). Hooks in sketch:</h178>
+    <h179>L-shaped rebars:</h179>
+    <h180>U-shaped rebars:</h180>
+    <h181>Girth rebars:</h181>
+    <h182>L-shaped rebars with big bend:</h182>
+    <h183>Reset all values to "Auto"</h183>
+    <h184>Preferred Rebar Shapes</h184>
+    <h185>Failed to set parameter values for some elements. Below are the elements codes (id), parameter names, and set values:</h185>
+    <!-- todo remove after 5.24.16.0 end -->
+    <h186>Horizontal tied stirrups</h186>
+    <h187>Only in walls that do not have end intersections with other walls</h187>
+    <h188>In walls up to, mm long:</h188>
+    <h189>Do not create horizontal bars for background reinforcement</h189>
+    <h190>Number of rod pairs covered:</h190>
+    <h191>Consider details at ends and intersections</h191>
+    <h192>Type of girth for background reinforcement bars:</h192>
+    <h193>First overlap length, mm:</h193>
+    <h194>Second overlap length, mm:</h194>
+    <h195>Calculate overlap length</h195>
+    <h196>Overlap length, mm:</h196>
+    <h197>LOADING</h197>
+    <h198>Horizontal rebars at the bottom</h198>
+    <h199>Top Tied Stirrups</h199>
+    <h200>Shape hooks:</h200>
+    <h201>Set in sketch</h201>
+    <h202>Use Revit hooks</h202>
+    <h203>Select again</h203>
+    <h204>Reselect walls that were processed in the current view when using the plugin</h204>
+    <h205>C-shaped cross holes (stirrups). Revit hooks:</h205>
+    <h206>S-shaped cross holes (stirrups). Revit hooks:</h206>
+    <h207>Create each detail with a separate rebar</h207>
+    <h208>Do not cut rebars by openings with sizes up to (LxH):</h208>
+    <h209>Rods in a row:</h209>
+    <h210>Layout along the length of:</h210>
+    <h211>opening</h211>
+    <h212>straight bars</h212>
+    <h213>U-shaped rebars at the bottom</h213>
+    <h214>Bottom Tied Stirrups</h214>
+    <h215>Vertical Tied Stirrups</h215>
+    <h216>Joints length, mm:</h216>
+    <h217>Move the outermost vertical rebars of the background reinforcement when hitting the U-shaped rebar</h217>
+    <h218>Additional vertical rebars near intersections</h218>
+    <h219>Snap to intersection face (center of rebar):</h219>
+    <h220>Only for walls crossed at right angles</h220>
+    <h221>Longitudinally curved rods (bent into a "bottle")</h221>
+    <h222>Step at the area of thickening, mm:</h222>
+    <h223>Thickening distance, mm:</h223>
+    <h224>Thickening distance, fraction:</h224>
+    <h225>Thickening of horizontal reinforcement in the lower zone of the wall</h225>
+    <h226>Removal of previously created reinforcement:</h226>
+    <h227>Vertical reinforcement at intersections</h227>
+    <h228>Use the main vertical reinforcement settings</h228>
+    <h229>Level</h229>
+    <h230>Create joints for additional vertical bars of the background reinforcement</h230>
+    <h231>Distance of the bend start point from the top of the wall (a), mm:</h231>
+    <h232>Distance of the bend end point from the top of the plate (b), mm:</h232>
+    <h233>Use rebar diameter as bending height (c)</h233>
+    <h234>Bending height (c), mm:</h234>
+    <h235>Detail binding to the top of the slab (on the outer edge of the detail), mm:</h235>
+    <h236>U-shaped rebars of vertical joints:</h236>
+    <h237>The distance between the vertical rebars (by the smallest wall in the group) is</h237>
+    <h238>According to Section 10.3.5 of SP 63.13330 the distance between the rods of vertical reinforcement should be at least 50 mm!</h238>
+    <h239>According to Section 10.3.5 of SP 63.13330 the distance between the rods of horizontal reinforcement should be at least 25 mm!</h239>
+    <h240>Side alternating</h240>
+    <h241>Additional L-shaped rebar, bent into the slab and placed in the extreme walls</h241>
+    <h242>Anchoring length into the wall, mm:</h242>
+    <h243>"Breaking in" joints by offset</h243>
+    <h244>Create only in areas where there is no overlying slab or wall</h244>
+    <h245>U-shaped rebars along bottom wall end</h245>
+    <h246>Walls in contact with the slab:</h246>
+    <h247>Source parameter</h247>
+    <h248>No parameter</h248>
+    <h249>Horizontal U-shaped rods</h249>
+    <h250>Ends type:</h250>
+    <h251>Length of end(s), mm:</h251>
+    <h252>Calculate the length of the U-shaped rod end(s)</h252>
+    <h253>Apply cover from the rebar ends at the bottom of the wall</h253>
+    <h254>Create with a step of background reinforcement</h254>
+    <h255>Thickening of horizontal reinforcement in the upper zone of the wall</h255>
+    <et1>Both ends are set by wall length</et1>
+    <et2>One end is set by wall length, the other end is set by value</et2>
+    <et3>Both ends are set by value</et3>
+    <srd>Saving data of selected walls</srd>
+    <rr1>Remove reinforcement of the same type that is created</rr1>
+    <rr2>Remove all previously created reinforcement</rr2>
+    <rr3>Do not remove</rr3>
+    <hook>Hook:</hook>
+    <g1>Girth vertical bars</g1>
+    <g2>Girth horizontal bars</g2>
+    <auto>Auto</auto>
+    <oa1>do not create joints</oa1>
+    <oa2>bend into slab (if available)</oa2>
+    <npa1>assume a slab conditionally existing</npa1>
+    <npa2>calculate overlap length from the top of the wall</npa2>
+    <jtd1>Joints of background vertical rebars are not created. Rebars are cut on the top of the wall according to the specified value of cover from the rebars ends</jtd1>
+    <jtd2>Created straight joints of vertical rebars. Overlap length is set from the top of the overlying slab or from the top of the wall. When the width of the overlying wall decreases, the reinforcement is bent (if slab exist)</jtd2>
+    <jtd3>Vertical bar releases are created by analogy with straight releases, but with different anchorage lengths</jtd3>
+    <jtd4>Joints of vertical rebars with anchoring in the overlying slab are created. The length of the anchorage is counted from the side face of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the slab</jtd4>
+    <jtd5>Created straight joints of vertical rebars. Overlap length is set from the top of the overlying slab or from the top of the wall</jtd5>
+    <jtd6>Straight joints of vertical rebars in the form of a "bottle" are created – the bends are bent to the center of intersection to the diameter of the rebar. The overlap length is set from the top of the overlying slab</jtd6>
+    <jtd7>Joints are created in the overlying slab in the form of separate L-shaped bars. The first anchoring length – the length of the anchoring of the rods into the slab – is counted from the side face of the wall. The second anchoring length – the length of the anchoring of the rods into the wall – is counted from the top edge of the wall. If the bends of the rebars can not be performed in two directions, the rebars are bent in one direction in different levels of the slab</jtd7>
+    <jtd8>Created straight joints of vertical rebars without taking into account the overlying elements</jtd8>
+    <jtd9>Straight joints of vertical rebars in the form of a "bottle" are created – the bends are bent to the center of the wall at a given distance or by the diameter of the rebar. The overlap length is set from the top of the overlying slab</jtd9>
+    <jtd10>The vertical rebars of the background reinforcement are cut along the top of the wall according to the specified value of cover from the rebars ends. Create an anchoring into the overlying slab in the form of a separate U-shaped rod</jtd10>
+    <!-- todo remove after 5.24.16.0 start -->
+    <i1>1. Corner</i1>
+    <i2>2. T-shaped</i2>
+    <i3>3. Cross</i3>
+    <i4>0. Undefined</i4>
+    <i5>Various</i5>
+    <!-- todo remove after 5.24.16.0 end -->
+    <m1>Enter a value from</m1>
+    <m2>to</m2>
+    <!-- todo remove after 5.24.16.0 -->
+    <m13>Reinforcement cover</m13>
+    <m14>Up to</m14>
+    <m15>From</m15>
+    <m16>Window</m16>
+    <m17>Door</m17>
+    <m18>Generic model</m18>
+    <m19>Rectangular opening</m19>
+    <!-- todo remove after 5.24.16.0 -->
+    <m20>The list of walls contains walls whose reinforcement settings have been changed manually and differ from the settings of the reinforcement group</m20>
+    <!-- todo remove after 5.24.16.0 -->
+    <m21>The list of intersections contains intersections whose reinforcement settings have been changed manually and differ from the reinforcement settings of the group</m21>
+    <!-- todo remove after 5.24.16.0 -->
+    <m22>The list of openings contains openings whose reinforcement settings have been changed manually and differ from the reinforcement settings of the group</m22>
+    <m23>Reinforcement settings copied</m23>
+    <m24>You did not specify for which groups to create reinforcement!</m24>
+    <m25>No groups were selected for creating reinforcement!</m25>
+    <m26>Select walls</m26>
+    <m27>Attention! No loaded rebar shapes found in the current project! In this case, the rebar shapes created during the operation of the plugin cannot be opened in the Family Editor! It is recommended that before using the plugin, load the rebar shapes into the project!\nPerform reinforcement, despite the missing rebar shapes?</m27>
+    <!-- todo remove after 5.24.16.0 -->
+    <m28>Select underlying slabs</m28>
+    <!-- todo remove after 5.24.16.0 -->
+    <m29>The selected underlying slab (id: {0}) has no mates with selected walls</m29>
+    <!-- todo remove after 5.24.16.0 -->
+    <m30>Attention! Reinforcement settings for underlying slab joint bars will be reset! Continue?</m30>
+    <m31>Bend radius of rebar is less than the minimum allowable</m31>
+    <m32>The specified reinforcement settings will make it impossible to model the reinforcement details!</m32>
+    <m33>Attention! Repeated analysis will clear the current list of groups and the list of underlying slabs! Repeat analysis?</m33>
+    <m34>Wall Profile</m34>
+    <p1>Search is not processed walls intersecting with the selected walls</p1>
+    <p2>Initializing the geometry of the walls</p2>
+    <p3>Search for intersections of walls</p3>
+    <p4>Removing the same intersections</p4>
+    <p5>Integrating intersections</p5>
+    <p6>Geometry analysis of intersections</p6>
+    <p7>Determination of the belonging of walls to intersections</p7>
+    <p8>Removing the reinforcement created earlier</p8>
+    <p9>Calculation and modeling of wall reinforcement</p9>
+    <p10>Calculation and modeling of intersection reinforcement</p10>
+    <p11>Calculation and modeling of reinforcement of the opening</p11>
+    <p12>Revit rebars generation</p12>
+    <p13>Combining the horizontal rebars of the reinforcement</p13>
+    <p14>Calculation and modeling of joints from the slab by middle walls</p14>
+    <p15>Calculation and modeling of joints from the slab by outer walls</p15>
+    <p16>Searching for underlying slabs</p16>
+    <dd1>V</dd1>
+    <dd2>H</dd2>
+    <dd3>inside</dd3>
+    <dd4>outside</dd4>
+    <dd5>S</dd5>
+    <dd6>U</dd6>
+    <rn>Rebar ⌀</rn>
+    <!-- todo remove after 5.24.16.0 -->
+    <noInFamily>Plugin operation in families is not available!</noInFamily>
+    <c1>Move to the end of the wall</c1>
+    <c2>Move to the middle of the wall</c2>
+    <c3>Distribute vertical reinforcement</c3>
+    <c4>Inside</c4>
+    <c5>Outside</c5>
+    <c6>Direct order</c6>
+    <c7>Chess order</c7>
+    <c8>By the smallest step</c8>
+    <c9>By the largest step</c9>
+    <c10>Move to both ends of the wall</c10>
+    <t1>Select walls for later analysis</t1>
+    <t2>In the selection filter, only walls with the following parameters fall:</t2>
+    <t3>The wall is bounded by straight lines</t3>
+    <t4>The "Structural" property is included</t4>
+    <t5>The wall is not a curtain wall</t5>
+    <t6>Wall width not less than 100 mm</t6>
+    <!-- todo remove after 5.24.16.0 -->
+    <t7>The group contains walls whose reinforcement settings have been manually edited and differ from the group reinforcement settings</t7>
+    <!-- todo remove after 5.24.16.0 -->
+    <t8>Add a new empty group</t8>
+    <!-- todo remove after 5.24.16.0 -->
+    <t9>Delete an empty group</t9>
+    <t10>Check all groups</t10>
+    <t11>Uncheck all groups</t11>
+    <!-- todo remove after 5.24.16.0 -->
+    <t12>The wall reinforcement settings have been edited manually and differ from the group reinforcement settings</t12>
+    <!-- todo remove after 5.24.16.0 -->
+    <t13>Edit the reinforcement settings of the selected wall</t13>
+    <!-- todo remove after 5.24.16.0 -->
+    <t14>Replace wall reinforcement settings from the group</t14>
+    <t15>Display in the model the previous wall in the list</t15>
+    <t16>Display in the model the wall selected in the list</t16>
+    <t17>Display in the model the next wall in the list</t17>
+    <t18>The heights of the walls are determined only at the intersections</t18>
+    <!-- todo remove after 5.24.16.0 -->
+    <t19>The group contains intersections whose reinforcement settings have been edited manually and differ from the group reinforcement settings</t19>
+    <!-- todo remove after 5.24.16.0 -->
+    <t20>The intersection reinforcement settings have been edited manually and differ from the reinforcement settings of the group</t20>
+    <!-- todo remove after 5.24.16.0 -->
+    <t21>Edit the reinforcement settings of the selected intersection</t21>
+    <!-- todo remove after 5.24.16.0 -->
+    <t22>Replace the settings of reinforcement intersection settings from the group</t22>
+    <t23>Display in the model the previous intersection in the list</t23>
+    <t24>Display in the model the intersection selected in the list</t24>
+    <t25>Display in the model the next intersection in the list</t25>
+    <t26>This wall is not processed by a plug-in (not reinforced) and serves only to determine the intersection with one of the selected walls</t26>
+    <t27>A brief description of the reinforcement of the wall, where:</t27>
+    <t28>V – vertical reinforcement indicating the diameter and step of the bars</t28>
+    <t29>H – horizontal reinforcement indicating the diameter, step and position of the bars</t29>
+    <t30>S – cross reinforcement (stirrups) with diameter indication</t30>
+    <t31>U – U-shaped bars at the ends with diameter indication</t31>
+    <!-- todo remove after 5.24.16.0 -->
+    <t32>Edit reinforcement settings for the size group</t32>
+    <!-- todo remove after 5.24.16.0 -->
+    <t33>The group contains openings, the reinforcement settings of which have been edited manually and differ from the reinforcement settings of the group</t33>
+    <!-- todo remove after 5.24.16.0 -->
+    <t34>The reinforcement settings of the opening are manually edited and differ from the reinforcement settings of the group</t34>
+    <!-- todo remove after 5.24.16.0 -->
+    <t35>Edit the reinforcement settings of the selected opening</t35>
+    <!-- todo remove after 5.24.16.0 -->
+    <t36>Replace the reinforcement settings with the settings from the group</t36>
+    <t37>Display in the model the previous opening in the list</t37>
+    <t38>Display in the model the selected aperture in the list</t38>
+    <t39>Display in the model the next opening in the list</t39>
+    <!-- todo remove after 5.24.16.0 -->
+    <t40>Copy the reinforcement settings of the current group to all selected groups</t40>
+    <!-- todo remove after 5.24.16.0 -->
+    <t41>Save the reinforcement settings of current group in the xml-file</t41>
+    <!-- todo remove after 5.24.16.0 -->
+    <t42>Load the reinforcement settings from the xml-file and set it for the current group</t42>
+    <t43>Attention! The surface appearance of the reinforcement may depend on the class of reinforcement, diameter or other values that are not considered by the program. Read the normative documentation</t43>
+    <t44>α is a coefficient that takes into account the effect on the anchoring length of the stress state of concrete and reinforcement and the structural solution of the element in the anchoring zone. When anchoring rods of a periodic profile with straight ends (straight anchoring) or smooth reinforcement with hooks or loops without additional anchoring devices for stretched rods, take α = 1.0, and for compressed ones – α = 0.75. According to clause 10.3.30 of SP 63.13330, the coefficient α may be increased to 2.0</t44>
+    <t45>According to paragraph 10.3.8 of SP 63.13330.2012, the vertical bars take no more than 2t and 400 mm (t is the thickness of the wall)</t45>
+    <t46>In accordance with GOST 21.501-2018, clause 6.4.7, the length of the detail is set along the outer edge of the rebar</t46>
+    <t47>Increases the time of the reinforcement generation!</t47>
+    <t48>The details of the reinforcement of the intersection will be established with the horizontal reinforcement of the walls – by the smallest or the largest step of horizontal reinforcement of the walls participating in the intersection</t48>
+    <t49>The number of rows of vertical reinforcement</t49>
+    <t50>The number of rows of horizontal reinforcement</t50>
+    <!-- todo remove after 5.24.16.0 start -->
+    <t51>Selecting a underlying slab directly below the selected walls. Underlying slab selection available after wall selection, analysis and grouping. You can select one or more slabs. In the properties of the underlying slabs should be included properties "Structural"</t51>
+    <!-- todo remove after 5.24.16.0 -->
+    <t53>Reset all values of the current default reinforcement settings to the default values set in the plugin</t53>
+    <t54>Copy the current slab joints reinforcement settings to all selected plates</t54>
+    <t55>Save the current slab joints reinforcement settings</t55>
+    <t56>Load the joints reinforcement settings and set for the current slab</t56>
+    <t57>The minimum and maximum values are calculated based on the specified diameters and vertical reinforcement step</t57>
+    <t58>Rebar length consists of two anchoring lengths</t58>
+    <t59>When you turn on the "Breaking in" option, each first pair of joints along the wall will be created with the first overlap length, every second pair – with the second overlap length</t59>
+    <t60>If the joints exceed the height of the overlying wall, they will be cut off along the upper face of the wall, taking into account the specified ends cover of the rebars</t60>
+    <!-- todo remove after 5.24.16.0 -->
+    <t61>The selection variant applies to the selection of plates</t61>
+    <t62>The vertical rebar is moved to the place where the U-shaped rebar bend begins, which is obtained by adding the values of the cover layer of the horizontal reinforcement from the ends, the diameter of the U-shaped rebar and the standard bending diameter of the U-shaped rebar</t62>
+    <!-- todo remove after 5.24.16.0 -->
+    <t63>You can specify preferred rebar shapes for different types of rebars created by the plugin.</t63>
+    <!-- todo remove after 5.24.16.0 -->
+    <t64>Setting the preferred shapes does not guarantee that the reinforcement will be created using the specified shape of the rebar.</t64>
+    <!-- todo remove after 5.24.16.0 -->
+    <t65>When creating rebars, an attempt will be made to use the specified shape. If creating a rebar with the specified shape is not possible, Revit will automatically search for a suitable shape or create a new shape.</t65>
+    <!-- todo remove after 5.24.16.0 -->
+    <t66>Save current reinforcement settings as default reinforcement settings</t66>
+    <t67>Group walls, intersections and openings according to the current grouping settings</t67>
+    <t68>When this option is enabled, stirrups will not be created at intersections of walls and at the ends of walls where details are created (for example, U-shaped details)</t68>
+    <t69>If the horizontal bars of the background reinforcement are on the inside and the vertical bars are on the outside, it is recommended to specify the girth of the vertical bars. For the opposite case, when the horizontal bars of the background reinforcement are located outside, it is recommended to specify the girth of the horizontal bars</t69>
+    <t70>The length of the detail is taken as the length of the anchoring</t70>
+    <t71>Each second pair of rods will be indented at the bottom by a distance equal to the absolute value of the overlap length difference. The indentation does not affect the second overlap length. For example, if the first overlap length is 500 mm and the second overlap length is 750 mm, then the rods of each second pair will be indented from below 250 mm</t71>
+    <t72>Display in the model the slab selected in the list</t72>
+    <t73>Display in the model the walls that are in contact with the selected slab in the list</t73>
+    <re1>Error while creating vertical bars of background reinforcement in the wall id={0}:</re1>
+    <re2>Error while creating vertical bars of background reinforcement at the intersection in the wall id={0}:</re2>
+    <re3>Error while creating additional vertical bars at the end of the wall id={0}:</re3>
+    <re4>Error while creating horizontal tied stirrups in the wall id={0}:</re4>
+    <re5>Error while creating horizontal bars of background reinforcement in the wall id={0}:</re5>
+    <re6>Error when creating U-shaped bars at the ends of the wall id={0}:</re6>
+    <re7>Error when creating U-shaped bars along the upper end of the wall id={0}:</re7>
+    <re8>Error while creating stirrups in the wall id={0}:</re8>
+    <re9>Error when creating details of corner intersection in the walls {0}:</re9>
+    <re10>Error while creating details of T-shaped intersection in the walls {0}:</re10>
+    <re11>Error while creating details of cross intersection in the walls {0}:</re11>
+    <re12>Error while creating vertical bars for the frame of the opening in the wall id={0}:</re12>
+    <re13>Error while creating horizontal bars for the frame of the opening in the wall id={0}:</re13>
+    <re14>Error while creating U-shaped bars of the opening frame along the vertical in the wall id={0}</re14>
+    <re15>Error while creating U-shaped bars of the opening frame along the horizontal (on top) in the wall id={0}</re15>
+    <re16>Error while creating diagonal rebars in the frame of opening in the wall id={0}:</re16>
+    <re17>Error while creating joints from slab id={0} to wall id={1}:</re17>
+    <re18>Error while creating stirrups of the frame of the opening in the wall id={0}:</re18>
+    <re19>Error while creating U-shaped bars of the opening frame along the horizontal (on bottom) in the wall id={0}</re19>
+    <re20>Failed to create rebar with a given preferred rebar shape "{0}". Error: {1}\nAn attempt was made to create a bar with automatic rebar shape selection or creation</re20>
+    <re21>Error when creating U-shaped bars along the bottom end of the wall</re21>
+    <re22>It is not possible to display the intersection in the current view! Go to the floor plan</re22>
+    <re23>Error while creating horizontal U-bars in wall id={0}:</re23>
+    <re24>Error while creating additional vertical rods near an intersection in wall id={0}:</re24>
+  </mprWallsReinforcement>
+</ModPlus>

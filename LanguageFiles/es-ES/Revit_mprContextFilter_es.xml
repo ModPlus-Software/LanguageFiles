@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprContextFilter
+    LocalName="Filtro contextual"
+    Description="Filtrado de elementos por parámetros a través del menú contextual"
+    FullDescription="Inicio de tres maneras: clic izquierdo con Ctrl presionado, pulsación secuencial de teclas o atajo de teclado. Tres niveles de procesamiento: todos los elementos del modelo, elementos de la vista actual o elementos seleccionados. Ajustes preestablecidos disponibles para uso rápido"
+    LocalName1="Filtro de modo ventana"
+    Description1="Filtrado de elementos por parámetros en modo ventana">
+    <h1>Ajustes preestablecidos</h1>
+    <h3>Aplicar ajuste preestablecido a lista actual</h3>
+    <h4>Buscar categorías</h4>
+    <h5>Seleccionar elementos marcados</h5>
+    <h6>Aislar elementos marcados</h6>
+    <h7>Aislar todo excepto elementos marcados</h7>
+    <h8>Limpiar lista</h8>
+    <h9>Guardar o actualizar ajuste preestablecido</h9>
+    <h10>Guardar como nuevo</h10>
+    <h11>Nombre de ajuste preestablecido</h11>
+    <h12>Descripción del ajuste preestablecido (opcional)</h12>
+    <h13>Guardar lista actual de parámetros marcados como un nuevo ajuste preestablecido</h13>
+    <h14>Cambiar ajuste preestablecido actual</h14>
+    <h15>Especificar nombre de ajuste preestablecido!</h15>
+    <h16>¡Nombre de ajuste preestablecido especificado ya está en uso! Especificar nombre diferente</h16>
+    <h17>[Sin valor]</h17>
+    <h18>Especificar una de tres opciones para abrir diálogo de filtro de contexto y ejecutarlo</h18>
+    <h19>Ejecutar filtro al iniciar Revit</h19>
+    <h20>Ejecutar filtro</h20>
+    <h21>Dejar de filtrar</h21>
+    <h22>Utilizar Ctrl + LMB</h22>
+    <h23>Utilizar secuencia</h23>
+    <h24>Utilizar combinación</h24>
+    <h25>Cuadro de diálogo de filtro contextual se abre presionando botón izquierdo del mouse mientras se mantiene presionada tecla Ctrl. En este caso, puede haber algunas restricciones para trabajar en Revit asociadas con uso de esta combinación de botones. Por ejemplo, cuando intenta añadir otros elementos al conjunto de selección</h25>
+    <h26>Cuadro de diálogo de filtro contextual se abre presionando sucesivamente teclas especificadas. Secuencia predeterminadas es "F,F". Ignora intervalo de tiempo entre pulsaciones de teclas. Al especificar secuencia, tenga en cuenta teclas de acceso rápido asignadas de Revit</h26>
+    <h27>Cuadro de diálogo de filtro contextual se abra presionando combinación de teclas especificadas. Combinación de teclas predeterminadas es Mayús+F. Al especificar una combinación diferente, tenga en cuenta combinaciones existentes (Ctrl+C, Ctrl+V y otras)</h27>
+    <h28>Excluir elementos marcados de selección actual</h28>
+    <h29>No cerrar filtro después de aplicar acción</h29>
+    <h30>Selección dinámica</h30>
+    <h31>Al seleccionar posición en árbol, se seleccionarán elementos en modelo</h31>
+    <h32>[No especificado]</h32>
+    <h33>Filtro de parámetros</h33>
+    <h34>Minimizar todas categorías</h34>
+    <h35>Lista de categorías se completa con categorías derivadas de elementos seleccionados, pero se procesarán todos elementos del modelo</h35>
+    <h36>Es comprensible</h36>
+    <h37>Parámetro general</h37>
+    <h38>Parámetro de tipo</h38>
+    <h39>Mismos parámetros</h39>
+    <h40>Marque más de una categoría para mostrar mismas opciones para categorías marcadas</h40>
+    <h41>Sin valores</h41>
+    <h42>Guardar sólo categorías y nombres de parámetros en un ajuste preestablecido para una selección posterior de todos valores de parámetros</h42>
+    <h43>[Sin categoría]</h43>
+    <h44>Filtro ModPlus</h44>
+    <h45>Marcar todas las categorías</h45>
+    <h46>Desmarcar todas las categorías</h46>
+    <h47>Insertar el valor de búsqueda guardado</h47>
+    <h48>Cómo funcionan las condiciones "Y" y "O"</h48>
+    <h49>"O": un elemento coincide si al menos uno de los valores marcados coincide.</h49>
+    <h50>"Y": un elemento debe coincidir con todos los parámetros que tengan valores marcados. Si en un parámetro hay varios valores marcados, se consideran alternativas: basta con cualquiera de ellos.</h50>
+    <h51>Ejemplo. Marcado: "Grado de armadura" → A500C; "Diámetro" → 10, 12, 16</h51>
+    <h52>"O" seleccionará toda la armadura de grado A500C y también toda la armadura de diámetro 10, 12 o 16 de cualquier grado</h52>
+    <h53>"Y" seleccionará solo la armadura de grado A500C con diámetro 10, 12 o 16</h53>
+    <h54>Las categorías siempre se unen entre sí: un elemento pertenece a una sola categoría. Un parámetro de ejemplar y un parámetro de tipo con el mismo nombre se consideran parámetros distintos.</h54>
+    <fo1>Todos elementos</fo1>
+    <fo2>Todos elementos a vista</fo2>
+    <fo3>Elementos seleccionados</fo3>
+    <fo4>Todo según seleccionado</fo4>
+    <fo5>Encontrados a vista</fo5>
+    <fo6>Encontrados en modelo</fo6>
+    <fo7>Por filtro en vista</fo7>
+  </mprContextFilter>
+</ModPlus>

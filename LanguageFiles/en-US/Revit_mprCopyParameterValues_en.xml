@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCopyParameterValues
+    LocalName="Copy values"
+    Description="Copy parameter values between elements or within one element"
+    FullDescription="Various copying options for configuring source and target elements. Composite value copying (from several parameters to one) is available. Element selection filters by categories and parameter values are provided, as well as value conversion between different parameter types">
+    <saveNew>Save as new</saveNew>
+    <full>Available in the full version of the plugin</full>
+    <to>to</to>
+    <space>Space</space>
+    <cn1>Copy within an element</cn1>
+    <cn2>Copying from one element to several</cn2>
+    <cn3>Copying from host to children</cn3>
+    <cn4>Copying from parent family to nested</cn4>
+    <cn5>Copying from a group to its children</cn5>
+    <h1>Select copy option</h1>
+    <h2>Perform copy</h2>
+    <h3>Saved configurations</h3>
+    <h10>Sample element</h10>
+    <h11>The sample element is used to populate the list of parameter names in the parameter copy rule setup</h11>
+    <h12>Source element</h12>
+    <h13>The element from which the parameter values will be copied. Also used to populate the list of parameter names in the parameter copy rules setup</h13>
+    <h14>Sample host element</h14>
+    <h15>The sample host element is used to populate a list of source parameter names in the parameter copy rule setup</h15>
+    <h16>Sample target element</h16>
+    <h17>The sample target element is used to populate the list of target parameter names in the parameter copy rule setup</h17>
+    <h18>Pick</h18>
+    <h21>Selecting the type of copy rule</h21>
+    <h22>Add a parameters copy rule of type:</h22>
+    <h23>Single</h23>
+    <h24>Composite</h24>
+    <h25>Parameter copying rules</h25>
+    <h26>Try to convert values between different types of parameters</h26>
+    <h27>Overwrite existing target parameter values</h27>
+    <h28>Processed elements</h28>
+    <h29>Elements within which the copying of parameter values will be performed according to the specified rules</h29>
+    <h30>Elements to which the parameter values will be copied from the source element according to the specified rules</h30>
+    <h31>Host elements</h31>
+    <h32>Host elements, from which the parameter values will be taken for copying to child elements according to the specified rules</h32>
+    <h33>Child elements</h33>
+    <h34>Child elements, into which the values from the parameters of the host elements will be copied according to the specified rules. In this group, pre-filtering of child elements is configured, and during the copying process, filtering will be performed by the element's belonging to the host</h34>
+    <h35>Count of selected elements:</h35>
+    <h36>Elements selection variant:</h36>
+    <h37>Select</h37>
+    <h38>Source parameter</h38>
+    <h39>Target parameter</h39>
+    <h40>Add parameter</h40>
+    <h44>Parameter search option by name: "=" – full match of the parameter name. "≈" – parameter name must contain the specified value</h44>
+    <h45>Add parameter name from parameter list of sample element</h45>
+    <h46>Enter configuration name</h46>
+    <h47>Select categories</h47>
+    <h48>Equality parameters</h48>
+    <h49>Instance parameters</h49>
+    <h50>Type parameters</h50>
+    <h51>Composite arithmetic</h51>
+    <h52>Preview:</h52>
+    <h53>Formula:</h53>
+    <h54>Formula contains errors and cannot be calculated</h54>
+    <h55>Round up the result</h55>
+    <h56>Prefix and suffix are used only when the target parameter has a string data type</h56>
+    <h57>Sample parent family</h57>
+    <h58>The sample parent family is used to populate a list of source parameter names in the parameter copy rule setup</h58>
+    <h59>Sample nested family</h59>
+    <h60>The sample nested family is used to populate a list of source parameter names in the parameter copy rule setup</h60>
+    <h61>Parent families</h61>
+    <h62>Parent families, from which parameter values will be taken to be copied to nested elements according to specified rules</h62>
+    <h63>Filtering nested families</h63>
+    <h64>Optional filtering of nested families by categories and/or parameters. If no filters are specified, all nested families will be processed</h64>
+    <h65>Select from Link</h65>
+    <h66>Open the folder where the files of saved configurations are located. To exchange configurations, they must be placed in this folder</h66>
+    <h67>Sample group</h67>
+    <h68>The sample group is used to populate a list of source parameter names in the parameter copy rule setup</h68>
+    <h69>Sample child element</h69>
+    <h70>The sample child element is used to populate a list of source parameter names in the parameter copy rule setup</h70>
+    <h71>Groups</h71>
+    <h72>Groups, from which parameter values will be taken to be copied to child elements according to specified rules</h72>
+    <h73>Filtering child elements</h73>
+    <h74>Optional filtering of child elements by categories and/or parameters. If no filters are specified, all child elements will be processed</h74>
+    <h75>Rounding is used only when the value to be set is a number</h75>
+    <h76>Support for this plugin has been discontinued. We recommend switching to the "Parametrization" plugin, which allows you to perform all the tasks that this plugin does</h76>
+    <i1>The input fields before and after the names of the source parameters allow you to create a formula for the calculation.</i1>
+    <i2>To create a formula, you can use simple arithmetic operators such as "+", "-", "*", "/", parentheses, and mathematical functions:</i2>
+    <i3>Abs – absolute value,</i3>
+    <i4>Pow – taking a number to a specified power,</i4>
+    <i5>Sqrt – getting the square root of the number.</i5>
+    <i6>When using functions, the values to be processed must be in parentheses. For example, if you want to get an absolute value of a parameter, enter "Abs(" in the field before the parameter name and ")" in the field after the parameter name.</i6>
+    <i7>For a complete list of functions, see the help page.</i7>
+    <msg1>Element is not a host element</msg1>
+    <msg2>No children found</msg2>
+    <msg3>Failed to copy composite value to parameter "{0}". Error: {1}</msg3>
+    <msg4>Failed to copy the value of parameter "{0}" to parameter "{1}". Error: {2}</msg4>
+    <msg5>No source parameter found matching pattern "{0}"</msg5>
+    <msg6>Source parameter "{0}" is missing a value. Copy skipped</msg6>
+    <msg7>Source parameter "{0}" has an invalid data type</msg7>
+    <msg8>No target parameter found matching pattern "{0}"</msg8>
+    <msg9>Delete selected item?</msg9>
+    <msg10>Skipped setting value for target parameter "{0}" because parameter has value</msg10>
+    <msg11>Target parameter "{0}" has an invalid data type</msg11>
+    <msg12>Parameters "{0}" and "{1}" are of different types. Copy skipped</msg12>
+    <msg13>Failed to convert value of parameter "{0}" to write to parameter "{1}"</msg13>
+    <msg14>Parameter value "{0}" cannot be converted to parameter "{1}"</msg14>
+    <msg15>Parameter value "{0}" copied to parameter "{1}"</msg15>
+    <msg16>Error while copying parameter value "{0}" to parameter "{1}": {2}</msg16>
+    <msg17>Composite value copied to parameter "{0}"</msg17>
+    <msg18>Target parameter "{0}" is not a supported data type for copying a composite value. Copying only into a string parameter is allowed</msg18>
+    <msg19>Error while copying composite value to parameter "{0}": {1}</msg19>
+    <msg20>Failed to copy arithmetic value to parameter "{0}". Error: {1}</msg20>
+    <msg21>Error while copying the arithmetic value calculated by the formula "{0}" to parameter "{1}": {2}</msg21>
+    <msg22>Arithmetic value copied to parameter "{0}"</msg22>
+    <msg23>No nested families found</msg23>
+    <msg26>No child elements found</msg26>
+    <msg27>Element identifier (ID) cannot be used as the target parameter</msg27>
+    <msg28>Failed to set "{0}" to "{1}"</msg28>
+    <msg29>Failed to set a value in the "{0}" parameter</msg29>
+    <err1>Empty value is invalid</err1>
+    <err2>Entered value contains invalid characters</err2>
+    <err3>Name is already in use</err3>
+    <err4>Parameters copy rules are not specified</err4>
+    <err5>Source element not selected</err5>
+    <err6>No processing elements selected</err6>
+    <err7>No child elements selected</err7>
+    <sv1>Elements in the model with filter</sv1>
+    <sv2>Elements in the current view with filter</sv2>
+    <sv3>Custom selection with filter</sv3>
+    <sv4>Custom selection without filter </sv4>
+  </mprCopyParameterValues>
+</ModPlus>

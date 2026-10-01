@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprContextFilter
+    LocalName="Kontextbezogener Filter"
+    Description="Filterung von Elementen nach Parametern über das Kontextmenü"
+    FullDescription="Start auf drei Arten: Linksklick bei gedrückter Strg-Taste, sequenzielles Drücken bestimmter Tasten oder Tastenkombination. Drei Verarbeitungsebenen: alle Modellelemente, Elemente in der aktuellen Ansicht oder ausgewählte Elemente. Voreinstellungen für schnellen Zugriff sind verfügbar"
+    LocalName1="Filter Fenstermodus"
+    Description1="Filterung von Elementen nach Parametern im Fenstermodus">
+    <h1>Voreinstellungen</h1>
+    <h3>Eine Voreinstellung auf die aktuelle Liste anwenden</h3>
+    <h4>Suche nach Kategorien</h4>
+    <h5>Die markierten Elemente auswählen</h5>
+    <h6>Die markierten Elemente isolieren</h6>
+    <h7>Alle Elemente außer den markierten isolieren</h7>
+    <h8>Liste nullsetzen</h8>
+    <h9>Voreinstellung speichern oder aktualisieren</h9>
+    <h10>Als neue speichern</h10>
+    <h11>Name der Voreinstellung</h11>
+    <h12>Beschreibung der Voreinstellung (optional)</h12>
+    <h13>Die aktuelle Liste der markierten Parameter als neue Voreinstellung speichern</h13>
+    <h14>Die aktuelle Voreinstellung ändern</h14>
+    <h15>Bestimmen Sie den Namen der Voreinstellung!</h15>
+    <h16>Der angegebene Name der Voreinstellung ist bereits in Gebrauch! Geben Sie einen neuen Namen an</h16>
+    <h17>[Kein Wert]</h17>
+    <h18>Geben Sie eine der drei Optionen an, um den Dialog des Kontextfilters aufzurufen und starten Sie ihn</h18>
+    <h19>Den Filter beim Laden von Revit starten</h19>
+    <h20>Den Filter starten</h20>
+    <h21>Filter stoppen</h21>
+    <h22>Strg + Linke Maustaste verwenden</h22>
+    <h23>Reihenfolge verwenden</h23>
+    <h24>Eine Kombination verwenden</h24>
+    <h25>Das Dialogfeld für den Kontextfilter wird durch Linksklick bei gedrückter Strg-Taste aufgerufen. In diesem Fall kann es zu Einschränkungen bei der Arbeit in Revit kommen, die mit der Verwendung dieser Tastenkombination zusammenhängen. Beispielsweise, wenn Sie versuchen, andere Elemente zu einer Gruppe ausgewählter Elemente hinzuzufügen</h25>
+    <h26>Der Dialog für den Kontextfilter wird durch aufeinanderfolgendes Drücken der angegebenen Tasten aufgerufen. Standardmäßig wird die Reihenfolge "F,F" verwendet. Die Zeitspanne zwischen den Tastendrücken wird nicht berücksichtigt. Beachten Sie bei der Bestimmung einer Reihenfolge die zugewiesenen Revit-Tastaturkurzbefehle</h26>
+    <h27>Der Dialog für den Kontextfilter wird durch Drücken der angegebenen Tastenkombination aufgerufen. Standardmäßig wird die Tastenkombination "Shift+F" verwendet. Berücksichtigen Sie bei der Bestimmung einer anderen Kombination die bestehenden Kombinationen (Strg+C, Strg+V und andere)</h27>
+    <h28>Die markierten Elemente aus der aktuellen Auswahl ausschließen</h28>
+    <h29>Schließen Sie den Filter nicht, nachdem Sie den Vorgang ausgeführt haben</h29>
+    <h30>Dynamische Option</h30>
+    <h31>Durch Auswahl einer Position in der Baumstruktur werden Elemente im Modell ausgewählt</h31>
+    <h32>[Nicht festgelegt]</h32>
+    <h33>Filter für Parameter</h33>
+    <h34>Alle Kategorien ausblenden</h34>
+    <h35>Die Kategorieliste wird mit Kategorien gefüllt, die von den ausgewählten Elementen gebildet werden, aber es werden alle Elemente des Modells verarbeitet</h35>
+    <h36>Klar</h36>
+    <h37>Der allgemeine Parameter</h37>
+    <h38>Parameter des Typs</h38>
+    <h39>Gleiche Parameter</h39>
+    <h40>Markieren Sie mehr als eine Kategorie, um die gleichen Parameter für die markierten Kategorien anzuzeigen</h40>
+    <h41>Ohne Werteingaben</h41>
+    <h42>Für die spätere Auswahl aller Parameterwerte nur Kategorien und Parameternamen in der Voreinstellung speichern</h42>
+    <h43>[Keine Kategorie]</h43>
+    <h44>ModPlus filter</h44>
+    <h45>Alle Kategorien markieren</h45>
+    <h46>Markierung aller Kategorien aufheben</h46>
+    <h47>Gespeicherten Suchwert einfügen</h47>
+    <h48>Wie die Bedingungen "UND" und "Oder" funktionieren</h48>
+    <h49>"Oder" — ein Element passt, wenn mindestens einer der markierten Werte übereinstimmt.</h49>
+    <h50>"UND" — ein Element muss zu allen Parametern passen, bei denen Werte markiert sind. Sind bei einem Parameter mehrere Werte markiert, gelten sie als Alternativen: einer davon genügt.</h50>
+    <h51>Beispiel. Markiert: "Bewehrungsgüte" → A500C; "Durchmesser" → 10, 12, 16</h51>
+    <h52>"Oder" wählt die gesamte Bewehrung der Güte A500C sowie die gesamte Bewehrung mit Durchmesser 10, 12 oder 16 beliebiger Güte</h52>
+    <h53>"UND" wählt nur die Bewehrung der Güte A500C mit Durchmesser 10, 12 oder 16</h53>
+    <h54>Kategorien werden untereinander immer vereinigt: ein Element gehört nur zu einer Kategorie. Ein Exemplarparameter und ein Typparameter mit gleichem Namen gelten als unterschiedliche Parameter.</h54>
+    <fo1>Alle Elemente</fo1>
+    <fo2>Alle Elemente in der Ansicht</fo2>
+    <fo3>Ausgewählte Elemente</fo3>
+    <fo4>Alles entsprechend der gewählten</fo4>
+    <fo5>Gefunden in der Ansicht</fo5>
+    <fo6>Gefunden im Modell</fo6>
+    <fo7>Nach dem Filter in der Ansicht</fo7>
+  </mprContextFilter>
+</ModPlus>

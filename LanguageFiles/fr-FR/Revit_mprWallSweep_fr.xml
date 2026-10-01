@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWallSweep
+    LocalName="Développements de murs"
+    Description="Création de développements de murs">
+    <v1>Couper à la face supérieure du sol supérieur</v1>
+    <v2>Couper à la face inférieure du sol inférieur</v2>
+    <v3>Élévation</v3>
+    <v4>Coupe</v4>
+    <v5>Appliquer un gabarit de vue</v5>
+    <v6>Nombre de divisions des courbes</v6>
+    <v8>Profondeur de projection</v8>
+    <v9>Placer sur la feuille</v9>
+    <v10>Décalage vers l'intérieur</v10>
+    <v11>Définir un suffixe/préfixe</v11>
+    <v12>Suffixe</v12>
+    <v13>Préfixe</v13>
+    <v14>Dans le document courant</v14>
+    <v15>Dans le document lié</v15>
+    <v16>Sélectionner un élément</v16>
+    <v17>Décalage vers le haut</v17>
+    <v18>Décalage vers le bas</v18>
+    <v19>Dans la vue active du document courant</v19>
+    <v20>Créer une feuille</v20>
+    <v21>Décalage latéral</v21>
+    <v22>Vous pouvez indiquer un paramètre de la pièce source entre accolades. Par exemple : "Développement {Nom}"</v22>
+    <v23>Vous pouvez indiquer un paramètre du mur source entre accolades. Par exemple : "Développement {Marque}"</v23>
+    <v24>AUCUN PARAMÈTRE</v24>
+    <v25>AUCUNE VALEUR</v25>
+    <t2>Mur</t2>
+    <t3>Pièce</t3>
+    <t5>Nom du développement :</t5>
+    <t6>Options</t6>
+    <t7>Créer :</t7>
+    <t8>Créer par :</t8>
+    <t9>Cotes</t9>
+    <t10>Autre</t10>
+    <t11>Ordre inversé</t11>
+    <t1>Type d'élément sélectionné : </t1>
+    <t4>Aucun élément sélectionné</t4>
+    <e1>Annulation de la sélection</e1>
+    <e2>Aucun élément approprié n'a été sélectionné</e2>
+    <e4>Impossible de trouver des murs dépendants</e4>
+    <e5>Impossible de déterminer le plan le plus proche du point</e5>
+    <e6>Une erreur inattendue s'est produite : </e6>
+    <e7>Aucune vue à créer</e7>
+    <e8>L'élément sélectionné n'est ni un mur, ni une pièce, ni un poteau</e8>
+    <e9>Impossible de déterminer la ligne pour créer la coupe</e9>
+    <e10>Impossible d'obtenir l'objet enveloppe de la pièce ou du mur</e10>
+    <m1>Sélectionnez une pièce ou un mur</m1>
+    <m2>Indiquez le point le plus proche de la face le long de laquelle le développement sera créé. Pour un fonctionnement correct, le point doit être choisi dans une vue en plan</m2>
+    <tr1>Créer les vues</tr1>
+    <elevationType>Type d'élévation :</elevationType>
+    <sectionType>Type de coupe :</sectionType>
+    <roomSelected>Pièces sélectionnées :</roomSelected>
+    <wallSelected>Murs sélectionnés :</wallSelected>
+    <columnSelected>Poteaux sélectionnés :</columnSelected>
+    <invalidViewDirection>Impossible de déterminer la direction de la vue. Le point sélectionné est trop proche de la face du mur. Veuillez sélectionner un point plus éloigné du mur.</invalidViewDirection>
+    <viewDirection>Direction de la vue :</viewDirection>
+    <manualSelection>Sélection manuelle</manualSelection>
+    <innerSide>Côté intérieur</innerSide>
+    <outerSide>Côté extérieur</outerSide>
+    <manualSelectionTooltip>Pour chaque mur, il faudra indiquer un point afin de déterminer la direction de la vue</manualSelectionTooltip>
+    <innerSideTooltip>Lors de la sélection de plusieurs murs, crée automatiquement les développements du côté intérieur</innerSideTooltip>
+    <outerSideTooltip>Lors de la sélection de plusieurs murs, crée automatiquement les développements du côté extérieur</outerSideTooltip>
+    <cylindricalColumnsNotSupportError>La création de développements de poteaux cylindriques n'est pas prise en charge</cylindricalColumnsNotSupportError>
+    <verticalFacesNotFound>Impossible de trouver les faces verticales du poteau</verticalFacesNotFound>
+    <columnMode>Poteau</columnMode>
+  </mprWallSweep>
+</ModPlus>

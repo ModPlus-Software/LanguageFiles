@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprStructureToParameter
+    LocalName="Estructura en parámetro"
+    Description="Transferir estructura de un tipo multicapa a un parámetro multilínea"
+    LocalName1="Volumen de capas en parámetro"
+    Description1="Transferir volúmenes de capas de elementos multicapa a un parámetro multilínea">
+    <t1>Buscar por tipo o nombre de material:</t1>
+    <t2>Mostrar sólo tipos con parámetros requeridos</t2>
+    <t3>Mostrar sólo tipos utilizados</t3>
+    <t4>Utilizados – son tipos utilizados en al menos un ejemplar del elemento en modelo</t4>
+    <t5>Número de ejemplares en modelo con tipo determinado</t5>
+    <t6>Estructura</t6>
+    <t7>Espesor de capa</t7>
+    <t8>Número de veces que material se ha utilizado en otros tipos (cargados en complemento ), incluido tipo actual</t8>
+    <t9>Esta capa tiene espesor variable</t9>
+    <t10>Espes.var.</t10>
+    <t11>Resultado actual</t11>
+    <t12>Nuevo resultado</t12>
+    <t13>Actualizar</t13>
+    <t14>Tipos:</t14>
+    <t15>Número de tipos cargados en complemento</t15>
+    <t16>Mostrado:</t16>
+    <t17>Número de tipos mostrados en tabla teniendo en cuenta todos filtros</t17>
+    <t18>Plantillas:</t18>
+    <t19>Número de tipos mostrados con parámetro "Plantilla" relleno</t19>
+    <t20>Cambiado:</t20>
+    <t21>Número de tipos mostrados para los cuales valor del nuevo resultado difiere de valor del resultado actual</t21>
+    <t22>Se actualizará:</t22>
+    <t23>Número de tipos mostrados cuyos valores de parámetros se actualizarán</t23>
+    <t24>Seleccionado:</t24>
+    <t25>Número de tipos mostrados seleccionados en tabla</t25>
+    <t26>Resultado:</t26>
+    <t27>Espesor variable:</t27>
+    <!--todo remove after 2.0.2.0-->
+    <t28>Comodín de estructura</t28>
+    <t29>Numeración</t29>
+    <t30>Formato del número:</t30>
+    <t31>Formato de cadena</t31>
+    <t32>{0} – nombre del material. {1} – espesor de capa. {2} – espesor variable. {3} - número de capas</t32>
+    <t33>Capa estándar:</t33>
+    <t34>Capa de espesor cero:</t34>
+    <t35>Capa de espesor variable:</t35>
+    <t36>Parámetro de tipo requerido con tipo de datos "Texto multilínea". Este parámetro especifica plantilla para generar resultado. Para mostrar una lista de capas de estructura en la plantilla, debe especificar el comodín de estructura</t36>
+    <t37>Parámetro de tipo requerido con tipo de datos "Texto multilínea". Este parámetro registra una lista numerada de capas de estructura, teniendo en cuenta los formatos de línea especificados y los ajustes de numeración</t37>
+    <t38>Parámetro de tipo opcional con tipo de datos "Texto". Este parámetro especifica un valor personalizado de espesor variable que se puede usar en formato de cadena para una capa de espesor variable</t38>
+    <!--todo remove after 2.0.2.0-->
+    <t39>Un comodín especificado en plantilla que se reemplaza por una lista formateada de capas de estructura en resultado</t39>
+    <t40>Por categoría</t40>
+    <t41>Falta parámetro</t41>
+    <t42>Tomar nombre del material del parámetro del material:</t42>
+    <t43>Resultado inverso:</t43>
+    <t44>Parámetro de tipo opcional con tipo de datos "Texto multilínea". En este parámetro se especifica el mismo resultado que en el parámetro "Resultado", pero en orden inverso. Este parámetro se procesa si el tipo que se está procesando lo tiene</t44>
+    <t45>Ejemplo de resultado</t45>
+    <t46>Parámetro de ejemplar requerido con tipo de datos "Texto multilínea". Este parámetro registra una lista numerada de volúmenes de capas de estructura, teniendo en cuenta formatos de línea especificados y ajustes de numeración</t46>
+    <t47>{0} – nombre del material. {1} – volumen de material</t47>
+    <t48>Redondear valor del volumen</t48>
+    <t49>Capa combinada:</t49>
+    <t50>capa</t50>
+    <t51>capas</t51>
+    <t52>capas</t52>
+    <t53>Marcadores de posición de la estructura especificados en la plantilla</t53>
+    <t54>@ - requerido, se utiliza para sustituir una lista formateada de capas de la estructura en el resultado</t54>
+    <t55>&amp; - opcional, se utiliza para sustituir una lista formateada de capas combinadas de la estructura en el resultado</t55>
+    <t56>[n] - opcional, se utiliza para especificar los índices de las capas que se utilizarán para sustituir una lista formateada de capas de la estructura en el resultado</t56>
+    <t57>^ - opcional, se utiliza para definir un subtítulo de capas. Se indica antes de @. La cadena escrita después de ^ no se incluirá en la numeración de las capas de la estructura en el resultado</t57>
+    <t58>Resultado para el tipo:</t58>
+    <t59>Resultado para los ejemplares:</t59>
+    <t60>Parámetro de tipo requerido con tipo de datos "Texto multilínea". Este parámetro registra una lista numerada de los volúmenes totales de las capas de la estructura, teniendo en cuenta los formatos de línea especificados y los ajustes de numeración</t60>
+    <t61>Usar numeración</t61>
+    <t62>Mostrar solo tipos сambiado</t62>
+    <t63>{0} en {3} capas - {3}х{1}</t63>
+    <t64>Cambiar el valor del parámetro de material especificado Para habilitar la posibilidad de cambiar el valor active la opción "Tomar nombre del material del parámetro del material" en la configuración del formato de cadena</t64>
+    <s1>Sin cambios. Parámetros de tipo no se actualizarán</s1>
+    <s2>Faltan parámetros requeridos "Plantilla" y "Resultado"</s2>
+    <s3>Nuevo valor del resultado es diferente de valor del resultado actual. Parámetros de tipo no se actualizarán porque casilla "Actualizar" no está seleccionada</s3>
+    <s4>Nuevo valor del resultado es diferente de valor del resultado actual. Parámetros de tipo se actualizarán</s4>
+    <msg1>Parámetro de ejemplar "{0}" no se ha encontrado</msg1>
+    <!--todo remove after 2.0.2.0-->
+    <msg2>Volumen de capas se guarda en parámetro de ejemplar del tipo "{0}"</msg2>
+    <msg3>Volumen de las capas se ha registrado en parámetro de ejemplar "{0}" para el tipo "{1}"</msg3>
+    <msg4>No hay ejemplares colocados para los tipos. El volumen no puede calcularse</msg4>
+    <msg5>El volumen total de las capas se ha registrado en el parámetro de tipo "{0}"</msg5>
+    <msg6>La estructura de las capas está registrada en el parámetro de tipo</msg6>
+    <msg7>Parámetro de tipo "{0}" no se ha encontrado</msg7>
+    <msg8>Falta el material</msg8>
+    <msg9>No se ha asignado material a la capa {0}</msg9>
+    <msg10>Introduzca el valor del parámetro</msg10>
+    <msg11>{0}\para el material {1}</msg11>
+    <msg12>El parámetro {0} no se ha encontrado o es de solo lectura</msg12>
+    <str1>Estructura [1]</str1>
+    <str2>Substrato [2]</str2>
+    <str3>Capa térmica/de aire [3]</str3>
+    <str4>Acabado 1 [4]</str4>
+    <str5>Acabado 2 [5]</str5>
+    <str6>Capa membrana [6]</str6>
+    <str7>Plataforma estructural [7]</str7>
+  </mprStructureToParameter>
+</ModPlus>

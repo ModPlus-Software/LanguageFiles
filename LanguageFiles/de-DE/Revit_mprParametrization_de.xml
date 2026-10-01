@@ -2,7 +2,9 @@
 <ModPlus>
   <mprParametrization
     LocalName="Parametrisierung"
-    Description="Ausfüllen von Elementparametern mit verschiedenen Strategien">
+    Description="Ausfüllen von Elementparametern mit verschiedenen Strategien"
+    LocalName1="Parametrisierung. Palette"
+    Description1="Blendet die Palette zum schnellen Ausführen der Regeln der ausgewählten Strategie ein oder aus">
     <!-- todo remove after 3.3.6.0 start -->
     <t1>Den Inhalt des Fensters minimieren</t1>
     <t2>Den Inhalt des Fensters vergrößern</t2>
@@ -17,6 +19,7 @@
     <t10>Die Strategie löschen</t10>
     <t11>Regeln</t11>
     <t12>Verarbeitung der Elemente aus den verknüpften Dateien</t12>
+    <!--todo remove after 4.1.33.0-->
     <t13>Aus den verknüpften Dateien werden die übergeordneten Elemente gesammelt. Bei der Strategie InMass sind es beispielsweise die Formelemente, bei der Strategie InSolid die Vollkörperelemente usw. Die Elemente werden nach den Kategorien gesammelt, die in der entsprechenden Spalte der Regel angegeben sind</t13>
     <t14>Strategien, die mit der Geometrie von Elementen arbeiten (wie z.B. InRoom, InSpace, InSolid, SolidTouch, etc.), sollten in der aktiven Ansicht gestartet werden! Erfolgt der Start im gesamten Dokument, wird die Geometrie von Elementen übernommen, die die Interaktion mit anderen Elementen nicht berücksichtigt, was zu falschen Ergebnissen führen kann.</t14>
     <t15>Geben Sie einen Namen der Strategie ein</t15>
@@ -151,7 +154,7 @@
     <t142>Name und Beschreibung</t142>
     <t143>Anleitung öffnen</t143>
     <t144>Vorfilter</t144>
-    <t145>Der Vorfilter grenzt den Elementsatz für alle Regeln der Strategie gleichzeitig ein. Im Gegensatz zum Strategiefilter wird er nicht anstelle eines nicht ausgefüllten Regelfilters eingesetzt, sondern zusätzlich zu diesem angewendet: Ein Element wird nur dann verarbeitet, wenn es sowohl den Vorfilter als auch den Regelfilter passiert. Wenn beispielsweise im Vorfilter die Kategorie „Wände" und der Parameter „Tragend" festgelegt werden, arbeiten alle Regeln nur mit tragenden Wänden und wählen daraus Elemente nach ihren eigenen Kategorien und Parametern aus. Ein leerer Vorfilter schränkt nichts ein</t145>
+    <t145>Der Vorfilter grenzt den Elementsatz für alle Regeln der Strategie gleichzeitig ein. Im Gegensatz zum Strategiefilter wird er nicht anstelle eines nicht ausgefüllten Regelfilters eingesetzt, sondern zusätzlich zu diesem angewendet: Ein Element wird nur dann verarbeitet, wenn es sowohl den Vorfilter als auch den Regelfilter passiert. Wenn beispielsweise im Vorfilter die Kategorien „Wände", „Tragwerksstützen" und „Skelettbau" sowie der Parameter „Tragend" festgelegt werden, arbeiten alle Regeln nur mit tragenden Elementen dieser Kategorien und wählen daraus Elemente nach ihren eigenen Kategorien und Parametern aus. Ein leerer Vorfilter schränkt nichts ein</t145>
     <t146>Aktuelle Strategie exportieren</t146>
     <t147>In aktuelle Strategie importieren</t147>
     <t148>Strategiefilter</t148>
@@ -169,7 +172,6 @@
     <t160>Gruppe umbenennen</t160>
     <t161>Gruppe löschen. Die Konfigurationen dieser Gruppe werden nicht gelöscht — sie bleiben ohne Gruppe</t161>
     <t162>Anzahl der Konfigurationen in der Gruppe</t162>
-    <t163>Gruppe</t163>
     <t164>Parameter oder Ausdruck, zum Beispiel $[Typname]</t164>
     <t168>Groß- und Kleinschreibung ignorieren</t168>
     <t169>Sortieren</t169>
@@ -256,6 +258,69 @@
     <msg44>Das Element wurde übersprungen: Der Gruppierungsschlüssel wurde als leer berechnet</msg44>
     <msg45>Element übersprungen: es wurde kein bedingtes Quellelement mit demselben Zuordnungswert gefunden</msg45>
     <msg46>Bei der ausgewählten Datei handelt es sich nicht um eine Datei für die Konfigurationsspeicherung</msg46>
+    <msg47>Das Projekt vor dem Start mit dem Zentralmodell synchronisieren?</msg47>
+    <msg48>Die Anweisung ist leer</msg48>
+    <msg49>Die Anweisung ist kein gültiges XML: {0}</msg49>
+    <msg50>Das Stammelement der Anweisung muss "{0}" heißen</msg50>
+    <msg51>Die Version "{0}" der Anweisung wird nicht unterstützt. Unterstützte Version: {1}</msg51>
+    <msg52>Unbekanntes Element "{0}" der Anweisung wurde übersprungen</msg52>
+    <msg53>Das erforderliche Element "{0}" ist nicht angegeben</msg53>
+    <msg54>Das Element "{0}" ist leer</msg54>
+    <msg55>Das Element "{0}" ist leer. Wenn der Wert nicht benötigt wird, entfernen Sie das Element</msg55>
+    <msg56>Ungültiger Wert "{0}" des Elements "{1}". Zulässige Werte: {2}</msg56>
+    <msg57>Das Element "{0}" muss den Wert true oder false haben</msg57>
+    <msg58>Das Attribut "{0}" des Elements "{1}" muss den Wert true oder false haben</msg58>
+    <msg59>Im Element "{0}" können {1}="true" und eine Liste von Ansichten nicht gleichzeitig angegeben werden</msg59>
+    <msg60>Unbekanntes Element "{0}" in "{1}" wurde übersprungen</msg60>
+    <msg61>"{0}" enthält leere Elemente "{1}"</msg61>
+    <msg62>Die Liste "{0}" ist leer. Wenn die Liste nicht benötigt wird, entfernen Sie das Element</msg62>
+    <msg63>Das Element "{0}" ist mehrfach angegeben</msg63>
+    <msg64>Automatischer Start abgelehnt: Der vorherige Start ist noch nicht abgeschlossen</msg64>
+    <msg65>Verarbeitung abgebrochen: {0}</msg65>
+    <msg66>Automatischer Start durch einen unerwarteten Fehler abgebrochen</msg66>
+    <msg67>Automatischer Start abgeschlossen. Ergebnis: {0}</msg67>
+    <msg68>Automatischer Start. Anweisung:</msg68>
+    <msg69>Konfigurationsdatei "{0}" wird gelesen</msg69>
+    <msg70>Konfiguration "{0}" ({1})</msg70>
+    <msg71>Der Ordner für Protokolle existiert nicht: "{0}"</msg71>
+    <msg72>Der Ordner für Ergebnisse existiert nicht: "{0}"</msg72>
+    <msg73>Im aktiven Dokument ist eine Transaktion geöffnet. Der automatische Start muss ohne geöffnete Transaktionen ausgeführt werden</msg73>
+    <msg74>Die Anweisung wurde nicht ausgeführt. Gefundene Fehler: {0}</msg74>
+    <msg75>Die Konfigurationsdatei ist in der Anweisung nicht angegeben, und die Konfigurationsquelle wurde im Plugin-Fenster nie ausgewählt</msg75>
+    <msg76>Konfigurationsdatei nicht gefunden: "{0}"</msg76>
+    <msg77>Die Konfigurationsdatei ist angegeben, die Konfiguration jedoch nicht. Die aktuelle Konfiguration wird nur zusammen mit der im Plugin-Fenster ausgewählten Konfigurationsdatei verwendet</msg77>
+    <msg78>Die aktuelle Konfiguration wurde in der Datei "{0}" nicht gefunden</msg78>
+    <msg79>Die Konfiguration "{0}" wurde in der Datei "{1}" nicht gefunden</msg79>
+    <msg80>Die Datei "{0}" enthält mehrere Konfigurationen mit dem Namen "{1}". Geben Sie die Kennung der Konfiguration an</msg80>
+    <msg81>Die Konfiguration enthält keine markierten Strategien</msg81>
+    <msg82>Die Strategie "{0}" wurde in der Konfiguration nicht gefunden</msg82>
+    <msg83>Mehrere Strategien "{0}" gefunden. Alle werden verarbeitet</msg83>
+    <msg84>Keine der Strategien aus der Anweisung wurde gefunden</msg84>
+    <msg85>Zu verarbeitende Strategien: {0}</msg85>
+    <msg86>Die aktuelle Ansicht ist keine grafische Ansicht</msg86>
+    <msg87>Verarbeitungsbereich: {0}</msg87>
+    <msg88>Ansicht "{0}" nicht gefunden</msg88>
+    <msg89>Mehrere Ansichten mit dem Namen "{0}" gefunden ({1}). Alle werden verarbeitet</msg89>
+    <msg90>Keine der Ansichten aus der Anweisung wurde gefunden</msg90>
+    <msg91>Zu verarbeitende Ansichten: {0}</msg91>
+    <msg92>Die Liste der verknüpften Dateien wird übersprungen: Die Verarbeitung von Elementen aus verknüpften Dateien ist ausgeschaltet</msg92>
+    <msg93>Verknüpfte Datei "{0}" nicht gefunden</msg93>
+    <msg94>Keine der verknüpften Dateien aus der Anweisung wurde gefunden</msg94>
+    <msg95>Zu verarbeitende verknüpfte Dateien: {0}</msg95>
+    <msg96>Die Ergebnisse werden in einer Textdatei gespeichert</msg96>
+    <msg97>Die Verarbeitung wurde ausgeführt, aber die Ergebnisdatei "{0}" konnte nicht gespeichert werden</msg97>
+    <msg98>Ergebnisse in Datei "{0}" gespeichert</msg98>
+    <msg99>Die Protokolldatei "{0}" konnte nicht erstellt werden</msg99>
+    <msg100>Start der Verarbeitung der Konfiguration "{0}" ({1}). Modus: {2}. {3}. Strategien: {4}</msg100>
+    <msg101>Verarbeitung der Konfiguration "{0}" in {1} abgeschlossen</msg101>
+    <msg102>Verarbeitung in der Ansicht "{0}" ({1})</msg102>
+    <msg103>Elemente aus verknüpften Dateien werden gesammelt</msg103>
+    <msg104>Aus verknüpften Dateien gesammelte Elemente: {0}</msg104>
+    <msg105>Elemente werden gesammelt. {0}</msg105>
+    <msg106>Gesammelte Elemente: {0}</msg106>
+    <msg107>Verarbeitung der Strategie "{0}" ({1}). Regeln: {2}</msg107>
+    <msg108>Regel {0} der Strategie "{1}" wurde nicht verarbeitet</msg108>
+    <msg109>Verarbeitung durch einen Fehler abgebrochen</msg109>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -382,6 +447,7 @@
     <err125>Das Projekt enthält keinen globalen Parameter "{0}"</err125>
     <err126>Das Unterelement der Verbindung {0} hat keinen Parameter "{1}"</err126>
     <err127>Der Gruppierungsschlüssel konnte nicht berechnet werden: Das Element hat keinen Parameter "{0}"</err127>
+    <err128>Das Element {0} hat keinen Raum "{1}": In dessen Parameter kann kein Wert geschrieben werden</err128>
     <rh1>Nr.</rh1>
     <rh2>Ein</rh2>
     <rh3>Formel</rh3>
@@ -392,7 +458,7 @@
     <sm4>Bearbeitung von Elementen in den ausgewählten Ansichten</sm4>
     <ssd1>Verarbeitung der Elemente ohne Zusammenhänge</ssd1>
     <sld1>Die Strategie verarbeitet Elemente ohne Berücksichtigung ihrer Zusammenhänge mit anderen Elementen. Mindestens ein Filter (für Kategorien oder für Parameter) muss ausgefüllt werden</sld1>
-    <ssd2>Verarbeitung der Exemplaren von Familien ohne Zusammenhänge</ssd2>
+    <ssd2>Verarbeitung der Exemplare von Familien ohne Zusammenhänge</ssd2>
     <sld2>Die Strategie verarbeitet Exemplare von Familien ohne Berücksichtigung ihrer Zusammenhänge mit anderen Elementen. Es ist zulässig, weder einen Filter für Kategorien noch einen Filter für Parameter zu verwenden</sld2>
     <ssd3>Verarbeitung der Typen</ssd3>
     <sld3>Die Strategie verarbeitet die Typen. Wenn die Option "Verarbeitung der ausgewählten Elemente" ausgewählt ist, werden die Typeigenschaften der ausgewählten Elemente verarbeitet. Wenn die Option "Verarbeitung der Elemente in der aktuellen Ansicht" ausgewählt ist, werden die Typeigenschaften der Elemente in der aktuellen Ansicht verarbeitet. Wenn die Option "Verarbeitung der Elemente in dem Dokument" ausgewählt ist, werden alle Typeigenschaften im Dokument verarbeitet</sld3>
@@ -404,24 +470,24 @@
     <sld6>Die Strategie verarbeitet Elemente, die sich innerhalb von Räumen befinden</sld6>
     <ssd7>Verarbeitung von Elementen im MEP-Raum</ssd7>
     <sld7>Die Strategie verarbeitet Elemente, die sich innerhalb von MEP-Räumen befinden</sld7>
-    <ssd8>Verarbeitung von Elementen mithilfe von Körpermodellstudien</ssd8>
+    <ssd8>Verarbeitung von Elementen in der Körpermodellstudie</ssd8>
     <sld8>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich innerhalb von Körpermodellstudien befinden. Die Körpermodellstudien müssen einen Vollkörper haben</sld8>
     <ssd9>Verarbeitung von Elementen in einem Vollkörper</ssd9>
     <sld9>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich innerhalb anderer Elemente befinden, die einen Vollkörper haben</sld9>
-    <ssd10>Verarbeitung von Elementen, die mit den Kanten ihrer Vollkörper in Berührung sind</ssd10>
-    <sld10>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich mit flachen Körperkanten berühren</sld10>
+    <ssd10>Verarbeitung von Elementen, die sich mit den Flächen ihrer Vollkörper berühren</ssd10>
+    <sld10>Die Strategie verarbeitet Elemente, die einen Vollkörper haben und sich gegenseitig mit ebenen Flächen ihrer Vollkörper berühren</sld10>
     <ssd11>Verarbeitung der Begrenzungselemente von Räumen</ssd11>
     <sld11>Die Strategie verarbeitet Elemente, die Begrenzungselemente von Räumen sind</sld11>
-    <ssd12>Verarbeitung der untergeordneten Elementen in den Verbindungen von Tragwerken</ssd12>
+    <ssd12>Verarbeitung der untergeordneten Elemente in den Verbindungen von Tragwerken</ssd12>
     <sld12>Die Strategie verarbeitet Elemente, die in den Verbindungen von Tragwerken platziert sind (Platten, Schrauben, etc.). Das Filtern von untergeordneten Elementen nach Parametern sowie die Liste der Parameter von untergeordneten Elementen im Formel-Editor sind nicht vorgesehen. Numerische Parameter werden ohne Konvertierung in interne Einheiten eingestellt</sld12>
     <ssd13>Verarbeitung von Unterfamilien</ssd13>
-    <sld13>Die Strategie verarbeitet Familien, die in die Hauptfamilie untergeordnet sind</sld13>
+    <sld13>Die Strategie verarbeitet Familien, die in die Hauptfamilie verschachtelt sind</sld13>
     <ssd14>Bearbeitung von Rohr- und Luftkanalisolierungen</ssd14>
     <sld14>Die Strategie bearbeitet Rohr- bzw. Luftkanalisolationselemente. Für die Isolierung ist es zulässig keinen Parameterfilter zu verwenden</sld14>
     <ssd15>Bearbeitung der Bewehrung im Bewehrungssystem</ssd15>
     <sld15>Die Strategie bearbeitet Bewehrungsstäbe innerhalb der Bewehrungssysteme, und zwar der Flächenbewehrung und der linearen Bewehrung</sld15>
     <ssd16>Bearbeitung der Materialien</ssd16>
-    <sld16>Die Strategie bearbeitet alle Materialien im aktuellen Dokument, unabhängig von der ausgewählten Elementen</sld16>
+    <sld16>Die Strategie bearbeitet alle Materialien im aktuellen Dokument, unabhängig von der Option der Elementauswahl</sld16>
     <ssd17>Bearbeitung der Elemente von MEP-Systemen</ssd17>
     <sld17>Die Strategie bearbeitet die Elemente, aus denen ein MEP-System (elektrisches System, Rohrleitungs- bzw. Luftkanalsystem) besteht. Als Ausgangselement gilt konventionell das übergeordnete System des Elements</sld17>
     <ssd18>Bearbeitung von Fassadenbestandteilen</ssd18>
@@ -430,14 +496,14 @@
     <sld19>Die Strategie bearbeitet Elemente mit der Möglichkeit, beliebiges angegebenes Modellelement als Quellelement zu verwenden</sld19>
     <ssd20>Bearbeitung von Teilen</ssd20>
     <sld20>Die Strategie bearbeitet Teile unter Berücksichtigung der Quellelemente, aus denen die Teile erstellt sind. Ist ein Teil aus mehreren Quellelementen erstellt, gilt das erste Element als Quellelement</sld20>
-    <ssd21>Verarbeitung von Elementen in Baugruppen</ssd21>
+    <ssd21>Verarbeitung von Elementen in der Baugruppe</ssd21>
     <sld21>Die Strategie verarbeitet Elemente, die sich in Baugruppen befinden</sld21>
     <ssd22>Verarbeitung ansichtsgebundener Elemente</ssd22>
-    <sld22>Verarbeitet Elemente, die nur innerhalb einer einzigen Ansicht existieren und nicht Teil des dreidimensionalen Modells sind: Bemaßungen, Textbausteine, Beschriftungen, Detaillinien und schraffierte Flächen sowie Planinhalte. Solche Elemente sind an die Ansicht gebunden, in der sie erstellt wurden, und werden in anderen Ansichten nicht angezeigt. Modellelemente wie Wände, Geschossdecken oder Ausstattungselemente sind davon nicht betroffen</sld22>
+    <sld22>Die Strategie verarbeitet Elemente, die nur innerhalb einer einzigen Ansicht existieren und nicht Teil des dreidimensionalen Modells sind: Bemaßungen, Textbausteine, Beschriftungen, Detaillinien und schraffierte Flächen sowie Planinhalte. Solche Elemente sind an die Ansicht gebunden, in der sie erstellt wurden, und werden in anderen Ansichten nicht angezeigt. Modellelemente wie Wände, Geschossdecken oder Ausstattungselemente sind davon nicht betroffen</sld22>
     <ssd23>Verarbeitung von Treppenkomponenten</ssd23>
-    <sld23>Verarbeitet Treppenkomponenten: Läufe, Podeste, Auflager sowie die der Treppe zugeordneten Geländer. Bedingtes Ausgangselement ist die Treppe. Die Komponenten einer geschossübergreifenden Treppe werden über die Treppe verarbeitet, zu der sie gehören</sld23>
+    <sld23>Die Strategie verarbeitet Treppenkomponenten: Läufe, Podeste, Auflager sowie die der Treppe zugeordneten Geländer. Bedingtes Ausgangselement ist die Treppe. Die Komponenten einer geschossübergreifenden Treppe werden über die Treppe verarbeitet, zu der sie gehören</sld23>
     <ssd24>Verarbeitung von Raumöffnungen</ssd24>
-    <sld24>Verarbeitet die Öffnungen - Türen und Fenster -, die in den Raum führen. Bedingtes Ausgangselement ist der Raum. Die Öffnungen werden in den Raumbegrenzungen einschließlich Fassaden gesucht; die Zugehörigkeit wird über die Eigenschaften "Nach Raum" und "Von Raum" unter Berücksichtigung der Raumphase bestimmt und bei leeren Eigenschaften über den Schnitt der Öffnungsgeometrie mit dem Raumvolumen</sld24>
+    <sld24>Die Strategie verarbeitet die Öffnungen - Türen und Fenster -, die in den Raum führen. Bedingtes Ausgangselement ist der Raum. Die Öffnungen werden in den Raumbegrenzungen einschließlich Fassaden gesucht; die Zugehörigkeit wird über die Eigenschaften "Nach Raum" und "Von Raum" unter Berücksichtigung der Raumphase bestimmt und bei leeren Eigenschaften über den Schnitt der Öffnungsgeometrie mit dem Raumvolumen</sld24>
     <ssd25>Bearbeitung von zwei nach Wert zugeordneten Elementmengen</ssd25>
     <sld25>Die Strategie bearbeitet zwei unabhängige Elementmengen - bedingte Quellelemente und Zielelemente. Ein Paar wird nicht über eine Beziehung der Elemente im Modell gebildet, sondern über die Übereinstimmung des Wertes, der auf beiden Seiten durch die Zuordnung berechnet wird. Übereinstimmende Elemente bilden eine Gruppe, über die Aggregatfunktionen berechnet werden</sld25>
     <ssd26>Bearbeitung des Raumausbaus</ssd26>
@@ -446,6 +512,22 @@
     <sld27>Die Strategie bearbeitet Elemente nach ihrer Bindung an eine Ebene. Das bedingte Quellelement ist eine Ebene, die Zielelemente sind die auf ihr befindlichen Elemente. Die Ebene wird der Elementeigenschaft entnommen, und falls diese nicht gefüllt ist - dem Ebenenparameter («Ebene», «Referenzebene», «Basisabhängigkeit»). Ein Element, das sich über mehrere Ebenen erstreckt (Wand, Stütze, Treppe), gehört zu seiner unteren Ebene. Ebenen werden automatisch in die Bearbeitung aufgenommen, sie müssen im Modell nicht ausgewählt werden</sld27>
     <ssd28>Bearbeitung von Bewehrungskupplungen</ssd28>
     <sld28>Die Strategie bearbeitet Bewehrungsstäbe, die durch eine Bewehrungskupplung verbunden sind. Das bedingte Quellelement ist die Kupplung, die Zielelemente sind ein oder zwei Stäbe, auf deren Enden sie sitzt. Eine Kupplung auf einem einzelnen Stab ergibt eine Eins-zu-eins-Beziehung: In diesem Fall wird der Wert des Stabes mit den Rückschreibfunktionen in die Kupplung übertragen. Bei einer Kupplung auf zwei Stäben wird die rechte Seite der Rückschreibung für beide Stäbe berechnet</sld28>
+    <ssd29>Bearbeitung der Ansichten einer Ebene</ssd29>
+    <sld29>Die Strategie bearbeitet die einer Ebene zugeordneten Ansichten. Das bedingte Quellelement ist eine Ebene, die Zielelemente sind die zu dieser Ebene gehörenden Grundrisse, Deckenpläne, Tragwerkspläne und Flächenpläne. Die Ebene einer Ansicht wird beim Erstellen der Ansicht festgelegt und ändert sich nicht: ein durch Kopieren erhaltener Grundriss bleibt auf der Ebene des Originals. Ansichten anderer Art - Schnitte, Ansichten, 3D-Ansichten, Legenden, Bauteillisten - sind keiner Ebene zugeordnet und werden nicht bearbeitet, Ansichtsvorlagen ebenfalls nicht. Die zu bearbeitenden Ebenen werden wie die Elemente jeder anderen Strategie ermittelt: bei der Bearbeitung des gesamten Dokuments sind das alle Ebenen des Dokuments, bei der Auswahl einzelner Elemente nur die ausgewählten Ebenen, bei der Bearbeitung einer Ansicht die in dieser Ansicht sichtbaren Ebenen. Eine Ebene wird im Modell in einem Schnitt oder einer Ansicht gewählt, wo sie ein gewöhnliches Element ist; ein Grundriss hat keine Ebenenlinie, daher wird bei der Bearbeitung eines Grundrisses die Ebene übernommen, nach der er erzeugt ist</sld29>
+    <sg1>Ohne Zusammenhänge</sg1>
+    <sgd1>Es werden die Parameter der Elemente selbst bearbeitet, ohne Bezug auf andere Elemente</sgd1>
+    <sg2>Enthalten in einem Element</sg2>
+    <sgd2>Die Zielelemente befinden sich im bedingten Quellelement oder gehören zu ihm</sgd2>
+    <sg3>Bestandteile</sg3>
+    <sgd3>Die Zielelemente sind Teile des bedingten Quellelements</sgd3>
+    <sg4>Räume</sg4>
+    <sgd4>Die Zielelemente sind mit dem Raum anders als durch ihre Lage darin verbunden</sgd4>
+    <sg5>Angrenzende Elemente</sg5>
+    <sgd5>Die Zielelemente berühren das bedingte Quellelement oder sind mit ihm verbunden</sgd5>
+    <sg6>Ebenen und Ansichten</sg6>
+    <sgd6>Die Zielelemente sind an eine Ebene oder eine Ansicht gebunden</sgd6>
+    <sg7>Beliebige Beziehung</sg7>
+    <sgd7>Das Paar wird nicht durch eine Beziehung im Modell bestimmt, sondern manuell angegeben oder nach Werten zugeordnet</sgd7>
     <se1>Basis</se1>
     <sp1>Basisparameter einfügen</sp1>
     <se2>Gruppe</se2>
@@ -454,7 +536,7 @@
     <sp3>Raumparameter einfügen</sp3>
     <se4>MEP-Raum</se4>
     <sp4>MEP-Raumparameter einfügen</sp4>
-    <se5>Körpermodellstudien</se5>
+    <se5>Körpermodellstudie</se5>
     <sp5>Körpermodellstudienparameter einfügen</sp5>
     <se6>Übergeordnetes Element</se6>
     <sp6>Parameter des übergeordneten Elementes einfügen</sp6>
@@ -509,6 +591,7 @@
     <tp9>Parameter der Öffnung einfügen</tp9>
     <te12>Ausbauelement</te12>
     <tp12>Parameter des Ausbauelements einfügen</tp12>
+    <tp13>Ansichtsparameter einfügen</tp13>
     <ft1>Mathematische Funktionen</ft1>
     <ft2>Logische Funktionen</ft2>
     <ft3>Modifizierende Funktionen</ft3>
@@ -523,12 +606,12 @@
     <d-rounddown>Gibt die größte Ganzzahl zurück, die kleiner oder gleich der angegebenen Zahl ist</d-rounddown>
     <d-sqrt>Gibt die Quadratwurzel der angegebenen Zahl zurück</d-sqrt>
     <d-pow>Potenziert eine angegebene Zahl mit dem angegebenen Exponenten</d-pow>
-    <d-sin>Gibt den Sinus des angegebenen Winkels zurück</d-sin>
-    <d-cos>Gibt den Kosinus des angegebenen Winkels zurück</d-cos>
-    <d-tan>Gibt den Tangens des angegebenen Winkels zurück</d-tan>
-    <d-asin>Gibt den Winkel zurück, dessen Sinus gleich der angegebenen Zahl ist</d-asin>
-    <d-acos>Gibt den Winkel zurück, dessen Kosinus gleich der angegebenen Zahl ist</d-acos>
-    <d-atan>Gibt den Winkel zurück, dessen Tangens gleich der angegebenen Zahl ist</d-atan>
+    <d-sin>Gibt den Sinus des angegebenen Winkels zurück. Der Winkel wird in Grad angegeben</d-sin>
+    <d-cos>Gibt den Kosinus des angegebenen Winkels zurück. Der Winkel wird in Grad angegeben</d-cos>
+    <d-tan>Gibt den Tangens des angegebenen Winkels zurück. Der Winkel wird in Grad angegeben</d-tan>
+    <d-asin>Gibt den Winkel in Grad zurück, dessen Sinus gleich der angegebenen Zahl ist</d-asin>
+    <d-acos>Gibt den Winkel in Grad zurück, dessen Kosinus gleich der angegebenen Zahl ist</d-acos>
+    <d-atan>Gibt den Winkel in Grad zurück, dessen Tangens gleich der angegebenen Zahl ist</d-atan>
     <d-log>Gibt den Logarithmus der angegebenen Zahl mit der angegebenen Basis zurück</d-log>
     <d-ln>Gibt den natürlichen Logarithmus (mit der Basis e) der angegebenen Zahl zurück</d-ln>
     <d-exp>Gibt e, auf einen bestimmten Grad angehoben, zurück</d-exp>
@@ -550,14 +633,14 @@
     <d-isvertical>Gibt TRUE zurück, wenn die Achse des Zielelements senkrecht verläuft. Andernfalls FALSE. Das optionale Argument &lt;a&gt; legt die Toleranz in Grad fest, standardmäßig 0.1. Die Funktion gilt nur für Elemente, deren Position durch eine gerade Linie definiert ist</d-isvertical>
     <d-ishorizontal>Gibt TRUE zurück, wenn die Achse des Zielelements waagerecht verläuft. Andernfalls FALSE. Das optionale Argument &lt;a&gt; legt die Toleranz in Grad fest, standardmäßig 0.1. Die Funktion gilt nur für Elemente, deren Position durch eine gerade Linie definiert ist</d-ishorizontal>
     <d-strlen>Gibt die Länge einer Zeichenfolge zurück</d-strlen>
-    <d-strindex>Gibt den Index zurück, der auf Null des ersten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-strindex>
+    <d-strindex>Gibt den Index zurück, der auf Null des ersten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-strindex>
     <d-valuestr>Gibt den Parameterwert als Zeichenfolge mit Maßeinheiten zurück</d-valuestr>
     <d-eindex>Gibt den Index der erfolgreicher Verwendung der aktuellen Formelanweisung zurück</d-eindex>
     <d-replace>Gibt den Wert zurück, im dem alle Auftreten der Vorgabezeile durch eine andere Vorgabezeile ersetzt sind</d-replace>
     <d-format>Konvertiert eine Zahl im angegebenen Format in eine Zeichenfolge</d-format>
     <d-cv>Gibt den Wert aus der angegebenen Zelle der Strategiedatenquelle zurück</d-cv>
-    <d-count>Gibt die Anzahl der Vorkommen der Teilzeichenfolge in der Zeichenfolge zurück. Gibt 0 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-count>
-    <d-lstrindex>Gibt den Index zurück, der auf Null des letzten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist</d-lstrindex>
+    <d-count>Gibt die Anzahl der Übereinstimmungen mit dem Muster in der Zeichenfolge zurück. Gibt 0 zurück, wenn es keine Übereinstimmungen gibt. Das Muster ist ein regulärer Ausdruck. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-count>
+    <d-lstrindex>Gibt den Index zurück, der auf Null des letzten Vorkommens einer Teilzeichenfolge in der Zeichenfolge basiert. Gibt -1 zurück, wenn die Teilzeichenfolge in der Zeichenfolge nicht gefunden ist. Die Funktion unterscheidet nicht zwischen Groß- und Kleinschreibung</d-lstrindex>
     <d-not>Gibt TRUE zurück, wenn die Bedingung falsch ist. Ansonsten wird FALSE zurückgegeben</d-not>
     <d-distinct>Gibt die unterscheidenden Werte aus der Liste zurück und lässt dabei die Leerzeichen am Anfang und am Ende unbeachtet</d-distinct>
     <d-cvif>Sucht die erste Zeile in der Datenquelle der Strategie (Excel-Datei), in der alle Bedingungen erfüllt sind, und gibt den Wert aus der angegebenen Spalte dieser Zeile zurück</d-cvif>
@@ -565,12 +648,12 @@
     <d-doctitle>Gibt den Titel des aktuellen Dokuments zurück</d-doctitle>
     <d-getcurrentviewparameter>Gibt den Wert des Parameters &lt;p&gt; der Ansicht zurück, in der die Verarbeitung ausgeführt wird. Verfügbar bei der Verarbeitung der Elemente in der aktuellen Ansicht, in den ausgewählten Ansichten und bei der Verarbeitung der ausgewählten Elemente</d-getcurrentviewparameter>
     <d-targetbottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targetbottomz>
-    <d-targettopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-targettopz>
+    <d-targettopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des Zielelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben. Wenn die Verarbeitung nicht im gesamten Dokument erfolgt, wird die Geometrie in der aktiven Ansicht genommen: In einem Grundriss ist die höchste Höhenkote die Schnittebene des Grundrisses und nicht die tatsächliche Oberkante des Elements</d-targettopz>
     <d-sourcebottomz>Gibt die niedrigste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcebottomz>
-    <d-sourcetopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben</d-sourcetopz>
+    <d-sourcetopz>Gibt die höchste Höhenkote (Z) aus der Geometrie des bedingten Quellelements zurück. Die Höhenkote wird in Millimetern mit einer Rundung auf 3 Nachkommastellen zurückgegeben. Wenn die Verarbeitung nicht im gesamten Dokument erfolgt, wird die Geometrie in der aktiven Ansicht genommen: In einem Grundriss ist die höchste Höhenkote die Schnittebene des Grundrisses und nicht die tatsächliche Oberkante des Elements</d-sourcetopz>
     <d-gsum>Gibt die Summe der Ausdruckswerte über die Elemente der Gruppe zurück</d-gsum>
     <d-gcount>Gibt die Anzahl der Gruppenelemente der angegebenen Rolle zurück: "s" - bedingte Quellelemente, "t" - Zielelemente</d-gcount>
-    <d-gjoin>Verbindet die Ausdruckswerte über die Elemente der Gruppe mit dem angegebenen Trennzeichen</d-gjoin>
+    <d-gjoin>Verbindet die Ausdruckswerte über die Elemente der Gruppe mit dem angegebenen Trennzeichen. Das optionale dritte Argument legt Flags fest: "d" - nur unterschiedliche Werte, "s" - sortieren, "r" - aufeinanderfolgende ganze Zahlen zu Bereichen zusammenfassen</d-gjoin>
     <d-gmin>Gibt den kleinsten Wert des Ausdrucks über die Elemente der Gruppe zurück</d-gmin>
     <d-gmax>Gibt den größten Wert des Ausdrucks über die Elemente der Gruppe zurück</d-gmax>
     <d-gavg>Gibt den Durchschnittswert des Ausdrucks über die Elemente der Gruppe zurück</d-gavg>
@@ -596,5 +679,38 @@
     <d-wb-max>Schreibt das größte Ergebnis in einen Parameter des bedingten Quellelements</d-wb-max>
     <d-wb-min>Schreibt das kleinste Ergebnis in einen Parameter des bedingten Quellelements</d-wb-min>
     <d-wb-sum>Schreibt die Summe der Ergebnisse in einen Parameter des bedingten Quellelements</d-wb-sum>
+    <t211>The plugin window is open. The palette is available after it is closed</t211>
+    <t212>Configurations file is not selected. Open the plugin window</t212>
+    <t213>Organization settings have changed. Open the plugin window to select a configurations file</t213>
+    <t214>Configurations file is not available</t214>
+    <t215>There are no configurations in the configurations file</t215>
+    <t216>There are no strategies in the current configuration</t216>
+    <t217>Open the plugin window</t217>
+    <t218>Work type</t218>
+    <t219>Strategy of the current configuration</t219>
+    <t220>Run all rules of the strategy</t220>
+    <t221>Click to run the rule</t221>
+    <t222>Show or hide the palette</t222>
+    <t223>Source</t223>
+    <t224>PF SE</t224>
+    <t225>PF TE</t225>
+    <t226>F SE</t226>
+    <t227>F TE</t227>
+    <t228>The plugin does not work in family files</t228>
+    <t229>No open document</t229>
+    <t230>Vor dem Start nach Synchronisierung mit dem Zentralmodell fragen</t230>
+    <t231>Synchronisierungsoptionen</t231>
+    <t232>Zentraldatei komprimieren (langsam)</t232>
+    <t233>Nach der Synchronisierung folgende Bearbeitungsbereiche und Elemente freigeben:</t233>
+    <t234>Projektstandard-Bearbeitungsbereiche</t234>
+    <t235>Familien-Bearbeitungsbereiche</t235>
+    <t236>Ausgeliehene Elemente</t236>
+    <t237>Ansichts-Bearbeitungsbereiche</t237>
+    <t238>Benutzerdefinierte Bearbeitungsbereiche</t238>
+    <t239>Lokale Datei vor und nach der Synchronisierung mit der Zentraldatei speichern</t239>
+    <t240>Zurück</t240>
+    <t241>Excel-Datei der Datenquelle der Strategie auswählen</t241>
+    <t242>Excel-Datei aus der Datenquelle der Strategie entfernen (die Datei selbst wird nicht gelöscht)</t242>
+    <t243>Aus den verknüpften Dateien werden die Elemente der Kategorien gesammelt, die in den Spalten der Regeln angegeben sind – sowohl für bedingte Quellelemente als auch für Zielelemente. Anschließend werden sie gleichberechtigt mit den Elementen des aktuellen Modells verarbeitet: Bei der Strategie InMass können es beispielsweise die Formelemente sein, bei der Strategie InSolid die Vollkörperelemente, bei der Strategie ManyToMany die bedingten Quellelemente. Die Parameterwerte der Elemente aus verknüpften Dateien können in Formeln verwendet werden, aber ein Wert kann nicht in einen Parameter eines Elements aus einer verknüpften Datei geschrieben werden – ein solcher Schreibvorgang wird im Bericht als Fehler gekennzeichnet</t243>
   </mprParametrization>
 </ModPlus>

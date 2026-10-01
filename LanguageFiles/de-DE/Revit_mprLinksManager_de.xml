@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprLinksManager
+    LocalName="Verknüpfungsmanager"
+    Description="Verwaltung externer Revit- und CAD-Verknüpfungen im aktuellen Dokument"
+    FullDescription="Anzeigen, Filtern, Hinzufügen, Laden, Entladen, Neuladen, Löschen von Verknüpfungen sowie Umschreiben ihrer Pfade im aktuellen Revit-Dokument">
+    <filtersGroupHeader>Filter</filtersGroupHeader>
+    <statusLabel>Status:</statusLabel>
+    <linksListGroupHeader>Liste der Verknüpfungen</linksListGroupHeader>
+    <columnNameHeader>Name</columnNameHeader>
+    <columnStatusHeader>Status</columnStatusHeader>
+    <loadSettingsGroupHeader>Ladeeinstellungen</loadSettingsGroupHeader>
+    <positioningLabel>Positionierung</positioningLabel>
+    <onAddBehaviorLabel>Beim Hinzufügen</onAddBehaviorLabel>
+    <fileSelectButton>Dateien auswählen</fileSelectButton>
+    <operationsGroupHeader>Operationen</operationsGroupHeader>
+    <deleteSelectedButton>Löschen</deleteSelectedButton>
+    <unloadButton>Lösen</unloadButton>
+    <reloadButton>Neu laden</reloadButton>
+    <updateButton>Aktualisieren</updateButton>
+    <rewritePathText>Pfade umschreiben</rewritePathText>
+    <rewritePathsByFolderButton>Pfade umschreiben (Ordner)</rewritePathsByFolderButton>
+    <showLogButton>Protokoll anzeigen</showLogButton>
+    <addLinksTransaction>Verknüpfungen hinzufügen</addLinksTransaction>
+    <deleteLinksTransaction>Verknüpfungen löschen</deleteLinksTransaction>
+    <loadLinksTransaction>Verknüpfungen laden</loadLinksTransaction>
+    <unloadLinksTransaction>Verknüpfungen entladen</unloadLinksTransaction>
+    <reloadLinksTransaction>Verknüpfungen neu laden</reloadLinksTransaction>
+    <searchHint>Suchtext eingeben</searchHint>
+    <typeWorksetColumnHeader>Typ-Bearbeitungsbereich</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Exemplar-Bearbeitungsbereich</instanceWorksetColumnHeader>
+    <placeInWorkset>Im Bearbeitungsbereich platzieren</placeInWorkset>
+    <createWorksetByPrefixLabel>Im eigenen Bearbeitungsbereich platzieren</createWorksetByPrefixLabel>
+    <worksetNamePrefixLabel>Präfix des Bearbeitungsbereichs:</worksetNamePrefixLabel>
+    <disableWorksetContains>Bearbeitungsbereiche deaktivieren, die Folgendes enthalten:</disableWorksetContains>
+    <disableWorksetTooltip>Geben Sie Teilzeichenfolgen durch Kommas getrennt ein. Beim Laden der Verknüpfung werden Bearbeitungsbereiche des verknüpften Modells geschlossen, deren Namen mindestens eine der angegebenen Teilzeichenfolgen enthalten. Alle anderen Bearbeitungsbereiche werden geöffnet.</disableWorksetTooltip>
+    <fromRevitServer>Aus Revit Server</fromRevitServer>
+    <revitServerWindowTitle>Vom Revit Server hinzufügen</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>Beim Ändern des Typ-Bearbeitungsbereichs: {0} ist ein Fehler aufgetreten: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>Beim Ändern des Bearbeitungsbereichs der Instanz: {0}, ist ein Fehler aufgetreten: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Fehler beim Hinzufügen einer Verknüpfung aus Revit Server</addFromServerErrorFormat>
+    <diffWorkset>*VARIIERT*</diffWorkset>
+    <operationUnloadLocallyGenitive>lokales Entladen</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Verknüpfungen lokal entladen</unloadLocallyLinksTransaction>
+    <addLinkSettingsDialogTitle>Einstellungen zum Hinzufügen</addLinkSettingsDialogTitle>
+    <rewriteHintText>Platzhalter: * — beliebige Folge, ? — ein Zeichen, # — Ziffer. Escaping: \* \? \# \\. Wenn der Modus „Nur Pfad ändern" aktiviert ist, wird die Maske nur auf das Verzeichnis angewendet.</rewriteHintText>
+    <rewriteModeLabel>Modus:</rewriteModeLabel>
+    <rewriteModeNormal>Normal</rewriteModeNormal>
+    <rewriteModeMask>Maske</rewriteModeMask>
+    <findTextLabel>Suchen:</findTextLabel>
+    <replaceTextLabel>Ersetzen durch:</replaceTextLabel>
+    <pathOnlyModeLabel>Nur Pfad ändern</pathOnlyModeLabel>
+    <originalPathColumnHeader>Ursprünglicher Pfad</originalPathColumnHeader>
+    <newPathColumnHeader>Neuer Pfad</newPathColumnHeader>
+    <fileNotFoundTooltip>Datei nicht gefunden</fileNotFoundTooltip>
+    <tableHintText>Markieren Sie Verknüpfungen für die Ausführung von Operationen</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Verknüpfungsmanager gestartet</managerStartedLogFormat>
+    <openFilesFilter>Revit- und DWG-Dateien (*.rvt;*.dwg)|*.rvt;*.dwg|Revit-Dateien (*.rvt)|*.rvt|DWG-Dateien (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Bereits vorhandene Verknüpfungen übersprungen: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>Hinzufügen von {0} Verknüpfungen</addStartedLogFormat>
+    <addCompletedLogFormat>Verknüpfungen hinzugefügt: {0}, Fehler: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Fehler beim Hinzufügen der Datei "{0}": {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>Allgemeiner Fehler: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>Löschens</operationDeleteGenitive>
+    <operationLoadGenitive>Ladens</operationLoadGenitive>
+    <operationUnloadGenitive>Entladens</operationUnloadGenitive>
+    <operationReloadGenitive>Neuladen</operationReloadGenitive>
+    <deleteConfirmationMessage>Möchten Sie wirklich die ausgewählten Verknüpfungen löschen?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Löschen</deleteConfirmationTitle>
+    <operationCanceledLogFormat>Vorgang {0} wurde vom Benutzer abgebrochen</operationCanceledLogFormat>
+    <operationStartedLogFormat>Beginn von {0} für {1} Verknüpfungen</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Erfolgreich: {0}, übersprungen: {1}, Fehler: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Ergebnis von {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>Allgemeiner Fehler während {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Ordnerauswahl wurde vom Benutzer abgebrochen</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Pfadumschreibung wurde vom Benutzer abgebrochen</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Keine Änderungen zum Umschreiben der Pfade</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Beginn der Pfadumschreibung für {0} Verknüpfungen</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Pfade umgeschrieben: {0}, Fehler: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>Allgemeiner Fehler beim Umschreiben der Pfade: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Fehler beim Pfad-Umschreiben: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>Verknüpfung befindet sich in einem geschlossenen Arbeitssatz</rewritePathClosedWorksetError>
+    <linkStatusLoaded>Geladen</linkStatusLoaded>
+    <linkStatusUnloaded>Entladen</linkStatusUnloaded>
+    <linkStatusNotFound>Nicht gefunden</linkStatusNotFound>
+    <positioningSharedCoordinates>Nach gemeinsamen Koordinaten</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Ursprung zu Ursprung</positioningOriginToOrigin>
+    <positioningCenterToCenter>Mitte zu Mitte</positioningCenterToCenter>
+    <onAddLoadImmediately>Sofort laden</onAddLoadImmediately>
+    <onAddAddUnloaded>Entladen hinzufügen</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Datei der Verknüpfung nicht gefunden: {0}</handlerLinkFileNotFoundFormat>
+    <handlerCannotLinkDocumentToItself>Das aktuelle Modell kann nicht als Verknüpfung zu sich selbst hinzugefügt werden</handlerCannotLinkDocumentToItself>
+    <handlerLinkSavedByLaterRevitVersion>Das Modell wurde in einer neueren Revit-Version gespeichert</handlerLinkSavedByLaterRevitVersion>
+    <handlerUnsupportedLinkTypeFormat>Verknüpfungstyp "{0}" wird nicht unterstützt</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>Dateierweiterung "{0}" wird nicht unterstützt</handlerUnsupportedExtensionFormat>
+    <unloadForSelfMenuItem>Für aktuellen Benutzer</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Für alle Benutzer</unloadForAllMenuItem>
+  </mprLinksManager>
+</ModPlus>

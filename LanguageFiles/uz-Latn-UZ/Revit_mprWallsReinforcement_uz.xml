@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWallsReinforcement
+    LocalName="Devorlarni armaturalash"
+    Description="Devorlar va oʻyiqlarni tahlil qilish, guruhlash va berilgan shartlar boʻyicha armaturalash"
+    FullDescription="Faqat bitta sathda joylashgan devorlar bilan ishlash. Devorlarni uch turdagi kesishmalar (burchakli, torets va xochsimon) va oʻyiqlarni topgan holda tahlil qilish. Moslashuvchan guruhlash qanday turdagi armaturalashni bajarish kerakligini aniq koʻrsatish imkonini beradi. Armaturalashni faqat koʻrsatilgan guruhlar – devorlar, kesishmalar yoki oʻyiqlar uchun bajarish mumkin. Hatto boʻsh shablonda ham ishlash mumkin">
+    <h2>PLAGIN OYNASI:</h2>
+    <h4>Oynalar ustida</h4>
+    <h5>MODELDA AKS ETTIRISH:</h5>
+    <h6>Masshtablash koeffitsiyenti:</h6>
+    <!-- todo remove after 5.24.16.0 -->
+    <h7>STANDART BOʻYICHA ARMATURALASH:</h7>
+    <h8>Devorlarni asosiy armaturalash</h8>
+    <h9>Kesishmalarni armaturalash</h9>
+    <h10>Oʻyiqlarni hoshiyalash</h10>
+    <h11>Tanlash</h11>
+    <h12>Tahlil qilish</h12>
+    <h13>Hammasini guruhlash</h13>
+    <h14>Tanlangan devorlar:</h14>
+    <h15>Guruhlash</h15>
+    <h16>Devorlar</h16>
+    <h17>Kesishmalar</h17>
+    <h18>Oʻyiqlar</h18>
+    <h19>Guruhlash mezoni:</h19>
+    <h20>Devorlar qalinligi</h20>
+    <h21>Devorlar balandligi</h21>
+    <h22>Devorlar parametri</h22>
+    <h23>Guruhlash</h23>
+    <h24>Devorlar soni</h24>
+    <h25>Devorlar qalinliklari</h25>
+    <h26>Devorlar balandliklari</h26>
+    <h27>Guruhdagi devorlar:</h27>
+    <h28>Qalinlik</h28>
+    <h29>Balandliklar</h29>
+    <h30>Parametr</h30>
+    <!-- todo remove after 5.24.16.0 -->
+    <h31>Devorlarni joriy guruhdan boshqa guruhlarga sichqoncha bilan sudrab oʻtkazishingiz mumkin</h31>
+    <h32>Yaratish:</h32>
+    <h33>Kesishma turi</h33>
+    <h34>Devorlar balandliklari</h34>
+    <h35>Devorlarni armaturalash</h35>
+    <h36>Kesishmalar soni</h36>
+    <h37>Kesishma turi</h37>
+    <h38>Parametrlar</h38>
+    <h39>Guruhdagi kesishmalar:</h39>
+    <!-- todo remove after 5.24.16.0 -->
+    <h40>Kesishmalarni joriy guruhdan boshqa guruhlarga sichqoncha bilan sudrab oʻtkazishingiz mumkin</h40>
+    <h41>Kesishmadagi devorlar:</h41>
+    <h42>Armaturalash</h42>
+    <h43>Oʻyiq gabaritlari</h43>
+    <h44>1. Oʻyiqlar, maksimal</h44>
+    <h45>2. Oʻyiqlar, minimal</h45>
+    <h46>mm, maksimal:</h46>
+    <h47>3. Oʻyiqlar, minimal</h47>
+    <h48>Guruhlarning bazaviy armaturalashini gabaritlar boʻyicha oʻrnatish</h48>
+    <h49>Manba</h49>
+    <h50>Oʻyiqlar soni</h50>
+    <h51>Devor qalinligi</h51>
+    <h52>Kenglik boʻyicha guruh</h52>
+    <h53>Balandlik boʻyicha guruh</h53>
+    <h54>Manba</h54>
+    <h55>Guruhdagi oʻyiqlar:</h55>
+    <!-- todo remove after 5.24.16.0 -->
+    <h58>Oʻyiqlarni joriy guruhdan boshqa guruhlarga sichqoncha bilan sudrab oʻtkazishingiz mumkin</h58>
+    <h59>Guruhlarni armaturalash sozlamalari</h59>
+    <h60>Armaturalashni bajarish</h60>
+    <h61>SP 52-101-2003 boʻyicha ankerlashni hisoblash</h61>
+    <h62>Diametr:</h62>
+    <h63>Kesim yuzasi, mm²:</h63>
+    <h64>Beton sinfi:</h64>
+    <h65>Armatura sirtining turi:</h65>
+    <h66>Choʻzilishga hisobiy qarshilik, MPa:</h66>
+    <h67>Ankerlashning bazaviy (asosiy) uzunligi, mm:</h67>
+    <h68>α koeffitsiyenti:</h68>
+    <h69>Talab qilinadigan (hisobiy) ankerlash uzunligi, mm:</h69>
+    <h70>Ankerlash uzunligi:</h70>
+    <!-- todo remove after 5.24.16.0 -->
+    <h71>Kesishmani armaturalash sozlamalari</h71>
+    <!-- todo remove after 5.24.16.0 -->
+    <h72>Oʻyiqni armaturalash sozlamalari</h72>
+    <!-- todo remove after 5.24.16.0 -->
+    <h73>Devorni armaturalash sozlamalari</h73>
+    <!-- todo remove after 5.24.16.0 -->
+    <h74>Guruhning armaturalash sozlamalari bilan almashtirish</h74>
+    <!-- todo remove after 5.24.16.0 -->
+    <h75>Armaturalash sozlamalarini qoldirish</h75>
+    <h76>Vertikal armaturalash</h76>
+    <h79>Qadam, mm:</h79>
+    <h80>Markazni devor chetiga bogʻlash, mm:</h80>
+    <h81>Qoʻshimcha qadamni qayta ishlash:</h81>
+    <h82>Devor toretsidan chekinish, mm:</h82>
+    <h83>Devor ustidan chiqib turish, mm:</h83>
+    <h84>Armatura uchlaridagi himoya qatlami, mm:</h84>
+    <h85>Oʻyiq ustidagi devor balandligi quyidagidan katta boʻlganda oxirgi oʻyiq ustiga armatura oʻrnatish (mm):</h85>
+    <h86>Agar oʻyiq ostidagi devor balandligi devorning ikki qalinligidan kichik yoki teng boʻlsa (lekin 400 mm dan kam boʻlmasa), oʻyiq ostiga armatura oʻrnatmaslik</h86>
+    <h87>Gorizontal armaturalash</h87>
+    <h88>Joylashuv:</h88>
+    <h89>Birinchi sterjen chekinishi, mm:</h89>
+    <h90>Oxirgi sterjen chekinishi, mm:</h90>
+    <h91>Devor toretslaridagi U-simon sterjenlar</h91>
+    <h92>Detal uzunligi, mm:</h92>
+    <h93>U-simon sterjen uzunligini hisoblash</h93>
+    <h94>Koʻndalang xomutlar (shpilkalar)</h94>
+    <h95>Shpilka turi:</h95>
+    <h96>Shpilkalarni asosiy armaturalash kesishish tugunlarini qamrab olgan holda 45° ga burish</h96>
+    <h97>Joylashtirish turi:</h97>
+    <h98>Gorizontal qadam, mm:</h98>
+    <h99>Vertikal qadam, mm:</h99>
+    <h100>Burchakli kesishmalar</h100>
+    <h101>Detallar qadami:</h101>
+    <h102>Armaturalash turi:</h102>
+    <h103>Detal №1</h103>
+    <h104>Ankerlash uzunligi, mm:</h104>
+    <h105>Ankerlash uzunligini hisoblash</h105>
+    <h106>Detal №2</h106>
+    <h107>T-simon kesishmalar</h107>
+    <h108>Xochsimon kesishmalar</h108>
+    <h109>Vertikal sterjenlar</h109>
+    <h110>Armaturalashni yaratish</h110>
+    <h111>Oʻyiqdan chekinish:</h111>
+    <h112>Qatorlar soni:</h112>
+    <h113>Asosiy armaturalashning vertikal sterjenlariga toʻgʻri kelganda siljitish</h113>
+    <h114>Yuqori boʻyicha gorizontal sterjenlar</h114>
+    <h115>Vertikal boʻyicha U-simon sterjenlar</h115>
+    <h116>Yuqori boʻyicha U-simon sterjenlar</h116>
+    <h117>Detal uzunligi, mm:</h117>
+    <h118>Detal qadami, mm:</h118>
+    <h119>Devorlar uchun standart armaturalash sozlamalari</h119>
+    <h120>Kesishmalar uchun standart armaturalash sozlamalari</h120>
+    <h121>Oʻyiqlar uchun standart armaturalash sozlamalari</h121>
+    <h122>Birinchi oʻlcham guruhi</h122>
+    <h123>Ikkinchi oʻlcham guruhi</h123>
+    <h124>Uchinchi oʻlcham guruhi</h124>
+    <h127>Pastdagi plitalardan chiqarmalar</h127>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h128>Pastdagi plitalarni tanlash</h128>
+    <h129>Pastdagi plitalar</h129>
+    <h130>Qalinlik</h130>
+    <!-- todo remove after 5.24.16.0 -->
+    <h131>Plitaga tegib turgan devorlar guruhlari:</h131>
+    <h132>Plitadan chiqarmalarni armaturalash sozlamalari</h132>
+    <h133>Oʻrta devorlar boʻyicha chiqarmalar</h133>
+    <h134>Pastdagi plitalardan chiqarmalar uchun standart armaturalash sozlamalari</h134>
+    <h135>Chiqiqlar turi:</h135>
+    <h136>Chetki devorlar boʻyicha chiqarmalar</h136>
+    <h137>Oʻrta devorlar boʻyicha chiqarmalar sozlamalaridan foydalanish</h137>
+    <h138>Armaturaning himoya qatlami:</h138>
+    <h139>Gorizontal armaturalash ichkarida joylashgan – vertikal armatura boʻyicha himoya qatlami</h139>
+    <h140>Gorizontal armaturalash tashqarida joylashgan – gorizontal armatura boʻyicha himoya qatlami</h140>
+    <h141>Armaturalash yaratilgandan keyin oynani yopmaslik</h141>
+    <h142>Kesishmani koʻrish</h142>
+    <h143>Yordamchi geometriyani oʻchirish</h143>
+    <h144>Detalning pastdagi plita tagidan chekinishi:</h144>
+    <h145>Birinchi ankerlash uzunligi, mm:</h145>
+    <h146>Ikkinchi ankerlash uzunligi, mm:</h146>
+    <!-- todo remove after 5.24.16.0 -->
+    <h147>Tiklash</h147>
+    <h148>Plitaga ankerlash uzunligi, mm:</h148>
+    <h149>Pastdagi plitadan chiqiqlar</h149>
+    <h150>Tegib turgan devorlar soni</h150>
+    <h151>Toretslardagi qoʻshimcha vertikal sterjenlar</h151>
+    <h152>Chetki vertikal sterjenlardan chekinish</h152>
+    <h153>Yuqori bilvosita armaturalash</h153>
+    <h154>Pastki bilvosita armaturalash</h154>
+    <h155>Sterjenlar uzunligi:</h155>
+    <h156>Devorning yuqori toretsi boʻyicha U-simon sterjenlar</h156>
+    <h157>Chiqarmalar</h157>
+    <h158>Fon armaturalashi vertikal sterjenlarining chiqarmalari</h158>
+    <h159>Kesishmalar vertikal sterjenlarining chiqarmalari</h159>
+    <h160>Chiqiqlar turi:</h160>
+    <h161>Plitaning shartli qalinligi, mm:</h161>
+    <h162>"Pogʻonali" chiqarmalarni yaratish</h162>
+    <h163>Agar yuqoridagi devorda oʻyiq joylashgan boʻlsa, u holda</h163>
+    <h164>Yuqoridagi devorning oʻyiq ostidagi balandligi (yoki butun devor balandligi) devorning ikki qalinligidan kichik yoki teng boʻlgan (lekin 400 dan kam boʻlmagan) qismlariga ham qoʻllash</h164>
+    <h165>Agar devor ustida orayopma plitasi boʻlmasa, u holda</h165>
+    <h166>Bukilishlarni plita yuqorisiga bogʻlash (armatura markazi boʻyicha), mm:</h166>
+    <h167>Bukilishlarni plita pastiga bogʻlash (armatura markazi boʻyicha), mm:</h167>
+    <h168>Devorlarni ramka bilan tanlash</h168>
+    <h169>Devorlarni koʻrsatib tanlash</h169>
+    <h170>Chiqarmalarni devor tanasi boʻyicha kesish</h170>
+    <h171>Qoʻshimcha sterjen juftlari soni:</h171>
+    <h172>Sterjenlar qadami:</h172>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h173>Toʻgʻri sterjenlar:</h173>
+    <h174>L-simon sterjenlar (vertikal sterjenlar bukilishlarini yaratishda):</h174>
+    <h175>Devor toretslaridagi U-simon sterjenlar:</h175>
+    <h176>Devorning yuqori toretsi boʻyicha U-simon sterjenlar:</h176>
+    <h177>C-simon koʻndalang xomutlar (shpilkalar). Eskizdagi ilgaklar:</h177>
+    <h178>S-simon koʻndalang xomutlar (shpilkalar). Eskizdagi ilgaklar:</h178>
+    <h179>L-simon sterjenlar:</h179>
+    <h180>U-simon sterjenlar:</h180>
+    <h181>Oʻrovchi sterjenlar:</h181>
+    <h182>Katta bukilgan L-simon sterjenlar:</h182>
+    <h183>Barcha qiymatlarni "Avto" qiymatiga tiklash</h183>
+    <h184>Armatura sterjenlarining afzal shakllari</h184>
+    <h185>Baʼzi elementlar uchun parametr qiymatlarini oʻrnatib boʻlmadi. Quyida elementlar kodlari (id), parametr nomlari va oʻrnatiladigan qiymatlar keltirilgan:</h185>
+    <!-- todo remove after 5.24.16.0 end -->
+    <h186>Gorizontal bogʻlangan xomutlar</h186>
+    <h187>Faqat boshqa devorlar bilan uchki kesishmalari boʻlmagan devorlarda</h187>
+    <h188>Uzunligi quyidagigacha boʻlgan devorlarda, mm:</h188>
+    <h189>Fon armaturalashining gorizontal sterjenlarini yaratmaslik</h189>
+    <h190>Qamrab olinadigan sterjen juftlari soni:</h190>
+    <h191>Toretslar va kesishmalardagi detallarni hisobga olish</h191>
+    <h192>Fon armaturalashi sterjenlarini qamrab olish turi:</h192>
+    <h193>Birinchi ustma-ust tushish uzunligi, mm:</h193>
+    <h194>Ikkinchi ustma-ust tushish uzunligi, mm:</h194>
+    <h195>Ustma-ust tushish uzunligini hisoblash</h195>
+    <h196>Ustma-ust tushish uzunligi, mm:</h196>
+    <h197>YUKLANMOQDA</h197>
+    <h198>Past boʻyicha gorizontal sterjenlar</h198>
+    <h199>Yuqori boʻyicha xomutlar</h199>
+    <h200>Shakl ilgaklari:</h200>
+    <h201>Eskizda belgilash</h201>
+    <h202>Revit ilgaklaridan foydalanish</h202>
+    <h203>Qayta tanlash</h203>
+    <h204>Plagindan oldingi foydalanishda joriy koʻrinishda qayta ishlangan devorlarni qayta tanlash</h204>
+    <h205>C-simon koʻndalang xomutlar (shpilkalar). Revit ilgaklari:</h205>
+    <h206>S-simon koʻndalang xomutlar (shpilkalar). Revit ilgaklari:</h206>
+    <h207>Har bir detalni alohida armatura sterjeni bilan yaratish</h207>
+    <h208>Oʻlchami quyidagigacha boʻlgan oʻyiqlar bilan armatura sterjenlarini kesmaslik (LxH):</h208>
+    <h209>Qatordagi sterjenlar:</h209>
+    <h210>Quyidagi uzunlik boʻyicha joylashtirish:</h210>
+    <h211>oʻyiq</h211>
+    <h212>toʻgʻri sterjenlar</h212>
+    <h213>Past boʻyicha U-simon sterjenlar</h213>
+    <h214>Past boʻyicha xomutlar</h214>
+    <h215>Vertikal boʻyicha xomutlar</h215>
+    <h216>Chiqarmalar uzunligi, mm:</h216>
+    <h217>U-simon sterjenga toʻgʻri kelganda fon armaturalashining chetki vertikal sterjenlarini siljitish</h217>
+    <h218>Kesishmalar yonidagi qoʻshimcha vertikal sterjenlar</h218>
+    <h219>Kesishma qirrasiga bogʻlash (armatura markazi boʻyicha):</h219>
+    <h220>Faqat toʻgʻri burchak ostida kesishadigan devorlar uchun</h220>
+    <h221>Boʻylama egilgan sterjenlar ("shisha" shaklida bukilgan)</h221>
+    <h222>Zichlashtirish qismlaridagi qadam, mm:</h222>
+    <h223>Zichlashtirish masofasi, mm:</h223>
+    <h224>Zichlashtirish masofasi, ulushlar:</h224>
+    <h225>Devorning pastki zonasida gorizontal armaturalashni zichlashtirish</h225>
+    <h226>Avval yaratilgan armaturani oʻchirish:</h226>
+    <h227>Kesishmalardagi vertikal armaturalash</h227>
+    <h228>Asosiy vertikal armaturalash sozlamalaridan foydalanish</h228>
+    <h229>Sath</h229>
+    <h230>Fon armaturalashining qoʻshimcha vertikal sterjenlari boʻyicha chiqarmalarni yaratish</h230>
+    <h231>Bukilish boshlanish nuqtasining devor yuqorisidan chekinishi (a), mm:</h231>
+    <h232>Bukilish tugash nuqtasining plita yuqorisidan chekinishi (b), mm:</h232>
+    <h233>Armatura diametrini bukilish balandligi sifatida ishlatish (c)</h233>
+    <h234>Bukilish balandligi (c), mm:</h234>
+    <h235>Detalni plita yuqorisiga bogʻlash (detalning tashqi qirrasi boʻyicha), mm:</h235>
+    <h236>Vertikal chiqarmalarning U-simon sterjenlari:</h236>
+    <h237>Vertikal armaturalash sterjenlari orasidagi masofa (guruhdagi eng kichik devor boʻyicha)</h237>
+    <h238>SP 63.13330 ning 10.3.5-bandiga muvofiq vertikal armaturalash sterjenlari orasidagi masofa kamida 50 mm boʻlishi kerak!</h238>
+    <h239>SP 63.13330 ning 10.3.5-bandiga muvofiq gorizontal armaturalash sterjenlari orasidagi masofa kamida 25 mm boʻlishi kerak!</h239>
+    <h240>Tomonni almashlab turish</h240>
+    <h241>Plitaga bukiladigan va chetki devorlarda oʻrnatiladigan qoʻshimcha L-simon sterjen</h241>
+    <h242>Devorga ankerlash uzunligi, mm:</h242>
+    <h243>Siljitish orqali pogʻonalash</h243>
+    <h244>Faqat ustida orayopma yoki devor boʻlmagan qismlarda yaratish</h244>
+    <h245>Devorning pastki toretsi boʻyicha U-simon sterjenlar</h245>
+    <h246>Plitaga tegib turgan devorlar:</h246>
+    <h247>Manba parametri</h247>
+    <h248>Parametr yoʻq</h248>
+    <h249>Gorizontal U-simon sterjenlar</h249>
+    <h250>Uchlar turi:</h250>
+    <h251>Uch(lar) uzunligi, mm:</h251>
+    <h252>U-simon sterjen uch(lar)i uzunligini hisoblash</h252>
+    <h253>Devor pastidagi armatura uchlariga himoya qatlamini qoʻllash</h253>
+    <h254>Fon armaturalash qadami bilan oʻrnatish</h254>
+    <h255>Devorning yuqori zonasida gorizontal armaturalashni zichlashtirish</h255>
+    <et1>Ikkala uch devor uzunligi boʻyicha belgilanadi</et1>
+    <et2>Bir uchi devor uzunligi boʻyicha, ikkinchisi - qiymat bilan belgilanadi</et2>
+    <et3>Ikkala uch qiymat bilan belgilanadi</et3>
+    <srd>Tanlangan devorlar haqidagi maʼlumotlarni saqlash</srd>
+    <rr1>Yaratilayotgan armatura bilan bir xil turdagi armaturani oʻchirish</rr1>
+    <rr2>Avval yaratilgan barcha armaturani oʻchirish</rr2>
+    <rr3>Oʻchirmaslik</rr3>
+    <hook>Ilgak:</hook>
+    <g1>Vertikal sterjenlarni qamrab olish</g1>
+    <g2>Gorizontal sterjenlarni qamrab olish</g2>
+    <auto>Avto</auto>
+    <oa1>chiqiqlarni yaratmaslik</oa1>
+    <oa2>plitaga bukish (mavjud boʻlsa)</oa2>
+    <npa1>plitani shartli mavjud deb hisoblash</npa1>
+    <npa2>ustma-ust tushish uzunligini devor yuqorisidan hisoblash</npa2>
+    <jtd1>Fon armaturalashi vertikal sterjenlarining chiqarmalari yaratilmaydi. Sterjenlar armatura uchlaridagi himoya qatlamining berilgan qiymatiga muvofiq devor yuqorisi boʻyicha kesiladi</jtd1>
+    <jtd2>Vertikal sterjenlarning toʻgʻri chiqarmalari yaratiladi. Ustma-ust tushish uzunligi yuqoridagi orayopma yuqorisidan yoki devor yuqorisidan belgilanadi. Yuqoridagi devor qalinligi kamayganda armatura bukiladi (orayopma mavjud boʻlsa)</jtd2>
+    <jtd3>Vertikal sterjenlarning chiqarmalari toʻgʻri chiqarmalarga oʻxshash tarzda, lekin turli ankerlash uzunliklari bilan yaratiladi</jtd3>
+    <jtd4>Yuqoridagi orayopmaga ankerlangan vertikal sterjenlar chiqarmalari yaratiladi. Ankerlash uzunligi devorning yon qirrasidan hisoblanadi. Agar sterjenlarni ikki tomonga bukish imkonsiz boʻlsa, sterjenlar plitaning turli sathlarida bir tomonga bukiladi</jtd4>
+    <jtd5>Vertikal sterjenlarning toʻgʻri chiqarmalari yaratiladi. Ustma-ust tushish uzunligi yuqoridagi orayopma yuqorisidan yoki devor yuqorisidan belgilanadi</jtd5>
+    <jtd6>Vertikal sterjenlarning "shisha" shaklidagi toʻgʻri chiqarmalari yaratiladi – chiqarmalar kesishma markaziga sterjen diametri qadar bukiladi. Ustma-ust tushish uzunligi yuqoridagi orayopma yuqorisidan belgilanadi</jtd6>
+    <jtd7>Yuqoridagi orayopmaga alohida L-simon sterjenlar koʻrinishidagi chiqarmalar yaratiladi. Birinchi ankerlash uzunligi – sterjenlarning plitaga ankerlash uzunligi – devorning yon sirtidan hisoblanadi. Ikkinchi ankerlash uzunligi – sterjenlarning devorga ankerlash uzunligi – devorning yuqori qirrasidan hisoblanadi. Agar bukilishlarni ikki tomonga bajarish imkonsiz boʻlsa, sterjenlar plitaning turli sathlarida bir tomonga bukiladi</jtd7>
+    <jtd8>Yuqoridagi elementlarni hisobga olmagan holda vertikal sterjenlarning toʻgʻri chiqarmalari yaratiladi</jtd8>
+    <jtd9>Vertikal sterjenlarning "shisha" shaklidagi toʻgʻri chiqarmalari yaratiladi – chiqarmalar devor markaziga berilgan masofaga yoki sterjen diametri qadar bukiladi. Ustma-ust tushish uzunligi yuqoridagi orayopma yuqorisidan belgilanadi</jtd9>
+    <jtd10>Fon armaturalashining vertikal sterjenlari himoya qatlamining berilgan qiymatiga muvofiq devor yuqorisi boʻyicha kesiladi. Yuqoridagi plitaga alohida U-simon sterjen koʻrinishida ankerlash yaratiladi</jtd10>
+    <!-- todo remove after 5.24.16.0 start -->
+    <i1>1. Burchak</i1>
+    <i2>2. T-simon</i2>
+    <i3>3. Kesishma</i3>
+    <i4>0. Aniqlanmagan</i4>
+    <i5>Turli</i5>
+    <!-- todo remove after 5.24.16.0 end -->
+    <m1>Qiymat oraligʻi</m1>
+    <m2>–</m2>
+    <!-- todo remove after 5.24.16.0 -->
+    <m13>Armaturaning himoya qatlami</m13>
+    <m14>Maksimal</m14>
+    <m15>Minimal</m15>
+    <m16>Deraza</m16>
+    <m17>Eshik</m17>
+    <m18>Umumlashgan model</m18>
+    <m19>Toʻrtburchak oʻyiq</m19>
+    <!-- todo remove after 5.24.16.0 -->
+    <m20>Devorlar roʻyxatida armaturalash sozlamalari qoʻlda oʻzgartirilgan va guruhning armaturalash sozlamalaridan farq qiladigan devorlar mavjud</m20>
+    <!-- todo remove after 5.24.16.0 -->
+    <m21>Kesishmalar roʻyxatida armaturalash sozlamalari qoʻlda oʻzgartirilgan va guruhning armaturalash sozlamalaridan farq qiladigan kesishmalar mavjud</m21>
+    <!-- todo remove after 5.24.16.0 -->
+    <m22>Oʻyiqlar roʻyxatida armaturalash sozlamalari qoʻlda oʻzgartirilgan va guruhning armaturalash sozlamalaridan farq qiladigan oʻyiqlar mavjud</m22>
+    <m23>Armaturalash sozlamalari nusxalandi</m23>
+    <m24>Qaysi guruhlar uchun armaturalash yaratishni koʻrsatmadingiz!</m24>
+    <m25>Armaturalash yaratish uchun birorta ham guruh tanlanmagan!</m25>
+    <m26>Devorlarni tanlang</m26>
+    <m27>Diqqat! Joriy loyihada yuklangan armatura sterjenlari shakllari topilmadi! Bu holda plagin ishlashi davomida yaratilgan armatura sterjenlari shakllarini oilalar muharririda ochib boʻlmaydi! Plagindan foydalanishdan oldin loyihaga armatura sterjenlari shakllarini yuklash tavsiya etiladi!\nArmatura sterjenlari shakllari mavjud boʻlmasa ham armaturalash bajarilsinmi?</m27>
+    <!-- todo remove after 5.24.16.0 -->
+    <m28>Pastdagi plitalarni tanlang</m28>
+    <!-- todo remove after 5.24.16.0 -->
+    <m29>Tanlangan pastdagi plita (id: {0}) tanlangan devorlar bilan tutashmaydi</m29>
+    <!-- todo remove after 5.24.16.0 -->
+    <m30>Diqqat! Pastdagi plitalardan chiqarmalar uchun armaturalash sozlamalari tiklanadi! Davom ettirilsinmi?</m30>
+    <m31>Armatura sterjenining bukilish radiusi minimal ruxsat etilgandan kichik</m31>
+    <m32>Koʻrsatilgan armaturalash sozlamalari armatura detallarini modellashtirishni imkonsiz qiladi!</m32>
+    <m33>Diqqat! Qayta tahlil guruhlarning joriy roʻyxatlarini va pastdagi plitalar roʻyxatini tozalaydi! Qayta tahlil bajarilsinmi?</m33>
+    <m34>Devor profili</m34>
+    <p1>Tanlangan devorlar bilan kesishadigan qayta ishlanmaydigan devorlarni qidirish</p1>
+    <p2>Devorlar geometriyasini initsializatsiya qilish</p2>
+    <p3>Devorlar kesishmalarini qidirish</p3>
+    <p4>Bir xil kesishmalarni oʻchirish</p4>
+    <p5>Kesishmalarni birlashtirish</p5>
+    <p6>Kesishmalar geometriyasini tahlil qilish</p6>
+    <p7>Devorlarning kesishmalarga tegishliligini aniqlash</p7>
+    <p8>Avval yaratilgan armaturalashni oʻchirish</p8>
+    <p9>Devor armaturalashini hisoblash va modellashtirish</p9>
+    <p10>Kesishmani armaturalashni hisoblash va modellashtirish</p10>
+    <p11>Oʻyiq armaturalashini hisoblash va modellashtirish</p11>
+    <p12>Revit armaturasini generatsiya qilish</p12>
+    <p13>Yaratilgan armaturalashning gorizontal sterjenlarini birlashtirish</p13>
+    <p14>Oʻrta devorlar boʻyicha plitadan chiqarmalarni hisoblash va modellashtirish</p14>
+    <p15>Chetki devorlar boʻyicha plitadan chiqarmalarni hisoblash va modellashtirish</p15>
+    <p16>Pastdagi plitalarni qidirish</p16>
+    <dd1>T</dd1>
+    <dd2>G</dd2>
+    <dd3>ichkariga</dd3>
+    <dd4>tashqariga</dd4>
+    <dd5>Sh</dd5>
+    <dd6>U</dd6>
+    <rn>Yuk koʻtaruvchi armatura ⌀</rn>
+    <!-- todo remove after 5.24.16.0 -->
+    <noInFamily>Plaginning oilalarda ishlashi mavjud emas!</noInFamily>
+    <c1>Devor chetiga siljitish</c1>
+    <c2>Devor oʻrtasiga siljitish</c2>
+    <c3>Vertikal armaturalashni taqsimlash</c3>
+    <c4>Ichkariga</c4>
+    <c5>Tashqariga</c5>
+    <c6>Toʻgʻri tartib</c6>
+    <c7>Shaxmat tartibi</c7>
+    <c8>Eng kichik qadam boʻyicha</c8>
+    <c9>Eng katta qadam boʻyicha</c9>
+    <c10>Devorning ikkala chetiga siljitish</c10>
+    <t1>Keyingi tahlil uchun devorlarni tanlash</t1>
+    <t2>Tanlash filtriga faqat quyidagi parametrlarga ega devorlar tushadi:</t2>
+    <t3>Devor toʻgʻri chiziqlar bilan chegaralangan</t3>
+    <t4>"Yuk koʻtaruvchi konstruksiyalar" xususiyati yoqilgan</t4>
+    <t5>Devor vitraj emas</t5>
+    <t6>Devor qalinligi kamida 100 mm</t6>
+    <!-- todo remove after 5.24.16.0 -->
+    <t7>Guruhda armaturalash sozlamalari qoʻlda tahrirlangan va guruhning armaturalash sozlamalaridan farq qiladigan devorlar mavjud</t7>
+    <!-- todo remove after 5.24.16.0 -->
+    <t8>Yangi boʻsh guruh qoʻshish</t8>
+    <!-- todo remove after 5.24.16.0 -->
+    <t9>Boʻsh guruhni oʻchirish</t9>
+    <t10>Barcha guruhlarni belgilash</t10>
+    <t11>Barcha guruhlardan belgini olib tashlash</t11>
+    <!-- todo remove after 5.24.16.0 -->
+    <t12>Devorning armaturalash sozlamalari qoʻlda tahrirlangan va guruhning armaturalash sozlamalaridan farq qiladi</t12>
+    <!-- todo remove after 5.24.16.0 -->
+    <t13>Tanlangan devorning armaturalash sozlamalarini tahrirlash</t13>
+    <!-- todo remove after 5.24.16.0 -->
+    <t14>Devorning armaturalash sozlamalarini guruh sozlamalari bilan almashtirish</t14>
+    <t15>Roʻyxatdagi oldingi devorni modelda koʻrsatish</t15>
+    <t16>Roʻyxatda tanlangan devorni modelda koʻrsatish</t16>
+    <t17>Roʻyxatdagi keyingi devorni modelda koʻrsatish</t17>
+    <t18>Devorlar balandliklari faqat kesishish joylarida aniqlanadi</t18>
+    <!-- todo remove after 5.24.16.0 -->
+    <t19>Guruhda armaturalash sozlamalari qoʻlda tahrirlangan va guruhning armaturalash sozlamalaridan farq qiladigan kesishmalar mavjud</t19>
+    <!-- todo remove after 5.24.16.0 -->
+    <t20>Kesishmaning armaturalash sozlamalari qoʻlda tahrirlangan va guruhning armaturalash sozlamalaridan farq qiladi</t20>
+    <!-- todo remove after 5.24.16.0 -->
+    <t21>Tanlangan kesishmaning armaturalash sozlamalarini tahrirlash</t21>
+    <!-- todo remove after 5.24.16.0 -->
+    <t22>Kesishmaning armaturalash sozlamalarini guruh sozlamalari bilan almashtirish</t22>
+    <t23>Roʻyxatdagi oldingi kesishmani modelda koʻrsatish</t23>
+    <t24>Roʻyxatda tanlangan kesishmani modelda koʻrsatish</t24>
+    <t25>Roʻyxatdagi keyingi kesishmani modelda koʻrsatish</t25>
+    <t26>Ushbu devor plagin tomonidan qayta ishlanmaydi (armaturalanmaydi) va faqat tanlangan devorlardan biri bilan kesishmani aniqlash uchun xizmat qiladi</t26>
+    <t27>Devor armaturalashining qisqacha tavsifi, bunda:</t27>
+    <t28>V – sterjenlar diametri va qadami koʻrsatilgan vertikal armaturalash</t28>
+    <t29>G – sterjenlar diametri, qadami va holati koʻrsatilgan gorizontal armaturalash</t29>
+    <t30>Sh – diametri koʻrsatilgan koʻndalang armaturalash (shpilkalar)</t30>
+    <t31>U – diametri koʻrsatilgan toretslardagi U-simon sterjenlar</t31>
+    <!-- todo remove after 5.24.16.0 -->
+    <t32>Gabarit guruhi uchun armaturalash sozlamalarini tahrirlash</t32>
+    <!-- todo remove after 5.24.16.0 -->
+    <t33>Guruhda armaturalash sozlamalari qoʻlda tahrirlangan va guruhning armaturalash sozlamalaridan farq qiladigan oʻyiqlar mavjud</t33>
+    <!-- todo remove after 5.24.16.0 -->
+    <t34>Oʻyiqning armaturalash sozlamalari qoʻlda tahrirlangan va guruhning armaturalash sozlamalaridan farq qiladi</t34>
+    <!-- todo remove after 5.24.16.0 -->
+    <t35>Tanlangan oʻyiqning armaturalash sozlamalarini tahrirlash</t35>
+    <!-- todo remove after 5.24.16.0 -->
+    <t36>Oʻyiqning armaturalash sozlamalarini guruh sozlamalari bilan almashtirish</t36>
+    <t37>Roʻyxatdagi oldingi oʻyiqni modelda koʻrsatish</t37>
+    <t38>Roʻyxatda tanlangan oʻyiqni modelda koʻrsatish</t38>
+    <t39>Roʻyxatdagi keyingi oʻyiqni modelda koʻrsatish</t39>
+    <!-- todo remove after 5.24.16.0 -->
+    <t40>Joriy guruhning armaturalash sozlamalarini barcha belgilangan guruhlarga nusxalash</t40>
+    <!-- todo remove after 5.24.16.0 -->
+    <t41>Joriy guruhning armaturalash sozlamalarini xml-faylga saqlash</t41>
+    <!-- todo remove after 5.24.16.0 -->
+    <t42>Armaturalash sozlamalarini xml-fayldan yuklash va joriy guruh uchun oʻrnatish</t42>
+    <t43>Diqqat! Armatura sirtining turi armatura sinfiga, diametriga yoki dastur hisobga olmaydigan boshqa qiymatlarga bogʻliq boʻlishi mumkin. Meʼyoriy hujjatlarni oʻqing</t43>
+    <t44>α – betonning va armaturaning kuchlanganlik holatining hamda ankerlash zonasidagi element konstruktiv yechimining ankerlash uzunligiga taʼsirini hisobga oluvchi koeffitsiyent. Uchlari toʻgʻri boʻlgan davriy profilli sterjenlarni (toʻgʻri ankerlash) yoki qoʻshimcha ankerlovchi qurilmalarsiz ilgakli yoki halqali silliq armaturani ankerlashda choʻzilgan sterjenlar uchun α = 1,0, siqilganlar uchun esa α = 0,75 qabul qilinadi. SP 63.13330 ning 10.3.30-bandiga muvofiq α koeffitsiyentini 2,0 gacha oshirishga ruxsat etiladi</t44>
+    <t45>SP 63.13330.2012 ning 10.3.8-bandiga muvofiq vertikal sterjenlar qadami 2t va 400 mm dan oshmagan holda qabul qilinadi (t – devor qalinligi)</t45>
+    <t46>GOST 21.501-2018 ning 6.4.7-bandiga muvofiq detal uzunligi armatura sterjenining tashqi qirrasi boʻyicha belgilanadi</t46>
+    <t47>Armaturani generatsiya qilish vaqtini oshiradi!</t47>
+    <t48>Kesishmani armaturalash detallari devorlarning gorizontal armaturalash qadami bilan – kesishmada ishtirok etayotgan devorlar gorizontal armaturalashining eng kichik yoki eng katta qadami boʻyicha oʻrnatiladi</t48>
+    <t49>Vertikal armatura qatorlari soni</t49>
+    <t50>Gorizontal armatura qatorlari soni</t50>
+    <!-- todo remove after 5.24.16.0 start -->
+    <t51>Tanlangan devorlar ostida bevosita joylashgan pastdagi plitani tanlash. Pastdagi plitani tanlash devorlarni tanlash, tahlil qilish va guruhlashdan keyin mavjud boʻladi. Bitta yoki bir nechta plitani tanlash mumkin. Pastdagi plitalar xususiyatlarida "Yuk koʻtaruvchi konstruksiyalar" xususiyati yoqilgan boʻlishi kerak</t51>
+    <!-- todo remove after 5.24.16.0 -->
+    <t53>Standart boʻyicha joriy armaturalash sozlamalarining barcha qiymatlarini plaginda belgilangan standart qiymatlarga tiklash</t53>
+    <t54>Joriy plitaning chiqarmalarni armaturalash sozlamalarini barcha belgilangan plitalarga nusxalash</t54>
+    <t55>Joriy plitaning chiqarmalarni armaturalash sozlamalarini saqlash</t55>
+    <t56>Chiqarmalarni armaturalash sozlamalarini yuklash va joriy plita uchun oʻrnatish</t56>
+    <t57>Minimal va maksimal qiymatlar vertikal armaturalashning berilgan diametrlari va qadami asosida hisoblanadi</t57>
+    <t58>Sterjen uzunligi ikkita ankerlash uzunligidan iborat</t58>
+    <t59>"Pogʻonali" varianti yoqilganda devor boʻylab chiqarmalarning har bir birinchi jufti birinchi ustma-ust tushish uzunligi bilan, har bir ikkinchi jufti – ikkinchi ustma-ust tushish uzunligi bilan yaratiladi</t59>
+    <t60>Agar chiqarmalar yuqoridagi devor balandligidan oshsa, ular armatura uchlaridagi koʻrsatilgan himoya qatlamini hisobga olgan holda devorning yuqori qirrasi boʻyicha kesiladi</t60>
+    <!-- todo remove after 5.24.16.0 -->
+    <t61>Tanlash varianti plitalarni tanlashga ham tatbiq etiladi</t61>
+    <t62>Vertikal sterjen U-simon sterjen bukilishi boshlanadigan joyga suriladi, bu joy gorizontal armaturalashning uchlardagi himoya qatlami, U-simon sterjen diametri va U-simon sterjenning meʼyoriy bukilish diametri qiymatlarini qoʻshish orqali olinadi</t62>
+    <!-- todo remove after 5.24.16.0 -->
+    <t63>Siz plagin tomonidan yaratiladigan turli armatura sterjenlari turlari uchun armatura sterjenlarining afzal shakllarini koʻrsatishingiz mumkin.</t63>
+    <!-- todo remove after 5.24.16.0 -->
+    <t64>Afzal shakllarni oʻrnatish armatura koʻrsatilgan armatura sterjeni shaklidan foydalanib yaratilishini kafolatlamaydi.</t64>
+    <!-- todo remove after 5.24.16.0 -->
+    <t65>Armatura sterjenlarini yaratishda koʻrsatilgan shakldan foydalanishga urinib koʻriladi. Agar koʻrsatilgan shakl bilan sterjen yaratish imkonsiz boʻlsa, Revit avtomatik ravishda mos shaklni qidiradi yoki yangi shakl yaratadi.</t65>
+    <!-- todo remove after 5.24.16.0 -->
+    <t66>Joriy armaturalash sozlamalarini standart armaturalash sozlamalari sifatida saqlash</t66>
+    <t67>Devorlar, kesishmalar va oʻyiqlarni joriy guruhlash sozlamalari boʻyicha guruhlash</t67>
+    <t68>Ushbu opsiya yoqilganda shpilkalar devorlar kesishgan joylarda va detallar (masalan, U-simon sterjenlar) oʻrnatiladigan devor toretslarida oʻrnatilmaydi</t68>
+    <t69>Agar fon armaturalashining gorizontal sterjenlari ichkarida, vertikallari esa tashqarida joylashgan boʻlsa, vertikal sterjenlarni qamrab olishni koʻrsatish tavsiya etiladi. Teskari holatda, fon armaturalashining gorizontal sterjenlari tashqarida joylashganda, gorizontal sterjenlarni qamrab olishni koʻrsatish tavsiya etiladi</t69>
+    <t70>Detal uzunligi sifatida ankerlash uzunligi qabul qilinadi</t70>
+    <t71>Har bir ikkinchi sterjenlar juftiga pastdan ustma-ust tushish uzunliklari farqining mutlaq qiymatiga teng masofada chekinish qoʻllaniladi. Chekinish ikkinchi ustma-ust tushish uzunligiga taʼsir qilmaydi. Masalan, agar birinchi ustma-ust tushish uzunligi 500 mm, ikkinchisi esa 750 mm boʻlsa, har bir ikkinchi juftning sterjenlari pastdan 250 mm chekinishga ega boʻladi</t71>
+    <t72>Roʻyxatda tanlangan plitani modelda koʻrsatish</t72>
+    <t73>Roʻyxatda tanlangan plitaga tegib turgan devorlarni modelda koʻrsatish</t73>
+    <re1>id={0} devorda fon armaturalashining vertikal sterjenlarini yaratishda xato:</re1>
+    <re2>id={0} devordagi kesishmada fon armaturalashining vertikal sterjenlarini yaratishda xato:</re2>
+    <re3>id={0} devor toretsida qoʻshimcha vertikal sterjenlarni yaratishda xato:</re3>
+    <re4>id={0} devorda gorizontal bogʻlangan sterjenlarni yaratishda xato:</re4>
+    <re5>id={0} devorda fon armaturalashining gorizontal sterjenlarini yaratishda xato:</re5>
+    <re6>id={0} devor toretslarida U-simon sterjenlarni yaratishda xato:</re6>
+    <re7>id={0} devorning yuqori toretsi boʻyicha U-simon sterjenlarni yaratishda xato:</re7>
+    <re8>id={0} devorda shpilkalarni yaratishda xato:</re8>
+    <re9>{0} devorlarda burchakli birikma detallarini yaratishda xato:</re9>
+    <re10>{0} devorlarda T-simon birikma detallarini yaratishda xato:</re10>
+    <re11>{0} devorlarda xochsimon birikma detallarini yaratishda xato:</re11>
+    <re12>id={0} devorda oʻyiqni hoshiyalash vertikal sterjenlarini yaratishda xato:</re12>
+    <re13>id={0} devorda oʻyiqni hoshiyalash gorizontal sterjenlarini yaratishda xato:</re13>
+    <re14>id={0} devorda vertikal boʻylab oʻyiqni hoshiyalash U-simon sterjenlarini yaratishda xato</re14>
+    <re15>id={0} devorda gorizontal boʻylab (yuqori boʻyicha) oʻyiqni hoshiyalash U-simon sterjenlarini yaratishda xato</re15>
+    <re16>id={0} devorda oʻyiqni hoshiyalashda bilvosita armaturalash sterjenlarini yaratishda xato:</re16>
+    <re17>id={0} plitadan id={1} devorga chiqarmalarni yaratishda xato:</re17>
+    <re18>id={0} devorda oʻyiqni hoshiyalash xomutlarini yaratishda xato:</re18>
+    <re19>id={0} devorda gorizontal boʻylab (past boʻyicha) oʻyiqni hoshiyalash U-simon sterjenlarini yaratishda xato</re19>
+    <re20>"{0}" armatura sterjeni afzal shakli bilan armatura sterjenini yaratib boʻlmadi. Xato: {1}\nArmatura sterjeni shaklini avtomatik tanlash yoki yaratish bilan sterjen yaratishga urinib koʻrildi</re20>
+    <re21>Devorning pastki toretsi boʻyicha U-simon sterjenlarni yaratishda xato</re21>
+    <re22>Joriy koʻrinishda kesishmani koʻrsatib boʻlmaydi! Qavat rejasiga oʻting</re22>
+    <re23>id={0} devorda gorizontal U-simon sterjenlarni yaratishda xato:</re23>
+    <re24>id={0} devorda kesishma yonida qoʻshimcha vertikal sterjenlarni yaratishda xato:</re24>
+  </mprWallsReinforcement>
+</ModPlus>

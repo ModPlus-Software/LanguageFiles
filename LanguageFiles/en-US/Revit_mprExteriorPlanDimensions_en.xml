@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprExteriorPlanDimensions
+    LocalName="External dimensions on plan"
+    Description="External dimensions on the floor plan"
+    FullDescription="Placing external dimensions on the floor plan in one click. Only horizontal and vertical walls and axes are processed. Placement follows the current working configuration, which specifies dimensioning sides and dimension chain settings"
+    LocalName1="External dimensions. Settings"
+    Description1="Working configuration settings for external dimensions in the floor plan">
+    <!--todo remove after 1.8.2.0-->
+    <h1>External dimensions settings</h1>
+    <!--todo remove after 1.8.2.0-->
+    <h2>Current working configuration of external dimensions on the plan:</h2>
+    <h3>Edit the current configuration</h3>
+    <!--todo remove after 1.8.2.0-->
+    <h4>Create a new configuration</h4>
+    <!--todo remove after 1.8.2.0-->
+    <h5>Delete the current configuration</h5>
+    <h6>To process the wall thickness of</h6>
+    <h8>When the distance between faces is less than</h8>
+    <h9>exclude</h9>
+    <h10>face</h10>
+    <h11>Create configuration for external dimensions</h11>
+    <h12>Configuration</h12>
+    <h13>will be permanently deleted!</h13>
+    <h14>Sure?</h14>
+    <h15>Edit configuration for external dimensions</h15>
+    <h16>Configuration name</h16>
+    <h17>Dimension fitting side:</h17>
+    <h18>Dimensional chains:</h18>
+    <h19>Remove dimension chain</h19>
+    <h20>Add dimension chain</h20>
+    <msg1>You need to specify the name of the configuration!</msg1>
+    <msg2>You need to specify at least one side of the dimensioning!</msg2>
+    <msg4>Dimensional chain №</msg4>
+    <!--todo remove after 1.8.2.0-->
+    <msg5>There are no working configurations\nOpen settings window of working configurations?</msg5>
+    <msg7>No Walls and Grids selected or the selected Walls and Grids do not meet the conditions for processing by the plugin!</msg7>
+    <msg8>In the specified set there are no walls, suitable for the minimum permissible width!</msg8>
+    <msg9>In this set, there are no walls intersected by view range!</msg9>
+    <msg10>Select walls and grids</msg10>
+    <msg11>It is necessary to choose more than one element!</msg11>
+    <msg12>Could not create dimension line!</msg12>
+    <attention>Attention!</attention>
+    <!--todo remove after 1.8.2.0-->
+    <edit>Edit</edit>
+    <!--todo remove after 1.8.2.0-->
+    <create>Create</create>
+    <!--todo remove after 1.8.2.0-->
+    <delete>Delete</delete>
+    <!--todo remove after 1.8.2.0-->
+    <accept>Accept</accept>
+    <cb1>smallest</cb1>
+    <cb2>largest</cb2>
+    <d1>Indent</d1>
+    <d2>- indent the dimension line from the previous element:</d2>
+    <d3>For the first dimension chain, the indent is set from the end of the selected wall</d3>
+    <d4>For subsequent dimensional chains, the indent is set from the previous dimension chain</d4>
+    <d5>Indentation is specified in mm in natural units</d5>
+    <d6>Walls</d6>
+    <d7>- dimensioning of the walls:</d7>
+    <d8>Creating the overall dimensions of the walls in a given direction</d8>
+    <d9>That is, vertical walls for the left/right direction, horizontal for the bottom/top direction</d9>
+    <d10>Opens the ability to select options for "Openings" and "Intersecting walls"</d10>
+    <d11>Openings</d11>
+    <d12>- dimensioning to wall openings in a given direction</d12>
+    <d13>Intersec. walls</d13>
+    <d14>- dimensioning intersecting walls:</d14>
+    <d15>Dimensions are placed on walls that are perpendicular to the current direction and cross all walls in the given direction</d15>
+    <d16>Grids</d16>
+    <d17>- dimensioning of the grids perpendicular to current direction</d17>
+    <d18>Extreme grids</d18>
+    <d19>- dimensioning along the extreme grids perpendicular to this direction:</d19>
+    <d20>This option disables the possibility of installing dimensions on the walls</d20>
+    <d21>Overall size</d21>
+    <d22>- dimensioning of the overall size in this direction:</d22>
+    <d23>Overall size in current direction is the distance from the extreme edges of the outer walls</d23>
+    <d24>This option disables all other options</d24>
+  </mprExteriorPlanDimensions>
+</ModPlus>

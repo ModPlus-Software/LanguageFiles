@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprBeamsReinforcement
+    LocalName="Trägerbewehrung"
+    Description="Analyse, Gruppierung und Bewehrung von Trägern nach festgelegten Bedingungen"
+    FullDescription="Verarbeitung sowohl einzelner ausgewählter Träger als auch aller Träger in der Ansicht oder im Dokument. Die Querbewehrung kann mithilfe verschiedener Formen von Bewehrungsstäben angeordnet werden. Funktioniert sogar mit einer leeren Vorlage">
+    <h1>Auswahlmöglichkeiten</h1>
+    <h2>Träger auswählen</h2>
+    <h3>Alle Träger in der aktuellen Ansicht auswählen</h3>
+    <h4>Alle Träger im Projekt auswählen</h4>
+    <h5>Bewehrung kann nur in Tragwerksträgern erstellt werden</h5>
+    <h6>Auswählen</h6>
+    <h7>Analysieren</h7>
+    <h8>Die Gesamtzahl der ausgewählten Träger:</h8>
+    <h9>Davon wurde es erfolgreich analysiert:</h9>
+    <h10>Bewehrung durchführen</h10>
+    <h11>Bewehrungseinstellungen für die Gruppe</h11>
+    <h12>Gruppierung</h12>
+    <h13>nach Ebene</h13>
+    <h15>Gruppierung</h15>
+    <h16>Anzahl</h16>
+    <h17>Profile</h17>
+    <h18>Ebenen</h18>
+    <h19>Alles gruppieren</h19>
+    <h20>Träger in der Gruppe:</h20>
+    <h21>Ebene</h21>
+    <h23>Gruppierung nach:</h23>
+    <h24>Schnittansicht</h24>
+    <h25>Längsbewehrung</h25>
+    <h27>Dicke der Betonüberdeckung für die Arbeitsbewehrung:</h27>
+    <coverTop>Oberhalb:</coverTop>
+    <coverBottom>Unterhalb:</coverBottom>
+    <coverSide>An den Seiten:</coverSide>
+    <coverEnd>An den Enden:</coverEnd>
+    <h28>Die Betonüberdeckung für die Arbeitsbewehrung muss mindestens 20 mm oder mindestens dem Bewehrungsdurchmesser entsprechen</h28>
+    <h30>Parameter</h30>
+    <h31>Anzahl der Stäbe entlang der Breite:</h31>
+    <h32>Anzahl der Stäbe entlang der Höhe:</h32>
+    <h33>Abstände ändern</h33>
+    <h34>Querschnittsfläche des Trägers, mm²:</h34>
+    <h35>Querschnittsfläche der Bewehrung, mm²:</h35>
+    <h36>Prozentsatz der Bewehrung:</h36>
+    <h37>Es wird empfohlen, dass die Querschnittsfläche der Längsbewehrung nicht mehr als 5% der Querschnittsfläche des Trägers beträgt</h37>
+    <h38>Abstand zwischen den Stäben entlang der Balkenbreite:</h38>
+    <h39>Abstand zwischen den Stäben entlang der Balkenhöhe:</h39>
+    <h40>Achtung! Beim Ändern des Durchmessers, der Betonüberdeckung oder der Anzahl der Stäbe werden die Abstände zwischen den Stäben auf gleichmäßige Werte zurückgesetzt!</h40>
+    <h41>Überstände der Längsbewehrung</h41>
+    <h42>Querbewehrung (Verlegung)</h42>
+    <h43>Querbewehrung (Formen)</h43>
+    <h44>Die oberen Stäbe biegen, wenn der Abstand zur Verankerung nicht ausreicht</h44>
+    <h45>Anpassung der Nutzbewehrung dem Rand des Trägers in der Mitte der Bewehrung. Die Anpassung wird anhand des Durchmessers von dem Stab des Modells berechnet</h45>
+    <h50>Einstellungen</h50>
+    <h51>PLUGIN-FENSTER:</h51>
+    <h53>IM MODELL ANZEIGEN:</h53>
+    <h54>Skalierfaktor:</h54>
+    <!-- todo remove after 1.18.16.0 -->
+    <h55>STANDARDBEWEHRUNG:</h55>
+    <h56>Verschiebung</h56>
+    <h57>Umschlingung</h57>
+    <h58>Die ausgewählte Form löschen</h58>
+    <!-- todo remove after 1.18.16.0 -->
+    <h59>Geben Sie den Typ der Formhaken, die Parameter, den Durchmesser und den Typ des Bewehrungsstabes an, die als Standard für die hinzuzufügenden Querbewehrungsformen eingestellt werden sollen</h59>
+    <h60>Abstand der Querbewehrung in den Eindickungsbereichen, mm:</h60>
+    <h61>Verankerungsberechnung nach SP 52-101-2003</h61>
+    <h72>Das Hinzufügen einer Form zum aktuellen Layout ist fehlgeschlagen: Es gibt keinen Platz, um die Form zu platzieren!</h72>
+    <!-- todo remove after 1.18.16.0 -->
+    <h73>Bewehrungseinstellungen des Trägers</h73>
+    <h74>Durch die Einstellungen für die Gruppenbewehrung ersetzen</h74>
+    <h75>Die Einstellungen der Bewehrung unverändert lassen</h75>
+    <!-- todo remove after 1.18.16.0 -->
+    <h76>Balkenbewehrung</h76>
+    <h79>Die Haken der Standardform:</h79>
+    <h80>Haken der Form:</h80>
+    <h81>in der Skizze einstellen</h81>
+    <h82>Revit-Haken verwenden</h82>
+    <h83>Default-Parameter</h83>
+    <h84>Betonüberdeckung an den Enden der Bewehrung, mm:</h84>
+    <h85>Basisabstand der Querbewehrung, mm:</h85>
+    <h86>Abstand vom Trägerende, mm:</h86>
+    <h87>Verdickung der Querbewehrung</h87>
+    <h88>Eindickungsabstand, mm:</h88>
+    <h89>Eindickungsabstand, Raten:</h89>
+    <h90>Verdichtung der Bewehrung an den Enden des Trägers</h90>
+    <h91>Verdichtung der Bewehrung an den Enden des Trägers bei Fehlen der unterliegenden Elemente (freitragende Trägerenden)</h91>
+    <h93>Dreieckige Bügel:</h93>
+    <h94>Darunterliegende und stirnseitige Stützen und Wände berücksichtigen</h94>
+    <h96>Nach Parameter:</h96>
+    <h97>Parameter</h97>
+    <h98>Abstand zwischen den Mittelpunkten der Stäbe</h98>
+    <h99>Abstand zwischen den Kanten der Stäbe</h99>
+    <!-- todo remove after 1.18.16.0 -->
+    <h100>Achtung! Die Anzahl und Lage der Stäbe der Längsbewehrung und die Verlegung der Querbewehrung können gespeichert, geladen und in die markierten Träger eines entsprechenden Querschnitts kopiert werden, können aber nicht standardmäßig gespeichert werden!</h100>
+    <h102>Typ der Bewehrung:</h102>
+    <h103>Teil Nr.1</h103>
+    <h104>Verankerungslänge der geraden Überstände, mm:</h104>
+    <h105>Die Verankerungslänge berechnen</h105>
+    <h106>Teil Nr.2</h106>
+    <h107>T-förmige Schnittpunkte</h107>
+    <h108>Kreuzschnittpunkte</h108>
+    <h110>Bewehrung erstellen</h110>
+    <h141>Das Fenster nach dem Erstellen der Bewehrung nicht schließen</h141>
+    <h142>Anzeigen des Schnittpunktes</h142>
+    <h143>Löschen von Hilfsgeometrie</h143>
+    <!-- todo remove after 1.18.16.0 start -->
+    <h147>Zurücksetzen</h147>
+    <h173>Gerade Stäbe:</h173>
+    <h174>L-förmige Stäbe:</h174>
+    <h177>C-förmige Querbügel (Ständer). Haken in der Skizze:</h177>
+    <h178>S-förmige Querbügel (Ständer). Haken in der Skizze:</h178>
+    <h180>U-förmige Stäbe:</h180>
+    <h181>Rechteckige Bügel:</h181>
+    <h182>L-förmige Stäbe mit großer Biegung:</h182>
+    <h183>Alle Werte auf "Auto" zurücksetzen</h183>
+    <h184>Bevorzugte Formen von Bewehrungsstäben</h184>
+    <!-- todo remove after 1.18.16.0 end -->
+    <h186>Erneut auswählen</h186>
+    <h187>Erneute Auswahl von Trägern, die bei der vorherigen Verwendung des Plugins in der aktuellen Ansicht bearbeitet wurden</h187>
+    <h205>C-förmige Querbügel (Ständer). Revit-Haken:</h205>
+    <h206>S-förmige Querbügel (Ständer). Revit-Haken:</h206>
+    <h207>Verwendung der Geometrie von Trägern ohne Berücksichtigung von Verbindungen</h207>
+    <h208>Die Stäbe der Längsbewehrung in die angrenzenden senkrechten Träger, die sich an den Enden des aktuellen Trägers befinden, einsetzen</h208>
+    <h226>Löschen der zuvor erstellten Bewehrung:</h226>
+    <h229>Ebene</h229>
+    <h238>Erstellen:</h238>
+    <h239>Querbewehrung</h239>
+    <h240>Standardmäßige Formeneigenschaften</h240>
+    <h241>Wenn in der Liste bereits eine Form mit derselben Skizze vorhanden ist, werden die Eigenschaften von dieser übernommen</h241>
+    <h243>Grundlegende Bewehrungseinstellungen</h243>
+    <h244>Bewehrung der Schnittpunkte</h244>
+    <h245>Träger</h245>
+    <h246>Schnittpunkte</h246>
+    <h247>Typ des Schnittpunktes</h247>
+    <h248>Winkelschnittpunkte</h248>
+    <h249>Verankerungslänge, mm:</h249>
+    <h250>Anzahl der Schnittpunkte</h250>
+    <h251>Typ des Schnittpunktes</h251>
+    <h252>Parameter</h252>
+    <h253>Schnittpunkte in der Gruppe:</h253>
+    <h255>Träger in dem Schnittpunkt:</h255>
+    <h256>Anzahl der Träger</h256>
+    <h257>Die Einstellungen für die Gruppenbewehrung</h257>
+    <h258>Keine Querbewehrung über den untengelegenen Wänden und Stützen erstellen</h258>
+    <h259>Anderer Bewehrungsdurchmesser für die obere Reihe:</h259>
+    <h260>Der Breitenabstand zwischen den Stäben wird für den Hauptdurchmesser der Bewehrung angezeigt. Es wird kein anderer Bewehrungsdurchmesser für die obere Reihe berücksichtigt</h260>
+    <h261>Abstand vom Anfang des Abschnitts (mm):</h261>
+    <h262>Auf gleiche Werte zurücksetzen</h262>
+    <srd>Speichern von Daten für die ausgewählte Träger</srd>
+    <hook>Haken:</hook>
+    <jt1>Es werden keine Überstände der Längsbewehrung erstellt. Die Stäbe werden am Trägerende entsprechend dem angegebenen Wert der Betonüberdeckung an den Bewehrungsenden abgeschnitten</jt1>
+    <jt2>Es werden gerade Überstände der Stäbe der Längsbewehrung erstellt. Die Verankerungslänge wird vom Rand des Trägers aus festgelegt. Überstände werden nur dann erstellt, wenn sich am Ende des Trägers eine Wand oder Stütze befindet, andernfalls werden keine Überstände erstellt und die Längsstäbe werden am Ende des Trägers unter Berücksichtigung der angegebenen Überdeckung geschnitten.</jt2>
+    <msg1>Wählen Sie Träger aus</msg1>
+    <m1>Geben Sie einen Wert von</m1>
+    <m2>bis</m2>
+    <m4>Gerippter Stabtyp</m4>
+    <m5>Glatter Stabtyp</m5>
+    <!-- todo remove after 1.18.16.0 -->
+    <m13>Betonüberdeckung der Bewehrung</m13>
+    <m20>Die Liste der Träger enthält Träger, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</m20>
+    <m23>Bewehrungseinstellungen kopiert</m23>
+    <m24>Sie haben nicht angegeben, für welche Gruppen Bewehrung zu erstellen ist!</m24>
+    <m25>Es wurde keine Gruppe ausgewählt, um Bewehrung zu erstellen!</m25>
+    <m27>Achtung! Im aktuellen Projekt wurden keine geladenen Bewehrungsformen gefunden! In diesem Fall können die vom Plugin erstellten Bewehrungsformen nicht im Familieneditor geöffnet werden! Es wird empfohlen, Bewehrungsformen in das Projekt herunterzuladen, bevor Sie das Plugin verwenden!\nDie Bewehrung trotz der fehlenden Bewehrungsformen durchführen?</m27>
+    <rn>Bewehrungsstahl ⌀</rn>
+    <!-- todo remove after 1.18.16.0 -->
+    <full>Erhältlich in der vollständigen Plugin-Version!</full>
+    <!-- todo remove after 1.18.16.0 -->
+    <full2>In der limitierten Version ist nur eine Form verfügbar</full2>
+    <!-- todo remove after 1.18.16.0 -->
+    <noInFamily>Die Ausführung des Plugins in Familien ist nicht möglich!</noInFamily>
+    <p1>Analyse des Trägers:</p1>
+    <p2>Suche nach anpassenden Elementen:</p2>
+    <pt1>T-Träger</pt1>
+    <pt2>Doppel-T-Träger</pt2>
+    <pt3>Rechteck</pt3>
+    <pt4>Quadrat</pt4>
+    <pt5>Nicht bestimmt</pt5>
+    <pt6>Trapez</pt6>
+    <pt7>L-Form</pt7>
+    <rr1>Bewehrung des gleichen Typs löschen wie die, die erstellt wird</rr1>
+    <rr2>Die ganze zuvor erstellte Bewehrung löschen</rr2>
+    <rr3>Nicht löschen</rr3>
+    <e1>Fehler bei der Analyse von Trägern</e1>
+    <e2>Der Träger kann nicht initialisiert werden</e2>
+    <e3>Die Vollkörper können nicht erhalten werden</e3>
+    <e4>Es wurde kein Haupt- oder kombinierter Vollkörper erhalten</e4>
+    <e6>Das Querschnittsprofil konnte nicht ermittelt werden</e6>
+    <p1>Analyse des Trägers:</p1>
+    <p2>Suche nach anpassenden Elementen:</p2>
+    <p8>Entfernen der zuvor erstellten Bewehrung</p8>
+    <p9>Berechnung und Modellierung der Längsbewehrung</p9>
+    <p10>Berechnung und Modellierung der Querbewehrung</p10>
+    <p11>Berechnung und Modellierung der Schnittpunktbewehrung</p11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t7>Die Gruppe enthält Träger, deren Bewehrungseinstellungen manuell geändert wurden und von den Einstellungen für die Gruppenbewehrung abweichen</t7>
+    <!-- todo remove after 1.18.16.0 -->
+    <t8>Eine neue leere Gruppe hinzufügen</t8>
+    <!-- todo remove after 1.18.16.0 -->
+    <t9>Eine leere Gruppe löschen</t9>
+    <t10>Alle Gruppen markieren</t10>
+    <t11>Alle Gruppen abwählen</t11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t12>Die Bewehrungseinstellungen des Trägers wurden manuell geändert und unterscheiden sich von den Einstellungen für die Gruppenbewehrung</t12>
+    <!-- todo remove after 1.18.16.0 -->
+    <t13>Die Bewehrungseinstellungen für den ausgewählten Träger ändern</t13>
+    <!-- todo remove after 1.18.16.0 -->
+    <t14>Die Bewehrungseinstellungen der Stütze durch die Einstellungen aus der Gruppe ersetzen</t14>
+    <t15>Anzeige des vorherigen Trägers in der Liste im Modell</t15>
+    <t16>Anzeige des in der Liste ausgewählten Trägers im Modell</t16>
+    <t17>Anzeige des nächsten Trägers in der Liste im Modell</t17>
+    <t23>Anzeige des vorherigen Schnittpunktes in der Liste im Modell</t23>
+    <t24>Anzeige des in der Liste ausgewählten Schnittpunktes im Modell</t24>
+    <t25>Anzeige des nächsten Schnittpunktes in der Liste im Modell</t25>
+    <!-- todo remove after 1.18.16.0 -->
+    <t40>Kopieren der Bewehrungseinstellungen der aktuellen Gruppe in alle markierten Gruppen</t40>
+    <!-- todo remove after 1.18.16.0 -->
+    <t41>Speichern der Bewehrungseinstellungen der aktuellen Gruppe in eine xml-Datei</t41>
+    <!-- todo remove after 1.18.16.0 -->
+    <t42>Bewehrungseinstellungen aus xml-Datei herunterladen und für die aktuelle Gruppe einstellen</t42>
+    <!-- todo remove after 1.18.16.0 -->
+    <t53>Zurücksetzen aller aktuellen Bewehrungseinstellungen auf die Standardwerte im Plugin</t53>
+    <!-- todo remove after 1.18.16.0 -->
+    <t63>Sie können bevorzugte Formen von Bewehrungsstäben für verschiedene Bewehrungstypen, die durch das Plugin erzeugt werden, angeben.</t63>
+    <!-- todo remove after 1.18.16.0 -->
+    <t64>Die Einstellung der bevorzugten Formen gewährleistet nicht, dass die Bewehrung mit der angegebenen Form des Bewehrungsstabs erstellt wird.</t64>
+    <!-- todo remove after 1.18.16.0 -->
+    <t65>Beim Erstellen der Bewehrungsstäbe wird versucht, die angegebene Form zu verwenden. Wenn es nicht möglich ist, einen Stab mit einer bestimmten Form zu erstellen, sucht Revit automatisch nach einer passenden Form oder erstellt eine neue.</t65>
+    <!-- todo remove after 1.18.16.0 -->
+    <t66>Aktuelle Bewehrungseinstellungen als Standard-Bewehrungseinstellungen speichern</t66>
+    <t67>Gruppierung von Träger und Schnittpunkten entsprechend den aktuellen Gruppierungseinstellungen durchführen</t67>
+    <re1>Beim Erstellen der Längsbewehrung des Trägers id={0} ist ein Fehler aufgetreten</re1>
+    <re2>Bei der Berechnung der Punkte der Querbewehrung des Trägers id={0} ist ein Fehler aufgetreten</re2>
+    <re3>Beim Erstellen eines Teils der Querbewehrung vom Typ "{0}" in dem Träger id={1} ist ein Fehler aufgetreten</re3>
+    <re4>Die Erstellung eines geraden Bewehrungsstabes mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{0}" konnte nicht durchgeführt werden. Fehler: {1}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re4>
+    <re5>Die Erstellung eines Bewehrungsstabes mit Form "{0}" mit einer angegebenen bevorzugten Form des Bewehrungsstabes "{1}" konnte nicht durchgeführt werden. Fehler: {2}\nEs wurde versucht, einen Stab mit automatischer Auswahl oder Formgebung des Bewehrungsstabs zu erstellen</re5>
+    <!-- todo remove after 1.18.16.0 -->
+    <re6>Parameterwerte konnten nicht festgelegt werden</re6>
+    <re9>Fehler beim Erstellen von Bauteilen der abgewinkelten Verbindung in den Träger {0}:</re9>
+    <re10>Fehler beim Erstellen von Bauteilen der T-förmigen Verbindung in den Träger {0}:</re10>
+    <re11>Fehler beim Erstellen von Bauteilen der Kreuzverbindung in den Träger {0}:</re11>
+    <re22>Der Schnittpunkt kann in der aktuellen Ansicht nicht angezeigt werden! Bitte zur Grundrissansicht wechseln</re22>
+  </mprBeamsReinforcement>
+</ModPlus>

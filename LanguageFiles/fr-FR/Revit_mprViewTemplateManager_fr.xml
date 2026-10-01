@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprViewTemplateManager
+    LocalName="Gestionnaire de gabarits de vue"
+    Description="Modification des gabarits de vue du modèle et transfert des réglages entre eux">
+    <t1>Gabarits de vue</t1>
+    <t2>Recherche d'un gabarit par nom</t2>
+    <t3>Uniquement les matériaux utilisés</t3>
+    <t4>Copier les réglages</t4>
+    <t5>Placer les réglages du gabarit de vue sélectionné dans le presse-papiers</t5>
+    <t6>Coller les réglages</t6>
+    <t7>Transférer de manière sélective les réglages du presse-papiers vers les gabarits de vue sélectionnés</t7>
+    <t8>Dupliquer les gabarits de vue sélectionnés</t8>
+    <t9>Supprimer les gabarits de vue sélectionnés</t9>
+    <t10>État</t10>
+    <t11>Nom du gabarit de vue</t11>
+    <t12>Type de vue</t12>
+    <t13>Vues</t13>
+    <t14>Nombre de vues utilisant ce gabarit</t14>
+    <t15>Chargement des gabarits de vue...</t15>
+    <t16>Les réglages des gabarits de vue sont définis via la palette Propriétés de Revit : les gabarits sélectionnés dans cette fenêtre sont sélectionnés dans le modèle et leurs propriétés sont immédiatement disponibles dans la palette. Le plugin ne propose que les réglages qui ne peuvent pas être modifiés via la palette Propriétés.</t16>
+    <t17>Plage de vue</t17>
+    <t18>Haut</t18>
+    <t19>Décalage par rapport au haut, mm</t19>
+    <t20>Plan de coupe</t20>
+    <t21>Décalage par rapport au plan de coupe, mm</t21>
+    <t22>Bas</t22>
+    <t23>Décalage par rapport au bas, mm</t23>
+    <t24>Profondeur de vue</t24>
+    <t25>Décalage de la profondeur de vue, mm</t25>
+    <t26>Jeu de couleurs</t26>
+    <t27>Contrôlé par le gabarit</t27>
+    <t28>Recherche d'un réglage</t28>
+    <t29>Contrôlés uniquement</t29>
+    <t30>Inclure tous les réglages affichés dans les gabarits de vue sélectionnés</t30>
+    <t31>Exclure tous les réglages affichés des gabarits de vue sélectionnés</t31>
+    <t33>Sélectionnez des gabarits de vue</t33>
+    <t34>Nombre total de gabarits de vue dans le modèle courant</t34>
+    <t35>Total :</t35>
+    <t36>Gabarits de vue effectivement affichés</t36>
+    <t37>Affichés :</t37>
+    <t38>Gabarits de vue sélectionnés</t38>
+    <t39>Sélectionné :</t39>
+    <t40>Gabarit de vue dont les réglages sont placés dans le presse-papiers</t40>
+    <t41>Source :</t41>
+    <t42>Destination :</t42>
+    <t43>Rechercher un réglage par nom</t43>
+    <t44>Cocher les réglages contrôlés par le gabarit source</t44>
+    <t45>Transférer également les indicateurs "Contrôlé par le gabarit"</t45>
+    <t46>En plus des valeurs des réglages, transférer le fait qu'ils sont contrôlés ou non par le gabarit</t46>
+    <t47>Copie des réglages du gabarit de vue</t47>
+    <t49>gabarits de vue : {0}</t49>
+    <t50>Réglages masqués car non pris en charge par le type de vue des gabarits cibles : {0}</t50>
+    <t51>*VARIABLE*</t51>
+    <t52>Le réglage est contrôlé par le gabarit source</t52>
+    <t53>Le réglage n'est pas contrôlé par le gabarit source, sa valeur actuelle sera copiée</t53>
+    <t54>&lt;Aucun&gt;</t54>
+    <t55>Modifications non appliquées</t55>
+    <t56>Aucune modification</t56>
+    <t57>Paramètres inclus</t57>
+    <t58>Dans le presse-papiers : {0}</t58>
+    <t59>Le presse-papiers des réglages est vide</t59>
+    <t60>Niveau associé</t60>
+    <t61>Niveau au-dessus</t61>
+    <t62>Niveau au-dessous</t62>
+    <t63>Illimité</t63>
+    <t64>Autres</t64>
+    <vt1>Plan d'étage</vt1>
+    <vt2>Plan de plafond</vt2>
+    <vt3>Élévation</vt3>
+    <vt4>Vue 3D</vt4>
+    <vt5>Nomenclature</vt5>
+    <vt6>Feuille</vt6>
+    <vt7>Vue de dessin</vt7>
+    <vt8>Légende</vt8>
+    <vt9>Coupe</vt9>
+    <vt10>Vue de détail</vt10>
+    <vt11>Plan de structure</vt11>
+    <vt12>Plan de surface</vt12>
+    <vt13>Visite virtuelle</vt13>
+    <vt14>Rendu</vt14>
+    <msg1>Voulez-vous vraiment supprimer les gabarits de vue sélectionnés ?</msg1>
+    <msg2>Le gabarit de vue placé dans le presse-papiers n'existe plus</msg2>
+    <msg3>Appliquez ou annulez les modifications non enregistrées avant de copier les réglages</msg3>
+    <msg4>Les gabarits de vue sélectionnés ne prennent en charge aucun réglage du gabarit "{0}"</msg4>
+    <msg5>Réglages copiés. Gabarits de vue modifiés : {0}</msg5>
+    <msg6>Aucun gabarit de vue n'a été modifié</msg6>
+    <msg7>Le nom ne peut pas être vide</msg7>
+    <msg8>Le nom ne peut pas contenir le caractère "{0}"</msg8>
+    <msg9>Un gabarit de vue portant ce nom existe déjà</msg9>
+    <msg10>Impossible de modifier la propriété "{0}" du gabarit de vue "{1}"</msg10>
+    <msg11>Impossible de copier les réglages dans le gabarit de vue "{0}"</msg11>
+    <msg12>Impossible de copier les indicateurs "Contrôlé par le gabarit" dans le gabarit de vue "{0}"</msg12>
+  </mprViewTemplateManager>
+</ModPlus>

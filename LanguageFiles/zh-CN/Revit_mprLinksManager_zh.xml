@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprLinksManager
+    LocalName="链接管理器"
+    Description="管理当前文档中的 Revit 和 CAD 外部链接"
+    FullDescription="在当前Revit文档中查看、筛选、添加、加载、卸载、重新加载、删除链接以及重写路径">
+    <filtersGroupHeader>筛选器</filtersGroupHeader>
+    <statusLabel>状态：</statusLabel>
+    <linksListGroupHeader>链接列表</linksListGroupHeader>
+    <columnNameHeader>名称</columnNameHeader>
+    <columnStatusHeader>状态</columnStatusHeader>
+    <loadSettingsGroupHeader>加载设置</loadSettingsGroupHeader>
+    <positioningLabel>定位</positioningLabel>
+    <onAddBehaviorLabel>添加时</onAddBehaviorLabel>
+    <fileSelectButton>选择文件</fileSelectButton>
+    <operationsGroupHeader>操作</operationsGroupHeader>
+    <deleteSelectedButton>删除</deleteSelectedButton>
+    <unloadButton>卸载</unloadButton>
+    <reloadButton>重新载入</reloadButton>
+    <updateButton>更新</updateButton>
+    <rewritePathText>重写路径</rewritePathText>
+    <rewritePathsByFolderButton>重写路径（文件夹）</rewritePathsByFolderButton>
+    <showLogButton>显示日志</showLogButton>
+    <addLinkSettingsDialogTitle>添加设置</addLinkSettingsDialogTitle>
+    <rewriteHintText>通配符：* — 任意序列，? — 单个字符，# — 数字。转义：\* \? \# \\. 启用"仅更改路径"模式时，掩码仅应用于目录。</rewriteHintText>
+    <rewriteModeLabel>替换模式：</rewriteModeLabel>
+    <rewriteModeNormal>普通</rewriteModeNormal>
+    <rewriteModeMask>掩码</rewriteModeMask>
+    <findTextLabel>查找：</findTextLabel>
+    <replaceTextLabel>替换为：</replaceTextLabel>
+    <pathOnlyModeLabel>仅更改路径</pathOnlyModeLabel>
+    <originalPathColumnHeader>原始路径</originalPathColumnHeader>
+    <newPathColumnHeader>新路径</newPathColumnHeader>
+    <fileNotFoundTooltip>未找到文件</fileNotFoundTooltip>
+    <tableHintText>标记要执行操作的链接</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — 链接管理器已启动</managerStartedLogFormat>
+    <openFilesFilter>Revit 和 DWG 文件 (*.rvt;*.dwg)|*.rvt;*.dwg|Revit 文件 (*.rvt)|*.rvt|DWG 文件 (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>已跳过已存在的链接：{0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>正在添加 {0} 个链接</addStartedLogFormat>
+    <addCompletedLogFormat>已添加链接：{0}，错误：{1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>添加文件"{0}"时出错：{1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>常规错误：{0}</generalErrorLogFormat>
+    <operationDeleteGenitive>删除</operationDeleteGenitive>
+    <operationLoadGenitive>加载</operationLoadGenitive>
+    <operationUnloadGenitive>卸载</operationUnloadGenitive>
+    <operationReloadGenitive>重新加载</operationReloadGenitive>
+    <deleteConfirmationMessage>是否确认删除所选链接？</deleteConfirmationMessage>
+    <deleteConfirmationTitle>删除</deleteConfirmationTitle>
+    <operationCanceledLogFormat>操作 {0} 已被用户取消</operationCanceledLogFormat>
+    <operationStartedLogFormat>开始对 {1} 个链接执行{0}</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>成功：{0}，跳过：{1}，错误：{2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>{0} 的结果：{1}</operationResultLogFormat>
+    <operationErrorLogFormat>{0} 时发生常规错误：{1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>用户已取消文件夹选择</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>路径重写已被用户取消</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>没有可重写路径的更改</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>开始为 {0} 个链接重写路径</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>已重写路径：{0}，错误：{1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>重写路径时发生常规错误：{0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>重写路径错误："{0}"：{1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>链接位于关闭的工作集中</rewritePathClosedWorksetError>
+    <linkStatusLoaded>已加载</linkStatusLoaded>
+    <linkStatusUnloaded>已卸载</linkStatusUnloaded>
+    <linkStatusNotFound>未找到</linkStatusNotFound>
+    <positioningSharedCoordinates>通过共享坐标</positioningSharedCoordinates>
+    <positioningOriginToOrigin>原点到原点</positioningOriginToOrigin>
+    <positioningCenterToCenter>中心到中心</positioningCenterToCenter>
+    <onAddLoadImmediately>立即加载</onAddLoadImmediately>
+    <onAddAddUnloaded>以卸载状态添加</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>未找到链接文件：{0}</handlerLinkFileNotFoundFormat>
+    <handlerCannotLinkDocumentToItself>不能将当前模型作为链接添加到自身</handlerCannotLinkDocumentToItself>
+    <handlerLinkSavedByLaterRevitVersion>该模型已由更高版本的 Revit 保存</handlerLinkSavedByLaterRevitVersion>
+    <handlerUnsupportedLinkTypeFormat>不支持链接类型"{0}"</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>不支持文件扩展名"{0}"</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>添加链接</addLinksTransaction>
+    <deleteLinksTransaction>删除链接</deleteLinksTransaction>
+    <loadLinksTransaction>加载链接</loadLinksTransaction>
+    <unloadLinksTransaction>卸载链接</unloadLinksTransaction>
+    <reloadLinksTransaction>重新加载链接</reloadLinksTransaction>
+    <unloadForSelfMenuItem>仅对我</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>对所有用户</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>本地卸载</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>本地卸载链接</unloadLocallyLinksTransaction>
+    <searchHint>输入搜索文本</searchHint>
+    <typeWorksetColumnHeader>类型工作集</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>实例工作集</instanceWorksetColumnHeader>
+    <placeInWorkset>放置到工作集中</placeInWorkset>
+    <createWorksetByPrefixLabel>放置到自己的工作集</createWorksetByPrefixLabel>
+    <worksetNamePrefixLabel>工作集名称前缀:</worksetNamePrefixLabel>
+    <disableWorksetContains>禁用包含以下内容的工作集：</disableWorksetContains>
+    <disableWorksetTooltip>请输入以逗号分隔的子字符串。加载链接时，关联模型中名称包含至少一个指定子字符串的工作集将被关闭，其余工作集将被打开。</disableWorksetTooltip>
+    <fromRevitServer>来自 Revit Server</fromRevitServer>
+    <revitServerWindowTitle>从 Revit Server 添加</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>更改类型工作集时发生错误：{0}，错误：{1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>更改实例工作集时发生错误：{0}，错误：{1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>从 Revit Server 添加链接时发生错误</addFromServerErrorFormat>
+    <diffWorkset>*不同*</diffWorkset>
+  </mprLinksManager>
+</ModPlus>

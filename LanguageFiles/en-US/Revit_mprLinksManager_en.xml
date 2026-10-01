@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprLinksManager
+    LocalName="Links manager"
+    Description="Manage Revit and CAD external links in the current document"
+    FullDescription="Viewing, filtering, adding, loading, unloading, reloading, deleting links, and rewriting their paths in the current Revit document">
+    <filtersGroupHeader>Filters</filtersGroupHeader>
+    <statusLabel>Status:</statusLabel>
+    <linksListGroupHeader>Links list</linksListGroupHeader>
+    <columnNameHeader>Name</columnNameHeader>
+    <columnStatusHeader>Status</columnStatusHeader>
+    <loadSettingsGroupHeader>Load settings</loadSettingsGroupHeader>
+    <positioningLabel>Positioning</positioningLabel>
+    <onAddBehaviorLabel>On add</onAddBehaviorLabel>
+    <fileSelectButton>Select files</fileSelectButton>
+    <operationsGroupHeader>Operations</operationsGroupHeader>
+    <deleteSelectedButton>Delete</deleteSelectedButton>
+    <unloadButton>Unload</unloadButton>
+    <reloadButton>Reload</reloadButton>
+    <updateButton>Update</updateButton>
+    <rewritePathText>Rewrite paths</rewritePathText>
+    <rewritePathsByFolderButton>Rewrite paths (folder)</rewritePathsByFolderButton>
+    <showLogButton>Show log</showLogButton>
+    <addLinkSettingsDialogTitle>Add link settings</addLinkSettingsDialogTitle>
+    <rewriteHintText>Wildcards: * — any sequence, ? — one character, # — digit. Escaping: \* \? \# \\. When "Path only" mode is enabled, the mask is applied only to the directory.</rewriteHintText>
+    <rewriteModeLabel>Rewrite mode:</rewriteModeLabel>
+    <rewriteModeNormal>Normal</rewriteModeNormal>
+    <rewriteModeMask>Mask</rewriteModeMask>
+    <findTextLabel>Find:</findTextLabel>
+    <replaceTextLabel>Replace with:</replaceTextLabel>
+    <pathOnlyModeLabel>Change path only</pathOnlyModeLabel>
+    <originalPathColumnHeader>Original path</originalPathColumnHeader>
+    <newPathColumnHeader>New path</newPathColumnHeader>
+    <fileNotFoundTooltip>File not found</fileNotFoundTooltip>
+    <tableHintText>Mark links to perform operations</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Links manager started</managerStartedLogFormat>
+    <openFilesFilter>Revit and DWG files (*.rvt;*.dwg)|*.rvt;*.dwg|Revit files (*.rvt)|*.rvt|DWG files (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Skipped existing links: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>Adding {0} links</addStartedLogFormat>
+    <addCompletedLogFormat>Added links: {0}, failed: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>Error adding file "{0}": {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>General error: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>deletion</operationDeleteGenitive>
+    <operationLoadGenitive>loading</operationLoadGenitive>
+    <operationUnloadGenitive>unloading</operationUnloadGenitive>
+    <operationReloadGenitive>reloading</operationReloadGenitive>
+    <deleteConfirmationMessage>Are you sure you want to delete the selected links?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Delete</deleteConfirmationTitle>
+    <operationCanceledLogFormat>Operation {0} was canceled by the user</operationCanceledLogFormat>
+    <operationStartedLogFormat>Started {0} of {1} links</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Successful: {0}, skipped: {1}, errors: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>Result of {0}: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>General error during {0}: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Folder selection canceled by user</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Path rewrite canceled by user</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>No changes to rewrite paths</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>Starting path rewrite for {0} links</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Rewritten paths: {0}, errors: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>General error while rewriting paths: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Path rewrite error: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>link is in a closed workset</rewritePathClosedWorksetError>
+    <linkStatusLoaded>Loaded</linkStatusLoaded>
+    <linkStatusUnloaded>Unloaded</linkStatusUnloaded>
+    <linkStatusNotFound>Not found</linkStatusNotFound>
+    <positioningSharedCoordinates>By Shared Coordinates</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Origin to Origin</positioningOriginToOrigin>
+    <positioningCenterToCenter>Center to Center</positioningCenterToCenter>
+    <onAddLoadImmediately>Load immediately</onAddLoadImmediately>
+    <onAddAddUnloaded>Add unloaded</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Link file not found: {0}</handlerLinkFileNotFoundFormat>
+    <handlerCannotLinkDocumentToItself>Cannot add the current model as a link to itself</handlerCannotLinkDocumentToItself>
+    <handlerLinkSavedByLaterRevitVersion>The model was saved by a later version of Revit</handlerLinkSavedByLaterRevitVersion>
+    <handlerUnsupportedLinkTypeFormat>Link type "{0}" is not supported</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>File extension "{0}" is not supported</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Add links</addLinksTransaction>
+    <deleteLinksTransaction>Delete links</deleteLinksTransaction>
+    <loadLinksTransaction>Load links</loadLinksTransaction>
+    <unloadLinksTransaction>Unload links</unloadLinksTransaction>
+    <reloadLinksTransaction>Reload links</reloadLinksTransaction>
+    <searchHint>Enter text to search</searchHint>
+    <typeWorksetColumnHeader>Type workset</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Instance workset</instanceWorksetColumnHeader>
+    <placeInWorkset>Place in workset</placeInWorkset>
+    <createWorksetByPrefixLabel>Place in own workset</createWorksetByPrefixLabel>
+    <worksetNamePrefixLabel>Workset name prefix:</worksetNamePrefixLabel>
+    <disableWorksetContains>Disable worksets containing:</disableWorksetContains>
+    <disableWorksetTooltip>Enter substrings separated by commas. When loading the link, worksets of the linked model whose names contain at least one of the specified substrings will be closed. All other worksets will be opened.</disableWorksetTooltip>
+    <fromRevitServer>From Revit Server</fromRevitServer>
+    <revitServerWindowTitle>Add from Revit Server</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>An error occurred while changing the type workset: {0}, error: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>An error occurred while changing the instance workset: {0}, error: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Error while adding link from Revit Server</addFromServerErrorFormat>
+    <diffWorkset>*VARIES*</diffWorkset>
+    <unloadForSelfMenuItem>For me</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>For all users</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>local unloading</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Local unload links</unloadLocallyLinksTransaction>
+  </mprLinksManager>
+</ModPlus>

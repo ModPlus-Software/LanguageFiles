@@ -222,6 +222,7 @@
     <msg6>The file "{0}" is not a valid xml file. {1}</msg6>
     <msg7>Failed to read data from the file "{0}". {1}</msg7>
     <msg8>The selected file is not a configuration storage file</msg8>
+    <msg9>Failed to save file "{0}". It may be open in another program. Close the file and try again</msg9>
     <close>Close</close>
     <yes>Yes</yes>
     <no>No</no>
@@ -237,7 +238,7 @@
     <h3>Details</h3>
     <h4>Source</h4>
     <h5>Stack trace</h5>
-    <h6>SELECT NUMBER FROM TEXT</h6>
+    <h6>Select number from text</h6>
     <h7>Separator of the integer and fractional part:</h7>
     <h8>Dot</h8>
     <h9>Comma</h9>
@@ -279,7 +280,7 @@
     <h50>Calculation of the length of anchorage or overlap</h50>
     <h51>Calculation of the length of anchorage</h51>
     <h52>Calculation of the length of overlap</h52>
-    <h53>Access to the ModPlus web service was blocked when sending a request. Contact your local network administrator to access the services in the https://*.modplus.org subdomain (https://api.modplus.org, https://update.modplus.org, https://api-lsm.modplus.org)</h53>
+    <h53>A web page (shown below) was received instead of a response from the ModPlus web service. This usually means the connection is intercepted by a proxy server, firewall, VPN or internet access control system, or the network requires sign-in (for example, guest Wi-Fi). If a VPN is used, try turning it off or, conversely, turning it on. If internet access in your organization is restricted, contact your local network administrator to get access to the services in the https://*.modplus.org subdomain (https://api.modplus.org, https://api-lsm.modplus.org, https://update.modplus.org, https://storage.modplus.org)</h53>
     <h54>Open in Notepad</h54>
     <h55>Notification settings</h55>
     <h56>News</h56>
@@ -326,6 +327,22 @@
     <em3>or write to our support chat in</em3>
     <em4>Telegram</em4>
     <em5>Describe in detail what actions caused the error</em5>
+    <ke1>Cause</ke1>
+    <ke2>What to do</ke2>
+    <ke3>One or more of the processed elements are outside the Revit design limits. All model geometry must be within 10 miles (16 km) of the project's internal origin. Revit can't build geometry with coordinates beyond this limit. The error comes from Revit itself and isn't caused by the plugin.</ke3>
+    <ke4>Check whether some elements were accidentally moved far away from the main part of the model. This often happens after copying, importing a DWG or pasting from another project. Use "Zoom to Fit" (ZF) on a plan view: if the model shrinks to a dot, there are distant elements. Find them and delete or move them.</ke4>
+    <ke5>If the whole model is more than 10 miles (16 km) from the internal origin, move it closer. Set the real-world location with shared coordinates: "Manage" → "Coordinates" → "Specify Coordinates at Point".</ke5>
+    <ke6>Couldn't connect to the ModPlus server: the connection was refused or dropped, or the server address couldn't be resolved. The cause is on the computer's network side: there's no internet access, or the connection is blocked by a firewall, antivirus, proxy server or your organization's network rules. The error isn't caused by the plugin.</ke6>
+    <ke7>Make sure the computer has internet access and try again in a few minutes.</ke7>
+    <ke8>If the internet connection goes through a proxy server, check the proxy settings in ModPlus. If internet access in your organization is restricted, ask your system administrator to allow connections to api.modplus.org, api-lsm.modplus.org, update.modplus.org and storage.modplus.org (port 443).</ke8>
+    <ke9>A web page was received instead of a response from the ModPlus server. This usually means the connection is intercepted by a proxy server, firewall or internet access control system, or the network requires sign-in (for example, guest Wi-Fi). Less often, the server is temporarily unavailable. The error isn't caused by the plugin.</ke9>
+    <ke10>The server returned a web page instead of a response to the request</ke10>
+    <ke11>Open any website in your browser: if the network requires sign-in, a sign-in page will open. Sign in and try again.</ke11>
+    <ke12>If a VPN is used on the computer, try turning it off or, conversely, turning it on: access to the ModPlus servers may depend on the country the connection comes from. Then try again.</ke12>
+    <ke13>The "Method not found" error indicates that your version of ModPlus has only received partial updates: some components have been updated while others remain at the previous version, and they are incompatible with each other. The error isn't caused by the plugin itself.</ke13>
+    <ke14>Close all supported products (AutoCAD, Revit, etc.), then run an update check in the auto-update module (the icon in the Windows notification area) and install all available updates.</ke14>
+    <ke15>If the auto-update module doesn't install the required updates (no updates are found, the installation fails, or this error persists after updating), download the ModPlus installer and update using it.</ke15>
+    <ke16>Download the ModPlus installer</ke16>
     <p1>Result of calculation in Word</p1>
     <p2>Create a new document</p2>
     <p3>Filling data</p3>
@@ -470,6 +487,9 @@
     <uk-UA>Український (Україна)</uk-UA>
     <es-ES>Español (España)</es-ES>
     <zh-CN>简体中文</zh-CN>
+    <fr-FR>Français (France)</fr-FR>
+    <pt-BR>Português (Brasil)</pt-BR>
+    <uz-Latn-UZ>Oʻzbekcha (Oʻzbekiston)</uz-Latn-UZ>
     <ny>New Year's decorations</ny>
   </ModPlusAPI>
   <Geometry>
@@ -594,7 +614,7 @@
     <closeCad>To start the ModPlus configurator, you need to close AutoCAD</closeCad>
     <closeRevit>To start the ModPlus configurator, you need to close Revit</closeRevit>
     <closeRenga>To start the ModPlus configurator, you need to close Renga</closeRenga>
-    <loading>LOADING...</loading>
+    <loading>Loading...</loading>
     <progress1>Running a timer to check for running AutoCAD or Revit applications</progress1>
     <progress2>Checking the location of the directory with the plugin</progress2>
     <progress4>Checking the default directories</progress4>
@@ -634,7 +654,7 @@
     <header12>Window borders:</header12>
     <header16>Registration</header16>
     <header17>Contacts:</header17>
-    <header18>CHANGE STORY</header18>
+    <header18>Change story</header18>
     <header19>Plugin</header19>
     <header20>Product</header20>
     <header21>Product version</header21>
@@ -644,7 +664,7 @@
     <header25>Binding Option:</header25>
     <header26>Binding to a physical disk:</header26>
     <header27>Binding to account:</header27>
-    <header28>READ MORE ABOUT BINDING</header28>
+    <header28>Read more about binding</header28>
     <header29>Version of Configurator:</header29>
     <header30>Version of auto-update module:</header30>
     <header31>Version of working libraries for AutoCAD:</header31>
@@ -974,7 +994,7 @@
     <h17>Plugin version:</h17>
     <h18>Product version:</h18>
     <!--todo remove after 46.5.0.0-->
-    <h21>AUTO UPDATE MODULE: SETTINGS</h21>
+    <h21>Auto update module: settings</h21>
     <h23>Update check period:</h23>
     <h24>If updates are available:</h24>
     <h25>When installing new plugins:</h25>
@@ -1083,6 +1103,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <h127>All product versions are selected. Installing, enabling and disabling a plugin apply to all versions at once</h127>
     <h128>The plugin will be installed for the product versions: {0}. Continue?</h128>
     <h129>Failed to download updates. Another attempt will be made later</h129>
+    <h130>Updates will be installed after closing {0}</h130>
     <!--todo remove after 43.3.0.0-->
     <b3>Check all</b3>
     <!--todo remove after 43.3.0.0-->
@@ -1205,6 +1226,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg51>All displayed uninstalled or outdated plugins will be installed. Continue?</msg51>
     <msg52>The connection to ModPlus services was successful</msg52>
     <msg53>Failed to connect to ModPlus services. Check your proxy settings and try again</msg53>
+    <!--todo remove after 52.0.1.0-->
     <msg54>Updates have been downloaded and will be installed after closing {0}</msg54>
     <msg55>Updating requires closing {0}</msg55>
     <msg56>Module functionality is limited because the {0} application is open</msg56>
@@ -1316,6 +1338,12 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <h66>Title</h66>
     <h67>Icon</h67>
     <h68>ModPlus ribbon tab</h68>
+    <h69>Select Previous [mpSelectPrevious]</h69>
+    <h70>MP: Select Previous</h70>
+    <h71>Select Objects in Viewport [mpSelectByViewport]</h71>
+    <h72>MP: Select Objects in Viewport</h72>
+    <h73>Select Object from Field [mpSelectByField]</h73>
+    <h74>MP: Select Objects from Field</h74>
     <cb1>Icon</cb1>
     <cb2>Title</cb2>
     <tt2>To work with the modplus.org server, enter your email address. A mail address is required to identify you on the server. It is recommended to use the email address specified at the registration on modplus.org</tt2>
@@ -1339,6 +1367,9 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <!--todo remove after 15.2.4.0-->
     <tt20>Show the ModPlus vector icon to the left of the ribbon tab name</tt20>
     <tt21>What to show in the header of the ModPlus ribbon tab</tt21>
+    <tt22>Enable/Disable Context Menu for the "Select Previous" Mini-Plugin</tt22>
+    <tt23>Enable/Disable Context Menu for the "Select Objects in Viewport" Mini-Plugin</tt23>
+    <tt24>Enable/Disable Context Menu for the "Select Objects from Field" Mini-Plugin</tt24>
     <err1>This name is already in use! Create another</err1>
     <err2>You need to specify the display name of the block!</err2>
     <err3>You need to select a block in the list!</err3>
@@ -1371,7 +1402,8 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg23>Unable to access AutoCAD Editor! Running another command.\nComplete the command and try again</msg23>
     <msg24>Attention! The language of the palette, the Smart ribbon tab and the plugin context menus will change only after restarting AutoCAD</msg24>
     <msg25>Second point:</msg25>
-    <p1>ATTENTION!</p1>
+    <msg26>Select Objects with Fields:</msg26>
+    <p1>Attention!</p1>
     <p2>Trying to load the plugin into an incompatible version of the AutoCAD!</p2>
     <p3>Download interrupt</p3>
     <p4>Loading ModPlus...</p4>
@@ -1487,7 +1519,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg24>Attention! The language of the adaptation and context menus will change only after restarting nanoCAD</msg24>
     <msg25>Second point:</msg25>
     <msg26>The ModPlus adaptation has been changed. Restart nanoCAD for its correct display</msg26>
-    <p1>ATTENTION!</p1>
+    <p1>Attention!</p1>
     <p2>Trying to load the plugin into an incompatible version of the nanoCAD!</p2>
     <p3>Download interrupt</p3>
     <p4>Loading ModPlus...</p4>
@@ -1681,6 +1713,17 @@ Not all parameters may be present in the list of instance parameters, because in
     <h232>ModPlus ribbon tab</h232>
     <h233>Change the plugins theme when the Revit theme changes</h233>
     <h234>When the Revit interface theme changes, the theme of ModPlus plugin windows automatically switches to a light or dark one. The theme you select is remembered separately for the light and dark Revit themes and is restored when you switch back</h234>
+    <h235>The ModPlus option "{0}" is enabled. The Revit interface theme is currently dark, while the light theme "{1}" is selected for plugin windows, so it will be replaced with "{2}".
+
+Keep the selected theme "{1}"?
+
+To disable the automatic change completely, clear that option in the ModPlus settings.</h235>
+    <h236>The ModPlus option "{0}" is enabled. The Revit interface theme is currently light, while the dark theme "{1}" is selected for plugin windows, so it will be replaced with "{2}".
+
+Keep the selected theme "{1}"?
+
+To disable the automatic change completely, clear that option in the ModPlus settings.</h236>
+    <h237>No annotations were found on the current view for the selected elements</h237>
     <parameters>Parameters</parameters>
     <name>Name</name>
     <any>Any</any>
@@ -1818,6 +1861,7 @@ Not all parameters may be present in the list of instance parameters, because in
     <err14>The requested plugin was not found in the Ribbon. Make sure the plugin is installed and enabled in the "Plugins" section of the auto-update module, and also make sure the plugin is added to the menu in the "Menu" section of the auto-update module</err14>
     <err15>Failed to initialize the graphical representation of the requested plugin</err15>
     <err16>Failed to retrieve the graphical representations layer</err16>
+    <err17>Parameter name is not specified in some conditions. Specify the parameter name or remove the condition</err17>
     <c1>Coloring tabs</c1>
     <c2>Color scheme:</c2>
     <c3>Coloring zone:</c3>
@@ -1960,11 +2004,16 @@ Not all parameters may be present in the list of instance parameters, because in
     <tcm13>Close all documents except current</tcm13>
     <tcm14>Close all documents without saving</tcm14>
     <tcm15>Close all documents except current without saving</tcm15>
+    <plgs1>Search plugin</plgs1>
+    <plgs2>Show on ribbon</plgs2>
+    <plgs3>Nothing found</plgs3>
+    <plgs4>The command is not available in the current context. Use the magnifier button to find it on the ribbon</plgs4>
+    <plgs5>hidden in the current menu</plgs5>
   </RevitDlls>
   <!-- todo после версии 9.3.0 имена типов и расчетных характеристик вынесены в отдельные узлы -->
   <RengaDlls
     LocalName="Working libraries for Renga">
-    <h1>MODPLUS SETTINGS</h1>
+    <h1>ModPlus settings</h1>
     <h2>General</h2>
     <h5>Language:</h5>
     <h6>Theme:</h6>
@@ -2009,6 +2058,7 @@ Not all parameters may be present in the list of instance parameters, because in
     <ef27>The object matches if</ef27>
     <ef28>all conditions match</ef28>
     <ef29>any of conditions match</ef29>
+    <ef30>Attribute name is not specified in some conditions. Specify the attribute name or remove the condition</ef30>
     <et1>Equal</et1>
     <et2>More</et2>
     <et3>Less</et3>
@@ -2216,7 +2266,7 @@ dоп=8ds at ds ≥ 20 mm;</r1>
     <r2>Minimum mandrel diameter to avoid damage to reinforcement is taken:
 4Ø rod diameter Ø ≤ 16 mm;
 7Ø at rod diameter Ø &gt; 16 mm;</r2>
-    <h1>BENDING RULES</h1>
+    <h1>Bending rules</h1>
     <h2>Rule Source:</h2>
     <h3>Rules description:</h3>
     <h4>Fix bend diameters for existing types</h4>

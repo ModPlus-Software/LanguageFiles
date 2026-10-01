@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWallSweep
+    LocalName="Planificação de paredes"
+    Description="Criação de planificações de paredes">
+    <v1>Recortar pela face superior do piso superior</v1>
+    <v2>Recortar pela face inferior do piso inferior</v2>
+    <v3>Elevação</v3>
+    <v4>Corte</v4>
+    <v5>Aplicar modelo de vista</v5>
+    <v6>Número de divisões das curvas</v6>
+    <v8>Profundidade da vista</v8>
+    <v9>Inserir na folha</v9>
+    <v10>Deslocamento para dentro</v10>
+    <v11>Definir sufixo/prefixo</v11>
+    <v12>Sufixo</v12>
+    <v13>Prefixo</v13>
+    <v14>No documento atual</v14>
+    <v15>No documento vinculado</v15>
+    <v16>Selecionar elemento</v16>
+    <v17>Deslocamento para cima</v17>
+    <v18>Deslocamento para baixo</v18>
+    <v19>Na vista ativa do documento atual</v19>
+    <v20>Criar folha</v20>
+    <v21>Deslocamento lateral</v21>
+    <v22>Você pode especificar um parâmetro do ambiente de origem entre chaves. Por exemplo: "Planificação {Nome}"</v22>
+    <v23>Você pode especificar um parâmetro da parede de origem entre chaves. Por exemplo: "Planificação {Marca}"</v23>
+    <v24>SEM PARÂMETRO</v24>
+    <v25>SEM VALOR</v25>
+    <t2>Parede</t2>
+    <t3>Ambiente</t3>
+    <t5>Nome da planificação:</t5>
+    <t6>Opções</t6>
+    <t7>Criar:</t7>
+    <t8>Criar por:</t8>
+    <t9>Cotas</t9>
+    <t10>Outros</t10>
+    <t11>Ordem inversa</t11>
+    <t1>Tipo de elemento selecionado: </t1>
+    <t4>Nenhum elemento selecionado</t4>
+    <e1>Cancelar seleção</e1>
+    <e2>Nenhum elemento adequado foi selecionado</e2>
+    <e4>Não foi possível encontrar paredes dependentes</e4>
+    <e5>Não foi possível determinar o plano mais próximo do ponto</e5>
+    <e6>Ocorreu um erro inesperado: </e6>
+    <e7>Não há vistas para criar</e7>
+    <e8>O elemento selecionado não é uma parede, um ambiente ou um pilar</e8>
+    <e9>Não foi possível determinar a linha para criar o corte</e9>
+    <e10>Não foi possível obter o objeto de encapsulamento do ambiente ou da parede</e10>
+    <m1>Selecione um ambiente ou uma parede</m1>
+    <m2>Especifique o ponto mais próximo da face pela qual a planificação será criada. Para o funcionamento correto, o ponto deve ser selecionado em planta</m2>
+    <tr1>Criar vistas</tr1>
+    <elevationType>Tipo de elevação:</elevationType>
+    <sectionType>Tipo de corte:</sectionType>
+    <roomSelected>Ambientes selecionados:</roomSelected>
+    <wallSelected>Paredes selecionadas:</wallSelected>
+    <columnSelected>Pilares selecionados:</columnSelected>
+    <invalidViewDirection>Não foi possível determinar a direção da vista. O ponto selecionado está muito próximo da face da parede. Selecione um ponto mais distante da parede.</invalidViewDirection>
+    <viewDirection>Direção da vista:</viewDirection>
+    <manualSelection>Seleção manual</manualSelection>
+    <innerSide>Lado interno</innerSide>
+    <outerSide>Lado externo</outerSide>
+    <manualSelectionTooltip>Para cada parede será necessário especificar um ponto para determinar a direção da vista</manualSelectionTooltip>
+    <innerSideTooltip>Ao selecionar várias paredes, cria automaticamente as planificações pelo lado interno</innerSideTooltip>
+    <outerSideTooltip>Ao selecionar várias paredes, cria automaticamente as planificações pelo lado externo</outerSideTooltip>
+    <cylindricalColumnsNotSupportError>A criação de planificações de pilares cilíndricos não é suportada</cylindricalColumnsNotSupportError>
+    <verticalFacesNotFound>Não foi possível encontrar as faces verticais do pilar</verticalFacesNotFound>
+    <columnMode>Pilar</columnMode>
+  </mprWallSweep>
+</ModPlus>

@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprColumnsReinforcement
+    LocalName="Ferraillage des poteaux"
+    Description="Analyse, regroupement et ferraillage des poteaux selon des conditions définies"
+    FullDescription="Traitement aussi bien de poteaux sélectionnés individuellement que de tous les poteaux de la vue ou du document. Le ferraillage tient compte de la position relative des poteaux superposés. Les armatures transversales peuvent être composées à l'aide de différentes formes de barres d'armature. Fonctionne même sur un gabarit vide">
+    <h1>Options de sélection</h1>
+    <h2>Sélectionner les poteaux</h2>
+    <h3>Sélectionner tous les poteaux de la vue courante</h3>
+    <h4>Sélectionner tous les poteaux du projet</h4>
+    <h5>Le ferraillage ne peut être créé que dans les poteaux porteurs</h5>
+    <h6>Sélectionner</h6>
+    <h7>Analyser</h7>
+    <h8>Nombre total de poteaux sélectionnés :</h8>
+    <h9>Dont analysées avec succès :</h9>
+    <h10>Effectuer le ferraillage</h10>
+    <h11>Réglages de ferraillage du groupe</h11>
+    <h12>Regroupement</h12>
+    <h13>Par niveau</h13>
+    <h14>Sur la hauteur</h14>
+    <h15>Regrouper</h15>
+    <h16>Nbre</h16>
+    <h17>Profil</h17>
+    <h18>Niveaux</h18>
+    <h19>Hauteurs</h19>
+    <h20>Poteaux du groupe :</h20>
+    <h21>Niveau</h21>
+    <h22>Hauteur</h22>
+    <h23>Regrouper par :</h23>
+    <h24>Section</h24>
+    <h25>Ferraillage longitudinal</h25>
+    <h26>Armatures longitudinales (principales)</h26>
+    <h27>Enrobage des armatures principales :</h27>
+    <h28>L'enrobage des armatures principales doit être d'au moins 20 mm ou d'au moins le diamètre de l'armature</h28>
+    <h29>Pour les poteaux préfabriqués, il est recommandé d'adopter un diamètre des barres longitudinales principales d'au moins 16 mm. Pour les poteaux coulés en place, ainsi que pour les armatures constructives, un diamètre de barres de 12 mm est admis</h29>
+    <h30>Paramètre</h30>
+    <h31>Nombre de barres en largeur :</h31>
+    <h32>Nombre de barres sur la profondeur :</h32>
+    <h33>Modifier les espacements</h33>
+    <h34>Aire de la section transversale du poteau, mm² :</h34>
+    <h35>Section transversale des armatures, mm² :</h35>
+    <h36>Pourcentage d'armature :</h36>
+    <h37>Il est déconseillé d'adopter une section d'armatures longitudinales supérieure à 5 % de l'aire de la section transversale du poteau</h37>
+    <h38>Distances entre les faces des barres sur la largeur du poteau :</h38>
+    <h39>Distances entre les faces des barres sur la profondeur du poteau :</h39>
+    <h40>Attention ! En cas de modification du diamètre, de l'enrobage ou du nombre de barres, les espacements entre les barres seront réinitialisés à des valeurs égales !</h40>
+    <h41>Attentes du ferraillage longitudinal</h41>
+    <h42>Ferraillage transversal (disposition)</h42>
+    <h43>Ferraillage transversal (formes)</h43>
+    <h45>Nombre de barres d'angle :</h45>
+    <!-- todo remove after 3.22.12.0 -->
+    <h46>Nombre de barres intermédiaires :</h46>
+    <h47>Attentes des armatures longitudinales des poteaux inférieurs et intermédiaires lorsque la section transversale des poteaux supérieurs est identique (ou légèrement différente)</h47>
+    <h48>Attentes des armatures longitudinales des poteaux inférieurs et intermédiaires de plus grande section transversale (≥ 100 mm de chaque côté) dans le poteau supérieur de plus petite section transversale</h48>
+    <h49>Attentes des armatures longitudinales des poteaux supérieurs</h49>
+    <h50>Réglages</h50>
+    <h51>FENÊTRE DU PLUGIN :</h51>
+    <h53>AFFICHAGE DANS LE MODÈLE :</h53>
+    <h54>Facteur d'échelle :</h54>
+    <!-- todo remove after 3.22.12.0 -->
+    <h55>FERRAILLAGE PAR DÉFAUT :</h55>
+    <h56>Décalage</h56>
+    <h57>Enveloppe</h57>
+    <h58>Supprimer la forme sélectionnée</h58>
+    <!-- todo remove after 3.22.12.0 -->
+    <h59>Indiquez le type de crochets des formes, les paramètres, le diamètre et le type de barre d'armature qui seront définis par défaut pour les formes de ferraillage transversal ajoutées</h59>
+    <h60>Espacement du ferraillage transversal dans les zones de densification, mm :</h60>
+    <h61>Calcul de l'ancrage selon SP 52-101-2003</h61>
+    <h62>Diamètre :</h62>
+    <h63>Aire de la section, mm² :</h63>
+    <h64>Classe de béton :</h64>
+    <h65>Type de surface de l'armature :</h65>
+    <h66>Résistance de calcul à la traction, MPa :</h66>
+    <h67>Longueur d'ancrage de base, mm :</h67>
+    <h68>Coefficient α :</h68>
+    <h69>Longueur d'ancrage requise (de calcul), mm :</h69>
+    <h70>Longueur d'ancrage :</h70>
+    <h71>Il est recommandé d'adopter un espacement courant des armatures transversales égal à 15d et un espacement dans les zones de resserrement égal à 10d, où d est le diamètre des armatures longitudinales (principales)</h71>
+    <h72>Impossible d'ajouter la forme à la disposition actuelle : aucun emplacement disponible pour placer la forme !</h72>
+    <!-- todo remove after 3.22.12.0 -->
+    <h73>Réglages du ferraillage du poteau</h73>
+    <h74>Remplacer par les réglages de ferraillage du groupe</h74>
+    <h75>Conserver les réglages de ferraillage</h75>
+    <h76>Ferraillage des poteaux</h76>
+    <h79>Crochets de forme par défaut :</h79>
+    <h80>Crochets de forme :</h80>
+    <h81>définir dans l'esquisse</h81>
+    <h82>utiliser les crochets Revit</h82>
+    <h83>Paramètres par défaut</h83>
+    <h84>Enrobage aux extrémités des armatures, mm :</h84>
+    <h85>Espacement principal du ferraillage transversal, mm :</h85>
+    <h86>Décalage par rapport à la face supérieure du poteau, mm :</h86>
+    <h87>Resserrement des armatures transversales dans la zone supérieure du poteau</h87>
+    <h88>Longueur de densification, mm :</h88>
+    <h89>Longueur de densification, fraction :</h89>
+    <h90>Resserrement des armatures transversales dans la zone inférieure du poteau</h90>
+    <h91>En présence d'attentes entrantes, définir la longueur de resserrement de la zone inférieure selon la longueur des attentes</h91>
+    <h93>Étriers triangulaires :</h93>
+    <h94>Cadres circulaires :</h94>
+    <h95>Les crochets d'esquisse ne peuvent pas être utilisés dans cette forme</h95>
+    <h96>Par paramètre :</h96>
+    <h97>Paramètre</h97>
+    <h98>Distance entre les axes des barres</h98>
+    <h99>Distance entre les faces des barres</h99>
+    <!-- todo remove after 3.22.12.0 -->
+    <h100>Attention ! Le nombre et la position des barres longitudinales ainsi que le schéma de disposition des armatures transversales peuvent être enregistrés, chargés et copiés dans les poteaux cochés de section compatible, mais ne peuvent pas être enregistrés par défaut !</h100>
+    <h104>Longueur de recouvrement des attentes droites, mm :</h104>
+    <h105>Calculer la longueur d'ancrage</h105>
+    <h106>Longueur d'ancrage des attentes dans la dalle, mm :</h106>
+    <h107>Longueur d'ancrage dans le poteau, mm :</h107>
+    <h108>Longueur de recouvrement dans le poteau supérieur, mm :</h108>
+    <h109>La longueur de recouvrement calculée est multipliée par 2</h109>
+    <h110>Créer le ferraillage</h110>
+    <!-- todo remove after 3.22.12.0 -->
+    <h119>Réglages de ferraillage par défaut</h119>
+    <h127>Attentes depuis la dalle inférieure</h127>
+    <h135>Type d'attentes :</h135>
+    <h138>Enrobage des armatures :</h138>
+    <h141>Ne pas fermer la fenêtre après la création du ferraillage</h141>
+    <h144>Décalage de l'élément par rapport à la sous-face du radier :</h144>
+    <!-- todo remove after 3.22.12.0 -->
+    <h147>Réinitialiser</h147>
+    <h148>Longueur d'ancrage dans la dalle, mm :</h148>
+    <h149>Créer des attentes uniquement depuis les dalles de la catégorie "Fondations structurelles"</h149>
+    <h150>Les attentes depuis la dalle inférieure ne sont créées qu'en l'absence de poteau inférieur. Les relations entre poteaux ne sont déterminées qu'entre les poteaux sélectionnés</h150>
+    <h160>Type d'attentes :</h160>
+    <h161>Épaisseur conventionnelle de la dalle, mm :</h161>
+    <h165>En l'absence de dalle au-dessus du poteau,</h165>
+    <h166>Accrochage des coudes au-dessus de la dalle (selon l'axe de l'armature)</h166>
+    <h167>Accrochage des coudes au-dessous de la dalle (selon l'axe de l'armature)</h167>
+    <!-- todo remove after 3.22.12.0 start -->
+    <h173>Barres droites :</h173>
+    <h174>Barres en L (lors de la création de coudes des barres verticales) :</h174>
+    <h177>Étriers transversaux en C (épingles). Crochets dans l'esquisse :</h177>
+    <h178>Étriers transversaux en S (épingles). Crochets dans l'esquisse :</h178>
+    <h179>Barres en L :</h179>
+    <h180>Barres en U :</h180>
+    <h181>Cadres rectangulaires :</h181>
+    <h182>Barres en L à grand retour :</h182>
+    <h183>Réinitialiser toutes les valeurs sur "Auto"</h183>
+    <h184>Formes d'armature préférées</h184>
+    <h185>Impossible de définir les valeurs des paramètres pour certains éléments. Ci-dessous figurent les codes des éléments (id), les noms des paramètres et les valeurs à définir :</h185>
+    <!-- todo remove after 3.22.12.0 end -->
+    <h186>Sélectionner à nouveau</h186>
+    <h187>Resélectionner les poteaux traités dans la vue courante lors de l'utilisation précédente du plugin</h187>
+    <h188>Décalage par rapport à la face inférieure du poteau, mm :</h188>
+    <h189>Rayon dans :</h189>
+    <h190>Indiquez le paramètre de la forme d'armature qui définit le rayon de la spirale</h190>
+    <h191>Pas de la spirale :</h191>
+    <h193>Première longueur de recouvrement, mm :</h193>
+    <h194>Deuxième longueur de recouvrement, mm :</h194>
+    <h195>Calculer la longueur de recouvrement</h195>
+    <h196>Longueur de recouvrement, mm :</h196>
+    <h205>Étriers transversaux en C (épingles). Crochets Revit :</h205>
+    <h206>Étriers transversaux en S (épingles). Crochets Revit :</h206>
+    <h207>Barres en spirale :</h207>
+    <h208>Utiliser la géométrie des poteaux sans tenir compte des jonctions</h208>
+    <h221>Barres longitudinales coudées (pliées en "bouteille")</h221>
+    <h226>Suppression du ferraillage créé précédemment :</h226>
+    <h227>Accrochage des armatures principales au bord du poteau selon l'axe de l'armature. L'accrochage est calculé d'après le diamètre de modèle de la barre</h227>
+    <h228>Placer des coupleurs</h228>
+    <h229>Première armature</h229>
+    <h230>Deuxième armature</h230>
+    <h231>Les coupleurs ne seront placés que si les poteaux traités ont la même section transversale et si le type de coupleur est présent dans le document. Les types de coupleurs sont recherchés dans le document selon les règles indiquées dans la fenêtre </h231>
+    <h232>. Dans les poteaux où des coupleurs seront placés, les armatures longitudinales seront réalisées par des barres d'armature individuelles, sans composition.</h232>
+    <h233>Indiquez les règles de placement des coupleurs pour certains types de barres d'armature. Vous pouvez indiquer le nom complet du type de barre d'armature ou seulement une partie. Par exemple, indiquez la valeur "10". Le type de barre d'armature sera alors considéré comme adapté si son nom contient "10".</h233>
+    <h234>Plier la partie inférieure des barres droites</h234>
+    <h235>Décalage du pli (O), mm :</h235>
+    <h236>Longueur du pli (L), mm :</h236>
+    <h237>Le pliage de la partie inférieure est effectué pour les barres droites à condition que les poteaux traités aient la même section transversale.</h237>
+    <h238>Créer :</h238>
+    <h239>Ferraillage transversal</h239>
+    <h240>Propriétés des formes par défaut</h240>
+    <h241>Si la liste contient déjà une forme ayant la même esquisse, ses propriétés seront reprises</h241>
+    <h242>Direction du pli :</h242>
+    <h243>Réglages principaux du ferraillage</h243>
+    <h244>Il est déconseillé de définir l'enrobage d'après les réglages de ferraillage si les armatures transversales ont des diamètres différents et/ou des valeurs différentes de la propriété "Attache cadre/épingle"</h244>
+    <h245>Regrouper les armatures longitudinales en jeux de barres d'armature</h245>
+    <h262>Réinitialiser à des valeurs égales</h262>
+    <h263>Longueur d'attente, mm :</h263>
+    <h264>Définir la longueur d'attente depuis le haut du poteau, en ignorant les dalles supérieures</h264>
+    <srd>Enregistrement des données des poteaux sélectionnés</srd>
+    <hook>Crochet :</hook>
+    <err1>Les réglages de ferraillage du poteau prévoient des attentes sous forme de barres pliées en "bouteille", dont la création nécessite une dalle ou une distance non nulle entre les poteaux. Aucune dalle supérieure n'a été trouvée ou la distance jusqu'au poteau supérieur est égale à 0</err1>
+    <npa1>ne pas créer d'attentes</npa1>
+    <npa2>créer des attentes droites</npa2>
+    <npa3>considérer la dalle comme existante de manière conventionnelle</npa3>
+    <pt1>Cercle</pt1>
+    <pt3>Rectangle</pt3>
+    <pt4>Carré</pt4>
+    <pt5>Non défini</pt5>
+    <rr1>Supprimer le ferraillage du même type que celui créé</rr1>
+    <rr2>Supprimer tout le ferraillage créé précédemment</rr2>
+    <rr3>Ne pas supprimer</rr3>
+    <jt1>Les attentes des armatures longitudinales ne sont pas créées. Les barres sont coupées en haut du poteau selon la valeur d'enrobage définie aux extrémités des armatures</jt1>
+    <jt2>Des attentes droites des barres d'armatures longitudinales sont créées. La longueur d'ancrage est comptée depuis le dessus de la dalle supérieure ou depuis le haut du poteau en l'absence de dalle. La position des barres longitudinales des poteaux supérieurs n'est pas prise en compte</jt2>
+    <jt3>Des attentes des barres d'armatures longitudinales avec pliage vers le poteau supérieur sont créées. La longueur d'ancrage est comptée depuis le dessus de la dalle supérieure ou depuis le haut du poteau en l'absence de dalle.</jt3>
+    <jt4>Des attentes sont créées sous forme de barres supplémentaires du diamètre indiqué</jt4>
+    <jt5>Des attentes droites des barres d'armatures longitudinales sont créées. La longueur d'attente est comptée depuis le dessus de la dalle supérieure ou depuis le haut du poteau en l'absence de dalle</jt5>
+    <jt6>Des attentes des barres d'armatures longitudinales avec ancrage dans la dalle supérieure sont créées. La longueur d'ancrage est comptée depuis la face latérale du poteau</jt6>
+    <bbd1>Toutes les attentes sont pliées le long du petit côté du poteau</bbd1>
+    <bbd2>Toutes les attentes sont pliées le long du grand côté du poteau</bbd2>
+    <bbd3>Les attentes d'angle sont pliées vers le centre du poteau, les autres le long des faces du poteau</bbd3>
+    <bbd4>Les attentes d'angle sont pliées vers le centre du poteau. Sur le grand côté, le long des faces du poteau. Sur le petit côté, perpendiculairement aux faces du poteau</bbd4>
+    <bbd5>Les attentes d'angle sont pliées le long du grand côté du poteau, les autres vers l'intérieur du poteau</bbd5>
+    <bbd6>Les attentes d'angle sont pliées le long du petit côté du poteau, les autres le long des faces du poteau</bbd6>
+    <msg1>Sélectionnez les poteaux</msg1>
+    <m1>Saisissez une valeur de</m1>
+    <m2>à</m2>
+    <m4>Barres à haute adhérence</m4>
+    <m5>Barres lisses</m5>
+    <!-- todo remove after 3.22.12.0 -->
+    <m13>Enrobage des armatures</m13>
+    <m20>La liste contient des poteaux dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</m20>
+    <m23>Réglages de ferraillage copiés</m23>
+    <m24>Vous n'avez pas indiqué pour quels groupes créer le ferraillage !</m24>
+    <m25>Aucun groupe n'est sélectionné pour la création du ferraillage !</m25>
+    <m27>Attention ! Aucune forme d'armature chargée n'a été trouvée dans le projet actuel ! Dans ce cas, les formes d'armature créées par le plugin ne pourront pas être ouvertes dans l'éditeur de familles ! Il est recommandé de charger les formes d'armature dans le projet avant d'utiliser le plugin !\nEffectuer le ferraillage malgré l'absence de formes d'armature ?</m27>
+    <rn>Armature porteuse ⌀</rn>
+    <!-- todo remove after 3.22.12.0 -->
+    <full>Disponible dans la version complète du plugin !</full>
+    <!-- todo remove after 3.22.12.0 -->
+    <full2>Une seule forme est disponible dans la version limitée</full2>
+    <!-- todo remove after 3.22.12.0 -->
+    <noInFamily>Le fonctionnement du plugin dans les familles n'est pas disponible !</noInFamily>
+    <p1>Analyse du poteau :</p1>
+    <p2>Recherche des éléments associés :</p2>
+    <p8>Suppression du ferraillage créé précédemment</p8>
+    <p9>Calcul et modélisation du ferraillage longitudinal</p9>
+    <p10>Calcul et modélisation du ferraillage transversal</p10>
+    <p14>Calcul et modélisation des attentes depuis la dalle</p14>
+    <p15>Placement des coupleurs</p15>
+    <e1>Erreurs d'analyse des poteaux</e1>
+    <e2>Impossible d'initialiser le poteau</e2>
+    <e3>Impossible d'obtenir les solides</e3>
+    <e4>Impossible d'obtenir le solide principal ou combiné</e4>
+    <e5>Impossible d'obtenir la face supérieure ou inférieure</e5>
+    <e6>Impossible de déterminer le profil transversal</e6>
+    <e7>Le nom de la forme utilisée pour créer les armatures en spirale n'est pas indiqué. Utilisez la fenêtre de réglage des formes d'armature préférées pour indiquer la forme des armatures en spirale</e7>
+    <e9>Le paramètre indiqué, qui définit le rayon des armatures en spirale, est introuvable dans le document</e9>
+    <!-- todo remove after 3.22.12.0 -->
+    <t7>Le groupe contient des poteaux dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t7>
+    <t10>Cocher tous les groupes</t10>
+    <t11>Décocher tous les groupes</t11>
+    <!-- todo remove after 3.22.12.0 -->
+    <t12>Les réglages de ferraillage du poteau ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t12>
+    <!-- todo remove after 3.22.12.0 -->
+    <t13>Modifier les réglages de ferraillage du poteau sélectionné</t13>
+    <!-- todo remove after 3.22.12.0 -->
+    <t14>Remplacer les réglages de ferraillage du poteau par ceux du groupe</t14>
+    <t15>Afficher dans le modèle le poteau précédent de la liste</t15>
+    <t16>Afficher dans le modèle le poteau sélectionné dans la liste</t16>
+    <t17>Afficher dans le modèle le poteau suivant de la liste</t17>
+    <!-- todo remove after 3.22.12.0 -->
+    <t40>Copier les réglages de ferraillage du groupe courant dans tous les groupes cochés</t40>
+    <!-- todo remove after 3.22.12.0 -->
+    <t41>Enregistrer les réglages de ferraillage du groupe actuel dans un fichier xml</t41>
+    <!-- todo remove after 3.22.12.0 -->
+    <t42>Charger les réglages de ferraillage depuis un fichier xml et les appliquer au groupe actuel</t42>
+    <t43>Attention ! L'aspect de surface des armatures peut dépendre de la classe d'armature, du diamètre ou d'autres valeurs qui ne sont pas prises en compte par le programme. Consultez la documentation normative</t43>
+    <t44>α – coefficient tenant compte de l'influence, sur la longueur d'ancrage, de l'état de contrainte du béton et de l'armature ainsi que de la solution constructive de l'élément dans la zone d'ancrage. Pour l'ancrage de barres à haute adhérence à extrémités droites (ancrage droit) ou d'armatures lisses avec crochets ou boucles sans dispositifs d'ancrage supplémentaires, on prend α = 1,0 pour les barres tendues et α = 0,75 pour les barres comprimées. Selon le point 10.3.30 du SP 63.13330, le coefficient α peut être augmenté jusqu'à 2,0</t44>
+    <!-- todo remove after 3.22.12.0 -->
+    <t53>Réinitialisation de toutes les valeurs des réglages de ferraillage par défaut actuels aux valeurs standard prévues dans le plugin</t53>
+    <!-- todo remove after 3.22.12.0 -->
+    <t63>Vous pouvez indiquer les formes d'armature préférées pour les différents types de barres d'armature créées par le plugin.</t63>
+    <!-- todo remove after 3.22.12.0 -->
+    <t64>La définition de formes préférées ne garantit pas que l'armature sera créée avec la forme d'armature indiquée.</t64>
+    <!-- todo remove after 3.22.12.0 -->
+    <t65>Lors de la création des barres d'armature, le plugin tentera d'utiliser la forme indiquée. Si la création d'une barre avec la forme indiquée est impossible, Revit recherchera automatiquement une forme adaptée ou créera une nouvelle forme.</t65>
+    <!-- todo remove after 3.22.12.0 -->
+    <t66>Enregistrer les réglages de ferraillage actuels comme réglages de ferraillage par défaut</t66>
+    <re1>Une erreur s'est produite lors de la création des armatures longitudinales du poteau id={0} :</re1>
+    <re2>Une erreur s'est produite lors du calcul des points de position des armatures transversales du poteau id={0} :</re2>
+    <re3>Une erreur s'est produite lors de la création de l'élément d'armature transversale de type "{0}" dans le poteau id={1} :</re3>
+    <re4>Impossible de créer une barre d'armature droite avec la forme d'armature préférée "{0}". Erreur : {1}\nTentative de création de la barre avec sélection ou création automatique de la forme d'armature</re4>
+    <re5>Impossible de créer une barre d'armature de forme "{0}" avec la forme d'armature préférée "{1}". Erreur : {2}\nTentative de création de la barre avec sélection ou création automatique de la forme d'armature</re5>
+    <re17>Erreur lors de la création des attentes depuis la dalle id={0} dans le poteau id={1} :</re17>
+    <re18>Erreur de création des coupleurs lors de la jonction des poteaux id={0} et id={1} :</re18>
+    <re19>Erreur de création des coupleurs lors du traitement du poteau id={0} :</re19>
+  </mprColumnsReinforcement>
+</ModPlus>

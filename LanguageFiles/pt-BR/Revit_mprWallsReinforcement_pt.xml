@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWallsReinforcement
+    LocalName="Armadura de paredes"
+    Description="Análise, agrupamento e armadura de paredes e aberturas conforme condições definidas"
+    FullDescription="Funciona apenas com paredes localizadas em um único nível. Analisa as paredes, identificando três tipos de interseções (em canto, de extremidade e em cruz) e aberturas. O agrupamento flexível permite especificar exatamente qual tipo de armadura deve ser executada. É possível executar a armadura apenas para os grupos indicados – paredes, interseções ou aberturas. Funciona até mesmo em um modelo vazio">
+    <h2>JANELA DO PLUGIN:</h2>
+    <h4>Sobre as outras janelas</h4>
+    <h5>EXIBIÇÃO NO MODELO:</h5>
+    <h6>Fator de escala:</h6>
+    <!-- todo remove after 5.24.16.0 -->
+    <h7>ARMADURA PADRÃO:</h7>
+    <h8>Armadura principal das paredes</h8>
+    <h9>Armadura das interseções</h9>
+    <h10>Armadura de contorno das aberturas</h10>
+    <h11>Selecionar</h11>
+    <h12>Analisar</h12>
+    <h13>Agrupar todos</h13>
+    <h14>Paredes selecionadas:</h14>
+    <h15>Agrupamento</h15>
+    <h16>Paredes</h16>
+    <h17>Interseções</h17>
+    <h18>Aberturas</h18>
+    <h19>Agrupar por:</h19>
+    <h20>Espessura das paredes</h20>
+    <h21>Altura das paredes</h21>
+    <h22>Parâmetro das paredes</h22>
+    <h23>Agrupar</h23>
+    <h24>Qtd. de paredes</h24>
+    <h25>Espessuras das paredes</h25>
+    <h26>Alturas das paredes</h26>
+    <h27>Paredes no grupo:</h27>
+    <h28>Espessura</h28>
+    <h29>Alturas</h29>
+    <h30>Parâmetro</h30>
+    <!-- todo remove after 5.24.16.0 -->
+    <h31>Você pode arrastar com o mouse as paredes do grupo atual para outros grupos</h31>
+    <h32>Criar:</h32>
+    <h33>Tipo de interseção</h33>
+    <h34>Alturas das paredes</h34>
+    <h35>Armadura das paredes</h35>
+    <h36>Qtd. de interseç.</h36>
+    <h37>Tipo de interseção</h37>
+    <h38>Parâmetros</h38>
+    <h39>Interseções no grupo:</h39>
+    <!-- todo remove after 5.24.16.0 -->
+    <h40>Você pode arrastar com o mouse as interseções do grupo atual para outros grupos</h40>
+    <h41>Paredes na interseção:</h41>
+    <h42>Armadura</h42>
+    <h43>Dimensões da abertura</h43>
+    <h44>1. Aberturas até</h44>
+    <h45>2. Aberturas de</h45>
+    <h46>mm até:</h46>
+    <h47>3. Aberturas de</h47>
+    <h48>Definir a armadura básica dos grupos por dimensões</h48>
+    <h49>Origem</h49>
+    <h50>Qtd. de aberturas</h50>
+    <h51>Espessura da parede</h51>
+    <h52>Grupo por largura</h52>
+    <h53>Grupo por altura</h53>
+    <h54>Origem</h54>
+    <h55>Aberturas no grupo:</h55>
+    <!-- todo remove after 5.24.16.0 -->
+    <h58>Você pode arrastar com o mouse as aberturas do grupo atual para outros grupos</h58>
+    <h59>Configurações de armadura dos grupos</h59>
+    <h60>Executar armadura</h60>
+    <h61>Cálculo da ancoragem conforme SP 52-101-2003</h61>
+    <h62>Diâmetro:</h62>
+    <h63>Área da seção, mm²:</h63>
+    <h64>Classe do concreto:</h64>
+    <h65>Tipo de superfície do vergalhão:</h65>
+    <h66>Resistência de cálculo à tração, MPa:</h66>
+    <h67>Comprimento de ancoragem básico (principal), mm:</h67>
+    <h68>Coeficiente α:</h68>
+    <h69>Comprimento de ancoragem necessário (de cálculo), mm:</h69>
+    <h70>Comprimento de ancoragem:</h70>
+    <!-- todo remove after 5.24.16.0 -->
+    <h71>Configurações de armadura da interseção</h71>
+    <!-- todo remove after 5.24.16.0 -->
+    <h72>Configurações de armadura da abertura</h72>
+    <!-- todo remove after 5.24.16.0 -->
+    <h73>Configurações de armadura da parede</h73>
+    <!-- todo remove after 5.24.16.0 -->
+    <h74>Substituir pelas configurações de armadura do grupo</h74>
+    <!-- todo remove after 5.24.16.0 -->
+    <h75>Manter as configurações de armadura</h75>
+    <h76>Armadura vertical</h76>
+    <h79>Espaçamento, mm:</h79>
+    <h80>Distância do centro à face da parede, mm:</h80>
+    <h81>Tratamento do espaçamento complementar:</h81>
+    <h82>Afastamento da extremidade da parede, mm:</h82>
+    <h83>Projeção acima da parede, mm:</h83>
+    <h84>Recobrimento nas pontas das barras, mm:</h84>
+    <h85>Posicionar vergalhões acima da última abertura quando a altura da parede acima da abertura for maior que (mm):</h85>
+    <h86>Não posicionar vergalhões abaixo da abertura se a altura da parede abaixo da abertura for menor ou igual a duas espessuras da parede (mas não menos de 400 mm)</h86>
+    <h87>Armadura horizontal</h87>
+    <h88>Posição:</h88>
+    <h89>Afastamento da primeira barra, mm:</h89>
+    <h90>Afastamento da última barra, mm:</h90>
+    <h91>Barras em U nas extremidades da parede</h91>
+    <h92>Comprimento da peça, mm:</h92>
+    <h93>Calcular o comprimento da barra em U</h93>
+    <h94>Estribos transversais (grampos)</h94>
+    <h95>Tipo de grampo:</h95>
+    <h96>Girar os grampos a 45° envolvendo os nós de interseção da armadura principal</h96>
+    <h97>Tipo de distribuição:</h97>
+    <h98>Espaçamento horizontal, mm:</h98>
+    <h99>Espaçamento vertical, mm:</h99>
+    <h100>Interseções em canto</h100>
+    <h101>Espaçamento das peças:</h101>
+    <h102>Tipo de armadura:</h102>
+    <h103>Peça nº 1</h103>
+    <h104>Comprimento de ancoragem, mm:</h104>
+    <h105>Calcular o comprimento de ancoragem</h105>
+    <h106>Peça nº 2</h106>
+    <h107>Interseções em T</h107>
+    <h108>Interseções em cruz</h108>
+    <h109>Barras verticais</h109>
+    <h110>Criar armadura</h110>
+    <h111>Afastamento da abertura:</h111>
+    <h112>Número de fileiras:</h112>
+    <h113>Deslocar ao coincidir com as barras verticais da armadura principal</h113>
+    <h114>Barras horizontais no topo</h114>
+    <h115>Barras em U na vertical</h115>
+    <h116>Barras em U no topo</h116>
+    <h117>Comprimento da peça, mm:</h117>
+    <h118>Espaçamento da peça, mm:</h118>
+    <h119>Configurações de armadura padrão para paredes</h119>
+    <h120>Configurações de armadura padrão para interseções</h120>
+    <h121>Configurações de armadura padrão para aberturas</h121>
+    <h122>Primeiro grupo dimensional</h122>
+    <h123>Segundo grupo dimensional</h123>
+    <h124>Terceiro grupo dimensional</h124>
+    <h127>Arranques das lajes inferiores</h127>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h128>Selecionar lajes inferiores</h128>
+    <h129>Lajes inferiores</h129>
+    <h130>Espessura</h130>
+    <!-- todo remove after 5.24.16.0 -->
+    <h131>Grupos de paredes em contato com a laje:</h131>
+    <h132>Configurações de armadura dos arranques da laje</h132>
+    <h133>Arranques nas paredes intermediárias</h133>
+    <h134>Configurações de armadura padrão para arranques das lajes inferiores</h134>
+    <h135>Tipo de arranques:</h135>
+    <h136>Arranques nas paredes de extremidade</h136>
+    <h137>Usar as configurações de arranques das paredes intermediárias</h137>
+    <h138>Recobrimento da armadura:</h138>
+    <h139>A armadura horizontal está posicionada internamente – o recobrimento em relação à armadura vertical é de</h139>
+    <h140>A armadura horizontal está posicionada externamente – o recobrimento em relação à armadura horizontal é de</h140>
+    <h141>Não fechar a janela após criar a armadura</h141>
+    <h142>Visualizar interseção</h142>
+    <h143>Exclusão da geometria auxiliar</h143>
+    <h144>Afastamento da peça em relação à base da laje inferior:</h144>
+    <h145>Primeiro comprimento de ancoragem, mm:</h145>
+    <h146>Segundo comprimento de ancoragem, mm:</h146>
+    <!-- todo remove after 5.24.16.0 -->
+    <h147>Redefinir</h147>
+    <h148>Comprimento de ancoragem na laje, mm:</h148>
+    <h149>Arranques da laje inferior</h149>
+    <h150>Qtd. de paredes em contato</h150>
+    <h151>Barras verticais adicionais nas extremidades</h151>
+    <h152>Afastamento das barras verticais extremas</h152>
+    <h153>Armadura indireta superior</h153>
+    <h154>Armadura indireta inferior</h154>
+    <h155>Comprimento das barras:</h155>
+    <h156>Barras em U na extremidade superior da parede</h156>
+    <h157>Arranques</h157>
+    <h158>Arranques das barras verticais da armadura de fundo</h158>
+    <h159>Arranques das barras verticais das interseções</h159>
+    <h160>Tipo de arranques:</h160>
+    <h161>Espessura convencional da laje, mm:</h161>
+    <h162>Criar arranques "Defasados"</h162>
+    <h163>Se houver uma abertura na parede superior, então</h163>
+    <h164>Aplicar também aos trechos da parede superior cuja altura abaixo da abertura (ou a altura da parede inteira) seja menor ou igual a duas espessuras da parede (mas não menos de 400)</h164>
+    <h165>Se não houver laje de piso acima da parede, então</h165>
+    <h166>Distância das dobras ao topo da laje (pelo centro do vergalhão), mm:</h166>
+    <h167>Distância das dobras à base da laje (pelo centro do vergalhão), mm:</h167>
+    <h168>Selecionar paredes por retângulo</h168>
+    <h169>Selecionar paredes individualmente</h169>
+    <h170>Recortar os arranques pelo sólido da parede</h170>
+    <h171>Número de pares de barras adicionais:</h171>
+    <h172>Espaçamento das barras:</h172>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h173>Barras retas:</h173>
+    <h174>Barras em L (ao criar dobras das barras verticais):</h174>
+    <h175>Barras em U nas extremidades da parede:</h175>
+    <h176>Barras em U na extremidade superior da parede:</h176>
+    <h177>Estribos transversais em C (grampos). Ganchos no esboço:</h177>
+    <h178>Estribos transversais em S (grampos). Ganchos no esboço:</h178>
+    <h179>Barras em L:</h179>
+    <h180>Barras em U:</h180>
+    <h181>Barras envolventes:</h181>
+    <h182>Barras em L com dobra grande:</h182>
+    <h183>Redefinir todos os valores para "Auto"</h183>
+    <h184>Formas de vergalhão preferenciais</h184>
+    <h185>Não foi possível definir os valores dos parâmetros para alguns elementos. Abaixo estão os códigos dos elementos (id), os nomes dos parâmetros e os valores definidos:</h185>
+    <!-- todo remove after 5.24.16.0 end -->
+    <h186>Estribos horizontais amarrados</h186>
+    <h187>Somente em paredes sem interseções de extremidade com outras paredes</h187>
+    <h188>Em paredes com comprimento até, mm:</h188>
+    <h189>Não criar barras horizontais da armadura de fundo</h189>
+    <h190>Número de pares de barras envolvidos:</h190>
+    <h191>Considerar as peças nas extremidades e interseções</h191>
+    <h192>Tipo de envolvimento das barras da armadura de fundo:</h192>
+    <h193>Primeiro comprimento de traspasse, mm:</h193>
+    <h194>Segundo comprimento de traspasse, mm:</h194>
+    <h195>Calcular o comprimento de traspasse</h195>
+    <h196>Comprimento de traspasse, mm:</h196>
+    <h197>CARREGANDO</h197>
+    <h198>Barras horizontais na base</h198>
+    <h199>Estribos no topo</h199>
+    <h200>Ganchos da forma:</h200>
+    <h201>Definir no esboço</h201>
+    <h202>Usar ganchos do Revit</h202>
+    <h203>Selecionar novamente</h203>
+    <h204>Selecionar novamente as paredes que foram processadas na vista atual no uso anterior do plugin</h204>
+    <h205>Estribos transversais em C (grampos). Ganchos do Revit:</h205>
+    <h206>Estribos transversais em S (grampos). Ganchos do Revit:</h206>
+    <h207>Criar cada peça como uma barra de vergalhão separada</h207>
+    <h208>Não recortar as barras de vergalhão por aberturas com dimensões até (LxH):</h208>
+    <h209>Barras por fileira:</h209>
+    <h210>Distribuição ao longo do comprimento:</h210>
+    <h211>da abertura</h211>
+    <h212>das barras retas</h212>
+    <h213>Barras em U na base</h213>
+    <h214>Estribos na base</h214>
+    <h215>Estribos na vertical</h215>
+    <h216>Comprimento dos arranques, mm:</h216>
+    <h217>Deslocar as barras verticais extremas da armadura de fundo ao coincidirem com a barra em U</h217>
+    <h218>Barras verticais adicionais junto às interseções</h218>
+    <h219>Distância à face da interseção (pelo centro do vergalhão):</h219>
+    <h220>Somente para paredes que se cruzam em ângulo reto</h220>
+    <h221>Barras com dobra longitudinal (dobradas em "garrafa")</h221>
+    <h222>Espaçamento nos trechos de adensamento, mm:</h222>
+    <h223>Distância de adensamento, mm:</h223>
+    <h224>Distância de adensamento, frações:</h224>
+    <h225>Adensamento da armadura horizontal na zona inferior da parede</h225>
+    <h226>Exclusão da armadura criada anteriormente:</h226>
+    <h227>Armadura vertical nas interseções</h227>
+    <h228>Usar as configurações da armadura vertical principal</h228>
+    <h229>Nível</h229>
+    <h230>Criar arranques para as barras verticais adicionais da armadura de fundo</h230>
+    <h231>Distância do ponto inicial da dobra ao topo da parede (a), mm:</h231>
+    <h232>Distância do ponto final da dobra ao topo da laje (b), mm:</h232>
+    <h233>Usar o diâmetro do vergalhão como altura da dobra (c)</h233>
+    <h234>Altura da dobra (c), mm:</h234>
+    <h235>Distância da peça ao topo da laje (pela face externa da peça), mm:</h235>
+    <h236>Barras em U dos arranques verticais:</h236>
+    <h237>A distância entre as barras da armadura vertical (pela menor parede do grupo) é de</h237>
+    <h238>De acordo com o item 10.3.5 da SP 63.13330, a distância entre as barras da armadura vertical deve ser de no mínimo 50 mm!</h238>
+    <h239>De acordo com o item 10.3.5 da SP 63.13330, a distância entre as barras da armadura horizontal deve ser de no mínimo 25 mm!</h239>
+    <h240>Alternar o lado</h240>
+    <h241>Barra adicional em L, dobrada para dentro da laje e posicionada nas paredes de extremidade</h241>
+    <h242>Comprimento de ancoragem na parede, mm:</h242>
+    <h243>Defasagem por deslocamento</h243>
+    <h244>Criar apenas nos trechos onde não há piso ou parede superior</h244>
+    <h245>Barras em U na extremidade inferior da parede</h245>
+    <h246>Paredes em contato com a laje:</h246>
+    <h247>Parâmetro da origem</h247>
+    <h248>Sem parâmetro</h248>
+    <h249>Barras em U horizontais</h249>
+    <h250>Tipo de pontas:</h250>
+    <h251>Comprimento da(s) ponta(s), mm:</h251>
+    <h252>Calcular o comprimento da(s) ponta(s) da barra em U</h252>
+    <h253>Aplicar o recobrimento nas pontas das barras na base da parede</h253>
+    <h254>Posicionar com o espaçamento da armadura de fundo</h254>
+    <h255>Adensamento da armadura horizontal na zona superior da parede</h255>
+    <et1>Ambas as pontas são definidas pelo comprimento da parede</et1>
+    <et2>Uma ponta é definida pelo comprimento da parede, a outra - por valor</et2>
+    <et3>Ambas as pontas são definidas por valor</et3>
+    <srd>Salvando os dados das paredes selecionadas</srd>
+    <rr1>Excluir armadura do mesmo tipo que está sendo criada</rr1>
+    <rr2>Excluir toda a armadura criada anteriormente</rr2>
+    <rr3>Não excluir</rr3>
+    <hook>Gancho:</hook>
+    <g1>Envolver as barras verticais</g1>
+    <g2>Envolver as barras horizontais</g2>
+    <auto>Auto</auto>
+    <oa1>não criar arranques</oa1>
+    <oa2>dobrar para dentro da laje (se houver)</oa2>
+    <npa1>considerar a laje como existente convencionalmente</npa1>
+    <npa2>calcular o comprimento de traspasse a partir do topo da parede</npa2>
+    <jtd1>Os arranques das barras verticais da armadura de fundo não são criados. As barras são cortadas no topo da parede de acordo com o valor definido do recobrimento nas pontas das barras</jtd1>
+    <jtd2>São criados arranques retos das barras verticais. O comprimento de traspasse é definido a partir do topo do piso superior ou do topo da parede. Quando a espessura da parede superior diminui, é feita a dobra do vergalhão (se houver piso)</jtd2>
+    <jtd3>São criados arranques das barras verticais de forma análoga aos arranques retos, mas com comprimentos de ancoragem diferentes</jtd3>
+    <jtd4>São criados arranques das barras verticais com ancoragem no piso superior. O comprimento de ancoragem é medido a partir da face lateral da parede. Se não for possível fazer as dobras das barras para os dois lados, as barras são dobradas para um lado em diferentes níveis da laje</jtd4>
+    <jtd5>São criados arranques retos das barras verticais. O comprimento de traspasse é definido a partir do topo do piso superior ou do topo da parede</jtd5>
+    <jtd6>São criados arranques retos das barras verticais em forma de "garrafa" – os arranques são dobrados em direção ao centro da interseção no valor do diâmetro da barra. O comprimento de traspasse é definido a partir do topo do piso superior</jtd6>
+    <jtd7>São criados arranques para o piso superior na forma de barras em L separadas. O primeiro comprimento de ancoragem – comprimento de ancoragem das barras na laje – é medido a partir da superfície lateral da parede. O segundo comprimento de ancoragem – comprimento de ancoragem das barras na parede – é medido a partir da face superior da parede. Se não for possível fazer as dobras para os dois lados, as barras são dobradas para um lado em diferentes níveis da laje</jtd7>
+    <jtd8>São criados arranques retos das barras verticais sem considerar os elementos superiores</jtd8>
+    <jtd9>São criados arranques retos das barras verticais em forma de "garrafa" – os arranques são dobrados em direção ao centro da parede a uma distância definida ou no valor do diâmetro da barra. O comprimento de traspasse é definido a partir do topo do piso superior</jtd9>
+    <jtd10>As barras verticais da armadura de fundo são cortadas no topo da parede de acordo com o valor definido do recobrimento. É criada a ancoragem no piso superior na forma de uma barra em U separada</jtd10>
+    <!-- todo remove after 5.24.16.0 start -->
+    <i1>1. Canto</i1>
+    <i2>2. Em T</i2>
+    <i3>3. Cruz</i3>
+    <i4>0. Indefinido</i4>
+    <i5>Diversos</i5>
+    <!-- todo remove after 5.24.16.0 end -->
+    <m1>Insira um valor de</m1>
+    <m2>até</m2>
+    <!-- todo remove after 5.24.16.0 -->
+    <m13>Recobrimento da armadura</m13>
+    <m14>Até</m14>
+    <m15>De</m15>
+    <m16>Janela</m16>
+    <m17>Porta</m17>
+    <m18>Modelo genérico</m18>
+    <m19>Abertura retangular</m19>
+    <!-- todo remove after 5.24.16.0 -->
+    <m20>A lista de paredes contém paredes cujas configurações de armadura foram alteradas manualmente e diferem das configurações de armadura do grupo</m20>
+    <!-- todo remove after 5.24.16.0 -->
+    <m21>A lista de interseções contém interseções cujas configurações de armadura foram alteradas manualmente e diferem das configurações de armadura do grupo</m21>
+    <!-- todo remove after 5.24.16.0 -->
+    <m22>A lista de aberturas contém aberturas cujas configurações de armadura foram alteradas manualmente e diferem das configurações de armadura do grupo</m22>
+    <m23>Configurações de armadura copiadas</m23>
+    <m24>Você não indicou para quais grupos criar a armadura!</m24>
+    <m25>Nenhum grupo foi selecionado para criar a armadura!</m25>
+    <m26>Selecione as paredes</m26>
+    <m27>Atenção! Nenhuma forma de vergalhão carregada foi encontrada no projeto atual! Nesse caso, as formas de vergalhão criadas durante o funcionamento do plugin não poderão ser abertas no editor de família! Recomenda-se carregar as formas de vergalhão no projeto antes de usar o plugin!\nExecutar a armadura mesmo com as formas de vergalhão ausentes?</m27>
+    <!-- todo remove after 5.24.16.0 -->
+    <m28>Selecione as lajes inferiores</m28>
+    <!-- todo remove after 5.24.16.0 -->
+    <m29>A laje inferior selecionada (id: {0}) não tem ligações com as paredes selecionadas</m29>
+    <!-- todo remove after 5.24.16.0 -->
+    <m30>Atenção! As configurações de armadura dos arranques das lajes inferiores serão redefinidas! Continuar?</m30>
+    <m31>O raio de dobra da barra de vergalhão é menor que o mínimo permitido</m31>
+    <m32>As configurações de armadura indicadas tornarão impossível modelar as peças de armadura!</m32>
+    <m33>Atenção! Uma nova análise limpará as listas atuais de grupos e a lista de lajes inferiores! Executar nova análise?</m33>
+    <m34>Perfil da parede</m34>
+    <p1>Busca de paredes não processadas que fazem interseção com as paredes selecionadas</p1>
+    <p2>Inicialização da geometria das paredes</p2>
+    <p3>Busca de interseções das paredes</p3>
+    <p4>Exclusão de interseções iguais</p4>
+    <p5>União de interseções</p5>
+    <p6>Análise da geometria das interseções</p6>
+    <p7>Determinação da pertinência das paredes às interseções</p7>
+    <p8>Exclusão da armadura criada anteriormente</p8>
+    <p9>Cálculo e modelagem da armadura da parede</p9>
+    <p10>Cálculo e modelagem da armadura da interseção</p10>
+    <p11>Cálculo e modelagem da armadura da abertura</p11>
+    <p12>Geração de vergalhões do Revit</p12>
+    <p13>União das barras horizontais da armadura criada</p13>
+    <p14>Cálculo e modelagem dos arranques da laje nas paredes intermediárias</p14>
+    <p15>Cálculo e modelagem dos arranques da laje nas paredes de extremidade</p15>
+    <p16>Busca de lajes inferiores</p16>
+    <dd1>V</dd1>
+    <dd2>H</dd2>
+    <dd3>para dentro</dd3>
+    <dd4>para fora</dd4>
+    <dd5>G</dd5>
+    <dd6>U</dd6>
+    <rn>Vergalhão ⌀</rn>
+    <!-- todo remove after 5.24.16.0 -->
+    <noInFamily>O funcionamento do plugin em famílias não está disponível!</noInFamily>
+    <c1>Deslocar para a borda da parede</c1>
+    <c2>Deslocar para o meio da parede</c2>
+    <c3>Distribuir a armadura vertical</c3>
+    <c4>Para dentro</c4>
+    <c5>Para fora</c5>
+    <c6>Ordem direta</c6>
+    <c7>Em quincôncio</c7>
+    <c8>Pelo menor espaçamento</c8>
+    <c9>Pelo maior espaçamento</c9>
+    <c10>Deslocar para ambas as bordas da parede</c10>
+    <t1>Selecionar paredes para análise posterior</t1>
+    <t2>O filtro de seleção inclui apenas paredes com os seguintes parâmetros:</t2>
+    <t3>A parede é delimitada por linhas retas</t3>
+    <t4>A propriedade "Estrutural" está ativada</t4>
+    <t5>A parede não é uma parede cortina</t5>
+    <t6>Espessura da parede de no mínimo 100 mm</t6>
+    <!-- todo remove after 5.24.16.0 -->
+    <t7>O grupo contém paredes cujas configurações de armadura foram editadas manualmente e diferem das configurações de armadura do grupo</t7>
+    <!-- todo remove after 5.24.16.0 -->
+    <t8>Adicionar um novo grupo vazio</t8>
+    <!-- todo remove after 5.24.16.0 -->
+    <t9>Excluir grupo vazio</t9>
+    <t10>Marcar todos os grupos</t10>
+    <t11>Desmarcar todos os grupos</t11>
+    <!-- todo remove after 5.24.16.0 -->
+    <t12>As configurações de armadura da parede foram editadas manualmente e diferem das configurações de armadura do grupo</t12>
+    <!-- todo remove after 5.24.16.0 -->
+    <t13>Editar as configurações de armadura da parede selecionada</t13>
+    <!-- todo remove after 5.24.16.0 -->
+    <t14>Substituir as configurações de armadura da parede pelas configurações do grupo</t14>
+    <t15>Exibir no modelo a parede anterior da lista</t15>
+    <t16>Exibir no modelo a parede selecionada na lista</t16>
+    <t17>Exibir no modelo a próxima parede da lista</t17>
+    <t18>As alturas das paredes são determinadas apenas nos locais de interseção</t18>
+    <!-- todo remove after 5.24.16.0 -->
+    <t19>O grupo contém interseções cujas configurações de armadura foram editadas manualmente e diferem das configurações de armadura do grupo</t19>
+    <!-- todo remove after 5.24.16.0 -->
+    <t20>As configurações de armadura da interseção foram editadas manualmente e diferem das configurações de armadura do grupo</t20>
+    <!-- todo remove after 5.24.16.0 -->
+    <t21>Editar as configurações de armadura da interseção selecionada</t21>
+    <!-- todo remove after 5.24.16.0 -->
+    <t22>Substituir as configurações de armadura da interseção pelas configurações do grupo</t22>
+    <t23>Exibir no modelo a interseção anterior da lista</t23>
+    <t24>Exibir no modelo a interseção selecionada na lista</t24>
+    <t25>Exibir no modelo a próxima interseção da lista</t25>
+    <t26>Esta parede não é processada pelo plugin (não recebe armadura) e serve apenas para determinar a interseção com uma das paredes selecionadas</t26>
+    <t27>Descrição resumida da armadura da parede, onde:</t27>
+    <t28>V – armadura vertical com indicação do diâmetro e do espaçamento das barras</t28>
+    <t29>H – armadura horizontal com indicação do diâmetro, do espaçamento e da posição das barras</t29>
+    <t30>G – armadura transversal (grampos) com indicação do diâmetro</t30>
+    <t31>U – barras em U nas extremidades com indicação do diâmetro</t31>
+    <!-- todo remove after 5.24.16.0 -->
+    <t32>Editar as configurações de armadura do grupo dimensional</t32>
+    <!-- todo remove after 5.24.16.0 -->
+    <t33>O grupo contém aberturas cujas configurações de armadura foram editadas manualmente e diferem das configurações de armadura do grupo</t33>
+    <!-- todo remove after 5.24.16.0 -->
+    <t34>As configurações de armadura da abertura foram editadas manualmente e diferem das configurações de armadura do grupo</t34>
+    <!-- todo remove after 5.24.16.0 -->
+    <t35>Editar as configurações de armadura da abertura selecionada</t35>
+    <!-- todo remove after 5.24.16.0 -->
+    <t36>Substituir as configurações de armadura da abertura pelas configurações do grupo</t36>
+    <t37>Exibir no modelo a abertura anterior da lista</t37>
+    <t38>Exibir no modelo a abertura selecionada na lista</t38>
+    <t39>Exibir no modelo a próxima abertura da lista</t39>
+    <!-- todo remove after 5.24.16.0 -->
+    <t40>Copiar as configurações de armadura do grupo atual para todos os grupos marcados</t40>
+    <!-- todo remove after 5.24.16.0 -->
+    <t41>Salvar as configurações de armadura do grupo atual em arquivo xml</t41>
+    <!-- todo remove after 5.24.16.0 -->
+    <t42>Carregar as configurações de armadura de um arquivo xml e aplicá-las ao grupo atual</t42>
+    <t43>Atenção! O tipo de superfície do vergalhão pode depender da classe do vergalhão, do diâmetro ou de outros valores que não são considerados pelo programa. Consulte a documentação normativa</t43>
+    <t44>α – coeficiente que considera a influência do estado de tensão do concreto e do vergalhão e da solução construtiva do elemento na zona de ancoragem sobre o comprimento de ancoragem. Na ancoragem de barras nervuradas com pontas retas (ancoragem reta) ou de barras lisas com ganchos ou laços sem dispositivos de ancoragem adicionais, adota-se α = 1,0 para barras tracionadas e α = 0,75 para barras comprimidas. De acordo com o item 10.3.30 da SP 63.13330, o coeficiente α pode ser aumentado até 2,0</t44>
+    <t45>De acordo com o item 10.3.8 da SP 63.13330.2012, o espaçamento das barras verticais deve ser de no máximo 2t e 400 mm (t – espessura da parede)</t45>
+    <t46>De acordo com o item 6.4.7 da GOST 21.501-2018, o comprimento da peça é definido pela face externa da barra de vergalhão</t46>
+    <t47>Aumenta o tempo de geração dos vergalhões!</t47>
+    <t48>As peças de armadura da interseção serão posicionadas com o espaçamento da armadura horizontal das paredes – pelo menor ou pelo maior espaçamento da armadura horizontal das paredes que participam da interseção</t48>
+    <t49>Número de fileiras da armadura vertical</t49>
+    <t50>Número de fileiras da armadura horizontal</t50>
+    <!-- todo remove after 5.24.16.0 start -->
+    <t51>Seleção da laje inferior localizada diretamente abaixo das paredes selecionadas. A seleção da laje inferior fica disponível após a seleção, a análise e o agrupamento das paredes. É possível selecionar uma ou várias lajes. Nas propriedades das lajes inferiores, a propriedade "Estrutural" deve estar ativada</t51>
+    <!-- todo remove after 5.24.16.0 -->
+    <t53>Redefinir todos os valores das configurações de armadura padrão atuais para os valores padrão definidos no plugin</t53>
+    <t54>Copiar as configurações de armadura dos arranques da laje atual para todas as lajes marcadas</t54>
+    <t55>Salvar as configurações de armadura dos arranques da laje atual</t55>
+    <t56>Carregar as configurações de armadura dos arranques e aplicá-las à laje atual</t56>
+    <t57>Os valores mínimo e máximo são calculados com base nos diâmetros e no espaçamento definidos da armadura vertical</t57>
+    <t58>O comprimento da barra é a soma de dois comprimentos de ancoragem</t58>
+    <t59>Ao ativar a opção "Defasados", cada primeiro par de arranques ao longo da parede será criado com o primeiro comprimento de traspasse, e cada segundo par – com o segundo comprimento de traspasse</t59>
+    <t60>Se os arranques excederem a altura da parede superior, eles serão cortados pela face superior da parede, considerando o recobrimento indicado nas pontas das barras</t60>
+    <!-- todo remove after 5.24.16.0 -->
+    <t61>A opção de seleção se aplica à seleção das lajes</t61>
+    <t62>A barra vertical é deslocada para o ponto de início da dobra da barra em U, obtido pela soma dos valores do recobrimento da armadura horizontal nas extremidades, do diâmetro da barra em U e do diâmetro normativo de dobra da barra em U</t62>
+    <!-- todo remove after 5.24.16.0 -->
+    <t63>Você pode indicar formas de vergalhão preferenciais para diferentes tipos de barras de vergalhão criadas pelo plugin.</t63>
+    <!-- todo remove after 5.24.16.0 -->
+    <t64>Definir formas preferenciais não garante que o vergalhão será criado usando a forma do vergalhão indicada.</t64>
+    <!-- todo remove after 5.24.16.0 -->
+    <t65>Ao criar as barras de vergalhão, será feita uma tentativa de usar a forma indicada. Se não for possível criar a barra com a forma indicada, o Revit procurará automaticamente uma forma adequada ou criará uma nova forma.</t65>
+    <!-- todo remove after 5.24.16.0 -->
+    <t66>Salvar as configurações de armadura atuais como configurações de armadura padrão</t66>
+    <t67>Agrupar paredes, interseções e aberturas de acordo com as configurações de agrupamento atuais</t67>
+    <t68>Com esta opção ativada, os grampos não serão posicionados nas interseções das paredes nem nas extremidades das paredes onde são posicionadas peças (por exemplo, barras em U)</t68>
+    <t69>Se as barras horizontais da armadura de fundo estiverem posicionadas internamente e as verticais externamente, recomenda-se indicar o envolvimento das barras verticais. No caso inverso, quando as barras horizontais da armadura de fundo estiverem posicionadas externamente, recomenda-se indicar o envolvimento das barras horizontais</t69>
+    <t70>O comprimento da peça é considerado igual ao comprimento de ancoragem</t70>
+    <t71>A cada segundo par de barras será aplicado um afastamento inferior igual ao valor absoluto da diferença entre os comprimentos de traspasse. O afastamento não afeta o segundo comprimento de traspasse. Por exemplo, se o primeiro comprimento de traspasse for 500 mm e o segundo for 750 mm, as barras de cada segundo par terão um afastamento inferior de 250 mm</t71>
+    <t72>Exibir no modelo a laje selecionada na lista</t72>
+    <t73>Exibir no modelo as paredes em contato com a laje selecionada na lista</t73>
+    <re1>Erro ao criar as barras verticais da armadura de fundo na parede id={0}:</re1>
+    <re2>Erro ao criar as barras verticais da armadura de fundo na interseção na parede id={0}:</re2>
+    <re3>Erro ao criar as barras verticais adicionais na extremidade da parede id={0}:</re3>
+    <re4>Erro ao criar as barras horizontais amarradas na parede id={0}:</re4>
+    <re5>Erro ao criar as barras horizontais da armadura de fundo na parede id={0}:</re5>
+    <re6>Erro ao criar as barras em U nas extremidades da parede id={0}:</re6>
+    <re7>Erro ao criar as barras em U na extremidade superior da parede id={0}:</re7>
+    <re8>Erro ao criar os grampos na parede id={0}:</re8>
+    <re9>Erro ao criar as peças da ligação em canto nas paredes {0}:</re9>
+    <re10>Erro ao criar as peças da ligação em T nas paredes {0}:</re10>
+    <re11>Erro ao criar as peças da ligação em cruz nas paredes {0}:</re11>
+    <re12>Erro ao criar as barras verticais de contorno da abertura na parede id={0}:</re12>
+    <re13>Erro ao criar as barras horizontais de contorno da abertura na parede id={0}:</re13>
+    <re14>Erro ao criar as barras em U de contorno da abertura na vertical na parede id={0}</re14>
+    <re15>Erro ao criar as barras em U de contorno da abertura na horizontal (no topo) na parede id={0}</re15>
+    <re16>Erro ao criar as barras de armadura indireta no contorno da abertura na parede id={0}:</re16>
+    <re17>Erro ao criar os arranques da laje id={0} para a parede id={1}:</re17>
+    <re18>Erro ao criar os estribos de contorno da abertura na parede id={0}:</re18>
+    <re19>Erro ao criar as barras em U de contorno da abertura na horizontal (na base) na parede id={0}</re19>
+    <re20>Não foi possível criar a barra de vergalhão com a forma de vergalhão preferencial definida "{0}". Erro: {1}\nFoi feita uma tentativa de criar a barra com seleção ou criação automática da forma do vergalhão</re20>
+    <re21>Erro ao criar as barras em U na extremidade inferior da parede</re21>
+    <re22>Não é possível exibir a interseção na vista atual! Vá para uma planta de piso</re22>
+    <re23>Erro ao criar as barras em U horizontais na parede id={0}:</re23>
+    <re24>Erro ao criar as barras verticais adicionais junto à interseção na parede id={0}:</re24>
+  </mprWallsReinforcement>
+</ModPlus>

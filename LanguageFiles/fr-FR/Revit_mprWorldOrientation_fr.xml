@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWorldOrientation
+    LocalName="Points cardinaux"
+    Description="Analyse de l'orientation des éléments selon les points cardinaux par rapport à la pièce ou par rapport à leur position sur le site">
+    <!--todo remove after 2.2.1.0-->
+    <d1>L'analyse de l'orientation des pièces est effectuée d'après les fenêtres, les portes et les murs-rideaux. Le résultat de l'analyse peut être écrit dans un paramètre des pièces ou dans un paramètre des fenêtres, portes et murs-rideaux</d1>
+    <!--todo remove after 2.2.1.0-->
+    <d2>Analyse de l'orientation des éléments. Le résultat de l'analyse peut être écrit dans un paramètre des fenêtres, portes ou murs-rideaux.</d2>
+    <d3>Pour les éléments des catégories sélectionnées, le point cardinal (compte tenu de l'orientation vers le nord géographique) est déterminé par rapport à la pièce sélectionnée, indépendamment de l'orientation propre de l'élément sur le site. Le résultat de l'analyse peut être écrit dans un paramètre de la pièce et/ou dans un paramètre des éléments sélectionnés</d3>
+    <d4>Pour les éléments des catégories sélectionnées, l'orientation de la face avant est déterminée par rapport au nord géographique. Les résultats de l'analyse peuvent être écrits dans un paramètre des éléments sélectionnés</d4>
+    <tab1>Par pièces</tab1>
+    <tab2>Par éléments</tab2>
+    <!-- todo remove after 2.0.0.0 -->
+    <v1>Paramètre :</v1>
+    <v2>Écrire le résultat dans un paramètre des :</v2>
+    <v3>Portes</v3>
+    <v4>Fenêtres</v4>
+    <v5>Murs-rideaux</v5>
+    <v6>Filtrer les pièces :</v6>
+    <v7>Pièces</v7>
+    <v8>Éléments</v8>
+    <v9>Pièces et éléments</v9>
+    <v10>Éléments à analyser :</v10>
+    <v11>Murs</v11>
+    <s1>N</s1>
+    <s2>S</s2>
+    <s3>O</s3>
+    <s4>E</s4>
+    <s5>NO</s5>
+    <s6>SO</s6>
+    <s7>NE</s7>
+    <s8>SE</s8>
+    <h1>Éléments sélectionnés</h1>
+    <h2>Dans la vue active</h2>
+    <h3>Dans le projet</h3>
+    <tr1>Détermination de l'orientation des ouvertures</tr1>
+    <t1>Les pièces n'ont pas de paramètre "{0}", il est donc impossible de renseigner les résultats de l'analyse</t1>
+    <t2>Impossible d'affecter une valeur au paramètre "{0}". Vérifiez le type du paramètre à renseigner – il doit être de type texte</t2>
+    <t3>Nombre total de pièces trouvées : {0}</t3>
+    <t4>Nombre total d'éléments de la catégorie "{0}" ayant reçu une valeur après l'analyse : {1}</t4>
+    <t5>Impossible de déterminer l'orientation de l'élément</t5>
+    <t6>Aucun paramètre cible n'est défini pour écrire le résultat pour les éléments de la catégorie "{0}"</t6>
+  </mprWorldOrientation>
+</ModPlus>

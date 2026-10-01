@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpArmature
+    LocalName="Vergalhões"
+    Description="Obtenção de informações e cálculos por bitolas de vergalhões"
+    FullDescription="Requer bancos de dados. Permite obter diversos dados informativos e de cálculo (área, peso, ancoragem etc.) para um grande número de tabelas de bitolas">
+    <cancel>Cancelar</cancel>
+    <h1>Vergalhões</h1>
+    <h2>Doc. normativo</h2>
+    <h3>Seleção do documento normativo</h3>
+    <h4>Diâmetro</h4>
+    <h5>Seleção por diâmetro do vergalhão</h5>
+    <h6>Área da seção, cm²</h6>
+    <h7>Seleção por área da seção transversal do vergalhão</h7>
+    <h8>Massa de 1 m, kg</h8>
+    <h9>Seleção por massa de um metro linear de vergalhão</h9>
+    <h10>Classe do vergalhão</h10>
+    <h11>Seleção da classe do aço do vergalhão</h11>
+    <h12>Massa</h12>
+    <h13>Comprimento, mm:</h13>
+    <h14>Campo para inserir o comprimento (mm) para o cálculo da massa</h14>
+    <h15>m</h15>
+    <h16>Em metros lineares</h16>
+    <h17>Medir o comprimento entre dois pontos</h17>
+    <h18>Obter a soma dos comprimentos dos objetos</h18>
+    <h19>Resultado, kg</h19>
+    <h20>Número de casas decimais</h20>
+    <h21>Resultado para a tabela</h21>
+    <h22>Inserir o resultado do cálculo na tabela do AutoCAD</h22>
+    <h23>Nome para a tabela</h23>
+    <h24>Inserir o nome do vergalhão selecionado na tabela do AutoCAD</h24>
+    <h25>Inserir resultado e nome</h25>
+    <h26>Inserir o resultado do cálculo e o nome do vergalhão selecionado na tabela do AutoCAD</h26>
+    <h27>Áreas</h27>
+    <h28>Com o número de barras:</h28>
+    <h29>Área, cm²:</h29>
+    <h30>Com espaçamento das barras (mm):</h30>
+    <h31>Área, cm²/1 m:</h31>
+    <h32>Ancoragem/Traspasse</h32>
+    <h33>SP 52-101-2003</h33>
+    <h34>Classe do concreto:</h34>
+    <h35>Classe do concreto quanto à resistência à compressão</h35>
+    <h36>Resistência de cálculo à tração</h36>
+    <h37>Tipo de superfície do vergalhão</h37>
+    <h38>Atenção! O tipo de superfície do vergalhão pode depender da classe, do diâmetro ou de outros valores que não são considerados pelo programa. Consulte a documentação normativa</h38>
+    <h39>Resistência de cálculo à tração, MPa</h39>
+    <h40>Comprimento básico (principal) de ancoragem, mm:</h40>
+    <h41>Coeficiente α:</h41>
+    <h42>α é o coeficiente que considera a influência, sobre o comprimento de ancoragem, do estado de tensão do concreto e da armadura e da solução construtiva do elemento na zona de ancoragem. Na ancoragem de barras nervuradas com pontas retas (ancoragem reta) ou de armadura lisa com ganchos ou alças sem dispositivos de ancoragem adicionais, adota-se α = 1,0 para barras tracionadas e α = 0,75 para barras comprimidas. Conforme o item 10.3.30 da SP 63.13330, o coeficiente α pode ser aumentado até 2,0</h42>
+    <h43>Armadura necessária e efetiva são iguais</h43>
+    <h44>Armadura efetivamente instalada (diâmetro)</h44>
+    <h45>Por padrão, considera-se que a armadura necessária pelo cálculo e a armadura efetivamente instalada são iguais. Caso a armadura seja diferente, selecione a armadura efetivamente instalada. A armadura necessária pelo cálculo é selecionada na parte esquerda da janela</h45>
+    <h46>Comprimento de ancoragem necessário (de cálculo), mm:</h46>
+    <h47>Gerar relatório no MS Word</h47>
+    <h48>Detalhes</h48>
+    <h49>Status do documento: Em vigor</h49>
+    <h50>Status do documento: Revogado</h50>
+    <h51>Status do documento: Informações ausentes ou não definidas pela legislação</h51>
+    <h52>O cálculo do comprimento de ancoragem ou de traspasse para o diâmetro atual do vergalhão é feito em uma janela separada</h52>
+    <h53>Abrir</h53>
+    <h54>Adicionar símbolo de diâmetro (Ø)</h54>
+    <msg1>Disponível na versão completa do plugin!</msg1>
+    <msg2>Não há valor no campo "Comprimento"</msg2>
+    <msg3>Vergalhão não selecionado</msg3>
+    <msg4>Só é permitido inserir números e ponto</msg4>
+    <msg5>Nem todos os dados foram inseridos</msg5>
+    <msg6>Massa de 1 m para a tabela</msg6>
+    <msg7>Selecione a tabela "Lista de materiais"</msg7>
+    <msg8>Selecione a célula "Nome"</msg8>
+    <msg9>kg/m</msg9>
+    <msg10>Selecione a célula "Massa"</msg10>
+    <err1>Seleção inválida!</err1>
+    <err2>Você não clicou em uma célula!</err2>
+    <mpa>MPa</mpa>
+    <cb1>Vergalhão liso</cb1>
+    <cb2>Deformado a frio (nervurado)</cb2>
+    <cb3>Laminado a quente (nervurado)</cb3>
+    <cb4>Com tratamento termomecânico (nervurado)</cb4>
+    <p1>Resultado do cálculo no Word</p1>
+    <p2>Criação de novo documento</p2>
+    <p3>Preenchimento dos dados</p3>
+  </mpArmature>
+</ModPlus>

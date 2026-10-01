@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpProductInsert
+    LocalName="Product insert"
+    Description="Inserting products from the ModPlus database as blocks with extended data"
+    FullDescription="Creating AutoCAD blocks based on data from the database. Extended data is added to the blocks, which allows processing these blocks with other plugins and creating a specification based on them\nExtended data can also be added to ordinary AutoCAD entities\nImportant! Blocks must be inserted with this plugin or copy already inserted, otherwise (when inserted by normal means AutoCAD), extended data will not be added!">
+    <all>All</all>
+    <cb1>Metal</cb1>
+    <cb2>Concrete</cb2>
+    <cb3>Wood/Plastics</cb3>
+    <cb4>Materials</cb4>
+    <cb5>Other</cb5>
+    <h1>Edit the list of documents used by the plugin</h1>
+    <h2>Open the database search bar</h2>
+    <h4>2 characters or more</h4>
+    <h5>Product insert</h5>
+    <h6>Choose a section:</h6>
+    <h7>Filter by groups:</h7>
+    <h8>Select a document:</h8>
+    <h9>Open image</h9>
+    <h10>Acting</h10>
+    <h11>Inactive</h11>
+    <h12>No information or legislation</h12>
+    <h13>Length, mm</h13>
+    <h14>Measure between two points</h14>
+    <h15>Diameter, mm</h15>
+    <h16>Width, mm</h16>
+    <h17>Height (thickness), mm</h17>
+    <h18>Steel:</h18>
+    <h19>Density, kg/m³:</h19>
+    <h20>Save the entered dimension values</h20>
+    <h21>Product position</h21>
+    <h22>Insertion Option</h22>
+    <h23>Masking</h23>
+    <h24>Add masking to hide items behind the block</h24>
+    <h25>Insert</h25>
+    <h26>Inserting a product in the form of a block with a simple geometry and with extended data</h26>
+    <h27>Replace block</h27>
+    <h28>Replace block representing the product</h28>
+    <h29>Add to entity</h29>
+    <h30>Add to the specified entity extended data containing information about the product</h30>
+    <h31>Show documents for the database section:</h31>
+    <h32>Document status:</h32>
+    <h33>Valid</h33>
+    <h34>Not valid</h34>
+    <h35>No information or legislation</h35>
+    <h36>Product data</h36>
+    <h37>By two points</h37>
+    <h38>In the form of polyline</h38>
+    <h39>The insertion options "By two points" and "In the form of polyline" are only available for linear products (products whose length is required). The insertion option will use if it is active and selected. When using either of the two options, you do not need to pre-specify the length of the product in the window. The "By two point" insert option is available when you select the "Side view" or "Top view" display option. The insertion option "In the form of polyline" is available when selecting the "Front view (section)" display option</h39>
+    <h40>Document's status:</h40>
+    <h41>Block scale:</h41>
+    <rb1>Side view</rb1>
+    <rb2>Front view (section)</rb2>
+    <rb3>Top view</rb3>
+    <s1>Side</s1>
+    <s2>Front (Section)</s2>
+    <err1>Error creating block name!</err1>
+    <err2>Incorrect block name!</err2>
+    <msg1>Select block for replace:</msg1>
+    <msg2>The selected block does not contain the extended data of the ModPlus product\nReplace this block?</msg2>
+    <msg3>Select entities in which you want to add data for the product</msg3>
+    <msg4>Enter the length of the product</msg4>
+    <msg5>Enter the diameter of the product</msg5>
+    <msg6>Enter the width of the product</msg6>
+    <msg7>Enter the height of the product</msg7>
+    <msg8>Insertion point:</msg8>
+    <msg9>MP:Product data</msg9>
+    <msg10>First point</msg10>
+    <msg11>Second point</msg11>
+  </mpProductInsert>
+</ModPlus>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpArmature
+    LocalName="Armatures"
+    Description="Informations et calculs pour les gammes d'armatures"
+    FullDescription="Nécessite des bases de données. Permet d'obtenir diverses données d'information et de calcul (aire, poids, ancrage, etc.) pour un grand nombre de gammes différentes">
+    <cancel>Annuler</cancel>
+    <h1>Armatures</h1>
+    <h2>Doc. normatif</h2>
+    <h3>Sélection du document normatif</h3>
+    <h4>Diamètre</h4>
+    <h5>Sélection par diamètre d'armature</h5>
+    <h6>Aire de sect., cm²</h6>
+    <h7>Sélection par aire de la section transversale de l'armature</h7>
+    <h8>Masse 1 ml, kg</h8>
+    <h9>Sélection par masse d'un mètre linéaire d'armature</h9>
+    <h10>Classe d'armature</h10>
+    <h11>Sélection de la classe d'acier de l'armature</h11>
+    <h12>Masse</h12>
+    <h13>Longueur, mm :</h13>
+    <h14>Champ de saisie de la longueur (mm) pour le calcul de la masse</h14>
+    <h15>ml</h15>
+    <h16>En mètres linéaires</h16>
+    <h17>Mesurer la longueur entre deux points</h17>
+    <h18>Obtenir la somme des longueurs à partir des objets</h18>
+    <h19>Résultat, kg</h19>
+    <h20>Nombre de décimales</h20>
+    <h21>Résultat dans le tableau</h21>
+    <h22>Insérer le résultat du calcul dans un tableau AutoCAD</h22>
+    <h23>Désignation dans le tableau</h23>
+    <h24>Insérer la désignation de l'armature sélectionnée dans un tableau AutoCAD</h24>
+    <h25>Insérer le résultat et la désignation</h25>
+    <h26>Insérer le résultat du calcul et la désignation de l'armature sélectionnée dans un tableau AutoCAD</h26>
+    <h27>Aires</h27>
+    <h28>Pour un nombre de barres :</h28>
+    <h29>Aire, cm² :</h29>
+    <h30>Pour un espacement des barres (mm) :</h30>
+    <h31>Aire, cm²/1 m :</h31>
+    <h32>Ancrage/Recouvrement</h32>
+    <h33>SP 52-101-2003</h33>
+    <h34>Classe de béton :</h34>
+    <h35>Classe de béton selon la résistance à la compression</h35>
+    <h36>Résistance de calcul à la traction</h36>
+    <h37>Type de surface de l'armature</h37>
+    <h38>Attention ! L'aspect de surface des armatures peut dépendre de la classe d'armature, du diamètre ou d'autres valeurs qui ne sont pas prises en compte par le programme. Consultez la documentation normative</h38>
+    <h39>Résistance de calcul à la traction, MPa</h39>
+    <h40>Longueur d'ancrage de base, mm :</h40>
+    <h41>Coefficient α :</h41>
+    <h42>α – coefficient tenant compte de l'influence, sur la longueur d'ancrage, de l'état de contrainte du béton et de l'armature ainsi que de la solution constructive de l'élément dans la zone d'ancrage. Pour l'ancrage de barres à haute adhérence à extrémités droites (ancrage droit) ou d'armatures lisses avec crochets ou boucles sans dispositifs d'ancrage supplémentaires, on prend α = 1,0 pour les barres tendues et α = 0,75 pour les barres comprimées. Selon le point 10.3.30 du SP 63.13330, le coefficient α peut être augmenté jusqu'à 2,0</h42>
+    <h43>Les armatures requise et réelle sont identiques</h43>
+    <h44>Armature réellement mise en place (diamètre)</h44>
+    <h45>Par défaut, on considère que l'armature requise par le calcul et l'armature réellement mise en place sont identiques. Si elles diffèrent, sélectionnez l'armature réellement mise en place. L'armature requise par le calcul est sélectionnée dans la partie gauche de la fenêtre</h45>
+    <h46>Longueur d'ancrage requise (de calcul), mm :</h46>
+    <h47>Générer un rapport dans MS Word</h47>
+    <h48>Détails</h48>
+    <h49>Statut du document : En vigueur</h49>
+    <h50>Statut du document : Abrogé</h50>
+    <h51>Statut du document : Informations absentes ou non définies par la législation</h51>
+    <h52>Le calcul de la longueur d'ancrage ou de recouvrement pour le diamètre d'armature actuel s'effectue dans une fenêtre distincte</h52>
+    <h53>Ouvrir</h53>
+    <h54>Ajouter le symbole de diamètre (Ø)</h54>
+    <msg1>Disponible dans la version complète du plugin !</msg1>
+    <msg2>Aucune valeur dans le champ "Longueur"</msg2>
+    <msg3>Aucune armature sélectionnée</msg3>
+    <msg4>Seuls les chiffres et le point sont autorisés</msg4>
+    <msg5>Toutes les données n'ont pas été saisies</msg5>
+    <msg6>Masse au mètre linéaire dans le tableau</msg6>
+    <msg7>Sélectionnez le tableau "Nomenclature"</msg7>
+    <msg8>Sélectionnez la cellule "Désignation"</msg8>
+    <msg9>kg/ml</msg9>
+    <msg10>Sélectionnez la cellule "Masse"</msg10>
+    <err1>Sélection incorrecte !</err1>
+    <err2>Aucune cellule atteinte !</err2>
+    <mpa>MPa</mpa>
+    <cb1>Armature lisse</cb1>
+    <cb2>Déformée à froid (haute adhérence)</cb2>
+    <cb3>Laminée à chaud (haute adhérence)</cb3>
+    <cb4>Traitée thermomécaniquement (haute adhérence)</cb4>
+    <p1>Résultat du calcul dans Word</p1>
+    <p2>Création d'un nouveau document</p2>
+    <p3>Remplissage des données</p3>
+  </mpArmature>
+</ModPlus>

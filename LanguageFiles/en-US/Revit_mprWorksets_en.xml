@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWorksets
+    LocalName="Worksets"
+    Description="Manage, create, and apply worksets"
+    FullDescription="Creating workset configurations used to create worksets in a document. Configurations can be imported and exported. For each workset in the configuration, conditions for applying the workset to an element can be specified"
+    LocalName1="Update worksets"
+    Description1="Calling the command &quot;Apply worksets by filters&quot; with the current settings without using the plugin window"
+    LocalName2="Workset Processing"
+    Description2="Utilities for worksets – merge, hide, isolate, etc.">
+    <h1>Create worksets</h1>
+    <h2>Create worksets and apply them by filters</h2>
+    <h3>Apply worksets by filters</h3>
+    <h4>Visibility</h4>
+    <h5>Copy the settings to all work sets in the current group</h5>
+    <h6>Copy the settings to all working sets of all groups</h6>
+    <h7>Filters</h7>
+    <h10>Open file</h10>
+    <h11>Read settings</h11>
+    <h12>Each row is a group</h12>
+    <h13>Separator items in a row:</h13>
+    <h14>First value is the name of the group</h14>
+    <h15>Each group is separated by an empty line</h15>
+    <h16>Group name is preceded by a symbol:</h16>
+    <h17>Preview</h17>
+    <h18>Select a group to import worksets:</h18>
+    <h21>Copy filter settings to all worksets of the current group</h21>
+    <h22>Copy filter settings to all worksets of all groups</h22>
+    <h23>Processing of worksets in a group</h23>
+    <h24>Add prefix:</h24>
+    <h26>Add suffix:</h26>
+    <h28>Sought value</h28>
+    <h29>replaced by:</h29>
+    <h30>New value</h30>
+    <h31>Only process checked worksets</h31>
+    <h32>Check all</h32>
+    <h33>Uncheck all</h33>
+    <h34>Inverse</h34>
+    <h37>Import worksets</h37>
+    <h38>Group export</h38>
+    <h40>Enter name</h40>
+    <h41>Enter new name</h41>
+    <h42>Enter name of group</h42>
+    <h43>Import configuration</h43>
+    <h44>Export configuration</h44>
+    <h45>Create worksets</h45>
+    <h46>Applying worksets</h46>
+    <h47>Select categories</h47>
+    <h48>Equality parameters</h48>
+    <h49>Display in the results the id of the elements to which the workset is assigned</h49>
+    <h52>Workset</h52>
+    <h53>Editable</h53>
+    <h54>Opened</h54>
+    <h55>The elements are transferred from the worksets: {0}\ninto the workset\n{1}</h55>
+    <h56>Select</h56>
+    <h57>Hiding elements</h57>
+    <h58>Showing elements</h58>
+    <h59>Elements isolation</h59>
+    <h60>To merge worksets (move elements from one workset to another), select the source worksets and move them with the mouse to the target workset</h60>
+    <h61>Merging worksets</h61>
+    <h62>When processing groups, apply workset to</h62>
+    <h63>group instance</h63>
+    <h64>group type</h64>
+    <h65>group instance and group type</h65>
+    <h66>When processing linked files, apply workset to</h66>
+    <h67>link instance</h67>
+    <h68>link type</h68>
+    <h69>link instance and type</h69>
+    <h70>When processing Import Symbols, apply workset to</h70>
+    <h71>import instance</h71>
+    <h72>import type</h72>
+    <h73>import instance and type</h73>
+    <h74>Select a group or a workset</h74>
+    <h75>Remove worksets</h75>
+    <!-- todo remove after 3.0.2.0 start -->
+    <t1>Rename configuration</t1>
+    <t2>Create new configuration</t2>
+    <t3>Import configuration</t3>
+    <t4>Export configuration</t4>
+    <t5>Remove configuration</t5>
+    <!-- todo remove after 3.0.2.0 end -->
+    <t6>Rename group</t6>
+    <t7>Add new workset</t7>
+    <t8>Import group</t8>
+    <t9>Export group</t9>
+    <t10>Remove group</t10>
+    <t11>Remove workset</t11>
+    <t12>Create new group</t12>
+    <t13>Select Elements</t13>
+    <t14>Hide elements in current view</t14>
+    <t15>Show elements in current view</t15>
+    <t16>Isolate elements in current view</t16>
+    <t17>This workset name is already in use</t17>
+    <t18>Empty workset name is not valid</t18>
+    <t19>Pin elements in selected Worksets</t19>
+    <t20>Unpin elements in selected Worksets</t20>
+    <t21>Add worksets by link names</t21>
+    <t22>Elements</t22>
+    <t23>The elements of the worksets will be:</t23>
+    <t24>Removed</t24>
+    <t25>Moved to:</t25>
+    <t26>Sort worksets in a group in alphabetical order</t26>
+    <msg1>Remove?</msg1>
+    <msg2>The current configuration "{0}" will be permanently deleted!</msg2>
+    <msg3>Group "{0}" will be permanently deleted!</msg3>
+    <msg4>Copy filter settings?</msg4>
+    <msg5>Apply filters will be overwritten for all worksets of all groups in the current configuration. This action cannot be undone!</msg5>
+    <msg6>Apply filters will be overwritten for all worksets in the current group. This action cannot be undone!</msg6>
+    <msg7>Need to enter name</msg7>
+    <msg8>Name "{0}" already used</msg8>
+    <msg9>Delete selected item?</msg9>
+    <msg10>No configuration selected!</msg10>
+    <msg11>Nothing selected!</msg11>
+    <msg12>Creating worksets is only possible in documents configured for collaboration (workshared)</msg12>
+    <msg14>Elements cannot be hidden in current view</msg14>
+    <msg20>No worksets configuration created</msg20>
+    <msg21>Worksets configuration not selected</msg21>
+    <msg22>No worksets groups created in current configuration</msg22>
+    <msg23>The selected file is not a configuration data storage file and cannot be imported!</msg23>
+    <msg24>You are trying to import a worksets group storage file</msg24>
+    <msg25>The selected file is not a file for storing data about a group of worksets and cannot be imported!</msg25>
+    <msg26>You are trying to import a configuration storage file</msg26>
+    <msg28>A workset already exists in the current document</msg28>
+    <msg29>Workset created</msg29>
+    <msg30>Workset not found</msg30>
+    <msg31>No apply conditions are set for the workset</msg31>
+    <msg32>Element did not have a "Workset" parameter</msg32>
+    <msg33>The workset "{0}" is applied to {1} elements</msg33>
+    <msg34>An error "{0}" occurred while setting the workset to elements</msg34>
+    <msg35>The workset was not applied for the following elements because the elements are owned by user "{0}"</msg35>
+    <msg36>There are no links in the document</msg36>
+    <msg37>Copy the settings?</msg37>
+    <msg38>The settings will be overwritten for all work sets in the current group. This action cannot be undone!</msg38>
+    <msg39>The settings will be overwritten in all work sets of all groups in the current configuration. This action cannot be undone!</msg39>
+    <msg40>Sorting?</msg40>
+    <msg41>Worksets will be sorted alphabetically in group "{0}". Continue?</msg41>
+    <ie1>Text file</ie1>
+    <ie2>Excel file</ie2>
+    <ie3>xml-file</ie3>
+    <ie4>Current Revit document</ie4>
+    <rp1>Each row contains a list of worksets</rp1>
+    <rp2>Each row contains a workset</rp2>
+  </mprWorksets>
+</ModPlus>

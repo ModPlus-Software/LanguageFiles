@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPCopy
+    LocalName="MEP Copy"
+    Description="A set of tools for copying MEP elements"
+    LocalName1="Copy by Levels"
+    Description1="Copying MEP elements with alignment to selected levels"
+    LocalName2="Copy vertically"
+    Description2="Copying MEP elements vertically by distance"
+    LocalName3="Copy in direction"
+    Description3="Copying MEP elements in direction by distance">
+    <msg1>MEP elements not selected</msg1>
+    <msg2>Select MEP elements to copy</msg2>
+    <msg3>Failed to identify a base level of elements</msg3>
+    <msg4>Specify a point on the MEP curve to select a direction</msg4>
+    <t1>Quantity up:</t1>
+    <t2>Quantity down:</t2>
+    <t3>Distance:</t3>
+    <t4>Quantity:</t4>
+    <t5>Show only selected</t5>
+    <t6>Levels selected:</t6>
+    <t7>If both "Count" and "Distance" options are enabled, the selected elements will be copied the specified number of times at the defined distance in the chosen direction.
+
+If only the "Count" option is enabled, only elements connected to MEP curves whose direction matches the selected direction will be copied. Copying will be performed the specified number of times, evenly spaced until reaching the end of the MEP curve.
+
+If only the "Distance" option is enabled, only elements connected to MEP curves whose direction matches the selected direction will be copied. Copying will be performed repeatedly at the specified distance as long as the elements can connect to the MEP curves.</t7>
+    <err1>Failed to connect elements</err1>
+  </mprMEPCopy>
+</ModPlus>
