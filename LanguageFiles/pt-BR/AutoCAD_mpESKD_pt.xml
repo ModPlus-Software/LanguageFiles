@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpESKD
+    LocalName="Smart"
+    Description="Criação de objetos inteligentes que ampliam os recursos do AutoCAD e permitem elaborar desenhos conforme normas (ISO)">
+    <tab1>Linhas</tab1>
+    <tab2>Configurações</tab2>
+    <tab3>Eixos</tab3>
+    <tab4>Estilos e configurações</tab4>
+    <tab5>Trabalho com estilos e configurações dos objetos inteligentes ModPlus</tab5>
+    <tab6>Paleta de propriedades</tab6>
+    <tab7>Paleta de propriedades dos objetos inteligentes ModPlus</tab7>
+    <tab8>Vistas, cortes</tab8>
+    <tab9>Utilitários</tab9>
+    <tab10>Localizar</tab10>
+    <tab11>Cotas de nível</tab11>
+    <!-- todo remove tab12 after 1.28.24.0  -->
+    <tab12>Localizar por valor</tab12>
+    <tab13>Pesquisa de objetos inteligentes por tipo</tab13>
+    <!-- todo remove tab14 after 1.28.24.0  -->
+    <tab14>Pesquisa de objetos inteligentes pelo valor de propriedades de texto e numéricas</tab14>
+    <tab15>Linhas de chamada</tab15>
+    <tab16>Indicações</tab16>
+    <tab17>Localizar e substituir</tab17>
+    <tab18>Localizar e substituir em objetos inteligentes pelo valor de propriedades de texto e numéricas</tab18>
+    <tab19>Soldagem</tab19>
+    <!--todo remove after 2.5.18.0-->
+    <defl>Padrão</defl>
+    <err1>Não foi possível encontrar o arquivo</err1>
+    <err2>Não foi possível carregar o tipo de linha</err2>
+    <err5>Erro ao obter dados do registro! Execute o Configurador para atualizar os dados no registro</err5>
+    <msg1>Especifique o ponto de inserção:</msg1>
+    <msg2>Especifique o ponto final:</msg2>
+    <msg3>Selecione um bloco que seja um objeto inteligente ModPlus</msg3>
+    <msg5>Especifique o próximo ponto:</msg5>
+    <msg6>Selecione a polilinha:</msg6>
+    <msg7>Excluir a polilinha original?</msg7>
+    <msg8>Copiar a camada? [Sim/Não]</msg8>
+    <msg9>Objetos inteligentes processados</msg9>
+    <msg10>Nenhum objeto inteligente dos tipos especificados foi encontrado no espaço atual</msg10>
+    <msg11>Especifique o ponto de referência:</msg11>
+    <msg12>Especifique o ponto do nível:</msg12>
+    <msg13>Especifique o ponto de posição da cota de nível:</msg13>
+    <msg14>Selecione as cotas de nível:</msg14>
+    <msg15>Selecione a cota de nível de referência:</msg15>
+    <msg16>Remova objetos da seleção:</msg16>
+    <msg17>Especifique o ponto do quadro:</msg17>
+    <msg18>Especifique o ponto da linha de chamada:</msg18>
+    <msg19>Especifique o ponto de posicionamento do texto:</msg19>
+    <msg20>Especifique o ponto de afastamento do texto:</msg20>
+    <msg21>Especifique o ponto de posição do texto:</msg21>
+    <msg22>Próximo ponto ou</msg22>
+    <msg23>Selecione a primeira aresta</msg23>
+    <msg24>Selecione a segunda aresta</msg24>
+    <msg25>Especifique o centro do arco</msg25>
+    <msg26>Especifique o início do arco</msg26>
+    <msg27>Especifique o fim do arco</msg27>
+    <msg28>Especifique o ponto para o novo eixo</msg28>
+    <wrong>Objeto inválido!</wrong>
+    <vc1>VARIADOS</vc1>
+    <vc2>NÃO DEFINIDO</vc2>
+    <h1>Configurações da paleta</h1>
+    <h2>Iniciar automaticamente com o AutoCAD</h2>
+    <h3>Conectar à paleta ModPlus</h3>
+    <h4>Limite máximo excedido</h4>
+    <h5>de objetos selecionados</h5>
+    <h6>A paleta parou de funcionar</h6>
+    <h7>O limite máximo de objetos selecionados</h7>
+    <h8>pode ser alterado nas</h8>
+    <h9>configurações</h9>
+    <h10>do plugin</h10>
+    <h11>Propriedades Smart</h11>
+    <h12>Sistema</h12>
+    <h13>Novo estilo do usuário</h13>
+    <h14>Editor de estilos</h14>
+    <h15>Configurações</h15>
+    <h16>Adicionar novo estilo do usuário</h16>
+    <h17>Excluir o estilo do usuário selecionado</h17>
+    <h18>Definir o estilo selecionado como padrão</h18>
+    <h19>Criar um novo estilo com base no objeto inteligente selecionado</h19>
+    <h20>Descrição da propriedade:</h20>
+    <h21>Configurações gerais</h21>
+    <h22>Ao criar o objeto, definir a escala a partir do estilo</h22>
+    <h23>Se marcado, ao criar o objeto inteligente, será aplicada a escala definida no estilo atual, independentemente da escala de anotação do desenho. Caso contrário, será aplicada ao objeto a escala de anotação do desenho</h23>
+    <h24>Ao criar o objeto, definir a camada a partir do estilo</h24>
+    <h25>Se marcado, ao criar o objeto inteligente, será aplicada a camada definida no estilo atual, independentemente da camada atual do desenho. Caso contrário, será aplicada ao objeto a camada atual do desenho</h25>
+    <h26>Se a camada especificada no estilo não existir no documento atual:</h26>
+    <h27>Aplicar a camada atual</h27>
+    <h28>Ao criar o objeto, será aplicada a ele a camada atual do desenho</h28>
+    <h29>Criar e aplicar a camada do estilo</h29>
+    <h30>A camada definida no estilo será criada no documento atual e aplicada ao objeto inteligente</h30>
+    <h31>Ao criar o objeto, definir o estilo de texto a partir do estilo</h31>
+    <h32>Se marcado, ao criar o objeto inteligente, será aplicado o estilo de texto definido no estilo atual, independentemente do estilo de texto atual do desenho. Caso contrário, será aplicado ao objeto o estilo de texto atual do desenho</h32>
+    <h33>Se o estilo de texto especificado no estilo não existir no documento atual:</h33>
+    <h34>Aplicar o estilo de texto atual</h34>
+    <h35>Ao criar o objeto inteligente, será aplicado a ele o estilo de texto atual do desenho</h35>
+    <h36>Criar e aplicar o estilo de texto do estilo</h36>
+    <h37>O estilo de texto definido no estilo será criado no documento atual e aplicado ao objeto</h37>
+    <h38>Número máximo de objetos selecionados a partir do qual a paleta de propriedades deixa de funcionar. Esta configuração serve para acelerar o trabalho no AutoCAD, desativando a leitura das propriedades dos objetos. Por exemplo, se você precisar selecionar 1000 objetos para copiá-los para outro desenho, não é necessário processar as propriedades de todos eles</h38>
+    <h39>Máximo de objetos selecionados (0 – sempre funcionar):</h39>
+    <h40>Configurações dos objetos inteligentes</h40>
+    <h41>Eixo reto</h41>
+    <h42>Alterar a escala do tipo de linha proporcionalmente à escala do objeto</h42>
+    <h43>A escala do tipo de linha definida para o eixo será alterada proporcionalmente à escala principal do eixo. Por exemplo, se a escala do eixo for 1:1 e a escala do tipo de linha for 2, ao definir a escala do eixo como 1:100, a escala do tipo de linha passará a ser 200</h43>
+    <h44>Continuar os valores dos eixos criados</h44>
+    <h45>Ao criar eixos, será feita a pesquisa dos eixos já existentes no desenho e a coleta dos valores do primeiro marcador de cada eixo, com posterior ordenação crescente. Para o eixo criado, será definido o valor do marcador seguinte ao último valor encontrado</h45>
+    <h46>Mostrar linhas auxiliares</h46>
+    <h47>Ao selecionar uma cota de nível, serão exibidas as linhas auxiliares do ponto de referência até o ponto do nível e do ponto do nível até a cota de nível</h47>
+    <h48>Linha de interrupção</h48>
+    <h49>Principais</h49>
+    <h50>Estilo:</h50>
+    <h51>Geometria</h51>
+    <h52>Estilo do objeto inteligente</h52>
+    <h53>Estilo base para linha de interrupção</h53>
+    <h54>Nome do estilo</h54>
+    <h55>Descrição do estilo</h55>
+    <h56>Criação de linha de interrupção</h56>
+    <h57>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de interrupção, especificando dois pontos</h57>
+    <h58>Interrupção curvilínea</h58>
+    <h59>Interrupção cilíndrica</h59>
+    <h60>Criação de interrupção curvilínea</h60>
+    <h61>Criação de interrupção cilíndrica</h61>
+    <h62>Criação de um objeto inteligente com base em um bloco anônimo que descreve a interrupção curvilínea, especificando dois pontos</h62>
+    <h63>Criação de um objeto inteligente com base em um bloco anônimo que descreve a interrupção cilíndrica, especificando dois pontos</h63>
+    <h64>Conteúdo</h64>
+    <h65>Criação de eixo reto</h65>
+    <h66>Criação de um objeto inteligente com base em um bloco anônimo que descreve o eixo reto, especificando dois pontos</h66>
+    <h68>Estilo base para eixo reto</h68>
+    <h69>O estilo selecionado será excluído permanentemente! Continuar?</h69>
+    <h70>O grupo de estilos</h70>
+    <h71>contém estilos com o mesmo nome</h71>
+    <h72>Renomeie os estilos para que não haja nomes iguais</h72>
+    <h73>Linha de solo</h73>
+    <h74>Criação de linha de indicação de solo</h74>
+    <h75>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de solo</h75>
+    <h76>Linha de solo a partir de polilinha</h76>
+    <h77>Conversão da polilinha selecionada em linha de indicação de solo</h77>
+    <h78>Estilo base para linha de solo</h78>
+    <h79>Corte</h79>
+    <h80>Criação de indicação de corte (seção)</h80>
+    <h81>Criação de um objeto inteligente com base em um bloco anônimo que descreve o corte (seção)</h81>
+    <h82>Corte escalonado</h82>
+    <h83>Corte a partir de polilinha</h83>
+    <h84>Criação de indicação de corte (seção) escalonado</h84>
+    <h85>Conversão da polilinha selecionada em indicação de corte</h85>
+    <h86>Continuar os valores dos novos cortes</h86>
+    <h87>Ao criar um novo corte, será procurado no espaço atual o último corte criado, cujo valor será usado como base para o novo corte</h87>
+    <h88>Exibir a linha auxiliar do corte</h88>
+    <h89>Ao selecionar um corte, será exibida uma linha auxiliar que passa por todos os pontos do corte</h89>
+    <h90>Movimento dependente do texto</h90>
+    <h93>Restaurar a posição do texto</h93>
+    <h95>MP: Criar análogo</h95>
+    <h96>Estilo base para corte</h96>
+    <h97>Ao mover um dos textos do corte, o outro será deslocado automaticamente pela mesma distância</h97>
+    <h98>Como tratar a propriedade "Camada" durante o comando "Criar análogo":</h98>
+    <h99>Pesquisa de objetos inteligentes</h99>
+    <h100>Especifique os tipos de objetos a pesquisar</h100>
+    <h101>Selecionar tudo</h101>
+    <h102>Desmarcar tudo</h102>
+    <h103>O estilo não existe na base</h103>
+    <h104>Um ou mais objetos estão em uma camada bloqueada e não podem ser atualizados</h104>
+    <h105>Cota de nível</h105>
+    <h106>Criação de cota de nível</h106>
+    <h107>Criação de um objeto inteligente com base em um bloco anônimo que descreve a cota de nível</h107>
+    <h108>Estilo base para cota de nível</h108>
+    <h110>Alinhamento de cotas de nível</h110>
+    <h111>Alinhamento vertical da posição das cotas</h111>
+    <h112>Coincidência dos pontos de referência</h112>
+    <h113>O comando permite alinhar as cotas de nível segundo diversas condições</h113>
+    <h114>Impermeabilização</h114>
+    <h115>Criação de linha de indicação de impermeabilização</h115>
+    <h116>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de impermeabilização</h116>
+    <h117>Impermeabilização a partir de polilinha</h117>
+    <h118>Conversão da polilinha selecionada em linha de indicação de impermeabilização</h118>
+    <h119>Para o objeto inteligente criado que contém um número exibido, definir o separador da parte inteira e da parte decimal:</h119>
+    <h120>Valor a pesquisar</h120>
+    <h121>Pesquisar</h121>
+    <h122>Palavra inteira</h122>
+    <h123>Diferenciar maiúsculas e minúsculas</h123>
+    <h124>Nenhum resultado encontrado para "{0}"</h124>
+    <h125>Adicionar tudo à seleção atual</h125>
+    <h126>Linha de chamada de detalhe</h126>
+    <h127>Criação de linha de chamada de detalhe</h127>
+    <h128>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de chamada de detalhe</h128>
+    <h129>Estilo base para impermeabilização</h129>
+    <h130>Estilo base para linha de chamada de detalhe</h130>
+    <h131>Continuar os valores das linhas de chamada de detalhe criadas</h131>
+    <h132>Ao criar linhas de chamada de detalhe, será feita a pesquisa das linhas de chamada de detalhe já existentes no desenho e a coleta dos números de detalhe, com posterior ordenação crescente. Para a linha de chamada de detalhe criada, será definido o número de detalhe seguinte ao último valor encontrado</h132>
+    <h133>Linha de chamada de detalhe em corte</h133>
+    <h134>Criação de linha de chamada de detalhe em corte</h134>
+    <h135>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de chamada de detalhe em corte</h135>
+    <h136>Continuar os valores das linhas de chamada de detalhe em corte criadas</h136>
+    <h137>Ao criar linhas de chamada de detalhe em corte, será feita a pesquisa das linhas de chamada de detalhe em corte já existentes no desenho e a coleta dos números de detalhe, com posterior ordenação crescente. Para a linha de chamada de detalhe em corte criada, será definido o número de detalhe seguinte ao último valor encontrado</h137>
+    <h138>Estilo base para linha de chamada de detalhe em corte</h138>
+    <h139>Cordão de solda</h139>
+    <h140>Criação de indicação de cordão de solda</h140>
+    <h141>Criação de um objeto inteligente com base em um bloco anônimo que descreve o cordão de solda</h141>
+    <h142>Estilo base para indicação de cordão de solda</h142>
+    <h143>Cordão de solda a partir de polilinha</h143>
+    <h144>Conversão da polilinha selecionada em linha de indicação de cordão de solda</h144>
+    <h145>Indicação de fragmento</h145>
+    <h146>Estilo base para indicação de fragmento</h146>
+    <h147>Criação de indicação de fragmento</h147>
+    <h148>Criação de um objeto inteligente com base em um bloco anônimo que descreve a indicação de fragmento, especificando dois pontos</h148>
+    <h149>Continuar os valores dos fragmentos criados</h149>
+    <h150>Ao criar fragmentos, será feita a pesquisa dos fragmentos já existentes no desenho e a coleta de seus números, com posterior ordenação crescente. Para o fragmento criado, será definido o número seguinte ao último valor encontrado</h150>
+    <h151>Indicação de vista/corte</h151>
+    <h152>Estilo base para indicação de vista/corte</h152>
+    <h153>Indicação de vista</h153>
+    <h154>Criação de indicação de vista </h154>
+    <h155>Criação de um objeto inteligente de indicação de vista com base em um bloco anônimo</h155>
+    <h156>Continuar os valores das novas vistas</h156>
+    <h157>Ao criar uma nova indicação de vista/corte, será procurada no espaço atual a última indicação de vista/corte criada, cujo valor será usado como base para a nova indicação de vista/corte</h157>
+    <h158>Indicação de corte</h158>
+    <h159>Criação de indicação de corte</h159>
+    <h160>Criação de um objeto inteligente de indicação de corte com base em um bloco anônimo</h160>
+    <h161>Linha com letras</h161>
+    <h162>Estilo base para linha com letras</h162>
+    <h163>Desenho da indicação de linha com letras</h163>
+    <h164>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha com letras</h164>
+    <h165>Linha com letras a partir de polilinha</h165>
+    <h166>Conversão da polilinha selecionada em linha com letras</h166>
+    <h167>Vista</h167>
+    <h168>Estilo base para indicação de vista</h168>
+    <h169>Criação de indicação de vista</h169>
+    <h170>Criação de um objeto inteligente com base em um bloco anônimo que descreve a indicação de vista</h170>
+    <h171>Cota de nível em planta</h171>
+    <h172>Estilo base para cota de nível em planta</h172>
+    <h173>Criação de cota de nível em planta</h173>
+    <h174>Criação de um objeto inteligente com base em um bloco anônimo que descreve a cota de nível em planta</h174>
+    <h175>Linha de chamada em cadeia</h175>
+    <h176>Estilo base para linha de chamada em cadeia</h176>
+    <h177>Criação de linha de chamada em cadeia</h177>
+    <h178>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de chamada em cadeia</h178>
+    <h179>Continuar os valores das linhas de chamada em cadeia criadas</h179>
+    <h180>Ao criar linhas de chamada em cadeia, será feita a pesquisa das linhas de chamada já existentes no desenho e a coleta de seus valores, com posterior ordenação crescente. Para a linha de chamada criada, será definido o número ou a letra seguinte ao último valor encontrado. A função só funciona se todas as linhas de chamada em cadeia criadas tiverem valores numéricos ou alfabéticos</h180>
+    <h181>Considerar o ângulo de rotação do bloco ao girar o texto</h181>
+    <h182>O texto do eixo reto girará junto com o bloco do eixo ao usar o comando ROTACIONAR</h182>
+    <h183>Linha de chamada em pente</h183>
+    <h184>Estilo base para linha de chamada em pente</h184>
+    <h185>Criação de linha de chamada em pente</h185>
+    <h186>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de chamada em pente</h186>
+    <h187>Seta grossa</h187>
+    <h188>Estilo base para seta grossa</h188>
+    <h189>Criação de seta grossa</h189>
+    <h190>Criação de um objeto inteligente com base em um bloco anônimo que descreve a seta grossa</h190>
+    <h191>Junta de concretagem</h191>
+    <h192>Criação de junta de concretagem</h192>
+    <h193>Criação de um objeto inteligente com base em um bloco anônimo que descreve a junta de concretagem</h193>
+    <h194>Junta de concretagem a partir de polilinha</h194>
+    <h195>Conversão da polilinha selecionada em linha de indicação de junta de concretagem</h195>
+    <h196>Estilo base para indicação de junta de concretagem</h196>
+    <h197>Indicação de detalhe</h197>
+    <h198>Criação de indicação de detalhe</h198>
+    <h199>Criação de um objeto inteligente com base em um bloco anônimo que descreve a indicação de detalhe</h199>
+    <h200>Estilo base para indicação de detalhe</h200>
+    <h201>Continuar os valores das indicações de detalhe criadas</h201>
+    <h202>Ao criar indicações de detalhe, será feita a pesquisa das indicações de detalhe já existentes no desenho e a coleta dos números de detalhe, com posterior ordenação crescente. Para a indicação de detalhe criada, será definido o número de detalhe seguinte ao último valor encontrado</h202>
+    <h203>Marcador de revisão</h203>
+    <h204>Criação de marcador de revisão</h204>
+    <h205>Criação de um objeto inteligente com base em um bloco anônimo que descreve o marcador de revisão</h205>
+    <h206>Estilo base para marcador de revisão</h206>
+    <h207>Linha de chamada em pente</h207>
+    <h208>Estilo base para linha de chamada em pente</h208>
+    <h209>Criação de linha de chamada em pente</h209>
+    <h210>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de chamada em pente</h210>
+    <h211>Identificador de estaca</h211>
+    <h212>Estilo base para identificador de estaca</h212>
+    <h213>Criação de identificador de estaca</h213>
+    <h214>Criação de um objeto inteligente com base em um bloco anônimo que descreve o identificador de estaca</h214>
+    <h215>Indicação de inclinação</h215>
+    <h216>Criação de indicação de inclinação</h216>
+    <h217>Criação de um objeto inteligente com base em um bloco anônimo que descreve a indicação de inclinação</h217>
+    <h218>Estilo base para indicação de inclinação</h218>
+    <h219>Substituir tudo</h219>
+    <h220>Substituir selecionados</h220>
+    <h221>Tipo de objeto</h221>
+    <h224>Propriedade sem nome</h224>
+    <h225>Objetos inteligentes encontrados:</h225>
+    <h226>Propriedades encontradas:</h226>
+    <h227>Pesquisar apenas propriedades substituíveis</h227>
+    <h228>Pode ser alterado</h228>
+    <h229>Valor de substituição</h229>
+    <h230>Isolamento</h230>
+    <h231>Criação de linha de indicação de diversos tipos de isolamento</h231>
+    <h232>Criação de um objeto inteligente com base em um bloco anônimo que descreve diversos tipos de isolamento</h232>
+    <h233>Isolamento a partir de polilinha</h233>
+    <h234>Conversão da polilinha selecionada em linha de indicação de diversos tipos de isolamento</h234>
+    <h235>Exibir alças adicionais nos objetos inteligentes lineares</h235>
+    <h236>Estilo base para isolamento</h236>
+    <h237>Exibir alças funcionais adicionais ao selecionar objetos inteligentes lineares</h237>
+    <h238>Indicação de solda</h238>
+    <h239>Criação de indicação de solda</h239>
+    <h240>Criação de um objeto inteligente com base em um bloco anônimo que descreve a indicação de solda</h240>
+    <h241>Estilo base para indicação de solda</h241>
+    <h242>Lado</h242>
+    <h243>Perna de solda</h243>
+    <h244>Criação de perna de solda</h244>
+    <h245>Criação de um objeto inteligente com base em um bloco anônimo que descreve a perna de solda</h245>
+    <h246>Criação de perna de solda por três pontos</h246>
+    <h247>Criação de um objeto inteligente com base em um bloco anônimo que descreve a perna de solda por três pontos</h247>
+    <h248>Estilo base para perna de solda</h248>
+    <h249>Preenchimento de aberturas</h249>
+    <h250>Criação de preenchimento de aberturas</h250>
+    <h251>Criação de um objeto inteligente com base em um bloco anônimo que descreve o preenchimento de aberturas</h251>
+    <h252>Estilo base para preenchimento de aberturas</h252>
+    <h253>Perna de solda por três pontos</h253>
+    <h254>Não há objetos inteligentes no documento</h254>
+    <h255>Eixo polar</h255>
+    <h256>Criação de eixo polar</h256>
+    <h257>Criação de um objeto inteligente com base em um bloco anônimo que descreve a indicação do eixo polar</h257>
+    <h258>Estilo base para eixo polar</h258>
+    <h259>Valor inicial</h259>
+    <h260>Linha de chamada multilinha</h260>
+    <h261>Criação de linha de chamada multilinha</h261>
+    <h262>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de chamada multilinha</h262>
+    <h263>Editar valores salvos</h263>
+    <h264>Editar os valores salvos da linha de chamada multilinha</h264>
+    <h265>Estilo base para linha de chamada multilinha</h265>
+    <h266>Nova linha</h266>
+    <h267>Número máximo de itens:</h267>
+    <h268>Valores no objeto atual</h268>
+    <h269>Valores salvos</h269>
+    <h270>Linha com setas</h270>
+    <h271>Criação de linha com setas</h271>
+    <h272>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha com setas</h272>
+    <h273>Linha com setas a partir de polilinha</h273>
+    <h274>Conversão da polilinha selecionada em linha com setas</h274>
+    <h275>Estilo base para linha com setas</h275>
+    <h276>Propriedades gerais</h276>
+    <h277>Novo grupo</h277>
+    <h278>Adicionar grupo</h278>
+    <h279>Linha de transmissão</h279>
+    <h280>Criação de linha de transmissão</h280>
+    <h281>Criação de um objeto inteligente com base em um bloco anônimo que descreve a linha de transmissão</h281>
+    <h282>Linha de transmissão a partir de polilinha</h282>
+    <h283>Conversão da polilinha selecionada em linha de transmissão</h283>
+    <h284>Estilo base para linha de transmissão</h284>
+    <h285>Unidades de medida</h285>
+    <h286>Excluir grupo</h286>
+    <h287>Adicionar linha</h287>
+    <h288>Excluir linha</h288>
+    <so0>Atualizar gráficos</so0>
+    <sot0>Os gráficos de todos os objetos inteligentes encontrados serão regenerados</sot0>
+    <so1>Selecionar</so1>
+    <sot1>Todos os objetos inteligentes dos tipos especificados no espaço atual serão selecionados</sot1>
+    <so2>Remover dados</so2>
+    <sot2>Os dados estendidos de todos os objetos inteligentes dos tipos especificados no espaço atual serão removidos, o que os transformará em blocos comuns</sot2>
+    <so3>Explodir</so3>
+    <sot3>Todos os objetos inteligentes dos tipos especificados no espaço atual serão explodidos</sot3>
+    <so4>Excluir</so4>
+    <sot4>Todos os objetos inteligentes dos tipos especificados no espaço atual serão excluídos</sot4>
+    <mtleadavailfull>O uso de valores salvos está disponível na versão completa do plugin!</mtleadavailfull>
+    <la1>Copiar</la1>
+    <la2>Não copiar</la2>
+    <la3>Perguntar</la3>
+    <gp1>Esticar</gp1>
+    <gp2>Mover</gp2>
+    <gp3>Remover vértice</gp3>
+    <gp4>Adicionar vértice</gp4>
+    <gp5>Adicionar linha de chamada</gp5>
+    <gp6>Remover linha de chamada</gp6>
+    <gp7>Tipo de seta da linha de chamada</gp7>
+    <gp8>Preenchimento</gp8>
+    <blt1>Linear</blt1>
+    <blt2>Curvilínea</blt2>
+    <blt3>Cilíndrica</blt3>
+    <amt1>Dos dois lados</amt1>
+    <amt2>Em cima</amt2>
+    <amt3>Embaixo</amt3>
+    <amt4>Primeira</amt4>
+    <amt5>Segunda</amt5>
+    <vlt1>Corte</vlt1>
+    <vlt2>Vista</vlt2>
+    <llt1>Padrão</llt1>
+    <llt2>Composta</llt2>
+    <type1>Tipo 1</type1>
+    <type2>Tipo 2</type2>
+    <glfst1>Distância entre os traços</glfst1>
+    <glfst2>Metade da distância entre os grupos de traços</glfst2>
+    <glfst3>Distância entre os grupos de traços</glfst3>
+    <wpfst1>Metade da distância entre os traços</wpfst1>
+    <wpfst2>Sem afastamento</wpfst2>
+    <separator1>Das configurações do ModPlus</separator1>
+    <separator2>Do estilo</separator2>
+    <separator3>Ponto</separator3>
+    <separator4>Vírgula</separator4>
+    <tha1>À esquerda</tha1>
+    <tha2>Ao centro</tha2>
+    <tha3>À direita</tha3>
+    <tha4>Superior direito</tha4>
+    <tha5>Inferior direito</tha5>
+    <tha6>Inferior esquerdo</tha6>
+    <tha7>Superior esquerdo</tha7>
+    <tha8>Livre</tha8>
+    <ft1>Redonda</ft1>
+    <ft2>Retangular</ft2>
+    <ft3>Linha</ft3>
+    <ft4>Sem moldura</ft4>
+    <let0>Nenhuma</let0>
+    <let1>Meia seta</let1>
+    <let2>Ponto</let2>
+    <let3>Traço oblíquo duplo</let3>
+    <let4>Ângulo reto</let4>
+    <let5>Fechada preenchida</let5>
+    <let6>Aberta</let6>
+    <let7>Fechada</let7>
+    <let8>Traço oblíquo</let8>
+    <let9>Seção</let9>
+    <wjt1>De topo, de fábrica, contínuo, no lado visível</wjt1>
+    <wjt2>De topo, de fábrica, contínuo, no lado oculto</wjt2>
+    <wjt3>De topo, de montagem, contínuo, no lado visível</wjt3>
+    <wjt4>De topo, de montagem, contínuo, no lado oculto</wjt4>
+    <wjt5>De topo, de fábrica, intermitente, no lado visível</wjt5>
+    <wjt6>De topo, de fábrica, intermitente, no lado oculto</wjt6>
+    <wjt7>De topo, de montagem, intermitente, no lado visível</wjt7>
+    <wjt8>De topo, de montagem, intermitente, no lado oculto</wjt8>
+    <wjt9>De filete, de fábrica, contínuo, no lado visível</wjt9>
+    <wjt10>De filete, de fábrica, contínuo, no lado oculto</wjt10>
+    <wjt11>De filete, de montagem, contínuo, no lado visível</wjt11>
+    <wjt12>De filete, de montagem, contínuo, no lado oculto</wjt12>
+    <wjt13>De filete, de fábrica, intermitente, no lado visível</wjt13>
+    <wjt14>De filete, de fábrica, intermitente, no lado oculto</wjt14>
+    <wjt15>De filete, de montagem, intermitente, no lado visível</wjt15>
+    <wjt16>De filete, de montagem, intermitente, no lado oculto</wjt16>
+    <pil0>Tipo 0</pil0>
+    <pil1>Tipo 1</pil1>
+    <pil2>Tipo 2</pil2>
+    <pil3>Tipo 3</pil3>
+    <pil4>Tipo 4</pil4>
+    <pil5>Tipo 5</pil5>
+    <pil6>Tipo 6</pil6>
+    <pil7>Tipo 7</pil7>
+    <pil8>Tipo 8</pil8>
+    <pil9>Tipo 9</pil9>
+    <pil10>Tipo 10</pil10>
+    <pit0>Círculo</pit0>
+    <pit1>Retângulo</pit1>
+    <dmt0>Por mil</dmt0>
+    <dmt1>Graus</dmt1>
+    <dmt2>Razão</dmt2>
+    <dmt3>Número</dmt3>
+    <dmt4>Porcentagem</dmt4>
+    <dot>Ponto</dot>
+    <comma>Vírgula</comma>
+    <len>Comprimento</len>
+    <p1>Tipo de linha de interrupção</p1>
+    <d1>Tipo de linha: linear, curvilínea ou cilíndrica</d1>
+    <p2>Prolongamentos além do objeto</p2>
+    <d2>Para a interrupção linear, o valor do prolongamento é definido em mm. Para a interrupção curvilínea, o valor do prolongamento é definido em % do comprimento entre os pontos principais. Para a interrupção cilíndrica, o valor do prolongamento não é usado</d2>
+    <p3>Largura da interrupção</p3>
+    <d3>Largura da interrupção em mm. Somente para a linha de interrupção do tipo linear</d3>
+    <p4>Altura da interrupção</p4>
+    <d4>Altura da interrupção em mm. Somente para a linha de interrupção do tipo linear</d4>
+    <p5>Escala</p5>
+    <d5>Escala da linha de interrupção</d5>
+    <d5-1>Escala do eixo</d5-1>
+    <p6>Escala do tipo de linha</p6>
+    <d6>Escala do tipo de linha definido nas propriedades do bloco</d6>
+    <p7>Camada</p7>
+    <d7>Camada do objeto</d7>
+    <p8>Posição dos marcadores</p8>
+    <d8>Posição dos marcadores: dos dois lados, em cima ou embaixo</d8>
+    <p9>Quebra</p9>
+    <d9>Altura da quebra do eixo</d9>
+    <p10>Diâmetro dos marcadores</p10>
+    <d10>Diâmetro dos marcadores do eixo</d10>
+    <p11>Quantidade de marcadores</p11>
+    <d11>Quantidade de marcadores do eixo</d11>
+    <p12>Tipo do primeiro marcador</p12>
+    <d12>Tipo do primeiro marcador do eixo</d12>
+    <p13>Tipo do segundo marcador</p13>
+    <d13>Tipo do segundo marcador do eixo</d13>
+    <p14>Tipo do terceiro marcador</p14>
+    <d14>Tipo do terceiro marcador do eixo</d14>
+    <p15>Afastamento inferior da quebra</p15>
+    <d15>Afastamento inferior da quebra do eixo</d15>
+    <p16>Afastamento superior da quebra</p16>
+    <d16>Afastamento superior da quebra do eixo</d16>
+    <p16-2>Afastamento da quebra</p16-2>
+    <d16-2>Afastamento superior ou inferior da quebra do eixo</d16-2>
+    <p17>Estilo de texto</p17>
+    <d17>Estilo de texto dos elementos de texto do eixo</d17>
+    <p18>Altura do texto</p18>
+    <d18>Altura do texto dos elementos de texto do eixo</d18>
+    <p19>Tipo de linha do eixo</p19>
+    <p20>Prefixo do primeiro valor</p20>
+    <p21>Sufixo do primeiro valor</p21>
+    <p22>Primeiro valor</p22>
+    <p23>Prefixo do segundo valor</p23>
+    <p24>Sufixo do segundo valor</p24>
+    <p25>Segundo valor</p25>
+    <p26>Prefixo do terceiro valor</p26>
+    <p27>Sufixo do terceiro valor</p27>
+    <p28>Terceiro valor</p28>
+    <p29>Tamanho das setas</p29>
+    <p30>Valor do marcador de orientação inferior</p30>
+    <p31>Valor do marcador de orientação superior</p31>
+    <p32>Marcador de orientação inferior</p32>
+    <d32>Visibilidade do marcador de orientação inferior</d32>
+    <p33>Marcador de orientação superior</p33>
+    <d33>Visibilidade do marcador de orientação superior</d33>
+    <p34>Tipo do marcador de orientação</p34>
+    <d34>Tipo do marcador de orientação do eixo</d34>
+    <p35>Tipo de linha</p35>
+    <d35>Tipo de linha da polilinha principal</d35>
+    <d35-1>Tipo de linha padrão ou composta</d35-1>
+    <p36>Afastamento do primeiro traço</p36>
+    <d36>Afastamento do primeiro traço em cada segmento da linha de solo</d36>
+    <d36-1>Afastamento do primeiro traço em cada segmento da linha de impermeabilização</d36-1>
+    <p37>Comprimento do traço</p37>
+    <p38>Distância entre os traços</p38>
+    <p39>Ângulo de inclinação do traço</p39>
+    <p40>Afastamento do grupo de traços</p40>
+    <p41>Estilo de texto</p41>
+    <d41>Estilo de texto dos elementos de texto</d41>
+    <p42>Comprimento do traço intermediário</p42>
+    <d42>Comprimento do traço intermediário até o ponto de quebra</d42>
+    <p43>Espessura dos traços</p43>
+    <d43>Espessura de todos os traços do corte</d43>
+    <p44>Comprimento do traço</p44>
+    <d44>Comprimento dos traços principais do corte</d44>
+    <p45>Afastamento do patamar</p45>
+    <d45>Afastamento do patamar ao longo do traço, em porcentagem</d45>
+    <p46>Comprimento do patamar</p46>
+    <p47>Comprimento da seta</p47>
+    <p48>Espessura da seta</p48>
+    <p49>Altura do texto</p49>
+    <p50>Altura do texto pequeno</p50>
+    <p51>Indicação do corte</p51>
+    <p52>Prefixo da indicação</p52>
+    <p53>Número da folha</p53>
+    <p54>Posição do número da folha</p54>
+    <d54>Posição do número da folha: dos dois lados, embaixo, em cima</d54>
+    <p55>Linha do objeto</p55>
+    <d55>Desenhar ou não a linha da cota de nível até o objeto medido</d55>
+    <p56>Afastamento da linha do objeto</p56>
+    <d56>Afastamento da linha do objeto em relação ao objeto medido</d56>
+    <p57>Comprimento do patamar inferior</p57>
+    <d57>Comprimento do patamar inferior, da extremidade do patamar do lado do objeto medido até a seta da cota de nível</d57>
+    <p58>Prolongamento do patamar inferior</p58>
+    <d58>Prolongamento do patamar inferior, da seta da cota de nível até a extremidade do patamar do lado oposto ao objeto medido</d58>
+    <p59>Altura da seta</p59>
+    <p60>Espessura da seta</p60>
+    <p61>Afastamento do texto</p61>
+    <p62>Afastamento vertical do texto</p62>
+    <p63>Prolongamento do patamar</p63>
+    <d63>Prolongamento do patamar em relação ao texto mais longo</d63>
+    <d63-1>Prolongamento do patamar em relação ao texto</d63-1>
+    <p63-1>Altura do patamar</p63-1>
+    <p64>Mostrar sinal de mais</p64>
+    <d64>Mostrar o sinal de mais se o valor medido for maior que zero. A propriedade é ignorada se o texto for substituído</d64>
+    <p65>Valor medido</p65>
+    <p66>Substituição do texto</p66>
+    <p67>Precisão</p67>
+    <d67>Precisão do valor medido. Define o número de casas decimais</d67>
+    <p68>Observação</p68>
+    <p69>Escala de medição</p69>
+    <d69>Define um valor no intervalo de 0,000001 a 1000000 pelo qual é multiplicada a distância medida no desenho</d69>
+    <p70>Espessura da linha</p70>
+    <p71>Ângulo de rotação do texto</p71>
+    <p72>Separador decimal</p72>
+    <d72>Separador da parte inteira e da parte decimal do número</d72>
+    <p73>Alinhamento do texto</p73>
+    <d73>Alinhamento horizontal do texto</d73>
+    <p74>Alinhamento da observação</p74>
+    <p75>Mostrar asterisco</p75>
+    <d75>Adição de um asterisco ao final do valor principal</d75>
+    <p76>Altura da moldura</p76>
+    <p77>Largura da moldura</p77>
+    <p78>Posição do patamar</p78>
+    <p79>Número do detalhe</p79>
+    <p80>Número da folha</p80>
+    <p81>Endereço do detalhe</p81>
+    <p82>Tipo de moldura</p82>
+    <p83>Raio de arredondamento</p83>
+    <d83>Raio de arredondamento dos cantos da moldura retangular</d83>
+    <d83-1>Raio de arredondamento dos cantos da indicação de fragmento</d83-1>
+    <p84>Texto sempre horizontal</p84>
+    <d84>A linha de chamada com texto manterá a posição horizontal após a rotação do objeto com o comando "Rotacionar"</d84>
+    <p85>Ocultar plano de fundo</p85>
+    <d85>Adição de cobertura (wipeout) ao longo do contorno do texto com o afastamento definido. A exibição das molduras de cobertura é controlada pelas variáveis de sistema WIPEOUTFRAME e FRAME</d85>
+    <d85-1>Adição de cobertura (wipeout) ao longo do contorno do texto com o afastamento definido. A exibição das molduras de cobertura é controlada pelas variáveis de sistema WIPEOUTFRAME e FRAME. Se for definida uma moldura retangular, a cobertura será criada pela moldura, sem considerar o afastamento</d85-1>
+    <p86>Afastamento da cobertura</p86>
+    <d86>O afastamento da cobertura é considerado para os tipos de moldura "Linha" e "Sem moldura"</d86>
+    <d87>Presença de setas: dos dois lados, primeira ou segunda</d87>
+    <p87>Espessura do elemento secante</p87>
+    <p88>Comprimento do elemento secante</p88>
+    <p89>Tipo de cordão de solda</p89>
+    <p90>Espaçamento dos traços</p90>
+    <p91>Meia altura do traço</p91>
+    <p92>Espaçamento da cruz grande</p92>
+    <p93>Espaçamento da cruz pequena</p93>
+    <p94>Meia altura da cruz grande</p94>
+    <p95>Altura da cruz pequena</p95>
+    <p96>Comprimento da série</p96>
+    <p97>Comprimento do espaço</p97>
+    <p98>Intervalo entre as séries</p98>
+    <p99>Altura do traço pequeno</p99>
+    <p100>Raio de arredondamento</p100>
+    <p101>Texto principal</p101>
+    <p102>Texto pequeno</p102>
+    <p103>Tipo de vista</p103>
+    <d103>Tipo de vista: Corte ou Vista</d103>
+    <p104>Linha de chamada</p104>
+    <d104>Ativar/desativar a linha de chamada</d104>
+    <p105>Geração do tipo de linha</p105>
+    <d105>Geração do tipo de linha ao longo de toda a polilinha</d105>
+    <p106>Distância entre os textos</p106>
+    <p107>Fórmula da linha</p107>
+    <d107>A fórmula da linha é definida por números inteiros separados por hífens. Cada número ímpar (1, 3, 5...) define o comprimento do traço. Cada número par (2, 4, 6...) define o comprimento do espaço</d107>
+    <p108>Afastamento do primeiro texto</p108>
+    <p109>Indicação de vista</p109>
+    <p110>Cota de nível</p110>
+    <p111>Prefixo</p111>
+    <p112>Sufixo</p112>
+    <p113>Valor</p113>
+    <p114>Espessura da linha</p114>
+    <p115>Presença de setas</p115>
+    <p116>Largura da quebra</p116>
+    <p117>Comprimento da linha na borda esquerda</p117>
+    <d117>Comprimento da linha na borda esquerda do segmento da linha da junta</d117>
+    <p118>Linhas nas bordas</p118>
+    <d118>Visibilidade das linhas nas bordas dos segmentos da linha da junta</d118>
+    <p119>Altura da quebra</p119>
+    <p120>Diâmetro do círculo</p120>
+    <p121>Diâmetro do círculo externo</p121>
+    <p122>Afastamento vertical do texto pequeno</p122>
+    <d122>Afastamento vertical do texto pequeno em relação à linha</d122>
+    <p123>Círculo externo</p123>
+    <p124>Afastamento do texto do número</p124>
+    <p125>Afastamento do texto da observação</p125>
+    <p126>Posição do patamar da observação</p126>
+    <p127>Estilo de moldura em nuvem</p127>
+    <p128>Comprimento do arco da nuvem</p128>
+    <p129>Altura do número</p129>
+    <p130>Altura da observação</p130>
+    <p131>Número</p131>
+    <p132>Texto superior</p132>
+    <p133>Texto inferior</p133>
+    <p134>Altura do texto superior</p134>
+    <p135>Altura do texto inferior</p135>
+    <p136>Insira o texto</p136>
+    <p137>Largura da seção</p137>
+    <p138>Altura da seção</p138>
+    <p139>Diâmetro da seção</p139>
+    <p140>Afastamento das linhas de centro</p140>
+    <p141>Posição do número</p141>
+    <p142>Visibilidade do número</p142>
+    <p143>Visibilidade dos eixos</p143>
+    <p144>Visibilidade da linha de chamada</p144>
+    <p145>Afastamento do número</p145>
+    <p146>Afastamento vertical do número</p146>
+    <p147>Espessura da linha principal</p147>
+    <p148>Tipo de linha de centro</p148>
+    <p149>Escala da linha de centro</p149>
+    <p150>Somente contorno</p150>
+    <p151>Tipo de seção transversal</p151>
+    <p152>Tipo de indicação</p152>
+    <p153>Tipo de cota</p153>
+    <p154>Tamanho da seta</p154>
+    <p155>Como direção</p155>
+    <d155>Exibição da inclinação como direção</d155>
+    <p156>Símbolo de conicidade</p156>
+    <d156>Exibir o símbolo de conicidade em vez do símbolo de inclinação</d156>
+    <p157>Contagem a partir do ponto esquerdo</p157>
+    <d157>No cálculo da inclinação, considerar como primeiro ponto o mais à esquerda dos dois</d157>
+    <p158>Lado de posicionamento do texto</p158>
+    <d158>Lado em que o texto horizontal será posicionado</d158>
+    <p159>Tipo de isolamento</p159>
+    <p160>Raio do círculo</p160>
+    <p161>Raio do ponto</p161>
+    <p162>Raio de arredondamento</p162>
+    <p163>Largura do tipo de isolamento</p163>
+    <p164>Altura do tipo de isolamento</p164>
+    <p165>Desenho do limite externo</p165>
+    <p166>Número da solda</p166>
+    <p167>Quantidade total de soldas</p167>
+    <p168>Categoria de inspeção</p168>
+    <p169>GOST</p169>
+    <p170>Designação</p170>
+    <p171>Processo de soldagem</p171>
+    <p172>Dimensão da perna</p172>
+    <p173>Dimensão da solda</p173>
+    <p174>Dimensão do passo da solda</p174>
+    <p175>Lado</p175>
+    <p176>Solda fechada</p176>
+    <p177>Solda de montagem</p177>
+    <p178>Subtipo de solda</p178>
+    <p179>Símbolo de dimensão</p179>
+    <p180>Símbolo auxiliar do lado frontal</p180>
+    <p181>Símbolo auxiliar do lado oposto</p181>
+    <p182>Símbolo de superfície do lado frontal</p182>
+    <p183>Símbolo de superfície do lado oposto</p183>
+    <p184>Texto do símbolo de superfície do lado frontal</p184>
+    <p185>Texto do símbolo de superfície do lado oposto</p185>
+    <p186>Comprimento da perna</p186>
+    <p187>Convexidade\Concavidade</p187>
+    <d187>Convexidade (de 0 a 1) ou concavidade (de -1 a 1)</d187>
+    <p191>Exibir eixos</p191>
+    <p192>Comprimento externo dos eixos</p192>
+    <p193>Exibir rosca</p193>
+    <p194>Distância da rosca</p194>
+    <p195>Rosca interna</p195>
+    <p196>Girar preenchimento</p196>
+    <p197>Tipo de furo</p197>
+    <p198>Exibir símbolos convencionais</p198>
+    <p199>Tamanho dos símbolos convencionais</p199>
+    <d199>Valor convencional do tamanho, de 0.1 a 1</d199>
+    <p200>Preenchimento dos símbolos convencionais</p200>
+    <p201>Truncar em vez de arredondar</p201>
+    <p202>Supressão de zeros à direita</p202>
+    <p203>Comprimento da quebra superior</p203>
+    <p204>Comprimento da quebra inferior</p204>
+    <p205>Ângulo de inclinação da quebra superior</p205>
+    <d205>Ângulo de inclinação da quebra superior (de -90 a 90)</d205>
+    <p206>Ângulo de inclinação da quebra inferior</p206>
+    <d206>Ângulo de inclinação da quebra inferior (de -90 a 90)</d206>
+    <p207>Exibir a linha de quebra até o ponto base</p207>
+    <d207>Orientar a linha de quebra pelo centro do primeiro marcador ou até a alça</d207>
+    <p208>Orientar os marcadores adicionais pelo vetor base</p208>
+    <d208>Exibir os marcadores adicionais pelo vetor da quebra ou pelo vetor original</d208>
+    <p209>Ponto inicial da seta</p209>
+    <p210>Afastamento até o próximo patamar</p210>
+    <p211>Lado da linha lateral</p211>
+    <p212>Comprimento da linha</p212>
+    <p213>Curvar as setas nos segmentos de arco</p213>
+    <p214>Exibir setas truncadas</p214>
+    <p215>Tipo de setas</p215>
+    <p216>Preencher os espaços com traços adicionais</p216>
+    <p217>Cor dos traços principais</p217>
+    <p218>Cor dos traços adicionais</p218>
+    <p219>Afastamento</p219>
+    <p220>Ocultar plano de fundo</p220>
+    <p221>Altura da cobertura</p221>
+    <p222>Espaçamento vertical entre linhas</p222>
+    <p223>Espaçamento entre colunas</p223>
+    <p224>Alinhamento horizontal da coluna adicional</p224>
+    <p225>Lado da coluna adicional</p225>
+    <p226>Tamanho da indicação</p226>
+    <p227>Exibir setas a partir do centro da indicação</p227>
+    <p228>Exibir a polilinha principal</p228>
+    <p229>Tipo de indicação</p229>
+    <jigM1>Arco</jigM1>
+    <jigM2>Linear</jigM2>
+    <grpM1>Esticar pelo vértice</grpM1>
+    <grpM2>Adicionar vértice</grpM2>
+    <grpM3>Remover vértice</grpM3>
+    <grpM4>Alterar direção</grpM4>
+    <grpM5>Esticar</grpM5>
+    <grpM6>Adicionar vértice</grpM6>
+    <grpM7>Converter em arco</grpM7>
+    <grpM8>Converter em linha</grpM8>
+    <ilt1>Tipo 1</ilt1>
+    <ilt2>Tipo 2</ilt2>
+    <ilt3>Tipo 3</ilt3>
+    <ilt4>Tipo 4</ilt4>
+    <ilt5>Tipo 5</ilt5>
+    <ilt6>Tipo 6</ilt6>
+    <ilt7>Tipo 7</ilt7>
+    <ilt8>Tipo 8</ilt8>
+    <none>Nenhum</none>
+    <djauxs1>Remover o reforço da solda</djauxs1>
+    <djauxs2>Solda em linha aberta</djauxs2>
+    <djauxs3>Transição suave</djauxs3>
+    <djsrs1>Superfície não regulada</djsrs1>
+    <djsrs2>Com remoção da camada superficial</djsrs2>
+    <djsrs3>Sem remoção da camada superficial</djsrs3>
+    <djwstt1>Solda em cadeia</djwstt1>
+    <djwstt2>Solda alternada</djwstt2>
+    <djwsub1>União por brasagem</djwsub1>
+    <djwsub2>União por costura</djwsub2>
+    <djwsub3>União por grampos</djwsub3>
+    <djwsub4>União por cantoneiras</djwsub4>
+    <djwsub5>União colada</djwsub5>
+    <djwsd0>Interna</djwsd0>
+    <djwsd1>Externa</djwsd1>
+    <hfqt1>Quadrante 1</hfqt1>
+    <hfqt2>Quadrante 2</hfqt2>
+    <hfqt3>Quadrante 3</hfqt3>
+    <hfqt4>Quadrante 4</hfqt4>
+    <mtArrowPos1>Automático</mtArrowPos1>
+    <mtArrowPos2>Inferior esquerdo</mtArrowPos2>
+    <mtArrowPos3>Inferior direito</mtArrowPos3>
+    <mtArrowPos4>Superior direito</mtArrowPos4>
+    <mtArrowPos5>Superior esquerdo</mtArrowPos5>
+    <mtLedSide1>Automático</mtLedSide1>
+    <mtLedSide2>À esquerda</mtLedSide2>
+    <mtLedSide3>À direita</mtLedSide3>
+    <pwrLineArrType1>Linha de transmissão de baixa tensão</pwrLineArrType1>
+    <pwrLineArrType2>Linha de transmissão de alta tensão</pwrLineArrType2>
+    <arrLineType1>Seta simples</arrLineType1>
+    <arrLineType2>Seta grossa</arrLineType2>
+    <arrLineType3>Seta simples com traço</arrLineType3>
+    <pwrLineMrkType1>Sem marca</pwrLineMrkType1>
+    <pwrLineMrkType2>Marca redonda</pwrLineMrkType2>
+    <pwrLineMrkType3>Marca redonda preenchida</pwrLineMrkType3>
+    <pwrLineMrkType4>Marca retangular</pwrLineMrkType4>
+    <pwrLineMrkType5>Marca retangular preenchida</pwrLineMrkType5>
+  </mpESKD>
+</ModPlus>

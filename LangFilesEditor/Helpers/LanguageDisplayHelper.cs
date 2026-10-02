@@ -15,6 +15,9 @@ public static class LanguageDisplayHelper
         ["de-DE"] = "Deutsch",
         ["es-ES"] = "Español",
         ["zh-CN"] = "中文",
+        ["fr-FR"] = "Français",
+        ["pt-BR"] = "Português",
+        ["uz-Latn-UZ"] = "Oʻzbekcha",
     };
 
     /// <summary>

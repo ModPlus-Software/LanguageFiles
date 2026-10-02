@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCopyParameterValues
+    LocalName="Copier les valeurs"
+    Description="Copie des valeurs de paramètres entre éléments ou au sein d'un même élément"
+    FullDescription="Différentes variantes de copie avec configuration des éléments source et cible. La copie d'une valeur composée (de plusieurs paramètres vers un seul) est disponible. Des filtres de sélection des éléments par catégories et valeurs de paramètres sont disponibles, ainsi que la conversion des valeurs entre différents types de paramètres">
+    <saveNew>Enregistrer comme nouveau</saveNew>
+    <full>Disponible dans la version complète du plugin</full>
+    <to>vers</to>
+    <space>Espace</space>
+    <cn1>Copie au sein d'un élément</cn1>
+    <cn2>Copie d'un élément vers plusieurs</cn2>
+    <cn3>Copie de l'hôte vers les éléments enfants</cn3>
+    <cn4>Copie de la famille parente vers les familles imbriquées</cn4>
+    <cn5>Copie du groupe vers les éléments enfants</cn5>
+    <h1>Sélectionnez une variante de copie</h1>
+    <h2>Lancer la copie</h2>
+    <h3>Configurations enregistrées</h3>
+    <h10>Élément modèle</h10>
+    <h11>L'élément modèle sert à remplir la liste des noms de paramètres lors de la configuration des règles de copie des paramètres</h11>
+    <h12>Élément source</h12>
+    <h13>Élément à partir duquel les valeurs des paramètres seront copiées. Sert également à remplir la liste des noms de paramètres lors de la configuration des règles de copie des paramètres</h13>
+    <h14>Élément hôte modèle</h14>
+    <h15>L'élément hôte modèle sert à remplir la liste des noms des paramètres source lors de la configuration des règles de copie des paramètres</h15>
+    <h16>Élément cible modèle</h16>
+    <h17>L'élément cible modèle sert à remplir la liste des noms des paramètres cibles lors de la configuration des règles de copie des paramètres</h17>
+    <h18>Choisir</h18>
+    <h21>Choix du type de règle de copie</h21>
+    <h22>Ajouter une règle de copie des paramètres de type :</h22>
+    <h23>Simple</h23>
+    <h24>Composée</h24>
+    <h25>Règles de copie des paramètres</h25>
+    <h26>Essayer de convertir les valeurs entre différents types de paramètres</h26>
+    <h27>Remplacer les valeurs existantes des paramètres cibles</h27>
+    <h28>Éléments traités</h28>
+    <h29>Éléments au sein desquels les valeurs des paramètres seront copiées selon les règles définies</h29>
+    <h30>Éléments vers lesquels les valeurs des paramètres de l'élément source seront copiées selon les règles définies</h30>
+    <h31>Éléments hôtes</h31>
+    <h32>Éléments hôtes dont les valeurs des paramètres seront prises pour être copiées dans les éléments enfants selon les règles définies</h32>
+    <h33>Éléments enfants</h33>
+    <h34>Éléments enfants dans lesquels les valeurs des paramètres des éléments hôtes seront copiées selon les règles définies. Ce groupe permet de configurer le filtrage préalable des éléments enfants, et lors de la copie, un filtrage selon l'appartenance de l'élément à l'hôte sera effectué</h34>
+    <h35>Nombre d'éléments sélectionnés :</h35>
+    <h36>Variante de sélection des éléments :</h36>
+    <h37>Sélectionner</h37>
+    <h38>Paramètre source</h38>
+    <h39>Paramètre cible</h39>
+    <h40>Ajouter un paramètre</h40>
+    <h44>Option de recherche du paramètre par nom : "=" – correspondance exacte du nom du paramètre. "≈" – le nom du paramètre doit contenir la valeur indiquée</h44>
+    <h45>Ajouter un nom de paramètre à partir de la liste des paramètres de l'élément modèle</h45>
+    <h46>Saisissez le nom de la configuration</h46>
+    <h47>Sélection des catégories</h47>
+    <h48>Paramètres d'égalité</h48>
+    <h49>Paramètres d'occurrence</h49>
+    <h50>Paramètres de type</h50>
+    <h51>Composée arithmétique</h51>
+    <h52>Aperçu :</h52>
+    <h53>Formule :</h53>
+    <h54>La formule contient des erreurs et ne peut pas être calculée</h54>
+    <h55>Arrondir le résultat</h55>
+    <h56>Le préfixe et le suffixe ne sont utilisés que lorsque le paramètre cible est de type texte</h56>
+    <h57>Famille parente modèle</h57>
+    <h58>La famille parente modèle sert à remplir la liste des noms des paramètres source lors de la configuration des règles de copie des paramètres</h58>
+    <h59>Famille imbriquée modèle</h59>
+    <h60>La famille imbriquée modèle sert à remplir la liste des noms des paramètres source lors de la configuration des règles de copie des paramètres</h60>
+    <h61>Familles parentes</h61>
+    <h62>Familles parentes dont les valeurs des paramètres seront prises pour être copiées dans les éléments imbriqués selon les règles définies</h62>
+    <h63>Filtrage des familles imbriquées</h63>
+    <h64>Filtrage facultatif des familles imbriquées par catégories et/ou paramètres. Si aucun filtre n'est défini, toutes les familles imbriquées seront traitées</h64>
+    <h65>Sélectionner depuis un lien</h65>
+    <h66>Ouvrir le dossier contenant les fichiers des configurations enregistrées. Pour échanger des configurations, placez-les dans ce dossier</h66>
+    <h67>Groupe modèle</h67>
+    <h68>Le groupe modèle sert à remplir la liste des noms des paramètres source lors de la configuration des règles de copie des paramètres</h68>
+    <h69>Élément enfant modèle</h69>
+    <h70>L'élément enfant modèle sert à remplir la liste des noms des paramètres source lors de la configuration des règles de copie des paramètres</h70>
+    <h71>Groupes</h71>
+    <h72>Groupes dont les valeurs des paramètres seront prises pour être copiées dans les éléments enfants selon les règles définies</h72>
+    <h73>Filtrage des éléments enfants</h73>
+    <h74>Filtrage facultatif des éléments enfants par catégories et/ou paramètres. Si aucun filtre n'est défini, tous les éléments enfants seront traités</h74>
+    <h75>L'arrondi n'est utilisé que lorsque la valeur à définir est un nombre</h75>
+    <h76>Ce plugin n'est plus pris en charge. Nous vous recommandons de passer au plugin "Paramétrage", qui permet d'effectuer toutes les tâches de ce plugin</h76>
+    <i1>Les champs de saisie avant et après les noms des paramètres source permettent de créer une formule de calcul.</i1>
+    <i2>Pour créer une formule, vous pouvez utiliser des opérateurs arithmétiques simples tels que "+", "-", "*", "/", des parenthèses, ainsi que des fonctions mathématiques :</i2>
+    <i3>Abs – valeur absolue,</i3>
+    <i4>Pow – élévation d'un nombre à la puissance indiquée,</i4>
+    <i5>Sqrt – racine carrée d'un nombre.</i5>
+    <i6>Lors de l'utilisation de fonctions, les valeurs traitées doivent être entre parenthèses. Par exemple, pour obtenir la valeur absolue d'un paramètre, saisissez "Abs(" dans le champ avant le nom du paramètre et ")" dans le champ après le nom du paramètre.</i6>
+    <i7>La liste complète des fonctions figure sur la page d'aide.</i7>
+    <msg1>L'élément n'est pas un élément hôte</msg1>
+    <msg2>Aucun élément enfant trouvé</msg2>
+    <msg3>Impossible de copier la valeur composée dans le paramètre "{0}". Erreur : {1}</msg3>
+    <msg4>Impossible de copier la valeur du paramètre "{0}" dans le paramètre "{1}". Erreur : {2}</msg4>
+    <msg5>Aucun paramètre source correspondant au modèle "{0}" n'a été trouvé</msg5>
+    <msg6>Le paramètre source "{0}" n'a pas de valeur. Copie ignorée</msg6>
+    <msg7>Le paramètre source "{0}" a un type de données non valide</msg7>
+    <msg8>Aucun paramètre cible correspondant au modèle "{0}" n'a été trouvé</msg8>
+    <msg9>Supprimer l'élément sélectionné ?</msg9>
+    <msg10>Définition de la valeur du paramètre cible "{0}" ignorée, car le paramètre a une valeur</msg10>
+    <msg11>Le paramètre cible "{0}" a un type de données non valide</msg11>
+    <msg12>Les paramètres "{0}" et "{1}" sont de types différents. Copie ignorée</msg12>
+    <msg13>Impossible de convertir la valeur du paramètre "{0}" pour l'écrire dans le paramètre "{1}"</msg13>
+    <msg14>La valeur du paramètre "{0}" ne peut pas être convertie vers le paramètre "{1}"</msg14>
+    <msg15>Valeur du paramètre "{0}" copiée dans le paramètre "{1}"</msg15>
+    <msg16>Erreur lors de la copie de la valeur du paramètre "{0}" dans le paramètre "{1}" : {2}</msg16>
+    <msg17>Valeur composée copiée dans le paramètre "{0}"</msg17>
+    <msg18>Le paramètre cible "{0}" a un type de données non pris en charge pour la copie d'une valeur composée. Seule la copie dans un paramètre de type texte est autorisée</msg18>
+    <msg19>Erreur lors de la copie de la valeur composée dans le paramètre "{0}" : {1}</msg19>
+    <msg20>Impossible de copier la valeur arithmétique dans le paramètre "{0}". Erreur : {1}</msg20>
+    <msg21>Erreur lors de la copie de la valeur arithmétique calculée selon la formule "{0}" dans le paramètre "{1}" : {2}</msg21>
+    <msg22>Valeur arithmétique copiée dans le paramètre "{0}"</msg22>
+    <msg23>Aucune famille imbriquée trouvée</msg23>
+    <msg26>Aucun élément enfant trouvé</msg26>
+    <msg27>L'identifiant de l'élément (ID) ne peut pas être utilisé comme paramètre cible</msg27>
+    <msg28>Impossible de définir la valeur "{0}" dans le paramètre "{1}"</msg28>
+    <msg29>Impossible de définir une valeur dans le paramètre "{0}"</msg29>
+    <err1>Une valeur vide n'est pas autorisée</err1>
+    <err2>La valeur saisie contient des caractères non autorisés</err2>
+    <err3>Ce nom est déjà utilisé</err3>
+    <err4>Aucune règle de copie des paramètres n'est définie</err4>
+    <err5>L'élément source n'est pas sélectionné</err5>
+    <err6>Aucun élément à traiter n'est sélectionné</err6>
+    <err7>Aucun élément enfant n'est sélectionné</err7>
+    <sv1>Éléments du modèle selon le filtre</sv1>
+    <sv2>Éléments de la vue courante selon le filtre</sv2>
+    <sv3>Sélection personnalisée selon le filtre</sv3>
+    <sv4>Sélection personnalisée sans filtre</sv4>
+  </mprCopyParameterValues>
+</ModPlus>

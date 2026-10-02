@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mrSearchBy
+    LocalName="Recherche par condition"
+    Description="Recherche d'objets selon diverses conditions">
+    <!-- todo remove after 3.1.0.0 start -->
+    <h1>Type d'objets :</h1>
+    <h2>Rechercher dans :</h2>
+    <h3>Propriétés</h3>
+    <h4>Paramètres</h4>
+    <h5>Caractéristiques calculées</h5>
+    <h6>Unités de mesure</h6>
+    <h7>Type de correspondance des chaînes :</h7>
+    <h8>Rechercher :</h8>
+    <!-- todo remove after 3.1.0.0 end -->
+    <h9>Réinitialiser la sélection courante si rien n'est trouvé</h9>
+    <h10>Rechercher</h10>
+    <h11>{0} objets trouvés</h11>
+    <h12>Aucun résultat</h12>
+    <h16>Rechercher parmi les objets sélectionnés</h16>
+    <!-- todo remove after 3.1.0.0 start -->
+    <m1>Égal</m1>
+    <m2>Contient</m2>
+    <t1>Indiquez dans quelles unités de mesure les valeurs seront prises dans les objets, ainsi que la précision de comparaison des valeurs numériques</t1>
+    <t2>Indiquez l'option de correspondance pour les valeurs de type chaîne : la chaîne vérifiée doit-elle correspondre entièrement à la valeur recherchée ou peut-elle seulement contenir la valeur recherchée</t2>
+    <t3>Vous pouvez indiquer plusieurs valeurs de recherche en les séparant par un astérisque. Par exemple, "200*300".</t3>
+    <t4>Si plusieurs valeurs sont indiquées, le mode "OU" s'applique. Par exemple, lors d'une recherche avec la valeur "200*300", une correspondance avec "200" ou avec "300" sera considérée comme satisfaisante.</t4>
+    <t5>Pour utiliser le mode "ET", indiquez la valeur "AND" au tout début de la requête de recherche. Par exemple, "AND200*300" indique que la valeur "200" et la valeur "300" doivent toutes deux correspondre dans l'objet recherché.</t5>
+    <t6>Lors de la saisie de nombres décimaux, le séparateur de la partie entière et décimale défini dans les paramètres régionaux du système d'exploitation est pris en compte. Si vos paramètres utilisent la virgule, la valeur "1.75" sera traitée comme une chaîne.</t6>
+    <t7>Pour rechercher par des paramètres de type "Oui/Non", indiquez respectivement "true" ou "false" dans la chaîne de recherche.</t7>
+    <t8>Pour les valeurs numériques, vous pouvez indiquer des opérateurs de comparaison : "!=" – différent de, "&lt;" – inférieur à, "&gt;" – supérieur à. Pour les valeurs de type chaîne, vous pouvez indiquer l'opérateur de comparaison "!=" (différent de), qui n'est traité que si la valeur "Égal" est sélectionnée dans la propriété "Type de correspondance des chaînes".</t8>
+    <t9>Par exemple, la chaîne "ANDBéton*&gt;1,75" indique qu'il faut rechercher les objets dont les valeurs vérifiées comprennent la valeur de chaîne "Béton" et une valeur numérique supérieure à 1,75.</t9>
+    <t10>Vous pouvez indiquer le nom précis de la propriété ou du paramètre dans lequel la valeur saisie doit être vérifiée. Par exemple, la chaîne "Note=Béton" avec la case "Rechercher dans les propriétés" cochée indique que les objets satisfaisant la condition de recherche doivent avoir la propriété "Note" avec la valeur "Béton". La vérification du nom tient également compte de la valeur "Type de correspondance des chaînes".</t10>
+    <t11>Pour rechercher selon une condition de valeurs vides, il suffit d'indiquer le nom de la propriété ou du paramètre. Par exemple, la chaîne "Note=" avec la case "Rechercher dans les propriétés" cochée indique que les objets satisfaisant la condition de recherche doivent avoir la propriété "Note" avec une valeur vide.</t11>
+    <t12>La vérification de toutes les valeurs de type chaîne n'est pas sensible à la casse.</t12>
+    <!-- todo remove after 3.1.0.0 end -->
+    <t13>Afficher les objets trouvés dans la scène 3D</t13>
+    <!-- todo remove after 3.1.0.0 start -->
+    <all>Tous</all>
+    <qh1>Longueur :</qh1>
+    <qh2>Surface :</qh2>
+    <qh3>Masse :</qh3>
+    <qh4>Volume :</qh4>
+    <qh5>Précision :</qh5>
+    <q1>Millimètres</q1>
+    <q2>Centimètres</q2>
+    <q3>Mètres</q3>
+    <q4>Pouces</q4>
+    <q5>Millimètres carrés</q5>
+    <q6>Centimètres carrés</q6>
+    <q7>Mètres carrés</q7>
+    <q8>Grammes</q8>
+    <q9>Kilogrammes</q9>
+    <q10>Millimètres cubes</q10>
+    <q11>Centimètres cubes</q11>
+    <q12>Mètres cubes</q12>
+    <!-- todo remove after 3.1.0.0 end -->
+  </mrSearchBy>
+</ModPlus>

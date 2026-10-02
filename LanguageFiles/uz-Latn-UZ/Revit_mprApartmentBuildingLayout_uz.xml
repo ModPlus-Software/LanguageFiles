@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprApartmentBuildingLayout
+    LocalName="Xonadonlar tarkibi"
+    Description="Xonadonlar tarkibini kompleks bajarish"
+    LocalName1="Avto hisoblash"
+    Description1="Xonalar oʻlchamlari oʻzgarganda xonadon maydonlarini avtomatik qayta hisoblash">
+    <tab1>Parametrlar</tab1>
+    <tab2>Manbalar</tab2>
+    <tab3>Dastlabki tekshiruv</tab3>
+    <tab4>Xonadonlarni yigʻish</tab4>
+    <tab5>Xonadonlarni hisoblash</tab5>
+    <tab6>Raqamlash</tab6>
+    <tab7>Spetsifikatsiyalar</tab7>
+    <!-- todo remove after 2.11.15.0 -->
+    <tab8>Xonadonlar koʻrinishlari</tab8>
+    <tab9>Xonadonlar muharriri</tab9>
+    <tab10>Bloklanganlar</tab10>
+    <tab11>Tasniflash</tab11>
+    <rt1>Berilmagan</rt1>
+    <rt2>Turar joy</rt2>
+    <rt3>Noturar joy</rt3>
+    <rt4>Isitilmaydigan</rt4>
+    <rtm1>turar,yashash</rtm1>
+    <rtm2>noturar,yashash uchun emas</rtm2>
+    <rtm3>isitilmaydigan,balkon,lodjiya,terrasa</rtm3>
+    <sa1>Yaxlitlangan maydon</sa1>
+    <sa2>Koeffitsiyentli yaxlitlangan maydon</sa2>
+    <fc1>SP 12.13130</fc1>
+    <fc2>Yevroklass</fc2>
+    <apartment>Xonadon</apartment>
+    <view>joriy koʻrinishda</view>
+    <model>butun loyihada</model>
+    <flatArea>Xonadon maydoni</flatArea>
+    <totalArea>Umumiy maydon</totalArea>
+    <livingArea>Yashash maydoni</livingArea>
+    <flatAreaS>S xon.</flatAreaS>
+    <totalAreaS>S umum.</totalAreaS>
+    <totalAreaWithoutFactorS>S umum. koeff.siz</totalAreaWithoutFactorS>
+    <livingAreaS>S yash.</livingAreaS>
+    <number>Raqam</number>
+    <p1>XN_Funks. vazifasi</p1>
+    <pd1>Qoʻlda kiritiladi! Xonadonlar tarkibining barcha asosiy algoritmlarida ishtirok etadi</pd1>
+    <p2>XN_№_Xona</p2>
+    <pd2>"Raqam" tizim parametrini almashtiradi</pd2>
+    <p3>XD_Xonadon ID</p3>
+    <pd3>Xonadonning noyob indeksi</pd3>
+    <p4>XD_Xonadon turi</p4>
+    <pd4>Masalan: 1K, 2S, 3K</pd4>
+    <p5>XD_Xona turi</p5>
+    <pd5>Xona turi. Xonalar matritsasi boʻyicha tayinlanadi</pd5>
+    <p6>XD_Yashash xonalari soni</p6>
+    <pd6>Xonadondagi yashash xonalari soni</pd6>
+    <p7>XD_Yaxlitlangan maydon</p7>
+    <pd7>Xonadon xonasining berilgan aniqlikkacha yaxlitlangan maydoni</pd7>
+    <p8>XD_Koeffitsiyentli maydon</p8>
+    <pd8>Xonadon xonasining berilgan aniqlikkacha yaxlitlangan maydoni. Kamaytiruvchi koeffitsiyent bilan</pd8>
+    <p9>XD_Maydon koeffitsiyenti</p9>
+    <pd9>Balkon, lodjiya, terrasa uchun kamaytiruvchi koeffitsiyent</pd9>
+    <p10>XD_Qora pardozlash qalinligi</p10>
+    <pd10>Maydonlarni hisoblashda ishlatiladigan qora pardozlash qalinligi, mm da</pd10>
+    <p11>XD_Xona indeksi</p11>
+    <pd11>Xonadondagi bir xil nomli xonalarning tartib raqami</pd11>
+    <p12>XD_Yashash maydoni</p12>
+    <pd12>Xonadon yashash xonalari maydonlarining yigʻindisi</pd12>
+    <p13>XD_Xonadon maydoni</p13>
+    <pd13>Isitilmaydigan xonalarni hisobga olmagan holda xonadon xonalari maydonlarining yigʻindisi (Umumiy)</pd13>
+    <p14>XD_Umumiy maydon</p14>
+    <pd14>Xonadon xonalari barcha maydonlarining yigʻindisi. Isitilmaydiganlarni kamaytiruvchi koeffitsiyent bilan hisobga olgan holda (Keltirilgan)</pd14>
+    <p14-1>XD_Umumiy maydon koeff.siz</p14-1>
+    <pd14-1>Kamaytiruvchi koeffitsiyentni hisobga olmagan holda xonadon xonalari barcha maydonlarining yigʻindisi</pd14-1>
+    <p15>XD_Isitilmaydigan xonalar maydoni</p15>
+    <pd15>Xonadonning isitilmaydigan xonalari maydonlarining yigʻindisi. Kamaytiruvchi koeffitsiyentlarsiz</pd15>
+    <p16>XD_Isitilmaydigan xonalar maydoni koeff. bilan</p16>
+    <pd16>Xonadonning isitilmaydigan xonalari maydonlarining yigʻindisi. Kamaytiruvchi koeffitsiyent bilan</pd16>
+    <p17>XD_Xonadon belgisi</p17>
+    <pd17>Spetsifikatsiyalarda xonadonlar sonini hisoblash imkonini beruvchi yordamchi parametr</pd17>
+    <p18>XD_Xonadon №</p18>
+    <pd18>Loyihalash oxirida toʻldiriladi (FRS ga topshirishdan oldin)</pd18>
+    <p19>XD_Sathlar soni</p19>
+    <pd19>Koʻp sathli xonadonning sathlar soni</pd19>
+    <p20>XN_Antresol</p20>
+    <pd20>Xonani antresol sifatida belgilash imkonini beruvchi qoʻshimcha parametr</pd20>
+    <pt1>Matn</pt1>
+    <pt2>Maydon</pt2>
+    <pt3>Pul birligi</pt3>
+    <pt4>Butun</pt4>
+    <pt5>Ha/Yoʻq</pt5>
+    <pt6>Son</pt6>
+    <h1>Xonadon ID</h1>
+    <h2>Umumiy parametrlar</h2>
+    <h3>Rang sxemalari</h3>
+    <h4>FV</h4>
+    <h5>Xona nomi</h5>
+    <h6>Qora pardoz qalinligi</h6>
+    <h7>Xona turi</h7>
+    <h8>Maydon koeffitsiyenti</h8>
+    <h9>Xonadonlar identifikatori:</h9>
+    <h10>Maydonlarni yaxlitlash:</h10>
+    <h11>Umumiy</h11>
+    <h12>Xonadonlar maydonlari</h12>
+    <h13>Xonadonning jami maydonlarini hisoblashda xonaning qaysi maydoni – yaxlitlangan yoki koeffitsiyentli yaxlitlangan maydondan foydalanishni koʻrsating</h13>
+    <h14>Xonalar matritsasi</h14>
+    <h15>Xonadon turlari</h15>
+    <h16>Yetishmayotgan parametrlarni yaratish</h16>
+    <h17>Ruxsat etilgan identifikatorlar:</h17>
+    <h18>Joylashtirilmagan oilalarni oʻchirish</h18>
+    <h19>Excel fayllari|*.xlsx</h19>
+    <h20>Raqamlash ustuvorligi</h20>
+    <h21>Xonadonlarni yigʻish</h21>
+    <h22>Xonalar matritsasi boʻyicha maʼlumotlarni toʻldirish</h22>
+    <h23>Maydonlarni hisoblash</h23>
+    <h24>Funksional vazifasi</h24>
+    <h25>Xonadon turi</h25>
+    <h26>Yashash xonalari soni</h26>
+    <h27>Yash. xonalar soni</h27>
+    <h28>Minimal maydon</h28>
+    <h30>Maksimal maydon</h30>
+    <h32>Xonalarni oʻz ichiga oladi</h32>
+    <h33>Xonalarni oʻz ichiga oladi</h33>
+    <h34>Xonalarni oʻz ichiga olmaydi</h34>
+    <h35>Xonalarni oʻz ichiga olmaydi</h35>
+    <h36>Parametrlarni yaratish</h36>
+    <h37>Excel dan import</h37>
+    <h38>Maʼlumotlarni oʻqish boshlanishi kerak boʻlgan boshlangʻich satrni, shuningdek koʻrsatilgan xususiyatlar qiymatlarini oʻz ichiga olgan ustunlar raqamlarini koʻrsating</h38>
+    <h39>Boshlangʻich satr:</h39>
+    <h40>Yigʻish</h40>
+    <h41>"Xona nomi" ustuni:</h41>
+    <h42>"Qora pardozlash qalinligi" ustuni:</h42>
+    <h43>"Xona turi" ustuni:</h43>
+    <h44>"Maydon koeffitsiyenti" ustuni:</h44>
+    <h45>"Raqamlash ustuvorligi" ustuni:</h45>
+    <h46>"Xonadon turi" ustuni:</h46>
+    <h47>"Yashash xonalari soni" ustuni:</h47>
+    <h48>"Minimal maydon" ustuni:</h48>
+    <h49>"Maksimal maydon" ustuni:</h49>
+    <h50>"Xonalarni oʻz ichiga oladi" ustuni:</h50>
+    <h51>"Xonalarni oʻz ichiga olmaydi" ustuni:</h51>
+    <h52>Xona raqami</h52>
+    <h53>Muammolar</h53>
+    <h54>Loyihada joylashtirilmagan xonalar topilmadi</h54>
+    <h55>Yaroqsiz xonalar</h55>
+    <h56>Parametr</h56>
+    <h57>Foydalanish</h57>
+    <h58>Xonadonlarni yigʻish</h58>
+    <h59>Yigʻilgan xonadonlar:</h59>
+    <h60>Sath</h60>
+    <h61>Xonadondagi xonalar soni</h61>
+    <h62>Birorta ham xonadon yigʻilmadi! Xonalarda xonalar matritsasiga mos keladigan "Funksional vazifasi" va "Nomi" parametrlari toʻgʻri toʻldirilganligiga ishonch hosil qiling</h62>
+    <h63>Notoʻgʻri xonalar:</h63>
+    <h64>Xonadonlarni yigʻishda notoʻgʻri xonalar aniqlanmadi</h64>
+    <h65>Hisoblangan xonadonlar:</h65>
+    <h66>Hisoblash uchun xonadonlar topilmadi! Xonalarning "Funksional vazifasi" va "Nomi" parametrlarini xonalar matritsasiga muvofiq toʻldiring, soʻngra xonadonlarni yigʻishni bajaring</h66>
+    <h67>Joylashtirilmagan xonalar</h67>
+    <h68>Tanlanganlarni oʻchirish</h68>
+    <h69>Hammasini oʻchirish</h69>
+    <h70>Roʻyxatda bir nechta pozitsiyani tanlash uchun Shift va/yoki Ctrl tugmasidan foydalaning</h70>
+    <h71>Hisoblash</h71>
+    <h72>yoki</h72>
+    <h73>Tanlangan xonalar boʻyicha yigʻish</h73>
+    <h74>Tanlangan xonalar boʻyicha hisoblash</h74>
+    <h75>Oyna tarkibini yigʻish</h75>
+    <h76>Oyna tarkibini yoyish</h76>
+    <h77>"Oynalar ustida" opsiyasini yoqish</h77>
+    <h78>"Oynalar ustida" opsiyasini oʻchirish</h78>
+    <h79>Barchasini tanlash</h79>
+    <h80>Yashirilgan yoʻriqnomani tiklash</h80>
+    <h81>Xonalar oʻlchamlari oʻzgarganda xonadon maydonlarini avtomatik qayta hisoblash xizmati va xonalar oʻchirilganda toʻliq qayta hisoblash (matritsa boʻyicha parametrlash, maydonlarni qayta hisoblash va xonadon turini aniqlash) xizmati. Xizmatlar faqat "Xonadon ID" parametri toʻldirilgan xonalarni qayta ishlaydi</h81>
+    <h81-1>Xizmat ishlaganda "Xonadonlar maydonlari" boʻlimida belgilangan sozlamalar hisobga olinadi</h81-1>
+    <h82>Xona nomi boʻyicha qidiruv</h82>
+    <h83>Loyihadagi barcha xonalar yaroqli</h83>
+    <h84>Joriy koʻrinishdagi barcha xonalar yaroqli</h84>
+    <h85>Standart sifatida saqlash</h85>
+    <h86>Joriy parametrlar bogʻlamasini standart qiymatlar sifatida saqlaydi. Plagin parametrlar bogʻlamasi sozlanmagan yangi hujjatda ishga tushirilganda saqlangan standart qiymatlar qoʻyiladi (hujjatda parametrlar mavjud boʻlsa)</h86>
+    <h87>Raqamlashni bajarish</h87>
+    <h88>Xonadonlarni raqamlash</h88>
+    <h89>Raqamlangan xonadonlar:</h89>
+    <h90>Raqamlash uchun xonadonlar topilmadi</h90>
+    <h91>Guruhlash</h91>
+    <h92>Raqamlash sozlamalari</h92>
+    <h93>Uzluksiz raqamlash</h93>
+    <h94>Raqamlash yoʻnalishi:</h94>
+    <h95>soat strelkasi boʻyicha</h95>
+    <h96>soat strelkasiga qarshi</h96>
+    <h97>Raqamlash boshlanishi:</h97>
+    <h98>chap yuqori burchak</h98>
+    <h99>oʻng yuqori burchak</h99>
+    <h100>chap pastki burchak</h100>
+    <h101>oʻng pastki burchak</h101>
+    <h102>koʻrsatish</h102>
+    <h103>Boshlangʻich raqam:</h103>
+    <h104>Korpuslar boʻyicha guruhlash</h104>
+    <h105>Seksiyalar boʻyicha guruhlash</h105>
+    <h106>Saralash:</h106>
+    <h107>oʻsish boʻyicha</h107>
+    <h108>kamayish boʻyicha</h108>
+    <h109>Kirish eshigini topib boʻlmadi!</h109>
+    <h110>Korpus</h110>
+    <h111>Seksiya</h111>
+    <h112>Korpusni raqamga</h112>
+    <h113>Seksiyani raqamga</h113>
+    <h114>Tanlanmagan</h114>
+    <!-- todo remove after 2.11.15.0 -->
+    <h115>Joriy koʻrinishda xonadonlar topilmadi</h115>
+    <h116>Parametr qiymatini raqamga</h116>
+    <!-- todo remove after 2.11.15.0 start -->
+    <h117>Koʻrinishni dublikatlash varianti:</h117>
+    <h118>Dublikatlash</h118>
+    <h119>Detallash bilan dublikatlash</h119>
+    <h120>Koʻrinish shablonini qoʻllash:</h120>
+    <h121>Kesish konturining siljishi:</h121>
+    <h122>Koʻrinish masshtabini qoʻllash:</h122>
+    <h123>Xonadon turini koʻrinish nomi sifatida ishlatishga harakat qilish</h123>
+    <h124>Xonadonlar koʻrinishlarini yaratish</h124>
+    <!-- todo remove after 2.11.15.0 end -->
+    <h125>Plaginning sinov muddati tugadi! "Xonadonlar tarkibi" plaginidan foydalanishni davom ettirish uchun plagin litsenziyasini yoki Revit obunasini xarid qiling</h125>
+    <h126>Sinov muddati. Qolgan kunlar</h126>
+    <h127>Xonalar soni (yash.)</h127>
+    <h128>Min. maydon</h128>
+    <h129>Maks. maydon</h129>
+    <h130>Xonadon turlarini jadval boʻyicha aniqlashda foydalanish:</h130>
+    <h131>Xonadon maydoni</h131>
+    <h132>Xonadonning yashash maydoni</h132>
+    <h133>Xonadonning umumiy maydoni</h133>
+    <!--todo remove after 3.8.8.0-->
+    <h134>Maydonlarni avtomatik qayta hisoblash xizmati yuklanmagan! ModPlus konfiguratoridan foydalanib, plaginni qayta yoqing</h134>
+    <h134-1>Maydonlarni avtomatik qayta hisoblash xizmati yuklanmagan! ModPlus avtomatik yangilash modulidan ("Plaginlar" menyusi) foydalanib, plaginni qayta yoqing</h134-1>
+    <h135>Xonalardan qoʻshish</h135>
+    <h136>Joriy xonalar matritsasi:</h136>
+    <h137>Joriy xonadon turlari jadvali:</h137>
+    <h138>Joriy manbalarni Excelga eksport qilish</h138>
+    <h139>Barcha manbalarni Excelga eksport qilish</h139>
+    <h140>Barcha manbalar</h140>
+    <h141>Xonadonlarni birlashtirish</h141>
+    <h142>Ajratgich</h142>
+    <h143>*TURLICHA*</h143>
+    <h144>Parametrlar roʻyxatini bloknotda ochish</h144>
+    <h145>Oʻzgartirilgan qiymatlarni yozish</h145>
+    <h146>Xonadonlar</h146>
+    <h147>Belgilangan xonadonlar maʼlumotlari</h147>
+    <h148>Belgilangan xonadonlar soni:</h148>
+    <h149>Xonadonlar maʼlumotlarini oʻzgartirish</h149>
+    <h150>Koʻp sathli xonadonlarga birlashtirish</h150>
+    <!-- todo remove after 2.11.15.0 -->
+    <h151>Koʻp sathli xonadonlarga birlashtirish</h151>
+    <h152>Xonadondagi bir xil nomli xonalarni indekslash tartibi ("Xona indeksi" parametri):</h152>
+    <h153>Maydonning oʻsishi boʻyicha</h153>
+    <h154>Maydonning kamayishi boʻyicha</h154>
+    <h155>"Xonadon belgisi" parametrini xonada toʻldirish</h155>
+    <h156>eng katta maydonli</h156>
+    <h157>turi boʻyicha eng katta maydonli</h157>
+    <h158>"Xonadon belgisi" parametri koʻrsatilgan turdagi eng katta maydonli xonada toʻldiriladi. Agar xonadonda koʻrsatilgan turdagi xonalar boʻlmasa, "Xonadon belgisi" parametri eng katta maydonli xonada toʻldiriladi</h158>
+    <h159>Xonadonlarni yigʻishdan oldin qayta ishlanadigan xonalar parametrlarini dastlabki tozalash varianti:</h159>
+    <h160>Hammasini tozalash</h160>
+    <h161>Faqat xonadon identifikatori borlarini tozalash</h161>
+    <h162>Tozalamaslik (tavsiya etilmaydi)</h162>
+    <h163>"XN_№_Xona" parametri oʻrniga "Raqam" tizim parametridan foydalanish</h163>
+    <h164>Xonadonlarni bloklash</h164>
+    <h165>Bloklangan xonadonlarni yigʻish</h165>
+    <h166>Bloklangan xonadonlar topilmadi!</h166>
+    <h167>Xonadonlar blokini olib tashlash</h167>
+    <h168>Egri chiziq boʻyicha raqamlash</h168>
+    <h169>Xonadonlarni raqamlash uchun egri chiziqni tanlang</h169>
+    <h170>"Korpus" parametri:</h170>
+    <h171>"Seksiya" parametri:</h171>
+    <h172>Tanlangan xonadonlarni bloklash</h172>
+    <h173>Maqsad parametr</h173>
+    <!-- todo remove after 2.8.6.0 -->
+    <h174>Tanlangan xonalarni tanlangan xonadonga qoʻshish</h174>
+    <h175>Tipik qavatlar</h175>
+    <h176>Joriy tipik qavatlar jadvali:</h176>
+    <h177>"Qavat" ustuni</h177>
+    <h178>"Tipik qavat" ustuni</h178>
+    <h179>Qavat</h179>
+    <h180>Tipik qavat</h180>
+    <h181>Tipik qavatlarni hisobga olish</h181>
+    <h182>Xonadonlarni yigʻish va hisoblashda tipik qavatlarni hisobga olish</h182>
+    <h183>Tipik xonadonlar parametrlarining nusxasi</h183>
+    <h184>Ortiqcha xona</h184>
+    <h185>Oʻralmagan</h185>
+    <h186>Joriy jadval nomini import qilinayotgan Excel faylidagi varaq nomi boʻyicha belgilash</h186>
+    <h187>Xonadonlar identifikatorining bir nechta qiymatini nuqtali vergul bilan boʻshliqlarsiz ajratib koʻrsatishingiz mumkin</h187>
+    <h188>Har bir sath uchun raqamlashni qayta boshlash (uzluksiz boʻlmagan raqamlash)</h188>
+    <h189>Maydonni koeffitsiyent bilan hisoblashda foydalanish:</h189>
+    <h190>Yaxlitlangan maydon</h190>
+    <h191>Dastlabki maydon</h191>
+    <h192>Xonani xonadondan olib tashlash</h192>
+    <h193>Tanlangan xonadonlarni hisoblash</h193>
+    <h194>Tanlangan xonadonlarni oʻchirish</h194>
+    <h195>Xonadonning koeffitsiyentsiz umumiy maydoni</h195>
+    <h196>Majburiy parametrlar</h196>
+    <h197>Qoʻshimcha parametrlar</h197>
+    <h198>A</h198>
+    <h199>Antresol</h199>
+    <h200>Tanlangan xonalarni "Antresol" sifatida belgilash</h200>
+    <h201>Tanlangan xonalardan "Antresol" belgisini olib tashlash</h201>
+    <h202>Shartlar</h202>
+    <h203>Joriy konfiguratsiya</h203>
+    <h204>Jadvalning yangi nomini koʻrsating</h204>
+    <h205>Tasniflashda yuzaga kelgan xatolar mavjud</h205>
+    <h206>Ustunlarni tahrirlash</h206>
+    <h208>Bloklangan xonadonlarni qayta ishlash</h208>
+    <h209>Istalgan funksional vazifalarni qayta ishlash</h209>
+    <h210>Tasniflash</h210>
+    <h211>Tanlangan xonalar boʻyicha tasniflash</h211>
+    <h212>Tasniflangan xonadonlar:</h212>
+    <h213>Logni ochish</h213>
+    <h214>Tasniflash uchun xonadonlar topilmadi!</h214>
+    <h215>Parametrni koʻrsating!</h215>
+    <h216>Parametr qiymati</h216>
+    <h217>Xonadonning barcha xonalari parametri koʻrsatilgan qiymatga ega ekanligini tekshirish</h217>
+    <h218>Xonadon koʻrsatilgan xonalarni oʻz ichiga olmasligini tekshirish</h218>
+    <h219>Xonadon koʻrsatilgan xonalarni oʻz ichiga olishini tekshirish</h219>
+    <h220>Xonadondagi yashash xonalari sonini tekshirish</h220>
+    <h221>Xonadon maydoni koʻrsatilgan qiymatdan kam emasligini tekshirish. Maydon xonadonning birinchi uchragan xonasi parametridan olinadi</h221>
+    <h222>Xonadon maydoni koʻrsatilgan qiymatdan koʻp emasligini tekshirish. Maydon xonadonning birinchi uchragan xonasi parametridan olinadi</h222>
+    <h223>Xonadonni tanlash</h223>
+    <h224>"Xonadonni tanlash" oʻrnatilgan buyrugʻi</h224>
+    <h225>Tanlangan xona kiradigan xonadonning barcha xonalarini tanlash imkonini beradi</h225>
+    <h226>Bloklangan xonadonlar maydonlarini hisoblash</h226>
+    <h227>Filtrni hisobga olgan holda:</h227>
+    <h228>Dastlabki maydon</h228>
+    <h229>Xonadonlarni hisoblash</h229>
+    <h230>Maydonni hisoblash</h230>
+    <h231>Funksional vazifasi joriy xonadonlar identifikatoriga mos keladigan xonalarni chiqarib tashlash</h231>
+    <h232>Funksional vazifani toʻldirish</h232>
+    <h233>Nomlari joriy xonalar matritsasida mavjud boʻlgan xonalar uchun "Funksional vazifasi" parametrini toʻldirish</h233>
+    <h234>Xonadonlarni tiplashtirishni bajarish</h234>
+    <h235>Xona raqami formati</h235>
+    <h236>Parametrdan</h236>
+    <h237>Xonalarni raqamlash</h237>
+    <h238>Koʻp sathli xonadonlarda har bir sath uchun raqamlashni qayta boshlash</h238>
+    <h239>Xonadon sathlari boʻyicha parametrlar</h239>
+    <h240>Koeffitsiyentli maydonlarni yaxlitlash:</h240>
+    <msg1>"{0}" parametri topilmadi</msg1>
+    <msg2>"{0}" parametri toʻldirilmagan</msg2>
+    <msg3>"{0}" parametri yaroqsiz qiymatga ega</msg3>
+    <msg4>Roʻyxatda koʻrsatilgan parametrlar joriy loyiha xonalarida mavjud emas:</msg4>
+    <msg5>Xona nomi toʻldirilmagan</msg5>
+    <msg6>Xona nomi matritsada topilmadi</msg6>
+    <!--todo remove after 4.1.11.0-->
+    <msg7>Dastlabki tekshiruv natijalarida parametrlari toʻldirilmagan yoki notoʻgʻri boʻlgan xonalar mavjud. Xonadonlarni yigʻishni bajarishni xohlaysizmi?</msg7>
+    <msg8>Xonasiz fazoga olib boradigan eshik mavjud</msg8>
+    <msg9>Xona eshiklari boʻlmagan konstruksiyalar bilan oʻralgan</msg9>
+    <msg10>Xonalar matritsasi boʻsh! Eksport qilish uchun hech narsa yoʻq</msg10>
+    <msg11>Xonadon turlari roʻyxati boʻsh! Eksport qilish uchun hech narsa yoʻq</msg11>
+    <msg12>Import qilish uchun maʼlumot yoʻq!</msg12>
+    <msg13>Toʻldirilgan satrlar soni koʻrsatilgan birinchi satr raqamidan kam!</msg13>
+    <msg14>Joriy qiymatlarni matritsadan oʻchirish? Ha – oʻchirish, Yoʻq – toʻldirish</msg14>
+    <msg15>Joriy qiymatlarni xona turlari roʻyxatidan oʻchirish? Ha – oʻchirish, Yoʻq – toʻldirish</msg15>
+    <msg16>Yordamchi qattiq jismni qurib boʻlmadi va yordamchi konturni olib boʻlmadi</msg16>
+    <msg17>Xona chegaralarini olib boʻlmadi. Xona konturida mayda nuqsonlar bor-yoʻqligini tekshiring. Bunday nuqsonlar koʻpincha toʻsuvchi konstruksiyalar noaniq qurilganda yuzaga keladi</msg17>
+    <msg18>Xona notoʻgʻri oʻralgan yoki umuman oʻralmagan</msg18>
+    <msg19>"{0}" xonasi uchun matritsada yozuv topilmadi</msg19>
+    <msg20>"{0}" xonasi uchun matritsadagi yozuv yaroqsiz</msg20>
+    <msg21>Funksional vazifani olib boʻlmadi</msg21>
+    <msg22>Plaginni oila hujjatida ishga tushirish mumkin emas!</msg22>
+    <msg23>Ushbu yoʻriqnoma plaginning keyingi barcha ishga tushirilishlarida koʻrsatilmaydi. Uni yopishni xohlaysizmi?</msg23>
+    <msg24>Koʻrinishni yaratishda xato yuz berdi</msg24>
+    <!-- todo remove after 2.11.15.0 start -->
+    <msg25>Har bir konstruksiyani hisobga oluvchi toʻsuvchi konstruksiyalar boʻyicha konturni yaratib boʻlmadi</msg25>
+    <msg26>Toʻsuvchi konstruksiyalarning eng katta qalinligi boʻyicha kontur yaratish varianti ishlatildi</msg26>
+    <msg27>Toʻsuvchi konstruksiyalarning eng katta qalinligini hisobga oluvchi toʻsuvchi konstruksiyalar boʻyicha konturni yaratib boʻlmadi</msg27>
+    <msg28>Xonalar konturlari boʻyicha xonadon konturini yaratish varianti ishlatildi</msg28>
+    <msg29>Xonadon konturini olib boʻlmadi. Xato:</msg29>
+    <msg30>Xonadon koʻrinishi yaratilmadi</msg30>
+    <!-- todo remove after 2.11.15.0 end -->
+    <msg31>Nom uzunligi 28 belgidan oshmasligi kerak</msg31>
+    <msg32>Quyidagi belgilar \ / * ? : [ ] nom uchun ruxsat etilmagan</msg32>
+    <msg33>Joriy xonalar matritsasi qaytarib boʻlmaydigan tarzda oʻchiriladi! Davom etishni xohlaysizmi?</msg33>
+    <msg34>Joriy xonadon turlari jadvali qaytarib boʻlmaydigan tarzda oʻchiriladi! Davom etishni xohlaysizmi?</msg34>
+    <msg35>Maʼlumotlar yangilandi</msg35>
+    <!-- todo remove after 2.8.6.0 -->
+    <msg36>Belgilanganlar orasidan quyidagi xonadonlar (id) uchun tutashtirish variantlari topilmadi (qoʻshni sathlarda joylashgan va vertikal boʻyicha kesishadigan xonadonlar)</msg36>
+    <msg37>Xonadonlar ({0}) id: {1} boʻlgan koʻp sathli xonadonga birlashtirildi</msg37>
+    <msg38>Xonadonlarni birlashtirishda xato yuz berdi</msg38>
+    <msg39>Xonadonning bir yoki bir nechta xonasida "Xona turi" parametri toʻldirilmagan</msg39>
+    <msg40>{1} xonasining "{0}" parametriga qiymat berib boʻlmadi – parametr "Faqat oʻqish uchun" xususiyatiga ega. Ehtimol, xona siz tahrirlay olmaydigan ishchi toʻplamda joylashgan</msg40>
+    <msg41>"{0}" parametri {1} xonasida topilmadi. Agar raqamlashni bajarayotgan boʻlsangiz, "Maqsad parametr" xususiyatida toʻgʻri parametrni tanlaganingizga ishonch hosil qiling</msg41>
+    <msg42>Joriy tipik qavatlar jadvali qaytarib boʻlmaydigan tarzda oʻchiriladi! Davom etishni xohlaysizmi?</msg42>
+    <msg43>Joriy qiymatlarni tipik qavatlar roʻyxatidan oʻchirish? Ha – oʻchirish, Yoʻq – toʻldirish</msg43>
+    <msg44>Qavat koʻrsatilmagan</msg44>
+    <msg45>Tipik qavat koʻrsatilmagan</msg45>
+    <msg46>Ushbu qavat boshqa yozuvda tipik qavat sifatida allaqachon koʻrsatilgan</msg46>
+    <msg47>Tipik sifatida koʻrsatilgan qavat boshqa yozuvda notipik sifatida koʻrsatilgan</msg47>
+    <msg48>Ushbu qavat boshqa yozuvda allaqachon koʻrsatilgan</msg48>
+    <msg49>"{0}" tipik qavatida mos xona topilmadi (vertikal kesishish yoʻq)</msg49>
+    <msg50>Quyidagi xonalar va tanlangan xonadon turli sathlarda joylashgan</msg50>
+    <msg51>Baribir bu xonalarni xonadonga qoʻshish?</msg51>
+    <!--todo remove after 4.1.10.0-->
+    <msg52>Belgilanganlar orasidan quyidagi xonadonlar (id) uchun tutashtirish variantlari topilmadi (qoʻshni sathlarda joylashgan va vertikal boʻyicha kesishadigan bir xil funksional vazifali xonadonlar)</msg52>
+    <msg53>Tanlangan xonadonlar orasida funksional vazifasi sozlamalarda koʻrsatilgan joriy xonadonlar identifikatoriga mos kelmaydigan xonadonlar mavjud. Ushbu xonadonlarni joriy sozlamalar bilan hisoblashni xohlaysizmi?</msg53>
+    <msg54>Xonadon ID={0} oʻchirildi: xonadon xonalarining parametrlari tozalandi (satrli parametrlar) yoki nolga tenglashtirildi (sonli parametrlar)</msg54>
+    <msg55>Bloklangan xonadonlar "Bloklanganlar" yorligʻidagi roʻyxatga qoʻshildi</msg55>
+    <msg56>"XN_Antresol" parametri topilmadi. Yetishmayotgan qoʻshimcha parametrlarni "Parametrlar" - "Qoʻshimcha parametrlar" yorligʻida yarating</msg56>
+    <msg57>Barcha jadvallar qaytarib boʻlmaydigan tarzda oʻchiriladi!</msg57>
+    <msg58>Ishonchingiz komilmi?</msg58>
+    <msg59>Joriy loyiha xonalarida "{0}" parametri mavjud emas</msg59>
+    <msg60>Jadvalni qayta ishlashda xato yuz berdi</msg60>
+    <msg61>Birorta ham mos xona yigʻilmadi! Filtrlash shartlarini aniqlashtiring va qaytadan urinib koʻring</msg61>
+    <msg62>{0} ta xona uchun funksional vazifa toʻldirildi</msg62>
+    <msg63>Xona joriy xonalar matritsasida mavjud boʻlmagan "{0}" nomiga ega. Funksional vazifani toʻldirish oʻtkazib yuborildi</msg63>
+    <msg64>"Funksional vazifasi" parametri yaratilmagan yoki bogʻlanmagan. "Parametrlar" yorligʻiga oʻting va parametrlarni yarating/bogʻlang</msg64>
+    <msg65>"{0}" parametri topilmadi</msg65>
+    <msg66>"{0}" parametri qoʻllab-quvvatlanmaydigan maʼlumot turiga ega (satrli va sonli parametrlar qoʻllab-quvvatlanadi)</msg66>
+    <msg67>"{0}" parametriga qiymat berib boʻlmadi. Ehtimol, parametr "Faqat oʻqish uchun" xususiyatiga ega yoki mavjud boʻlmagan ishchi toʻplamda joylashgan</msg67>
+    <msg68>Koʻrsatilgan xonadonlar turli sathlarda joylashgan! Ularni bitta xonadonga birlashtirishni xohlaysizmi?</msg68>
+    <msg69>Belgilanganlar orasidan quyidagi xonadonlar (id) uchun tutashtirish variantlari topilmadi (vertikal boʻyicha kesishadigan bir xil funksional vazifali xonadonlar)</msg69>
+    <msg70>Dastlabki tekshiruv natijalarida notoʻgʻri xonalar (parametrlari toʻldirilmagan yoki notoʻgʻri boʻlgan xonalar, joylashtirilmagan xonalar) mavjud! Davom etishni xohlaysizmi?</msg70>
+    <msg71>Ushbu roʻyxat shakllantirilgandan keyin modeldagi xonadonlar maʼlumotlari oʻzgardi (boshqa yorliqda yoki qoʻlda). Roʻyxat eskirgan boʻlishi mumkin — amalni qayta bajaring</msg71>
+    <tt1>Qayta ishlanadigan xonalarni tanlab olish uchun ishlatiladigan "Funksional vazifasi" parametrining qiymati. Agar parametr boshqa qiymatga ega boʻlsa, xona barcha algoritmlar ishlashida oʻtkazib yuboriladi</tt1>
+    <tt2>Yoʻriqnomani yashirish</tt2>
+    <tt3>Roʻyxatdagi har bir guruh uchun loyihada raqamlash boshlanadigan xonadonni aniqlash uchun xonani tanlang</tt3>
+    <tt4>"Funksional vazifasi" parametrining ruxsat etilgan qiymatlari roʻyxati. Ushbu roʻyxat "Funksional vazifasi" parametri qiymati xonadonlar identifikatoriga mos kelmaydigan va xonalar matritsasida mavjud boʻlmagan xonalarni dastlabki tekshiruvdan chiqarib tashlash uchun ishlatiladi</tt4>
+    <tt5>Xonadonlarni toʻgʻri yigʻish uchun xonadonlarga kirishi kerak boʻlgan barcha xonalarni tanlash zarur</tt5>
+    <tt6>Xonadonlarni hisoblash uchun xonadonning kamida bitta xonasini tanlash kifoya. Xonadonlar "Xonadon ID" parametri qiymati boʻyicha yigʻiladi</tt6>
+    <tt7>"Korpus" parametrining qiymati xonadon raqamiga defis bilan ajratilgan prefiks koʻrinishida qoʻshiladi</tt7>
+    <tt8>"Seksiya" parametrining qiymati xonadon raqamiga defis bilan ajratilgan prefiks koʻrinishida qoʻshiladi</tt8>
+    <tt9>Tanlangan parametrning qiymati, agar parametr qiymatga ega boʻlsa va qiymat xonadonning barcha xonalari uchun bir xil boʻlsa, xonadon raqamiga defis bilan ajratilgan prefiks koʻrinishida qoʻshiladi</tt9>
+    <tt10>Joriy jadvalga joriy loyiha xonalaridan yigʻilgan yangi pozitsiyalarni qoʻshish. Faqat "Xona nomi" qiymati toʻldirilgan pozitsiyalar qoʻshiladi</tt10>
+    <!-- todo remove after 2.8.6.0 -->
+    <tt11>Roʻyxatda tanlangan xonadonlarni bittaga birlashtirish</tt11>
+    <tt12>Raqamga Korpus, Seksiya va/yoki parametr qiymatini qoʻshishda ajratgich sifatida ishlatiladigan qiymat</tt12>
+    <tt13>Belgilangan xonadonlarni tanlash va koʻrsatish</tt13>
+    <tt14>Jiddiy xatolar mavjudligi sababli xonadon maydonlarini hisoblash bajarilmadi</tt14>
+    <!-- todo remove after 2.11.15.0 -->
+    <tt15>Tanlangan xonadonlarni bloklash. Bloklangan xonadonlarning xonalari keyingi xonadonlarni yigʻishlarda qayta ishlanmaydi</tt15>
+    <tt15_1>Tanlangan xonadonlarni bloklash. Bloklangan xonadonlarning xonalari keyingi xonadonlarni yigʻish va hisoblashlarda qayta ishlanmaydi</tt15_1>
+    <tt16>Tanlangan xonadonlarni blokdan chiqarish</tt16>
+    <tt17>Egri chiziqni tanlash</tt17>
+    <tt18>Xonadon bloklangan</tt18>
+    <tt19>Joriy hujjatdan qavat qoʻshish</tt19>
+    <tt20>Barcha muammoli xonalarni tanlash va koʻrsatish</tt20>
+    <tt21>Koʻp sathli xonadon</tt21>
+    <tt22>Roʻyxatda tanlangan xonadonlarni bittaga birlashtirish. Faqat bir xil funksional vazifali xonadonlarni birlashtirish mumkin</tt22>
+    <tt23>Tanlangan xonalarni tanlangan xonadonga qoʻshish. Xonadon va xona bir xil funksional vazifaga ega boʻlishi kerak</tt23>
+    <tt24>Masalan, xonaning dastlabki maydoni 3.48. Maydonlarni yaxlitlash 0.1. Koeffitsiyent 0.5.</tt24>
+    <tt25>"Yaxlitlangan maydon" opsiyasi tanlanganda avval yaxlitlangan maydon hisoblanadi – 3.5, olingan natija koeffitsiyentga koʻpaytiriladi – 3.5 * 0.5 = 1.75, soʻngra yaxlitlanadi – 1.8.</tt25>
+    <tt26>"Dastlabki maydon" opsiyasi tanlanganda dastlabki maydon koeffitsiyentga koʻpaytiriladi – 3.48 * 0.5 = 1.74, soʻngra yaxlitlanadi – 1.7.</tt26>
+    <tt27>Ushbu xonadon bloklangan: xonadonlarni yigʻishda xonadon xonalari qayta ishlanmaydi</tt27>
+    <tt28>Roʻyxatni tozalash</tt28>
+    <tt29>Xona xonadondan olib tashlanadi. Xonaning barcha parametrlari tozalanadi (satrli parametrlar) yoki nolga tenglashtiriladi (sonli parametrlar)</tt29>
+    <tt30>Tanlangan xonadonlarni joriy sozlamalar va manbalar bilan hisoblashni bajarish. Hisoblangan xonadonlar qoʻshimcha ravishda "Xonadonlarni hisoblash" yorligʻida koʻrsatiladi</tt30>
+    <tt31>Xonadon xonalari soni oʻzgartirildi! Xonadonni qayta hisoblash talab etiladi</tt31>
+    <tt32>Xonadon xonalarining barcha parametrlari tozalanadi (satrli parametrlar) yoki nolga tenglashtiriladi (sonli parametrlar)</tt32>
+    <tt33>Tasniflash shartlarining yangi jadvalini yaratish</tt33>
+    <tt34>Tasniflash shartlarining barcha jadvallarini oʻchirish</tt34>
+    <tt35>Xonadonlarni tasniflash uchun xonadonning kamida bitta xonasini tanlash kifoya. Xonadonlar "Xonadon ID" parametri qiymati boʻyicha yigʻiladi</tt35>
+    <tt36>Yangi satr qoʻshish</tt36>
+    <tt37>Tanlangan satrlarni oʻchirish</tt37>
+    <tt38>Notoʻgʻri qiymat. Qavs ichida koʻrsatilgan shartlarni tekshiring</tt38>
+    <tt39>Tanlangan xonalarni koʻrsatish</tt39>
+    <tt40>Xona nomini joriy hujjatdagi xona nomlari roʻyxatidan belgilash</tt40>
+    <tt41>Agar opsiya yoqilgan boʻlsa, koʻrsatilgan yaxlitlash har bir xonaning koeffitsiyentli maydoniga («XD_Koeffitsiyentli maydon» parametri), shuningdek xonadonning «XD_Umumiy maydon» va «XD_Isitilmaydigan xonalar maydoni koeff. bilan» umumiy maydonlariga qoʻllanadi. Qolgan maydonlar «Maydonlarni yaxlitlash» xususiyatiga muvofiq yaxlitlanadi.</tt41>
+    <tt42>Masalan, xonaning dastlabki maydoni 3.48. Maydonlarni yaxlitlash 0.1. Koeffitsiyentli maydonlarni yaxlitlash 0.01. Koeffitsiyent 0.5. Yaxlitlangan maydon – 3.5, koeffitsiyentli maydon – 3.5 * 0.5 = 1.75, yaxlitlashdan keyin – 1.75 (bu opsiyasiz 1.8 boʻlardi).</tt42>
+    <tt43>Agar opsiya oʻchirilgan boʻlsa, barcha maydonlar uchun «Maydonlarni yaxlitlash» xususiyati ishlatiladi.</tt43>
+    <instruction>Yoʻriqnoma</instruction>
+    <instruction1>Loyihadagi barcha xonalar ushbu roʻyxatda koʻrsatilgan umumiy parametrlarga ega boʻlishi kerak. Siz xuddi shu turdagi (qavs ichida koʻrsatilgan) oʻz umumiy parametrlaringizdan foydalanishingiz mumkin. Oʻz umumiy parametrlaringizni roʻyxatda koʻrsating yoki "Yetishmayotgan parametrlarni yaratish" tugmasini bosing. Barcha sonli parametrlar "Pul birligi" turi bilan ifodalangan, bu xonalarni guruhlarda qayta ishlash imkonini beradi</instruction1>
+    <instruction1_1>Qoʻshimcha parametrlar faqat xonalarda ushbu parametrlar mavjud boʻlganda qayta ishlanadi va toʻldiriladi. Siz xuddi shu turdagi (qavs ichida koʻrsatilgan) oʻz umumiy parametrlaringizdan foydalanishingiz mumkin. Oʻz umumiy parametrlaringizni roʻyxatda koʻrsating yoki "Yetishmayotgan parametrlarni yaratish" tugmasini bosing</instruction1_1>
+    <instruction2>Xonalar matritsasida qayta ishlanadigan xonalarni tanlash, xonadondagi xonalarni raqamlash uchun asosiy xususiyatlar, shuningdek xonadon maydonlarini hisoblash uchun qiymatlar belgilanadi. Matritsadagi qiymatlar funksional vazifa (FV ustuni) va xona nomining mosligi boʻyicha tanlanadi. "Xona nomi" ustunida nom oxirida yulduzcha koʻrsatish mumkin, bu xona nomining boshi boʻyicha moslikni tekshirishni bildiradi (masalan, "Yotoqxona*" qiymati "Yotoqxona 1", "Yotoqxona 2" va h.k. xona nomlariga mos keladi)</instruction2>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction2_1>Ushbu jadvalda xonadon turini aniqlash uchun ishlatiladigan maʼlumotlar belgilanadi. "Xonalarni oʻz ichiga oladi" va "Xonalarni oʻz ichiga olmaydi" qiymatlari nuqtali vergul (;) bilan ajratilgan xona nomlari bilan toʻldiriladi</instruction2_1>
+    <instruction2_2>Roʻyxatda qavatlar va tipik qavatlar moslashuvi belgilanadi. Agar qavat uchun tipik qavat belgilangan boʻlsa, xonadonlarni yigʻish va hisoblashda koʻrsatilgan qavatda joylashgan xonalarning barcha parametrlari tipik qavatda joylashgan tegishli xonadan olinadi. Tipik qavat xonasi qayta ishlanayotgan xonaning qoʻyish nuqtasi orqali oʻtkazilgan vertikal nur yordamida aniqlanadi. Qavatlarni sath nomlari boʻyicha ham, sath belgilari boʻyicha ham belgilash mumkin</instruction2_2>
+    <instruction2_3>Ushbu jadvalda xonadon turini aniqlash uchun ishlatiladigan maʼlumotlar belgilanadi. "Xonalarni oʻz ichiga oladi" va "Xonalarni oʻz ichiga olmaydi" shartlari nuqtali vergul (;) bilan ajratilgan xona nomlari bilan toʻldiriladi. Xona nomlarini maydonni tekshirish sharti va/yoki xona antresol ekanligini tekshirish sharti bilan toʻldirish mumkin. Buning uchun xona nomidan keyin qavs ichida shart va maydon qiymatini va/yoki zarur boʻlsa, vergul orqali "Antresol" tekshiruvi shartini koʻrsating. Mavjud shartlar – teng (=), teng emas (!=), katta (&gt;), katta yoki teng (&gt;=), kichik (&lt;), kichik yoki teng (&lt;=). "Antresol" tekshiruvi uchun "Xona antresol boʻlishi kerak" shartini belgilash uchun vergul orqali "a" belgisini yoki "Xona antresol boʻlmasligi kerak" shartini belgilash uchun "na" ni qoʻshing. Maydonni tekshirmasdan faqat "Antresol" tekshiruvi shartini belgilash mumkin. Misollar: "Oshxona (&gt;10); Yotoqxona", "Omborxona (&lt;5,a)", "Omborxona (na)"</instruction2_3>
+    <instruction3>Dastlabki tekshiruv ikki qismdan iborat: joylashtirilmagan xonalarni tekshirish va "Funksional vazifa" hamda "Nom" parametrlarining toʻldirilganligini tekshirish. Agar xonaning "Funksional vazifa" parametri qiymati sozlamalarda koʻrsatilgan "Xonadonlar identifikatori" qiymatiga mos kelsa, "Nom" parametri joriy xonalar matritsasi boʻyicha tekshiriladi</instruction3>
+    <instruction4>Xonadonlarni yigʻish xonalarning geometrik xususiyatlari orqali, xonalarning derazalar, eshiklar va xona ajratgichlari orqali bogʻlanishini hisobga olgan holda amalga oshiriladi. Bitta xonadonning barcha xonalariga "Xonadon ID" parametrining bir xil qiymati beriladi. "Xonadon ID" parametri boʻyicha rang sxemasini yaratib, qoʻshimcha vizual tekshiruv oʻtkazish tavsiya etiladi</instruction4>
+    <instruction5>Xonadonlarni hisoblash xonadon maydonlarini, yashash xonalari sonini hisoblashni, shuningdek "Xonadon turlari" manbasi boʻyicha xonadon turini aniqlashni oʻz ichiga oladi. Olingan barcha qiymatlar xonadonga kiruvchi xonalar parametrlariga beriladi. Barcha xonadonlar "Xonadonlarni yigʻish" bosqichida belgilangan "Xonadon ID" parametri qiymati boʻyicha aniqlanadi</instruction5>
+    <instruction5_1>Bu yorliq xonadonlarni hisoblashning asosiy algoritmi qismi emas! U faqat yaxlitlash sozlamalarini hisobga olgan holda tanlangan xonalarda "XD_Yaxlitlangan maydon" (yoki ishlatilayotgan tegishli) parametrini toʻldirish uchun moʻljallangan. Bu funksiyadan faqat joriy funksional vazifaga mos kelmaydigan xonalar uchun foydalaning</instruction5_1>
+    <instruction6>Xonadonlarni raqamlashni tegishli opsiyalarni yoqib va Korpus va/yoki Seksiya qiymati olinadigan parametr nomlarini belgilab, xonadonlarni Korpuslar va/yoki Seksiyalar boʻyicha guruhlagan holda bajarish mumkin. Bunda seksiyalar korpuslarning kichik guruhlari hisoblanadi. "Uzluksiz raqamlash" xususiyati keyingi guruhda raqamlash "Boshlangʻich raqam" xususiyatida belgilangan qiymatdan boshlanmasdan, davom ettirilishini bildiradi. Agar "Raqamlash boshlanishi" xususiyatida "koʻrsatish" variantini tanlasangiz, har bir xonadonlar guruhi uchun xonani tanlash talab etiladi</instruction6>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction7>Xonadon koʻrinishlarini yaratish joriy koʻrinishni nusxalash va keyin xonadon konturi boʻyicha kesish orqali amalga oshiriladi. Avvalo toʻsuvchi devorlar qalinligini hisobga olgan holda kesish konturini yaratishga urinib koʻriladi (faqat Revit 2020 va undan yuqori uchun). Muvaffaqiyatsiz boʻlsa, toʻsuvchi devorlarning eng katta qalinligini hisobga olgan holda kesish konturini yaratishga urinib koʻriladi. Agar kesish konturi yaratilmasa, xona chegaralari boʻyicha olingan xonadon konturi ishlatiladi. "Xonadon turini koʻrinish nomi sifatida ishlatishga urinish" opsiyasi yoqilganda yaratilgan koʻrinishlarga "SATH_NOMI – Xonadon XONADON_TURI" koʻrinishidagi nom beriladi</instruction7>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction8>Xonadonlar muharriri xonadon maydonlari qiymatlariga qoʻlda oʻzgartirishlar kiritish, shuningdek koʻp sathli xonadonlarni yigʻish imkonini beradi. Koʻp sathli xonadonlarni yigʻishda maydonlar qayta hisoblanadi, shuningdek "XD_Sathlar soni" parametri qiymati toʻldiriladi MUHIM! Xonadonlarni muayyan sathda qayta hisoblashda koʻp sathli xonadonga tegishli, lekin boshqa sathda joylashgan xonalarning parametr qiymatlari qayta hisoblanmaydi</instruction8>
+    <instruction8_1>Xonadonlarni yigʻish sozlamalarda koʻrsatilgan xonadonlar identifikatorining joriy qiymatidan qatʼi nazar amalga oshiriladi. Xonadonlar muharriri xonadon maydonlari qiymatlariga oʻzgartirishlar kiritish, shuningdek koʻp sathli xonadonlarni yigʻish imkonini beradi. Koʻp sathli xonadonlarni yigʻishda maydonlar qayta hisoblanadi, shuningdek "XD_Sathlar soni" parametri qiymati toʻldiriladi. Xonadonlar muharriri, shuningdek, tanlangan xonadonlarni qayta hisoblash, tanlangan xonadonlarni bloklash yoki blokdan chiqarish, hamda tanlangan xonadonlarni oʻchirish imkonini beradi</instruction8_1>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction9>Bloklangan xonadonlar – bu xonadonlarni yigʻishda xonalari qayta ishlanmaydigan xonadonlar. Xonadonlarni bloklash "Xonadonlarni yigʻish" yorligʻida amalga oshiriladi. Roʻyxatda bloklangan xonadonlar "Xonadonlar identifikatori"ning joriy qiymatidan ("Funksional vazifa" parametri qiymati) qatʼi nazar koʻrsatiladi</instruction9>
+    <instruction9_1>Bloklangan xonadonlar – bu xonadonlarni yigʻish va hisoblashda xonalari qayta ishlanmaydigan xonadonlar. Roʻyxatda bloklangan xonadonlar "Xonadonlar identifikatori"ning joriy qiymatidan ("Funksional vazifa" parametri qiymati) qatʼi nazar koʻrsatiladi</instruction9_1>
+    <instruction10>Tasniflash xonadonlarning xususiyatlari asosida xonadonlarning muayyan parametrlarini toʻldirish imkonini beradi. Avval "Shartlar" yorligʻida shartli jadvallarni yaratish kerak, shundan soʻng natijani "Tasniflash" yorligʻida koʻrsatgan holda tasniflashni bajarish mumkin</instruction10>
+    <instruction10_1>Maqsadli parametrni koʻrsating – tasniflash natijasi yoziladigan satrli parametr. Maydon tekshiruvi xonadonning tasodifiy xonasining koʻrsatilgan parametri boʻyicha amalga oshiriladi (yaʼni barcha xonalarda parametr bir xil qiymatga ega deb hisoblanadi). "Xonalarni oʻz ichiga oladi" va "Xonalarni oʻz ichiga olmaydi" shartlari nuqtali vergul (;) bilan ajratilgan xona nomlari bilan toʻldiriladi. Xona nomlarini maydonni tekshirish sharti va/yoki xona antresol ekanligini tekshirish sharti bilan toʻldirish mumkin. Buning uchun xona nomidan keyin qavs ichida shart va maydon qiymatini va/yoki zarur boʻlsa, vergul orqali "Antresol" tekshiruvi shartini koʻrsating. Mavjud shartlar – teng (=), teng emas (!=), katta (&gt;), katta yoki teng (&gt;=), kichik (&lt;), kichik yoki teng (&lt;=). "Antresol" tekshiruvi uchun "Xona antresol boʻlishi kerak" shartini belgilash uchun vergul orqali "a" belgisini yoki "Xona antresol boʻlmasligi kerak" shartini belgilash uchun "na" ni qoʻshing. Maydonni tekshirmasdan faqat "Antresol" tekshiruvi shartini belgilash mumkin. Misollar: "Oshxona (&gt;10); Yotoqxona", "Omborxona (&lt;5,a)", "Omborxona (na)"</instruction10_1>
+    <instruction10_2>Tasniflash "Shartlar" yorligʻidagi belgilangan shartlar jadvallari boʻyicha amalga oshiriladi. Agar tekshirilayotgan xonadon jadval shartlarining birorta satriga ham toʻgʻri kelmasa, maqsadli parametr tozalanadi</instruction10_2>
+    <instruction11>Plagin koʻp sathli xonadonning har bir sathi uchun tegishli qiymatlarni yozadigan parametrlarni koʻrsating. Asosiy parametrlar bilan bir xil maʼlumot turiga ega parametrlardan foydalanish tavsiya etiladi. Qiymatlar barcha xonadonlar uchun toʻldiriladi. Bir sathli xonadonlarda qiymatlar asosiy parametrlar qiymatlarini takrorlaydi</instruction11>
+  </mprApartmentBuildingLayout>
+</ModPlus>

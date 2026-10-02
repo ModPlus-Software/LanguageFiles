@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprColumnsReinforcement
+    LocalName="Armadura de pilares"
+    Description="Análise, agrupamento e armadura de pilares conforme condições especificadas"
+    FullDescription="Processamento tanto de pilares selecionados individualmente quanto de todos os pilares na vista ou no documento. A armadura é executada considerando a posição relativa dos pilares uns sobre os outros. A armadura transversal pode ser composta usando diversas variantes de formas de vergalhão. É possível trabalhar até mesmo em um modelo vazio">
+    <h1>Variantes de seleção</h1>
+    <h2>Selecionar pilares</h2>
+    <h3>Selecionar todos os pilares na vista atual</h3>
+    <h4>Selecionar todos os pilares do projeto</h4>
+    <h5>A criação de armadura só é possível em pilares estruturais</h5>
+    <h6>Selecionar</h6>
+    <h7>Analisar</h7>
+    <h8>Total de pilares selecionados:</h8>
+    <h9>Analisados com sucesso:</h9>
+    <h10>Executar armadura</h10>
+    <h11>Configurações de armadura do grupo</h11>
+    <h12>Agrupamento</h12>
+    <h13>Por nível</h13>
+    <h14>Por altura</h14>
+    <h15>Agrupar</h15>
+    <h16>Qtde</h16>
+    <h17>Perfil</h17>
+    <h18>Níveis</h18>
+    <h19>Alturas</h19>
+    <h20>Pilares no grupo:</h20>
+    <h21>Nível</h21>
+    <h22>Altura</h22>
+    <h23>Agrupar por:</h23>
+    <h24>Seção</h24>
+    <h25>Armadura longitudinal</h25>
+    <h26>Vergalhões longitudinais (principais)</h26>
+    <h27>Recobrimento de concreto para a armadura principal:</h27>
+    <h28>O recobrimento da armadura principal deve ser de no mínimo 20 mm ou no mínimo igual ao diâmetro da barra</h28>
+    <h29>Recomenda-se adotar diâmetro mínimo de 16 mm para as barras longitudinais principais de pilares pré-moldados. Para pilares moldados in loco, bem como para armadura construtiva, é permitido usar barras de 12 mm de diâmetro</h29>
+    <h30>Parâmetro</h30>
+    <h31>Quantidade de barras na largura:</h31>
+    <h32>Quantidade de barras na profundidade:</h32>
+    <h33>Editar distâncias</h33>
+    <h34>Área da seção transversal do pilar, mm²:</h34>
+    <h35>Área da seção transversal da armadura, mm²:</h35>
+    <h36>Taxa de armadura:</h36>
+    <h37>Não se recomenda que a área da seção da armadura longitudinal ultrapasse 5 % da área da seção transversal do pilar</h37>
+    <h38>Distâncias entre as faces das barras ao longo da largura do pilar:</h38>
+    <h39>Distâncias entre as faces das barras ao longo da profundidade do pilar:</h39>
+    <h40>Atenção! Ao alterar o diâmetro, o recobrimento ou a quantidade de barras, as distâncias entre as barras serão redefinidas para valores iguais!</h40>
+    <h41>Arranques da armadura longitudinal</h41>
+    <h42>Armadura transversal (distribuição)</h42>
+    <h43>Armadura transversal (formas)</h43>
+    <h45>Quantidade de barras de canto:</h45>
+    <!-- todo remove after 3.22.12.0 -->
+    <h46>Quantidade de barras intermediárias:</h46>
+    <h47>Arranques da armadura longitudinal de pilares inferiores e intermediários com seção transversal igual (ou ligeiramente diferente) à dos pilares superiores</h47>
+    <h48>Arranques da armadura longitudinal de pilares inferiores e intermediários com seção transversal maior (≥ 100 mm de cada lado) para o pilar superior com seção transversal menor</h48>
+    <h49>Arranques da armadura longitudinal dos pilares do topo</h49>
+    <h50>Configurações</h50>
+    <h51>JANELA DO PLUGIN:</h51>
+    <h53>EXIBIÇÃO NO MODELO:</h53>
+    <h54>Fator de escala:</h54>
+    <!-- todo remove after 3.22.12.0 -->
+    <h55>ARMADURA PADRÃO:</h55>
+    <h56>Deslocamento</h56>
+    <h57>Contorno</h57>
+    <h58>Excluir a forma selecionada</h58>
+    <!-- todo remove after 3.22.12.0 -->
+    <h59>Especifique o tipo de ganchos das formas, os parâmetros, o diâmetro e o tipo de vergalhão que serão definidos por padrão para as formas de armadura transversal adicionadas</h59>
+    <h60>Espaçamento da armadura transversal nas zonas de adensamento, mm:</h60>
+    <h61>Cálculo da ancoragem conforme SP 52-101-2003</h61>
+    <h62>Diâmetro:</h62>
+    <h63>Área da seção, mm²:</h63>
+    <h64>Classe do concreto:</h64>
+    <h65>Tipo de superfície da armadura:</h65>
+    <h66>Resistência de cálculo à tração, MPa:</h66>
+    <h67>Comprimento de ancoragem básico, mm:</h67>
+    <h68>Coeficiente α:</h68>
+    <h69>Comprimento de ancoragem necessário (de cálculo), mm:</h69>
+    <h70>Comprimento de ancoragem:</h70>
+    <h71>Recomenda-se adotar o espaçamento principal da armadura transversal igual a 15d e o espaçamento nas zonas de adensamento igual a 10d, onde d é o diâmetro da armadura longitudinal (principal)</h71>
+    <h72>Não foi possível adicionar a forma à composição atual: não há posições disponíveis para posicionar a forma!</h72>
+    <!-- todo remove after 3.22.12.0 -->
+    <h73>Configurações de armadura do pilar</h73>
+    <h74>Substituir pelas configurações de armadura do grupo</h74>
+    <h75>Manter as configurações de armadura</h75>
+    <h76>Armadura de pilares</h76>
+    <h79>Ganchos padrão da forma:</h79>
+    <h80>Ganchos da forma:</h80>
+    <h81>definir no esboço</h81>
+    <h82>usar ganchos do Revit</h82>
+    <h83>Parâmetros padrão</h83>
+    <h84>Recobrimento nas extremidades das barras, mm:</h84>
+    <h85>Espaçamento principal da armadura transversal, mm:</h85>
+    <h86>Afastamento da face superior do pilar, mm:</h86>
+    <h87>Adensamento da armadura transversal na zona superior do pilar</h87>
+    <h88>Distância de adensamento, mm:</h88>
+    <h89>Distância de adensamento, fração:</h89>
+    <h90>Adensamento da armadura transversal na zona inferior do pilar</h90>
+    <h91>Se houver arranques de entrada, definir a distância de adensamento da zona inferior pelo comprimento dos arranques</h91>
+    <h93>Estribos triangulares:</h93>
+    <h94>Estribos circulares:</h94>
+    <h95>Nesta forma não é possível usar ganchos no esboço</h95>
+    <h96>Por parâmetro:</h96>
+    <h97>Parâmetro</h97>
+    <h98>Distância entre os eixos das barras</h98>
+    <h99>Distância entre as faces das barras</h99>
+    <!-- todo remove after 3.22.12.0 -->
+    <h100>Atenção! A quantidade e a posição das barras da armadura longitudinal, bem como o esquema de distribuição da armadura transversal, podem ser salvos, carregados e copiados para os pilares marcados com seção adequada, mas não podem ser salvos como padrão!</h100>
+    <h104>Comprimento de traspasse dos arranques retos, mm:</h104>
+    <h105>Calcular comprimento de ancoragem</h105>
+    <h106>Comprimento de ancoragem dos arranques na laje, mm:</h106>
+    <h107>Comprimento de ancoragem no pilar, mm:</h107>
+    <h108>Comprimento de traspasse no pilar superior, mm:</h108>
+    <h109>O valor calculado do comprimento de traspasse é multiplicado por 2</h109>
+    <h110>Criar armadura</h110>
+    <!-- todo remove after 3.22.12.0 -->
+    <h119>Configurações padrão de armadura</h119>
+    <h127>Arranques da laje inferior</h127>
+    <h135>Tipo de arranques:</h135>
+    <h138>Recobrimento da armadura:</h138>
+    <h141>Não fechar a janela após criar a armadura</h141>
+    <h144>Afastamento da peça em relação à base da laje de fundação:</h144>
+    <!-- todo remove after 3.22.12.0 -->
+    <h147>Redefinir</h147>
+    <h148>Comprimento de ancoragem na laje, mm:</h148>
+    <h149>Criar arranques somente de lajes da categoria "Fundação estrutural"</h149>
+    <h150>Os arranques da laje inferior são criados somente se não houver pilar inferior. As relações entre pilares são determinadas apenas entre os pilares selecionados</h150>
+    <h160>Tipo de arranques:</h160>
+    <h161>Espessura convencional da laje, mm:</h161>
+    <h165>Se não houver laje de piso acima do pilar, então</h165>
+    <h166>Referência das dobras ao topo da laje (pelo eixo da barra)</h166>
+    <h167>Referência das dobras à base da laje (pelo eixo da barra)</h167>
+    <!-- todo remove after 3.22.12.0 start -->
+    <h173>Barras retas:</h173>
+    <h174>Barras em forma de L (ao criar dobras das barras verticais):</h174>
+    <h177>Grampos transversais em forma de C. Ganchos no esboço:</h177>
+    <h178>Grampos transversais em forma de S. Ganchos no esboço:</h178>
+    <h179>Barras em forma de L:</h179>
+    <h180>Barras em forma de U:</h180>
+    <h181>Estribos retangulares:</h181>
+    <h182>Barras em forma de L com dobra longa:</h182>
+    <h183>Redefinir todos os valores para "Auto"</h183>
+    <h184>Formas de vergalhão preferenciais</h184>
+    <h185>Não foi possível definir os valores dos parâmetros de alguns elementos. Abaixo estão os códigos dos elementos (id), os nomes dos parâmetros e os valores a definir:</h185>
+    <!-- todo remove after 3.22.12.0 end -->
+    <h186>Selecionar novamente</h186>
+    <h187>Selecionar novamente os pilares processados na vista atual no uso anterior do plugin</h187>
+    <h188>Afastamento da face inferior do pilar, mm:</h188>
+    <h189>Raio em:</h189>
+    <h190>Especifique o parâmetro da forma do vergalhão que define o raio da espiral</h190>
+    <h191>Passo da espiral:</h191>
+    <h193>Primeiro comprimento de traspasse, mm:</h193>
+    <h194>Segundo comprimento de traspasse, mm:</h194>
+    <h195>Calcular comprimento de traspasse</h195>
+    <h196>Comprimento de traspasse, mm:</h196>
+    <h205>Grampos transversais em forma de C. Ganchos do Revit:</h205>
+    <h206>Grampos transversais em forma de S. Ganchos do Revit:</h206>
+    <h207>Barras em espiral:</h207>
+    <h208>Usar a geometria dos pilares sem considerar as uniões</h208>
+    <h221>Barras dobradas longitudinalmente (dobradas em "garrafa")</h221>
+    <h226>Exclusão da armadura criada anteriormente:</h226>
+    <h227>Referência da armadura principal à borda do pilar pelo eixo da barra. A referência é calculada pelo diâmetro de modelo da barra</h227>
+    <h228>Instalar acopladores</h228>
+    <h229>Primeiro vergalhão</h229>
+    <h230>Segundo vergalhão</h230>
+    <h231>Os acopladores serão instalados somente se os pilares processados tiverem a mesma seção transversal e o tipo de acoplador estiver presente no documento. Os tipos de acoplador são pesquisados no documento com base nas regras especificadas na janela </h231>
+    <h232>. Nos pilares em que forem instalados acopladores, a armadura longitudinal será executada com barras de vergalhão individuais, sem composição.</h232>
+    <h233>Especifique as regras de instalação de acopladores para determinados tipos de vergalhão. Você pode especificar o nome completo do tipo de vergalhão ou apenas parte dele. Por exemplo, especifique o valor "10". Assim, o tipo de vergalhão será considerado adequado se seu nome contiver "10".</h233>
+    <h234>Dobrar a parte inferior das barras retas</h234>
+    <h235>Afastamento da dobra (O), mm:</h235>
+    <h236>Comprimento da dobra (L), mm:</h236>
+    <h237>A dobra da parte inferior é executada para barras retas desde que os pilares processados tenham a mesma seção transversal.</h237>
+    <h238>Criar:</h238>
+    <h239>Armadura transversal</h239>
+    <h240>Propriedades padrão das formas</h240>
+    <h241>Se já houver na lista uma forma com o mesmo esboço, as propriedades serão obtidas dela</h241>
+    <h242>Direção da dobra:</h242>
+    <h243>Configurações básicas de armadura</h243>
+    <h244>Não é recomendado definir o recobrimento com base nas configurações de armadura se a armadura transversal tiver diâmetros diferentes e/ou valores diferentes da propriedade "Anexo do estribo/amarração"</h244>
+    <h245>Combinar a armadura longitudinal em conjuntos de vergalhões</h245>
+    <h262>Redefinir para valores iguais</h262>
+    <h263>Comprimento do arranque, mm:</h263>
+    <h264>Definir o comprimento do arranque a partir do topo do pilar, ignorando os pisos superiores</h264>
+    <srd>Salvando dados dos pilares selecionados</srd>
+    <hook>Gancho:</hook>
+    <err1>Nas configurações de armadura do pilar foram especificados arranques em forma de barras dobradas em "garrafa", que exigem lajes ou uma distância não nula entre os pilares para serem criados. Não foi encontrada laje superior ou a distância até o pilar superior é igual a 0</err1>
+    <npa1>não criar arranques</npa1>
+    <npa2>criar arranques retos</npa2>
+    <npa3>considerar a laje como existente</npa3>
+    <pt1>Círculo</pt1>
+    <pt3>Retângulo</pt3>
+    <pt4>Quadrado</pt4>
+    <pt5>Indefinido</pt5>
+    <rr1>Excluir armadura do mesmo tipo que a criada</rr1>
+    <rr2>Excluir toda a armadura criada anteriormente</rr2>
+    <rr3>Não excluir</rr3>
+    <jt1>Os arranques da armadura longitudinal não são criados. As barras são cortadas no topo do pilar de acordo com o valor especificado de recobrimento nas extremidades</jt1>
+    <jt2>São criados arranques retos das barras da armadura longitudinal. O comprimento de ancoragem é definido a partir do topo do piso superior ou do topo do pilar, se não houver piso. A posição das barras da armadura longitudinal dos pilares superiores não é considerada</jt2>
+    <jt3>São criados arranques das barras da armadura longitudinal com dobra para o pilar superior. O comprimento de ancoragem é definido a partir do topo do piso superior ou do topo do pilar, se não houver piso.</jt3>
+    <jt4>Os arranques são criados como barras adicionais do diâmetro especificado</jt4>
+    <jt5>São criados arranques retos das barras da armadura longitudinal. O comprimento do arranque é definido a partir do topo do piso superior ou do topo do pilar, se não houver piso</jt5>
+    <jt6>São criados arranques das barras da armadura longitudinal com ancoragem no piso superior. O comprimento de ancoragem é medido a partir da face lateral do pilar</jt6>
+    <bbd1>Todos os arranques são dobrados ao longo do lado menor do pilar</bbd1>
+    <bbd2>Todos os arranques são dobrados ao longo do lado maior do pilar</bbd2>
+    <bbd3>Os arranques de canto são dobrados em direção ao centro do pilar; os demais, ao longo das faces do pilar</bbd3>
+    <bbd4>Os arranques de canto são dobrados em direção ao centro do pilar. No lado maior, ao longo das faces do pilar. No lado menor, transversalmente às faces do pilar</bbd4>
+    <bbd5>Os arranques de canto são dobrados ao longo do lado maior do pilar; os demais, para dentro do pilar</bbd5>
+    <bbd6>Os arranques de canto são dobrados ao longo do lado menor do pilar; os demais, ao longo das faces do pilar</bbd6>
+    <msg1>Selecione os pilares</msg1>
+    <m1>Insira um valor de</m1>
+    <m2>até</m2>
+    <m4>Barras nervuradas</m4>
+    <m5>Barras lisas</m5>
+    <!-- todo remove after 3.22.12.0 -->
+    <m13>Recobrimento da armadura</m13>
+    <m20>A lista contém pilares cujas configurações de armadura foram alteradas manualmente e diferem das configurações de armadura do grupo</m20>
+    <m23>Configurações de armadura copiadas</m23>
+    <m24>Você não especificou para quais grupos criar a armadura!</m24>
+    <m25>Nenhum grupo selecionado para criar a armadura!</m25>
+    <m27>Atenção! Não foram encontradas formas de vergalhão carregadas no projeto atual! Nesse caso, as formas de vergalhão criadas durante o funcionamento do plugin não poderão ser abertas no editor de família! Recomenda-se carregar formas de vergalhão no projeto antes de usar o plugin!\nExecutar a armadura mesmo sem as formas de vergalhão?</m27>
+    <rn>Armadura principal ⌀</rn>
+    <!-- todo remove after 3.22.12.0 -->
+    <full>Disponível na versão completa do plugin!</full>
+    <!-- todo remove after 3.22.12.0 -->
+    <full2>Na versão limitada, apenas uma forma está disponível</full2>
+    <!-- todo remove after 3.22.12.0 -->
+    <noInFamily>O funcionamento do plugin em famílias não está disponível!</noInFamily>
+    <p1>Análise do pilar:</p1>
+    <p2>Busca de elementos relacionados:</p2>
+    <p8>Exclusão da armadura criada anteriormente</p8>
+    <p9>Cálculo e modelagem da armadura longitudinal</p9>
+    <p10>Cálculo e modelagem da armadura transversal</p10>
+    <p14>Cálculo e modelagem dos arranques da laje</p14>
+    <p15>Instalação de acopladores</p15>
+    <e1>Erros de análise de pilares</e1>
+    <e2>Não foi possível inicializar o pilar</e2>
+    <e3>Não foi possível obter os sólidos</e3>
+    <e4>Não foi possível obter o sólido principal ou unido</e4>
+    <e5>Não foi possível obter a face superior ou inferior</e5>
+    <e6>Não foi possível determinar o perfil transversal</e6>
+    <e7>O nome da forma usada para criar a armadura em espiral não foi especificado. Use a janela de configuração de formas de vergalhão preferenciais para especificar a forma da armadura em espiral</e7>
+    <e9>O parâmetro especificado que define o raio da armadura em espiral não foi encontrado no documento</e9>
+    <!-- todo remove after 3.22.12.0 -->
+    <t7>O grupo contém pilares cujas configurações de armadura foram editadas manualmente e diferem das configurações de armadura do grupo</t7>
+    <t10>Marcar todos os grupos</t10>
+    <t11>Desmarcar todos os grupos</t11>
+    <!-- todo remove after 3.22.12.0 -->
+    <t12>As configurações de armadura do pilar foram editadas manualmente e diferem das configurações de armadura do grupo</t12>
+    <!-- todo remove after 3.22.12.0 -->
+    <t13>Editar as configurações de armadura do pilar selecionado</t13>
+    <!-- todo remove after 3.22.12.0 -->
+    <t14>Substituir as configurações de armadura do pilar pelas configurações do grupo</t14>
+    <t15>Mostrar no modelo o pilar anterior da lista</t15>
+    <t16>Mostrar no modelo o pilar selecionado na lista</t16>
+    <t17>Mostrar no modelo o próximo pilar da lista</t17>
+    <!-- todo remove after 3.22.12.0 -->
+    <t40>Copiar as configurações de armadura do grupo atual para todos os grupos marcados</t40>
+    <!-- todo remove after 3.22.12.0 -->
+    <t41>Salvar as configurações de armadura do grupo atual em arquivo xml</t41>
+    <!-- todo remove after 3.22.12.0 -->
+    <t42>Carregar as configurações de armadura de um arquivo xml e aplicá-las ao grupo atual</t42>
+    <t43>Atenção! O tipo de superfície da armadura pode depender da classe da armadura, do diâmetro ou de outros valores não considerados pelo programa. Consulte a documentação normativa</t43>
+    <t44>α é o coeficiente que considera a influência do estado de tensão do concreto e da armadura e da solução construtiva do elemento na zona de ancoragem sobre o comprimento de ancoragem. Na ancoragem de barras nervuradas com extremidades retas (ancoragem reta) ou de armadura lisa com ganchos ou laços sem dispositivos de ancoragem adicionais, adota-se α = 1,0 para barras tracionadas e α = 0,75 para barras comprimidas. De acordo com o item 10.3.30 da SP 63.13330, é permitido aumentar o coeficiente α até 2,0</t44>
+    <!-- todo remove after 3.22.12.0 -->
+    <t53>Redefinir todos os valores das configurações padrão de armadura atuais para os valores padrão definidos no plugin</t53>
+    <!-- todo remove after 3.22.12.0 -->
+    <t63>Você pode especificar formas de vergalhão preferenciais para os diferentes tipos de barras criados pelo plugin.</t63>
+    <!-- todo remove after 3.22.12.0 -->
+    <t64>Definir formas preferenciais não garante que a armadura será criada usando a forma de vergalhão especificada.</t64>
+    <!-- todo remove after 3.22.12.0 -->
+    <t65>Ao criar os vergalhões, será feita uma tentativa de usar a forma especificada. Se não for possível criar a barra com a forma especificada, o Revit pesquisará automaticamente uma forma adequada ou criará uma nova forma.</t65>
+    <!-- todo remove after 3.22.12.0 -->
+    <t66>Salvar as configurações de armadura atuais como configurações de armadura padrão</t66>
+    <re1>Ocorreu um erro ao criar a armadura longitudinal do pilar id={0}:</re1>
+    <re2>Ocorreu um erro ao calcular os pontos de posicionamento da armadura transversal do pilar id={0}:</re2>
+    <re3>Ocorreu um erro ao criar a peça de armadura transversal do tipo "{0}" no pilar id={1}:</re3>
+    <re4>Não foi possível criar um vergalhão reto com a forma de vergalhão preferencial especificada "{0}". Erro: {1}\nFoi feita uma tentativa de criar a barra com seleção ou criação automática da forma de vergalhão</re4>
+    <re5>Não foi possível criar um vergalhão com a forma "{0}" usando a forma de vergalhão preferencial especificada "{1}". Erro: {2}\nFoi feita uma tentativa de criar a barra com seleção ou criação automática da forma de vergalhão</re5>
+    <re17>Erro ao criar arranques da laje id={0} para o pilar id={1}:</re17>
+    <re18>Erro ao criar acopladores na união dos pilares id={0} e id={1}:</re18>
+    <re19>Erro ao criar acopladores ao processar o pilar id={0}:</re19>
+  </mprColumnsReinforcement>
+</ModPlus>

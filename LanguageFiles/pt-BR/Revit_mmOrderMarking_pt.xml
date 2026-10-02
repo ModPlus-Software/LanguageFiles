@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <!-- todo remove when used mprNumbering -->
+  <mmOrderMarking
+    LocalName="Numeração"
+    Description="Adição de numeração ao parâmetro indicado dos elementos, com possibilidade de numeração na tabela"
+    FullDescription="Ao trabalhar em uma vista que não seja tabela, é possível indicar a direção da numeração de acordo com a posição dos elementos ou adicionar a numeração na ordem de criação dos elementos. Ao trabalhar em uma tabela, o plugin adiciona a numeração na ordem em que os elementos aparecem na tabela (considerando a classificação). É possível definir prefixo e sufixo para o número">
+    <h7>Valor inicial:</h7>
+    <h8>Direção da numeração:</h8>
+    <h9>Parâmetro de destino:</h9>
+    <h12>Parâmetro de instância</h12>
+    <h13>Parâmetro de tipo</h13>
+    <h14>Parâmetro</h14>
+    <h15>tem a propriedade "Somente leitura" nos seguintes elementos</h15>
+    <h16>Não é possível alterar o parâmetro de instância de um elemento localizado em um grupo se a propriedade "Os valores podem variar por instância de grupo" não estiver ativada no parâmetro ou se ele não for o parâmetro de sistema "Marca"</h16>
+    <h17>Ocorreram erros ao alterar os valores de parâmetros dos elementos listados</h17>
+    <h18>Atenção! A limpeza do parâmetro é feita em todos os elementos desta tabela, independentemente das configurações de filtragem. Isso significa que se, por exemplo, a tabela contiver 10 pilares e, com as configurações de filtragem, forem exibidos apenas 5 pilares, a limpeza do parâmetro ocorrerá em todos os 10 pilares! Limpar o parâmetro?</h18>
+    <h20>Opção de seleção:</h20>
+    <h21>Quantidade de elementos selecionados:</h21>
+    <h24>Numerar apenas as linhas selecionadas</h24>
+    <h25>Seleção de elementos</h25>
+    <h26>Configurações de numeração</h26>
+    <h27>Incremento:</h27>
+    <h28>O parâmetro "{0}" tem a propriedade "Somente leitura". Verifique se os elementos processados não estão em um workset que não esteja disponível para você editar</h28>
+    <h29>Prefixo e sufixo de</h29>
+    <h30>string</h30>
+    <h31>parâmetro</h31>
+    <h32>Criar nova configuração</h32>
+    <h33>Renomear configuração</h33>
+    <h34>Digite o novo nome da configuração</h34>
+    <h35>Excluir configuração</h35>
+    <h36>Parâmetro numérico</h36>
+    <h37>Parâmetro de texto</h37>
+    <h38>Alfabeto:</h38>
+    <h39>Personalizado</h39>
+    <h40>Russo</h40>
+    <h41>Inglês</h41>
+    <h42>Ucraniano</h42>
+    <h43>Digite as letras do alfabeto sem espaços, em maiúsculas ou minúsculas. Você também pode</h43>
+    <h44>inserir</h44>
+    <h45>e editar</h45>
+    <h46>o alfabeto</h46>
+    <h47>Alfabeto personalizado</h47>
+    <h48>Agrupamento por parâmetro:</h48>
+    <h49>Comportamento no grupo:</h49>
+    <sv1>Seleção padrão por janela</sv1>
+    <sv2>Seleção sequencial</sv2>
+    <sv3>Interseção com curva</sv3>
+    <!-- todo remove after 6.1.2.0 -->
+    <select>Selecionar</select>
+    <t1>O plugin só funciona em uma tabela em cujas configurações de classificação a propriedade "Discriminar cada instância" esteja ativada</t1>
+    <t2>Desmarcar todas as categorias</t2>
+    <t3>Seleção padrão por janela – seleção de elementos na vista atual por janela, com confirmação da seleção pelo botão "Concluir". Nesta opção, a direção da numeração tem nove variantes – na ordem de criação e pela posição dos elementos.</t3>
+    <t4>Seleção sequencial – seleção de cada elemento a ser numerado na ordem em que a numeração será feita. Nesta opção, a direção da numeração pode ser crescente ou decrescente. A seleção é concluída pressionando a tecla Esc.</t4>
+    <t5>Interseção com curva – seleção de uma curva (linha de modelo ou linha de detalhe). Os elementos a serem numerados serão selecionados pela busca da interseção da curva com a geometria dos elementos na vista atual, com projeção no plano da vista. Nesta opção, a direção da numeração pode ser crescente ou decrescente.</t5>
+    <t6>Para todas as opções de seleção de elementos, é possível aplicar um filtro por categoria e/ou parâmetros.</t6>
+    <t7>A lista de parâmetros é preenchida após a seleção dos elementos a serem numerados.</t7>
+    <t12>O valor inicial pode ser fracionário. Para separar a parte inteira da fracionária, você pode usar ponto ou vírgula. O separador indicado será usado ao definir valores em um parâmetro de texto. Se o parâmetro de destino tiver o tipo de dados "Número", o separador indicado não afetará o resultado exibido. Se o parâmetro de destino tiver o tipo de dados "Inteiro", o resultado da numeração será convertido em inteiro descartando a parte fracionária.</t12>
+    <t13>Você pode adicionar zeros à esquerda ao valor inicial. Por exemplo, se o valor inicial for "01" e o incremento for "5", o resultado da numeração será "01, 05, 10, 15…". Os zeros à esquerda são considerados apenas se o parâmetro de destino tiver o tipo de dados texto.</t13>
+    <!-- todo remove after 5.2.16.0 -->
+    <t14>A direção geométrica da numeração é calculada pelos valores absolutos de X e Y dos pontos de inserção dos elementos. Para objetos lineares, é usado o ponto médio</t14>
+    <t15>Na classificação de objetos lineares, é usado o ponto médio. Na classificação de viewports, é usado o centro do viewport. Na classificação de identificadores, é usado o ponto de inserção do cabeçalho. Nos demais casos, é usado o ponto de inserção do elemento</t15>
+    <t16>Você pode aplicar numeração por letras. Para isso, indique como valor inicial a letra do alfabeto com a qual a numeração por letras começará. A numeração por letras será feita em maiúsculas ou minúsculas, conforme o valor inicial indicado.</t16>
+    <m1>Selecione os elementos para a marcação numerada</m1>
+    <m2>Não há elementos na vista de tabela atual</m2>
+    <m3>Filtrar os elementos selecionados pela lista atual de categorias?</m3>
+    <m4>Selecione uma curva (linha de modelo ou linha de detalhe)</m4>
+    <o1>Crescente</o1>
+    <o2>Decrescente</o2>
+    <b1>Numeração em cada grupo</b1>
+    <b2>Um número por grupo</b2>
+    <b3>Numeração contínua com classificação por parâmetro (crescente)</b3>
+    <b4>Numeração contínua com classificação por parâmetro (decrescente)</b4>
+    <d1>Na ordem de criação, crescente</d1>
+    <d1-1>Na ordem de criação, decrescente</d1-1>
+    <d2>Da esquerda para a direita e de cima para baixo</d2>
+    <d3>Da esquerda para a direita e de baixo para cima</d3>
+    <d4>Da direita para a esquerda e de cima para baixo</d4>
+    <d5>Da direita para a esquerda e de baixo para cima</d5>
+    <d6>De cima para baixo e da esquerda para a direita</d6>
+    <d7>De cima para baixo e da direita para a esquerda</d7>
+    <d8>De baixo para cima e da esquerda para a direita</d8>
+    <d9>De baixo para cima e da direita para a esquerda</d9>
+    <d10>Da esquerda para a direita</d10>
+    <d11>Da direita para a esquerda</d11>
+    <d12>De cima para baixo</d12>
+    <d13>De baixo para cima</d13>
+    <r1>Valor inicial não definido</r1>
+    <r2>Nenhum elemento selecionado para processamento</r2>
+    <r3>Alfabeto personalizado vazio</r3>
+    <r4>A letra "{0}" não existe no alfabeto selecionado</r4>
+    <r5>Não é possível fazer a numeração por letras porque foi selecionado um parâmetro numérico</r5>
+    <r6>Parâmetro de agrupamento não selecionado</r6>
+  </mmOrderMarking>
+</ModPlus>

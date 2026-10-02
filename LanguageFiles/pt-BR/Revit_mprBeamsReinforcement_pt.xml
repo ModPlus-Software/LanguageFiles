@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprBeamsReinforcement
+    LocalName="Armadura de vigas"
+    Description="Análise, agrupamento e armadura de vigas de acordo com as condições definidas"
+    FullDescription="Processamento tanto de vigas selecionadas individualmente quanto de todas as vigas na vista ou no documento. A armadura transversal pode ser composta usando diversas variantes de formas de barras de vergalhão. É possível trabalhar até mesmo em um modelo vazio">
+    <h1>Opções de seleção</h1>
+    <h2>Selecionar vigas</h2>
+    <h3>Selecionar todas as vigas na vista atual</h3>
+    <h4>Selecionar todas as vigas no projeto</h4>
+    <h5>A criação de armadura só é possível em vigas estruturais</h5>
+    <h6>Selecionar</h6>
+    <h7>Analisar</h7>
+    <h8>Total de vigas selecionadas:</h8>
+    <h9>Destas, analisadas com sucesso:</h9>
+    <h10>Executar armadura</h10>
+    <h11>Configurações de armadura do grupo</h11>
+    <h12>Agrupamento</h12>
+    <h13>Por nível</h13>
+    <h15>Agrupar</h15>
+    <h16>Quantidade</h16>
+    <h17>Perfil</h17>
+    <h18>Níveis</h18>
+    <h19>Agrupar todas</h19>
+    <h20>Vigas no grupo:</h20>
+    <h21>Nível</h21>
+    <h23>Agrupar por:</h23>
+    <h24>Seção</h24>
+    <h25>Armadura longitudinal</h25>
+    <h27>Recobrimento de concreto da armadura principal:</h27>
+    <coverTop>Superior:</coverTop>
+    <coverBottom>Inferior:</coverBottom>
+    <coverSide>Laterais:</coverSide>
+    <coverEnd>Extremidades:</coverEnd>
+    <h28>O recobrimento da armadura principal deve ser de no mínimo 20 mm ou no mínimo igual ao diâmetro do vergalhão</h28>
+    <h30>Parâmetro</h30>
+    <h31>Quantidade de barras na largura:</h31>
+    <h32>Quantidade de barras na altura:</h32>
+    <h33>Editar distâncias</h33>
+    <h34>Área da seção transversal da viga, mm²:</h34>
+    <h35>Área da seção transversal da armadura, mm²:</h35>
+    <h36>Taxa de armadura:</h36>
+    <h37>Não se recomenda que a área da seção da armadura longitudinal seja superior a 5% da área da seção transversal da viga</h37>
+    <h38>Distâncias entre as barras na largura da viga:</h38>
+    <h39>Distâncias entre as barras na altura da viga:</h39>
+    <h40>Atenção! Ao alterar o diâmetro, o recobrimento ou a quantidade de barras, as distâncias entre as barras serão redefinidas para valores iguais!</h40>
+    <h41>Esperas da armadura longitudinal</h41>
+    <h42>Armadura transversal (distribuição)</h42>
+    <h43>Armadura transversal (formas)</h43>
+    <h44>Dobrar as barras superiores em caso de comprimento insuficiente para a ancoragem</h44>
+    <h45>Referência da armadura principal à borda da viga pelo centro da barra. A referência é calculada pelo diâmetro da barra no modelo</h45>
+    <h50>Configurações</h50>
+    <h51>JANELA DO PLUGIN:</h51>
+    <h53>EXIBIÇÃO NO MODELO:</h53>
+    <h54>Fator de escala:</h54>
+    <!-- todo remove after 1.18.16.0 -->
+    <h55>ARMADURA PADRÃO:</h55>
+    <h56>Deslocamento</h56>
+    <h57>Envolvimento</h57>
+    <h58>Excluir a forma selecionada</h58>
+    <!-- todo remove after 1.18.16.0 -->
+    <h59>Indique o tipo de ganchos das formas, os parâmetros, o diâmetro e o tipo de barra de vergalhão que serão definidos por padrão para as formas de armadura transversal adicionadas</h59>
+    <h60>Espaçamento da armadura transversal nos trechos de adensamento, mm:</h60>
+    <h61>Cálculo da ancoragem conforme SP 52-101-2003</h61>
+    <h72>Não foi possível adicionar a forma à composição atual: não há locais disponíveis para posicionar a forma!</h72>
+    <!-- todo remove after 1.18.16.0 -->
+    <h73>Configurações de armadura da viga</h73>
+    <h74>Substituir pelas configurações de armadura do grupo</h74>
+    <h75>Manter as configurações de armadura</h75>
+    <!-- todo remove after 1.18.16.0 -->
+    <h76>Armadura de vigas</h76>
+    <h79>Ganchos das formas padrão:</h79>
+    <h80>Ganchos da forma:</h80>
+    <h81>definir no esboço</h81>
+    <h82>usar ganchos do Revit</h82>
+    <h83>Parâmetros padrão</h83>
+    <h84>Recobrimento nas extremidades das barras, mm:</h84>
+    <h85>Espaçamento principal da armadura transversal, mm:</h85>
+    <h86>Afastamento da extremidade da viga, mm:</h86>
+    <h87>Adensamento da armadura transversal</h87>
+    <h88>Distância de adensamento, mm:</h88>
+    <h89>Distância de adensamento, frações:</h89>
+    <h90>Adensamento da armadura nas extremidades da viga</h90>
+    <h91>Adensamento da armadura nas extremidades da viga na ausência de elementos subjacentes (extremidades da viga em balanço)</h91>
+    <h93>Estribos triangulares:</h93>
+    <h94>Considerar pilares e paredes subjacentes e de extremidade</h94>
+    <h96>Por parâmetro:</h96>
+    <h97>Parâmetro</h97>
+    <h98>Distância entre os centros das barras</h98>
+    <h99>Distância entre as faces das barras</h99>
+    <!-- todo remove after 1.18.16.0 -->
+    <h100>Atenção! A quantidade e a posição das barras da armadura longitudinal, bem como o esquema de distribuição da armadura transversal, podem ser salvos, carregados e copiados para as vigas marcadas com seção adequada, mas não podem ser salvos como padrão!</h100>
+    <h102>Tipo de armadura:</h102>
+    <h103>Detalhe nº 1</h103>
+    <h104>Comprimento de ancoragem das esperas retas, mm:</h104>
+    <h105>Calcular o comprimento de ancoragem</h105>
+    <h106>Detalhe nº 2</h106>
+    <h107>Interseções em T</h107>
+    <h108>Interseções em cruz</h108>
+    <h110>Criar armadura</h110>
+    <h141>Não fechar a janela após criar a armadura</h141>
+    <h142>Visualização da interseção</h142>
+    <h143>Exclusão da geometria auxiliar</h143>
+    <!-- todo remove after 1.18.16.0 start -->
+    <h147>Redefinir</h147>
+    <h173>Barras retas:</h173>
+    <h174>Barras em L:</h174>
+    <h177>Grampos em C (estribos transversais). Ganchos no esboço:</h177>
+    <h178>Grampos em S (estribos transversais). Ganchos no esboço:</h178>
+    <h180>Barras em U:</h180>
+    <h181>Estribos retangulares:</h181>
+    <h182>Barras em L com dobra grande:</h182>
+    <h183>Redefinir todos os valores para "Auto"</h183>
+    <h184>Formas preferenciais de barras de vergalhão</h184>
+    <!-- todo remove after 1.18.16.0 end -->
+    <h186>Selecionar novamente</h186>
+    <h187>Selecionar novamente as vigas que foram processadas na vista atual no uso anterior do plugin</h187>
+    <h205>Grampos em C (estribos transversais). Ganchos do Revit:</h205>
+    <h206>Grampos em S (estribos transversais). Ganchos do Revit:</h206>
+    <h207>Usar a geometria das vigas sem considerar as uniões</h207>
+    <h208>Prolongar as barras de vergalhão longitudinais nas vigas perpendiculares adjacentes localizadas nas extremidades da viga atual</h208>
+    <h226>Exclusão de armadura criada anteriormente:</h226>
+    <h229>Nível</h229>
+    <h238>Criar:</h238>
+    <h239>Armadura transversal</h239>
+    <h240>Propriedades padrão das formas</h240>
+    <h241>Se a lista já tiver uma forma com o mesmo esboço, as propriedades serão obtidas dela</h241>
+    <h243>Configurações principais de armadura</h243>
+    <h244>Armadura de interseções</h244>
+    <h245>Vigas</h245>
+    <h246>Interseções</h246>
+    <h247>Tipo de interseção</h247>
+    <h248>Interseções em canto</h248>
+    <h249>Comprimento de ancoragem, mm:</h249>
+    <h250>Qtd. de interseç.</h250>
+    <h251>Tipo de interseção</h251>
+    <h252>Parâmetros</h252>
+    <h253>Interseções no grupo:</h253>
+    <h255>Vigas na interseção:</h255>
+    <h256>Qtd. de vigas</h256>
+    <h257>Configurações de armadura dos grupos</h257>
+    <h258>Não criar armadura transversal sobre paredes e pilares subjacentes</h258>
+    <h259>Outro diâmetro de vergalhão para a camada superior:</h259>
+    <h260>A distância entre as barras na largura é exibida para o diâmetro principal do vergalhão. O outro diâmetro de vergalhão da camada superior não é considerado</h260>
+    <h261>Afastamento do início do trecho, mm:</h261>
+    <h262>Redefinir para valores iguais</h262>
+    <srd>Salvando dados das vigas selecionadas</srd>
+    <hook>Gancho:</hook>
+    <jt1>As esperas da armadura longitudinal não são criadas. As barras são cortadas na extremidade da viga de acordo com o valor definido de recobrimento nas extremidades das barras</jt1>
+    <jt2>São criadas esperas retas das barras de vergalhão da armadura longitudinal. O comprimento de ancoragem é definido a partir da borda da viga. As esperas são criadas apenas se houver parede ou pilar na extremidade da viga; caso contrário, as esperas não serão criadas e as barras longitudinais serão cortadas na extremidade da viga considerando o recobrimento indicado</jt2>
+    <msg1>Selecione as vigas</msg1>
+    <m1>Digite um valor de</m1>
+    <m2>a</m2>
+    <m4>Barras nervuradas</m4>
+    <m5>Barras lisas</m5>
+    <!-- todo remove after 1.18.16.0 -->
+    <m13>Recobrimento do vergalhão</m13>
+    <m20>A lista de vigas contém vigas cujas configurações de armadura foram alteradas manualmente e diferem das configurações de armadura do grupo</m20>
+    <m23>Configurações de armadura copiadas</m23>
+    <m24>Você não indicou para quais grupos criar a armadura!</m24>
+    <m25>Nenhum grupo selecionado para criar a armadura!</m25>
+    <m27>Atenção! Não foram encontradas formas de vergalhão carregadas no projeto atual! Neste caso, as formas de vergalhão criadas durante o funcionamento do plugin não poderão ser abertas no editor de família! Recomenda-se carregar as formas de vergalhão no projeto antes de usar o plugin!\nExecutar a armadura apesar da ausência de formas de vergalhão?</m27>
+    <rn>Vergalhão estrutural ⌀</rn>
+    <!-- todo remove after 1.18.16.0 -->
+    <full>Disponível na versão completa do plugin!</full>
+    <!-- todo remove after 1.18.16.0 -->
+    <full2>Na versão limitada, apenas uma forma está disponível</full2>
+    <!-- todo remove after 1.18.16.0 -->
+    <noInFamily>O funcionamento do plugin em famílias não está disponível!</noInFamily>
+    <p1>Análise da viga:</p1>
+    <p2>Busca de elementos relacionados:</p2>
+    <pt1>Seção T</pt1>
+    <pt2>Seção I</pt2>
+    <pt3>Retângulo</pt3>
+    <pt4>Quadrado</pt4>
+    <pt5>Não definido</pt5>
+    <pt6>Trapézio</pt6>
+    <pt7>Seção L</pt7>
+    <rr1>Excluir vergalhões do mesmo tipo que está sendo criado</rr1>
+    <rr2>Excluir todos os vergalhões criados anteriormente</rr2>
+    <rr3>Não excluir</rr3>
+    <e1>Erros de análise das vigas</e1>
+    <e2>Não foi possível inicializar a viga</e2>
+    <e3>Não foi possível obter os sólidos</e3>
+    <e4>Não foi possível obter o sólido principal ou unificado</e4>
+    <e6>Não foi possível determinar o perfil transversal</e6>
+    <p1>Análise da viga:</p1>
+    <p2>Busca de elementos relacionados:</p2>
+    <p8>Exclusão da armadura criada anteriormente</p8>
+    <p9>Cálculo e modelagem da armadura longitudinal</p9>
+    <p10>Cálculo e modelagem da armadura transversal</p10>
+    <p11>Cálculo e modelagem da armadura da interseção</p11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t7>O grupo contém vigas cujas configurações de armadura foram editadas manualmente e diferem das configurações de armadura do grupo</t7>
+    <!-- todo remove after 1.18.16.0 -->
+    <t8>Adicionar novo grupo vazio</t8>
+    <!-- todo remove after 1.18.16.0 -->
+    <t9>Excluir grupo vazio</t9>
+    <t10>Marcar todos os grupos</t10>
+    <t11>Desmarcar todos os grupos</t11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t12>As configurações de armadura da viga foram editadas manualmente e diferem das configurações de armadura do grupo</t12>
+    <!-- todo remove after 1.18.16.0 -->
+    <t13>Editar as configurações de armadura da viga selecionada</t13>
+    <!-- todo remove after 1.18.16.0 -->
+    <t14>Substituir as configurações de armadura do pilar pelas configurações do grupo</t14>
+    <t15>Mostrar no modelo a viga anterior da lista</t15>
+    <t16>Mostrar no modelo a viga selecionada na lista</t16>
+    <t17>Mostrar no modelo a próxima viga da lista</t17>
+    <t23>Mostrar no modelo a interseção anterior da lista</t23>
+    <t24>Mostrar no modelo a interseção selecionada na lista</t24>
+    <t25>Mostrar no modelo a próxima interseção da lista</t25>
+    <!-- todo remove after 1.18.16.0 -->
+    <t40>Copiar as configurações de armadura do grupo atual para todos os grupos marcados</t40>
+    <!-- todo remove after 1.18.16.0 -->
+    <t41>Salvar as configurações de armadura do grupo atual em um arquivo xml</t41>
+    <!-- todo remove after 1.18.16.0 -->
+    <t42>Carregar as configurações de armadura de um arquivo xml e definir para o grupo atual</t42>
+    <!-- todo remove after 1.18.16.0 -->
+    <t53>Redefinir todos os valores das configurações de armadura padrão atuais para os valores padrão do plugin</t53>
+    <!-- todo remove after 1.18.16.0 -->
+    <t63>Você pode indicar formas preferenciais de vergalhão para diferentes tipos de barras de vergalhão criadas pelo plugin.</t63>
+    <!-- todo remove after 1.18.16.0 -->
+    <t64>A definição de formas preferenciais não garante que o vergalhão será criado usando a forma de vergalhão indicada.</t64>
+    <!-- todo remove after 1.18.16.0 -->
+    <t65>Ao criar barras de vergalhão, será feita uma tentativa de usar a forma indicada. Se não for possível criar a barra com a forma indicada, o Revit procurará automaticamente uma forma adequada ou criará uma nova forma.</t65>
+    <!-- todo remove after 1.18.16.0 -->
+    <t66>Salvar as configurações de armadura atuais como configurações de armadura padrão</t66>
+    <t67>Agrupar vigas e interseções de acordo com as configurações de agrupamento atuais</t67>
+    <re1>Ocorreu um erro ao criar a armadura longitudinal da viga id={0}</re1>
+    <re2>Ocorreu um erro ao calcular os pontos de posicionamento da armadura transversal da viga id={0}</re2>
+    <re3>Ocorreu um erro ao criar o detalhe de armadura transversal do tipo "{0}" na viga id={1}</re3>
+    <re4>Não foi possível criar a barra de vergalhão reta com a forma de vergalhão preferencial definida "{0}". Erro: {1}\nFoi feita uma tentativa de criar a barra com seleção ou criação automática da forma de vergalhão</re4>
+    <re5>Não foi possível criar a barra de vergalhão de forma "{0}" com a forma de vergalhão preferencial definida "{1}". Erro: {2}\nFoi feita uma tentativa de criar a barra com seleção ou criação automática da forma de vergalhão</re5>
+    <!-- todo remove after 1.18.16.0 -->
+    <re6>Não foi possível definir os valores dos parâmetros</re6>
+    <re9>Erro ao criar os detalhes da ligação em canto nas vigas {0}:</re9>
+    <re10>Erro ao criar os detalhes da ligação em T nas vigas {0}:</re10>
+    <re11>Erro ao criar os detalhes da ligação em cruz nas vigas {0}:</re11>
+    <re22>Não é possível mostrar a interseção na vista atual! Vá para a planta de piso</re22>
+  </mprBeamsReinforcement>
+</ModPlus>

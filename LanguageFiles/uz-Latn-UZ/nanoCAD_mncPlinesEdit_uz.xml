@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mncPlinesEdit
+    LocalName="Polichiziqlar"
+    Description="Polichiziqlar bilan ishlash uchun vositalar toʻplami"
+    LocalName1="3D polichiziqni LW ga aylantirish"
+    Description1="Tanlangan 3D polichiziqlarning nusxalarini 0,0 sathiga koʻchirgan holda LW-polichiziqlar (2D) koʻrinishida yaratish"
+    LocalName2="Polichiziqning mos keluvchi uchlarini oʻchirish"
+    Description2="Tanlangan polichiziqlarning bir xil koordinatalarga ega qoʻshni uchlarini oʻchirish"
+    LocalName3="Bir toʻgʻri chiziqda yotgan uchlarni oʻchirish"
+    Description3="Tanlangan polichiziqlarning bir toʻgʻri chiziqda yotgan qoʻshni uchlarini oʻchirish. Toʻgʻri chiziqdan ogʻish boʻyicha dopusk yoki burchak dopuskini berish mumkin"
+    LocalName4="Obyektni polichiziq uchlarida joylashtirish"
+    Description4="Tanlangan obyektni polichiziq uchlarida joylashtirish. Obyektni polichiziq segmenti boʻyicha burish mumkin. Bloklar geometrik markaz boʻyicha ham, qoʻyish nuqtasi boʻyicha ham joylashtirilishi mumkin"
+    LocalName5="Yoy segmentini chiziqli segmentga almashtirish"
+    Description5="Polichiziqning koʻrsatilgan yoy segmentini chiziqli segmentga almashtirish (yoyni kesmaga almashtirish)"
+    LocalName6="Chiziqli segmentni yoy segmentiga almashtirish"
+    Description6="Polichiziqning koʻrsatilgan chiziqli (yoki yoy) segmentini yoy segmentiga almashtirish (kesmani yoyga almashtirish). Yoyni urinma yoki yoydagi nuqta boʻyicha qurish mumkin"
+    LocalName7="Uchni dinamik qoʻshish"
+    Description7="Koʻrsatilgan polichiziqqa uchni dinamik qoʻshish"
+    LocalName8="Uch nuqta boʻyicha toʻrtburchak chizish"
+    Description8="Uch nuqta boʻyicha toʻrtburchak chizish"
+    LocalName9="Polichiziqdan yoy segmentlarini olib tashlash"
+    Description9="Polichiziqdan yoy segmentlarini ularni chiziqli segmentlarga almashtirish orqali olib tashlash. Plagin ishining bir nechta varianti mavjud: segmentlar soni, segmentlar uzunligi, segmentlar balandligi (vatar ogʻishi), vatar uzunligi"
+    LocalName10="Oʻrta chiziqni qurish"
+    Description10="Ikkita koʻrsatilgan egri chiziq (kesmalar, polichiziqlar yoki splaynlar) orasida oʻrta chiziqni (polichiziq koʻrinishida) qurish"
+    LocalName11="Uchlarni tez koʻchirish"
+    Description11="Koʻrsatilgan polichiziq uchlarini tez koʻchirish"
+    LocalName12="Egri chiziqni kesishish nuqtalarida boʻlish"
+    Description12="Egri chiziqni (kesma, polichiziq yoki splayn) chizmaning boshqa obyektlari bilan kesishish nuqtalarida boʻlish"
+    LocalName13="Kesishish nuqtalarida obyektlar yaratish"
+    Description13="Egri chiziqlarning berilgan obyektlar bilan kesishish nuqtalarida obyektlar yaratadi"
+    LocalName14="Nuqtalar boʻyicha toʻrtburchak"
+    Description14="Ikki va undan ortiq nuqta boʻyicha toʻrtburchak yaratadi. Toʻrtburchak tomonlari joriy koordinatalar tizimiga muvofiq yoʻnaltiriladi. Tomonlarga koʻproq nuqtalarni qamrab olish imkonini beruvchi burchak dopuskini sozlash mumkin.">
+    <h1>Polichiziqlar</h1>
+    <h2>Plagin 3D polichiziqlar bilan ishlaydi</h2>
+    <h3>Plagin 2D polichiziqlar bilan ishlaydi</h3>
+    <h4>Plagin LW-polichiziqlar bilan ishlaydi</h4>
+    <h5>Lentaga panel qoʻshish</h5>
+    <h7>ModPlus yorligʻi topilmadi</h7>
+    <h8>Polichiziqlar bilan ishlash panelini qoʻshish uchun ModPlus yorligʻi topilmadi</h8>
+    <h9>Polichiziqlar</h9>
+    <h10>Ish varianti:</h10>
+    <h11>Ishlov beriladigan yoyning min. radiusi:</h11>
+    <h12>Istalgan</h12>
+    <h13>Yoyni koʻrsatilgan miqdordagi teng segmentlarga boʻlish\nRasmda 3 segmentga boʻlish varianti koʻrsatilgan\nR – polichiziqdagi yoy radiusi</h13>
+    <h14>Yoyni boʻlish natijasida hosil boʻladigan yoy segmentlari uzunligini koʻrsatish orqali segmentlarga boʻlish\nR – polichiziqdagi yoy radiusi\nL – yoy segmenti uzunligi</h14>
+    <h15>Yoyni vatar ogʻishini (segment balandligini) koʻrsatish orqali segmentlarga boʻlish\nR – polichiziqdagi yoy radiusi\nH – segment balandligi</h15>
+    <h16>Yoyni vatar uzunligini koʻrsatish orqali segmentlarga boʻlish\nR – polichiziqdagi yoy radiusi\nX – vatar uzunligi</h16>
+    <h17>Tanlangan polichiziqlarni oʻchirish</h17>
+    <h18>Chetki nuqtalarni chiqarib tashlash</h18>
+    <h19>Bloklarni nusxalash:</h19>
+    <h20>Burish:</h20>
+    <h21>Dopusklar</h21>
+    <h22>P – polichiziqning koʻrib chiqilayotgan nuqtasi</h22>
+    <h23>- Plagin ikkala shartni tekshirish bilan ishlaydi</h23>
+    <h24>H – toʻgʻri chiziqdan maksimal ogʻish:</h24>
+    <h25>a – burchak dopuski:</h25>
+    <h26>Obyekt turi:</h26>
+    <h27>Doira radiusi:</h27>
+    <h28>Blok turi:</h28>
+    <h29>Kesishish nuqtalarida obyektlar yaratish</h29>
+    <err1>Hujjatda qoʻyish uchun bloklar yoʻq</err1>
+    <accept>Qabul qilish</accept>
+    <cancel>Bekor qilish</cancel>
+    <cb1>Segmentlar soni</cb1>
+    <cb2>Segment uzunligi</cb2>
+    <cb3>Vatar ogʻishi</cb3>
+    <cb4>Vatar uzunligi</cb4>
+    <cb5>blok qoʻyish nuqtasi boʻyicha</cb5>
+    <cb6>geometrik markaz boʻyicha</cb6>
+    <cb7>burmaslik</cb7>
+    <cb8>oldingi segment boʻyicha burish</cb8>
+    <cb9>keyingi segment boʻyicha burish</cb9>
+    <wrong>Notoʻgʻri tanlov!</wrong>
+    <undividable>Egri chiziqni boʻlishda xato yuz berdi. Egri chiziq uzunligini kamaytirib koʻring</undividable>
+    <k1>3D polichiziqlarni tanlang</k1>
+    <k2>Polichiziqlarni tanlang</k2>
+    <k3>Oʻchirilgan uchlar</k3>
+    <k4>Polichiziq</k4>
+    <k5>bir xil uchlarga ega emas</k5>
+    <k6>Polichiziqlarni tanlang yoki</k6>
+    <k7>DOPusklar</k7>
+    <k7ln>DOP</k7ln>
+    <k8>Toʻgʻri chiziqdan maksimal ogʻish (H) qabul qilindi</k8>
+    <k9>Gradusdagi burchak dopuski (a) qabul qilindi</k9>
+    <k10>jami</k10>
+    <k11>uchga ega</k11>
+    <k12>bir toʻgʻri chiziqda yotgan yoki dopusk shartlariga mos keladigan uchlarga ega emas</k12>
+    <k13>Polichiziqni tanlang</k13>
+    <k14>Joylashtirish uchun obyektni tanlang</k14>
+    <k15>Polichiziqning yoy segmentini tanlang</k15>
+    <k16>Polichiziq segmentini tanlang</k16>
+    <k17>Urinmadagi nuqtani koʻrsating yoki: [Urinma/oʻtish Nuqtasi]</k17>
+    <k18>Yoydagi nuqtani koʻrsating yoki: [Urinma/oʻtish Nuqtasi]</k18>
+    <k19>Nuqtani koʻrsating (Ctrl ni bosib turish – bir uch oldinga siljish)</k19>
+    <k20>Birinchi nuqtani koʻrsating</k20>
+    <k21>Ikkinchi nuqtani koʻrsating</k21>
+    <k22>Uchinchi nuqtani koʻrsating</k22>
+    <k23>Segmentlar sonini koʻrsating</k23>
+    <k24>Segment uzunligini koʻrsating</k24>
+    <k25>Vatar ogʻishini (segment balandligini) koʻrsating</k25>
+    <k26>Vatar uzunligini koʻrsating</k26>
+    <k27>Birinchi tayanch elementni tanlang (kesma, polichiziq yoki splayn)</k27>
+    <k28>Ikkinchi tayanch elementni tanlang (kesma, polichiziq yoki splayn)</k28>
+    <k29>Tayanch nuqtalar soni</k29>
+    <k31>Egri chiziqni tanlang (kesma, polichiziq yoki splayn)</k31>
+    <k32>Urinmadagi nuqtani koʻrsating yoki:</k32>
+    <k33>Urinma</k33>
+    <k33ln>U</k33ln>
+    <k34>oʻtish Nuqtasi</k34>
+    <k34ln>N</k34ln>
+    <k35>Yoydagi nuqtani koʻrsating yoki:</k35>
+    <k36>Nuqtalarni tanlang yoki</k36>
+    <k37>Keraksiz obyektlarni chiqarib tashlang</k37>
+    <k38>Bir yoki bir nechta egri chiziqni (kesma, polichiziq, yoy, splayn yoki aylana) tanlang</k38>
+    <k39>Kesishishni hisoblash uchun obyektlarni tanlang yoki barcha obyektlar boʻyicha hisoblash uchun tanlovni boʻsh qoldiring</k39>
+    <k40>0 dan 30 gacha burchak dopuskini kiriting</k40>
+    <k41>DOPusk</k41>
+    <k41ln>Dop</k41ln>
+    <k42>Polichiziq soddalashtirilsinmi?</k42>
+  </mncPlinesEdit>
+</ModPlus>

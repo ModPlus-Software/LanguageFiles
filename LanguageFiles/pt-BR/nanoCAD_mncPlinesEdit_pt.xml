@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mncPlinesEdit
+    LocalName="Polilinhas"
+    Description="Conjunto de ferramentas para trabalhar com polilinhas"
+    LocalName1="Converter polilinha 3D em LW"
+    Description1="Criação de cópias das polilinhas 3D selecionadas como polilinhas LW (2D) transferidas para o nível 0,0"
+    LocalName2="Remoção de vértices coincidentes da polilinha"
+    Description2="Remoção de vértices adjacentes das polilinhas selecionadas que têm as mesmas coordenadas"
+    LocalName3="Remoção de vértices alinhados"
+    Description3="Remoção de vértices adjacentes das polilinhas selecionadas que estão sobre uma mesma reta. É possível definir uma tolerância de desvio da reta ou uma tolerância angular"
+    LocalName4="Posicionamento de objeto nos vértices da polilinha"
+    Description4="Posicionamento do objeto selecionado nos vértices da polilinha. É possível girar o objeto de acordo com o segmento da polilinha. Os blocos podem ser posicionados tanto pelo centro geométrico quanto pelo ponto de inserção"
+    LocalName5="Substituição de segmento de arco por segmento linear"
+    Description5="Substituição do segmento de arco especificado da polilinha por um segmento linear (substituição do arco por uma linha)"
+    LocalName6="Substituição de segmento linear por segmento de arco"
+    Description6="Substituição do segmento linear (ou de arco) especificado da polilinha por um segmento de arco (substituição da linha por um arco). É possível construir o arco pela tangente ou por um ponto no arco"
+    LocalName7="Adição dinâmica de vértice"
+    Description7="Adição dinâmica de um vértice à polilinha especificada"
+    LocalName8="Desenho de retângulo por três pontos"
+    Description8="Desenho de retângulo por três pontos"
+    LocalName9="Remoção de segmentos de arco da polilinha"
+    Description9="Remoção de segmentos de arco da polilinha, substituindo-os por segmentos lineares. O plugin tem vários modos de operação: número de segmentos, comprimento dos segmentos, altura dos segmentos (desvio da corda), comprimento da corda"
+    LocalName10="Construção da linha média"
+    Description10="Construção de uma linha média (como polilinha) entre duas curvas especificadas (linhas, polilinhas ou splines)"
+    LocalName11="Movimentação rápida de vértices"
+    Description11="Movimentação rápida dos vértices da polilinha especificada"
+    LocalName12="Divisão da curva nos pontos de interseção"
+    Description12="Divisão da curva (linha, polilinha ou spline) nos pontos de interseção com outros objetos do desenho"
+    LocalName13="Criar objetos nos pontos de interseção"
+    Description13="Cria objetos nos pontos de interseção das curvas com os objetos especificados"
+    LocalName14="Quadrilátero por pontos"
+    Description14="Cria um quadrilátero a partir de dois ou mais pontos. Os lados do quadrilátero são orientados de acordo com o sistema de coordenadas atual. Há uma configuração de tolerância angular que permite aos lados capturar mais pontos.">
+    <h1>Polilinhas</h1>
+    <h2>O plugin trabalha com polilinhas 3D</h2>
+    <h3>O plugin trabalha com polilinhas 2D</h3>
+    <h4>O plugin trabalha com polilinhas LW</h4>
+    <h5>Adicionar painel à faixa de opções</h5>
+    <h7>A guia ModPlus não foi encontrada</h7>
+    <h8>A guia ModPlus não foi encontrada para adicionar o painel de trabalho com polilinhas</h8>
+    <h9>Polilinhas</h9>
+    <h10>Modo de operação:</h10>
+    <h11>Raio mín. de arco processado:</h11>
+    <h12>Qualquer</h12>
+    <h13>Divisão do arco no número especificado de segmentos iguais\nA imagem mostra a divisão em 3 segmentos\nR – raio do arco na polilinha</h13>
+    <h14>Divisão do arco em segmentos especificando o comprimento dos segmentos de arco resultantes da divisão\nR – raio do arco na polilinha\nL – comprimento do segmento de arco</h14>
+    <h15>Divisão do arco em segmentos especificando o desvio da corda (altura do segmento)\nR – raio do arco na polilinha\nH – altura do segmento</h15>
+    <h16>Divisão do arco em segmentos especificando o comprimento da corda\nR – raio do arco na polilinha\nX – comprimento da corda</h16>
+    <h17>Excluir as polilinhas selecionadas</h17>
+    <h18>Excluir pontos extremos</h18>
+    <h19>Copiar blocos:</h19>
+    <h20>Girar:</h20>
+    <h21>Tolerâncias</h21>
+    <h22>P – ponto considerado da polilinha</h22>
+    <h23>- O plugin verifica ambas as condições</h23>
+    <h24>H – desvio máximo da reta:</h24>
+    <h25>a – tolerância angular:</h25>
+    <h26>Tipo de objeto:</h26>
+    <h27>Raio do círculo:</h27>
+    <h28>Tipo de bloco:</h28>
+    <h29>Criar objetos nos pontos de interseção</h29>
+    <err1>Não há blocos disponíveis para inserção no documento</err1>
+    <accept>Aceitar</accept>
+    <cancel>Cancelar</cancel>
+    <cb1>Número de segmentos</cb1>
+    <cb2>Comprimento do segmento</cb2>
+    <cb3>Desvio da corda</cb3>
+    <cb4>Comprimento da corda</cb4>
+    <cb5>pelo ponto de inserção do bloco</cb5>
+    <cb6>pelo centro geométrico</cb6>
+    <cb7>não girar</cb7>
+    <cb8>girar pelo segmento anterior</cb8>
+    <cb9>girar pelo segmento seguinte</cb9>
+    <wrong>Seleção inválida!</wrong>
+    <undividable>Ocorreu um erro ao dividir a curva. Tente reduzir o comprimento da curva</undividable>
+    <k1>Selecione polilinhas 3D</k1>
+    <k2>Selecione polilinhas</k2>
+    <k3>Vértices removidos</k3>
+    <k4>Polilinha</k4>
+    <k5>não contém vértices coincidentes</k5>
+    <k6>Selecione polilinhas ou</k6>
+    <k7>TOLerâncias</k7>
+    <k7ln>TOL</k7ln>
+    <k8>Desvio máximo da reta (H) aceito</k8>
+    <k9>Tolerância angular em graus (a) aceita</k9>
+    <k10>contém apenas</k10>
+    <k11>vértices</k11>
+    <k12>não contém vértices alinhados ou que atendam às condições de tolerância</k12>
+    <k13>Selecione uma polilinha</k13>
+    <k14>Selecione um objeto para posicionar</k14>
+    <k15>Selecione um segmento de arco da polilinha</k15>
+    <k16>Selecione um segmento da polilinha</k16>
+    <k17>Especifique um ponto na tangente ou: [Tangente/Ponto de passagem]</k17>
+    <k18>Especifique um ponto no arco ou: [Tangente/Ponto de passagem]</k18>
+    <k19>Especifique o ponto (mantenha Ctrl pressionado para avançar um vértice)</k19>
+    <k20>Especifique o primeiro ponto</k20>
+    <k21>Especifique o segundo ponto</k21>
+    <k22>Especifique o terceiro ponto</k22>
+    <k23>Especifique o número de segmentos</k23>
+    <k24>Especifique o comprimento do segmento</k24>
+    <k25>Especifique o desvio da corda (altura do segmento)</k25>
+    <k26>Especifique o comprimento da corda</k26>
+    <k27>Selecione o primeiro elemento de referência (linha, polilinha ou spline)</k27>
+    <k28>Selecione o segundo elemento de referência (linha, polilinha ou spline)</k28>
+    <k29>Número de pontos de controle</k29>
+    <k31>Selecione uma curva (linha, polilinha ou spline)</k31>
+    <k32>Especifique um ponto na tangente ou:</k32>
+    <k33>Tangente</k33>
+    <k33ln>T</k33ln>
+    <k34>Ponto de passagem</k34>
+    <k34ln>P</k34ln>
+    <k35>Especifique um ponto no arco ou:</k35>
+    <k36>Selecione pontos ou</k36>
+    <k37>Remova os objetos desnecessários</k37>
+    <k38>Selecione uma ou mais curvas (linha, polilinha, arco, spline ou círculo)</k38>
+    <k39>Selecione objetos para o cálculo de interseção ou deixe a seleção vazia para calcular com todos os objetos</k39>
+    <k40>Digite a tolerância angular de 0 a 30</k40>
+    <k41>TOLerância</k41>
+    <k41ln>TOL</k41ln>
+    <k42>Simplificar a polilinha?</k42>
+  </mncPlinesEdit>
+</ModPlus>

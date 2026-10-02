@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprSlabsReinforcement
+    LocalName="Armadura de lajes"
+    Description="Análise, agrupamento e armadura de lajes de acordo com as condições especificadas"
+    FullDescription="Processamento tanto de lajes selecionadas individualmente quanto de todas as lajes da vista ou do documento. A armadura principal da laje está disponível tanto com barras individuais quanto com armadura da área. A análise das aberturas é feita a partir da geometria da própria laje e não depende das famílias utilizadas. É possível trabalhar até mesmo em um modelo vazio">
+    <h1>Opções de seleção</h1>
+    <h2>Selecionar lajes</h2>
+    <h3>Selecionar todas as lajes na vista atual</h3>
+    <h4>Selecionar todas as lajes no projeto</h4>
+    <h6>Selecionar</h6>
+    <h7>Analisar</h7>
+    <h8>Total de lajes selecionadas:</h8>
+    <h9>Destas, analisadas com sucesso:</h9>
+    <h10>Executar armadura</h10>
+    <h11>Configurações de armadura</h11>
+    <h12>Espessura</h12>
+    <h13>Elevação inferior</h13>
+    <h14>Armadura principal (de base)</h14>
+    <h15>Armadura adicional</h15>
+    <h16>Armadura das extremidades</h16>
+    <h17>Reforço de aberturas</h17>
+    <h18>Quantidade de malhas da armadura de base</h18>
+    <h19>Deslocamento da barra extrema (pelo eixo da barra) em relação à borda da laje:</h19>
+    <!--todo remove after 3.3.14.0-->
+    <h19-1>Deslocamento da barra extrema (pela face da barra) em relação à borda da laje:</h19-1>
+    <h20>Configurações</h20>
+    <h21>JANELA DO PLUGIN:</h21>
+    <h23>Primeira malha (superior)</h23>
+    <h24>Segunda malha (inferior)</h24>
+    <h25>Armadura longitudinal (direção principal):</h25>
+    <h26>Armadura transversal (direção secundária):</h26>
+    <h27>Recobrimento superior da armadura (a partir da face superior da laje):</h27>
+    <h28>Recobrimento inferior da armadura (a partir da face inferior da laje):</h28>
+    <h29>As configurações de armadura da malha inferior repetem as configurações de armadura da malha superior</h29>
+    <h30>Método de criação da armadura de base:</h30>
+    <h31>Deslocar o espaçamento complementar para:</h31>
+    <h32>Criar:</h32>
+    <!-- todo remove after 2.20.2.0 -->
+    <h33>ARMADURA PADRÃO:</h33>
+    <h34>Armadura da laje</h34>
+    <h35>Usar o elemento "Armadura da área" para:</h35>
+    <h36>Cada direção em cada malha</h36>
+    <h37>Cada direção</h37>
+    <h38>Toda a armadura de base</h38>
+    <h39>Configurações principais de armadura</h39>
+    <h40>Lajes</h40>
+    <h41>Aberturas na laje selecionada</h41>
+    <h42>Tamanho</h42>
+    <!-- todo remove after 2.20.2.0 -->
+    <h43>Nas lajes processadas, o recobrimento</h43>
+    <!-- todo remove after 2.20.2.0 -->
+    <h44>Definir como zero</h44>
+    <!-- todo remove after 2.20.2.0 -->
+    <h45>Definir com base nas configurações de armadura</h45>
+    <h47>Ajustar à janela</h47>
+    <h48>Copiar para todas as aberturas marcadas da laje atual</h48>
+    <h49>Copiar para todas as aberturas marcadas de todas as lajes marcadas</h49>
+    <h50>Não definido</h50>
+    <h51>Não é recomendado fazer o reforço de aberturas de até 300 mm</h51>
+    <h52>Os limites da abertura não estão alinhados com a direção da armadura. Não é possível fazer o reforço!</h52>
+    <h53>Aplicar as configurações de recobrimento superior e inferior somente às malhas da armadura de base</h53>
+    <h54>Criar cada peça como um vergalhão separado</h54>
+    <h55>Multiplicidade do espaçamento em relação ao espaçamento das barras da armadura de base</h55>
+    <!-- todo remove after 2.20.2.0 -->
+    <h56>Não foi possível definir os valores dos parâmetros de alguns elementos. Abaixo estão os códigos dos elementos (id), os nomes dos parâmetros e os valores a serem definidos:</h56>
+    <h57>Parâmetros da armadura longitudinal</h57>
+    <h58>Parâmetros da armadura transversal</h58>
+    <h59>Posicionar com o espaçamento da armadura de base</h59>
+    <h60>Barra complementar na borda da laje com afastamento (pelo centro) em relação à barra extrema:</h60>
+    <h61>Cálculo da ancoragem conforme SP 52-101-2003</h61>
+    <h62>Diâmetro:</h62>
+    <h63>Área da seção, mm²:</h63>
+    <h64>Classe do concreto:</h64>
+    <h65>Tipo de superfície da armadura:</h65>
+    <h66>Resistência de cálculo à tração, MPa:</h66>
+    <h67>Comprimento básico (principal) de ancoragem, mm:</h67>
+    <h68>Coeficiente α:</h68>
+    <h69>Comprimento de ancoragem necessário (de cálculo), mm:</h69>
+    <h70>Comprimento de ancoragem:</h70>
+    <h71>Espaçamento das barras em U nas extremidades, em caso de espaçamentos diferentes nas malhas da armadura de base, definir pelas</h71>
+    <h72>barras da malha superior</h72>
+    <h73>barras da malha inferior</h73>
+    <h76>Armadura da laje</h76>
+    <h79>Espaçamento, mm:</h79>
+    <h80>Definir o tipo para as instâncias criadas de "Armadura da área":</h80>
+    <h81>Cada malha</h81>
+    <h82>Transferir os valores dos parâmetros de "Armadura da área" para os vergalhões</h82>
+    <h84>Recobrimento nas pontas das barras, mm:</h84>
+    <h85>Armadura das extremidades na direção longitudinal</h85>
+    <h86>Armadura das extremidades na direção transversal</h86>
+    <h87>Repetir as configurações de armadura das extremidades na direção longitudinal</h87>
+    <h88>Orientação da malha inferior:</h88>
+    <h89>Não é possível usar a orientação codirecional da malha inferior ao usar armadura da área para toda a armadura de base. Será usada a orientação espelhada</h89>
+    <h91>Não criar a peça se, na geração, o comprimento da peça resultar menor que, mm:</h91>
+    <h92>Comprimento da peça, mm:</h92>
+    <h93>Calcular o comprimento da barra em U</h93>
+    <h104>Comprimento de ancoragem, mm:</h104>
+    <h105>Calcular o comprimento de ancoragem</h105>
+    <h109>Barras retas na direção longitudinal</h109>
+    <h110>Criar armadura</h110>
+    <h111>Afastamento da abertura:</h111>
+    <h112>Quantidade de fileiras:</h112>
+    <h113>Deslocar ao coincidir com barras da armadura principal</h113>
+    <h114>Barras retas na direção transversal</h114>
+    <h115>Barras em U na direção longitudinal</h115>
+    <h116>Barras em U na direção transversal</h116>
+    <h117>Comprimento da peça, mm:</h117>
+    <h118>Espaçamento das peças, mm:</h118>
+    <!-- todo remove after 2.20.2.0 -->
+    <h119>Configurações de armadura padrão para lajes</h119>
+    <!-- todo remove after 2.20.2.0 -->
+    <h120>Configurações de armadura padrão para aberturas</h120>
+    <h121>Parâmetros das barras da malha superior</h121>
+    <h122>Parâmetros das barras da malha inferior</h122>
+    <h141>Não fechar a janela após criar a armadura</h141>
+    <!-- todo remove after 2.20.2.0 -->
+    <h147>Redefinir</h147>
+    <h153>Armadura indireta</h153>
+    <h155>Comprimento das barras:</h155>
+    <!-- todo remove after 2.20.2.0 -->
+    <h173>Barras retas:</h173>
+    <!-- todo remove after 2.20.2.0 -->
+    <h180>Barras em U:</h180>
+    <!-- todo remove after 2.20.2.0 -->
+    <h181>Barras envolventes (estribos):</h181>
+    <!-- todo remove after 2.20.2.0 -->
+    <h183>Redefinir todos os valores para "Auto"</h183>
+    <!-- todo remove after 2.20.2.0 -->
+    <h184>Formas de vergalhão preferenciais</h184>
+    <h185>Criar:</h185>
+    <h186>Armadura longitudinal e transversal</h186>
+    <h187>Somente armadura longitudinal</h187>
+    <h188>Somente armadura transversal</h188>
+    <h199>Estribos na direção longitudinal</h199>
+    <h203>Selecionar novamente</h203>
+    <h204>Selecionar novamente as lajes que foram processadas na vista atual no uso anterior do plugin</h204>
+    <h205>SELEÇÃO DE ABERTURAS:</h205>
+    <h206>Por padrão, deixar desmarcadas as aberturas cujo retângulo circunscrito tenha</h206>
+    <h207>um dos lados</h207>
+    <h208>todos os lados</h208>
+    <h209>menor que</h209>
+    <h210>Distribuição ao longo do comprimento:</h210>
+    <h211>da abertura</h211>
+    <h212>das barras retas</h212>
+    <h214>Estribos na direção transversal</h214>
+    <h226>Exclusão da armadura criada anteriormente:</h226>
+    <h229>Para poder criar estribos, é necessário ativar a criação de pelo menos duas barras retas na direção longitudinal com a opção "Deslocar ao coincidir com barras da armadura principal" desativada</h229>
+    <h230>Para poder criar estribos, é necessário ativar a criação de pelo menos duas barras retas na direção transversal com a opção "Deslocar ao coincidir com barras da armadura principal" desativada</h230>
+    <h231>Comprimento de ancoragem da barra complementar:</h231>
+    <h232>Cortar as barras em U pelo corpo da laje, caso as barras ultrapassem os limites do corpo da laje</h232>
+    <h233>Parâmetros da armadura da área</h233>
+    <h234>Parâmetros da armadura principal</h234>
+    <h235>Parâmetros da armadura da área da malha superior</h235>
+    <h236>Parâmetros da armadura da área da malha inferior</h236>
+    <srd>Salvando os dados das lajes selecionadas</srd>
+    <hook>Gancho:</hook>
+    <msg1>Selecione as lajes</msg1>
+    <!-- todo remove after 2.20.2.0 -->
+    <m13>Recobrimento da armadura</m13>
+    <m24>Você não especificou qual tipo de armadura criar!</m24>
+    <m25>Você não selecionou nenhuma laje para criar a armadura!</m25>
+    <m27>Atenção! Não foram encontradas formas de vergalhão carregadas no projeto atual! Nesse caso, as formas de vergalhão criadas durante o funcionamento do plugin não poderão ser abertas no editor de família! Recomenda-se carregar as formas de vergalhão no projeto antes de usar o plugin!\nExecutar a armadura mesmo com as formas de vergalhão ausentes?</m27>
+    <p1>Análise da laje:</p1>
+    <p2>Cálculo e modelagem da armadura de base</p2>
+    <p3>Cálculo e modelagem da armadura adicional</p3>
+    <p4>Cálculo e modelagem da armadura das extremidades</p4>
+    <p5>Cálculo e modelagem do reforço de aberturas</p5>
+    <p8>Exclusão da armadura criada anteriormente</p8>
+    <p12>Geração de vergalhões do Revit</p12>
+    <e1>Erros de análise da laje</e1>
+    <e2>Não foi possível inicializar a laje</e2>
+    <e3>Não foi possível obter a espessura da laje a partir do parâmetro</e3>
+    <e4>Não foi possível obter o sólido da geometria da laje</e4>
+    <e5>Não foi possível obter a face superior e/ou inferior da geometria da laje</e5>
+    <e7>Não foi possível obter os contornos externos da geometria da laje</e7>
+    <e8>Não foi possível obter o contorno para a armadura da área</e8>
+    <e9>Não foi possível criar a armadura de base da laje:</e9>
+    <e10>Não foi possível criar a armadura das extremidades da laje:</e10>
+    <e11>Não foi possível criar a armadura adicional da laje:</e11>
+    <e12>Não foi possível criar o reforço das aberturas da laje:</e12>
+    <e13>Não foi possível obter as linhas da armadura da área criada. A armadura posterior da laje foi interrompida. Erro:</e13>
+    <m1>Digite um valor de</m1>
+    <m2>até</m2>
+    <m6>Para o vergalhão</m6>
+    <m7>o valor da propriedade "Diâmetro de dobra padrão"</m7>
+    <m8>não atende às normas do SP 63.13330.2012</m8>
+    <m9>O valor mínimo do diâmetro de dobra para o vergalhão</m9>
+    <m10>com diâmetro</m10>
+    <m11>deve ser:</m11>
+    <m12>O valor da propriedade será substituído</m12>
+    <m23>Configurações de armadura copiadas</m23>
+    <rn>Armadura principal ⌀</rn>
+    <!-- todo remove after 2.20.2.0 -->
+    <full>Disponível na versão completa!</full>
+    <notSet>Não definir</notSet>
+    <br1>Com barras individuais</br1>
+    <br2>Com armadura da área</br2>
+    <as1>para a borda da laje</as1>
+    <as2>para o meio da laje</as2>
+    <rr1>Excluir a armadura do mesmo tipo que está sendo criada</rr1>
+    <rr2>Excluir toda a armadura criada anteriormente</rr2>
+    <rr3>Não excluir</rr3>
+    <t1>De acordo com o SP 63.13330.2012, item 10.3.5 – a distância livre mínima entre as barras da armadura deve ser de pelo menos o maior diâmetro da barra, e também de pelo menos 25 mm para a armadura inferior e 30 mm para a armadura superior; item 10.3.8 – a maior distância entre os eixos das barras não deve exceder 200 mm para altura da seção transversal da laje h &lt;= 150 mm e não deve exceder 1,5h e 400 mm para altura da seção transversal h &gt; 150 mm</t1>
+    <t2>A verificação e o deslocamento ao coincidir com as barras da armadura de base são feitos para a primeira barra (a mais próxima), o que não garante o deslocamento correto da segunda ou terceira barra. No deslocamento é considerada a distância livre mínima admissível entre as barras – 30 mm</t2>
+    <!-- todo remove after 2.20.2.0 -->
+    <t4>Salvar as configurações de armadura atuais como configurações de armadura padrão</t4>
+    <t5>Se a opção estiver ativada, o recobrimento superior e inferior será aplicado ao criar as malhas da armadura de base, sem considerar os diâmetros da demais armadura. Se a opção estiver desativada, o recobrimento será aplicado a todos os tipos de armadura criados, e a posição das malhas da armadura de base em relação às faces superior e inferior da laje será calculada a partir das condições estabelecidas</t5>
+    <t6>As barras em U serão posicionadas com o espaçamento das barras da malha superior da armadura de base. Se a armadura de base não for criada na laje, as barras em U serão criadas com o espaçamento especificado</t6>
+    <t7>Marcar todas as aberturas da lista disponíveis para processamento</t7>
+    <t8>Desmarcar todas as aberturas da lista</t8>
+    <t9>Os estribos serão posicionados com o espaçamento das barras da malha superior da armadura de base. Se a armadura de base não for criada na laje, os estribos serão criados com o espaçamento especificado</t9>
+    <t37>Copiar as configurações de armadura da abertura atual para as aberturas marcadas</t37>
+    <t38>Salvar as configurações de armadura da abertura atual</t38>
+    <t39>Carregar as configurações de armadura e defini-las para a abertura atual</t39>
+    <t40>Copiar as configurações de armadura da laje atual para todas as lajes marcadas</t40>
+    <t41>Salvar as configurações de armadura da laje atual</t41>
+    <t42>Carregar as configurações de armadura e defini-las para a laje atual</t42>
+    <t43>Atenção! O tipo de superfície da armadura pode depender da classe da armadura, do diâmetro ou de outros valores que não são considerados pelo programa. Consulte a documentação normativa</t43>
+    <t44>α – coeficiente que considera a influência, no comprimento de ancoragem, do estado de tensão do concreto e da armadura e da solução construtiva do elemento na zona de ancoragem. Na ancoragem de barras de perfil nervurado com pontas retas (ancoragem reta) ou de armadura lisa com ganchos ou laços sem dispositivos de ancoragem adicionais, adota-se α = 1,0 para barras tracionadas e α = 0,75 para barras comprimidas.</t44>
+    <t46>De acordo com o GOST 21.501-2018, item 6.4.7, o comprimento da peça é definido pela face externa do vergalhão</t46>
+    <t47>O comprimento da peça é adotado igual ao comprimento de ancoragem</t47>
+    <t49>Quantidade de fileiras de armadura na direção longitudinal (cada fileira tem duas barras "ao longo" da abertura)</t49>
+    <t50>Quantidade de fileiras de armadura na direção transversal (cada fileira tem duas barras "ao longo" da abertura)</t50>
+    <!-- todo remove after 2.20.2.0 -->
+    <t53>Redefinir todos os valores das configurações de armadura padrão atuais para os valores padrão definidos no plugin</t53>
+    <t58>O comprimento da barra é a soma de dois comprimentos de ancoragem</t58>
+    <!-- todo remove after 2.20.2.0 -->
+    <t63>Você pode especificar formas de vergalhão preferenciais para diferentes tipos de vergalhões criados pelo plugin.</t63>
+    <!-- todo remove after 2.20.2.0 -->
+    <t64>Definir formas preferenciais não garante que a armadura será criada usando a forma do vergalhão especificada.</t64>
+    <!-- todo remove after 2.20.2.0 -->
+    <t65>Ao criar os vergalhões, será feita uma tentativa de usar a forma especificada. Se não for possível criar a barra com a forma especificada, o Revit procurará automaticamente uma forma adequada ou criará uma nova forma.</t65>
+    <re4>Não foi possível criar um vergalhão reto com a forma do vergalhão preferencial especificada "{0}". Erro: {1}\nFoi feita uma tentativa de criar a barra com seleção ou criação automática da forma do vergalhão</re4>
+    <re5>Não foi possível criar um vergalhão com a forma "{0}" com a forma do vergalhão preferencial especificada "{1}". Erro: {2}\nFoi feita uma tentativa de criar a barra com seleção ou criação automática da forma do vergalhão</re5>
+    <re18>Erro ao criar os estribos do reforço da abertura na laje id={0}</re18>
+    <re20>Não foi possível criar um vergalhão com a forma do vergalhão preferencial especificada "{0}". Erro: {1}\nFoi feita uma tentativa de criar a barra com seleção ou criação automática da forma do vergalhão</re20>
+  </mprSlabsReinforcement>
+</ModPlus>

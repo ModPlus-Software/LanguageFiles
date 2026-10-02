@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprContextFilter
+    LocalName="Filtre contextuel"
+    Description="Filtrage des éléments par paramètres via le menu contextuel"
+    FullDescription="Lancement de l'une des trois manières suivantes : clic gauche en maintenant la touche Ctrl enfoncée, pression successive de touches ou combinaison de touches. Trois niveaux de traitement : tous les éléments du modèle, les éléments de la vue courante ou les éléments sélectionnés. Des préréglages sont disponibles pour une utilisation rapide du filtre"
+    LocalName1="Filtre. Mode fenêtre"
+    Description1="Filtrage des éléments par paramètres en mode fenêtre">
+    <h1>Préréglages</h1>
+    <h3>Appliquer le préréglage à la liste courante</h3>
+    <h4>Rechercher des catégories</h4>
+    <h5>Sélectionner les éléments cochés</h5>
+    <h6>Isoler les éléments cochés</h6>
+    <h7>Isoler tout sauf les éléments cochés</h7>
+    <h8>Effacer la liste</h8>
+    <h9>Enregistrer ou mettre à jour le préréglage</h9>
+    <h10>Enregistrer comme nouveau</h10>
+    <h11>Nom du préréglage</h11>
+    <h12>Description du préréglage (facultatif)</h12>
+    <h13>Enregistrer la liste courante des paramètres cochés comme nouveau préréglage</h13>
+    <h14>Modifier le préréglage courant</h14>
+    <h15>Indiquez le nom du préréglage !</h15>
+    <h16>Le nom de préréglage indiqué est déjà utilisé ! Indiquez un autre nom</h16>
+    <h17>[Aucune valeur]</h17>
+    <h18>Indiquez l'une des trois options d'appel de la boîte de dialogue du filtre contextuel et lancez-le</h18>
+    <h19>Lancer le filtre au chargement de Revit</h19>
+    <h20>Lancer le filtre</h20>
+    <h21>Arrêter le filtre</h21>
+    <h22>Utiliser Ctrl + clic gauche</h22>
+    <h23>Utiliser une séquence</h23>
+    <h24>Utiliser une combinaison</h24>
+    <h25>La boîte de dialogue du filtre contextuel s'ouvre par un clic gauche en maintenant la touche Ctrl enfoncée. Dans ce cas, certaines restrictions liées à l'utilisation de cette combinaison de touches peuvent s'appliquer au travail dans Revit. Par exemple, lors d'une tentative d'ajout d'autres éléments au jeu de sélection</h25>
+    <h26>La boîte de dialogue du filtre contextuel s'ouvre en appuyant successivement sur les touches indiquées. La séquence par défaut est "F,F". L'intervalle de temps entre les appuis sur les touches n'est pas pris en compte. Lors de la définition de la séquence, tenez compte des raccourcis clavier attribués dans Revit</h26>
+    <h27>La boîte de dialogue du filtre contextuel s'ouvre en appuyant sur la combinaison de touches indiquée. La combinaison par défaut est Shift+F. Lors de la définition d'une autre combinaison, tenez compte des combinaisons existantes (Ctrl+C, Ctrl+V, etc.)</h27>
+    <h28>Exclure les éléments cochés de la sélection courante</h28>
+    <h29>Ne pas fermer le filtre après l'application de l'action</h29>
+    <h30>Sélection dynamique</h30>
+    <h31>La sélection d'une position dans l'arborescence sélectionne les éléments dans le modèle</h31>
+    <h32>[Non défini]</h32>
+    <h33>Filtre de paramètres</h33>
+    <h34>Réduire toutes les catégories</h34>
+    <h35>La liste des catégories est remplie avec les catégories issues des éléments sélectionnés, mais tous les éléments du modèle seront traités</h35>
+    <h36>Compris</h36>
+    <h37>Paramètre partagé</h37>
+    <h38>Paramètre de type</h38>
+    <h39>Paramètres identiques</h39>
+    <h40>Cochez plus d'une catégorie pour afficher les paramètres identiques des catégories cochées</h40>
+    <h41>Sans valeurs</h41>
+    <h42>Enregistrer dans le préréglage uniquement les catégories et les noms des paramètres pour sélectionner ultérieurement toutes les valeurs des paramètres</h42>
+    <h43>[Sans catégorie]</h43>
+    <h44>Filtre ModPlus</h44>
+    <h45>Cocher toutes les catégories</h45>
+    <h46>Décocher toutes les catégories</h46>
+    <h47>Insérer la valeur de recherche enregistrée</h47>
+    <h48>Fonctionnement des conditions «Et» et «Ou»</h48>
+    <h49>«Ou» — un élément convient si au moins une des valeurs cochées correspond.</h49>
+    <h50>«Et» — un élément doit correspondre à tous les paramètres pour lesquels quelque chose est coché. Si plusieurs valeurs sont cochées pour un même paramètre, elles sont considérées comme des alternatives : n'importe laquelle suffit.</h50>
+    <h51>Exemple. Coché : «Classe d'armature» → A500C ; «Diamètre» → 10, 12, 16</h51>
+    <h52>«Ou» sélectionnera toutes les armatures de classe A500C, ainsi que toutes les armatures de diamètre 10, 12 ou 16 de n'importe quelle classe</h52>
+    <h53>«Et» sélectionnera uniquement les armatures de classe A500C de diamètre 10, 12 ou 16</h53>
+    <h54>Les catégories sont toujours combinées entre elles : un élément n'appartient qu'à une seule catégorie. Un paramètre d'occurrence et un paramètre de type portant le même nom sont considérés comme des paramètres différents.</h54>
+    <fo1>Tous les éléments</fo1>
+    <fo2>Tous les éléments de la vue</fo2>
+    <fo3>Éléments sélectionnés</fo3>
+    <fo4>Tous selon la sélection</fo4>
+    <fo5>Trouvés dans la vue</fo5>
+    <fo6>Trouvés dans le modèle</fo6>
+    <fo7>Selon le filtre dans la vue</fo7>
+  </mprContextFilter>
+</ModPlus>

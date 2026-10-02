@@ -487,6 +487,9 @@
     <uk-UA>Український (Україна)</uk-UA>
     <es-ES>Español (España)</es-ES>
     <zh-CN>简体中文</zh-CN>
+    <fr-FR>Français (France)</fr-FR>
+    <pt-BR>Português (Brasil)</pt-BR>
+    <uz-Latn-UZ>Oʻzbekcha (Oʻzbekiston)</uz-Latn-UZ>
     <ny>New Year's decorations</ny>
   </ModPlusAPI>
   <Geometry>
@@ -1100,6 +1103,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <h127>All product versions are selected. Installing, enabling and disabling a plugin apply to all versions at once</h127>
     <h128>The plugin will be installed for the product versions: {0}. Continue?</h128>
     <h129>Failed to download updates. Another attempt will be made later</h129>
+    <h130>Updates will be installed after closing {0}</h130>
     <!--todo remove after 43.3.0.0-->
     <b3>Check all</b3>
     <!--todo remove after 43.3.0.0-->
@@ -1222,6 +1226,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg51>All displayed uninstalled or outdated plugins will be installed. Continue?</msg51>
     <msg52>The connection to ModPlus services was successful</msg52>
     <msg53>Failed to connect to ModPlus services. Check your proxy settings and try again</msg53>
+    <!--todo remove after 52.0.1.0-->
     <msg54>Updates have been downloaded and will be installed after closing {0}</msg54>
     <msg55>Updating requires closing {0}</msg55>
     <msg56>Module functionality is limited because the {0} application is open</msg56>
@@ -1337,6 +1342,8 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <h70>MP: Select Previous</h70>
     <h71>Select Objects in Viewport [mpSelectByViewport]</h71>
     <h72>MP: Select Objects in Viewport</h72>
+    <h73>Select Object from Field [mpSelectByField]</h73>
+    <h74>MP: Select Objects from Field</h74>
     <cb1>Icon</cb1>
     <cb2>Title</cb2>
     <tt2>To work with the modplus.org server, enter your email address. A mail address is required to identify you on the server. It is recommended to use the email address specified at the registration on modplus.org</tt2>
@@ -1362,6 +1369,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <tt21>What to show in the header of the ModPlus ribbon tab</tt21>
     <tt22>Enable/Disable Context Menu for the "Select Previous" Mini-Plugin</tt22>
     <tt23>Enable/Disable Context Menu for the "Select Objects in Viewport" Mini-Plugin</tt23>
+    <tt24>Enable/Disable Context Menu for the "Select Objects from Field" Mini-Plugin</tt24>
     <err1>This name is already in use! Create another</err1>
     <err2>You need to specify the display name of the block!</err2>
     <err3>You need to select a block in the list!</err3>
@@ -1394,6 +1402,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg23>Unable to access AutoCAD Editor! Running another command.\nComplete the command and try again</msg23>
     <msg24>Attention! The language of the palette, the Smart ribbon tab and the plugin context menus will change only after restarting AutoCAD</msg24>
     <msg25>Second point:</msg25>
+    <msg26>Select Objects with Fields:</msg26>
     <p1>Attention!</p1>
     <p2>Trying to load the plugin into an incompatible version of the AutoCAD!</p2>
     <p3>Download interrupt</p3>
@@ -1463,6 +1472,12 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <h61>Signatures editor</h61>
     <h62>The editor of the signatures used to fill in title blocks</h62>
     <h63>Calling the "Signatures" plugin</h63>
+    <h69>Select Previous [mncSelectPrevious]</h69>
+    <h70>MP: Select Previous</h70>
+    <h71>Select Objects in Viewport [mncSelectByViewport]</h71>
+    <h72>MP: Select Objects in Viewport</h72>
+    <h73>Select Object from Field [mncSelectByField]</h73>
+    <h74>MP: Select Objects from Field</h74>
     <cb1>Icon</cb1>
     <cb2>Title</cb2>
     <tt5>Load plugin in AutoCAD with minimal details on the command line</tt5>
@@ -1478,6 +1493,9 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <tt16>Enable/disable the context menu for the mini plugin "Viewport boundary in model space"</tt16>
     <tt18>Enable/disable the context menu for wipeouts, which allows you to add or remove vertices of wipeout</tt18>
     <tt19>Enable/disable the context menu for the mini-plugin "Set Nested Objects layer"</tt19>
+    <tt22>Enable/Disable Context Menu for the "Select Previous" Mini-Plugin</tt22>
+    <tt23>Enable/Disable Context Menu for the "Select Objects in Viewport" Mini-Plugin</tt23>
+    <tt24>Enable/Disable Context Menu for the "Select Objects from Field" Mini-Plugin</tt24>
     <err1>This name is already in use! Create another</err1>
     <err2>You need to specify the display name of the block!</err2>
     <err3>You need to select a block in the list!</err3>
@@ -1510,6 +1528,7 @@ To enable updates, install ModPlus in the recommended folder "{1}" or any other 
     <msg24>Attention! The language of the adaptation and context menus will change only after restarting nanoCAD</msg24>
     <msg25>Second point:</msg25>
     <msg26>The ModPlus adaptation has been changed. Restart nanoCAD for its correct display</msg26>
+    <msg27>Select Objects with Fields:</msg27>
     <p1>Attention!</p1>
     <p2>Trying to load the plugin into an incompatible version of the nanoCAD!</p2>
     <p3>Download interrupt</p3>
@@ -1714,6 +1733,7 @@ To disable the automatic change completely, clear that option in the ModPlus set
 Keep the selected theme "{1}"?
 
 To disable the automatic change completely, clear that option in the ModPlus settings.</h236>
+    <h237>No annotations were found on the current view for the selected elements</h237>
     <parameters>Parameters</parameters>
     <name>Name</name>
     <any>Any</any>
@@ -1851,6 +1871,7 @@ To disable the automatic change completely, clear that option in the ModPlus set
     <err14>The requested plugin was not found in the Ribbon. Make sure the plugin is installed and enabled in the "Plugins" section of the auto-update module, and also make sure the plugin is added to the menu in the "Menu" section of the auto-update module</err14>
     <err15>Failed to initialize the graphical representation of the requested plugin</err15>
     <err16>Failed to retrieve the graphical representations layer</err16>
+    <err17>Parameter name is not specified in some conditions. Specify the parameter name or remove the condition</err17>
     <c1>Coloring tabs</c1>
     <c2>Color scheme:</c2>
     <c3>Coloring zone:</c3>
@@ -1993,6 +2014,11 @@ To disable the automatic change completely, clear that option in the ModPlus set
     <tcm13>Close all documents except current</tcm13>
     <tcm14>Close all documents without saving</tcm14>
     <tcm15>Close all documents except current without saving</tcm15>
+    <plgs1>Search plugin</plgs1>
+    <plgs2>Show on ribbon</plgs2>
+    <plgs3>Nothing found</plgs3>
+    <plgs4>The command is not available in the current context. Use the magnifier button to find it on the ribbon</plgs4>
+    <plgs5>hidden in the current menu</plgs5>
   </RevitDlls>
   <!-- todo после версии 9.3.0 имена типов и расчетных характеристик вынесены в отдельные узлы -->
   <RengaDlls
@@ -2042,6 +2068,7 @@ To disable the automatic change completely, clear that option in the ModPlus set
     <ef27>The object matches if</ef27>
     <ef28>all conditions match</ef28>
     <ef29>any of conditions match</ef29>
+    <ef30>Attribute name is not specified in some conditions. Specify the attribute name or remove the condition</ef30>
     <et1>Equal</et1>
     <et2>More</et2>
     <et3>Less</et3>

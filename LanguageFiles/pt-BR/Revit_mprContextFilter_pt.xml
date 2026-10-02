@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprContextFilter
+    LocalName="Filtro contextual"
+    Description="Filtragem de elementos por parâmetros por meio do menu de contexto"
+    FullDescription="Execução de uma de três formas: clique com o botão esquerdo do mouse mantendo a tecla Ctrl pressionada, pressionamento sequencial de teclas ou combinação de teclas. Três níveis de processamento – todos os elementos do modelo, elementos da vista atual ou elementos selecionados. É possível usar predefinições para aplicar o filtro rapidamente"
+    LocalName1="Filtro. Modo janela"
+    Description1="Filtragem de elementos por parâmetros no modo janela">
+    <h1>Predefinições</h1>
+    <h3>Aplicar predefinição à lista atual</h3>
+    <h4>Pesquisar categorias</h4>
+    <h5>Selecionar os elementos marcados</h5>
+    <h6>Isolar os elementos marcados</h6>
+    <h7>Isolar todos, exceto os elementos marcados</h7>
+    <h8>Limpar a lista</h8>
+    <h9>Salvar ou atualizar predefinição</h9>
+    <h10>Salvar como nova</h10>
+    <h11>Nome da predefinição</h11>
+    <h12>Descrição da predefinição (opcional)</h12>
+    <h13>Salvar a lista atual de parâmetros marcados como nova predefinição</h13>
+    <h14>Alterar a predefinição atual</h14>
+    <h15>Insira o nome da predefinição!</h15>
+    <h16>O nome de predefinição especificado já está em uso! Insira outro nome</h16>
+    <h17>[Sem valor]</h17>
+    <h18>Especifique uma das três opções para abrir a caixa de diálogo do filtro contextual e inicie-o</h18>
+    <h19>Iniciar o filtro ao carregar o Revit</h19>
+    <h20>Iniciar filtro</h20>
+    <h21>Parar filtro</h21>
+    <h22>Usar Ctrl + botão esquerdo</h22>
+    <h23>Usar sequência</h23>
+    <h24>Usar combinação</h24>
+    <h25>A caixa de diálogo do filtro contextual é aberta com um clique do botão esquerdo do mouse mantendo a tecla Ctrl pressionada. Nesse caso, podem surgir algumas restrições ao trabalho no Revit relacionadas ao uso dessa combinação. Por exemplo, ao tentar adicionar outros elementos ao conjunto de elementos selecionados</h25>
+    <h26>A caixa de diálogo do filtro contextual é aberta pressionando sequencialmente as teclas especificadas. Por padrão, é usada a sequência "F,F". O intervalo de tempo entre os pressionamentos não é considerado. Ao especificar a sequência, leve em conta os atalhos de teclado atribuídos no Revit</h26>
+    <h27>A caixa de diálogo do filtro contextual é aberta pressionando a combinação de teclas especificada. Por padrão, é usada a combinação Shift+F. Ao especificar outra combinação, leve em conta as combinações existentes (Ctrl+C, Ctrl+V e outras)</h27>
+    <h28>Excluir os elementos marcados da seleção atual</h28>
+    <h29>Não fechar o filtro após aplicar a ação</h29>
+    <h30>Seleção dinâmica</h30>
+    <h31>Ao realçar um item na árvore, os elementos correspondentes serão selecionados no modelo</h31>
+    <h32>[Não definido]</h32>
+    <h33>Filtro de parâmetros</h33>
+    <h34>Recolher todas as categorias</h34>
+    <h35>A lista de categorias foi preenchida com as categorias obtidas dos elementos selecionados, mas todos os elementos do modelo serão processados</h35>
+    <h36>Entendi</h36>
+    <h37>Parâmetro compartilhado</h37>
+    <h38>Parâmetro de tipo</h38>
+    <h39>Parâmetros iguais</h39>
+    <h40>Marque mais de uma categoria para exibir os parâmetros comuns às categorias marcadas</h40>
+    <h41>Sem valores</h41>
+    <h42>Salvar na predefinição apenas as categorias e os nomes dos parâmetros, para posterior seleção de todos os valores dos parâmetros</h42>
+    <h43>[Sem categoria]</h43>
+    <h44>Filtro ModPlus</h44>
+    <h45>Marcar todas as categorias</h45>
+    <h46>Desmarcar todas as categorias</h46>
+    <h47>Inserir o valor de pesquisa salvo</h47>
+    <h48>Como funcionam as condições "E" e "OU"</h48>
+    <h49>"OU" — o elemento é aceito se pelo menos um dos valores marcados coincidir.</h49>
+    <h50>"E" — o elemento deve atender a todos os parâmetros em que algo esteja marcado. Se vários valores estiverem marcados em um parâmetro, eles são considerados alternativas: basta qualquer um deles.</h50>
+    <h51>Exemplo. Marcado: "Classe do vergalhão" → A500C; "Diâmetro" → 10, 12, 16</h51>
+    <h52>"OU" selecionará todos os vergalhões da classe A500C e também todos os vergalhões de diâmetro 10, 12 ou 16 de qualquer classe</h52>
+    <h53>"E" selecionará somente os vergalhões da classe A500C com diâmetro 10, 12 ou 16</h53>
+    <h54>As categorias são sempre combinadas entre si: um elemento pertence a apenas uma categoria. Um parâmetro de instância e um parâmetro de tipo com o mesmo nome são considerados parâmetros diferentes.</h54>
+    <fo1>Todos os elementos</fo1>
+    <fo2>Todos os elementos na vista</fo2>
+    <fo3>Elementos selecionados</fo3>
+    <fo4>Todos pelos selecionados</fo4>
+    <fo5>Encontrados na vista</fo5>
+    <fo6>Encontrados no modelo</fo6>
+    <fo7>Por filtro na vista</fo7>
+  </mprContextFilter>
+</ModPlus>

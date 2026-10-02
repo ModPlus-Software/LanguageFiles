@@ -331,6 +331,7 @@
     <h237>Numeración de habitaciones</h237>
     <h238>Restablecer la numeración para cada nivel en apartamentos de varios niveles</h238>
     <h239>Parámetros por niveles del apartamento</h239>
+    <h240>Redondeo de áreas con factor:</h240>
     <msg1>No se ha encontrado parámetro "{0}"</msg1>
     <msg2>Parámetro "{0}" no rellenado</msg2>
     <msg3>Parámetro "{0}" tiene un valor ilegal</msg3>
@@ -406,6 +407,7 @@
     <msg68>¡Los apartamentos indicados se encuentran en diferentes niveles! ¿Está seguro de que desea fusionarlos en un solo apartamento?</msg68>
     <msg69>Para los siguientes apartamentos (id), no se encontraron opciones de emparejamiento entre los seleccionados (apartamentos con la misma designación funcional que tienen intersección vertical)</msg69>
     <msg70>¡Los resultados de la verificación inicial contienen habitaciones no válidas (habitaciones con parámetros vacíos o incorrectos, habitaciones no colocadas)! ¿Está seguro de que desea continuar?</msg70>
+    <msg71>Los datos de los apartamentos en el modelo han cambiado desde que se creó esta lista (en otra ficha o manualmente). Es posible que la lista esté desactualizada: vuelva a ejecutar la operación</msg71>
     <tt1>Valor del parámetro "Propósito funcional", que se utiliza para seleccionar habitaciones que se procesan. Si parámetro tiene valor diferente, habitación se omitirá cuando se estén ejecutando todos algoritmos</tt1>
     <tt2>Ocultar instrucción</tt2>
     <tt3>Para cada grupo de lista, seleccione una habitación del proyecto mediante lo cual se determinará apartamento inicial para numeración</tt3>
@@ -449,6 +451,9 @@
     <tt38>Valor incorrecto. Compruebe las condiciones indicadas entre paréntesis</tt38>
     <tt39>Mostrar los espacios seleccionados</tt39>
     <tt40>Establecer el nombre de la habitación a partir de la lista de nombres de habitaciones del documento actual</tt40>
+    <tt41>Si la opción está activada, el redondeo especificado se aplica al área con factor de cada habitación (parámetro "КВ_Площадь с коэффициентом"), así como a las áreas totales del apartamento "КВ_Площадь общая" y "КВ_Площадь неотапл. помещений с коэфф.". Las demás áreas se redondean según la propiedad "Redondeo de áreas".</tt41>
+    <tt42>Por ejemplo, el área original de la habitación es 3.48. Redondeo de áreas 0.1. Redondeo de áreas con factor 0.01. Factor 0.5. Área redondeada - 3.5, área con factor - 3.5 * 0.5 = 1.75, después del redondeo - 1.75 (sin esta opción sería 1.8).</tt42>
+    <tt43>Si la opción está desactivada, se utiliza la propiedad "Redondeo de áreas" para todas las áreas.</tt43>
     <instruction>Instrucción</instruction>
     <instruction1>Todas habitaciones del proyecto deben contar con parámetros generales especificados en esta lista. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes". Todos parámetros numéricos están representados por tipo "Unidad monetaria", que le permite procesar habitaciones en grupos</instruction1>
     <instruction1_1>Los parámetros adicionales se procesan y se rellenan sólo si las habitaciones tienen estos parámetros. Puede utilizar sus propios parámetros generales del mismo tipo (indicados entre paréntesis). Especificar sus propios parámetros generales en lista o hacer clic en botón "Crear parámetros faltantes"</instruction1_1>

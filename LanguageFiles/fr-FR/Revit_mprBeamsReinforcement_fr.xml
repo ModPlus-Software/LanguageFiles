@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprBeamsReinforcement
+    LocalName="Ferraillage des poutres"
+    Description="Analyse, regroupement et ferraillage des poutres selon des conditions données"
+    FullDescription="Traitement de poutres sélectionnées individuellement ou de toutes les poutres d'une vue ou d'un document. Le ferraillage transversal peut être composé à l'aide de différentes formes de barres d'armature. Fonctionne même avec un gabarit vide">
+    <h1>Options de sélection</h1>
+    <h2>Sélectionner des poutres</h2>
+    <h3>Sélectionner toutes les poutres de la vue actuelle</h3>
+    <h4>Sélectionner toutes les poutres du projet</h4>
+    <h5>Le ferraillage n'est possible que dans les poutres porteuses</h5>
+    <h6>Sélectionner</h6>
+    <h7>Analyser</h7>
+    <h8>Total des poutres sélectionnées :</h8>
+    <h9>Dont analysées avec succès :</h9>
+    <h10>Effectuer le ferraillage</h10>
+    <h11>Réglages de ferraillage du groupe</h11>
+    <h12>Regroupement</h12>
+    <h13>Par niveau</h13>
+    <h15>Regrouper</h15>
+    <h16>Nbre</h16>
+    <h17>Profil</h17>
+    <h18>Niveaux</h18>
+    <h19>Tout regrouper</h19>
+    <h20>Poutres du groupe :</h20>
+    <h21>Niveau</h21>
+    <h23>Regrouper par :</h23>
+    <h24>Section</h24>
+    <h25>Ferraillage longitudinal</h25>
+    <h27>Enrobage des armatures principales :</h27>
+    <coverTop>En haut :</coverTop>
+    <coverBottom>En bas :</coverBottom>
+    <coverSide>Sur les côtés :</coverSide>
+    <coverEnd>Aux extrémités :</coverEnd>
+    <h28>L'enrobage des armatures principales doit être d'au moins 20 mm ou d'au moins le diamètre de l'armature</h28>
+    <h30>Paramètre</h30>
+    <h31>Nombre de barres en largeur :</h31>
+    <h32>Nombre de barres en hauteur :</h32>
+    <h33>Modifier les espacements</h33>
+    <h34>Section transversale de la poutre, mm² :</h34>
+    <h35>Section transversale des armatures, mm² :</h35>
+    <h36>Pourcentage d'armature :</h36>
+    <h37>Il est déconseillé d'attribuer à l'armature longitudinale une section supérieure à 5 % de la section transversale de la poutre</h37>
+    <h38>Espacements entre les barres sur la largeur de la poutre :</h38>
+    <h39>Espacements entre les barres sur la hauteur de la poutre :</h39>
+    <h40>Attention ! En cas de modification du diamètre, de l'enrobage ou du nombre de barres, les espacements entre les barres seront réinitialisés à des valeurs égales !</h40>
+    <h41>Attentes du ferraillage longitudinal</h41>
+    <h42>Ferraillage transversal (disposition)</h42>
+    <h43>Ferraillage transversal (formes)</h43>
+    <h44>Plier les barres supérieures si la longueur d'ancrage est insuffisante</h44>
+    <h45>Positionnement des armatures principales par rapport au bord de la poutre selon l'axe de l'armature. Le positionnement est calculé selon le diamètre de modèle de la barre</h45>
+    <h50>Réglages</h50>
+    <h51>FENÊTRE DU PLUGIN :</h51>
+    <h53>AFFICHAGE DANS LE MODÈLE :</h53>
+    <h54>Facteur d'échelle :</h54>
+    <!-- todo remove after 1.18.16.0 -->
+    <h55>FERRAILLAGE PAR DÉFAUT :</h55>
+    <h56>Décalage</h56>
+    <h57>Enveloppe</h57>
+    <h58>Supprimer la forme sélectionnée</h58>
+    <!-- todo remove after 1.18.16.0 -->
+    <h59>Indiquez le type de crochets des formes, les paramètres, le diamètre et le type de barre d'armature qui seront définis par défaut pour les formes de ferraillage transversal ajoutées</h59>
+    <h60>Espacement du ferraillage transversal dans les zones de densification, mm :</h60>
+    <h61>Calcul de l'ancrage selon SP 52-101-2003</h61>
+    <h72>Impossible d'ajouter la forme à la disposition actuelle : aucun emplacement disponible pour placer la forme !</h72>
+    <!-- todo remove after 1.18.16.0 -->
+    <h73>Réglages de ferraillage de la poutre</h73>
+    <h74>Remplacer par les réglages de ferraillage du groupe</h74>
+    <h75>Conserver les réglages de ferraillage</h75>
+    <!-- todo remove after 1.18.16.0 -->
+    <h76>Ferraillage des poutres</h76>
+    <h79>Crochets de forme par défaut :</h79>
+    <h80>Crochets de forme :</h80>
+    <h81>définir dans l'esquisse</h81>
+    <h82>utiliser les crochets Revit</h82>
+    <h83>Paramètres par défaut</h83>
+    <h84>Enrobage aux extrémités des armatures, mm :</h84>
+    <h85>Espacement principal du ferraillage transversal, mm :</h85>
+    <h86>Retrait par rapport à l'extrémité de la poutre, mm :</h86>
+    <h87>Densification du ferraillage transversal</h87>
+    <h88>Longueur de densification, mm :</h88>
+    <h89>Longueur de densification, fraction :</h89>
+    <h90>Densification du ferraillage aux extrémités de la poutre</h90>
+    <h91>Densification du ferraillage aux extrémités de la poutre en l'absence d'éléments sous-jacents (extrémités en console de la poutre)</h91>
+    <h93>Étriers triangulaires :</h93>
+    <h94>Tenir compte des poteaux et murs sous-jacents et d'extrémité</h94>
+    <h96>Par paramètre :</h96>
+    <h97>Paramètre</h97>
+    <h98>Distance entre les axes des barres</h98>
+    <h99>Distance entre les faces des barres</h99>
+    <!-- todo remove after 1.18.16.0 -->
+    <h100>Attention ! Le nombre et la position des barres du ferraillage longitudinal, ainsi que le schéma de disposition du ferraillage transversal, peuvent être enregistrés, chargés et copiés dans les poutres cochées de section adaptée, mais ne peuvent pas être enregistrés par défaut !</h100>
+    <h102>Type de ferraillage :</h102>
+    <h103>Détail n°1</h103>
+    <h104>Longueur d'ancrage des attentes droites, mm :</h104>
+    <h105>Calculer la longueur d'ancrage</h105>
+    <h106>Détail n°2</h106>
+    <h107>Intersections en T</h107>
+    <h108>Intersections en croix</h108>
+    <h110>Créer le ferraillage</h110>
+    <h141>Ne pas fermer la fenêtre après la création du ferraillage</h141>
+    <h142>Aperçu de l'intersection</h142>
+    <h143>Suppression de la géométrie auxiliaire</h143>
+    <!-- todo remove after 1.18.16.0 start -->
+    <h147>Réinitialiser</h147>
+    <h173>Barres droites :</h173>
+    <h174>Barres en L :</h174>
+    <h177>Étriers transversaux en C (épingles). Crochets dans l'esquisse :</h177>
+    <h178>Étriers transversaux en S (épingles). Crochets dans l'esquisse :</h178>
+    <h180>Barres en U :</h180>
+    <h181>Cadres rectangulaires :</h181>
+    <h182>Barres en L à grand retour :</h182>
+    <h183>Réinitialiser toutes les valeurs sur "Auto"</h183>
+    <h184>Formes d'armature préférées</h184>
+    <!-- todo remove after 1.18.16.0 end -->
+    <h186>Sélectionner à nouveau</h186>
+    <h187>Sélectionner à nouveau les poutres traitées dans la vue actuelle lors de la précédente utilisation du plugin</h187>
+    <h205>Étriers transversaux en C (épingles). Crochets Revit :</h205>
+    <h206>Étriers transversaux en S (épingles). Crochets Revit :</h206>
+    <h207>Utiliser la géométrie des poutres sans tenir compte des assemblages</h207>
+    <h208>Prolonger les barres longitudinales dans les poutres perpendiculaires adjacentes situées aux extrémités de la poutre actuelle</h208>
+    <h226>Suppression du ferraillage créé précédemment :</h226>
+    <h229>Niveau</h229>
+    <h238>Créer :</h238>
+    <h239>Ferraillage transversal</h239>
+    <h240>Propriétés des formes par défaut</h240>
+    <h241>Si la liste contient déjà une forme ayant la même esquisse, ses propriétés seront reprises</h241>
+    <h243>Réglages principaux du ferraillage</h243>
+    <h244>Ferraillage des intersections</h244>
+    <h245>Poutres</h245>
+    <h246>Intersections</h246>
+    <h247>Type d'intersection</h247>
+    <h248>Intersections d'angle</h248>
+    <h249>Longueur d'ancrage, mm :</h249>
+    <h250>Nbre d'intersect.</h250>
+    <h251>Type d'intersection</h251>
+    <h252>Paramètres</h252>
+    <h253>Intersections du groupe :</h253>
+    <h255>Poutres de l'intersection :</h255>
+    <h256>Nbre de poutres</h256>
+    <h257>Réglages de ferraillage des groupes</h257>
+    <h258>Ne pas créer de ferraillage transversal au-dessus des murs et poteaux sous-jacents</h258>
+    <h259>Autre diamètre d'armature pour le lit supérieur :</h259>
+    <h260>L'espacement entre les barres sur la largeur est affiché pour le diamètre principal de l'armature. L'autre diamètre d'armature du lit supérieur n'est pas pris en compte</h260>
+    <h261>Retrait par rapport au début de la zone, mm :</h261>
+    <h262>Réinitialiser à des valeurs égales</h262>
+    <srd>Enregistrement des données des poutres sélectionnées</srd>
+    <hook>Crochet :</hook>
+    <jt1>Les attentes du ferraillage longitudinal ne sont pas créées. Les barres sont coupées à l'extrémité de la poutre selon la valeur d'enrobage aux extrémités des armatures indiquée</jt1>
+    <jt2>Des attentes droites des barres du ferraillage longitudinal sont créées. La longueur d'ancrage est définie à partir du bord de la poutre. Les attentes ne sont créées qu'en présence d'un mur ou d'un poteau à l'extrémité de la poutre ; sinon, elles ne sont pas créées et les barres longitudinales sont coupées à l'extrémité de la poutre en tenant compte de l'enrobage indiqué</jt2>
+    <msg1>Sélectionnez des poutres</msg1>
+    <m1>Saisissez une valeur de</m1>
+    <m2>à</m2>
+    <m4>Barres à haute adhérence</m4>
+    <m5>Barres lisses</m5>
+    <!-- todo remove after 1.18.16.0 -->
+    <m13>Enrobage des armatures</m13>
+    <m20>La liste contient des poutres dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</m20>
+    <m23>Réglages de ferraillage copiés</m23>
+    <m24>Vous n'avez pas indiqué pour quels groupes créer le ferraillage !</m24>
+    <m25>Aucun groupe n'est sélectionné pour la création du ferraillage !</m25>
+    <m27>Attention ! Aucune forme d'armature chargée n'a été trouvée dans le projet actuel ! Dans ce cas, les formes d'armature créées par le plugin ne pourront pas être ouvertes dans l'éditeur de familles ! Il est recommandé de charger les formes d'armature dans le projet avant d'utiliser le plugin !\nEffectuer le ferraillage malgré l'absence de formes d'armature ?</m27>
+    <rn>Armature porteuse ⌀</rn>
+    <!-- todo remove after 1.18.16.0 -->
+    <full>Disponible dans la version complète du plugin !</full>
+    <!-- todo remove after 1.18.16.0 -->
+    <full2>Une seule forme est disponible dans la version limitée</full2>
+    <!-- todo remove after 1.18.16.0 -->
+    <noInFamily>Le fonctionnement du plugin dans les familles n'est pas disponible !</noInFamily>
+    <p1>Analyse de la poutre :</p1>
+    <p2>Recherche des éléments associés :</p2>
+    <pt1>Té</pt1>
+    <pt2>Double té</pt2>
+    <pt3>Rectangle</pt3>
+    <pt4>Carré</pt4>
+    <pt5>Non défini</pt5>
+    <pt6>Trapèze</pt6>
+    <pt7>Forme en L</pt7>
+    <rr1>Supprimer le ferraillage du même type que celui créé</rr1>
+    <rr2>Supprimer tout le ferraillage créé précédemment</rr2>
+    <rr3>Ne pas supprimer</rr3>
+    <e1>Erreurs d'analyse des poutres</e1>
+    <e2>Impossible d'initialiser la poutre</e2>
+    <e3>Impossible d'obtenir les solides</e3>
+    <e4>Impossible d'obtenir le solide principal ou combiné</e4>
+    <e6>Impossible de déterminer le profil transversal</e6>
+    <p1>Analyse de la poutre :</p1>
+    <p2>Recherche des éléments associés :</p2>
+    <p8>Suppression du ferraillage créé précédemment</p8>
+    <p9>Calcul et modélisation du ferraillage longitudinal</p9>
+    <p10>Calcul et modélisation du ferraillage transversal</p10>
+    <p11>Calcul et modélisation du ferraillage des intersections</p11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t7>Le groupe contient des poutres dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t7>
+    <!-- todo remove after 1.18.16.0 -->
+    <t8>Ajouter un nouveau groupe vide</t8>
+    <!-- todo remove after 1.18.16.0 -->
+    <t9>Supprimer le groupe vide</t9>
+    <t10>Cocher tous les groupes</t10>
+    <t11>Décocher tous les groupes</t11>
+    <!-- todo remove after 1.18.16.0 -->
+    <t12>Les réglages de ferraillage de la poutre ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t12>
+    <!-- todo remove after 1.18.16.0 -->
+    <t13>Modifier les réglages de ferraillage de la poutre sélectionnée</t13>
+    <!-- todo remove after 1.18.16.0 -->
+    <t14>Remplacer les réglages de ferraillage du poteau par ceux du groupe</t14>
+    <t15>Afficher dans le modèle la poutre précédente de la liste</t15>
+    <t16>Afficher dans le modèle la poutre sélectionnée dans la liste</t16>
+    <t17>Afficher dans le modèle la poutre suivante de la liste</t17>
+    <t23>Afficher dans le modèle l'intersection précédente de la liste</t23>
+    <t24>Afficher dans le modèle l'intersection sélectionnée dans la liste</t24>
+    <t25>Afficher dans le modèle l'intersection suivante de la liste</t25>
+    <!-- todo remove after 1.18.16.0 -->
+    <t40>Copier les réglages de ferraillage du groupe courant dans tous les groupes cochés</t40>
+    <!-- todo remove after 1.18.16.0 -->
+    <t41>Enregistrer les réglages de ferraillage du groupe actuel dans un fichier xml</t41>
+    <!-- todo remove after 1.18.16.0 -->
+    <t42>Charger les réglages de ferraillage depuis un fichier xml et les appliquer au groupe actuel</t42>
+    <!-- todo remove after 1.18.16.0 -->
+    <t53>Réinitialisation de toutes les valeurs des réglages de ferraillage par défaut actuels aux valeurs standard prévues dans le plugin</t53>
+    <!-- todo remove after 1.18.16.0 -->
+    <t63>Vous pouvez indiquer les formes d'armature préférées pour les différents types de barres d'armature créées par le plugin.</t63>
+    <!-- todo remove after 1.18.16.0 -->
+    <t64>La définition de formes préférées ne garantit pas que l'armature sera créée avec la forme d'armature indiquée.</t64>
+    <!-- todo remove after 1.18.16.0 -->
+    <t65>Lors de la création des barres d'armature, le plugin tentera d'utiliser la forme indiquée. Si la création d'une barre avec la forme indiquée est impossible, Revit recherchera automatiquement une forme adaptée ou créera une nouvelle forme.</t65>
+    <!-- todo remove after 1.18.16.0 -->
+    <t66>Enregistrer les réglages de ferraillage actuels comme réglages de ferraillage par défaut</t66>
+    <t67>Regrouper les poutres et les intersections selon les réglages de regroupement actuels</t67>
+    <re1>Une erreur s'est produite lors de la création du ferraillage longitudinal de la poutre id={0}</re1>
+    <re2>Une erreur s'est produite lors du calcul des points de positionnement du ferraillage transversal de la poutre id={0}</re2>
+    <re3>Une erreur s'est produite lors de la création du détail de ferraillage transversal de type "{0}" dans la poutre id={1}</re3>
+    <re4>Impossible de créer une barre d'armature droite avec la forme d'armature préférée "{0}". Erreur : {1}\nTentative de création de la barre avec sélection ou création automatique de la forme d'armature</re4>
+    <re5>Impossible de créer une barre d'armature de forme "{0}" avec la forme d'armature préférée "{1}". Erreur : {2}\nTentative de création de la barre avec sélection ou création automatique de la forme d'armature</re5>
+    <!-- todo remove after 1.18.16.0 -->
+    <re6>Impossible de définir les valeurs des paramètres</re6>
+    <re9>Erreur lors de la création des détails de l'assemblage d'angle dans les poutres {0} :</re9>
+    <re10>Erreur lors de la création des détails de l'assemblage en T dans les poutres {0} :</re10>
+    <re11>Erreur lors de la création des détails de l'assemblage en croix dans les poutres {0} :</re11>
+    <re22>Impossible d'afficher l'intersection dans la vue actuelle ! Passez à un plan d'étage</re22>
+  </mprBeamsReinforcement>
+</ModPlus>

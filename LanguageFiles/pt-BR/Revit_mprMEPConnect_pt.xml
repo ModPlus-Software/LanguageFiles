@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprMEPConnect
+    LocalName="Conexões MEP"
+    Description="Conjunto de ferramentas para automatizar conexões de sistemas prediais"
+    LocalName1="Conectar difusores"
+    Description1="Conexão em lote de difusores aos dutos"
+    LocalName2="Unir conectores"
+    Description2="União de dois conectores (ou curvas MEP) com rotação e movimentação do primeiro selecionado"
+    LocalName3="Unir retilíneos"
+    Description3="União em lote de tubos, dutos, fios, bandejas de cabos ou conduítes retilíneos situados na mesma reta"
+    LocalName4="Desconectar conectores"
+    Description4="Desfazer a conexão entre o conector conectado mais próximo do elemento MEP selecionado e o elemento adjacente"
+    LocalName5="Desconectar do sistema"
+    Description5="Desconexão do ramal conectado de elementos MEP do sistema">
+    <msg1>Selecione os dutos e os difusores a serem conectados a eles</msg1>
+    <msg2>Nenhum duto selecionado!</msg2>
+    <msg3>Nenhum difusor selecionado! Somente são permitidos difusores que tenham um conector desconectado orientado ao longo do eixo Z</msg3>
+    <msg4>Selecione o elemento a ser conectado</msg4>
+    <msg5>Selecione o elemento ao qual conectar</msg5>
+    <msg6>Selecione tubos, dutos, fios, bandejas de cabos ou conduítes retos</msg6>
+    <msg7>Executar a conexão?</msg7>
+    <msg8>Selecione o elemento a ser desconectado</msg8>
+    <msg9>Selecione o elemento do sistema para desconectar. Se o elemento tiver vários sistemas, clique mais perto do conector do sistema desejado</msg9>
+    <msg10>Sistema não encontrado</msg10>
+    <msg11>Após a desconexão do sistema "{0}", o sistema "{1}" foi atribuído automaticamente aos elementos</msg11>
+    <msg12>O sistema "{0}" foi desconectado dos elementos com sucesso</msg12>
+    <msg13>Não foi possível desconectar o sistema "{0}" dos elementos</msg13>
+    <t1>Tipo de ramal a ser criado:</t1>
+    <t2>Criar uma conexão flexível entre o difusor e o ramal</t2>
+    <t3>Tipo de duto flexível:</t3>
+    <t4>Comprimento do duto flexível, mm:</t4>
+    <t5>Conexão de difusores</t5>
+    <dt1>Difusor oval</dt1>
+    <dt2>Difusor redondo</dt2>
+    <dt3>Difusor retangular</dt3>
+    <err1>O deslocamento vertical entre o difusor e o duto não é suficiente para criar a conexão</err1>
+    <err2>A distância entre o difusor e o duto é menor que o comprimento indicado da conexão flexível</err2>
+    <err3>Não foi possível conectar o difusor</err3>
+    <err4>Não foi possível criar o cotovelo</err4>
+    <err5>Verifique as preferências de roteamento dos tipos de duto indicados</err5>
+    <err6>Não foi possível criar o tê</err6>
+    <err7>Não foi possível criar a transição</err7>
+    <err8>Não foi possível criar a derivação</err8>
+    <err9>O elemento selecionado não tem conectores livres</err9>
+    <err10>Os elementos selecionados têm conectores de formatos diferentes</err10>
+    <err11>Os elementos selecionados têm conectores de tamanhos diferentes</err11>
+    <err12>Os elementos selecionados têm conectores de tipos de sistema diferentes</err12>
+    <err13>O elemento selecionado não tem conectores conectados</err13>
+  </mprMEPConnect>
+</ModPlus>

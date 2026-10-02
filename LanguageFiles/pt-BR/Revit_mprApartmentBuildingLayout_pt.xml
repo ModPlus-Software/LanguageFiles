@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprApartmentBuildingLayout
+    LocalName="Layout de apartamentos"
+    Description="Execução completa do layout de apartamentos"
+    LocalName1="Cálculo automático"
+    Description1="Recálculo automático das áreas do apartamento ao alterar as dimensões dos ambientes">
+    <tab1>Parâmetros</tab1>
+    <tab2>Fontes</tab2>
+    <tab3>Verificação inicial</tab3>
+    <tab4>Agrupamento de apartamentos</tab4>
+    <tab5>Cálculo de apartamentos</tab5>
+    <tab6>Numeração</tab6>
+    <tab7>Tabelas</tab7>
+    <!-- todo remove after 2.11.15.0 -->
+    <tab8>Vistas de apartamentos</tab8>
+    <tab9>Editor de apartamentos</tab9>
+    <tab10>Bloqueados</tab10>
+    <tab11>Classificação</tab11>
+    <rt1>Não definido</rt1>
+    <rt2>Residencial</rt2>
+    <rt3>Não residencial</rt3>
+    <rt4>Não aquecido</rt4>
+    <rtm1>residencial,habitável</rtm1>
+    <rtm2>não residencial,não habitável</rtm2>
+    <rtm3>não aquecido,não aquecida,sacada,varanda,loggia,terraço</rtm3>
+    <sa1>Área arredondada</sa1>
+    <sa2>Área arredondada com coeficiente</sa2>
+    <fc1>SP 12.13130</fc1>
+    <fc2>Euroclasse</fc2>
+    <apartment>Apartamento</apartment>
+    <view>na vista atual</view>
+    <model>em todo o projeto</model>
+    <flatArea>Área do apartamento</flatArea>
+    <totalArea>Área total</totalArea>
+    <livingArea>Área habitável</livingArea>
+    <flatAreaS>S ap.</flatAreaS>
+    <totalAreaS>S tot.</totalAreaS>
+    <totalAreaWithoutFactorS>S total sem coef.</totalAreaWithoutFactorS>
+    <livingAreaS>S hab.</livingAreaS>
+    <number>Número</number>
+    <p1>AM_Uso funcional</p1>
+    <pd1>Inserido manualmente! Participa de todos os algoritmos principais do layout de apartamentos</pd1>
+    <p2>AM_Nº do ambiente</p2>
+    <pd2>Substitui o parâmetro de sistema "Número"</pd2>
+    <p3>AP_ID do apartamento</p3>
+    <pd3>Índice único do apartamento</pd3>
+    <p4>AP_Tipo do apartamento</p4>
+    <pd4>Por exemplo: 1K, 2C, 3K</pd4>
+    <p5>AP_Tipo do ambiente</p5>
+    <pd5>Tipo do ambiente. Atribuído pela matriz de ambientes</pd5>
+    <p6>AP_Número de quartos</p6>
+    <pd6>Número de quartos no apartamento</pd6>
+    <p7>AP_Área arredondada</p7>
+    <pd7>Área do ambiente do apartamento, arredondada até a casa decimal definida</pd7>
+    <p8>AP_Área com coeficiente</p8>
+    <pd8>Área do ambiente do apartamento, arredondada até a casa decimal definida. Com coeficiente de redução</pd8>
+    <p9>AP_Coeficiente de área</p9>
+    <pd9>Coeficiente de redução para sacada, loggia, terraço</pd9>
+    <p10>AP_Espessura do acabamento bruto</p10>
+    <pd10>Espessura do acabamento bruto usada no cálculo das áreas, em mm</pd10>
+    <p11>AP_Índice do ambiente</p11>
+    <pd11>Número sequencial dos ambientes de mesmo nome no apartamento</pd11>
+    <p12>AP_Área habitável</p12>
+    <pd12>Soma das áreas dos ambientes habitáveis do apartamento</pd12>
+    <p13>AP_Área do apartamento</p13>
+    <pd13>Soma das áreas dos ambientes do apartamento sem considerar os ambientes não aquecidos (Total)</pd13>
+    <p14>AP_Área total</p14>
+    <pd14>Soma de todas as áreas dos ambientes do apartamento. Considerando os não aquecidos com coeficiente de redução (Reduzida)</pd14>
+    <p14-1>AP_Área total sem coef.</p14-1>
+    <pd14-1>Soma de todas as áreas dos ambientes do apartamento sem considerar o coeficiente de redução</pd14-1>
+    <p15>AP_Área de ambientes não aquecidos</p15>
+    <pd15>Soma das áreas dos ambientes não aquecidos do apartamento. Sem coeficientes de redução</pd15>
+    <p16>AP_Área de ambientes não aquec. com coef.</p16>
+    <pd16>Soma das áreas dos ambientes não aquecidos do apartamento. Com coeficiente de redução</pd16>
+    <p17>AP_Marcador do apartamento</p17>
+    <pd17>Parâmetro auxiliar que permite contar a quantidade de apartamentos nas tabelas</pd17>
+    <p18>AP_Nº do apartamento</p18>
+    <pd18>Preenchido no final do projeto</pd18>
+    <p19>AP_Número de níveis</p19>
+    <pd19>Número de níveis de um apartamento de vários níveis</pd19>
+    <p20>AM_Mezanino</p20>
+    <pd20>Parâmetro adicional que permite designar o ambiente como mezanino</pd20>
+    <pt1>Texto</pt1>
+    <pt2>Área</pt2>
+    <pt3>Moeda</pt3>
+    <pt4>Inteiro</pt4>
+    <pt5>Sim/Não</pt5>
+    <pt6>Número</pt6>
+    <h1>ID do apartamento</h1>
+    <h2>Parâmetros compartilhados</h2>
+    <h3>Esquemas de cores</h3>
+    <h4>UF</h4>
+    <h5>Nome do ambiente</h5>
+    <h6>Espessura do acab. bruto</h6>
+    <h7>Tipo do ambiente</h7>
+    <h8>Coef. de área</h8>
+    <h9>Identificador de apartamentos:</h9>
+    <h10>Arredondamento de áreas:</h10>
+    <h11>Gerais</h11>
+    <h12>Áreas dos apartamentos</h12>
+    <h13>Indique qual área do ambiente – arredondada ou arredondada com coeficiente – usar no cálculo das áreas totais do apartamento</h13>
+    <h14>Matriz de ambientes</h14>
+    <h15>Tipos de apartamentos</h15>
+    <h16>Criar parâmetros ausentes</h16>
+    <h17>Identificadores permitidos:</h17>
+    <h18>Exclusão de famílias não posicionadas</h18>
+    <h19>Arquivos do Excel|*.xlsx</h19>
+    <h20>Prioridade de numeração</h20>
+    <h21>Agrupamento de apartamentos</h21>
+    <h22>Preenchimento de dados pela matriz de ambientes</h22>
+    <h23>Cálculo de áreas</h23>
+    <h24>Uso funcional</h24>
+    <h25>Tipo de apartamento</h25>
+    <h26>Número de quartos</h26>
+    <h27>Nº de quart. hab.</h27>
+    <h28>Área mínima</h28>
+    <h30>Área máxima</h30>
+    <h32>Contém ambientes</h32>
+    <h33>Contém amb.</h33>
+    <h34>Não contém ambientes</h34>
+    <h35>Não contém amb.</h35>
+    <h36>Criação de parâmetros</h36>
+    <h37>Importar do Excel</h37>
+    <h38>Indique a linha inicial a partir da qual a leitura dos dados deve começar, bem como os números das colunas que contêm os valores das propriedades indicadas</h38>
+    <h39>Linha inicial:</h39>
+    <h40>Agrupar</h40>
+    <h41>Coluna "Nome do ambiente":</h41>
+    <h42>Coluna "Espessura do acabamento bruto":</h42>
+    <h43>Coluna "Tipo do ambiente":</h43>
+    <h44>Coluna "Coeficiente de área":</h44>
+    <h45>Coluna "Prioridade de numeração":</h45>
+    <h46>Coluna "Tipo de apartamento":</h46>
+    <h47>Coluna "Número de quartos":</h47>
+    <h48>Coluna "Área mínima":</h48>
+    <h49>Coluna "Área máxima":</h49>
+    <h50>Coluna "Contém ambientes":</h50>
+    <h51>Coluna "Não contém ambientes":</h51>
+    <h52>Número do ambiente</h52>
+    <h53>Problemas</h53>
+    <h54>Não foram encontrados ambientes não posicionados no projeto</h54>
+    <h55>Ambientes inválidos</h55>
+    <h56>Parâmetro</h56>
+    <h57>Usar</h57>
+    <h58>Agrupar apartamentos</h58>
+    <h59>Apartamentos agrupados:</h59>
+    <h60>Nível</h60>
+    <h61>Qtd. de amb. no apartamento</h61>
+    <h62>Nenhum apartamento foi agrupado! Verifique se os ambientes têm os parâmetros "Uso funcional" e "Nome" preenchidos corretamente, de acordo com a matriz de ambientes</h62>
+    <h63>Ambientes incorretos:</h63>
+    <h64>Ao agrupar os apartamentos, não foram encontrados ambientes incorretos</h64>
+    <h65>Apartamentos calculados:</h65>
+    <h66>Não foram encontrados apartamentos para cálculo! Preencha os parâmetros de ambiente "Uso funcional" e "Nome" de acordo com a matriz de ambientes e, em seguida, faça o agrupamento de apartamentos</h66>
+    <h67>Ambientes não posicionados</h67>
+    <h68>Excluir selecionados</h68>
+    <h69>Excluir todos</h69>
+    <h70>Para selecionar vários itens da lista, use a tecla Shift e/ou a tecla Ctrl</h70>
+    <h71>Calcular</h71>
+    <h72>ou</h72>
+    <h73>Agrupar pelos ambientes selecionados</h73>
+    <h74>Calcular pelos ambientes selecionados</h74>
+    <h75>Recolher o conteúdo da janela</h75>
+    <h76>Expandir o conteúdo da janela</h76>
+    <h77>Ativar a opção "Sobre as janelas"</h77>
+    <h78>Desativar a opção "Sobre as janelas"</h78>
+    <h79>Selecionar tudo</h79>
+    <h80>Restaurar a ocultação das instruções</h80>
+    <h81>Serviço de recálculo automático das áreas do apartamento ao alterar as dimensões dos ambientes e serviço de recálculo completo (parametrização pela matriz, recálculo de áreas e determinação do tipo de apartamento) ao excluir ambientes. Os serviços processam apenas ambientes com o parâmetro "ID do apartamento" preenchido</h81>
+    <h81-1>No funcionamento do serviço, são consideradas as configurações definidas na seção "Áreas dos apartamentos"</h81-1>
+    <h82>Pesquisa por nome do ambiente</h82>
+    <h83>Todos os ambientes do projeto são válidos</h83>
+    <h84>Todos os ambientes da vista atual são válidos</h84>
+    <h85>Salvar como padrão</h85>
+    <h86>Salva o vínculo atual de parâmetros como valores padrão. Ao executar o plugin em um novo documento em que o vínculo de parâmetros não esteja configurado, serão usados os valores padrão salvos (se os parâmetros existirem no documento)</h86>
+    <h87>Executar numeração</h87>
+    <h88>Numeração de apartamentos</h88>
+    <h89>Apartamentos numerados:</h89>
+    <h90>Não foram encontrados apartamentos para numeração</h90>
+    <h91>Agrupamento</h91>
+    <h92>Configurações de numeração</h92>
+    <h93>Numeração contínua</h93>
+    <h94>Direção da numeração:</h94>
+    <h95>sentido horário</h95>
+    <h96>sentido anti-horário</h96>
+    <h97>Início da numeração:</h97>
+    <h98>canto superior esquerdo</h98>
+    <h99>canto superior direito</h99>
+    <h100>canto inferior esquerdo</h100>
+    <h101>canto inferior direito</h101>
+    <h102>indicar</h102>
+    <h103>Número inicial:</h103>
+    <h104>Agrupamento por blocos</h104>
+    <h105>Agrupamento por seções</h105>
+    <h106>Classificação:</h106>
+    <h107>crescente</h107>
+    <h108>decrescente</h108>
+    <h109>Não foi possível encontrar a porta de entrada!</h109>
+    <h110>Bloco</h110>
+    <h111>Seção</h111>
+    <h112>Bloco no número</h112>
+    <h113>Seção no número</h113>
+    <h114>Não selecionado</h114>
+    <!-- todo remove after 2.11.15.0 -->
+    <h115>Não foram encontrados apartamentos na vista atual</h115>
+    <h116>Valor do parâmetro no número</h116>
+    <!-- todo remove after 2.11.15.0 start -->
+    <h117>Opção de duplicação da vista:</h117>
+    <h118>Duplicar</h118>
+    <h119>Duplicar com detalhamento</h119>
+    <h120>Aplicar modelo de vista:</h120>
+    <h121>Deslocamento do contorno de recorte:</h121>
+    <h122>Aplicar escala da vista:</h122>
+    <h123>Tentar usar o tipo de apartamento como nome da vista</h123>
+    <h124>Criar vistas de apartamentos</h124>
+    <!-- todo remove after 2.11.15.0 end -->
+    <h125>O período de avaliação do plugin terminou! Adquira uma licença do plugin ou uma assinatura do Revit para continuar usando o plugin "Layout de apartamentos"</h125>
+    <h126>Período de avaliação. Dias restantes</h126>
+    <h127>Qtd. de amb. (habit.)</h127>
+    <h128>Área mín.</h128>
+    <h129>Área máx.</h129>
+    <h130>Ao determinar os tipos de apartamentos pela tabela, usar:</h130>
+    <h131>Área do apartamento</h131>
+    <h132>Área habitável do apartamento</h132>
+    <h133>Área total do apartamento</h133>
+    <!--todo remove after 3.8.8.0-->
+    <h134>O serviço de recálculo automático de áreas não está carregado! Ative o plugin novamente usando o Configurador ModPlus</h134>
+    <h134-1>O serviço de recálculo automático de áreas não está carregado! Ative o plugin novamente usando o módulo de atualizações automáticas do ModPlus (menu "Plugins")</h134-1>
+    <h135>Adicionar a partir dos ambientes</h135>
+    <h136>Matriz de ambientes atual:</h136>
+    <h137>Tabela atual de tipos de apartamentos:</h137>
+    <h138>Exportar as fontes atuais para o Excel</h138>
+    <h139>Exportar todas as fontes para o Excel</h139>
+    <h140>Todas as fontes</h140>
+    <h141>Unificação de apartamentos</h141>
+    <h142>Separador</h142>
+    <h143>*DIFERENTES*</h143>
+    <h144>Abrir a lista de parâmetros no Bloco de Notas</h144>
+    <h145>Gravar os valores alterados</h145>
+    <h146>Apartamentos</h146>
+    <h147>Dados dos apartamentos marcados</h147>
+    <h148>Quantidade de apartamentos marcados:</h148>
+    <h149>Alteração de dados dos apartamentos</h149>
+    <h150>Unificar em apartamentos de vários níveis</h150>
+    <!-- todo remove after 2.11.15.0 -->
+    <h151>Unificação em apartamentos de vários níveis</h151>
+    <h152>Ordem de indexação dos ambientes de mesmo nome no apartamento (parâmetro "Índice do ambiente"):</h152>
+    <h153>Por área crescente</h153>
+    <h154>Por área decrescente</h154>
+    <h155>Preencher o parâmetro "Marcador do apartamento" no ambiente</h155>
+    <h156>com a maior área</h156>
+    <h157>com a maior área do tipo</h157>
+    <h158>O parâmetro "Marcador do apartamento" será preenchido no ambiente com a maior área do tipo indicado. Se o apartamento não tiver ambientes do tipo indicado, o parâmetro "Marcador do apartamento" será preenchido no ambiente com a maior área</h158>
+    <h159>Opção de limpeza prévia dos parâmetros dos ambientes processados antes do agrupamento de apartamentos:</h159>
+    <h160>Limpar todos</h160>
+    <h161>Limpar apenas com identificador de apartamento</h161>
+    <h162>Não limpar (não recomendado)</h162>
+    <h163>Usar o parâmetro de sistema "Número" em vez do parâmetro "AM_Nº do ambiente"</h163>
+    <h164>Bloqueio de apartamentos</h164>
+    <h165>Agrupar apartamentos bloqueados</h165>
+    <h166>Não foram encontrados apartamentos bloqueados!</h166>
+    <h167>Desbloqueio de apartamentos</h167>
+    <h168>Numeração por curva</h168>
+    <h169>Selecione uma curva para a numeração dos apartamentos</h169>
+    <h170>Parâmetro "Bloco":</h170>
+    <h171>Parâmetro "Seção":</h171>
+    <h172>Bloquear os apartamentos selecionados</h172>
+    <h173>Parâmetro de destino</h173>
+    <!-- todo remove after 2.8.6.0 -->
+    <h174>Adicionar os ambientes selecionados ao apartamento selecionado</h174>
+    <h175>Pavimentos tipo</h175>
+    <h176>Tabela atual de pavimentos tipo:</h176>
+    <h177>Coluna "Pavimento"</h177>
+    <h178>Coluna "Pavimento tipo"</h178>
+    <h179>Pavimento</h179>
+    <h180>Pavimento tipo</h180>
+    <h181>Considerar pavimentos tipo</h181>
+    <h182>Considerar pavimentos tipo ao agrupar e calcular apartamentos</h182>
+    <h183>Cópia de parâmetros de apartamentos tipo</h183>
+    <h184>Ambiente redundante</h184>
+    <h185>Não delimitado</h185>
+    <h186>Definir o nome da tabela atual pelo nome da planilha do arquivo Excel importado</h186>
+    <h187>Você pode indicar vários valores de identificador de apartamentos, separando-os com ponto e vírgula sem espaços</h187>
+    <h188>Reiniciar a numeração em cada nível (numeração não contínua)</h188>
+    <h189>Ao calcular a área com coeficiente, usar:</h189>
+    <h190>Área arredondada</h190>
+    <h191>Área original</h191>
+    <h192>Remoção de ambiente do apartamento</h192>
+    <h193>Calcular os apartamentos selecionados</h193>
+    <h194>Excluir os apartamentos selecionados</h194>
+    <h195>Área total do apartamento sem coeficiente</h195>
+    <h196>Parâmetros obrigatórios</h196>
+    <h197>Parâmetros adicionais</h197>
+    <h198>M</h198>
+    <h199>Mezanino</h199>
+    <h200>Marcar os ambientes selecionados como "Mezanino"</h200>
+    <h201>Desmarcar "Mezanino" nos ambientes selecionados</h201>
+    <h202>Condições</h202>
+    <h203>Configuração atual</h203>
+    <h204>Indique o novo nome da tabela</h204>
+    <h205>Há erros ocorridos durante a classificação</h205>
+    <h206>Editar colunas</h206>
+    <h208>Processar apartamentos bloqueados</h208>
+    <h209>Processar qualquer uso funcional</h209>
+    <h210>Classificar</h210>
+    <h211>Classificar pelos ambientes selecionados</h211>
+    <h212>Apartamentos classificados:</h212>
+    <h213>Abrir log</h213>
+    <h214>Não foram encontrados apartamentos para classificação!</h214>
+    <h215>Indique o parâmetro!</h215>
+    <h216>Valor do parâmetro</h216>
+    <h217>Verificação de que o parâmetro de todos os ambientes do apartamento tem o valor indicado</h217>
+    <h218>Verificação de que o apartamento não contém os ambientes indicados</h218>
+    <h219>Verificação de que o apartamento contém os ambientes indicados</h219>
+    <h220>Verificação da quantidade de quartos no apartamento</h220>
+    <h221>Verificação de que o apartamento tem área não inferior à indicada. A área é obtida do parâmetro do primeiro ambiente encontrado do apartamento</h221>
+    <h222>Verificação de que o apartamento tem área não superior à indicada. A área é obtida do parâmetro do primeiro ambiente encontrado do apartamento</h222>
+    <h223>Selecionar apartamento</h223>
+    <h224>Comando integrado "Selecionar apartamento"</h224>
+    <h225>Permite selecionar todos os ambientes do apartamento ao qual pertence o ambiente selecionado</h225>
+    <h226>Calcular as áreas dos apartamentos bloqueados</h226>
+    <h227>Considerando o filtro:</h227>
+    <h228>Área original</h228>
+    <h229>Calcular apartamentos</h229>
+    <h230>Calcular área</h230>
+    <h231>Excluir ambientes com uso funcional correspondente ao identificador de apartamentos atual</h231>
+    <h232>Preencher uso funcional</h232>
+    <h233>Preencher o parâmetro "Uso funcional" dos ambientes cujos nomes existem na matriz de ambientes atual</h233>
+    <h234>Executar a tipificação de apartamentos</h234>
+    <h235>Formato do número do ambiente</h235>
+    <h236>Do parâmetro</h236>
+    <h237>Numeração de ambientes</h237>
+    <h238>Reiniciar a numeração em cada nível nos apartamentos de vários níveis</h238>
+    <h239>Parâmetros por níveis dos apartamentos</h239>
+    <h240>Arredondamento de áreas com coeficiente:</h240>
+    <msg1>Parâmetro "{0}" não encontrado</msg1>
+    <msg2>Parâmetro "{0}" não preenchido</msg2>
+    <msg3>O parâmetro "{0}" tem um valor inválido</msg3>
+    <msg4>Os parâmetros indicados na lista não existem nos ambientes do projeto atual:</msg4>
+    <msg5>Nome do ambiente não preenchido</msg5>
+    <msg6>Nome do ambiente não encontrado na matriz</msg6>
+    <!--todo remove after 4.1.11.0-->
+    <msg7>Nos resultados da verificação inicial há ambientes com parâmetros não preenchidos ou incorretos. Tem certeza de que deseja executar o agrupamento de apartamentos?</msg7>
+    <msg8>Há uma porta que leva a um espaço sem ambiente</msg8>
+    <msg9>O ambiente está delimitado por elementos que não têm portas</msg9>
+    <msg10>A matriz de ambientes está vazia! Nada para exportar</msg10>
+    <msg11>A lista de tipos de apartamentos está vazia! Nada para exportar</msg11>
+    <msg12>Não há dados para importar!</msg12>
+    <msg13>A quantidade de linhas preenchidas é menor que o número da primeira linha indicado!</msg13>
+    <msg14>Excluir os valores atuais da matriz? Sim – excluir, Não – complementar</msg14>
+    <msg15>Excluir os valores atuais da lista de tipos de ambientes? Sim – excluir, Não – complementar</msg15>
+    <msg16>Não foi possível construir o sólido auxiliar nem obter o contorno auxiliar</msg16>
+    <msg17>Não foi possível obter os limites do ambiente. Verifique se o contorno do ambiente tem pequenas imperfeições. Essas imperfeições geralmente surgem da construção imprecisa dos elementos delimitadores</msg17>
+    <msg18>O ambiente tem uma delimitação incorreta ou não tem delimitação</msg18>
+    <msg19>Não foi encontrado registro na matriz para o ambiente "{0}"</msg19>
+    <msg20>O registro na matriz para o ambiente "{0}" não é válido</msg20>
+    <msg21>Não foi possível obter o uso funcional</msg21>
+    <msg22>Não é permitido executar o plugin em um documento de família!</msg22>
+    <msg23>Esta instrução não será exibida em nenhuma das próximas execuções do plugin. Tem certeza de que deseja fechá-la?</msg23>
+    <msg24>Ocorreu um erro ao criar a vista</msg24>
+    <!-- todo remove after 2.11.15.0 start -->
+    <msg25>Não foi possível criar um contorno pelos elementos delimitadores considerando cada elemento</msg25>
+    <msg26>Foi usada a opção de criação do contorno pela maior espessura dos elementos delimitadores</msg26>
+    <msg27>Não foi possível criar um contorno pelos elementos delimitadores considerando a maior espessura dos elementos delimitadores</msg27>
+    <msg28>Foi usada a opção de criação do contorno do apartamento pelos contornos dos ambientes</msg28>
+    <msg29>Não foi possível obter o contorno do apartamento. Erro:</msg29>
+    <msg30>A vista do apartamento não foi criada</msg30>
+    <!-- todo remove after 2.11.15.0 end -->
+    <msg31>O comprimento do nome não pode exceder 28 caracteres</msg31>
+    <msg32>Os seguintes caracteres \ / * ? : [ ] não são permitidos no nome</msg32>
+    <msg33>A matriz de ambientes atual será excluída permanentemente! Tem certeza de que deseja continuar?</msg33>
+    <msg34>A tabela atual de tipos de apartamentos será excluída permanentemente! Tem certeza de que deseja continuar?</msg34>
+    <msg35>Dados atualizados</msg35>
+    <!-- todo remove after 2.8.6.0 -->
+    <msg36>Para os seguintes apartamentos (id) entre os marcados, não foram encontradas opções de conexão (apartamentos localizados em níveis vizinhos e com interseção vertical)</msg36>
+    <msg37>Os apartamentos ({0}) foram unificados em um apartamento de vários níveis com id: {1}</msg37>
+    <msg38>Ocorreu um erro ao unificar os apartamentos</msg38>
+    <msg39>Um ou mais ambientes do apartamento não têm o parâmetro "Tipo do ambiente" preenchido</msg39>
+    <msg40>Não foi possível definir o valor no parâmetro "{0}" do ambiente {1} – o parâmetro tem a propriedade "Somente leitura". Talvez o ambiente esteja em um workset que não está disponível para você editar</msg40>
+    <msg41>O parâmetro "{0}" não foi encontrado no ambiente {1}. Se estiver executando a numeração, verifique se selecionou o parâmetro correto na propriedade "Parâmetro de destino"</msg41>
+    <msg42>A tabela atual de pavimentos tipo será excluída permanentemente! Tem certeza de que deseja continuar?</msg42>
+    <msg43>Excluir os valores atuais da lista de pavimentos tipo? Sim – excluir, Não – complementar</msg43>
+    <msg44>Pavimento não indicado</msg44>
+    <msg45>Pavimento tipo não indicado</msg45>
+    <msg46>Este pavimento já está indicado como pavimento tipo em outro registro</msg46>
+    <msg47>O pavimento indicado como tipo está indicado em outro registro como não tipo</msg47>
+    <msg48>Este pavimento já está indicado em outro registro</msg48>
+    <msg49>Não foi encontrado o ambiente correspondente (sem interseção vertical) no pavimento tipo "{0}"</msg49>
+    <msg50>Os seguintes ambientes e o apartamento selecionado estão localizados em níveis diferentes</msg50>
+    <msg51>Adicionar estes ambientes ao apartamento mesmo assim?</msg51>
+    <!--todo remove after 4.1.10.0-->
+    <msg52>Para os seguintes apartamentos (id) entre os marcados, não foram encontradas opções de conexão (apartamentos com o mesmo uso funcional, localizados em níveis vizinhos e com interseção vertical)</msg52>
+    <msg53>Entre os apartamentos selecionados há apartamentos com uso funcional que não corresponde ao identificador de apartamentos atual indicado nas configurações. Tem certeza de que deseja calcular esses apartamentos com as configurações atuais?</msg53>
+    <msg54>Apartamento ID={0} excluído: os parâmetros dos ambientes do apartamento foram limpos (parâmetros de texto) ou zerados (parâmetros numéricos)</msg54>
+    <msg55>Os apartamentos bloqueados foram adicionados à lista na guia "Bloqueados"</msg55>
+    <msg56>O parâmetro "AM_Mezanino" não foi encontrado. Crie os parâmetros adicionais ausentes na guia "Parâmetros" - "Parâmetros adicionais"</msg56>
+    <msg57>Todas as tabelas serão excluídas permanentemente!</msg57>
+    <msg58>Tem certeza?</msg58>
+    <msg59>Os ambientes do projeto atual não têm o parâmetro "{0}"</msg59>
+    <msg60>Ocorreu um erro ao processar a tabela</msg60>
+    <msg61>Nenhum ambiente adequado foi encontrado! Ajuste as condições de filtragem e tente novamente</msg61>
+    <msg62>O uso funcional foi preenchido para {0} ambientes</msg62>
+    <msg63>O ambiente tem o nome "{0}", que não existe na matriz de ambientes atual. O preenchimento do uso funcional foi ignorado</msg63>
+    <msg64>O parâmetro "Uso funcional" não foi criado ou não está vinculado. Vá para a guia "Parâmetros" e crie/vincule os parâmetros</msg64>
+    <msg65>Parâmetro "{0}" não encontrado</msg65>
+    <msg66>O parâmetro "{0}" tem um tipo de dados não suportado (são suportados parâmetros de texto e numéricos)</msg66>
+    <msg67>Não foi possível definir o valor no parâmetro "{0}". Talvez o parâmetro tenha a propriedade "Somente leitura" ou esteja em um workset indisponível</msg67>
+    <msg68>Os apartamentos indicados estão em níveis diferentes! Tem certeza de que deseja unificá-los em um único apartamento?</msg68>
+    <msg69>Para os seguintes apartamentos (id) entre os marcados, não foram encontradas opções de conexão (apartamentos com o mesmo uso funcional e com interseção vertical)</msg69>
+    <msg70>Os resultados da verificação inicial contêm ambientes incorretos (ambientes com parâmetros não preenchidos ou incorretos, ambientes não posicionados)! Tem certeza de que deseja continuar?</msg70>
+    <msg71>Os dados dos apartamentos no modelo foram alterados após a formação desta lista (em outra guia ou manualmente). A lista pode estar desatualizada — execute a operação novamente</msg71>
+    <tt1>Valor do parâmetro "Uso funcional" usado para selecionar os ambientes processados. Se o parâmetro tiver outro valor, o ambiente será ignorado por todos os algoritmos</tt1>
+    <tt2>Ocultar instrução</tt2>
+    <tt3>Para cada grupo da lista, selecione um ambiente no projeto pelo qual será determinado o apartamento inicial da numeração</tt3>
+    <tt4>Lista de valores permitidos do parâmetro "Uso funcional". Esta lista é usada para excluir da verificação inicial os ambientes cujo valor do parâmetro "Uso funcional" não corresponde ao identificador de apartamentos e não consta na matriz de ambientes</tt4>
+    <tt5>Para agrupar os apartamentos corretamente, é necessário selecionar todos os ambientes que devem fazer parte dos apartamentos</tt5>
+    <tt6>Para calcular os apartamentos, basta selecionar pelo menos um ambiente do apartamento. Os apartamentos serão agrupados pelo valor do parâmetro "ID do apartamento"</tt6>
+    <tt7>O valor do parâmetro "Bloco" será adicionado ao número do apartamento como prefixo, separado por hífen</tt7>
+    <tt8>O valor do parâmetro "Seção" será adicionado ao número do apartamento como prefixo, separado por hífen</tt8>
+    <tt9>O valor do parâmetro selecionado será adicionado ao número do apartamento como prefixo, separado por hífen, desde que o parâmetro tenha valor e o valor seja igual para todos os ambientes do apartamento</tt9>
+    <tt10>Adição de novos itens à tabela atual, obtidos dos ambientes do projeto atual. São adicionados apenas os itens com o valor "Nome do ambiente" preenchido</tt10>
+    <!-- todo remove after 2.8.6.0 -->
+    <tt11>Unificar os apartamentos selecionados na lista em um só</tt11>
+    <tt12>Valor usado como separador ao adicionar ao número o Bloco, a Seção e/ou o valor do parâmetro</tt12>
+    <tt13>Selecionar e mostrar os apartamentos marcados</tt13>
+    <tt14>O cálculo das áreas do apartamento não foi feito devido à existência de erros críticos</tt14>
+    <!-- todo remove after 2.11.15.0 -->
+    <tt15>Bloquear os apartamentos selecionados. Os ambientes dos apartamentos bloqueados não serão processados nos próximos agrupamentos de apartamentos</tt15>
+    <tt15_1>Bloquear os apartamentos selecionados. Os ambientes dos apartamentos bloqueados não serão processados nos próximos agrupamentos e cálculos de apartamentos</tt15_1>
+    <tt16>Desbloquear os apartamentos selecionados</tt16>
+    <tt17>Selecionar curva</tt17>
+    <tt18>Apartamento bloqueado</tt18>
+    <tt19>Adicionar pavimento do documento atual</tt19>
+    <tt20>Selecionar e mostrar todos os ambientes com problemas</tt20>
+    <tt21>Apartamento de vários níveis</tt21>
+    <tt22>Unificar os apartamentos selecionados na lista em um só. Somente apartamentos com o mesmo uso funcional podem ser unificados</tt22>
+    <tt23>Adicionar os ambientes selecionados ao apartamento selecionado. O apartamento e o ambiente devem ter o mesmo uso funcional</tt23>
+    <tt24>Por exemplo, a área original do ambiente é 3.48. Arredondamento de áreas 0.1. Coeficiente 0.5.</tt24>
+    <tt25>Ao selecionar a opção "Área arredondada", primeiro será calculada a área arredondada – 3.5, o resultado obtido será multiplicado pelo coeficiente – 3.5 * 0.5 = 1.75 e depois arredondado – 1.8.</tt25>
+    <tt26>Ao selecionar a opção "Área original", a área original será multiplicada pelo coeficiente – 3.48 * 0.5 = 1.74 e depois arredondada – 1.7.</tt26>
+    <tt27>Este apartamento está bloqueado: os ambientes do apartamento não serão processados no agrupamento de apartamentos</tt27>
+    <tt28>Limpar a lista</tt28>
+    <tt29>O ambiente será removido do apartamento. Todos os parâmetros do ambiente serão limpos (parâmetros de texto) ou zerados (parâmetros numéricos)</tt29>
+    <tt30>Executar o cálculo dos apartamentos selecionados com as configurações e fontes atuais. Os apartamentos calculados também serão exibidos na guia "Cálculo de apartamentos"</tt30>
+    <tt31>A quantidade de ambientes do apartamento foi alterada! É necessário recalcular o apartamento</tt31>
+    <tt32>Todos os parâmetros dos ambientes do apartamento serão limpos (parâmetros de texto) ou zerados (parâmetros numéricos)</tt32>
+    <tt33>Criar uma nova tabela de condições de classificação</tt33>
+    <tt34>Excluir todas as tabelas de condições de classificação</tt34>
+    <tt35>Para classificar os apartamentos, basta selecionar pelo menos um ambiente do apartamento. Os apartamentos serão agrupados pelo valor do parâmetro "ID do apartamento"</tt35>
+    <tt36>Adicionar nova linha</tt36>
+    <tt37>Excluir as linhas selecionadas</tt37>
+    <tt38>Valor incorreto. Verifique as condições indicadas entre parênteses</tt38>
+    <tt39>Mostrar os ambientes selecionados</tt39>
+    <tt40>Definir o nome do ambiente a partir da lista de nomes de ambientes do documento atual</tt40>
+    <tt41>Se a opção estiver ativada, o arredondamento indicado será aplicado à área com coeficiente de cada ambiente (parâmetro "AP_Área com coeficiente"), bem como às áreas totais do apartamento "AP_Área total" e "AP_Área de ambientes não aquec. com coef.". As demais áreas são arredondadas de acordo com a propriedade "Arredondamento de áreas".</tt41>
+    <tt42>Por exemplo, a área original do ambiente é 3.48. Arredondamento de áreas 0.1. Arredondamento de áreas com coeficiente 0.01. Coeficiente 0.5. Área arredondada – 3.5, área com coeficiente – 3.5 * 0.5 = 1.75, após o arredondamento – 1.75 (sem esta opção seria 1.8).</tt42>
+    <tt43>Se a opção estiver desativada, a propriedade "Arredondamento de áreas" será usada para todas as áreas.</tt43>
+    <instruction>Instrução</instruction>
+    <instruction1>Todos os ambientes do projeto devem ter os parâmetros compartilhados indicados nesta lista. Você pode usar seus próprios parâmetros compartilhados do mesmo tipo (indicado entre parênteses). Indique seus próprios parâmetros compartilhados na lista ou clique no botão "Criar parâmetros ausentes". Todos os parâmetros numéricos são do tipo "Moeda", o que permite processar ambientes em grupos</instruction1>
+    <instruction1_1>Os parâmetros adicionais são processados e preenchidos apenas se os ambientes tiverem esses parâmetros. Você pode usar seus próprios parâmetros compartilhados do mesmo tipo (indicado entre parênteses). Indique seus próprios parâmetros compartilhados na lista ou clique no botão "Criar parâmetros ausentes"</instruction1_1>
+    <instruction2>Na matriz de ambientes são definidas as propriedades principais para a seleção dos ambientes processados, para a numeração dos ambientes no apartamento, bem como os valores para o cálculo das áreas do apartamento. Os valores da matriz são escolhidos pela correspondência do uso funcional (coluna UF) e do nome do ambiente. Na coluna "Nome do ambiente", é possível indicar um asterisco no final do nome, o que indicará a verificação de correspondência pelo início do nome do ambiente (por exemplo, o valor "Quarto*" corresponderá aos nomes de ambientes "Quarto 1", "Quarto 2" etc.)</instruction2>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction2_1>Nesta tabela são definidos os dados usados para determinar o tipo de apartamento. Os valores "Contém ambientes" e "Não contém ambientes" são preenchidos com nomes de ambientes separados por ponto e vírgula (;)</instruction2_1>
+    <instruction2_2>Na lista é definido o mapeamento entre pavimentos e pavimentos tipo. Se for definido um pavimento tipo para um pavimento, ao agrupar e calcular os apartamentos, todos os parâmetros dos ambientes localizados no pavimento indicado serão obtidos do ambiente correspondente localizado no pavimento tipo. O ambiente do pavimento tipo é determinado por meio de um raio vertical traçado pelo ponto de inserção do ambiente processado. Os pavimentos podem ser definidos tanto pelos nomes dos níveis quanto pelas elevações dos níveis</instruction2_2>
+    <instruction2_3>Nesta tabela são definidos os dados usados para determinar o tipo de apartamento. As condições "Contém ambientes" e "Não contém ambientes" são preenchidas com nomes de ambientes separados por ponto e vírgula (;). Os nomes dos ambientes podem ser complementados com uma condição de verificação da área e/ou uma condição de verificação de que o ambiente é um mezanino. Para isso, após o nome do ambiente, indique entre parênteses a condição e o valor da área e/ou, separada por vírgula, a condição de verificação "Mezanino", se necessário. Condições disponíveis – igual (=), diferente (!=), maior (&gt;), maior ou igual (&gt;=), menor (&lt;), menor ou igual (&lt;=). Para a verificação "Mezanino", adicione separado por vírgula o símbolo "m" para definir a condição "O ambiente deve ser um mezanino" ou "nm" para definir a condição "O ambiente não deve ser um mezanino". É possível definir apenas a condição de verificação "Mezanino", sem verificação da área. Exemplos: "Cozinha (&gt;10); Quarto", "Despensa (&lt;5,m)", "Despensa (nm)"</instruction2_3>
+    <instruction3>A verificação inicial inclui duas partes: verificação de ambientes não posicionados e verificação do preenchimento dos parâmetros "Uso funcional" e "Nome". Se o valor do parâmetro "Uso funcional" do ambiente corresponder ao valor do "Identificador de apartamentos" indicado nas configurações, o parâmetro "Nome" será verificado pela matriz de ambientes atual</instruction3>
+    <instruction4>O agrupamento de apartamentos é feito com base nas características geométricas dos ambientes, considerando a ligação entre os ambientes através de janelas, portas e separadores de ambiente. Todos os ambientes de um mesmo apartamento recebem o mesmo valor do parâmetro "ID do apartamento". Recomenda-se fazer uma verificação visual adicional, criando um esquema de cores pelo parâmetro "ID do apartamento"</instruction4>
+    <instruction5>O cálculo de apartamentos inclui o cálculo das áreas do apartamento, da quantidade de quartos, bem como a determinação do tipo de apartamento pela fonte "Tipos de apartamentos". Todos os valores obtidos são atribuídos aos parâmetros dos ambientes que fazem parte do apartamento. Todos os apartamentos são determinados pelo valor do parâmetro "ID do apartamento", definido na etapa "Agrupamento de apartamentos"</instruction5>
+    <instruction5_1>Esta guia não faz parte do algoritmo principal do layout de apartamentos! Ela se destina exclusivamente ao preenchimento do parâmetro "AP_Área arredondada" (ou do parâmetro correspondente utilizado) nos ambientes selecionados, considerando as configurações de arredondamento. Use esta função apenas para ambientes que não correspondem ao uso funcional atual</instruction5_1>
+    <instruction6>A numeração dos apartamentos pode ser feita agrupando os apartamentos por Blocos e/ou Seções, ativando as opções correspondentes e definindo os nomes dos parâmetros dos quais obter o valor do Bloco e/ou da Seção. Considera-se que as seções são subgrupos dos blocos. A propriedade "Numeração contínua" significa que a numeração no grupo seguinte será continuada, e não iniciada a partir do valor definido na propriedade "Número inicial". Se na propriedade "Início da numeração" for escolhida a opção "indicar", será necessário selecionar um ambiente para cada grupo de apartamentos</instruction6>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction7>A criação de vistas de apartamentos é feita duplicando a vista atual e, em seguida, recortando-a pelo contorno do apartamento. Primeiro, tenta-se criar o contorno de recorte considerando a espessura das paredes delimitadoras (somente para Revit 2020 e superior). Em caso de falha, tenta-se criar o contorno de recorte considerando a maior das espessuras das paredes delimitadoras. Se o contorno de recorte não for criado, será usado o contorno do apartamento obtido pelos limites do ambiente. Ao ativar a opção "Tentar usar o tipo de apartamento como nome da vista", as vistas criadas receberão o nome "NOME_DO_NÍVEL – Apartamento TIPO_DE_APARTAMENTO"</instruction7>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction8>O editor de apartamentos permite fazer alterações manuais nos valores das áreas dos apartamentos, bem como unificar apartamentos de vários níveis. Ao unificar apartamentos de vários níveis, as áreas são recalculadas e o valor do parâmetro "AP_Número de níveis" é preenchido IMPORTANTE! Ao recalcular os apartamentos em um nível específico, os valores dos parâmetros dos ambientes que pertencem ao apartamento de vários níveis, mas estão localizados em outro nível, não serão recalculados</instruction8>
+    <instruction8_1>O agrupamento de apartamentos é feito independentemente do valor atual do identificador de apartamentos indicado nas configurações. O editor de apartamentos permite fazer alterações nos valores das áreas dos apartamentos, bem como unificar apartamentos de vários níveis. Ao unificar apartamentos de vários níveis, as áreas são recalculadas e o valor do parâmetro "AP_Número de níveis" é preenchido. O editor de apartamentos também permite recalcular os apartamentos selecionados, bloquear ou desbloquear os apartamentos selecionados, bem como excluir os apartamentos selecionados</instruction8_1>
+    <!-- todo remove after 2.11.15.0 -->
+    <instruction9>Apartamentos bloqueados são apartamentos cujos ambientes não serão processados no agrupamento de apartamentos. O bloqueio de apartamentos é feito na guia "Agrupamento de apartamentos". A lista exibe os apartamentos bloqueados independentemente do valor atual do "Identificador de apartamentos" (valor do parâmetro "Uso funcional")</instruction9>
+    <instruction9_1>Apartamentos bloqueados são apartamentos cujos ambientes não serão processados no agrupamento e no cálculo de apartamentos. A lista exibe os apartamentos bloqueados independentemente do valor atual do "Identificador de apartamentos" (valor do parâmetro "Uso funcional")</instruction9_1>
+    <instruction10>A classificação permite preencher determinados parâmetros dos apartamentos com base nas características dos apartamentos. Primeiro, é necessário criar tabelas com condições na guia "Condições" e, depois, é possível executar a classificação com a exibição do resultado na guia "Classificação"</instruction10>
+    <instruction10_1>Indique o parâmetro de destino – um parâmetro de texto no qual será gravado o resultado da classificação. A verificação da área é feita pelo parâmetro indicado de um ambiente aleatório do apartamento (ou seja, considera-se que o parâmetro tem o mesmo valor em todos os ambientes). As condições "Contém ambientes" e "Não contém ambientes" são preenchidas com nomes de ambientes separados por ponto e vírgula (;). Os nomes dos ambientes podem ser complementados com uma condição de verificação da área e/ou uma condição de verificação de que o ambiente é um mezanino. Para isso, após o nome do ambiente, indique entre parênteses a condição e o valor da área e/ou, separada por vírgula, a condição de verificação "Mezanino", se necessário. Condições disponíveis – igual (=), diferente (!=), maior (&gt;), maior ou igual (&gt;=), menor (&lt;), menor ou igual (&lt;=). Para a verificação "Mezanino", adicione separado por vírgula o símbolo "m" para definir a condição "O ambiente deve ser um mezanino" ou "nm" para definir a condição "O ambiente não deve ser um mezanino". É possível definir apenas a condição de verificação "Mezanino", sem verificação da área. Exemplos: "Cozinha (&gt;10); Quarto", "Despensa (&lt;5,m)", "Despensa (nm)"</instruction10_1>
+    <instruction10_2>A classificação é feita pelas tabelas de condições marcadas na guia "Condições". Se o apartamento verificado não se enquadrar em nenhuma linha de condições da tabela, o parâmetro de destino será limpo</instruction10_2>
+    <instruction11>Indique os parâmetros nos quais o plugin gravará os valores correspondentes para cada nível de um apartamento de vários níveis. Recomenda-se usar parâmetros com o mesmo tipo de dados dos parâmetros principais. Os valores serão preenchidos para todos os apartamentos. Nos apartamentos de um nível, os valores repetirão os valores dos parâmetros principais</instruction11>
+  </mprApartmentBuildingLayout>
+</ModPlus>

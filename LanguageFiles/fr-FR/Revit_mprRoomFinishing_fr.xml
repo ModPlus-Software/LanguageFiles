@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprRoomFinishing
+    LocalName="Finitions des pièces"
+    Description="Création d'éléments de finition dans les pièces"
+    LocalName1="Mettre à jour les finitions des pièces"
+    Description1="Mise à jour des éléments de finition dans les pièces"
+    LocalName2="Gestion des finitions des pièces"
+    Description2="Gestion des éléments de finition dans les pièces">
+    <t1>Filtre des pièces :</t1>
+    <t2>Sols</t2>
+    <!--todo remove after 2.0.0-->
+    <t3>Type de sol :</t3>
+    <t4>Décalage par rapport au niveau, mm :</t4>
+    <t5>Définir la valeur d'épaisseur du type de sol sélectionné en tenant compte des sols précédents</t5>
+    <t6>Copier la valeur du paramètre (de la pièce vers le sol) :</t6>
+    <t7>De</t7>
+    <t8>vers</t8>
+    <t9>Plafonds</t9>
+    <t10>Murs</t10>
+    <t11>Lors du prolongement du sol dans les baies de portes sur toute l'épaisseur du mur, considérer comme pièce principale :</t11>
+    <t12>Si la porte mène vers la sortie</t12>
+    <t13>Si la porte mène vers l'entrée</t13>
+    <t14>Le sol de la pièce principale sera créé avec prolongement dans la baie de porte. En conséquence, pour la pièce définie comme non principale, aucun prolongement dans la baie de porte ne sera créé. Cette option ne fonctionne que pour les familles de la catégorie "Portes" dont les propriétés internes FromRoom et ToRoom sont renseignées. Le sens de passage dans la baie est déterminé par l'orientation du côté extérieur de la famille</t14>
+    <t15>Découper la géométrie solide de la porte dans le contour du sol</t15>
+    <t16>Supprimer les éléments de finition créés précédemment</t16>
+    <t17>Par les pièces sélectionnées</t17>
+    <t18>Par les pièces de la vue</t18>
+    <t19>Pour toutes les pièces</t19>
+    <!--todo remove after 2.0.0-->
+    <t20>Pour toutes les pièces des fichiers liés</t20>
+    <t21>Mettre à jour les paramètres</t21>
+    <t22>Déplacer vers le haut</t22>
+    <t23>Déplacer vers le bas</t23>
+    <t24>Par les pièces présélectionnées</t24>
+    <t26>Le type n'est pas défini ou le type correspondant est introuvable dans le modèle. Impossible de traiter cette configuration !</t26>
+    <t27>Hôte :</t27>
+    <t28>En bas, mm :</t28>
+    <t29>Décalage par rapport au bas de la pièce, mm</t29>
+    <t30>Hauteur du mur, mm :</t30>
+    <t31>Sélectionnez le type de mur de finition</t31>
+    <t32>En haut, mm :</t32>
+    <t33>Décalage par rapport au haut de la pièce, mm</t33>
+    <t34>Limite</t34>
+    <t35>Limite de pièce</t35>
+    <t36>Ajouter une couche</t36>
+    <t37>Ajouter un hôte</t37>
+    <t38>Copier la valeur du paramètre (de la pièce vers les murs de finition) :</t38>
+    <t39>Attacher les murs de finition à l'hôte</t39>
+    <t40>Bas des murs</t40>
+    <t41>Les murs de finition sont construits au-dessus de ce sol</t41>
+    <t42>Calque :</t42>
+    <t43>Pour tous les types de murs</t43>
+    <!--todo remove after 2.0.0-->
+    <t44>Type de plafond :</t44>
+    <t45>Définir la valeur d'épaisseur du type de plafond sélectionné en tenant compte des plafonds précédents</t45>
+    <t46>Copier la valeur du paramètre (de la pièce vers le plafond) :</t46>
+    <t47>Ajouter des réglages de création des finitions</t47>
+    <t48>Sélectionnez le type de mur ou de poteau servant d'hôte</t48>
+    <t49>Sélectionnez le type de sol</t49>
+    <t50>Sélectionnez le type de plafond</t50>
+    <t51>Indiquer dans le modèle les murs ou poteaux dont les types serviront d'hôte pour la création des murs de finition</t51>
+    <t52>Mode de sélection de l'hôte :</t52>
+    <t53>Le filtre n'est pas défini</t53>
+    <t54>Plinthes</t54>
+    <t55>Sélectionnez le type de plinthe</t55>
+    <t56>Hauteur de la plinthe, mm :</t56>
+    <t57>Copier la valeur du paramètre (de la pièce vers la plinthe)</t57>
+    <t58>Autres réglages</t58>
+    <t59>Traiter les portes-fenêtres</t59>
+    <t60>Si l'option est activée, le sol se prolonge dans les ouvertures créées par des éléments de la catégorie "Fenêtres" sur toute l'épaisseur de l'ouverture. Si l'option est désactivée, ces ouvertures sont traitées selon les règles générales</t60>
+    <t61>Raccords de murs :</t61>
+    <t62>Sélectionnez le type de murs et de poteaux</t62>
+    <t63>Le type correspondant est introuvable dans le modèle. Impossible de traiter cette configuration !</t63>
+    <t64>Sélectionnez les pièces</t64>
+    <t65>Sélectionnez les éléments de finition à lier à la pièce</t65>
+    <t66>Sélectionnez les éléments de finition dont la liaison doit être supprimée</t66>
+    <t67>La valeur du paramètre source est collectée dans les pièces liées aux éléments de finition, regroupée par type, triée et écrite, séparée par des virgules, dans le paramètre de destination de chaque élément de finition de la pièce. Par exemple, si des éléments de finition d'un même type appartiennent à des pièces dont les valeurs du paramètre source sont "3", "1" et "5", alors "1, 3, 5" sera écrit dans le paramètre de destination indiqué de ces éléments. L'option "Former des plages" regroupe les suites de nombres avec un trait d'union, par exemple "3-5"</t67>
+    <t68>Sélectionnez un paramètre des pièces</t68>
+    <t69>Sélectionnez un paramètre des sols</t69>
+    <t70>Former des plages</t70>
+    <t71>Sélectionnez un paramètre des murs</t71>
+    <t72>Sélectionnez un paramètre des plafonds</t72>
+    <t73>Paramètres non renseignés</t73>
+    <t74>Remplir les paramètres</t74>
+    <t76>Sélectionner les finitions des pièces</t76>
+    <t77>Sélectionne dans le modèle les éléments de finition liés à la pièce</t77>
+    <t78>Lier les finitions à la pièce</t78>
+    <t79>Établit une liaison entre les éléments de finition et la pièce afin de pouvoir ensuite renseigner les paramètres à l'aide de la fonction "Renseigner les paramètres" et utiliser la fonction "Sélectionner les finitions"</t79>
+    <t80>Supprimer la liaison des finitions avec la pièce</t80>
+    <t81>Supprime la liaison entre les éléments de finition et la pièce, de sorte que l'élément de finition ne soit plus rattaché à la pièce sélectionnée</t81>
+    <t82>Renseignement des paramètres</t82>
+    <t83>Création des finitions des pièces</t83>
+    <t84>Sélectionnez une pièce</t84>
+    <t85>Décalage par rapport au bas de la pièce :</t85>
+    <t86>Calculer le décalage inférieur :</t86>
+    <t87>Décalage par rapport au niveau de la pièce, mm</t87>
+    <t88>Afficher uniquement la sélection</t88>
+    <l1>Ne pas prolonger le contour du sol dans les ouvertures de portes</l1>
+    <l2>Prolonger le contour jusqu'au milieu de l'ouverture</l2>
+    <l3>Prolonger le contour sur toute l'épaisseur de l'ouverture</l3>
+    <l4>Prolonger le contour de la valeur indiquée, mm</l4>
+    <l5>Prolonger le contour jusqu'au milieu du vantail de la porte</l5>
+    <l6>Pour tous les types de murs et de poteaux</l6>
+    <l7>Sélection des types de murs et de poteaux</l7>
+    <l8>Filtre des murs et des poteaux</l8>
+    <l9>Bout à bout</l9>
+    <l10>Onglet</l10>
+    <l11>Coupe d'équerre</l11>
+    <l12>Sans raccord</l12>
+    <l13>Depuis le niveau</l13>
+    <l14>Depuis le bas de la pièce</l14>
+    <msg1>Aucune pièce à traiter !</msg1>
+    <msg2>Aucune pièce satisfaisant au filtre par les paramètres "{0}" n'a été trouvée</msg2>
+    <msg3>Le type de sol n'est pas indiqué</msg3>
+    <msg4>Type de sol "{0}" introuvable</msg4>
+    <msg5>Sol de type "{0}" créé selon le contour de la pièce</msg5>
+    <msg6>Impossible de créer le sol selon le contour de la pièce</msg6>
+    <msg7>Le contour de la pièce comporte des erreurs</msg7>
+    <msg8>Impossible de traiter le contour de l'ouverture. Erreur "{0}". Le contour du sol ne sera pas prolongé dans l'ouverture</msg8>
+    <msg9>Paramètre "{0}" introuvable</msg9>
+    <msg10>Impossible de copier la valeur du paramètre "{0}" dans le paramètre "{1}"</msg10>
+    <msg11>Types de paramètres incompatibles ou cause inconnue</msg11>
+    <msg12>Impossible de créer les murs de finition. Erreur</msg12>
+    <msg13>Des murs de finition de type "{0}" ont été créés le long du contour de la pièce</msg13>
+    <msg14>Impossible d'obtenir la hauteur de la pièce</msg14>
+    <msg15>Impossible de créer un plafond le long du contour de la pièce</msg15>
+    <msg16>Un plafond de type "{0}" a été créé le long du contour de la pièce</msg16>
+    <msg17>Impossible de modifier le profil du mur</msg17>
+    <msg18>La hauteur du mur de finition ne peut pas être inférieure à 0</msg18>
+    <msg19>Des plinthes de type "{0}" ont été créées le long du contour de la pièce</msg19>
+    <msg20>Impossible d'obtenir la cote du sol. La plinthe de type "{0}" sera créée à la cote du niveau de la pièce</msg20>
+    <msg21>Impossible de créer une plinthe le long du contour de la pièce</msg21>
+    <msg22>Impossible de modifier l'esquisse</msg22>
+    <msg23>Le sol de type "{0}" a été mis à jour le long du contour de la pièce</msg23>
+    <msg24>Impossible de mettre à jour le sol le long du contour de la pièce</msg24>
+    <msg25>Le plafond de type "{0}" a été mis à jour le long du contour de la pièce</msg25>
+    <msg26>Impossible d'attacher le mur de finition : {0} à l'hôte : {1}</msg26>
+    <msg27>Le paramètre d'écriture "{0}" n'est pas de type texte</msg27>
+    <msg28>Les paramètres des éléments ont été renseignés avec succès</msg28>
+    <msg29>Les paramètres contiennent déjà la valeur requise</msg29>
+    <msg30>Le paramètre d'écriture "{0}" est en lecture seule</msg30>
+    <msg31>La commande n'est pas disponible dans la version actuelle de Revit, car l'API ne contient pas les méthodes nécessaires</msg31>
+    <msg32>Impossible d'obtenir l'élévation du sol. La plinthe de type "{0}" sera créée à l'élévation inférieure de la pièce</msg32>
+    <msg33>Impossible de mettre à jour la finition : la finition a été créée dans une version précédente du plugin. Recréez la finition</msg33>
+  </mprRoomFinishing>
+</ModPlus>

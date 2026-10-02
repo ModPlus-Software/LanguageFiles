@@ -223,6 +223,9 @@ public partial class TranslationEntriesGrid
             DeColumn.CellTemplate = (DataTemplate)FindResource("WorkspaceDeDeCellTemplate");
             EsColumn.CellTemplate = (DataTemplate)FindResource("WorkspaceEsEsCellTemplate");
             ZhColumn.CellTemplate = (DataTemplate)FindResource("WorkspaceZhCnCellTemplate");
+            FrColumn.CellTemplate = (DataTemplate)FindResource("WorkspaceFrFrCellTemplate");
+            PtColumn.CellTemplate = (DataTemplate)FindResource("WorkspacePtBrCellTemplate");
+            UzColumn.CellTemplate = (DataTemplate)FindResource("WorkspaceUzLatnUzCellTemplate");
             return;
         }
 
@@ -236,6 +239,9 @@ public partial class TranslationEntriesGrid
         DeColumn.CellTemplate = (DataTemplate)FindResource("EntryDeDeCellTemplate");
         EsColumn.CellTemplate = (DataTemplate)FindResource("EntryEsEsCellTemplate");
         ZhColumn.CellTemplate = (DataTemplate)FindResource("EntryZhCnCellTemplate");
+        FrColumn.CellTemplate = (DataTemplate)FindResource("EntryFrFrCellTemplate");
+        PtColumn.CellTemplate = (DataTemplate)FindResource("EntryPtBrCellTemplate");
+        UzColumn.CellTemplate = (DataTemplate)FindResource("EntryUzLatnUzCellTemplate");
     }
 
     private void UpdateHeaderVisibility()

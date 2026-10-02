@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mrSearchBy
+    LocalName="Pesquisa por condição"
+    Description="Pesquisa de objetos por diversas condições">
+    <!-- todo remove after 3.1.0.0 start -->
+    <h1>Tipo de objeto:</h1>
+    <h2>Pesquisar em:</h2>
+    <h3>Propriedades</h3>
+    <h4>Parâmetros</h4>
+    <h5>Características calculadas</h5>
+    <h6>Unidades de medida</h6>
+    <h7>Tipo de correspondência de strings:</h7>
+    <h8>Pesquisar:</h8>
+    <!-- todo remove after 3.1.0.0 end -->
+    <h9>Redefinir a seleção atual se nada for encontrado</h9>
+    <h10>Pesquisar</h10>
+    <h11>{0} objetos encontrados</h11>
+    <h12>Nada encontrado</h12>
+    <h16>Pesquisar entre os selecionados</h16>
+    <!-- todo remove after 3.1.0.0 start -->
+    <m1>Igual</m1>
+    <m2>Contém</m2>
+    <t1>Indique em quais unidades de medida os valores serão obtidos dos objetos, bem como a precisão da comparação de valores numéricos</t1>
+    <t2>Indique a opção de correspondência para valores de string: se a string verificada deve corresponder totalmente ao valor pesquisado ou se a string verificada pode conter o valor pesquisado</t2>
+    <t3>Você pode indicar vários valores para a pesquisa, separando-os com um asterisco. Por exemplo, "200*300".</t3>
+    <t4>Se forem indicados vários valores, será aplicada a opção "OU". Por exemplo, ao pesquisar pelo valor "200*300", uma correspondência com "200" ou com "300" será considerada satisfatória.</t4>
+    <t5>Para usar a opção "E", indique o valor "AND" no início da consulta de pesquisa. Por exemplo, "AND200*300" indica que no objeto pesquisado devem corresponder tanto o valor "200" quanto o valor "300".</t5>
+    <t6>Ao indicar números fracionários, é considerado o separador decimal definido nas configurações regionais do sistema operacional. Se nas suas configurações for usada a vírgula, o valor "1.75" será processado como string.</t6>
+    <t7>Para pesquisar por parâmetros do tipo "Sim/Não", indique "true" ou "false", respectivamente, na linha de pesquisa.</t7>
+    <t8>Para valores numéricos, você pode indicar operadores de comparação: "!=" – diferente, "&lt;" – menor, "&gt;" – maior. Para valores de string, você pode indicar o operador de comparação "!=" (diferente), que é processado apenas se o valor "Igual" estiver selecionado na propriedade "Tipo de correspondência de strings".</t8>
+    <t9>Por exemplo, a string "ANDConcreto*&gt;1,75" indica que devem ser encontrados objetos que tenham, entre os valores verificados, o valor de string "Concreto" e um valor numérico maior que 1,75.</t9>
+    <t10>Você pode indicar o nome específico da propriedade ou do parâmetro em que o valor inserido deve ser verificado. Por exemplo, a string "Observação=Concreto" com a caixa "Pesquisar em propriedades" marcada indica que os objetos que atendem à condição de pesquisa devem ter a propriedade "Observação" com o valor "Concreto". A verificação do nome também é processada de acordo com o valor de "Tipo de correspondência de strings".</t10>
+    <t11>Para pesquisar pela condição de valores vazios, indique apenas o nome da propriedade ou do parâmetro. Por exemplo, a string "Observação=" com a caixa "Pesquisar em propriedades" marcada indica que os objetos que atendem à condição de pesquisa devem ter a propriedade "Observação" com valor vazio.</t11>
+    <t12>A verificação de todos os valores de string não diferencia maiúsculas de minúsculas.</t12>
+    <!-- todo remove after 3.1.0.0 end -->
+    <t13>Mostrar os objetos encontrados na cena 3D</t13>
+    <!-- todo remove after 3.1.0.0 start -->
+    <all>Todos</all>
+    <qh1>Comprimento:</qh1>
+    <qh2>Área:</qh2>
+    <qh3>Massa:</qh3>
+    <qh4>Volume:</qh4>
+    <qh5>Precisão:</qh5>
+    <q1>Milímetros</q1>
+    <q2>Centímetros</q2>
+    <q3>Metros</q3>
+    <q4>Polegadas</q4>
+    <q5>Milímetros quadrados</q5>
+    <q6>Centímetros quadrados</q6>
+    <q7>Metros quadrados</q7>
+    <q8>Gramas</q8>
+    <q9>Quilogramas</q9>
+    <q10>Milímetros cúbicos</q10>
+    <q11>Centímetros cúbicos</q11>
+    <q12>Metros cúbicos</q12>
+    <!-- todo remove after 3.1.0.0 end -->
+  </mrSearchBy>
+</ModPlus>

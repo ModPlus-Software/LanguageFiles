@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprTools
+    LocalName="Utilitários"
+    Description="Conjunto de utilitários auxiliares">
+    <ttShow>Mostrar todos os elementos da categoria especificada na vista atual</ttShow>
+    <ttHide>Ocultar todos os elementos da categoria especificada na vista atual</ttHide>
+    <Category>Todas</Category>
+    <Walls>Paredes</Walls>
+    <Windows>Janelas</Windows>
+    <Doors>Portas</Doors>
+    <Tags>Identificadores</Tags>
+    <Floors>Pisos</Floors>
+    <Columns>Pilares</Columns>
+    <Levels>Níveis</Levels>
+    <Grids>Eixos</Grids>
+    <StairsRailing>Guarda-corpos</StairsRailing>
+    <Stairs>Escadas</Stairs>
+    <Ramps>Rampas</Ramps>
+    <Roofs>Telhados</Roofs>
+    <Ceilings>Forros</Ceilings>
+    <Elevations>Elevações</Elevations>
+    <Sections>Cortes</Sections>
+    <Components>Componentes</Components>
+    <ReferencePlanes>Planos de referência</ReferencePlanes>
+    <StructuralFraming>Framing estrutural</StructuralFraming>
+    <StructuralFoundation>Fundação estrutural</StructuralFoundation>
+    <Analytical>Todas as categorias do modelo analítico</Analytical>
+    <GenericModels>Modelos genéricos</GenericModels>
+    <Reinforcement>Armadura</Reinforcement>
+    <Lines>Linhas</Lines>
+    <Links>Vínculos</Links>
+    <Mass>Massa</Mass>
+    <Ducts>Dutos</Ducts>
+    <FlexDucts>Dutos flexíveis</FlexDucts>
+    <Pipes>Tubulações</Pipes>
+    <Wires>Fios</Wires>
+    <CableTrays>Bandejas de cabos</CableTrays>
+    <Conduits>Conduítes</Conduits>
+    <PointClouds>Nuvens de pontos</PointClouds>
+    <Equipment>Equipamentos</Equipment>
+    <Images>Imagens raster</Images>
+    <Annotations>Anotações</Annotations>
+    <ElectricalDevices>Equipamentos elétricos</ElectricalDevices>
+    <Imports>Símbolos de importação</Imports>
+    <h1>Distância de entalhe</h1>
+    <h2>Distância de entalhe, mm</h2>
+    <h3>Alteração automática da distância de entalhe para elementos do framing estrutural</h3>
+    <!--todo remove after 2.27.8-->
+    <h4>Atenção! A distância de entalhe será definida com o valor especificado a cada alteração da geometria do elemento!</h4>
+    <!--todo remove after 2.27.8-->
+    <h5>Alterar a distância de entalhe dos elementos selecionados</h5>
+    <!--todo remove after 2.27.8-->
+    <h6>Alterar a distância de entalhe de todos os elementos na vista atual</h6>
+    <h7>Alteração da distância de entalhe dos elementos especificados ou ativação do modo automático de alteração da distância de entalhe</h7>
+    <h8>Selecione as vigas</h8>
+    <h9>Alteração da distância de entalhe</h9>
+    <h10>Valor inválido inserido!</h10>
+    <h11>Modo dos eixos</h11>
+    <h12>Alternância do modo 2D-3D dos eixos especificados</h12>
+    <!--todo remove after 2.27.8-->
+    <h13>Alternar todos os eixos da vista atual para 2D</h13>
+    <!--todo remove after 2.27.8-->
+    <h14>Alternar todos os eixos da vista atual para 3D</h14>
+    <!--todo remove after 2.27.8-->
+    <h15>Inverter o modo dos eixos</h15>
+    <h16>Alternar os eixos 2D para 3D e os eixos 3D para 2D</h16>
+    <h17>Vergalhões fora do hospedeiro</h17>
+    <h18>Para os vergalhões, a pesquisa é feita de duas formas: se o layout da barra tiver o valor "Único", é verificado se a barra está posicionada dentro do hospedeiro. Nos demais layouts, é verificado se a armadura ultrapassa o hospedeiro. No caso de verificação de armadura em sistema (por exemplo, armadura da área), é verificado se a armadura ultrapassa o hospedeiro</h18>
+    <h19>Visibilidade das bolhas dos eixos</h19>
+    <h20>Ativação/desativação da visibilidade das bolhas dos eixos selecionados ou dos eixos na vista</h20>
+    <!--todo remove after 2.27.8-->
+    <h21>Mostrar bolhas no início</h21>
+    <!--todo remove after 2.27.8-->
+    <h22>Mostrar bolhas no fim</h22>
+    <!--todo remove after 2.27.8-->
+    <h23>Ocultar bolhas no início</h23>
+    <!--todo remove after 2.27.8-->
+    <h24>Ocultar bolhas no fim</h24>
+    <h25>Inverter a exibição das bolhas</h25>
+    <h26>Eixos selecionados</h26>
+    <h27>Eixos na vista</h27>
+    <h28>Selecione os eixos</h28>
+    <h29>Seleção de anotações</h29>
+    <h30>Seleção rápida por janela de anotações específicas: cotas, identificadores, texto</h30>
+    <h31>Restaurar vistas</h31>
+    <h32>Abrir as vistas do documento atual que estavam abertas ao final da última sessão do Revit</h32>
+    <h33>Exclusão de segmentos nulos</h33>
+    <h34>Exclusão de segmentos nulos das cadeias de cotas</h34>
+    <h35>Cópia de gráficos</h35>
+    <h36>Cópia de propriedades</h36>
+    <h37>Selecione o elemento de origem</h37>
+    <h38>Selecione os elementos de destino</h38>
+    <h39>Cópia das configurações de sobreposição de gráficos na vista do elemento de origem para os elementos de destino</h39>
+    <h40>Atribuição aos elementos de destino do mesmo tipo do elemento de origem selecionado e cópia dos valores dos parâmetros do elemento de origem para os elementos de destino. O valor dos parâmetros compartilhados é copiado somente se os GUIDs coincidirem. O tipo não será alterado se o tipo do elemento de origem não for compatível com o elemento de destino</h40>
+    <h41>Abrir vistas</h41>
+    <h42>Abrir as vistas e folhas selecionadas no navegador de projeto</h42>
+    <h43>Selecione vistas e folhas no navegador de projeto usando Ctrl e/ou Shift e execute o plugin para abri-las</h43>
+    <h44>Ajustar ao selecionado</h44>
+    <h45>Zoom e centralização da vista atual nos elementos selecionados</h45>
+    <h51>Comprimento total de {0} elementos na categoria "{1}"</h51>
+    <h52>Comprimento total de todos os elementos selecionados</h52>
+    <h53>Soma dos comprimentos</h53>
+    <h54>Exibição do comprimento total dos elementos lineares selecionados</h54>
+    <h55>Unir splines</h55>
+    <h56>União de linhas de detalhe ou linhas de modelo feitas como spline e que tenham um ponto final em comum</h56>
+    <h57>Selecione as splines</h57>
+    <h58>Mostrar elementos</h58>
+    <h59>Exibição dos elementos selecionados na vista, alterando seu estado de "oculto" para "visível"</h59>
+    <h60>Mostrar informações</h60>
+    <h61>Obter</h61>
+    <h62>Aproximar</h62>
+    <h63>Restaurar a vista original</h63>
+    <h64>Total de categorias</h64>
+    <h65>Total de elementos</h65>
+    <h66>Exibição das informações básicas do elemento</h66>
+    <h67>Quantidade</h67>
+    <h68>Classe</h68>
+    <h69>Criador</h69>
+    <h70>Última alteração</h70>
+    <h71>Proprietário</h71>
+    <h72>Workset</h72>
+    <h73>Desconhecido</h73>
+    <h74>Ninguém</h74>
+    <h75>Sem categoria</h75>
+    <h76>Os limites dos elementos não podem ser exibidos na vista atual. Alternar para outra vista?</h76>
+    <h77>Desativar vistas temporárias</h77>
+    <h78>Desativa o modo de ocultar/isolar temporário em todas as vistas do documento atual</h78>
+    <!--todo remove after 3.0.0-->
+    <h79>Alternar para 2D nas vistas selecionadas</h79>
+    <!--todo remove after 3.0.0-->
+    <h80>Alternar para 3D nas vistas selecionadas</h80>
+    <!--todo remove after 3.0.0-->
+    <h81>Inverter a seleção nas vistas selecionadas</h81>
+    <h82>no início</h82>
+    <h83>no fim</h83>
+    <h84>no início e no fim</h84>
+    <h85>Mostrar bolhas</h85>
+    <!--todo remove after 3.0.0-->
+    <h86>Inverter a seleção na vista atual</h86>
+    <!--todo remove after 3.0.0-->
+    <h87>Alternar para 2D na vista atual</h87>
+    <!--todo remove after 3.0.0-->
+    <h88>Alternar para 3D na vista atual</h88>
+    <h89>Junções de parede</h89>
+    <h90>Alteração automática do tipo de junção de paredes</h90>
+    <h91>Alteração automática do tipo de junção ao criar paredes</h91>
+    <h92>Configuração de junções de parede</h92>
+    <h93>Permitir junção</h93>
+    <h94>Não permitir junção</h94>
+    <h95>Topo</h95>
+    <h96>Chanfro</h96>
+    <h97>Esquadrar</h97>
+    <h98>O tipo de junção será alterado ao criar paredes</h98>
+    <h99>Alterar o tipo de junção das paredes selecionadas</h99>
+    <h100>Alterar o tipo de junção das paredes na vista atual</h100>
+    <h101>Selecione as paredes</h101>
+    <h102>Alterar as conexões e o tipo de junção da parede</h102>
+    <h103>A distância de entalhe será definida com o valor especificado a cada alteração da geometria do elemento</h103>
+    <h104>Alterar a distância de entalhe dos elementos selecionados</h104>
+    <h105>Alterar a distância de entalhe de todos os elementos na vista atual</h105>
+    <h106>Os elementos não estão visíveis na vista atual. Aproximar pelas coordenadas?</h106>
+    <h107>&lt;varia&gt;</h107>
+    <h108>Modo de exibição</h108>
+    <h109>Alterar</h109>
+    <h110>Alternar na vista atual</h110>
+    <h111>Alternar nas vistas selecionadas</h111>
+    <h112>Inversão</h112>
+    <m1>Não é possível alterar as configurações de visibilidade da categoria na vista atual, pois um modelo de vista está aplicado à vista</m1>
+    <m2>Nenhum vergalhão foi encontrado no projeto atual</m2>
+    <m3>Encontrado no projeto atual:</m3>
+    <m4>Vergalhões:</m4>
+    <m5>Vergalhões em sistema:</m5>
+    <m6>Executar verificação</m6>
+    <m7>Resultado da verificação:</m7>
+    <m8>Vergalhões que estão fora do hospedeiro ou que ultrapassam o hospedeiro (no layout):</m8>
+    <m9>Selecionar vergalhões</m9>
+    <m10>Vergalhões sem hospedeiro:</m10>
+    <m11>Vergalhões em sistema que ultrapassam o hospedeiro:</m11>
+    <m12>Selecionar sistemas</m12>
+    <m13>Selecionar tudo</m13>
+    <m14>Nada encontrado</m14>
+    <m15>Não foram encontradas informações salvas para restaurar as vistas</m15>
+    <m16>A sobreposição de gráficos dos elementos não está disponível na vista atual</m16>
+    <m17>Não é possível alternar o modo dos eixos na vista atual</m17>
+  </mprTools>
+</ModPlus>

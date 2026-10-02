@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprNumbering
+    LocalName="Numérotation"
+    Description="Ajout d'une numérotation dans le paramètre indiqué des éléments, avec possibilité de numérotation dans la nomenclature"
+    FullDescription="Lorsque vous travaillez dans une vue autre qu'une nomenclature, vous pouvez indiquer le sens de numérotation en fonction de la disposition des éléments ou ajouter la numérotation dans l'ordre de création des éléments. Lorsque vous travaillez dans une nomenclature, le plugin ajoute la numérotation dans l'ordre des éléments de la nomenclature (en tenant compte du tri). Il est possible de définir un préfixe et un suffixe pour le numéro">
+    <h7>Valeur initiale :</h7>
+    <h8>Sens de la numérotation :</h8>
+    <h9>Paramètre cible :</h9>
+    <h12>Paramètre d'occurrence</h12>
+    <h13>Paramètre de type</h13>
+    <h14>Paramètre</h14>
+    <h15>possède la propriété "Lecture seule" pour les éléments suivants</h15>
+    <h16>Impossible de modifier le paramètre d'occurrence d'un élément situé dans un groupe si la propriété "Les valeurs peuvent varier par occurrence de groupe" n'est pas activée pour ce paramètre ou s'il ne s'agit pas du paramètre système "Marque"</h16>
+    <h17>Des erreurs se sont produites lors de la modification des valeurs de paramètres des éléments listés</h17>
+    <h18>Attention ! Le paramètre est effacé pour tous les éléments de cette nomenclature, quels que soient les réglages de filtrage. Cela signifie que si, par exemple, la nomenclature contient 10 poteaux et que seuls 5 poteaux sont affichés avec les réglages de filtrage, le paramètre sera effacé pour les 10 poteaux ! Effacer le paramètre ?</h18>
+    <h20>Mode de sélection :</h20>
+    <h21>Nombre d'éléments sélectionnés :</h21>
+    <h24>Numéroter uniquement les lignes sélectionnées</h24>
+    <h25>Sélection des éléments</h25>
+    <h26>Réglages de la numérotation</h26>
+    <h27>Pas :</h27>
+    <h28>Le paramètre "{0}" a la propriété "Lecture seule". Vérifiez que les éléments traités ne se trouvent pas dans un sous-projet que vous ne pouvez pas modifier</h28>
+    <h29>Préfixe et suffixe depuis</h29>
+    <h30>une chaîne</h30>
+    <h31>un paramètre</h31>
+    <h32>Créer une configuration</h32>
+    <h33>Renommer la configuration</h33>
+    <h34>Saisissez le nouveau nom de la configuration</h34>
+    <h35>Supprimer la configuration</h35>
+    <h36>Paramètre numérique</h36>
+    <h37>Paramètre texte</h37>
+    <h38>Alphabet :</h38>
+    <h39>Personnalisé</h39>
+    <h40>Russe</h40>
+    <h41>Anglais</h41>
+    <h42>Ukrainien</h42>
+    <h43>Saisissez les lettres de l'alphabet sans espaces, en majuscules ou en minuscules. Vous pouvez aussi</h43>
+    <h44>insérer</h44>
+    <h45>et modifier</h45>
+    <h46>l'alphabet</h46>
+    <h47>Alphabet personnalisé</h47>
+    <h48>Regroupement par paramètre :</h48>
+    <h49>Comportement dans le groupe :</h49>
+    <sv1>Sélection standard par fenêtre</sv1>
+    <sv2>Sélection ordonnée</sv2>
+    <sv3>Intersection avec une courbe</sv3>
+    <!-- todo remove after 6.1.2.0 -->
+    <select>Sélectionner</select>
+    <t1>Le plugin ne fonctionne que dans une nomenclature dont les réglages de tri ont la propriété "Détailler chaque occurrence" activée</t1>
+    <t2>Décocher toutes les catégories</t2>
+    <t3>Sélection standard par fenêtre – sélection des éléments de la vue courante par une fenêtre, avec validation de la sélection par le bouton "Terminer". Avec cette option, le sens de numérotation offre neuf variantes – dans l'ordre de création et selon la position des éléments.</t3>
+    <t4>Sélection ordonnée – sélection de chaque élément à numéroter dans l'ordre dans lequel la numérotation sera effectuée. Avec cette option, la numérotation peut être croissante ou décroissante. La sélection se termine en appuyant sur la touche Échap.</t4>
+    <t5>Intersection avec une courbe – sélection d'une courbe (ligne de modèle ou ligne de détail). Les éléments à numéroter seront sélectionnés en recherchant l'intersection de la courbe avec la géométrie des éléments de la vue courante, projetée sur le plan de la vue. Avec cette option, la numérotation peut être croissante ou décroissante.</t5>
+    <t6>Pour tous les modes de sélection des éléments, un filtre par catégorie et/ou par paramètres peut être appliqué.</t6>
+    <t7>La liste des paramètres est remplie après la sélection des éléments à numéroter.</t7>
+    <t12>La valeur initiale peut être décimale. Le point ou la virgule peut servir de séparateur entre la partie entière et la partie décimale. Le séparateur indiqué sera utilisé lors de l'écriture des valeurs dans un paramètre texte. Si le paramètre cible est de type "Nombre", le séparateur indiqué n'aura pas d'effet sur le résultat affiché. Si le paramètre cible est de type "Entier", le résultat de la numérotation sera converti en entier en supprimant la partie décimale.</t12>
+    <t13>Des zéros non significatifs peuvent être ajoutés à la valeur initiale. Par exemple, si la valeur initiale est "01" et le pas "5", le résultat de la numérotation sera "01, 05, 10, 15…". Les zéros initiaux ne sont pris en compte que si le paramètre cible est de type texte.</t13>
+    <!-- todo remove after 5.2.16.0 -->
+    <t14>Le sens géométrique de numérotation est calculé d'après les valeurs absolues X et Y des points d'insertion des éléments. Pour les objets linéaires, le point milieu est utilisé</t14>
+    <t15>Pour le tri des objets linéaires, le point milieu est utilisé. Pour le tri des fenêtres, le centre de la fenêtre est utilisé. Pour le tri des étiquettes, le point d'insertion de la tête est utilisé. Dans les autres cas, le point d'insertion de l'élément est utilisé</t15>
+    <t16>Une numérotation alphabétique est possible. Pour cela, indiquez comme valeur initiale la lettre de l'alphabet par laquelle commencera la numérotation alphabétique. La numérotation alphabétique respectera la casse de la valeur initiale.</t16>
+    <m1>Sélectionnez les éléments pour le marquage numéroté</m1>
+    <m2>La vue de nomenclature courante ne contient aucun élément</m2>
+    <m3>Filtrer les éléments sélectionnés selon la liste de catégories courante ?</m3>
+    <m4>Sélectionnez une courbe (ligne de modèle ou ligne de détail)</m4>
+    <o1>Croissant</o1>
+    <o2>Décroissant</o2>
+    <b1>Numérotation dans chaque groupe</b1>
+    <b2>Un numéro par groupe</b2>
+    <b3>Numérotation continue avec tri par paramètre (Croissant)</b3>
+    <b4>Numérotation continue avec tri par paramètre (Décroissant)</b4>
+    <d1>Dans l'ordre de création croissant</d1>
+    <d1-1>Dans l'ordre de création décroissant</d1-1>
+    <d2>De gauche à droite et de haut en bas</d2>
+    <d3>De gauche à droite et de bas en haut</d3>
+    <d4>De droite à gauche et de haut en bas</d4>
+    <d5>De droite à gauche et de bas en haut</d5>
+    <d6>De haut en bas et de gauche à droite</d6>
+    <d7>De haut en bas et de droite à gauche</d7>
+    <d8>De bas en haut et de gauche à droite</d8>
+    <d9>De bas en haut et de droite à gauche</d9>
+    <d10>De gauche à droite</d10>
+    <d11>De droite à gauche</d11>
+    <d12>De haut en bas</d12>
+    <d13>De bas en haut</d13>
+    <r1>Valeur initiale non définie</r1>
+    <r2>Aucun élément sélectionné pour le traitement</r2>
+    <r3>Alphabet personnalisé vide</r3>
+    <r4>La lettre "{0}" ne figure pas dans l'alphabet sélectionné</r4>
+    <r5>Impossible d'effectuer une numérotation alphabétique, car un paramètre numérique est sélectionné</r5>
+    <r6>Aucun paramètre de regroupement sélectionné</r6>
+    <r7>Aucun paramètre cible sélectionné</r7>
+  </mprNumbering>
+</ModPlus>

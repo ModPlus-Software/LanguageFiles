@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprFindAndReplace
+    LocalName="Rechercher et remplacer"
+    Description="Recherche et remplacement de texte dans les zones de recherche indiquées">
+    <h1>Portée de la recherche</h1>
+    <h2>Rechercher :</h2>
+    <h3>Expression régulière</h3>
+    <h4>Remplacer par :</h4>
+    <h5>Respecter la casse</h5>
+    <h6>Mot entier</h6>
+    <h7>Résultats de la recherche :</h7>
+    <h8>Effacer les résultats</h8>
+    <!--todo remove after 2.13.0-->
+    <h9>La recherche "{0}" n'a donné aucun résultat</h9>
+    <h10>Recherche dans les éléments sélectionnés</h10>
+    <h11>Réglages de recherche des paramètres</h11>
+    <h12>Nom, nom système ou GUID du paramètre</h12>
+    <h13>Si l'identifiant du paramètre n'est pas indiqué, la recherche portera sur tous les paramètres de type chaîne modifiables</h13>
+    <h14>Copier l'ID de l'élément dans le presse-papiers</h14>
+    <h15>Afficher l'élément</h15>
+    <h16>Paramètre d'occurrence</h16>
+    <h17>Paramètre de type</h17>
+    <search>Rechercher tout</search>
+    <replace>Remplacer les éléments cochés</replace>
+    <searchAndReplace>Rechercher et remplacer tout</searchAndReplace>
+    <copied>Copié</copied>
+    <copyError>Une erreur s'est produite lors de la copie dans le presse-papiers. Réessayez</copyError>
+    <msg1>Erreur lors de la tentative de remplacement</msg1>
+    <msg2>Occurrences remplacées</msg2>
+    <ss1>Nom de la vue</ss1>
+    <ss2>Nom de la nomenclature</ss2>
+    <ss3>Nom du gabarit de vue</ss3>
+    <ss4>Nom de la feuille</ss4>
+    <ss5>Nom du groupe</ss5>
+    <ss6>Nom de la famille</ss6>
+    <ss7>Nom du type</ss7>
+    <ss8>Nom de l'assemblage</ss8>
+    <ss9>Nom du type de famille</ss9>
+    <ss10>Texte dans la vue active</ss10>
+    <ss11>Texte dans le projet</ss11>
+    <ss12>Texte de modèle dans la vue active</ss12>
+    <ss13>Texte de modèle dans le projet</ss13>
+    <ss14>Titre de la fenêtre</ss14>
+    <ss15>Numéro de feuille</ss15>
+    <ss16>Nom de la vue de la fenêtre</ss16>
+    <ss17>Annotation générique dans la vue active</ss17>
+    <ss18>Annotation générique dans le projet</ss18>
+    <ss19>Paramètre d'occurrence dans la vue active</ss19>
+    <ss20>Paramètre d'occurrence dans le projet</ss20>
+    <ss21>Paramètre de type dans la vue active</ss21>
+    <ss22>Paramètre de type dans le projet</ss22>
+    <ss23>Nom du matériau</ss23>
+    <ss24>En-têtes de la nomenclature</ss24>
+    <ss25>Titre de la nomenclature</ss25>
+    <ss26>Mode de comparaison :</ss26>
+    <ss27>Masque</ss27>
+    <ss28>Normal</ss28>
+    <ss29>Nom du filtre</ss29>
+    <searchEmptyValues>Rechercher les valeurs vides</searchEmptyValues>
+    <emptyValue>(vide)</emptyValue>
+    <maskHint>Aide sur les masques : * - n'importe quel nombre de caractères ; ? - un caractère ; # - un chiffre. Si le masque de recherche ne contient pas * ? #, alors * dans le remplacement désigne tout le fragment trouvé</maskHint>
+    <regexHint>Aide sur les expressions régulières : . — n'importe quel caractère ; .* — suite de caractères ; \d — chiffre, \w — lettre/chiffre/trait de soulignement</regexHint>
+    <counterHint>Compteurs : {CountN} - nombre, {CountC} - lettre. Exemple : Vue_{CountC} =&gt; Vue_A, Vue_B. Paramètres : {CountN:début:largeur}, {CountC:lettre}</counterHint>
+    <systemName>Nom du système</systemName>
+    <elementSystemName>Nom système de l'élément</elementSystemName>
+    <unknownCategory>Catégorie inconnue</unknownCategory>
+    <removePair>Supprimer la paire</removePair>
+    <appendPair>Ajouter une paire</appendPair>
+    <duplicatesError>Des valeurs de recherche en double ont été détectées</duplicatesError>
+    <specificationFilter>Filtre de nomenclature</specificationFilter>
+    <notFoundMessage>Aucun résultat trouvé pour cette requête</notFoundMessage>
+    <elementSystemNameSettings>Réglages de recherche des éléments</elementSystemNameSettings>
+    <searchSettingsCommon>Réglages de recherche</searchSettingsCommon>
+    <replaceErrorMessage>Élément nommé "{0}" introuvable dans le document. Remplacement impossible.</replaceErrorMessage>
+    <fillPatternName>Nom du motif de remplissage</fillPatternName>
+    <systemElementError>L'élément est l'élément intégré de motif de remplissage plein et ne peut pas être modifié</systemElementError>
+    <invalidNameMessage>Le nom contient des caractères non autorisés : "{0}"</invalidNameMessage>
+    <scheduleNotOnSheet>Pas sur une feuille</scheduleNotOnSheet>
+    <dimensionTextInCurrentView>Cotes dans la vue active</dimensionTextInCurrentView>
+    <dimensionTextInProject>Cotes dans le projet</dimensionTextInProject>
+    <dimensionAbove>Exposant</dimensionAbove>
+    <dimensionBelow>Indice</dimensionBelow>
+    <dimensionValueOverride>Valeur remplacée</dimensionValueOverride>
+    <siteName>Nom du site</siteName>
+    <worksetName>Nom du sous-projet</worksetName>
+    <worksetNameExistsMessage>Un sous-projet nommé "{0}" existe déjà</worksetNameExistsMessage>
+    <worksetNotEditableMessage>Le sous-projet "{0}" n'est pas modifiable</worksetNotEditableMessage>
+    <documentChangedMessage>Un autre document a été sélectionné. Lancez une nouvelle recherche d'éléments</documentChangedMessage>
+  </mprFindAndReplace>
+</ModPlus>

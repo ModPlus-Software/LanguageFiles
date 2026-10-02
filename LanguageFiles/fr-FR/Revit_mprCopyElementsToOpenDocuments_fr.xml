@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCopyElementsToOpenDocuments
+    LocalName="Copier des éléments"
+    Description="Copie par lots d'éléments vers les documents ouverts"
+    FullDescription="Copie par lots des éléments sélectionnés du document courant vers les documents ouverts indiqués">
+    <h1>Éléments sélectionnés :</h1>
+    <h2>Depuis le projet :</h2>
+    <h3>Vers le projet :</h3>
+    <h4>Options de copie</h4>
+    <!--todo remove after 2.4.4.0-->
+    <h5>Journal de travail</h5>
+    <h6>Lancer la copie</h6>
+    <h7>Ouvrir dans le Bloc-notes</h7>
+    <h8>Développer toutes les positions jusqu'au deuxième niveau d'imbrication</h8>
+    <h9>Tout réduire</h9>
+    <h10>Tout cocher</h10>
+    <h11>Tout désélectionner</h11>
+    <h12>Afficher le GUID des paramètres partagés</h12>
+    <h13>Autres réglages</h13>
+    <h14>Types</h14>
+    <h15>Autres éléments</h15>
+    <h16>Supprimer les avertissements</h16>
+    <h17>Afficher les fichiers liés</h17>
+    <h18>Comportement en cas de noms identiques</h18>
+    <h19>Comportement en cas de noms de types identiques</h19>
+    <h20>Jeu</h20>
+    <h21>Comportement en cas de noms de filtres identiques</h21>
+    <h22>Comportement en cas de noms de vues identiques</h22>
+    <h23>Définit le comportement en cas de noms identiques des éléments associés. Par exemple, si une occurrence de mur est copiée et que le document cible contient déjà un type de mur portant le même nom que celui du mur copié, Revit propose d'utiliser le type du document cible ou de créer une copie du type avec ajout d'un suffixe numérique.</h23>
+    <h24>Cette option n'a pas d'effet sur la plupart des éléments copiés par le plugin, mais elle doit obligatoirement être définie dans la méthode de copie de l'API Revit utilisée. La plupart des éléments sont copiés avec ajout d'un suffixe numérique, quelle que soit la valeur de cette option.</h24>
+    <h25>En cas de noms de types identiques et si l'option "Remplacer" est sélectionnée, le plugin exécutera l'algorithme suivant : dans le document cible, le type portant le même nom que le type copié (l'ancien type) sera renommé. Ensuite, le nouveau type sera copié. Le nouveau type sera attribué à toutes les occurrences des éléments auxquelles l'ancien type était attribué. L'ancien type sera supprimé.</h25>
+    <h26>En cas de noms de filtres identiques et si l'option "Remplacer" est sélectionnée, le plugin exécutera l'algorithme suivant : dans le document cible, toutes les vues et tous les gabarits de vue auxquels est appliqué un filtre portant le même nom que le filtre copié (l'ancien filtre) seront recherchés. Ensuite, le nouveau filtre sera copié avec ajout d'un suffixe numérique. Pour toutes les vues et tous les gabarits de vue trouvés précédemment, les filtres seront de nouveau appliqués, en remplaçant l'ancien filtre par le nouveau, tout en conservant les réglages de visibilité. L'ancien filtre sera supprimé. Le nouveau filtre recevra le nom de l'ancien filtre.</h26>
+    <h27>En cas de noms de vues identiques et si l'option "Remplacer" est sélectionnée, le plugin exécutera l'algorithme suivant : dans le document cible, toutes les fenêtres affichant l'ancienne vue, ou toutes les vues utilisant l'ancienne vue comme gabarit (si la vue copiée est un gabarit), seront recherchées. Ensuite, la nouvelle vue sera copiée avec ajout d'un suffixe numérique. Pour toutes les fenêtres trouvées précédemment, la nouvelle vue sera définie comme vue affichée, ou, pour toutes les vues trouvées précédemment, la nouvelle vue sera définie comme gabarit. L'ancienne vue sera supprimée. La nouvelle vue recevra le nom de l'ancienne vue.</h27>
+    <h28>Enregistrer comme nouveau jeu</h28>
+    <h29>Enregistrer le jeu courant</h29>
+    <h30>Supprimer le jeu</h30>
+    <h31>Saisissez le nom du nouveau jeu</h31>
+    <h32>La modification des fenêtres n'est possible qu'à partir de Revit 2023 !</h32>
+    <filters>Filtres</filters>
+    <link>Lien :</link>
+    <b1>Utiliser les noms du document de destination</b1>
+    <b2>Interrompre le collage</b2>
+    <b3>Comportement par défaut</b3>
+    <b4>Remplacer</b4>
+    <b5>Demander</b5>
+    <elementGetError>Une erreur s'est produite lors de l'obtention de l'élément. Id : "{0}". Erreur : "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
+    <m1>{0} – ERREUR ! Une erreur s'est produite lors de l'obtention de l'élément. Id : "{1}". Erreur : "{2}".</m1>
+    <startCollectingElements>Début de l'opération de collecte des éléments du modèle ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m2>{0} – Début de l'opération de collecte des éléments du modèle ({1}).</m2>
+    <completionCollectingElements>Fin de l'opération de collecte des éléments du modèle ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m3>{0} – Fin de l'opération de collecte des éléments du modèle ({1}).</m3>
+    <collectingElementsCriticalError>Erreur critique lors de l'opération de collecte des éléments du modèle ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
+    <m4>{0} – ERREUR ! Erreur critique lors de l'opération de collecte des éléments du modèle ({1}).</m4>
+    <startCopyingElements>Début de la copie des éléments du document "{0}" vers les documents "{1}".</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m5>{0} – Début de la copie des éléments du document "{1}" vers les documents "{2}".</m5>
+    <completionCopyingElements>Fin de la copie des éléments du document "{0}" vers les documents "{1}".</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m6>{0} – Fin de la copie des éléments du document "{1}" vers les documents "{2}".</m6>
+    <elementCopyError>Une erreur s'est produite lors de la copie de l'élément "{0} (id : {1})" de la catégorie "{2}" : "{3}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
+    <m7>{0} – ERREUR ! Une erreur s'est produite lors de la copie de l'élément "{1} (id : {2})" de la catégorie "{3}" : "{4}".</m7>
+    <worksharingDisabledWarning>Le travail partagé n'est pas activé dans ce document ({0}). Les sous-projets ne sont pas copiés.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
+    <m9>{0} – AVERTISSEMENT ! Le travail partagé n'est pas activé dans ce document ({1}). Les sous-projets ne sont pas copiés.</m9>
+    <m10>Sous-projets</m10>
+    <m11> (Type)</m11>
+    <m12>Organisation de l'arborescence du projet</m12>
+    <m13>Cotes</m13>
+    <m14>Motifs de remplissage</m14>
+    <m15>Filtres de paramètres</m15>
+    <m16>Types de ligne</m16>
+    <m17>Familles chargeables</m17>
+    <m18>Filtres de phase</m18>
+    <m19>Réglages d'impression</m19>
+    <m20>Révisions</m20>
+    <m21>Réglages des révisions</m21>
+    <m22>Styles de texte</m22>
+    <m23>Types de famille de vues</m23>
+    <m24>Vues</m24>
+    <m25>Paramètres</m25>
+    <m26>Paramètres partagés</m26>
+    <m27>Copie d'éléments</m27>
+    <m28>Tous les groupes</m28>
+    <m29>Vues (gabarits)</m29>
+    <m30>Copie terminée</m30>
+    <!--todo remove after 2.4.4.0-->
+    <m32>Annuler</m32>
+    <m33>Recherche</m33>
+    <m34>Plans de surface</m34>
+    <m35>Plans de plafond</m35>
+    <m36>Nomenclatures de poteaux</m36>
+    <m37>Rapports de coûts</m37>
+    <m38>Détails</m38>
+    <m39>Vues de dessin</m39>
+    <m40>Feuilles</m40>
+    <m41>Élévations</m41>
+    <m42>Plans d'ingénierie</m42>
+    <m43>Plans d'étage</m43>
+    <m44>Interne</m44>
+    <m45>Légendes</m45>
+    <m46>Rapport des charges</m46>
+    <m47>Nomenclatures de tableaux électriques</m47>
+    <m48>Rapports de perte de charge</m48>
+    <m49>Arborescence du projet</m49>
+    <m50>Rendu</m50>
+    <m51>Rapports</m51>
+    <m52>Nomenclatures</m52>
+    <m53>Coupes</m53>
+    <m54>Navigateur de systèmes</m54>
+    <m55>Rapport d'analyse des systèmes</m55>
+    <m56>3D</m56>
+    <m57>Visite virtuelle</m57>
+    <m58>Non défini</m58>
+    <m59>Catégories</m59>
+    <startCollectingTypes>Début de l'opération de collecte des types du modèle ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m60>{0} – Début de l'opération de collecte des types du modèle ({1}).</m60>
+    <completionCollectingTypes>Fin de l'opération de collecte des types du modèle ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m61>{0} – Fin de l'opération de collecte des types du modèle ({1}).</m61>
+    <m62>un avertissement critique de Revit nécessitant une confirmation de l'utilisateur est survenu. Désactivez la suppression des avertissements et relancez la copie</m62>
+    <m63>Paramètres partagés</m63>
+    <m64>Sans catégorie</m64>
+    <elementCopySkipped>Copie de l'élément "{0} (id {1})" de la catégorie "{2}" ignorée.</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
+    <m65>{0} – Copie de l'élément "{1} (id {2})" de la catégorie "{3}" ignorée.</m65>
+    <m66>Le document cible contient déjà la famille "{0}" avec le type "{1}".{2}Copier avec remplacement ?</m66>
+    <m67>Paramètres globaux</m67>
+    <m68>Motifs de ligne</m68>
+    <m69>Jeux de couleurs</m69>
+    <m70>Paramètres de projet</m70>
+    <m71>Le document cible contient déjà le filtre "{0}".{1}Copier avec remplacement ?</m71>
+    <m72>Le document cible contient déjà la vue "{0}".{1}Copier avec remplacement ?</m72>
+    <copyConduitStandardWithReplace>Le document cible contient déjà le standard de conduits "{0}".{1}Copier avec remplacement ?</copyConduitStandardWithReplace>
+    <!--todo remove after 2.4.4.0-->
+    <m73>Éléments copiés :</m73>
+    <!--todo remove after 2.4.4.0-->
+    <m74>Éléments ignorés :</m74>
+    <!--todo remove after 2.4.4.0-->
+    <m75>Nombre d'erreurs :</m75>
+    <m76>Détails dans le journal de travail</m76>
+    <m77>Options d'exportation</m77>
+    <m78>Options d'exportation DWG/DXF</m78>
+    <m79>Options d'exportation DGN</m79>
+    <fillPatterns>Motifs de remplissage</fillPatterns>
+    <startCollectingFamilies>Début de l'opération de collecte des familles du modèle ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Fin de l'opération de collecte des familles du modèle ({0})</completionCollectingFamilies>
+    <families>Familles</families>
+    <familyProcessError>Une erreur s'est produite lors du traitement de la famille "{0}" (id : {1}) : "{2}"</familyProcessError>
+    <familyExists>Le document cible contient déjà la famille "{0}".{1}Lancer la copie ?</familyExists>
+    <duplicateCreated>Un doublon de la famille {0} a été créé</duplicateCreated>
+    <elementTab>Éléments</elementTab>
+    <modelElementTab>Éléments du modèle</modelElementTab>
+    <selectedInModel>Sélectionnés dans le modèle</selectedInModel>
+    <selectFromLink>Sélectionner depuis un lien</selectFromLink>
+    <selectElementsFrom>Sélectionnez les éléments de {0}</selectElementsFrom>
+    <copyResultMessage>Copie terminée. Copiés : {0}, Ignorés : {1}, Avec erreurs : {2}</copyResultMessage>
+    <messageInvalidActiveDocument>Le document actif ne correspond pas à la source sélectionnée</messageInvalidActiveDocument>
+    <notSelectedElements>Aucun élément n'est sélectionné dans le modèle</notSelectedElements>
+    <selectElementsFromLink>Sélectionnez les éléments du fichier lié</selectElementsFromLink>
+    <groupTypeExists>Le document cible contient déjà le groupe "{0}".\nCopier avec remplacement ?</groupTypeExists>
+    <groups>Groupes</groups>
+    <materialExists>Le document cible contient déjà le matériau "{0}".\nCopier avec remplacement ?</materialExists>
+    <materialDuplicateActionSettings>Comportement en cas de noms de matériaux identiques</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>En cas de noms de matériaux identiques et si l'option "Remplacer" est sélectionnée, le plugin exécutera l'algorithme suivant : l'ancien matériau du document cible sera mis à jour - toutes les propriétés du nouveau matériau lui seront attribuées. Le nom du matériau restera inchangé. Tous les éléments utilisant ce matériau recevront automatiquement les propriétés mises à jour.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Fermer les nomenclatures ouvertes</closeOpenedSchedule>
+    <searchModeLabel>Mode de comparaison :</searchModeLabel>
+    <searchModeNormal>Normal</searchModeNormal>
+    <searchModeRegex>Expression régulière</searchModeRegex>
+    <patternCopyWarning>Impossible de copier le motif "{0}" (id : {1}) dans le document cible. Les remplacements de graphismes du filtre seront appliqués sans ce motif.</patternCopyWarning>
+    <viewTemplateFiltersCopyError>Impossible d'appliquer les filtres au gabarit de vue copié "{0}". Erreur : "{1}".</viewTemplateFiltersCopyError>
+  </mprCopyElementsToOpenDocuments>
+</ModPlus>

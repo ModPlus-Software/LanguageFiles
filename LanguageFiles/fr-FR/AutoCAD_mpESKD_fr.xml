@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpESKD
+    LocalName="Smart"
+    Description="Création d'objets intelligents qui étendent les possibilités d'AutoCAD et permettent de réaliser la mise en forme selon les normes (ISO)">
+    <tab1>Lignes</tab1>
+    <tab2>Réglages</tab2>
+    <tab3>Axes</tab3>
+    <tab4>Styles et réglages</tab4>
+    <tab5>Gestion des styles et réglages des objets intelligents ModPlus</tab5>
+    <tab6>Palette des propriétés</tab6>
+    <tab7>Palette des propriétés des objets intelligents ModPlus</tab7>
+    <tab8>Vues, coupes</tab8>
+    <tab9>Utilitaires</tab9>
+    <tab10>Rechercher</tab10>
+    <tab11>Repères de niveau</tab11>
+    <!-- todo remove tab12 after 1.28.24.0  -->
+    <tab12>Rechercher par valeur</tab12>
+    <tab13>Recherche d'objets intelligents par type</tab13>
+    <!-- todo remove tab14 after 1.28.24.0  -->
+    <tab14>Recherche d'objets intelligents par valeur des propriétés textuelles et numériques</tab14>
+    <tab15>Lignes de repère</tab15>
+    <tab16>Symboles</tab16>
+    <tab17>Rechercher et remplacer</tab17>
+    <tab18>Recherche et remplacement dans les objets intelligents par valeur des propriétés textuelles et numériques</tab18>
+    <tab19>Soudure</tab19>
+    <!--todo remove after 2.5.18.0-->
+    <defl>Par défaut</defl>
+    <err1>Fichier introuvable</err1>
+    <err2>Impossible de charger le type de ligne</err2>
+    <err5>Erreur lors de la lecture des données du registre ! Lancez le Configurateur pour mettre à jour les données du registre</err5>
+    <msg1>Spécifiez le point d'insertion :</msg1>
+    <msg2>Spécifiez le point final :</msg2>
+    <msg3>Sélectionnez un bloc constituant un objet intelligent ModPlus</msg3>
+    <msg5>Spécifiez le point suivant :</msg5>
+    <msg6>Sélectionnez une polyligne :</msg6>
+    <msg7>Supprimer la polyligne d'origine ?</msg7>
+    <msg8>Copier le calque ? [Oui/Non]</msg8>
+    <msg9>Objets intelligents traités</msg9>
+    <msg10>Aucun objet intelligent des types spécifiés n'a été trouvé dans l'espace courant</msg10>
+    <msg11>Spécifiez le point d'origine :</msg11>
+    <msg12>Spécifiez le point du niveau :</msg12>
+    <msg13>Spécifiez le point de position du repère de niveau :</msg13>
+    <msg14>Sélectionnez les repères de niveau :</msg14>
+    <msg15>Sélectionnez le repère de niveau de référence :</msg15>
+    <msg16>Supprimer des objets de la sélection :</msg16>
+    <msg17>Spécifiez le point du cadre :</msg17>
+    <msg18>Spécifiez le point de la ligne de repère :</msg18>
+    <msg19>Spécifiez le point de placement du texte :</msg19>
+    <msg20>Spécifiez le point de décalage du texte :</msg20>
+    <msg21>Spécifiez le point de position du texte :</msg21>
+    <msg22>Point suivant ou</msg22>
+    <msg23>Sélectionnez la première arête</msg23>
+    <msg24>Sélectionnez la seconde arête</msg24>
+    <msg25>Spécifiez le centre de l'arc</msg25>
+    <msg26>Spécifiez le début de l'arc</msg26>
+    <msg27>Spécifiez la fin de l'arc</msg27>
+    <msg28>Spécifiez le point du nouvel axe</msg28>
+    <wrong>Objet incorrect !</wrong>
+    <vc1>DIVERS</vc1>
+    <vc2>NON DÉFINI</vc2>
+    <h1>Réglages de la palette</h1>
+    <h2>Démarrage automatique avec AutoCAD</h2>
+    <h3>Se connecter à la palette ModPlus</h3>
+    <h4>Limite maximale dépassée</h4>
+    <h5>d'objets sélectionnés</h5>
+    <h6>Fonctionnement de la palette interrompu</h6>
+    <h7>La limite maximale d'objets sélectionnés</h7>
+    <h8>peut être modifiée dans les</h8>
+    <h9>réglages</h9>
+    <h10>du plugin</h10>
+    <h11>Propriétés Smart</h11>
+    <h12>Système</h12>
+    <h13>Nouveau style utilisateur</h13>
+    <h14>Éditeur de styles</h14>
+    <h15>Réglages</h15>
+    <h16>Ajouter un nouveau style utilisateur</h16>
+    <h17>Supprimer le style utilisateur sélectionné</h17>
+    <h18>Définir le style sélectionné comme style par défaut</h18>
+    <h19>Créer un nouveau style à partir de l'objet intelligent sélectionné</h19>
+    <h20>Description de la propriété :</h20>
+    <h21>Réglages généraux</h21>
+    <h22>Lors de la création d'un objet, appliquer l'échelle du style</h22>
+    <h23>Si cette case est cochée, lors de la création d'un objet intelligent, l'échelle définie dans le style courant lui sera appliquée, indépendamment de l'échelle d'annotation du dessin. Sinon, l'échelle d'annotation du dessin sera appliquée à l'objet</h23>
+    <h24>Lors de la création d'un objet, appliquer le calque du style</h24>
+    <h25>Si cette case est cochée, lors de la création d'un objet intelligent, le calque défini dans le style courant lui sera appliqué, indépendamment du calque courant du dessin. Sinon, le calque courant du dessin sera appliqué à l'objet</h25>
+    <h26>Si le calque spécifié dans le style est absent du document courant :</h26>
+    <h27>Appliquer le calque courant</h27>
+    <h28>Lors de la création de l'objet, le calque courant du dessin lui sera appliqué</h28>
+    <h29>Créer et appliquer le calque du style</h29>
+    <h30>Le calque défini dans le style sera créé dans le document courant et appliqué à l'objet intelligent</h30>
+    <h31>Lors de la création d'un objet, appliquer le style de texte du style</h31>
+    <h32>Si cette case est cochée, lors de la création d'un objet intelligent, le style de texte défini dans le style courant lui sera appliqué, indépendamment du style de texte courant du dessin. Sinon, le style de texte courant du dessin sera appliqué à l'objet</h32>
+    <h33>Si le style de texte spécifié dans le style est absent du document courant :</h33>
+    <h34>Appliquer le style de texte courant</h34>
+    <h35>Lors de la création d'un objet intelligent, le style de texte courant du dessin lui sera appliqué</h35>
+    <h36>Créer et appliquer le style de texte du style</h36>
+    <h37>Le style de texte défini dans le style sera créé dans le document courant et appliqué à l'objet</h37>
+    <h38>Nombre maximal d'objets sélectionnés au-delà duquel la palette des propriétés cesse de fonctionner. Ce réglage permet d'accélérer le travail dans AutoCAD en désactivant la lecture des propriétés des objets. Par exemple, si vous devez sélectionner 1000 objets pour les copier dans un autre dessin, il n'est pas nécessaire de traiter les propriétés de tous ces objets</h38>
+    <h39>Nombre maximal d'objets sélectionnés (0 – toujours fonctionner) :</h39>
+    <h40>Réglages des objets intelligents</h40>
+    <h41>Axe droit</h41>
+    <h42>Modifier l'échelle du type de ligne proportionnellement à l'échelle de l'objet</h42>
+    <h43>L'échelle du type de ligne définie pour l'axe variera proportionnellement à l'échelle principale de l'axe. Par exemple, si l'échelle de l'axe était de 1:1 et l'échelle du type de ligne de 2, alors en définissant l'échelle de l'axe à 1:100, l'échelle du type de ligne deviendra égale à 200</h43>
+    <h44>Poursuivre les valeurs des axes créés</h44>
+    <h45>Lors de la création d'axes, les axes déjà créés dans le dessin seront recherchés et les valeurs de leur premier marqueur seront collectées, puis triées par ordre croissant. L'axe créé recevra la valeur de marqueur suivant la dernière valeur trouvée</h45>
+    <h46>Afficher les lignes auxiliaires</h46>
+    <h47>Lors de la sélection d'une cote de niveau, des lignes auxiliaires seront affichées du point de référence au point de niveau et du point de niveau à la cote de niveau</h47>
+    <h48>Ligne de rupture</h48>
+    <h49>Général</h49>
+    <h50>Style :</h50>
+    <h51>Géométrie</h51>
+    <h52>Style de l'objet intelligent</h52>
+    <h53>Style de base pour la ligne de rupture</h53>
+    <h54>Nom du style</h54>
+    <h55>Description du style</h55>
+    <h56>Création d'une ligne de rupture</h56>
+    <h57>Création d'un objet intelligent basé sur un bloc anonyme décrivant une ligne de rupture, par l'indication de deux points</h57>
+    <h58>Rupture curviligne</h58>
+    <h59>Rupture cylindrique</h59>
+    <h60>Création d'une rupture curviligne</h60>
+    <h61>Création d'une rupture cylindrique</h61>
+    <h62>Création d'un objet intelligent basé sur un bloc anonyme décrivant une rupture curviligne, par l'indication de deux points</h62>
+    <h63>Création d'un objet intelligent basé sur un bloc anonyme décrivant une rupture cylindrique, par l'indication de deux points</h63>
+    <h64>Contenu</h64>
+    <h65>Création d'un axe droit</h65>
+    <h66>Création d'un objet intelligent basé sur un bloc anonyme décrivant un axe droit, par l'indication de deux points</h66>
+    <h68>Style de base pour l'axe droit</h68>
+    <h69>Le style sélectionné sera supprimé définitivement ! Continuer ?</h69>
+    <h70>Groupe de styles</h70>
+    <h71>contient des styles portant le même nom</h71>
+    <h72>Renommez les styles de sorte qu'il n'y ait pas de noms identiques</h72>
+    <h73>Ligne de terrain</h73>
+    <h74>Création d'une ligne de désignation du terrain</h74>
+    <h75>Création d'un objet intelligent basé sur un bloc anonyme décrivant une ligne de terrain</h75>
+    <h76>Ligne de terrain à partir d'une polyligne</h76>
+    <h77>Conversion de la polyligne sélectionnée en ligne de désignation du terrain</h77>
+    <h78>Style de base pour la ligne de terrain</h78>
+    <h79>Coupe</h79>
+    <h80>Création d'une désignation de coupe (section)</h80>
+    <h81>Création d'un objet intelligent basé sur un bloc anonyme décrivant une coupe (section)</h81>
+    <h82>Coupe brisée</h82>
+    <h83>Coupe à partir d'une polyligne</h83>
+    <h84>Création d'une désignation de coupe brisée (section)</h84>
+    <h85>Conversion de la polyligne sélectionnée en désignation de coupe</h85>
+    <h86>Poursuivre les valeurs pour les nouvelles coupes</h86>
+    <h87>Lors de la création d'une nouvelle coupe, la dernière coupe créée dans l'espace courant sera recherchée et sa valeur servira de base pour la nouvelle coupe</h87>
+    <h88>Afficher la ligne de coupe auxiliaire</h88>
+    <h89>Lors de la sélection d'une coupe, une ligne auxiliaire passant par tous les points de la coupe sera affichée</h89>
+    <h90>Déplacement lié du texte</h90>
+    <h93>Restaurer la position du texte</h93>
+    <h95>MP: Créer un analogue</h95>
+    <h96>Style de base pour la coupe</h96>
+    <h97>Lors du déplacement de l'un des textes de la coupe, le second se décalera automatiquement de la même distance</h97>
+    <h98>Comment traiter la propriété "Calque" lors de l'exécution de la commande "Créer un analogue" :</h98>
+    <h99>Recherche d'objets intelligents</h99>
+    <h100>Indiquez les types d'objets à rechercher</h100>
+    <h101>Tout cocher</h101>
+    <h102>Tout désélectionner</h102>
+    <h103>Le style est absent de la base</h103>
+    <h104>Un ou plusieurs objets se trouvent sur un calque verrouillé, il est impossible de les mettre à jour</h104>
+    <h105>Cote de niveau</h105>
+    <h106>Création d'une cote de niveau</h106>
+    <h107>Création d'un objet intelligent basé sur un bloc anonyme décrivant une cote de niveau</h107>
+    <h108>Style de base pour la cote de niveau</h108>
+    <h110>Alignement des cotes de niveau</h110>
+    <h111>Alignement vertical de la position des cotes</h111>
+    <h112>Alignement des points d'origine</h112>
+    <h113>La commande permet d'aligner les cotes de niveau selon différentes conditions</h113>
+    <h114>Étanchéité</h114>
+    <h115>Création d'une ligne de désignation de l'étanchéité</h115>
+    <h116>Création d'un objet intelligent basé sur un bloc anonyme décrivant une ligne d'étanchéité</h116>
+    <h117>Étanchéité à partir d'une polyligne</h117>
+    <h118>Conversion de la polyligne sélectionnée en ligne de désignation de l'étanchéité</h118>
+    <h119>Pour l'objet intelligent créé contenant un nombre affiché, définir le séparateur des parties entière et décimale :</h119>
+    <h120>Valeur à rechercher</h120>
+    <h121>Rechercher</h121>
+    <h122>Mot entier</h122>
+    <h123>Respecter la casse</h123>
+    <h124>Aucun résultat pour "{0}"</h124>
+    <h125>Tout ajouter à la sélection courante</h125>
+    <h126>Repère de détail</h126>
+    <h127>Création d'un repère de détail</h127>
+    <h128>Création d'un objet intelligent basé sur un bloc anonyme décrivant un repère de détail</h128>
+    <h129>Style de base pour l'étanchéité</h129>
+    <h130>Style de base pour le repère de détail</h130>
+    <h131>Poursuivre les valeurs des repères de détail créés</h131>
+    <h132>Lors de la création de repères de détail, les repères de détail déjà créés dans le dessin seront recherchés et les valeurs de leur numéro de détail seront collectées, puis triées par ordre croissant. Le repère de détail créé recevra le numéro de détail suivant la dernière valeur trouvée</h132>
+    <h133>Repère de détail sécant</h133>
+    <h134>Création d'un repère de détail sécant</h134>
+    <h135>Création d'un objet intelligent basé sur un bloc anonyme décrivant un repère de détail sécant</h135>
+    <h136>Poursuivre les valeurs des repères de détail sécants créés</h136>
+    <h137>Lors de la création de repères de détail sécants, les repères de détail sécants déjà créés dans le dessin seront recherchés et les valeurs de leur numéro de détail seront collectées, puis triées par ordre croissant. Le repère de détail sécant créé recevra le numéro de détail suivant la dernière valeur trouvée</h137>
+    <h138>Style de base pour le repère de détail sécant</h138>
+    <h139>Soudure</h139>
+    <h140>Création d'une désignation de cordon de soudure</h140>
+    <h141>Création d'un objet intelligent basé sur un bloc anonyme décrivant un cordon de soudure</h141>
+    <h142>Style de base de la désignation de cordon de soudure</h142>
+    <h143>Soudure à partir d'une polyligne</h143>
+    <h144>Conversion de la polyligne sélectionnée en ligne de désignation de cordon de soudure</h144>
+    <h145>Repère de fragment</h145>
+    <h146>Style de base pour le repère de fragment</h146>
+    <h147>Création d'un repère de fragment</h147>
+    <h148>Création d'un objet intelligent basé sur un bloc anonyme décrivant un repère de fragment, par l'indication de deux points</h148>
+    <h149>Poursuivre les valeurs des fragments créés</h149>
+    <h150>Lors de la création de fragments, les fragments déjà créés dans le dessin seront recherchés et les valeurs de leur numéro seront collectées, puis triées par ordre croissant. Le fragment créé recevra le numéro de fragment suivant la dernière valeur trouvée</h150>
+    <h151>Désignation de vue/coupe</h151>
+    <h152>Style de base pour la désignation de vue/coupe</h152>
+    <h153>Désignation de vue</h153>
+    <h154>Création d'une désignation de vue </h154>
+    <h155>Création d'un objet intelligent de désignation de vue basé sur un bloc anonyme</h155>
+    <h156>Poursuivre les valeurs pour les nouvelles vues</h156>
+    <h157>Lors de la création d'une nouvelle désignation de vue/coupe, la dernière désignation de vue/coupe créée dans l'espace courant sera recherchée et sa valeur servira de base pour la nouvelle désignation de vue/coupe</h157>
+    <h158>Désignation de coupe</h158>
+    <h159>Création d'une désignation de coupe</h159>
+    <h160>Création d'un objet intelligent de désignation de coupe basé sur un bloc anonyme</h160>
+    <h161>Ligne à lettres</h161>
+    <h162>Style de base pour la ligne à lettres</h162>
+    <h163>Tracé d'une désignation de ligne à lettres</h163>
+    <h164>Création d'un objet intelligent basé sur un bloc anonyme décrivant une ligne à lettres</h164>
+    <h165>Ligne à lettres à partir d'une polyligne</h165>
+    <h166>Conversion de la polyligne sélectionnée en ligne à lettres</h166>
+    <h167>Vue</h167>
+    <h168>Style de base pour la désignation de vue</h168>
+    <h169>Création d'une désignation de vue</h169>
+    <h170>Création d'un objet intelligent basé sur un bloc anonyme décrivant une désignation de vue</h170>
+    <h171>Cote de niveau en plan</h171>
+    <h172>Style de base pour la désignation de cote de niveau en plan</h172>
+    <h173>Création d'une cote de niveau en plan</h173>
+    <h174>Création d'un objet intelligent basé sur un bloc anonyme décrivant une cote de niveau en plan</h174>
+    <h175>Repère en chaîne</h175>
+    <h176>Style de base pour la désignation de repère en chaîne</h176>
+    <h177>Création d'un repère en chaîne</h177>
+    <h178>Création d'un objet intelligent basé sur un bloc anonyme décrivant un repère en chaîne</h178>
+    <h179>Poursuivre les valeurs des repères en chaîne créés</h179>
+    <h180>Lors de la création de repères en chaîne, les repères déjà créés dans le dessin seront recherchés et leurs valeurs seront collectées, puis triées par ordre croissant. Le repère créé recevra la valeur numérique ou alphabétique suivant la dernière valeur trouvée. La fonction n'est opérationnelle que si tous les repères en chaîne créés ont des valeurs numériques ou alphabétiques</h180>
+    <h181>Tenir compte de l'angle de rotation du bloc lors de la rotation du texte</h181>
+    <h182>Le texte de l'axe droit pivotera avec le bloc de l'axe lors de l'utilisation de la commande ROTATION</h182>
+    <h183>Repère en peigne</h183>
+    <h184>Style de base pour la désignation de repère en peigne</h184>
+    <h185>Création d'un repère en peigne</h185>
+    <h186>Création d'un objet intelligent basé sur un bloc anonyme décrivant un repère en peigne</h186>
+    <h187>Flèche épaisse</h187>
+    <h188>Style de base pour la désignation de flèche épaisse</h188>
+    <h189>Création d'une flèche épaisse</h189>
+    <h190>Création d'un objet intelligent basé sur un bloc anonyme décrivant une flèche épaisse</h190>
+    <h191>Reprise de bétonnage</h191>
+    <h192>Création d'une reprise de bétonnage</h192>
+    <h193>Création d'un objet intelligent basé sur un bloc anonyme décrivant une reprise de bétonnage</h193>
+    <h194>Reprise de bétonnage à partir d'une polyligne</h194>
+    <h195>Conversion de la polyligne sélectionnée en ligne de désignation de reprise de bétonnage</h195>
+    <h196>Style de base pour la désignation de reprise de bétonnage</h196>
+    <h197>Désignation de détail</h197>
+    <h198>Création d'une désignation de détail</h198>
+    <h199>Création d'un objet intelligent basé sur un bloc anonyme décrivant une désignation de détail</h199>
+    <h200>Style de base pour la désignation de détail</h200>
+    <h201>Poursuivre les valeurs des désignations de détail créées</h201>
+    <h202>Lors de la création de désignations de détail, les désignations de détail déjà créées dans le dessin seront recherchées et les valeurs de leur numéro de détail seront collectées, puis triées par ordre croissant. La désignation de détail créée recevra le numéro de détail suivant la dernière valeur trouvée</h202>
+    <h203>Repère de révision</h203>
+    <h204>Création d'un repère de révision</h204>
+    <h205>Création d'un objet intelligent basé sur un bloc anonyme décrivant un repère de révision</h205>
+    <h206>Style de base pour le repère de révision</h206>
+    <h207>Repère en peigne</h207>
+    <h208>Style de base pour le repère en peigne</h208>
+    <h209>Création d'un repère en peigne</h209>
+    <h210>Création d'un objet intelligent basé sur un bloc anonyme décrivant un repère en peigne</h210>
+    <h211>Repère de pieu</h211>
+    <h212>Style de base pour le repère de pieu</h212>
+    <h213>Création d'un repère de pieu</h213>
+    <h214>Création d'un objet intelligent basé sur un bloc anonyme décrivant un repère de pieu</h214>
+    <h215>Indication de pente</h215>
+    <h216>Création d'une indication de pente</h216>
+    <h217>Création d'un objet intelligent basé sur un bloc anonyme décrivant une indication de pente</h217>
+    <h218>Style de base pour l'indication de pente</h218>
+    <h219>Tout remplacer</h219>
+    <h220>Remplacer la sélection</h220>
+    <h221>Type d'objet</h221>
+    <h224>Propriété sans nom</h224>
+    <h225>Objets intelligents trouvés :</h225>
+    <h226>Propriétés trouvées :</h226>
+    <h227>Rechercher uniquement les propriétés remplaçables</h227>
+    <h228>Modifiable</h228>
+    <h229>Valeur de remplacement</h229>
+    <h230>Isolation</h230>
+    <h231>Création d'une ligne de désignation de différents types d'isolation</h231>
+    <h232>Création d'un objet intelligent basé sur un bloc anonyme décrivant différents types d'isolation</h232>
+    <h233>Isolation à partir d'une polyligne</h233>
+    <h234>Conversion de la polyligne sélectionnée en ligne de désignation de différents types d'isolation</h234>
+    <h235>Afficher des poignées supplémentaires sur les objets intelligents linéaires</h235>
+    <h236>Style de base pour l'isolation</h236>
+    <h237>Afficher des poignées fonctionnelles supplémentaires lors de la sélection d'objets intelligents linéaires</h237>
+    <h238>Symbole de soudure</h238>
+    <h239>Création d'un symbole de soudure</h239>
+    <h240>Création d'un objet intelligent basé sur un bloc anonyme décrivant un symbole de soudure</h240>
+    <h241>Style de base pour le symbole de soudure</h241>
+    <h242>Côté</h242>
+    <h243>Cordon d'angle</h243>
+    <h244>Création d'un cordon d'angle</h244>
+    <h245>Création d'un objet intelligent basé sur un bloc anonyme décrivant un cordon d'angle</h245>
+    <h246>Création d'un cordon d'angle par trois points</h246>
+    <h247>Création d'un objet intelligent basé sur un bloc anonyme décrivant un cordon d'angle par trois points</h247>
+    <h248>Style de base pour le cordon d'angle</h248>
+    <h249>Remplissage des trous</h249>
+    <h250>Création d'un remplissage des trous</h250>
+    <h251>Création d'un objet intelligent basé sur un bloc anonyme décrivant un remplissage des trous</h251>
+    <h252>Style de base pour le remplissage des trous</h252>
+    <h253>Cordon d'angle par trois points</h253>
+    <h254>Le document ne contient aucun objet intelligent</h254>
+    <h255>Axe polaire</h255>
+    <h256>Création d'un axe polaire</h256>
+    <h257>Création d'un objet intelligent basé sur un bloc anonyme décrivant la désignation d'un axe polaire</h257>
+    <h258>Style de base pour l'axe polaire</h258>
+    <h259>Valeur initiale</h259>
+    <h260>Repère multiligne</h260>
+    <h261>Création d'un repère multiligne</h261>
+    <h262>Création d'un objet intelligent basé sur un bloc anonyme décrivant un repère multiligne</h262>
+    <h263>Modifier les valeurs enregistrées</h263>
+    <h264>Modifier les valeurs enregistrées du repère multiligne</h264>
+    <h265>Style de base pour le repère multiligne</h265>
+    <h266>Nouvelle ligne</h266>
+    <h267>Nombre maximal d'éléments :</h267>
+    <h268>Valeurs de l'objet courant</h268>
+    <h269>Valeurs enregistrées</h269>
+    <h270>Ligne fléchée</h270>
+    <h271>Création d'une ligne fléchée</h271>
+    <h272>Création d'un objet intelligent basé sur un bloc anonyme décrivant une ligne fléchée</h272>
+    <h273>Ligne fléchée à partir d'une polyligne</h273>
+    <h274>Conversion de la polyligne sélectionnée en ligne fléchée</h274>
+    <h275>Style de base pour la ligne fléchée</h275>
+    <h276>Propriétés communes</h276>
+    <h277>Nouveau groupe</h277>
+    <h278>Ajouter un groupe</h278>
+    <h279>Ligne électrique</h279>
+    <h280>Création d'une ligne électrique</h280>
+    <h281>Création d'un objet intelligent basé sur un bloc anonyme décrivant une ligne électrique</h281>
+    <h282>Ligne électrique à partir d'une polyligne</h282>
+    <h283>Conversion de la polyligne sélectionnée en ligne électrique</h283>
+    <h284>Style de base pour la ligne électrique</h284>
+    <h285>Unités de mesure</h285>
+    <h286>Supprimer le groupe</h286>
+    <h287>Ajouter une ligne</h287>
+    <h288>Supprimer la ligne</h288>
+    <so0>Actualiser les graphismes</so0>
+    <sot0>Les graphismes de tous les objets intelligents trouvés seront régénérés</sot0>
+    <so1>Sélectionner</so1>
+    <sot1>Tous les objets intelligents des types indiqués dans l'espace courant seront sélectionnés</sot1>
+    <so2>Supprimer les données</so2>
+    <sot2>Les données étendues de tous les objets intelligents des types indiqués dans l'espace courant seront supprimées, ce qui transformera les objets en blocs ordinaires</sot2>
+    <so3>Décomposer</so3>
+    <sot3>Tous les objets intelligents des types indiqués dans l'espace courant seront décomposés</sot3>
+    <so4>Supprimer</so4>
+    <sot4>Tous les objets intelligents des types indiqués dans l'espace courant seront supprimés</sot4>
+    <mtleadavailfull>L'utilisation des valeurs enregistrées est disponible dans la version complète du plugin !</mtleadavailfull>
+    <la1>Copier</la1>
+    <la2>Ne pas copier</la2>
+    <la3>Demander</la3>
+    <gp1>Étirer</gp1>
+    <gp2>Déplacer</gp2>
+    <gp3>Supprimer le sommet</gp3>
+    <gp4>Ajouter un sommet</gp4>
+    <gp5>Ajouter un repère</gp5>
+    <gp6>Supprimer le repère</gp6>
+    <gp7>Type de flèche du repère</gp7>
+    <gp8>Remplissage</gp8>
+    <blt1>Linéaire</blt1>
+    <blt2>Curviligne</blt2>
+    <blt3>Cylindrique</blt3>
+    <amt1>Des deux côtés</amt1>
+    <amt2>En haut</amt2>
+    <amt3>En bas</amt3>
+    <amt4>Première</amt4>
+    <amt5>Seconde</amt5>
+    <vlt1>Coupe</vlt1>
+    <vlt2>Vue</vlt2>
+    <llt1>Standard</llt1>
+    <llt2>Composée</llt2>
+    <type1>Type 1</type1>
+    <type2>Type 2</type2>
+    <glfst1>Distance entre les traits</glfst1>
+    <glfst2>Moitié de la distance entre les groupes de traits</glfst2>
+    <glfst3>Distance entre les groupes de traits</glfst3>
+    <wpfst1>Moitié de la distance entre les traits</wpfst1>
+    <wpfst2>Sans décalage</wpfst2>
+    <separator1>Depuis les réglages de ModPlus</separator1>
+    <separator2>Depuis le style</separator2>
+    <separator3>Point</separator3>
+    <separator4>Virgule</separator4>
+    <tha1>À gauche</tha1>
+    <tha2>Au centre</tha2>
+    <tha3>À droite</tha3>
+    <tha4>En haut à droite</tha4>
+    <tha5>En bas à droite</tha5>
+    <tha6>En bas à gauche</tha6>
+    <tha7>En haut à gauche</tha7>
+    <tha8>Libre</tha8>
+    <ft1>Ronde</ft1>
+    <ft2>Rectangulaire</ft2>
+    <ft3>Ligne</ft3>
+    <ft4>Sans cadre</ft4>
+    <let0>Aucune</let0>
+    <let1>Demi-flèche</let1>
+    <let2>Point</let2>
+    <let3>Double trait oblique</let3>
+    <let4>Angle droit</let4>
+    <let5>Pleine fermée</let5>
+    <let6>Ouverte</let6>
+    <let7>Fermée</let7>
+    <let8>Trait oblique</let8>
+    <let9>Section</let9>
+    <wjt1>Bout à bout, en atelier, continue, côté visible</wjt1>
+    <wjt2>Bout à bout, en atelier, continue, côté invisible</wjt2>
+    <wjt3>Bout à bout, sur chantier, continue, côté visible</wjt3>
+    <wjt4>Bout à bout, sur chantier, continue, côté invisible</wjt4>
+    <wjt5>Bout à bout, en atelier, discontinue, côté visible</wjt5>
+    <wjt6>Bout à bout, en atelier, discontinue, côté invisible</wjt6>
+    <wjt7>Bout à bout, sur chantier, discontinue, côté visible</wjt7>
+    <wjt8>Bout à bout, sur chantier, discontinue, côté invisible</wjt8>
+    <wjt9>D'angle, en atelier, continue, côté visible</wjt9>
+    <wjt10>D'angle, en atelier, continue, côté invisible</wjt10>
+    <wjt11>D'angle, sur chantier, continue, côté visible</wjt11>
+    <wjt12>D'angle, sur chantier, continue, côté invisible</wjt12>
+    <wjt13>D'angle, en atelier, discontinue, côté visible</wjt13>
+    <wjt14>D'angle, en atelier, discontinue, côté invisible</wjt14>
+    <wjt15>D'angle, sur chantier, discontinue, côté visible</wjt15>
+    <wjt16>D'angle, sur chantier, discontinue, côté invisible</wjt16>
+    <pil0>Type 0</pil0>
+    <pil1>Type 1</pil1>
+    <pil2>Type 2</pil2>
+    <pil3>Type 3</pil3>
+    <pil4>Type 4</pil4>
+    <pil5>Type 5</pil5>
+    <pil6>Type 6</pil6>
+    <pil7>Type 7</pil7>
+    <pil8>Type 8</pil8>
+    <pil9>Type 9</pil9>
+    <pil10>Type 10</pil10>
+    <pit0>Cercle</pit0>
+    <pit1>Rectangle</pit1>
+    <dmt0>Pour mille</dmt0>
+    <dmt1>Degrés</dmt1>
+    <dmt2>Rapport</dmt2>
+    <dmt3>Nombre</dmt3>
+    <dmt4>Pourcentage</dmt4>
+    <dot>Point</dot>
+    <comma>Virgule</comma>
+    <len>Longueur</len>
+    <p1>Type de ligne de rupture</p1>
+    <d1>Type de ligne : linéaire, curviligne ou cylindrique</d1>
+    <p2>Dépassements au-delà de l'objet</p2>
+    <d2>Pour une rupture linéaire, la valeur du dépassement est définie en mm. Pour une rupture curviligne, la valeur du dépassement est définie en % de la longueur entre les points principaux. Pour une rupture cylindrique, la valeur du dépassement n'est pas utilisée</d2>
+    <p3>Largeur de la rupture</p3>
+    <d3>Largeur de la rupture en mm. Uniquement pour une ligne de rupture de type linéaire</d3>
+    <p4>Hauteur de la rupture</p4>
+    <d4>Hauteur de la rupture en mm. Uniquement pour une ligne de rupture de type linéaire</d4>
+    <p5>Échelle</p5>
+    <d5>Échelle de la ligne de rupture</d5>
+    <d5-1>Échelle de l'axe</d5-1>
+    <p6>Échelle du type de ligne</p6>
+    <d6>Échelle du type de ligne pour le type de ligne défini dans les propriétés du bloc</d6>
+    <p7>Calque</p7>
+    <d7>Calque de l'objet</d7>
+    <p8>Position des marqueurs</p8>
+    <d8>Position des marqueurs : des deux côtés, en haut ou en bas</d8>
+    <p9>Brisure</p9>
+    <d9>Hauteur de la brisure de l'axe</d9>
+    <p10>Diamètre des marqueurs</p10>
+    <d10>Diamètre des marqueurs de l'axe</d10>
+    <p11>Nombre de marqueurs</p11>
+    <d11>Nombre de marqueurs de l'axe</d11>
+    <p12>Type du premier marqueur</p12>
+    <d12>Type du premier marqueur de l'axe</d12>
+    <p13>Type du deuxième marqueur</p13>
+    <d13>Type du deuxième marqueur de l'axe</d13>
+    <p14>Type du troisième marqueur</p14>
+    <d14>Type du troisième marqueur de l'axe</d14>
+    <p15>Décalage inférieur de la brisure</p15>
+    <d15>Décalage inférieur de la brisure de l'axe</d15>
+    <p16>Décalage supérieur de la brisure</p16>
+    <d16>Décalage supérieur de la brisure de l'axe</d16>
+    <p16-2>Décalage de la brisure</p16-2>
+    <d16-2>Décalage supérieur ou inférieur de la brisure de l'axe</d16-2>
+    <p17>Style de texte</p17>
+    <d17>Style de texte pour les éléments de texte de l'axe</d17>
+    <p18>Hauteur du texte</p18>
+    <d18>Hauteur du texte des éléments de texte de l'axe</d18>
+    <p19>Type de ligne de l'axe</p19>
+    <p20>Préfixe de la première valeur</p20>
+    <p21>Suffixe de la première valeur</p21>
+    <p22>Première valeur</p22>
+    <p23>Préfixe de la deuxième valeur</p23>
+    <p24>Suffixe de la deuxième valeur</p24>
+    <p25>Deuxième valeur</p25>
+    <p26>Préfixe de la troisième valeur</p26>
+    <p27>Suffixe de la troisième valeur</p27>
+    <p28>Troisième valeur</p28>
+    <p29>Taille des flèches</p29>
+    <p30>Valeur du marqueur de repérage inférieur</p30>
+    <p31>Valeur du marqueur de repérage supérieur</p31>
+    <p32>Marqueur de repérage inférieur</p32>
+    <d32>Visibilité du marqueur de repérage inférieur</d32>
+    <p33>Marqueur de repérage supérieur</p33>
+    <d33>Visibilité du marqueur de repérage supérieur</d33>
+    <p34>Type de marqueur de repérage</p34>
+    <d34>Type de marqueur de repérage de l'axe</d34>
+    <p35>Type de ligne</p35>
+    <d35>Type de ligne de la polyligne principale</d35>
+    <d35-1>Type de ligne standard ou composée</d35-1>
+    <p36>Décalage du premier trait</p36>
+    <d36>Décalage du premier trait dans chaque segment de la ligne de terrain</d36>
+    <d36-1>Décalage du premier trait dans chaque segment de la ligne d'étanchéité</d36-1>
+    <p37>Longueur du trait</p37>
+    <p38>Distance entre les traits</p38>
+    <p39>Angle d'inclinaison du trait</p39>
+    <p40>Décalage du groupe de traits</p40>
+    <p41>Style de texte</p41>
+    <d41>Style de texte pour les éléments de texte</d41>
+    <p42>Longueur du trait central</p42>
+    <d42>Longueur du trait central jusqu'au point de brisure</d42>
+    <p43>Épaisseur des traits</p43>
+    <d43>Épaisseur de tous les traits de la coupe</d43>
+    <p44>Longueur du trait</p44>
+    <d44>Longueur des traits principaux de la coupe</d44>
+    <p45>Décalage de la ligne de guidage</p45>
+    <d45>Décalage de la ligne de guidage le long du trait, en pourcentage</d45>
+    <p46>Longueur de la ligne de guidage</p46>
+    <p47>Longueur de la flèche</p47>
+    <p48>Épaisseur de la flèche</p48>
+    <p49>Hauteur du texte</p49>
+    <p50>Hauteur du petit texte</p50>
+    <p51>Désignation de la coupe</p51>
+    <p52>Préfixe de la désignation</p52>
+    <p53>Numéro de feuille</p53>
+    <p54>Position du numéro de feuille</p54>
+    <d54>Position du numéro de feuille : des deux côtés, en bas, en haut</d54>
+    <p55>Ligne d'objet</p55>
+    <d55>Tracer ou non une ligne de la cote de niveau jusqu'à l'objet mesuré</d55>
+    <p56>Décalage de la ligne d'objet</p56>
+    <d56>Décalage de la ligne d'objet par rapport à l'objet mesuré</d56>
+    <p57>Longueur de la ligne de guidage inférieure</p57>
+    <d57>Longueur de la ligne de guidage inférieure, du bord de la ligne de guidage côté objet mesuré jusqu'à la flèche de la cote de niveau</d57>
+    <p58>Dépassement de la ligne de guidage inférieure</p58>
+    <d58>Dépassement de la ligne de guidage inférieure, de la flèche de la cote de niveau jusqu'au bord de la ligne de guidage du côté opposé à l'objet mesuré</d58>
+    <p59>Hauteur de la flèche</p59>
+    <p60>Épaisseur de la flèche</p60>
+    <p61>Décalage du texte</p61>
+    <p62>Décalage vertical du texte</p62>
+    <p63>Dépassement de la ligne de guidage</p63>
+    <d63>Dépassement de la ligne de guidage par rapport au texte le plus long</d63>
+    <d63-1>Dépassement de la ligne de guidage par rapport au texte</d63-1>
+    <p63-1>Hauteur de la ligne de guidage</p63-1>
+    <p64>Afficher le plus</p64>
+    <d64>Afficher le signe plus si la valeur mesurée est supérieure à zéro. La propriété n'est pas prise en compte si le texte est remplacé</d64>
+    <p65>Valeur mesurée</p65>
+    <p66>Remplacement du texte</p66>
+    <p67>Précision</p67>
+    <d67>Précision de la valeur mesurée. Définit le nombre de décimales</d67>
+    <p68>Remarque</p68>
+    <p69>Échelle de mesure</p69>
+    <d69>Définit une valeur comprise entre 0,000001 et 1000000 par laquelle est multipliée la distance mesurée dans le dessin</d69>
+    <p70>Épaisseur de ligne</p70>
+    <p71>Angle de rotation du texte</p71>
+    <p72>Séparateur décimal</p72>
+    <d72>Séparateur des parties entière et décimale du nombre</d72>
+    <p73>Alignement du texte</p73>
+    <d73>Alignement horizontal du texte</d73>
+    <p74>Alignement de la note</p74>
+    <p75>Afficher l'astérisque</p75>
+    <d75>Ajout d'un astérisque à la fin de la valeur principale</d75>
+    <p76>Hauteur du cadre</p76>
+    <p77>Largeur du cadre</p77>
+    <p78>Position de la ligne de guidage</p78>
+    <p79>Numéro de détail</p79>
+    <p80>Numéro de feuille</p80>
+    <p81>Adresse du détail</p81>
+    <p82>Type de cadre</p82>
+    <p83>Rayon de raccord</p83>
+    <d83>Rayon de raccord des angles du cadre rectangulaire</d83>
+    <d83-1>Rayon de raccord des angles du repère de fragment</d83-1>
+    <p84>Texte toujours horizontal</p84>
+    <d84>Le repère et son texte conserveront une position horizontale après la rotation de l'objet par la commande "Rotation"</d84>
+    <p85>Masquer l'arrière-plan</p85>
+    <d85>Ajout d'un nettoyage le long du contour du texte avec le décalage indiqué. L'affichage des cadres de nettoyage est contrôlé par les variables système WIPEOUTFRAME et FRAME</d85>
+    <d85-1>Ajout d'un nettoyage le long du contour du texte avec le décalage indiqué. L'affichage des cadres de nettoyage est contrôlé par les variables système WIPEOUTFRAME et FRAME. Si un cadre rectangulaire est défini, le nettoyage est créé le long du cadre sans tenir compte du décalage</d85-1>
+    <p86>Décalage du nettoyage</p86>
+    <d86>Le décalage du nettoyage est pris en compte pour les types de cadre "Ligne" et "Sans cadre"</d86>
+    <d87>Présence des flèches : des deux côtés, première ou seconde</d87>
+    <p87>Épaisseur de l'élément sécant</p87>
+    <p88>Longueur de l'élément sécant</p88>
+    <p89>Type de soudure</p89>
+    <p90>Pas des traits obliques</p90>
+    <p91>Demi-hauteur du trait oblique</p91>
+    <p92>Pas de la grande croix</p92>
+    <p93>Pas de la petite croix</p93>
+    <p94>Demi-hauteur de la grande croix</p94>
+    <p95>Hauteur de la petite croix</p95>
+    <p96>Longueur de la série</p96>
+    <p97>Longueur de l'espace</p97>
+    <p98>Intervalle entre les séries</p98>
+    <p99>Hauteur du petit trait oblique</p99>
+    <p100>Rayon de raccord</p100>
+    <p101>Texte principal</p101>
+    <p102>Petit texte</p102>
+    <p103>Type de vue</p103>
+    <d103>Type de vue : Coupe ou Vue</d103>
+    <p104>Repère</p104>
+    <d104>Activation/Désactivation du repère</d104>
+    <p105>Génération du type de ligne</p105>
+    <d105>Génération du type de ligne sur toute la polyligne</d105>
+    <p106>Distance entre les textes</p106>
+    <p107>Formule de la ligne</p107>
+    <d107>La formule de la ligne est définie par des nombres entiers séparés par des tirets. Chaque nombre impair (1, 3, 5...) définit la longueur du trait. Chaque nombre pair (2, 4, 6...) définit la longueur de l'espace</d107>
+    <p108>Décalage du premier texte</p108>
+    <p109>Désignation de vue</p109>
+    <p110>Cote de niveau</p110>
+    <p111>Préfixe</p111>
+    <p112>Suffixe</p112>
+    <p113>Valeur</p113>
+    <p114>Épaisseur de ligne</p114>
+    <p115>Présence des flèches</p115>
+    <p116>Largeur de la brisure</p116>
+    <p117>Longueur de la ligne au bord gauche</p117>
+    <d117>Longueur de la ligne au bord gauche du segment de ligne de reprise</d117>
+    <p118>Lignes aux bords</p118>
+    <d118>Visibilité des lignes aux bords des segments de ligne de reprise</d118>
+    <p119>Hauteur de la brisure</p119>
+    <p120>Diamètre du cercle</p120>
+    <p121>Diamètre du cercle extérieur</p121>
+    <p122>Décalage vertical du petit texte</p122>
+    <d122>Décalage vertical du petit texte par rapport à la ligne</d122>
+    <p123>Cercle extérieur</p123>
+    <p124>Décalage du texte du numéro</p124>
+    <p125>Décalage du texte de la note</p125>
+    <p126>Position de la ligne de guidage de la note</p126>
+    <p127>Style de cadre en nuage</p127>
+    <p128>Longueur d'arc du nuage</p128>
+    <p129>Hauteur du numéro</p129>
+    <p130>Hauteur de la note</p130>
+    <p131>Numéro</p131>
+    <p132>Texte supérieur</p132>
+    <p133>Texte inférieur</p133>
+    <p134>Hauteur du texte supérieur</p134>
+    <p135>Hauteur du texte inférieur</p135>
+    <p136>Saisissez le texte</p136>
+    <p137>Largeur de la section</p137>
+    <p138>Hauteur de la section</p138>
+    <p139>Diamètre de la section</p139>
+    <p140>Décalage des lignes d'axe</p140>
+    <p141>Position du numéro</p141>
+    <p142>Visibilité du numéro</p142>
+    <p143>Visibilité des axes</p143>
+    <p144>Visibilité du repère</p144>
+    <p145>Décalage du numéro</p145>
+    <p146>Décalage vertical du numéro</p146>
+    <p147>Épaisseur de la ligne principale</p147>
+    <p148>Type de ligne d'axe</p148>
+    <p149>Échelle de la ligne d'axe</p149>
+    <p150>Contour uniquement</p150>
+    <p151>Type de section transversale</p151>
+    <p152>Type de désignation</p152>
+    <p153>Type d'indication</p153>
+    <p154>Taille de la flèche</p154>
+    <p155>Comme direction</p155>
+    <d155>Affichage de la pente sous forme de direction</d155>
+    <p156>Symbole de conicité</p156>
+    <d156>Afficher le symbole de conicité au lieu du symbole de pente</d156>
+    <p157>Origine au point gauche</p157>
+    <d157>Lors du calcul de la pente, prendre comme premier point le plus à gauche des deux</d157>
+    <p158>Côté de positionnement du texte</p158>
+    <d158>Côté sur lequel sera placé le texte horizontal</d158>
+    <p159>Type d'isolation</p159>
+    <p160>Rayon du cercle</p160>
+    <p161>Rayon du point</p161>
+    <p162>Rayon de raccord</p162>
+    <p163>Largeur du type d'isolation</p163>
+    <p164>Hauteur du type d'isolation</p164>
+    <p165>Tracé du contour extérieur</p165>
+    <p166>Numéro de la soudure</p166>
+    <p167>Nombre total de soudures</p167>
+    <p168>Catégorie de contrôle</p168>
+    <p169>GOST</p169>
+    <p170>Référence</p170>
+    <p171>Procédé de soudage</p171>
+    <p172>Dimension du côté</p172>
+    <p173>Dimension de la soudure</p173>
+    <p174>Pas de la soudure</p174>
+    <p175>Côté</p175>
+    <p176>Soudure fermée</p176>
+    <p177>Soudure de montage</p177>
+    <p178>Sous-type de soudure</p178>
+    <p179>Signe de dimension</p179>
+    <p180>Signe auxiliaire côté face</p180>
+    <p181>Signe auxiliaire côté revers</p181>
+    <p182>Signe de surface côté face</p182>
+    <p183>Signe de surface côté revers</p183>
+    <p184>Texte du signe de surface côté face</p184>
+    <p185>Texte du signe de surface côté revers</p185>
+    <p186>Longueur du côté</p186>
+    <p187>Convexité\Concavité</p187>
+    <d187>Convexité (de 0 à 1) ou concavité (de -1 à 1)</d187>
+    <p191>Afficher les axes</p191>
+    <p192>Longueur extérieure des axes</p192>
+    <p193>Afficher le filetage</p193>
+    <p194>Distance du filetage</p194>
+    <p195>Filetage intérieur</p195>
+    <p196>Faire pivoter le remplissage</p196>
+    <p197>Type de trou</p197>
+    <p198>Afficher les symboles</p198>
+    <p199>Taille des symboles</p199>
+    <d199>Valeur de taille conventionnelle de 0.1 à 1</d199>
+    <p200>Remplissage des symboles</p200>
+    <p201>Tronquer au lieu d'arrondir</p201>
+    <p202>Suppression des zéros de fin</p202>
+    <p203>Longueur de la brisure supérieure</p203>
+    <p204>Longueur de la brisure inférieure</p204>
+    <p205>Angle d'inclinaison de la brisure supérieure</p205>
+    <d205>Angle d'inclinaison de la brisure supérieure (de -90 à 90)</d205>
+    <p206>Angle d'inclinaison de la brisure inférieure</p206>
+    <d206>Angle d'inclinaison de la brisure inférieure (de -90 à 90)</d206>
+    <p207>Afficher la ligne de brisure jusqu'au point de base</p207>
+    <d207>Orienter la ligne de brisure vers le centre du premier marqueur ou jusqu'à la poignée</d207>
+    <p208>Orienter les marqueurs supplémentaires selon le vecteur de base</p208>
+    <d208>Afficher les marqueurs supplémentaires selon le vecteur de brisure ou selon le vecteur initial</d208>
+    <p209>Point de départ de la flèche</p209>
+    <p210>Décalage jusqu'à la ligne de guidage suivante</p210>
+    <p211>Côté de la ligne latérale</p211>
+    <p212>Longueur de la ligne</p212>
+    <p213>Courber les flèches sur les segments d'arc</p213>
+    <p214>Afficher les flèches tronquées</p214>
+    <p215>Type de flèches</p215>
+    <p216>Combler les espaces par des traits supplémentaires</p216>
+    <p217>Couleur des traits principaux</p217>
+    <p218>Couleur des traits supplémentaires</p218>
+    <p219>Décalage</p219>
+    <p220>Masquer l'arrière-plan</p220>
+    <p221>Hauteur du nettoyage</p221>
+    <p222>Espacement vertical entre les lignes</p222>
+    <p223>Espacement entre les colonnes</p223>
+    <p224>Alignement horizontal de la colonne supplémentaire</p224>
+    <p225>Côté de la colonne supplémentaire</p225>
+    <p226>Taille de la marque</p226>
+    <p227>Afficher les flèches depuis le centre de la marque</p227>
+    <p228>Afficher la polyligne principale</p228>
+    <p229>Type de marque</p229>
+    <jigM1>Arc</jigM1>
+    <jigM2>Linéaire</jigM2>
+    <grpM1>Étirer le sommet</grpM1>
+    <grpM2>Ajouter un sommet</grpM2>
+    <grpM3>Supprimer le sommet</grpM3>
+    <grpM4>Inverser la direction</grpM4>
+    <grpM5>Étirer</grpM5>
+    <grpM6>Ajouter un sommet</grpM6>
+    <grpM7>Convertir en arc</grpM7>
+    <grpM8>Convertir en ligne</grpM8>
+    <ilt1>Type 1</ilt1>
+    <ilt2>Type 2</ilt2>
+    <ilt3>Type 3</ilt3>
+    <ilt4>Type 4</ilt4>
+    <ilt5>Type 5</ilt5>
+    <ilt6>Type 6</ilt6>
+    <ilt7>Type 7</ilt7>
+    <ilt8>Type 8</ilt8>
+    <none>Aucun</none>
+    <djauxs1>Supprimer la surépaisseur de la soudure</djauxs1>
+    <djauxs2>Soudure suivant une ligne ouverte</djauxs2>
+    <djauxs3>Transition progressive</djauxs3>
+    <djsrs1>Surface non réglementée</djsrs1>
+    <djsrs2>Avec enlèvement de la couche superficielle</djsrs2>
+    <djsrs3>Sans enlèvement de la couche superficielle</djsrs3>
+    <djwstt1>Soudure discontinue en chaîne</djwstt1>
+    <djwstt2>Soudure discontinue en quinconce</djwstt2>
+    <djwsub1>Assemblage par brasage</djwsub1>
+    <djwsub2>Assemblage par couture</djwsub2>
+    <djwsub3>Assemblage par agrafes</djwsub3>
+    <djwsub4>Assemblage par cornières</djwsub4>
+    <djwsub5>Assemblage par collage</djwsub5>
+    <djwsd0>Intérieure</djwsd0>
+    <djwsd1>Extérieure</djwsd1>
+    <hfqt1>Quart 1</hfqt1>
+    <hfqt2>Quart 2</hfqt2>
+    <hfqt3>Quart 3</hfqt3>
+    <hfqt4>Quart 4</hfqt4>
+    <mtArrowPos1>Automatique</mtArrowPos1>
+    <mtArrowPos2>En bas à gauche</mtArrowPos2>
+    <mtArrowPos3>En bas à droite</mtArrowPos3>
+    <mtArrowPos4>En haut à droite</mtArrowPos4>
+    <mtArrowPos5>En haut à gauche</mtArrowPos5>
+    <mtLedSide1>Automatique</mtLedSide1>
+    <mtLedSide2>À gauche</mtLedSide2>
+    <mtLedSide3>À droite</mtLedSide3>
+    <pwrLineArrType1>Ligne électrique basse tension</pwrLineArrType1>
+    <pwrLineArrType2>Ligne électrique haute tension</pwrLineArrType2>
+    <arrLineType1>Flèche simple</arrLineType1>
+    <arrLineType2>Flèche épaisse</arrLineType2>
+    <arrLineType3>Flèche simple avec trait oblique</arrLineType3>
+    <pwrLineMrkType1>Sans marque</pwrLineMrkType1>
+    <pwrLineMrkType2>Marque ronde</pwrLineMrkType2>
+    <pwrLineMrkType3>Marque ronde pleine</pwrLineMrkType3>
+    <pwrLineMrkType4>Marque rectangulaire</pwrLineMrkType4>
+    <pwrLineMrkType5>Marque rectangulaire pleine</pwrLineMrkType5>
+  </mpESKD>
+</ModPlus>

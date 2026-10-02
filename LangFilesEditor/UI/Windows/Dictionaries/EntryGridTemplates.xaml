@@ -35,4 +35,19 @@
                  Text="{Binding Values[zh-CN].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
     </DataTemplate>
 
+    <DataTemplate x:Key="EntryFrFrCellTemplate">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Values[fr-FR].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="EntryPtBrCellTemplate">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Values[pt-BR].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="EntryUzLatnUzCellTemplate">
+        <TextBox Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                 Text="{Binding Values[uz-Latn-UZ].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
 </ResourceDictionary>

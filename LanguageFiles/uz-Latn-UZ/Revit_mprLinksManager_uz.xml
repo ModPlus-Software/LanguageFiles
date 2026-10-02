@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprLinksManager
+    LocalName="Bogʻlanishlar menejeri"
+    Description="Joriy hujjatda Revit va CAD tashqi bogʻlanishlarini boshqarish"
+    FullDescription="Joriy Revit hujjatida bogʻlanishlarni koʻrish, filtrlash, qoʻshish, yuklash, yuklashdan chiqarish, qayta yuklash, oʻchirish va ularga yoʻllarni qayta yozish">
+    <filtersGroupHeader>Filtrlar</filtersGroupHeader>
+    <statusLabel>Holat:</statusLabel>
+    <linksListGroupHeader>Bogʻlanishlar roʻyxati</linksListGroupHeader>
+    <columnNameHeader>Nomi</columnNameHeader>
+    <columnStatusHeader>Holat</columnStatusHeader>
+    <loadSettingsGroupHeader>Yuklash sozlamalari</loadSettingsGroupHeader>
+    <positioningLabel>Joylashtirish</positioningLabel>
+    <onAddBehaviorLabel>Qoʻshishda</onAddBehaviorLabel>
+    <fileSelectButton>Fayllarni tanlash</fileSelectButton>
+    <operationsGroupHeader>Amallar</operationsGroupHeader>
+    <deleteSelectedButton>Oʻchirish</deleteSelectedButton>
+    <unloadButton>Yuklamadan chiqarish</unloadButton>
+    <reloadButton>Yangilash</reloadButton>
+    <updateButton>Qayta yuklash</updateButton>
+    <rewritePathText>Yoʻllarni qayta yozish</rewritePathText>
+    <rewritePathsByFolderButton>Yoʻllarni qayta yozish (papka)</rewritePathsByFolderButton>
+    <showLogButton>Jurnalni koʻrsatish</showLogButton>
+    <addLinkSettingsDialogTitle>Qoʻshish sozlamalari</addLinkSettingsDialogTitle>
+    <rewriteHintText>Oʻrniga qoʻyishlar: * — istalgan ketma-ketlik, ? — bitta belgi, # — raqam. Ekranlash: \* \? \# \\. "Faqat yoʻlni oʻzgartirish" rejimi yoqilganda niqob faqat katalogga qoʻllaniladi.</rewriteHintText>
+    <rewriteModeLabel>Almashtirish rejimi:</rewriteModeLabel>
+    <rewriteModeNormal>Oddiy</rewriteModeNormal>
+    <rewriteModeMask>Niqob</rewriteModeMask>
+    <findTextLabel>Topish:</findTextLabel>
+    <replaceTextLabel>Almashtirish:</replaceTextLabel>
+    <pathOnlyModeLabel>Faqat yoʻlni oʻzgartirish</pathOnlyModeLabel>
+    <originalPathColumnHeader>Dastlabki yoʻl</originalPathColumnHeader>
+    <newPathColumnHeader>Yangi yoʻl</newPathColumnHeader>
+    <fileNotFoundTooltip>Fayl topilmadi</fileNotFoundTooltip>
+    <tableHintText>Amallarni bajarish uchun bogʻlanishlarni belgilang</tableHintText>
+    <managerStartedLogFormat>{0:dd.MM.yyyy HH:mm} — Bogʻlanishlar menejeri ishga tushirildi</managerStartedLogFormat>
+    <openFilesFilter>Revit va DWG fayllari (*.rvt;*.dwg)|*.rvt;*.dwg|Revit fayllari (*.rvt)|*.rvt|DWG fayllari (*.dwg)|*.dwg</openFilesFilter>
+    <existingLinksSkippedLogFormat>Oʻtkazib yuborilgan mavjud bogʻlanishlar: {0}</existingLinksSkippedLogFormat>
+    <addStartedLogFormat>{0} ta bogʻlanishni qoʻshish</addStartedLogFormat>
+    <addCompletedLogFormat>Qoʻshilgan bogʻlanishlar: {0}, xatolar: {1}</addCompletedLogFormat>
+    <addFileErrorLogFormat>"{0}" faylini qoʻshishda xato: {1}</addFileErrorLogFormat>
+    <generalErrorLogFormat>Umumiy xato: {0}</generalErrorLogFormat>
+    <operationDeleteGenitive>oʻchirish</operationDeleteGenitive>
+    <operationLoadGenitive>yuklash</operationLoadGenitive>
+    <operationUnloadGenitive>yuklashdan chiqarish</operationUnloadGenitive>
+    <operationReloadGenitive>qayta yuklash</operationReloadGenitive>
+    <deleteConfirmationMessage>Tanlangan bogʻlanishlarni oʻchirishni xohlaysizmi?</deleteConfirmationMessage>
+    <deleteConfirmationTitle>Oʻchirish</deleteConfirmationTitle>
+    <operationCanceledLogFormat>{0} amali foydalanuvchi tomonidan bekor qilindi</operationCanceledLogFormat>
+    <operationStartedLogFormat>{1} ta bogʻlanishni {0} boshlandi</operationStartedLogFormat>
+    <bulkOperationSummaryFormat>Muvaffaqiyatli: {0}, oʻtkazib yuborildi: {1}, xatolar: {2}</bulkOperationSummaryFormat>
+    <operationResultLogFormat>{0} natijasi: {1}</operationResultLogFormat>
+    <operationErrorLogFormat>{0} vaqtida umumiy xato: {1}</operationErrorLogFormat>
+    <folderSelectionCanceledLogText>Papka tanlash foydalanuvchi tomonidan bekor qilindi</folderSelectionCanceledLogText>
+    <rewriteCanceledLogText>Yoʻllarni qayta yozish foydalanuvchi tomonidan bekor qilindi</rewriteCanceledLogText>
+    <rewriteNoChangesLogText>Yoʻllarni qayta yozish uchun oʻzgarishlar yoʻq</rewriteNoChangesLogText>
+    <rewriteStartedLogFormat>{0} ta bogʻlanish uchun yoʻllarni qayta yozish boshlandi</rewriteStartedLogFormat>
+    <rewriteCompletedLogFormat>Qayta yozilgan yoʻllar: {0}, xatolar: {1}</rewriteCompletedLogFormat>
+    <rewriteErrorLogFormat>Yoʻllarni qayta yozishda umumiy xato: {0}</rewriteErrorLogFormat>
+    <rewritePathErrorFormat>Yoʻlni almashtirishda xato: "{0}": {1}</rewritePathErrorFormat>
+    <rewritePathClosedWorksetError>bogʻlanish yopiq ishchi toʻplamda joylashgan</rewritePathClosedWorksetError>
+    <linkStatusLoaded>Yuklangan</linkStatusLoaded>
+    <linkStatusUnloaded>Yuklashdan chiqarilgan</linkStatusUnloaded>
+    <linkStatusNotFound>Topilmadi</linkStatusNotFound>
+    <positioningSharedCoordinates>Umumiy koordinatalar boʻyicha</positioningSharedCoordinates>
+    <positioningOriginToOrigin>Ichki boshlanishlarni moslashtirish</positioningOriginToOrigin>
+    <positioningCenterToCenter>Markazlarni moslashtirish</positioningCenterToCenter>
+    <onAddLoadImmediately>Darhol yuklash</onAddLoadImmediately>
+    <onAddAddUnloaded>Yuklanmagan holda qoʻshish</onAddAddUnloaded>
+    <handlerLinkFileNotFoundFormat>Bogʻlanish fayli topilmadi: {0}</handlerLinkFileNotFoundFormat>
+    <handlerCannotLinkDocumentToItself>Joriy modelni oʻziga bogʻlanish sifatida qoʻshib boʻlmaydi</handlerCannotLinkDocumentToItself>
+    <handlerLinkSavedByLaterRevitVersion>Model Revit ning keyingi versiyasida saqlangan</handlerLinkSavedByLaterRevitVersion>
+    <handlerUnsupportedLinkTypeFormat>"{0}" bogʻlanish turi qoʻllab-quvvatlanmaydi</handlerUnsupportedLinkTypeFormat>
+    <handlerUnsupportedExtensionFormat>"{0}" fayl kengaytmasi qoʻllab-quvvatlanmaydi</handlerUnsupportedExtensionFormat>
+    <addLinksTransaction>Bogʻlanishlarni qoʻshish</addLinksTransaction>
+    <deleteLinksTransaction>Bogʻlanishlarni oʻchirish</deleteLinksTransaction>
+    <loadLinksTransaction>Bogʻlanishlarni yuklash</loadLinksTransaction>
+    <unloadLinksTransaction>Bogʻlanishlarni yuklashdan chiqarish</unloadLinksTransaction>
+    <reloadLinksTransaction>Bogʻlanishlarni qayta yuklash</reloadLinksTransaction>
+    <unloadForSelfMenuItem>Men uchun</unloadForSelfMenuItem>
+    <unloadForAllMenuItem>Barcha foydalanuvchilar uchun</unloadForAllMenuItem>
+    <operationUnloadLocallyGenitive>lokal yuklashdan chiqarish</operationUnloadLocallyGenitive>
+    <unloadLocallyLinksTransaction>Bogʻlanishlarni lokal yuklashdan chiqarish</unloadLocallyLinksTransaction>
+    <searchHint>Qidirish uchun matn kiriting</searchHint>
+    <typeWorksetColumnHeader>Tur ishchi toʻplami</typeWorksetColumnHeader>
+    <instanceWorksetColumnHeader>Nusxalar ishchi toʻplami</instanceWorksetColumnHeader>
+    <placeInWorkset>Ishchi toʻplamga joylashtirish</placeInWorkset>
+    <createWorksetByPrefixLabel>Oʻz ishchi toʻplamiga joylashtirish</createWorksetByPrefixLabel>
+    <worksetNamePrefixLabel>Ishchi toʻplam prefiksi:</worksetNamePrefixLabel>
+    <disableWorksetContains>Quyidagilarni oʻz ichiga olgan ishchi toʻplamlarni oʻchirish:</disableWorksetContains>
+    <disableWorksetTooltip>Qismiy satrlarni vergul bilan ajratib kiriting. Bogʻlanish yuklanganda bogʻlangan modelning nomlarida koʻrsatilgan qismiy satrlardan kamida bittasi boʻlgan ishchi toʻplamlari yopiladi. Qolgan ishchi toʻplamlar ochiladi.</disableWorksetTooltip>
+    <fromRevitServer>Revit Server dan</fromRevitServer>
+    <revitServerWindowTitle>Revit Server dan qoʻshish</revitServerWindowTitle>
+    <changeTypeWorksetErrorFormat>Tur ishchi toʻplamini oʻzgartirishda: {0}, xato yuz berdi: {1}</changeTypeWorksetErrorFormat>
+    <changeInstanceWorksetErrorFormat>Nusxa ishchi toʻplamini oʻzgartirishda: {0}, xato yuz berdi: {1}</changeInstanceWorksetErrorFormat>
+    <addFromServerErrorFormat>Revit Server dan bogʻlanish qoʻshishda xato</addFromServerErrorFormat>
+    <diffWorkset>*TURLI*</diffWorkset>
+  </mprLinksManager>
+</ModPlus>

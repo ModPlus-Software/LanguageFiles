@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprExcelImport
+    LocalName="Importer depuis Excel"
+    Description="Visualisation des données d'un fichier Excel"
+    LocalName1="Excel vers nomenclature"
+    Description1="Importation de données d'un fichier Excel dans la nomenclature active">
+    <!--todo remove after 1.7.2.0-->
+    <h1>Importer depuis Excel</h1>
+    <h2>Tableau :</h2>
+    <h3>Statut :</h3>
+    <h4>Fichier source :</h4>
+    <h5>Feuille source :</h5>
+    <!--todo remove after 1.7.2.0-->
+    <h6>Recherche des tableaux...</h6>
+    <h7>Ajouter un nouveau tableau</h7>
+    <h8>Fichier Excel</h8>
+    <h10>Vous devez sélectionner un fichier Excel</h10>
+    <h11>Sélectionnez une feuille</h11>
+    <!--todo remove after 1.7.2.0-->
+    <h12>Créer une nouvelle vue de dessin</h12>
+    <!--todo remove after 1.7.2.0-->
+    <h13>Insérer le tableau dans une vue de dessin existante</h13>
+    <h14>Épaisseurs de trait</h14>
+    <h15>Correspondance entre les épaisseurs de trait Excel et les épaisseurs de ligne Revit</h15>
+    <h16>Très fine :</h16>
+    <h17>Fine :</h17>
+    <h18>Moyenne :</h18>
+    <h19>Épaisse :</h19>
+    <h20>Construction du tableau</h20>
+    <h21>Dessin du tableau Excel</h21>
+    <h22>Effacement de la vue contenant le tableau Excel</h22>
+    <h23>Suppression de la vue contenant le tableau Excel</h23>
+    <h24>Mise à jour des données du tableau Excel</h24>
+    <h25>Interaction</h25>
+    <h26>Ouverture de la vue après l'importation :</h26>
+    <h27>Demander</h27>
+    <h28>Ouvrir</h28>
+    <h29>Ne pas ouvrir</h29>
+    <h30>Ne plus demander</h30>
+    <h31>Ligne à partir de laquelle commence la lecture des données :</h31>
+    <h32>Remplir la nomenclature</h32>
+    <h33>Le plugin ne fonctionne pas dans les familles</h33>
+    <h34>Ligne de la nomenclature à partir de laquelle commence le remplissage des données :</h34>
+    <h35>Le titre et les en-têtes de la nomenclature ne sont pas pris en compte. Le décompte, à partir de 1, porte sur les lignes contenant les paramètres des éléments</h35>
+    <h36>Écrire les valeurs vides</h36>
+    <h37>Créer une vue</h37>
+    <h38>Insérer le tableau dans une vue existante</h38>
+    <h39>Tenir compte de l'échelle de la vue</h39>
+    <h40>Nom de la nouvelle vue</h40>
+    <h41>Type de vue :</h41>
+    <h42>Zone d'importation :</h42>
+    <h43>Dimensions du tableau</h43>
+    <h44>Le plugin construit le tableau avec les dimensions qu'Excel affiche en mode « Mise en page » : en tenant compte de l'échelle d'impression de la feuille</h44>
+    <h45>Pour voir ces dimensions dans Excel : onglet « Affichage » → « Mise en page », puis cliquez sur la bordure d'une colonne dans son en-tête — une info-bulle s'affiche « Largeur : 2,32 centimètres (179 pixels) »</h45>
+    <h46>En mode Normal et en mode Aperçu des sauts de page, la largeur est indiquée en caractères et non en centimètres : ces valeurs ne correspondent pas aux dimensions dans Revit</h46>
+    <b1>Ajouter</b1>
+    <b2>Mettre à jour</b2>
+    <b3>Ouvrir la vue</b3>
+    <b4>Ouvrir le fichier source</b4>
+    <b5>Supprimer</b5>
+    <!--todo remove after 1.7.2.0-->
+    <b6>Interrompre la mise à jour</b6>
+    <b7>Supprimer le lien</b7>
+    <b9>Remplacer la source</b9>
+    <b10>Ouvrir le dossier du fichier source</b10>
+    <b11>Mettre à jour le tableau sélectionné</b11>
+    <b12>Mettre à jour tous les tableaux obsolètes</b12>
+    <b13>Mettre à jour tous les tableaux</b13>
+    <!--todo remove after 1.7.2.0-->
+    <w1>Dans la version limitée du plugin, vous ne pouvez pas ajouter plus de 3 tableaux</w1>
+    <!--todo remove after 1.7.2.0-->
+    <w2>Dans la version limitée du plugin, seules les trois premières feuilles du fichier Excel sélectionné sont disponibles</w2>
+    <!--todo remove after 1.7.2.0-->
+    <m1>Fichier lu avec succès</m1>
+    <!--todo remove after 1.7.2.0-->
+    <m2>Impossible de lire le fichier</m2>
+    <m3>Conversion de la feuille</m3>
+    <m5>convertie avec succès</m5>
+    <m6>Impossible de convertir la feuille</m6>
+    <!--todo remove after 1.7.2.0-->
+    <m7>Aucune vue de dessin n'est sélectionnée dans la liste</m7>
+    <!--todo remove after 1.7.2.0-->
+    <m8>Toutes les données de la vue de dessin sélectionnée seront supprimées ! Continuer ?</m8>
+    <!--todo remove after 1.7.2.0-->
+    <m9>Vous devez indiquer un nom pour la nouvelle vue de dessin</m9>
+    <!--todo remove after 1.7.2.0-->
+    <m10>Une vue de dessin portant ce nom existe déjà dans le document</m10>
+    <m12>Ouvrir la vue créée ?</m12>
+    <m13>Fichier source introuvable !</m13>
+    <m14>Le tableau sélectionné et la vue associée seront supprimés définitivement ! Continuer ?</m14>
+    <m15>Erreur de lecture de la cellule</m15>
+    <m16>Erreur lors du traitement de la cellule</m16>
+    <m17>Le tableau sélectionné sera retiré de la liste. La vue sera conservée. Continuer ?</m17>
+    <m18>Pour lancer le plugin, passez dans une nomenclature !</m18>
+    <m19>Impossible d'obtenir le paramètre du champ</m19>
+    <m20>Le paramètre "{0}" est en lecture seule</m20>
+    <m21>Traitement du champ "{0}" ignoré</m21>
+    <m22>Impossible de définir la valeur du champ "{0}"</m22>
+    <m23>Impossible d'affecter la valeur "{0}" au paramètre entier "{1}"</m23>
+    <m24>Type de paramètre non pris en charge</m24>
+    <m25>Revit n'a pas pu affecter la valeur "{0}" au paramètre "{1}"</m25>
+    <m26>Type de champ non pris en charge "{0}"</m26>
+    <m27>La valeur du paramètre de référence "{0}" ne peut être modifiée que si le paramètre a déjà une valeur</m27>
+    <m28>Aucun élément trouvé dans la catégorie "{0}" avec le nom "{1}"</m28>
+    <m29>Le sous-projet nommé "{0}" est introuvable</m29>
+    <m30>Dessin de la feuille</m30>
+    <m31>Le numéro de ligne {0}, indiqué comme début du remplissage des données dans la nomenclature active, n'est pas dans la plage des valeurs autorisées ! Les valeurs de 1 à {1} sont autorisées</m31>
+    <m32>Vous devez indiquer un nom pour la nouvelle vue</m32>
+    <m33>Une vue de type "{0}" nommée "{1}" existe déjà dans le document actif</m33>
+    <m34>Sélectionnez une vue existante pour y insérer le tableau</m34>
+    <m35>La vue sélectionnée sera effacée ! Continuer ?</m35>
+    <m36>Pour créer une nouvelle légende, le projet actif doit contenir au moins une légende pouvant être copiée</m36>
+    <m37>L'isolation nommée "{0}" est introuvable dans le projet</m37>
+    <m38>Les feuilles du fichier indiqué ne contiennent aucune donnée</m38>
+    <m39>Indiquez une plage de cellules valide au format A1:B2</m39>
+    <ts1>Mise à jour du tableau requise</ts1>
+    <ts2>Le fichier source est absent !</ts2>
+    <ts3>La feuille source est absente ou a été renommée !</ts3>
+    <vt1>Vue de dessin</vt1>
+    <vt2>Légende</vt2>
+    <vt3>Nomenclature</vt3>
+    <ia1>Cellules utilisées</ia1>
+    <ia2>Zone d'impression</ia2>
+    <ia3>Plage personnalisée</ia3>
+  </mprExcelImport>
+</ModPlus>

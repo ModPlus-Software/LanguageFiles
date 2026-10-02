@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprWallsReinforcement
+    LocalName="Ferraillage des murs"
+    Description="Analyse, regroupement et ferraillage des murs et des ouvertures selon des conditions définies"
+    FullDescription="Fonctionne uniquement avec des murs situés sur un même niveau. Analyse des murs avec détection de trois types d'intersections (en angle, en about et en croix) et des ouvertures. Un regroupement flexible permet d'indiquer précisément le type de ferraillage à réaliser. Le ferraillage peut être réalisé uniquement pour les groupes indiqués – murs, intersections ou ouvertures. Fonctionne même sur un gabarit vide">
+    <h2>FENÊTRE DU PLUGIN :</h2>
+    <h4>Au-dessus des fenêtres</h4>
+    <h5>AFFICHAGE DANS LE MODÈLE :</h5>
+    <h6>Facteur d'échelle :</h6>
+    <!-- todo remove after 5.24.16.0 -->
+    <h7>FERRAILLAGE PAR DÉFAUT :</h7>
+    <h8>Ferraillage de base des murs</h8>
+    <h9>Ferraillage des intersections</h9>
+    <h10>Ferraillage du pourtour des ouvertures</h10>
+    <h11>Sélectionner</h11>
+    <h12>Analyser</h12>
+    <h13>Tout regrouper</h13>
+    <h14>Murs sélectionnés :</h14>
+    <h15>Regroupement</h15>
+    <h16>Murs</h16>
+    <h17>Intersections</h17>
+    <h18>Ouvertures</h18>
+    <h19>Regrouper par :</h19>
+    <h20>Épaisseur des murs</h20>
+    <h21>Hauteur des murs</h21>
+    <h22>Paramètre des murs</h22>
+    <h23>Regrouper</h23>
+    <h24>Nombre de murs</h24>
+    <h25>Épaisseurs des murs</h25>
+    <h26>Hauteurs des murs</h26>
+    <h27>Murs du groupe :</h27>
+    <h28>Épaisseur</h28>
+    <h29>Hauteurs</h29>
+    <h30>Paramètre</h30>
+    <!-- todo remove after 5.24.16.0 -->
+    <h31>Vous pouvez faire glisser à la souris des murs du groupe courant vers d'autres groupes</h31>
+    <h32>Créer :</h32>
+    <h33>Type d'intersection</h33>
+    <h34>Hauteurs des murs</h34>
+    <h35>Ferraillage des murs</h35>
+    <h36>Nbre d'intersect.</h36>
+    <h37>Type d'intersection</h37>
+    <h38>Paramètres</h38>
+    <h39>Intersections du groupe :</h39>
+    <!-- todo remove after 5.24.16.0 -->
+    <h40>Vous pouvez faire glisser à la souris des intersections du groupe courant vers d'autres groupes</h40>
+    <h41>Murs de l'intersection :</h41>
+    <h42>Ferraillage</h42>
+    <h43>Dimensions de l'ouverture</h43>
+    <h44>1. Ouvertures jusqu'à</h44>
+    <h45>2. Ouvertures de</h45>
+    <h46>mm à :</h46>
+    <h47>3. Ouvertures de</h47>
+    <h48>Définir le ferraillage de base des groupes par dimensions</h48>
+    <h49>Source</h49>
+    <h50>Nombre d'ouvertures</h50>
+    <h51>Épaisseur du mur</h51>
+    <h52>Groupe par largeur</h52>
+    <h53>Groupe par hauteur</h53>
+    <h54>Source</h54>
+    <h55>Ouvertures du groupe :</h55>
+    <!-- todo remove after 5.24.16.0 -->
+    <h58>Vous pouvez faire glisser à la souris des ouvertures du groupe courant vers d'autres groupes</h58>
+    <h59>Réglages de ferraillage des groupes</h59>
+    <h60>Réaliser le ferraillage</h60>
+    <h61>Calcul de l'ancrage selon SP 52-101-2003</h61>
+    <h62>Diamètre :</h62>
+    <h63>Aire de la section, mm² :</h63>
+    <h64>Classe de béton :</h64>
+    <h65>Type de surface de l'armature :</h65>
+    <h66>Résistance de calcul à la traction, MPa :</h66>
+    <h67>Longueur d'ancrage de base, mm :</h67>
+    <h68>Coefficient α :</h68>
+    <h69>Longueur d'ancrage requise (de calcul), mm :</h69>
+    <h70>Longueur d'ancrage :</h70>
+    <!-- todo remove after 5.24.16.0 -->
+    <h71>Réglages du ferraillage de l'intersection</h71>
+    <!-- todo remove after 5.24.16.0 -->
+    <h72>Réglages du ferraillage de l'ouverture</h72>
+    <!-- todo remove after 5.24.16.0 -->
+    <h73>Réglages du ferraillage du mur</h73>
+    <!-- todo remove after 5.24.16.0 -->
+    <h74>Remplacer par les réglages de ferraillage du groupe</h74>
+    <!-- todo remove after 5.24.16.0 -->
+    <h75>Conserver les réglages de ferraillage</h75>
+    <h76>Ferraillage vertical</h76>
+    <h79>Espacement, mm :</h79>
+    <h80>Position du centre par rapport au bord du mur, mm :</h80>
+    <h81>Traitement de l'espacement complémentaire :</h81>
+    <h82>Distance depuis l'about du mur, mm :</h82>
+    <h83>Dépassement au-dessus du mur, mm :</h83>
+    <h84>Enrobage aux extrémités des armatures, mm :</h84>
+    <h85>Placer des armatures au-dessus de la dernière ouverture lorsque la hauteur du mur au-dessus de l'ouverture est supérieure à (mm) :</h85>
+    <h86>Ne pas placer d'armatures sous l'ouverture si la hauteur du mur sous l'ouverture est inférieure ou égale à deux épaisseurs de mur (mais pas moins de 400 mm)</h86>
+    <h87>Ferraillage horizontal</h87>
+    <h88>Emplacement :</h88>
+    <h89>Distance de la première barre, mm :</h89>
+    <h90>Distance de la dernière barre, mm :</h90>
+    <h91>Barres en U aux abouts du mur</h91>
+    <h92>Longueur de la pièce, mm :</h92>
+    <h93>Calculer la longueur de la barre en U</h93>
+    <h94>Étriers transversaux (épingles)</h94>
+    <h95>Type d'épingle :</h95>
+    <h96>Tourner les épingles à 45° en enveloppant les nœuds d'intersection du ferraillage de base</h96>
+    <h97>Type de disposition :</h97>
+    <h98>Espacement horizontal, mm :</h98>
+    <h99>Espacement vertical, mm :</h99>
+    <h100>Intersections d'angle</h100>
+    <h101>Espacement des éléments :</h101>
+    <h102>Type de ferraillage :</h102>
+    <h103>Détail n°1</h103>
+    <h104>Longueur d'ancrage, mm :</h104>
+    <h105>Calculer la longueur d'ancrage</h105>
+    <h106>Détail n°2</h106>
+    <h107>Intersections en T</h107>
+    <h108>Intersections en croix</h108>
+    <h109>Barres verticales</h109>
+    <h110>Créer le ferraillage</h110>
+    <h111>Distance depuis l'ouverture :</h111>
+    <h112>Nombre de rangées :</h112>
+    <h113>Décaler en cas de rencontre avec les barres verticales du ferraillage de base</h113>
+    <h114>Barres horizontales en partie haute</h114>
+    <h115>Barres en U verticales</h115>
+    <h116>Barres en U en partie haute</h116>
+    <h117>Longueur de la pièce, mm :</h117>
+    <h118>Espacement des pièces, mm :</h118>
+    <h119>Réglages de ferraillage par défaut pour les murs</h119>
+    <h120>Réglages de ferraillage par défaut pour les intersections</h120>
+    <h121>Réglages de ferraillage par défaut pour les ouvertures</h121>
+    <h122>Premier groupe de dimensions</h122>
+    <h123>Deuxième groupe de dimensions</h123>
+    <h124>Troisième groupe de dimensions</h124>
+    <h127>Attentes depuis les dalles inférieures</h127>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h128>Sélectionner les dalles inférieures</h128>
+    <h129>Dalles inférieures</h129>
+    <h130>Épaisseur</h130>
+    <!-- todo remove after 5.24.16.0 -->
+    <h131>Groupes de murs en contact avec la dalle :</h131>
+    <h132>Réglages du ferraillage des attentes depuis la dalle</h132>
+    <h133>Attentes des murs intermédiaires</h133>
+    <h134>Réglages de ferraillage par défaut pour les attentes depuis les dalles inférieures</h134>
+    <h135>Type d'attentes :</h135>
+    <h136>Attentes des murs de rive</h136>
+    <h137>Utiliser les réglages des attentes des murs intermédiaires</h137>
+    <h138>Enrobage des armatures :</h138>
+    <h139>Le ferraillage horizontal est situé à l'intérieur – l'enrobage des armatures verticales est de</h139>
+    <h140>Le ferraillage horizontal est situé à l'extérieur – l'enrobage des armatures horizontales est de</h140>
+    <h141>Ne pas fermer la fenêtre après la création du ferraillage</h141>
+    <h142>Aperçu de l'intersection</h142>
+    <h143>Suppression de la géométrie auxiliaire</h143>
+    <h144>Distance de l'élément depuis la sous-face de la dalle inférieure :</h144>
+    <h145>Première longueur d'ancrage, mm :</h145>
+    <h146>Deuxième longueur d'ancrage, mm :</h146>
+    <!-- todo remove after 5.24.16.0 -->
+    <h147>Réinitialiser</h147>
+    <h148>Longueur d'ancrage dans la dalle, mm :</h148>
+    <h149>Attentes depuis la dalle inférieure</h149>
+    <h150>Nombre de murs en contact</h150>
+    <h151>Barres verticales supplémentaires aux abouts</h151>
+    <h152>Distance depuis les barres verticales extrêmes</h152>
+    <h153>Ferraillage diagonal supérieur</h153>
+    <h154>Ferraillage diagonal inférieur</h154>
+    <h155>Longueur des barres :</h155>
+    <h156>Barres en U le long de l'about supérieur du mur</h156>
+    <h157>Attentes</h157>
+    <h158>Attentes des barres verticales du ferraillage de base</h158>
+    <h159>Attentes des barres verticales des intersections</h159>
+    <h160>Type d'attentes :</h160>
+    <h161>Épaisseur conventionnelle de la dalle, mm :</h161>
+    <h162>Créer des attentes "Décalées"</h162>
+    <h163>Si le mur supérieur comporte une ouverture,</h163>
+    <h164>Appliquer également aux parties du mur supérieur dont la hauteur sous l'ouverture (ou la hauteur du mur entier) est inférieure ou égale à deux épaisseurs de mur (mais pas moins de 400)</h164>
+    <h165>En l'absence de dalle de plancher au-dessus du mur,</h165>
+    <h166>Position des pliages par rapport au haut de la dalle (à l'axe de l'armature), mm :</h166>
+    <h167>Position des pliages par rapport au bas de la dalle (à l'axe de l'armature), mm :</h167>
+    <h168>Sélection des murs par fenêtre</h168>
+    <h169>Sélection des murs par pointage</h169>
+    <h170>Couper les attentes au volume du mur</h170>
+    <h171>Nombre de paires de barres supplémentaires :</h171>
+    <h172>Espacement des barres :</h172>
+    <!-- todo remove after 5.24.16.0 start -->
+    <h173>Barres droites :</h173>
+    <h174>Barres en L (lors de la création de coudes des barres verticales) :</h174>
+    <h175>Barres en U aux abouts du mur :</h175>
+    <h176>Barres en U le long de l'about supérieur du mur :</h176>
+    <h177>Étriers transversaux en C (épingles). Crochets dans l'esquisse :</h177>
+    <h178>Étriers transversaux en S (épingles). Crochets dans l'esquisse :</h178>
+    <h179>Barres en L :</h179>
+    <h180>Barres en U :</h180>
+    <h181>Cadres enveloppants :</h181>
+    <h182>Barres en L à grand retour :</h182>
+    <h183>Réinitialiser toutes les valeurs sur "Auto"</h183>
+    <h184>Formes d'armature préférées</h184>
+    <h185>Impossible de définir les valeurs des paramètres pour certains éléments. Ci-dessous figurent les codes des éléments (id), les noms des paramètres et les valeurs à définir :</h185>
+    <!-- todo remove after 5.24.16.0 end -->
+    <h186>Étriers horizontaux ligaturés</h186>
+    <h187>Uniquement dans les murs sans intersection d'extrémité avec d'autres murs</h187>
+    <h188>Dans les murs d'une longueur jusqu'à, mm :</h188>
+    <h189>Ne pas créer les barres horizontales du ferraillage de base</h189>
+    <h190>Nombre de paires de barres enveloppées :</h190>
+    <h191>Tenir compte des éléments aux abouts et aux intersections</h191>
+    <h192>Type d'enveloppement des barres du ferraillage de base :</h192>
+    <h193>Première longueur de recouvrement, mm :</h193>
+    <h194>Deuxième longueur de recouvrement, mm :</h194>
+    <h195>Calculer la longueur de recouvrement</h195>
+    <h196>Longueur de recouvrement, mm :</h196>
+    <h197>CHARGEMENT</h197>
+    <h198>Barres horizontales en partie basse</h198>
+    <h199>Étriers en partie haute</h199>
+    <h200>Crochets de forme :</h200>
+    <h201>Définir dans l'esquisse</h201>
+    <h202>Utiliser les crochets Revit</h202>
+    <h203>Sélectionner à nouveau</h203>
+    <h204>Resélectionner les murs traités dans la vue courante lors de l'utilisation précédente du plugin</h204>
+    <h205>Étriers transversaux en C (épingles). Crochets Revit :</h205>
+    <h206>Étriers transversaux en S (épingles). Crochets Revit :</h206>
+    <h207>Créer chaque pièce comme une barre d'armature distincte</h207>
+    <h208>Ne pas couper les barres d'armature par les ouvertures de dimensions jusqu'à (LxH) :</h208>
+    <h209>Barres par rangée :</h209>
+    <h210>Répartition sur la longueur :</h210>
+    <h211>de l'ouverture</h211>
+    <h212>des barres droites</h212>
+    <h213>Barres en U en partie basse</h213>
+    <h214>Étriers en partie basse</h214>
+    <h215>Étriers verticaux</h215>
+    <h216>Longueur des attentes, mm :</h216>
+    <h217>Décaler les barres verticales extrêmes du ferraillage de base en cas de rencontre avec une barre en U</h217>
+    <h218>Barres verticales supplémentaires près des intersections</h218>
+    <h219>Position par rapport à la face de l'intersection (à l'axe de l'armature) :</h219>
+    <h220>Uniquement pour les murs se croisant à angle droit</h220>
+    <h221>Barres longitudinales coudées (pliées en "bouteille")</h221>
+    <h222>Espacement dans les zones de resserrement, mm :</h222>
+    <h223>Longueur de densification, mm :</h223>
+    <h224>Longueur de densification, fraction :</h224>
+    <h225>Resserrement du ferraillage horizontal dans la zone inférieure du mur</h225>
+    <h226>Suppression du ferraillage créé précédemment :</h226>
+    <h227>Ferraillage vertical aux intersections</h227>
+    <h228>Utiliser les réglages du ferraillage vertical de base</h228>
+    <h229>Niveau</h229>
+    <h230>Créer des attentes pour les barres verticales supplémentaires du ferraillage de base</h230>
+    <h231>Distance du point de début du pliage depuis le haut du mur (a), mm :</h231>
+    <h232>Distance du point de fin du pliage depuis le haut de la dalle (b), mm :</h232>
+    <h233>Utiliser le diamètre de l'armature comme hauteur de pliage (c)</h233>
+    <h234>Hauteur de pliage (c), mm :</h234>
+    <h235>Position de l'élément par rapport au haut de la dalle (à la face extérieure de l'élément), mm :</h235>
+    <h236>Barres en U des attentes verticales :</h236>
+    <h237>La distance entre les barres du ferraillage vertical (selon le mur le plus petit du groupe) est de</h237>
+    <h238>Selon le point 10.3.5 du SP 63.13330, la distance entre les barres du ferraillage vertical doit être d'au moins 50 mm !</h238>
+    <h239>Selon le point 10.3.5 du SP 63.13330, la distance entre les barres du ferraillage horizontal doit être d'au moins 25 mm !</h239>
+    <h240>Alterner le côté</h240>
+    <h241>Barre en L supplémentaire, pliée dans la dalle et placée dans les murs de rive</h241>
+    <h242>Longueur d'ancrage dans le mur, mm :</h242>
+    <h243>Décalage par translation</h243>
+    <h244>Créer uniquement dans les zones sans sol ni mur au-dessus</h244>
+    <h245>Barres en U le long de l'about inférieur du mur</h245>
+    <h246>Murs en contact avec la dalle :</h246>
+    <h247>Paramètre de la source</h247>
+    <h248>Aucun paramètre</h248>
+    <h249>Barres en U horizontales</h249>
+    <h250>Type d'extrémités :</h250>
+    <h251>Longueur de l'extrémité (des extrémités), mm :</h251>
+    <h252>Calculer la longueur de l'extrémité (des extrémités) de la barre en U</h252>
+    <h253>Appliquer l'enrobage aux extrémités des armatures en bas du mur</h253>
+    <h254>Placer avec l'espacement du ferraillage de base</h254>
+    <h255>Resserrement du ferraillage horizontal dans la zone supérieure du mur</h255>
+    <et1>Les deux extrémités sont définies selon la longueur du mur</et1>
+    <et2>Une extrémité est définie selon la longueur du mur, l'autre par une valeur</et2>
+    <et3>Les deux extrémités sont définies par une valeur</et3>
+    <srd>Enregistrement des données des murs sélectionnés</srd>
+    <rr1>Supprimer le ferraillage du même type que celui créé</rr1>
+    <rr2>Supprimer tout le ferraillage créé précédemment</rr2>
+    <rr3>Ne pas supprimer</rr3>
+    <hook>Crochet :</hook>
+    <g1>Envelopper les barres verticales</g1>
+    <g2>Envelopper les barres horizontales</g2>
+    <auto>Auto</auto>
+    <oa1>ne pas créer d'attentes</oa1>
+    <oa2>plier dans la dalle (si elle existe)</oa2>
+    <npa1>considérer la dalle comme existante par convention</npa1>
+    <npa2>calculer la longueur de recouvrement depuis le haut du mur</npa2>
+    <jtd1>Les attentes des barres verticales du ferraillage de base ne sont pas créées. Les barres sont coupées au niveau du haut du mur selon la valeur d'enrobage aux extrémités des armatures indiquée</jtd1>
+    <jtd2>Des attentes droites des barres verticales sont créées. La longueur de recouvrement est définie à partir du haut du sol supérieur ou du haut du mur. Lorsque l'épaisseur du mur supérieur diminue, l'armature est pliée (en présence d'un sol)</jtd2>
+    <jtd3>Des attentes des barres verticales sont créées de manière analogue aux attentes droites, mais avec des longueurs d'ancrage différentes</jtd3>
+    <jtd4>Des attentes des barres verticales avec ancrage dans le sol supérieur sont créées. La longueur d'ancrage est mesurée à partir de la face latérale du mur. Si les pliages des barres ne peuvent pas être réalisés des deux côtés, les barres sont pliées d'un seul côté à différents niveaux de la dalle</jtd4>
+    <jtd5>Des attentes droites des barres verticales sont créées. La longueur de recouvrement est définie à partir du haut du sol supérieur ou du haut du mur</jtd5>
+    <jtd6>Des attentes droites des barres verticales en forme de "bouteille" sont créées – les attentes sont pliées vers le centre de l'intersection d'une valeur égale au diamètre de la barre. La longueur de recouvrement est définie à partir du haut du sol supérieur</jtd6>
+    <jtd7>Des attentes dans le sol supérieur sont créées sous forme de barres en L séparées. La première longueur d'ancrage – longueur d'ancrage des barres dans la dalle – est mesurée à partir de la face latérale du mur. La deuxième longueur d'ancrage – longueur d'ancrage des barres dans le mur – est mesurée à partir de la face supérieure du mur. Si les pliages ne peuvent pas être réalisés des deux côtés, les barres sont pliées d'un seul côté à différents niveaux de la dalle</jtd7>
+    <jtd8>Des attentes droites des barres verticales sont créées sans tenir compte des éléments supérieurs</jtd8>
+    <jtd9>Des attentes droites des barres verticales en forme de "bouteille" sont créées – les attentes sont pliées vers le centre du mur d'une distance donnée ou d'une valeur égale au diamètre de la barre. La longueur de recouvrement est définie à partir du haut du sol supérieur</jtd9>
+    <jtd10>Les barres verticales du ferraillage de base sont coupées au niveau du haut du mur selon la valeur d'enrobage indiquée. Un ancrage dans la dalle supérieure est créé sous forme d'une barre en U séparée</jtd10>
+    <!-- todo remove after 5.24.16.0 start -->
+    <i1>1. Angle</i1>
+    <i2>2. En T</i2>
+    <i3>3. En croix</i3>
+    <i4>0. Non défini</i4>
+    <i5>Divers</i5>
+    <!-- todo remove after 5.24.16.0 end -->
+    <m1>Saisissez une valeur de</m1>
+    <m2>à</m2>
+    <!-- todo remove after 5.24.16.0 -->
+    <m13>Enrobage des armatures</m13>
+    <m14>Jusqu'à</m14>
+    <m15>De</m15>
+    <m16>Fenêtre</m16>
+    <m17>Porte</m17>
+    <m18>Modèle générique</m18>
+    <m19>Ouverture rectangulaire</m19>
+    <!-- todo remove after 5.24.16.0 -->
+    <m20>La liste des murs contient des murs dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</m20>
+    <!-- todo remove after 5.24.16.0 -->
+    <m21>La liste des intersections contient des intersections dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</m21>
+    <!-- todo remove after 5.24.16.0 -->
+    <m22>La liste des ouvertures contient des ouvertures dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</m22>
+    <m23>Réglages de ferraillage copiés</m23>
+    <m24>Vous n'avez pas indiqué pour quels groupes créer le ferraillage !</m24>
+    <m25>Aucun groupe n'est sélectionné pour la création du ferraillage !</m25>
+    <m26>Sélectionnez les murs</m26>
+    <m27>Attention ! Aucune forme d'armature chargée n'a été trouvée dans le projet courant ! Dans ce cas, les formes d'armature créées par le plugin ne pourront pas être ouvertes dans l'éditeur de familles ! Il est recommandé de charger les formes d'armature dans le projet avant d'utiliser le plugin !\nRéaliser le ferraillage malgré l'absence de formes d'armature ?</m27>
+    <!-- todo remove after 5.24.16.0 -->
+    <m28>Sélectionnez les dalles inférieures</m28>
+    <!-- todo remove after 5.24.16.0 -->
+    <m29>La dalle inférieure sélectionnée (id : {0}) n'a pas de jonction avec les murs sélectionnés</m29>
+    <!-- todo remove after 5.24.16.0 -->
+    <m30>Attention ! Les réglages de ferraillage des attentes depuis les dalles inférieures seront réinitialisés ! Continuer ?</m30>
+    <m31>Le rayon de pliage de la barre d'armature est inférieur au minimum admissible</m31>
+    <m32>Les réglages de ferraillage indiqués rendront impossible la modélisation des éléments d'armature !</m32>
+    <m33>Attention ! Une nouvelle analyse effacera les listes actuelles des groupes et la liste des dalles inférieures ! Effectuer une nouvelle analyse ?</m33>
+    <m34>Profil de mur</m34>
+    <p1>Recherche des murs non traités qui croisent les murs sélectionnés</p1>
+    <p2>Initialisation de la géométrie des murs</p2>
+    <p3>Recherche des intersections de murs</p3>
+    <p4>Suppression des intersections identiques</p4>
+    <p5>Fusion des intersections</p5>
+    <p6>Analyse de la géométrie des intersections</p6>
+    <p7>Détermination de l'appartenance des murs aux intersections</p7>
+    <p8>Suppression du ferraillage créé précédemment</p8>
+    <p9>Calcul et modélisation du ferraillage du mur</p9>
+    <p10>Calcul et modélisation du ferraillage des intersections</p10>
+    <p11>Calcul et modélisation du ferraillage de l'ouverture</p11>
+    <p12>Génération des armatures Revit</p12>
+    <p13>Fusion des barres horizontales du ferraillage créé</p13>
+    <p14>Calcul et modélisation des attentes depuis la dalle pour les murs intermédiaires</p14>
+    <p15>Calcul et modélisation des attentes depuis la dalle pour les murs de rive</p15>
+    <p16>Recherche des dalles inférieures</p16>
+    <dd1>V</dd1>
+    <dd2>H</dd2>
+    <dd3>vers l'intérieur</dd3>
+    <dd4>vers l'extérieur</dd4>
+    <dd5>É</dd5>
+    <dd6>U</dd6>
+    <rn>Armature porteuse ⌀</rn>
+    <!-- todo remove after 5.24.16.0 -->
+    <noInFamily>Le fonctionnement du plugin dans les familles n'est pas disponible !</noInFamily>
+    <c1>Décaler vers le bord du mur</c1>
+    <c2>Décaler vers le milieu du mur</c2>
+    <c3>Répartir le ferraillage vertical</c3>
+    <c4>Vers l'intérieur</c4>
+    <c5>Vers l'extérieur</c5>
+    <c6>Disposition alignée</c6>
+    <c7>Disposition en quinconce</c7>
+    <c8>Selon le plus petit espacement</c8>
+    <c9>Selon le plus grand espacement</c9>
+    <c10>Décaler vers les deux bords du mur</c10>
+    <t1>Sélectionner les murs pour l'analyse</t1>
+    <t2>Seuls les murs présentant les caractéristiques suivantes sont retenus par le filtre de sélection :</t2>
+    <t3>Le mur est délimité par des lignes droites</t3>
+    <t4>La propriété "Structure" est activée</t4>
+    <t5>Le mur n'est pas un mur-rideau</t5>
+    <t6>Épaisseur du mur d'au moins 100 mm</t6>
+    <!-- todo remove after 5.24.16.0 -->
+    <t7>Le groupe contient des murs dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t7>
+    <!-- todo remove after 5.24.16.0 -->
+    <t8>Ajouter un nouveau groupe vide</t8>
+    <!-- todo remove after 5.24.16.0 -->
+    <t9>Supprimer le groupe vide</t9>
+    <t10>Cocher tous les groupes</t10>
+    <t11>Décocher tous les groupes</t11>
+    <!-- todo remove after 5.24.16.0 -->
+    <t12>Les réglages de ferraillage du mur ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t12>
+    <!-- todo remove after 5.24.16.0 -->
+    <t13>Modifier les réglages de ferraillage du mur sélectionné</t13>
+    <!-- todo remove after 5.24.16.0 -->
+    <t14>Remplacer les réglages de ferraillage du mur par ceux du groupe</t14>
+    <t15>Afficher dans le modèle le mur précédent de la liste</t15>
+    <t16>Afficher dans le modèle le mur sélectionné dans la liste</t16>
+    <t17>Afficher dans le modèle le mur suivant de la liste</t17>
+    <t18>Les hauteurs des murs sont déterminées uniquement aux intersections</t18>
+    <!-- todo remove after 5.24.16.0 -->
+    <t19>Le groupe contient des intersections dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t19>
+    <!-- todo remove after 5.24.16.0 -->
+    <t20>Les réglages de ferraillage de l'intersection ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t20>
+    <!-- todo remove after 5.24.16.0 -->
+    <t21>Modifier les réglages de ferraillage de l'intersection sélectionnée</t21>
+    <!-- todo remove after 5.24.16.0 -->
+    <t22>Remplacer les réglages de ferraillage de l'intersection par ceux du groupe</t22>
+    <t23>Afficher dans le modèle l'intersection précédente de la liste</t23>
+    <t24>Afficher dans le modèle l'intersection sélectionnée dans la liste</t24>
+    <t25>Afficher dans le modèle l'intersection suivante de la liste</t25>
+    <t26>Ce mur n'est pas traité par le plugin (pas de ferraillage) et sert uniquement à déterminer l'intersection avec l'un des murs sélectionnés</t26>
+    <t27>Description succincte du ferraillage du mur, où :</t27>
+    <t28>V – ferraillage vertical avec indication du diamètre et de l'espacement des barres</t28>
+    <t29>H – ferraillage horizontal avec indication du diamètre, de l'espacement et de la position des barres</t29>
+    <t30>É – ferraillage transversal (épingles) avec indication du diamètre</t30>
+    <t31>U – barres en U aux abouts avec indication du diamètre</t31>
+    <!-- todo remove after 5.24.16.0 -->
+    <t32>Modifier les réglages de ferraillage du groupe de dimensions</t32>
+    <!-- todo remove after 5.24.16.0 -->
+    <t33>Le groupe contient des ouvertures dont les réglages de ferraillage ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t33>
+    <!-- todo remove after 5.24.16.0 -->
+    <t34>Les réglages de ferraillage de l'ouverture ont été modifiés manuellement et diffèrent des réglages de ferraillage du groupe</t34>
+    <!-- todo remove after 5.24.16.0 -->
+    <t35>Modifier les réglages de ferraillage de l'ouverture sélectionnée</t35>
+    <!-- todo remove after 5.24.16.0 -->
+    <t36>Remplacer les réglages de ferraillage de l'ouverture par ceux du groupe</t36>
+    <t37>Afficher dans le modèle l'ouverture précédente de la liste</t37>
+    <t38>Afficher dans le modèle l'ouverture sélectionnée dans la liste</t38>
+    <t39>Afficher dans le modèle l'ouverture suivante de la liste</t39>
+    <!-- todo remove after 5.24.16.0 -->
+    <t40>Copier les réglages de ferraillage du groupe courant dans tous les groupes cochés</t40>
+    <!-- todo remove after 5.24.16.0 -->
+    <t41>Enregistrer les réglages de ferraillage du groupe actuel dans un fichier xml</t41>
+    <!-- todo remove after 5.24.16.0 -->
+    <t42>Charger les réglages de ferraillage depuis un fichier xml et les appliquer au groupe actuel</t42>
+    <t43>Attention ! L'aspect de surface des armatures peut dépendre de la classe d'armature, du diamètre ou d'autres valeurs qui ne sont pas prises en compte par le programme. Consultez la documentation normative</t43>
+    <t44>α – coefficient tenant compte de l'influence, sur la longueur d'ancrage, de l'état de contrainte du béton et de l'armature ainsi que de la solution constructive de l'élément dans la zone d'ancrage. Pour l'ancrage de barres à haute adhérence à extrémités droites (ancrage droit) ou d'armatures lisses avec crochets ou boucles sans dispositifs d'ancrage supplémentaires, on prend α = 1,0 pour les barres tendues et α = 0,75 pour les barres comprimées. Selon le point 10.3.30 du SP 63.13330, le coefficient α peut être augmenté jusqu'à 2,0</t44>
+    <t45>Selon le point 10.3.8 du SP 63.13330.2012, l'espacement des barres verticales ne doit pas dépasser 2t et 400 mm (t – épaisseur du mur)</t45>
+    <t46>Conformément à GOST 21.501-2018 art. 6.4.7, la longueur de la pièce est définie selon la face extérieure de la barre d'armature</t46>
+    <t47>Augmente le temps de génération des armatures !</t47>
+    <t48>Les éléments de ferraillage de l'intersection seront placés avec l'espacement du ferraillage horizontal des murs – selon le plus petit ou le plus grand espacement du ferraillage horizontal des murs participant à l'intersection</t48>
+    <t49>Nombre de rangées d'armatures verticales</t49>
+    <t50>Nombre de rangées d'armatures horizontales</t50>
+    <!-- todo remove after 5.24.16.0 start -->
+    <t51>Sélection de la dalle inférieure située directement sous les murs sélectionnés. La sélection de la dalle inférieure est disponible après la sélection, l'analyse et le regroupement des murs. Vous pouvez sélectionner une ou plusieurs dalles. La propriété "Structure" doit être activée dans les propriétés des dalles inférieures</t51>
+    <!-- todo remove after 5.24.16.0 -->
+    <t53>Réinitialisation de toutes les valeurs des réglages de ferraillage par défaut actuels aux valeurs standard prévues dans le plugin</t53>
+    <t54>Copier les réglages de ferraillage des attentes de la dalle courante dans toutes les dalles cochées</t54>
+    <t55>Enregistrer les réglages de ferraillage des attentes de la dalle courante</t55>
+    <t56>Charger les réglages de ferraillage des attentes et les appliquer à la dalle courante</t56>
+    <t57>Les valeurs minimale et maximale sont calculées à partir des diamètres et de l'espacement du ferraillage vertical indiqués</t57>
+    <t58>La longueur de la barre est la somme de deux longueurs d'ancrage</t58>
+    <t59>Lorsque l'option "Décalées" est activée, chaque première paire d'attentes le long du mur est créée avec la première longueur de recouvrement, et chaque deuxième paire avec la deuxième longueur de recouvrement</t59>
+    <t60>Si les attentes dépassent la hauteur du mur supérieur, elles seront coupées au niveau de la face supérieure du mur en tenant compte de l'enrobage indiqué aux extrémités des armatures</t60>
+    <!-- todo remove after 5.24.16.0 -->
+    <t61>Le mode de sélection s'applique à la sélection des dalles</t61>
+    <t62>La barre verticale est décalée vers le point de début du pliage de la barre en U, obtenu en additionnant l'enrobage du ferraillage horizontal aux abouts, le diamètre de la barre en U et le diamètre normatif de pliage de la barre en U</t62>
+    <!-- todo remove after 5.24.16.0 -->
+    <t63>Vous pouvez indiquer les formes d'armature préférées pour les différents types de barres d'armature créées par le plugin.</t63>
+    <!-- todo remove after 5.24.16.0 -->
+    <t64>La définition de formes préférées ne garantit pas que l'armature sera créée avec la forme d'armature indiquée.</t64>
+    <!-- todo remove after 5.24.16.0 -->
+    <t65>Lors de la création des barres d'armature, le plugin tentera d'utiliser la forme indiquée. Si la création d'une barre avec la forme indiquée est impossible, Revit recherchera automatiquement une forme adaptée ou créera une nouvelle forme.</t65>
+    <!-- todo remove after 5.24.16.0 -->
+    <t66>Enregistrer les réglages de ferraillage actuels comme réglages de ferraillage par défaut</t66>
+    <t67>Regrouper les murs, les intersections et les ouvertures selon les réglages de regroupement actuels</t67>
+    <t68>Lorsque cette option est activée, les épingles ne sont pas placées aux intersections des murs ni aux abouts des murs où sont placés des éléments (par exemple, des barres en U)</t68>
+    <t69>Si les barres horizontales du ferraillage de base sont situées à l'intérieur et les barres verticales à l'extérieur, il est recommandé d'indiquer l'enveloppement des barres verticales. Dans le cas inverse, lorsque les barres horizontales du ferraillage de base sont situées à l'extérieur, il est recommandé d'indiquer l'enveloppement des barres horizontales</t69>
+    <t70>La longueur de la pièce est égale à la longueur d'ancrage</t70>
+    <t71>Un décalage par le bas égal à la valeur absolue de la différence des longueurs de recouvrement sera appliqué à chaque deuxième paire de barres. Le décalage n'a pas d'incidence sur la deuxième longueur de recouvrement. Par exemple, si la première longueur de recouvrement est de 500 mm et la deuxième de 750 mm, les barres de chaque deuxième paire auront un décalage par le bas de 250 mm</t71>
+    <t72>Afficher dans le modèle la dalle sélectionnée dans la liste</t72>
+    <t73>Afficher dans le modèle les murs en contact avec la dalle sélectionnée dans la liste</t73>
+    <re1>Erreur lors de la création des barres verticales du ferraillage de base dans le mur id={0} :</re1>
+    <re2>Erreur lors de la création des barres verticales du ferraillage de base à l'intersection dans le mur id={0} :</re2>
+    <re3>Erreur lors de la création des barres verticales supplémentaires à l'about du mur id={0} :</re3>
+    <re4>Erreur lors de la création des barres horizontales ligaturées dans le mur id={0} :</re4>
+    <re5>Erreur lors de la création des barres horizontales du ferraillage de base dans le mur id={0} :</re5>
+    <re6>Erreur lors de la création des barres en U aux abouts du mur id={0} :</re6>
+    <re7>Erreur lors de la création des barres en U le long de l'about supérieur du mur id={0} :</re7>
+    <re8>Erreur lors de la création des épingles dans le mur id={0} :</re8>
+    <re9>Erreur lors de la création des éléments de la jonction en angle dans les murs {0} :</re9>
+    <re10>Erreur lors de la création des éléments de la jonction en T dans les murs {0} :</re10>
+    <re11>Erreur lors de la création des éléments de la jonction en croix dans les murs {0} :</re11>
+    <re12>Erreur lors de la création des barres verticales du pourtour de l'ouverture dans le mur id={0} :</re12>
+    <re13>Erreur lors de la création des barres horizontales du pourtour de l'ouverture dans le mur id={0} :</re13>
+    <re14>Erreur lors de la création des barres en U verticales du pourtour de l'ouverture dans le mur id={0}</re14>
+    <re15>Erreur lors de la création des barres en U horizontales (en partie haute) du pourtour de l'ouverture dans le mur id={0}</re15>
+    <re16>Erreur lors de la création des barres du ferraillage diagonal du pourtour de l'ouverture dans le mur id={0} :</re16>
+    <re17>Erreur lors de la création des attentes depuis la dalle id={0} dans le mur id={1} :</re17>
+    <re18>Erreur lors de la création des étriers du pourtour de l'ouverture dans le mur id={0} :</re18>
+    <re19>Erreur lors de la création des barres en U horizontales (en partie basse) du pourtour de l'ouverture dans le mur id={0}</re19>
+    <re20>Impossible de créer la barre d'armature avec la forme d'armature préférée indiquée "{0}". Erreur : {1}\nUne tentative de création de la barre avec sélection ou création automatique de la forme d'armature a été effectuée</re20>
+    <re21>Erreur lors de la création des barres en U le long de l'about inférieur du mur</re21>
+    <re22>Impossible d'afficher l'intersection dans la vue actuelle ! Passez à un plan d'étage</re22>
+    <re23>Erreur lors de la création des barres en U horizontales dans le mur id={0} :</re23>
+    <re24>Erreur lors de la création des barres verticales supplémentaires près de l'intersection dans le mur id={0} :</re24>
+  </mprWallsReinforcement>
+</ModPlus>

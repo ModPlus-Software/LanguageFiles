@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprParametrization
+    LocalName="Parametrlash"
+    Description="Element parametrlarini turli strategiyalar bilan toʻldirish"
+    LocalName1="Parametrlash. Palitra"
+    Description1="Tanlangan strategiya qoidalarini tez ishga tushirish uchun palitrani koʻrsatadi yoki yashiradi">
+    <!-- todo remove after 3.3.6.0 start -->
+    <t1>Oyna tarkibini yigʻish</t1>
+    <t2>Oyna tarkibini yoyish</t2>
+    <t3>Yangi konfiguratsiya yaratish</t3>
+    <t4>Joriy konfiguratsiyani dublikatlash</t4>
+    <t5>Joriy konfiguratsiyani oʻchirish</t5>
+    <!-- todo remove after 3.3.6.0 end -->
+    <t6>Konfiguratsiya nomini kiriting</t6>
+    <t7>Strategiyalar</t7>
+    <t8>Strategiya qoʻshish</t8>
+    <t9>Strategiyani dublikatlash</t9>
+    <t10>Strategiyani oʻchirish</t10>
+    <t11>Qoidalar</t11>
+    <t12>Bogʻlangan fayllardagi elementlarni qayta ishlash</t12>
+    <!--todo remove after 4.1.33.0-->
+    <t13>Bogʻlangan fayllardan ota elementlar yigʻiladi. Masalan, InMass strategiyasi uchun bular shakl hosil qiluvchi elementlar, InSolid strategiyasi uchun – qattiq jismga ega elementlar va h. k. Elementlar qoidalarning tegishli ustunida koʻrsatilgan toifalar boʻyicha yigʻiladi</t13>
+    <t14>Elementlar geometriyasi bilan ishlaydigan strategiyalarni (InRoom, InSpace, InSolid, SolidTouch va h. k.) faol koʻrinishda ishga tushirish tavsiya etiladi! Agar butun hujjatda ishga tushirilsa, elementlardan boshqa elementlar bilan oʻzaro taʼsirni hisobga olmaydigan geometriya olinadi, bu esa notoʻgʻri natijaga olib kelishi mumkin</t14>
+    <t15>Strategiya nomini kiriting</t15>
+    <t16>Yangi qoida qoʻshish</t16>
+    <t17>Tanlangan qoidalarni oʻchirish</t17>
+    <t18>Tanlangan qoidalarni dublikatlash</t18>
+    <t19>Jadvaldagi joylashuviga koʻra qayta raqamlash</t19>
+    <t20>Joriy konfiguratsiyani eksport qilish</t20>
+    <t21>Strategiyalarni joriy konfiguratsiyaga import qilish</t21>
+    <!--todo remove after 4.1.33.0-->
+    <t23>Qoidalarni joriy strategiyaga import qilish</t23>
+    <!--todo remove after 4.1.33.0-->
+    <t24>Joriy strategiya qoidalarini eksport qilish</t24>
+    <t25>Boʻsh natijani yozish</t25>
+    <t26>Ifodani hisoblashda olingan boʻsh natijani maqsadli parametrga yozish. Satrli parametrlar uchun bu boʻsh satr, sonli parametrlar uchun esa 0</t26>
+    <t27>Shartlarda satrli qiymatlarni solishtirishda registrni hisobga olish</t27>
+    <t28>Shartlarda sonli qiymatlarni solishtirishda qoʻllaniladigan ruxsat etilgan chetlanish</t28>
+    <t29>Funksiya qoʻyish</t29>
+    <t30>Formulani oldindan koʻrish</t30>
+    <t31>Formula muharriri</t31>
+    <t32>Registrni hisobga olish</t32>
+    <t33>Boʻshlarni yozish</t33>
+    <t34>Strategiyaning noyob identifikatori (oʻzgartirmang!):</t34>
+    <t35>Strategiyaning foydalanuvchi nomi:</t35>
+    <t36>nusxa</t36>
+    <t37>Strategiya</t37>
+    <t38>parametr yoʻq</t38>
+    <t39>Qoida</t39>
+    <t40>Ifoda</t40>
+    <t41>SolidTouch: elementlar yoqlari orasidagi masofaning ruxsat etilgan chetlanishi, mm:</t41>
+    <t42>Matnni yangi satrga koʻchirish</t42>
+    <t43>Konfiguratsiyani tanlang yoki yarating</t43>
+    <t44>Hajmiy shakllarning kirishini qidirish algoritmi:</t44>
+    <t45>Yordamchi nurlar</t45>
+    <t46>Mantiqiy amallar</t46>
+    <t47>InRoom, InSpace, InMass, InSolid strategiyalari uchun hajmiy shakllarning kirishini qidirish algoritmini belgilaydi. "Yordamchi nurlar" algoritmi tez ishlaydi, lekin shaklning faqat bitta ota shaklga tegishliligini aniqlash imkonini beradi. "Mantiqiy amallar" algoritmi uzoq ishlaydi, lekin shaklning bir nechta ota shakllarga tegishliligini aniqlash imkonini beradi. Batafsil maʼlumotnomada koʻring</t47>
+    <t48>Maydonlar</t48>
+    <t49>Sevimli maydonlar</t49>
+    <t50>Yangi maydon qoʻshish</t50>
+    <t51>Maydonni oʻchirish</t51>
+    <t52>Maydonni formulaga qoʻyish</t52>
+    <t53>Sevimli maydonlar roʻyxatidan maydonlar qoʻshish</t53>
+    <t54>Maydonni sevimli maydonlar roʻyxatiga qoʻshish</t54>
+    <t55>Maydonni sevimli maydonlar roʻyxatidan olib tashlash</t55>
+    <t56>Maydonlar roʻyxatida bunday kalitli maydon allaqachon mavjud</t56>
+    <t57>Maydonni dublikatlash</t57>
+    <t58>Funksiya nomlarini moslashtirish</t58>
+    <t59>Ushbu oynada formula muharririda ishlatiladigan funksiyalar uchun oʻz nomlaringizni belgilashingiz mumkin. Funksiya nomlarida boʻsh joylar va boshqaruv belgilari (qavslar, vergullar, nuqtalar va h. k.) boʻlmasligi kerak. Registr muhim emas</t59>
+    <t60>Qidirish va almashtirish</t60>
+    <t61>Maydon yaratish</t61>
+    <t62>Yangi maydon uchun noyob kalitni kiriting</t62>
+    <t63>Bogʻlanishni bekor qilish</t63>
+    <t64>Agar bogʻlanish mavjud boʻlsa, maqsadli parametrning loyihaning global parametri bilan bogʻlanishini oʻchirish</t64>
+    <t65>Barcha strategiyalarni oʻchirish</t65>
+    <t66>Tanlangan qoidalarni almashish buferiga nusxalash</t66>
+    <t67>Qoidalarni almashish buferidan qoʻyish</t67>
+    <t68>Barcha qoidalarda maydon qiymatini yangilash</t68>
+    <t69>Formulani koʻrsatish</t69>
+    <t70>Formulani yashirish</t70>
+    <t71>Agar oilada geometriya boʻlmasa, ichki oilalar geometriyasidan foydalanish</t71>
+    <t72>Strategiya tavsifini kiriting</t72>
+    <t73>Sonli qiymatlarning oʻnlik ajratgichi:</t73>
+    <t74>Tizim</t74>
+    <t75>Sonli qiymatlarning oʻnlik ajratgichi formulani hisoblash vaqtida sonli qiymatlarni satrli qiymatlarga aylantirishda ishlatiladi. Bunday aylantirishlar sonli parametrlardan qiymatlar olinganda, matematik ifodalar hisoblanganda, shuningdek natijasi son boʻlgan funksiyalar hisoblanganda bajariladi</t75>
+    <t76>Qoidalar soni: yoqilgan/jami</t76>
+    <t77>Roʻyxatda strategiya fonini oʻzgartirish</t77>
+    <t78>Tanlangan qoidalarning birinchi katagi fonini oʻzgartirish</t78>
+    <t79>Parametrlash natijalari</t79>
+    <t80>Konfiguratsiya: {0}. Strategiyalarning umumiy soni: {1}. Qoidalarning umumiy soni: {2}. Jami sarflangan vaqt: {3}</t80>
+    <t81>Qayta ishlangan elementlarning umumiy soni</t81>
+    <t82>Umumiy bajarilish vaqti</t82>
+    <t83>Bajarilgan qoidalar:</t83>
+    <t84>Oʻzgartirilgan elementlar soni</t84>
+    <t85>Oʻtkazib yuborilgan elementlar soni</t85>
+    <t86>Oʻzgartirib boʻlmagan elementlar soni</t86>
+    <t87>Qayta ishlangan elementlar</t87>
+    <t88>Barchasini tanlash</t88>
+    <t89>Hammasini ajratib koʻrsatish</t89>
+    <t90>txt ga eksport</t90>
+    <t91>Mundarija:</t91>
+    <t93>Qayta ishlangan elementlar identifikatorlari roʻyxatini koʻrish uchun ifodani qayta ishlash natijasini tanlang</t93>
+    <t94>Cheklangan rejim</t94>
+    <t95>Strategiya filtrlari oʻz element filtrlari toʻldirilmagan barcha qoidalarga tatbiq etiladi. Agar strategiya filtrida faqat toifalar boʻyicha filtr, qoida filtrida esa faqat parametrlar boʻyicha filtr toʻldirilgan boʻlsa, natijada belgilangan toifalar va parametrlarga ega birlashgan filtr hosil boʻladi. Va aksincha – strategiya filtrida faqat toifalarni, qoida filtrida esa faqat parametrlarni belgilash mumkin. Agar qoidada toifalar boʻyicha filtr ham, parametrlar boʻyicha filtr ham toʻldirilgan boʻlsa, strategiya filtri eʼtiborga olinmaydi</t95>
+    <!--todo remove after 4.1.33.0-->
+    <t96>Koʻrinishlarni tanlang</t96>
+    <t97>Maʼlumotlar manbai</t97>
+    <t98>Strategiya filtri</t98>
+    <t99>Qoidalar roʻyxatini yoyish</t99>
+    <t100>Qoidalar roʻyxatini yigʻish</t100>
+    <t101>Modelda dastlabki elementni tanlash</t101>
+    <t102>Ifodalar soni:</t102>
+    <t103>Quyidagi sozlamalar joriy konfiguratsiyada saqlanadi</t103>
+    <t104>Hujjatdagi oʻzgarishlarni qayd etish:</t104>
+    <t105>Parametrga qiymat oʻrnatishda</t105>
+    <t106>Qoidani qayta ishlashda</t106>
+    <t107>Strategiyani qayta ishlashda</t107>
+    <t108>Parametrga qiymat oʻrnatishda – har bir elementning parametriga har bir qiymat oʻrnatilgandan keyin hujjatdagi oʻzgarishlar qayd etiladi. Bu holda formulaning har bir keyingi ifodasida formulaning oldingi ifodasida oʻzgartirilgan parametrlar qiymatlaridan foydalanish mumkin. Ushbu parametr qayta ishlash uchun koʻproq vaqt talab qilishi mumkin.</t108>
+    <t109>Qoidani qayta ishlashda – hujjatdagi oʻzgarishlar bitta qoidaning barcha ifodalari qayta ishlangandan keyin qayd etiladi. Bu holda bitta qoida doirasida bir xil parametrni oʻzgartirib, soʻngra undan qayta foydalanib boʻlmaydi, chunki parametrning oʻzgartirilgan qiymati hali hujjatda qayd etilmagan.</t109>
+    <t110>Strategiyani qayta ishlashda – hujjatdagi oʻzgarishlar strategiyaning barcha qoidalari qayta ishlangandan keyin qayd etiladi. Bu holda bitta strategiyaning turli qoidalarida bir xil parametrni oʻzgartirib, soʻngra undan qayta foydalanib boʻlmaydi, chunki parametrning oʻzgartirilgan qiymati hali hujjatda qayd etilmagan.</t110>
+    <t111>Joriy konfiguratsiyani eksport qilish. Maʼlumotlarni saqlash va uzatish uchun XML dan foydalaning. Excel dan faqat tezkor tahrirlash va keyin qayta yuklash uchun foydalanish tavsiya etiladi</t111>
+    <t112>Joriy strategiyani eksport qilish. Maʼlumotlarni saqlash va uzatish uchun XML dan foydalaning. Excel dan faqat tezkor tahrirlash va keyin qayta yuklash uchun foydalanish tavsiya etiladi</t112>
+    <t113>Bosqichma-bosqich hisoblash</t113>
+    <t114>Bosqichma-bosqich hisoblash formuladagi har bir ifodani har bir bosqichda natijani koʻrsatgan holda ketma-ket hisoblash imkonini beradi. Bu ifodalar yozuvining toʻgʻriligini tekshirishga yordam beradi</t114>
+    <t115>Bosqichma-bosqich hisoblashda elementlarning geometrik oʻzaro bogʻliqligi (qattiq jism ichida joylashish, tegish va h.k.) hisobga olinmaydi</t115>
+    <t116>Bogʻlanishdan tanlash</t116>
+    <t117>Tizimni tanlash</t117>
+    <t118>Materialni tanlash</t118>
+    <t119>Turni tanlash</t119>
+    <t120>Toifadagi element:</t120>
+    <t121>Dastlabki ifoda:</t121>
+    <t122>Parametrlarni noyob kalitlarga almashtirish:</t122>
+    <t123>Ifodada parametrlar yoʻq</t123>
+    <t124>Normallashtirilgan formula:</t124>
+    <t125>Ifodani hisoblash natijasi:</t125>
+    <t126>Tekshirish</t126>
+    <t127>Tanlangan strategiyalarning tanlangan qoidalari uchun toʻliq parametrlash sikli bajariladi, lekin qiymat berish oʻrniga formulani hisoblash natijasi maqsadli parametrning joriy qiymati bilan solishtiriladi</t127>
+    <t128>Tekshirish natijalari</t128>
+    <!--todo remove after 4.1.33.0-->
+    <t129>Tanlangan koʻrinishlar:</t129>
+    <t130>Bogʻlangan fayllarni tanlash</t130>
+    <t131>Elementlar qidiriladigan bogʻlangan fayllarni koʻrsating</t131>
+    <t132>Tanlangan bogʻlangan fayllar:</t132>
+    <t133>Teskari yozish funksiyalari</t133>
+    <t134>Blokni yigʻish</t134>
+    <t135>Barcha bloklarni yigʻish</t135>
+    <t136>Barcha bloklarni yoyish</t136>
+    <t137>Loyiha maʼlumotlaridan parametrni qoʻyish</t137>
+    <t138>Global parametrni qoʻyish</t138>
+    <t139>Joriy hujjatda global parametrlar yoʻq</t139>
+    <t140>STRATEGIYALAR SOZLAMALARI</t140>
+    <t141>dan</t141>
+    <t142>Nom va tavsif</t142>
+    <t143>Yoʻriqnomani ochish</t143>
+    <t144>Dastlabki filtr</t144>
+    <t145>Dastlabki filtr strategiyaning barcha qoidalari uchun elementlar toʻplamini birdaniga toraytiradi. Strategiya filtridan farqli ravishda u qoidaning toʻldirilmagan filtri oʻrniga qoʻyilmaydi, balki unga qoʻshimcha ravishda qoʻllaniladi: element dastlabki filtrdan ham, qoida filtridan ham oʻtgandagina qayta ishlanadi. Masalan, agar dastlabki filtrda "Devorlar", "Yuk koʻtaruvchi kolonnalar" va "Yuk koʻtaruvchi karkas" toifalari, shuningdek "Yuk koʻtaruvchi konstruksiyalar" parametri belgilansa, barcha qoidalar faqat ushbu toifalarning yuk koʻtaruvchi elementlari bilan ishlaydi va ular orasidan elementlarni oʻz toifalari va parametrlari boʻyicha saralaydi. Toʻldirilmagan dastlabki filtr hech narsani cheklamaydi</t145>
+    <t146>Joriy strategiyani eksport qilish</t146>
+    <t147>Joriy strategiyaga import qilish</t147>
+    <t148>Strategiya filtrlari</t148>
+    <t149>Strategiyaning dastlabki filtrlari</t149>
+    <t150>Qoida nomini tahrirlash</t150>
+    <t151>Qoida nomini kiriting</t151>
+    <t152>Formulada "Faqat tekshirish uchun" belgisiga ega ifodalar mavjud - bular maqsadli parametrdan keyin "=" dan farqli solishtirish operatori koʻrsatilgan ifodalardir. Bunday ifodalar faqat "Tekshirish" rejimida qayta ishlanadi va "Bajarish" rejimida oʻtkazib yuboriladi</t152>
+    <t153>Faqat tekshirish uchun</t153>
+    <t154>Guruhsiz</t154>
+    <t155>Konfiguratsiya nomi va guruhi</t155>
+    <t156>Konfiguratsiyalarni guruh boʻyicha filtrlash</t156>
+    <t157>Guruhni kiriting yoki tanlang</t157>
+    <t158>Konfiguratsiyani guruhdan olib tashlash</t158>
+    <t159>Guruhlar</t159>
+    <t160>Guruh nomini oʻzgartirish</t160>
+    <t161>Guruhni oʻchirish. Guruhga kiruvchi konfiguratsiyalar oʻchirilmaydi — ular guruhsiz qoladi</t161>
+    <t162>Guruhdagi konfiguratsiyalar soni</t162>
+    <t164>Parametr yoki ifoda, masalan $[Type Name]</t164>
+    <t168>Registrni eʼtiborsiz qoldirish</t168>
+    <t169>Saralash</t169>
+    <t170>Kamayish boʻyicha</t170>
+    <t171>Guruh ichida saralash, masalan $[Length]</t171>
+    <t172>Bir xil qiymatli elementlar bitta guruhga tushadi</t172>
+    <t173>Guruhlash belgilanmagan</t173>
+    <t174>Guruhlash mezoni</t174>
+    <t178>Guruh ichida saralash mezoni</t178>
+    <t179>Qiymatlarni harflar registrini hisobga olmasdan solishtirish. Sonli qiymatlarga taʼsir qilmaydi</t179>
+    <t180>Guruh ichidagi elementlarni saralash. GIndex funksiyasi natijasiga va GJoin dagi qiymatlar tartibiga taʼsir qiladi</t180>
+    <t181>Kamayish boʻyicha saralash. Faqat saralash yoqilgan boʻlsa amal qiladi</t181>
+    <t183>Guruhlash</t183>
+    <t184>Moslashtirish</t184>
+    <t188>Moslashtirish belgilanmagan</t188>
+    <t189>registrsiz</t189>
+    <t190>oʻsish boʻyicha</t190>
+    <t191>kamayish boʻyicha</t191>
+    <t192>Tekshiriladigan shart:</t192>
+    <t193>Tekshirish yakuni:</t193>
+    <t194>Bu funksiyalar faqat ifoda boshiga qoʻyiladi</t194>
+    <t175>Shartli dastlabki elementlarni moslashtirish mezoni</t175>
+    <t176>Maqsadli elementlarni moslashtirish mezoni</t176>
+    <t177>Moslashtirishni oldindan koʻrish</t177>
+    <t195>Shartli dastlabki va maqsadli elementlar ikki tomondan hisoblangan qiymatlar mos kelganda bitta guruhga tushadi. Aynan shu guruh boʻyicha agregat funksiyalar hisoblanadi</t195>
+    <t196>Toʻliq boʻlmagan guruhlar birinchi turadi: ularning elementlari qayta ishlashda oʻtkazib yuboriladi</t196>
+    <t197>Qiymat</t197>
+    <t198>Dastlabki</t198>
+    <t199>Maqsadli</t199>
+    <t200>Dastlabki elementlar namunalari</t200>
+    <t201>Maqsadli elementlar namunalari</t201>
+    <t202>Muammo</t202>
+    <t203>Guruhlar: {0}, ulardan toʻliqlari: {1}. Shartli dastlabki elementlar: {2}, maqsadlilar: {3}</t203>
+    <t204>Qiymat hisoblanmadi: dastlabki elementlarda: {0}, maqsadli elementlarda: {1}</t204>
+    <t205>Shartli dastlabki elementlar boʻyicha parametr yoki ifoda, masalan @[Apartment type]</t205>
+    <t206>Maqsadli elementlar boʻyicha parametr yoki ifoda, masalan $[Room type]</t206>
+    <t207>Bu qiymatga ega maqsadli elementlar yoʻq</t207>
+    <t208>Bu qiymatga ega shartli dastlabki elementlar yoʻq</t208>
+    <t209>Moslashtirish qiymatlari mos keladi</t209>
+    <t210>Moslashtirish qiymatlari mos kelmaydi: qayta ishlashda bu juftlik tuzilmaydi</t210>
+    <msg1>Konfiguratsiya qaytarib boʻlmaydigan tarzda oʻchiriladi! Davom ettirishni xohlaysizmi?</msg1>
+    <msg2>Strategiya qaytarib boʻlmaydigan tarzda oʻchiriladi! Davom ettirishni xohlaysizmi?</msg2>
+    <msg3>Strategiyalar roʻyxati boʻsh emas</msg3>
+    <msg4>Joriy strategiyalar roʻyxatini almashtirasizmi yoki import qilinayotgan strategiyalarni roʻyxatga qoʻshasizmi?</msg4>
+    <msg5>Element nusxalari orasidagi oʻzaro bogʻliqliklarni qidirish</msg5>
+    <msg6>Strategiyani qayta ishlash</msg6>
+    <msg7>birorta ham element qayta ishlanmadi</msg7>
+    <msg8>Tanlangan strategiyalarning tanlangan qoidalari bilan birorta ham element qayta ishlanmadi</msg8>
+    <msg9>Hujjatdagi oʻzgarishlarni qayd etish...</msg9>
+    <msg10>Qoidalar roʻyxati boʻsh emas</msg10>
+    <msg11>Joriy qoidalar roʻyxatini almashtirasizmi yoki import qilinayotgan qoidalarni roʻyxatga qoʻshasizmi?</msg11>
+    <msg12>Formula berilmaganligi sababli qoida oʻtkazib yuborildi</msg12>
+    <msg13>Qoidani qayta ishlash</msg13>
+    <msg14>qiymat oʻrnatish oʻtkazib yuborildi, chunki "{0}" parametri xuddi shunday qiymatga ega</msg14>
+    <msg15>qayta ishlandi</msg15>
+    <msg16>xato bilan qayta ishlanmadi</msg16>
+    <msg17>Plaginning cheklangan versiyasida faqat bitta konfiguratsiya yaratish mumkin</msg17>
+    <msg18>Plaginning cheklangan versiyasida uchtadan koʻp boʻlmagan strategiya yaratish mumkin</msg18>
+    <msg19>Plaginning cheklangan versiyasida uchtadan koʻp boʻlmagan qoida yaratish mumkin</msg19>
+    <msg20>Sevimli maydonlar roʻyxatida bunday kalitli maydon allaqachon mavjud</msg20>
+    <msg21>Joriy konfiguratsiyadagi barcha strategiyalarni qaytarib boʻlmaydigan tarzda oʻchirishni xohlaysizmi?</msg21>
+    <msg22>Maydon kaliti mos kelganda ushbu maydon qiymati barcha konfiguratsiyalarning barcha qoidalarida yangilanadi.\nDavom ettirilsinmi?</msg22>
+    <msg23>"{0}" maydoni yangilandi: konfiguratsiya "{1}" – strategiya "{2}" – qoida "{3}"</msg23>
+    <msg24>"{0}" maydoni birorta ham qoidada topilmadi!</msg24>
+    <msg25>Joriy koʻrinishda elementlarni tanlab boʻlmaydi. Boshqa koʻrinishga oʻting</msg25>
+    <msg26>Joriy strategiya filtrlarini import qilinayotgan fayldagi strategiya filtrlari bilan almashtirilsinmi?</msg26>
+    <msg27>Strategiyaning joriy maʼlumotlar manbaini import qilinayotgan fayldagi maʼlumotlar manbai bilan almashtirilsinmi?</msg27>
+    <msg28>Tanlangan fayl konfiguratsiyani saqlash fayli yoki strategiyani saqlash fayli emas</msg28>
+    <msg29>Tanlangan fayl strategiyani saqlash fayli emas</msg29>
+    <msg30>"{0}" strategiyasining dastlabki element uchun filtridan Revit ning keyingi versiyasida qoʻshilgan va Revit ning joriy versiyasida mavjud boʻlmagan toifa oʻchirildi</msg30>
+    <msg31>"{0}" strategiyasining maqsadli element uchun filtridan Revit ning keyingi versiyasida qoʻshilgan va Revit ning joriy versiyasida mavjud boʻlmagan toifa oʻchirildi</msg31>
+    <msg32>"{1}" strategiyasidagi "{0}" qoidasining dastlabki element uchun filtridan Revit ning keyingi versiyasida qoʻshilgan va Revit ning joriy versiyasida mavjud boʻlmagan toifa oʻchirildi</msg32>
+    <msg33>"{1}" strategiyasidagi "{0}" qoidasining maqsadli element uchun filtridan Revit ning keyingi versiyasida qoʻshilgan va Revit ning joriy versiyasida mavjud boʻlmagan toifa oʻchirildi</msg33>
+    <msg34>Agar natijada 255 tadan ortiq strategiya boʻlsa, Excel ga eksport qilish mumkin emas</msg34>
+    <msg35>Koʻrsatilgan fayl band! Faylni yoping va eksportni qayta urinib koʻring yoki boshqa faylni koʻrsating</msg35>
+    <msg36>"{1}" parametrining "{0}" qiymati ifodaning hisoblangan qiymatiga mos keladi</msg36>
+    <msg37>"{1}" parametrining "{0}" qiymati ifodaning hisoblangan "{2}" qiymatiga mos kelmaydi</msg37>
+    <msg38>Elementni qayta ishlash oʻtkazib yuborildi, chunki ifodani hisoblash natijasi SKIP_ELEMENT kalit soʻzidir</msg38>
+    <msg39>№ {0} qoidalar: toifalar dastlabki filtr {1} toifalari bilan kesishmaydi. Bu qoidalar birorta ham elementni qayta ishlamaydi</msg39>
+    <msg40>№ {0} qoidalar: toifalar dastlabki filtr {1} toifalariga faqat qisman tushadi. Mos kelmaydigan toifalar tashlab yuboriladi</msg40>
+    <msg41>Ifoda oʻtkazib yuborildi: u "Faqat tekshirish uchun" belgisiga ega va faqat "Tekshirish" rejimida qayta ishlanadi</msg41>
+    <msg42>"{1}" parametrining "{0}" qiymati "{2} {3}" shartini qanoatlantiradi</msg42>
+    <msg43>"{1}" parametrining "{0}" qiymati "{2} {3}" shartini qanoatlantirmaydi</msg43>
+    <msg44>Element oʻtkazib yuborildi: guruhlash kaliti boʻsh hisoblandi</msg44>
+    <msg45>Element oʻtkazib yuborildi: moslashtirish qiymati bir xil boʻlgan birorta ham shartli dastlabki element topilmadi</msg45>
+    <msg46>Tanlangan fayl konfiguratsiyani saqlash fayli emas</msg46>
+    <msg47>Ishga tushirishdan oldin loyiha markaziy model bilan sinxronlansinmi?</msg47>
+    <msg48>Yoʻriqnoma boʻsh</msg48>
+    <msg49>Yoʻriqnoma toʻgʻri xml emas: {0}</msg49>
+    <msg50>Yoʻriqnomaning ildiz elementi "{0}" deb nomlanishi kerak</msg50>
+    <msg51>Yoʻriqnomaning "{0}" versiyasi qoʻllab-quvvatlanmaydi. Qoʻllab-quvvatlanadigan versiya {1}</msg51>
+    <msg52>Yoʻriqnomaning nomaʼlum "{0}" elementi oʻtkazib yuborildi</msg52>
+    <msg53>Majburiy "{0}" elementi berilmagan</msg53>
+    <msg54>"{0}" elementi boʻsh</msg54>
+    <msg55>"{0}" elementi boʻsh. Agar qiymat kerak boʻlmasa, elementni oʻchiring</msg55>
+    <msg56>"{1}" elementining "{0}" qiymati yaroqsiz. Ruxsat etilgan qiymatlar: {2}</msg56>
+    <msg57>"{0}" elementi true yoki false qiymatiga ega boʻlishi kerak</msg57>
+    <msg58>"{1}" elementining "{0}" atributi true yoki false qiymatiga ega boʻlishi kerak</msg58>
+    <msg59>"{0}" elementida bir vaqtning oʻzida {1}="true" va koʻrinishlar roʻyxatini berib boʻlmaydi</msg59>
+    <msg60>"{1}" ichidagi nomaʼlum "{0}" elementi oʻtkazib yuborildi</msg60>
+    <msg61>"{0}" ichida boʻsh "{1}" elementlari bor</msg61>
+    <msg62>"{0}" roʻyxati boʻsh. Agar roʻyxat kerak boʻlmasa, elementni oʻchiring</msg62>
+    <msg63>"{0}" elementi bir necha marta berilgan</msg63>
+    <msg64>Avtomatik ishga tushirish rad etildi: oldingi ishga tushirish hali tugallanmagan</msg64>
+    <msg65>Qayta ishlash toʻxtatildi: {0}</msg65>
+    <msg66>Avtomatik ishga tushirish kutilmagan xato tufayli toʻxtatildi</msg66>
+    <msg67>Avtomatik ishga tushirish tugallandi. Natija: {0}</msg67>
+    <msg68>Avtomatik ishga tushirish. Yoʻriqnoma:</msg68>
+    <msg69>"{0}" konfiguratsiyalar faylini oʻqish</msg69>
+    <msg70>"{0}" konfiguratsiyasi ({1})</msg70>
+    <msg71>Loglar uchun papka mavjud emas: "{0}"</msg71>
+    <msg72>Natijalar uchun papka mavjud emas: "{0}"</msg72>
+    <msg73>Faol hujjatda tranzaksiya ochiq. Avtomatik ishga tushirish ochiq tranzaksiyalarsiz bajarilishi kerak</msg73>
+    <msg74>Yoʻriqnoma bajarilmadi. Topilgan xatolar: {0}</msg74>
+    <msg75>Konfiguratsiyalar fayli yoʻriqnomada berilmagan, konfiguratsiyalar manbai esa plagin oynasida hech qachon tanlanmagan</msg75>
+    <msg76>Konfiguratsiyalar fayli topilmadi: "{0}"</msg76>
+    <msg77>Konfiguratsiyalar fayli berilgan, lekin konfiguratsiya berilmagan. Joriy konfiguratsiya faqat plagin oynasida tanlangan konfiguratsiyalar fayli bilan birga ishlatiladi</msg77>
+    <msg78>Joriy konfiguratsiya "{0}" faylida topilmadi</msg78>
+    <msg79>"{0}" konfiguratsiyasi "{1}" faylida topilmadi</msg79>
+    <msg80>"{0}" faylida "{1}" nomli bir nechta konfiguratsiya mavjud. Konfiguratsiya identifikatorini koʻrsating</msg80>
+    <msg81>Konfiguratsiyada belgilangan strategiyalar yoʻq</msg81>
+    <msg82>"{0}" strategiyasi konfiguratsiyada topilmadi</msg82>
+    <msg83>Bir nechta "{0}" strategiyasi topildi. Ularning barchasi qayta ishlanadi</msg83>
+    <msg84>Yoʻriqnomadagi strategiyalardan birortasi ham topilmadi</msg84>
+    <msg85>Qayta ishlash uchun strategiyalar: {0}</msg85>
+    <msg86>Joriy koʻrinish grafik koʻrinish emas</msg86>
+    <msg87>Qayta ishlash joyi: {0}</msg87>
+    <msg88>"{0}" koʻrinishi topilmadi</msg88>
+    <msg89>"{0}" nomli bir nechta koʻrinish topildi ({1}). Ularning barchasi qayta ishlanadi</msg89>
+    <msg90>Yoʻriqnomadagi koʻrinishlardan birortasi ham topilmadi</msg90>
+    <msg91>Qayta ishlash uchun koʻrinishlar: {0}</msg91>
+    <msg92>Bogʻlangan fayllar roʻyxati oʻtkazib yuborildi: bogʻlangan fayllardagi elementlarni qayta ishlash oʻchirilgan</msg92>
+    <msg93>"{0}" bogʻlangan fayli topilmadi</msg93>
+    <msg94>Yoʻriqnomadagi bogʻlangan fayllardan birortasi ham topilmadi</msg94>
+    <msg95>Qayta ishlash uchun bogʻlangan fayllar: {0}</msg95>
+    <msg96>Natijalar matnli faylga saqlanadi</msg96>
+    <msg97>Qayta ishlash bajarildi, lekin "{0}" natijalar faylini saqlab boʻlmadi</msg97>
+    <msg98>Natijalar "{0}" fayliga saqlandi</msg98>
+    <msg99>"{0}" log faylini yaratib boʻlmadi</msg99>
+    <msg100>"{0}" konfiguratsiyasini qayta ishlash boshlandi ({1}). Rejim: {2}. {3}. Strategiyalar: {4}</msg100>
+    <msg101>"{0}" konfiguratsiyasini qayta ishlash {1} da yakunlandi</msg101>
+    <msg102>"{0}" koʻrinishida qayta ishlash ({1})</msg102>
+    <msg103>Bogʻlangan fayllardan elementlarni yigʻish</msg103>
+    <msg104>Bogʻlangan fayllardan yigʻilgan elementlar: {0}</msg104>
+    <msg105>Elementlarni yigʻish. {0}</msg105>
+    <msg106>Yigʻilgan elementlar: {0}</msg106>
+    <msg107>"{0}" strategiyasini qayta ishlash ({1}). Qoidalar: {2}</msg107>
+    <msg108>"{1}" strategiyasining {0} qoidasi qayta ishlanmadi</msg108>
+    <msg109>Qayta ishlash xato tufayli toʻxtatildi</msg109>
+    <err1>Formuladagi har bir ifoda "$[ParametrNomi]=" maqsadli parametridan boshlanishi kerak</err1>
+    <err2>Ochiluvchi oddiy qavslar soni yopiluvchi qavslar soniga teng boʻlishi kerak</err2>
+    <err3>Ochiluvchi figurali qavslar soni yopiluvchi qavslar soniga teng boʻlishi kerak</err3>
+    <err4>Arifmetik ifodani hisoblab boʻlmadi</err4>
+    <err5>"{0}" sharti shartli solishtirish operatorlarini ({1}) oʻz ichiga olishi kerak</err5>
+    <!-- todo remove after 3.3.18.0 -->
+    <err6>"{0}" sharti "{1}" belgisidan oldin va keyin qiymatlarni oʻz ichiga olishi kerak</err6>
+    <err9>Kutilmagan shartli operator</err9>
+    <err10>Shartni qayta ishlab boʻlmadi</err10>
+    <err11>Funksiya vergul bilan ajratilgan sonlarni oʻz ichiga olishi kerak</err11>
+    <err12>"{0}" yaxlitlash qoidasi qiymati yaroqsiz. AwayFromZero qoidasi uchun "z" belgisidan yoki ToEven qoidasi uchun "e" belgisidan foydalanish mumkin</err12>
+    <err13>Kasr xonalari soni 0 dan katta butun son yoki 0 dan 1 gacha boʻlgan kasr son sifatida koʻrsatilishi kerak</err13>
+    <err14>Ikkinchi argument yaxlitlash qoidasi (AwayFromZero qoidasi uchun "z" belgisi yoki ToEven qoidasi uchun "e" belgisi) yoki kasr xonalari soni boʻlishi kerak</err14>
+    <err15>Funksiya uchtadan koʻp boʻlmagan argumentni oʻz ichiga olishi kerak</err15>
+    <err16>Funksiya vergul bilan ajratilgan ikkita sonli argumentni oʻz ichiga olishi kerak</err16>
+    <err17>Funksiya vergullar bilan ajratilgan uchta argumentni oʻz ichiga olishi kerak: shart, shart bajarilgandagi qiymat va shart bajarilmagandagi qiymat</err17>
+    <err18>Funksiya vergul bilan ajratilgan kamida ikkita shartni oʻz ichiga olishi kerak</err18>
+    <err19>Funksiya vergul bilan ajratilgan ikkita argumentni oʻz ichiga olishi kerak: tekshiriladigan son va ikki nuqta ".." bilan ajratilgan sonlar diapazoni</err19>
+    <err20>"{0}" argumenti ikki nuqta ".." bilan ajratilgan ikkita sonni oʻz ichiga olishi kerak</err20>
+    <err21>Funksiya nuqtali vergul bilan ajratilgan kamida ikkita argumentni oʻz ichiga olishi kerak</err21>
+    <err22>"{0}" argumenti ikki nuqta bilan ajratilgan shart va qiymatni oʻz ichiga olishi kerak</err22>
+    <err23>"{0}" qiymatini songa aylantirib boʻlmadi</err23>
+    <err24>Funksiyani hisoblab boʻlmadi</err24>
+    <err25>"{0}" varagʻida satrlar va ustunlar soni notoʻgʻri</err25>
+    <err26>"{0}" varagʻidagi 1-satrning 4-ustunida strategiyaning noyob identifikatori (Self, OnlyFamilies, Types, InHost va h. k.) boʻlishi kerak</err26>
+    <err27>Toifalarni oʻqishda xato</err27>
+    <err28>Parametrlarni oʻqishda xato</err28>
+    <err29>Notoʻgʻri formula</err29>
+    <err30>Satrni qayta ishlash xato bilan yakunlandi</err30>
+    <err31>Qoʻllab-quvvatlanmaydigan strategiya turi</err31>
+    <err32>"{0}" ifodasi xatosi</err32>
+    <err33>"{0}" parametri topilmadi</err33>
+    <err34>Revit parametrga qiymat oʻrnata olmadi</err34>
+    <!-- todo remove after 2.31.10.0 -->
+    <err35>parametrning havola qiymati turi qoʻllab-quvvatlanmaydi</err35>
+    <err36>"{1}" parametriga oʻrnatishda "{0}" havola qiymati topilmadi</err36>
+    <err37>"{0}" parametrini tahrirlab boʻlmaydi</err37>
+    <err38>"{0}" parametri "Butun" maʼlumot turiga ega, lekin berilayotgan "{1}" qiymati butun son emas</err38>
+    <err39>Ota strategiya shartli dastlabki elementlar parametrlaridan (@[Parametr]) foydalanishga ruxsat bermaydi</err39>
+    <err40>"{0}" qiymatidan maydonni olib boʻlmadi. Qiymat burchakli qavslarga olingan maydon kalitidan boshlanishi kerak</err40>
+    <err41>"{0}" parametrining maʼlumot turi aniqlanmagan</err41>
+    <err42>formulani hisoblashda olingan boʻsh qiymat parametrga yozilmadi, chunki formulada "Boʻshlarni yozish" parametri yoqilmagan</err42>
+    <err43>"{0}" nomli tur qayta ishlanayotgan elementning ruxsat etilgan turlari roʻyxatida topilmadi</err43>
+    <err44>"{0}" nomli tur allaqachon mavjud</err44>
+    <err45>Element identifikatori (ID) maqsadli parametr sifatida ishlatilishi mumkin emas</err45>
+    <err46>Ikkinchi argument noldan katta butun son boʻlishi kerak</err46>
+    <err48>Uchinchi argument noldan katta butun son boʻlishi kerak</err48>
+    <err49>Funksiya ikkita argumentni oʻz ichiga olishi kerak</err49>
+    <err50>Funksiya ikkita yoki uchta argumentni oʻz ichiga olishi kerak</err50>
+    <err51>"{0}" kalitli maydon joriy formulaning maydonlar roʻyxatida allaqachon mavjud</err51>
+    <err52>"{0}" parametri boshqa model elementiga havola qiluvchi parametr emas</err52>
+    <err53>Maqsadli parametrda "|" belgisi boʻlmasligi kerak</err53>
+    <err54>Ifodada funksiya chegarasi boʻlmagan oddiy qavslar boʻlmasligi kerak. Ifodaga qavs qoʻshish uchun ularni ekranlash kerak – "\)" va "\("</err54>
+    <err55>Funksiya argument sifatida parametrga koʻrsatkichni (@[], $[], #[] yoki %[]) oʻz ichiga olishi kerak</err55>
+    <err56>Roʻyxatda bir xil kalitli maydonlar mavjud!</err56>
+    <err57>"{0}" nomli ishchi toʻplam topilmadi</err57>
+    <err58>Funksiyada argumentlar boʻlmasligi kerak</err58>
+    <err59>Funksiya uchta argumentni oʻz ichiga olishi kerak: dastlabki qiymat, qidiriladigan qiymat va almashtiriladigan qiymat</err59>
+    <err60>"{1}" varagʻidagi "{0}" noyob strategiya identifikatori joriy strategiyaning "{2}" identifikatoriga mos kelmaydi</err60>
+    <err61>Funksiya "A1" koʻrinishidagi katak manzilini oʻz ichiga olishi kerak</err61>
+    <err62>Maʼlumotlar manbaining Excel fayli koʻrsatilmagan yoki topilmadi</err62>
+    <err63>"{0}" izolyatsiya turi joriy loyihada topilmadi</err63>
+    <err64>"ToRoom" va "FromRoom" kalit parametrlaridan faqat "Eshiklar", "Derazalar" toifalaridagi oilalarni qayta ishlashda foydalanish mumkin</err64>
+    <err65>Modelda filtrlash shartlariga mos keladigan birorta ham dastlabki element topilmadi</err65>
+    <err66>Ifodani hisoblash natijasini tayinlash uchun maʼlumotlar aniqlanmagan</err66>
+    <err67>Formuladagi har bir ifoda "$[ParametrNomi]=" maqsadli parametridan yoki natijani shartli dastlabki elementga teskari yozish funksiyasidan boshlanishi kerak: "SUM(@[ParametrNomi])=", "MIN(@[ParametrNomi])=", "MAX(@[ParametrNomi])=", "AVG(@[ParametrNomi])=", "FIRST(@[ParametrNomi])=", "LAST(@[ParametrNomi])=" yoki "JOIN(@[ParametrNomi],)="</err67>
+    <err68>"{0}" qiymatidan sonni olib boʻlmadi</err68>
+    <err69>Bogʻlangan fayldagi shartli dastlabki elementga natijani yozib boʻlmaydi</err69>
+    <err70>Element "{0}" foydalanuvchisi tomonidan band qilingan va oʻzgartirish uchun mavjud emas</err70>
+    <err71>Joriy koʻrinishda filtrlash shartlariga mos keladigan birorta ham dastlabki element topilmadi</err71>
+    <err72>Bogʻlangan fayldagi element parametriga natijani yozib boʻlmaydi</err72>
+    <err73>Funksiya kamida ikkita argumentni oʻz ichiga olishi kerak: shart va natija ustuniga koʻrsatkich</err73>
+    <err74>{0} ustunining nomi lotin harfi yoki raqam bilan berilishi kerak</err74>
+    <err75>"{0}" parametri havola parametri, lekin model elementiga havola qilmaydi</err75>
+    <err76>Global parametrga qiymat oʻrnatish nazarda tutilmagan</err76>
+    <err77>ID psevdo parametriga qiymat oʻrnatish nazarda tutilmagan</err77>
+    <err78>Global parametrlarda "HasValue" xossasi yoʻq</err78>
+    <err79>Yuk koʻtaruvchi konstruksiyalar birikmalarining ichki elementlari parametrlarida "HasValue" xossasi yoʻq</err79>
+    <err80>ID psevdo parametrida "HasValue" xossasi yoʻq</err80>
+    <err81>Elementda "{0}" nomli bir nechta parametr mavjud. Ortiqcha parametrni oʻchiring yoki parametrning kalit nomidan foydalaning (umumiy parametrlar uchun GUID, tizim parametrlari uchun tizim nomi)</err81>
+    <err82>Id {0} boʻlgan elementda geometriya yoʻq</err82>
+    <err83>Agregat funksiyani guruhning qaysi elementlari boʻyicha hisoblashni aniqlab boʻlmadi: funksiya tanasida birorta ham element parametri yoʻq</err83>
+    <err84>Funksiya argumenti "s" (shartli dastlabki elementlar) yoki "t" (maqsadli elementlar) harfi boʻlishi kerak</err84>
+    <err85>Funksiya guruhning har bir elementi uchun hisoblanadigan ifodani oʻz ichiga olishi kerak</err85>
+    <err86>Funksiya ikkita yoki uchta argumentni oʻz ichiga olishi kerak</err86>
+    <err87>Funksiyaning uchinchi argumenti faqat "d", "s" va "r" harflarini oʻz ichiga olishi mumkin</err87>
+    <err88>Funksiya maqsadli elementning tartib raqamini qaytaradi, shuning uchun yagona ruxsat etilgan argument - "t" harfi</err88>
+    <err89>Strategiyada shartli dastlabki element bor, shuning uchun guruh elementlarining rolini aniq koʻrsatish kerak: "s" - shartli dastlabki, "t" - maqsadli</err89>
+    <err90>Guruhlash kaliti ifodasida faqat parametrlar hamda satrlar va sonlar bilan ishlash funksiyalariga ruxsat beriladi</err90>
+    <err91>{0} qoida: moslashtirish uni qoʻllab-quvvatlamaydigan strategiyada berilgan - shartli dastlabki element qiymatning mos kelishi bilan emas, balki munosabat bilan aniqlanadi</err91>
+    <err92>{0} qoida: moslashtirish faqat bir tomondan berilgan - moslashtiradigan narsa yoʻq</err92>
+    <err93>{0} qoida: agregat funksiyalarni teskari yozish funksiyalari bilan birga ishlatib boʻlmaydi - agregat qiymati guruhning barcha juftliklarida bir xil va jamlagich uni guruhda nechta juftlik boʻlsa, shuncha marta qoʻshib yuboradi</err93>
+    <err94>Shartli dastlabki elementlarni moslashtirish ifodasida maqsadli element parametrlaridan foydalanib boʻlmaydi: bu paytda maqsadli element hali tanlanmagan</err94>
+    <err95>Funksiya bitta yoki ikkita argumentni oʻz ichiga olishi kerak: ustunga (satrga) koʻrsatkich va ikki nuqta ".." bilan ajratilgan ixtiyoriy kataklar diapazoni</err95>
+    <err96>"{0}" satr raqami musbat butun son boʻlishi kerak</err96>
+    <err97>"{0}" kataklar diapazoni ikki nuqta ".." bilan ajratilgan ikkita chegarani oʻz ichiga olishi kerak</err97>
+    <err98>Funksiyaning ikkinchi argumenti faqat "s" harfi boʻlishi mumkin - tanlashdan oldin qiymatlarni saralash</err98>
+    <err99>Funksiya uchta argumentni oʻz ichiga olishi kerak: roʻyxat satri, ajratgich va element indeksi</err99>
+    <err100>Funksiya uchta argumentni oʻz ichiga olishi kerak: roʻyxat satri, ajratgich va qidiriladigan qiymat</err100>
+    <err101>Funksiya ikkita argumentni oʻz ichiga olishi kerak: roʻyxat satri va ajratgich</err101>
+    <err102>"{0}" operatorining oʻng qismi roʻyxat - List, CCList yoki CRList funksiyasining natijasi boʻlishi kerak</err102>
+    <err103>Roʻyxatdan faqat "=|" yoki "!=|" kirishni tekshirish operatorining oʻng tomonida foydalanish mumkin</err103>
+    <err104>Muntazam ifoda shabloni qoʻsh qoʻshtirnoqdagi satr, parametrga havola yoki funksiya natijasi boʻlishi kerak</err104>
+    <err105>Muntazam ifoda shabloni boʻsh boʻlmasligi kerak</err105>
+    <err106>Muntazam ifodaning yaroqsiz shabloni "{0}". {1}</err106>
+    <err107>"{0}" muntazam ifodasini hisoblash ajratilgan vaqt ichida tugallanmadi</err107>
+    <err108>Id {0} boʻlgan element chiziqli emas: uning joylashuvi toʻgʻri chiziq bilan berilmagan</err108>
+    <err109>Funksiya bitta ixtiyoriy argumentni oʻz ichiga olishi mumkin - 0 dan 90 gacha boʻlgan oraliqdagi gradusdagi ruxsat etilgan chetlanish</err109>
+    <err110>Maqsadli elementlarni moslashtirish ifodasida shartli dastlabki element parametrlaridan foydalanib boʻlmaydi: bu paytda shartli dastlabki element hali tanlanmagan</err110>
+    <err111>{0} qoida: maqsadli elementlarni moslashtirish ifodasida shartli dastlabki element parametrlaridan foydalanib boʻlmaydi</err111>
+    <err112>Strategiya maʼlumotlar manbaining Excel fayli koʻrsatilmagan</err112>
+    <err113>Strategiya maʼlumotlar manbaining Excel fayli topilmadi yoki mavjud emas: {0}</err113>
+    <err114>Strategiya maʼlumotlar manbai Excel faylining varagʻi tanlanmagan</err114>
+    <err115>Strategiya maʼlumotlar manbaining Excel faylida {0} varagʻi topilmadi</err115>
+    <err116>{0} qoida: bu strategiyada juftliklar moslashtirish boʻyicha tuziladi, shuning uchun moslashtirish berilishi kerak</err116>
+    <err117>{0} qoida: moslashtirishli strategiyada guruhlash berilmaydi - qoida guruhi moslashtirish guruhidir</err117>
+    <err118>Moslashtirish ikkala tomondan berilishi kerak: qiymat ham shartli dastlabki elementlar, ham maqsadli elementlar boʻyicha hisoblanadi va oʻzaro solishtiriladi</err118>
+    <err119>{0} qoida: shartli dastlabki elementlarni moslashtirish ifodasida maqsadli element parametrlaridan foydalanib boʻlmaydi</err119>
+    <err120>Funksiya koʻrinish parametrining identifikatorini oʻz ichiga olishi kerak: nom, umumiy parametr GUID yoki tizim nomi</err120>
+    <err121>Koʻrinish parametrini olish funksiyasi faqat joriy koʻrinishdagi, tanlangan koʻrinishlardagi elementlarni yoki tanlangan elementlarni qayta ishlashda mavjud</err121>
+    <err122>Joriy "{0}" koʻrinishida "{1}" parametri yoʻq</err122>
+    <err123>{0} elementida "{1}" parametri yoʻq</err123>
+    <err124>Loyiha maʼlumotlarida "{0}" parametri yoʻq</err124>
+    <err125>Loyihada "{0}" global parametri yoʻq</err125>
+    <err126>{0} birikmaning ichki elementida "{1}" parametri yoʻq</err126>
+    <err127>Guruhlash kalitini hisoblab boʻlmadi: elementda "{0}" parametri yoʻq</err127>
+    <err128>{0} elementida "{1}" xonasi yoʻq: uning parametriga qiymat yozib boʻlmaydi</err128>
+    <rh1>№</rh1>
+    <rh2>Yoq</rh2>
+    <rh3>Formula</rh3>
+    <rh4>Parametrlar</rh4>
+    <sm1>Tanlangan elementlarni qayta ishlash</sm1>
+    <sm2>Joriy koʻrinishdagi elementlarni qayta ishlash</sm2>
+    <sm3>Hujjatdagi elementlarni qayta ishlash</sm3>
+    <sm4>Tanlangan koʻrinishlardagi elementlarni qayta ishlash</sm4>
+    <ssd1>Elementlarni oʻzaro bogʻliqliklarsiz qayta ishlash</ssd1>
+    <sld1>Strategiya elementlarni ularning boshqa elementlar bilan oʻzaro bogʻliqliklarini hisobga olmasdan qayta ishlaydi. Kamida bitta filtr (toifa yoki parametrlar boʻyicha) toʻldirilgan boʻlishi kerak</sld1>
+    <ssd2>Oila nusxalarini oʻzaro bogʻliqliklarsiz qayta ishlash</ssd2>
+    <sld2>Strategiya oila nusxalarini ularning boshqa elementlar bilan oʻzaro bogʻliqliklarini hisobga olmasdan qayta ishlaydi. Toifa boʻyicha filtr yoki parametrlar boʻyicha filtrdan foydalanmaslik mumkin</sld2>
+    <ssd3>Turlarni qayta ishlash</ssd3>
+    <sld3>Strategiya turlarni qayta ishlaydi. Agar "Tanlangan elementlarni qayta ishlash" parametri tanlangan boʻlsa, tanlangan elementlarning turlari qayta ishlanadi. Agar "Joriy koʻrinishdagi elementlarni qayta ishlash" parametri tanlangan boʻlsa, joriy koʻrinishdagi elementlarning turlari qayta ishlanadi. Agar "Hujjatdagi elementlarni qayta ishlash" parametri tanlangan boʻlsa, hujjatdagi barcha turlar qayta ishlanadi</sld3>
+    <ssd4>Asosdagi elementlarni qayta ishlash</ssd4>
+    <sld4>Strategiya asos haqidagi maʼlumotga ega elementlarni qayta ishlaydi. Bunday elementlarga quyidagilar kiradi: armatura sterjeni, maydon boʻyicha armaturalash, trayektoriya boʻyicha armaturalash, armatura konteyneri, oʻyiqlar, tarkibiy devorlar, shuningdek oilalar (vitraj tizimlari elementlari ham)</sld4>
+    <ssd5>Guruhdagi elementlarni qayta ishlash</ssd5>
+    <sld5>Strategiya guruhlarda joylashgan elementlarni qayta ishlaydi. Formulalar yaratishda maqsadli parametr guruh nusxalari boʻyicha oʻzgarish imkoniyatiga ega boʻlishi kerakligini hisobga oling.</sld5>
+    <ssd6>Xonadagi elementlarni qayta ishlash</ssd6>
+    <sld6>Strategiya xonalar ichida joylashgan elementlarni qayta ishlaydi</sld6>
+    <ssd7>Fazodagi elementlarni qayta ishlash</ssd7>
+    <sld7>Strategiya fazolar ichida joylashgan elementlarni qayta ishlaydi</sld7>
+    <ssd8>Shakl hosil qiluvchi elementdagi elementlarni qayta ishlash</ssd8>
+    <sld8>Strategiya hajmiy shaklga ega va shakl hosil qiluvchi elementlar ichida joylashgan elementlarni qayta ishlaydi. Shakl hosil qiluvchi elementlar hajmiy shaklga ega boʻlishi kerak</sld8>
+    <ssd9>Hajmiy shakldagi elementlarni qayta ishlash</ssd9>
+    <sld9>Strategiya hajmiy shaklga ega va hajmiy shaklga ega boshqa elementlar ichida joylashgan elementlarni qayta ishlaydi</sld9>
+    <ssd10>Hajmiy shakllar yoqlari bilan tutashgan elementlarni qayta ishlash</ssd10>
+    <sld10>Strategiya hajmiy shaklga ega va bir-biri bilan shaklning tekis yoqlari orqali tutashgan elementlarni qayta ishlaydi</sld10>
+    <ssd11>Xonalarning toʻsuvchi konstruksiyalarini qayta ishlash</ssd11>
+    <sld11>Strategiya xonalarning toʻsuvchi konstruksiyalari boʻlgan elementlarni qayta ishlaydi</sld11>
+    <ssd12>Yuk koʻtaruvchi konstruksiyalar birikmalarining ichki elementlarini qayta ishlash</ssd12>
+    <sld12>Strategiya yuk koʻtaruvchi konstruksiyalar birikmalarida joylashtirilgan elementlarni (plastinalar, boltlar va h. k.) qayta ishlaydi. Ichki elementlarni parametrlar boʻyicha filtrlash, shuningdek formula muharririda ichki elementlar parametrlari roʻyxati nazarda tutilmagan. Sonli parametrlar ichki birliklarga aylantirilmasdan beriladi</sld12>
+    <ssd13>Ichki oilalarni qayta ishlash</ssd13>
+    <sld13>Strategiya ota oilaga ichki boʻlgan oilalarni qayta ishlaydi</sld13>
+    <ssd14>Quvurlar va havo quvurlari izolyatsiyasini qayta ishlash</ssd14>
+    <sld14>Strategiya quvurlar izolyatsiyasi elementlarini va/yoki havo quvurlari izolyatsiyasi elementlarini qayta ishlaydi. Izolyatsiya uchun parametrlar boʻyicha filtrdan foydalanmaslik mumkin</sld14>
+    <ssd15>Tizimdagi armaturani qayta ishlash</ssd15>
+    <sld15>Strategiya armatura tizimlari – maydon boʻyicha armaturalash va trayektoriya boʻyicha armaturalash tarkibidagi armatura sterjenlarini qayta ishlaydi</sld15>
+    <ssd16>Materiallarni qayta ishlash</ssd16>
+    <sld16>Strategiya elementlarni tanlash variantidan qatʼi nazar joriy hujjatning barcha materiallarini qayta ishlaydi</sld16>
+    <ssd17>MEP tizimlari elementlarini qayta ishlash</ssd17>
+    <sld17>Strategiya MEP tizimiga (elektr tizimi, quvurlar tizimi yoki havo quvurlari tizimi) kiruvchi elementlarni qayta ishlaydi. Shartli dastlabki element elementning ota tizimidir</sld17>
+    <ssd18>Vitraj tarkibiy qismlarini qayta ishlash</ssd18>
+    <sld18>Strategiya vitrajning tarkibiy qismlarini (impostlar va panellar) qayta ishlaydi. Shartli dastlabki element devordir</sld18>
+    <ssd19>Elementlarni koʻrsatilgan dastlabki elementlarga nisbatan qayta ishlash</ssd19>
+    <sld19>Strategiya elementlarni modelning istalgan koʻrsatilgan elementini dastlabki element sifatida ishlatish imkoniyati bilan qayta ishlaydi</sld19>
+    <ssd20>Qismlarni qayta ishlash</ssd20>
+    <sld20>Strategiya qismlarni ular yaratilgan dastlabki elementlarni hisobga olgan holda qayta ishlaydi. Agar qism bir nechta dastlabki elementdan yaratilgan boʻlsa, birinchi element dastlabki element hisoblanadi</sld20>
+    <ssd21>Yigʻmadagi elementlarni qayta ishlash</ssd21>
+    <sld21>Strategiya yigʻmalarda joylashgan elementlarni qayta ishlaydi</sld21>
+    <ssd22>Bitta koʻrinishga bogʻlangan elementlarni qayta ishlash</ssd22>
+    <sld22>Strategiya faqat bitta koʻrinish ichida mavjud boʻlgan va uch oʻlchamli modelning qismi boʻlmagan elementlarni qayta ishlaydi: oʻlchamlar, matnli izohlar, markalar, detallashtirish chiziqlari va sohalari, shuningdek varaqlar tarkibi. Bunday elementlar ular yaratilgan koʻrinishga bogʻlangan va boshqa koʻrinishlarda aks etmaydi. Bunda devorlar, orayopmalar yoki uskunalar kabi model elementlariga taʼsir qilinmaydi</sld22>
+    <ssd23>Zinapoya komponentlarini qayta ishlash</ssd23>
+    <sld23>Strategiya zinapoya komponentlarini qayta ishlaydi: marshlar, maydonchalar, tayanchlar va zinapoyaga bogʻlangan toʻsiqlar. Shartli dastlabki element zinapoyadir. Koʻp qavatli zinapoya komponentlari ular tegishli boʻlgan zinapoya boʻyicha qayta ishlanadi</sld23>
+    <ssd24>Xonalar oʻyiqlarini qayta ishlash</ssd24>
+    <sld24>Strategiya xonaga chiqadigan oʻyiqlarni - eshiklar va derazalarni - qayta ishlaydi. Shartli dastlabki element xonadir. Oʻyiqlar xonaning toʻsuvchi konstruksiyalarida, jumladan vitrajlarda qidiriladi, xonaga tegishliligi esa xona bosqichini hisobga olgan holda "Xonaga" va "Xonadan" xossalari boʻyicha aniqlanadi; xossalar toʻldirilmagan boʻlsa - oʻyiq geometriyasining xona hajmi bilan kesishishi boʻyicha</sld24>
+    <ssd25>Qiymat boʻyicha moslashtirilgan ikki element toʻplamini qayta ishlash</ssd25>
+    <sld25>Strategiya ikkita mustaqil element toʻplamini - shartli dastlabki va maqsadli elementlarni qayta ishlaydi. Juftlik modeldagi elementlar munosabati boʻyicha emas, balki moslashtirish sozlamasi orqali ikki tomondan hisoblangan qiymatning mos kelishi boʻyicha tuziladi. Mos kelgan elementlar guruh hosil qiladi va shu guruh boʻyicha agregat funksiyalar hisoblanadi</sld25>
+    <ssd26>Xonalar pardozlashini qayta ishlash</ssd26>
+    <sld26>Strategiya «Xonalarni pardozlash» plagini tomonidan yaratilgan xonalar pardozlashini qayta ishlaydi. Shartli dastlabki element xona, maqsadli elementlar - u uchun yaratilgan pardozlash elementlari, jumladan shu plagin vositalari bilan xonaga qoʻlda bogʻlanganlari ham. Boshqa har qanday vositalar bilan yaratilgan pardozlash strategiya tomonidan qayta ishlanmaydi</sld26>
+    <ssd27>Sathga bogʻlangan elementlarni qayta ishlash</ssd27>
+    <sld27>Strategiya elementlarni ularning sathga bogʻlanishi boʻyicha qayta ishlaydi. Shartli dastlabki element sath, maqsadli elementlar - unda joylashgan elementlar. Sath element xossasidan, agar u toʻldirilmagan boʻlsa - sath parametridan («Sath», «Tayanch sath», «Asosiy bogʻlanish») olinadi. Sathlar orasida choʻzilgan element (devor, kolonna, zinapoya) oʻzining pastki sathiga tegishli boʻladi. Sathlar qayta ishlashga avtomatik ravishda qoʻshiladi, ularni modelda tanlash talab etilmaydi</sld27>
+    <ssd28>Armatura ulagichlarini qayta ishlash</ssd28>
+    <sld28>Strategiya yuk koʻtaruvchi armatura ulagichi bilan ulanadigan armatura sterjenlarini qayta ishlaydi. Shartli dastlabki element ulagich, maqsadli elementlar - u uchlariga kiydirilgan bitta yoki ikkita sterjen. Bitta sterjenga kiydirilgan ulagich birga-bir bogʻlanishni beradi: bu holda sterjen qiymati ulagichga teskari yozish funksiyalari orqali koʻchiriladi. Ikkita sterjendagi ulagichda teskari yozishning oʻng qismi ikkalasi boʻyicha hisoblanadi</sld28>
+    <ssd29>Sath koʻrinishlarini qayta ishlash</ssd29>
+    <sld29>Strategiya sath bilan bogʻlangan koʻrinishlarni qayta ishlaydi. Shartli dastlabki element sath, maqsadli elementlar - shu sath boʻyicha qurilgan qavat rejalari, shift rejalari, yuk koʻtaruvchi konstruksiyalar rejalari va zonalash rejalari. Koʻrinish sathi u yaratilganda belgilanadi va oʻzgarmaydi: nusxalash orqali olingan reja asl nusxa sathida qoladi. Boshqa turdagi koʻrinishlar - qirqimlar, fasadlar, 3D koʻrinishlar, legendalar, spetsifikatsiyalar - sath bilan bogʻlanmagan va qayta ishlashga tushmaydi, koʻrinish shablonlari qayta ishlanmaydi. Qayta ishlash uchun sathlar har qanday boshqa strategiyadagi elementlar kabi olinadi: hujjat boʻyicha qayta ishlashda bular hujjatning barcha sathlari, birma-bir tanlashda - faqat tanlangan sathlar, koʻrinish boʻyicha qayta ishlashda - shu koʻrinishda koʻrinadigan sathlar. Sath sichqoncha bilan qirqim va fasadda koʻrsatiladi, u yerda u oddiy elementdir; rejada sath chizigʻi yoʻq, shuning uchun rejani qayta ishlashda reja qurilgan sath olinadi</sld29>
+    <sg1>Bogʻlanishlarsiz</sg1>
+    <sgd1>Boshqa elementlarga murojaat qilmasdan elementlarning oʻz parametrlari qayta ishlanadi</sgd1>
+    <sg2>Elementga kirish</sg2>
+    <sgd2>Maqsadli elementlar shartli dastlabki element ichida joylashgan yoki unga tegishli</sgd2>
+    <sg3>Tarkibiy qismlar</sg3>
+    <sgd3>Maqsadli elementlar shartli dastlabki elementning qismlaridir</sgd3>
+    <sg4>Xonalar</sg4>
+    <sgd4>Maqsadli elementlar xona bilan uning ichida joylashishdan boshqacha tarzda bogʻlangan</sgd4>
+    <sg5>Qoʻshni elementlar</sg5>
+    <sgd5>Maqsadli elementlar shartli dastlabki element bilan tutashgan yoki unga biriktirilgan</sgd5>
+    <sg6>Sathlar va koʻrinishlar</sg6>
+    <sgd6>Maqsadli elementlar sathga yoki koʻrinishga bogʻlangan</sgd6>
+    <sg7>Ixtiyoriy bogʻlanish</sg7>
+    <sgd7>Juftlik modeldagi bogʻlanish bilan berilmaydi, balki qoʻlda koʻrsatiladi yoki qiymatlar boʻyicha tanlanadi</sgd7>
+    <se1>Asos</se1>
+    <sp1>Asos parametrini qoʻyish</sp1>
+    <se2>Guruh</se2>
+    <sp2>Guruh parametrini qoʻyish</sp2>
+    <se3>Xona</se3>
+    <sp3>Xona parametrini qoʻyish</sp3>
+    <se4>Fazo</se4>
+    <sp4>Fazo parametrini qoʻyish</sp4>
+    <se5>Shakl hosil qiluvchi element</se5>
+    <sp5>Shakl hosil qiluvchi element parametrini qoʻyish</sp5>
+    <se6>Ota element</se6>
+    <sp6>Ota element parametrini qoʻyish</sp6>
+    <se7>Tutashgan element</se7>
+    <sp7>Tutashgan element parametrini qoʻyish</sp7>
+    <se8>Birikma</se8>
+    <sp8>Yuk koʻtaruvchi konstruksiyalar birikmasi parametrini qoʻyish</sp8>
+    <se9>Ota oila</se9>
+    <sp9>Ota oila parametrini qoʻyish</sp9>
+    <se10>Quvur yoki havo quvuri</se10>
+    <sp10>Quvur yoki havo quvuri parametrini qoʻyish</sp10>
+    <se11>Tizim</se11>
+    <sp11>Ota armatura tizimi parametrini qoʻyish</sp11>
+    <se12>MEP tizimi</se12>
+    <sp12>Ota MEP tizimi parametrini qoʻyish</sp12>
+    <se13>Vitraj</se13>
+    <sp13>Vitraj parametrini qoʻyish</sp13>
+    <se14>Dastlabki element</se14>
+    <sp14>Dastlabki element parametrini qoʻyish</sp14>
+    <se15>Yigʻma</se15>
+    <sp15>Yigʻma parametrini qoʻyish</sp15>
+    <sp16>Koʻrinish parametrini qoʻyish</sp16>
+    <se16>Zinapoya</se16>
+    <sp17>Zinapoya parametrini qoʻyish</sp17>
+    <se17>Dastlabki elementlar</se17>
+    <sp18>Dastlabki element parametrini qoʻyish</sp18>
+    <se18>Sath</se18>
+    <sp19>Sath parametrini qoʻyish</sp19>
+    <se19>Ulagich</se19>
+    <sp20>Ulagich parametrini qoʻyish</sp20>
+    <te1>Maqsadli element</te1>
+    <tp1>Maqsadli element parametrini qoʻyish</tp1>
+    <te2>Oila nusxasi</te2>
+    <tp2>Oila nusxasi parametrini qoʻyish</tp2>
+    <te3>Tur</te3>
+    <tp3>Maqsadli tur parametrini qoʻyish</tp3>
+    <te4>Ichki element</te4>
+    <tp4>Maqsadli ichki element parametrini qoʻyish</tp4>
+    <te5>Ichki oila</te5>
+    <tp5>Ichki oila parametrini qoʻyish</tp5>
+    <te6>Izolyatsiya</te6>
+    <tp6>Izolyatsiya parametrini qoʻyish</tp6>
+    <te7>Arm. sterjen</te7>
+    <tp7>Maqsadli armatura sterjeni parametrini qoʻyish</tp7>
+    <te8>Material</te8>
+    <tp8>Material parametrini qoʻyish</tp8>
+    <te9>Qism</te9>
+    <tp10>Qism parametrini qoʻyish</tp10>
+    <te10>Zinapoya komponenti</te10>
+    <tp11>Zinapoya komponenti parametrini qoʻyish</tp11>
+    <te11>Oʻyiq</te11>
+    <tp9>Oʻyiq parametrini qoʻyish</tp9>
+    <te12>Pardozlash elementi</te12>
+    <tp12>Pardozlash elementi parametrini qoʻyish</tp12>
+    <tp13>Koʻrinish parametrini qoʻyish</tp13>
+    <ft1>Matematik funksiyalar</ft1>
+    <ft2>Mantiqiy funksiyalar</ft2>
+    <ft3>Oʻzgartiruvchi funksiyalar</ft3>
+    <ft4>Qiymat olish funksiyalari</ft4>
+    <ft5>Agregat funksiyalar</ft5>
+    <ft6>Teskari yozish funksiyalari</ft6>
+    <d-min>Sonlarning eng kichigini qaytaradi</d-min>
+    <d-max>Sonlarning eng kattasini qaytaradi</d-max>
+    <d-abs>Sonning absolyut qiymatini qaytaradi</d-abs>
+    <d-round>Qiymatni eng yaqin butun songacha yoki koʻrsatilgan oʻnlik xonalar sonigacha yaxlitlaydi</d-round>
+    <d-roundup>Koʻrsatilgan sondan katta yoki unga teng boʻlgan eng kichik butun sonni qaytaradi</d-roundup>
+    <d-rounddown>Koʻrsatilgan sondan kichik yoki unga teng boʻlgan eng katta butun sonni qaytaradi</d-rounddown>
+    <d-sqrt>Koʻrsatilgan sonning kvadrat ildizini qaytaradi</d-sqrt>
+    <d-pow>Koʻrsatilgan darajaga koʻtarilgan koʻrsatilgan sonni qaytaradi</d-pow>
+    <d-sin>Koʻrsatilgan burchakning sinusini qaytaradi. Burchak gradusda koʻrsatiladi</d-sin>
+    <d-cos>Koʻrsatilgan burchakning kosinusini qaytaradi. Burchak gradusda koʻrsatiladi</d-cos>
+    <d-tan>Koʻrsatilgan burchakning tangensini qaytaradi. Burchak gradusda koʻrsatiladi</d-tan>
+    <d-asin>Sinusi koʻrsatilgan songa teng boʻlgan burchakni gradusda qaytaradi</d-asin>
+    <d-acos>Kosinusi koʻrsatilgan songa teng boʻlgan burchakni gradusda qaytaradi</d-acos>
+    <d-atan>Tangensi koʻrsatilgan songa teng boʻlgan burchakni gradusda qaytaradi</d-atan>
+    <d-log>Koʻrsatilgan sonning koʻrsatilgan asosli logarifmini qaytaradi</d-log>
+    <d-ln>Koʻrsatilgan sonning natural logarifmini (e asosli) qaytaradi</d-ln>
+    <d-exp>Koʻrsatilgan darajaga koʻtarilgan e ni qaytaradi</d-exp>
+    <d-pi>Aylana uzunligining doira diametriga nisbatini qaytaradi</d-pi>
+    <d-if>Agar &lt;c&gt; sharti toʻgʻri boʻlsa, birinchi &lt;true&gt; qiymatini qaytaradi. Agar &lt;c&gt; sharti notoʻgʻri boʻlsa, ikkinchi &lt;false&gt; qiymatini qaytaradi</d-if>
+    <d-and>Agar barcha &lt;c&gt; shartlari toʻgʻri boʻlsa, TRUE qaytaradi. Aks holda FALSE qaytaradi</d-and>
+    <d-or>Agar kamida bitta &lt;c&gt; sharti toʻgʻri boʻlsa, TRUE qaytaradi. Aks holda FALSE qaytaradi</d-or>
+    <d-inrange>Agar &lt;x&gt; soni &lt;min&gt; dan katta yoki unga teng va &lt;max&gt; dan kichik yoki unga teng boʻlsa, TRUE qaytaradi. Aks holda FALSE qaytaradi</d-inrange>
+    <d-has>Agar &lt;p&gt; parametri mavjud boʻlsa, TRUE qaytaradi. Aks holda FALSE qaytaradi</d-has>
+    <d-hasvalue>Agar &lt;p&gt; parametriga kamida bir marta qiymat berilgan boʻlsa, TRUE qaytaradi. Aks holda FALSE qaytaradi</d-hasvalue>
+    <d-firsttrue>&lt;c&gt; sharti toʻgʻri boʻlgan birinchi &lt;v&gt; qiymatini qaytaradi. Agar barcha &lt;c&gt; shartlari notoʻgʻri boʻlsa, oxirgi &lt;v&gt; qiymatini qaytaradi</d-firsttrue>
+    <d-toupper>Yuqori registrga oʻtkazilgan qiymatni qaytaradi</d-toupper>
+    <d-tolower>Quyi registrga oʻtkazilgan qiymatni qaytaradi</d-tolower>
+    <d-lstr>Satr boshidan koʻrsatilgan miqdordagi belgilarni qaytaradi</d-lstr>
+    <d-rstr>Satr oxiridan koʻrsatilgan miqdordagi belgilarni qaytaradi</d-rstr>
+    <d-sstr>Satr qismini qaytaradi</d-sstr>
+    <d-tmirrored>Agar maqsadli oila koʻzgu aksida boʻlsa, TRUE qaytaradi</d-tmirrored>
+    <d-smirrored>Agar shartli dastlabki oila koʻzgu aksida boʻlsa, TRUE qaytaradi</d-smirrored>
+    <d-isvertical>Agar maqsadli elementning oʻq chizigʻi vertikal joylashgan boʻlsa, TRUE qaytaradi. Aks holda FALSE qaytaradi. Ixtiyoriy &lt;a&gt; argumenti gradusdagi ruxsat etilgan chetlanishni belgilaydi, standart boʻyicha 0.1. Funksiya faqat joylashuvi toʻgʻri chiziq bilan berilgan elementlarga qoʻllaniladi</d-isvertical>
+    <d-ishorizontal>Agar maqsadli elementning oʻq chizigʻi gorizontal joylashgan boʻlsa, TRUE qaytaradi. Aks holda FALSE qaytaradi. Ixtiyoriy &lt;a&gt; argumenti gradusdagi ruxsat etilgan chetlanishni belgilaydi, standart boʻyicha 0.1. Funksiya faqat joylashuvi toʻgʻri chiziq bilan berilgan elementlarga qoʻllaniladi</d-ishorizontal>
+    <d-strlen>Satr uzunligini qaytaradi</d-strlen>
+    <d-strindex>Satrdagi satr qismining birinchi kirishining noldan boshlab hisoblangan indeksini qaytaradi. Agar satr qismi satrda topilmasa, -1 qaytaradi. Funksiya registrga sezgir emas</d-strindex>
+    <d-valuestr>Parametr qiymatini oʻlchov birliklari bilan satr koʻrinishida qaytaradi</d-valuestr>
+    <d-eindex>Formulaning joriy ifodasidan muvaffaqiyatli foydalanish indeksini qaytaradi</d-eindex>
+    <d-replace>Berilgan satrning barcha kirishlari boshqa berilgan satr bilan almashtirilgan qiymatni qaytaradi</d-replace>
+    <d-format>Koʻrsatilgan formatdan foydalanib sonni satrga aylantiradi</d-format>
+    <d-cv>Strategiya maʼlumotlar manbaining koʻrsatilgan katagidagi qiymatni qaytaradi</d-cv>
+    <d-count>Satrdagi shablonga mos kelishlar sonini qaytaradi. Agar mos kelishlar boʻlmasa, 0 qaytaradi. Shablon muntazam ifodadir. Funksiya registrga sezgir emas</d-count>
+    <d-lstrindex>Satrdagi satr qismining oxirgi kirishining noldan boshlab hisoblangan indeksini qaytaradi. Agar satr qismi satrda topilmasa, -1 qaytaradi. Funksiya registrga sezgir emas</d-lstrindex>
+    <d-not>Agar shart notoʻgʻri boʻlsa, TRUE qaytaradi. Aks holda FALSE qaytaradi</d-not>
+    <d-distinct>Qiymatlarni solishtirishda boshlangʻich va oxirgi boʻsh joylarni eʼtiborsiz qoldirib, roʻyxatning farqlanuvchi qiymatlarini qaytaradi</d-distinct>
+    <d-cvif>Strategiya maʼlumotlar manbasida (Excel fayli) barcha shartlar bajariladigan birinchi satrni qidiradi va shu satrning koʻrsatilgan ustunidagi qiymatni qaytaradi</d-cvif>
+    <d-cvor>Strategiya maʼlumotlar manbasida (Excel fayli) kamida bitta shart bajariladigan birinchi satrni qidiradi va shu satrning koʻrsatilgan ustunidagi qiymatni qaytaradi</d-cvor>
+    <d-doctitle>Joriy hujjat sarlavhasini qaytaradi</d-doctitle>
+    <d-getcurrentviewparameter>Ishlov berish bajarilayotgan koʻrinishning &lt;p&gt; parametri qiymatini qaytaradi. Joriy koʻrinishdagi, tanlangan koʻrinishlardagi elementlarga ishlov berishda va tanlangan elementlarga ishlov berishda mavjud</d-getcurrentviewparameter>
+    <d-targetbottomz>Maqsadli element geometriyasidan eng past belgini (Z) qaytaradi. Belgi millimetrlarda, verguldan keyin 3 xonagacha yaxlitlab qaytariladi</d-targetbottomz>
+    <d-targettopz>Maqsadli element geometriyasidan eng yuqori belgini (Z) qaytaradi. Belgi millimetrlarda, verguldan keyin 3 xonagacha yaxlitlab qaytariladi. Ishlov berish butun hujjatda bajarilmaganda geometriya faol koʻrinishda olinadi: qavat rejasida yuqori belgi elementning haqiqiy yuqorisi emas, balki rejaning kesuvchi tekisligi boʻladi</d-targettopz>
+    <d-sourcebottomz>Shartli manba element geometriyasidan eng past belgini (Z) qaytaradi. Belgi millimetrlarda, verguldan keyin 3 xonagacha yaxlitlab qaytariladi</d-sourcebottomz>
+    <d-sourcetopz>Shartli manba element geometriyasidan eng yuqori belgini (Z) qaytaradi. Belgi millimetrlarda, verguldan keyin 3 xonagacha yaxlitlab qaytariladi. Ishlov berish butun hujjatda bajarilmaganda geometriya faol koʻrinishda olinadi: qavat rejasida yuqori belgi elementning haqiqiy yuqorisi emas, balki rejaning kesuvchi tekisligi boʻladi</d-sourcetopz>
+    <d-gsum>Guruh elementlari boʻyicha ifoda qiymatlari yigʻindisini qaytaradi</d-gsum>
+    <d-gcount>Koʻrsatilgan roldagi guruh elementlari sonini qaytaradi: "s" - shartli manba, "t" - maqsadli</d-gcount>
+    <d-gjoin>Guruh elementlari boʻyicha ifoda qiymatlarini koʻrsatilgan ajratgich orqali birlashtiradi. Ixtiyoriy uchinchi argument bayroqlarni belgilaydi: "d" - faqat farqlanuvchi qiymatlar, "s" - saralash, "r" - ketma-ket sonlarni diapazonlarga yigʻish</d-gjoin>
+    <d-gmin>Guruh elementlari boʻyicha ifodaning minimal qiymatini qaytaradi</d-gmin>
+    <d-gmax>Guruh elementlari boʻyicha ifodaning maksimal qiymatini qaytaradi</d-gmax>
+    <d-gavg>Guruh elementlari boʻyicha ifodaning oʻrtacha qiymatini qaytaradi</d-gavg>
+    <d-gindex>Guruh ichidagi maqsadli elementning tartib raqamini qaytaradi</d-gindex>
+    <d-ranges>Ketma-ket keluvchi butun sonlar ketma-ketligini 1-3 koʻrinishidagi diapazonlarga yigʻadi</d-ranges>
+    <d-ccmin>Strategiya maʼlumotlar manbasi ustunidan minimal qiymatni qaytaradi. Qiymati songa aylantirilmaydigan kataklar oʻtkazib yuboriladi</d-ccmin>
+    <d-ccmax>Strategiya maʼlumotlar manbasi ustunidan maksimal qiymatni qaytaradi. Qiymati songa aylantirilmaydigan kataklar oʻtkazib yuboriladi</d-ccmax>
+    <d-crmin>Strategiya maʼlumotlar manbasi satridan minimal qiymatni qaytaradi. Qiymati songa aylantirilmaydigan kataklar oʻtkazib yuboriladi</d-crmin>
+    <d-crmax>Strategiya maʼlumotlar manbasi satridan maksimal qiymatni qaytaradi. Qiymati songa aylantirilmaydigan kataklar oʻtkazib yuboriladi</d-crmax>
+    <d-item>Roʻyxat elementini noldan boshlanuvchi koʻrsatilgan indeks boʻyicha qaytaradi. Bunday indeksli element boʻlmasa, boʻsh qiymat qaytaradi</d-item>
+    <d-finditem>Qidirilayotgan qiymatni oʻz ichiga olgan birinchi roʻyxat elementini qaytaradi. Bunday element boʻlmasa, boʻsh qiymat qaytaradi. Funksiya registrga sezgir emas</d-finditem>
+    <d-itemindex>Qidirilayotgan qiymatni oʻz ichiga olgan birinchi roʻyxat elementining noldan boshlanuvchi indeksini qaytaradi. Bunday element boʻlmasa, -1 qaytaradi. Funksiya registrga sezgir emas</d-itemindex>
+    <d-trim>Satr boshi va oxiridagi boʻshliqlarsiz qiymatni qaytaradi</d-trim>
+    <d-list>Koʻrsatilgan ajratgichli satrni "=|" va "!=|" operatorlari bilan kirishni tekshirish uchun roʻyxat sifatida taqdim etadi. Elementlarning chetki boʻshliqlari va boʻsh elementlar tashlab yuboriladi</d-list>
+    <d-cclist>Strategiya maʼlumotlar manbasi ustuni qiymatlarini "=|" va "!=|" operatorlari bilan kirishni tekshirish uchun roʻyxat koʻrinishida qaytaradi</d-cclist>
+    <d-crlist>Strategiya maʼlumotlar manbasi satri qiymatlarini "=|" va "!=|" operatorlari bilan kirishni tekshirish uchun roʻyxat koʻrinishida qaytaradi</d-crlist>
+    <d-rgxreplace>&lt;s1&gt; muntazam ifodasi bilan barcha mosliklar &lt;s2&gt; ga almashtirilgan &lt;s&gt; qiymatini qaytaradi. &lt;s1&gt; shabloni qoʻshtirnoq ichida yoziladi yoki parametr qiymatidan keladi yoki ichki funksiya natijasi boʻladi. &lt;s2&gt; qiymatida guruh oʻrniga qoʻyishlari - "$1", "$2" va hokazo mavjud. Registrni hisobga olish formula sozlamasi bilan belgilanadi</d-rgxreplace>
+    <d-rgxmatch>&lt;s&gt; qiymati &lt;s1&gt; muntazam ifodasi bilan moslikni oʻz ichiga olsa, TRUE qaytaradi. Aks holda FALSE qaytaradi. &lt;s1&gt; shabloni qoʻshtirnoq ichida yoziladi yoki parametr qiymatidan keladi yoki ichki funksiya natijasi boʻladi. Qiymatning toʻliq mosligi uchun "^" va "$" langarlaridan foydalaning. Registrni hisobga olish formula sozlamasi bilan belgilanadi</d-rgxmatch>
+    <d-wb-avg>Natijalarning oʻrtacha qiymatini shartli manba element parametriga yozadi</d-wb-avg>
+    <d-wb-first>Birinchi natijani shartli manba element parametriga yozadi</d-wb-first>
+    <d-wb-join>Ajratgich orqali birlashtirilgan natijalarni shartli manba element parametriga yozadi</d-wb-join>
+    <d-wb-last>Oxirgi natijani shartli manba element parametriga yozadi</d-wb-last>
+    <d-wb-max>Maksimal natijani shartli manba element parametriga yozadi</d-wb-max>
+    <d-wb-min>Minimal natijani shartli manba element parametriga yozadi</d-wb-min>
+    <d-wb-sum>Natijalar yigʻindisini shartli manba element parametriga yozadi</d-wb-sum>
+    <t211>Plagin oynasi ochiq. Palitra u yopilgandan keyin mavjud boʻladi</t211>
+    <t212>Konfiguratsiyalar fayli tanlanmagan. Plagin oynasini oching</t212>
+    <t213>Tashkilot sozlamalari oʻzgardi. Konfiguratsiyalar faylini tanlash uchun plagin oynasini oching</t213>
+    <t214>Konfiguratsiyalar fayli mavjud emas</t214>
+    <t215>Konfiguratsiyalar faylida birorta ham konfiguratsiya yoʻq</t215>
+    <t216>Joriy konfiguratsiyada strategiyalar yoʻq</t216>
+    <t217>Plagin oynasini ochish</t217>
+    <t218>Ish turi</t218>
+    <t219>Joriy konfiguratsiya strategiyasi</t219>
+    <t220>Strategiyaning barcha qoidalarini ishga tushirish</t220>
+    <t221>Qoidani ishga tushirish uchun bosing</t221>
+    <t222>Palitrani koʻrsatish yoki yashirish</t222>
+    <t223>Manba</t223>
+    <t224>PF ME</t224>
+    <t225>PF MqE</t225>
+    <t226>F ME</t226>
+    <t227>F MqE</t227>
+    <t228>Plagin oila fayllarida ishlamaydi</t228>
+    <t229>Ochiq hujjat yoʻq</t229>
+    <t230>Ishga tushirishdan oldin sinxronizatsiyani bajarishni soʻrash</t230>
+    <t231>Sinxronizatsiya parametrlari</t231>
+    <t232>Markaziy modelni zichlash (sinxronizatsiyani sekinlashtiradi)</t232>
+    <t233>Sinxronizatsiyadan keyin quyidagi ishchi toʻplamlar va elementlarni boʻshatish:</t233>
+    <t234>Loyiha standartlari ishchi toʻplamlari</t234>
+    <t235>Oilalar ishchi toʻplamlari</t235>
+    <t236>Olingan elementlar</t236>
+    <t237>Koʻrinishlar ishchi toʻplamlari</t237>
+    <t238>Foydalanuvchi yaratgan ishchi toʻplamlar</t238>
+    <t239>Markaziy fayl bilan sinxronizatsiyadan oldin va keyin lokal faylni saqlash</t239>
+    <t240>Orqaga</t240>
+    <t241>Strategiya maʼlumotlar manbasi Excel faylini tanlash</t241>
+    <t242>Excel faylini strategiya maʼlumotlar manbasidan olib tashlash (faylning oʻzi oʻchirilmaydi)</t242>
+    <t243>Bogʻlangan fayllardan qoidalar ustunlarida koʻrsatilgan toifalarning elementlari yigʻiladi – shartli manba elementlar uchun ham, maqsadli elementlar uchun ham. Keyin ular joriy model elementlari bilan teng ravishda qayta ishlanadi: masalan, InMass strategiyasi uchun bular shakl hosil qiluvchilar, InSolid strategiyasi uchun – qattiq jismga ega elementlar, ManyToMany strategiyasi uchun – shartli manba elementlar boʻlishi mumkin. Bogʻlangan fayllardagi elementlar parametrlari qiymatlaridan formulalarda foydalanish mumkin, ammo bogʻlangan fayldagi element parametriga qiymat yozish mumkin emas – bunday yozuv hisobotda xato sifatida belgilanadi</t243>
+  </mprParametrization>
+</ModPlus>

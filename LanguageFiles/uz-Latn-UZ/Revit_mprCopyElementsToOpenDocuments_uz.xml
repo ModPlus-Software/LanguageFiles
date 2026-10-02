@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprCopyElementsToOpenDocuments
+    LocalName="Elementlarni nusxalash"
+    Description="Elementlarni ochiq hujjatlarga paketli nusxalash"
+    FullDescription="Tanlangan elementlarni joriy hujjatdan koʻrsatilgan ochiq hujjatlarga paketli nusxalash">
+    <h1>Tanlangan elementlar:</h1>
+    <h2>Loyihadan:</h2>
+    <h3>Loyihaga:</h3>
+    <h4>Nusxalash opsiyalari</h4>
+    <!--todo remove after 2.4.4.0-->
+    <h5>Ish jurnali</h5>
+    <h6>Nusxalashni bajarish</h6>
+    <h7>Bloknotda ochish</h7>
+    <h8>Barcha pozitsiyalarni ikkinchi ichki darajagacha yoyish</h8>
+    <h9>Barchasini yigʻish</h9>
+    <h10>Barchasini tanlash</h10>
+    <h11>Tanlovni bekor qilish</h11>
+    <h12>Umumiy parametrlar guidini koʻrsatish</h12>
+    <h13>Boshqa sozlamalar</h13>
+    <h14>Turlar</h14>
+    <h15>Boshqa elementlar</h15>
+    <h16>Ogohlantirishlarni bostirish</h16>
+    <h17>Bogʻlangan fayllarni koʻrsatish</h17>
+    <h18>Nomlar mos kelgandagi xatti-harakat</h18>
+    <h19>Tur nomlari mos kelgandagi xatti-harakat</h19>
+    <h20>Toʻplam</h20>
+    <h21>Filtr nomlari mos kelgandagi xatti-harakat</h21>
+    <h22>Koʻrinish nomlari mos kelgandagi xatti-harakat</h22>
+    <h23>Bogʻliq elementlar nomlari mos kelgandagi xatti-harakatni belgilaydi. Masalan, agar devor nusxasi nusxalanayotgan boʻlsa va maqsadli hujjatda nusxalanayotgan devor bilan bir xil nomli devor turi allaqachon mavjud boʻlsa, Revit maqsadli hujjat turidan foydalanishni yoki raqamli qoʻshimcha qoʻshib tur nusxasini yaratishni taklif qiladi.</h23>
+    <h24>Ushbu opsiya plagin nusxalaydigan elementlarning koʻpchiligiga taʼsir qilmaydi, lekin Revit APIdagi ishlatiladigan nusxalash usulida albatta berilishi kerak. Elementlarning koʻpchiligi ushbu opsiya qiymatidan qatʼi nazar raqamli qoʻshimcha qoʻshilgan holda nusxalanadi.</h24>
+    <h25>Tur nomlari mos kelganda va "Almashtirish" opsiyasi tanlanganda plagin quyidagi algoritmni bajaradi: maqsadli hujjatda nusxalanayotgan tur bilan bir xil nomli tur (eski tur) qayta nomlanadi. Soʻngra yangi tur nusxalanadi. Yangi tur eski tur tayinlangan barcha element nusxalariga tayinlanadi. Eski tur oʻchiriladi.</h25>
+    <h26>Filtr nomlari mos kelganda va "Almashtirish" opsiyasi tanlanganda plagin quyidagi algoritmni bajaradi: maqsadli hujjatda nusxalanayotgan filtr bilan bir xil nomli filtr (eski filtr) qoʻllanilgan barcha koʻrinishlar va koʻrinish shablonlari topiladi. Soʻngra yangi filtr raqamli qoʻshimcha qoʻshilgan holda nusxalanadi. Avval topilgan barcha koʻrinishlar va koʻrinish shablonlari uchun filtrlar qayta qoʻllaniladi, bunda eski filtr yangisiga almashtiriladi, lekin koʻrinuvchanlik sozlamalari saqlanib qoladi. Eski filtr oʻchiriladi. Yangi filtrga eski filtr nomi beriladi.</h26>
+    <h27>Koʻrinish nomlari mos kelganda va "Almashtirish" opsiyasi tanlanganda plagin quyidagi algoritmni bajaradi: maqsadli hujjatda eski koʻrinishni aks ettiruvchi barcha koʻrinish oynalari yoki eski koʻrinishdan shablon sifatida foydalanadigan barcha koʻrinishlar (agar nusxalanayotgan koʻrinish shablon boʻlsa) topiladi. Soʻngra yangi koʻrinish raqamli qoʻshimcha qoʻshilgan holda nusxalanadi. Avval topilgan barcha koʻrinish oynalari uchun yangi koʻrinish aks ettiriladigan koʻrinish sifatida yoki avval topilgan barcha koʻrinishlar uchun yangi koʻrinish shablon sifatida oʻrnatiladi. Eski koʻrinish oʻchiriladi. Yangi koʻrinishga eski koʻrinish nomi beriladi.</h27>
+    <h28>Yangi toʻplam sifatida saqlash</h28>
+    <h29>Joriy toʻplamni saqlash</h29>
+    <h30>Toʻplamni oʻchirish</h30>
+    <h31>Yangi toʻplam nomini kiriting</h31>
+    <h32>Koʻrinish oynalarini oʻzgartirish faqat Revit 2023 versiyasidan boshlab amalga oshiriladi!</h32>
+    <filters>Filtrlar</filters>
+    <link>Bogʻlanish:</link>
+    <b1>Maqsadli hujjat nomlaridan foydalanish</b1>
+    <b2>Qoʻyishni toʻxtatish</b2>
+    <b3>Standart xatti-harakat</b3>
+    <b4>Almashtirish</b4>
+    <b5>Soʻrash</b5>
+    <elementGetError>Elementni olish jarayonida xato yuz berdi. Id: "{0}". Xato: "{1}".</elementGetError>
+    <!--todo remove after 2.4.4.0-->
+    <m1>{0} – XATO! Elementni olish jarayonida xato yuz berdi. Id: "{1}". Xato: "{2}".</m1>
+    <startCollectingElements>Model elementlarini yigʻish amalining boshlanishi ({0}).</startCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m2>{0} – Model elementlarini yigʻish amalining boshlanishi ({1}).</m2>
+    <completionCollectingElements>Model elementlarini yigʻish amalining yakunlanishi ({0}).</completionCollectingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m3>{0} – Model elementlarini yigʻish amalining yakunlanishi ({1}).</m3>
+    <collectingElementsCriticalError>Model elementlarini yigʻish amali jarayonida jiddiy xato ({0}).</collectingElementsCriticalError>
+    <!--todo remove after 2.4.4.0-->
+    <m4>{0} – XATO! Model elementlarini yigʻish amali jarayonida jiddiy xato ({1}).</m4>
+    <startCopyingElements>Elementlarni "{0}" hujjatidan "{1}" hujjatlariga nusxalashning boshlanishi.</startCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m5>{0} – Elementlarni "{1}" hujjatidan "{2}" hujjatlariga nusxalashning boshlanishi.</m5>
+    <completionCopyingElements>Elementlarni "{0}" hujjatidan "{1}" hujjatlariga nusxalashning yakunlanishi.</completionCopyingElements>
+    <!--todo remove after 2.4.4.0-->
+    <m6>{0} – Elementlarni "{1}" hujjatidan "{2}" hujjatlariga nusxalashning yakunlanishi.</m6>
+    <elementCopyError>"{2}" toifasidagi "{0} (id: {1})" elementini nusxalash jarayonida xato yuz berdi: "{3}".</elementCopyError>
+    <!--todo remove after 2.4.4.0-->
+    <m7>{0} – XATO! "{3}" toifasidagi "{1} (id: {2})" elementini nusxalash jarayonida xato yuz berdi: "{4}".</m7>
+    <worksharingDisabledWarning>Ushbu hujjatda ({0}) birgalikda ishlash oʻchirilgan. Ishchi toʻplamlar nusxalanmaydi.</worksharingDisabledWarning>
+    <!--todo remove after 2.4.4.0-->
+    <m9>{0} – OGOHLANTIRISH! Ushbu hujjatda ({1}) birgalikda ishlash oʻchirilgan. Ishchi toʻplamlar nusxalanmaydi.</m9>
+    <m10>Ishchi toʻplamlar</m10>
+    <m11> (Tur)</m11>
+    <m12>Loyiha brauzerini tashkil etish</m12>
+    <m13>Oʻlchamlar</m13>
+    <m14>Shtrixovkalar</m14>
+    <m15>Parametrlar filtrlari</m15>
+    <m16>Chiziq turlari</m16>
+    <m17>Yuklanadigan oilalar</m17>
+    <m18>Bosqich filtrlari</m18>
+    <m19>Chop etish sozlamalari</m19>
+    <m20>Oʻzgartirishlar</m20>
+    <m21>Oʻzgartirishlar sozlamalari</m21>
+    <m22>Matn uslublari</m22>
+    <m23>Koʻrinish oilalari turlari</m23>
+    <m24>Koʻrinishlar</m24>
+    <m25>Parametrlar</m25>
+    <m26>Umumiy parametrlar</m26>
+    <m27>Elementlarni nusxalash</m27>
+    <m28>Barcha guruhlar</m28>
+    <m29>Koʻrinishlar (shablonlar)</m29>
+    <m30>Nusxalash yakunlandi</m30>
+    <!--todo remove after 2.4.4.0-->
+    <m32>Bekor qilish</m32>
+    <m33>Qidiruv</m33>
+    <m34>Maydonlar rejalari</m34>
+    <m35>Shift rejalari</m35>
+    <m36>Kolonnalar spetsifikatsiyalari</m36>
+    <m37>Narx hisobotlari</m37>
+    <m38>Uzellar</m38>
+    <m39>Qoralama koʻrinishlar</m39>
+    <m40>Chizma varaqlari</m40>
+    <m41>Fasadlar</m41>
+    <m42>Muhandislik rejalari</m42>
+    <m43>Qavat rejalari</m43>
+    <m44>Ichki</m44>
+    <m45>Legendalar</m45>
+    <m46>Yuklamalar boʻyicha hisobot</m46>
+    <m47>Panellar spetsifikatsiyalari</m47>
+    <m48>Bosim yoʻqotilishi boʻyicha hisobotlar</m48>
+    <m49>Brauzer</m49>
+    <m50>Render</m50>
+    <m51>Hisobotlar</m51>
+    <m52>Spetsifikatsiyalar</m52>
+    <m53>Qirqimlar</m53>
+    <m54>Tizim brauzeri</m54>
+    <m55>Tizimlar tahlili hisoboti</m55>
+    <m56>3D</m56>
+    <m57>Sayr</m57>
+    <m58>Aniqlanmagan</m58>
+    <m59>Toifalar</m59>
+    <startCollectingTypes>Model turlarini yigʻish amalining boshlanishi ({0}).</startCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m60>{0} – Model turlarini yigʻish amalining boshlanishi ({1}).</m60>
+    <completionCollectingTypes>Model turlarini yigʻish amalining yakunlanishi ({0}).</completionCollectingTypes>
+    <!--todo remove after 2.4.4.0-->
+    <m61>{0} – Model turlarini yigʻish amalining yakunlanishi ({1}).</m61>
+    <m62>foydalanuvchi tasdigʻini talab qiladigan jiddiy Revit ogohlantirishi mavjud edi. Ogohlantirishlarni bostirishni oʻchiring va nusxalashni takrorlang</m62>
+    <m63>Umumiy parametrlar</m63>
+    <m64>Toifasiz</m64>
+    <elementCopySkipped>"{2}" toifasidagi "{0} (id {1})" elementini nusxalash oʻtkazib yuborildi.</elementCopySkipped>
+    <!--todo remove after 2.4.4.0-->
+    <m65>{0} – "{3}" toifasidagi "{1} (id {2})" elementini nusxalash oʻtkazib yuborildi.</m65>
+    <m66>Maqsadli hujjatda "{1}" turiga ega "{0}" oilasi allaqachon mavjud.{2}Almashtirish bilan nusxalansinmi?</m66>
+    <m67>Global parametrlar</m67>
+    <m68>Chiziq naqshlari</m68>
+    <m69>Rang sxemalari</m69>
+    <m70>Loyiha parametrlari</m70>
+    <m71>Maqsadli hujjatda "{0}" filtri allaqachon mavjud.{1}Almashtirish bilan nusxalansinmi?</m71>
+    <m72>Maqsadli hujjatda "{0}" koʻrinishi allaqachon mavjud.{1}Almashtirish bilan nusxalansinmi?</m72>
+    <copyConduitStandardWithReplace>Maqsadli hujjatda "{0}" kabel kanallari standarti allaqachon mavjud.{1}Almashtirish bilan nusxalansinmi?</copyConduitStandardWithReplace>
+    <!--todo remove after 2.4.4.0-->
+    <m73>Nusxalangan elementlar:</m73>
+    <!--todo remove after 2.4.4.0-->
+    <m74>Oʻtkazib yuborilgan elementlar:</m74>
+    <!--todo remove after 2.4.4.0-->
+    <m75>Xatolar soni:</m75>
+    <m76>Batafsil maʼlumot ish jurnalida</m76>
+    <m77>Eksport parametrlari</m77>
+    <m78>DWG/DXF eksport parametrlari</m78>
+    <m79>DGN eksport parametrlari</m79>
+    <fillPatterns>Shtrixovkalar</fillPatterns>
+    <startCollectingFamilies>Model oilalarini yigʻish amalining boshlanishi ({0})</startCollectingFamilies>
+    <completionCollectingFamilies>Model oilalarini yigʻish amalining yakunlanishi ({0})</completionCollectingFamilies>
+    <families>Oilalar</families>
+    <familyProcessError>"{0}" (id: {1}) oilasini qayta ishlash jarayonida xato yuz berdi: "{2}"</familyProcessError>
+    <familyExists>Maqsadli hujjatda "{0}" oilasi allaqachon mavjud.{1}Nusxalansinmi?</familyExists>
+    <duplicateCreated>{0} oilasining dublikati yaratildi</duplicateCreated>
+    <elementTab>Elementlar</elementTab>
+    <modelElementTab>Model elementlari</modelElementTab>
+    <selectedInModel>Modelda tanlanganlar</selectedInModel>
+    <selectFromLink>Bogʻlanishdan tanlash</selectFromLink>
+    <selectElementsFrom>{0} dan elementlarni tanlang</selectElementsFrom>
+    <copyResultMessage>Nusxalash yakunlandi. Nusxalandi: {0}, Oʻtkazib yuborildi: {1}, Xatolar bilan: {2}"</copyResultMessage>
+    <messageInvalidActiveDocument>Faol hujjat tanlangan manba bilan mos kelmaydi</messageInvalidActiveDocument>
+    <notSelectedElements>Modelda birorta ham element tanlanmagan</notSelectedElements>
+    <selectElementsFromLink>Bogʻlangan fayldan elementlarni tanlang</selectElementsFromLink>
+    <groupTypeExists>Maqsadli hujjatda "{0}" guruhi allaqachon mavjud.\nAlmashtirish bilan nusxalansinmi?</groupTypeExists>
+    <groups>Guruhlar</groups>
+    <materialExists>Maqsadli hujjatda "{0}" materiali allaqachon mavjud.\nAlmashtirish bilan nusxalansinmi?</materialExists>
+    <materialDuplicateActionSettings>Material nomlari mos kelgandagi xatti-harakat</materialDuplicateActionSettings>
+    <materialDuplicateActionTooltip>Material nomlari mos kelganda va "Almashtirish" opsiyasi tanlanganda plagin quyidagi algoritmni bajaradi: maqsadli hujjatdagi eski material yangilanadi - unga yangi materialning barcha xususiyatlari beriladi. Material nomi oʻzgarmaydi. Ushbu materialdan foydalanadigan barcha elementlar avtomatik ravishda yangilangan xususiyatlarni oladi.</materialDuplicateActionTooltip>
+    <closeOpenedSchedule>Ochilgan spetsifikatsiyalarni yopish</closeOpenedSchedule>
+    <searchModeLabel>Taqqoslash rejimi:</searchModeLabel>
+    <searchModeNormal>Oddiy</searchModeNormal>
+    <searchModeRegex>Muntazam ifoda</searchModeRegex>
+    <patternCopyWarning>"{0}" (id: {1}) naqshini maqsadli hujjatga nusxalab boʻlmadi. Filtr grafikasini qayta belgilash ushbu naqshsiz qoʻllaniladi.</patternCopyWarning>
+    <viewTemplateFiltersCopyError>Nusxalangan "{0}" koʻrinish shabloniga filtrlarni qoʻllab boʻlmadi. Xato: "{1}".</viewTemplateFiltersCopyError>
+  </mprCopyElementsToOpenDocuments>
+</ModPlus>

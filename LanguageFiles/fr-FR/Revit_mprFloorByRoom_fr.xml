@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprFloorByRoom
+    LocalName="Sol par pièce"
+    Description="Création de sols selon le contour des pièces">
+    <t1>Filtre des pièces :</t1>
+    <t2>Type de sol :</t2>
+    <t3>Décalage par rapport au niveau, mm :</t3>
+    <t4>Prolonger dans les baies de portes</t4>
+    <t5>Le type de sol n'est pas défini ! Cette configuration ne peut pas être traitée !</t5>
+    <t6>Par les pièces de la vue</t6>
+    <t7>Par les pièces sélectionnées</t7>
+    <t8>Par les pièces présélectionnées</t8>
+    <t9>Définir la valeur d'épaisseur du type de sol sélectionné</t9>
+    <t10>Copier la valeur du paramètre (de la pièce vers le sol) :</t10>
+    <t11>De</t11>
+    <t12>vers</t12>
+    <t13>Lors du prolongement du sol dans les baies de portes sur toute l'épaisseur du mur, considérer comme pièce principale :</t13>
+    <t14>Si la porte mène vers la sortie</t14>
+    <t15>Si la porte mène vers l'entrée</t15>
+    <t16>Le sol de la pièce principale sera créé avec prolongement dans la baie de porte. En conséquence, pour la pièce définie comme non principale, aucun prolongement dans la baie de porte ne sera créé. Cette option ne fonctionne que pour les familles de la catégorie "Portes" dont les propriétés internes FromRoom et ToRoom sont renseignées. Le sens de passage dans la baie est déterminé par l'orientation du côté extérieur de la famille</t16>
+    <t17>Découper la géométrie solide de la porte dans le contour du sol</t17>
+    <l1>Ne pas prolonger le contour du sol dans les baies de portes</l1>
+    <l2>Prolonger le contour jusqu'au milieu du mur</l2>
+    <l3>Prolonger le contour sur toute l'épaisseur du mur</l3>
+    <l4>Prolonger le contour de la valeur indiquée, mm</l4>
+    <msg1>Pour lancer le plugin, passez dans un plan d'étage !</msg1>
+    <msg2>Sol de type "{0}" créé selon le contour de la pièce</msg2>
+    <msg3>Impossible de créer le sol selon le contour de la pièce</msg3>
+    <msg4>Aucune pièce satisfaisant au filtre par les paramètres "{0}" n'a été trouvée</msg4>
+    <msg5>La vue active ne contient aucune pièce !</msg5>
+    <msg6>Impossible de traiter le contour de l'ouverture. Erreur "{0}". Le contour du sol ne sera pas prolongé dans l'ouverture</msg6>
+    <msg7>Paramètre "{0}" introuvable</msg7>
+    <msg8>Impossible de copier la valeur du paramètre "{0}" dans le paramètre "{1}"</msg8>
+    <msg9>Types de paramètres incompatibles ou cause inconnue</msg9>
+    <msg10>Le support et le développement de ce plugin sont arrêtés ! Toutes les tâches réalisées par ce plugin sont assurées par le plugin "Finitions des pièces"</msg10>
+  </mprFloorByRoom>
+</ModPlus>

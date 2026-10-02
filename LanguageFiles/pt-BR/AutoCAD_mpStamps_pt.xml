@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpStamps
+    LocalName="Carimbos"
+    Description="Inserção de carimbos no desenho como tabelas do AutoCAD de acordo com a documentação normativa, com suporte a campos"
+    FullDescription="O uso do plugin &quot;Campos&quot; permite adicionar ao documento valores adicionais que podem ser inseridos no carimbo como campos. Isso permite alterar os valores de uma só vez em todos os carimbos do documento">
+    <h1>Carimbos</h1>
+    <h2>Nome do carimbo</h2>
+    <h3>Documentos normativos para:</h3>
+    <h4>Rússia</h4>
+    <h5>Ucrânia</h5>
+    <h6>Belarus</h6>
+    <h7>Documento normativo:</h7>
+    <h8>Seleção do documento normativo</h8>
+    <h9>Nome da tabela</h9>
+    <h10>Documento normativo:</h10>
+    <h11>Descrição:</h11>
+    <h12>Descrição breve (referência ao carimbo no documento normativo)</h12>
+    <h13>Sem vigência</h13>
+    <h14>Inserção do carimbo com ancoragem Superior esquerda</h14>
+    <h15>Inserção do carimbo com ancoragem Superior direita</h15>
+    <h16>Inserção do carimbo com ancoragem Inferior esquerda</h16>
+    <h17>Inserção do carimbo com ancoragem Inferior direita</h17>
+    <h18>Mostrar imagem</h18>
+    <h19>Ocultar imagem</h19>
+    <h21>Escala do carimbo:</h21>
+    <h22>Estilo de texto:</h22>
+    <h23>Altura principal do texto:</h23>
+    <h24>Altura adicional do texto:</h24>
+    <h25>Logotipo</h25>
+    <h26>do bloco:</h26>
+    <h27>do arquivo:</h27>
+    <h28>Especificar um arquivo DWG como logotipo</h28>
+    <h29>Disponível na versão completa</h29>
+    <h30>Usar campos</h30>
+    <h31>Cargos</h31>
+    <h32>Editar a lista de cargos do usuário</h32>
+    <h33>Adicionar cargo ao carimbo</h33>
+    <h34>Remover cargo do carimbo</h34>
+    <h35>Cargos no carimbo</h35>
+    <h36>Mover o cargo uma linha para cima</h36>
+    <h37>Mover o cargo uma linha para baixo</h37>
+    <h38>Executar o plugin "Campos"</h38>
+    <h39>Altura do texto em todas as células do carimbo. O padrão é 2,5, que corresponde à ESKD GOST 2.304-81 "Fontes para desenho"</h39>
+    <h40>Altura adicional do texto. É definida em células como "Designação do documento", "Fase", "Folha" etc., o que confere expressividade e legibilidade ao carimbo. O padrão é 3,5, que corresponde à ESKD GOST 2.304-81 "Fontes para desenho"</h40>
+    <h41>Especifique um bloco definido neste desenho para inseri-lo no carimbo como logotipo</h41>
+    <h42>O arquivo DWG especificado será adicionado ao desenho atual como um bloco, que será inserido no carimbo como logotipo. O nome do arquivo será usado como nome do bloco. Se um bloco com esse nome já existir no desenho atual, será usado o bloco do desenho</h42>
+    <h43>Cargos</h43>
+    <h44>Cargo</h44>
+    <h45>Campos</h45>
+    <h46>Sobrenomes</h46>
+    <h47>Padrão</h47>
+    <h48>Personalizados</h48>
+    <h49>Cargo</h49>
+    <h50>Adicionar novo cargo</h50>
+    <h51>Remover o cargo selecionado</h51>
+    <h52>Sobrenome</h52>
+    <!--todo remove after 3.0.0.0-->
+    <h53>GOST R 21.1101-2013</h53>
+    <h54>Anexo Z</h54>
+    <h55>Campo 1</h55>
+    <h56>Campo 2</h56>
+    <h57>Campo 3</h57>
+    <h58>Campo 6</h58>
+    <h59>Campo 9</h59>
+    <h60>Anexo L</h60>
+    <h61>Adicionar ao desenho</h61>
+    <h62>Adicionar os campos preenchidos ao desenho</h62>
+    <h63>Do arquivo</h63>
+    <h64>Carregar e definir os valores dos campos a partir do arquivo DWG especificado</h64>
+    <h65>Salvar</h65>
+    <h66>Salvar os campos preenchidos como padrão</h66>
+    <h67>Carregar</h67>
+    <h68>Carregar os valores de campos salvos</h68>
+    <h69>Adicionar campos ao carimbo</h69>
+    <h70>Definir valores padrão</h70>
+    <h71>Obter o valor do desenho</h71>
+    <!--todo remove after 3.0.0.0-->
+    <h72>DSTU B A.2.4-4:2009</h72>
+    <!--todo remove after 3.0.0.0-->
+    <h73>STB 2255-2012</h73>
+    <h74>Atualizar no desenho</h74>
+    <h75>Você pode usar quebras de linha nos campos 2, 3 e 9. Para adicionar uma quebra de linha, use a tecla Enter</h75>
+    <h76>Data</h76>
+    <h77>A data é adicionada se houver um cargo na linha</h77>
+    <h78>Fator de largura do campo inserido no carimbo. O fator de largura será aplicado diretamente ao campo inserido, independentemente do fator de largura definido no estilo de texto. Valores válidos de 0,01 a 100,0. Para não alterar o fator de largura, especifique o valor 0</h78>
+    <h79>Linhas finas:</h79>
+    <h80>Linhas grossas:</h80>
+    <h81>A alteração da espessura das linhas ocorre após a criação do carimbo. A espessura das linhas finas é alterada processando a espessura das linhas do carimbo original, no qual o valor padrão das linhas finas é "PorBloco"</h81>
+    <h82>A alteração da espessura das linhas ocorre após a criação do carimbo. A espessura das linhas grossas é alterada processando a espessura das linhas do carimbo original, no qual o valor padrão das linhas grossas é "0,40 mm"</h82>
+    <h83>F.L.</h83>
+    <h84>Fator de largura</h84>
+    <h85>Assinaturas</h85>
+    <h86>Seleção do bloco de assinatura</h86>
+    <h87>Ativar ou desativar o uso da assinatura</h87>
+    <h88>Sobrenome:</h88>
+    <h89>Arquivo com o bloco de assinatura:</h89>
+    <h90>Nome do bloco de assinatura:</h90>
+    <h91>Bloco de assinatura:</h91>
+    <h92>O arquivo especificado não foi encontrado!</h92>
+    <h93>Especificar o arquivo e o bloco de assinatura</h93>
+    <h94>Adicionar nova assinatura</h94>
+    <h95>Remover a assinatura selecionada</h95>
+    <h96>Adicionar assinaturas ao carimbo</h96>
+    <h97>Inserir assinaturas</h97>
+    <h98>Executar o plugin "Assinaturas"</h98>
+    <h99>A assinatura é inserida no canto inferior esquerdo da célula que fica à direita da célula com o sobrenome. A escala das tabelas (carimbos) não é considerada!</h99>
+    <h100>Camada padrão</h100>
+    <h101>Copiar o nome do layout para o carimbo</h101>
+    <h102>Você pode ampliar a imagem com a roda do mouse, fazer pan mantendo pressionado o botão esquerdo do mouse e ajustar a imagem à janela clicando com o botão direito do mouse</h102>
+    <msg1>O arquivo de configuração está corrompido!\nExecute o Configurador ModPlus</msg1>
+    <msg2>Ocorreu um erro!</msg2>
+    <msg3>O valor</msg3>
+    <msg4>já está na lista de valores padrão</msg4>
+    <msg5>A lista contém valores repetidos!</msg5>
+    <msg6>Os valores preenchidos foram atualizados no desenho atual\nNão se esqueça de executar a regeneração para atualizar os valores nos carimbos</msg6>
+    <msg7>Os valores preenchidos foram adicionados ao desenho</msg7>
+    <msg8>Salvo</msg8>
+    <msg9>Selecione o carimbo:</msg9>
+    <msg10>Seleção inválida! Isto não é um carimbo!</msg10>
+    <msg11>Especifique o objeto para obter o texto (texto, linha de chamada múltipla, tabela):</msg11>
+    <msg12>Especifique a célula:</msg12>
+    <msg13>Adicionar campos do arquivo</msg13>
+    <msg14>No arquivo</msg14>
+    <msg15>não foram encontrados campos</msg15>
+    <msg16>O arquivo foi criado em uma versão mais recente do AutoCAD!</msg16>
+    <msg17>Não foi possível copiar o arquivo para o disco!\nTalvez não haja direitos de administrador</msg17>
+    <msg18>Não foi possível copiar a tabela do arquivo de recursos</msg18>
+    <msg19>Não é possível adicionar mais de</msg19>
+    <msg20>cargos</msg20>
+    <msg21>O carimbo não corresponde a um carimbo ModPlus!\nNúmero de células inválido</msg21>
+    <msg22>A célula "Organização" contém um logotipo\nSubstituir por um campo?</msg22>
+    <msg23>Usar arquivo DWG como logotipo</msg23>
+    <msg24>Ponto de inserção:</msg24>
+    <msg25>Valores dos campos exportados</msg25>
+    <msg26>No momento, está selecionada a área de trabalho com a tag "{0}", mas o arquivo carregado especifica a tag "{1}".\nContinuar o carregamento?</msg26>
+    <msg27>O arquivo selecionado não é um arquivo de armazenamento de campos</msg27>
+    <msg28>Na versão limitada estão disponíveis no máximo três assinaturas!</msg28>
+    <msg29>Não há assinaturas disponíveis para inserção no carimbo!</msg29>
+    <msg30>Não há assinaturas na lista!</msg30>
+    <msg31>O arquivo selecionado não é um arquivo de armazenamento de assinaturas!</msg31>
+  </mpStamps>
+</ModPlus>

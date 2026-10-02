@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprFamilyDuplicateFixer
+    LocalName="Correção de duplicatas"
+    Description="Automação da correção de duplicatas de famílias ou tipos"
+    FullDescription="Cópia de tipos das famílias duplicadas para as famílias principais, cópia dos valores dos parâmetros de tipo, atualização das instâncias de família e exclusão das famílias duplicadas. Também é possível substituir tipos de família duplicados e excluir os tipos substituídos">
+    <h1>Copiar tipos</h1>
+    <h3>Substituir instâncias de família</h3>
+    <h4>Excluir famílias duplicadas</h4>
+    <h5>Executar</h5>
+    <h6>Adicionar par de famílias "Duplicata - Família principal"</h6>
+    <h7>Selecione a família duplicada</h7>
+    <h8>Selecione a família principal (para a qual os tipos serão copiados)</h8>
+    <h9>Aceitar</h9>
+    <h10>Na categoria atual não foram encontradas famílias adequadas das quais a família selecionada seja duplicata.
+Uma verificação adicional é feita pelos parâmetros de tipo – o par de famílias semelhantes deve ter os mesmos parâmetros de tipo</h10>
+    <h11>Copiar os valores dos parâmetros da instância de família substituída</h11>
+    <h12>Definir o tipo da família principal</h12>
+    <h13>A lista de famílias principais exibe as famílias da mesma categoria da família duplicada selecionada, cujos tipos são intercambiáveis. A quantidade e os nomes dos parâmetros de tipo devem ser iguais.</h13>
+    <h14>Correção de famílias duplicadas</h14>
+    <h15>Correção de tipos duplicados</h15>
+    <h16>Adicionar famílias</h16>
+    <h17>Excluir os tipos substituídos da família</h17>
+    <h18>A lista contém apenas famílias com mais de um tipo</h18>
+    <m1>Nenhum tipo foi selecionado na lista de famílias processadas!</m1>
+    <m2>Criação do tipo "{0}" para a família "{1}"</m2>
+    <m3>Cópia dos valores dos parâmetros do tipo "{0}" da família "{1}" para a família "{2}"</m3>
+    <m4>Substituição do tipo da instância da família "{0}" {1}</m4>
+    <m5>Substituição do tipo "{0}" pelo tipo "{1}" na família "{2}"</m5>
+    <m6>Tipo "{0}" substituído pelo tipo "{1}"</m6>
+    <m7>Exclusão do tipo "{0}" na família "{1}"</m7>
+    <m8>Tipo "{0}" excluído na família "{1}"</m8>
+    <e1>O tipo "{0}" não foi criado na família "{1}"</e1>
+    <e2>Não foi possível carregar a família "{0}" no documento</e2>
+    <e3>O parâmetro "{0}" não foi encontrado no tipo "{1}" da família "{2}"</e3>
+    <e4>Tipo "{0}" não encontrado na família "{1}"</e4>
+    <e5>Não foi possível excluir a família "{0}" porque há instâncias dessa família no modelo</e5>
+    <e6>Erro ao substituir o tipo na família "{0}": {1}</e6>
+    <e7>Erro ao excluir o tipo "{0}" na família "{1}": {2}</e7>
+    <t1>Direção de processamento: a família à esquerda é a duplicata, a família à direita é a família principal</t1>
+    <t2>Adicionar à lista de processamento um par de famílias não identificado pela busca padrão de duplicatas</t2>
+    <t3>Na família principal serão criados os novos tipos que existem e estão marcados na família duplicada e não existem na família principal</t3>
+    <t5>As instâncias da família duplicada dos tipos marcados serão substituídas por instâncias da família principal com o tipo correspondente. Se a família principal não tiver o tipo necessário, a substituição da instância da família duplicada será ignorada</t5>
+    <t6>As famílias duplicadas sem instâncias no modelo serão excluídas</t6>
+    <t7>Os valores dos parâmetros de instância serão copiados da família duplicada substituída para a família principal que a substitui</t7>
+    <t8>Nas instâncias da família duplicada serão definidos os tipos da família principal selecionados nas listas suspensas</t8>
+    <t9>Adicionar à lista famílias não identificadas pela busca padrão de duplicatas</t9>
+    <t10>À esquerda ficam os tipos da família, à direita as listas suspensas para substituição do tipo. Se nenhum tipo for selecionado na lista, a substituição não será feita</t10>
+    <t11>Limpar seleção</t11>
+  </mprFamilyDuplicateFixer>
+</ModPlus>

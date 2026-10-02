@@ -150,4 +150,37 @@
                      Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
         </Grid>
     </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceFrFrCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderRowBackgroundTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <TextBox Text="{Binding Entry.Values[fr-FR].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                     Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspacePtBrCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderRowBackgroundTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <TextBox Text="{Binding Entry.Values[pt-BR].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                     Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="WorkspaceUzLatnUzCellTemplate">
+        <Grid>
+            <ContentControl Content="{Binding}"
+                            ContentTemplate="{StaticResource WorkspaceModuleHeaderRowBackgroundTemplate}"
+                            Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=ModuleHeader}" />
+            <TextBox Text="{Binding Entry.Values[uz-Latn-UZ].Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TranslationEntryValueTextBoxStyle}"
+                     Visibility="{Binding Kind, Converter={StaticResource WorkspaceRowKindVisibilityConverter}, ConverterParameter=Entry}" />
+        </Grid>
+    </DataTemplate>
 </ResourceDictionary>
