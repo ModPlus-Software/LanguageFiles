@@ -321,6 +321,20 @@
     <msg107>Processing strategy "{0}" ({1}). Rules: {2}</msg107>
     <msg108>Rule {0} of strategy "{1}" was not processed</msg108>
     <msg109>Processing interrupted by an error</msg109>
+    <msg110>Element "{0}" must have exactly one of the attributes Id or Name</msg110>
+    <msg111>The Id attribute of element "{0}" must be an identifier (GUID): "{1}"</msg111>
+    <msg112>The Id attribute of element "{0}" must be an integer: "{1}"</msg112>
+    <msg113>The Name attribute of element "{0}" is empty</msg113>
+    <msg114>Unknown attribute "{0}" of element "{1}" skipped</msg114>
+    <msg115>File "{0}" contains several configurations with identifier "{1}". Specify the configuration by name</msg115>
+    <msg116>Several strategies with identifier "{0}" found. Specify the strategy by name</msg116>
+    <msg117>Strategy "{0}" has several rules with number {1}. Specify the rule by name</msg117>
+    <msg118>Rule "{0}" not found in strategy "{1}"</msg118>
+    <msg119>Several rules "{0}" found in strategy "{1}". All of them will be processed</msg119>
+    <msg120>None of the rules from the instruction were found in strategy "{0}"</msg120>
+    <msg121>Strategy "{0}" is specified in the instruction more than once. The rules are combined</msg121>
+    <msg122>Rules of strategy "{0}": {1}</msg122>
+    <msg123>No view matches the mask "{0}"</msg123>
     <err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
     <err2>The number of opening round brackets must equal the number of closing ones</err2>
     <err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -712,5 +726,7 @@
     <t241>Select strategy data source Excel file</t241>
     <t242>Clear strategy data source Excel file (the file itself is not deleted)</t242>
     <t243>Elements of the categories specified in the rule columns – both for conditional source and for target elements – will be collected from the linked files. They are then processed on a par with the elements of the current model: for example, for the InMass strategy these can be Masses, for the InSolid strategy – elements that have a solid, for the ManyToMany strategy – conditional source elements. Parameter values of elements from linked files can be used in formulas, but writing a value to a parameter of an element from a linked file is not possible – such a write is marked in the report as an error</t243>
+    <t244>Copy identifier</t244>
+    <t245>Copy name</t245>
   </mprParametrization>
 </ModPlus>
