@@ -15,5 +15,6 @@ public static class TextNormalizer
             .Replace("«", "\"")
             .Replace("»", "\"")
             .Replace("“", "\"")
+            .Replace("„", "\"")
             .Replace("”", "\"");
 }
