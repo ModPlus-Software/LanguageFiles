@@ -744,5 +744,9 @@
     <t243>Les éléments des catégories indiquées dans les colonnes des règles seront collectés dans les fichiers liés, tant pour les éléments sources conditionnels que pour les éléments cibles. Ils sont ensuite traités au même titre que les éléments du modèle actuel : par exemple, pour la stratégie InMass, il peut s'agir de volumes, pour la stratégie InSolid, d'éléments possédant un solide, pour la stratégie ManyToMany, d'éléments sources conditionnels. Les valeurs des paramètres des éléments des fichiers liés peuvent être utilisées dans les formules, mais il est impossible d'écrire une valeur dans un paramètre d'un élément d'un fichier lié : une telle écriture est signalée comme erreur dans le rapport</t243>
     <t244>Copier l'identifiant</t244>
     <t245>Copier le nom</t245>
+    <t246>Déterminer l'appartenance des familles uniquement par le point de calcul</t246>
+    <t247>S'applique aux stratégies InRoom et InSpace. Si une occurrence de famille possède un point de calcul de pièce et que ce point se trouve dans une pièce (un espace), la famille appartient toujours à cette pièce.</t247>
+    <t248>Option activée – la famille appartient uniquement à la pièce contenant le point de calcul, sans vérification géométrique. Le traitement est plus rapide, mais une famille qui coupe plusieurs pièces ne sera attribuée qu'à une seule d'entre elles.</t248>
+    <t249>Option désactivée – la famille appartient en plus à toutes les pièces dans lesquelles elle se trouve géométriquement, selon l'algorithme de recherche d'inclusion des solides sélectionné. Le résultat est plus complet, mais le traitement est plus long. Les familles sans point de calcul et celles dont le point de calcul ne se trouve dans aucune pièce sont toujours vérifiées par la géométrie.</t249>
   </mprParametrization>
 </ModPlus>

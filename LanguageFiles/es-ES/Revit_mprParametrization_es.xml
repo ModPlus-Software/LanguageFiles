@@ -744,5 +744,9 @@
     <t243>Se recopilarán de los archivos vinculados los elementos de las categorías especificadas en las columnas de las reglas, tanto para los elementos de origen condicionales como para los elementos de destino. Después se procesan al igual que los elementos del modelo actual: por ejemplo, para la estrategia InMass pueden ser elementos formativos, para la estrategia InSolid, elementos que tienen un sólido, para la estrategia ManyToMany, elementos de origen condicionales. Los valores de los parámetros de los elementos de archivos vinculados se pueden usar en las fórmulas, pero no es posible guardar un valor en un parámetro de un elemento de un archivo vinculado: esa escritura se marca en el informe como error</t243>
     <t244>Copiar identificador</t244>
     <t245>Copiar nombre</t245>
+    <t246>Determinar la pertenencia de familias solo por el punto de cálculo</t246>
+    <t247>Se aplica a las estrategias InRoom e InSpace. Si un ejemplar de familia tiene un punto de cálculo de habitación y este se encuentra dentro de una habitación (espacio), la familia siempre pertenece a esa habitación.</t247>
+    <t248>Opción activada – la familia pertenece solo a la habitación en la que se encuentra el punto de cálculo y no se realiza la comprobación por geometría. El procesamiento es más rápido, pero una familia que interseca varias habitaciones se asignará solo a una de ellas.</t248>
+    <t249>Opción desactivada – la familia pertenece además a todas las habitaciones en las que entra por geometría según el algoritmo de búsqueda de inclusiones de sólidos seleccionado. El resultado es más completo, pero el procesamiento tarda más. Las familias sin punto de cálculo y las familias cuyo punto de cálculo no está en ninguna habitación siempre se comprueban por geometría.</t249>
   </mprParametrization>
 </ModPlus>
