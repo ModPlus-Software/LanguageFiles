@@ -1803,6 +1803,7 @@ Para desativar totalmente a alteração automática, desmarque essa opção nas 
     <i5-2>Para usar a condição "Termina com", selecione a condição "Contém" e adicione o caractere "*" ao início do valor. Por exemplo, "*Wall".</i5-2>
     <i5-3>Para usar a condição "Não começa com", selecione a condição "Não contém" e adicione o caractere "*" ao final do valor. Por exemplo, "Wall*".</i5-3>
     <i5-4>Para usar a condição "Não termina com", selecione a condição "Não contém" e adicione o caractere "*" ao início do valor. Por exemplo, "*Wall".</i5-4>
+    <!--todo remove after 39.2.2-->
     <i6>A verificação de valores de texto diferencia maiúsculas de minúsculas.</i6>
     <i7>Parâmetros do tipo "sim/não" são verificados como número inteiro (0 – não, 1 – sim).</i7>
     <i8>Todas as condições simples aninhadas de uma condição de grupo são verificadas com o operador "E", ou seja, todas as condições aninhadas devem ser atendidas.</i8>
@@ -1826,6 +1827,7 @@ Para desativar totalmente a alteração automática, desmarque essa opção nas 
     <i18>As condições "Presença do parâmetro" e "Ausência do parâmetro", ao verificar o parâmetro especial "InRebarSystem" (o vergalhão faz parte de um sistema de vergalhões), verificam, respectivamente, se o vergalhão é ou não parte de um sistema de vergalhões. Ou seja, a condição "Presença do parâmetro" interpreta a verificação "O vergalhão faz parte de um sistema de vergalhões", e a condição "Ausência do parâmetro" interpreta a verificação "O vergalhão não faz parte de um sistema de vergalhões".</i18>
     <i19>O parâmetro especial DocumentTitle retorna o nome do documento atual. O valor do parâmetro especial DocumentTitle é verificado segundo as regras para texto. Se o documento não estiver salvo ou estiver desanexado, será retornado o valor padrão ou uma string vazia.</i19>
     <i20>A condição "Somente leitura" com o valor "Não" significa que o elemento será processado se o parâmetro estiver disponível para edição. A condição "Somente leitura" com o valor "Sim" significa que o elemento será processado se o parâmetro não estiver disponível para edição. O parâmetro pode estar indisponível para edição se for um parâmetro de sistema não editável (por exemplo, o parâmetro "Volume"), se o elemento estiver em um workset inacessível e em várias outras situações.</i20>
+    <i21>Por padrão, a verificação de valores de texto diferencia maiúsculas de minúsculas (opção "Aa"). Para as condições "Igual", "Diferente", "Contém", "Não contém" é possível selecionar a opção "aa" para ignorar maiúsculas e minúsculas. Na representação em texto do filtro, essa condição é marcada com "?" após o nome do parâmetro, por exemplo: Marca?=A-1.</i21>
     <et1>Igual</et1>
     <et2>Maior</et2>
     <et3>Menor</et3>
@@ -1837,6 +1839,8 @@ Para desativar totalmente a alteração automática, desmarque essa opção nas 
     <et9>Não contém</et9>
     <et10>Ausência do parâmetro</et10>
     <et11>Somente leitura</et11>
+    <ic1>diferenciar maiúsculas e minúsculas</ic1>
+    <ic2>ignorar maiúsculas e minúsculas</ic2>
     <tt2>Para trabalhar com o servidor modplus.org, informe seu endereço de e-mail. O endereço de e-mail é necessário para identificar você no servidor. Recomenda-se usar o endereço de e-mail informado no cadastro no site modplus.org</tt2>
     <tt3>É necessário informar o login na guia "Registro"! (Configurador do ModPlus)</tt3>
     <tt4>O endereço de e-mail informado não passou na verificação!\nOu você digitou o endereço de e-mail incorretamente, ou seu provedor de e-mail é muuuuito exclusivo =)</tt4>

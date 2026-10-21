@@ -1803,6 +1803,7 @@ To disable the automatic change completely, clear that option in the ModPlus set
     <i5-2>To use the "Ends on" condition, select the "Contains" condition and add a "*" at the beginning of the value. For example, "*Wall".</i5-2>
     <i5-3>To use the "Not starts with" condition, select the "Not contains" condition and add an "*" to the end of the value. For example, "Wall*".</i5-3>
     <i5-4>To use the "Not ends with " condition, select the "Not contains" condition and add a "*" sign to the beginning of the value. For example, "*Wall".</i5-4>
+    <!--todo remove after 39.2.2-->
     <i6>String values are case-sensitive.</i6>
     <i7>Parameters of type "on/off" are checked as an integer (0-off, 1-on).</i7>
     <i8>All simple nested conditions of a group condition are checked with the "AND" operator – i.e. all nested conditions must match.</i8>
@@ -1826,6 +1827,7 @@ To disable the automatic change completely, clear that option in the ModPlus set
     <i18>The conditions "Presence of parameter" and "Absence of parameter" when checking the special parameter "InRebarSystem" (rebar is in a rebar system) determine respectively whether the rebar is part of a rebar system or not. That is, the condition "Parameter exists" interprets the check as "Rebar is part of a rebar system", and the condition "Parameter does not exist" interprets the check as "Rebar is not part of a rebar system".</i18>
     <i19>The special parameter DocumentTitle returns the name of the current document. The value of the special parameter DocumentTitle is checked according to string rules. If the document is not saved or is detached, the default value or an empty string is returned.</i19>
     <i20>The condition "Read-only" with the value "No" means that the element will be processed if the parameter is available for editing. The condition "Read-only" with the value "Yes" means that the element will be processed if the parameter is not available for editing. A parameter may be unavailable for editing if it is a non-editable system parameter (for example, the "Volume" parameter), the element is located in an inaccessible workset, or under other conditions.</i20>
+    <i21>String values are case-sensitive by default ("Aa" option). For the conditions "Equal", "Not equal", "Contains", "Not contains" you can select the "aa" option to compare values case-insensitively. In the string representation of the filter such a condition is marked with a "?" after the parameter name, for example: Mark?=A-1.</i21>
     <et1>Equal</et1>
     <et2>More</et2>
     <et3>Less</et3>
@@ -1837,6 +1839,8 @@ To disable the automatic change completely, clear that option in the ModPlus set
     <et9>Not contains</et9>
     <et10>Absence of parameter</et10>
     <et11>Read-only</et11>
+    <ic1>case-sensitive</ic1>
+    <ic2>case-insensitive</ic2>
     <tt2>To work with the modplus.org server, enter your email address. A mail address is required to identify you on the server. It is recommended to use the email address specified at the registration on modplus.org</tt2>
     <tt3>You must enter your Login in the "Registration" tab! (ModPlus Configurator)</tt3>
     <tt4>The specified mail address did not pass the verification!\nOr you have made a mistake in specifying the mail address or you have an very unique mail hoster =)</tt4>
