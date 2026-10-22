@@ -169,11 +169,56 @@
     <materialExists>目标文档中已存在材质 "{0}"。\n是否执行复制并替换？</materialExists>
     <materialDuplicateActionSettings>材质名称冲突时的行为</materialDuplicateActionSettings>
     <materialDuplicateActionTooltip>当材质名称冲突并选择"替换"选项时，插件将执行以下算法：目标文档中的旧材质将被更新，并获得新材质的所有属性。材质名称将保持不变。所有使用该材质的元素都会自动获得更新后的属性。</materialDuplicateActionTooltip>
+    <colorSchemesDuplicateActionSettings>颜色方案名称冲突时的行为</colorSchemesDuplicateActionSettings>
+    <colorSchemesDuplicateActionTooltip>当颜色方案名称冲突并选择"替换"选项时，插件将执行以下算法：目标文档中已有的颜色方案将被更新，并获得新方案的参数、条目和颜色。方案的标识和名称将保持不变，因此所有使用该方案的视图和视图样板都会自动获得更新后的数据。区域颜色方案无法替换：此类方案与面积方案绑定。</colorSchemesDuplicateActionTooltip>
+    <colorSchemeExists>目标文档中已存在颜色方案 "{0}"。{1}是否执行复制并替换？</colorSchemeExists>
+    <colorSchemeReplaceNotSupported>颜色方案 "{0}" 无法自动替换：区域方案与面积方案绑定。</colorSchemeReplaceNotSupported>
+    <colorSchemeReplaceError>无法替换颜色方案 "{0}" 的内容。错误: "{1}"。</colorSchemeReplaceError>
     <closeOpenedSchedule>关闭已打开的明细表</closeOpenedSchedule>
     <searchModeLabel>比较模式：</searchModeLabel>
     <searchModeNormal>普通</searchModeNormal>
     <searchModeRegex>正则表达式</searchModeRegex>
     <patternCopyWarning>无法将图案 "{0}" (id: {1}) 复制到目标文档。过滤器覆盖将应用时不包含此图案。</patternCopyWarning>
     <viewTemplateFiltersCopyError>无法将过滤器应用到复制的视图样板 "{0}"。错误: "{1}"。</viewTemplateFiltersCopyError>
+    <filterReplaceInViewWarning>无法为视图 "{0}" 重新分配过滤器。错误: "{1}"。</filterReplaceInViewWarning>
+    <filterReplaceError>无法完成过滤器替换。错误: "{0}"。</filterReplaceError>
+    <assemblyExists>目标文档中已存在组合 "{0}"。{1}是否执行替换复制？</assemblyExists>
+    <assemblyMemberCopyError>无法复制组合 "{2}" 的元素 "{0}" (id: {1})。错误: "{3}"。</assemblyMemberCopyError>
+    <assemblyRenameTransaction>重命名组合</assemblyRenameTransaction>
+    <assemblyTypeNameSetError>无法设置组合类型名称 "{0}"。错误: "{1}"。</assemblyTypeNameSetError>
+    <insertionReference>插入</insertionReference>
+    <insertionReferencePrompt>插入坐标系：</insertionReferencePrompt>
+    <insertionReferenceInternalOrigin>内部原点</insertionReferenceInternalOrigin>
+    <insertionReferenceProjectBasePoint>项目基点</insertionReferenceProjectBasePoint>
+    <insertionReferenceSharedCoordinates>共享坐标</insertionReferenceSharedCoordinates>
+    <insertionReferenceLog>插入坐标系: "{0}"。偏移: X={1:F4}, Y={2:F4}, Z={3:F4}</insertionReferenceLog>
+    <sheetsGroupName>图纸</sheetsGroupName>
+    <sheetContentCopySettings>复制图纸内容</sheetContentCopySettings>
+    <copySheetParameterValues>复制图纸参数值</copySheetParameterValues>
+    <copyTitleBlocks>复制标题栏</copyTitleBlocks>
+    <copyTitleBlockParameterValues>复制标题栏参数值</copyTitleBlockParameterValues>
+    <copyModelViews>复制模型视图</copyModelViews>
+    <copySchedules>复制明细表</copySchedules>
+    <copyLegends>复制图例</copyLegends>
+    <copyImageView>复制渲染的光栅图像</copyImageView>
+    <copyDraftingViews>复制绘图视图</copyDraftingViews>
+    <copyTextNotes>复制文本</copyTextNotes>
+    <copyGenericAnnotations>复制典型注释</copyGenericAnnotations>
+    <copyDetailLines>复制详图线</copyDetailLines>
+    <copyGuideGrids>复制参考平面网格</copyGuideGrids>
+    <copySheetRevisions>复制并设置修订</copySheetRevisions>
+    <copyRasterImages>复制光栅图像（+PDF）</copyRasterImages>
+    <copySheetsDialogTitle>复制图纸</copySheetsDialogTitle>
+    <useExisting>使用现有</useExisting>
+    <createCopy>创建副本</createCopy>
+    <useExistingForAll>使用现有（所有情况）</useExistingForAll>
+    <createCopyForAll>创建副本（所有情况）</createCopyForAll>
+    <legendExistsMessage>目标文档"{0}"中已有图例"{1}"</legendExistsMessage>
+    <legendConflictHint>选择：使用目标文档中的现有图例，或创建并使用源文档图例的副本</legendConflictHint>
+    <draftingViewExistsMessage>目标文档"{0}"中已有绘图视图"{1}"</draftingViewExistsMessage>
+    <draftingViewConflictHint>选择：使用目标文档中的现有绘图视图，或创建并使用源文档绘图视图的副本</draftingViewConflictHint>
+    <continueWithoutLegendsMessage>要在目标文档"{0}"中复制图例，需要至少创建一个图例</continueWithoutLegendsMessage>
+    <continueWithoutLegendsHint>是否继续为此文档复制图纸？</continueWithoutLegendsHint>
+    <sheetViewCopyError>图纸：{0}。视图：{1}。错误：{2}。</sheetViewCopyError>
   </mprCopyElementsToOpenDocuments>
 </ModPlus>

@@ -65,6 +65,7 @@
     <positioningSharedCoordinates>通过共享坐标</positioningSharedCoordinates>
     <positioningOriginToOrigin>原点到原点</positioningOriginToOrigin>
     <positioningCenterToCenter>中心到中心</positioningCenterToCenter>
+    <positioningProjectBasePoint>项目基点对项目基点</positioningProjectBasePoint>
     <onAddLoadImmediately>立即加载</onAddLoadImmediately>
     <onAddAddUnloaded>以卸载状态添加</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>未找到链接文件：{0}</handlerLinkFileNotFoundFormat>
@@ -95,5 +96,39 @@
     <changeInstanceWorksetErrorFormat>更改实例工作集时发生错误：{0}，错误：{1}</changeInstanceWorksetErrorFormat>
     <addFromServerErrorFormat>从 Revit Server 添加链接时发生错误</addFromServerErrorFormat>
     <diffWorkset>*不同*</diffWorkset>
+    <linkWorksetsTitle>链接工作集</linkWorksetsTitle>
+    <linkWorksetsColumnHeader>工作集</linkWorksetsColumnHeader>
+    <worksetsReloadWarningText>更改已打开的工作集会重新加载链接：将清除撤销历史记录，未保存的共享坐标更改将丢失。</worksetsReloadWarningText>
+    <worksetsStateUnknownText>工作集状态未知，因为链接已卸载。应用时将加载链接。</worksetsStateUnknownText>
+    <invertSelectionTooltip>反选</invertSelectionTooltip>
+    <worksetOpenColumnHeader>打开</worksetOpenColumnHeader>
+    <linkWorksetsNoWorksetsMessage>链接“{0}”不包含工作集。\n链接的模型未使用工作共享（worksharing），或工作集不可用。</linkWorksetsNoWorksetsMessage>
+    <linkWorksetsCanceledLogFormat>已取消更改链接“{0}”的工作集。</linkWorksetsCanceledLogFormat>
+    <linkWorksetsUnchangedLogFormat>链接“{0}”的工作集未更改。</linkWorksetsUnchangedLogFormat>
+    <linkWorksetsAppliedLogFormat>已应用链接“{0}”的工作集。</linkWorksetsAppliedLogFormat>
+    <linkWorksetsApplyErrorLogFormat>无法应用链接“{0}”的工作集：{1}</linkWorksetsApplyErrorLogFormat>
+    <linkWorksetsManageErrorLogFormat>管理链接“{0}”的工作集时出错：{1}</linkWorksetsManageErrorLogFormat>
+    <directoryNotFoundLogFormat>未找到文件夹：{0}</directoryNotFoundLogFormat>
+    <linkWorksetsLinkNotFoundWarningFormat>读取工作集时未在文档中找到链接“{0}”。</linkWorksetsLinkNotFoundWarningFormat>
+    <linkWorksetsNotWorksharedInfoFormat>链接的模型“{0}”未使用工作共享——没有工作集。</linkWorksetsNotWorksharedInfoFormat>
+    <linkWorksetsReadErrorWarningFormat>无法读取链接“{0}”的工作集。已加载：{1}；文件读取错误：{2}。</linkWorksetsReadErrorWarningFormat>
+    <excelListName>链接</excelListName>
+    <excelDialogFilter>Excel 文件 (*.xlsx)|*.xlsx</excelDialogFilter>
+    <exportToExcelButton>导出到 Excel</exportToExcelButton>
+    <importFromExcelButton>从 Excel 导入</importFromExcelButton>
+    <exportToExcelCompletedLogFormat>链接已导出到 Excel。链接数：{0}</exportToExcelCompletedLogFormat>
+    <exportToExcelErrorLogFormat>将链接导出到 Excel 时出错：{0}</exportToExcelErrorLogFormat>
+    <importFromExcelCompletedLogFormat>已从 Excel 导入链接。已添加：{0}，文件错误：{1}，添加错误：{2}</importFromExcelCompletedLogFormat>
+    <importFromExcelErrorLogFormat>从 Excel 导入链接时出错：{0}</importFromExcelErrorLogFormat>
+    <importFromExcelRowInvalidPathFormat>第 {0} 行：未指定链接路径</importFromExcelRowInvalidPathFormat>
+    <importFromExcelRowUnsupportedExtensionFormat>第 {0} 行：不支持文件扩展名"{1}"</importFromExcelRowUnsupportedExtensionFormat>
+    <importFromExcelRowDuplicateFormat>第 {0} 行：链接已存在于文档或文件 {1} 中</importFromExcelRowDuplicateFormat>
+    <linkItemNullError>未指定链接。</linkItemNullError>
+    <worksetInvalidIdError>工作集 ID 无效。</worksetInvalidIdError>
+    <documentNotWorksharedError>文档未使用工作共享 (worksharing)。</documentNotWorksharedError>
+    <linkWorksetsOnlyRevitError>仅 Revit 链接支持工作集配置。</linkWorksetsOnlyRevitError>
+    <linkWorksetsApplyFailedError>无法应用工作集配置。</linkWorksetsApplyFailedError>
+    <linkWorksetsNestedNotSupportedError>嵌套链接不支持工作集配置。</linkWorksetsNestedNotSupportedError>
+    <linkWorksetsMultipleOpenDocumentsError>该链接已加载到多个打开的文档中，无法重新加载。</linkWorksetsMultipleOpenDocumentsError>
   </mprLinksManager>
 </ModPlus>

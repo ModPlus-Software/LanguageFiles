@@ -65,6 +65,7 @@
     <positioningSharedCoordinates>By Shared Coordinates</positioningSharedCoordinates>
     <positioningOriginToOrigin>Origin to Origin</positioningOriginToOrigin>
     <positioningCenterToCenter>Center to Center</positioningCenterToCenter>
+    <positioningProjectBasePoint>Project Base Point to Project Base Point</positioningProjectBasePoint>
     <onAddLoadImmediately>Load immediately</onAddLoadImmediately>
     <onAddAddUnloaded>Add unloaded</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Link file not found: {0}</handlerLinkFileNotFoundFormat>
@@ -95,5 +96,39 @@
     <unloadForAllMenuItem>For all users</unloadForAllMenuItem>
     <operationUnloadLocallyGenitive>local unloading</operationUnloadLocallyGenitive>
     <unloadLocallyLinksTransaction>Local unload links</unloadLocallyLinksTransaction>
+    <linkWorksetsTitle>Link worksets</linkWorksetsTitle>
+    <linkWorksetsColumnHeader>Worksets</linkWorksetsColumnHeader>
+    <worksetsReloadWarningText>Changing open worksets reloads the link: the undo history is cleared and unsaved shared coordinate changes are lost.</worksetsReloadWarningText>
+    <worksetsStateUnknownText>The worksets state is unknown because the link is unloaded. The link will be loaded when applied.</worksetsStateUnknownText>
+    <invertSelectionTooltip>Invert</invertSelectionTooltip>
+    <worksetOpenColumnHeader>Open</worksetOpenColumnHeader>
+    <linkWorksetsNoWorksetsMessage>Link "{0}" has no worksets.\nThe linked model does not use worksharing or worksets are unavailable.</linkWorksetsNoWorksetsMessage>
+    <linkWorksetsCanceledLogFormat>Changes to link worksets "{0}" were canceled.</linkWorksetsCanceledLogFormat>
+    <linkWorksetsUnchangedLogFormat>Link worksets "{0}" were not changed.</linkWorksetsUnchangedLogFormat>
+    <linkWorksetsAppliedLogFormat>Link worksets "{0}" applied.</linkWorksetsAppliedLogFormat>
+    <linkWorksetsApplyErrorLogFormat>Failed to apply link worksets "{0}": {1}</linkWorksetsApplyErrorLogFormat>
+    <linkWorksetsManageErrorLogFormat>Error managing link worksets "{0}": {1}</linkWorksetsManageErrorLogFormat>
+    <directoryNotFoundLogFormat>Directory not found: {0}</directoryNotFoundLogFormat>
+    <linkWorksetsLinkNotFoundWarningFormat>Link "{0}" not found in the document while reading worksets.</linkWorksetsLinkNotFoundWarningFormat>
+    <linkWorksetsNotWorksharedInfoFormat>Linked model "{0}" does not use worksharing — there are no worksets.</linkWorksetsNotWorksharedInfoFormat>
+    <linkWorksetsReadErrorWarningFormat>Failed to read worksets of link "{0}". Loaded: {1}; file read error: {2}.</linkWorksetsReadErrorWarningFormat>
+    <excelListName>Links</excelListName>
+    <excelDialogFilter>Excel files (*.xlsx)|*.xlsx</excelDialogFilter>
+    <exportToExcelButton>Export to Excel</exportToExcelButton>
+    <importFromExcelButton>Import from Excel</importFromExcelButton>
+    <exportToExcelCompletedLogFormat>Links exported to Excel. Links: {0}</exportToExcelCompletedLogFormat>
+    <exportToExcelErrorLogFormat>Error exporting links to Excel: {0}</exportToExcelErrorLogFormat>
+    <importFromExcelCompletedLogFormat>Links imported from Excel. Added: {0}, file errors: {1}, add errors: {2}</importFromExcelCompletedLogFormat>
+    <importFromExcelErrorLogFormat>Error importing links from Excel: {0}</importFromExcelErrorLogFormat>
+    <importFromExcelRowInvalidPathFormat>Row {0}: link path is not specified</importFromExcelRowInvalidPathFormat>
+    <importFromExcelRowUnsupportedExtensionFormat>Row {0}: file extension "{1}" is not supported</importFromExcelRowUnsupportedExtensionFormat>
+    <importFromExcelRowDuplicateFormat>Row {0}: link already exists in the document or file {1}</importFromExcelRowDuplicateFormat>
+    <linkItemNullError>Link item is null.</linkItemNullError>
+    <worksetInvalidIdError>Invalid workset ID.</worksetInvalidIdError>
+    <documentNotWorksharedError>The document is not workshared.</documentNotWorksharedError>
+    <linkWorksetsOnlyRevitError>Workset configuration is supported for Revit links only.</linkWorksetsOnlyRevitError>
+    <linkWorksetsApplyFailedError>Failed to apply the workset configuration.</linkWorksetsApplyFailedError>
+    <linkWorksetsNestedNotSupportedError>Nested links do not support workset configuration.</linkWorksetsNestedNotSupportedError>
+    <linkWorksetsMultipleOpenDocumentsError>The link is loaded into multiple open documents and cannot be reloaded.</linkWorksetsMultipleOpenDocumentsError>
   </mprLinksManager>
 </ModPlus>

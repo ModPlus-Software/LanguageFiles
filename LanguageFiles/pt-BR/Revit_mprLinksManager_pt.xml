@@ -65,6 +65,7 @@
     <positioningSharedCoordinates>Por coordenadas compartilhadas</positioningSharedCoordinates>
     <positioningOriginToOrigin>Origem a origem</positioningOriginToOrigin>
     <positioningCenterToCenter>Centro a centro</positioningCenterToCenter>
+    <positioningProjectBasePoint>Ponto base do projeto a ponto base do projeto</positioningProjectBasePoint>
     <onAddLoadImmediately>Carregar imediatamente</onAddLoadImmediately>
     <onAddAddUnloaded>Adicionar descarregado</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Arquivo do vínculo não encontrado: {0}</handlerLinkFileNotFoundFormat>
@@ -95,5 +96,39 @@
     <changeInstanceWorksetErrorFormat>Ao alterar o workset da instância: {0}, ocorreu um erro: {1}</changeInstanceWorksetErrorFormat>
     <addFromServerErrorFormat>Erro ao adicionar vínculo do Revit Server</addFromServerErrorFormat>
     <diffWorkset>*VARIA*</diffWorkset>
+    <linkWorksetsTitle>Worksets do vínculo</linkWorksetsTitle>
+    <linkWorksetsColumnHeader>Worksets</linkWorksetsColumnHeader>
+    <worksetsReloadWarningText>Alterar os worksets abertos recarrega o vínculo: o histórico de desfazer é apagado e as alterações não salvas das coordenadas compartilhadas são perdidas.</worksetsReloadWarningText>
+    <worksetsStateUnknownText>O estado dos worksets é desconhecido porque o vínculo está descarregado. Ao aplicar, o vínculo será carregado.</worksetsStateUnknownText>
+    <invertSelectionTooltip>Inverter</invertSelectionTooltip>
+    <worksetOpenColumnHeader>Aberto</worksetOpenColumnHeader>
+    <linkWorksetsNoWorksetsMessage>O vínculo "{0}" não contém worksets.\nO modelo vinculado não usa compartilhamento de trabalho (worksharing) ou os worksets não estão disponíveis.</linkWorksetsNoWorksetsMessage>
+    <linkWorksetsCanceledLogFormat>Alteração dos worksets do vínculo "{0}" cancelada.</linkWorksetsCanceledLogFormat>
+    <linkWorksetsUnchangedLogFormat>Os worksets do vínculo "{0}" não foram alterados.</linkWorksetsUnchangedLogFormat>
+    <linkWorksetsAppliedLogFormat>Worksets do vínculo "{0}" aplicados.</linkWorksetsAppliedLogFormat>
+    <linkWorksetsApplyErrorLogFormat>Falha ao aplicar os worksets do vínculo "{0}": {1}</linkWorksetsApplyErrorLogFormat>
+    <linkWorksetsManageErrorLogFormat>Erro ao gerenciar os worksets do vínculo "{0}": {1}</linkWorksetsManageErrorLogFormat>
+    <directoryNotFoundLogFormat>Pasta não encontrada: {0}</directoryNotFoundLogFormat>
+    <linkWorksetsLinkNotFoundWarningFormat>Vínculo "{0}" não encontrado no documento ao ler os worksets.</linkWorksetsLinkNotFoundWarningFormat>
+    <linkWorksetsNotWorksharedInfoFormat>O modelo vinculado "{0}" não usa compartilhamento de trabalho — não há worksets.</linkWorksetsNotWorksharedInfoFormat>
+    <linkWorksetsReadErrorWarningFormat>Falha ao ler os worksets do vínculo "{0}". Carregado: {1}; erro de leitura do arquivo: {2}.</linkWorksetsReadErrorWarningFormat>
+    <excelListName>Vínculos</excelListName>
+    <excelDialogFilter>Arquivos do Excel (*.xlsx)|*.xlsx</excelDialogFilter>
+    <exportToExcelButton>Exportar para Excel</exportToExcelButton>
+    <importFromExcelButton>Importar do Excel</importFromExcelButton>
+    <exportToExcelCompletedLogFormat>Vínculos exportados para Excel. Vínculos: {0}</exportToExcelCompletedLogFormat>
+    <exportToExcelErrorLogFormat>Erro ao exportar vínculos para Excel: {0}</exportToExcelErrorLogFormat>
+    <importFromExcelCompletedLogFormat>Vínculos importados do Excel. Adicionados: {0}, erros do arquivo: {1}, erros de adição: {2}</importFromExcelCompletedLogFormat>
+    <importFromExcelErrorLogFormat>Erro ao importar vínculos do Excel: {0}</importFromExcelErrorLogFormat>
+    <importFromExcelRowInvalidPathFormat>Linha {0}: caminho do vínculo não especificado</importFromExcelRowInvalidPathFormat>
+    <importFromExcelRowUnsupportedExtensionFormat>Linha {0}: a extensão de arquivo "{1}" não é suportada</importFromExcelRowUnsupportedExtensionFormat>
+    <importFromExcelRowDuplicateFormat>Linha {0}: o vínculo já existe no documento ou no arquivo {1}</importFromExcelRowDuplicateFormat>
+    <linkItemNullError>O vínculo não foi especificado.</linkItemNullError>
+    <worksetInvalidIdError>ID de workset inválido.</worksetInvalidIdError>
+    <documentNotWorksharedError>O documento não usa compartilhamento de trabalho (worksharing).</documentNotWorksharedError>
+    <linkWorksetsOnlyRevitError>A configuração de worksets é suportada apenas para vínculos do Revit.</linkWorksetsOnlyRevitError>
+    <linkWorksetsApplyFailedError>Não foi possível aplicar a configuração dos worksets.</linkWorksetsApplyFailedError>
+    <linkWorksetsNestedNotSupportedError>Vínculos aninhados não suportam configuração de worksets.</linkWorksetsNestedNotSupportedError>
+    <linkWorksetsMultipleOpenDocumentsError>O vínculo está carregado em vários documentos abertos e não pode ser recarregado.</linkWorksetsMultipleOpenDocumentsError>
   </mprLinksManager>
 </ModPlus>

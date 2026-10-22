@@ -65,6 +65,7 @@
     <positioningSharedCoordinates>По общим координатам</positioningSharedCoordinates>
     <positioningOriginToOrigin>Совмещение внутренних начал</positioningOriginToOrigin>
     <positioningCenterToCenter>Совмещение центров</positioningCenterToCenter>
+    <positioningProjectBasePoint>От базовой точки проекта</positioningProjectBasePoint>
     <onAddLoadImmediately>Сразу загрузить</onAddLoadImmediately>
     <onAddAddUnloaded>Добавить выгруженной</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Файл связи не найден: {0}</handlerLinkFileNotFoundFormat>
@@ -95,5 +96,39 @@
     <changeInstanceWorksetErrorFormat>При изменении рабочего набора экземпляра: {0}, произошла ошибка: {1}</changeInstanceWorksetErrorFormat>
     <addFromServerErrorFormat>Ошибка при добавление связи из Revit Server</addFromServerErrorFormat>
     <diffWorkset>*РАЗНЫЕ*</diffWorkset>
+    <linkWorksetsTitle>Рабочие наборы связи</linkWorksetsTitle>
+    <linkWorksetsColumnHeader>Рабочие наборы</linkWorksetsColumnHeader>
+    <worksetsReloadWarningText>Изменение открытых рабочих наборов перезагружает связь: очищается история отмены, теряются несохранённые изменения общих координат.</worksetsReloadWarningText>
+    <worksetsStateUnknownText>Состояние рабочих наборов неизвестно, так как связь выгружена. При применении связь будет загружена.</worksetsStateUnknownText>
+    <invertSelectionTooltip>Инвертировать</invertSelectionTooltip>
+    <worksetOpenColumnHeader>Открыт</worksetOpenColumnHeader>
+    <linkWorksetsNoWorksetsMessage>Связь "{0}" не содержит рабочих наборов.\nСвязанная модель не использует совместную работу (worksharing) или рабочие наборы недоступны.</linkWorksetsNoWorksetsMessage>
+    <linkWorksetsCanceledLogFormat>Изменение рабочих наборов связи "{0}" отменено.</linkWorksetsCanceledLogFormat>
+    <linkWorksetsUnchangedLogFormat>Рабочие наборы связи "{0}" не изменены.</linkWorksetsUnchangedLogFormat>
+    <linkWorksetsAppliedLogFormat>Рабочие наборы связи "{0}" применены.</linkWorksetsAppliedLogFormat>
+    <linkWorksetsApplyErrorLogFormat>Не удалось применить рабочие наборы связи "{0}": {1}</linkWorksetsApplyErrorLogFormat>
+    <linkWorksetsManageErrorLogFormat>Ошибка управления рабочими наборами связи "{0}": {1}</linkWorksetsManageErrorLogFormat>
+    <directoryNotFoundLogFormat>Папка не найдена: {0}</directoryNotFoundLogFormat>
+    <linkWorksetsLinkNotFoundWarningFormat>Связь "{0}" не найдена в документе при чтении рабочих наборов.</linkWorksetsLinkNotFoundWarningFormat>
+    <linkWorksetsNotWorksharedInfoFormat>Связанная модель "{0}" не использует совместную работу — рабочих наборов нет.</linkWorksetsNotWorksharedInfoFormat>
+    <linkWorksetsReadErrorWarningFormat>Не удалось прочитать рабочие наборы связи "{0}". Загружена: {1}; ошибка чтения из файла: {2}.</linkWorksetsReadErrorWarningFormat>
+    <excelListName>Связи</excelListName>
+    <excelDialogFilter>Файлы Excel (*.xlsx)|*.xlsx</excelDialogFilter>
+    <exportToExcelButton>Экспорт в Excel</exportToExcelButton>
+    <importFromExcelButton>Импорт из Excel</importFromExcelButton>
+    <exportToExcelCompletedLogFormat>Экспорт связей в Excel выполнен. Связей: {0}</exportToExcelCompletedLogFormat>
+    <exportToExcelErrorLogFormat>Ошибка экспорта связей в Excel: {0}</exportToExcelErrorLogFormat>
+    <importFromExcelCompletedLogFormat>Импорт связей из Excel. Добавлено: {0}, ошибок в файле: {1}, ошибок добавления: {2}</importFromExcelCompletedLogFormat>
+    <importFromExcelErrorLogFormat>Ошибка импорта связей из Excel: {0}</importFromExcelErrorLogFormat>
+    <importFromExcelRowInvalidPathFormat>Строка {0}: не указан путь к связи</importFromExcelRowInvalidPathFormat>
+    <importFromExcelRowUnsupportedExtensionFormat>Строка {0}: расширение файла "{1}" не поддерживается</importFromExcelRowUnsupportedExtensionFormat>
+    <importFromExcelRowDuplicateFormat>Строка {0}: связь уже присутствует в документе или файле {1}</importFromExcelRowDuplicateFormat>
+    <linkItemNullError>Связь не задана.</linkItemNullError>
+    <worksetInvalidIdError>Недопустимый идентификатор рабочего набора.</worksetInvalidIdError>
+    <documentNotWorksharedError>Документ не использует совместную работу.</documentNotWorksharedError>
+    <linkWorksetsOnlyRevitError>Настройка рабочих наборов поддерживается только для связей Revit.</linkWorksetsOnlyRevitError>
+    <linkWorksetsApplyFailedError>Не удалось применить настройки рабочих наборов.</linkWorksetsApplyFailedError>
+    <linkWorksetsNestedNotSupportedError>Вложенные связи не поддерживают настройку рабочих наборов.</linkWorksetsNestedNotSupportedError>
+    <linkWorksetsMultipleOpenDocumentsError>Связь загружена в несколько открытых документов и не может быть перезагружена.</linkWorksetsMultipleOpenDocumentsError>
   </mprLinksManager>
 </ModPlus>
