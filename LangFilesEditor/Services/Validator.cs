@@ -1,10 +1,12 @@
 ﻿namespace LangFilesEditor.Services;
 
 using Models;
+using ModPlus.LanguageTools.Checks;
 
 /// <summary>
 /// Валидатор коллекций записей перевода: помечает записи с дубликатами имён,
-/// дубликатами наборов значений и некорректными данными.
+/// дубликатами наборов значений и некорректными данными. Сами правила — в
+/// <see cref="EntryRules"/> (общие с проверкой файлов при сборке и публикации).
 /// </summary>
 public class Validator
 {
@@ -44,12 +46,9 @@ public class Validator
             item.DiagnosticState.HasDuplicateName = false;
         }
 
-        foreach (var group in items.GroupBy(i => i.Name).Where(g => g.Count() > 1))
+        foreach (var item in EntryRules.FindDuplicateNames(items, i => i.Name))
         {
-            foreach (var item in group)
-            {
-                item.DiagnosticState.HasDuplicateName = true;
-            }
+            item.DiagnosticState.HasDuplicateName = true;
         }
     }
 
@@ -64,32 +63,14 @@ public class Validator
             item.DiagnosticState.HasDuplicateValue = false;
         }
 
-        var groupsWithSameValues = items
-            .Where(i => string.IsNullOrEmpty(i.Comment))
-            .GroupBy(BuildValuesSignature, StringComparer.Ordinal)
-            .Where(g => g.Skip(1).Any());
+        var duplicates = EntryRules.FindDuplicateValues(
+            items,
+            i => i.Comment,
+            i => i.Values.Values.Select(v => v?.Value));
 
-        foreach (var group in groupsWithSameValues)
+        foreach (var item in duplicates)
         {
-            foreach (var item in group)
-            {
-                item.DiagnosticState.HasDuplicateValue = true;
-            }
+            item.DiagnosticState.HasDuplicateValue = true;
         }
-    }
-
-    /// <summary>
-    /// Строит сигнатуру набора значений записи для сравнения: значения всех языков сортируются
-    /// и склеиваются редким управляющим символом, который не встречается в текстах перевода.
-    /// </summary>
-    private static string BuildValuesSignature(TranslationEntry translationEntry)
-    {
-        var sortedValues = translationEntry.Values.Values
-            .Select(v => v?.Value ?? string.Empty)
-            .OrderBy(s => s, StringComparer.Ordinal);
-        // Unit Separator (U+001F) — управляющий символ, не встречающийся в обычном тексте перевода.
-        const char rareSeparator = '\u001F';
-
-        return string.Join(rareSeparator, sortedValues);
     }
 }

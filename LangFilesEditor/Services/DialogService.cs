@@ -65,7 +65,7 @@ public class DialogService : IDialogService
         var win = new Merger
         {
             Owner = Application.Current.MainWindow,
-            DataContext = new MergerVM(_host, _repository, this, new NotificationService()),
+            DataContext = new MergerVM(_host, _repository, new NotificationService()),
         };
 
         return win.ShowDialog();

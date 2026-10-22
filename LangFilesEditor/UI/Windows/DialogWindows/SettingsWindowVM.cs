@@ -1,5 +1,3 @@
-using LangFilesEditor.Services.RepositoryServices;
-
 namespace LangFilesEditor.UI.Windows.DialogWindows;
 
 using System.Collections.ObjectModel;
@@ -12,6 +10,7 @@ using Helpers;
 using Models;
 using Services;
 using Services.Diagnostics;
+using ModPlus.LanguageTools;
 using ModPlusAPI;
 using ModPlusAPI.Mvvm;
 using Constants = LangFilesEditor.Constants;
@@ -51,7 +50,7 @@ public sealed class SettingsWindowVM : ObservableObject
         _maxRowsPerFrame = settings.Current.MaxRowsPerFrame;
         _selectedThemeName = ToThemeName(settings.Current.Theme);
 
-        LocalVersion = new LocalizationVersionService().GetLocalVersion()?.ToString() ?? EditorStrings.UnknownVersion;
+        LocalVersion = LanguagesVersionFile.TryRead(Constants.LanguageFilesDirectory)?.ToString() ?? EditorStrings.UnknownVersion;
         LanguageFilesPath = Constants.LanguageFilesDirectory;
         Languages = new ObservableCollection<LanguageDisplayInfo>(
             LanguageDisplayHelper.BuildDisplayList(session.Languages));
@@ -67,7 +66,7 @@ public sealed class SettingsWindowVM : ObservableObject
     }
 
     /// <summary>
-    /// Локальная версия пакета локализации.
+    /// Версия пакета локализации из <c>Langs.xml</c> папки LanguageFiles.
     /// </summary>
     public string LocalVersion { get; }
 

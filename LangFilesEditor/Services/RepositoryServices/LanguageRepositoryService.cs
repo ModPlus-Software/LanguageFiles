@@ -2,20 +2,18 @@
 
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Xml;
 using System.Xml.Linq;
 using Core.Abstractions;
 using Helpers;
 using Models;
 using Loggers;
+using ModPlus.LanguageTools;
 
 /// <summary>
 /// Чтение и запись XML-файлов локализации на диске.
 /// </summary>
 public class LanguageRepositoryService : ILanguageRepository
 {
-    private static readonly string[] MergeDomainPrefixes = ["Common", "AutoCAD", "Revit", "Renga", "nanoCAD"];
-
     /// <inheritdoc />
     public IReadOnlyList<string> LoadLanguages(string languageDirectory)
     {
@@ -130,29 +128,21 @@ public class LanguageRepositoryService : ILanguageRepository
             return;
         }
 
-        if (!ClearMergeTargetDirectory(targetLangDirectory, notifications))
-        {
-            return;
-        }
-
-        var sourceLanguagesDirectory = Constants.LanguageFilesDirectory;
+        // Из хода сборки в лог слияния выводятся только ошибки; при успехе — версия и собранные файлы
+        var log = new NotificationLog(notifications, errorsOnly: true);
         try
         {
-            var version = new LocalizationVersionService().GetLocalVersion();
-            if (version == null)
-            {
-                return;
-            }
+            // Версия не задаётся в редакторе: в собранные файлы пишется версия, опубликованная
+            // в хранилище. Метод выполняется в фоновом потоке, поэтому синхронное ожидание безопасно
+            var version = LanguagesVersionFile.ReadRemoteAsync().GetAwaiter().GetResult();
+
+            // Та же сборка, что при публикации: исправление кавычек в исходных файлах, проверка, слияние
+            var result = LanguageBuilder.Build(Constants.LanguageFilesDirectory, targetLangDirectory, version, log);
 
             notifications.Notify(EditorStrings.FormatTargetLanguageVersion(version));
-
-            foreach (var directory in Directory.GetDirectories(sourceLanguagesDirectory))
+            foreach (var file in result.Files)
             {
-                var langName = new DirectoryInfo(directory).Name;
-                notifications.Notify(EditorStrings.FormatProcessLanguage(langName));
-                var mergedDocument = BuildMergedLanguageDocument(directory, langName, version.ToString(), notifications);
-                mergedDocument.Save(Path.Combine(targetLangDirectory, $"{langName}.xml"));
-                notifications.Notify(EditorStrings.FormatLanguageFileCreated(langName));
+                notifications.Notify(EditorStrings.FormatLanguageFileCreated(file));
             }
 
             notifications.Notify(EditorStrings.Done);
@@ -385,62 +375,10 @@ public class LanguageRepositoryService : ILanguageRepository
 
         var targetLangDirectory = Path.Combine(topDir, "Languages");
         Directory.CreateDirectory(targetLangDirectory);
-        notifications.Notify(EditorStrings.FormatTargetLanguagesDirectory(targetLangDirectory));
         return targetLangDirectory;
     }
 
-    private static bool ClearMergeTargetDirectory(string targetLangDirectory, NotificationService notifications)
-    {
-        foreach (var file in Directory.GetFiles(targetLangDirectory, "*.xml", SearchOption.TopDirectoryOnly))
-        {
-            try
-            {
-                File.Delete(file);
-            }
-            catch (Exception exception)
-            {
-                notifications.NotifyError(EditorStrings.FormatDeleteFileFailed(file, exception.Message));
-                return false;
-            }
-        }
 
-        return true;
-    }
-
-    private static XElement BuildMergedLanguageDocument(
-        string languageDirectory,
-        string languageName,
-        string version,
-        NotificationService notifications)
-    {
-        var resultDoc = new XElement("ModPlus");
-        resultDoc.SetAttributeValue("Name", languageName);
-        resultDoc.SetAttributeValue("Version", version);
-        foreach (var domainPrefix in MergeDomainPrefixes)
-        {
-            notifications.Notify(EditorStrings.FormatProcessMergePart(domainPrefix));
-            resultDoc.Add(new XComment(domainPrefix));
-            var moduleNodes = CollectModuleNodesForMerge(languageDirectory, domainPrefix);
-            foreach (var moduleNode in moduleNodes.OrderBy(node => node.Name.LocalName, StringComparer.OrdinalIgnoreCase))
-            {
-                moduleNode.DescendantNodes().Where(node => node.NodeType == XmlNodeType.Comment).Remove();
-                resultDoc.Add(moduleNode);
-            }
-        }
-
-        return resultDoc;
-    }
-
-    private static IEnumerable<XElement> CollectModuleNodesForMerge(string languageDirectory, string domainPrefix)
-    {
-        var moduleNodes = new List<XElement>();
-        foreach (var file in Directory.EnumerateFiles(languageDirectory, $"{domainPrefix}*.xml", SearchOption.TopDirectoryOnly))
-        {
-            moduleNodes.AddRange(XElement.Load(file).Elements());
-        }
-
-        return moduleNodes;
-    }
 
     /// <summary>
     /// Читает список модулей одного источника: берётся самый полный языковой файл этого источника

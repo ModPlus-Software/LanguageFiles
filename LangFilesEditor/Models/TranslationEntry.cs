@@ -3,6 +3,7 @@ namespace LangFilesEditor.Models;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Utils;
+using ModPlus.LanguageTools.Checks;
 using ModPlusAPI.Mvvm;
 
 /// <summary>
@@ -185,9 +186,8 @@ public class TranslationEntry : ObservableObject
     /// </summary>
     public void Validate()
     {
-        DiagnosticState.HasIncorrectData = string.IsNullOrEmpty(Name) ||
-                           (!string.IsNullOrEmpty(Name) && char.IsDigit(Name[0])) ||
-                           _values.Values.Any(v => v == null || string.IsNullOrEmpty(v.Value));
+        DiagnosticState.HasIncorrectData = _values.Values.Any(v => v == null) ||
+                                           EntryRules.HasIncorrectData(Name, _values.Values.Select(v => v.Value));
         OnPropertyChanged(nameof(RowToolTip));
     }
 
@@ -215,16 +215,16 @@ public class TranslationEntry : ObservableObject
     {
         var parts = new List<string>();
 
-        if (string.IsNullOrEmpty(Name))
+        if (EntryRules.IsEmptyName(Name))
         {
             parts.Add(Helpers.EditorStrings.EntryTooltipEmptyName);
         }
-        else if (char.IsDigit(Name[0]))
+        else if (EntryRules.StartsWithDigit(Name))
         {
             parts.Add(Helpers.EditorStrings.EntryTooltipNameStartsWithDigit);
         }
 
-        if (_values.Values.Any(v => v == null || string.IsNullOrEmpty(v.Value)))
+        if (_values.Values.Any(v => v == null || EntryRules.IsEmptyValue(v.Value)))
         {
             parts.Add(Helpers.EditorStrings.EntryTooltipEmptyValues);
         }
