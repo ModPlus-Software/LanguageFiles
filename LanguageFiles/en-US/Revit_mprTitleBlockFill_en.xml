@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprTitleBlockFill
+    LocalName="Title Block Fill"
+    Description="Fills sheet title blocks using configurable profiles: signers, dates, signatures and other fields">
+    <h1>Settings</h1>
+    <h2>Fill</h2>
+    <h4>Field</h4>
+    <h5>Before</h5>
+    <h6>After</h6>
+    <h7>Fill</h7>
+    <h8>Preview of changes</h8>
+    <h10>Field values</h10>
+    <h11>Fill</h11>
+    <h12>Preview</h12>
+    <h14>Profiles</h14>
+    <h15>Profile</h15>
+    <h16>Title block types</h16>
+    <h17>Title block fields</h17>
+    <h18>Add field</h18>
+    <h19>Add group</h19>
+    <h20>General</h20>
+    <h21>Signatures</h21>
+    <h22>Check box value</h22>
+    <h23>Use "Title on Sheet" if set</h23>
+    <h24>Include legends</h24>
+    <h25>Write empty value</h25>
+    <t1>Search by number and name</t1>
+    <t2>Title block profile</t2>
+    <t3>Field name, for example Name</t3>
+    <t4>Field type</t4>
+    <t5>Value source</t5>
+    <t7>Constant value</t7>
+    <t8>Field to take the value from</t8>
+    <t9>Separator between view names</t9>
+    <t10>Date format</t10>
+    <t11>Signature method</t11>
+    <t12>Placeholder family "no signature"</t12>
+    <t13>Profile name</t13>
+    <t14>Search by type name</t14>
+    <t15>Group name, for example Designed by</t15>
+    <t16>Sheet parameter for grouping</t16>
+    <t17>Signatures folder</t17>
+    <t18>Select all sheets</t18>
+    <t19>Clear selection</t19>
+    <t20>Check the sheets selected in the Project Browser and the current sheet</t20>
+    <t21>Signature file name. The signature is placed if a name is entered</t21>
+    <t22>Place signature</t22>
+    <t23>No signature file with this name was found in the signatures folder</t23>
+    <t24>Filled without entering values</t24>
+    <t25>Show which values will change before writing</t25>
+    <t26>Clear the fields of the checked rows on the selected sheets</t26>
+    <t27>Parameter owner&#10;The element on which the plugin looks for the parameter</t27>
+    <t28>Field name&#10;Shown when filling</t28>
+    <t29>Duplicate field</t29>
+    <t30>Delete field</t30>
+    <t31>Move up</t31>
+    <t32>Move down</t32>
+    <t33>Field type&#10;How the value is entered and written</t33>
+    <t34>Value source&#10;Where the field value comes from</t34>
+    <t35>Parameter&#10;The field value is written to it</t35>
+    <t36>Constant value&#10;Written on every fill</t36>
+    <t37>Constant check box value&#10;Written on every fill</t37>
+    <t38>Source field&#10;Its value is also written to this field</t38>
+    <t39>Separator&#10;Placed between view names</t39>
+    <t40>The value is collected separately for each sheet from the views placed on it, in the order of their detail numbers. Repeated names are written once. The field is not shown when filling</t40>
+    <t41>Date format&#10;For example dd.MM.yy</t41>
+    <t42>Format for writing the date to a text parameter. dd - day, MM - month, yy or yyyy - year. Lowercase mm means minutes, not month. In a "Yes/No" parameter the date is written as a check mark</t42>
+    <t43>Signature method&#10;How the signature gets into the title block</t43>
+    <t44>Placeholder family&#10;Placed when the signature is removed</t44>
+    <t45>Text in title block family: the plugin writes the signature name to a text parameter, and the family itself shows the signature. Family from signatures folder: an instance parameter of the "Family Type" data type, the signature file is loaded from the folder; a placeholder family is needed to remove a signature. The signature file name is the field value, for example from the name field</t45>
+    <t46>If unchecked, empty text, a cleared check box and a cleared signature mark are skipped and do not overwrite what is already filled in the title block. If checked, the text is cleared, the check box is cleared and the signature is removed</t46>
+    <t47>Add profile</t47>
+    <t48>Duplicate profile</t48>
+    <t49>Delete profile</t49>
+    <t50>Export profile to file</t50>
+    <t51>Import profile from file</t51>
+    <t52>Add or import a title block profile</t52>
+    <t53>Check the document types to which the profile applies</t53>
+    <t54>The fields filled by the plugin are organized into groups. Fields of one group are filled together and enabled with one check mark. The order of groups and fields is the order in the fill window</t54>
+    <t55>There are issues in the settings of the group or its fields</t55>
+    <t56>Group name&#10;Block header when filling</t56>
+    <t57>Duplicate group with its fields</t57>
+    <t58>Move group up</t58>
+    <t59>Move group down</t59>
+    <t60>Delete group</t60>
+    <t61>Sheets are grouped in the fill section by the value of this parameter, for example by project section</t61>
+    <t62>Select folder</t62>
+    <t63>Needed only for the "Family from signatures folder" signature method: signature families and the "no signature" placeholder family are loaded from this folder. The family file name is the signature name, for example J.Smith.rfa. The folder is not used by the "Text in title block family" method</t63>
+    <e1>Sheet</e1>
+    <e2>Title block</e2>
+    <e3>Text</e3>
+    <e4>Date</e4>
+    <e5>Check box</e5>
+    <e6>Signature</e6>
+    <e7>Entered when filling</e7>
+    <e9>From another field</e9>
+    <e10>View names on the sheet</e10>
+    <e11>Text in title block family</e11>
+    <e12>Family from signatures folder</e12>
+    <m2>Values to be changed: {0}. Already matching: {1}</m2>
+    <m4>Clearing title blocks</m4>
+    <m6>The configuration has no title block profiles</m6>
+    <m7>The profile has no fields. Add them in the settings section</m7>
+    <m8>No sheets selected</m8>
+    <m9>No rows checked for filling</m9>
+    <m10>The values in the title blocks already match the ones being filled, there are no changes</m10>
+    <m11>No sheets available for filling are selected in Revit. Select sheets in the Project Browser or open a sheet</m11>
+    <m12>New profile</m12>
+    <m13>The selected file does not contain a title block profile</m13>
+    <m14>Signature files folder</m14>
+    <m18>Unnamed group</m18>
+    <m19>fields: {0}</m19>
+    <m20>No group</m20>
+    <m21>The sheet has no title block</m21>
+    <m22>No profile found for the title block type</m22>
+    <m23>Profile: {0}</m23>
+    <m24>The group name is not set</m24>
+    <m25>The profile has another group with the same name</m25>
+    <m26>The group has no fields</m26>
+    <m27>The field name is not set</m27>
+    <m28>The group has another field with the same name</m28>
+    <m29>No parameter selected</m29>
+    <m30>The field to take the value from is not selected</m30>
+    <m31>The signatures folder is not selected: it is set on the "General" tab</m31>
+    <m32>The "no signature" placeholder family is not set: removing the signature may fail</m32>
+    <m33>The placeholder family file was not found in the signatures folder</m33>
+    <m34>Invalid date format</m34>
+    <m35>In the date format lowercase mm means minutes, the month is MM</m35>
+    <m36>The sheet profile has no field: {0}</m36>
+    <m37>Failed to process the sheet: {0}</m37>
+    <m38>The field has no parameter: {0}</m38>
+    <m39>Parameter not found: {0} ({1})</m39>
+    <m40>Read-only parameter: {0} ({1})</m40>
+    <m41>The parameter data type does not suit the field: {0} ({1})</m41>
+    <m42>The signature name is not set, the signature was not placed: {0}</m42>
+    <m43>Failed to write the value to parameter {0}</m43>
+    <m44>Revit rolled back the sheet changes</m44>
+    <m45>Family Type</m45>
+    <m46>Revit does not allow leaving the signature slot empty. Specify the "no signature" placeholder family in the field settings: {0}</m46>
+    <m47>Failed to write signature {0} to parameter {1}. Check that the parameter accepts families of this category</m47>
+    <m48>The signatures folder is not selected</m48>
+    <m49>Signature file not found: {0}.rfa</m49>
+    <m50>The signatures folder is not available: {0}</m50>
+    <m51>Failed to load the signature file: {0}.rfa</m51>
+    <m53>Family {0} has several types, {1} was used</m53>
+    <m55>Failed to write the signature to the parameter: {0}</m55>
+    <m56>Signature parameter not found: {0}</m56>
+    <m57>The signature parameter must have the "{0}" data type: {1}</m57>
+    <m58>The signature parameter is read-only: {0}</m58>
+  </mprTitleBlockFill>
+</ModPlus>
