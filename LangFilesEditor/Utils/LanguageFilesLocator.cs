@@ -27,7 +27,7 @@ public static class LanguageFilesLocator
     /// </summary>
     public const string DirectoryName = "LanguageFiles";
 
-    private const string VersionFileName = "Version.txt";
+    private const string VersionFileName = ModPlus.LanguageTools.LanguageFolder.VersionFileName;
 
     private static string _resolvedDirectory;
 
@@ -78,7 +78,7 @@ public static class LanguageFilesLocator
                 return true;
             }
 
-            // Version.txt может отсутствовать в урезанной копии — тогда каталог опознаётся
+            // Langs.xml может отсутствовать в урезанной копии — тогда каталог опознаётся
             // по языковым подпапкам.
             return HasLanguageSubdirectory(path);
         }

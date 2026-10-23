@@ -169,11 +169,56 @@
     <materialExists>В целевом документе уже имеется материал "{0}".\nВыполнить копирование с заменой?</materialExists>
     <materialDuplicateActionSettings>Поведение при совпадении имен материалов</materialDuplicateActionSettings>
     <materialDuplicateActionTooltip>При совпадении имен материалов и выборе опции "Заменить" плагином будет выполнен следующий алгоритм: старый материал в целевом документе будет обновлен - ему будут присвоены все свойства нового материала. Имя материала останется прежним. Все элементы, использующие этот материал, автоматически получат обновленные свойства.</materialDuplicateActionTooltip>
+    <colorSchemesDuplicateActionSettings>Поведение при совпадении имен цветовых схем</colorSchemesDuplicateActionSettings>
+    <colorSchemesDuplicateActionTooltip>При совпадении имен цветовых схем и выборе опции "Заменить" плагином будет выполнен следующий алгоритм: существующая цветовая схема в целевом документе будет обновлена - ей будут присвоены параметр, состав и цвета новой схемы. Идентификатор и имя схемы останутся прежними, поэтому все виды и шаблоны видов, использующие эту схему, автоматически получат обновленные данные. Цветовые схемы зон заменить нельзя: такая схема связана со схемой зонирования.</colorSchemesDuplicateActionTooltip>
+    <colorSchemeExists>В целевом документе уже имеется цветовая схема "{0}".{1}Выполнить копирование с заменой?</colorSchemeExists>
+    <colorSchemeReplaceNotSupported>Цветовая схема "{0}" не может быть заменена автоматически: схема зон связана со схемой зонирования.</colorSchemeReplaceNotSupported>
+    <colorSchemeReplaceError>Не удалось заменить содержимое цветовой схемы "{0}". Ошибка: "{1}".</colorSchemeReplaceError>
     <closeOpenedSchedule>Закрывать открывшиеся спецификации</closeOpenedSchedule>
     <searchModeLabel>Режим сравнения:</searchModeLabel>
     <searchModeNormal>Обычный</searchModeNormal>
     <searchModeRegex>Регулярное выражение</searchModeRegex>
     <patternCopyWarning>Не удалось скопировать образец "{0}" (id: {1}) в целевой документ. Переопределение графики фильтра будет применено без этого образца.</patternCopyWarning>
     <viewTemplateFiltersCopyError>Не удалось применить фильтры к скопированному шаблону вида "{0}". Ошибка: "{1}".</viewTemplateFiltersCopyError>
+    <filterReplaceInViewWarning>Не удалось переназначить фильтры для вида "{0}". Ошибка: "{1}".</filterReplaceInViewWarning>
+    <filterReplaceError>Не удалось выполнить замену фильтров. Ошибка: "{0}".</filterReplaceError>
+    <assemblyExists>В целевом документе уже имеется сборка "{0}".{1}Выполнить копирование с заменой?</assemblyExists>
+    <assemblyMemberCopyError>Не удалось скопировать элемент "{0}" (id: {1}) сборки "{2}". Ошибка: "{3}".</assemblyMemberCopyError>
+    <assemblyRenameTransaction>Переименование сборок</assemblyRenameTransaction>
+    <assemblyTypeNameSetError>Не удалось задать имя типа сборки "{0}". Ошибка: "{1}".</assemblyTypeNameSetError>
+    <insertionReference>Вставка</insertionReference>
+    <insertionReferencePrompt>Система координат вставки:</insertionReferencePrompt>
+    <insertionReferenceInternalOrigin>Внутреннее начало</insertionReferenceInternalOrigin>
+    <insertionReferenceProjectBasePoint>Базовая точка проекта</insertionReferenceProjectBasePoint>
+    <insertionReferenceSharedCoordinates>Общие координаты</insertionReferenceSharedCoordinates>
+    <insertionReferenceLog>Система координат вставки: "{0}". Смещение: X={1:F4}, Y={2:F4}, Z={3:F4}</insertionReferenceLog>
+    <sheetsGroupName>Листы</sheetsGroupName>
+    <sheetContentCopySettings>Копирование содержимого листов</sheetContentCopySettings>
+    <copySheetParameterValues>Копировать значения параметров листа</copySheetParameterValues>
+    <copyTitleBlocks>Копировать основные надписи</copyTitleBlocks>
+    <copyTitleBlockParameterValues>Копировать значения параметров основной надписи</copyTitleBlockParameterValues>
+    <copyModelViews>Копировать виды модели</copyModelViews>
+    <copySchedules>Копировать спецификации</copySchedules>
+    <copyLegends>Копировать легенды</copyLegends>
+    <copyImageView>Копировать растровые изображения визуализации</copyImageView>
+    <copyDraftingViews>Копировать чертежные виды</copyDraftingViews>
+    <copyTextNotes>Копировать текст</copyTextNotes>
+    <copyGenericAnnotations>Копировать типовые аннотации</copyGenericAnnotations>
+    <copyDetailLines>Копировать линии детализации</copyDetailLines>
+    <copyGuideGrids>Копировать сетки направляющих</copyGuideGrids>
+    <copySheetRevisions>Копировать и установить Изменения (Ревизии)</copySheetRevisions>
+    <copyRasterImages>Копировать растровые изображения (+ PDF)</copyRasterImages>
+    <copySheetsDialogTitle>Копирование листов</copySheetsDialogTitle>
+    <useExisting>Использовать существующую</useExisting>
+    <createCopy>Создать копию</createCopy>
+    <useExistingForAll>Использовать существующую (для всех случаев)</useExistingForAll>
+    <createCopyForAll>Создать копию (для всех случаев)</createCopyForAll>
+    <legendExistsMessage>В целевом документе "{0}" имеется легенда "{1}"</legendExistsMessage>
+    <legendConflictHint>Выберите один из вариантов: использовать существующую легенду из целевого документа или создать и использовать копию легенды из документа-источника</legendConflictHint>
+    <draftingViewExistsMessage>В целевом документе "{0}" имеется чертежный вид "{1}"</draftingViewExistsMessage>
+    <draftingViewConflictHint>Выберите один из вариантов: использовать существующий чертежный вид из целевого документа или создать и использовать копию чертежного вида из документа-источника</draftingViewConflictHint>
+    <continueWithoutLegendsMessage>Для копирования легенд в целевом документе "{0}" требуется создать хотя бы одну легенду</continueWithoutLegendsMessage>
+    <continueWithoutLegendsHint>Продолжить копирование листов для этого документа?</continueWithoutLegendsHint>
+    <sheetViewCopyError>Лист: {0}. Вид: {1}. Ошибка: {2}.</sheetViewCopyError>
   </mprCopyElementsToOpenDocuments>
 </ModPlus>

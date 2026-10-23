@@ -347,6 +347,7 @@
     <msg133>Relationship search: processed {0} of {1}, elapsed {2}</msg133>
     <msg134>Touch search: processed {0} of {1}, elapsed {2}</msg134>
     <msg135>Relationship search completed in {0}. Elements in collection: {1}</msg135>
+    <msg136>Element skipped: no conditionally source element matching the rule filters was found</msg136>
     <err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
     <err2>The number of opening round brackets must equal the number of closing ones</err2>
     <err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -744,5 +745,9 @@
     <t243>Elements of the categories specified in the rule columns – both for conditional source and for target elements – will be collected from the linked files. They are then processed on a par with the elements of the current model: for example, for the InMass strategy these can be Masses, for the InSolid strategy – elements that have a solid, for the ManyToMany strategy – conditional source elements. Parameter values of elements from linked files can be used in formulas, but writing a value to a parameter of an element from a linked file is not possible – such a write is marked in the report as an error</t243>
     <t244>Copy identifier</t244>
     <t245>Copy name</t245>
+    <t246>Determine family membership by calculation point only</t246>
+    <t247>Applies to the InRoom and InSpace strategies. If a family instance has a room calculation point and the point is inside a room (space), the family always belongs to that room.</t247>
+    <t248>Option enabled – the family belongs only to the room containing the calculation point, and no geometry check is performed. Processing is faster, but a family that intersects several rooms will be assigned to only one of them.</t248>
+    <t249>Option disabled – the family additionally belongs to all rooms it falls into by geometry, according to the selected solids entry search algorithm. The result is more complete, but processing takes longer. Families without a calculation point, and families whose calculation point is not inside any room, are always checked by geometry.</t249>
   </mprParametrization>
 </ModPlus>

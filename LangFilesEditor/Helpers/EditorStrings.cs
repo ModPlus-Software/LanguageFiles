@@ -56,48 +56,21 @@ internal static class EditorStrings
     public const string InstalledModPlusNotFound = "Installed ModPlus not found!";
 
     /// <summary>
-    /// Форматирует сообщение с версией целевого языка при слиянии.
+    /// Форматирует сообщение с версией, записанной в собранные языковые файлы.
     /// </summary>
     /// <param name="version">Версия локализации.</param>
     public static string FormatTargetLanguageVersion(object version) => $"Target language version: {version}";
 
     /// <summary>
-    /// Форматирует сообщение о начале обработки языка при слиянии.
+    /// Форматирует сообщение о созданном при слиянии языковом файле.
     /// </summary>
-    /// <param name="languageName">Код обрабатываемого языка.</param>
-    public static string FormatProcessLanguage(string languageName) => $"Process language: {languageName}";
-
-    /// <summary>
-    /// Форматирует путь к целевому каталогу языковых файлов при слиянии.
-    /// </summary>
-    /// <param name="targetLanguageDirectory">Путь к каталогу назначения.</param>
-    public static string FormatTargetLanguagesDirectory(string targetLanguageDirectory) =>
-        $"Target languages directory: {targetLanguageDirectory}";
-
-    /// <summary>
-    /// Форматирует сообщение о создании языкового файла при слиянии.
-    /// </summary>
-    /// <param name="languageName">Код языка, для которого создан файл.</param>
-    public static string FormatLanguageFileCreated(string languageName) => $"Language file for {languageName} created";
+    /// <param name="file">Путь к созданному файлу.</param>
+    public static string FormatLanguageFileCreated(string file) => $"Language file created: {file}";
 
     /// <summary>
     /// Сообщение о завершении длительной операции (слияние, сканирование и т.п.).
     /// </summary>
     public const string Done = "Done";
-
-    /// <summary>
-    /// Форматирует сообщение о начале обработки части (domain prefix) при построении объединённого документа слияния.
-    /// </summary>
-    /// <param name="domainPrefix">Префикс имён доменов этой части (например, «Common», «AutoCAD»).</param>
-    public static string FormatProcessMergePart(string domainPrefix) => $"    Process part: {domainPrefix}";
-
-    /// <summary>
-    /// Форматирует сообщение об ошибке удаления файла при подготовке каталога слияния.
-    /// </summary>
-    /// <param name="filePath">Путь к файлу, который не удалось удалить.</param>
-    /// <param name="exceptionMessage">Текст исключения.</param>
-    public static string FormatDeleteFileFailed(string filePath, string exceptionMessage) =>
-        $"Failed delete file {filePath}.\nException: {exceptionMessage}.\nDelete it manually and try again";
 
     /// <summary>Подсказка: пустое имя ключа.</summary>
     public const string EntryTooltipEmptyName = "Пустое имя ключа";
@@ -130,11 +103,6 @@ internal static class EditorStrings
         Environment.NewLine + Environment.NewLine +
         "Проверены пути:" + Environment.NewLine +
         string.Join(Environment.NewLine, probedPaths);
-
-    /// <summary>
-    /// Сообщение об ошибке чтения локальной версии пакета локализации.
-    /// </summary>
-    public const string LocalVersionReadFailed = "Не удалось прочитать локальную версию локализации";
 
     /// <summary>
     /// Сообщение о некорректно введённой версии.

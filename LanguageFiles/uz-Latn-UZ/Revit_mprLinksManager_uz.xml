@@ -65,6 +65,7 @@
     <positioningSharedCoordinates>Umumiy koordinatalar boʻyicha</positioningSharedCoordinates>
     <positioningOriginToOrigin>Ichki boshlanishlarni moslashtirish</positioningOriginToOrigin>
     <positioningCenterToCenter>Markazlarni moslashtirish</positioningCenterToCenter>
+    <positioningProjectBasePoint>Loyiha tayanch nuqtalarini moslashtirish</positioningProjectBasePoint>
     <onAddLoadImmediately>Darhol yuklash</onAddLoadImmediately>
     <onAddAddUnloaded>Yuklanmagan holda qoʻshish</onAddAddUnloaded>
     <handlerLinkFileNotFoundFormat>Bogʻlanish fayli topilmadi: {0}</handlerLinkFileNotFoundFormat>
@@ -95,5 +96,39 @@
     <changeInstanceWorksetErrorFormat>Nusxa ishchi toʻplamini oʻzgartirishda: {0}, xato yuz berdi: {1}</changeInstanceWorksetErrorFormat>
     <addFromServerErrorFormat>Revit Server dan bogʻlanish qoʻshishda xato</addFromServerErrorFormat>
     <diffWorkset>*TURLI*</diffWorkset>
+    <linkWorksetsTitle>Bogʻlanish ishchi toʻplamlari</linkWorksetsTitle>
+    <linkWorksetsColumnHeader>Ishchi toʻplamlar</linkWorksetsColumnHeader>
+    <worksetsReloadWarningText>Ochiq ishchi toʻplamlarni oʻzgartirish bogʻlanishni qayta yuklaydi: bekor qilish tarixi tozalanadi, saqlanmagan umumiy koordinatalar oʻzgarishlari yoʻqoladi.</worksetsReloadWarningText>
+    <worksetsStateUnknownText>Bogʻlanish tushirilganligi sababli ishchi toʻplamlar holati nomaʼlum. Qoʻllashda bogʻlanish yuklanadi.</worksetsStateUnknownText>
+    <invertSelectionTooltip>Teskari oʻzgartirish</invertSelectionTooltip>
+    <worksetOpenColumnHeader>Ochiq</worksetOpenColumnHeader>
+    <linkWorksetsNoWorksetsMessage>"{0}" bogʻlanishida ishchi toʻplamlar yoʻq.\nBogʻlangan model umumiy ishdan foydalanmaydi (worksharing) yoki ishchi toʻplamlar mavjud emas.</linkWorksetsNoWorksetsMessage>
+    <linkWorksetsCanceledLogFormat>"{0}" bogʻlanish ishchi toʻplamlarini oʻzgartirish bekor qilindi.</linkWorksetsCanceledLogFormat>
+    <linkWorksetsUnchangedLogFormat>"{0}" bogʻlanish ishchi toʻplamlari oʻzgartirilmadi.</linkWorksetsUnchangedLogFormat>
+    <linkWorksetsAppliedLogFormat>"{0}" bogʻlanish ishchi toʻplamlari qoʻllandi.</linkWorksetsAppliedLogFormat>
+    <linkWorksetsApplyErrorLogFormat>"{0}" bogʻlanish ishchi toʻplamlarini qoʻllash amalga oshmadi: {1}</linkWorksetsApplyErrorLogFormat>
+    <linkWorksetsManageErrorLogFormat>"{0}" bogʻlanish ishchi toʻplamlarini boshqarishda xato: {1}</linkWorksetsManageErrorLogFormat>
+    <directoryNotFoundLogFormat>Papka topilmadi: {0}</directoryNotFoundLogFormat>
+    <linkWorksetsLinkNotFoundWarningFormat>Ishchi toʻplamlarni oʻqishda "{0}" bogʻlanish hujjatda topilmadi.</linkWorksetsLinkNotFoundWarningFormat>
+    <linkWorksetsNotWorksharedInfoFormat>"{0}" bogʻlangan model umumiy ishdan foydalanmaydi — ishchi toʻplamlar yoʻq.</linkWorksetsNotWorksharedInfoFormat>
+    <linkWorksetsReadErrorWarningFormat>"{0}" bogʻlanish ishchi toʻplamlarini oʻqib boʻlmadi. Yuklangan: {1}; fayldan oʻqish xatosi: {2}.</linkWorksetsReadErrorWarningFormat>
+    <excelListName>Bogʻlanishlar</excelListName>
+    <excelDialogFilter>Excel fayllari (*.xlsx)|*.xlsx</excelDialogFilter>
+    <exportToExcelButton>Excel ga eksport</exportToExcelButton>
+    <importFromExcelButton>Excel dan import</importFromExcelButton>
+    <exportToExcelCompletedLogFormat>Bogʻlanishlar Excel ga eksport qilindi. Bogʻlanishlar: {0}</exportToExcelCompletedLogFormat>
+    <exportToExcelErrorLogFormat>Bogʻlanishlarni Excel ga eksport qilishda xato: {0}</exportToExcelErrorLogFormat>
+    <importFromExcelCompletedLogFormat>Bogʻlanishlar Excel dan import qilindi. Qoʻshildi: {0}, fayldagi xatolar: {1}, qoʻshishdagi xatolar: {2}</importFromExcelCompletedLogFormat>
+    <importFromExcelErrorLogFormat>Bogʻlanishlarni Excel dan import qilishda xato: {0}</importFromExcelErrorLogFormat>
+    <importFromExcelRowInvalidPathFormat>{0}-qator: bogʻlanish yoʻli koʻrsatilmagan</importFromExcelRowInvalidPathFormat>
+    <importFromExcelRowUnsupportedExtensionFormat>{0}-qator: "{1}" fayl kengaytmasi qoʻllab-quvvatlanmaydi</importFromExcelRowUnsupportedExtensionFormat>
+    <importFromExcelRowDuplicateFormat>{0}-qator: bogʻlanish hujjatda yoki {1} faylida allaqachon mavjud</importFromExcelRowDuplicateFormat>
+    <linkItemNullError>Bogʻlanish belgilanmagan.</linkItemNullError>
+    <worksetInvalidIdError>Ishchi toʻplam identifikatori notoʻgʻri.</worksetInvalidIdError>
+    <documentNotWorksharedError>Hujjat birgalikda ishlashdan (worksharing) foydalanmaydi.</documentNotWorksharedError>
+    <linkWorksetsOnlyRevitError>Ishchi toʻplamlar sozlamasi faqat Revit bogʻlanishlari uchun qoʻllab-quvvatlanadi.</linkWorksetsOnlyRevitError>
+    <linkWorksetsApplyFailedError>Ishchi toʻplamlar sozlamasini qoʻllash amalga oshmadi.</linkWorksetsApplyFailedError>
+    <linkWorksetsNestedNotSupportedError>Ichma-ich bogʻlanishlar ishchi toʻplamlar sozlamasini qoʻllab-quvvatlamaydi.</linkWorksetsNestedNotSupportedError>
+    <linkWorksetsMultipleOpenDocumentsError>Bogʻlanish bir nechta ochiq hujjatga yuklangan va uni qayta yuklab boʻlmaydi.</linkWorksetsMultipleOpenDocumentsError>
   </mprLinksManager>
 </ModPlus>

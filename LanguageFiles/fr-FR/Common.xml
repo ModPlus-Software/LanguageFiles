@@ -600,6 +600,7 @@
     <group22>Gestionnaires</group22>
     <group23>Gestion de projet</group23>
     <group24>Réglages du projet</group24>
+    <group25>Modification</group25>
     <general>Créer</general>
     <acm>Disciplines</acm>
     <view>Vue</view>
@@ -1738,8 +1739,13 @@ Conserver le thème sélectionné "{1}" ?
 
 Vous pouvez désactiver complètement le changement automatique dans les réglages de ModPlus en décochant cette option.</h236>
     <h237>Aucune annotation n'a été trouvée dans la vue courante pour les éléments sélectionnés</h237>
-    <parameters>Paramètres</parameters>
-    <name>Nom</name>
+    <h238>Fichiers liés</h238>
+    <h239>La recherche des valeurs du paramètre "{0}" s'effectue parmi tous les éléments et types d'éléments des catégories indiquées dans le lien Revit sélectionné ou dans tous les liens Revit chargés</h239>
+    <h240>La recherche des valeurs du paramètre spécial "{0}" ({1}) s'effectue parmi tous les éléments des catégories indiquées dans le lien Revit sélectionné ou dans tous les liens Revit chargés</h240>
+    <h241>Aucune valeur du paramètre "{0}" n'a été trouvée dans les éléments et types d'éléments de la catégorie "{1}" dans les fichiers liés. Le paramètre indiqué n'existe peut-être pas</h241>
+    <h242>Le projet courant ne contient aucun lien Revit chargé</h242>
+    <h243>Ajouter les partagées à l'ensemble</h243>
+    <h244>Permet d'ajouter aux ensembles sélectionnés les familles imbriquées partagées des éléments contenus dans ces ensembles</h244>
     <any>Quelconque</any>
     <rtw1>Type</rtw1>
     <rtw2>Diamètre, mm</rtw2>
@@ -1803,6 +1809,7 @@ Vous pouvez désactiver complètement le changement automatique dans les réglag
     <i5-2>Pour utiliser la condition "Se termine par", sélectionnez la condition "Contient" et ajoutez le signe "*" au début de la valeur. Par exemple, "*Wall".</i5-2>
     <i5-3>Pour utiliser la condition "Ne commence pas par", sélectionnez la condition "Ne contient pas" et ajoutez le signe "*" à la fin de la valeur. Par exemple, "Wall*".</i5-3>
     <i5-4>Pour utiliser la condition "Ne se termine pas par", sélectionnez la condition "Ne contient pas" et ajoutez le signe "*" au début de la valeur. Par exemple, "*Wall".</i5-4>
+    <!--todo remove after 39.2.2-->
     <i6>La vérification des valeurs de type chaîne respecte la casse.</i6>
     <i7>Les paramètres de type "oui/non" sont vérifiés comme un nombre entier (0 – non, 1 – oui).</i7>
     <i8>Toutes les conditions simples imbriquées d'une condition de groupe sont vérifiées avec l'opérateur "ET", c'est-à-dire que toutes les conditions imbriquées doivent être remplies.</i8>
@@ -1826,6 +1833,7 @@ Vous pouvez désactiver complètement le changement automatique dans les réglag
     <i18>Lors de la vérification du paramètre spécial "InRebarSystem" (l'armature fait partie d'un système d'armature), les conditions "Présence du paramètre" et "Absence du paramètre" vérifient respectivement si l'armature fait ou non partie d'un système d'armature. Autrement dit, la condition "Présence du paramètre" correspond à la vérification "L'armature fait partie d'un système d'armature", et la condition "Absence du paramètre" à la vérification "L'armature ne fait pas partie d'un système d'armature".</i18>
     <i19>Le paramètre spécial DocumentTitle renvoie le nom du document courant. La valeur du paramètre spécial DocumentTitle est vérifiée selon les règles applicables aux chaînes. Si le document n'est pas enregistré ou s'il est détaché, la valeur par défaut ou une chaîne vide est renvoyée.</i19>
     <i20>La condition "Lecture seule" avec la valeur "Non" signifie que l'élément sera traité si le paramètre est modifiable. La condition "Lecture seule" avec la valeur "Oui" signifie que l'élément sera traité si le paramètre n'est pas modifiable. Un paramètre peut être non modifiable s'il s'agit d'un paramètre système non modifiable (par exemple, le paramètre "Volume"), si l'élément se trouve dans un sous-projet non disponible, ou dans d'autres cas.</i20>
+    <i21>Par défaut, la vérification des valeurs de type chaîne respecte la casse (option "Aa"). Pour les conditions "Égal", "Différent", "Contient", "Ne contient pas", vous pouvez choisir l'option "aa" pour ignorer la casse. Dans la représentation textuelle du filtre, une telle condition est signalée par un "?" après le nom du paramètre, par exemple : Marque?=A-1.</i21>
     <et1>Égal</et1>
     <et2>Supérieur</et2>
     <et3>Inférieur</et3>
@@ -1837,6 +1845,8 @@ Vous pouvez désactiver complètement le changement automatique dans les réglag
     <et9>Ne contient pas</et9>
     <et10>Absence du paramètre</et10>
     <et11>Lecture seule</et11>
+    <ic1>respecter la casse</ic1>
+    <ic2>ignorer la casse</ic2>
     <tt2>Pour utiliser le serveur modplus.org, indiquez votre adresse e-mail. L'adresse e-mail est nécessaire pour vous identifier sur le serveur. Il est recommandé d'utiliser l'adresse e-mail indiquée lors de l'inscription sur le site modplus.org</tt2>
     <tt3>Vous devez saisir l'identifiant dans l'onglet "Enregistrement" ! (Configurateur ModPlus)</tt3>
     <tt4>L'adresse e-mail indiquée n'a pas passé la vérification !\nSoit vous avez fait une erreur de saisie, soit votre hébergeur de messagerie est trèèès original =)</tt4>

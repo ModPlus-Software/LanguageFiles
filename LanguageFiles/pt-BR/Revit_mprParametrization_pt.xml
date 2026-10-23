@@ -347,6 +347,7 @@
     <msg133>Busca de relações: processados {0} de {1}, decorrido {2}</msg133>
     <msg134>Busca de contatos: processados {0} de {1}, decorrido {2}</msg134>
     <msg135>Busca de relações concluída em {0}. Elementos na coleção: {1}</msg135>
+    <msg136>Elemento ignorado: não foi encontrado nenhum elemento condicionalmente de origem que corresponda aos filtros da regra</msg136>
     <err1>Cada expressão da fórmula deve começar com o parâmetro de destino "$[NomeDoParametro]="</err1>
     <err2>O número de parênteses de abertura deve ser igual ao número de parênteses de fechamento</err2>
     <err3>O número de chaves de abertura deve ser igual ao número de chaves de fechamento</err3>
@@ -744,5 +745,9 @@
     <t243>Dos arquivos vinculados serão coletados os elementos das categorias especificadas nas colunas das regras – tanto para os elementos de origem condicional quanto para os de destino. Em seguida, eles são processados da mesma forma que os elementos do modelo atual: por exemplo, para a estratégia InMass podem ser massas, para a estratégia InSolid – elementos que possuem sólido, para a estratégia ManyToMany – elementos de origem condicional. Os valores dos parâmetros dos elementos dos arquivos vinculados podem ser usados nas fórmulas, mas não é possível gravar um valor no parâmetro de um elemento de um arquivo vinculado – essa gravação é marcada no relatório como erro</t243>
     <t244>Copiar identificador</t244>
     <t245>Copiar nome</t245>
+    <t246>Determinar a pertença das famílias apenas pelo ponto de cálculo</t246>
+    <t247>Aplica-se às estratégias InRoom e InSpace. Se uma instância de família tiver um ponto de cálculo de ambiente e esse ponto estiver dentro de um ambiente (espaço), a família sempre pertence a esse ambiente.</t247>
+    <t248>Opção ativada – a família pertence apenas ao ambiente em que está o ponto de cálculo, e a verificação por geometria não é realizada. O processamento é mais rápido, mas uma família que intercepta vários ambientes será atribuída a apenas um deles.</t248>
+    <t249>Opção desativada – a família pertence também a todos os ambientes em que entra pela geometria, de acordo com o algoritmo de busca de inclusões de sólidos selecionado. O resultado é mais completo, mas o processamento é mais demorado. Famílias sem ponto de cálculo e famílias cujo ponto de cálculo não está em nenhum ambiente são sempre verificadas pela geometria.</t249>
   </mprParametrization>
 </ModPlus>

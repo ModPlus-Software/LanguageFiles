@@ -600,6 +600,7 @@
     <group22>Manager</group22>
     <group23>Projektverwaltung</group23>
     <group24>Projekteinstellungen</group24>
+    <group25>Ändern</group25>
     <general>Erstellen</general>
     <acm>Disziplinen</acm>
     <view>Ansicht</view>
@@ -1738,8 +1739,13 @@ Das gewählte Design "{1}" beibehalten?
 
 Um die automatische Umstellung vollständig zu deaktivieren, deaktivieren Sie diese Option in den ModPlus-Einstellungen.</h236>
     <h237>Für die ausgewählten Elemente wurden in der aktuellen Ansicht keine Beschriftungen gefunden</h237>
-    <parameters>Parameter</parameters>
-    <name>Benennung</name>
+    <h238>Verknüpfte Dateien</h238>
+    <h239>Die Suche nach Werten des Parameters "{0}" wird für alle Elemente und Elementtypen der angegebenen Kategorien in der ausgewählten Revit-Verknüpfung oder in allen geladenen Revit-Verknüpfungen durchgeführt</h239>
+    <h240>Die Suche nach Werten des speziellen Parameters "{0}" ({1}) erfolgt in allen Elementen der angegebenen Kategorien in der ausgewählten Revit-Verknüpfung oder in allen geladenen Revit-Verknüpfungen</h240>
+    <h241>Es wurden keine Werte des Parameters "{0}" in den Elementen und Elementtypen der Kategorie "{1}" in den verknüpften Dateien gefunden. Der angegebene Parameter existiert möglicherweise nicht</h241>
+    <h242>Im aktuellen Projekt gibt es keine geladenen Revit-Verknüpfungen</h242>
+    <h243>Gemeinsam genutzte zur Baugruppe hinzufügen</h243>
+    <h244>Ermöglicht das Hinzufügen der gemeinsam genutzten Unterfamilien der in den ausgewählten Baugruppen enthaltenen Elemente zu diesen Baugruppen</h244>
     <any>Beliebige</any>
     <rtw1>Bewehrungstyp</rtw1>
     <rtw2>Durchmesser, mm</rtw2>
@@ -1803,6 +1809,7 @@ Um die automatische Umstellung vollständig zu deaktivieren, deaktivieren Sie di
     <i5-2>Um die Bedingung "Endet mit" zu verwenden, wählen Sie die Bedingung "Enthält" und fügen ein "*" am Ende des Wertes hinzu. Zum Beispiel "*Wall.</i5-2>
     <i5-3>Um die Bedingung "Beginnt nicht mit" zu verwenden, wählen Sie die Bedingung "Enthält nicht" und fügen ein "*" am Ende des Wertes hinzu. Zum Beispiel "Wall*.</i5-3>
     <i5-4>Um die Bedingung "Endet nicht mit" zu verwenden, wählen Sie die Bedingung "Enthält nicht" und fügen ein "*" am Anfang des Wertes hinzu. Zum Beispiel "*Wall.</i5-4>
+    <!--todo remove after 39.2.2-->
     <i6>Bei der Prüfung von Zeichenfolgen wird die Groß- und Kleinschreibung berücksichtigt.</i6>
     <i7>Parameter des Typs "on/off" werden als Ganzzahl geprüft (0 – off, 1 – on).</i7>
     <i8>Alle einfachen Bedingungen einer Gruppenbedingung werden mit dem Operator "UND" geprüft - d.h. alle Bedingungen müssen übereinstimmen.</i8>
@@ -1826,6 +1833,7 @@ Um die automatische Umstellung vollständig zu deaktivieren, deaktivieren Sie di
     <i18>Die Bedingungen "Vorhandensein des Parameters" und "Fehlender Parameter" bei der Prüfung des speziellen Parameters "InRebarSystem" (Bewehrung befindet sich in einem Bewehrungssystem) prüfen entsprechend, ob die Bewehrung Teil eines Bewehrungssystems ist oder nicht. Das heißt, die Bedingung "Parameter vorhanden" interpretiert die Prüfung als "Die Bewehrung ist Teil eines Bewehrungssystems", und die Bedingung "Parameter nicht vorhanden" interpretiert die Prüfung als "Die Bewehrung ist nicht Teil eines Bewehrungssystems".</i18>
     <i19>Der spezielle Parameter DocumentTitle gibt den Namen des aktuellen Dokuments zurück. Der Wert des speziellen Parameters DocumentTitle wird nach den Regeln für Zeichenfolgen geprüft. Wenn das Dokument nicht gespeichert oder getrennt ist, wird der Standardwert oder eine leere Zeichenfolge zurückgegeben.</i19>
     <i20>Die Bedingung "Schreibgeschützt" mit dem Wert "Nein" bedeutet, dass das Element verarbeitet wird, wenn der Parameter zur Bearbeitung verfügbar ist. Die Bedingung "Schreibgeschützt" mit dem Wert "Ja" bedeutet, dass das Element verarbeitet wird, wenn der Parameter nicht zur Bearbeitung verfügbar ist. Ein Parameter kann nicht zur Bearbeitung verfügbar sein, wenn es sich um einen unveränderlichen Systemparameter handelt (zum Beispiel den Parameter "Volumen"), sich das Element in einem nicht zugänglichen Arbeitssatz befindet oder unter anderen Bedingungen.</i20>
+    <i21>Bei der Prüfung von Zeichenfolgen wird standardmäßig die Groß- und Kleinschreibung berücksichtigt (Option "Aa"). Für die Bedingungen "Gleich", "Nicht gleich", "Enthält", "Enthält nicht" kann die Option "aa" gewählt werden – dann wird die Groß- und Kleinschreibung ignoriert. In der Zeichenfolgendarstellung des Filters wird eine solche Bedingung durch ein "?" nach dem Parameternamen gekennzeichnet, zum Beispiel: Kennzeichen?=A-1.</i21>
     <et1>Gleich</et1>
     <et2>Mehr</et2>
     <et3>Weniger</et3>
@@ -1837,6 +1845,8 @@ Um die automatische Umstellung vollständig zu deaktivieren, deaktivieren Sie di
     <et9>Enthält nicht</et9>
     <et10>Fehlender Parameter</et10>
     <et11>Schreibgeschützt</et11>
+    <ic1>Groß-/Kleinschreibung beachten</ic1>
+    <ic2>Groß-/Kleinschreibung ignorieren</ic2>
     <tt2>Um mit dem modplus.org-Server zu kommunizieren, geben Sie bitte Ihre EMail-Adresse an. Die EMail-Adresse ist erforderlich, um Sie auf dem Server zu identifizieren. Verwenden Sie vorzugsweise die EMail-Adresse, die Sie bei der Registrierung auf modplus.org angegeben haben</tt2>
     <tt3>Sie müssen Ihr Login in der Registerkarte "Registrierung" eingeben! (ModPlus Konfigurator)</tt3>
     <tt4>Die angegebene EMail-Adresse konnte nicht verifiziert werden!\nOder Sie haben einen Fehler bei der Angabe der EMail-Adresse gemacht oder Sie haben einen sehr einzigartigen EMail-Host =)</tt4>

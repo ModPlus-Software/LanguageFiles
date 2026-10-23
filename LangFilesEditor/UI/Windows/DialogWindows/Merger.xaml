@@ -30,17 +30,9 @@
                     Style="{StaticResource EditorDialogSectionBorderStyle}">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Center"
-                               Margin="0,0,8,0"
+                               Margin="0,0,12,0"
                                Style="{StaticResource EditorDialogFieldLabelStyle}"
-                               Text="Local version:" />
-                    <TextBox MinWidth="120"
-                             VerticalAlignment="Center"
-                             Style="{StaticResource EditorDialogTextBoxStyle}"
-                             Text="{Binding Path=LocalVersion, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                    <Button Command="{Binding Path=SetLocalVersionCommand}"
-                            Content="Set"
-                            Margin="8,0,0,0"
-                            Style="{StaticResource EditorDialogButtonStyle}" />
+                               Text="Версия берётся из хранилища" />
                     <Button Command="{Binding Path=MergeCommand}"
                             Content="Merge"
                             Margin="0"

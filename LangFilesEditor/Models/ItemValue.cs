@@ -1,6 +1,5 @@
 namespace LangFilesEditor.Models;
 
-using Utils;
 using ModPlusAPI.Mvvm;
 
 /// <summary>
@@ -11,14 +10,14 @@ public class ItemValue : ObservableObject
     private string _value;
 
     /// <summary>
-    /// Текст перевода; типографские кавычки нормализуются к двойным при установке.
+    /// Текст перевода. Кавычки при вводе не меняются: типографские кавычки приводятся
+    /// к прямым при сохранении файла и при сборке (<see cref="ModPlus.LanguageTools.QuoteNormalizer"/>).
     /// </summary>
     public string Value
     {
         get => _value;
         set
         {
-            value = TextNormalizer.NormalizeQuotes(value);
             if (_value == value)
             {
                 return;

@@ -347,6 +347,7 @@
     <msg133>Suche nach Zusammenhängen: {0} von {1} verarbeitet, vergangen {2}</msg133>
     <msg134>Berührungssuche: {0} von {1} verarbeitet, vergangen {2}</msg134>
     <msg135>Suche nach Zusammenhängen abgeschlossen in {0}. Elemente in der Sammlung: {1}</msg135>
+    <msg136>Element übersprungen: es wurde kein bedingtes Quellelement gefunden, das den Filtern der Regel entspricht</msg136>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -744,5 +745,9 @@
     <t243>Aus den verknüpften Dateien werden die Elemente der Kategorien gesammelt, die in den Spalten der Regeln angegeben sind – sowohl für bedingte Quellelemente als auch für Zielelemente. Anschließend werden sie gleichberechtigt mit den Elementen des aktuellen Modells verarbeitet: Bei der Strategie InMass können es beispielsweise die Formelemente sein, bei der Strategie InSolid die Vollkörperelemente, bei der Strategie ManyToMany die bedingten Quellelemente. Die Parameterwerte der Elemente aus verknüpften Dateien können in Formeln verwendet werden, aber ein Wert kann nicht in einen Parameter eines Elements aus einer verknüpften Datei geschrieben werden – ein solcher Schreibvorgang wird im Bericht als Fehler gekennzeichnet</t243>
     <t244>Kennung kopieren</t244>
     <t245>Namen kopieren</t245>
+    <t246>Zugehörigkeit von Familien nur über den Berechnungspunkt bestimmen</t246>
+    <t247>Gilt für die Strategien InRoom und InSpace. Wenn ein Familienexemplar einen Raumberechnungspunkt hat und dieser sich in einem Raum (MEP-Raum) befindet, gehört die Familie immer zu diesem Raum.</t247>
+    <t248>Option aktiviert – die Familie gehört nur zu dem Raum, in dem sich der Berechnungspunkt befindet; es erfolgt keine Geometrieprüfung. Die Verarbeitung ist schneller, aber eine Familie, die mehrere Räume schneidet, wird nur einem davon zugeordnet.</t248>
+    <t249>Option deaktiviert – die Familie gehört zusätzlich zu allen Räumen, in die sie geometrisch fällt, gemäß dem gewählten Algorithmus zur Suche nach Volumenkörpern. Das Ergebnis ist vollständiger, die Verarbeitung dauert jedoch länger. Familien ohne Berechnungspunkt sowie Familien, deren Berechnungspunkt in keinem Raum liegt, werden immer über die Geometrie geprüft.</t249>
   </mprParametrization>
 </ModPlus>

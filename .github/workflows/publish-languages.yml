@@ -1,0 +1,87 @@
+# Публикация файлов локализации после слияния в master (и при любом push в master,
+# затрагивающем папку LanguageFiles). Можно запустить и вручную на вкладке Actions.
+#
+# Порядок: исправление кавычек в исходных файлах → проверка → поднятие версии
+# (вторая часть большей из версий в LanguageFiles/Langs.xml и в хранилище +1) → сборка →
+# выгрузка на сервер сайта, сервер web-приложения и в хранилище → коммит Langs.xml
+# и исправленных файлов в master. Если любой шаг до выгрузки не прошёл, ничего не выгружается
+# и не коммитится. Коммит делается токеном GITHUB_TOKEN, поэтому повторно workflow не запускает.
+#
+# Secrets репозитория (Settings → Secrets and variables → Actions):
+#   MODPLUS_SITE_SFTP_HOST, MODPLUS_SITE_SFTP_PORT (необяз., 22), MODPLUS_SITE_SFTP_USER (необяз., root),
+#   MODPLUS_SITE_SFTP_PRIVATE_KEY (содержимое приватного ключа), MODPLUS_SITE_ROOT_PATH,
+#   MODPLUS_SERVICE_SFTP_HOST, MODPLUS_SERVICE_SFTP_PORT (необяз.), MODPLUS_SERVICE_SFTP_USER (необяз.),
+#   MODPLUS_SERVICE_SFTP_PASSWORD, MODPLUS_SERVICE_SFTP_PRIVATE_KEY (необяз.),
+#   MODPLUS_SERVICE_DOWNLOADS_PATH,
+#   MODPLUS_STORAGE_SERVICE_URL (необяз.), MODPLUS_STORAGE_BUCKET (необяз.),
+#   MODPLUS_STORAGE_ACCESS_KEY, MODPLUS_STORAGE_SECRET_KEY, MODPLUS_STORAGE_API_URL (необяз.)
+name: Публикация локализации
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'LanguageFiles/**'
+  workflow_dispatch:
+
+# Две публикации одновременно подняли бы одну и ту же версию
+concurrency:
+  group: publish-languages
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      # Актуальное состояние master, а не коммит, запустивший workflow: если до этого
+      # запуска отработала другая публикация, её коммит с версией уже должен быть здесь
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Сборка утилиты
+        run: dotnet build ModPlus.LanguageTools.Cli/ModPlus.LanguageTools.Cli.csproj -c Release -o tools
+
+      - name: Проверка, сборка и выгрузка
+        id: publish
+        run: dotnet tools/ModPlus.LanguageTools.Cli.dll publish --root LanguageFiles --output "$RUNNER_TEMP/Languages"
+        env:
+          MODPLUS_SITE_SFTP_HOST: ${{ secrets.MODPLUS_SITE_SFTP_HOST }}
+          MODPLUS_SITE_SFTP_PORT: ${{ secrets.MODPLUS_SITE_SFTP_PORT }}
+          MODPLUS_SITE_SFTP_USER: ${{ secrets.MODPLUS_SITE_SFTP_USER }}
+          MODPLUS_SITE_SFTP_PRIVATE_KEY: ${{ secrets.MODPLUS_SITE_SFTP_PRIVATE_KEY }}
+          MODPLUS_SITE_ROOT_PATH: ${{ secrets.MODPLUS_SITE_ROOT_PATH }}
+          MODPLUS_SERVICE_SFTP_HOST: ${{ secrets.MODPLUS_SERVICE_SFTP_HOST }}
+          MODPLUS_SERVICE_SFTP_PORT: ${{ secrets.MODPLUS_SERVICE_SFTP_PORT }}
+          MODPLUS_SERVICE_SFTP_USER: ${{ secrets.MODPLUS_SERVICE_SFTP_USER }}
+          MODPLUS_SERVICE_SFTP_PASSWORD: ${{ secrets.MODPLUS_SERVICE_SFTP_PASSWORD }}
+          MODPLUS_SERVICE_SFTP_PRIVATE_KEY: ${{ secrets.MODPLUS_SERVICE_SFTP_PRIVATE_KEY }}
+          MODPLUS_SERVICE_DOWNLOADS_PATH: ${{ secrets.MODPLUS_SERVICE_DOWNLOADS_PATH }}
+          MODPLUS_STORAGE_SERVICE_URL: ${{ secrets.MODPLUS_STORAGE_SERVICE_URL }}
+          MODPLUS_STORAGE_BUCKET: ${{ secrets.MODPLUS_STORAGE_BUCKET }}
+          MODPLUS_STORAGE_ACCESS_KEY: ${{ secrets.MODPLUS_STORAGE_ACCESS_KEY }}
+          MODPLUS_STORAGE_SECRET_KEY: ${{ secrets.MODPLUS_STORAGE_SECRET_KEY }}
+          MODPLUS_STORAGE_API_URL: ${{ secrets.MODPLUS_STORAGE_API_URL }}
+
+      - name: Коммит версии и исправленных файлов
+        env:
+          VERSION: ${{ steps.publish.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add LanguageFiles
+          if git diff --cached --quiet; then
+            echo "Изменений нет"
+            exit 0
+          fi
+          git commit -m "Локализация $VERSION"
+          # Пока шла публикация, в master могли прийти новые коммиты
+          git pull --rebase origin master
+          git push origin HEAD:master

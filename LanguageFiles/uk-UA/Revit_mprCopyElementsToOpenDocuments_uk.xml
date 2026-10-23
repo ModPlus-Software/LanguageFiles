@@ -169,11 +169,56 @@
     <materialExists>У цільовому документі вже є матеріал "{0}".\nВиконати копіювання із заміною?</materialExists>
     <materialDuplicateActionSettings>Поведінка при збігу назв матеріалів</materialDuplicateActionSettings>
     <materialDuplicateActionTooltip>При збігу назв матеріалів і виборі опції "Замінити" плагін виконає такий алгоритм: старий матеріал у цільовому документі буде оновлено — йому буде присвоєно всі властивості нового матеріалу. Назва матеріалу залишиться незмінною. Усі елементи, що використовують цей матеріал, автоматично отримають оновлені властивості.</materialDuplicateActionTooltip>
+    <colorSchemesDuplicateActionSettings>Поведінка при збігу назв колірних схем</colorSchemesDuplicateActionSettings>
+    <colorSchemesDuplicateActionTooltip>При збігу назв колірних схем і виборі опції "Замінити" плагін виконає такий алгоритм: наявна колірна схема в цільовому документі буде оновлена — їй буде присвоєно параметр, склад і кольори нової схеми. Ідентифікатор і назва схеми залишаться незмінними, тому всі види та шаблони видів, що використовують цю схему, автоматично отримають оновлені дані. Колірні схеми зон замінити не можна: така схема пов'язана зі схемою зонування.</colorSchemesDuplicateActionTooltip>
+    <colorSchemeExists>У цільовому документі вже є колірна схема "{0}".{1}Виконати копіювання із заміною?</colorSchemeExists>
+    <colorSchemeReplaceNotSupported>Колірна схема "{0}" не може бути замінена автоматично: схема зон пов'язана зі схемою зонування.</colorSchemeReplaceNotSupported>
+    <colorSchemeReplaceError>Не вдалося замінити вміст колірної схеми "{0}". Помилка: "{1}".</colorSchemeReplaceError>
     <closeOpenedSchedule>Закривати відкриті специфікації</closeOpenedSchedule>
     <searchModeLabel>Режим порівняння:</searchModeLabel>
     <searchModeNormal>Звичайний</searchModeNormal>
     <searchModeRegex>Регулярний вираз</searchModeRegex>
     <patternCopyWarning>Не вдалося скопіювати зразок "{0}" (id: {1}) у цільовий документ. Перевизначення фільтра буде застосовано без цього зразка.</patternCopyWarning>
     <viewTemplateFiltersCopyError>Не вдалося застосувати фільтри до скопійованого шаблону виду "{0}". Помилка: "{1}".</viewTemplateFiltersCopyError>
+    <filterReplaceInViewWarning>Не вдалося повторно призначити фільтри для виду "{0}". Помилка: "{1}".</filterReplaceInViewWarning>
+    <filterReplaceError>Не вдалося завершити заміну фільтрів. Помилка: "{0}".</filterReplaceError>
+    <assemblyExists>У цільовому документі вже є збірка "{0}".{1}Виконати копіювання із заміною?</assemblyExists>
+    <assemblyMemberCopyError>Не вдалося скопіювати елемент "{0}" (id: {1}) збірки "{2}". Помилка: "{3}".</assemblyMemberCopyError>
+    <assemblyRenameTransaction>Перейменування збірок</assemblyRenameTransaction>
+    <assemblyTypeNameSetError>Не вдалося задати ім'я типу збірки "{0}". Помилка: "{1}".</assemblyTypeNameSetError>
+    <insertionReference>Вставка</insertionReference>
+    <insertionReferencePrompt>Система координат вставки:</insertionReferencePrompt>
+    <insertionReferenceInternalOrigin>Внутрішній початок</insertionReferenceInternalOrigin>
+    <insertionReferenceProjectBasePoint>Базова точка проєкту</insertionReferenceProjectBasePoint>
+    <insertionReferenceSharedCoordinates>Спільні координати</insertionReferenceSharedCoordinates>
+    <insertionReferenceLog>Система координат вставки: "{0}". Зсув: X={1:F4}, Y={2:F4}, Z={3:F4}</insertionReferenceLog>
+    <sheetsGroupName>Аркуші</sheetsGroupName>
+    <sheetContentCopySettings>Копіювання вмісту аркушів</sheetContentCopySettings>
+    <copySheetParameterValues>Копіювати значення параметрів аркуша</copySheetParameterValues>
+    <copyTitleBlocks>Копіювати основні написи</copyTitleBlocks>
+    <copyTitleBlockParameterValues>Копіювати значення параметрів основного напису</copyTitleBlockParameterValues>
+    <copyModelViews>Копіювати види моделі</copyModelViews>
+    <copySchedules>Копіювати специфікації</copySchedules>
+    <copyLegends>Копіювати легенди</copyLegends>
+    <copyImageView>Копіювати растрові зображення візуалізації</copyImageView>
+    <copyDraftingViews>Копіювати креслярські види</copyDraftingViews>
+    <copyTextNotes>Копіювати текст</copyTextNotes>
+    <copyGenericAnnotations>Копіювати типові анотації</copyGenericAnnotations>
+    <copyDetailLines>Копіювати лінії деталізації</copyDetailLines>
+    <copyGuideGrids>Копіювати сітки напрямних</copyGuideGrids>
+    <copySheetRevisions>Копіювати та встановити Зміни (Ревізії)</copySheetRevisions>
+    <copyRasterImages>Копіювати растрові зображення (+ PDF)</copyRasterImages>
+    <copySheetsDialogTitle>Копіювання аркушів</copySheetsDialogTitle>
+    <useExisting>Використовувати існуючу</useExisting>
+    <createCopy>Створити копію</createCopy>
+    <useExistingForAll>Використати існуючу (для всіх випадків)</useExistingForAll>
+    <createCopyForAll>Створити копію (для всіх випадків)</createCopyForAll>
+    <legendExistsMessage>У цільовому документі "{0}" є легенда "{1}"</legendExistsMessage>
+    <legendConflictHint>Виберіть один із варіантів: використати наявну легенду з цільового документа або створити та використати копію легенди з документа-джерела</legendConflictHint>
+    <draftingViewExistsMessage>У цільовому документі "{0}" є креслярський вигляд "{1}"</draftingViewExistsMessage>
+    <draftingViewConflictHint>Виберіть один із варіантів: використати наявний креслярський вигляд із цільового документа або створити й використати копію креслярського вигляду з документа-джерела</draftingViewConflictHint>
+    <continueWithoutLegendsMessage>Для копіювання легенд у цільовому документі "{0}" потрібно створити хоча б одну легенду</continueWithoutLegendsMessage>
+    <continueWithoutLegendsHint>Продовжити копіювання аркушів для цього документу?</continueWithoutLegendsHint>
+    <sheetViewCopyError>Аркуш: {0}. Вид: {1}. Помилка: {2}.</sheetViewCopyError>
   </mprCopyElementsToOpenDocuments>
 </ModPlus>

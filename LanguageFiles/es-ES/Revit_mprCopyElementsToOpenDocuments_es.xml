@@ -169,11 +169,56 @@
     <materialExists>El documento de destino ya contiene el material "{0}".\n¿Desea realizar la copia con reemplazo?</materialExists>
     <materialDuplicateActionSettings>Comportamiento cuando los nombres de los materiales coinciden</materialDuplicateActionSettings>
     <materialDuplicateActionTooltip>Cuando los nombres de los materiales coincidan y se seleccione la opción "Reemplazar", el complemento aplicará el siguiente algoritmo: el material existente en el documento de destino se actualizará con todas las propiedades del nuevo material. El nombre del material permanecerá sin cambios. Todos los elementos que utilicen este material recibirán automáticamente las propiedades actualizadas.</materialDuplicateActionTooltip>
+    <colorSchemesDuplicateActionSettings>Comportamiento cuando los nombres de los esquemas de color coinciden</colorSchemesDuplicateActionSettings>
+    <colorSchemesDuplicateActionTooltip>Cuando los nombres de los esquemas de color coincidan y se seleccione la opción "Reemplazar", el complemento aplicará el siguiente algoritmo: el esquema de color existente en el documento de destino se actualizará con el parámetro, las entradas y los colores del nuevo esquema. El identificador y el nombre del esquema permanecerán sin cambios, por lo que todas las vistas y plantillas de vista que utilicen este esquema recibirán automáticamente los datos actualizados. Los esquemas de color de zonas no se pueden reemplazar: dicho esquema está vinculado a un esquema de áreas.</colorSchemesDuplicateActionTooltip>
+    <colorSchemeExists>El documento de destino ya contiene el esquema de color "{0}".{1}¿Desea realizar la copia con reemplazo?</colorSchemeExists>
+    <colorSchemeReplaceNotSupported>El esquema de color "{0}" no se puede reemplazar automáticamente: el esquema de zonas está vinculado a un esquema de áreas.</colorSchemeReplaceNotSupported>
+    <colorSchemeReplaceError>No se pudo reemplazar el contenido del esquema de color "{0}". Error: "{1}".</colorSchemeReplaceError>
     <closeOpenedSchedule>Cerrar tablas de planificación abiertas</closeOpenedSchedule>
     <searchModeLabel>Modo de comparación:</searchModeLabel>
     <searchModeNormal>Normal</searchModeNormal>
     <searchModeRegex>Expresión regular</searchModeRegex>
     <patternCopyWarning>No se pudo copiar el patrón "{0}" (id: {1}) al documento de destino. La anulación del filtro se aplicará sin este patrón.</patternCopyWarning>
     <viewTemplateFiltersCopyError>No se pudieron aplicar los filtros a la plantilla de vista copiada "{0}". Error: "{1}".</viewTemplateFiltersCopyError>
+    <filterReplaceInViewWarning>No se pudieron reasignar los filtros para la vista "{0}". Error: "{1}".</filterReplaceInViewWarning>
+    <filterReplaceError>No se pudo completar la sustitución de filtros. Error: "{0}".</filterReplaceError>
+    <assemblyExists>El documento de destino ya contiene el ensamblaje "{0}".{1}Desea realizar la copia con reemplazo?</assemblyExists>
+    <assemblyMemberCopyError>No se pudo copiar el elemento "{0}" (id: {1}) del ensamblaje "{2}". Error: "{3}".</assemblyMemberCopyError>
+    <assemblyRenameTransaction>Cambio de nombre de ensamblajes</assemblyRenameTransaction>
+    <assemblyTypeNameSetError>No se pudo establecer el nombre del tipo de ensamblaje "{0}". Error: "{1}".</assemblyTypeNameSetError>
+    <insertionReference>Inserción</insertionReference>
+    <insertionReferencePrompt>Sistema de coordenadas de inserción:</insertionReferencePrompt>
+    <insertionReferenceInternalOrigin>Origen interno</insertionReferenceInternalOrigin>
+    <insertionReferenceProjectBasePoint>Punto base del proyecto</insertionReferenceProjectBasePoint>
+    <insertionReferenceSharedCoordinates>Coordenadas compartidas</insertionReferenceSharedCoordinates>
+    <insertionReferenceLog>Sistema de coordenadas de inserción: "{0}". Desplazamiento: X={1:F4}, Y={2:F4}, Z={3:F4}</insertionReferenceLog>
+    <sheetsGroupName>Hojas</sheetsGroupName>
+    <sheetContentCopySettings>Copiar contenido de hojas</sheetContentCopySettings>
+    <copySheetParameterValues>Copiar valores de parámetros de hoja</copySheetParameterValues>
+    <copyTitleBlocks>Copiar cuadros de rotulación</copyTitleBlocks>
+    <copyTitleBlockParameterValues>Copiar valores de parámetros de cuadro de rotulación</copyTitleBlockParameterValues>
+    <copyModelViews>Copiar vistas del modelo</copyModelViews>
+    <copySchedules>Copiar tabla de planificacións</copySchedules>
+    <copyLegends>Copiar leyendas</copyLegends>
+    <copyImageView>Copiar imágenes de trama de visualización</copyImageView>
+    <copyDraftingViews>Copiar vistas de dibujo</copyDraftingViews>
+    <copyTextNotes>Copiar texto</copyTextNotes>
+    <copyGenericAnnotations>Copiar anotaciones típicas</copyGenericAnnotations>
+    <copyDetailLines>Copiar líneas de detalle</copyDetailLines>
+    <copyGuideGrids>Copiar rejillas de guías</copyGuideGrids>
+    <copySheetRevisions>Copiar e establecer cambios (revisiones)</copySheetRevisions>
+    <copyRasterImages>Copiar imágenes de trama (+ PDF)</copyRasterImages>
+    <copySheetsDialogTitle>Copiar hojas</copySheetsDialogTitle>
+    <useExisting>Utilizar existente</useExisting>
+    <createCopy>Crear copia</createCopy>
+    <useExistingForAll>Utilizar existente (para todos casos)</useExistingForAll>
+    <createCopyForAll>Crear copia (para todos casos)</createCopyForAll>
+    <legendExistsMessage>Documento objetivo "{0}" tiene una leyenda "{1}"</legendExistsMessage>
+    <legendConflictHint>Seleccionar una opción: utilizar una leyenda existente del documento objetivo o crear y utilizar una copia de leyenda del documento original</legendConflictHint>
+    <draftingViewExistsMessage>Documento objetivo "{0}" tiene una vista de dibujo "{1}"</draftingViewExistsMessage>
+    <draftingViewConflictHint>Seleccionar una opción: utilizar una vista de dibujo existente del documento objetivo o crear y utilizar una copia de vista de dibujo del documento original</draftingViewConflictHint>
+    <continueWithoutLegendsMessage>Para copiar leyendas en documento objetivo "{0}" es necesario crear al menos una leyenda</continueWithoutLegendsMessage>
+    <continueWithoutLegendsHint>¿Continuar copiando hojas para este documento?</continueWithoutLegendsHint>
+    <sheetViewCopyError>Hoja: {0}. Vista: {1}. Error: {2}.</sheetViewCopyError>
   </mprCopyElementsToOpenDocuments>
 </ModPlus>

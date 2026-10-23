@@ -1,8 +1,8 @@
 namespace LangFilesEditor.Services.RepositoryServices;
 
-using System.Xml;
 using System.Xml.Linq;
 using Models;
+using ModPlus.LanguageTools;
 using Utils;
 
 /// <summary>
@@ -11,15 +11,6 @@ using Utils;
 /// </summary>
 internal static class ModuleXmlSerializer
 {
-    /// <summary>
-    /// Настройки форматирования при записи XML на диск.
-    /// </summary>
-    public static readonly XmlWriterSettings SaveSettings = new()
-    {
-        Indent = true,
-        NewLineOnAttributes = true
-    };
-
     /// <summary>
     /// Читает атрибуты XML-узла модуля в коллекцию записей metadata.
     /// </summary>
@@ -211,19 +202,22 @@ internal static class ModuleXmlSerializer
     }
 
     /// <summary>
-    /// Записывает XML-документ на диск с форматированием <see cref="SaveSettings"/>.
+    /// Записывает XML-документ на диск в общем формате исходных файлов локализации
+    /// (<see cref="SourceXml.Save"/>).
     /// </summary>
     /// <param name="filePath">Путь к целевому файлу.</param>
     /// <param name="document">Корневой XML-элемент для записи.</param>
-    public static void WriteDocument(string filePath, XElement document)
-    {
-        using var writer = XmlWriter.Create(filePath, SaveSettings);
-        document.WriteTo(writer);
-    }
+    public static void WriteDocument(string filePath, XElement document) => SourceXml.Save(filePath, document);
 
     /// <summary>
-    /// Пытается получить значение перевода записи для указанного языка.
+    /// Пытается получить значение перевода записи для указанного языка в том виде, в котором
+    /// оно записывается в файл: типографские кавычки заменяются на прямые.
     /// </summary>
+    /// <remarks>
+    /// Кавычки нормализуются здесь, а не при вводе: слияние исправляет кавычки в исходных файлах,
+    /// и без нормализации при записи следующее сохранение уже загруженного модуля вернуло бы
+    /// в файл старые типографские кавычки из памяти редактора.
+    /// </remarks>
     /// <param name="entry">Запись перевода.</param>
     /// <param name="languageName">Код языка.</param>
     /// <param name="value">Найденное значение или пустая строка.</param>
@@ -232,7 +226,7 @@ internal static class ModuleXmlSerializer
     {
         if (entry.Values.TryGetValue(languageName, out var itemValue))
         {
-            value = itemValue.Value;
+            value = QuoteNormalizer.Normalize(itemValue.Value);
             return true;
         }
 

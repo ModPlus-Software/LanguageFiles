@@ -169,11 +169,56 @@
     <materialExists>Le document cible contient déjà le matériau "{0}".\nCopier avec remplacement ?</materialExists>
     <materialDuplicateActionSettings>Comportement en cas de noms de matériaux identiques</materialDuplicateActionSettings>
     <materialDuplicateActionTooltip>En cas de noms de matériaux identiques et si l'option "Remplacer" est sélectionnée, le plugin exécutera l'algorithme suivant : l'ancien matériau du document cible sera mis à jour - toutes les propriétés du nouveau matériau lui seront attribuées. Le nom du matériau restera inchangé. Tous les éléments utilisant ce matériau recevront automatiquement les propriétés mises à jour.</materialDuplicateActionTooltip>
+    <colorSchemesDuplicateActionSettings>Comportement en cas de noms de schémas de couleurs identiques</colorSchemesDuplicateActionSettings>
+    <colorSchemesDuplicateActionTooltip>En cas de noms de schémas de couleurs identiques et si l'option "Remplacer" est sélectionnée, le plugin exécutera l'algorithme suivant : le schéma de couleurs existant du document cible sera mis à jour - le paramètre, les entrées et les couleurs du nouveau schéma lui seront attribués. L'identifiant et le nom du schéma resteront inchangés, tous les vues et gabarits de vue utilisant ce schéma recevront donc automatiquement les données mises à jour. Les schémas de couleurs de zones ne peuvent pas être remplacés : un tel schéma est lié à un schéma de surfaces.</colorSchemesDuplicateActionTooltip>
+    <colorSchemeExists>Le document cible contient déjà le schéma de couleurs "{0}".{1}Copier avec remplacement ?</colorSchemeExists>
+    <colorSchemeReplaceNotSupported>Le schéma de couleurs "{0}" ne peut pas être remplacé automatiquement : le schéma de zones est lié à un schéma de surfaces.</colorSchemeReplaceNotSupported>
+    <colorSchemeReplaceError>Impossible de remplacer le contenu du schéma de couleurs "{0}". Erreur : "{1}".</colorSchemeReplaceError>
     <closeOpenedSchedule>Fermer les nomenclatures ouvertes</closeOpenedSchedule>
     <searchModeLabel>Mode de comparaison :</searchModeLabel>
     <searchModeNormal>Normal</searchModeNormal>
     <searchModeRegex>Expression régulière</searchModeRegex>
     <patternCopyWarning>Impossible de copier le motif "{0}" (id : {1}) dans le document cible. Les remplacements de graphismes du filtre seront appliqués sans ce motif.</patternCopyWarning>
-    <viewTemplateFiltersCopyError>Impossible d'appliquer les filtres au gabarit de vue copié "{0}". Erreur : "{1}".</viewTemplateFiltersCopyError>
+    <viewTemplateFiltersCopyError>Impossible d'appliquer les filtres au gabarit de vue copié "{0}". Erreur : "{1}".</viewTemplateFiltersCopyError>
+    <filterReplaceInViewWarning>Impossible de réaffecter les filtres pour la vue "{0}". Erreur : "{1}".</filterReplaceInViewWarning>
+    <filterReplaceError>Impossible de terminer le remplacement des filtres. Erreur : "{0}".</filterReplaceError>
+    <assemblyExists>Le document cible contient deja l'assemblage "{0}".{1}Copier avec remplacement ?</assemblyExists>
+    <assemblyMemberCopyError>Impossible de copier l'element "{0}" (id : {1}) de l'assemblage "{2}". Erreur : "{3}".</assemblyMemberCopyError>
+    <assemblyRenameTransaction>Renommage des assemblages</assemblyRenameTransaction>
+    <assemblyTypeNameSetError>Impossible de definir le nom du type d'assemblage "{0}". Erreur : "{1}".</assemblyTypeNameSetError>
+    <insertionReference>Insertion</insertionReference>
+    <insertionReferencePrompt>Système de coordonnées d'insertion :</insertionReferencePrompt>
+    <insertionReferenceInternalOrigin>Origine interne</insertionReferenceInternalOrigin>
+    <insertionReferenceProjectBasePoint>Point de base du projet</insertionReferenceProjectBasePoint>
+    <insertionReferenceSharedCoordinates>Coordonnées partagées</insertionReferenceSharedCoordinates>
+    <insertionReferenceLog>Système de coordonnées d'insertion : "{0}". Décalage : X={1:F4}, Y={2:F4}, Z={3:F4}</insertionReferenceLog>
+    <sheetsGroupName>Feuilles</sheetsGroupName>
+    <sheetContentCopySettings>Copie du contenu des feuilles</sheetContentCopySettings>
+    <copySheetParameterValues>Copier les valeurs des paramètres de la feuille</copySheetParameterValues>
+    <copyTitleBlocks>Copier les cartouches</copyTitleBlocks>
+    <copyTitleBlockParameterValues>Copier les valeurs des paramètres du cartouche</copyTitleBlockParameterValues>
+    <copyModelViews>Copier les vues du modèle</copyModelViews>
+    <copySchedules>Copier les nomenclatures</copySchedules>
+    <copyLegends>Copier les légendes</copyLegends>
+    <copyImageView>Copier les images de rendu</copyImageView>
+    <copyDraftingViews>Copier les vues de dessin</copyDraftingViews>
+    <copyTextNotes>Copier le texte</copyTextNotes>
+    <copyGenericAnnotations>Copier les annotations génériques</copyGenericAnnotations>
+    <copyDetailLines>Copier les lignes de détail</copyDetailLines>
+    <copyGuideGrids>Copier les grilles de guidage</copyGuideGrids>
+    <copySheetRevisions>Copier et définir les révisions</copySheetRevisions>
+    <copyRasterImages>Copier les images raster (+ PDF)</copyRasterImages>
+    <copySheetsDialogTitle>Copie des feuilles</copySheetsDialogTitle>
+    <useExisting>Utiliser l'existante</useExisting>
+    <createCopy>Créer une copie</createCopy>
+    <useExistingForAll>Utiliser l'existante (pour tous les cas)</useExistingForAll>
+    <createCopyForAll>Créer une copie (pour tous les cas)</createCopyForAll>
+    <legendExistsMessage>Le document cible "{0}" contient la légende "{1}"</legendExistsMessage>
+    <legendConflictHint>Choisissez l'une des options : utiliser la légende existante du document cible ou créer et utiliser une copie de la légende du document source</legendConflictHint>
+    <draftingViewExistsMessage>Le document cible "{0}" contient la vue de dessin "{1}"</draftingViewExistsMessage>
+    <draftingViewConflictHint>Choisissez l'une des options : utiliser la vue de dessin existante du document cible ou créer et utiliser une copie de la vue de dessin du document source</draftingViewConflictHint>
+    <continueWithoutLegendsMessage>Pour copier des légendes, vous devez créer au moins une légende dans le document cible "{0}"</continueWithoutLegendsMessage>
+    <continueWithoutLegendsHint>Poursuivre la copie des feuilles pour ce document ?</continueWithoutLegendsHint>
+    <sheetViewCopyError>Feuille : {0}. Vue : {1}. Erreur : {2}.</sheetViewCopyError>
   </mprCopyElementsToOpenDocuments>
 </ModPlus>
