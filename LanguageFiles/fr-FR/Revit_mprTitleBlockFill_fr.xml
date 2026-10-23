@@ -3,150 +3,128 @@
   <mprTitleBlockFill
     LocalName="Remplissage des cartouches"
     Description="Remplit les cartouches des feuilles selon des profils configurables : signataires, dates, signatures et autres champs">
-    <h1>Paramètres</h1>
-    <h2>Remplissage</h2>
-    <h4>Champ</h4>
-    <h5>Avant</h5>
-    <h6>Après</h6>
-    <h7>Remplir</h7>
-    <h8>Aperçu des modifications</h8>
-    <h10>Valeurs des champs</h10>
-    <h11>Remplir</h11>
-    <h12>Aperçu</h12>
-    <h14>Profils</h14>
-    <h15>Profil</h15>
-    <h16>Types de cartouche</h16>
-    <h17>Champs du cartouche</h17>
-    <h18>Ajouter un champ</h18>
-    <h19>Ajouter un groupe</h19>
-    <h20>Général</h20>
-    <h21>Signatures</h21>
-    <h22>Valeur de la case à cocher</h22>
-    <h23>Utiliser « Titre sur la feuille » s'il est défini</h23>
-    <h24>Inclure les légendes</h24>
-    <h25>Écrire une valeur vide</h25>
+    <h1>Remplissage</h1>
+    <h2>Aperçu des modifications</h2>
+    <h3>Valeurs des champs</h3>
+    <h4>Remplir</h4>
+    <h5>Profils</h5>
+    <h6>Profil</h6>
+    <h7>Types de cartouche</h7>
+    <h8>Champs du cartouche</h8>
+    <h9>Ajouter un champ</h9>
+    <h10>Ajouter un groupe</h10>
+    <h11>Général</h11>
+    <h12>Signatures</h12>
+    <h13>Valeur de la case à cocher</h13>
+    <h14>Utiliser « Titre sur la feuille » s'il est défini</h14>
+    <h15>Inclure les légendes</h15>
+    <h16>Écrire une valeur vide</h16>
     <t1>Rechercher par numéro et nom</t1>
     <t2>Profil de cartouche</t2>
     <t3>Nom du champ, par exemple Nom</t3>
     <t4>Type de champ</t4>
-    <t5>Source de la valeur</t5>
-    <t7>Valeur constante</t7>
-    <t8>Champ dont la valeur est reprise</t8>
-    <t9>Séparateur entre les noms de vues</t9>
-    <t10>Format de date</t10>
-    <t11>Méthode de signature</t11>
-    <t12>Famille de remplacement « sans signature »</t12>
-    <t13>Nom du profil</t13>
-    <t14>Rechercher par nom de type</t14>
-    <t15>Nom du groupe, par exemple Conçu par</t15>
-    <t16>Paramètre de feuille pour le regroupement</t16>
-    <t17>Dossier des signatures</t17>
-    <t18>Sélectionner toutes les feuilles</t18>
-    <t19>Effacer la sélection</t19>
-    <t20>Cocher les feuilles sélectionnées dans l'arborescence du projet et la feuille courante</t20>
-    <t21>Nom du fichier de signature. La signature est placée si un nom est saisi</t21>
-    <t22>Placer la signature</t22>
-    <t23>Aucun fichier de signature portant ce nom n'a été trouvé dans le dossier des signatures</t23>
-    <t24>Rempli sans saisie de valeurs</t24>
-    <t25>Afficher les valeurs qui vont changer avant l'écriture</t25>
-    <t26>Effacer les champs des lignes cochées sur les feuilles sélectionnées</t26>
-    <t27>Propriétaire du paramètre&#10;Élément sur lequel le plugin recherche le paramètre</t27>
-    <t28>Nom du champ&#10;Affiché lors du remplissage</t28>
-    <t29>Dupliquer le champ</t29>
-    <t30>Supprimer le champ</t30>
-    <t31>Monter</t31>
-    <t32>Descendre</t32>
-    <t33>Type de champ&#10;Comment la valeur est saisie et écrite</t33>
-    <t34>Source de la valeur&#10;Provenance de la valeur du champ</t34>
-    <t35>Paramètre&#10;La valeur du champ y est écrite</t35>
-    <t36>Valeur constante&#10;Écrite à chaque remplissage</t36>
-    <t37>Valeur constante de la case à cocher&#10;Écrite à chaque remplissage</t37>
-    <t38>Champ source&#10;Sa valeur est aussi écrite dans ce champ</t38>
-    <t39>Séparateur&#10;Placé entre les noms de vues</t39>
-    <t40>La valeur est obtenue séparément pour chaque feuille à partir des vues qui y sont placées, dans l'ordre de leurs numéros de détail. Les noms répétés sont écrits une seule fois. Le champ n'est pas affiché lors du remplissage</t40>
-    <t41>Format de date&#10;Par exemple dd.MM.yy</t41>
-    <t42>Format d'écriture de la date dans un paramètre texte. dd - jour, MM - mois, yy ou yyyy - année. mm en minuscules signifie minutes et non mois. Dans un paramètre « Oui/Non », la date est écrite comme une coche</t42>
-    <t43>Méthode de signature&#10;Comment la signature arrive dans le cartouche</t43>
-    <t44>Famille de remplacement&#10;Placée lors du retrait de la signature</t44>
-    <t45>Texte dans la famille de cartouche : le plugin écrit le nom de la signature dans un paramètre texte, et la famille affiche elle-même la signature. Famille du dossier des signatures : paramètre d'occurrence de type de données « Type de famille », le fichier de signature est chargé depuis le dossier ; une famille de remplacement est nécessaire pour retirer une signature. Le nom du fichier de signature est la valeur du champ, par exemple celle du champ du nom</t45>
-    <t46>Si non coché, un texte vide, une case décochée et une signature décochée sont ignorés et n'écrasent pas ce qui est déjà rempli dans le cartouche. Si coché, le texte est effacé, la case est décochée et la signature est retirée</t46>
-    <t47>Ajouter un profil</t47>
-    <t48>Dupliquer le profil</t48>
-    <t49>Supprimer le profil</t49>
-    <t50>Exporter le profil vers un fichier</t50>
-    <t51>Importer un profil depuis un fichier</t51>
-    <t52>Ajoutez ou importez un profil de cartouche</t52>
-    <t53>Cochez les types du document auxquels le profil s'applique</t53>
-    <t54>Les champs remplis par le plugin sont regroupés. Les champs d'un même groupe sont remplis ensemble et activés par une seule coche. L'ordre des groupes et des champs est celui de la fenêtre de remplissage</t54>
-    <t55>Les paramètres du groupe ou de ses champs comportent des remarques</t55>
-    <t56>Nom du groupe&#10;En-tête du bloc lors du remplissage</t56>
-    <t57>Dupliquer le groupe avec ses champs</t57>
-    <t58>Monter le groupe</t58>
-    <t59>Descendre le groupe</t59>
-    <t60>Supprimer le groupe</t60>
-    <t61>Les feuilles sont regroupées dans la section de remplissage selon la valeur de ce paramètre, par exemple par lot du projet</t61>
-    <t62>Sélectionner un dossier</t62>
-    <t63>Nécessaire uniquement pour la méthode de signature « Famille du dossier des signatures » : les familles de signatures et la famille de remplacement « sans signature » sont chargées depuis ce dossier. Le nom du fichier de famille est le nom de la signature, par exemple J.Dupont.rfa. La méthode « Texte dans la famille de cartouche » n'utilise pas le dossier</t63>
-    <e1>Feuille</e1>
-    <e2>Cartouche</e2>
-    <e3>Texte</e3>
-    <e4>Date</e4>
-    <e5>Case à cocher</e5>
-    <e6>Signature</e6>
-    <e7>Saisi lors du remplissage</e7>
-    <e9>D'un autre champ</e9>
-    <e10>Noms des vues de la feuille</e10>
-    <e11>Texte dans la famille de cartouche</e11>
-    <e12>Famille du dossier des signatures</e12>
-    <m2>Valeurs à modifier : {0}. Déjà identiques : {1}</m2>
-    <m4>Effacement des cartouches</m4>
-    <m6>La configuration ne contient aucun profil de cartouche</m6>
-    <m7>Le profil ne contient aucun champ. Ajoutez-les dans la section Paramètres</m7>
-    <m8>Aucune feuille sélectionnée</m8>
-    <m9>Aucune ligne cochée pour le remplissage</m9>
-    <m10>Les valeurs des cartouches correspondent déjà à celles à remplir, aucune modification</m10>
-    <m11>Aucune feuille disponible pour le remplissage n'est sélectionnée dans Revit. Sélectionnez des feuilles dans l'arborescence du projet ou ouvrez une feuille</m11>
-    <m12>Nouveau profil</m12>
-    <m13>Le fichier sélectionné ne contient pas de profil de cartouche</m13>
-    <m14>Dossier des fichiers de signature</m14>
-    <m18>Groupe sans nom</m18>
-    <m19>champs : {0}</m19>
-    <m20>Sans groupe</m20>
-    <m21>La feuille n'a pas de cartouche</m21>
-    <m22>Aucun profil trouvé pour le type de cartouche</m22>
-    <m23>Profil : {0}</m23>
-    <m24>Le nom du groupe n'est pas défini</m24>
-    <m25>Le profil contient un autre groupe portant le même nom</m25>
-    <m26>Le groupe ne contient aucun champ</m26>
-    <m27>Le nom du champ n'est pas défini</m27>
-    <m28>Le groupe contient un autre champ portant le même nom</m28>
-    <m29>Aucun paramètre sélectionné</m29>
-    <m30>Le champ dont la valeur est reprise n'est pas sélectionné</m30>
-    <m31>Le dossier des signatures n'est pas sélectionné : il se définit dans l'onglet « Général »</m31>
-    <m32>La famille de remplacement « sans signature » n'est pas définie : le retrait de la signature peut échouer</m32>
-    <m33>Le fichier de la famille de remplacement est introuvable dans le dossier des signatures</m33>
-    <m34>Format de date incorrect</m34>
-    <m35>Dans le format de date, mm en minuscules signifie minutes, le mois est MM</m35>
-    <m36>Le profil de la feuille ne contient pas le champ : {0}</m36>
-    <m37>Impossible de traiter la feuille : {0}</m37>
-    <m38>Aucun paramètre n'est défini pour le champ : {0}</m38>
-    <m39>Paramètre introuvable : {0} ({1})</m39>
-    <m40>Paramètre en lecture seule : {0} ({1})</m40>
-    <m41>Le type de données du paramètre ne convient pas au champ : {0} ({1})</m41>
-    <m42>Le nom de la signature n'est pas défini, la signature n'a pas été placée : {0}</m42>
-    <m43>Impossible d'écrire la valeur dans le paramètre {0}</m43>
-    <m44>Revit a annulé les modifications de la feuille</m44>
-    <m45>Type de famille</m45>
-    <m46>Revit ne permet pas de laisser l'emplacement de signature vide. Indiquez la famille de remplacement « sans signature » dans les paramètres du champ : {0}</m46>
-    <m47>Impossible d'écrire la signature {0} dans le paramètre {1}. Vérifiez que le paramètre accepte les familles de cette catégorie</m47>
-    <m48>Le dossier des signatures n'est pas sélectionné</m48>
-    <m49>Fichier de signature introuvable : {0}.rfa</m49>
-    <m50>Le dossier des signatures est inaccessible : {0}</m50>
-    <m51>Impossible de charger le fichier de signature : {0}.rfa</m51>
-    <m53>La famille {0} a plusieurs types, {1} a été utilisé</m53>
-    <m55>Impossible d'écrire la signature dans le paramètre : {0}</m55>
-    <m56>Paramètre de signature introuvable : {0}</m56>
-    <m57>Le paramètre de signature doit avoir le type de données « {0} » : {1}</m57>
-    <m58>Le paramètre de signature est en lecture seule : {0}</m58>
+    <t5>Valeur constante</t5>
+    <t6>Champ dont la valeur est reprise</t6>
+    <t7>Séparateur entre les noms de vues</t7>
+    <t8>Format de date</t8>
+    <t9>Méthode de signature</t9>
+    <t10>Famille de remplacement « sans signature »</t10>
+    <t11>Nom du profil</t11>
+    <t12>Nom du groupe, par exemple Conçu par</t12>
+    <t13>Paramètre de feuille pour le regroupement</t13>
+    <t14>Dossier des signatures</t14>
+    <t15>Cocher les feuilles sélectionnées dans l'arborescence du projet et la feuille courante</t15>
+    <t16>Nom du fichier de signature. La signature est placée si un nom est saisi</t16>
+    <t17>Placer la signature</t17>
+    <t18>Aucun fichier de signature portant ce nom n'a été trouvé dans le dossier des signatures</t18>
+    <t19>Rempli sans saisie de valeurs</t19>
+    <t20>Afficher les valeurs qui vont changer avant l'écriture</t20>
+    <t21>Effacer les champs des lignes cochées sur les feuilles sélectionnées</t21>
+    <t22>Propriétaire du paramètre&#10;Élément sur lequel le plugin recherche le paramètre</t22>
+    <t23>Nom du champ&#10;Affiché lors du remplissage</t23>
+    <t24>Monter</t24>
+    <t25>Descendre</t25>
+    <t26>Type de champ&#10;Comment la valeur est saisie et écrite</t26>
+    <t27>Source de la valeur&#10;Provenance de la valeur du champ</t27>
+    <t28>Paramètre&#10;La valeur du champ y est écrite</t28>
+    <t29>Valeur constante&#10;Écrite à chaque remplissage</t29>
+    <t30>Valeur constante de la case à cocher&#10;Écrite à chaque remplissage</t30>
+    <t31>Champ source&#10;Sa valeur est aussi écrite dans ce champ</t31>
+    <t32>Séparateur&#10;Placé entre les noms de vues</t32>
+    <t33>La valeur est obtenue séparément pour chaque feuille à partir des vues qui y sont placées, dans l'ordre de leurs numéros de détail. Les noms répétés sont écrits une seule fois. Le champ n'est pas affiché lors du remplissage</t33>
+    <t34>Format de date&#10;Par exemple dd.MM.yy</t34>
+    <t35>Format d'écriture de la date dans un paramètre texte. dd - jour, MM - mois, yy ou yyyy - année. mm en minuscules signifie minutes et non mois. Dans un paramètre « Oui/Non », la date est écrite comme une coche</t35>
+    <t36>Méthode de signature&#10;Comment la signature arrive dans le cartouche</t36>
+    <t37>Famille de remplacement&#10;Placée lors du retrait de la signature</t37>
+    <t38>Texte dans la famille de cartouche : le plugin écrit le nom de la signature dans un paramètre texte, et la famille affiche elle-même la signature. Famille du dossier des signatures : paramètre d'occurrence de type de données « Type de famille », le fichier de signature est chargé depuis le dossier ; une famille de remplacement est nécessaire pour retirer une signature. Le nom du fichier de signature est la valeur du champ, par exemple celle du champ du nom</t38>
+    <t39>Si non coché, un texte vide, une case décochée et une signature décochée sont ignorés et n'écrasent pas ce qui est déjà rempli dans le cartouche. Si coché, le texte est effacé, la case est décochée et la signature est retirée</t39>
+    <t40>Ajoutez ou importez un profil de cartouche</t40>
+    <t41>Cochez les types du document auxquels le profil s'applique</t41>
+    <t42>Les champs remplis par le plugin sont regroupés. Les champs d'un même groupe sont remplis ensemble et activés par une seule coche. L'ordre des groupes et des champs est celui de la fenêtre de remplissage</t42>
+    <t43>Les paramètres du groupe ou de ses champs comportent des remarques</t43>
+    <t44>Nom du groupe&#10;En-tête du bloc lors du remplissage</t44>
+    <t45>Monter le groupe</t45>
+    <t46>Descendre le groupe</t46>
+    <t47>Les feuilles sont regroupées dans la section de remplissage selon la valeur de ce paramètre, par exemple par lot du projet</t47>
+    <t48>Sélectionner un dossier</t48>
+    <t49>Nécessaire uniquement pour la méthode de signature « Famille du dossier des signatures » : les familles de signatures et la famille de remplacement « sans signature » sont chargées depuis ce dossier. Le nom du fichier de famille est le nom de la signature, par exemple J.Dupont.rfa. La méthode « Texte dans la famille de cartouche » n'utilise pas le dossier</t49>
+    <e1>Cartouche</e1>
+    <e2>Case à cocher</e2>
+    <e3>Signature</e3>
+    <e4>Saisi lors du remplissage</e4>
+    <e5>D'un autre champ</e5>
+    <e6>Noms des vues de la feuille</e6>
+    <e7>Texte dans la famille de cartouche</e7>
+    <e8>Famille du dossier des signatures</e8>
+    <m1>Valeurs à modifier : {0}. Déjà identiques : {1}</m1>
+    <m2>Effacement des cartouches</m2>
+    <m3>La configuration ne contient aucun profil de cartouche</m3>
+    <m4>Le profil ne contient aucun champ. Ajoutez-les dans la section Paramètres</m4>
+    <m5>Aucune feuille sélectionnée</m5>
+    <m6>Aucune ligne cochée pour le remplissage</m6>
+    <m7>Les valeurs des cartouches correspondent déjà à celles à remplir, aucune modification</m7>
+    <m8>Aucune feuille disponible pour le remplissage n'est sélectionnée dans Revit. Sélectionnez des feuilles dans l'arborescence du projet ou ouvrez une feuille</m8>
+    <m9>Nouveau profil</m9>
+    <m10>Le fichier sélectionné ne contient pas de profil de cartouche</m10>
+    <m11>Dossier des fichiers de signature</m11>
+    <m12>Groupe sans nom</m12>
+    <m13>champs : {0}</m13>
+    <m14>Sans groupe</m14>
+    <m15>La feuille n'a pas de cartouche</m15>
+    <m16>Aucun profil trouvé pour le type de cartouche</m16>
+    <m17>Profil : {0}</m17>
+    <m18>Le nom du groupe n'est pas défini</m18>
+    <m19>Le profil contient un autre groupe portant le même nom</m19>
+    <m20>Le groupe ne contient aucun champ</m20>
+    <m21>Le nom du champ n'est pas défini</m21>
+    <m22>Le groupe contient un autre champ portant le même nom</m22>
+    <m23>Aucun paramètre sélectionné</m23>
+    <m24>Le champ dont la valeur est reprise n'est pas sélectionné</m24>
+    <m25>Le dossier des signatures n'est pas sélectionné : il se définit dans l'onglet « Général »</m25>
+    <m26>La famille de remplacement « sans signature » n'est pas définie : le retrait de la signature peut échouer</m26>
+    <m27>Le fichier de la famille de remplacement est introuvable dans le dossier des signatures</m27>
+    <m28>Format de date incorrect</m28>
+    <m29>Dans le format de date, mm en minuscules signifie minutes, le mois est MM</m29>
+    <m30>Le profil de la feuille ne contient pas le champ : {0}</m30>
+    <m31>Impossible de traiter la feuille : {0}</m31>
+    <m32>Aucun paramètre n'est défini pour le champ : {0}</m32>
+    <m33>Paramètre introuvable : {0} ({1})</m33>
+    <m34>Paramètre en lecture seule : {0} ({1})</m34>
+    <m35>Le type de données du paramètre ne convient pas au champ : {0} ({1})</m35>
+    <m36>Le nom de la signature n'est pas défini, la signature n'a pas été placée : {0}</m36>
+    <m37>Impossible d'écrire la valeur dans le paramètre {0}</m37>
+    <m38>Revit a annulé les modifications de la feuille</m38>
+    <m39>Type de famille</m39>
+    <m40>Revit ne permet pas de laisser l'emplacement de signature vide. Indiquez la famille de remplacement « sans signature » dans les paramètres du champ : {0}</m40>
+    <m41>Impossible d'écrire la signature {0} dans le paramètre {1}. Vérifiez que le paramètre accepte les familles de cette catégorie</m41>
+    <m42>Le dossier des signatures n'est pas sélectionné</m42>
+    <m43>Fichier de signature introuvable : {0}.rfa</m43>
+    <m44>Le dossier des signatures est inaccessible : {0}</m44>
+    <m45>Impossible de charger le fichier de signature : {0}.rfa</m45>
+    <m46>La famille {0} a plusieurs types, {1} a été utilisé</m46>
+    <m47>Impossible d'écrire la signature dans le paramètre : {0}</m47>
+    <m48>Paramètre de signature introuvable : {0}</m48>
+    <m49>Le paramètre de signature doit avoir le type de données « {0} » : {1}</m49>
+    <m50>Le paramètre de signature est en lecture seule : {0}</m50>
   </mprTitleBlockFill>
 </ModPlus>
