@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mprTitleBlockFill
+    LocalName="Preenchimento de carimbos"
+    Description="Preenche os blocos de margens e carimbo das folhas com perfis configuráveis: signatários, datas, assinaturas e outros campos">
+    <h1>Preenchimento</h1>
+    <h2>Pré-visualização das alterações</h2>
+    <h3>Valores dos campos</h3>
+    <h4>Preencher</h4>
+    <h5>Perfis</h5>
+    <h6>Perfil</h6>
+    <h7>Tipos de bloco de margens e carimbo</h7>
+    <h8>Campos do carimbo</h8>
+    <h9>Adicionar campo</h9>
+    <h10>Adicionar grupo</h10>
+    <h11>Geral</h11>
+    <h12>Assinaturas</h12>
+    <h13>Valor da caixa de seleção</h13>
+    <h14>Usar "Título na folha", se definido</h14>
+    <h15>Incluir legendas</h15>
+    <h16>Gravar valor vazio</h16>
+    <h17>Antes</h17>
+    <h18>Depois</h18>
+    <t1>Pesquisar por número e nome</t1>
+    <t2>Perfil do carimbo</t2>
+    <t3>Nome do campo, por exemplo Sobrenome</t3>
+    <t4>Tipo de campo</t4>
+    <t5>Valor constante</t5>
+    <t6>Campo do qual o valor é obtido</t6>
+    <t7>Separador entre nomes de vistas</t7>
+    <t8>Formato de data</t8>
+    <t9>Método de assinatura</t9>
+    <t10>Família de espaço reservado "sem assinatura"</t10>
+    <t11>Nome do perfil</t11>
+    <t12>Nome do grupo, por exemplo Elaborado por</t12>
+    <t13>Parâmetro da folha para agrupamento</t13>
+    <t14>Pasta de assinaturas</t14>
+    <t15>Marcar as folhas selecionadas no Navegador de projeto e a folha atual</t15>
+    <t16>Nome do arquivo de assinatura. A assinatura é colocada se um nome for informado</t16>
+    <t17>Colocar assinatura</t17>
+    <t18>Nenhum arquivo de assinatura com este nome foi encontrado na pasta de assinaturas</t18>
+    <t19>Preenchido sem inserir valores</t19>
+    <t20>Mostrar quais valores serão alterados antes de gravar</t20>
+    <t21>Limpar os campos das linhas marcadas nas folhas selecionadas</t21>
+    <t22>Proprietário do parâmetro&#10;Elemento no qual o plugin procura o parâmetro</t22>
+    <t23>Nome do campo&#10;Exibido no preenchimento</t23>
+    <t24>Mover para cima</t24>
+    <t25>Mover para baixo</t25>
+    <t26>Tipo de campo&#10;Como o valor é inserido e gravado</t26>
+    <t27>Origem do valor&#10;De onde vem o valor do campo</t27>
+    <t28>Parâmetro&#10;O valor do campo é gravado nele</t28>
+    <t29>Valor constante&#10;Gravado em cada preenchimento</t29>
+    <t30>Valor constante da caixa de seleção&#10;Gravado em cada preenchimento</t30>
+    <t31>Campo de origem&#10;Seu valor também é gravado neste campo</t31>
+    <t32>Separador&#10;Colocado entre os nomes das vistas</t32>
+    <t33>O valor é obtido separadamente para cada folha a partir das vistas posicionadas nela, na ordem dos números de detalhe. Nomes repetidos são gravados uma vez. O campo não é exibido no preenchimento</t33>
+    <t34>Formato de data&#10;Por exemplo dd.MM.yy</t34>
+    <t35>Formato para gravar a data em um parâmetro de texto. dd - dia, MM - mês, yy ou yyyy - ano. mm minúsculo são minutos, não o mês. Em um parâmetro "Sim/Não" a data é gravada como marcação</t35>
+    <t36>Método de assinatura&#10;Como a assinatura chega ao carimbo</t36>
+    <t37>Família de espaço reservado&#10;Colocada ao remover a assinatura</t37>
+    <t38>Texto na família do carimbo: o plugin grava o nome da assinatura em um parâmetro de texto, e a própria família mostra a assinatura. Família da pasta de assinaturas: parâmetro de instância com o tipo de dados "Tipo de família", o arquivo de assinatura é carregado da pasta; para remover uma assinatura é necessária uma família de espaço reservado. O nome do arquivo de assinatura é o valor do campo, por exemplo do campo de sobrenome</t38>
+    <t39>Se desmarcado, texto vazio, caixa desmarcada e marcação de assinatura desmarcada são ignorados e não sobrescrevem o que já está preenchido no carimbo. Se marcado, o texto é limpo, a caixa é desmarcada e a assinatura é removida</t39>
+    <t40>Adicione ou importe um perfil de carimbo</t40>
+    <t41>Marque os tipos do documento aos quais o perfil se aplica</t41>
+    <t42>Os campos preenchidos pelo plugin são organizados em grupos. Os campos de um grupo são preenchidos juntos e ativados por uma única marcação. A ordem dos grupos e campos é a ordem na janela de preenchimento</t42>
+    <t43>Há observações na configuração do grupo ou de seus campos</t43>
+    <t44>Nome do grupo&#10;Cabeçalho do bloco no preenchimento</t44>
+    <t45>Mover o grupo para cima</t45>
+    <t46>Mover o grupo para baixo</t46>
+    <t47>As folhas são agrupadas na seção de preenchimento pelo valor deste parâmetro, por exemplo por disciplina do projeto</t47>
+    <t48>Selecionar pasta</t48>
+    <t49>Necessária apenas para o método de assinatura "Família da pasta de assinaturas": as famílias de assinaturas e a família de espaço reservado "sem assinatura" são carregadas desta pasta. O nome do arquivo da família é o nome da assinatura, por exemplo J.Silva.rfa. O método "Texto na família do carimbo" não usa a pasta</t49>
+    <e1>Bloco de margens e carimbo</e1>
+    <e2>Caixa de seleção</e2>
+    <e3>Assinatura</e3>
+    <e4>Inserido no preenchimento</e4>
+    <e5>De outro campo</e5>
+    <e6>Nomes das vistas na folha</e6>
+    <e7>Texto na família do carimbo</e7>
+    <e8>Família da pasta de assinaturas</e8>
+    <m1>Valores a alterar: {0}. Já coincidem: {1}</m1>
+    <m2>Limpeza de carimbos</m2>
+    <m3>A configuração não tem perfis de carimbo</m3>
+    <m4>O perfil não tem campos. Adicione-os na seção de configuração</m4>
+    <m5>Nenhuma folha selecionada</m5>
+    <m6>Nenhuma linha marcada para preenchimento</m6>
+    <m7>Os valores nos carimbos já coincidem com os preenchidos, não há alterações</m7>
+    <m8>Nenhuma folha disponível para preenchimento está selecionada no Revit. Selecione folhas no Navegador de projeto ou abra uma folha</m8>
+    <m9>Novo perfil</m9>
+    <m10>O arquivo selecionado não contém um perfil de carimbo</m10>
+    <m11>Pasta com arquivos de assinatura</m11>
+    <m12>Grupo sem nome</m12>
+    <m13>campos: {0}</m13>
+    <m14>Sem grupo</m14>
+    <m15>A folha não tem bloco de margens e carimbo</m15>
+    <m16>Nenhum perfil encontrado para o tipo de bloco de margens e carimbo</m16>
+    <m17>Perfil: {0}</m17>
+    <m18>O nome do grupo não foi definido</m18>
+    <m19>O perfil tem outro grupo com o mesmo nome</m19>
+    <m20>O grupo não tem campos</m20>
+    <m21>O nome do campo não foi definido</m21>
+    <m22>O grupo tem outro campo com o mesmo nome</m22>
+    <m23>Nenhum parâmetro selecionado</m23>
+    <m24>O campo do qual o valor é obtido não foi selecionado</m24>
+    <m25>A pasta de assinaturas não foi selecionada: ela é definida na guia "Geral"</m25>
+    <m26>A família de espaço reservado "sem assinatura" não foi definida: pode não ser possível remover a assinatura</m26>
+    <m27>O arquivo da família de espaço reservado não foi encontrado na pasta de assinaturas</m27>
+    <m28>Formato de data inválido</m28>
+    <m29>No formato de data mm minúsculo são minutos, o mês é MM</m29>
+    <m30>O perfil da folha não tem o campo: {0}</m30>
+    <m31>Não foi possível processar a folha: {0}</m31>
+    <m32>O campo não tem parâmetro: {0}</m32>
+    <m33>Parâmetro não encontrado: {0} ({1})</m33>
+    <m34>Parâmetro somente leitura: {0} ({1})</m34>
+    <m35>O tipo de dados do parâmetro não é adequado para o campo: {0} ({1})</m35>
+    <m36>O nome da assinatura não foi definido, a assinatura não foi colocada: {0}</m36>
+    <m37>Não foi possível gravar o valor no parâmetro {0}</m37>
+    <m38>O Revit desfez as alterações da folha</m38>
+    <m39>Tipo de família</m39>
+    <m40>O Revit não permite deixar o espaço da assinatura vazio. Indique a família de espaço reservado "sem assinatura" na configuração do campo: {0}</m40>
+    <m41>Não foi possível gravar a assinatura {0} no parâmetro {1}. Verifique se o parâmetro aceita famílias desta categoria</m41>
+    <m42>A pasta de assinaturas não foi selecionada</m42>
+    <m43>Arquivo de assinatura não encontrado: {0}.rfa</m43>
+    <m44>A pasta de assinaturas não está disponível: {0}</m44>
+    <m45>Não foi possível carregar o arquivo de assinatura: {0}.rfa</m45>
+    <m46>A família {0} tem vários tipos, foi usado {1}</m46>
+    <m47>Não foi possível gravar a assinatura no parâmetro: {0}</m47>
+    <m48>Parâmetro de assinatura não encontrado: {0}</m48>
+    <m49>O parâmetro de assinatura deve ter o tipo de dados "{0}": {1}</m49>
+    <m50>O parâmetro de assinatura é somente leitura: {0}</m50>
+  </mprTitleBlockFill>
+</ModPlus>
