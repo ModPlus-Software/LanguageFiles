@@ -246,6 +246,35 @@
     <t220>Aucun paramètre approprié trouvé</t220>
     <t221>Sont considérés comme appropriés les paramètres ayant le même type de données que le paramètre remplacé et dont les noms ne correspondent pas aux noms d'autres paramètres de la famille</t221>
     <t222>Aucun résultat pour votre recherche</t222>
+    <t223>Type de données non sélectionné</t223>
+    <t224>Ajouter aux favoris</t224>
+    <t225>Retirer des favoris</t225>
+    <t226>Vous ne pouvez pas ajouter plus de {0} actions aux favoris</t226>
+    <t227>Définir la valeur</t227>
+    <t228>Définir la valeur pour tous les types</t228>
+    <t229>Définir les valeurs par types</t229>
+    <t230>Tous les types</t230>
+    <t231>Une seule valeur pour tous les types. Enregistrée dans le préréglage sans liaison aux types</t231>
+    <t232>définir pour tous…</t232>
+    <t233>différentes</t233>
+    <t234>Cellules sélectionnées : {0}</t234>
+    <t235>Sélectionnez des cellules dans le tableau. Un clic sur l'en-tête de colonne sélectionne toute la colonne, un clic sur la ligne de famille sélectionne tous ses types dans cette colonne, Maj - plage, Ctrl - ajouter à la sélection. Double-clic - modifier la valeur de la cellule</t235>
+    <t236>Des paramètres de types de données différents sont sélectionnés - impossible de définir une valeur commune. "Effacer la valeur" ne s'applique qu'aux paramètres de texte</t236>
+    <t237>Rechercher par famille ou type</t237>
+    <t238>Les paramètres ont des unités différentes selon les familles. La valeur est définie dans les unités de chaque famille - vérifiez que la valeur saisie convient à toutes les familles :</t238>
+    <t239>Famille / type</t239>
+    <t240>Ancienne valeur : {0}</t240>
+    <t241>La valeur est définie dans la ligne "Tous les types". Modifier cette cellule fera passer le paramètre en mode valeurs par types</t241>
+    <t242>Impossible de reconnaître la valeur "{0}"</t242>
+    <t243>Actions qui seront ajoutées</t243>
+    <t244>Aucune valeur définie. Si les paramètres sélectionnés avaient une action "Définir la valeur", elle sera supprimée</t244>
+    <t245>dans les unités de chaque famille</t245>
+    <t246>&lt;vide&gt;</t246>
+    <t247>Effacer la valeur</t247>
+    <t248>Rétablir l'original</t248>
+    <t249>Modifiés uniquement</t249>
+    <t250>Nouvelle valeur</t250>
+    <t251>(type sans nom)</t251>
     <ad1>Permet de renommer un paramètre de famille. L'action n'est pas disponible pour les paramètres système et les paramètres partagés</ad1>
     <ad2>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres système. La modification du groupe d'un paramètre de famille non partagé entraîne la perte de sa description</ad2>
     <ad3>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres de projet</ad3>
@@ -264,6 +293,7 @@
     <ad17>Permet de remplacer un paramètre de famille ou un paramètre partagé par un autre paramètre partagé du même type de données, en conservant les formules et les étiquettes</ad17>
     <ad18>Permet d'effacer la formule des paramètres de familles</ad18>
     <ad19>Permet de définir la formule des paramètres de familles</ad19>
+    <ad20>Permet de définir les valeurs des paramètres de familles par types ou une seule valeur pour tous les types. Action indisponible pour les paramètres dont la valeur est déterminée par une formule</ad20>
     <ea1>Rien</ea1>
     <ea2>Ouvrir le dossier cible</ea2>
     <ea3>Ouvrir le fichier créé</ea3>
@@ -341,6 +371,17 @@
     <msg48>Préréglages importés : {0}</msg48>
     <msg49>Aucune famille ouverte à part la famille actuelle</msg49>
     <msg50>Le type "{0}" est introuvable dans la famille actuelle. La valeur du paramètre n'a pas été copiée</msg50>
+    <msg51>Valeurs du paramètre définies dans les types : {0}</msg51>
+    <msg52>Paramètre "{0}" : type "{1}" introuvable. Valeur non définie</msg52>
+    <msg53>La valeur du paramètre "{0}" est déterminée par une formule ou ne peut pas être modifiée. Valeurs non définies</msg53>
+    <msg54>Type "{0}" de la famille "{1}" introuvable. Valeur non chargée</msg54>
+    <msg55>Les valeurs par types ne sont pas importées depuis Excel. Utilisez des préréglages pour transférer ces valeurs</msg55>
+    <msg56>Le paramètre est marqué pour suppression</msg56>
+    <msg57>L'action "Définir la formule" a été ajoutée au paramètre. La valeur d'un paramètre avec formule ne peut pas être définie</msg57>
+    <msg58>La définition de valeurs n'est pas prise en charge pour les paramètres de ce type de données</msg58>
+    <msg59>La valeur du paramètre est déterminée par une formule dans la famille "{0}"</msg59>
+    <msg60>La valeur du paramètre ne peut pas être modifiée dans la famille "{0}"</msg60>
+    <msg61>La famille ne contient aucun type. Impossible de définir les valeurs des paramètres</msg61>
     <err1>Une erreur inattendue s'est produite lors de l'initialisation de la fenêtre</err1>
     <err2>Une erreur inattendue s'est produite lors de la fermeture de la fenêtre</err2>
     <err3>Une erreur s'est produite lors de la création du paramètre</err3>
@@ -398,5 +439,6 @@
     <err55>Impossible d'importer le fichier "{0}". Erreur : {1}</err55>
     <err56>Aucune famille de la catégorie "{0}" n'est chargée dans la famille actuelle. Chargez une famille de cette catégorie et relancez l'import</err56>
     <err57>La famille n'a pas été chargée, car son fichier principal ou sa copie de sauvegarde figure déjà dans la liste. Un fichier et sa copie de sauvegarde ne peuvent pas être traités simultanément</err57>
+    <err58>Impossible de convertir la valeur "{0}" vers le type de données "{1}". La valeur n'a pas été définie</err58>
   </mprParameters>
 </ModPlus>

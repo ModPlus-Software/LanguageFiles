@@ -246,6 +246,35 @@
     <t220>Keine passenden Parameter gefunden</t220>
     <t221>Als passend gelten Parameter mit demselben Datentyp wie der zu ersetzende Parameter, deren Namen nicht mit den Namen anderer Familienparameter übereinstimmen</t221>
     <t222>Für Ihre Suche wurde nichts gefunden</t222>
+    <t223>Datentyp nicht ausgewählt</t223>
+    <t224>Zu Favoriten hinzufügen</t224>
+    <t225>Aus Favoriten entfernen</t225>
+    <t226>Es können höchstens {0} Aktionen zu den Favoriten hinzugefügt werden</t226>
+    <t227>Wert festlegen</t227>
+    <t228>Wert für alle Typen festlegen</t228>
+    <t229>Werte nach Typen festlegen</t229>
+    <t230>Alle Typen</t230>
+    <t231>Ein Wert für alle Typen. Wird ohne Bindung an Typen im Voreinstellungssatz gespeichert</t231>
+    <t232>für alle festlegen…</t232>
+    <t233>unterschiedlich</t233>
+    <t234>Ausgewählte Zellen: {0}</t234>
+    <t235>Wählen Sie Zellen in der Tabelle aus. Klick auf eine Spaltenüberschrift wählt die ganze Spalte, Klick auf eine Familienzeile alle ihre Typen in dieser Spalte, Umschalt - Bereich, Strg - zur Auswahl hinzufügen. Doppelklick - Zellwert bearbeiten</t235>
+    <t236>Es sind Parameter mit unterschiedlichen Datentypen ausgewählt - ein gemeinsamer Wert kann nicht festgelegt werden. "Wert löschen" gilt nur für Textparameter</t236>
+    <t237>Suche nach Familie oder Typ</t237>
+    <t238>Parameter haben in den Familien unterschiedliche Einheiten. Der Wert wird in den Einheiten der jeweiligen Familie festgelegt - prüfen Sie, ob der eingegebene Wert für alle Familien passt:</t238>
+    <t239>Familie / Typ</t239>
+    <t240>War: {0}</t240>
+    <t241>Der Wert ist in der Zeile "Alle Typen" festgelegt. Eine Änderung dieser Zelle schaltet den Parameter auf Werte nach Typen um</t241>
+    <t242>Der Wert "{0}" konnte nicht erkannt werden</t242>
+    <t243>Hinzuzufügende Aktionen</t243>
+    <t244>Keine Werte festgelegt. Wenn die ausgewählten Parameter eine Aktion "Wert festlegen" hatten, wird sie entfernt</t244>
+    <t245>in den Einheiten der jeweiligen Familie</t245>
+    <t246>&lt;leer&gt;</t246>
+    <t247>Wert löschen</t247>
+    <t248>Original wiederherstellen</t248>
+    <t249>Nur geänderte</t249>
+    <t250>Neuer Wert</t250>
+    <t251>(Typ ohne Namen)</t251>
     <ad1>Ermöglicht die Umbenennung eines Familienparameters. Die Aktion ist für Systemparameter und die gemeinsam genutzten Parameter nicht verfügbar</ad1>
     <ad2>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Systemparameter nicht verfügbar. Beim Ändern der Gruppe verlieren die nicht gemeinsam genutzten Parameter der Familie ihre Beschreibung</ad2>
     <ad3>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Projektparameter nicht verfügbar</ad3>
@@ -264,6 +293,7 @@
     <ad17>Ermöglicht das Ersetzen eines Familienparameters oder eines gemeinsam genutzten Parameters durch einen anderen gemeinsam genutzten Parameter desselben Datentyps, ohne die Formel und Markierungen zu ändern</ad17>
     <ad18>Ermöglicht das Löschen des Formelwerts für Familienparameter</ad18>
     <ad19>Ermöglicht das Setzen des Formelwerts für Familienparameter</ad19>
+    <ad20>Ermöglicht das Festlegen von Familienparameterwerten nach Typen oder eines Werts für alle Typen. Die Aktion ist für Parameter, deren Wert durch eine Formel bestimmt wird, nicht verfügbar</ad20>
     <ea1>Nichts</ea1>
     <ea2>Zielordner öffnen</ea2>
     <ea3>Erstellte Datei öffnen</ea3>
@@ -341,6 +371,17 @@
     <msg48>Importierte Voreinstellungssätze: {0}</msg48>
     <msg49>Außer der aktuellen Familie sind keine Familien geöffnet</msg49>
     <msg50>Der Typ "{0}" wurde in der aktuellen Familie nicht gefunden. Der Parameterwert wurde nicht kopiert</msg50>
+    <msg51>Parameterwerte in Typen festgelegt: {0}</msg51>
+    <msg52>Parameter "{0}": Typ "{1}" nicht gefunden. Wert nicht festgelegt</msg52>
+    <msg53>Der Wert des Parameters "{0}" wird durch eine Formel bestimmt oder kann nicht geändert werden. Werte nicht festgelegt</msg53>
+    <msg54>Typ "{0}" der Familie "{1}" nicht gefunden. Wert nicht geladen</msg54>
+    <msg55>Werte nach Typen werden nicht aus Excel importiert. Verwenden Sie Voreinstellungssätze, um solche Werte zu übertragen</msg55>
+    <msg56>Der Parameter ist zum Löschen markiert</msg56>
+    <msg57>Dem Parameter wurde die Aktion "Formel vorgeben" hinzugefügt. Der Wert eines Parameters mit Formel kann nicht festgelegt werden</msg57>
+    <msg58>Das Festlegen von Werten wird für Parameter dieses Datentyps nicht unterstützt</msg58>
+    <msg59>Der Parameterwert wird in der Familie "{0}" durch eine Formel bestimmt</msg59>
+    <msg60>Der Parameterwert kann in der Familie "{0}" nicht geändert werden</msg60>
+    <msg61>Die Familie hat keine Typen. Parameterwerte können nicht festgelegt werden</msg61>
     <err1>Unerwarteter Fehler beim Initialisieren des Fensters aufgetreten</err1>
     <err2>Unerwarteter Fehler beim Schließen des Fensters aufgetreten</err2>
     <err3>Beim Erstellen des Parameters ist ein Fehler aufgetreten</err3>
@@ -398,5 +439,6 @@
     <err55>Die Datei "{0}" konnte nicht importiert werden. Fehler: {1}</err55>
     <err56>In die aktuelle Familie ist keine Familie der Kategorie "{0}" geladen. Laden Sie eine Familie dieser Kategorie und wiederholen Sie den Import</err56>
     <err57>Die Familie wurde nicht geladen, da ihre Hauptdatei oder ihre Sicherungskopie bereits in der Liste enthalten ist. Eine Datei und ihre Sicherungskopie können nicht gleichzeitig verarbeitet werden</err57>
+    <err58>Der Wert "{0}" konnte nicht in den Datentyp "{1}" konvertiert werden. Der Wert wurde nicht festgelegt</err58>
   </mprParameters>
 </ModPlus>

@@ -246,6 +246,35 @@
     <t220>No suitable parameters found</t220>
     <t221>Suitable parameters are those with the same data type as the parameter being replaced and whose names do not match the names of other family parameters</t221>
     <t222>Nothing found for your query</t222>
+    <t223>Data type not selected</t223>
+    <t224>Add to favorites</t224>
+    <t225>Remove from favorites</t225>
+    <t226>You can add no more than {0} actions to favorites</t226>
+    <t227>Set value</t227>
+    <t228>Set value for all types</t228>
+    <t229>Set values by types</t229>
+    <t230>All types</t230>
+    <t231>One value for all types. Saved to the preset without binding to types</t231>
+    <t232>set for all…</t232>
+    <t233>differ</t233>
+    <t234>Cells selected: {0}</t234>
+    <t235>Select cells in the table. Click a column header to select the whole column, a family row to select all its types in that column, Shift to select a range, Ctrl to add to the selection. Double-click a cell to edit its value</t235>
+    <t236>Parameters with different data types are selected - a common value cannot be set. "Clear value" applies only to text parameters</t236>
+    <t237>Search by family or type</t237>
+    <t238>Parameters have different units in families. The value is set in the units of each family - make sure the value you enter suits all families:</t238>
+    <t239>Family / type</t239>
+    <t240>Was: {0}</t240>
+    <t241>The value is set in the "All types" row. Changing this cell switches the parameter to values by types</t241>
+    <t242>Failed to recognize the value "{0}"</t242>
+    <t243>Actions to be added</t243>
+    <t244>No values are set. If the selected parameters had a "Set value" action, it will be removed</t244>
+    <t245>in the units of each family</t245>
+    <t246>&lt;empty&gt;</t246>
+    <t247>Clear value</t247>
+    <t248>Restore original</t248>
+    <t249>Changed only</t249>
+    <t250>New value</t250>
+    <t251>(unnamed type)</t251>
     <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
     <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
     <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
@@ -264,6 +293,7 @@
     <ad17>Allows you to replace a family parameter or shared parameter with another shared parameter of the same data type, while preserving formulas and labels</ad17>
     <ad18>Allows you to clear the formula value for family parameters</ad18>
     <ad19>Allows you to set the formula value for family parameters</ad19>
+    <ad20>Allows you to set family parameter values by types or one value for all types. The action is not available for parameters whose value is driven by a formula</ad20>
     <ea1>Nothing</ea1>
     <ea2>Open target folder</ea2>
     <ea3>Open created file</ea3>
@@ -341,6 +371,17 @@
     <msg48>Presets imported: {0}</msg48>
     <msg49>There are no open families other than the current one</msg49>
     <msg50>Type "{0}" was not found in the current family. The parameter value was not copied</msg50>
+    <msg51>Parameter values set in types: {0}</msg51>
+    <msg52>Parameter "{0}": type "{1}" not found. Value not set</msg52>
+    <msg53>The value of parameter "{0}" is driven by a formula or cannot be changed. Values not set</msg53>
+    <msg54>Type "{0}" of family "{1}" not found. Value not loaded</msg54>
+    <msg55>Values by types are not imported from Excel. Use presets to transfer such values</msg55>
+    <msg56>The parameter is marked for removal</msg56>
+    <msg57>The "Set formula" action has been added to the parameter. The value of a parameter with a formula cannot be set</msg57>
+    <msg58>Setting values is not supported for parameters of this data type</msg58>
+    <msg59>The parameter value is driven by a formula in family "{0}"</msg59>
+    <msg60>The parameter value cannot be changed in family "{0}"</msg60>
+    <msg61>The family has no types. Parameter values cannot be set</msg61>
     <err1>An unexpected error occurred during window initialization</err1>
     <err2>An unexpected error occurred when closing the window</err2>
     <err3>An error occurred while creating the parameter</err3>
@@ -398,5 +439,6 @@
     <err55>Failed to import file "{0}". Error: {1}</err55>
     <err56>No family of category "{0}" is loaded into the current family. Load a family of this category and repeat the import</err56>
     <err57>The family was not loaded because its main file or its backup copy is already in the list. A file and its backup copy cannot be processed at the same time</err57>
+    <err58>Value "{0}" could not be converted to data type "{1}". The value was not set</err58>
   </mprParameters>
 </ModPlus>

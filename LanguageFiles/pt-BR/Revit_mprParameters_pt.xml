@@ -246,6 +246,35 @@
     <t220>Nenhum parâmetro adequado encontrado</t220>
     <t221>São considerados adequados os parâmetros com o mesmo tipo de dados do parâmetro que está sendo substituído e cujos nomes não coincidem com os nomes de outros parâmetros da família</t221>
     <t222>Nada encontrado para sua pesquisa</t222>
+    <t223>Tipo de dados não selecionado</t223>
+    <t224>Adicionar aos favoritos</t224>
+    <t225>Remover dos favoritos</t225>
+    <t226>É possível adicionar no máximo {0} ações aos favoritos</t226>
+    <t227>Definir valor</t227>
+    <t228>Definir valor para todos os tipos</t228>
+    <t229>Definir valores por tipos</t229>
+    <t230>Todos os tipos</t230>
+    <t231>Um valor para todos os tipos. É salvo na predefinição sem vínculo com os tipos</t231>
+    <t232>definir para todos…</t232>
+    <t233>diferentes</t233>
+    <t234>Células selecionadas: {0}</t234>
+    <t235>Selecione células na tabela. Clique no cabeçalho da coluna para selecionar a coluna inteira, na linha da família para selecionar todos os seus tipos nessa coluna, Shift - intervalo, Ctrl - adicionar à seleção. Clique duplo - editar o valor da célula</t235>
+    <t236>Foram selecionados parâmetros com tipos de dados diferentes - não é possível definir um valor comum. "Limpar valor" se aplica apenas a parâmetros de texto</t236>
+    <t237>Pesquisar por família ou tipo</t237>
+    <t238>Os parâmetros têm unidades diferentes nas famílias. O valor é definido nas unidades de cada família - verifique se o valor informado é adequado para todas as famílias:</t238>
+    <t239>Família / tipo</t239>
+    <t240>Era: {0}</t240>
+    <t241>O valor está definido na linha "Todos os tipos". Alterar esta célula passará o parâmetro para o modo de valores por tipos</t241>
+    <t242>Não foi possível reconhecer o valor "{0}"</t242>
+    <t243>Ações que serão adicionadas</t243>
+    <t244>Nenhum valor definido. Se os parâmetros selecionados tinham a ação "Definir valor", ela será removida</t244>
+    <t245>nas unidades de cada família</t245>
+    <t246>&lt;vazio&gt;</t246>
+    <t247>Limpar valor</t247>
+    <t248>Restaurar original</t248>
+    <t249>Somente alterados</t249>
+    <t250>Novo valor</t250>
+    <t251>(tipo sem nome)</t251>
     <ad1>Permite renomear um parâmetro de família. A ação não está disponível para parâmetros de sistema e parâmetros compartilhados</ad1>
     <ad2>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de sistema. Ao alterar o grupo de um parâmetro de família não compartilhado, a descrição será perdida</ad2>
     <ad3>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de projeto</ad3>
@@ -264,6 +293,7 @@
     <ad17>Permite substituir um parâmetro de família ou um parâmetro compartilhado por outro parâmetro compartilhado do mesmo tipo de dados, mantendo as fórmulas e os rótulos</ad17>
     <ad18>Permite limpar o valor da fórmula dos parâmetros de família</ad18>
     <ad19>Permite definir o valor da fórmula dos parâmetros de família</ad19>
+    <ad20>Permite definir valores de parâmetros de família por tipos ou um valor para todos os tipos. A ação não está disponível para parâmetros cujo valor é determinado por fórmula</ad20>
     <ea1>Nada</ea1>
     <ea2>Abrir a pasta de destino</ea2>
     <ea3>Abrir o arquivo criado</ea3>
@@ -341,6 +371,17 @@
     <msg48>Predefinições importadas: {0}</msg48>
     <msg49>Não há famílias abertas além da atual</msg49>
     <msg50>O tipo "{0}" não foi encontrado na família atual. O valor do parâmetro não foi copiado</msg50>
+    <msg51>Valores do parâmetro definidos nos tipos: {0}</msg51>
+    <msg52>Parâmetro "{0}": tipo "{1}" não encontrado. Valor não definido</msg52>
+    <msg53>O valor do parâmetro "{0}" é determinado por fórmula ou não pode ser alterado. Valores não definidos</msg53>
+    <msg54>Tipo "{0}" da família "{1}" não encontrado. Valor não carregado</msg54>
+    <msg55>Valores por tipos não são importados do Excel. Use predefinições para transferir esses valores</msg55>
+    <msg56>O parâmetro está marcado para remoção</msg56>
+    <msg57>A ação "Definir fórmula" foi adicionada ao parâmetro. Não é possível definir o valor de um parâmetro com fórmula</msg57>
+    <msg58>A definição de valores não é suportada para parâmetros deste tipo de dados</msg58>
+    <msg59>O valor do parâmetro é determinado por fórmula na família "{0}"</msg59>
+    <msg60>O valor do parâmetro não pode ser alterado na família "{0}"</msg60>
+    <msg61>A família não tem tipos. Não é possível definir valores de parâmetros</msg61>
     <err1>Ocorreu um erro inesperado ao inicializar a janela</err1>
     <err2>Ocorreu um erro inesperado ao fechar a janela</err2>
     <err3>Ocorreu um erro ao criar o parâmetro</err3>
@@ -398,5 +439,6 @@
     <err55>Não foi possível importar o arquivo "{0}". Erro: {1}</err55>
     <err56>Nenhuma família da categoria "{0}" está carregada na família atual. Carregue uma família desta categoria e repita a importação</err56>
     <err57>A família não foi carregada porque o seu arquivo principal ou a sua cópia de backup já está na lista. Não é possível processar um arquivo e a sua cópia de backup ao mesmo tempo</err57>
+    <err58>Não foi possível converter o valor "{0}" para o tipo de dados "{1}". O valor não foi definido</err58>
   </mprParameters>
 </ModPlus>
