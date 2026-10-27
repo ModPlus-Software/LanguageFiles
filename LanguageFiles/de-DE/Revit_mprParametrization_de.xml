@@ -348,6 +348,9 @@
     <msg134>Berührungssuche: {0} von {1} verarbeitet, vergangen {2}</msg134>
     <msg135>Suche nach Zusammenhängen abgeschlossen in {0}. Elemente in der Sammlung: {1}</msg135>
     <msg136>Element übersprungen: es wurde kein bedingtes Quellelement gefunden, das den Filtern der Regel entspricht</msg136>
+    <msg137>Keine Elemente ausgewählt. Wählen Sie Elemente im Modell aus und starten Sie die Verarbeitung erneut</msg137>
+    <msg138>Verarbeitung vom Benutzer abgebrochen</msg138>
+    <msg139>Abbrechen...</msg139>
     <err1>Jeder Ausdruck in der Formel muss mit dem Zielparameter "$[Parametername]=" beginnen</err1>
     <err2>Die Anzahl der öffnenden runden Klammern muss gleich der Anzahl der schließenden Klammern sein</err2>
     <err3>Die Anzahl der öffnenden geschweiften Klammern muss gleich der Anzahl der schließenden Klammern sein</err3>
@@ -749,5 +752,13 @@
     <t247>Gilt für die Strategien InRoom und InSpace. Wenn ein Familienexemplar einen Raumberechnungspunkt hat und dieser sich in einem Raum (MEP-Raum) befindet, gehört die Familie immer zu diesem Raum.</t247>
     <t248>Option aktiviert – die Familie gehört nur zu dem Raum, in dem sich der Berechnungspunkt befindet; es erfolgt keine Geometrieprüfung. Die Verarbeitung ist schneller, aber eine Familie, die mehrere Räume schneidet, wird nur einem davon zugeordnet.</t248>
     <t249>Option deaktiviert – die Familie gehört zusätzlich zu allen Räumen, in die sie geometrisch fällt, gemäß dem gewählten Algorithmus zur Suche nach Volumenkörpern. Das Ergebnis ist vollständiger, die Verarbeitung dauert jedoch länger. Familien ohne Berechnungspunkt sowie Familien, deren Berechnungspunkt in keinem Raum liegt, werden immer über die Geometrie geprüft.</t249>
+    <t250>SolidTouch: nur die Berührung mit der größten Fläche berücksichtigen</t250>
+    <t251>Gilt für die Strategie Solid Touch, wenn ein Zielelement mehrere bedingte Quellelemente berührt, die die Filter der Regel erfüllen. Beispielsweise berührt eine Verkleidungswand mit ihrer Seitenfläche die Wand, an der sie entlangläuft, und mit ihrer Stirnfläche die Wand, an die sie in der Ecke anstößt.</t251>
+    <t252>Option aktiviert – nur die Berührung mit der größten Kontaktfläche der Flächen wird verarbeitet; die übrigen Berührungen dieses Zielelements werden nicht berücksichtigt, auch nicht bei der Gruppierung. Bei gleicher Fläche ist die Auswahl dennoch eindeutig und ändert sich nicht von Ausführung zu Ausführung.</t252>
+    <t253>Option deaktiviert – die Formel wird für jede Berührung ausgeführt, und im Parameter des Zielelements bleibt der zuletzt berechnete Wert. Die Reihenfolge, in der die Berührungen verarbeitet werden, ist nicht festgelegt</t253>
+    <t254>Aktuelle Ansicht</t254>
+    <t255>Ausgewählte Elemente</t255>
+    <t256>Ausgewählte Ansichten</t256>
+    <t257>Verarbeitung der vor dem Start im Modell ausgewählten Elemente</t257>
   </mprParametrization>
 </ModPlus>

@@ -348,6 +348,9 @@
     <msg134>Recherche des contacts : traité {0} sur {1}, écoulé {2}</msg134>
     <msg135>Recherche des relations terminée en {0}. Éléments dans la collection : {1}</msg135>
     <msg136>Élément ignoré : aucun élément considéré comme source correspondant aux filtres de la règle n'a été trouvé</msg136>
+    <msg137>Aucun élément sélectionné. Sélectionnez des éléments dans le modèle et relancez le traitement</msg137>
+    <msg138>Traitement annulé par l'utilisateur</msg138>
+    <msg139>Annulation...</msg139>
     <err1>Chaque expression de la formule doit commencer par le paramètre cible "$[NomParamètre]="</err1>
     <err2>Le nombre de parenthèses ouvrantes doit être égal au nombre de parenthèses fermantes</err2>
     <err3>Le nombre d'accolades ouvrantes doit être égal au nombre d'accolades fermantes</err3>
@@ -749,5 +752,13 @@
     <t247>S'applique aux stratégies InRoom et InSpace. Si une occurrence de famille possède un point de calcul de pièce et que ce point se trouve dans une pièce (un espace), la famille appartient toujours à cette pièce.</t247>
     <t248>Option activée – la famille appartient uniquement à la pièce contenant le point de calcul, sans vérification géométrique. Le traitement est plus rapide, mais une famille qui coupe plusieurs pièces ne sera attribuée qu'à une seule d'entre elles.</t248>
     <t249>Option désactivée – la famille appartient en plus à toutes les pièces dans lesquelles elle se trouve géométriquement, selon l'algorithme de recherche d'inclusion des solides sélectionné. Le résultat est plus complet, mais le traitement est plus long. Les familles sans point de calcul et celles dont le point de calcul ne se trouve dans aucune pièce sont toujours vérifiées par la géométrie.</t249>
+    <t250>SolidTouch : ne prendre en compte que le contact de plus grande surface</t250>
+    <t251>S'applique à la stratégie Solid Touch lorsqu'un élément cible touche plusieurs éléments sources conditionnels qui passent les filtres de la règle. Par exemple, un mur de finition touche par sa face latérale le mur le long duquel il passe, et par son about le mur contre lequel il bute dans l'angle.</t251>
+    <t252>Option activée – seul le contact présentant la plus grande surface de contact entre faces est traité ; les autres contacts de cet élément cible ne sont pas pris en compte, y compris dans le regroupement. À surface égale, le choix reste univoque et ne change pas d'une exécution à l'autre.</t252>
+    <t253>Option désactivée – la formule est exécutée pour chaque contact, et le paramètre de l'élément cible conserve la valeur calculée en dernier. L'ordre de traitement des contacts n'est pas défini</t253>
+    <t254>Vue courante</t254>
+    <t255>Éléments sélectionnés</t255>
+    <t256>Vues sélectionnées</t256>
+    <t257>Traitement des éléments sélectionnés dans le modèle avant le lancement</t257>
   </mprParametrization>
 </ModPlus>

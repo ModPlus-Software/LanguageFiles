@@ -348,6 +348,9 @@
     <msg134>Busca de contatos: processados {0} de {1}, decorrido {2}</msg134>
     <msg135>Busca de relações concluída em {0}. Elementos na coleção: {1}</msg135>
     <msg136>Elemento ignorado: não foi encontrado nenhum elemento condicionalmente de origem que corresponda aos filtros da regra</msg136>
+    <msg137>Nenhum elemento selecionado. Selecione elementos no modelo e execute o processamento novamente</msg137>
+    <msg138>Processamento cancelado pelo usuário</msg138>
+    <msg139>Cancelando...</msg139>
     <err1>Cada expressão da fórmula deve começar com o parâmetro de destino "$[NomeDoParametro]="</err1>
     <err2>O número de parênteses de abertura deve ser igual ao número de parênteses de fechamento</err2>
     <err3>O número de chaves de abertura deve ser igual ao número de chaves de fechamento</err3>
@@ -749,5 +752,13 @@
     <t247>Aplica-se às estratégias InRoom e InSpace. Se uma instância de família tiver um ponto de cálculo de ambiente e esse ponto estiver dentro de um ambiente (espaço), a família sempre pertence a esse ambiente.</t247>
     <t248>Opção ativada – a família pertence apenas ao ambiente em que está o ponto de cálculo, e a verificação por geometria não é realizada. O processamento é mais rápido, mas uma família que intercepta vários ambientes será atribuída a apenas um deles.</t248>
     <t249>Opção desativada – a família pertence também a todos os ambientes em que entra pela geometria, de acordo com o algoritmo de busca de inclusões de sólidos selecionado. O resultado é mais completo, mas o processamento é mais demorado. Famílias sem ponto de cálculo e famílias cujo ponto de cálculo não está em nenhum ambiente são sempre verificadas pela geometria.</t249>
+    <t250>SolidTouch: considerar apenas o contato com a maior área</t250>
+    <t251>Aplica-se à estratégia Solid Touch quando um elemento de destino toca vários elementos de origem condicional que passam pelos filtros da regra. Por exemplo, uma parede de acabamento toca com a face lateral a parede ao longo da qual passa e com a extremidade a parede em que se apoia no canto.</t251>
+    <t252>Opção ativada – apenas o contato com a maior área de contato entre faces é processado; os demais contatos deste elemento de destino não são considerados, inclusive no agrupamento. Com áreas iguais, a escolha continua inequívoca e não muda de uma execução para outra.</t252>
+    <t253>Opção desativada – a fórmula é executada para cada contato, e no parâmetro do elemento de destino fica o valor calculado por último. A ordem de processamento dos contatos não é definida</t253>
+    <t254>Vista atual</t254>
+    <t255>Elementos selecionados</t255>
+    <t256>Vistas selecionadas</t256>
+    <t257>Processar elementos selecionados no modelo antes da execução</t257>
   </mprParametrization>
 </ModPlus>

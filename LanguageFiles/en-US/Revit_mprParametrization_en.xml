@@ -348,6 +348,9 @@
     <msg134>Touch search: processed {0} of {1}, elapsed {2}</msg134>
     <msg135>Relationship search completed in {0}. Elements in collection: {1}</msg135>
     <msg136>Element skipped: no conditionally source element matching the rule filters was found</msg136>
+    <msg137>No elements selected. Select elements in the model and run the processing again</msg137>
+    <msg138>Processing canceled by the user</msg138>
+    <msg139>Canceling...</msg139>
     <err1>Each expression in a formula must start with the target parameter "$[ParameterName]="</err1>
     <err2>The number of opening round brackets must equal the number of closing ones</err2>
     <err3>The number of opening curly brackets must equal the number of closing ones</err3>
@@ -749,5 +752,13 @@
     <t247>Applies to the InRoom and InSpace strategies. If a family instance has a room calculation point and the point is inside a room (space), the family always belongs to that room.</t247>
     <t248>Option enabled – the family belongs only to the room containing the calculation point, and no geometry check is performed. Processing is faster, but a family that intersects several rooms will be assigned to only one of them.</t248>
     <t249>Option disabled – the family additionally belongs to all rooms it falls into by geometry, according to the selected solids entry search algorithm. The result is more complete, but processing takes longer. Families without a calculation point, and families whose calculation point is not inside any room, are always checked by geometry.</t249>
+    <t250>SolidTouch: consider only the touch with the largest area</t250>
+    <t251>Applies to the Solid Touch strategy when a target element touches several conditional source elements that pass the rule filters. For example, a finishing wall touches the wall it runs along with its side face, and the wall it abuts at a corner with its end face.</t251>
+    <t252>Option enabled – only the touch with the largest contact area of faces is processed; the other touches of this target element are ignored, including in grouping. If the areas are equal, the choice is still unambiguous and does not change from run to run.</t252>
+    <t253>Option disabled – the formula is executed for each touch, and the target element parameter keeps the value calculated last. The order in which touches are processed is not defined</t253>
+    <t254>Current view</t254>
+    <t255>Selected elements</t255>
+    <t256>Selected views</t256>
+    <t257>Process elements selected in the model before running</t257>
   </mprParametrization>
 </ModPlus>
