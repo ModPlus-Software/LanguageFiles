@@ -4,8 +4,17 @@
     LocalName="MEP-Stutzen"
     Description="Werkzeugsatz für die Arbeit mit Stutzen technischer Anlagen"
     LocalName1="Verbindung ersetzen"
-    Description1="Ersetzen eines T-Stücks durch einen Stutzen und eines Stutzens durch ein T-Stück unter Beibehaltung der ursprünglichen Lage der Hauptleitung">
+    Description1="Ersetzen eines T-Stücks durch einen Stutzen und eines Stutzens durch ein T-Stück unter Beibehaltung der ursprünglichen Lage der Hauptleitung"
+    LocalName2="Größenprüfung"
+    Description2="Anpassen der Stutzengrößen an die Größen der angeschlossenen Elemente">
     <t1>T-Stücke und Stutzen zum Ersetzen auswählen</t1>
+    <t2>Gefundene Abweichungen:</t2>
+    <t3>Id</t3>
+    <t4>Aktuelle Größe</t4>
+    <t5>Neue Größe</t5>
+    <t6>Ausgewählte korrigieren</t6>
+    <t7>Alle korrigieren</t7>
+    <t8>Die Stutzengröße wurde an das angeschlossene Element angepasst</t8>
     <err1>Das T-Stück konnte nicht ausgewertet werden: Es muss drei Endanschlüsse haben, von denen zwei auf einer Achse liegen, mit angeschlossener Hauptleitung und Abzweigleitung</err1>
     <err2>Der Stutzen konnte nicht ausgewertet werden: An ihm müssen die Hauptleitung und die Abzweigleitung angeschlossen sein</err2>
     <err3>Die Hauptleitung und die Abzweigleitung müssen gerade Abschnitte sein, und die Abschnitte der Hauptleitung müssen auf einer Geraden liegen</err3>
@@ -28,5 +37,8 @@
     <err20>Unerwarteter Fehler</err20>
     <err21>Revit hat den Vorgang zurückgesetzt, das Ersetzen wurde nicht ausgeführt</err21>
     <err22>Die Leitungsführungseinstellungen des Typs "{0}" konnten nicht zurückgesetzt werden, das Ersetzen wurde abgebrochen</err22>
+    <err23>Die Größen aller Stutzen stimmen mit den angeschlossenen Elementen überein</err23>
+    <err24>Die Stutzengröße konnte nicht geändert werden: Die Familie unterstützt die erforderliche Größe nicht</err24>
+    <err25>Das Projekt wurde geändert, die Liste der Abweichungen ist veraltet</err25>
   </mprMEPTap>
 </ModPlus>
