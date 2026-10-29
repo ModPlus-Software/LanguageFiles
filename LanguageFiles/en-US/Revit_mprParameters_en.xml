@@ -17,6 +17,8 @@
     <pcd4>Allows batch editing of parameters in the current project</pcd4>
     <pcn5>Edit parameters in families</pcn5>
     <pcd5>Allows batch editing of parameters in project families, open families, or families on disk</pcd5>
+    <pcn6>Remove unused parameters in families</pcn6>
+    <pcd6>Allows batch removal of unused parameters in project families, open families, or families on disk</pcd6>
     <t1>No document</t1>
     <t2>Family</t2>
     <t3>Project</t3>
@@ -122,6 +124,7 @@
     <!--todo remove after 1.6.2.0-->
     <t99>Type</t99>
     <t100>Formula Editor</t100>
+    <!-- todo remove after 2.13.6.0 -->
     <t101>Execute and close</t101>
     <t102>Edit the list of categories of the selected parameters</t102>
     <t103>Create a custom parameter. The custom parameter will be a Shared parameter with a random GUID, but with no binding to a specific SPF</t103>
@@ -225,6 +228,7 @@
     <t199>Group the same parameters with different formulas</t199>
     <t200>All parameter definitions</t200>
     <t201>Report Parameter</t201>
+    <!-- todo remove after 2.13.6.0 -->
     <t202>If families are open in one of the family-related sections, the second section becomes automatically unavailable.\nFor example, if families are open in the "Create parameters in families" section, the "Edit parameters in families" section becomes unavailable, and vice versa</t202>
     <t203>Clear formula</t203>
     <t204>Presets</t204>
@@ -279,6 +283,28 @@
     <t253>Export shared parameters for subsequent import in the "Create parameters in project" section</t253>
     <t254>Export shared and family parameters for subsequent import in the "Create parameters in families" section</t254>
     <t255>There are no parameters that can be exported for creation. Built-in parameters are not exported, and only shared parameters are exported from a project</t255>
+    <t256>&lt;Family Type...&gt;</t256>
+    <t257>Select category</t257>
+    <t258>Categories of families loaded into the families in the list. The number is the count of families in the list into which families of this category are loaded</t258>
+    <t259>There are no families in the list, so all categories are shown. Whether the parameter can be created will be checked on creation</t259>
+    <t260>No families are loaded into the families in the list</t260>
+    <t261>and close the window</t261>
+    <t262>In formulas</t262>
+    <t263>In dimensions</t263>
+    <t264>In arrays</t264>
+    <t265>Associated with element parameters</t265>
+    <t266>Can be removed after removing parameters: {0}</t266>
+    <t267>The shared parameter may be used in project schedules, tags, or filters. Mark it for removal only if you are sure it is not used there</t267>
+    <t268>Can be removed</t268>
+    <t269>Removable</t269>
+    <t270>Number of families in which the parameter can be removed, out of the total number of families with this parameter. In parentheses - the number of families in which the parameter can be removed after removing other parameters</t270>
+    <t271>Show non-removable</t271>
+    <t272>Show parameters that cannot be removed in any family</t272>
+    <t273>Summary of the reasons why the parameter cannot be removed right away. In parentheses - the number of families</t273>
+    <t274>Needs review</t274>
+    <t275>Parameter "{0}" was not removed because the parameter whose formula uses it was not removed</t275>
+    <t276>After removing other parameters</t276>
+    <t277>Marked for removal:</t277>
     <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
     <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
     <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
@@ -446,5 +472,7 @@
     <err57>The family was not loaded because its main file or its backup copy is already in the list. A file and its backup copy cannot be processed at the same time</err57>
     <err58>Value "{0}" could not be converted to data type "{1}". The value was not set</err58>
     <err59>No family of category "{0}" is loaded into the family</err59>
+    <err60>Type "{0}" of category "{1}" is not loaded into the family</err60>
+    <err61>Failed to remove parameter "{0}". Error: {1}</err61>
   </mprParameters>
 </ModPlus>

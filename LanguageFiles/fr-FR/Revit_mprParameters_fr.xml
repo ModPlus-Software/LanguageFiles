@@ -17,6 +17,8 @@
     <pcd4>Permet de modifier des paramètres par lots dans le projet actif</pcd4>
     <pcn5>Modification des paramètres dans les familles</pcn5>
     <pcd5>Permet de modifier des paramètres par lots dans les familles du projet, les familles ouvertes ou les familles sur le disque</pcd5>
+    <pcn6>Suppression des paramètres inutilisés dans les familles</pcn6>
+    <pcd6>Permet de supprimer par lots les paramètres inutilisés dans les familles du projet, les familles ouvertes ou les familles sur le disque</pcd6>
     <t1>Aucun document</t1>
     <t2>Famille</t2>
     <t3>Projet</t3>
@@ -122,6 +124,7 @@
     <!--todo remove after 1.6.2.0-->
     <t99>Type</t99>
     <t100>Éditeur de formules</t100>
+    <!-- todo remove after 2.13.6.0 -->
     <t101>Exécuter et fermer</t101>
     <t102>Modifier la liste des catégories des paramètres sélectionnés</t102>
     <t103>Créer un paramètre personnalisé. Le paramètre personnalisé sera un paramètre partagé avec un GUID aléatoire, mais sans lien avec un FPP particulier</t103>
@@ -225,6 +228,7 @@
     <t199>Regrouper les paramètres identiques ayant des formules différentes</t199>
     <t200>Toutes les définitions de paramètres</t200>
     <t201>Paramètre de rapport</t201>
+    <!-- todo remove after 2.13.6.0 -->
     <t202>Si des familles ont été ouvertes dans l'une des sections travaillant avec les familles, l'autre section devient automatiquement indisponible.\nPar exemple, si des familles ont été ouvertes dans la section "Création de paramètres dans les familles", la section "Modification des paramètres dans les familles" devient indisponible. Et inversement</t202>
     <t203>Effacer la formule</t203>
     <t204>Préréglages</t204>
@@ -279,6 +283,28 @@
     <t253>Exporter les paramètres partagés pour une importation ultérieure dans la section "Création de paramètres dans le projet"</t253>
     <t254>Exporter les paramètres partagés et de famille pour une importation ultérieure dans la section "Création de paramètres dans les familles"</t254>
     <t255>Aucun paramètre ne peut être exporté pour création. Les paramètres intégrés ne sont pas exportés et seuls les paramètres partagés sont exportés depuis un projet</t255>
+    <t256>&lt;Type de famille...&gt;</t256>
+    <t257>Sélection de la catégorie</t257>
+    <t258>Catégories des familles chargées dans les familles de la liste. Le nombre indique dans combien de familles de la liste des familles de cette catégorie sont chargées</t258>
+    <t259>La liste ne contient aucune famille, toutes les catégories sont donc affichées. La possibilité de créer le paramètre sera vérifiée lors de la création</t259>
+    <t260>Aucune famille n'est chargée dans les familles de la liste</t260>
+    <t261>et fermer la fenêtre</t261>
+    <t262>Dans les formules</t262>
+    <t263>Dans les cotes</t263>
+    <t264>Dans les réseaux</t264>
+    <t265>Associé aux paramètres des éléments</t265>
+    <t266>Peut être supprimé après la suppression des paramètres : {0}</t266>
+    <t267>Le paramètre partagé peut être utilisé dans les nomenclatures, étiquettes ou filtres du projet. Ne le marquez pour suppression que si vous êtes sûr qu'il n'y est pas utilisé</t267>
+    <t268>Peut être supprimé</t268>
+    <t269>Supprimable</t269>
+    <t270>Nombre de familles dans lesquelles le paramètre peut être supprimé, sur le nombre total de familles contenant ce paramètre. Entre parenthèses - nombre de familles dans lesquelles le paramètre peut être supprimé après la suppression d'autres paramètres</t270>
+    <t271>Afficher les non supprimables</t271>
+    <t272>Afficher les paramètres qui ne peuvent être supprimés dans aucune famille</t272>
+    <t273>Résumé des raisons pour lesquelles le paramètre ne peut pas être supprimé immédiatement. Entre parenthèses - nombre de familles</t273>
+    <t274>À vérifier</t274>
+    <t275>Le paramètre "{0}" n'a pas été supprimé, car le paramètre dans la formule duquel il est utilisé n'a pas été supprimé</t275>
+    <t276>Après la suppression d'autres paramètres</t276>
+    <t277>Marqués pour suppression :</t277>
     <ad1>Permet de renommer un paramètre de famille. L'action n'est pas disponible pour les paramètres système et les paramètres partagés</ad1>
     <ad2>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres système. La modification du groupe d'un paramètre de famille non partagé entraîne la perte de sa description</ad2>
     <ad3>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres de projet</ad3>
@@ -446,5 +472,7 @@
     <err57>La famille n'a pas été chargée, car son fichier principal ou sa copie de sauvegarde figure déjà dans la liste. Un fichier et sa copie de sauvegarde ne peuvent pas être traités simultanément</err57>
     <err58>Impossible de convertir la valeur "{0}" vers le type de données "{1}". La valeur n'a pas été définie</err58>
     <err59>Aucune famille de la catégorie "{0}" n'est chargée dans la famille</err59>
+    <err60>Le type "{0}" de la catégorie "{1}" n'est pas chargé dans la famille</err60>
+    <err61>Impossible de supprimer le paramètre "{0}". Erreur : {1}</err61>
   </mprParameters>
 </ModPlus>

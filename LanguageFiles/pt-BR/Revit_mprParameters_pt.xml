@@ -17,6 +17,8 @@
     <pcd4>Permite editar parâmetros em lote no projeto atual</pcd4>
     <pcn5>Edição de parâmetros em famílias</pcn5>
     <pcd5>Permite editar parâmetros em lote em famílias do projeto, famílias abertas ou famílias no disco</pcd5>
+    <pcn6>Exclusão de parâmetros não utilizados em famílias</pcn6>
+    <pcd6>Permite excluir em lote parâmetros não utilizados em famílias do projeto, famílias abertas ou famílias no disco</pcd6>
     <t1>Nenhum documento</t1>
     <t2>Família</t2>
     <t3>Projeto</t3>
@@ -122,6 +124,7 @@
     <!--todo remove after 1.6.2.0-->
     <t99>Tipo</t99>
     <t100>Editor de fórmulas</t100>
+    <!-- todo remove after 2.13.6.0 -->
     <t101>Executar e fechar</t101>
     <t102>Editar a lista de categorias dos parâmetros selecionados</t102>
     <t103>Criar um parâmetro personalizado. O parâmetro personalizado será compartilhado, com um GUID aleatório, mas sem vínculo a um arquivo de parâmetros compartilhados específico</t103>
@@ -225,6 +228,7 @@
     <t199>Agrupar parâmetros iguais com fórmulas diferentes</t199>
     <t200>Todas as definições de parâmetros</t200>
     <t201>Parâmetro de relatório</t201>
+    <!-- todo remove after 2.13.6.0 -->
     <t202>Se houver famílias abertas em uma das seções que trabalham com famílias, a outra seção ficará automaticamente indisponível.\nPor exemplo, se houver famílias abertas na seção "Criação de parâmetros em famílias", a seção "Edição de parâmetros em famílias" ficará indisponível. E vice-versa</t202>
     <t203>Limpar fórmula</t203>
     <t204>Predefinições</t204>
@@ -279,6 +283,28 @@
     <t253>Exportar parâmetros compartilhados para posterior importação na seção "Criação de parâmetros no projeto"</t253>
     <t254>Exportar parâmetros compartilhados e de família para posterior importação na seção "Criação de parâmetros em famílias"</t254>
     <t255>Não há parâmetros que possam ser exportados para criação. Parâmetros internos não são exportados e, de um projeto, são exportados apenas parâmetros compartilhados</t255>
+    <t256>&lt;Tipo de família...&gt;</t256>
+    <t257>Selecionar categoria</t257>
+    <t258>Categorias das famílias carregadas nas famílias da lista. O número é a quantidade de famílias da lista nas quais estão carregadas famílias desta categoria</t258>
+    <t259>Não há famílias na lista, por isso todas as categorias são exibidas. A possibilidade de criar o parâmetro será verificada na criação</t259>
+    <t260>Nenhuma família está carregada nas famílias da lista</t260>
+    <t261>e fechar a janela</t261>
+    <t262>Em fórmulas</t262>
+    <t263>Em cotas</t263>
+    <t264>Em matrizes</t264>
+    <t265>Associado a parâmetros de elementos</t265>
+    <t266>Pode ser excluído após a exclusão dos parâmetros: {0}</t266>
+    <t267>O parâmetro compartilhado pode ser usado em tabelas, identificadores ou filtros do projeto. Marque-o para exclusão somente se tiver certeza de que ele não é usado neles</t267>
+    <t268>Pode ser excluído</t268>
+    <t269>Excluível</t269>
+    <t270>Número de famílias em que o parâmetro pode ser excluído, do total de famílias com este parâmetro. Entre parênteses - número de famílias em que o parâmetro pode ser excluído após a exclusão de outros parâmetros</t270>
+    <t271>Mostrar não excluíveis</t271>
+    <t272>Mostrar parâmetros que não podem ser excluídos em nenhuma família</t272>
+    <t273>Resumo dos motivos pelos quais o parâmetro não pode ser excluído imediatamente. Entre parênteses - número de famílias</t273>
+    <t274>Requer verificação</t274>
+    <t275>O parâmetro "{0}" não foi excluído porque o parâmetro em cuja fórmula ele é usado não foi excluído</t275>
+    <t276>Após a exclusão de outros parâmetros</t276>
+    <t277>Marcado para exclusão:</t277>
     <ad1>Permite renomear um parâmetro de família. A ação não está disponível para parâmetros de sistema e parâmetros compartilhados</ad1>
     <ad2>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de sistema. Ao alterar o grupo de um parâmetro de família não compartilhado, a descrição será perdida</ad2>
     <ad3>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de projeto</ad3>
@@ -446,5 +472,7 @@
     <err57>A família não foi carregada porque o seu arquivo principal ou a sua cópia de backup já está na lista. Não é possível processar um arquivo e a sua cópia de backup ao mesmo tempo</err57>
     <err58>Não foi possível converter o valor "{0}" para o tipo de dados "{1}". O valor não foi definido</err58>
     <err59>Nenhuma família da categoria "{0}" está carregada na família</err59>
+    <err60>O tipo "{0}" da categoria "{1}" não está carregado na família</err60>
+    <err61>Não foi possível excluir o parâmetro "{0}". Erro: {1}</err61>
   </mprParameters>
 </ModPlus>

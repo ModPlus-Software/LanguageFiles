@@ -17,6 +17,8 @@
     <pcd4>Ermöglicht die Stapelbearbeitung von Parametern im aktuellen Projekt</pcd4>
     <pcn5>Bearbeitung von Parametern in Familien</pcn5>
     <pcd5>Ermöglicht die Stapelbearbeitung von Parametern in Familien des Projekts, offenen Familien oder auf der Festplatte enthaltenen Familien</pcd5>
+    <pcn6>Nicht verwendete Parameter in Familien löschen</pcn6>
+    <pcd6>Ermöglicht das Stapellöschen nicht verwendeter Parameter in Familien des Projekts, offenen Familien oder auf der Festplatte enthaltenen Familien</pcd6>
     <t1>Kein Dokument vorhanden</t1>
     <t2>Familie</t2>
     <t3>Projekt</t3>
@@ -122,6 +124,7 @@
     <!--todo remove after 1.6.2.0-->
     <t99>Typ</t99>
     <t100>Formeleditor</t100>
+    <!-- todo remove after 2.13.6.0 -->
     <t101>Ausführen und schließen</t101>
     <t102>Kategorieliste ausgewählter Parameter bearbeiten</t102>
     <t103>Benutzerdefinierten Parameter erstellen. Benutzerdefinierter Parameter wird mit einer zufälligen GUID gemeinsam genutzt, jedoch ohne Verknüpfung an eine bestimmte GPD</t103>
@@ -225,6 +228,7 @@
     <t199>Gleiche Parameter mit unterschiedlichen Formeln gruppieren</t199>
     <t200>Alle Parameterdefinitionen</t200>
     <t201>Berichtsparameter</t201>
+    <!-- todo remove after 2.13.6.0 -->
     <t202>Wenn in einem der familienbezogenen Abschnitte Familien geöffnet wurden, wird der zweite Abschnitt automatisch deaktiviert.\nBeispiel: Wenn im Abschnitt "Parameter in Familien erstellen" Familien geöffnet sind, wird der Abschnitt "Parameter in Familien bearbeiten" deaktiviert, und umgekehrt</t202>
     <t203>Formel löschen</t203>
     <t204>Voreinstellungssätze</t204>
@@ -279,6 +283,28 @@
     <t253>Export gemeinsam genutzter Parameter für den anschließenden Import im Bereich "Erstellung von Parametern im Projekt"</t253>
     <t254>Export gemeinsam genutzter Parameter und Familienparameter für den anschließenden Import im Bereich "Erstellung von Parametern in Familien"</t254>
     <t255>Es gibt keine Parameter, die zum Erstellen exportiert werden können. Integrierte Parameter werden nicht exportiert, und aus einem Projekt werden nur gemeinsam genutzte Parameter exportiert</t255>
+    <t256>&lt;Familientyp...&gt;</t256>
+    <t257>Kategorie auswählen</t257>
+    <t258>Kategorien der Familien, die in die Familien der Liste geladen sind. Die Zahl gibt an, in wie viele Familien der Liste Familien dieser Kategorie geladen sind</t258>
+    <t259>Die Liste enthält keine Familien, daher werden alle Kategorien angezeigt. Ob der Parameter erstellt werden kann, wird beim Erstellen geprüft</t259>
+    <t260>In die Familien der Liste ist keine Familie geladen</t260>
+    <t261>und Fenster schließen</t261>
+    <t262>In Formeln</t262>
+    <t263>In Maßen</t263>
+    <t264>In Arrays</t264>
+    <t265>Mit Elementparametern verbunden</t265>
+    <t266>Kann nach dem Löschen der Parameter gelöscht werden: {0}</t266>
+    <t267>Der gemeinsam genutzte Parameter kann in Bauteillisten, Beschriftungen oder Filtern des Projekts verwendet werden. Markieren Sie ihn nur dann zum Löschen, wenn Sie sicher sind, dass er dort nicht verwendet wird</t267>
+    <t268>Kann gelöscht werden</t268>
+    <t269>Löschbar</t269>
+    <t270>Anzahl der Familien, in denen der Parameter gelöscht werden kann, von der Gesamtzahl der Familien mit diesem Parameter. In Klammern - Anzahl der Familien, in denen der Parameter nach dem Löschen anderer Parameter gelöscht werden kann</t270>
+    <t271>Nicht löschbare anzeigen</t271>
+    <t272>Parameter anzeigen, die in keiner Familie gelöscht werden können</t272>
+    <t273>Zusammenfassung der Gründe, warum der Parameter nicht sofort gelöscht werden kann. In Klammern - Anzahl der Familien</t273>
+    <t274>Prüfung erforderlich</t274>
+    <t275>Parameter "{0}" wurde nicht gelöscht, da der Parameter, in dessen Formel er verwendet wird, nicht gelöscht wurde</t275>
+    <t276>Nach dem Löschen anderer Parameter</t276>
+    <t277>Zum Löschen markiert:</t277>
     <ad1>Ermöglicht die Umbenennung eines Familienparameters. Die Aktion ist für Systemparameter und die gemeinsam genutzten Parameter nicht verfügbar</ad1>
     <ad2>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Systemparameter nicht verfügbar. Beim Ändern der Gruppe verlieren die nicht gemeinsam genutzten Parameter der Familie ihre Beschreibung</ad2>
     <ad3>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Projektparameter nicht verfügbar</ad3>
@@ -446,5 +472,7 @@
     <err57>Die Familie wurde nicht geladen, da ihre Hauptdatei oder ihre Sicherungskopie bereits in der Liste enthalten ist. Eine Datei und ihre Sicherungskopie können nicht gleichzeitig verarbeitet werden</err57>
     <err58>Der Wert "{0}" konnte nicht in den Datentyp "{1}" konvertiert werden. Der Wert wurde nicht festgelegt</err58>
     <err59>In die Familie ist keine Familie der Kategorie "{0}" geladen</err59>
+    <err60>Typ "{0}" der Kategorie "{1}" ist nicht in die Familie geladen</err60>
+    <err61>Parameter "{0}" konnte nicht gelöscht werden. Fehler: {1}</err61>
   </mprParameters>
 </ModPlus>

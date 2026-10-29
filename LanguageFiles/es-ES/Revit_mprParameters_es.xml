@@ -17,6 +17,8 @@
     <pcd4>Le permite editar por lotes parámetros en proyecto actual</pcd4>
     <pcn5>Edición de parámetros en familias</pcn5>
     <pcd5>Le permite editar por lotes parámetros en familias de proyectos, familias abiertas o familias en disco</pcd5>
+    <pcn6>Eliminación de parámetros no utilizados en familias</pcn6>
+    <pcd6>Le permite eliminar por lotes parámetros no utilizados en familias de proyectos, familias abiertas o familias en disco</pcd6>
     <t1>Sin documento</t1>
     <t2>Familia</t2>
     <t3>Proyecto</t3>
@@ -122,6 +124,7 @@
     <!--todo remove after 1.6.2.0-->
     <t99>Tipo</t99>
     <t100>Editor de fórmulas</t100>
+    <!-- todo remove after 2.13.6.0 -->
     <t101>Ejecutar y cerrar</t101>
     <t102>Editar lista de categorías de parámetros seleccionados</t102>
     <t103>Crear un parámetro del usuario. Parámetro del usuario se compartirá con un GUID aleatorio, pero sin vinculación a un archivo de parámetros generales específico</t103>
@@ -225,6 +228,7 @@
     <t199>Agrupar los mismos parámetros con diferentes fórmulas</t199>
     <t200>Todas las definiciones de parámetros</t200>
     <t201>Parámetro de informe</t201>
+    <!-- todo remove after 2.13.6.0 -->
     <t202>Si se abren familias en una de las secciones relacionadas con familias, la segunda sección se vuelve automáticamente no disponible.\nPor ejemplo, si se abren familias en la sección "Crear parámetros en familias", la sección "Editar parámetros en familias" no estará disponible, y viceversa</t202>
     <t203>Borrar fórmula</t203>
     <t204>Ajustes preestablecidos</t204>
@@ -279,6 +283,28 @@
     <t253>Exportar parámetros compartidos para su posterior importación en la sección "Creación de parámetros en proyecto"</t253>
     <t254>Exportar parámetros compartidos y de familia para su posterior importación en la sección "Creación de parámetros en familias"</t254>
     <t255>No hay parámetros que se puedan exportar para creación. Los parámetros integrados no se exportan y desde un proyecto solo se exportan los parámetros compartidos</t255>
+    <t256>&lt;Tipo de familia...&gt;</t256>
+    <t257>Seleccionar categoría</t257>
+    <t258>Categorías de las familias cargadas en las familias de la lista. El número es la cantidad de familias de la lista en las que están cargadas familias de esta categoría</t258>
+    <t259>No hay familias en la lista, por lo que se muestran todas las categorías. La posibilidad de crear el parámetro se comprobará al crearlo</t259>
+    <t260>En las familias de la lista no está cargada ninguna familia</t260>
+    <t261>y cerrar la ventana</t261>
+    <t262>En fórmulas</t262>
+    <t263>En dimensiones</t263>
+    <t264>En matrices</t264>
+    <t265>Vinculado con parámetros de elementos</t265>
+    <t266>Se puede eliminar después de eliminar los parámetros: {0}</t266>
+    <t267>El parámetro compartido puede utilizarse en tablas de planificación, etiquetas o filtros del proyecto. Márquelo para eliminar solo si está seguro de que no se utiliza allí</t267>
+    <t268>Se puede eliminar</t268>
+    <t269>Eliminable</t269>
+    <t270>Número de familias en las que se puede eliminar el parámetro, del número total de familias con este parámetro. Entre paréntesis - número de familias en las que el parámetro se puede eliminar después de eliminar otros parámetros</t270>
+    <t271>Mostrar no eliminables</t271>
+    <t272>Mostrar los parámetros que no se pueden eliminar en ninguna familia</t272>
+    <t273>Resumen de los motivos por los que el parámetro no se puede eliminar de inmediato. Entre paréntesis - número de familias</t273>
+    <t274>Requiere revisión</t274>
+    <t275>El parámetro "{0}" no se ha eliminado porque no se ha eliminado el parámetro en cuya fórmula se utiliza</t275>
+    <t276>Después de eliminar otros parámetros</t276>
+    <t277>Marcado para eliminar:</t277>
     <ad1>Permite cambiar nombre de un parámetro familiar. Acción no disponible para los parámetros del sistema y parámetros compartidos</ad1>
     <ad2>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del sistema. Al cambiar un grupo, un parámetro familiar no compartido perderá su descripción</ad2>
     <ad3>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del proyecto</ad3>
@@ -446,5 +472,7 @@
     <err57>La familia no se cargó porque su archivo principal o su copia de seguridad ya está en la lista. No es posible procesar un archivo y su copia de seguridad al mismo tiempo</err57>
     <err58>No se pudo convertir el valor "{0}" al tipo de datos "{1}". El valor no se ha establecido</err58>
     <err59>En la familia no está cargada ninguna familia de la categoría "{0}"</err59>
+    <err60>El tipo "{0}" de la categoría "{1}" no está cargado en la familia</err60>
+    <err61>No se pudo eliminar el parámetro "{0}". Error: {1}</err61>
   </mprParameters>
 </ModPlus>
