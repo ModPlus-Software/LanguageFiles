@@ -211,14 +211,20 @@
     <copySheetsDialogTitle>Copiar hojas</copySheetsDialogTitle>
     <useExisting>Utilizar existente</useExisting>
     <createCopy>Crear copia</createCopy>
-    <useExistingForAll>Utilizar existente (para todos casos)</useExistingForAll>
-    <createCopyForAll>Crear copia (para todos casos)</createCopyForAll>
+    <useExistingView>Utilizar vista existente</useExistingView>
     <legendExistsMessage>Documento objetivo "{0}" tiene una leyenda "{1}"</legendExistsMessage>
-    <legendConflictHint>Seleccionar una opción: utilizar una leyenda existente del documento objetivo o crear y utilizar una copia de leyenda del documento original</legendConflictHint>
+    <legendConflictHint>Seleccione una de las opciones. La casilla de verificacion aplica la opcion elegida a todas las coincidencias siguientes de nombres de leyendas.</legendConflictHint>
     <draftingViewExistsMessage>Documento objetivo "{0}" tiene una vista de dibujo "{1}"</draftingViewExistsMessage>
-    <draftingViewConflictHint>Seleccionar una opción: utilizar una vista de dibujo existente del documento objetivo o crear y utilizar una copia de vista de dibujo del documento original</draftingViewConflictHint>
-    <continueWithoutLegendsMessage>Para copiar leyendas en documento objetivo "{0}" es necesario crear al menos una leyenda</continueWithoutLegendsMessage>
-    <continueWithoutLegendsHint>¿Continuar copiando hojas para este documento?</continueWithoutLegendsHint>
+    <draftingViewConflictHint>Seleccione una de las opciones. La casilla de verificacion aplica la opcion elegida a todas las coincidencias siguientes de nombres de vistas de dibujo.</draftingViewConflictHint>
     <sheetViewCopyError>Hoja: {0}. Vista: {1}. Error: {2}.</sheetViewCopyError>
+    <sheetsDuplicateActionSettings>Comportamiento cuando coinciden los numeros de hoja</sheetsDuplicateActionSettings>
+    <sheetsDuplicateActionTooltip>Cuando los numeros de hoja coinciden y se selecciona la opcion "Reemplazar", la hoja existente del documento de destino se elimina junto con todo su contenido y la hoja del documento original se copia en su lugar. Con el comportamiento predeterminado, el numero de la hoja copiada recibe un sufijo numerico</sheetsDuplicateActionTooltip>
+    <sheetWithNumberExists>El documento de destino ya tiene una hoja con el numero "{0}".\nCopiar con reemplazo?</sheetWithNumberExists>
+    <sheetViewsDuplicateActionSettings>Comportamiento cuando coinciden los nombres de leyendas y vistas de dibujo</sheetViewsDuplicateActionSettings>
+    <sheetViewsDuplicateActionTooltip>Define que ocurre al copiar el contenido de la hoja si el documento de destino ya tiene una leyenda o una vista de dibujo con el mismo nombre. "Crear copia" agrega un sufijo numerico al nombre de la copia. "Utilizar vista existente" coloca en la hoja la vista del documento de destino. "Reemplazar" reemplaza el contenido de la vista existente por el contenido de la vista del documento original, conservando el identificador de la vista y todas sus ubicaciones en hojas. "No copiar" omite la vista. Una vista de dibujo ya colocada en una hoja no se puede colocar de nuevo, por lo que para ella la opcion "Utilizar vista existente" se sustituye por la creacion de una copia</sheetViewsDuplicateActionTooltip>
+    <skipView>No copiar</skipView>
+    <applyToAllCases>Aplicar a todos los casos</applyToAllCases>
+    <draftingViewUseExistingNotPossible>La vista de dibujo "{0}" ya esta colocada en una hoja del documento de destino, por lo que se creo una copia</draftingViewUseExistingNotPossible>
+    <sheetReplaceSkippedActiveView>La hoja con el numero "{0}" esta abierta en este momento, por lo que no se puede recrear. La copia se creo con un numero distinto del original</sheetReplaceSkippedActiveView>
   </mprCopyElementsToOpenDocuments>
 </ModPlus>

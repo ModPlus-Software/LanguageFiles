@@ -211,14 +211,20 @@
     <copySheetsDialogTitle>Копіювання аркушів</copySheetsDialogTitle>
     <useExisting>Використовувати існуючу</useExisting>
     <createCopy>Створити копію</createCopy>
-    <useExistingForAll>Використати існуючу (для всіх випадків)</useExistingForAll>
-    <createCopyForAll>Створити копію (для всіх випадків)</createCopyForAll>
+    <useExistingView>Використати наявний вид</useExistingView>
     <legendExistsMessage>У цільовому документі "{0}" є легенда "{1}"</legendExistsMessage>
-    <legendConflictHint>Виберіть один із варіантів: використати наявну легенду з цільового документа або створити та використати копію легенди з документа-джерела</legendConflictHint>
+    <legendConflictHint>Виберіть один із варіантів. Прапорець застосує вибраний варіант до всіх наступних збігів імен легенд.</legendConflictHint>
     <draftingViewExistsMessage>У цільовому документі "{0}" є креслярський вигляд "{1}"</draftingViewExistsMessage>
-    <draftingViewConflictHint>Виберіть один із варіантів: використати наявний креслярський вигляд із цільового документа або створити й використати копію креслярського вигляду з документа-джерела</draftingViewConflictHint>
-    <continueWithoutLegendsMessage>Для копіювання легенд у цільовому документі "{0}" потрібно створити хоча б одну легенду</continueWithoutLegendsMessage>
-    <continueWithoutLegendsHint>Продовжити копіювання аркушів для цього документу?</continueWithoutLegendsHint>
+    <draftingViewConflictHint>Виберіть один із варіантів. Прапорець застосує вибраний варіант до всіх наступних збігів імен креслених видів.</draftingViewConflictHint>
     <sheetViewCopyError>Аркуш: {0}. Вид: {1}. Помилка: {2}.</sheetViewCopyError>
+    <sheetsDuplicateActionSettings>Поведінка при збігу номерів аркушів</sheetsDuplicateActionSettings>
+    <sheetsDuplicateActionTooltip>При збігу номерів аркушів і виборі опції "Замінити" наявний аркуш цільового документа буде видалено разом з усім його вмістом, а на його місце буде скопійовано аркуш з документа-джерела. При виборі опції "Поведінка за замовчуванням" номер скопійованого аркуша отримає числовий суфікс</sheetsDuplicateActionTooltip>
+    <sheetWithNumberExists>У цільовому документі вже є аркуш з номером "{0}".\nВиконати копіювання із заміною?</sheetWithNumberExists>
+    <sheetViewsDuplicateActionSettings>Поведінка при збігу імен легенд і креслених видів</sheetViewsDuplicateActionSettings>
+    <sheetViewsDuplicateActionTooltip>Задає поведінку під час копіювання вмісту аркуша, якщо в цільовому документі вже є легенда або креслений вид з такою самою назвою. "Створити копію" — до назви копії додається числовий суфікс. "Використати наявний вид" — на аркуш розміщується вид з цільового документа. "Замінити" — вміст наявного виду замінюється вмістом виду з документа-джерела, при цьому ідентифікатор виду та всі його розміщення на аркушах зберігаються. "Не копіювати" — вид пропускається. Креслений вид, уже розміщений на аркуші, не можна розмістити повторно, тому для нього опція "Використати наявний вид" замінюється створенням копії</sheetViewsDuplicateActionTooltip>
+    <skipView>Не копіювати</skipView>
+    <applyToAllCases>Застосувати до всіх випадків</applyToAllCases>
+    <draftingViewUseExistingNotPossible>Креслений вид "{0}" уже розміщено на аркуші цільового документа, тому створено його копію</draftingViewUseExistingNotPossible>
+    <sheetReplaceSkippedActiveView>Аркуш з номером "{0}" відкритий на цей момент, тому його пересоздати неможливо. Копію створено з номером, відмінним від вихідного</sheetReplaceSkippedActiveView>
   </mprCopyElementsToOpenDocuments>
 </ModPlus>
