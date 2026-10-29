@@ -127,6 +127,7 @@
     <!-- todo remove after 2.13.6.0 -->
     <t101>Exécuter et fermer</t101>
     <t102>Modifier la liste des catégories des paramètres sélectionnés</t102>
+    <!-- todo remove after 2.13.6.0 -->
     <t103>Créer un paramètre personnalisé. Le paramètre personnalisé sera un paramètre partagé avec un GUID aléatoire, mais sans lien avec un FPP particulier</t103>
     <t104>État</t104>
     <t105>Non pris en charge</t105>
@@ -305,6 +306,13 @@
     <t275>Le paramètre "{0}" n'a pas été supprimé, car le paramètre dans la formule duquel il est utilisé n'a pas été supprimé</t275>
     <t276>Après la suppression d'autres paramètres</t276>
     <t277>Marqués pour suppression :</t277>
+    <t278>Ajouter des paramètres au FPP</t278>
+    <t279>Ne pas ajouter</t279>
+    <t280>Utiliser depuis le FPP</t280>
+    <t281>Le FPP contient un paramètre portant le même nom (groupe "{0}"). Cliquez pour remplacer le paramètre personnalisé par le paramètre du FPP</t281>
+    <t282>Les paramètres personnalisés cochés seront ajoutés au FPP sélectionné et créés dans le projet en tant que paramètres partagés de ce FPP. Si le groupe indiqué n'existe pas dans le FPP, il sera créé</t282>
+    <t283>Paramètre ajouté au FPP dans le groupe "{0}"</t283>
+    <t284>Créer un paramètre personnalisé. Le paramètre personnalisé sera un paramètre partagé avec un GUID aléatoire, mais sans lien avec un FPP particulier. Lors de l'exécution, ces paramètres peuvent être ajoutés au FPP</t284>
     <ad1>Permet de renommer un paramètre de famille. L'action n'est pas disponible pour les paramètres système et les paramètres partagés</ad1>
     <ad2>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres système. La modification du groupe d'un paramètre de famille non partagé entraîne la perte de sa description</ad2>
     <ad3>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres de projet</ad3>
@@ -413,6 +421,7 @@
     <msg60>La valeur du paramètre ne peut pas être modifiée dans la famille "{0}"</msg60>
     <msg61>La famille ne contient aucun type. Impossible de définir les valeurs des paramètres</msg61>
     <msg62>La formule du paramètre n'a pas changé</msg62>
+    <msg63>Le groupe du FPP n'est pas indiqué pour les paramètres :</msg63>
     <err1>Une erreur inattendue s'est produite lors de l'initialisation de la fenêtre</err1>
     <err2>Une erreur inattendue s'est produite lors de la fermeture de la fenêtre</err2>
     <err3>Une erreur s'est produite lors de la création du paramètre</err3>
@@ -474,5 +483,6 @@
     <err59>Aucune famille de la catégorie "{0}" n'est chargée dans la famille</err59>
     <err60>Le type "{0}" de la catégorie "{1}" n'est pas chargé dans la famille</err60>
     <err61>Impossible de supprimer le paramètre "{0}". Erreur : {1}</err61>
+    <err62>Impossible d'ajouter le paramètre au FPP</err62>
   </mprParameters>
 </ModPlus>

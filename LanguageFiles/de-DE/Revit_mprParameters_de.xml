@@ -127,6 +127,7 @@
     <!-- todo remove after 2.13.6.0 -->
     <t101>Ausführen und schließen</t101>
     <t102>Kategorieliste ausgewählter Parameter bearbeiten</t102>
+    <!-- todo remove after 2.13.6.0 -->
     <t103>Benutzerdefinierten Parameter erstellen. Benutzerdefinierter Parameter wird mit einer zufälligen GUID gemeinsam genutzt, jedoch ohne Verknüpfung an eine bestimmte GPD</t103>
     <t104>Status</t104>
     <t105>Nicht unterstützt</t105>
@@ -305,6 +306,13 @@
     <t275>Parameter "{0}" wurde nicht gelöscht, da der Parameter, in dessen Formel er verwendet wird, nicht gelöscht wurde</t275>
     <t276>Nach dem Löschen anderer Parameter</t276>
     <t277>Zum Löschen markiert:</t277>
+    <t278>Parameter zur GPD hinzufügen</t278>
+    <t279>Nicht hinzufügen</t279>
+    <t280>Aus GPD verwenden</t280>
+    <t281>Die GPD enthält einen Parameter mit demselben Namen (Gruppe "{0}"). Klicken Sie, um den benutzerdefinierten Parameter durch den Parameter aus der GPD zu ersetzen</t281>
+    <t282>Die markierten benutzerdefinierten Parameter werden zur ausgewählten GPD hinzugefügt und im Projekt als gemeinsam genutzte Parameter aus dieser GPD erstellt. Wenn die angegebene Gruppe in der GPD nicht vorhanden ist, wird sie erstellt</t282>
+    <t283>Parameter wurde zur GPD in der Gruppe "{0}" hinzugefügt</t283>
+    <t284>Benutzerdefinierten Parameter erstellen. Benutzerdefinierter Parameter wird mit einer zufälligen GUID gemeinsam genutzt, jedoch ohne Verknüpfung an eine bestimmte GPD. Beim Ausführen können solche Parameter zur GPD hinzugefügt werden</t284>
     <ad1>Ermöglicht die Umbenennung eines Familienparameters. Die Aktion ist für Systemparameter und die gemeinsam genutzten Parameter nicht verfügbar</ad1>
     <ad2>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Systemparameter nicht verfügbar. Beim Ändern der Gruppe verlieren die nicht gemeinsam genutzten Parameter der Familie ihre Beschreibung</ad2>
     <ad3>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Projektparameter nicht verfügbar</ad3>
@@ -413,6 +421,7 @@
     <msg60>Der Parameterwert kann in der Familie "{0}" nicht geändert werden</msg60>
     <msg61>Die Familie hat keine Typen. Parameterwerte können nicht festgelegt werden</msg61>
     <msg62>Die Formel des Parameters hat sich nicht geändert</msg62>
+    <msg63>Für folgende Parameter ist keine GPD-Gruppe angegeben:</msg63>
     <err1>Unerwarteter Fehler beim Initialisieren des Fensters aufgetreten</err1>
     <err2>Unerwarteter Fehler beim Schließen des Fensters aufgetreten</err2>
     <err3>Beim Erstellen des Parameters ist ein Fehler aufgetreten</err3>
@@ -474,5 +483,6 @@
     <err59>In die Familie ist keine Familie der Kategorie "{0}" geladen</err59>
     <err60>Typ "{0}" der Kategorie "{1}" ist nicht in die Familie geladen</err60>
     <err61>Parameter "{0}" konnte nicht gelöscht werden. Fehler: {1}</err61>
+    <err62>Parameter konnte nicht zur GPD hinzugefügt werden</err62>
   </mprParameters>
 </ModPlus>

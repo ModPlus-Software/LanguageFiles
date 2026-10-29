@@ -127,6 +127,7 @@
     <!-- todo remove after 2.13.6.0 -->
     <t101>Execute and close</t101>
     <t102>Edit the list of categories of the selected parameters</t102>
+    <!-- todo remove after 2.13.6.0 -->
     <t103>Create a custom parameter. The custom parameter will be a Shared parameter with a random GUID, but with no binding to a specific SPF</t103>
     <t104>State</t104>
     <t105>Not supported</t105>
@@ -305,6 +306,13 @@
     <t275>Parameter "{0}" was not removed because the parameter whose formula uses it was not removed</t275>
     <t276>After removing other parameters</t276>
     <t277>Marked for removal:</t277>
+    <t278>Add parameters to SPF</t278>
+    <t279>Don't add</t279>
+    <t280>Use from SPF</t280>
+    <t281>The SPF contains a parameter with the same name (group "{0}"). Click to replace the custom parameter with the parameter from the SPF</t281>
+    <t282>Checked custom parameters will be added to the selected SPF and created in the project as shared parameters from this SPF. If the specified group does not exist in the SPF, it will be created</t282>
+    <t283>Parameter added to the SPF in group "{0}"</t283>
+    <t284>Create a custom parameter. The custom parameter will be a Shared parameter with a random GUID, but with no binding to a specific SPF. When executing, such parameters can be added to the SPF</t284>
     <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
     <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
     <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
@@ -413,6 +421,7 @@
     <msg60>The parameter value cannot be changed in family "{0}"</msg60>
     <msg61>The family has no types. Parameter values cannot be set</msg61>
     <msg62>Parameter formula has not changed</msg62>
+    <msg63>SPF group is not specified for parameters:</msg63>
     <err1>An unexpected error occurred during window initialization</err1>
     <err2>An unexpected error occurred when closing the window</err2>
     <err3>An error occurred while creating the parameter</err3>
@@ -474,5 +483,6 @@
     <err59>No family of category "{0}" is loaded into the family</err59>
     <err60>Type "{0}" of category "{1}" is not loaded into the family</err60>
     <err61>Failed to remove parameter "{0}". Error: {1}</err61>
+    <err62>Failed to add parameter to the SPF</err62>
   </mprParameters>
 </ModPlus>

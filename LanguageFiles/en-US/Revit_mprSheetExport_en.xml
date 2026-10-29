@@ -246,6 +246,7 @@
     <err10>The export directory is not selected or does not exist. Go to the settings and specify where to save the files.</err10>
     <err11>The printer "{0}" is not installed. Go to the settings to select another printer, or install the desired one.</err11>
     <err12>Printer "{0}" is not supported. It will not be possible to export to PDF. If you need to use this printer, contact support. Or select a supported printer ({1}) in the settings.</err12>
+    <!-- todo remove after 5.12.6.0 -->
     <err13>Format "{0}" was not found. Restart the plugin to check and add the formats required for printing.</err13>
     <err14>File path "{0}" is not specified</err14>
     <err15>File path is of zero length or contains invalid characters</err15>
@@ -264,5 +265,7 @@
     <err28>Failed to copy file {0} to destination folder {1}. Error:</err28>
     <err29>The file "{0}" was expected, but it did not appear within the specified time. Check whether the file was actually created and is located at the expected path</err29>
     <err30>An error "{1}" occurred while attempting to read sheets from the linked file "{0}". The file was skipped</err30>
+    <err31>Format "{0}" is missing from the paper sizes of printer "{1}". The plugin adds the required formats at startup, but the printer driver does not provide them. Install the printer using the official installer from the developer's website or select another supported printer in the settings. If the error persists, send the plugin log to support.</err31>
+    <err32>Printer "{0}" is installed through the modern Windows print platform (driver "{1}"), for example when Windows protected print mode is enabled. This driver does not support custom paper sizes, so sheets cannot be printed with this printer. Install printer "{0}" using the official installer from the developer's website (if Windows protected print mode is enabled, turn it off in the printer settings) or select another supported printer in the settings.</err32>
   </mprSheetExport>
 </ModPlus>
