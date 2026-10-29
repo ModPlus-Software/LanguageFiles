@@ -4,8 +4,16 @@
     LocalName="Derivação MEP"
     Description="Conjunto de ferramentas para trabalhar com derivações de sistemas prediais"
     LocalName1="Substituição de junção"
-    Description1="Substituição de tê por derivação e de derivação por tê, mantendo a posição original da linha principal">
+    Description1="Substituição de tê por derivação e de derivação por tê, mantendo a posição original da linha principal"
+    LocalName2="Verificação de tamanhos"
+    Description2="Ajuste dos tamanhos das derivações aos tamanhos dos elementos conectados">
     <t1>Selecione os tês e as derivações a substituir</t1>
+    <t2>Divergências encontradas:</t2>
+    <t3>Tamanho atual</t3>
+    <t4>Novo tamanho</t4>
+    <t5>Corrigir selecionados</t5>
+    <t6>Corrigir todos</t6>
+    <t7>O tamanho da derivação foi ajustado ao do elemento conectado</t7>
     <err1>Não foi possível analisar o tê: ele deve ter três conectores de extremidade, dois deles no mesmo eixo, com a linha principal e o ramal conectados</err1>
     <err2>Não foi possível analisar a derivação: a linha principal e o ramal devem estar conectados a ela</err2>
     <err3>A linha principal e o ramal devem ser segmentos retos, e os trechos da linha principal devem estar na mesma reta</err3>
@@ -28,5 +36,8 @@
     <err20>Erro inesperado</err20>
     <err21>O Revit cancelou a operação; a substituição não foi feita</err21>
     <err22>Não foi possível restaurar as preferências de roteamento do tipo "{0}"; a substituição foi cancelada</err22>
+    <err23>Os tamanhos de todas as derivações coincidem com os elementos conectados</err23>
+    <err24>Não foi possível alterar o tamanho da derivação: a família não suporta o tamanho necessário</err24>
+    <err25>O projeto foi alterado, a lista de divergências está desatualizada</err25>
   </mprMEPTap>
 </ModPlus>

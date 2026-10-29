@@ -4,8 +4,16 @@
     LocalName="Injerto MEP"
     Description="Conjunto de herramientas para trabajar con injertos de sistemas de instalaciones"
     LocalName1="Sustituir unión"
-    Description1="Sustitución de una te por un injerto y de un injerto por una te conservando la posición original del conducto principal">
+    Description1="Sustitución de una te por un injerto y de un injerto por una te conservando la posición original del conducto principal"
+    LocalName2="Comprobación de tamaños"
+    Description2="Ajuste de los tamaños de los injertos a los tamaños de los elementos conectados">
     <t1>Seleccione las tes e injertos que desea sustituir</t1>
+    <t2>Discrepancias encontradas:</t2>
+    <t3>Tamaño actual</t3>
+    <t4>Tamaño nuevo</t4>
+    <t5>Corregir seleccionados</t5>
+    <t6>Corregir todos</t6>
+    <t7>El tamaño del injerto se ha ajustado al del elemento conectado</t7>
     <err1>No se ha podido analizar la te: debe tener tres conectores de extremo, dos de ellos en el mismo eje, con el conducto principal y la derivación conectados</err1>
     <err2>No se ha podido analizar el injerto: deben estar conectados a él el conducto principal y la derivación</err2>
     <err3>El conducto principal y la derivación deben ser tramos rectos, y los tramos del conducto principal deben estar en la misma línea</err3>
@@ -28,5 +36,8 @@
     <err20>Error inesperado</err20>
     <err21>Revit ha deshecho la operación, la sustitución no se ha realizado</err21>
     <err22>No se han podido restaurar las preferencias de enrutamiento del tipo "{0}", la sustitución se ha cancelado</err22>
+    <err23>Los tamaños de todos los injertos coinciden con los elementos conectados</err23>
+    <err24>No se ha podido cambiar el tamaño del injerto: la familia no admite el tamaño requerido</err24>
+    <err25>El proyecto ha cambiado, la lista de discrepancias está obsoleta</err25>
   </mprMEPTap>
 </ModPlus>

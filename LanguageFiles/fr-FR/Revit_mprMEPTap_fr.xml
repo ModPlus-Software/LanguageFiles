@@ -4,8 +4,16 @@
     LocalName="Piquage MEP"
     Description="Ensemble d'outils pour travailler avec les piquages des réseaux techniques"
     LocalName1="Remplacement de jonction"
-    Description1="Remplacement d'un té par un piquage et d'un piquage par un té en conservant la position d'origine de la conduite principale">
+    Description1="Remplacement d'un té par un piquage et d'un piquage par un té en conservant la position d'origine de la conduite principale"
+    LocalName2="Vérification des tailles"
+    Description2="Ajustement des tailles des piquages aux tailles des éléments raccordés">
     <t1>Sélectionnez les tés et piquages à remplacer</t1>
+    <t2>Écarts trouvés :</t2>
+    <t3>Taille actuelle</t3>
+    <t4>Nouvelle taille</t4>
+    <t5>Corriger la sélection</t5>
+    <t6>Tout corriger</t6>
+    <t7>La taille du piquage a été ajustée à celle de l’élément raccordé</t7>
     <err1>Impossible d'analyser le té : il doit avoir trois connecteurs d'extrémité, dont deux sur le même axe, avec la conduite principale et la dérivation connectées</err1>
     <err2>Impossible d'analyser le piquage : la conduite principale et la dérivation doivent y être connectées</err2>
     <err3>La conduite principale et la dérivation doivent être des segments droits, et les tronçons de la conduite principale doivent se trouver sur une même droite</err3>
@@ -28,5 +36,8 @@
     <err20>Erreur inattendue</err20>
     <err21>Revit a annulé l'opération, le remplacement n'a pas été effectué</err21>
     <err22>Impossible de rétablir les préférences d'acheminement du type "{0}", le remplacement est annulé</err22>
+    <err23>Les tailles de tous les piquages correspondent aux éléments raccordés</err23>
+    <err24>Impossible de modifier la taille du piquage : la famille ne prend pas en charge la taille requise</err24>
+    <err25>Le projet a changé, la liste des écarts est obsolète</err25>
   </mprMEPTap>
 </ModPlus>
