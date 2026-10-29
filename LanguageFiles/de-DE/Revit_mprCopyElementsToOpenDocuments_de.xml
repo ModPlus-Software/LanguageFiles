@@ -211,14 +211,20 @@
     <copySheetsDialogTitle>Kopieren von Plänen</copySheetsDialogTitle>
     <useExisting>Eine vorhandene verwenden</useExisting>
     <createCopy>Eine Kopie erstellen</createCopy>
-    <useExistingForAll>Eine vorhandene verwenden (für alle Fälle)</useExistingForAll>
-    <createCopyForAll>Eine Kopie erstellen (für alle Fälle)</createCopyForAll>
+    <useExistingView>Vorhandene Ansicht verwenden</useExistingView>
     <legendExistsMessage>Das Zieldokument "{0}" enthält die Legende "{1}"</legendExistsMessage>
-    <legendConflictHint>Wählen Sie bitte, ob Sie eine vorhandene Legende aus dem Zieldokument verwenden oder eine Kopie der Legende aus dem Quelldokument erstellen und verwenden möchten</legendConflictHint>
+    <legendConflictHint>Wahlen Sie bitte eine der Optionen. Das Kontrollkastchen wendet die gewahlte Option auf alle weiteren Ubereinstimmungen von Legendennamen an.</legendConflictHint>
     <draftingViewExistsMessage>Das Zieldokument "{0}" enthält die Zeichenansicht "{1}"</draftingViewExistsMessage>
-    <draftingViewConflictHint>Wählen Sie bitte, ob Sie eine vorhandene Zeichenansicht aus dem Zieldokument verwenden oder eine Kopie der Zeichenansicht aus dem Quelldokument erstellen und verwenden möchten</draftingViewConflictHint>
-    <continueWithoutLegendsMessage>Um die Legenden in das Zieldokument "{0}" zu kopieren, muss mindestens eine Legende erstellt werden</continueWithoutLegendsMessage>
-    <continueWithoutLegendsHint>Wollen Sie das Kopieren der Pläne für dieses Dokument fortsetzen?</continueWithoutLegendsHint>
+    <draftingViewConflictHint>Wahlen Sie bitte eine der Optionen. Das Kontrollkastchen wendet die gewahlte Option auf alle weiteren Ubereinstimmungen von Namen der Zeichenansichten an.</draftingViewConflictHint>
     <sheetViewCopyError>Plan: {0}. Ansicht: {1}. Fehler: {2}.</sheetViewCopyError>
+    <sheetsDuplicateActionSettings>Verhalten bei ubereinstimmenden Plannummern</sheetsDuplicateActionSettings>
+    <sheetsDuplicateActionTooltip>Wenn die Plannummern ubereinstimmen und die Option "Ersetzen" gewahlt wird, wird der vorhandene Plan des Zieldokuments samt seinem gesamten Inhalt geloscht und der Plan aus dem Quelldokument an seiner Stelle kopiert. Beim Standardverhalten erhalt die kopierte Plannummer ein numerisches Suffix</sheetsDuplicateActionTooltip>
+    <sheetWithNumberExists>Das Zieldokument enthalt bereits einen Plan mit der Nummer "{0}".\nKopieren mit Ersetzen ausfuhren?</sheetWithNumberExists>
+    <sheetViewsDuplicateActionSettings>Verhalten bei ubereinstimmenden Namen von Legenden und Zeichenansichten</sheetViewsDuplicateActionSettings>
+    <sheetViewsDuplicateActionTooltip>Legt fest, was beim Kopieren des Planinhalts geschieht, wenn im Zieldokument bereits eine Legende oder Zeichenansicht mit demselben Namen vorhanden ist. "Eine Kopie erstellen" fugt dem Namen der Kopie ein numerisches Suffix hinzu. "Vorhandene Ansicht verwenden" platziert die Ansicht aus dem Zieldokument auf dem Plan. "Ersetzen" ersetzt den Inhalt der vorhandenen Ansicht durch den Inhalt der Ansicht aus dem Quelldokument; Kennung der Ansicht und alle ihre Platzierungen auf Planen bleiben erhalten. "Nicht kopieren" uberspringt die Ansicht. Eine bereits auf einem Plan platzierte Zeichenansicht kann nicht erneut platziert werden, daher wird fur sie die Option "Vorhandene Ansicht verwenden" durch das Erstellen einer Kopie ersetzt</sheetViewsDuplicateActionTooltip>
+    <skipView>Nicht kopieren</skipView>
+    <applyToAllCases>Auf alle Falle anwenden</applyToAllCases>
+    <draftingViewUseExistingNotPossible>Die Zeichenansicht "{0}" ist bereits auf einem Plan des Zieldokuments platziert, daher wurde eine Kopie erstellt</draftingViewUseExistingNotPossible>
+    <sheetReplaceSkippedActiveView>Der Plan mit der Nummer "{0}" ist derzeit geoffnet und kann daher nicht neu erstellt werden. Die Kopie wurde mit einer anderen Nummer als der ursprunglichen erstellt</sheetReplaceSkippedActiveView>
   </mprCopyElementsToOpenDocuments>
 </ModPlus>

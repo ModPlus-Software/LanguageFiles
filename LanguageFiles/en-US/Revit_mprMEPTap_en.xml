@@ -4,8 +4,16 @@
     LocalName="MEP tap"
     Description="A set of tools for working with taps of engineering systems"
     LocalName1="Replace junction"
-    Description1="Replacing a tee with a tap and a tap with a tee while keeping the original position of the main run">
+    Description1="Replacing a tee with a tap and a tap with a tee while keeping the original position of the main run"
+    LocalName2="Size check"
+    Description2="Matching tap sizes to the sizes of connected elements">
     <t1>Select tees and taps to replace</t1>
+    <t2>Mismatches found:</t2>
+    <t3>Current size</t3>
+    <t4>New size</t4>
+    <t5>Fix selected</t5>
+    <t6>Fix all</t6>
+    <t7>The tap size has been matched to the connected element</t7>
     <err1>Failed to parse the tee: it must have three end connectors, two of which lie on the same axis, with the main run and the branch connected</err1>
     <err2>Failed to parse the tap: the main run and the branch must be connected to it</err2>
     <err3>The main run and the branch must be straight segments, and the main run segments must lie on the same line</err3>
@@ -28,5 +36,8 @@
     <err20>Unexpected error</err20>
     <err21>Revit rolled back the operation, the replacement was not performed</err21>
     <err22>Failed to restore the routing preferences of type "{0}", the replacement was cancelled</err22>
+    <err23>The sizes of all taps match the connected elements</err23>
+    <err24>Failed to change the tap size: the family does not support the required size</err24>
+    <err25>The project has changed, the list of mismatches is out of date</err25>
   </mprMEPTap>
 </ModPlus>
