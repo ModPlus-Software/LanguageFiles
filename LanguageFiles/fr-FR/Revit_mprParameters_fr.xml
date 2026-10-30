@@ -313,6 +313,9 @@
     <t282>Les paramètres personnalisés cochés seront ajoutés au FPP sélectionné et créés dans le projet en tant que paramètres partagés de ce FPP. Si le groupe indiqué n'existe pas dans le FPP, il sera créé</t282>
     <t283>Paramètre ajouté au FPP dans le groupe "{0}"</t283>
     <t284>Créer un paramètre personnalisé. Le paramètre personnalisé sera un paramètre partagé avec un GUID aléatoire, mais sans lien avec un FPP particulier. Lors de l'exécution, ces paramètres peuvent être ajoutés au FPP</t284>
+    <t285>Restaurer les associations de paramètres</t285>
+    <t286>Seule la formule sera importée</t286>
+    <t287>Si un paramètre existe déjà dans la famille active et qu'il est défini par une formule dans la famille sélectionnée, seule la formule sera importée pour ce paramètre (indiqué dans la colonne "Remarque"). Les paramètres utilisés dans la formule et absents de la famille active seront automatiquement sélectionnés pour l'import</t287>
     <ad1>Permet de renommer un paramètre de famille. L'action n'est pas disponible pour les paramètres système et les paramètres partagés</ad1>
     <ad2>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres système. La modification du groupe d'un paramètre de famille non partagé entraîne la perte de sa description</ad2>
     <ad3>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres de projet</ad3>
@@ -422,6 +425,7 @@
     <msg61>La famille ne contient aucun type. Impossible de définir les valeurs des paramètres</msg61>
     <msg62>La formule du paramètre n'a pas changé</msg62>
     <msg63>Le groupe du FPP n'est pas indiqué pour les paramètres :</msg63>
+    <msg64>L'association du paramètre "{0}" de l'élément (Id : {1}) avec le paramètre "{2}" de la famille hôte a été restaurée</msg64>
     <err1>Une erreur inattendue s'est produite lors de l'initialisation de la fenêtre</err1>
     <err2>Une erreur inattendue s'est produite lors de la fermeture de la fenêtre</err2>
     <err3>Une erreur s'est produite lors de la création du paramètre</err3>
@@ -484,5 +488,11 @@
     <err60>Le type "{0}" de la catégorie "{1}" n'est pas chargé dans la famille</err60>
     <err61>Impossible de supprimer le paramètre "{0}". Erreur : {1}</err61>
     <err62>Impossible d'ajouter le paramètre au FPP</err62>
+    <err63>Impossible de restaurer l'étiquette de la cote (Id : {0}) avec le paramètre "{1}"</err63>
+    <err64>Impossible de restaurer l'étiquette du réseau (Id : {0}) avec le paramètre "{1}"</err64>
+    <err65>Impossible de restaurer l'association du paramètre "{0}" de l'élément (Id : {1}) avec le paramètre "{2}"</err65>
+    <err66>Impossible de restaurer l'association du paramètre "{0}" de l'élément (Id : {1}) avec le paramètre "{2}" : paramètre introuvable</err66>
+    <err67>L'élément "{0}" est introuvable dans la famille</err67>
+    <err68>L'élément "{0}" ne peut pas être la valeur du paramètre</err68>
   </mprParameters>
 </ModPlus>

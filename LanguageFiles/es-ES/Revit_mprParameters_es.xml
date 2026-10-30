@@ -313,6 +313,9 @@
     <t282>Los parámetros del usuario marcados se añadirán al APC seleccionado y se crearán en el proyecto como parámetros compartidos de este APC. Si el grupo especificado no existe en el APC, se creará</t282>
     <t283>Parámetro añadido al APC en el grupo "{0}"</t283>
     <t284>Crear un parámetro del usuario. Parámetro del usuario se compartirá con un GUID aleatorio, pero sin vinculación a un archivo de parámetros generales específico. Al ejecutar, estos parámetros se pueden añadir al APC</t284>
+    <t285>Restaurar asociaciones de parámetros</t285>
+    <t286>Solo se importará la fórmula</t286>
+    <t287>Si un parámetro ya existe en la familia actual y en la familia seleccionada está definido por una fórmula, para ese parámetro solo se importará la fórmula (se indica en la columna "Nota"). Los parámetros utilizados en la fórmula que faltan en la familia actual se seleccionarán automáticamente para la importación</t287>
     <ad1>Permite cambiar nombre de un parámetro familiar. Acción no disponible para los parámetros del sistema y parámetros compartidos</ad1>
     <ad2>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del sistema. Al cambiar un grupo, un parámetro familiar no compartido perderá su descripción</ad2>
     <ad3>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del proyecto</ad3>
@@ -422,6 +425,7 @@
     <msg61>La familia no tiene tipos. No se pueden establecer valores de parámetros</msg61>
     <msg62>La fórmula del parámetro no ha cambiado</msg62>
     <msg63>No se ha especificado el grupo del APC para los parámetros:</msg63>
+    <msg64>Se ha restaurado la asociación del parámetro "{0}" del elemento (Id: {1}) con el parámetro "{2}" de la familia anfitriona</msg64>
     <err1>Error inesperado al inicializar ventana</err1>
     <err2>Error inesperado al cerrar ventana</err2>
     <err3>Se ha producido un error al crear parámetro</err3>
@@ -484,5 +488,11 @@
     <err60>El tipo "{0}" de la categoría "{1}" no está cargado en la familia</err60>
     <err61>No se pudo eliminar el parámetro "{0}". Error: {1}</err61>
     <err62>No se pudo añadir el parámetro al APC</err62>
+    <err63>No se pudo restaurar la etiqueta de la cota (Id: {0}) con el parámetro "{1}"</err63>
+    <err64>No se pudo restaurar la etiqueta de la matriz (Id: {0}) con el parámetro "{1}"</err64>
+    <err65>No se pudo restaurar la asociación del parámetro "{0}" del elemento (Id: {1}) con el parámetro "{2}"</err65>
+    <err66>No se pudo restaurar la asociación del parámetro "{0}" del elemento (Id: {1}) con el parámetro "{2}": parámetro no encontrado</err66>
+    <err67>No se encontró el elemento "{0}" en la familia</err67>
+    <err68>El elemento "{0}" no puede ser el valor del parámetro</err68>
   </mprParameters>
 </ModPlus>

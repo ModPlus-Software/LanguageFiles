@@ -313,6 +313,9 @@
     <t282>Die markierten benutzerdefinierten Parameter werden zur ausgewählten GPD hinzugefügt und im Projekt als gemeinsam genutzte Parameter aus dieser GPD erstellt. Wenn die angegebene Gruppe in der GPD nicht vorhanden ist, wird sie erstellt</t282>
     <t283>Parameter wurde zur GPD in der Gruppe "{0}" hinzugefügt</t283>
     <t284>Benutzerdefinierten Parameter erstellen. Benutzerdefinierter Parameter wird mit einer zufälligen GUID gemeinsam genutzt, jedoch ohne Verknüpfung an eine bestimmte GPD. Beim Ausführen können solche Parameter zur GPD hinzugefügt werden</t284>
+    <t285>Parameterzuordnungen wiederherstellen</t285>
+    <t286>Nur die Formel wird importiert</t286>
+    <t287>Wenn ein Parameter bereits in der aktuellen Familie vorhanden ist und in der ausgewählten Familie durch eine Formel definiert ist, wird für diesen Parameter nur die Formel importiert (in der Spalte "Hinweis" gekennzeichnet). In der Formel verwendete Parameter, die in der aktuellen Familie fehlen, werden automatisch für den Import ausgewählt</t287>
     <ad1>Ermöglicht die Umbenennung eines Familienparameters. Die Aktion ist für Systemparameter und die gemeinsam genutzten Parameter nicht verfügbar</ad1>
     <ad2>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Systemparameter nicht verfügbar. Beim Ändern der Gruppe verlieren die nicht gemeinsam genutzten Parameter der Familie ihre Beschreibung</ad2>
     <ad3>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Projektparameter nicht verfügbar</ad3>
@@ -422,6 +425,7 @@
     <msg61>Die Familie hat keine Typen. Parameterwerte können nicht festgelegt werden</msg61>
     <msg62>Die Formel des Parameters hat sich nicht geändert</msg62>
     <msg63>Für folgende Parameter ist keine GPD-Gruppe angegeben:</msg63>
+    <msg64>Die Zuordnung des Parameters "{0}" des Elements (Id: {1}) zum Parameter "{2}" der übergeordneten Familie wurde wiederhergestellt</msg64>
     <err1>Unerwarteter Fehler beim Initialisieren des Fensters aufgetreten</err1>
     <err2>Unerwarteter Fehler beim Schließen des Fensters aufgetreten</err2>
     <err3>Beim Erstellen des Parameters ist ein Fehler aufgetreten</err3>
@@ -484,5 +488,11 @@
     <err60>Typ "{0}" der Kategorie "{1}" ist nicht in die Familie geladen</err60>
     <err61>Parameter "{0}" konnte nicht gelöscht werden. Fehler: {1}</err61>
     <err62>Parameter konnte nicht zur GPD hinzugefügt werden</err62>
+    <err63>Die Beschriftung der Bemaßung (Id: {0}) mit dem Parameter "{1}" konnte nicht wiederhergestellt werden</err63>
+    <err64>Die Beschriftung der Reihe (Id: {0}) mit dem Parameter "{1}" konnte nicht wiederhergestellt werden</err64>
+    <err65>Die Zuordnung des Parameters "{0}" des Elements (Id: {1}) zum Parameter "{2}" konnte nicht wiederhergestellt werden</err65>
+    <err66>Die Zuordnung des Parameters "{0}" des Elements (Id: {1}) zum Parameter "{2}" konnte nicht wiederhergestellt werden: Parameter nicht gefunden</err66>
+    <err67>Element "{0}" wurde in der Familie nicht gefunden</err67>
+    <err68>Element "{0}" kann nicht als Parameterwert verwendet werden</err68>
   </mprParameters>
 </ModPlus>

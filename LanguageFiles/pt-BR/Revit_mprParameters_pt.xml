@@ -313,6 +313,9 @@
     <t282>Os parâmetros personalizados marcados serão adicionados ao arquivo de parâmetros compartilhados selecionado e criados no projeto como parâmetros compartilhados desse arquivo. Se o grupo indicado não existir no arquivo, ele será criado</t282>
     <t283>Parâmetro adicionado ao arquivo de parâmetros compartilhados no grupo "{0}"</t283>
     <t284>Criar um parâmetro personalizado. O parâmetro personalizado será compartilhado, com um GUID aleatório, mas sem vínculo a um arquivo de parâmetros compartilhados específico. Ao executar, esses parâmetros podem ser adicionados ao arquivo de parâmetros compartilhados</t284>
+    <t285>Restaurar associações de parâmetros</t285>
+    <t286>Somente a fórmula será importada</t286>
+    <t287>Se um parâmetro já existir na família atual e na família selecionada for definido por uma fórmula, somente a fórmula será importada para esse parâmetro (indicado na coluna "Observação"). Os parâmetros usados na fórmula que não existem na família atual serão selecionados automaticamente para importação</t287>
     <ad1>Permite renomear um parâmetro de família. A ação não está disponível para parâmetros de sistema e parâmetros compartilhados</ad1>
     <ad2>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de sistema. Ao alterar o grupo de um parâmetro de família não compartilhado, a descrição será perdida</ad2>
     <ad3>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de projeto</ad3>
@@ -422,6 +425,7 @@
     <msg61>A família não tem tipos. Não é possível definir valores de parâmetros</msg61>
     <msg62>A fórmula do parâmetro não foi alterada</msg62>
     <msg63>O grupo do arquivo de parâmetros compartilhados não foi especificado para os parâmetros:</msg63>
+    <msg64>A associação do parâmetro "{0}" do elemento (Id: {1}) com o parâmetro "{2}" da família hospedeira foi restaurada</msg64>
     <err1>Ocorreu um erro inesperado ao inicializar a janela</err1>
     <err2>Ocorreu um erro inesperado ao fechar a janela</err2>
     <err3>Ocorreu um erro ao criar o parâmetro</err3>
@@ -484,5 +488,11 @@
     <err60>O tipo "{0}" da categoria "{1}" não está carregado na família</err60>
     <err61>Não foi possível excluir o parâmetro "{0}". Erro: {1}</err61>
     <err62>Não foi possível adicionar o parâmetro ao arquivo de parâmetros compartilhados</err62>
+    <err63>Não foi possível restaurar o rótulo da cota (Id: {0}) com o parâmetro "{1}"</err63>
+    <err64>Não foi possível restaurar o rótulo da matriz (Id: {0}) com o parâmetro "{1}"</err64>
+    <err65>Não foi possível restaurar a associação do parâmetro "{0}" do elemento (Id: {1}) com o parâmetro "{2}"</err65>
+    <err66>Não foi possível restaurar a associação do parâmetro "{0}" do elemento (Id: {1}) com o parâmetro "{2}": parâmetro não encontrado</err66>
+    <err67>O elemento "{0}" não foi encontrado na família</err67>
+    <err68>O elemento "{0}" não pode ser o valor do parâmetro</err68>
   </mprParameters>
 </ModPlus>
