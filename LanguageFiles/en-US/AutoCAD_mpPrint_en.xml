@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpPrint
+    LocalName="Plot"
+    Description="Batch plotting with recognition of drawing frames in model space">
+    <h1>Current settings configuration</h1>
+    <h2>Drawings</h2>
+    <h3>Search by drawing name</h3>
+    <h4>Folder</h4>
+    <h5>Folder where plot files are saved</h5>
+    <h6>Scan</h6>
+    <h7>Find frames by filters in model space and on every layout of the checked drawings</h7>
+    <h9>Order</h9>
+    <h10>Sort order of the found and selected plot areas in the table. Model space and each layout have their own order</h10>
+    <h11>Attribute by which plot areas are sorted</h11>
+    <h13>File name</h13>
+    <h14>Name of the resulting file when all areas are plotted to one file</h14>
+    <h16>Highlight plot areas</h16>
+    <h17>Without clearing, areas defined by objects keep their settings on a new scan</h17>
+    <h18>Clear the table when scanning</h18>
+    <h20>Open the result after plotting</h20>
+    <h21>Remove all plot areas except layouts from the table</h21>
+    <h22>Name template</h22>
+    <h23>Assign names by the template to the selected table rows</h23>
+    <h24>Filters</h24>
+    <h25>Show:</h25>
+    <h28>Plot areas in model space</h28>
+    <h30>Plot areas on layouts</h30>
+    <h32>Layouts</h32>
+    <h34>Additional plot settings</h34>
+    <h35>Additional plot settings (rows: {0})</h35>
+    <h36>Preview</h36>
+    <h37>Preview all rows checked for plotting</h37>
+    <h38>Plot</h38>
+    <h39>Main plot settings</h39>
+    <h40>Printer/plotter</h40>
+    <h41>Paper size</h41>
+    <h42>Paper size for new plot areas</h42>
+    <h43>Select by area size</h43>
+    <h44>A new plot area gets the smallest paper size it fits into at its scale. If there is no such paper size, the default paper size is assigned</h44>
+    <h45>Fit within</h45>
+    <h46>Which part of the paper to use for automatic paper size selection of plot areas</h46>
+    <h47>Tolerance, mm</h47>
+    <h48>By how many millimeters on paper the area may extend beyond the paper size and still fit it. Also used when detecting the scale from the frame</h48>
+    <h49>Detect from frame</h49>
+    <h50>A new area in model space gets the scale at which its frame matches a paper size of the device within the tolerance. For a frame block, its insertion scale is checked first. If several scales fit, the one closest to the default scale is chosen, if none - the default scale is assigned</h50>
+    <h51>Apply to all rows</h51>
+    <h52>Plot style table</h52>
+    <h53>Shade plot</h53>
+    <h54>Quality</h54>
+    <h55>DPI</h55>
+    <h57>Rotation</h57>
+    <h58>Offset, mm</h58>
+    <h59>Offset from the origin of the printable area</h59>
+    <h60>Center the plot</h60>
+    <h61>Plot object lineweights</h61>
+    <h62>Scale lineweights</h62>
+    <h63>Plot transparency</h63>
+    <h64>Plot with plot styles</h64>
+    <h65>The polyline or block that defines the area is not plotted. Does not apply to "Window" areas and layouts</h65>
+    <h66>Do not plot the area object</h66>
+    <h68>Include polylines</h68>
+    <h70>Closed only</h70>
+    <h72>Include line frames</h72>
+    <h74>Include blocks</h74>
+    <h75>Name mask</h75>
+    <h76>For example, Frame* - blocks whose name starts with "Frame". * - any number of any characters, ? - any single character</h76>
+    <h77>Search by block name</h77>
+    <h78>If nothing is checked, there is no filtering</h78>
+    <h79>Search by layer name</h79>
+    <h80>Search by color name</h80>
+    <h82>Skip frames on layers that are off or frozen</h82>
+    <h84>Skip empty frames</h84>
+    <h85>This field sets the template by which found plot areas will be named</h85>
+    <h87>Base</h87>
+    <h90>Attributes</h90>
+    <h92>Remove attribute</h92>
+    <h93>Add attribute</h93>
+    <h94>Between attributes</h94>
+    <h97>Separator</h97>
+    <h99>First number</h99>
+    <h100>Starting number and its length: 001 gives 001, 002, 003</h100>
+    <h101>No.</h101>
+    <h103>Drawing</h103>
+    <h104>Layout</h104>
+    <h105>Show in drawing</h105>
+    <h106>Create a layout in the drawing with a viewport for this plot area</h106>
+    <h107>Delete from table</h107>
+    <h109>Select rows in the table to change their plot settings</h109>
+    <h111>Check all visible in the list</h111>
+    <h112>Uncheck all visible in the list</h112>
+    <h113>Reread layers, blocks and colors from the checked drawings</h113>
+    <h114>Nothing is checked</h114>
+    <t1>In creation order</t1>
+    <t2>Left to right and top to bottom</t2>
+    <t3>Left to right and bottom to top</t3>
+    <t4>Top to bottom and left to right</t4>
+    <t5>Bottom to top and left to right</t5>
+    <t6>By attribute value</t6>
+    <t7>Separate files</t7>
+    <t8>One file</t8>
+    <t9>A file per drawing</t9>
+    <t10>A file per paper size</t10>
+    <t11>All rows</t11>
+    <t12>Checked for plotting</t12>
+    <t13>Not checked for plotting</t13>
+    <t14>Paper</t14>
+    <t15>Printable area</t15>
+    <t16>None</t16>
+    <t17>As displayed</t17>
+    <t18>Legacy wireframe</t18>
+    <t19>Legacy hidden</t19>
+    <t20>Rendered</t20>
+    <t21>Draft</t21>
+    <t22>Preview</t22>
+    <t23>Normal</t23>
+    <t24>Presentation</t24>
+    <t25>Maximum</t25>
+    <t26>Custom</t26>
+    <t27>Layout name</t27>
+    <t28>Drawing name</t28>
+    <t29>Current name</t29>
+    <t30>Custom text</t30>
+    <t31>Block attributes</t31>
+    <t32>On repeats</t32>
+    <t33>Sequential</t33>
+    <t34>By page number</t34>
+    <t35>on repeats</t35>
+    <t36>sequential</t36>
+    <t37>by page number</t37>
+    <t38>Window</t38>
+    <t39>Fit to paper</t39>
+    <t40>Area</t40>
+    <k1>ARea</k1>
+    <k1ln>ARea</k1ln>
+    <k2>Objects</k2>
+    <k2ln>Objects</k2ln>
+    <msg1>Polylines: not included</msg1>
+    <msg2>Polylines: closed</msg2>
+    <msg3>Polylines: any</msg3>
+    <msg4>line frames</msg4>
+    <msg5>Blocks: not included</msg5>
+    <msg6>Blocks: any</msg6>
+    <msg7>Blocks: {0}</msg7>
+    <msg8>Layers: {0}</msg8>
+    <msg9>Layers: all</msg9>
+    <msg10>Colors: {0}</msg10>
+    <msg11>Colors: all</msg11>
+    <msg12>on layers that are off or frozen</msg12>
+    <msg13>empty</msg13>
+    <msg14>Skip frames: none</msg14>
+    <msg15>Skip frames: {0}</msg15>
+    <msg16>on layers that are off or frozen - {0}</msg16>
+    <msg17>empty - {0}</msg17>
+    <msg18>Frames skipped: {0}</msg18>
+    <msg19>Select rows to rename them</msg19>
+    <msg20>Result: {0}</msg20>
+    <msg21>While the window was closed, these drawings were closed: {0}. Their rows have been removed from the table</msg21>
+    <msg22>Drawing "{0}" is closed, its rows have been removed from the table</msg22>
+    <msg23>No drawing is checked</msg23>
+    <msg24>No suitable objects were found either in model space or on layouts</msg24>
+    <msg25>Plot areas found: in model space - {0}, on layouts - {1}</msg25>
+    <msg26>No new plot areas found</msg26>
+    <msg27>New plot areas found: in model space - {0}, on layouts - {1}</msg27>
+    <msg28>The objects of these rows have been deleted from the drawing, the rows have been removed:</msg28>
+    <msg29>Failed to scan:</msg29>
+    <msg30>Scanning</msg30>
+    <msg31>Failed to detect the scale, the default scale has been assigned:</msg31>
+    <msg32>Scale detection</msg32>
+    <msg33>Failed to select a paper size, the default paper size has been assigned:</msg33>
+    <msg34>Paper size selection</msg34>
+    <msg35>Select a printer/plotter and a paper size in the settings</msg35>
+    <msg36>Both polylines and blocks are turned off in the filters, so there is nothing to search for</msg36>
+    <msg37>No rows are selected</msg37>
+    <msg38>Creating a layout</msg38>
+    <msg39>Layout "{0}" has been created</msg39>
+    <msg40>Additional plot settings have been applied to all rows</msg40>
+    <msg41>No rows are checked for plotting</msg41>
+    <msg42>Some plot areas were not included in the preview:</msg42>
+    <msg43>Failed to open "{0}": {1}</msg43>
+    <msg44>Plot areas plotted: {0}. Files created: {1}</msg44>
+    <msg45>Plotting canceled. {0}</msg45>
+    <msg46>Plot areas checked in model space: {0}, on layouts: {1}, layouts: {2}.</msg46>
+    <msg47>Drawings: {0}.</msg47>
+    <msg48>Nothing to plot</msg48>
+    <msg49>Repeated names: {0}. Numbers (2), (3) will be added to the names of such files</msg49>
+    <msg50>These files already exist in the folder and will be replaced: {0}</msg50>
+    <msg51>Continue?</msg51>
+    <msg52>Plot to one file.</msg52>
+    <msg53>Plot to a file per drawing.</msg53>
+    <msg54>Plot to a file per paper size.</msg54>
+    <msg55>Plot to separate files.</msg55>
+    <msg56>Rows that cannot be plotted will be skipped: {0}</msg56>
+    <msg57>Retry creating the combined file?</msg57>
+    <msg58>Combining PDF</msg58>
+    <msg59>Failed to create "{0}": {1}</msg59>
+    <msg60>The separate pages remain in the folder "{0}"</msg60>
+    <msg61>{0} files</msg61>
+    <msg62>{0} images</msg62>
+    <msg63>Plot Progress</msg63>
+    <msg64>Cancel Job</msg64>
+    <msg65>Cancel Sheet</msg65>
+    <msg66>Job Progress</msg66>
+    <msg67>Sheet Progress</msg67>
+    <msg68>Remove objects from the set</msg68>
+    <msg69>Select frame objects or {0}</msg69>
+    <msg70>Specify first corner of plot area or [{0}]:</msg70>
+    <msg71>Specify opposite corner:</msg71>
+    <msg72>The window has zero size</msg72>
+    <err1>file was not created</err1>
+    <err2>Paper sizes of the device "{0}" are set in pixels - the scale cannot be detected from the frame size for it</err2>
+    <err3>Failed to read any paper size of the device "{0}"</err3>
+    <err4>drawing is closed</err4>
+    <err5>failed to determine the area size</err5>
+    <err6>{0}x{1} does not match any paper size of the device at any scale</err6>
+    <err7>scales {0} fit - to choose among them, set a default scale</err7>
+    <err8>Paper sizes of the device "{0}" are set in pixels - a paper size cannot be selected by the area size for it, select a paper size manually</err8>
+    <err9>no paper size fits {0}x{1} mm</err9>
+    <err10>to create a layout, select a scale other than "Fit to paper"</err10>
+    <err11>A layout can be created only from a plot area in model space</err11>
+    <err12>plot area is invalid</err12>
+    <err13>plot device or paper size is not set</err13>
+    <err14>failed to make the drawing "{0}" active</err14>
+    <err15>drawing "{0}" is busy: {1}</err15>
+    <err16>Failed to finish plotting to the device: {0}</err16>
+    <err17>Another plot or preview is already in progress</err17>
+    <err18>Another plot is already in progress</err18>
+    <err19>Failed to create the folder "{0}": {1}</err19>
+    <err20>failed to open the plot device "{0}"</err20>
+    <err21>are not combined, each area has been plotted to a separate file</err21>
+    <err22>failed to start plotting: {0}</err22>
+    <err23>Drawing is closed</err23>
+    <err24>Layout has been deleted from the drawing</err24>
+    <err25>Object has been deleted from the drawing</err25>
+    <err26>The layout of the area has been deleted from the drawing</err26>
+    <err27>Layout is not initialized. To plot it, open the layout in AutoCAD</err27>
+    <err28>Plot device is not set</err28>
+    <err29>Plot device "{0}" not found</err29>
+    <err30>Paper size is not set</err30>
+    <err31>The plot device does not have the paper size "{0}"</err31>
+    <err32>The number must consist of digits</err32>
+    <err33>Invalid characters in the file name</err33>
+    <h115>Plot to</h115>
+  </mpPrint>
+</ModPlus>

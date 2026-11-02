@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpPrint
+    LocalName="Tracer"
+    Description="Tracé par lots avec reconnaissance des cadres de dessin dans l'espace objet">
+    <h1>Configuration courante des réglages</h1>
+    <h2>Dessins</h2>
+    <h3>Rechercher par nom de dessin</h3>
+    <h4>Dossier</h4>
+    <h5>Dossier dans lequel les fichiers de tracé sont enregistrés</h5>
+    <h6>Analyser</h6>
+    <h7>Rechercher les cadres selon les filtres dans l'espace objet et dans chaque présentation des dessins cochés</h7>
+    <h9>Ordre</h9>
+    <h10>Ordre de tri des zones de tracé trouvées et sélectionnées dans le tableau. L'espace objet et chaque présentation ont leur propre ordre</h10>
+    <h11>Attribut selon lequel les zones de tracé sont triées</h11>
+    <h13>Nom du fichier</h13>
+    <h14>Nom du fichier final lorsque toutes les zones sont tracées dans un seul fichier</h14>
+    <h16>Mettre en surbrillance les zones de tracé</h16>
+    <h17>Sans vidage, les zones définies par des objets conservent leurs paramètres lors d'une nouvelle analyse</h17>
+    <h18>Vider le tableau lors de l'analyse</h18>
+    <h20>Ouvrir le résultat après le tracé</h20>
+    <h21>Retirer du tableau toutes les zones de tracé sauf les présentations</h21>
+    <h22>Modèle de nom</h22>
+    <h23>Attribuer des noms selon le modèle aux lignes sélectionnées du tableau</h23>
+    <h24>Filtres</h24>
+    <h25>Afficher :</h25>
+    <h28>Zones de tracé dans l'espace objet</h28>
+    <h30>Zones de tracé dans les présentations</h30>
+    <h32>Présentations</h32>
+    <h34>Paramètres de tracé supplémentaires</h34>
+    <h35>Paramètres de tracé supplémentaires (lignes : {0})</h35>
+    <h36>Aperçu</h36>
+    <h37>Aperçu de toutes les lignes cochées pour le tracé</h37>
+    <h38>Tracer</h38>
+    <h39>Paramètres de tracé principaux</h39>
+    <h40>Imprimante/traceur</h40>
+    <h41>Format de papier</h41>
+    <h42>Format de papier pour les nouvelles zones de tracé</h42>
+    <h43>Choisir selon la taille de la zone</h43>
+    <h44>Une nouvelle zone de tracé reçoit le plus petit format de papier dans lequel elle tient compte tenu de l'échelle. S'il n'y en a pas, le format de papier par défaut est attribué</h44>
+    <h45>Ajuster à</h45>
+    <h46>Quelle partie du papier utiliser pour le choix automatique du format des zones de tracé</h46>
+    <h47>Tolérance, mm</h47>
+    <h48>De combien de millimètres sur le papier la zone peut dépasser le format pour que celui-ci convienne quand même. Également pris en compte lors de la détermination de l'échelle par le cadre</h48>
+    <h49>Déterminer par le cadre</h49>
+    <h50>Une nouvelle zone de l'espace objet reçoit l'échelle à laquelle son cadre correspond à un format de papier du périphérique, compte tenu de la tolérance. Pour un bloc de cadre, son échelle d'insertion est vérifiée en premier. Si plusieurs échelles conviennent, la plus proche de l'échelle par défaut est choisie, si aucune - l'échelle par défaut est attribuée</h50>
+    <h51>Appliquer à toutes les lignes</h51>
+    <h52>Table des styles de tracé</h52>
+    <h53>Tracé de l'ombrage</h53>
+    <h54>Qualité</h54>
+    <h55>PPP</h55>
+    <h57>Rotation</h57>
+    <h58>Décalage, mm</h58>
+    <h59>Décalage par rapport à l'origine de la zone imprimable</h59>
+    <h60>Centrer le tracé</h60>
+    <h61>Tracer avec épaisseurs de lignes</h61>
+    <h62>Mettre à l'échelle épaisseurs de ligne</h62>
+    <h63>Transparence du tracé</h63>
+    <h64>Tracer avec styles de tracé</h64>
+    <h65>La polyligne ou le bloc qui définit la zone n'est pas tracé. Ne s'applique pas aux zones de type "Fenêtre" ni aux présentations</h65>
+    <h66>Ne pas tracer l'objet de la zone</h66>
+    <h68>Prendre en compte les polylignes</h68>
+    <h70>Fermées uniquement</h70>
+    <h72>Prendre en compte les cadres de lignes</h72>
+    <h74>Prendre en compte les blocs</h74>
+    <h75>Masque de nom</h75>
+    <h76>Par exemple, Cadre* - blocs dont le nom commence par "Cadre". * - un nombre quelconque de caractères, ? - un seul caractère quelconque</h76>
+    <h77>Rechercher par nom de bloc</h77>
+    <h78>Si rien n'est coché, il n'y a pas de filtrage</h78>
+    <h79>Rechercher par nom de calque</h79>
+    <h80>Rechercher par nom de couleur</h80>
+    <h82>Ignorer les cadres sur les calques désactivés et gelés</h82>
+    <h84>Ignorer les cadres vides</h84>
+    <h85>Ce champ définit le modèle selon lequel les zones de tracé trouvées seront nommées</h85>
+    <h87>Base</h87>
+    <h90>Attributs</h90>
+    <h92>Supprimer l'attribut</h92>
+    <h93>Ajouter un attribut</h93>
+    <h94>Entre les attributs</h94>
+    <h97>Séparateur</h97>
+    <h99>Premier numéro</h99>
+    <h100>Numéro de départ et sa longueur : 001 donne 001, 002, 003</h100>
+    <h101>N°</h101>
+    <h103>Dessin</h103>
+    <h104>Présentation</h104>
+    <h105>Afficher dans le dessin</h105>
+    <h106>Créer dans le dessin une présentation avec une fenêtre pour cette zone de tracé</h106>
+    <h107>Supprimer du tableau</h107>
+    <h109>Sélectionnez des lignes dans le tableau pour modifier leurs paramètres de tracé</h109>
+    <h111>Cocher tous les éléments visibles de la liste</h111>
+    <h112>Décocher tous les éléments visibles de la liste</h112>
+    <h113>Relire les calques, les blocs et les couleurs des dessins cochés</h113>
+    <h114>Rien n'est coché</h114>
+    <t1>Dans l'ordre de création</t1>
+    <t2>De gauche à droite et de haut en bas</t2>
+    <t3>De gauche à droite et de bas en haut</t3>
+    <t4>De haut en bas et de gauche à droite</t4>
+    <t5>De bas en haut et de gauche à droite</t5>
+    <t6>Par valeur d'attribut</t6>
+    <t7>Des fichiers séparés</t7>
+    <t8>Un seul fichier</t8>
+    <t9>Un fichier par dessin</t9>
+    <t10>Un fichier par format</t10>
+    <t11>Toutes les lignes</t11>
+    <t12>Cochées pour le tracé</t12>
+    <t13>Non cochées pour le tracé</t13>
+    <t14>Papier</t14>
+    <t15>Zone imprimable</t15>
+    <t16>Aucun</t16>
+    <t17>Au format affiché</t17>
+    <t18>Filaire hérité</t18>
+    <t19>Masqué hérité</t19>
+    <t20>Rendu</t20>
+    <t21>Brouillon</t21>
+    <t22>Aperçu</t22>
+    <t23>Normale</t23>
+    <t24>Présentation</t24>
+    <t25>Maximale</t25>
+    <t26>Personnalisée</t26>
+    <t27>Nom de la présentation</t27>
+    <t28>Nom du dessin</t28>
+    <t29>Nom actuel</t29>
+    <t30>Texte personnalisé</t30>
+    <t31>Attributs du bloc</t31>
+    <t32>En cas de répétition</t32>
+    <t33>Dans l'ordre</t33>
+    <t34>Par numéro de page</t34>
+    <t35>en cas de répétition</t35>
+    <t36>dans l'ordre</t36>
+    <t37>par numéro de page</t37>
+    <t38>Fenêtre</t38>
+    <t39>A la taille du papier</t39>
+    <t40>Zone</t40>
+    <k1>ZOne</k1>
+    <k1ln>ZOne</k1ln>
+    <k2>Objets</k2>
+    <k2ln>Objets</k2ln>
+    <msg1>Polylignes : non prises en compte</msg1>
+    <msg2>Polylignes : fermées</msg2>
+    <msg3>Polylignes : toutes</msg3>
+    <msg4>cadres de lignes</msg4>
+    <msg5>Blocs : non pris en compte</msg5>
+    <msg6>Blocs : tous</msg6>
+    <msg7>Blocs : {0}</msg7>
+    <msg8>Calques : {0}</msg8>
+    <msg9>Calques : tous</msg9>
+    <msg10>Couleurs : {0}</msg10>
+    <msg11>Couleurs : toutes</msg11>
+    <msg12>sur les calques désactivés et gelés</msg12>
+    <msg13>vides</msg13>
+    <msg14>Ignorer les cadres : aucun</msg14>
+    <msg15>Ignorer les cadres : {0}</msg15>
+    <msg16>sur les calques désactivés et gelés - {0}</msg16>
+    <msg17>vides - {0}</msg17>
+    <msg18>Cadres ignorés : {0}</msg18>
+    <msg19>Sélectionnez des lignes pour les renommer</msg19>
+    <msg20>Résultat : {0}</msg20>
+    <msg21>Pendant que la fenêtre était fermée, ces dessins ont été fermés : {0}. Leurs lignes ont été retirées du tableau</msg21>
+    <msg22>Le dessin "{0}" a été fermé, ses lignes ont été retirées du tableau</msg22>
+    <msg23>Aucun dessin n'est coché</msg23>
+    <msg24>Aucun objet approprié n'a été trouvé ni dans l'espace objet ni dans les présentations</msg24>
+    <msg25>Zones de tracé trouvées : dans l'espace objet - {0}, dans les présentations - {1}</msg25>
+    <msg26>Aucune nouvelle zone de tracé trouvée</msg26>
+    <msg27>Nouvelles zones de tracé trouvées : dans l'espace objet - {0}, dans les présentations - {1}</msg27>
+    <msg28>Les objets de ces lignes ont été supprimés du dessin, les lignes ont été retirées :</msg28>
+    <msg29>Échec de l'analyse :</msg29>
+    <msg30>Analyse</msg30>
+    <msg31>Impossible de déterminer l'échelle, l'échelle par défaut a été attribuée :</msg31>
+    <msg32>Détermination de l'échelle</msg32>
+    <msg33>Impossible de choisir un format de papier, le format de papier par défaut a été attribué :</msg33>
+    <msg34>Choix du format de papier</msg34>
+    <msg35>Sélectionnez une imprimante/un traceur et un format de papier dans les réglages</msg35>
+    <msg36>Les polylignes et les blocs sont désactivés dans les filtres, il n'y a donc rien à rechercher</msg36>
+    <msg37>Aucune ligne n'est sélectionnée</msg37>
+    <msg38>Création d'une présentation</msg38>
+    <msg39>La présentation "{0}" a été créée</msg39>
+    <msg40>Les paramètres de tracé supplémentaires ont été appliqués à toutes les lignes</msg40>
+    <msg41>Aucune ligne n'est cochée pour le tracé</msg41>
+    <msg42>Certaines zones de tracé n'ont pas été incluses dans l'aperçu :</msg42>
+    <msg43>Impossible d'ouvrir "{0}" : {1}</msg43>
+    <msg44>Zones de tracé tracées : {0}. Fichiers créés : {1}</msg44>
+    <msg45>Tracé annulé. {0}</msg45>
+    <msg46>Zones de tracé cochées dans l'espace objet : {0}, dans les présentations : {1}, présentations : {2}.</msg46>
+    <msg47>Dessins : {0}.</msg47>
+    <msg48>Rien à tracer</msg48>
+    <msg49>Noms répétés : {0}. Les numéros (2), (3) seront ajoutés aux noms de ces fichiers</msg49>
+    <msg50>Ces fichiers existent déjà dans le dossier et seront remplacés : {0}</msg50>
+    <msg51>Continuer ?</msg51>
+    <msg52>Tracé dans un seul fichier.</msg52>
+    <msg53>Tracé dans un fichier par dessin.</msg53>
+    <msg54>Tracé dans un fichier par format.</msg54>
+    <msg55>Tracé dans des fichiers séparés.</msg55>
+    <msg56>Les lignes qui ne peuvent pas être tracées seront ignorées : {0}</msg56>
+    <msg57>Réessayer de créer le fichier commun ?</msg57>
+    <msg58>Combinaison des PDF</msg58>
+    <msg59>Impossible de créer "{0}" : {1}</msg59>
+    <msg60>Les pages séparées sont restées dans le dossier "{0}"</msg60>
+    <msg61>Fichiers {0}</msg61>
+    <msg62>Images {0}</msg62>
+    <msg63>Progression du tracé</msg63>
+    <msg64>Annuler le travail</msg64>
+    <msg65>Annuler la feuille</msg65>
+    <msg66>Progression du travail</msg66>
+    <msg67>Progression de la feuille</msg67>
+    <msg68>Supprimez des objets du jeu</msg68>
+    <msg69>Choix des objets de cadre ou {0}</msg69>
+    <msg70>Spécifiez le premier coin de la zone du tracé ou [{0}] :</msg70>
+    <msg71>Spécifiez le coin opposé :</msg71>
+    <msg72>La fenêtre a une taille nulle</msg72>
+    <err1>le fichier n'a pas été créé</err1>
+    <err2>Les formats de papier du périphérique "{0}" sont définis en pixels - impossible de déterminer l'échelle d'après la taille du cadre pour ce périphérique</err2>
+    <err3>Impossible de lire un format de papier du périphérique "{0}"</err3>
+    <err4>le dessin est fermé</err4>
+    <err5>impossible de déterminer la taille de la zone</err5>
+    <err6>{0}x{1} ne correspond à aucun format de papier du périphérique, quelle que soit l'échelle</err6>
+    <err7>les échelles {0} conviennent - pour choisir parmi elles, définissez une échelle par défaut</err7>
+    <err8>Les formats de papier du périphérique "{0}" sont définis en pixels - impossible de choisir le format d'après la taille de la zone pour ce périphérique, sélectionnez le format manuellement</err8>
+    <err9>aucun format de papier ne peut contenir {0}x{1} mm</err9>
+    <err10>pour créer une présentation, sélectionnez une échelle autre que "A la taille du papier"</err10>
+    <err11>Une présentation ne peut être créée qu'à partir d'une zone de tracé de l'espace objet</err11>
+    <err12>la zone de tracé n'est pas valide</err12>
+    <err13>le périphérique de traçage ou le format de papier n'est pas défini</err13>
+    <err14>impossible d'activer le dessin "{0}"</err14>
+    <err15>le dessin "{0}" est occupé : {1}</err15>
+    <err16>Impossible de terminer le tracé sur le périphérique : {0}</err16>
+    <err17>Un autre tracé ou aperçu est déjà en cours</err17>
+    <err18>Un autre tracé est déjà en cours</err18>
+    <err19>Impossible de créer le dossier "{0}" : {1}</err19>
+    <err20>impossible d'ouvrir le périphérique de traçage "{0}"</err20>
+    <err21>ne sont pas combinés, chaque zone a été tracée dans un fichier séparé</err21>
+    <err22>impossible de démarrer le tracé : {0}</err22>
+    <err23>Le dessin est fermé</err23>
+    <err24>La présentation a été supprimée du dessin</err24>
+    <err25>L'objet a été supprimé du dessin</err25>
+    <err26>La présentation de la zone a été supprimée du dessin</err26>
+    <err27>La présentation n'est pas initialisée. Pour la tracer, ouvrez la présentation dans AutoCAD</err27>
+    <err28>Le périphérique de traçage n'est pas défini</err28>
+    <err29>Périphérique de traçage "{0}" introuvable</err29>
+    <err30>Le format de papier n'est pas défini</err30>
+    <err31>Le périphérique de traçage n'a pas de format de papier "{0}"</err31>
+    <err32>Le numéro doit être composé de chiffres</err32>
+    <err33>Caractères non valides dans le nom de fichier</err33>
+    <h115>Tracer dans</h115>
+  </mpPrint>
+</ModPlus>
