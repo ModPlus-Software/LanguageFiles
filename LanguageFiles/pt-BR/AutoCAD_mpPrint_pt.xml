@@ -5,7 +5,6 @@
     Description="Plotagem em lote com reconhecimento de molduras de desenho no espaço do modelo">
     <h1>Configuração atual dos parâmetros</h1>
     <h2>Desenhos</h2>
-    <h3>Pesquisar por nome do desenho</h3>
     <h4>Pasta</h4>
     <h5>Pasta em que os arquivos de plotagem são salvos</h5>
     <h6>Escanear</h6>
@@ -26,11 +25,9 @@
     <h25>Exibir:</h25>
     <h28>Áreas de plotagem no espaço do modelo</h28>
     <h30>Áreas de plotagem nos layouts</h30>
-    <h32>Layouts</h32>
     <h34>Parâmetros de plotagem adicionais</h34>
     <h35>Parâmetros de plotagem adicionais (linhas: {0})</h35>
-    <h36>Visualizar</h36>
-    <h37>Visualização de todas as linhas marcadas para plotagem</h37>
+    <h37>Pré-visualização de todas as linhas marcadas para plotagem</h37>
     <h38>Plotar</h38>
     <h39>Parâmetros de plotagem principais</h39>
     <h40>Impressora/plotadora</h40>
@@ -40,7 +37,6 @@
     <h44>Uma nova área de plotagem recebe o menor tamanho de papel em que ela cabe, considerando a escala. Se não houver esse tamanho, é atribuído o tamanho de papel padrão</h44>
     <h45>Ajustar a</h45>
     <h46>Qual parte do papel usar para a escolha automática do tamanho do papel das áreas de plotagem</h46>
-    <h47>Tolerância, mm</h47>
     <h48>Quantos milímetros no papel a área pode ultrapassar o tamanho do papel para que ele ainda sirva. Também é considerado ao determinar a escala pela moldura</h48>
     <h49>Determinar pela moldura</h49>
     <h50>Uma nova área no espaço do modelo recebe a escala em que a sua moldura coincide com um tamanho de papel do dispositivo, considerando a tolerância. Para um bloco de moldura, primeiro é verificada a sua escala de inserção. Se várias escalas servirem, é escolhida a mais próxima da escala padrão, se nenhuma - é atribuída a escala padrão</h50>
@@ -65,15 +61,11 @@
     <h74>Considerar blocos</h74>
     <h75>Máscara de nome</h75>
     <h76>Por exemplo, Moldura* - blocos cujo nome começa com "Moldura". * - qualquer quantidade de caracteres, ? - um único caractere qualquer</h76>
-    <h77>Pesquisar por nome do bloco</h77>
     <h78>Se nada estiver marcado, não há filtragem</h78>
-    <h79>Pesquisar por nome da camada</h79>
-    <h80>Pesquisar por nome da cor</h80>
     <h82>Ignorar molduras em camadas desativadas e congeladas</h82>
     <h84>Ignorar molduras vazias</h84>
     <h85>Este campo define o modelo pelo qual as áreas de plotagem encontradas serão nomeadas</h85>
     <h87>Base</h87>
-    <h90>Atributos</h90>
     <h92>Remover atributo</h92>
     <h93>Adicionar atributo</h93>
     <h94>Entre atributos</h94>
@@ -82,13 +74,10 @@
     <h100>Número inicial e o seu comprimento: 001 gera 001, 002, 003</h100>
     <h101>Nº</h101>
     <h103>Desenho</h103>
-    <h104>Layout</h104>
     <h105>Mostrar no desenho</h105>
     <h106>Criar no desenho um layout com uma viewport para esta área de plotagem</h106>
     <h107>Excluir da tabela</h107>
     <h109>Selecione linhas na tabela para alterar os seus parâmetros de plotagem</h109>
-    <h111>Marcar todos os visíveis na lista</h111>
-    <h112>Desmarcar todos os visíveis na lista</h112>
     <h113>Reler as camadas, os blocos e as cores dos desenhos marcados</h113>
     <h114>Nada marcado</h114>
     <t1>Na ordem de criação</t1>
@@ -176,7 +165,7 @@
     <msg39>O layout "{0}" foi criado</msg39>
     <msg40>Os parâmetros de plotagem adicionais foram aplicados a todas as linhas</msg40>
     <msg41>Nenhuma linha marcada para plotagem</msg41>
-    <msg42>Algumas áreas de plotagem não entraram na visualização:</msg42>
+    <msg42>Algumas áreas de plotagem não entraram na pré-visualização:</msg42>
     <msg43>Não foi possível abrir "{0}": {1}</msg43>
     <msg44>Áreas de plotagem plotadas: {0}. Arquivos criados: {1}</msg44>
     <msg45>Plotagem cancelada. {0}</msg45>
@@ -185,7 +174,6 @@
     <msg48>Nada para plotar</msg48>
     <msg49>Nomes repetidos: {0}. Os números (2), (3) serão adicionados aos nomes desses arquivos</msg49>
     <msg50>Estes arquivos já existem na pasta e serão substituídos: {0}</msg50>
-    <msg51>Continuar?</msg51>
     <msg52>Plotagem em um só arquivo.</msg52>
     <msg53>Plotagem em um arquivo por desenho.</msg53>
     <msg54>Plotagem em um arquivo por tamanho de papel.</msg54>
@@ -223,7 +211,7 @@
     <err14>não foi possível ativar o desenho "{0}"</err14>
     <err15>o desenho "{0}" está ocupado: {1}</err15>
     <err16>Não foi possível concluir a plotagem no dispositivo: {0}</err16>
-    <err17>Já existe outra plotagem ou visualização em andamento</err17>
+    <err17>Já existe outra plotagem ou pré-visualização em andamento</err17>
     <err18>Já existe outra plotagem em andamento</err18>
     <err19>Não foi possível criar a pasta "{0}": {1}</err19>
     <err20>não foi possível abrir o dispositivo de plotagem "{0}"</err20>

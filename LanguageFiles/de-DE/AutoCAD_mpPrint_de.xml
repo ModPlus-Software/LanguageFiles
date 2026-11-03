@@ -5,7 +5,6 @@
     Description="Stapelplot mit Erkennung von Zeichnungsrahmen im Modellbereich">
     <h1>Aktuelle Konfiguration der Einstellungen</h1>
     <h2>Zeichnungen</h2>
-    <h3>Suche nach Zeichnungsname</h3>
     <h4>Ordner</h4>
     <h5>Ordner, in dem die Plotdateien gespeichert werden</h5>
     <h6>Scannen</h6>
@@ -26,11 +25,9 @@
     <h25>Anzeigen:</h25>
     <h28>Plotbereiche im Modellbereich</h28>
     <h30>Plotbereiche in Layouts</h30>
-    <h32>Layouts</h32>
     <h34>Zusätzliche Ploteinstellungen</h34>
     <h35>Zusätzliche Ploteinstellungen (Zeilen: {0})</h35>
-    <h36>Voransicht</h36>
-    <h37>Voransicht aller zum Plotten markierten Zeilen</h37>
+    <h37>Vorschau aller zum Plotten markierten Zeilen</h37>
     <h38>Plotten</h38>
     <h39>Grundlegende Ploteinstellungen</h39>
     <h40>Drucker/Plotter</h40>
@@ -40,7 +37,6 @@
     <h44>Einem neuen Plotbereich wird das kleinste Papierformat zugewiesen, in das er unter Berücksichtigung des Maßstabs passt. Gibt es kein solches Format, wird das Standardpapierformat zugewiesen</h44>
     <h45>Einpassen in</h45>
     <h46>Welcher Bereich des Papiers für die automatische Wahl des Papierformats der Plotbereiche verwendet wird</h46>
-    <h47>Toleranz, mm</h47>
     <h48>Um wie viele Millimeter auf dem Papier der Bereich über das Papierformat hinausgehen darf, damit es trotzdem passt. Wird auch beim Ermitteln des Maßstabs aus dem Rahmen berücksichtigt</h48>
     <h49>Aus Rahmen ermitteln</h49>
     <h50>Einem neuen Bereich im Modellbereich wird der Maßstab zugewiesen, bei dem sein Rahmen unter Berücksichtigung der Toleranz mit einem Papierformat des Geräts übereinstimmt. Bei einem Rahmenblock wird zuerst sein Einfügemaßstab geprüft. Passen mehrere Maßstäbe, wird der dem Standardmaßstab nächstgelegene gewählt, passt keiner - der Standardmaßstab zugewiesen</h50>
@@ -65,15 +61,11 @@
     <h74>Blöcke berücksichtigen</h74>
     <h75>Namensmaske</h75>
     <h76>Zum Beispiel Rahmen* - Blöcke, deren Name mit "Rahmen" beginnt. * - beliebig viele beliebige Zeichen, ? - ein beliebiges Zeichen</h76>
-    <h77>Suche nach Blockname</h77>
     <h78>Wenn nichts markiert ist, wird nicht gefiltert</h78>
-    <h79>Suche nach Layername</h79>
-    <h80>Suche nach Farbname</h80>
     <h82>Rahmen auf ausgeschalteten und gefrorenen Layern überspringen</h82>
     <h84>Leere Rahmen überspringen</h84>
     <h85>Dieses Feld legt die Vorlage fest, nach der gefundene Plotbereiche benannt werden</h85>
     <h87>Grundlage</h87>
-    <h90>Attribute</h90>
     <h92>Attribut entfernen</h92>
     <h93>Attribut hinzufügen</h93>
     <h94>Zwischen Attributen</h94>
@@ -82,13 +74,10 @@
     <h100>Startnummer und ihre Länge: 001 ergibt 001, 002, 003</h100>
     <h101>Nr.</h101>
     <h103>Zeichnung</h103>
-    <h104>Layout</h104>
     <h105>In der Zeichnung zeigen</h105>
     <h106>In der Zeichnung ein Layout mit einem Ansichtsfenster für diesen Plotbereich erstellen</h106>
     <h107>Aus der Tabelle löschen</h107>
     <h109>Wählen Sie Zeilen in der Tabelle aus, um ihre Ploteinstellungen zu ändern</h109>
-    <h111>Alle sichtbaren in der Liste markieren</h111>
-    <h112>Markierung aller sichtbaren in der Liste aufheben</h112>
     <h113>Layer, Blöcke und Farben aus den markierten Zeichnungen neu einlesen</h113>
     <h114>Nichts markiert</h114>
     <t1>In Erstellungsreihenfolge</t1>
@@ -176,7 +165,7 @@
     <msg39>Layout "{0}" wurde erstellt</msg39>
     <msg40>Die zusätzlichen Ploteinstellungen wurden auf alle Zeilen angewendet</msg40>
     <msg41>Keine Zeile zum Plotten markiert</msg41>
-    <msg42>Einige Plotbereiche wurden nicht in die Voransicht übernommen:</msg42>
+    <msg42>Einige Plotbereiche wurden nicht in die Vorschau übernommen:</msg42>
     <msg43>"{0}" konnte nicht geöffnet werden: {1}</msg43>
     <msg44>Geplottete Plotbereiche: {0}. Erstellte Dateien: {1}</msg44>
     <msg45>Plotten abgebrochen. {0}</msg45>
@@ -185,7 +174,6 @@
     <msg48>Nichts zu plotten</msg48>
     <msg49>Wiederholte Namen: {0}. An die Namen solcher Dateien werden Nummern (2), (3) angehängt</msg49>
     <msg50>Diese Dateien sind bereits im Ordner vorhanden und werden ersetzt: {0}</msg50>
-    <msg51>Fortfahren?</msg51>
     <msg52>Plotten in eine Datei.</msg52>
     <msg53>Plotten in eine Datei pro Zeichnung.</msg53>
     <msg54>Plotten in eine Datei pro Papierformat.</msg54>
@@ -223,7 +211,7 @@
     <err14>die Zeichnung "{0}" konnte nicht aktiviert werden</err14>
     <err15>Zeichnung "{0}" ist belegt: {1}</err15>
     <err16>Das Plotten auf das Gerät konnte nicht abgeschlossen werden: {0}</err16>
-    <err17>Es läuft bereits ein anderer Plot oder eine Voransicht</err17>
+    <err17>Es läuft bereits ein anderer Plot oder eine Vorschau</err17>
     <err18>Es läuft bereits ein anderer Plot</err18>
     <err19>Der Ordner "{0}" konnte nicht erstellt werden: {1}</err19>
     <err20>das Plotgerät "{0}" konnte nicht geöffnet werden</err20>
