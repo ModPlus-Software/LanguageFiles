@@ -332,6 +332,28 @@
     <t301>Not in the current document: {0}</t301>
     <t302>Only in the current document: {0}</t302>
     <t303>Hide matching</t303>
+    <t304>Change formulas</t304>
+    <t305>Find and replace</t305>
+    <t306>Prefix and suffix</t306>
+    <t307>Spaces</t307>
+    <t308>Replace with</t308>
+    <t309>Whole name or word only</t309>
+    <t310>Regular expression</t310>
+    <t311>Search in</t311>
+    <t312>Everywhere</t312>
+    <t313>Parameter names only</t313>
+    <t314>Except text values</t314>
+    <t315>Text values only</t315>
+    <t316>Enclose the original formula in parentheses</t316>
+    <t317>Templates</t317>
+    <t318>Remove extra spaces</t318>
+    <t319>Spaces around operators</t319>
+    <t320>Do not change</t320>
+    <t321>Before</t321>
+    <t322>After</t322>
+    <t323>Check the new formulas of the checked parameters</t323>
+    <t324>Formulas to be changed: {0}</t324>
+    <t325>The replacement can refer to regular expression groups: $1, $2, etc.</t325>
     <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
     <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
     <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
@@ -351,6 +373,7 @@
     <ad18>Allows you to clear the formula value for family parameters</ad18>
     <ad19>Allows you to set the formula value for family parameters</ad19>
     <ad20>Allows you to set family parameter values by types or one value for all types. The action is not available for parameters whose value is driven by a formula</ad20>
+    <ad21>Allows you to find and replace text in family parameter formulas, add a prefix and suffix to formulas or change spaces. The formula is changed in each family separately, so different formulas are not replaced with one</ad21>
     <ea1>Nothing</ea1>
     <ea2>Open target folder</ea2>
     <ea3>Open created file</ea3>
@@ -451,6 +474,9 @@
     <msg68>Together with parameter "{0}", the type parameters whose formulas use it directly or through other parameters will be made "By instance":</msg68>
     <msg69>Together with parameter "{0}", the instance parameters used in its formula directly or through other parameters will be made "By type":</msg69>
     <msg70>There are no open families</msg70>
+    <msg71>There are no parameters with formulas that can be changed</msg71>
+    <msg72>None of the checked formulas will change</msg72>
+    <msg73>The "Change formulas" action is not imported from Excel. Use presets to transfer the action</msg73>
     <err1>An unexpected error occurred during window initialization</err1>
     <err2>An unexpected error occurred when closing the window</err2>
     <err3>An error occurred while creating the parameter</err3>
@@ -521,5 +547,6 @@
     <err68>Element "{0}" cannot be the parameter value</err68>
     <err69>Parameter "{0}" was not made "By instance": this requires making parameter "{1}" "By instance", which was previously made "By type"</err69>
     <err70>Parameter "{0}" was not made "By type": this requires making parameter "{1}" "By type", which was previously made "By instance"</err70>
+    <err71>Invalid regular expression: {0}</err71>
   </mprParameters>
 </ModPlus>

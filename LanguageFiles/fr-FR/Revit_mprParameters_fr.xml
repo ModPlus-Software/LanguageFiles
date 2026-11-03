@@ -332,6 +332,28 @@
     <t301>Absent du document actif : {0}</t301>
     <t302>Uniquement dans le document actif : {0}</t302>
     <t303>Masquer les identiques</t303>
+    <t304>Modifier les formules</t304>
+    <t305>Rechercher et remplacer</t305>
+    <t306>Préfixe et suffixe</t306>
+    <t307>Espaces</t307>
+    <t308>Remplacer par</t308>
+    <t309>Nom ou mot entier uniquement</t309>
+    <t310>Expression régulière</t310>
+    <t311>Rechercher dans</t311>
+    <t312>Partout</t312>
+    <t313>Noms de paramètres uniquement</t313>
+    <t314>Sauf les valeurs de texte</t314>
+    <t315>Valeurs de texte uniquement</t315>
+    <t316>Mettre la formule d'origine entre parenthèses</t316>
+    <t317>Modèles</t317>
+    <t318>Supprimer les espaces superflus</t318>
+    <t319>Espaces autour des opérateurs</t319>
+    <t320>Ne pas modifier</t320>
+    <t321>Avant</t321>
+    <t322>Après</t322>
+    <t323>Vérifier les nouvelles formules des paramètres cochés</t323>
+    <t324>Formules à modifier : {0}</t324>
+    <t325>Le remplacement peut faire référence aux groupes de l'expression régulière : $1, $2, etc.</t325>
     <ad1>Permet de renommer un paramètre de famille. L'action n'est pas disponible pour les paramètres système et les paramètres partagés</ad1>
     <ad2>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres système. La modification du groupe d'un paramètre de famille non partagé entraîne la perte de sa description</ad2>
     <ad3>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres de projet</ad3>
@@ -351,6 +373,7 @@
     <ad18>Permet d'effacer la formule des paramètres de familles</ad18>
     <ad19>Permet de définir la formule des paramètres de familles</ad19>
     <ad20>Permet de définir les valeurs des paramètres de familles par types ou une seule valeur pour tous les types. Action indisponible pour les paramètres dont la valeur est déterminée par une formule</ad20>
+    <ad21>Permet de rechercher et remplacer du texte dans les formules des paramètres de famille, d'ajouter un préfixe et un suffixe aux formules ou de modifier les espaces. La formule est modifiée dans chaque famille séparément, de sorte que des formules différentes ne sont pas remplacées par une seule</ad21>
     <ea1>Rien</ea1>
     <ea2>Ouvrir le dossier cible</ea2>
     <ea3>Ouvrir le fichier créé</ea3>
@@ -451,6 +474,9 @@
     <msg68>Avec le paramètre "{0}", les paramètres de type dont les formules l'utilisent directement ou via d'autres paramètres seront rendus "Par occurrence" :</msg68>
     <msg69>Avec le paramètre "{0}", les paramètres d'occurrence utilisés dans sa formule directement ou via d'autres paramètres seront rendus "Par type" :</msg69>
     <msg70>Aucune famille ouverte</msg70>
+    <msg71>Aucun paramètre ne possède de formule modifiable</msg71>
+    <msg72>Aucune des formules cochées ne sera modifiée</msg72>
+    <msg73>L'action "Modifier les formules" n'est pas importée depuis Excel. Utilisez des préréglages pour transférer l'action</msg73>
     <err1>Une erreur inattendue s'est produite lors de l'initialisation de la fenêtre</err1>
     <err2>Une erreur inattendue s'est produite lors de la fermeture de la fenêtre</err2>
     <err3>Une erreur s'est produite lors de la création du paramètre</err3>
@@ -521,5 +547,6 @@
     <err68>L'élément "{0}" ne peut pas être la valeur du paramètre</err68>
     <err69>Le paramètre "{0}" n'a pas été rendu "Par occurrence" : il faudrait pour cela rendre "Par occurrence" le paramètre "{1}", précédemment rendu "Par type"</err69>
     <err70>Le paramètre "{0}" n'a pas été rendu "Par type" : il faudrait pour cela rendre "Par type" le paramètre "{1}", précédemment rendu "Par occurrence"</err70>
+    <err71>Expression régulière non valide : {0}</err71>
   </mprParameters>
 </ModPlus>
