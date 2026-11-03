@@ -17,7 +17,9 @@ public static class LanguageBuilder
     /// <exception cref="LanguageToolsException">Проверка не пройдена или сборка не удалась</exception>
     public static BuildResult Build(string root, string outputDirectory, Version version, ILanguageToolsLog log = null)
     {
-        ArgumentNullException.ThrowIfNull(version);
+        if (version == null)
+            throw new ArgumentNullException(nameof(version));
+
         if (string.IsNullOrWhiteSpace(outputDirectory))
             throw new LanguageToolsException("Не задана папка для собранных языковых файлов");
 

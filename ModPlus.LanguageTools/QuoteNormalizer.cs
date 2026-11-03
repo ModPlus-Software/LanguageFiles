@@ -22,11 +22,16 @@ public static class QuoteNormalizer
     public static IReadOnlyList<char> TypographicQuotes { get; } = ['«', '»', '“', '„', '”'];
 
     /// <summary>
+    /// Те же кавычки массивом для <see cref="string.IndexOfAny(char[])"/>
+    /// </summary>
+    private static readonly char[] TypographicQuoteChars = ['«', '»', '“', '„', '”'];
+
+    /// <summary>
     /// Есть ли в тексте типографские кавычки
     /// </summary>
     /// <param name="value">Текст</param>
     public static bool HasTypographicQuotes(string value) =>
-        !string.IsNullOrEmpty(value) && value.AsSpan().IndexOfAny(['«', '»', '“', '„', '”']) >= 0;
+        !string.IsNullOrEmpty(value) && value.IndexOfAny(TypographicQuoteChars) >= 0;
 
     /// <summary>
     /// Заменяет типографские кавычки на прямую двойную
@@ -73,7 +78,7 @@ public static class QuoteNormalizer
             SourceXml.Save(file, document);
             fixedFiles.Add(file);
 
-            log?.Info($"Исправлены кавычки ({count}): {Path.GetRelativePath(root, file)}");
+            log?.Info($"Исправлены кавычки ({count}): {PathCompat.GetRelativePath(root, file)}");
         }
 
         return fixedFiles;

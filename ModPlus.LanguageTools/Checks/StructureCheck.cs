@@ -156,7 +156,10 @@ internal static class StructureCheck
         var elements = new Dictionary<string, XElement>(StringComparer.Ordinal);
 
         foreach (var child in element.Elements())
-            elements.TryAdd(child.Name.LocalName, child);
+        {
+            if (!elements.ContainsKey(child.Name.LocalName))
+                elements[child.Name.LocalName] = child;
+        }
 
         return elements;
     }

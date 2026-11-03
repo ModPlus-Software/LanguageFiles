@@ -7,6 +7,7 @@ using Core.Abstractions;
 using Helpers;
 using Models;
 using Loggers;
+using Microsoft.Win32;
 using ModPlus.LanguageTools;
 
 /// <summary>
@@ -354,17 +355,39 @@ public class LanguageRepositoryService : ILanguageRepository
     /// Возвращает каталог, куда слияние кладёт языковые файлы: <c>Languages</c> в установленном ModPlus.
     /// </summary>
     /// <remarks>
-    /// Путь задан жёстко, а не взят из <c>TopDir</c> в реестре: это значение безусловно
-    /// перезаписывает геттер <c>ModPlusAPI.Constants.CurrentDirectory</c> родителем того каталога,
-    /// откуда загружена <c>ModPlusAPI.dll</c>, а вызывается он уже из статического конструктора
-    /// <c>ModPlusAPI.Language</c>. Поэтому сеанс XAML-дизайнера Visual Studio, поднявший сборки
-    /// плагина из <c>…\VisualStudio\&lt;версия&gt;\Designer\Cache</c>, оставлял в реестре путь на этот
-    /// кэш, и слияние раскладывало файлы туда вместо установленного ModPlus.
+    /// Сначала берётся папка установки из реестра (<c>HKCU\Software\ModPlus</c>, значение <c>TopDir</c>):
+    /// ModPlus может быть установлен не в <c>%AppData%</c>. Путь из реестра принимается, только если папка
+    /// существует и в ней есть подпапка <c>Languages</c>: значение <c>TopDir</c> безусловно перезаписывает
+    /// геттер <c>ModPlusAPI.Constants.CurrentDirectory</c> родителем каталога, откуда загружена
+    /// <c>ModPlusAPI.dll</c>, и сеанс XAML-дизайнера Visual Studio, поднявший сборки плагина
+    /// из <c>…\VisualStudio\&lt;версия&gt;\Designer\Cache</c>, мог оставить в реестре путь на этот кэш —
+    /// подпапки <c>Languages</c> там нет, и такой путь отбрасывается.
+    /// Если из реестра получить папку не удалось — <c>%AppData%\ModPlus\Languages</c>.
+    /// Та же логика — в расширении ModPlusVSTools (LocalizationFolder.GetInstalledLanguagesFolder).
     /// </remarks>
     /// <param name="notifications">Служба уведомлений для лога слияния.</param>
     /// <returns>Путь к каталогу назначения или <c>null</c>, если установленный ModPlus не найден.</returns>
     private static string GetMergeTargetDirectory(NotificationService notifications)
     {
+        var registryTopDir = ReadRegistryTopDir();
+        if (!string.IsNullOrWhiteSpace(registryTopDir))
+        {
+            try
+            {
+                var registryLanguages = Path.Combine(registryTopDir.Trim(), "Languages");
+                if (Directory.Exists(registryLanguages))
+                {
+                    var target = Path.GetFullPath(registryLanguages);
+                    notifications.Notify(EditorStrings.FormatMergeTargetFromRegistry(target));
+                    return target;
+                }
+            }
+            catch (Exception exception) when (exception is ArgumentException or NotSupportedException or PathTooLongException)
+            {
+                // Некорректный путь в реестре — используется путь по умолчанию
+            }
+        }
+
         var topDir = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "ModPlus");
         if (!Directory.Exists(topDir))
@@ -375,7 +398,27 @@ public class LanguageRepositoryService : ILanguageRepository
 
         var targetLangDirectory = Path.Combine(topDir, "Languages");
         Directory.CreateDirectory(targetLangDirectory);
+        notifications.Notify(EditorStrings.FormatMergeTargetDefault(targetLangDirectory, registryTopDir));
         return targetLangDirectory;
+    }
+
+    /// <summary>
+    /// Читает папку установки ModPlus из реестра (<c>HKCU\Software\ModPlus</c>, <c>TopDir</c>).
+    /// </summary>
+    /// <returns>Значение или <c>null</c>.</returns>
+    private static string ReadRegistryTopDir()
+    {
+        try
+        {
+            using var key = Registry.CurrentUser.OpenSubKey(@"Software\ModPlus");
+            return key?.GetValue("TopDir") as string;
+        }
+        catch (Exception exception) when (exception is System.Security.SecurityException
+                                              or UnauthorizedAccessException
+                                              or IOException)
+        {
+            return null;
+        }
     }
 
 

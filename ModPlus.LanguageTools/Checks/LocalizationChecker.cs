@@ -44,7 +44,7 @@ public static class LocalizationChecker
             issues.Add(new CheckIssue(
                 CheckSeverity.Warning,
                 QuotesCategory,
-                $"{Path.GetRelativePath(root, file)}: типографские кавычки — будут заменены на \" при сборке",
+                $"{PathCompat.GetRelativePath(root, file)}: типографские кавычки — будут заменены на \" при сборке",
                 file));
         }
 

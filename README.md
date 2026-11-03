@@ -4,7 +4,10 @@ Language files of ModPlus localization
 ## Проверка, сборка и публикация
 
 Все алгоритмы работы с файлами локализации — в библиотеке `ModPlus.LanguageTools`
-(её используют редактор `LangFilesEditor` и программа сборки ModPlusBuilder).
+(её используют редактор `LangFilesEditor`, программа сборки ModPlusBuilder и расширение Visual Studio
+ModPlusVSTools). Библиотека собирается под `net8.0` и `netstandard2.0` — вторая сборка нужна расширению VS,
+которое работает на .NET Framework; выгрузка (`Publishing`) есть только в `net8.0`, поэтому в библиотеке
+нельзя использовать API .NET 5+ вне папки `Publishing`.
 Версия пакета локализации хранится в `LanguageFiles/Langs.xml`.
 
 Консольная утилита `ModPlus.LanguageTools.Cli`:

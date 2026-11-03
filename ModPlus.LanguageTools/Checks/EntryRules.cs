@@ -82,7 +82,7 @@ public static class EntryRules
         const char rareSeparator = '\u001F';
 
         return string.Join(
-            rareSeparator,
+            rareSeparator.ToString(),
             values.Select(value => value ?? string.Empty).OrderBy(value => value, StringComparer.Ordinal));
     }
 }

@@ -56,6 +56,23 @@ internal static class EditorStrings
     public const string InstalledModPlusNotFound = "Installed ModPlus not found!";
 
     /// <summary>
+    /// Форматирует сообщение о каталоге слияния, взятом из реестра (TopDir).
+    /// </summary>
+    /// <param name="directory">Каталог Languages.</param>
+    public static string FormatMergeTargetFromRegistry(string directory) =>
+        $"Target directory: {directory} (registry HKCU\\Software\\ModPlus\\TopDir)";
+
+    /// <summary>
+    /// Форматирует сообщение о каталоге слияния по умолчанию (%AppData%\ModPlus\Languages).
+    /// </summary>
+    /// <param name="directory">Каталог Languages.</param>
+    /// <param name="registryTopDir">Значение TopDir из реестра или <c>null</c>.</param>
+    public static string FormatMergeTargetDefault(string directory, string registryTopDir) =>
+        string.IsNullOrWhiteSpace(registryTopDir)
+            ? $"Target directory: {directory} (default; TopDir is not set in the registry)"
+            : $"Target directory: {directory} (default; no Languages folder in TopDir \"{registryTopDir}\")";
+
+    /// <summary>
     /// Форматирует сообщение с версией, записанной в собранные языковые файлы.
     /// </summary>
     /// <param name="version">Версия локализации.</param>

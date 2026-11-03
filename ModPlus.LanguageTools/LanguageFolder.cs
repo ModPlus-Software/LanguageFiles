@@ -97,7 +97,7 @@ public static class LanguageFolder
             var name = Path.GetFileName(directory);
             if (IsLanguageFolderName(name))
                 languages.Add(name);
-            else if (!name.StartsWith('.'))
+            else if (!name.StartsWith(".", StringComparison.Ordinal))
                 log?.Warning($"Папка «{name}» пропущена: имя не является тегом языка (например, ru-RU)");
         }
 
@@ -156,7 +156,7 @@ public static class LanguageFolder
             return string.Empty;
 
         var separatorIndex = languageName.IndexOf('-');
-        return separatorIndex > 0 ? languageName[..separatorIndex] : languageName;
+        return separatorIndex > 0 ? languageName.Substring(0, separatorIndex) : languageName;
     }
 
     /// <summary>
@@ -178,7 +178,7 @@ public static class LanguageFolder
         var suffix = $"_{languageSuffix}";
 
         return fileNameWithoutExtension.EndsWith(suffix, StringComparison.OrdinalIgnoreCase)
-            ? fileNameWithoutExtension[..^suffix.Length]
+            ? fileNameWithoutExtension.Substring(0, fileNameWithoutExtension.Length - suffix.Length)
             : fileNameWithoutExtension;
     }
 

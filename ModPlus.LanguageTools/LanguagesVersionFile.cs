@@ -182,7 +182,10 @@ public static class LanguagesVersionFile
         string content;
         try
         {
-            content = await HttpClient.GetStringAsync(url, cancellationToken).ConfigureAwait(false);
+            // GetStringAsync с токеном отмены есть только в .NET 5+; библиотека собирается и под netstandard2.0
+            using var response = await HttpClient.GetAsync(url, cancellationToken).ConfigureAwait(false);
+            response.EnsureSuccessStatusCode();
+            content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
         }
         catch (Exception exception) when (exception is not OperationCanceledException || !cancellationToken.IsCancellationRequested)
         {

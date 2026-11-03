@@ -32,7 +32,8 @@ public static class LanguageMerger
         Version version,
         ILanguageToolsLog log = null)
     {
-        ArgumentNullException.ThrowIfNull(version);
+        if (version == null)
+            throw new ArgumentNullException(nameof(version));
 
         Directory.CreateDirectory(outputDirectory);
         log?.Info($"Папка языковых файлов: {outputDirectory}");
