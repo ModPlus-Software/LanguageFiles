@@ -316,6 +316,22 @@
     <t285>Restaurar asociaciones de parámetros</t285>
     <t286>Solo se importará la fórmula</t286>
     <t287>Si un parámetro ya existe en la familia actual y en la familia seleccionada está definido por una fórmula, para ese parámetro solo se importará la fórmula (se indica en la columna "Nota"). Los parámetros utilizados en la fórmula que faltan en la familia actual se seleccionarán automáticamente para la importación</t287>
+    <t288>El parámetro existe en el proyecto como parámetro de ejemplar y no se puede cambiar a parámetro de tipo</t288>
+    <t289>El parámetro existe en el proyecto como parámetro de tipo y no se puede cambiar a parámetro de ejemplar</t289>
+    <t290>Categorías de parámetros existentes:</t290>
+    <t291>Cómo se modifica la lista de categorías de un parámetro que ya existe en el proyecto. Con la opción "Reemplazar", se perderán los valores del parámetro de los elementos de las categorías excluidas</t291>
+    <t292>Añadir parámetros desde otro proyecto abierto o archivo vinculado</t292>
+    <t293>No hay otros proyectos abiertos ni archivos vinculados cargados</t293>
+    <t294>Nuevo</t294>
+    <t295>Coincide</t295>
+    <t296>Difiere</t296>
+    <t297>Otro GUID</t297>
+    <t298>El parámetro existe en el documento actual, la configuración coincide</t298>
+    <t299>El parámetro existe en el documento actual, diferencias:</t299>
+    <t300>El documento actual tiene un parámetro con el mismo nombre pero con otro GUID. Se creará un parámetro nuevo</t300>
+    <t301>No está en el documento actual: {0}</t301>
+    <t302>Solo en el documento actual: {0}</t302>
+    <t303>Ocultar coincidentes</t303>
     <ad1>Permite cambiar nombre de un parámetro familiar. Acción no disponible para los parámetros del sistema y parámetros compartidos</ad1>
     <ad2>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del sistema. Al cambiar un grupo, un parámetro familiar no compartido perderá su descripción</ad2>
     <ad3>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del proyecto</ad3>
@@ -343,6 +359,9 @@
     <ep2>Establecer fórmula (si es posible)</ep2>
     <ep3>Establecer valor (si es posible)</ep3>
     <ep4>Establecer fórmula o valor (si es posible)</ep4>
+    <ec1>Añadir</ec1>
+    <ec2>Reemplazar</ec2>
+    <ec3>No cambiar</ec3>
     <fs1>Desde archivo</fs1>
     <fs2>Desde proyecto</fs2>
     <fs3>Familias abiertas</fs3>
@@ -426,6 +445,12 @@
     <msg62>La fórmula del parámetro no ha cambiado</msg62>
     <msg63>No se ha especificado el grupo del APC para los parámetros:</msg63>
     <msg64>Se ha restaurado la asociación del parámetro "{0}" del elemento (Id: {1}) con el parámetro "{2}" de la familia anfitriona</msg64>
+    <msg65>Para establecer una fórmula o un valor para un parámetro existente, cambie la opción "{0}" en la configuración del plugin</msg65>
+    <msg66>Junto con el parámetro "{0}" se hicieron "Por ejemplar" los parámetros en cuyas fórmulas se utiliza: {1}</msg66>
+    <msg67>Junto con el parámetro "{0}" se hicieron "Por tipo" los parámetros utilizados en su fórmula: {1}</msg67>
+    <msg68>Junto con el parámetro "{0}" se harán "Por ejemplar" los parámetros de tipo en cuyas fórmulas se utiliza directamente o a través de otros parámetros:</msg68>
+    <msg69>Junto con el parámetro "{0}" se harán "Por tipo" los parámetros de ejemplar utilizados en su fórmula directamente o a través de otros parámetros:</msg69>
+    <msg70>No hay familias abiertas</msg70>
     <err1>Error inesperado al inicializar ventana</err1>
     <err2>Error inesperado al cerrar ventana</err2>
     <err3>Se ha producido un error al crear parámetro</err3>
@@ -494,5 +519,7 @@
     <err66>No se pudo restaurar la asociación del parámetro "{0}" del elemento (Id: {1}) con el parámetro "{2}": parámetro no encontrado</err66>
     <err67>No se encontró el elemento "{0}" en la familia</err67>
     <err68>El elemento "{0}" no puede ser el valor del parámetro</err68>
+    <err69>El parámetro "{0}" no se hizo "Por ejemplar": para ello hay que hacer "Por ejemplar" el parámetro "{1}", que antes se hizo "Por tipo"</err69>
+    <err70>El parámetro "{0}" no se hizo "Por tipo": para ello hay que hacer "Por tipo" el parámetro "{1}", que antes se hizo "Por ejemplar"</err70>
   </mprParameters>
 </ModPlus>

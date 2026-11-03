@@ -41,6 +41,12 @@
     <h50>Wert des Parameters "{0}" bei allen Elementen löschen</h50>
     <h51>Wert des Parameters "{0}" bei den ausgewählten Elementen löschen</h51>
     <h52>Nur verschachtelte Familien</h52>
+    <h53>Nummerntyp:</h53>
+    <h54>Einfach</h54>
+    <h55>Zusammengesetzt nach Maske</h55>
+    <h56>Änderung</h56>
+    <h57>Mit jeder Nummer</h57>
+    <h58>Nach Grenze rechts</h58>
     <sv1>Implizierte Fensterauswahl</sv1>
     <sv2>Sequentielle Auswahl</sv2>
     <sv3>Schnittpunkt mit einer Kurve</sv3>
@@ -65,6 +71,8 @@
     <t19>Bei aktivierter Option werden nur die Elemente der ausgewählten Zeilen nummeriert. Wenn in der Bauteilliste keine Zeile ausgewählt ist, werden alle Elemente nummeriert</t19>
     <t20>Bei der Auswahl mit Rechteck und der sequenziellen Auswahl können nur verschachtelte Familien ausgewählt werden. Nur gemeinsam genutzte verschachtelte Familien sind eigenständige Modellelemente</t20>
     <t21>Entlang der Trasse – Auswahl des Anfangselements einer Rohr-, Luftkanal-, Kabeltrassen- oder Leerrohrtrasse. Die Elemente für die Nummerierung werden ermittelt, indem die Trasse über ihre Verbindungen vom ausgewählten Element bis zu ihrem Ende verfolgt wird. Hat die Trasse Abzweigungen, kann der längste Pfad oder der Pfad bis zu einem angegebenen Element nummeriert werden. Bei dieser Option kann die Nummerierung aufsteigend oder absteigend erfolgen</t21>
+    <t22>Eine Maske ist ein Text, in dem die Teile der Nummer mit ihren Startwerten in geschweiften Klammern stehen. Die Maske {1}.{1}.{1} ergibt zum Beispiel die Nummern 1.1.1, 1.1.2 usw. Ein Teil besteht nur aus Ziffern oder nur aus Buchstaben. Führende Nullen legen die Länge der Zahl fest: Der Teil {01} ergibt 01, 02 … 10. Ein Buchstabenteil wird im ausgewählten Alphabet in der Schreibweise seines Startwerts nummeriert. Eine Maske kann bis zu fünf Teile enthalten. Eine zusammengesetzte Nummer kann nur in einen Textparameter geschrieben werden</t22>
+    <t23>Schritt – um wie viel sich der Teil bei jeder Änderung erhöht. Grenze – der größte Wert des Teils: danach beginnt der Teil wieder mit seinem Startwert. Der erste Teil hat keine Grenze. "Mit jeder Nummer" – der Teil erhöht sich für jede nächste Nummer. "Nach Grenze rechts" – der Teil erhöht sich nur, wenn der nächste Teil seine Grenze überschreitet. Der letzte Teil ändert sich immer mit jeder Nummer</t23>
     <m1>Wählen Sie Elemente für die nummerierte Markierung</m1>
     <m2>In der aktuellen Ansicht der Bauteilliste gibt es keine Elemente</m2>
     <m3>Wollen Sie die ausgewählten Elemente in der aktuellen Kategorieliste filtern?</m3>
@@ -103,5 +111,13 @@
     <r5>Keine alphabetische Nummerierung möglich, weil ein nummerischer Parameter ausgewählt ist</r5>
     <r6>Kein Parameter für Gruppieren ausgewählt</r6>
     <r7>Kein Zielparameter ausgewählt</r7>
+    <r8>Eine zusammengesetzte Nummer kann nur in einen Textparameter geschrieben werden</r8>
+    <r9>Die Maske enthält keine Nummernteile. Schreiben Sie die Startwerte der Teile in geschweifte Klammern, zum Beispiel {1}.{1}</r9>
+    <r10>Eine Maske kann höchstens {0} Nummernteile enthalten</r10>
+    <r11>Die Maske enthält eine geschweifte Klammer ohne Gegenstück</r11>
+    <r12>Der Maskenteil {0} darf nur Ziffern oder nur Buchstaben enthalten</r12>
+    <r13>Die Grenze von Teil {0} muss wie sein Startwert geschrieben werden: mit Ziffern oder mit Buchstaben</r13>
+    <r14>Die Grenze von Teil {0} ist kleiner als sein Startwert</r14>
+    <r15>Teil {0} ändert sich nie, da für Teil {1} keine Grenze festgelegt ist. Legen Sie eine Grenze fest oder wählen Sie die Änderung "Mit jeder Nummer"</r15>
   </mprNumbering>
 </ModPlus>

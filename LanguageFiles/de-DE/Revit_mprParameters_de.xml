@@ -316,6 +316,22 @@
     <t285>Parameterzuordnungen wiederherstellen</t285>
     <t286>Nur die Formel wird importiert</t286>
     <t287>Wenn ein Parameter bereits in der aktuellen Familie vorhanden ist und in der ausgewählten Familie durch eine Formel definiert ist, wird für diesen Parameter nur die Formel importiert (in der Spalte "Hinweis" gekennzeichnet). In der Formel verwendete Parameter, die in der aktuellen Familie fehlen, werden automatisch für den Import ausgewählt</t287>
+    <t288>Der Parameter ist im Projekt als Exemplarparameter vorhanden und kann nicht in einen Typparameter geändert werden</t288>
+    <t289>Der Parameter ist im Projekt als Typparameter vorhanden und kann nicht in einen Exemplarparameter geändert werden</t289>
+    <t290>Kategorien vorhandener Parameter:</t290>
+    <t291>Wie die Kategorienliste eines bereits im Projekt vorhandenen Parameters geändert wird. Bei der Option "Ersetzen" gehen die Parameterwerte der Elemente ausgeschlossener Kategorien verloren</t291>
+    <t292>Parameter aus einem anderen geöffneten Projekt oder einer verknüpften Datei hinzufügen</t292>
+    <t293>Es gibt keine anderen geöffneten Projekte oder geladenen verknüpften Dateien</t293>
+    <t294>Neu</t294>
+    <t295>Stimmt überein</t295>
+    <t296>Weicht ab</t296>
+    <t297>Andere GUID</t297>
+    <t298>Der Parameter ist im aktuellen Dokument vorhanden, die Einstellungen stimmen überein</t298>
+    <t299>Der Parameter ist im aktuellen Dokument vorhanden, Abweichungen:</t299>
+    <t300>Im aktuellen Dokument gibt es einen Parameter mit demselben Namen, aber einer anderen GUID. Es wird ein neuer Parameter erstellt</t300>
+    <t301>Nicht im aktuellen Dokument: {0}</t301>
+    <t302>Nur im aktuellen Dokument: {0}</t302>
+    <t303>Übereinstimmende ausblenden</t303>
     <ad1>Ermöglicht die Umbenennung eines Familienparameters. Die Aktion ist für Systemparameter und die gemeinsam genutzten Parameter nicht verfügbar</ad1>
     <ad2>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Systemparameter nicht verfügbar. Beim Ändern der Gruppe verlieren die nicht gemeinsam genutzten Parameter der Familie ihre Beschreibung</ad2>
     <ad3>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Projektparameter nicht verfügbar</ad3>
@@ -343,6 +359,9 @@
     <ep2>Formel vorgeben (wenn möglich)</ep2>
     <ep3>Wert vorgeben (wenn möglich)</ep3>
     <ep4>Formel oder Wert vorgeben (wenn möglich)</ep4>
+    <ec1>Hinzufügen</ec1>
+    <ec2>Ersetzen</ec2>
+    <ec3>Nicht ändern</ec3>
     <fs1>Aus Datei</fs1>
     <fs2>Aus Projekt</fs2>
     <fs3>Geöffnete Familien</fs3>
@@ -426,6 +445,12 @@
     <msg62>Die Formel des Parameters hat sich nicht geändert</msg62>
     <msg63>Für folgende Parameter ist keine GPD-Gruppe angegeben:</msg63>
     <msg64>Die Zuordnung des Parameters "{0}" des Elements (Id: {1}) zum Parameter "{2}" der übergeordneten Familie wurde wiederhergestellt</msg64>
+    <msg65>Um eine Formel oder einen Wert für einen vorhandenen Parameter festzulegen, ändern Sie in den Plugin-Einstellungen die Option "{0}"</msg65>
+    <msg66>Zusammen mit dem Parameter "{0}" wurden die Parameter, in deren Formeln er verwendet wird, auf "Exemplarweise" gesetzt: {1}</msg66>
+    <msg67>Zusammen mit dem Parameter "{0}" wurden die in seiner Formel verwendeten Parameter auf "Typweise" gesetzt: {1}</msg67>
+    <msg68>Zusammen mit dem Parameter "{0}" werden die Typparameter, in deren Formeln er direkt oder über andere Parameter verwendet wird, auf "Exemplarweise" gesetzt:</msg68>
+    <msg69>Zusammen mit dem Parameter "{0}" werden die Exemplarparameter, die direkt oder über andere Parameter in seiner Formel verwendet werden, auf "Typweise" gesetzt:</msg69>
+    <msg70>Es sind keine Familien geöffnet</msg70>
     <err1>Unerwarteter Fehler beim Initialisieren des Fensters aufgetreten</err1>
     <err2>Unerwarteter Fehler beim Schließen des Fensters aufgetreten</err2>
     <err3>Beim Erstellen des Parameters ist ein Fehler aufgetreten</err3>
@@ -494,5 +519,7 @@
     <err66>Die Zuordnung des Parameters "{0}" des Elements (Id: {1}) zum Parameter "{2}" konnte nicht wiederhergestellt werden: Parameter nicht gefunden</err66>
     <err67>Element "{0}" wurde in der Familie nicht gefunden</err67>
     <err68>Element "{0}" kann nicht als Parameterwert verwendet werden</err68>
+    <err69>Parameter "{0}" wurde nicht auf "Exemplarweise" gesetzt: Dazu muss der Parameter "{1}", der zuvor auf "Typweise" gesetzt wurde, auf "Exemplarweise" gesetzt werden</err69>
+    <err70>Parameter "{0}" wurde nicht auf "Typweise" gesetzt: Dazu muss der Parameter "{1}", der zuvor auf "Exemplarweise" gesetzt wurde, auf "Typweise" gesetzt werden</err70>
   </mprParameters>
 </ModPlus>

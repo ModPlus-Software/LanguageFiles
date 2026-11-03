@@ -316,6 +316,22 @@
     <t285>Restore parameter associations</t285>
     <t286>Only the formula will be imported</t286>
     <t287>If a parameter already exists in the current family and is defined by a formula in the selected family, only the formula will be imported for that parameter (marked in the "Note" column). Parameters used in the formula that are missing in the current family will be selected for import automatically</t287>
+    <t288>The parameter exists in the project as an instance parameter and cannot be changed to a type parameter</t288>
+    <t289>The parameter exists in the project as a type parameter and cannot be changed to an instance parameter</t289>
+    <t290>Categories of existing parameters:</t290>
+    <t291>How the category list of a parameter that already exists in the project is changed. With the "Replace" option, parameter values of elements in excluded categories will be lost</t291>
+    <t292>Add parameters from another open project or linked file</t292>
+    <t293>There are no other open projects or loaded linked files</t293>
+    <t294>New</t294>
+    <t295>Matches</t295>
+    <t296>Differs</t296>
+    <t297>Different GUID</t297>
+    <t298>Parameter exists in the current document, settings match</t298>
+    <t299>Parameter exists in the current document, differences:</t299>
+    <t300>The current document has a parameter with the same name but a different GUID. A new parameter will be created</t300>
+    <t301>Not in the current document: {0}</t301>
+    <t302>Only in the current document: {0}</t302>
+    <t303>Hide matching</t303>
     <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
     <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
     <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
@@ -343,6 +359,9 @@
     <ep2>Set formula (if possible)</ep2>
     <ep3>Set value (if possible)</ep3>
     <ep4>Set formula or value (if possible)</ep4>
+    <ec1>Add</ec1>
+    <ec2>Replace</ec2>
+    <ec3>Do not change</ec3>
     <fs1>From file</fs1>
     <fs2>From project</fs2>
     <fs3>Open families</fs3>
@@ -426,6 +445,12 @@
     <msg62>Parameter formula has not changed</msg62>
     <msg63>SPF group is not specified for parameters:</msg63>
     <msg64>Association of parameter "{0}" of element (Id: {1}) with parameter "{2}" of the host family restored</msg64>
+    <msg65>To set a formula or value for an existing parameter, change the "{0}" option in the plugin settings</msg65>
+    <msg66>Together with parameter "{0}", the parameters whose formulas use it were made "By instance": {1}</msg66>
+    <msg67>Together with parameter "{0}", the parameters used in its formula were made "By type": {1}</msg67>
+    <msg68>Together with parameter "{0}", the type parameters whose formulas use it directly or through other parameters will be made "By instance":</msg68>
+    <msg69>Together with parameter "{0}", the instance parameters used in its formula directly or through other parameters will be made "By type":</msg69>
+    <msg70>There are no open families</msg70>
     <err1>An unexpected error occurred during window initialization</err1>
     <err2>An unexpected error occurred when closing the window</err2>
     <err3>An error occurred while creating the parameter</err3>
@@ -494,5 +519,7 @@
     <err66>Failed to restore the association of parameter "{0}" of element (Id: {1}) with parameter "{2}": parameter not found</err66>
     <err67>Element "{0}" not found in the family</err67>
     <err68>Element "{0}" cannot be the parameter value</err68>
+    <err69>Parameter "{0}" was not made "By instance": this requires making parameter "{1}" "By instance", which was previously made "By type"</err69>
+    <err70>Parameter "{0}" was not made "By type": this requires making parameter "{1}" "By type", which was previously made "By instance"</err70>
   </mprParameters>
 </ModPlus>

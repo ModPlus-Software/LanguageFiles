@@ -41,6 +41,12 @@
     <h50>Clear the "{0}" parameter value for all elements</h50>
     <h51>Clear the "{0}" parameter value for selected elements</h51>
     <h52>Nested families only</h52>
+    <h53>Number type:</h53>
+    <h54>Simple</h54>
+    <h55>Composite by mask</h55>
+    <h56>Change</h56>
+    <h57>With each number</h57>
+    <h58>After limit on the right</h58>
     <sv1>Standard frame selection</sv1>
     <sv2>Ordinal selection</sv2>
     <sv3>Curve intersection</sv3>
@@ -65,6 +71,8 @@
     <t19>When the option is enabled, only the elements of the selected rows are numbered. If no rows are selected in the schedule, all elements are numbered</t19>
     <t20>With rectangle selection and order selection, only nested families can be selected. Only shared nested families are separate model elements</t20>
     <t21>Along route – select the start element of a pipe, duct, cable tray or conduit run. Elements for numbering are found by following the run through its connections from the selected element to its end. If the run has branches, you can number the longest path or the path to a specified element. With this option, the numbering direction can be ascending or descending</t21>
+    <t22>A mask is text in which the number parts are written in curly braces as their initial values. For example, the mask {1}.{1}.{1} gives the numbers 1.1.1, 1.1.2 and so on. A part is written with digits only or letters only. Leading zeros set the number length: the part {01} gives 01, 02 … 10. A letter part is numbered in the selected alphabet in the case of its initial value. A mask can contain up to five parts. A composite number can be written only to a text parameter</t22>
+    <t23>Step – how much the part increases with each change. Limit – the largest value of the part: after it, the part starts again from its initial value. The first part has no limit. "With each number" – the part increases for each next number. "After limit on the right" – the part increases only when the next part goes past its limit. The last part always changes with each number</t23>
     <m1>Select elements for numbered marking</m1>
     <m2>No items on current view schedule</m2>
     <m3>Filter selected elements by the current list of categories?</m3>
@@ -103,5 +111,13 @@
     <r5>Letter numbering cannot be performed because the numeric parameter is selected</r5>
     <r6>Parameter for grouping not selected</r6>
     <r7>Target parameter not selected</r7>
+    <r8>A composite number can be written only to a text parameter</r8>
+    <r9>The mask has no number parts. Write the initial values of the parts in curly braces, for example {1}.{1}</r9>
+    <r10>A mask can contain no more than {0} number parts</r10>
+    <r11>The mask has an unpaired curly brace</r11>
+    <r12>The mask part {0} must contain digits only or letters only</r12>
+    <r13>The limit of part {0} must be written the same way as its initial value: with digits or with letters</r13>
+    <r14>The limit of part {0} is less than its initial value</r14>
+    <r15>Part {0} will never change because part {1} has no limit. Set a limit or select the "With each number" change</r15>
   </mprNumbering>
 </ModPlus>

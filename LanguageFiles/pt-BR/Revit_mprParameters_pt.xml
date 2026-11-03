@@ -316,6 +316,22 @@
     <t285>Restaurar associações de parâmetros</t285>
     <t286>Somente a fórmula será importada</t286>
     <t287>Se um parâmetro já existir na família atual e na família selecionada for definido por uma fórmula, somente a fórmula será importada para esse parâmetro (indicado na coluna "Observação"). Os parâmetros usados na fórmula que não existem na família atual serão selecionados automaticamente para importação</t287>
+    <t288>O parâmetro existe no projeto como parâmetro de instância e não pode ser alterado para parâmetro de tipo</t288>
+    <t289>O parâmetro existe no projeto como parâmetro de tipo e não pode ser alterado para parâmetro de instância</t289>
+    <t290>Categorias de parâmetros existentes:</t290>
+    <t291>Como a lista de categorias de um parâmetro que já existe no projeto é alterada. Com a opção "Substituir", os valores do parâmetro dos elementos das categorias excluídas serão perdidos</t291>
+    <t292>Adicionar parâmetros de outro projeto aberto ou arquivo vinculado</t292>
+    <t293>Não há outros projetos abertos nem arquivos vinculados carregados</t293>
+    <t294>Novo</t294>
+    <t295>Coincide</t295>
+    <t296>Difere</t296>
+    <t297>Outro GUID</t297>
+    <t298>O parâmetro existe no documento atual, as configurações coincidem</t298>
+    <t299>O parâmetro existe no documento atual, diferenças:</t299>
+    <t300>O documento atual tem um parâmetro com o mesmo nome, mas com outro GUID. Será criado um novo parâmetro</t300>
+    <t301>Não está no documento atual: {0}</t301>
+    <t302>Somente no documento atual: {0}</t302>
+    <t303>Ocultar coincidentes</t303>
     <ad1>Permite renomear um parâmetro de família. A ação não está disponível para parâmetros de sistema e parâmetros compartilhados</ad1>
     <ad2>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de sistema. Ao alterar o grupo de um parâmetro de família não compartilhado, a descrição será perdida</ad2>
     <ad3>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de projeto</ad3>
@@ -343,6 +359,9 @@
     <ep2>Definir fórmula (se possível)</ep2>
     <ep3>Definir valor (se possível)</ep3>
     <ep4>Definir fórmula ou valor (se possível)</ep4>
+    <ec1>Adicionar</ec1>
+    <ec2>Substituir</ec2>
+    <ec3>Não alterar</ec3>
     <fs1>Do arquivo</fs1>
     <fs2>Do projeto</fs2>
     <fs3>Famílias abertas</fs3>
@@ -426,6 +445,12 @@
     <msg62>A fórmula do parâmetro não foi alterada</msg62>
     <msg63>O grupo do arquivo de parâmetros compartilhados não foi especificado para os parâmetros:</msg63>
     <msg64>A associação do parâmetro "{0}" do elemento (Id: {1}) com o parâmetro "{2}" da família hospedeira foi restaurada</msg64>
+    <msg65>Para definir uma fórmula ou um valor para um parâmetro existente, altere a opção "{0}" nas configurações do plugin</msg65>
+    <msg66>Junto com o parâmetro "{0}", os parâmetros em cujas fórmulas ele é usado foram tornados "Por instância": {1}</msg66>
+    <msg67>Junto com o parâmetro "{0}", os parâmetros usados em sua fórmula foram tornados "Por tipo": {1}</msg67>
+    <msg68>Junto com o parâmetro "{0}", os parâmetros de tipo em cujas fórmulas ele é usado diretamente ou por meio de outros parâmetros serão tornados "Por instância":</msg68>
+    <msg69>Junto com o parâmetro "{0}", os parâmetros de instância usados em sua fórmula diretamente ou por meio de outros parâmetros serão tornados "Por tipo":</msg69>
+    <msg70>Não há famílias abertas</msg70>
     <err1>Ocorreu um erro inesperado ao inicializar a janela</err1>
     <err2>Ocorreu um erro inesperado ao fechar a janela</err2>
     <err3>Ocorreu um erro ao criar o parâmetro</err3>
@@ -494,5 +519,7 @@
     <err66>Não foi possível restaurar a associação do parâmetro "{0}" do elemento (Id: {1}) com o parâmetro "{2}": parâmetro não encontrado</err66>
     <err67>O elemento "{0}" não foi encontrado na família</err67>
     <err68>O elemento "{0}" não pode ser o valor do parâmetro</err68>
+    <err69>O parâmetro "{0}" não foi tornado "Por instância": para isso é necessário tornar "Por instância" o parâmetro "{1}", que foi tornado "Por tipo" anteriormente</err69>
+    <err70>O parâmetro "{0}" não foi tornado "Por tipo": para isso é necessário tornar "Por tipo" o parâmetro "{1}", que foi tornado "Por instância" anteriormente</err70>
   </mprParameters>
 </ModPlus>
