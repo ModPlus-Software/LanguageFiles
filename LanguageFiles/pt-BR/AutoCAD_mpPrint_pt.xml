@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModPlus>
+  <mpPrint
+    LocalName="Plotar"
+    Description="Plotagem em lote com reconhecimento de molduras de desenho no espaço do modelo">
+    <h1>Configuração atual dos parâmetros</h1>
+    <h5>Pasta em que os arquivos de plotagem são salvos</h5>
+    <h6>Escanear</h6>
+    <h7>Localizar molduras pelos filtros no espaço do modelo e em cada layout dos desenhos marcados</h7>
+    <h10>Ordem de classificação das áreas de plotagem encontradas e selecionadas na tabela. O espaço do modelo e cada layout têm a sua própria ordem</h10>
+    <h11>Atributo pelo qual as áreas de plotagem são ordenadas</h11>
+    <h14>Nome do arquivo final ao plotar todas as áreas em um só arquivo</h14>
+    <h16>Realçar áreas de plotagem</h16>
+    <h17>Sem limpar, as áreas definidas por objetos mantêm as suas configurações em um novo escaneamento</h17>
+    <h18>Limpar a tabela ao escanear</h18>
+    <h20>Abrir o resultado após a plotagem</h20>
+    <h21>Remover da tabela todas as áreas de plotagem, exceto os layouts</h21>
+    <h22>Modelo de nome</h22>
+    <h23>Atribuir nomes pelo modelo às linhas selecionadas da tabela</h23>
+    <h25>Exibir:</h25>
+    <h28>Áreas de plotagem no espaço do modelo</h28>
+    <h30>Áreas de plotagem nos layouts</h30>
+    <h34>Parâmetros de plotagem adicionais</h34>
+    <h35>Parâmetros de plotagem adicionais (linhas: {0})</h35>
+    <h37>Pré-visualização de todas as linhas marcadas para plotagem</h37>
+    <h38>Plotar</h38>
+    <h39>Parâmetros de plotagem principais</h39>
+    <h40>Impressora/plotadora</h40>
+    <h41>Tamanho do papel</h41>
+    <h42>Tamanho do papel para as novas áreas de plotagem</h42>
+    <h43>Escolher pelo tamanho da área</h43>
+    <h44>Uma nova área de plotagem recebe o menor tamanho de papel em que ela cabe, considerando a escala. Se não houver esse tamanho, é atribuído o tamanho de papel padrão</h44>
+    <h45>Ajustar a</h45>
+    <h46>Qual parte do papel usar para a escolha automática do tamanho do papel das áreas de plotagem</h46>
+    <h48>Quantos milímetros no papel a área pode ultrapassar o tamanho do papel para que ele ainda sirva. Também é considerado ao determinar a escala pela moldura</h48>
+    <h49>Determinar pela moldura</h49>
+    <h50>Uma nova área no espaço do modelo recebe a escala em que a sua moldura coincide com um tamanho de papel do dispositivo, considerando a tolerância. Para um bloco de moldura, primeiro é verificada a sua escala de inserção. Se várias escalas servirem, é escolhida a mais próxima da escala padrão, se nenhuma - é atribuída a escala padrão</h50>
+    <h51>Aplicar a todas as linhas</h51>
+    <h52>Tabela de estilos de plotagem</h52>
+    <h53>Sombrear plotagem</h53>
+    <h54>Qualidade</h54>
+    <h55>DPI</h55>
+    <h59>Deslocamento a partir da origem da área imprimível</h59>
+    <h60>Centralizar plotagem</h60>
+    <h61>Plotar espessuras de linha de objeto</h61>
+    <h62>Redimensionar espessuras de linha</h62>
+    <h63>Plotar com transparência</h63>
+    <h64>Plotar com estilos de plotagem</h64>
+    <h65>A polilinha ou o bloco que define a área não é plotado. Não se aplica às áreas do tipo "Janela" nem aos layouts</h65>
+    <h66>Não plotar o objeto da área</h66>
+    <h68>Considerar polilinhas</h68>
+    <h70>Somente fechadas</h70>
+    <h72>Considerar molduras de linhas</h72>
+    <h74>Considerar blocos</h74>
+    <h75>Máscara de nome</h75>
+    <h76>Por exemplo, Moldura* - blocos cujo nome começa com "Moldura". * - qualquer quantidade de caracteres, ? - um único caractere qualquer</h76>
+    <h78>Se nada estiver marcado, não há filtragem</h78>
+    <h82>Ignorar molduras em camadas desativadas e congeladas</h82>
+    <h84>Ignorar molduras vazias</h84>
+    <h85>Este campo define o modelo pelo qual as áreas de plotagem encontradas serão nomeadas</h85>
+    <h87>Base</h87>
+    <h92>Remover atributo</h92>
+    <h93>Adicionar atributo</h93>
+    <h94>Entre atributos</h94>
+    <h97>Separador</h97>
+    <h99>Primeiro número</h99>
+    <h100>Número inicial e o seu comprimento: 001 gera 001, 002, 003</h100>
+    <h105>Mostrar no desenho</h105>
+    <h106>Criar no desenho um layout com uma viewport para esta área de plotagem</h106>
+    <h107>Excluir da tabela</h107>
+    <h109>Selecione linhas na tabela para alterar os seus parâmetros de plotagem</h109>
+    <h113>Reler as camadas, os blocos e as cores dos desenhos marcados</h113>
+    <h114>Nada marcado</h114>
+    <t1>Na ordem de criação</t1>
+    <t2>Da esquerda para a direita e de cima para baixo</t2>
+    <t3>Da esquerda para a direita e de baixo para cima</t3>
+    <t4>De cima para baixo e da esquerda para a direita</t4>
+    <t5>De baixo para cima e da esquerda para a direita</t5>
+    <t6>Pelo valor do atributo</t6>
+    <t7>Arquivos separados</t7>
+    <t8>Um arquivo</t8>
+    <t9>Um arquivo por desenho</t9>
+    <t10>Um arquivo por tamanho de papel</t10>
+    <t11>Todas as linhas</t11>
+    <t12>Marcadas para plotagem</t12>
+    <t13>Não marcadas para plotagem</t13>
+    <t14>Papel</t14>
+    <t15>Área imprimível</t15>
+    <t16>Nenhum</t16>
+    <t17>Conforme exibido</t17>
+    <t18>Estrutura de arame herdada</t18>
+    <t19>Herdado oculto</t19>
+    <t20>Renderizado</t20>
+    <t21>Rascunho</t21>
+    <t22>Visualização</t22>
+    <t23>Normal</t23>
+    <t24>Apresentação</t24>
+    <t25>Máxima</t25>
+    <t26>Personalizada</t26>
+    <t27>Nome do layout</t27>
+    <t28>Nome do desenho</t28>
+    <t29>Nome atual</t29>
+    <t30>Texto próprio</t30>
+    <t31>Atributos do bloco</t31>
+    <t32>Em repetições</t32>
+    <t33>Em sequência</t33>
+    <t34>Pelo número da página</t34>
+    <t35>em repetições</t35>
+    <t36>em sequência</t36>
+    <t37>pelo número da página</t37>
+    <t38>Janela</t38>
+    <t39>Ajustar ao papel</t39>
+    <t40>Área</t40>
+    <k1>ÁRea</k1>
+    <k1ln>ÁRea</k1ln>
+    <k2>Objetos</k2>
+    <k2ln>Objetos</k2ln>
+    <msg1>Polilinhas: não consideradas</msg1>
+    <msg2>Polilinhas: fechadas</msg2>
+    <msg3>Polilinhas: quaisquer</msg3>
+    <msg4>molduras de linhas</msg4>
+    <msg5>Blocos: não considerados</msg5>
+    <msg6>Blocos: quaisquer</msg6>
+    <msg7>Blocos: {0}</msg7>
+    <msg8>Camadas: {0}</msg8>
+    <msg9>Camadas: todas</msg9>
+    <msg10>Cores: {0}</msg10>
+    <msg11>Cores: todas</msg11>
+    <msg12>em camadas desativadas e congeladas</msg12>
+    <msg13>vazias</msg13>
+    <msg14>Ignorar molduras: nenhuma</msg14>
+    <msg15>Ignorar molduras: {0}</msg15>
+    <msg16>em camadas desativadas e congeladas - {0}</msg16>
+    <msg17>vazias - {0}</msg17>
+    <msg18>Molduras ignoradas: {0}</msg18>
+    <msg19>Selecione linhas para renomeá-las</msg19>
+    <msg20>Resultado: {0}</msg20>
+    <msg21>Enquanto a janela estava fechada, estes desenhos foram fechados: {0}. As suas linhas foram removidas da tabela</msg21>
+    <msg22>O desenho "{0}" foi fechado, as suas linhas foram removidas da tabela</msg22>
+    <msg23>Nenhum desenho marcado</msg23>
+    <msg24>Não foram encontrados objetos adequados nem no espaço do modelo nem nos layouts</msg24>
+    <msg25>Áreas de plotagem encontradas: no espaço do modelo - {0}, nos layouts - {1}</msg25>
+    <msg26>Nenhuma nova área de plotagem encontrada</msg26>
+    <msg27>Novas áreas de plotagem encontradas: no espaço do modelo - {0}, nos layouts - {1}</msg27>
+    <msg28>Os objetos destas linhas foram excluídos do desenho, as linhas foram removidas:</msg28>
+    <msg29>Não foi possível escanear:</msg29>
+    <msg30>Escaneamento</msg30>
+    <msg31>Não foi possível determinar a escala, foi atribuída a escala padrão:</msg31>
+    <msg32>Determinação da escala</msg32>
+    <msg33>Não foi possível escolher o tamanho do papel, foi atribuído o tamanho de papel padrão:</msg33>
+    <msg34>Escolha do tamanho do papel</msg34>
+    <msg35>Selecione uma impressora/plotadora e um tamanho de papel nas configurações</msg35>
+    <msg36>Nos filtros estão desativadas tanto as polilinhas quanto os blocos, por isso não há o que procurar</msg36>
+    <msg37>Nenhuma linha selecionada</msg37>
+    <msg38>Criação de layout</msg38>
+    <msg39>O layout "{0}" foi criado</msg39>
+    <msg40>Os parâmetros de plotagem adicionais foram aplicados a todas as linhas</msg40>
+    <msg41>Nenhuma linha marcada para plotagem</msg41>
+    <msg42>Algumas áreas de plotagem não entraram na pré-visualização:</msg42>
+    <msg43>Não foi possível abrir "{0}": {1}</msg43>
+    <msg44>Áreas de plotagem plotadas: {0}. Arquivos criados: {1}</msg44>
+    <msg45>Plotagem cancelada. {0}</msg45>
+    <msg46>Áreas de plotagem marcadas no espaço do modelo: {0}, nos layouts: {1}, layouts: {2}.</msg46>
+    <msg47>Desenhos: {0}.</msg47>
+    <msg48>Nada para plotar</msg48>
+    <msg49>Nomes repetidos: {0}. Os números (2), (3) serão adicionados aos nomes desses arquivos</msg49>
+    <msg50>Estes arquivos já existem na pasta e serão substituídos: {0}</msg50>
+    <msg52>Plotagem em um só arquivo.</msg52>
+    <msg53>Plotagem em um arquivo por desenho.</msg53>
+    <msg54>Plotagem em um arquivo por tamanho de papel.</msg54>
+    <msg55>Plotagem em arquivos separados.</msg55>
+    <msg56>As linhas que não podem ser plotadas serão ignoradas: {0}</msg56>
+    <msg57>Tentar criar o arquivo comum novamente?</msg57>
+    <msg58>Combinação de PDF</msg58>
+    <msg59>Não foi possível criar "{0}": {1}</msg59>
+    <msg60>As páginas separadas ficaram na pasta "{0}"</msg60>
+    <msg61>Arquivos {0}</msg61>
+    <msg62>Imagens {0}</msg62>
+    <msg63>Progresso da plotagem</msg63>
+    <msg64>Cancelar trabalho</msg64>
+    <msg65>Cancelar folha</msg65>
+    <msg66>Progresso do trabalho</msg66>
+    <msg67>Progresso da folha</msg67>
+    <msg68>Remova objetos do conjunto</msg68>
+    <msg69>Selecione objetos de moldura ou {0}</msg69>
+    <msg70>Especifique o primeiro canto da área de plotagem ou [{0}]:</msg70>
+    <msg71>Especifique o canto oposto:</msg71>
+    <msg72>A janela tem tamanho zero</msg72>
+    <err1>o arquivo não foi criado</err1>
+    <err2>Os tamanhos de papel do dispositivo "{0}" estão definidos em pixels - não é possível determinar a escala pelo tamanho da moldura para este dispositivo</err2>
+    <err3>Não foi possível ler nenhum tamanho de papel do dispositivo "{0}"</err3>
+    <err4>o desenho está fechado</err4>
+    <err5>não foi possível determinar o tamanho da área</err5>
+    <err6>{0}x{1} não coincide com nenhum tamanho de papel do dispositivo em nenhuma escala</err6>
+    <err7>servem as escalas {0} - para escolher entre elas, defina uma escala padrão</err7>
+    <err8>Os tamanhos de papel do dispositivo "{0}" estão definidos em pixels - não é possível escolher o tamanho do papel pelo tamanho da área para este dispositivo, selecione-o manualmente</err8>
+    <err9>não há tamanho de papel em que caiba {0}x{1} mm</err9>
+    <err10>para criar um layout, selecione uma escala diferente de "Ajustar ao papel"</err10>
+    <err11>Um layout só pode ser criado a partir de uma área de plotagem no espaço do modelo</err11>
+    <err12>a área de plotagem é inválida</err12>
+    <err13>o dispositivo de plotagem ou o tamanho do papel não está definido</err13>
+    <err14>não foi possível ativar o desenho "{0}"</err14>
+    <err15>o desenho "{0}" está ocupado: {1}</err15>
+    <err16>Não foi possível concluir a plotagem no dispositivo: {0}</err16>
+    <err17>Já existe outra plotagem ou pré-visualização em andamento</err17>
+    <err18>Já existe outra plotagem em andamento</err18>
+    <err19>Não foi possível criar a pasta "{0}": {1}</err19>
+    <err20>não foi possível abrir o dispositivo de plotagem "{0}"</err20>
+    <err21>não são combinados, cada área foi plotada em um arquivo separado</err21>
+    <err22>não foi possível iniciar a plotagem: {0}</err22>
+    <err23>O desenho está fechado</err23>
+    <err24>O layout foi excluído do desenho</err24>
+    <err25>O objeto foi excluído do desenho</err25>
+    <err26>O layout da área foi excluído do desenho</err26>
+    <err27>O layout não está inicializado. Para plotá-lo, abra o layout no AutoCAD</err27>
+    <err28>O dispositivo de plotagem não está definido</err28>
+    <err29>Dispositivo de plotagem "{0}" não encontrado</err29>
+    <err30>O tamanho do papel não está definido</err30>
+    <err31>O dispositivo de plotagem não tem o tamanho de papel "{0}"</err31>
+    <err32>O número deve conter apenas dígitos</err32>
+    <err33>Caracteres inválidos no nome do arquivo</err33>
+    <h115>Plotar em</h115>
+  </mpPrint>
+</ModPlus>
