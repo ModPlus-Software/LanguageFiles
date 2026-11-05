@@ -47,6 +47,24 @@
     <h56>Alteração</h56>
     <h57>A cada número</h57>
     <h58>Após o limite à direita</h58>
+    <h59>Agrupamento</h59>
+    <h60>Por parâmetro</h60>
+    <h61>Por grupos da tabela</h61>
+    <h62>Classificação adicional</h62>
+    <h63>Adicionar parâmetro de classificação</h63>
+    <h64>Processamento de splines:</h64>
+    <h65>Somente spline</h65>
+    <h66>Pontos de controle</h66>
+    <h67>Spline e pontos de controle</h67>
+    <h68>Renomeação do tipo</h68>
+    <h69>Renomeação da família</h69>
+    <h70>Os elementos foram ignorados porque o nome de uma família de sistema não pode ser alterado</h70>
+    <h71>O nome "{0}" já é usado por outro objeto. O objeto não foi renomeado</h71>
+    <h72>O nome "{0}" está vazio ou contém caracteres inválidos. O objeto não foi renomeado</h72>
+    <h73>Não foi possível restaurar o nome original após um erro de renomeação. Todas as alterações foram canceladas</h73>
+    <h74>Continuar a numeração</h74>
+    <h75>Próximo valor após a última numeração: {0}</h75>
+    <h76>O valor é salvo após a numeração com número simples sem reiniciar os números nos grupos</h76>
     <sv1>Seleção padrão por janela</sv1>
     <sv2>Seleção sequencial</sv2>
     <sv3>Interseção com curva</sv3>
@@ -73,6 +91,19 @@
     <t21>Ao longo do traçado – seleção do elemento inicial de um traçado de tubulação, duto, eletrocalha ou eletroduto. Os elementos para numeração são encontrados percorrendo o traçado pelas suas conexões, do elemento selecionado até o seu fim. Se o traçado tiver ramificações, é possível numerar o caminho mais longo ou o caminho até um elemento indicado. Com esta opção, a direção da numeração pode ser crescente ou decrescente</t21>
     <t22>Uma máscara é um texto em que as partes do número são escritas entre chaves com seus valores iniciais. Por exemplo, a máscara {1}.{1}.{1} gera os números 1.1.1, 1.1.2 e assim por diante. Uma parte é escrita apenas com dígitos ou apenas com letras. Os zeros à esquerda definem o comprimento do número: a parte {01} gera 01, 02 … 10. Uma parte com letras é numerada no alfabeto selecionado, com a mesma caixa do seu valor inicial. Uma máscara pode conter até cinco partes. Um número composto só pode ser escrito em um parâmetro de texto</t22>
     <t23>Incremento – quanto a parte aumenta a cada alteração. Limite – o maior valor da parte: depois dele, a parte recomeça do seu valor inicial. Se for definido um limite para a primeira parte, os números começarão a se repetir depois dele. "A cada número" – a parte aumenta a cada número seguinte. "Após o limite à direita" – a parte aumenta apenas quando a parte seguinte ultrapassa o seu limite. A última parte sempre muda a cada número</t23>
+    <t24>Os grupos são formados pelos campos que têm o cabeçalho, o rodapé ou a linha em branco ativados na guia "Classificar/Agrupar" das propriedades da tabela. A numeração é feita em cada grupo do último nível. Os campos usados apenas para classificação não formam grupos</t24>
+    <t25>Os elementos são classificados adicionalmente pelos parâmetros indicados, como níveis seguintes após a classificação da tabela. Se o parâmetro de destino for usado na classificação da tabela, os parâmetros indicados são aplicados antes dele e a nova ordem ficará visível na tabela após a numeração. O texto é comparado considerando os números nele contidos: "2" vem antes de "10"</t25>
+    <t26>A classificação adicional está disponível apenas em tabelas com a opção "Itemizar todas as instâncias" ativada nas configurações de classificação</t26>
+    <t27>A configuração é aplicada se a curva selecionada for uma spline. Para outras curvas, a interseção é sempre procurada com a própria curva</t27>
+    <t28>Somente spline – a interseção é procurada com a própria spline (linha tracejada na imagem)</t28>
+    <t29>Pontos de controle – a interseção é procurada com a polilinha que passa pelos pontos de controle da spline (linhas contínuas na imagem). A própria spline não é considerada</t29>
+    <t30>Spline e pontos de controle – a interseção é procurada tanto com a spline quanto com a polilinha pelos pontos de controle. Um elemento que cruza ambas as linhas é numerado uma vez – pela interseção mais próxima do início da spline</t30>
+    <t31>A ordem de numeração é determinada pela posição da interseção do início ao fim da spline. Uma interseção com a polilinha é convertida na posição correspondente na spline: o segmento da polilinha entre dois pontos de controle corresponde ao trecho da spline cuja forma esses pontos definem</t31>
+    <t32>"Nome do tipo" e "Nome da família" não são parâmetros do Revit. A numeração neles é feita renomeando o tipo ou a família a que o elemento pertence. Todas as instâncias desse tipo ou família no projeto recebem o novo nome, e a alteração se reflete nas identificações, tabelas e filtros que usam o nome.</t32>
+    <t33>O nome pertence ao tipo ou à família, e não à instância. Por isso, os tipos (famílias) são numerados na ordem em que aparece seu primeiro elemento, e os demais elementos do mesmo tipo (família) são ignorados e não ocupam números.</t33>
+    <t34>Os nomes devem ser únicos: o nome do tipo dentro da família, o nome da família dentro do projeto. Se o novo nome já for usado por um objeto que não está sendo numerado ou for atribuído a outro objeto numerado (por exemplo, com a opção "Um número por grupo"), o objeto não é renomeado e é incluído no relatório. Um nome não pode conter os caracteres \ : { } [ ] | ; &lt; &gt; ? ` ~.</t34>
+    <t35>O nome é substituído totalmente pelo número com o prefixo e o sufixo. Para manter o nome original, obtenha o prefixo e o sufixo de um parâmetro e selecione para o sufixo ou o prefixo o parâmetro com o nome do tipo ou da família. Ao numerar novamente, o número é adicionado ao nome já numerado.</t35>
+    <t36>O nome da família só pode ser alterado em famílias carregáveis e famílias no local – elementos de famílias de sistema (paredes, pisos, tubos etc.) são ignorados. A limpeza não está disponível para o nome do tipo e o nome da família. A renomeação pode ser desfeita com o comando "Desfazer" do Revit</t36>
     <m1>Selecione os elementos para a marcação numerada</m1>
     <m2>Não há elementos na vista de tabela atual</m2>
     <m3>Filtrar os elementos selecionados pela lista atual de categorias?</m3>
@@ -84,6 +115,7 @@
     <m9>O caminho até o fim do traçado que contém mais elementos para numeração</m9>
     <m10>Até o elemento indicado</m10>
     <m11>O caminho até o elemento que será selecionado no traçado</m11>
+    <m12>O valor salvo "{0}" não corresponde às configurações de numeração atuais</m12>
     <o1>Crescente</o1>
     <o2>Decrescente</o2>
     <b1>Numeração em cada grupo</b1>
@@ -119,5 +151,11 @@
     <r13>O limite da parte {0} deve ser escrito da mesma forma que o seu valor inicial: com dígitos ou com letras</r13>
     <r14>O limite da parte {0} é menor que o seu valor inicial</r14>
     <r15>A parte {0} nunca mudará porque a parte {1} não tem limite. Defina um limite ou selecione a alteração "A cada número"</r15>
+    <r16>A tabela não tem grupos. Ative o cabeçalho, o rodapé ou a linha em branco para pelo menos um campo na guia "Classificar/Agrupar" das propriedades da tabela</r16>
+    <r17>A numeração contínua com classificação por parâmetro não está disponível ao agrupar por grupos da tabela</r17>
+    <r18>O parâmetro de destino é usado para agrupamento na tabela. Selecione outro parâmetro de destino</r18>
+    <r19>Não foi possível determinar as colunas dos campos de classificação na tabela</r19>
+    <r20>Nenhum parâmetro de classificação adicional foi indicado</r20>
+    <r21>Parâmetro de classificação adicional não selecionado</r21>
   </mprNumbering>
 </ModPlus>

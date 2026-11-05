@@ -47,6 +47,24 @@
     <h56>Change</h56>
     <h57>With each number</h57>
     <h58>After limit on the right</h58>
+    <h59>Grouping</h59>
+    <h60>By parameter</h60>
+    <h61>By schedule groups</h61>
+    <h62>Additional sorting</h62>
+    <h63>Add sorting parameter</h63>
+    <h64>Spline processing:</h64>
+    <h65>Spline only</h65>
+    <h66>Control points</h66>
+    <h67>Spline and control points</h67>
+    <h68>Type renaming</h68>
+    <h69>Family renaming</h69>
+    <h70>The elements were skipped because the name of a system family cannot be changed</h70>
+    <h71>The name "{0}" is already used by another object. The object was not renamed</h71>
+    <h72>The name "{0}" is empty or contains invalid characters. The object was not renamed</h72>
+    <h73>Failed to restore the original name after a renaming error. All changes were canceled</h73>
+    <h74>Continue numbering</h74>
+    <h75>Next value after the last numbering: {0}</h75>
+    <h76>The value is saved after numbering with a simple number without resetting numbers in groups</h76>
     <sv1>Standard frame selection</sv1>
     <sv2>Ordinal selection</sv2>
     <sv3>Curve intersection</sv3>
@@ -73,6 +91,19 @@
     <t21>Along route – select the start element of a pipe, duct, cable tray or conduit run. Elements for numbering are found by following the run through its connections from the selected element to its end. If the run has branches, you can number the longest path or the path to a specified element. With this option, the numbering direction can be ascending or descending</t21>
     <t22>A mask is text in which the number parts are written in curly braces as their initial values. For example, the mask {1}.{1}.{1} gives the numbers 1.1.1, 1.1.2 and so on. A part is written with digits only or letters only. Leading zeros set the number length: the part {01} gives 01, 02 … 10. A letter part is numbered in the selected alphabet in the case of its initial value. A mask can contain up to five parts. A composite number can be written only to a text parameter</t22>
     <t23>Step – how much the part increases with each change. Limit – the largest value of the part: after it, the part starts again from its initial value. If you set a limit for the first part, the numbers will start repeating after it. "With each number" – the part increases for each next number. "After limit on the right" – the part increases only when the next part goes past its limit. The last part always changes with each number</t23>
+    <t24>Groups are formed by the fields that have a header, footer or blank line enabled on the "Sorting/Grouping" tab of the schedule properties. Numbering is performed in each group of the last level. Fields that are used only for sorting do not form groups</t24>
+    <t25>Elements are additionally sorted by the specified parameters as the next levels after the schedule sorting. If the target parameter is used in the schedule sorting, the specified parameters are applied before it, and the new order will be visible in the schedule after numbering. Text is compared taking numbers into account: "2" comes before "10"</t25>
+    <t26>Additional sorting is available only in schedules with the "Itemize every instance" option checked in the sorting settings</t26>
+    <t27>The setting applies if the selected curve is a spline. For other curves, the intersection is always searched with the curve itself</t27>
+    <t28>Spline only – the intersection is searched with the spline itself (dashed line in the picture)</t28>
+    <t29>Control points – the intersection is searched with the polyline passing through the spline control points (solid lines in the picture). The spline itself is not taken into account</t29>
+    <t30>Spline and control points – the intersection is searched with both the spline and the polyline through the control points. An element crossing both lines is numbered once – by the intersection closer to the start of the spline</t30>
+    <t31>The numbering order is determined by the position of the intersection from the start to the end of the spline. An intersection with the polyline is converted to the corresponding position on the spline: the polyline segment between two control points corresponds to the part of the spline whose shape these points define</t31>
+    <t32>"Type Name" and "Family Name" are not Revit parameters. Numbering into them is performed by renaming the type or family the element belongs to. All instances of this type or family in the project get the new name, and the change affects tags, schedules and filters that use the name.</t32>
+    <t33>The name belongs to the type or family, not to the instance. Therefore types (families) are numbered in the order in which their first element appears, and the other elements of the same type (family) are skipped and do not take numbers.</t33>
+    <t34>Names must be unique: a type name within its family, a family name within the project. If the new name is already used by an object that is not being numbered, or is given to another numbered object (for example, with the "One number per group" option), the object is not renamed and is added to the report. A name cannot contain the characters \ : { } [ ] | ; &lt; &gt; ? ` ~.</t34>
+    <t35>The name is completely replaced by the number with the prefix and suffix. To keep the original name, take the prefix and suffix from a parameter and select the parameter with the type or family name for the suffix or prefix. When numbering again, the number is added to the already numbered name.</t35>
+    <t36>A family name can be changed only for loadable families and in-place families – elements of system families (walls, floors, pipes, etc.) are skipped. Clearing is not available for the type name and family name. Renaming can be undone with the Revit "Undo" command</t36>
     <m1>Select elements for numbered marking</m1>
     <m2>No items on current view schedule</m2>
     <m3>Filter selected elements by the current list of categories?</m3>
@@ -84,6 +115,7 @@
     <m9>The path to the end of the route that contains the most elements for numbering</m9>
     <m10>To a specified element</m10>
     <m11>The path to an element that you select on the route</m11>
+    <m12>The saved value "{0}" does not match the current numbering settings</m12>
     <o1>Ascending</o1>
     <o2>Descending</o2>
     <b1>Numbering in each group</b1>
@@ -119,5 +151,11 @@
     <r13>The limit of part {0} must be written the same way as its initial value: with digits or with letters</r13>
     <r14>The limit of part {0} is less than its initial value</r14>
     <r15>Part {0} will never change because part {1} has no limit. Set a limit or select the "With each number" change</r15>
+    <r16>The schedule has no groups. Enable a header, footer or blank line for at least one field on the "Sorting/Grouping" tab of the schedule properties</r16>
+    <r17>Continuous numbering with sorting by parameter is not available when grouping by schedule groups</r17>
+    <r18>The target parameter is used for grouping in the schedule. Select another target parameter</r18>
+    <r19>Failed to determine the columns of the sorting fields in the schedule</r19>
+    <r20>No additional sorting parameters are specified</r20>
+    <r21>An additional sorting parameter is not selected</r21>
   </mprNumbering>
 </ModPlus>

@@ -47,6 +47,24 @@
     <h56>Cambio</h56>
     <h57>Con cada número</h57>
     <h58>Tras el límite a la derecha</h58>
+    <h59>Agrupación</h59>
+    <h60>Por parámetro</h60>
+    <h61>Por grupos de la tabla de planificación</h61>
+    <h62>Ordenación adicional</h62>
+    <h63>Añadir parámetro de ordenación</h63>
+    <h64>Procesamiento de splines:</h64>
+    <h65>Solo spline</h65>
+    <h66>Puntos de control</h66>
+    <h67>Spline y puntos de control</h67>
+    <h68>Cambio de nombre del tipo</h68>
+    <h69>Cambio de nombre de la familia</h69>
+    <h70>Los elementos se omitieron porque no se puede cambiar el nombre de una familia de sistema</h70>
+    <h71>El nombre "{0}" ya lo utiliza otro objeto. No se cambió el nombre del objeto</h71>
+    <h72>El nombre "{0}" está vacío o contiene caracteres no válidos. No se cambió el nombre del objeto</h72>
+    <h73>No se pudo restaurar el nombre original después de un error al cambiar el nombre. Se cancelaron todos los cambios</h73>
+    <h74>Continuar la numeración</h74>
+    <h75>Siguiente valor después de la última numeración: {0}</h75>
+    <h76>El valor se guarda después de numerar con un número simple sin reiniciar los números en los grupos</h76>
     <sv1>Selección estándar con marco</sv1>
     <sv2>Selección ordinal</sv2>
     <sv3>Intersección con curva</sv3>
@@ -73,6 +91,19 @@
     <t21>Por recorrido – selección del elemento inicial de un recorrido de tubería, conducto, bandeja de cables o tubo. Los elementos para la numeración se obtienen siguiendo el recorrido por sus conexiones desde el elemento seleccionado hasta su final. Si el recorrido tiene ramales, se puede numerar el camino más largo o el camino hasta un elemento indicado. Con esta opción, la dirección de numeración puede ser ascendente o descendente</t21>
     <t22>Una máscara es un texto en el que las partes del número se escriben entre llaves con sus valores iniciales. Por ejemplo, la máscara {1}.{1}.{1} da los números 1.1.1, 1.1.2, etc. Una parte se escribe solo con dígitos o solo con letras. Los ceros a la izquierda definen la longitud del número: la parte {01} da 01, 02 … 10. Una parte de letras se numera en el alfabeto seleccionado con el mismo tipo de letra que su valor inicial. Una máscara puede contener hasta cinco partes. Un número compuesto solo se puede escribir en un parámetro de texto</t22>
     <t23>Paso – cuánto aumenta la parte en cada cambio. Límite – el valor máximo de la parte: después de él, la parte empieza de nuevo desde su valor inicial. Si se define un límite para la primera parte, después de él los números empezarán a repetirse. "Con cada número" – la parte aumenta en cada número siguiente. "Tras el límite a la derecha" – la parte aumenta solo cuando la parte siguiente supera su límite. La última parte siempre cambia con cada número</t23>
+    <t24>Los grupos se forman con los campos que tienen activado el encabezado, el pie o la línea en blanco en la ficha "Clasificación/Agrupación" de las propiedades de la tabla de planificación. La numeración se realiza en cada grupo del último nivel. Los campos que solo se usan para ordenar no forman grupos</t24>
+    <t25>Los elementos se ordenan además por los parámetros indicados, como niveles siguientes después de la ordenación de la tabla de planificación. Si el parámetro de destino se usa en la ordenación de la tabla de planificación, los parámetros indicados se aplican antes que él y el nuevo orden será visible en la tabla de planificación después de la numeración. El texto se compara teniendo en cuenta los números que contiene: "2" va antes que "10"</t25>
+    <t26>La ordenación adicional solo está disponible en tablas de planificación con la opción "Detallar cada ejemplar" activada en los ajustes de ordenación</t26>
+    <t27>El ajuste se aplica si la curva seleccionada es una spline. Para otras curvas, la intersección siempre se busca con la propia curva</t27>
+    <t28>Solo spline – la intersección se busca con la propia spline (línea discontinua en la imagen)</t28>
+    <t29>Puntos de control – la intersección se busca con la polilínea que pasa por los puntos de control de la spline (líneas continuas en la imagen). La propia spline no se tiene en cuenta</t29>
+    <t30>Spline y puntos de control – la intersección se busca tanto con la spline como con la polilínea que pasa por los puntos de control. Un elemento que cruza ambas líneas se numera una sola vez, según la intersección más cercana al inicio de la spline</t30>
+    <t31>El orden de numeración se determina por la posición de la intersección desde el inicio hasta el final de la spline. Una intersección con la polilínea se convierte en la posición correspondiente en la spline: el segmento de la polilínea entre dos puntos de control corresponde al tramo de la spline cuya forma definen estos puntos</t31>
+    <t32>"Nombre de tipo" y "Nombre de familia" no son parámetros de Revit. La numeración en ellos se realiza cambiando el nombre del tipo o de la familia a la que pertenece el elemento. Todos los ejemplares de este tipo o familia del proyecto reciben el nuevo nombre, y el cambio se refleja en las etiquetas, tablas de planificación y filtros que utilizan el nombre.</t32>
+    <t33>El nombre pertenece al tipo o a la familia, no al ejemplar. Por eso los tipos (familias) se numeran en el orden en que aparece su primer elemento, y los demás elementos del mismo tipo (familia) se omiten y no ocupan números.</t33>
+    <t34>Los nombres deben ser únicos: el nombre de un tipo dentro de su familia y el nombre de una familia dentro del proyecto. Si el nuevo nombre ya lo utiliza un objeto que no se numera o lo recibe otro objeto numerado (por ejemplo, con la opción "Un número por grupo"), no se cambia el nombre del objeto y este se incluye en el informe. Un nombre no puede contener los caracteres \ : { } [ ] | ; &lt; &gt; ? ` ~.</t34>
+    <t35>El nombre se sustituye por completo por el número con el prefijo y el sufijo. Para conservar el nombre original, tome el prefijo y el sufijo de un parámetro y seleccione para el sufijo o el prefijo el parámetro con el nombre del tipo o de la familia. Al volver a numerar, el número se añade al nombre ya numerado.</t35>
+    <t36>El nombre de familia solo se puede cambiar en familias cargables y familias in situ: los elementos de familias de sistema (muros, suelos, tuberías, etc.) se omiten. La limpieza no está disponible para el nombre de tipo y el nombre de familia. El cambio de nombre se puede deshacer con el comando "Deshacer" de Revit</t36>
     <m1>Seleccionar elementos para etiquetado numerado</m1>
     <m2>No hay elementos en vista actual de tabla de planificación</m2>
     <m3>¿Filtrar elementos seleccionados por lista actual de categorías?</m3>
@@ -84,6 +115,7 @@
     <m9>El camino hasta el final del recorrido que contiene más elementos para numerar</m9>
     <m10>Hasta el elemento indicado</m10>
     <m11>El camino hasta el elemento que se seleccionará en el recorrido</m11>
+    <m12>El valor guardado "{0}" no es compatible con la configuración de numeración actual</m12>
     <o1>Ascendente</o1>
     <o2>Descendente</o2>
     <b1>Numeración en cada grupo</b1>
@@ -119,5 +151,11 @@
     <r13>El límite de la parte {0} debe escribirse igual que su valor inicial: con dígitos o con letras</r13>
     <r14>El límite de la parte {0} es menor que su valor inicial</r14>
     <r15>La parte {0} nunca cambiará porque la parte {1} no tiene límite. Defina un límite o seleccione el cambio "Con cada número"</r15>
+    <r16>La tabla de planificación no tiene grupos. Active el encabezado, el pie o la línea en blanco para al menos un campo en la ficha "Clasificación/Agrupación" de las propiedades de la tabla de planificación</r16>
+    <r17>La numeración continua con ordenación por parámetro no está disponible al agrupar por grupos de la tabla de planificación</r17>
+    <r18>El parámetro de destino se usa para agrupar en la tabla de planificación. Seleccione otro parámetro de destino</r18>
+    <r19>No se pudieron determinar las columnas de los campos de ordenación en la tabla de planificación</r19>
+    <r20>No se han indicado parámetros de ordenación adicional</r20>
+    <r21>No se ha seleccionado un parámetro de ordenación adicional</r21>
   </mprNumbering>
 </ModPlus>

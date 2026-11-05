@@ -47,6 +47,24 @@
     <h56>Änderung</h56>
     <h57>Mit jeder Nummer</h57>
     <h58>Nach Grenze rechts</h58>
+    <h59>Gruppierung</h59>
+    <h60>Nach Parameter</h60>
+    <h61>Nach Gruppen der Bauteilliste</h61>
+    <h62>Zusätzliche Sortierung</h62>
+    <h63>Sortierparameter hinzufügen</h63>
+    <h64>Spline-Verarbeitung:</h64>
+    <h65>Nur Spline</h65>
+    <h66>Steuerpunkte</h66>
+    <h67>Spline und Steuerpunkte</h67>
+    <h68>Umbenennung des Typs</h68>
+    <h69>Umbenennung der Familie</h69>
+    <h70>Die Elemente wurden übersprungen, da der Name einer Systemfamilie nicht geändert werden kann</h70>
+    <h71>Der Name "{0}" wird bereits von einem anderen Objekt verwendet. Das Objekt wurde nicht umbenannt</h71>
+    <h72>Der Name "{0}" ist leer oder enthält unzulässige Zeichen. Das Objekt wurde nicht umbenannt</h72>
+    <h73>Der ursprüngliche Name konnte nach einem Umbenennungsfehler nicht wiederhergestellt werden. Alle Änderungen wurden rückgängig gemacht</h73>
+    <h74>Nummerierung fortsetzen</h74>
+    <h75>Nächster Wert nach der letzten Nummerierung: {0}</h75>
+    <h76>Der Wert wird nach einer Nummerierung mit einfacher Nummer ohne Zurücksetzen der Nummern in Gruppen gespeichert</h76>
     <sv1>Implizierte Fensterauswahl</sv1>
     <sv2>Sequentielle Auswahl</sv2>
     <sv3>Schnittpunkt mit einer Kurve</sv3>
@@ -73,6 +91,19 @@
     <t21>Entlang der Trasse – Auswahl des Anfangselements einer Rohr-, Luftkanal-, Kabeltrassen- oder Leerrohrtrasse. Die Elemente für die Nummerierung werden ermittelt, indem die Trasse über ihre Verbindungen vom ausgewählten Element bis zu ihrem Ende verfolgt wird. Hat die Trasse Abzweigungen, kann der längste Pfad oder der Pfad bis zu einem angegebenen Element nummeriert werden. Bei dieser Option kann die Nummerierung aufsteigend oder absteigend erfolgen</t21>
     <t22>Eine Maske ist ein Text, in dem die Teile der Nummer mit ihren Startwerten in geschweiften Klammern stehen. Die Maske {1}.{1}.{1} ergibt zum Beispiel die Nummern 1.1.1, 1.1.2 usw. Ein Teil besteht nur aus Ziffern oder nur aus Buchstaben. Führende Nullen legen die Länge der Zahl fest: Der Teil {01} ergibt 01, 02 … 10. Ein Buchstabenteil wird im ausgewählten Alphabet in der Schreibweise seines Startwerts nummeriert. Eine Maske kann bis zu fünf Teile enthalten. Eine zusammengesetzte Nummer kann nur in einen Textparameter geschrieben werden</t22>
     <t23>Schritt – um wie viel sich der Teil bei jeder Änderung erhöht. Grenze – der größte Wert des Teils: danach beginnt der Teil wieder mit seinem Startwert. Wenn für den ersten Teil eine Grenze festgelegt ist, wiederholen sich die Nummern danach. "Mit jeder Nummer" – der Teil erhöht sich für jede nächste Nummer. "Nach Grenze rechts" – der Teil erhöht sich nur, wenn der nächste Teil seine Grenze überschreitet. Der letzte Teil ändert sich immer mit jeder Nummer</t23>
+    <t24>Gruppen werden durch die Felder gebildet, für die auf der Registerkarte "Sortieren/Gruppieren" der Bauteillisteneigenschaften eine Kopfzeile, Fußzeile oder Leerzeile aktiviert ist. Die Nummerierung erfolgt in jeder Gruppe der letzten Ebene. Felder, die nur zum Sortieren verwendet werden, bilden keine Gruppen</t24>
+    <t25>Die Elemente werden zusätzlich nach den angegebenen Parametern sortiert – als nächste Ebenen nach der Sortierung der Bauteilliste. Wenn der Zielparameter in der Sortierung der Bauteilliste verwendet wird, werden die angegebenen Parameter vor ihm angewendet, und die neue Reihenfolge ist nach der Nummerierung in der Bauteilliste sichtbar. Text wird unter Berücksichtigung der darin enthaltenen Zahlen verglichen: "2" kommt vor "10"</t25>
+    <t26>Die zusätzliche Sortierung ist nur in Bauteillisten verfügbar, in deren Sortiereinstellungen die Option "Jedes Exemplar aufgliedern" aktiviert ist</t26>
+    <t27>Die Einstellung wird berücksichtigt, wenn die ausgewählte Kurve ein Spline ist. Bei anderen Kurven wird der Schnittpunkt immer mit der Kurve selbst gesucht</t27>
+    <t28>Nur Spline – der Schnittpunkt wird mit dem Spline selbst gesucht (gestrichelte Linie in der Abbildung)</t28>
+    <t29>Steuerpunkte – der Schnittpunkt wird mit der Polylinie gesucht, die durch die Steuerpunkte des Splines verläuft (durchgezogene Linien in der Abbildung). Der Spline selbst wird nicht berücksichtigt</t29>
+    <t30>Spline und Steuerpunkte – der Schnittpunkt wird sowohl mit dem Spline als auch mit der Polylinie durch die Steuerpunkte gesucht. Ein Element, das beide Linien schneidet, wird einmal nummeriert – nach dem Schnittpunkt, der näher am Anfang des Splines liegt</t30>
+    <t31>Die Nummerierungsreihenfolge wird durch die Lage des Schnittpunkts vom Anfang bis zum Ende des Splines bestimmt. Ein Schnittpunkt mit der Polylinie wird in die entsprechende Lage auf dem Spline umgerechnet: Das Polyliniensegment zwischen zwei Steuerpunkten entspricht dem Abschnitt des Splines, dessen Form diese Punkte festlegen</t31>
+    <t32>"Typname" und "Familienname" sind keine Revit-Parameter. Die Nummerierung erfolgt durch Umbenennen des Typs oder der Familie, zu der das Element gehört. Alle Exemplare dieses Typs oder dieser Familie im Projekt erhalten den neuen Namen, die Änderung wirkt sich auf Beschriftungen, Bauteillisten und Filter aus, die den Namen verwenden.</t32>
+    <t33>Der Name gehört zum Typ oder zur Familie, nicht zum Exemplar. Daher werden Typen (Familien) in der Reihenfolge nummeriert, in der ihr erstes Element erscheint, und die übrigen Elemente desselben Typs (derselben Familie) werden übersprungen und belegen keine Nummern.</t33>
+    <t34>Namen müssen eindeutig sein: ein Typname innerhalb seiner Familie, ein Familienname innerhalb des Projekts. Wenn der neue Name bereits von einem nicht nummerierten Objekt verwendet wird oder einem anderen nummerierten Objekt zugewiesen wird (zum Beispiel bei der Option "Eine Nummer pro Gruppe"), wird das Objekt nicht umbenannt und in den Bericht aufgenommen. Ein Name darf die Zeichen \ : { } [ ] | ; &lt; &gt; ? ` ~ nicht enthalten.</t34>
+    <t35>Der Name wird vollständig durch die Nummer mit Präfix und Suffix ersetzt. Um den ursprünglichen Namen beizubehalten, übernehmen Sie Präfix und Suffix aus einem Parameter und wählen Sie für das Suffix oder Präfix den Parameter mit dem Typ- oder Familiennamen. Bei erneuter Nummerierung wird die Nummer zum bereits nummerierten Namen hinzugefügt.</t35>
+    <t36>Der Familienname kann nur bei ladbaren Familien und projektbezogenen Familien geändert werden – Elemente von Systemfamilien (Wände, Geschossdecken, Rohre usw.) werden übersprungen. Das Löschen ist für den Typnamen und den Familiennamen nicht verfügbar. Die Umbenennung kann mit dem Revit-Befehl "Rückgängig" rückgängig gemacht werden</t36>
     <m1>Wählen Sie Elemente für die nummerierte Markierung</m1>
     <m2>In der aktuellen Ansicht der Bauteilliste gibt es keine Elemente</m2>
     <m3>Wollen Sie die ausgewählten Elemente in der aktuellen Kategorieliste filtern?</m3>
@@ -84,6 +115,7 @@
     <m9>Der Pfad bis zum Ende der Trasse mit den meisten zu nummerierenden Elementen</m9>
     <m10>Bis zum angegebenen Element</m10>
     <m11>Der Pfad bis zu einem Element, das auf der Trasse ausgewählt wird</m11>
+    <m12>Der gespeicherte Wert "{0}" passt nicht zu den aktuellen Nummerierungseinstellungen</m12>
     <o1>Aufsteigend</o1>
     <o2>Absteigend</o2>
     <b1>Numerierung in jeder Gruppe</b1>
@@ -119,5 +151,11 @@
     <r13>Die Grenze von Teil {0} muss wie sein Startwert geschrieben werden: mit Ziffern oder mit Buchstaben</r13>
     <r14>Die Grenze von Teil {0} ist kleiner als sein Startwert</r14>
     <r15>Teil {0} ändert sich nie, da für Teil {1} keine Grenze festgelegt ist. Legen Sie eine Grenze fest oder wählen Sie die Änderung "Mit jeder Nummer"</r15>
+    <r16>Die Bauteilliste enthält keine Gruppen. Aktivieren Sie für mindestens ein Feld auf der Registerkarte "Sortieren/Gruppieren" der Bauteillisteneigenschaften eine Kopfzeile, Fußzeile oder Leerzeile</r16>
+    <r17>Die fortlaufende Nummerierung mit Sortieren nach dem Parameter ist bei Gruppierung nach Gruppen der Bauteilliste nicht verfügbar</r17>
+    <r18>Der Zielparameter wird in der Bauteilliste zum Gruppieren verwendet. Wählen Sie einen anderen Zielparameter</r18>
+    <r19>Die Spalten der Sortierfelder in der Bauteilliste konnten nicht ermittelt werden</r19>
+    <r20>Keine Parameter für die zusätzliche Sortierung angegeben</r20>
+    <r21>Kein Parameter für die zusätzliche Sortierung ausgewählt</r21>
   </mprNumbering>
 </ModPlus>

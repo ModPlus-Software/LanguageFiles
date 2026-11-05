@@ -47,6 +47,24 @@
     <h56>Changement</h56>
     <h57>À chaque numéro</h57>
     <h58>Après la limite à droite</h58>
+    <h59>Regroupement</h59>
+    <h60>Par paramètre</h60>
+    <h61>Par groupes de la nomenclature</h61>
+    <h62>Tri supplémentaire</h62>
+    <h63>Ajouter un paramètre de tri</h63>
+    <h64>Traitement des splines :</h64>
+    <h65>Spline uniquement</h65>
+    <h66>Points de contrôle</h66>
+    <h67>Spline et points de contrôle</h67>
+    <h68>Renommage du type</h68>
+    <h69>Renommage de la famille</h69>
+    <h70>Les éléments ont été ignorés, car le nom d'une famille système ne peut pas être modifié</h70>
+    <h71>Le nom "{0}" est déjà utilisé par un autre objet. L'objet n'a pas été renommé</h71>
+    <h72>Le nom "{0}" est vide ou contient des caractères non valides. L'objet n'a pas été renommé</h72>
+    <h73>Impossible de rétablir le nom d'origine après une erreur de renommage. Toutes les modifications ont été annulées</h73>
+    <h74>Continuer la numérotation</h74>
+    <h75>Valeur suivante après la dernière numérotation : {0}</h75>
+    <h76>La valeur est enregistrée après une numérotation par numéro simple sans réinitialisation des numéros dans les groupes</h76>
     <sv1>Sélection standard par fenêtre</sv1>
     <sv2>Sélection ordonnée</sv2>
     <sv3>Intersection avec une courbe</sv3>
@@ -73,6 +91,19 @@
     <t21>Le long du tracé – sélection de l'élément de départ d'un tracé de canalisation, de gaine, de chemin de câbles ou de conduit. Les éléments à numéroter sont trouvés en suivant le tracé par ses connexions depuis l'élément sélectionné jusqu'à sa fin. Si le tracé comporte des dérivations, vous pouvez numéroter le chemin le plus long ou le chemin jusqu'à un élément indiqué. Avec cette option, le sens de numérotation peut être croissant ou décroissant</t21>
     <t22>Un masque est un texte dans lequel les parties du numéro sont écrites entre accolades avec leurs valeurs initiales. Par exemple, le masque {1}.{1}.{1} donne les numéros 1.1.1, 1.1.2, etc. Une partie s'écrit uniquement avec des chiffres ou uniquement avec des lettres. Les zéros non significatifs définissent la longueur du nombre : la partie {01} donne 01, 02 … 10. Une partie en lettres est numérotée dans l'alphabet sélectionné, dans la casse de sa valeur initiale. Un masque peut contenir jusqu'à cinq parties. Un numéro composé ne peut être écrit que dans un paramètre de type texte</t22>
     <t23>Pas – de combien la partie augmente à chaque changement. Limite – la plus grande valeur de la partie : après elle, la partie recommence à sa valeur initiale. Si une limite est définie pour la première partie, les numéros commenceront à se répéter après elle. " À chaque numéro " – la partie augmente pour chaque numéro suivant. " Après la limite à droite " – la partie augmente uniquement lorsque la partie suivante dépasse sa limite. La dernière partie change toujours à chaque numéro</t23>
+    <t24>Les groupes sont formés par les champs pour lesquels l'en-tête, le pied de page ou la ligne vierge est activé dans l'onglet "Tri/Regroupement" des propriétés de la nomenclature. La numérotation est effectuée dans chaque groupe du dernier niveau. Les champs utilisés uniquement pour le tri ne forment pas de groupes</t24>
+    <t25>Les éléments sont en outre triés selon les paramètres indiqués, comme niveaux suivants après le tri de la nomenclature. Si le paramètre cible est utilisé dans le tri de la nomenclature, les paramètres indiqués sont appliqués avant lui et le nouvel ordre sera visible dans la nomenclature après la numérotation. Le texte est comparé en tenant compte des nombres qu'il contient : "2" vient avant "10"</t25>
+    <t26>Le tri supplémentaire n'est disponible que dans les nomenclatures dont les réglages de tri ont l'option "Détailler chaque occurrence" activée</t26>
+    <t27>Le paramètre s'applique si la courbe sélectionnée est une spline. Pour les autres courbes, l'intersection est toujours recherchée avec la courbe elle-même</t27>
+    <t28>Spline uniquement – l'intersection est recherchée avec la spline elle-même (ligne pointillée sur l'image)</t28>
+    <t29>Points de contrôle – l'intersection est recherchée avec la polyligne passant par les points de contrôle de la spline (lignes continues sur l'image). La spline elle-même n'est pas prise en compte</t29>
+    <t30>Spline et points de contrôle – l'intersection est recherchée à la fois avec la spline et avec la polyligne passant par les points de contrôle. Un élément qui coupe les deux lignes est numéroté une seule fois – selon l'intersection la plus proche du début de la spline</t30>
+    <t31>L'ordre de numérotation est déterminé par la position de l'intersection du début à la fin de la spline. Une intersection avec la polyligne est convertie en la position correspondante sur la spline : le segment de polyligne entre deux points de contrôle correspond à la partie de la spline dont ces points définissent la forme</t31>
+    <t32>"Nom du type" et "Nom de la famille" ne sont pas des paramètres Revit. La numérotation s'effectue en renommant le type ou la famille auquel appartient l'élément. Toutes les occurrences de ce type ou de cette famille dans le projet reçoivent le nouveau nom, et la modification se répercute sur les étiquettes, les nomenclatures et les filtres qui utilisent ce nom.</t32>
+    <t33>Le nom appartient au type ou à la famille, et non à l'occurrence. Les types (familles) sont donc numérotés dans l'ordre d'apparition de leur premier élément, et les autres éléments du même type (de la même famille) sont ignorés et n'occupent pas de numéros.</t33>
+    <t34>Les noms doivent être uniques : le nom d'un type au sein de sa famille, le nom d'une famille au sein du projet. Si le nouveau nom est déjà utilisé par un objet non numéroté ou attribué à un autre objet numéroté (par exemple, avec l'option "Un numéro par groupe"), l'objet n'est pas renommé et figure dans le rapport. Un nom ne peut pas contenir les caractères \ : { } [ ] | ; &lt; &gt; ? ` ~.</t34>
+    <t35>Le nom est entièrement remplacé par le numéro avec le préfixe et le suffixe. Pour conserver le nom d'origine, prenez le préfixe et le suffixe d'un paramètre et sélectionnez pour le suffixe ou le préfixe le paramètre contenant le nom du type ou de la famille. Lors d'une nouvelle numérotation, le numéro est ajouté au nom déjà numéroté.</t35>
+    <t36>Le nom de famille ne peut être modifié que pour les familles chargeables et les familles in situ – les éléments des familles système (murs, sols, canalisations, etc.) sont ignorés. L'effacement n'est pas disponible pour le nom du type et le nom de la famille. Le renommage peut être annulé avec la commande "Annuler" de Revit</t36>
     <m1>Sélectionnez les éléments pour le marquage numéroté</m1>
     <m2>La vue de nomenclature courante ne contient aucun élément</m2>
     <m3>Filtrer les éléments sélectionnés selon la liste de catégories courante ?</m3>
@@ -84,6 +115,7 @@
     <m9>Le chemin jusqu'à la fin du tracé qui contient le plus d'éléments à numéroter</m9>
     <m10>Jusqu'à l'élément indiqué</m10>
     <m11>Le chemin jusqu'à l'élément qui sera sélectionné sur le tracé</m11>
+    <m12>La valeur enregistrée "{0}" ne correspond pas aux paramètres de numérotation actuels</m12>
     <o1>Croissant</o1>
     <o2>Décroissant</o2>
     <b1>Numérotation dans chaque groupe</b1>
@@ -119,5 +151,11 @@
     <r13>La limite de la partie {0} doit être écrite comme sa valeur initiale : avec des chiffres ou avec des lettres</r13>
     <r14>La limite de la partie {0} est inférieure à sa valeur initiale</r14>
     <r15>La partie {0} ne changera jamais, car la partie {1} n'a pas de limite. Définissez une limite ou sélectionnez le changement " À chaque numéro "</r15>
+    <r16>La nomenclature ne contient aucun groupe. Activez l'en-tête, le pied de page ou la ligne vierge pour au moins un champ dans l'onglet "Tri/Regroupement" des propriétés de la nomenclature</r16>
+    <r17>La numérotation continue avec tri par paramètre n'est pas disponible lors du regroupement par groupes de la nomenclature</r17>
+    <r18>Le paramètre cible est utilisé pour le regroupement dans la nomenclature. Sélectionnez un autre paramètre cible</r18>
+    <r19>Impossible de déterminer les colonnes des champs de tri dans la nomenclature</r19>
+    <r20>Aucun paramètre de tri supplémentaire n'est indiqué</r20>
+    <r21>Aucun paramètre de tri supplémentaire sélectionné</r21>
   </mprNumbering>
 </ModPlus>
