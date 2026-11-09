@@ -4,7 +4,9 @@
     LocalName="Parameters"
     Description="Batch editing/adding parameters to projects and families"
     LocalName1="Family Editor"
-    Description1="Parameter editor for the current family with an alternative formula editor">
+    Description1="Parameter editor for the current family with an alternative formula editor"
+    LocalName2="Lookup Tables"
+    Description2="Lookup table editor for the current family: create, edit, import and export with data validation">
     <pcn1>Create parameters in project</pcn1>
     <pcd1>Allows batch creation of parameters in the current project</pcd1>
     <pcn2>Create parameters in families</pcn2>
@@ -357,6 +359,35 @@
     <t326>Add to list</t326>
     <t327>Save the current change as a list step and set up the next one. Steps are performed in order</t327>
     <t328>Add changes to the list to perform several replacements in a row</t328>
+    <t329>Lookup Tables</t329>
+    <t330>Name of the new lookup table</t330>
+    <t331>New name of the lookup table</t331>
+    <t332>Insert an empty row before the current one</t332>
+    <t333>Rows:</t333>
+    <t334>Column:</t334>
+    <t335>Edit</t335>
+    <t336>Left</t336>
+    <t337>Right</t337>
+    <t338>Double-click to change the column name and data type</t338>
+    <t339>The first column contains row names. The size_lookup function does not use it to look up values</t339>
+    <t340>Create lookup table</t340>
+    <t341>Import from CSV</t341>
+    <t342>Export to CSV</t342>
+    <t343>Rename lookup table</t343>
+    <t344>Delete lookup table</t344>
+    <t345>new</t345>
+    <t346>modified</t346>
+    <t347>will be deleted</t347>
+    <t348>renamed</t348>
+    <t349>Restore</t349>
+    <t350>The family has no lookup tables. Create a new table or import one from a CSV or Excel file</t350>
+    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copy and paste cells (including from Excel), Delete - clear cells, F2 or typing - edit, Esc - cancel editing</t351>
+    <t352>Rows: {0}, columns: {1}</t352>
+    <t353>Name:</t353>
+    <t354>Data type:</t354>
+    <t355>Units:</t355>
+    <t356>Column header in the file:</t356>
+    <t357>Lookup table column</t357>
     <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
     <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
     <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
@@ -553,5 +584,34 @@
     <err69>Parameter "{0}" was not made "By instance": this requires making parameter "{1}" "By instance", which was previously made "By type"</err69>
     <err70>Parameter "{0}" was not made "By type": this requires making parameter "{1}" "By type", which was previously made "By instance"</err70>
     <err71>Invalid regular expression: {0}</err71>
+    <err72>The lookup table name is not specified</err72>
+    <err73>The lookup table name "{0}" contains invalid characters</err73>
+    <err74>The lookup table must contain at least one column in addition to the first one</err74>
+    <err75>The name of column {0} is not specified</err75>
+    <err76>The column name "{0}" contains the invalid character "{1}"</err76>
+    <err77>The data type and units "{1}" of column "{0}" are not supported by this Revit version</err77>
+    <err78>Row {0}, column {1}: the value "{2}" is not a number (the decimal separator is a period)</err78>
+    <err79>The column name "{0}" contains characters that are not supported in lookup tables of this Revit version</err79>
+    <err80>Row {0}, column {1}: the value "{2}" contains characters that are not supported in lookup tables of this Revit version</err80>
+    <err81>Failed to determine the data type and units of column "{0}" of the lookup table "{1}"</err81>
+    <err82>The file "{0}" is not a lookup table: the header row could not be recognized</err82>
+    <err83>Row {0}: the number of values ({1}) does not match the number of columns ({2})</err83>
+    <msg76>Leading and trailing spaces in the column name "{0}" may be removed by Revit</msg76>
+    <msg77>Several columns named "{0}"</msg77>
+    <msg78>Row {0}, column {1}: leading and trailing spaces in the value will be removed by Revit</msg78>
+    <msg79>Row {0}, column {1}: the decimal comma in the value "{2}" was replaced with a period</msg79>
+    <msg80>Column "{0}": the data type and units "{1}" were replaced with "{2}" for the current Revit version</msg80>
+    <msg81>A lookup table named "{0}" already exists</msg81>
+    <msg82>Lookup table "{0}" has been renamed to "{1}". Formulas and text parameters that contain the old name have not been changed - update them manually</msg82>
+    <msg83>Changes to the lookup tables have not been saved. Close the window without saving?</msg83>
+    <msg84>The lookup tables contain errors. Fix them before saving</msg84>
+    <msg85>Select a cell in the table</msg85>
+    <msg86>This action is not available for the first column</msg86>
+    <msg87>Lookup table "{0}" is already in the list. Replace its data with the data from the file?</msg87>
+    <msg88>Convert the column values from "{0}" to "{1}"? If you answer "No", the numbers stay the same but are treated as values in the new units</msg88>
+    <msg89>Failed to delete lookup table "{0}"</msg89>
+    <msg90>Delete column "{0}"?</msg90>
+    <msg91>Delete the selected rows ({0})?</msg91>
+    <msg92>Some values from the clipboard did not fit into the table width and were not pasted</msg92>
   </mprParameters>
 </ModPlus>

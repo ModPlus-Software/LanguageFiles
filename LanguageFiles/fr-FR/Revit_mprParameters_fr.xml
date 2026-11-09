@@ -4,7 +4,9 @@
     LocalName="Paramètres"
     Description="Modification/ajout par lots de paramètres dans le projet et les familles"
     LocalName1="Éditeur de familles"
-    Description1="Éditeur des paramètres de la famille active avec un éditeur de formules alternatif">
+    Description1="Éditeur des paramètres de la famille active avec un éditeur de formules alternatif"
+    LocalName2="Tables de recherche"
+    Description2="Éditeur des tables de recherche de la famille active : création, modification, import et export avec contrôle des données">
     <pcn1>Création de paramètres dans le projet</pcn1>
     <pcd1>Permet de créer des paramètres par lots dans le projet actif</pcd1>
     <pcn2>Création de paramètres dans les familles</pcn2>
@@ -357,6 +359,35 @@
     <t326>Ajouter à la liste</t326>
     <t327>Enregistrer la modification actuelle comme étape de la liste et définir la suivante. Les étapes sont exécutées dans l'ordre</t327>
     <t328>Ajoutez des modifications à la liste pour effectuer plusieurs remplacements à la suite</t328>
+    <t329>Tables de recherche</t329>
+    <t330>Nom de la nouvelle table de recherche</t330>
+    <t331>Nouveau nom de la table de recherche</t331>
+    <t332>Insérer une ligne vide avant la ligne actuelle</t332>
+    <t333>Lignes :</t333>
+    <t334>Colonne :</t334>
+    <t335>Modifier</t335>
+    <t336>À gauche</t336>
+    <t337>À droite</t337>
+    <t338>Double-clic - modifier le nom et le type de données de la colonne</t338>
+    <t339>La première colonne contient les noms des lignes. La fonction size_lookup ne l'utilise pas pour rechercher des valeurs</t339>
+    <t340>Créer une table de recherche</t340>
+    <t341>Importer depuis CSV</t341>
+    <t342>Exporter vers CSV</t342>
+    <t343>Renommer la table de recherche</t343>
+    <t344>Supprimer la table de recherche</t344>
+    <t345>nouvelle</t345>
+    <t346>modifiée</t346>
+    <t347>sera supprimée</t347>
+    <t348>renommée</t348>
+    <t349>Restaurer</t349>
+    <t350>La famille ne contient aucune table de recherche. Créez une nouvelle table ou importez-la depuis un fichier CSV ou Excel</t350>
+    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copier et coller des cellules (y compris depuis Excel), Suppr - effacer les cellules, F2 ou saisie - modifier, Échap - annuler la modification</t351>
+    <t352>Lignes : {0}, colonnes : {1}</t352>
+    <t353>Nom :</t353>
+    <t354>Type de données :</t354>
+    <t355>Unités :</t355>
+    <t356>En-tête de colonne dans le fichier :</t356>
+    <t357>Colonne de la table de recherche</t357>
     <ad1>Permet de renommer un paramètre de famille. L'action n'est pas disponible pour les paramètres système et les paramètres partagés</ad1>
     <ad2>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres système. La modification du groupe d'un paramètre de famille non partagé entraîne la perte de sa description</ad2>
     <ad3>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres de projet</ad3>
@@ -553,5 +584,34 @@
     <err69>Le paramètre "{0}" n'a pas été rendu "Par occurrence" : il faudrait pour cela rendre "Par occurrence" le paramètre "{1}", précédemment rendu "Par type"</err69>
     <err70>Le paramètre "{0}" n'a pas été rendu "Par type" : il faudrait pour cela rendre "Par type" le paramètre "{1}", précédemment rendu "Par occurrence"</err70>
     <err71>Expression régulière non valide : {0}</err71>
+    <err72>Le nom de la table de recherche n'est pas indiqué</err72>
+    <err73>Le nom de la table de recherche "{0}" contient des caractères non valides</err73>
+    <err74>La table de recherche doit contenir au moins une colonne en plus de la première</err74>
+    <err75>Le nom de la colonne {0} n'est pas indiqué</err75>
+    <err76>Le nom de colonne "{0}" contient le caractère non valide "{1}"</err76>
+    <err77>Le type de données et les unités "{1}" de la colonne "{0}" ne sont pas pris en charge par cette version de Revit</err77>
+    <err78>Ligne {0}, colonne {1} : la valeur "{2}" n'est pas un nombre (le séparateur décimal est le point)</err78>
+    <err79>Le nom de colonne "{0}" contient des caractères non pris en charge dans les tables de recherche de cette version de Revit</err79>
+    <err80>Ligne {0}, colonne {1} : la valeur "{2}" contient des caractères non pris en charge dans les tables de recherche de cette version de Revit</err80>
+    <err81>Impossible de déterminer le type de données et les unités de la colonne "{0}" de la table de recherche "{1}"</err81>
+    <err82>Le fichier "{0}" n'est pas une table de recherche : la ligne d'en-tête n'a pas pu être reconnue</err82>
+    <err83>Ligne {0} : le nombre de valeurs ({1}) ne correspond pas au nombre de colonnes ({2})</err83>
+    <msg76>Les espaces au début et à la fin du nom de colonne "{0}" peuvent être supprimés par Revit</msg76>
+    <msg77>Plusieurs colonnes nommées "{0}"</msg77>
+    <msg78>Ligne {0}, colonne {1} : les espaces au début et à la fin de la valeur seront supprimés par Revit</msg78>
+    <msg79>Ligne {0}, colonne {1} : la virgule décimale de la valeur "{2}" a été remplacée par un point</msg79>
+    <msg80>Colonne "{0}" : le type de données et les unités "{1}" ont été remplacés par "{2}" pour la version actuelle de Revit</msg80>
+    <msg81>Une table de recherche nommée "{0}" existe déjà</msg81>
+    <msg82>La table de recherche "{0}" a été renommée en "{1}". Les formules et les paramètres de texte qui contiennent l'ancien nom n'ont pas été modifiés - mettez-les à jour manuellement</msg82>
+    <msg83>Les modifications des tables de recherche n'ont pas été enregistrées. Fermer la fenêtre sans enregistrer ?</msg83>
+    <msg84>Les tables de recherche contiennent des erreurs. Corrigez-les avant d'enregistrer</msg84>
+    <msg85>Sélectionnez une cellule du tableau</msg85>
+    <msg86>Cette action n'est pas disponible pour la première colonne</msg86>
+    <msg87>La table de recherche "{0}" est déjà dans la liste. Remplacer ses données par celles du fichier ?</msg87>
+    <msg88>Convertir les valeurs de la colonne de "{0}" en "{1}" ? Si vous répondez "Non", les nombres restent identiques mais sont considérés comme des valeurs dans les nouvelles unités</msg88>
+    <msg89>Impossible de supprimer la table de recherche "{0}"</msg89>
+    <msg90>Supprimer la colonne "{0}" ?</msg90>
+    <msg91>Supprimer les lignes sélectionnées ({0}) ?</msg91>
+    <msg92>Certaines valeurs du presse-papiers ne tenaient pas dans la largeur du tableau et n'ont pas été collées</msg92>
   </mprParameters>
 </ModPlus>

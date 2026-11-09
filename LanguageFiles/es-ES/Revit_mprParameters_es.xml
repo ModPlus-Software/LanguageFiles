@@ -4,7 +4,9 @@
     LocalName="Parámetros"
     Description="Edición por lotes/adición de parámetros a un proyecto y familias"
     LocalName1="Editor familiar"
-    Description1="Editor de parámetros de la familia actual con editor de fórmulas alternativo">
+    Description1="Editor de parámetros de la familia actual con editor de fórmulas alternativo"
+    LocalName2="Tablas de selección"
+    Description2="Editor de tablas de selección de la familia actual: creación, edición, importación y exportación con validación de datos">
     <pcn1>Creación de parámetros en proyecto</pcn1>
     <pcd1>Le permite crear parámetros por lotes en proyecto actual</pcd1>
     <pcn2>Creación de parámetros en familias</pcn2>
@@ -357,6 +359,35 @@
     <t326>Añadir a la lista</t326>
     <t327>Guardar el cambio actual como paso de la lista y configurar el siguiente. Los pasos se ejecutan en orden</t327>
     <t328>Añada cambios a la lista para realizar varios reemplazos seguidos</t328>
+    <t329>Tablas de selección</t329>
+    <t330>Nombre de la nueva tabla de selección</t330>
+    <t331>Nuevo nombre de la tabla de selección</t331>
+    <t332>Insertar una fila vacía antes de la actual</t332>
+    <t333>Filas:</t333>
+    <t334>Columna:</t334>
+    <t335>Editar</t335>
+    <t336>A la izquierda</t336>
+    <t337>A la derecha</t337>
+    <t338>Doble clic - cambiar el nombre y el tipo de datos de la columna</t338>
+    <t339>La primera columna contiene los nombres de las filas. La función size_lookup no la usa para buscar valores</t339>
+    <t340>Crear tabla de selección</t340>
+    <t341>Importar desde CSV</t341>
+    <t342>Exportar a CSV</t342>
+    <t343>Cambiar nombre de la tabla de selección</t343>
+    <t344>Eliminar tabla de selección</t344>
+    <t345>nueva</t345>
+    <t346>modificada</t346>
+    <t347>se eliminará</t347>
+    <t348>renombrada</t348>
+    <t349>Restaurar</t349>
+    <t350>La familia no tiene tablas de selección. Cree una tabla nueva o impórtela desde un archivo CSV o Excel</t350>
+    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copiar y pegar celdas (también desde Excel), Supr - borrar celdas, F2 o escribir - editar, Esc - cancelar la edición</t351>
+    <t352>Filas: {0}, columnas: {1}</t352>
+    <t353>Nombre:</t353>
+    <t354>Tipo de datos:</t354>
+    <t355>Unidades:</t355>
+    <t356>Encabezado de la columna en el archivo:</t356>
+    <t357>Columna de la tabla de selección</t357>
     <ad1>Permite cambiar nombre de un parámetro familiar. Acción no disponible para los parámetros del sistema y parámetros compartidos</ad1>
     <ad2>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del sistema. Al cambiar un grupo, un parámetro familiar no compartido perderá su descripción</ad2>
     <ad3>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del proyecto</ad3>
@@ -553,5 +584,34 @@
     <err69>El parámetro "{0}" no se hizo "Por ejemplar": para ello hay que hacer "Por ejemplar" el parámetro "{1}", que antes se hizo "Por tipo"</err69>
     <err70>El parámetro "{0}" no se hizo "Por tipo": para ello hay que hacer "Por tipo" el parámetro "{1}", que antes se hizo "Por ejemplar"</err70>
     <err71>Expresión regular no válida: {0}</err71>
+    <err72>No se ha especificado el nombre de la tabla de selección</err72>
+    <err73>El nombre de la tabla de selección "{0}" contiene caracteres no válidos</err73>
+    <err74>La tabla de selección debe contener al menos una columna además de la primera</err74>
+    <err75>No se ha especificado el nombre de la columna {0}</err75>
+    <err76>El nombre de columna "{0}" contiene el carácter no válido "{1}"</err76>
+    <err77>El tipo de datos y las unidades "{1}" de la columna "{0}" no son compatibles con esta versión de Revit</err77>
+    <err78>Fila {0}, columna {1}: el valor "{2}" no es un número (el separador decimal es el punto)</err78>
+    <err79>El nombre de columna "{0}" contiene caracteres no compatibles con las tablas de selección de esta versión de Revit</err79>
+    <err80>Fila {0}, columna {1}: el valor "{2}" contiene caracteres no compatibles con las tablas de selección de esta versión de Revit</err80>
+    <err81>No se pudieron determinar el tipo de datos y las unidades de la columna "{0}" de la tabla de selección "{1}"</err81>
+    <err82>El archivo "{0}" no es una tabla de selección: no se pudo reconocer la fila de encabezados</err82>
+    <err83>Fila {0}: el número de valores ({1}) no coincide con el número de columnas ({2})</err83>
+    <msg76>Revit puede eliminar los espacios al principio y al final del nombre de columna "{0}"</msg76>
+    <msg77>Varias columnas con el nombre "{0}"</msg77>
+    <msg78>Fila {0}, columna {1}: Revit eliminará los espacios al principio y al final del valor</msg78>
+    <msg79>Fila {0}, columna {1}: la coma decimal del valor "{2}" se ha sustituido por un punto</msg79>
+    <msg80>Columna "{0}": el tipo de datos y las unidades "{1}" se han sustituido por "{2}" para la versión actual de Revit</msg80>
+    <msg81>Ya existe una tabla de selección con el nombre "{0}"</msg81>
+    <msg82>La tabla de selección "{0}" se ha renombrado a "{1}". Las fórmulas y los parámetros de texto que contienen el nombre anterior no se han cambiado: actualícelos manualmente</msg82>
+    <msg83>Los cambios en las tablas de selección no se han guardado. ¿Cerrar la ventana sin guardar?</msg83>
+    <msg84>Las tablas de selección contienen errores. Corríjalos antes de guardar</msg84>
+    <msg85>Seleccione una celda de la tabla</msg85>
+    <msg86>Esta acción no está disponible para la primera columna</msg86>
+    <msg87>La tabla de selección "{0}" ya está en la lista. ¿Reemplazar sus datos por los datos del archivo?</msg87>
+    <msg88>¿Convertir los valores de la columna de "{0}" a "{1}"? Si responde "No", los números no cambian, pero se consideran valores en las nuevas unidades</msg88>
+    <msg89>No se pudo eliminar la tabla de selección "{0}"</msg89>
+    <msg90>¿Eliminar la columna "{0}"?</msg90>
+    <msg91>¿Eliminar las filas seleccionadas ({0})?</msg91>
+    <msg92>Algunos valores del portapapeles no cabían en el ancho de la tabla y no se pegaron</msg92>
   </mprParameters>
 </ModPlus>

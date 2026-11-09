@@ -4,7 +4,9 @@
     LocalName="Parâmetros"
     Description="Edição/adição em lote de parâmetros no projeto e em famílias"
     LocalName1="Editor de família"
-    Description1="Editor de parâmetros da família atual com editor de fórmulas alternativo">
+    Description1="Editor de parâmetros da família atual com editor de fórmulas alternativo"
+    LocalName2="Tabelas de pesquisa"
+    Description2="Editor de tabelas de pesquisa da família atual: criação, edição, importação e exportação com validação de dados">
     <pcn1>Criação de parâmetros no projeto</pcn1>
     <pcd1>Permite criar parâmetros em lote no projeto atual</pcd1>
     <pcn2>Criação de parâmetros em famílias</pcn2>
@@ -357,6 +359,35 @@
     <t326>Adicionar à lista</t326>
     <t327>Salvar a alteração atual como etapa da lista e configurar a próxima. As etapas são executadas em ordem</t327>
     <t328>Adicione alterações à lista para realizar várias substituições seguidas</t328>
+    <t329>Tabelas de pesquisa</t329>
+    <t330>Nome da nova tabela de pesquisa</t330>
+    <t331>Novo nome da tabela de pesquisa</t331>
+    <t332>Inserir uma linha vazia antes da atual</t332>
+    <t333>Linhas:</t333>
+    <t334>Coluna:</t334>
+    <t335>Editar</t335>
+    <t336>Para a esquerda</t336>
+    <t337>Para a direita</t337>
+    <t338>Clique duplo - alterar o nome e o tipo de dados da coluna</t338>
+    <t339>A primeira coluna contém os nomes das linhas. A função size_lookup não a utiliza para pesquisar valores</t339>
+    <t340>Criar tabela de pesquisa</t340>
+    <t341>Importar de CSV</t341>
+    <t342>Exportar para CSV</t342>
+    <t343>Renomear tabela de pesquisa</t343>
+    <t344>Excluir tabela de pesquisa</t344>
+    <t345>nova</t345>
+    <t346>alterada</t346>
+    <t347>será excluída</t347>
+    <t348>renomeada</t348>
+    <t349>Restaurar</t349>
+    <t350>A família não possui tabelas de pesquisa. Crie uma nova tabela ou importe-a de um arquivo CSV ou Excel</t350>
+    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copiar e colar células (inclusive do Excel), Delete - limpar células, F2 ou digitação - editar, Esc - cancelar a edição</t351>
+    <t352>Linhas: {0}, colunas: {1}</t352>
+    <t353>Nome:</t353>
+    <t354>Tipo de dados:</t354>
+    <t355>Unidades:</t355>
+    <t356>Cabeçalho da coluna no arquivo:</t356>
+    <t357>Coluna da tabela de pesquisa</t357>
     <ad1>Permite renomear um parâmetro de família. A ação não está disponível para parâmetros de sistema e parâmetros compartilhados</ad1>
     <ad2>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de sistema. Ao alterar o grupo de um parâmetro de família não compartilhado, a descrição será perdida</ad2>
     <ad3>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de projeto</ad3>
@@ -553,5 +584,34 @@
     <err69>O parâmetro "{0}" não foi tornado "Por instância": para isso é necessário tornar "Por instância" o parâmetro "{1}", que foi tornado "Por tipo" anteriormente</err69>
     <err70>O parâmetro "{0}" não foi tornado "Por tipo": para isso é necessário tornar "Por tipo" o parâmetro "{1}", que foi tornado "Por instância" anteriormente</err70>
     <err71>Expressão regular inválida: {0}</err71>
+    <err72>O nome da tabela de pesquisa não foi especificado</err72>
+    <err73>O nome da tabela de pesquisa "{0}" contém caracteres inválidos</err73>
+    <err74>A tabela de pesquisa deve conter pelo menos uma coluna além da primeira</err74>
+    <err75>O nome da coluna {0} não foi especificado</err75>
+    <err76>O nome da coluna "{0}" contém o caractere inválido "{1}"</err76>
+    <err77>O tipo de dados e as unidades "{1}" da coluna "{0}" não são suportados por esta versão do Revit</err77>
+    <err78>Linha {0}, coluna {1}: o valor "{2}" não é um número (o separador decimal é o ponto)</err78>
+    <err79>O nome da coluna "{0}" contém caracteres não suportados em tabelas de pesquisa desta versão do Revit</err79>
+    <err80>Linha {0}, coluna {1}: o valor "{2}" contém caracteres não suportados em tabelas de pesquisa desta versão do Revit</err80>
+    <err81>Não foi possível determinar o tipo de dados e as unidades da coluna "{0}" da tabela de pesquisa "{1}"</err81>
+    <err82>O arquivo "{0}" não é uma tabela de pesquisa: não foi possível reconhecer a linha de cabeçalho</err82>
+    <err83>Linha {0}: o número de valores ({1}) não corresponde ao número de colunas ({2})</err83>
+    <msg76>Os espaços no início e no fim do nome da coluna "{0}" podem ser removidos pelo Revit</msg76>
+    <msg77>Várias colunas com o nome "{0}"</msg77>
+    <msg78>Linha {0}, coluna {1}: os espaços no início e no fim do valor serão removidos pelo Revit</msg78>
+    <msg79>Linha {0}, coluna {1}: a vírgula decimal no valor "{2}" foi substituída por um ponto</msg79>
+    <msg80>Coluna "{0}": o tipo de dados e as unidades "{1}" foram substituídos por "{2}" para a versão atual do Revit</msg80>
+    <msg81>Já existe uma tabela de pesquisa com o nome "{0}"</msg81>
+    <msg82>A tabela de pesquisa "{0}" foi renomeada para "{1}". Fórmulas e parâmetros de texto que contêm o nome anterior não foram alterados - atualize-os manualmente</msg82>
+    <msg83>As alterações nas tabelas de pesquisa não foram salvas. Fechar a janela sem salvar?</msg83>
+    <msg84>As tabelas de pesquisa contêm erros. Corrija-os antes de salvar</msg84>
+    <msg85>Selecione uma célula na tabela</msg85>
+    <msg86>Esta ação não está disponível para a primeira coluna</msg86>
+    <msg87>A tabela de pesquisa "{0}" já está na lista. Substituir os dados dela pelos dados do arquivo?</msg87>
+    <msg88>Converter os valores da coluna de "{0}" para "{1}"? Se responder "Não", os números permanecem os mesmos, mas são considerados valores nas novas unidades</msg88>
+    <msg89>Não foi possível excluir a tabela de pesquisa "{0}"</msg89>
+    <msg90>Excluir a coluna "{0}"?</msg90>
+    <msg91>Excluir as linhas selecionadas ({0})?</msg91>
+    <msg92>Alguns valores da área de transferência não couberam na largura da tabela e não foram colados</msg92>
   </mprParameters>
 </ModPlus>

@@ -4,7 +4,9 @@
     LocalName="Parameter"
     Description="Stapelbearbeitung/Hinzufügen von Parametern zu Projekten und Familien"
     LocalName1="Familieneditor"
-    Description1="Parametereditor der aktuellen Familie mit alternativem Formeleditor">
+    Description1="Parametereditor der aktuellen Familie mit alternativem Formeleditor"
+    LocalName2="Abruftabellen"
+    Description2="Editor für Abruftabellen der aktuellen Familie: Erstellen, Bearbeiten, Import und Export mit Datenprüfung">
     <pcn1>Erstellung von Parametern im Projekt</pcn1>
     <pcd1>Ermöglicht die Stapelerstellung von Parametern im aktuellen Projekt</pcd1>
     <pcn2>Erstellung von Parametern in Familien</pcn2>
@@ -357,6 +359,35 @@
     <t326>Zur Liste hinzufügen</t326>
     <t327>Aktuelle Änderung als Listenschritt speichern und die nächste festlegen. Die Schritte werden der Reihe nach ausgeführt</t327>
     <t328>Fügen Sie Änderungen zur Liste hinzu, um mehrere Ersetzungen nacheinander auszuführen</t328>
+    <t329>Abruftabellen</t329>
+    <t330>Name der neuen Abruftabelle</t330>
+    <t331>Neuer Name der Abruftabelle</t331>
+    <t332>Leere Zeile vor der aktuellen einfügen</t332>
+    <t333>Zeilen:</t333>
+    <t334>Spalte:</t334>
+    <t335>Bearbeiten</t335>
+    <t336>Nach links</t336>
+    <t337>Nach rechts</t337>
+    <t338>Doppelklick - Spaltenname und Datentyp ändern</t338>
+    <t339>Die erste Spalte enthält die Zeilennamen. Die Funktion size_lookup verwendet sie nicht für die Suche nach Werten</t339>
+    <t340>Abruftabelle erstellen</t340>
+    <t341>Import aus CSV</t341>
+    <t342>Export nach CSV</t342>
+    <t343>Abruftabelle umbenennen</t343>
+    <t344>Abruftabelle löschen</t344>
+    <t345>neu</t345>
+    <t346>geändert</t346>
+    <t347>wird gelöscht</t347>
+    <t348>umbenannt</t348>
+    <t349>Wiederherstellen</t349>
+    <t350>Die Familie enthält keine Abruftabellen. Erstellen Sie eine neue Tabelle oder importieren Sie sie aus einer CSV- oder Excel-Datei</t350>
+    <t351>Strg+C, Strg+X, Strg+V - Zellen kopieren und einfügen (auch aus Excel), Entf - Zellen leeren, F2 oder Tastatureingabe - bearbeiten, Esc - Bearbeitung abbrechen</t351>
+    <t352>Zeilen: {0}, Spalten: {1}</t352>
+    <t353>Name:</t353>
+    <t354>Datentyp:</t354>
+    <t355>Einheiten:</t355>
+    <t356>Spaltenkopf in der Datei:</t356>
+    <t357>Spalte der Abruftabelle</t357>
     <ad1>Ermöglicht die Umbenennung eines Familienparameters. Die Aktion ist für Systemparameter und die gemeinsam genutzten Parameter nicht verfügbar</ad1>
     <ad2>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Systemparameter nicht verfügbar. Beim Ändern der Gruppe verlieren die nicht gemeinsam genutzten Parameter der Familie ihre Beschreibung</ad2>
     <ad3>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Projektparameter nicht verfügbar</ad3>
@@ -553,5 +584,34 @@
     <err69>Parameter "{0}" wurde nicht auf "Exemplarweise" gesetzt: Dazu muss der Parameter "{1}", der zuvor auf "Typweise" gesetzt wurde, auf "Exemplarweise" gesetzt werden</err69>
     <err70>Parameter "{0}" wurde nicht auf "Typweise" gesetzt: Dazu muss der Parameter "{1}", der zuvor auf "Exemplarweise" gesetzt wurde, auf "Typweise" gesetzt werden</err70>
     <err71>Ungültiger regulärer Ausdruck: {0}</err71>
+    <err72>Der Name der Abruftabelle ist nicht angegeben</err72>
+    <err73>Der Name der Abruftabelle "{0}" enthält ungültige Zeichen</err73>
+    <err74>Die Abruftabelle muss außer der ersten Spalte mindestens eine weitere Spalte enthalten</err74>
+    <err75>Der Name der Spalte {0} ist nicht angegeben</err75>
+    <err76>Der Spaltenname "{0}" enthält das ungültige Zeichen "{1}"</err76>
+    <err77>Der Datentyp und die Einheiten "{1}" der Spalte "{0}" werden von dieser Revit-Version nicht unterstützt</err77>
+    <err78>Zeile {0}, Spalte {1}: Der Wert "{2}" ist keine Zahl (Dezimaltrennzeichen ist der Punkt)</err78>
+    <err79>Der Spaltenname "{0}" enthält Zeichen, die in Abruftabellen dieser Revit-Version nicht unterstützt werden</err79>
+    <err80>Zeile {0}, Spalte {1}: Der Wert "{2}" enthält Zeichen, die in Abruftabellen dieser Revit-Version nicht unterstützt werden</err80>
+    <err81>Datentyp und Einheiten der Spalte "{0}" der Abruftabelle "{1}" konnten nicht bestimmt werden</err81>
+    <err82>Die Datei "{0}" ist keine Abruftabelle: Die Kopfzeile konnte nicht erkannt werden</err82>
+    <err83>Zeile {0}: Die Anzahl der Werte ({1}) stimmt nicht mit der Anzahl der Spalten ({2}) überein</err83>
+    <msg76>Führende und nachfolgende Leerzeichen im Spaltennamen "{0}" können von Revit entfernt werden</msg76>
+    <msg77>Mehrere Spalten mit dem Namen "{0}"</msg77>
+    <msg78>Zeile {0}, Spalte {1}: Führende und nachfolgende Leerzeichen im Wert werden von Revit entfernt</msg78>
+    <msg79>Zeile {0}, Spalte {1}: Das Dezimalkomma im Wert "{2}" wurde durch einen Punkt ersetzt</msg79>
+    <msg80>Spalte "{0}": Datentyp und Einheiten "{1}" wurden für die aktuelle Revit-Version durch "{2}" ersetzt</msg80>
+    <msg81>Eine Abruftabelle mit dem Namen "{0}" ist bereits vorhanden</msg81>
+    <msg82>Die Abruftabelle "{0}" wurde in "{1}" umbenannt. Formeln und Textparameter mit dem alten Namen wurden nicht geändert - aktualisieren Sie sie manuell</msg82>
+    <msg83>Die Änderungen an den Abruftabellen wurden nicht gespeichert. Fenster ohne Speichern schließen?</msg83>
+    <msg84>Die Abruftabellen enthalten Fehler. Beheben Sie sie vor dem Speichern</msg84>
+    <msg85>Wählen Sie eine Zelle in der Tabelle aus</msg85>
+    <msg86>Diese Aktion ist für die erste Spalte nicht verfügbar</msg86>
+    <msg87>Die Abruftabelle "{0}" ist bereits in der Liste. Ihre Daten durch die Daten aus der Datei ersetzen?</msg87>
+    <msg88>Spaltenwerte von "{0}" in "{1}" umrechnen? Bei "Nein" bleiben die Zahlen gleich, gelten aber als Werte in den neuen Einheiten</msg88>
+    <msg89>Die Abruftabelle "{0}" konnte nicht gelöscht werden</msg89>
+    <msg90>Spalte "{0}" löschen?</msg90>
+    <msg91>Ausgewählte Zeilen ({0}) löschen?</msg91>
+    <msg92>Einige Werte aus der Zwischenablage passten nicht in die Tabellenbreite und wurden nicht eingefügt</msg92>
   </mprParameters>
 </ModPlus>
