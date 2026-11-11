@@ -21,6 +21,8 @@
     <pcd5>Permet de modifier des paramètres par lots dans les familles du projet, les familles ouvertes ou les familles sur le disque</pcd5>
     <pcn6>Suppression des paramètres inutilisés dans les familles</pcn6>
     <pcd6>Permet de supprimer par lots les paramètres inutilisés dans les familles du projet, les familles ouvertes ou les familles sur le disque</pcd6>
+    <pcn7>Tables de recherche dans les familles</pcn7>
+    <pcd7>Permet de vérifier, exporter, charger, renommer et supprimer des tables de recherche dans les familles du projet, les familles ouvertes ou les familles sur disque</pcd7>
     <t1>Aucun document</t1>
     <t2>Famille</t2>
     <t3>Projet</t3>
@@ -381,13 +383,45 @@
     <t348>renommée</t348>
     <t349>Restaurer</t349>
     <t350>La famille ne contient aucune table de recherche. Créez une nouvelle table ou importez-la depuis un fichier CSV ou Excel</t350>
-    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copier et coller des cellules (y compris depuis Excel), Suppr - effacer les cellules, F2 ou saisie - modifier, Échap - annuler la modification</t351>
+    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copier et coller des cellules (y compris depuis Excel), Suppr - effacer les cellules, F2 ou saisie - modifier (si plusieurs cellules sont sélectionnées, la valeur est écrite dans toutes), Échap - annuler la modification</t351>
     <t352>Lignes : {0}, colonnes : {1}</t352>
     <t353>Nom :</t353>
     <t354>Type de données :</t354>
     <t355>Unités :</t355>
     <t356>En-tête de colonne dans le fichier :</t356>
     <t357>Colonne de la table de recherche</t357>
+    <t358>Annuler les modifications de la table de recherche</t358>
+    <t359>Clé de recherche {0}</t359>
+    <t360>Utilisée dans des formules</t360>
+    <t361>Clé de recherche {0}. L'ordre et le type de données des colonnes clés doivent correspondre aux formules des paramètres :</t361>
+    <t362>Les formules de ces paramètres prennent leur valeur dans cette colonne :</t362>
+    <t363>et {0} de plus</t363>
+    <t364>Utilisée dans des formules : {0}</t364>
+    <t365>Tables de recherche : {0}</t365>
+    <t366>Non utilisée</t366>
+    <t367>Le nom de la table est indiqué dans une formule ou un paramètre de texte</t367>
+    <t368>Sélectionnez un dossier pour exporter les tables de recherche</t368>
+    <t369>Rechercher par nom de famille ou de table</t369>
+    <t370>Cocher les non utilisées</t370>
+    <t371>Tables cochées :</t371>
+    <t372>Dans les familles cochées :</t372>
+    <t373>Tables cochées :</t373>
+    <t374>Familles modifiées (enregistrées avec le bouton "Exécuter") :</t374>
+    <t375>Double-clic sur une table ou une famille - ouvrir dans l'éditeur de tables de recherche</t375>
+    <t376>Modifiée, non enregistrée</t376>
+    <t377>Cocher uniquement les tables auxquelles aucune formule ne fait référence et dont les noms ne sont indiqués ni dans les formules ni dans les paramètres de texte. Ces tables peuvent être supprimées sans conséquence pour la famille</t377>
+    <t378>Renommer les tables cochées portant le même nom dans une ou plusieurs familles. Les formules qui y font référence peuvent être mises à jour automatiquement</t378>
+    <t379>Modifier en une fois dans toutes les familles les tables cochées portant le même nom : la table s'ouvre dans l'éditeur et le résultat est écrit dans toutes les familles cochées</t379>
+    <t380>Type de paramètre</t380>
+    <t381>Aucun paramètre partagé sélectionné</t381>
+    <t382>Données du paramètre</t382>
+    <t383>Regrouper le paramètre sous :</t383>
+    <t384>Info-bulle :</t384>
+    <t385>La création d'un paramètre avec ce type de données n'est pas prise en charge</t385>
+    <t386>Catégories des familles chargées dans la famille actuelle</t386>
+    <t387>Aucune famille n'est chargée dans la famille actuelle</t387>
+    <t388>Sont considérés comme appropriés les paramètres dont les noms ne correspondent pas aux noms des paramètres de la famille</t388>
+    <t389>Discipline :</t389>
     <ad1>Permet de renommer un paramètre de famille. L'action n'est pas disponible pour les paramètres système et les paramètres partagés</ad1>
     <ad2>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres système. La modification du groupe d'un paramètre de famille non partagé entraîne la perte de sa description</ad2>
     <ad3>Permet de modifier le groupe du paramètre. L'action n'est pas disponible pour les paramètres de projet</ad3>
@@ -602,7 +636,6 @@
     <msg79>Ligne {0}, colonne {1} : la virgule décimale de la valeur "{2}" a été remplacée par un point</msg79>
     <msg80>Colonne "{0}" : le type de données et les unités "{1}" ont été remplacés par "{2}" pour la version actuelle de Revit</msg80>
     <msg81>Une table de recherche nommée "{0}" existe déjà</msg81>
-    <msg82>La table de recherche "{0}" a été renommée en "{1}". Les formules et les paramètres de texte qui contiennent l'ancien nom n'ont pas été modifiés - mettez-les à jour manuellement</msg82>
     <msg83>Les modifications des tables de recherche n'ont pas été enregistrées. Fermer la fenêtre sans enregistrer ?</msg83>
     <msg84>Les tables de recherche contiennent des erreurs. Corrigez-les avant d'enregistrer</msg84>
     <msg85>Sélectionnez une cellule du tableau</msg85>
@@ -613,5 +646,33 @@
     <msg90>Supprimer la colonne "{0}" ?</msg90>
     <msg91>Supprimer les lignes sélectionnées ({0}) ?</msg91>
     <msg92>Certaines valeurs du presse-papiers ne tenaient pas dans la largeur du tableau et n'ont pas été collées</msg92>
+    <msg95>Annuler toutes les modifications non enregistrées de la table de recherche "{0}" ?</msg95>
+    <msg96>La formule du paramètre "{0}" recherche la ligne par {1} colonnes, mais le tableau en contient {2}</msg96>
+    <msg97>La formule du paramètre "{0}" prend la valeur de la colonne "{1}", qui n'existe pas dans le tableau</msg97>
+    <msg98>Formule du paramètre "{0}" : la clé {1} (paramètre "{2}") est comparée à la colonne "{3}" ({4}) - les types de données ne correspondent pas, la valeur ne sera pas trouvée</msg98>
+    <msg100>La colonne "{0}" est utilisée dans des formules. Après sa suppression, ces formules renverront la valeur par défaut. Supprimer la colonne ?</msg100>
+    <msg101>Les formules recherchent la ligne du tableau par les {0} premières colonnes après la colonne de description, strictement dans leur ordre. Modifier l'ordre de ces colonnes rendra les formules incorrectes. Continuer ?</msg101>
+    <msg102>La table de recherche "{0}" est utilisée dans des formules. Après sa suppression, ces formules renverront la valeur par défaut. Supprimer la table ?</msg102>
+    <msg103>Des tables ou des colonnes utilisées dans des formules ont été renommées. Mettre à jour les formules des paramètres ?</msg103>
+    <msg104>Les formules de ces paramètres contiennent d'anciens noms de tables ou de colonnes et n'ont pas été mises à jour - mettez-les à jour manuellement :</msg104>
+    <msg105>Impossible de mettre à jour la formule du paramètre "{0}" : {1}</msg105>
+    <msg106>Les formules des paramètres font référence à la table "{0}", qui n'existe pas dans la famille : {1}</msg106>
+    <msg107>Cochez des tables de recherche</msg107>
+    <msg108>Table "{0}" : le nom de la feuille Excel est "{1}" (les noms de feuille sont limités à 31 caractères). Lors de l'import depuis Excel, le nom de la table est pris dans le nom de la feuille</msg108>
+    <msg109>Tables exportées : {0}</msg109>
+    <msg110>La table de recherche "{0}" ne sera pas chargée : elle contient des erreurs</msg110>
+    <msg111>Cochez les familles dans lesquelles charger les tables de recherche</msg111>
+    <msg112>Familles enregistrées : {0}</msg112>
+    <msg113>Charger les tables de recherche ({0}) dans les familles ({1}) ? Les tables portant le même nom seront remplacées : {2}</msg113>
+    <msg114>Table de recherche "{0}" chargée</msg114>
+    <msg115>Supprimer les tables de recherche ({0}) dans les familles ({1}) ?</msg115>
+    <msg116>Utilisées dans les familles : {0}. Les formules qui y font référence renverront la valeur par défaut</msg116>
+    <msg117>Table de recherche "{0}" supprimée</msg117>
+    <msg118>Pour renommer, cochez des tables de recherche portant le même nom (dans une ou plusieurs familles)</msg118>
+    <msg119>Table de recherche "{0}" renommée en "{1}"</msg119>
+    <msg120>Pour une modification par lot, cochez des tables de recherche portant le même nom dans plusieurs familles</msg120>
+    <msg121>La table de recherche "{0}" diffère selon les familles : {1}. La table de la famille "{2}" servira de base ; dans les autres familles, elle sera remplacée par la table modifiée. Continuer ?</msg121>
+    <msg122>Table de recherche "{0}" mise à jour</msg122>
+    <msg123>Aucune table de recherche non utilisée trouvée</msg123>
   </mprParameters>
 </ModPlus>

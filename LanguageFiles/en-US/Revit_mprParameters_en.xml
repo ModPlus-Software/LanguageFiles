@@ -21,6 +21,8 @@
     <pcd5>Allows batch editing of parameters in project families, open families, or families on disk</pcd5>
     <pcn6>Remove unused parameters in families</pcn6>
     <pcd6>Allows batch removal of unused parameters in project families, open families, or families on disk</pcd6>
+    <pcn7>Lookup tables in families</pcn7>
+    <pcd7>Allows checking, exporting, loading, renaming and deleting lookup tables in project families, open families, or families on disk</pcd7>
     <t1>No document</t1>
     <t2>Family</t2>
     <t3>Project</t3>
@@ -381,13 +383,45 @@
     <t348>renamed</t348>
     <t349>Restore</t349>
     <t350>The family has no lookup tables. Create a new table or import one from a CSV or Excel file</t350>
-    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copy and paste cells (including from Excel), Delete - clear cells, F2 or typing - edit, Esc - cancel editing</t351>
+    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copy and paste cells (including from Excel), Delete - clear cells, F2 or typing - edit (with several cells selected, the value is written to all of them), Esc - cancel editing</t351>
     <t352>Rows: {0}, columns: {1}</t352>
     <t353>Name:</t353>
     <t354>Data type:</t354>
     <t355>Units:</t355>
     <t356>Column header in the file:</t356>
     <t357>Lookup table column</t357>
+    <t358>Discard lookup table changes</t358>
+    <t359>Lookup key {0}</t359>
+    <t360>Used in formulas</t360>
+    <t361>Lookup key {0}. The order and data type of the key columns must match the formulas of parameters:</t361>
+    <t362>Formulas of these parameters take values from this column:</t362>
+    <t363>and {0} more</t363>
+    <t364>Used in formulas: {0}</t364>
+    <t365>Lookup tables: {0}</t365>
+    <t366>Not used</t366>
+    <t367>The table name is specified in a formula or text parameter</t367>
+    <t368>Select a folder to export lookup tables</t368>
+    <t369>Search by family or table name</t369>
+    <t370>Check unused</t370>
+    <t371>Checked tables:</t371>
+    <t372>Into checked families:</t372>
+    <t373>Tables checked:</t373>
+    <t374>Families changed (saved with the "Execute" button):</t374>
+    <t375>Double-click a table or family to open it in the lookup table editor</t375>
+    <t376>Changed, not saved</t376>
+    <t377>Check only tables that are not referenced by formulas and whose names are not specified in formulas or text parameters. Such tables can be deleted without consequences for the family</t377>
+    <t378>Rename checked tables with the same name in one or more families. Formulas that reference them can be updated automatically</t378>
+    <t379>Edit checked tables with the same name in all families at once: the table opens in the editor, and the result is written to all checked families</t379>
+    <t380>Parameter Type</t380>
+    <t381>Shared parameter is not selected</t381>
+    <t382>Parameter Data</t382>
+    <t383>Group parameter under:</t383>
+    <t384>ToolTip:</t384>
+    <t385>Creating a parameter with this data type is not supported</t385>
+    <t386>Categories of families loaded into the current family</t386>
+    <t387>No families are loaded into the current family</t387>
+    <t388>Suitable parameters are those whose names do not match the names of the family parameters</t388>
+    <t389>Discipline:</t389>
     <ad1>Allows you to rename a family parameter. The action is not available for system parameters and shared parameters</ad1>
     <ad2>Allows you to change the group of the parameter. The action is not available for system parameters. If you change the group of a non-shared parameter of a family, the description will be lost</ad2>
     <ad3>Allows you to change the group of the parameter. The action is not available for project parameters</ad3>
@@ -602,7 +636,6 @@
     <msg79>Row {0}, column {1}: the decimal comma in the value "{2}" was replaced with a period</msg79>
     <msg80>Column "{0}": the data type and units "{1}" were replaced with "{2}" for the current Revit version</msg80>
     <msg81>A lookup table named "{0}" already exists</msg81>
-    <msg82>Lookup table "{0}" has been renamed to "{1}". Formulas and text parameters that contain the old name have not been changed - update them manually</msg82>
     <msg83>Changes to the lookup tables have not been saved. Close the window without saving?</msg83>
     <msg84>The lookup tables contain errors. Fix them before saving</msg84>
     <msg85>Select a cell in the table</msg85>
@@ -613,5 +646,33 @@
     <msg90>Delete column "{0}"?</msg90>
     <msg91>Delete the selected rows ({0})?</msg91>
     <msg92>Some values from the clipboard did not fit into the table width and were not pasted</msg92>
+    <msg95>Discard all unsaved changes to lookup table "{0}"?</msg95>
+    <msg96>The formula of parameter "{0}" looks up the row by {1} columns, but the table has {2}</msg96>
+    <msg97>The formula of parameter "{0}" takes a value from column "{1}", which is not in the table</msg97>
+    <msg98>Formula of parameter "{0}": key {1} (parameter "{2}") is compared with column "{3}" ({4}) - the data types do not match, the value will not be found</msg98>
+    <msg100>Column "{0}" is used in formulas. After deletion, these formulas will return the default value. Delete the column?</msg100>
+    <msg101>Formulas look up the table row by the first {0} columns after the description column - strictly in their order. Changing the order of these columns will break the formulas. Continue?</msg101>
+    <msg102>Lookup table "{0}" is used in formulas. After deletion, these formulas will return the default value. Delete the table?</msg102>
+    <msg103>Tables or columns used in formulas have been renamed. Update the parameter formulas?</msg103>
+    <msg104>The formulas of these parameters contain old table or column names and have not been updated - update them manually:</msg104>
+    <msg105>Failed to update the formula of parameter "{0}": {1}</msg105>
+    <msg106>Parameter formulas reference table "{0}", which is not in the family: {1}</msg106>
+    <msg107>Check lookup tables</msg107>
+    <msg108>Table "{0}": Excel sheet name is "{1}" (sheet names are limited to 31 characters). When importing from Excel, the table name is taken from the sheet name</msg108>
+    <msg109>Tables exported: {0}</msg109>
+    <msg110>Lookup table "{0}" will not be loaded: it contains errors</msg110>
+    <msg111>Check the families to load lookup tables into</msg111>
+    <msg112>Families saved: {0}</msg112>
+    <msg113>Load lookup tables ({0}) into families ({1})? Tables with the same names will be replaced: {2}</msg113>
+    <msg114>Lookup table "{0}" loaded</msg114>
+    <msg115>Delete lookup tables ({0}) in families ({1})?</msg115>
+    <msg116>Used in families: {0}. Formulas that reference them will return the default value</msg116>
+    <msg117>Lookup table "{0}" deleted</msg117>
+    <msg118>To rename, check lookup tables with the same name (in one or more families)</msg118>
+    <msg119>Lookup table "{0}" renamed to "{1}"</msg119>
+    <msg120>For batch editing, check lookup tables with the same name in several families</msg120>
+    <msg121>Lookup table "{0}" differs in families: {1}. The table from family "{2}" will be used as the base; in the other families it will be replaced with the edited table. Continue?</msg121>
+    <msg122>Lookup table "{0}" updated</msg122>
+    <msg123>No unused lookup tables found</msg123>
   </mprParameters>
 </ModPlus>

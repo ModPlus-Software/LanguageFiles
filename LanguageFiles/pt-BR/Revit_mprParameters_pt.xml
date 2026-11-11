@@ -21,6 +21,8 @@
     <pcd5>Permite editar parâmetros em lote em famílias do projeto, famílias abertas ou famílias no disco</pcd5>
     <pcn6>Exclusão de parâmetros não utilizados em famílias</pcn6>
     <pcd6>Permite excluir em lote parâmetros não utilizados em famílias do projeto, famílias abertas ou famílias no disco</pcd6>
+    <pcn7>Tabelas de pesquisa em famílias</pcn7>
+    <pcd7>Permite verificar, exportar, carregar, renomear e excluir tabelas de pesquisa em famílias do projeto, famílias abertas ou famílias no disco</pcd7>
     <t1>Nenhum documento</t1>
     <t2>Família</t2>
     <t3>Projeto</t3>
@@ -381,13 +383,45 @@
     <t348>renomeada</t348>
     <t349>Restaurar</t349>
     <t350>A família não possui tabelas de pesquisa. Crie uma nova tabela ou importe-a de um arquivo CSV ou Excel</t350>
-    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copiar e colar células (inclusive do Excel), Delete - limpar células, F2 ou digitação - editar, Esc - cancelar a edição</t351>
+    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copiar e colar células (inclusive do Excel), Delete - limpar células, F2 ou digitação - editar (com várias células selecionadas, o valor é gravado em todas), Esc - cancelar a edição</t351>
     <t352>Linhas: {0}, colunas: {1}</t352>
     <t353>Nome:</t353>
     <t354>Tipo de dados:</t354>
     <t355>Unidades:</t355>
     <t356>Cabeçalho da coluna no arquivo:</t356>
     <t357>Coluna da tabela de pesquisa</t357>
+    <t358>Descartar as alterações da tabela de pesquisa</t358>
+    <t359>Chave de pesquisa {0}</t359>
+    <t360>Usada em fórmulas</t360>
+    <t361>Chave de pesquisa {0}. A ordem e o tipo de dados das colunas-chave devem corresponder às fórmulas dos parâmetros:</t361>
+    <t362>As fórmulas destes parâmetros obtêm valores desta coluna:</t362>
+    <t363>e mais {0}</t363>
+    <t364>Usada em fórmulas: {0}</t364>
+    <t365>Tabelas de pesquisa: {0}</t365>
+    <t366>Não usada</t366>
+    <t367>O nome da tabela é indicado em uma fórmula ou parâmetro de texto</t367>
+    <t368>Selecione uma pasta para exportar as tabelas de pesquisa</t368>
+    <t369>Pesquisar por nome de família ou tabela</t369>
+    <t370>Marcar não usadas</t370>
+    <t371>Tabelas marcadas:</t371>
+    <t372>Nas famílias marcadas:</t372>
+    <t373>Tabelas marcadas:</t373>
+    <t374>Famílias alteradas (salvas com o botão "Executar"):</t374>
+    <t375>Clique duplo em uma tabela ou família - abrir no editor de tabelas de pesquisa</t375>
+    <t376>Alterada, não salva</t376>
+    <t377>Marcar apenas as tabelas que não são referenciadas por fórmulas e cujos nomes não são indicados em fórmulas ou parâmetros de texto. Essas tabelas podem ser excluídas sem consequências para a família</t377>
+    <t378>Renomear as tabelas marcadas com o mesmo nome em uma ou várias famílias. As fórmulas que as referenciam podem ser atualizadas automaticamente</t378>
+    <t379>Editar de uma vez em todas as famílias as tabelas marcadas com o mesmo nome: a tabela é aberta no editor e o resultado é gravado em todas as famílias marcadas</t379>
+    <t380>Tipo de parâmetro</t380>
+    <t381>Nenhum parâmetro compartilhado selecionado</t381>
+    <t382>Dados do parâmetro</t382>
+    <t383>Agrupar parâmetro em:</t383>
+    <t384>Dica de ferramenta:</t384>
+    <t385>A criação de um parâmetro com este tipo de dados não é suportada</t385>
+    <t386>Categorias das famílias carregadas na família atual</t386>
+    <t387>Nenhuma família está carregada na família atual</t387>
+    <t388>São considerados adequados os parâmetros cujos nomes não coincidem com os nomes dos parâmetros da família</t388>
+    <t389>Disciplina:</t389>
     <ad1>Permite renomear um parâmetro de família. A ação não está disponível para parâmetros de sistema e parâmetros compartilhados</ad1>
     <ad2>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de sistema. Ao alterar o grupo de um parâmetro de família não compartilhado, a descrição será perdida</ad2>
     <ad3>Permite alterar o grupo do parâmetro. A ação não está disponível para parâmetros de projeto</ad3>
@@ -602,7 +636,6 @@
     <msg79>Linha {0}, coluna {1}: a vírgula decimal no valor "{2}" foi substituída por um ponto</msg79>
     <msg80>Coluna "{0}": o tipo de dados e as unidades "{1}" foram substituídos por "{2}" para a versão atual do Revit</msg80>
     <msg81>Já existe uma tabela de pesquisa com o nome "{0}"</msg81>
-    <msg82>A tabela de pesquisa "{0}" foi renomeada para "{1}". Fórmulas e parâmetros de texto que contêm o nome anterior não foram alterados - atualize-os manualmente</msg82>
     <msg83>As alterações nas tabelas de pesquisa não foram salvas. Fechar a janela sem salvar?</msg83>
     <msg84>As tabelas de pesquisa contêm erros. Corrija-os antes de salvar</msg84>
     <msg85>Selecione uma célula na tabela</msg85>
@@ -613,5 +646,33 @@
     <msg90>Excluir a coluna "{0}"?</msg90>
     <msg91>Excluir as linhas selecionadas ({0})?</msg91>
     <msg92>Alguns valores da área de transferência não couberam na largura da tabela e não foram colados</msg92>
+    <msg95>Descartar todas as alterações não salvas da tabela de pesquisa "{0}"?</msg95>
+    <msg96>A fórmula do parâmetro "{0}" procura a linha por {1} colunas, mas a tabela tem {2}</msg96>
+    <msg97>A fórmula do parâmetro "{0}" obtém o valor da coluna "{1}", que não existe na tabela</msg97>
+    <msg98>Fórmula do parâmetro "{0}": a chave {1} (parâmetro "{2}") é comparada com a coluna "{3}" ({4}) - os tipos de dados não coincidem, o valor não será encontrado</msg98>
+    <msg100>A coluna "{0}" é usada em fórmulas. Após a exclusão, essas fórmulas retornarão o valor padrão. Excluir a coluna?</msg100>
+    <msg101>As fórmulas procuram a linha da tabela pelas primeiras {0} colunas após a coluna de descrição, estritamente nessa ordem. Alterar a ordem dessas colunas quebrará as fórmulas. Continuar?</msg101>
+    <msg102>A tabela de pesquisa "{0}" é usada em fórmulas. Após a exclusão, essas fórmulas retornarão o valor padrão. Excluir a tabela?</msg102>
+    <msg103>Tabelas ou colunas usadas em fórmulas foram renomeadas. Atualizar as fórmulas dos parâmetros?</msg103>
+    <msg104>As fórmulas destes parâmetros contêm nomes antigos de tabelas ou colunas e não foram atualizadas - atualize-as manualmente:</msg104>
+    <msg105>Não foi possível atualizar a fórmula do parâmetro "{0}": {1}</msg105>
+    <msg106>As fórmulas dos parâmetros referenciam a tabela "{0}", que não existe na família: {1}</msg106>
+    <msg107>Marque tabelas de pesquisa</msg107>
+    <msg108>Tabela "{0}": o nome da planilha do Excel é "{1}" (nomes de planilha são limitados a 31 caracteres). Ao importar do Excel, o nome da tabela é obtido do nome da planilha</msg108>
+    <msg109>Tabelas exportadas: {0}</msg109>
+    <msg110>A tabela de pesquisa "{0}" não será carregada: ela contém erros</msg110>
+    <msg111>Marque as famílias nas quais as tabelas de pesquisa devem ser carregadas</msg111>
+    <msg112>Famílias salvas: {0}</msg112>
+    <msg113>Carregar tabelas de pesquisa ({0}) nas famílias ({1})? Tabelas com os mesmos nomes serão substituídas: {2}</msg113>
+    <msg114>Tabela de pesquisa "{0}" carregada</msg114>
+    <msg115>Excluir tabelas de pesquisa ({0}) nas famílias ({1})?</msg115>
+    <msg116>Usadas nas famílias: {0}. As fórmulas que as referenciam retornarão o valor padrão</msg116>
+    <msg117>Tabela de pesquisa "{0}" excluída</msg117>
+    <msg118>Para renomear, marque tabelas de pesquisa com o mesmo nome (em uma ou várias famílias)</msg118>
+    <msg119>Tabela de pesquisa "{0}" renomeada para "{1}"</msg119>
+    <msg120>Para edição em lote, marque tabelas de pesquisa com o mesmo nome em várias famílias</msg120>
+    <msg121>A tabela de pesquisa "{0}" é diferente nas famílias: {1}. A tabela da família "{2}" será usada como base; nas demais famílias ela será substituída pela tabela editada. Continuar?</msg121>
+    <msg122>Tabela de pesquisa "{0}" atualizada</msg122>
+    <msg123>Nenhuma tabela de pesquisa não usada encontrada</msg123>
   </mprParameters>
 </ModPlus>

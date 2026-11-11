@@ -21,6 +21,8 @@
     <pcd5>Loyiha oilalarida, ochiq oilalarda yoki diskdagi oilalarda parametrlarni paketli tahrirlash imkonini beradi</pcd5>
     <pcn6>Oilalarda foydalanilmagan parametrlarni oʻchirish</pcn6>
     <pcd6>Loyiha oilalarida, ochiq oilalarda yoki diskdagi oilalarda foydalanilmagan parametrlarni paketli oʻchirish imkonini beradi</pcd6>
+    <pcn7>Oilalardagi tanlov jadvallari</pcn7>
+    <pcd7>Loyiha oilalari, ochiq oilalar yoki diskdagi oilalardagi tanlov jadvallarini tekshirish, eksport qilish, yuklash, qayta nomlash va o'chirish imkonini beradi</pcd7>
     <t1>Hujjat yoʻq</t1>
     <t2>Oila</t2>
     <t3>Loyiha</t3>
@@ -381,13 +383,45 @@
     <t348>qayta nomlangan</t348>
     <t349>Tiklash</t349>
     <t350>Oilada tanlov jadvallari yo'q. Yangi jadval yarating yoki uni CSV yoki Excel faylidan import qiling</t350>
-    <t351>Ctrl+C, Ctrl+X, Ctrl+V - kataklarni nusxalash va qo'yish (Excel dan ham), Delete - kataklarni tozalash, F2 yoki klaviaturadan kiritish - tahrirlash, Esc - tahrirlashni bekor qilish</t351>
+    <t351>Ctrl+C, Ctrl+X, Ctrl+V - kataklarni nusxalash va qo'yish (Excel dan ham), Delete - kataklarni tozalash, F2 yoki klaviaturadan kiritish - tahrirlash (bir nechta katak tanlanganda qiymat hammasiga yoziladi), Esc - tahrirlashni bekor qilish</t351>
     <t352>Qatorlar: {0}, ustunlar: {1}</t352>
     <t353>Nomi:</t353>
     <t354>Ma'lumot turi:</t354>
     <t355>Birliklar:</t355>
     <t356>Fayldagi ustun sarlavhasi:</t356>
     <t357>Tanlov jadvali ustuni</t357>
+    <t358>Tanlov jadvalidagi o'zgarishlarni bekor qilish</t358>
+    <t359>Qidiruv kaliti {0}</t359>
+    <t360>Formulalarda ishlatiladi</t360>
+    <t361>Qidiruv kaliti {0}. Kalit ustunlarning tartibi va ma'lumot turi parametrlar formulalariga mos bo'lishi kerak:</t361>
+    <t362>Ushbu parametrlarning formulalari qiymatni shu ustundan oladi:</t362>
+    <t363>va yana {0}</t363>
+    <t364>Formulalarda ishlatiladi: {0}</t364>
+    <t365>Tanlov jadvallari: {0}</t365>
+    <t366>Ishlatilmaydi</t366>
+    <t367>Jadval nomi formulada yoki matnli parametrda ko'rsatilgan</t367>
+    <t368>Tanlov jadvallarini eksport qilish uchun papkani tanlang</t368>
+    <t369>Oila yoki jadval nomi bo'yicha qidirish</t369>
+    <t370>Ishlatilmaydiganlarni belgilash</t370>
+    <t371>Belgilangan jadvallar:</t371>
+    <t372>Belgilangan oilalarga:</t372>
+    <t373>Belgilangan jadvallar:</t373>
+    <t374>O'zgartirilgan oilalar ("Bajarish" tugmasi bilan saqlanadi):</t374>
+    <t375>Jadval yoki oilani ikki marta bosish - tanlov jadvallari muharririda ochish</t375>
+    <t376>O'zgartirilgan, saqlanmagan</t376>
+    <t377>Faqat formulalar murojaat qilmaydigan va nomlari formulalarda va matnli parametrlarda ko'rsatilmagan jadvallarni belgilash. Bunday jadvallarni oila uchun oqibatsiz o'chirish mumkin</t377>
+    <t378>Bir yoki bir nechta oiladagi bir xil nomli belgilangan jadvallarni qayta nomlash. Ularga murojaat qiluvchi formulalarni avtomatik yangilash mumkin</t378>
+    <t379>Bir xil nomli belgilangan jadvallarni barcha oilalarda birdaniga o'zgartirish: jadval muharrirda ochiladi, natija esa barcha belgilangan oilalarga yoziladi</t379>
+    <t380>Parametr turi</t380>
+    <t381>Umumiy parametr tanlanmagan</t381>
+    <t382>Parametr maʼlumotlari</t382>
+    <t383>Parametrni guruhlash:</t383>
+    <t384>Koʻrsatma:</t384>
+    <t385>Bunday maʼlumot turidagi parametrni yaratish qoʻllab-quvvatlanmaydi</t385>
+    <t386>Joriy oilaga yuklangan oilalar toifalari</t386>
+    <t387>Joriy oilaga birorta ham oila yuklanmagan</t387>
+    <t388>Nomlari oila parametrlari nomlari bilan mos kelmaydigan parametrlar mos hisoblanadi</t388>
+    <t389>Soha:</t389>
     <ad1>Oila parametrini qayta nomlash imkonini beradi. Amal tizim parametrlari va umumiy parametrlar uchun mavjud emas</ad1>
     <ad2>Parametr guruhini oʻzgartirish imkonini beradi. Amal tizim parametrlari uchun mavjud emas. Oilaning umumiy boʻlmagan parametri guruhi oʻzgartirilganda tavsif yoʻqoladi</ad2>
     <ad3>Parametr guruhini oʻzgartirish imkonini beradi. Amal loyiha parametrlari uchun mavjud emas</ad3>
@@ -602,7 +636,6 @@
     <msg79>{0}-qator, {1}-ustun: "{2}" qiymatidagi oʻnli vergul nuqta bilan almashtirildi</msg79>
     <msg80>"{0}" ustuni: "{1}" maʼlumot turi va oʻlchov birliklari Revit-ning joriy versiyasi uchun "{2}" bilan almashtirildi</msg80>
     <msg81>"{0}" nomli tanlov jadvali allaqachon mavjud</msg81>
-    <msg82>"{0}" tanlov jadvali "{1}" deb qayta nomlandi. Avvalgi nom ko'rsatilgan formulalar va matnli parametrlar o'zgartirilmadi - ularni qo'lda yangilang</msg82>
     <msg83>Tanlov jadvallaridagi o'zgarishlar saqlanmadi. Oyna saqlanmasdan yopilsinmi?</msg83>
     <msg84>Tanlov jadvallarida xatolar bor. Saqlashdan oldin ularni tuzating</msg84>
     <msg85>Jadvaldagi katakni tanlang</msg85>
@@ -613,5 +646,33 @@
     <msg90>"{0}" ustuni o'chirilsinmi?</msg90>
     <msg91>Tanlangan qatorlar ({0}) o'chirilsinmi?</msg91>
     <msg92>Bufer qiymatlarining bir qismi jadval kengligiga sig'madi va qo'yilmadi</msg92>
+    <msg95>"{0}" tanlov jadvalidagi barcha saqlanmagan o'zgarishlar bekor qilinsinmi?</msg95>
+    <msg96>"{0}" parametrining formulasi qatorni {1} ta ustun bo'yicha qidiradi, jadvalda esa {2} ta</msg96>
+    <msg97>"{0}" parametrining formulasi qiymatni jadvalda mavjud bo'lmagan "{1}" ustunidan oladi</msg97>
+    <msg98>"{0}" parametrining formulasi: {1}-kalit ("{2}" parametri) "{3}" ({4}) ustuni bilan solishtiriladi - ma'lumot turlari mos emas, qiymat topilmaydi</msg98>
+    <msg100>"{0}" ustuni formulalarda ishlatiladi. O'chirilgandan keyin bu formulalar standart qiymatni qaytaradi. Ustun o'chirilsinmi?</msg100>
+    <msg101>Formulalar jadval qatorini tavsif ustunidan keyingi dastlabki {0} ta ustun bo'yicha - aynan ularning tartibida qidiradi. Bu ustunlar tartibini o'zgartirish formulalar ishini buzadi. Davom etilsinmi?</msg101>
+    <msg102>"{0}" tanlov jadvali formulalarda ishlatiladi. O'chirilgandan keyin bu formulalar standart qiymatni qaytaradi. Jadval o'chirilsinmi?</msg102>
+    <msg103>Formulalarda ishlatiladigan jadvallar yoki ustunlar qayta nomlandi. Parametr formulalari yangilansinmi?</msg103>
+    <msg104>Ushbu parametrlarning formulalarida jadval yoki ustunlarning avvalgi nomlari bor va ular yangilanmadi - ularni qo'lda yangilang:</msg104>
+    <msg105>"{0}" parametrining formulasini yangilab bo'lmadi: {1}</msg105>
+    <msg106>Parametrlar formulalari oilada mavjud bo'lmagan "{0}" jadvaliga murojaat qiladi: {1}</msg106>
+    <msg107>Tanlov jadvallarini belgilang</msg107>
+    <msg108>"{0}" jadvali: Excel varag'i nomi - "{1}" (varaq nomi 31 belgi bilan cheklangan). Excel dan import qilishda jadval nomi varaq nomidan olinadi</msg108>
+    <msg109>Eksport qilingan jadvallar: {0}</msg109>
+    <msg110>"{0}" tanlov jadvali yuklanmaydi: unda xatolar bor</msg110>
+    <msg111>Tanlov jadvallarini yuklash kerak bo'lgan oilalarni belgilang</msg111>
+    <msg112>Saqlangan oilalar: {0}</msg112>
+    <msg113>Tanlov jadvallari ({0}) oilalarga ({1}) yuklansinmi? Bir xil nomli jadvallar almashtiriladi: {2}</msg113>
+    <msg114>"{0}" tanlov jadvali yuklandi</msg114>
+    <msg115>Oilalardagi ({1}) tanlov jadvallari ({0}) o'chirilsinmi?</msg115>
+    <msg116>Oilalarda ishlatiladi: {0}. Ularga murojaat qiluvchi formulalar standart qiymatni qaytaradi</msg116>
+    <msg117>"{0}" tanlov jadvali o'chirildi</msg117>
+    <msg118>Qayta nomlash uchun bir xil nomli tanlov jadvallarini belgilang (bir yoki bir nechta oilada)</msg118>
+    <msg119>"{0}" tanlov jadvali "{1}" deb qayta nomlandi</msg119>
+    <msg120>Paketli o'zgartirish uchun bir nechta oiladagi bir xil nomli tanlov jadvallarini belgilang</msg120>
+    <msg121>"{0}" tanlov jadvali oilalarda farq qiladi: {1}. Asos sifatida "{2}" oilasidagi jadval olinadi, qolgan oilalarda u o'zgartirilgan jadval bilan almashtiriladi. Davom etilsinmi?</msg121>
+    <msg122>"{0}" tanlov jadvali yangilandi</msg122>
+    <msg123>Ishlatilmaydigan tanlov jadvallari topilmadi</msg123>
   </mprParameters>
 </ModPlus>

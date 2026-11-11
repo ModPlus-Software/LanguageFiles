@@ -21,6 +21,8 @@
     <pcd5>Ermöglicht die Stapelbearbeitung von Parametern in Familien des Projekts, offenen Familien oder auf der Festplatte enthaltenen Familien</pcd5>
     <pcn6>Nicht verwendete Parameter in Familien löschen</pcn6>
     <pcd6>Ermöglicht das Stapellöschen nicht verwendeter Parameter in Familien des Projekts, offenen Familien oder auf der Festplatte enthaltenen Familien</pcd6>
+    <pcn7>Abruftabellen in Familien</pcn7>
+    <pcd7>Ermöglicht das Prüfen, Exportieren, Laden, Umbenennen und Löschen von Abruftabellen in Projektfamilien, geöffneten Familien oder Familien auf dem Datenträger</pcd7>
     <t1>Kein Dokument vorhanden</t1>
     <t2>Familie</t2>
     <t3>Projekt</t3>
@@ -381,13 +383,45 @@
     <t348>umbenannt</t348>
     <t349>Wiederherstellen</t349>
     <t350>Die Familie enthält keine Abruftabellen. Erstellen Sie eine neue Tabelle oder importieren Sie sie aus einer CSV- oder Excel-Datei</t350>
-    <t351>Strg+C, Strg+X, Strg+V - Zellen kopieren und einfügen (auch aus Excel), Entf - Zellen leeren, F2 oder Tastatureingabe - bearbeiten, Esc - Bearbeitung abbrechen</t351>
+    <t351>Strg+C, Strg+X, Strg+V - Zellen kopieren und einfügen (auch aus Excel), Entf - Zellen leeren, F2 oder Tastatureingabe - bearbeiten (bei mehreren ausgewählten Zellen wird der Wert in alle geschrieben), Esc - Bearbeitung abbrechen</t351>
     <t352>Zeilen: {0}, Spalten: {1}</t352>
     <t353>Name:</t353>
     <t354>Datentyp:</t354>
     <t355>Einheiten:</t355>
     <t356>Spaltenkopf in der Datei:</t356>
     <t357>Spalte der Abruftabelle</t357>
+    <t358>Änderungen der Abruftabelle verwerfen</t358>
+    <t359>Suchschlüssel {0}</t359>
+    <t360>In Formeln verwendet</t360>
+    <t361>Suchschlüssel {0}. Reihenfolge und Datentyp der Schlüsselspalten müssen den Formeln dieser Parameter entsprechen:</t361>
+    <t362>Die Formeln dieser Parameter übernehmen Werte aus dieser Spalte:</t362>
+    <t363>und {0} weitere</t363>
+    <t364>In Formeln verwendet: {0}</t364>
+    <t365>Abruftabellen: {0}</t365>
+    <t366>Nicht verwendet</t366>
+    <t367>Der Tabellenname ist in einer Formel oder einem Textparameter angegeben</t367>
+    <t368>Ordner für den Export der Abruftabellen auswählen</t368>
+    <t369>Suche nach Familien- oder Tabellenname</t369>
+    <t370>Nicht verwendete markieren</t370>
+    <t371>Markierte Tabellen:</t371>
+    <t372>In markierte Familien:</t372>
+    <t373>Markierte Tabellen:</t373>
+    <t374>Geänderte Familien (werden mit "Ausführen" gespeichert):</t374>
+    <t375>Doppelklick auf eine Tabelle oder Familie - im Abruftabellen-Editor öffnen</t375>
+    <t376>Geändert, nicht gespeichert</t376>
+    <t377>Nur Tabellen markieren, auf die keine Formeln verweisen und deren Namen nicht in Formeln oder Textparametern angegeben sind. Solche Tabellen können ohne Folgen für die Familie gelöscht werden</t377>
+    <t378>Markierte Tabellen mit gleichem Namen in einer oder mehreren Familien umbenennen. Formeln, die auf sie verweisen, können automatisch aktualisiert werden</t378>
+    <t379>Markierte Tabellen mit gleichem Namen in allen Familien gleichzeitig bearbeiten: die Tabelle wird im Editor geöffnet, und das Ergebnis wird in alle markierten Familien geschrieben</t379>
+    <t380>Parametertyp</t380>
+    <t381>Kein gemeinsam genutzter Parameter ausgewählt</t381>
+    <t382>Parameterdaten</t382>
+    <t383>Parameter gruppieren:</t383>
+    <t384>QuickInfo:</t384>
+    <t385>Das Erstellen eines Parameters mit diesem Datentyp wird nicht unterstützt</t385>
+    <t386>Kategorien der Familien, die in die aktuelle Familie geladen sind</t386>
+    <t387>In die aktuelle Familie ist keine Familie geladen</t387>
+    <t388>Als passend gelten Parameter, deren Namen nicht mit den Namen der Familienparameter übereinstimmen</t388>
+    <t389>Disziplin:</t389>
     <ad1>Ermöglicht die Umbenennung eines Familienparameters. Die Aktion ist für Systemparameter und die gemeinsam genutzten Parameter nicht verfügbar</ad1>
     <ad2>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Systemparameter nicht verfügbar. Beim Ändern der Gruppe verlieren die nicht gemeinsam genutzten Parameter der Familie ihre Beschreibung</ad2>
     <ad3>Ermöglicht die Änderung der Gruppe bei einem Parameter. Die Aktion ist für Projektparameter nicht verfügbar</ad3>
@@ -602,7 +636,6 @@
     <msg79>Zeile {0}, Spalte {1}: Das Dezimalkomma im Wert "{2}" wurde durch einen Punkt ersetzt</msg79>
     <msg80>Spalte "{0}": Datentyp und Einheiten "{1}" wurden für die aktuelle Revit-Version durch "{2}" ersetzt</msg80>
     <msg81>Eine Abruftabelle mit dem Namen "{0}" ist bereits vorhanden</msg81>
-    <msg82>Die Abruftabelle "{0}" wurde in "{1}" umbenannt. Formeln und Textparameter mit dem alten Namen wurden nicht geändert - aktualisieren Sie sie manuell</msg82>
     <msg83>Die Änderungen an den Abruftabellen wurden nicht gespeichert. Fenster ohne Speichern schließen?</msg83>
     <msg84>Die Abruftabellen enthalten Fehler. Beheben Sie sie vor dem Speichern</msg84>
     <msg85>Wählen Sie eine Zelle in der Tabelle aus</msg85>
@@ -613,5 +646,33 @@
     <msg90>Spalte "{0}" löschen?</msg90>
     <msg91>Ausgewählte Zeilen ({0}) löschen?</msg91>
     <msg92>Einige Werte aus der Zwischenablage passten nicht in die Tabellenbreite und wurden nicht eingefügt</msg92>
+    <msg95>Alle ungespeicherten Änderungen der Abruftabelle "{0}" verwerfen?</msg95>
+    <msg96>Die Formel des Parameters "{0}" sucht die Zeile über {1} Spalten, die Tabelle hat aber {2}</msg96>
+    <msg97>Die Formel des Parameters "{0}" übernimmt den Wert aus der Spalte "{1}", die in der Tabelle nicht vorhanden ist</msg97>
+    <msg98>Formel des Parameters "{0}": Schlüssel {1} (Parameter "{2}") wird mit der Spalte "{3}" ({4}) verglichen - die Datentypen stimmen nicht überein, der Wert wird nicht gefunden</msg98>
+    <msg100>Die Spalte "{0}" wird in Formeln verwendet. Nach dem Löschen geben diese Formeln den Standardwert zurück. Spalte löschen?</msg100>
+    <msg101>Formeln suchen die Tabellenzeile über die ersten {0} Spalten nach der Beschreibungsspalte - genau in deren Reihenfolge. Eine Änderung der Reihenfolge dieser Spalten führt zu fehlerhaften Formeln. Fortfahren?</msg101>
+    <msg102>Die Abruftabelle "{0}" wird in Formeln verwendet. Nach dem Löschen geben diese Formeln den Standardwert zurück. Tabelle löschen?</msg102>
+    <msg103>Tabellen oder Spalten, die in Formeln verwendet werden, wurden umbenannt. Parameterformeln aktualisieren?</msg103>
+    <msg104>Die Formeln dieser Parameter enthalten alte Tabellen- oder Spaltennamen und wurden nicht aktualisiert - aktualisieren Sie sie manuell:</msg104>
+    <msg105>Die Formel des Parameters "{0}" konnte nicht aktualisiert werden: {1}</msg105>
+    <msg106>Parameterformeln verweisen auf die Tabelle "{0}", die in der Familie nicht vorhanden ist: {1}</msg106>
+    <msg107>Markieren Sie Abruftabellen</msg107>
+    <msg108>Tabelle "{0}": Name des Excel-Blatts ist "{1}" (Blattnamen sind auf 31 Zeichen begrenzt). Beim Import aus Excel wird der Tabellenname aus dem Blattnamen übernommen</msg108>
+    <msg109>Exportierte Tabellen: {0}</msg109>
+    <msg110>Die Abruftabelle "{0}" wird nicht geladen: sie enthält Fehler</msg110>
+    <msg111>Markieren Sie die Familien, in die Abruftabellen geladen werden sollen</msg111>
+    <msg112>Gespeicherte Familien: {0}</msg112>
+    <msg113>Abruftabellen ({0}) in Familien ({1}) laden? Tabellen mit gleichen Namen werden ersetzt: {2}</msg113>
+    <msg114>Abruftabelle "{0}" geladen</msg114>
+    <msg115>Abruftabellen ({0}) in Familien ({1}) löschen?</msg115>
+    <msg116>In Familien verwendet: {0}. Formeln, die auf sie verweisen, geben den Standardwert zurück</msg116>
+    <msg117>Abruftabelle "{0}" gelöscht</msg117>
+    <msg118>Markieren Sie zum Umbenennen Abruftabellen mit gleichem Namen (in einer oder mehreren Familien)</msg118>
+    <msg119>Abruftabelle "{0}" in "{1}" umbenannt</msg119>
+    <msg120>Markieren Sie für die Stapelbearbeitung Abruftabellen mit gleichem Namen in mehreren Familien</msg120>
+    <msg121>Die Abruftabelle "{0}" unterscheidet sich in den Familien: {1}. Als Grundlage wird die Tabelle aus der Familie "{2}" verwendet; in den anderen Familien wird sie durch die bearbeitete Tabelle ersetzt. Fortfahren?</msg121>
+    <msg122>Abruftabelle "{0}" aktualisiert</msg122>
+    <msg123>Keine nicht verwendeten Abruftabellen gefunden</msg123>
   </mprParameters>
 </ModPlus>

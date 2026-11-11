@@ -21,6 +21,8 @@
     <pcd5>Le permite editar por lotes parámetros en familias de proyectos, familias abiertas o familias en disco</pcd5>
     <pcn6>Eliminación de parámetros no utilizados en familias</pcn6>
     <pcd6>Le permite eliminar por lotes parámetros no utilizados en familias de proyectos, familias abiertas o familias en disco</pcd6>
+    <pcn7>Tablas de selección en familias</pcn7>
+    <pcd7>Permite revisar, exportar, cargar, renombrar y eliminar tablas de selección en familias del proyecto, familias abiertas o familias en disco</pcd7>
     <t1>Sin documento</t1>
     <t2>Familia</t2>
     <t3>Proyecto</t3>
@@ -381,13 +383,45 @@
     <t348>renombrada</t348>
     <t349>Restaurar</t349>
     <t350>La familia no tiene tablas de selección. Cree una tabla nueva o impórtela desde un archivo CSV o Excel</t350>
-    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copiar y pegar celdas (también desde Excel), Supr - borrar celdas, F2 o escribir - editar, Esc - cancelar la edición</t351>
+    <t351>Ctrl+C, Ctrl+X, Ctrl+V - copiar y pegar celdas (también desde Excel), Supr - borrar celdas, F2 o escribir - editar (con varias celdas seleccionadas, el valor se escribe en todas), Esc - cancelar la edición</t351>
     <t352>Filas: {0}, columnas: {1}</t352>
     <t353>Nombre:</t353>
     <t354>Tipo de datos:</t354>
     <t355>Unidades:</t355>
     <t356>Encabezado de la columna en el archivo:</t356>
     <t357>Columna de la tabla de selección</t357>
+    <t358>Descartar los cambios de la tabla de selección</t358>
+    <t359>Clave de búsqueda {0}</t359>
+    <t360>Se usa en fórmulas</t360>
+    <t361>Clave de búsqueda {0}. El orden y el tipo de datos de las columnas clave deben coincidir con las fórmulas de los parámetros:</t361>
+    <t362>Las fórmulas de estos parámetros toman valores de esta columna:</t362>
+    <t363>y {0} más</t363>
+    <t364>Se usa en fórmulas: {0}</t364>
+    <t365>Tablas de selección: {0}</t365>
+    <t366>No se usa</t366>
+    <t367>El nombre de la tabla se indica en una fórmula o un parámetro de texto</t367>
+    <t368>Seleccione una carpeta para exportar las tablas de selección</t368>
+    <t369>Buscar por nombre de familia o tabla</t369>
+    <t370>Marcar no usadas</t370>
+    <t371>Tablas marcadas:</t371>
+    <t372>En las familias marcadas:</t372>
+    <t373>Tablas marcadas:</t373>
+    <t374>Familias modificadas (se guardan con el botón "Ejecutar"):</t374>
+    <t375>Doble clic en una tabla o familia: abrir en el editor de tablas de selección</t375>
+    <t376>Modificada, sin guardar</t376>
+    <t377>Marcar solo las tablas a las que no hacen referencia las fórmulas y cuyos nombres no se indican en fórmulas ni en parámetros de texto. Estas tablas se pueden eliminar sin consecuencias para la familia</t377>
+    <t378>Renombrar las tablas marcadas con el mismo nombre en una o varias familias. Las fórmulas que hacen referencia a ellas se pueden actualizar automáticamente</t378>
+    <t379>Editar a la vez en todas las familias las tablas marcadas con el mismo nombre: la tabla se abre en el editor y el resultado se escribe en todas las familias marcadas</t379>
+    <t380>Tipo de parámetro</t380>
+    <t381>No se ha seleccionado ningún parámetro compartido</t381>
+    <t382>Datos de parámetro</t382>
+    <t383>Agrupar parámetros:</t383>
+    <t384>Información de herramientas:</t384>
+    <t385>No se admite la creación de un parámetro con este tipo de datos</t385>
+    <t386>Categorías de las familias cargadas en la familia actual</t386>
+    <t387>En la familia actual no está cargada ninguna familia</t387>
+    <t388>Se consideran adecuados los parámetros cuyos nombres no coinciden con los nombres de los parámetros de la familia</t388>
+    <t389>Disciplina:</t389>
     <ad1>Permite cambiar nombre de un parámetro familiar. Acción no disponible para los parámetros del sistema y parámetros compartidos</ad1>
     <ad2>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del sistema. Al cambiar un grupo, un parámetro familiar no compartido perderá su descripción</ad2>
     <ad3>Permite cambiar grupo de parámetro. Acción no disponible para los parámetros del proyecto</ad3>
@@ -602,7 +636,6 @@
     <msg79>Fila {0}, columna {1}: la coma decimal del valor "{2}" se ha sustituido por un punto</msg79>
     <msg80>Columna "{0}": el tipo de datos y las unidades "{1}" se han sustituido por "{2}" para la versión actual de Revit</msg80>
     <msg81>Ya existe una tabla de selección con el nombre "{0}"</msg81>
-    <msg82>La tabla de selección "{0}" se ha renombrado a "{1}". Las fórmulas y los parámetros de texto que contienen el nombre anterior no se han cambiado: actualícelos manualmente</msg82>
     <msg83>Los cambios en las tablas de selección no se han guardado. ¿Cerrar la ventana sin guardar?</msg83>
     <msg84>Las tablas de selección contienen errores. Corríjalos antes de guardar</msg84>
     <msg85>Seleccione una celda de la tabla</msg85>
@@ -613,5 +646,33 @@
     <msg90>¿Eliminar la columna "{0}"?</msg90>
     <msg91>¿Eliminar las filas seleccionadas ({0})?</msg91>
     <msg92>Algunos valores del portapapeles no cabían en el ancho de la tabla y no se pegaron</msg92>
+    <msg95>¿Descartar todos los cambios sin guardar de la tabla de selección "{0}"?</msg95>
+    <msg96>La fórmula del parámetro "{0}" busca la fila por {1} columnas, pero la tabla tiene {2}</msg96>
+    <msg97>La fórmula del parámetro "{0}" toma el valor de la columna "{1}", que no está en la tabla</msg97>
+    <msg98>Fórmula del parámetro "{0}": la clave {1} (parámetro "{2}") se compara con la columna "{3}" ({4}) - los tipos de datos no coinciden, el valor no se encontrará</msg98>
+    <msg100>La columna "{0}" se usa en fórmulas. Después de eliminarla, estas fórmulas devolverán el valor predeterminado. ¿Eliminar la columna?</msg100>
+    <msg101>Las fórmulas buscan la fila de la tabla por las primeras {0} columnas después de la columna de descripción, estrictamente en su orden. Cambiar el orden de estas columnas romperá las fórmulas. ¿Continuar?</msg101>
+    <msg102>La tabla de selección "{0}" se usa en fórmulas. Después de eliminarla, estas fórmulas devolverán el valor predeterminado. ¿Eliminar la tabla?</msg102>
+    <msg103>Se han renombrado tablas o columnas que se usan en fórmulas. ¿Actualizar las fórmulas de los parámetros?</msg103>
+    <msg104>Las fórmulas de estos parámetros contienen nombres anteriores de tablas o columnas y no se han actualizado: actualícelas manualmente:</msg104>
+    <msg105>No se pudo actualizar la fórmula del parámetro "{0}": {1}</msg105>
+    <msg106>Las fórmulas de los parámetros hacen referencia a la tabla "{0}", que no está en la familia: {1}</msg106>
+    <msg107>Marque tablas de selección</msg107>
+    <msg108>Tabla "{0}": el nombre de la hoja de Excel es "{1}" (los nombres de hoja están limitados a 31 caracteres). Al importar desde Excel, el nombre de la tabla se toma del nombre de la hoja</msg108>
+    <msg109>Tablas exportadas: {0}</msg109>
+    <msg110>La tabla de selección "{0}" no se cargará: contiene errores</msg110>
+    <msg111>Marque las familias en las que desea cargar las tablas de selección</msg111>
+    <msg112>Familias guardadas: {0}</msg112>
+    <msg113>¿Cargar tablas de selección ({0}) en familias ({1})? Se reemplazarán las tablas con el mismo nombre: {2}</msg113>
+    <msg114>Tabla de selección "{0}" cargada</msg114>
+    <msg115>¿Eliminar tablas de selección ({0}) en familias ({1})?</msg115>
+    <msg116>Se usan en familias: {0}. Las fórmulas que hacen referencia a ellas devolverán el valor predeterminado</msg116>
+    <msg117>Tabla de selección "{0}" eliminada</msg117>
+    <msg118>Para renombrar, marque tablas de selección con el mismo nombre (en una o varias familias)</msg118>
+    <msg119>Tabla de selección "{0}" renombrada a "{1}"</msg119>
+    <msg120>Para la edición por lotes, marque tablas de selección con el mismo nombre en varias familias</msg120>
+    <msg121>La tabla de selección "{0}" es diferente en las familias: {1}. Se tomará como base la tabla de la familia "{2}"; en las demás familias se reemplazará por la tabla editada. ¿Continuar?</msg121>
+    <msg122>Tabla de selección "{0}" actualizada</msg122>
+    <msg123>No se encontraron tablas de selección sin usar</msg123>
   </mprParameters>
 </ModPlus>
