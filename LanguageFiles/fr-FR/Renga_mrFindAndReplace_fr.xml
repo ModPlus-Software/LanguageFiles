@@ -31,6 +31,7 @@
     <notFoundMessage>Aucun résultat trouvé pour cette requête</notFoundMessage>
     <maskHint>Aide sur les masques : * - n'importe quel nombre de caractères ; ? - un caractère ; # - un chiffre. Si le masque de recherche ne contient pas * ? #, alors * dans le remplacement désigne tout le fragment trouvé</maskHint>
     <regexHint>Aide sur les expressions régulières : . — n'importe quel caractère ; .* — suite de caractères ; \d — chiffre, \w — lettre/chiffre/trait de soulignement</regexHint>
-    <counterHint>Compteurs : {CountN} - nombre, {CountC} - lettre. Exemple : Vue_{CountC} =&gt; Vue_A, Vue_B. Paramètres : {CountN:début:largeur}, {CountC:lettre}</counterHint>
+    <counterHint>Compteurs : {CountN} - nombre, {CountC} - lettre. Exemple : Vue_{CountC} => Vue_A, Vue_B. Paramètres : {CountN:valeur initiale:pas}, {CountC:lettre initiale}. Les zéros de tête de la valeur initiale définissent la largeur : {CountN:01:5} => 01, 06, 11. Le compteur de lettres n'a que la lettre initiale</counterHint>
+    <invalidCounterPlaceholderError>Compteur incorrect dans le remplacement : </invalidCounterPlaceholderError>
   </mrFindAndReplace>
 </ModPlus>

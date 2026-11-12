@@ -31,6 +31,7 @@
     <notFoundMessage>No se encontraron resultados para la consulta</notFoundMessage>
     <maskHint>Sugerencia de máscaras: * - cualquier número de caracteres; ? - un carácter; # - un dígito. Si la máscara de búsqueda no contiene * ? #, entonces * en la sustitución indica todo el fragmento encontrado</maskHint>
     <regexHint>Sugerencia de expresiones regulares: . — cualquier carácter; .* — secuencia de caracteres; \d — dígito; \w — letra/dígito/guion bajo</regexHint>
-    <counterHint>Contadores: {CountN} - número, {CountC} - letra. Ejemplo: Vista_{CountC} => Vista_A, Vista_B. Parámetros: {CountN:inicio:ancho}, {CountC:letra}</counterHint>
+    <counterHint>Contadores: {CountN} - número, {CountC} - letra. Ejemplo: Vista_{CountC} => Vista_A, Vista_B. Parámetros: {CountN:valor inicial:paso}, {CountC:letra inicial}. Los ceros iniciales del valor inicial definen el ancho: {CountN:01:5} => 01, 06, 11. El contador de letras solo tiene la letra inicial</counterHint>
+    <invalidCounterPlaceholderError>Contador incorrecto en el reemplazo: </invalidCounterPlaceholderError>
   </mrFindAndReplace>
 </ModPlus>

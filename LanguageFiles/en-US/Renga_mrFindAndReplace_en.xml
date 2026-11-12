@@ -31,6 +31,7 @@
     <notFoundMessage>No results found for the query</notFoundMessage>
     <maskHint>Mask hint: * - any number of characters; ? - one character; # - a digit. If the search mask does not contain * ? #, then * in the replacement denotes the entire matched fragment</maskHint>
     <regexHint>Regex hint: . — any character; .* — sequence of characters; \d — digit; \w — letter/digit/underscore</regexHint>
-    <counterHint>Counters: {CountN} - number, {CountC} - letter. Example: View_{CountC} => View_A, View_B. Parameters: {CountN:start:width}, {CountC:letter}</counterHint>
+    <counterHint>Counters: {CountN} - number, {CountC} - letter. Example: View_{CountC} => View_A, View_B. Parameters: {CountN:start value:step}, {CountC:start letter}. Leading zeros of the start value set the number width: {CountN:01:5} => 01, 06, 11. The letter counter has only the start letter</counterHint>
+    <invalidCounterPlaceholderError>Invalid counter in replacement: </invalidCounterPlaceholderError>
   </mrFindAndReplace>
 </ModPlus>
