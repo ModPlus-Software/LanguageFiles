@@ -6,7 +6,9 @@
     LocalName1="Éditeur de familles"
     Description1="Éditeur des paramètres de la famille active avec un éditeur de formules alternatif"
     LocalName2="Tables de recherche"
-    Description2="Éditeur des tables de recherche de la famille active : création, modification, import et export avec contrôle des données">
+    Description2="Éditeur des tables de recherche de la famille active : création, modification, import et export avec contrôle des données"
+    LocalName3="Tableau des paramètres"
+    Description3="Modification sous forme de tableau des valeurs des paramètres des éléments du projet actif, avec filtres et saisie par lot">
     <pcn1>Création de paramètres dans le projet</pcn1>
     <pcd1>Permet de créer des paramètres par lots dans le projet actif</pcd1>
     <pcn2>Création de paramètres dans les familles</pcn2>
@@ -675,5 +677,79 @@
     <msg121>La table de recherche "{0}" diffère selon les familles : {1}. La table de la famille "{2}" servira de base ; dans les autres familles, elle sera remplacée par la table modifiée. Continuer ?</msg121>
     <msg122>Table de recherche "{0}" mise à jour</msg122>
     <msg123>Aucune table de recherche non utilisée trouvée</msg123>
+    <t391>Les paramètres sélectionnés seront ajoutés au tableau avec les caractéristiques des paramètres de la famille sélectionnée : nom, type de données, regroupement, occurrence/type, option "Paramètre de rapport" et formule. Pour les paramètres sans formule, la valeur du type indiqué en bas de la fenêtre sera définie. Lorsqu'un paramètre avec formule est sélectionné, tous les paramètres utilisés dans la formule sont cochés. L'ajout des paramètres système est impossible. Un paramètre partagé ne peut être ajouté que s'il figure dans le FPP actuel</t391>
+    <t392>Valeurs du type :</t392>
+    <t393>Le paramètre partagé ne figure pas dans le FPP actuel</t393>
+    <t394>Étendue :</t394>
+    <t395>Charger</t395>
+    <t396>Annotation</t396>
+    <t397>Modèle analytique</t397>
+    <t398>Colonnes du tableau (faites glisser pour modifier l'ordre)</t398>
+    <t399>Lecture seule</t399>
+    <t400>Nom en double : la liste contient un autre paramètre portant le même nom</t400>
+    <t401>Lignes : {0}, affichées : {1}</t401>
+    <t402>Cellules modifiées : {0}</t402>
+    <t403>Erreurs : {0}</t403>
+    <t404>Erreurs uniquement</t404>
+    <t405>Sélectionner dans le modèle</t405>
+    <t406>Annuler toutes les modifications</t406>
+    <t407>&lt;non applicable&gt;</t407>
+    <t408>L'élément n'a pas ce paramètre</t408>
+    <t409>La valeur du paramètre ne peut pas être modifiée</t409>
+    <t410>L'élément appartient à l'utilisateur {0}</t410>
+    <t411>Valeur d'origine : {0}</t411>
+    <t412>La valeur doit être un nombre entier</t412>
+    <t413>La valeur doit être un nombre</t413>
+    <t414>La valeur doit être "Oui" ou "Non"</t414>
+    <t415>La valeur ne figure pas dans la liste des valeurs autorisées</t415>
+    <t416>La modification d'un paramètre de type s'applique à tous les éléments de ce type ({0})</t416>
+    <t417>Sélectionnez l'étendue, cochez les catégories et les paramètres, puis cliquez sur "Charger"</t417>
+    <t418>Cellules ignorées (non applicables, en lecture seule ou détenues) : {0}</t418>
+    <t419>Les valeurs numériques et les références aux éléments ne sont pas effacées. Cellules ignorées : {0}</t419>
+    <t420>Application des modifications</t420>
+    <t421>Cochez les catégories</t421>
+    <t422>GUID : {0}</t422>
+    <t423>Par occurrence et par type</t423>
+    <t424>La saisie lance la modification de la cellule (si plusieurs cellules sont sélectionnées, la valeur est écrite dans toutes), Suppr - effacer le texte, Espace - basculer Oui/Non, Ctrl+Espace - sélectionner la colonne, Ctrl+D - remplir vers le bas, Ctrl+Z / Ctrl+Y - annuler / rétablir, poignée dans le coin de la sélection - remplir une série (avec Ctrl - copier), Échap - annuler la modification</t424>
+    <t425>Annuler</t425>
+    <t426>Rétablir</t426>
+    <t427>Remplir vers le bas</t427>
+    <t428>Numérotation</t428>
+    <t429>Numéro de départ</t429>
+    <t430>Nombre de chiffres</t430>
+    <t431>Exemple : {0}</t431>
+    <t432>Le pas ne peut pas être nul</t432>
+    <t433>Le nombre de chiffres doit être un entier compris entre 0 et 10</t433>
+    <t434>Lignes :</t434>
+    <t435>Occurrences</t435>
+    <t436>Types</t436>
+    <t437>Ctrl+C / Ctrl+X / Ctrl+V - copier / couper / coller (y compris depuis et vers Excel)</t437>
+    <msg124>Les modifications n'ont pas été appliquées au modèle. Fermer la fenêtre sans les appliquer ?</msg124>
+    <msg125>Les modifications du tableau n'ont pas été appliquées au modèle et seront perdues. Recharger le tableau ?</msg125>
+    <msg126>Des cellules contiennent des erreurs ({0}). Elles ne seront pas appliquées. Appliquer les autres modifications ?</msg126>
+    <msg127>Aucune modification à appliquer</msg127>
+    <msg128>Valeurs appliquées : {0}</msg128>
+    <msg129>Impossible d'emprunter les éléments pour les modifier : {0}</msg129>
+    <msg130>L'élément n'a pas été emprunté pour modification : il appartient à un autre utilisateur ou n'est pas synchronisé avec le modèle central</msg130>
+    <msg131>Paramètre "{0}" introuvable pour l'élément</msg131>
+    <msg132>Impossible de définir la valeur du paramètre "{0}"</msg132>
+    <msg133>Impossible de changer le type</msg133>
+    <msg134>Cochez les paramètres</msg134>
+    <msg135>Avertissement Revit : {0}</msg135>
+    <msg136>Erreur Revit : {0}. Les modifications n'ont pas été appliquées</msg136>
+    <msg137>Les catégories du préréglage sont absentes de l'étendue sélectionnée</msg137>
+    <msg138>Les paramètres du préréglage sont introuvables pour les éléments des catégories cochées</msg138>
+    <msg139>Valeur du paramètre "{0}" définie</msg139>
+    <msg140>Type modifié</msg140>
+    <msg141>Certaines valeurs du presse-papiers ne tenaient pas dans le tableau et n’ont pas été collées</msg141>
+    <msg142>Le fichier n’est pas reconnu : la deuxième ligne ne contient pas de marque de service. Utilisez un fichier exporté depuis cette fenêtre</msg142>
+    <msg143>Le fichier a été exporté depuis un tableau en mode de lignes "{0}", mais le tableau est chargé en mode "{1}". Chargez le tableau en mode "{0}" et recommencez l’importation</msg143>
+    <msg144>La colonne "{0}" est introuvable dans le tableau chargé - ses valeurs n’ont pas été importées</msg144>
+    <msg145>Ligne {0} : l’élément est introuvable dans le tableau chargé (supprimé ou hors de la portée sélectionnée)</msg145>
+    <msg146>Les valeurs du paramètre de type "{0}" diffèrent dans les lignes du fichier - la valeur "{1}" a été écrite</msg146>
+    <msg147>Valeurs écrites : {0}. Les modifications ne sont pas encore appliquées au modèle - vérifiez-les et cliquez sur "Appliquer"</msg147>
+    <msg148>Valeurs avec erreurs : {0}. Ces cellules sont encadrées en rouge, la raison figure dans l’info-bulle de la cellule</msg148>
+    <msg149>Valeurs non écrites dans des cellules non modifiables : {0}</msg149>
+    <msg150>Les valeurs du fichier ne diffèrent pas des valeurs du tableau</msg150>
   </mprParameters>
 </ModPlus>

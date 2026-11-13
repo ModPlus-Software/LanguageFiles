@@ -6,7 +6,9 @@
     LocalName1="Editor de família"
     Description1="Editor de parâmetros da família atual com editor de fórmulas alternativo"
     LocalName2="Tabelas de pesquisa"
-    Description2="Editor de tabelas de pesquisa da família atual: criação, edição, importação e exportação com validação de dados">
+    Description2="Editor de tabelas de pesquisa da família atual: criação, edição, importação e exportação com validação de dados"
+    LocalName3="Tabela de parâmetros"
+    Description3="Edição em tabela dos valores de parâmetros dos elementos do projeto atual com filtros e entrada em lote">
     <pcn1>Criação de parâmetros no projeto</pcn1>
     <pcd1>Permite criar parâmetros em lote no projeto atual</pcd1>
     <pcn2>Criação de parâmetros em famílias</pcn2>
@@ -675,5 +677,79 @@
     <msg121>A tabela de pesquisa "{0}" é diferente nas famílias: {1}. A tabela da família "{2}" será usada como base; nas demais famílias ela será substituída pela tabela editada. Continuar?</msg121>
     <msg122>Tabela de pesquisa "{0}" atualizada</msg122>
     <msg123>Nenhuma tabela de pesquisa não usada encontrada</msg123>
+    <t391>Os parâmetros selecionados serão adicionados à tabela com as características dos parâmetros da família selecionada: nome, tipo de dados, agrupamento, instância/tipo, opção "Parâmetro de relatório" e fórmula. Para os parâmetros sem fórmula, será definido o valor do tipo indicado na parte inferior da janela. Ao selecionar um parâmetro com fórmula, todos os parâmetros usados na fórmula serão marcados. Não é possível adicionar parâmetros de sistema. Um parâmetro compartilhado só pode ser adicionado se estiver presente no arquivo de parâmetros compartilhados atual</t391>
+    <t392>Valores do tipo:</t392>
+    <t393>O parâmetro compartilhado não está presente no arquivo de parâmetros compartilhados atual</t393>
+    <t394>Escopo:</t394>
+    <t395>Carregar</t395>
+    <t396>Anotação</t396>
+    <t397>Modelo analítico</t397>
+    <t398>Colunas da tabela (arraste para alterar a ordem)</t398>
+    <t399>Somente leitura</t399>
+    <t400>Nome repetido: a lista contém outro parâmetro com o mesmo nome</t400>
+    <t401>Linhas: {0}, exibidas: {1}</t401>
+    <t402>Células alteradas: {0}</t402>
+    <t403>Erros: {0}</t403>
+    <t404>Somente com erros</t404>
+    <t405>Selecionar no modelo</t405>
+    <t406>Descartar todas as alterações</t406>
+    <t407>&lt;não aplicável&gt;</t407>
+    <t408>O elemento não tem este parâmetro</t408>
+    <t409>O valor do parâmetro não pode ser alterado</t409>
+    <t410>O elemento pertence ao usuário {0}</t410>
+    <t411>Valor original: {0}</t411>
+    <t412>O valor deve ser um número inteiro</t412>
+    <t413>O valor deve ser um número</t413>
+    <t414>O valor deve ser "Sim" ou "Não"</t414>
+    <t415>O valor não está na lista de valores permitidos</t415>
+    <t416>A alteração de um parâmetro de tipo se aplica a todos os elementos deste tipo ({0})</t416>
+    <t417>Selecione o escopo, marque as categorias e os parâmetros e clique em "Carregar"</t417>
+    <t418>Células ignoradas (não aplicáveis, somente leitura ou com proprietário): {0}</t418>
+    <t419>Valores numéricos e referências a elementos não são limpos. Células ignoradas: {0}</t419>
+    <t420>Aplicando alterações</t420>
+    <t421>Marque as categorias</t421>
+    <t422>GUID: {0}</t422>
+    <t423>Por instância e por tipo</t423>
+    <t424>A digitação inicia a edição da célula (com várias células selecionadas, o valor é gravado em todas), Delete - limpar texto, Espaço - alternar Sim/Não, Ctrl+Espaço - selecionar coluna, Ctrl+D - preencher abaixo, Ctrl+Z / Ctrl+Y - desfazer / refazer, alça no canto da seleção - preencher série (com Ctrl - copiar), Esc - cancelar a edição</t424>
+    <t425>Desfazer</t425>
+    <t426>Refazer</t426>
+    <t427>Preencher abaixo</t427>
+    <t428>Numeração</t428>
+    <t429>Número inicial</t429>
+    <t430>Número de dígitos</t430>
+    <t431>Exemplo: {0}</t431>
+    <t432>O passo não pode ser zero</t432>
+    <t433>O número de dígitos deve ser um número inteiro de 0 a 10</t433>
+    <t434>Linhas:</t434>
+    <t435>Instâncias</t435>
+    <t436>Tipos</t436>
+    <t437>Ctrl+C / Ctrl+X / Ctrl+V - copiar / recortar / colar (inclusive de e para o Excel)</t437>
+    <msg124>As alterações não foram aplicadas ao modelo. Fechar a janela sem aplicar?</msg124>
+    <msg125>As alterações da tabela não foram aplicadas ao modelo e serão perdidas. Carregar a tabela novamente?</msg125>
+    <msg126>Há células com erros ({0}). Elas não serão aplicadas. Aplicar as demais alterações?</msg126>
+    <msg127>Não há alterações para aplicar</msg127>
+    <msg128>Valores aplicados: {0}</msg128>
+    <msg129>Não foi possível tomar emprestados os elementos para edição: {0}</msg129>
+    <msg130>O elemento não foi tomado emprestado para edição: ele pertence a outro usuário ou não está sincronizado com o modelo central</msg130>
+    <msg131>Parâmetro "{0}" não encontrado no elemento</msg131>
+    <msg132>Não foi possível definir o valor do parâmetro "{0}"</msg132>
+    <msg133>Não foi possível alterar o tipo</msg133>
+    <msg134>Marque os parâmetros</msg134>
+    <msg135>Aviso do Revit: {0}</msg135>
+    <msg136>Erro do Revit: {0}. As alterações não foram aplicadas</msg136>
+    <msg137>As categorias da predefinição não estão no escopo selecionado</msg137>
+    <msg138>Os parâmetros da predefinição não foram encontrados nos elementos das categorias marcadas</msg138>
+    <msg139>Valor do parâmetro "{0}" definido</msg139>
+    <msg140>Tipo alterado</msg140>
+    <msg141>Alguns valores da área de transferência não couberam na tabela e não foram colados</msg141>
+    <msg142>O arquivo não foi reconhecido: não há marca de serviço na segunda linha. Use um arquivo exportado desta janela</msg142>
+    <msg143>O arquivo foi exportado de uma tabela no modo de linhas "{0}", mas a tabela está carregada no modo "{1}". Carregue a tabela no modo "{0}" e repita a importação</msg143>
+    <msg144>A coluna "{0}" não foi encontrada na tabela carregada - seus valores não foram importados</msg144>
+    <msg145>Linha {0}: o elemento não foi encontrado na tabela carregada (excluído ou fora do escopo selecionado)</msg145>
+    <msg146>Os valores do parâmetro de tipo "{0}" diferem nas linhas do arquivo - foi gravado o valor "{1}"</msg146>
+    <msg147>Valores gravados: {0}. As alterações ainda não foram aplicadas ao modelo - verifique-as e clique em "Aplicar"</msg147>
+    <msg148>Valores com erro: {0}. Essas células estão destacadas com borda vermelha, o motivo está na dica da célula</msg148>
+    <msg149>Valores não gravados em células que não podem ser alteradas: {0}</msg149>
+    <msg150>Os valores do arquivo não diferem dos valores da tabela</msg150>
   </mprParameters>
 </ModPlus>

@@ -6,7 +6,9 @@
     LocalName1="Family Editor"
     Description1="Parameter editor for the current family with an alternative formula editor"
     LocalName2="Lookup Tables"
-    Description2="Lookup table editor for the current family: create, edit, import and export with data validation">
+    Description2="Lookup table editor for the current family: create, edit, import and export with data validation"
+    LocalName3="Parameters Table"
+    Description3="Table editing of element parameter values in the current project with filters and batch input">
     <pcn1>Create parameters in project</pcn1>
     <pcd1>Allows batch creation of parameters in the current project</pcd1>
     <pcn2>Create parameters in families</pcn2>
@@ -675,5 +677,79 @@
     <msg121>Lookup table "{0}" differs in families: {1}. The table from family "{2}" will be used as the base; in the other families it will be replaced with the edited table. Continue?</msg121>
     <msg122>Lookup table "{0}" updated</msg122>
     <msg123>No unused lookup tables found</msg123>
+    <t391>The selected parameters will be added to the table with the characteristics of the parameters of the selected family: name, data type, grouping, instance/type, the "Report Parameter" option and formula. For parameters without a formula, the value from the type specified at the bottom of the window will be set. When selecting a parameter with a formula, all parameters used in the formula will be checked. System parameters cannot be added. A shared parameter can only be added if it is present in the current SPF</t391>
+    <t392>Values from type:</t392>
+    <t393>Shared parameter is not found in the current SPF</t393>
+    <t394>Scope:</t394>
+    <t395>Load</t395>
+    <t396>Annotation</t396>
+    <t397>Analytical Model</t397>
+    <t398>Table columns (drag to change the order)</t398>
+    <t399>Read-only</t399>
+    <t400>Duplicate name: the list contains another parameter with the same name</t400>
+    <t401>Rows: {0}, shown: {1}</t401>
+    <t402>Cells changed: {0}</t402>
+    <t403>Errors: {0}</t403>
+    <t404>Errors only</t404>
+    <t405>Select in model</t405>
+    <t406>Discard all changes</t406>
+    <t407>&lt;not applicable&gt;</t407>
+    <t408>The element does not have this parameter</t408>
+    <t409>The parameter value cannot be changed</t409>
+    <t410>The element is owned by user {0}</t410>
+    <t411>Original value: {0}</t411>
+    <t412>The value must be an integer</t412>
+    <t413>The value must be a number</t413>
+    <t414>The value must be "Yes" or "No"</t414>
+    <t415>The value is not in the list of allowed values</t415>
+    <t416>A type parameter change applies to all elements of this type ({0})</t416>
+    <t417>Select the scope, check the categories and parameters, and click "Load"</t417>
+    <t418>Cells skipped (not applicable, read-only or owned): {0}</t418>
+    <t419>Numeric values and element references are not cleared. Cells skipped: {0}</t419>
+    <t420>Applying changes</t420>
+    <t421>Check the categories</t421>
+    <t422>GUID: {0}</t422>
+    <t423>By instance and by type</t423>
+    <t424>Typing starts editing the cell (with several cells selected, the value is written to all of them), Delete - clear text, Space - toggle Yes/No, Ctrl+Space - select column, Ctrl+D - fill down, Ctrl+Z / Ctrl+Y - undo / redo, handle in the selection corner - fill series (with Ctrl - copy), Esc - cancel editing</t424>
+    <t425>Undo</t425>
+    <t426>Redo</t426>
+    <t427>Fill down</t427>
+    <t428>Numbering</t428>
+    <t429>Start number</t429>
+    <t430>Number of digits</t430>
+    <t431>Example: {0}</t431>
+    <t432>The step cannot be zero</t432>
+    <t433>The number of digits must be an integer from 0 to 10</t433>
+    <t434>Rows:</t434>
+    <t435>Instances</t435>
+    <t436>Types</t436>
+    <t437>Ctrl+C / Ctrl+X / Ctrl+V - copy / cut / paste (including to and from Excel)</t437>
+    <msg124>The changes have not been applied to the model. Close the window without applying?</msg124>
+    <msg125>The table changes have not been applied to the model and will be lost. Reload the table?</msg125>
+    <msg126>There are cells with errors ({0}). They will not be applied. Apply the other changes?</msg126>
+    <msg127>There are no changes to apply</msg127>
+    <msg128>Values applied: {0}</msg128>
+    <msg129>Failed to borrow the elements for editing: {0}</msg129>
+    <msg130>The element was not borrowed for editing: it is owned by another user or not synchronized with the central model</msg130>
+    <msg131>Parameter "{0}" not found for the element</msg131>
+    <msg132>Failed to set the value of parameter "{0}"</msg132>
+    <msg133>Failed to change the type</msg133>
+    <msg134>Check the parameters</msg134>
+    <msg135>Revit warning: {0}</msg135>
+    <msg136>Revit error: {0}. The changes were not applied</msg136>
+    <msg137>Preset categories are missing in the selected scope</msg137>
+    <msg138>Preset parameters were not found for elements of the checked categories</msg138>
+    <msg139>Parameter "{0}" value set</msg139>
+    <msg140>Type changed</msg140>
+    <msg141>Some values from the clipboard did not fit into the table and were not pasted</msg141>
+    <msg142>The file is not recognized: there is no service mark in the second row. Use a file exported from this window</msg142>
+    <msg143>The file was exported from a table in the "{0}" row mode, but the table is loaded in the "{1}" mode. Load the table in the "{0}" mode and repeat the import</msg143>
+    <msg144>Column "{0}" was not found in the loaded table - its values were not imported</msg144>
+    <msg145>Row {0}: the element was not found in the loaded table (deleted or not in the selected scope)</msg145>
+    <msg146>Values of the type parameter "{0}" differ in the file rows - the value "{1}" was written</msg146>
+    <msg147>Values written: {0}. The changes are not yet applied to the model - check them and click "Apply"</msg147>
+    <msg148>Values with errors: {0}. Such cells are outlined in red, the reason is in the cell tooltip</msg148>
+    <msg149>Values not written to cells that cannot be changed: {0}</msg149>
+    <msg150>The values in the file do not differ from the values in the table</msg150>
   </mprParameters>
 </ModPlus>

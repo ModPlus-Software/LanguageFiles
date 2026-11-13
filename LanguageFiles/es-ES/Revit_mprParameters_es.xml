@@ -6,7 +6,9 @@
     LocalName1="Editor familiar"
     Description1="Editor de parámetros de la familia actual con editor de fórmulas alternativo"
     LocalName2="Tablas de selección"
-    Description2="Editor de tablas de selección de la familia actual: creación, edición, importación y exportación con validación de datos">
+    Description2="Editor de tablas de selección de la familia actual: creación, edición, importación y exportación con validación de datos"
+    LocalName3="Tabla de parámetros"
+    Description3="Edición en tabla de los valores de parámetros de los elementos del proyecto actual con filtros y entrada por lotes">
     <pcn1>Creación de parámetros en proyecto</pcn1>
     <pcd1>Le permite crear parámetros por lotes en proyecto actual</pcd1>
     <pcn2>Creación de parámetros en familias</pcn2>
@@ -675,5 +677,79 @@
     <msg121>La tabla de selección "{0}" es diferente en las familias: {1}. Se tomará como base la tabla de la familia "{2}"; en las demás familias se reemplazará por la tabla editada. ¿Continuar?</msg121>
     <msg122>Tabla de selección "{0}" actualizada</msg122>
     <msg123>No se encontraron tablas de selección sin usar</msg123>
+    <t391>Los parámetros seleccionados se añadirán a la tabla con las características de los parámetros de la familia seleccionada: nombre, tipo de datos, agrupación, ejemplar/tipo, la opción "Parámetro de informe" y la fórmula. Para los parámetros sin fórmula se establecerá el valor del tipo indicado en la parte inferior de la ventana. Si selecciona un parámetro con una fórmula, se marcarán todos los parámetros utilizados en la fórmula. No es posible añadir parámetros del sistema. Un parámetro compartido solo se puede añadir si está presente en el APC actual</t391>
+    <t392>Valores del tipo:</t392>
+    <t393>El parámetro compartido no está presente en el APC actual</t393>
+    <t394>Ámbito:</t394>
+    <t395>Cargar</t395>
+    <t396>Anotación</t396>
+    <t397>Modelo analítico</t397>
+    <t398>Columnas de la tabla (arrastre para cambiar el orden)</t398>
+    <t399>Solo lectura</t399>
+    <t400>Nombre repetido: la lista contiene otro parámetro con el mismo nombre</t400>
+    <t401>Filas: {0}, mostradas: {1}</t401>
+    <t402>Celdas modificadas: {0}</t402>
+    <t403>Errores: {0}</t403>
+    <t404>Solo con errores</t404>
+    <t405>Seleccionar en el modelo</t405>
+    <t406>Descartar todos los cambios</t406>
+    <t407>&lt;no aplicable&gt;</t407>
+    <t408>El elemento no tiene este parámetro</t408>
+    <t409>El valor del parámetro no se puede modificar</t409>
+    <t410>El elemento es propiedad del usuario {0}</t410>
+    <t411>Valor original: {0}</t411>
+    <t412>El valor debe ser un número entero</t412>
+    <t413>El valor debe ser un número</t413>
+    <t414>El valor debe ser "Sí" o "No"</t414>
+    <t415>El valor no está en la lista de valores permitidos</t415>
+    <t416>El cambio de un parámetro de tipo se aplica a todos los elementos de este tipo ({0})</t416>
+    <t417>Seleccione el ámbito, marque las categorías y los parámetros y haga clic en "Cargar"</t417>
+    <t418>Celdas omitidas (no aplicables, de solo lectura o con propietario): {0}</t418>
+    <t419>Los valores numéricos y las referencias a elementos no se borran. Celdas omitidas: {0}</t419>
+    <t420>Aplicando cambios</t420>
+    <t421>Marque las categorías</t421>
+    <t422>GUID: {0}</t422>
+    <t423>Por ejemplar y por tipo</t423>
+    <t424>Escribir inicia la edición de la celda (con varias celdas seleccionadas, el valor se escribe en todas), Supr - borrar texto, Espacio - alternar Sí/No, Ctrl+Espacio - seleccionar columna, Ctrl+D - rellenar hacia abajo, Ctrl+Z / Ctrl+Y - deshacer / rehacer, controlador en la esquina de la selección - rellenar serie (con Ctrl - copiar), Esc - cancelar la edición</t424>
+    <t425>Deshacer</t425>
+    <t426>Rehacer</t426>
+    <t427>Rellenar hacia abajo</t427>
+    <t428>Numeración</t428>
+    <t429>Número inicial</t429>
+    <t430>Número de dígitos</t430>
+    <t431>Ejemplo: {0}</t431>
+    <t432>El paso no puede ser cero</t432>
+    <t433>El número de dígitos debe ser un número entero de 0 a 10</t433>
+    <t434>Filas:</t434>
+    <t435>Ejemplares</t435>
+    <t436>Tipos</t436>
+    <t437>Ctrl+C / Ctrl+X / Ctrl+V - copiar / cortar / pegar (también desde y hacia Excel)</t437>
+    <msg124>Los cambios no se han aplicado al modelo. ¿Cerrar la ventana sin aplicarlos?</msg124>
+    <msg125>Los cambios de la tabla no se han aplicado al modelo y se perderán. ¿Volver a cargar la tabla?</msg125>
+    <msg126>Hay celdas con errores ({0}). No se aplicarán. ¿Aplicar los demás cambios?</msg126>
+    <msg127>No hay cambios que aplicar</msg127>
+    <msg128>Valores aplicados: {0}</msg128>
+    <msg129>No se pudieron tomar prestados los elementos para su edición: {0}</msg129>
+    <msg130>El elemento no se tomó prestado para su edición: es propiedad de otro usuario o no está sincronizado con el modelo central</msg130>
+    <msg131>No se encontró el parámetro "{0}" en el elemento</msg131>
+    <msg132>No se pudo establecer el valor del parámetro "{0}"</msg132>
+    <msg133>No se pudo cambiar el tipo</msg133>
+    <msg134>Marque los parámetros</msg134>
+    <msg135>Advertencia de Revit: {0}</msg135>
+    <msg136>Error de Revit: {0}. Los cambios no se aplicaron</msg136>
+    <msg137>Las categorías del ajuste preestablecido no están en el ámbito seleccionado</msg137>
+    <msg138>No se encontraron los parámetros del ajuste preestablecido en los elementos de las categorías marcadas</msg138>
+    <msg139>Valor del parámetro "{0}" establecido</msg139>
+    <msg140>Tipo cambiado</msg140>
+    <msg141>Algunos valores del portapapeles no cabían en la tabla y no se pegaron</msg141>
+    <msg142>El archivo no se ha reconocido: no hay marca de servicio en la segunda fila. Use un archivo exportado desde esta ventana</msg142>
+    <msg143>El archivo se exportó desde una tabla en el modo de filas "{0}", pero la tabla está cargada en el modo "{1}". Cargue la tabla en el modo "{0}" y repita la importación</msg143>
+    <msg144>La columna "{0}" no se encontró en la tabla cargada - sus valores no se importaron</msg144>
+    <msg145>Fila {0}: el elemento no se encontró en la tabla cargada (eliminado o fuera del ámbito seleccionado)</msg145>
+    <msg146>Los valores del parámetro de tipo "{0}" difieren en las filas del archivo - se escribió el valor "{1}"</msg146>
+    <msg147>Valores escritos: {0}. Los cambios aún no se han aplicado al modelo - revíselos y pulse "Aplicar"</msg147>
+    <msg148>Valores con errores: {0}. Estas celdas tienen un borde rojo, el motivo está en la información sobre herramientas de la celda</msg148>
+    <msg149>Valores no escritos en celdas que no se pueden modificar: {0}</msg149>
+    <msg150>Los valores del archivo no difieren de los valores de la tabla</msg150>
   </mprParameters>
 </ModPlus>
