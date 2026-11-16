@@ -296,21 +296,20 @@
     <t259>La liste ne contient aucune famille, toutes les catégories sont donc affichées. La possibilité de créer le paramètre sera vérifiée lors de la création</t259>
     <t260>Aucune famille n'est chargée dans les familles de la liste</t260>
     <t261>et fermer la fenêtre</t261>
-    <t262>Dans les formules</t262>
+    <t262>Dans la formule du paramètre {0}</t262>
     <t263>Dans les cotes</t263>
     <t264>Dans les réseaux</t264>
-    <t265>Associé aux paramètres des éléments</t265>
-    <t266>Peut être supprimé après la suppression des paramètres : {0}</t266>
+    <t265>Associé aux paramètres des éléments : {0}</t265>
+    <t266>Uniquement avec {0}</t266>
     <t267>Le paramètre partagé peut être utilisé dans les nomenclatures, étiquettes ou filtres du projet. Ne le marquez pour suppression que si vous êtes sûr qu'il n'y est pas utilisé</t267>
     <t268>Peut être supprimé</t268>
-    <t269>Supprimable</t269>
-    <t270>Nombre de familles dans lesquelles le paramètre peut être supprimé, sur le nombre total de familles contenant ce paramètre. Entre parenthèses - nombre de familles dans lesquelles le paramètre peut être supprimé après la suppression d'autres paramètres</t270>
+    <t269>Peut être supprimé</t269>
+    <t270>Indique si le paramètre peut être supprimé dans les familles qui le contiennent. "Uniquement avec" signifie que le paramètre n'est utilisé que dans les formules de paramètres qui peuvent aussi être supprimés, il ne peut donc être supprimé qu'avec eux</t270>
     <t271>Afficher les non supprimables</t271>
     <t272>Afficher les paramètres qui ne peuvent être supprimés dans aucune famille</t272>
-    <t273>Résumé des raisons pour lesquelles le paramètre ne peut pas être supprimé immédiatement. Entre parenthèses - nombre de familles</t273>
-    <t274>À vérifier</t274>
+    <t273>Où le paramètre est utilisé. S'il n'est pas utilisé ainsi dans toutes les familles, le nombre de ces familles est indiqué entre parenthèses</t273>
+    <t274>Le paramètre partagé peut être utilisé dans le projet</t274>
     <t275>Le paramètre "{0}" n'a pas été supprimé, car le paramètre dans la formule duquel il est utilisé n'a pas été supprimé</t275>
-    <t276>Après la suppression d'autres paramètres</t276>
     <t277>Marqués pour suppression :</t277>
     <t278>Ajouter des paramètres au FPP</t278>
     <t279>Ne pas ajouter</t279>
@@ -633,6 +632,7 @@
     <err81>Impossible de déterminer le type de données et les unités de la colonne "{0}" de la table de recherche "{1}"</err81>
     <err82>Le fichier "{0}" n'est pas une table de recherche : la ligne d'en-tête n'a pas pu être reconnue</err82>
     <err83>Ligne {0} : le nombre de valeurs ({1}) ne correspond pas au nombre de colonnes ({2})</err83>
+    <err84>Impossible de lire le fichier "{0}" avec le séparateur "{1}" : le fichier semble utiliser le séparateur "{2}"</err84>
     <msg76>Les espaces au début et à la fin du nom de colonne "{0}" peuvent être supprimés par Revit</msg76>
     <msg77>Plusieurs colonnes nommées "{0}"</msg77>
     <msg78>Ligne {0}, colonne {1} : les espaces au début et à la fin de la valeur seront supprimés par Revit</msg78>
@@ -724,6 +724,16 @@
     <t435>Occurrences</t435>
     <t436>Types</t436>
     <t437>Ctrl+C / Ctrl+X / Ctrl+V - copier / couper / coller (y compris depuis et vers Excel)</t437>
+    <t438>Séparateur :</t438>
+    <t439>Dans les formules des paramètres : {0}</t439>
+    <t440>Peut être supprimé uniquement avec {0}</t440>
+    <t441>Ne peut pas être supprimé</t441>
+    <t442>Dans {0} familles sur {1}</t442>
+    <t443>dans {0} familles sur {1}</t443>
+    <t444>A une formule : {0}</t444>
+    <t445>A une formule</t445>
+    <t446>N'est pas utilisé</t446>
+    <t447>Points à prendre en compte avant de supprimer le paramètre. Les remarques n'empêchent pas la suppression</t447>
     <msg124>Les modifications n'ont pas été appliquées au modèle. Fermer la fenêtre sans les appliquer ?</msg124>
     <msg125>Les modifications du tableau n'ont pas été appliquées au modèle et seront perdues. Recharger le tableau ?</msg125>
     <msg126>Des cellules contiennent des erreurs ({0}). Elles ne seront pas appliquées. Appliquer les autres modifications ?</msg126>

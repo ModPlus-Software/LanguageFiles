@@ -296,21 +296,20 @@
     <t259>There are no families in the list, so all categories are shown. Whether the parameter can be created will be checked on creation</t259>
     <t260>No families are loaded into the families in the list</t260>
     <t261>and close the window</t261>
-    <t262>In formulas</t262>
+    <t262>In the formula of parameter {0}</t262>
     <t263>In dimensions</t263>
     <t264>In arrays</t264>
-    <t265>Associated with element parameters</t265>
-    <t266>Can be removed after removing parameters: {0}</t266>
+    <t265>Associated with element parameters: {0}</t265>
+    <t266>Only together with {0}</t266>
     <t267>The shared parameter may be used in project schedules, tags, or filters. Mark it for removal only if you are sure it is not used there</t267>
     <t268>Can be removed</t268>
-    <t269>Removable</t269>
-    <t270>Number of families in which the parameter can be removed, out of the total number of families with this parameter. In parentheses - the number of families in which the parameter can be removed after removing other parameters</t270>
+    <t269>Can be removed</t269>
+    <t270>Whether the parameter can be removed in the families that contain it. "Only together with" means the parameter is used only in formulas of parameters that can also be removed, so it can be removed only together with them</t270>
     <t271>Show non-removable</t271>
     <t272>Show parameters that cannot be removed in any family</t272>
-    <t273>Summary of the reasons why the parameter cannot be removed right away. In parentheses - the number of families</t273>
-    <t274>Needs review</t274>
+    <t273>Where the parameter is used. If it is used this way not in all families, the number of such families is given in parentheses</t273>
+    <t274>The shared parameter may be used in the project</t274>
     <t275>Parameter "{0}" was not removed because the parameter whose formula uses it was not removed</t275>
-    <t276>After removing other parameters</t276>
     <t277>Marked for removal:</t277>
     <t278>Add parameters to SPF</t278>
     <t279>Don't add</t279>
@@ -633,6 +632,7 @@
     <err81>Failed to determine the data type and units of column "{0}" of the lookup table "{1}"</err81>
     <err82>The file "{0}" is not a lookup table: the header row could not be recognized</err82>
     <err83>Row {0}: the number of values ({1}) does not match the number of columns ({2})</err83>
+    <err84>File "{0}" could not be read with the "{1}" separator: the file seems to use the "{2}" separator</err84>
     <msg76>Leading and trailing spaces in the column name "{0}" may be removed by Revit</msg76>
     <msg77>Several columns named "{0}"</msg77>
     <msg78>Row {0}, column {1}: leading and trailing spaces in the value will be removed by Revit</msg78>
@@ -724,6 +724,16 @@
     <t435>Instances</t435>
     <t436>Types</t436>
     <t437>Ctrl+C / Ctrl+X / Ctrl+V - copy / cut / paste (including to and from Excel)</t437>
+    <t438>Separator:</t438>
+    <t439>In the formulas of parameters: {0}</t439>
+    <t440>Can be removed only together with {0}</t440>
+    <t441>Cannot be removed</t441>
+    <t442>In {0} of {1} families</t442>
+    <t443>in {0} of {1} families</t443>
+    <t444>Has a formula: {0}</t444>
+    <t445>Has a formula</t445>
+    <t446>Not used</t446>
+    <t447>What to consider before removing the parameter. Notes do not prevent removal</t447>
     <msg124>The changes have not been applied to the model. Close the window without applying?</msg124>
     <msg125>The table changes have not been applied to the model and will be lost. Reload the table?</msg125>
     <msg126>There are cells with errors ({0}). They will not be applied. Apply the other changes?</msg126>

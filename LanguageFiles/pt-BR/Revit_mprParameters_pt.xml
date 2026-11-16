@@ -296,21 +296,20 @@
     <t259>Não há famílias na lista, por isso todas as categorias são exibidas. A possibilidade de criar o parâmetro será verificada na criação</t259>
     <t260>Nenhuma família está carregada nas famílias da lista</t260>
     <t261>e fechar a janela</t261>
-    <t262>Em fórmulas</t262>
+    <t262>Na fórmula do parâmetro {0}</t262>
     <t263>Em cotas</t263>
     <t264>Em matrizes</t264>
-    <t265>Associado a parâmetros de elementos</t265>
-    <t266>Pode ser excluído após a exclusão dos parâmetros: {0}</t266>
+    <t265>Associado a parâmetros de elementos: {0}</t265>
+    <t266>Somente junto com {0}</t266>
     <t267>O parâmetro compartilhado pode ser usado em tabelas, identificadores ou filtros do projeto. Marque-o para exclusão somente se tiver certeza de que ele não é usado neles</t267>
     <t268>Pode ser excluído</t268>
-    <t269>Excluível</t269>
-    <t270>Número de famílias em que o parâmetro pode ser excluído, do total de famílias com este parâmetro. Entre parênteses - número de famílias em que o parâmetro pode ser excluído após a exclusão de outros parâmetros</t270>
+    <t269>Pode ser excluído</t269>
+    <t270>Se o parâmetro pode ser excluído nas famílias que o contêm. "Somente junto com" significa que o parâmetro é usado apenas em fórmulas de parâmetros que também podem ser excluídos, portanto ele só pode ser excluído junto com eles</t270>
     <t271>Mostrar não excluíveis</t271>
     <t272>Mostrar parâmetros que não podem ser excluídos em nenhuma família</t272>
-    <t273>Resumo dos motivos pelos quais o parâmetro não pode ser excluído imediatamente. Entre parênteses - número de famílias</t273>
-    <t274>Requer verificação</t274>
+    <t273>Onde o parâmetro é usado. Se ele não for usado dessa forma em todas as famílias, o número dessas famílias é indicado entre parênteses</t273>
+    <t274>O parâmetro compartilhado pode ser usado no projeto</t274>
     <t275>O parâmetro "{0}" não foi excluído porque o parâmetro em cuja fórmula ele é usado não foi excluído</t275>
-    <t276>Após a exclusão de outros parâmetros</t276>
     <t277>Marcado para exclusão:</t277>
     <t278>Adicionar parâmetros ao arquivo de parâmetros compartilhados</t278>
     <t279>Não adicionar</t279>
@@ -633,6 +632,7 @@
     <err81>Não foi possível determinar o tipo de dados e as unidades da coluna "{0}" da tabela de pesquisa "{1}"</err81>
     <err82>O arquivo "{0}" não é uma tabela de pesquisa: não foi possível reconhecer a linha de cabeçalho</err82>
     <err83>Linha {0}: o número de valores ({1}) não corresponde ao número de colunas ({2})</err83>
+    <err84>Não foi possível ler o arquivo "{0}" com o separador "{1}": parece que o arquivo usa o separador "{2}"</err84>
     <msg76>Os espaços no início e no fim do nome da coluna "{0}" podem ser removidos pelo Revit</msg76>
     <msg77>Várias colunas com o nome "{0}"</msg77>
     <msg78>Linha {0}, coluna {1}: os espaços no início e no fim do valor serão removidos pelo Revit</msg78>
@@ -724,6 +724,16 @@
     <t435>Instâncias</t435>
     <t436>Tipos</t436>
     <t437>Ctrl+C / Ctrl+X / Ctrl+V - copiar / recortar / colar (inclusive de e para o Excel)</t437>
+    <t438>Separador:</t438>
+    <t439>Nas fórmulas dos parâmetros: {0}</t439>
+    <t440>Pode ser excluído somente junto com {0}</t440>
+    <t441>Não pode ser excluído</t441>
+    <t442>Em {0} de {1} famílias</t442>
+    <t443>em {0} de {1} famílias</t443>
+    <t444>Tem fórmula: {0}</t444>
+    <t445>Tem fórmula</t445>
+    <t446>Não é usado</t446>
+    <t447>O que considerar antes de excluir o parâmetro. As observações não impedem a exclusão</t447>
     <msg124>As alterações não foram aplicadas ao modelo. Fechar a janela sem aplicar?</msg124>
     <msg125>As alterações da tabela não foram aplicadas ao modelo e serão perdidas. Carregar a tabela novamente?</msg125>
     <msg126>Há células com erros ({0}). Elas não serão aplicadas. Aplicar as demais alterações?</msg126>

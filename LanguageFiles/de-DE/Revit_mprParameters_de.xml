@@ -296,21 +296,20 @@
     <t259>Die Liste enthält keine Familien, daher werden alle Kategorien angezeigt. Ob der Parameter erstellt werden kann, wird beim Erstellen geprüft</t259>
     <t260>In die Familien der Liste ist keine Familie geladen</t260>
     <t261>und Fenster schließen</t261>
-    <t262>In Formeln</t262>
+    <t262>In der Formel des Parameters {0}</t262>
     <t263>In Maßen</t263>
     <t264>In Arrays</t264>
-    <t265>Mit Elementparametern verbunden</t265>
-    <t266>Kann nach dem Löschen der Parameter gelöscht werden: {0}</t266>
+    <t265>Mit Elementparametern verbunden: {0}</t265>
+    <t266>Nur zusammen mit {0}</t266>
     <t267>Der gemeinsam genutzte Parameter kann in Bauteillisten, Beschriftungen oder Filtern des Projekts verwendet werden. Markieren Sie ihn nur dann zum Löschen, wenn Sie sicher sind, dass er dort nicht verwendet wird</t267>
     <t268>Kann gelöscht werden</t268>
-    <t269>Löschbar</t269>
-    <t270>Anzahl der Familien, in denen der Parameter gelöscht werden kann, von der Gesamtzahl der Familien mit diesem Parameter. In Klammern - Anzahl der Familien, in denen der Parameter nach dem Löschen anderer Parameter gelöscht werden kann</t270>
+    <t269>Kann gelöscht werden</t269>
+    <t270>Ob der Parameter in den Familien, die ihn enthalten, gelöscht werden kann. "Nur zusammen mit" bedeutet, dass der Parameter nur in Formeln von Parametern verwendet wird, die ebenfalls gelöscht werden können, und daher nur zusammen mit ihnen gelöscht werden kann</t270>
     <t271>Nicht löschbare anzeigen</t271>
     <t272>Parameter anzeigen, die in keiner Familie gelöscht werden können</t272>
-    <t273>Zusammenfassung der Gründe, warum der Parameter nicht sofort gelöscht werden kann. In Klammern - Anzahl der Familien</t273>
-    <t274>Prüfung erforderlich</t274>
+    <t273>Wo der Parameter verwendet wird. Wenn er nicht in allen Familien so verwendet wird, ist die Anzahl dieser Familien in Klammern angegeben</t273>
+    <t274>Der gemeinsam genutzte Parameter kann im Projekt verwendet werden</t274>
     <t275>Parameter "{0}" wurde nicht gelöscht, da der Parameter, in dessen Formel er verwendet wird, nicht gelöscht wurde</t275>
-    <t276>Nach dem Löschen anderer Parameter</t276>
     <t277>Zum Löschen markiert:</t277>
     <t278>Parameter zur GPD hinzufügen</t278>
     <t279>Nicht hinzufügen</t279>
@@ -633,6 +632,7 @@
     <err81>Datentyp und Einheiten der Spalte "{0}" der Abruftabelle "{1}" konnten nicht bestimmt werden</err81>
     <err82>Die Datei "{0}" ist keine Abruftabelle: Die Kopfzeile konnte nicht erkannt werden</err82>
     <err83>Zeile {0}: Die Anzahl der Werte ({1}) stimmt nicht mit der Anzahl der Spalten ({2}) überein</err83>
+    <err84>Die Datei "{0}" konnte mit dem Trennzeichen "{1}" nicht gelesen werden: die Datei verwendet anscheinend das Trennzeichen "{2}"</err84>
     <msg76>Führende und nachfolgende Leerzeichen im Spaltennamen "{0}" können von Revit entfernt werden</msg76>
     <msg77>Mehrere Spalten mit dem Namen "{0}"</msg77>
     <msg78>Zeile {0}, Spalte {1}: Führende und nachfolgende Leerzeichen im Wert werden von Revit entfernt</msg78>
@@ -724,6 +724,16 @@
     <t435>Exemplare</t435>
     <t436>Typen</t436>
     <t437>Strg+C / Strg+X / Strg+V - kopieren / ausschneiden / einfügen (auch aus und nach Excel)</t437>
+    <t438>Trennzeichen:</t438>
+    <t439>In den Formeln der Parameter: {0}</t439>
+    <t440>Kann nur zusammen mit {0} gelöscht werden</t440>
+    <t441>Kann nicht gelöscht werden</t441>
+    <t442>In {0} von {1} Familien</t442>
+    <t443>in {0} von {1} Familien</t443>
+    <t444>Hat eine Formel: {0}</t444>
+    <t445>Hat eine Formel</t445>
+    <t446>Wird nicht verwendet</t446>
+    <t447>Was vor dem Löschen des Parameters zu beachten ist. Hinweise verhindern das Löschen nicht</t447>
     <msg124>Die Änderungen wurden nicht auf das Modell angewendet. Fenster ohne Anwenden schließen?</msg124>
     <msg125>Die Änderungen in der Tabelle wurden nicht auf das Modell angewendet und gehen verloren. Tabelle neu laden?</msg125>
     <msg126>Es gibt Zellen mit Fehlern ({0}). Sie werden nicht angewendet. Die übrigen Änderungen anwenden?</msg126>

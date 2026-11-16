@@ -296,21 +296,20 @@
     <t259>No hay familias en la lista, por lo que se muestran todas las categorías. La posibilidad de crear el parámetro se comprobará al crearlo</t259>
     <t260>En las familias de la lista no está cargada ninguna familia</t260>
     <t261>y cerrar la ventana</t261>
-    <t262>En fórmulas</t262>
+    <t262>En la fórmula del parámetro {0}</t262>
     <t263>En dimensiones</t263>
     <t264>En matrices</t264>
-    <t265>Vinculado con parámetros de elementos</t265>
-    <t266>Se puede eliminar después de eliminar los parámetros: {0}</t266>
+    <t265>Vinculado con parámetros de elementos: {0}</t265>
+    <t266>Solo junto con {0}</t266>
     <t267>El parámetro compartido puede utilizarse en tablas de planificación, etiquetas o filtros del proyecto. Márquelo para eliminar solo si está seguro de que no se utiliza allí</t267>
     <t268>Se puede eliminar</t268>
-    <t269>Eliminable</t269>
-    <t270>Número de familias en las que se puede eliminar el parámetro, del número total de familias con este parámetro. Entre paréntesis - número de familias en las que el parámetro se puede eliminar después de eliminar otros parámetros</t270>
+    <t269>Se puede eliminar</t269>
+    <t270>Si el parámetro se puede eliminar en las familias que lo contienen. "Solo junto con" significa que el parámetro se utiliza solo en fórmulas de parámetros que también se pueden eliminar, por lo que solo se puede eliminar junto con ellos</t270>
     <t271>Mostrar no eliminables</t271>
     <t272>Mostrar los parámetros que no se pueden eliminar en ninguna familia</t272>
-    <t273>Resumen de los motivos por los que el parámetro no se puede eliminar de inmediato. Entre paréntesis - número de familias</t273>
-    <t274>Requiere revisión</t274>
+    <t273>Dónde se utiliza el parámetro. Si no se utiliza así en todas las familias, entre paréntesis se indica en cuántas</t273>
+    <t274>El parámetro compartido puede utilizarse en el proyecto</t274>
     <t275>El parámetro "{0}" no se ha eliminado porque no se ha eliminado el parámetro en cuya fórmula se utiliza</t275>
-    <t276>Después de eliminar otros parámetros</t276>
     <t277>Marcado para eliminar:</t277>
     <t278>Añadir parámetros al APC</t278>
     <t279>No añadir</t279>
@@ -633,6 +632,7 @@
     <err81>No se pudieron determinar el tipo de datos y las unidades de la columna "{0}" de la tabla de selección "{1}"</err81>
     <err82>El archivo "{0}" no es una tabla de selección: no se pudo reconocer la fila de encabezados</err82>
     <err83>Fila {0}: el número de valores ({1}) no coincide con el número de columnas ({2})</err83>
+    <err84>No se pudo leer el archivo "{0}" con el separador "{1}": parece que el archivo usa el separador "{2}"</err84>
     <msg76>Revit puede eliminar los espacios al principio y al final del nombre de columna "{0}"</msg76>
     <msg77>Varias columnas con el nombre "{0}"</msg77>
     <msg78>Fila {0}, columna {1}: Revit eliminará los espacios al principio y al final del valor</msg78>
@@ -724,6 +724,16 @@
     <t435>Ejemplares</t435>
     <t436>Tipos</t436>
     <t437>Ctrl+C / Ctrl+X / Ctrl+V - copiar / cortar / pegar (también desde y hacia Excel)</t437>
+    <t438>Separador:</t438>
+    <t439>En las fórmulas de los parámetros: {0}</t439>
+    <t440>Se puede eliminar solo junto con {0}</t440>
+    <t441>No se puede eliminar</t441>
+    <t442>En {0} de {1} familias</t442>
+    <t443>en {0} de {1} familias</t443>
+    <t444>Tiene fórmula: {0}</t444>
+    <t445>Tiene fórmula</t445>
+    <t446>No se utiliza</t446>
+    <t447>Aspectos a tener en cuenta antes de eliminar el parámetro. Las notas no impiden la eliminación</t447>
     <msg124>Los cambios no se han aplicado al modelo. ¿Cerrar la ventana sin aplicarlos?</msg124>
     <msg125>Los cambios de la tabla no se han aplicado al modelo y se perderán. ¿Volver a cargar la tabla?</msg125>
     <msg126>Hay celdas con errores ({0}). No se aplicarán. ¿Aplicar los demás cambios?</msg126>
