@@ -3,7 +3,9 @@
   <mprMepElementsBender
     LocalName="MEP clash solver"
     Description="Adding bends to MEP elements to bypass clashing elements"
-    FullDescription="First, select the elements to be bypassed, then simply select MEP elements in the model — bends will be created automatically. The plugin window automatically adds elements to the processing list">
+    FullDescription="First, select the elements to be bypassed, then simply select MEP elements in the model — bends will be created automatically. The plugin window automatically adds elements to the processing list"
+    LocalName1="MEP up/down"
+    Description1="Lowering or raising MEP elements from a specified point by a given height with an inclined section">
     <h1>Settings</h1>
     <h2>Bend directions</h2>
     <m1>Offset, mm</m1>
@@ -71,5 +73,27 @@
     <t1>Standard</t1>
     <t2>By templates</t2>
     <e1>Failed to create elbow fitting. Check the existence of the necessary families in the project and the trace settings of the elements to be processed</e1>
+    <ud1>Offset, mm</ud1>
+    <ud2>Direction:</ud2>
+    <ud3>Pick the split point on a MEP element - the element will be split. Then select the segment to be offset: the whole part of the network connected on its side will be offset. For a bundle, select the MEP elements in the model before clicking «Execute»</ud3>
+    <ud4>Pick the split point on a MEP element</ud4>
+    <ud5>Select the segment to be offset</ud5>
+    <ud7>The split point is too close to the end of the element</ud7>
+    <ud8>The offset part is connected to the fixed part bypassing the split point</ud8>
+    <ud9>Revit has canceled the changes</ud9>
+    <ud10>Splitting a cable tray or conduit with elements connected along its length is not supported</ud10>
+    <ud11>The offset part is too short for the inclined section</ud11>
+    <ud12>Pick the second split point</ud12>
+    <ud13>The offset part is connected to an element that the command does not offset (equipment, fixture or a tap into a riser)</ud13>
+    <ud14>The split points are not connected by a horizontal route</ud14>
+    <ud15>The split points are too close to each other</ud15>
+    <ud16>Mode:</ud16>
+    <ud17>1 point</ud17>
+    <ud18>2 points</ud18>
+    <ud19>Pick two split points on MEP elements. The part of the network between them will be offset together with its branches</ud19>
+    <ud20>The inclined section with elbows hits a branch. Pick the split point farther from the branch</ud20>
+    <ud21>The inclined section with elbows runs into the adjacent fitting. Pick the split point farther from the fitting</ud21>
+    <ud22>There is not enough length between the split points for two inclined sections with elbows</ud22>
+    <ud23>The inclined section with elbows does not fit before the end of the pipe. Pick the split point farther from the end of the pipe</ud23>
   </mprMepElementsBender>
 </ModPlus>

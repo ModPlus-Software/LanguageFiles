@@ -3,7 +3,9 @@
   <mprMepElementsBender
     LocalName="Paseo a través de interferencias"
     Description="Adición de curvas en elementos MEP para evitar elementos que se cruzan"
-    FullDescription="Primero se seleccionan los elementos a evitar, luego simplemente se seleccionan los elementos MEP en el modelo — las curvas se crean automáticamente. La ventana añade automáticamente elementos a la lista de procesamiento">
+    FullDescription="Primero se seleccionan los elementos a evitar, luego simplemente se seleccionan los elementos MEP en el modelo — las curvas se crean automáticamente. La ventana añade automáticamente elementos a la lista de procesamiento"
+    LocalName1="Bajar/subir MEP"
+    Description1="Bajada o subida de elementos MEP desde un punto indicado a una altura dada con un tramo inclinado">
     <h1>Ajustes</h1>
     <h2>Direcciones de plegado</h2>
     <m1>Desfase, mm</m1>
@@ -71,5 +73,27 @@
     <t1>Estándar</t1>
     <t2>Por plantillas</t2>
     <e1>No es posible crear conexión del codo. Verifique presencia de familias necesarias en proyecto y ajustes de enrutamiento de elementos procesados</e1>
+    <ud1>Desplazamiento, mm</ud1>
+    <ud2>Dirección:</ud2>
+    <ud3>Indique el punto de división en el elemento MEP: el elemento se dividirá. Luego seleccione el tramo que se desplazará: se desplazará toda la parte de la red conectada en su lado. Para un haz, seleccione los elementos MEP en el modelo antes de pulsar «Ejecutar»</ud3>
+    <ud4>Indique el punto de división en el elemento MEP</ud4>
+    <ud5>Seleccione el tramo que se desplazará</ud5>
+    <ud7>El punto de división está demasiado cerca del extremo del elemento</ud7>
+    <ud8>La parte desplazada está conectada a la parte fija sin pasar por el punto de división</ud8>
+    <ud9>Revit canceló los cambios</ud9>
+    <ud10>No se admite la división de una bandeja de cables o un tubo con elementos conectados a lo largo</ud10>
+    <ud11>La longitud de la parte desplazada no es suficiente para el tramo inclinado</ud11>
+    <ud12>Indique el segundo punto de división</ud12>
+    <ud13>La parte desplazada está conectada a un elemento que el comando no desplaza (equipo, aparato o derivación a un montante)</ud13>
+    <ud14>Los puntos de división no están conectados por un trazado horizontal</ud14>
+    <ud15>Los puntos de división están demasiado cerca entre sí</ud15>
+    <ud16>Modo:</ud16>
+    <ud17>1 punto</ud17>
+    <ud18>2 puntos</ud18>
+    <ud19>Indique dos puntos de división en los elementos MEP. Se desplazará la parte de la red entre ellos junto con sus derivaciones</ud19>
+    <ud20>El tramo inclinado con codos toca una derivación. Indique el punto de división más lejos de la derivación</ud20>
+    <ud21>El tramo inclinado con codos choca con el accesorio contiguo. Indique el punto de división más lejos del accesorio</ud21>
+    <ud22>No hay longitud suficiente entre los puntos de división para dos tramos inclinados con codos</ud22>
+    <ud23>El tramo inclinado con codos no cabe hasta el extremo del tubo. Indique el punto de división más lejos del extremo del tubo</ud23>
   </mprMepElementsBender>
 </ModPlus>

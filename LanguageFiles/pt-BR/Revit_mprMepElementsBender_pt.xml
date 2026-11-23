@@ -3,7 +3,9 @@
   <mprMepElementsBender
     LocalName="Desvio de interferências"
     Description="Adição de desvios em elementos MEP para contornar elementos que interferem"
-    FullDescription="Primeiro, selecione os elementos a serem contornados e, em seguida, basta selecionar os elementos MEP no modelo — o desvio será criado automaticamente. Na janela do plugin, os elementos são adicionados automaticamente à lista de processamento">
+    FullDescription="Primeiro, selecione os elementos a serem contornados e, em seguida, basta selecionar os elementos MEP no modelo — o desvio será criado automaticamente. Na janela do plugin, os elementos são adicionados automaticamente à lista de processamento"
+    LocalName1="Descer/subir MEP"
+    Description1="Descida ou subida de elementos MEP a partir de um ponto indicado em uma altura definida com um trecho inclinado">
     <h1>Configurações</h1>
     <h2>Direções do desvio</h2>
     <m1>Deslocamento, mm</m1>
@@ -71,5 +73,27 @@
     <t1>Padrão</t1>
     <t2>Por modelos</t2>
     <e1>Não foi possível criar o cotovelo. Verifique se as famílias necessárias existem no projeto e as preferências de roteamento dos elementos processados</e1>
+    <ud1>Deslocamento, mm</ud1>
+    <ud2>Direção:</ud2>
+    <ud3>Indique o ponto de divisão no elemento MEP - o elemento será dividido. Em seguida, selecione o trecho que será deslocado: toda a parte da rede conectada do seu lado será deslocada. Para um feixe, selecione os elementos MEP no modelo antes de clicar em «Executar»</ud3>
+    <ud4>Indique o ponto de divisão no elemento MEP</ud4>
+    <ud5>Selecione o trecho que será deslocado</ud5>
+    <ud7>O ponto de divisão está muito próximo da extremidade do elemento</ud7>
+    <ud8>A parte deslocada está conectada à parte fixa contornando o ponto de divisão</ud8>
+    <ud9>O Revit cancelou as alterações</ud9>
+    <ud10>A divisão de uma bandeja de cabos ou eletroduto com elementos conectados ao longo do comprimento não é suportada</ud10>
+    <ud11>O comprimento da parte deslocada é insuficiente para o trecho inclinado</ud11>
+    <ud12>Indique o segundo ponto de divisão</ud12>
+    <ud13>A parte deslocada está conectada a um elemento que o comando não desloca (equipamento, aparelho ou derivação em uma prumada)</ud13>
+    <ud14>Os pontos de divisão não estão ligados por um traçado horizontal</ud14>
+    <ud15>Os pontos de divisão estão muito próximos um do outro</ud15>
+    <ud16>Modo:</ud16>
+    <ud17>1 ponto</ud17>
+    <ud18>2 pontos</ud18>
+    <ud19>Indique dois pontos de divisão nos elementos MEP. A parte da rede entre eles será deslocada junto com as derivações</ud19>
+    <ud20>O trecho inclinado com cotovelos atinge uma derivação. Indique o ponto de divisão mais longe da derivação</ud20>
+    <ud21>O trecho inclinado com cotovelos esbarra na conexão vizinha. Indique o ponto de divisão mais longe da conexão</ud21>
+    <ud22>Não há comprimento suficiente entre os pontos de divisão para dois trechos inclinados com cotovelos</ud22>
+    <ud23>O trecho inclinado com cotovelos não cabe até a extremidade do tubo. Indique o ponto de divisão mais longe da extremidade do tubo</ud23>
   </mprMepElementsBender>
 </ModPlus>
