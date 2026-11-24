@@ -3,7 +3,9 @@
   <mprMepElementsBender
     LocalName="Contournement des intersections"
     Description="Ajout de dévoiements aux éléments MEP pour contourner les éléments en intersection"
-    FullDescription="Sélectionnez d'abord les éléments à contourner, puis sélectionnez simplement les éléments MEP dans le modèle — le dévoiement sera créé automatiquement. Les éléments sont ajoutés automatiquement à la liste des éléments traités dans la fenêtre du plugin">
+    FullDescription="Sélectionnez d'abord les éléments à contourner, puis sélectionnez simplement les éléments MEP dans le modèle — le dévoiement sera créé automatiquement. Les éléments sont ajoutés automatiquement à la liste des éléments traités dans la fenêtre du plugin"
+    LocalName1="Abaisser/relever"
+    Description1="Abaissement ou relèvement des éléments MEP à partir d'un point indiqué d'une hauteur donnée avec un tronçon incliné">
     <h1>Réglages</h1>
     <h2>Directions du dévoiement</h2>
     <m1>Décalage, mm</m1>
@@ -71,5 +73,27 @@
     <t1>Standard</t1>
     <t2>Par modèles</t2>
     <e1>Impossible de créer le coude. Vérifiez la présence des familles nécessaires dans le projet et les préférences d'acheminement des éléments traités</e1>
+    <ud1>Décalage, mm</ud1>
+    <ud2>Direction :</ud2>
+    <ud3>Indiquez le point de division sur l'élément MEP : l'élément sera divisé. Sélectionnez ensuite le tronçon à décaler : toute la partie du réseau connectée de son côté sera décalée. Pour un faisceau, sélectionnez les éléments MEP dans le modèle avant de cliquer sur «Exécuter»</ud3>
+    <ud4>Indiquez le point de division sur l'élément MEP</ud4>
+    <ud5>Sélectionnez le tronçon à décaler</ud5>
+    <ud7>Le point de division est trop proche de l'extrémité de l'élément</ud7>
+    <ud8>La partie décalée est reliée à la partie fixe en contournant le point de division</ud8>
+    <ud9>Revit a annulé les modifications</ud9>
+    <ud10>La division d'un chemin de câbles ou d'un conduit avec des éléments connectés sur sa longueur n'est pas prise en charge</ud10>
+    <ud11>La longueur de la partie décalée est insuffisante pour le tronçon incliné</ud11>
+    <ud12>Indiquez le second point de division</ud12>
+    <ud13>La partie décalée est connectée à un élément que la commande ne décale pas (équipement, appareil ou piquage sur une colonne montante)</ud13>
+    <ud14>Les points de division ne sont pas reliés par un tracé horizontal</ud14>
+    <ud15>Les points de division sont trop proches l'un de l'autre</ud15>
+    <ud16>Mode :</ud16>
+    <ud17>1 point</ud17>
+    <ud18>2 points</ud18>
+    <ud19>Indiquez deux points de division sur les éléments MEP. La partie du réseau située entre eux sera décalée avec ses dérivations</ud19>
+    <ud20>Le tronçon incliné avec coudes touche une dérivation. Indiquez le point de division plus loin de la dérivation</ud20>
+    <ud21>Le tronçon incliné avec coudes bute contre le raccord voisin. Indiquez le point de division plus loin du raccord</ud21>
+    <ud22>La longueur entre les points de division est insuffisante pour deux tronçons inclinés avec coudes</ud22>
+    <ud23>Le tronçon incliné avec coudes ne tient pas jusqu'à l'extrémité du tube. Indiquez le point de division plus loin de l'extrémité du tube</ud23>
   </mprMepElementsBender>
 </ModPlus>
